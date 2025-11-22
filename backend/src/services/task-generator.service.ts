@@ -1,10 +1,12 @@
 import * as path from "path";
 import * as fs from "fs";
 import {
-  Task,
-  TaskImage,
   TaskGenerationResult,
   TaskGeneratorRequest,
+  GeneratedTask,
+  SolutionStep,
+  TaskImage,
+  TaskMetadata,
 } from "../types";
 import { generateTaskId, generateImageId } from "../utils";
 import { TextGeneratorService } from "./text-generator.service";
@@ -82,7 +84,60 @@ export class TaskGeneratorService {
     prompt += `- Follow ${request.educational_model} educational principles\n`;
     prompt += `- Design for ${request.display_template} display template\n`;
 
+    // Request structured response with title and solution steps
+    prompt += `\n## OUTPUT FORMAT\n`;
+    prompt += `Please provide the response in the following structure:\n`;
+    prompt += `1. A clear, engaging title for the task\n`;
+    prompt += `2. The main story/problem text in markdown format\n`;
+    prompt += `3. Solution steps with descriptions, formulas (in LaTeX), and explanations\n`;
+
     return prompt;
+  }
+
+  /**
+   * Parses the AI-generated text into structured solution steps
+   */
+  private parseSolutionSteps(text: string): SolutionStep[] {
+    // Simple parsing - in production, you'd want more sophisticated parsing
+    const steps: SolutionStep[] = [];
+    const lines = text.split('\n');
+    let stepNumber = 1;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line.match(/^(Step|step|\d+\.)/i)) {
+        steps.push({
+          step_number: stepNumber++,
+          description: line,
+          explanation: lines[i + 1]?.trim() || undefined,
+        });
+      }
+    }
+
+    // If no steps found, create a single step with the full text
+    if (steps.length === 0) {
+      steps.push({
+        step_number: 1,
+        description: "Solution",
+        explanation: text,
+      });
+    }
+
+    return steps;
+  }
+
+  /**
+   * Extracts title from generated text
+   */
+  private extractTitle(text: string): string {
+    const lines = text.split('\n');
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (trimmed.startsWith('# ')) {
+        return trimmed.substring(2);
+      }
+    }
+    return "Mathematical Task";
   }
 
   /**
@@ -108,6 +163,12 @@ export class TaskGeneratorService {
 
     console.log(`📝 Generated task description (${taskId})\n`);
 
+    // Extract title from generated text
+    const title = this.extractTitle(description);
+
+    // Parse solution steps from the description
+    const solutionSteps = this.parseSolutionSteps(description);
+
     // Generate images based on the task description
     const images: TaskImage[] = [];
     const numImages = request.number_of_images;
@@ -131,8 +192,11 @@ export class TaskGeneratorService {
 
         const imageId = generateImageId();
         images.push({
-          id: imageId,
+          image_id: imageId,
           url: imageResult.url,
+          type: i === 0 ? "main" : "secondary",
+          aspect_ratio: "1:1",
+          prompt_used: imagePrompt,
         });
 
         console.log(`✅ Generated image ${i + 1}: ${imageId}\n`);
@@ -141,28 +205,43 @@ export class TaskGeneratorService {
       console.log(`📝 No images requested\n`);
     }
 
-    // Create task object
-    const task: Task = {
-      id: taskId,
-      description,
+    // Create metadata
+    const metadata: TaskMetadata = {
+      curriculum_path: request.curriculum_path,
+      target_group: request.target_group,
+      difficulty_level: request.difficulty_level,
+      educational_model: request.educational_model,
+      country_code: request.country_code,
+      tags: request.custom_keywords || [],
+    };
+
+    // Create the generated task object
+    const generatedTask: GeneratedTask = {
+      title,
+      story_text: description,
+      solution_steps: solutionSteps,
       images,
+      metadata,
+      is_editable: true,
+      created_at: new Date().toISOString(),
     };
 
     // Save task to storage
-    const storagePath = await this.taskStorage.saveTask(task);
+    const storagePath = await this.taskStorage.saveTask(taskId, generatedTask);
 
     console.log("🎉 Task generation completed!\n");
 
     return {
-      task: {
-        ...task,
+      taskId,
+      storagePath,
+      generatedTask: {
+        ...generatedTask,
         // Update image URLs to local storage paths
-        images: task.images.map((img) => ({
+        images: generatedTask.images.map((img) => ({
           ...img,
-          url: `/storage/tasks/${taskId}/images/${img.id}.png`,
+          url: `/storage/tasks/${taskId}/images/${img.image_id}.png`,
         })),
       },
-      storagePath,
     };
   }
 }

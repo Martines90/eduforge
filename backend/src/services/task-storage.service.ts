@@ -1,6 +1,6 @@
 import * as path from "path";
 import { config } from "../config";
-import { Task, TaskImage } from "../types";
+import { GeneratedTask } from "../types";
 import {
   writeFile,
   readFile,
@@ -17,6 +17,15 @@ export class TaskStorageService {
    */
   private getTaskDir(taskId: string): string {
     return path.join(config.storageDir, "tasks", taskId);
+  }
+
+  /**
+   * Gets the task data file path (JSON)
+   * @param taskId The task ID
+   * @returns The full path to the task.json file
+   */
+  private getTaskDataPath(taskId: string): string {
+    return path.join(this.getTaskDir(taskId), "task.json");
   }
 
   /**
@@ -49,26 +58,31 @@ export class TaskStorageService {
 
   /**
    * Saves a task to storage
-   * @param task The task to save
+   * @param taskId The task ID
+   * @param generatedTask The generated task data to save
    * @returns Promise that resolves to the storage path
    */
-  async saveTask(task: Task): Promise<string> {
-    const taskDir = this.getTaskDir(task.id);
-    const imagesDir = this.getImagesDir(task.id);
+  async saveTask(taskId: string, generatedTask: GeneratedTask): Promise<string> {
+    const taskDir = this.getTaskDir(taskId);
+    const imagesDir = this.getImagesDir(taskId);
 
     // Create directories
     ensureDirectoryExists(taskDir);
     ensureDirectoryExists(imagesDir);
 
-    // Save description
-    const descriptionPath = this.getDescriptionPath(task.id);
-    await writeFile(descriptionPath, task.description);
+    // Save complete task data as JSON
+    const taskDataPath = this.getTaskDataPath(taskId);
+    await writeFile(taskDataPath, JSON.stringify(generatedTask, null, 2));
+
+    // Also save description as markdown for easy reading
+    const descriptionPath = this.getDescriptionPath(taskId);
+    await writeFile(descriptionPath, generatedTask.story_text);
 
     // Download and save images
-    for (const image of task.images) {
-      const imagePath = this.getImagePath(task.id, image.id);
+    for (const image of generatedTask.images) {
+      const imagePath = this.getImagePath(taskId, image.image_id);
       await downloadFile(image.url, imagePath);
-      console.log(`✅ Saved image: ${image.id}`);
+      console.log(`✅ Saved image: ${image.image_id}`);
     }
 
     console.log(`✅ Task saved to: ${taskDir}`);
@@ -80,7 +94,7 @@ export class TaskStorageService {
    * @param taskId The task ID to retrieve
    * @returns The task object with local file URLs
    */
-  async getTask(taskId: string): Promise<Task | null> {
+  async getTask(taskId: string): Promise<GeneratedTask | null> {
     const taskDir = this.getTaskDir(taskId);
 
     // Check if task exists
@@ -88,39 +102,28 @@ export class TaskStorageService {
       return null;
     }
 
-    // Read description
-    const descriptionPath = this.getDescriptionPath(taskId);
-    if (!exists(descriptionPath)) {
-      return null;
-    }
+    // Try to read the complete task data JSON
+    const taskDataPath = this.getTaskDataPath(taskId);
+    if (exists(taskDataPath)) {
+      try {
+        const taskDataJson = await readFile(taskDataPath);
+        const generatedTask: GeneratedTask = JSON.parse(taskDataJson);
 
-    const description = await readFile(descriptionPath);
+        // Update image URLs to local storage paths
+        generatedTask.images = generatedTask.images.map((img) => ({
+          ...img,
+          url: `/storage/tasks/${taskId}/images/${img.image_id}.png`,
+        }));
 
-    // Find all image files in the images directory
-    const imagesDir = this.getImagesDir(taskId);
-    const images: TaskImage[] = [];
-
-    if (exists(imagesDir)) {
-      const fs = await import("fs");
-      const files = await fs.promises.readdir(imagesDir);
-
-      for (const file of files) {
-        if (file.endsWith(".png")) {
-          const imageId = file.replace(".png", "");
-          // Return relative URL path for the API
-          images.push({
-            id: imageId,
-            url: `/storage/tasks/${taskId}/images/${file}`,
-          });
-        }
+        return generatedTask;
+      } catch (error) {
+        console.error("Error reading task.json:", error);
       }
     }
 
-    return {
-      id: taskId,
-      description,
-      images,
-    };
+    // Fallback: if task.json doesn't exist, return null
+    // (old tasks won't have this file)
+    return null;
   }
 
   /**

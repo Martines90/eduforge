@@ -79,7 +79,7 @@ const taskController = new TaskController();
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Task'
+ *               $ref: '#/components/schemas/TaskGeneratorResponse'
  *       400:
  *         description: Invalid request parameters
  *         content:
@@ -113,7 +113,7 @@ router.post("/generate-task", taskController.generateTask);
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Task'
+ *               $ref: '#/components/schemas/TaskGeneratorResponse'
  *       404:
  *         $ref: '#/components/responses/NotFound'
  *       500:

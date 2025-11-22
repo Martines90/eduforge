@@ -38,44 +38,199 @@ const swaggerDefinition = {
   ],
   components: {
     schemas: {
-      Task: {
+      TaskGeneratorResponse: {
         type: "object",
-        required: ["id", "description", "images"],
+        required: ["task_id", "status"],
         properties: {
-          id: {
+          task_id: {
             type: "string",
-            description: "Unique task identifier (32-character hex string)",
+            description: "Unique task identifier",
             example: "task_a1b2c3d4e5f6789012345678901234ab",
           },
-          description: {
+          status: {
             type: "string",
-            description: "Task description in markdown format",
+            enum: ["generated", "processing", "failed"],
+            description: "Task generation status",
+            example: "generated",
+          },
+          task_data: {
+            $ref: "#/components/schemas/GeneratedTask",
+          },
+          error_message: {
+            type: "string",
+            description: "Error message if status is 'failed'",
+          },
+        },
+      },
+      GeneratedTask: {
+        type: "object",
+        required: [
+          "title",
+          "story_text",
+          "solution_steps",
+          "images",
+          "metadata",
+          "is_editable",
+          "created_at",
+        ],
+        properties: {
+          title: {
+            type: "string",
+            description: "Task title",
+            example: "The Great Canal Project of 1855",
+          },
+          story_text: {
+            type: "string",
+            description: "Task story/problem text in markdown format",
             example:
-              "# The Great Canal of 1855\n\nAs chief engineer for the Imperial Navigation Company...",
+              "# The Great Canal Project\n\nAs chief engineer...",
+          },
+          solution_steps: {
+            type: "array",
+            items: {
+              $ref: "#/components/schemas/SolutionStep",
+            },
           },
           images: {
             type: "array",
-            description: "Array of task images",
             items: {
               $ref: "#/components/schemas/TaskImage",
             },
+          },
+          metadata: {
+            $ref: "#/components/schemas/TaskMetadata",
+          },
+          is_editable: {
+            type: "boolean",
+            description: "Whether the task can be edited",
+            example: true,
+          },
+          created_at: {
+            type: "string",
+            format: "date-time",
+            description: "ISO datetime when task was created",
+            example: "2025-11-22T10:30:00.000Z",
+          },
+        },
+      },
+      SolutionStep: {
+        type: "object",
+        required: ["step_number", "description"],
+        properties: {
+          step_number: {
+            type: "integer",
+            description: "Step number in solution sequence",
+            example: 1,
+          },
+          description: {
+            type: "string",
+            description: "Description of this solution step",
+            example: "Calculate the total distance",
+          },
+          formula: {
+            type: "string",
+            description: "LaTeX formatted formula",
+            example: "d = v \\times t",
+          },
+          calculation: {
+            type: "string",
+            description: "LaTeX formatted calculation",
+            example: "d = 50 \\times 2 = 100",
+          },
+          explanation: {
+            type: "string",
+            description: "Additional explanation for this step",
           },
         },
       },
       TaskImage: {
         type: "object",
-        required: ["id", "url"],
+        required: ["image_id", "url", "type", "aspect_ratio"],
         properties: {
-          id: {
+          image_id: {
             type: "string",
-            description: "Unique image identifier (32-character hex string)",
+            description: "Unique image identifier",
             example: "image_x1y2z3a4b5c6789012345678901234xy",
           },
           url: {
             type: "string",
             description: "URL path to the image file",
             example:
-              "/storage/tasks/task_a1b2c3d4e5f6789012345678901234ab/images/image_x1y2z3a4b5c6789012345678901234xy.png",
+              "/storage/tasks/task_a1b2.../images/image_x1y2....png",
+          },
+          type: {
+            type: "string",
+            enum: ["main", "secondary"],
+            description: "Image type",
+            example: "main",
+          },
+          aspect_ratio: {
+            type: "string",
+            enum: ["5:3", "3:2", "1:3", "1:1"],
+            description: "Image aspect ratio",
+            example: "1:1",
+          },
+          prompt_used: {
+            type: "string",
+            description: "The prompt used to generate this image",
+          },
+        },
+      },
+      TaskMetadata: {
+        type: "object",
+        required: [
+          "curriculum_path",
+          "target_group",
+          "difficulty_level",
+          "country_code",
+          "tags",
+        ],
+        properties: {
+          curriculum_path: {
+            type: "string",
+            example:
+              "math:grade_9_10:algebra:linear_equations:solving_basic_equations",
+          },
+          target_group: {
+            type: "string",
+            enum: ["boys", "girls", "mixed"],
+            example: "mixed",
+          },
+          difficulty_level: {
+            type: "string",
+            enum: ["easy", "medium", "hard"],
+            example: "medium",
+          },
+          educational_model: {
+            type: "string",
+            enum: [
+              "secular",
+              "conservative",
+              "traditional",
+              "liberal",
+              "progressive",
+              "religious_christian",
+              "religious_islamic",
+              "religious_jewish",
+              "montessori",
+              "waldorf",
+            ],
+          },
+          country_code: {
+            type: "string",
+            example: "US",
+          },
+          estimated_time_minutes: {
+            type: "integer",
+            description: "Estimated time to complete task in minutes",
+            example: 15,
+          },
+          tags: {
+            type: "array",
+            items: {
+              type: "string",
+            },
+            example: ["Renaissance", "architecture"],
           },
         },
       },

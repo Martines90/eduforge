@@ -1,7 +1,10 @@
 import { Request, Response, NextFunction } from "express";
 import { TaskGeneratorService } from "../services/task-generator.service";
 import { TaskStorageService } from "../services/task-storage.service";
-import { TaskGeneratorRequest } from "../types";
+import {
+  TaskGeneratorRequest,
+  TaskGeneratorResponse,
+} from "../types";
 
 export class TaskController {
   private taskGenerator: TaskGeneratorService;
@@ -36,12 +39,14 @@ export class TaskController {
       // Generate the task with comprehensive configuration
       const result = await this.taskGenerator.generateTask(requestData);
 
-      // Return the task data
-      res.status(201).json({
-        id: result.task.id,
-        description: result.task.description,
-        images: result.task.images,
-      });
+      // Return the task data in new response format
+      const response: TaskGeneratorResponse = {
+        task_id: result.taskId,
+        status: "generated",
+        task_data: result.generatedTask,
+      };
+
+      res.status(201).json(response);
     } catch (error) {
       next(error);
     }
@@ -62,9 +67,9 @@ export class TaskController {
       console.log(`📥 Request to get task: ${taskId}`);
 
       // Retrieve the task
-      const task = await this.taskStorage.getTask(taskId);
+      const generatedTask = await this.taskStorage.getTask(taskId);
 
-      if (!task) {
+      if (!generatedTask) {
         res.status(404).json({
           error: "Task not found",
           message: `No task found with ID: ${taskId}`,
@@ -72,12 +77,14 @@ export class TaskController {
         return;
       }
 
-      // Return the task data
-      res.status(200).json({
-        id: task.id,
-        description: task.description,
-        images: task.images,
-      });
+      // Return the task data in response format
+      const response: TaskGeneratorResponse = {
+        task_id: taskId,
+        status: "generated",
+        task_data: generatedTask,
+      };
+
+      res.status(200).json(response);
     } catch (error) {
       next(error);
     }

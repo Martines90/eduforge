@@ -88,3 +88,61 @@ export interface PrecisionSettings {
   // Whether to use exact values (fractions, π symbol) or decimals
   use_exact_values?: boolean;
 }
+
+/**
+ * Response interface for the task generator endpoint
+ */
+export interface TaskGeneratorResponse {
+  task_id: string;
+  status: "generated" | "processing" | "failed";
+  task_data?: GeneratedTask;
+  error_message?: string;
+}
+
+/**
+ * Generated task structure
+ */
+export interface GeneratedTask {
+  // Task content
+  title: string;
+  story_text: string; // Markdown formatted
+
+  // Solution
+  solution_steps: SolutionStep[];
+
+  // Images
+  images: TaskImage[];
+
+  // Metadata
+  metadata: TaskMetadata;
+
+  // Editing capabilities
+  is_editable: boolean;
+  created_at: string; // ISO datetime
+}
+
+export interface SolutionStep {
+  step_number: number;
+  description: string;
+  formula?: string; // LaTeX formatted
+  calculation?: string; // LaTeX formatted
+  explanation?: string;
+}
+
+export interface TaskImage {
+  image_id: string;
+  url: string;
+  type: "main" | "secondary";
+  aspect_ratio: "5:3" | "3:2" | "1:3" | "1:1";
+  prompt_used?: string; // The prompt that generated this image
+}
+
+export interface TaskMetadata {
+  curriculum_path: string;
+  target_group: TargetGroup;
+  difficulty_level: DifficultyLevel;
+  educational_model?: EducationalModel;
+  country_code: string;
+  estimated_time_minutes?: number;
+  tags: string[];
+}
