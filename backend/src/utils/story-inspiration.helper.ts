@@ -183,7 +183,7 @@ function adjustWeightsForDifficultyLevel(
 /**
  * Selects appropriate age based on target group
  */
-function selectAgeForTargetGroup(targetGroup: TargetGroup): HeroAge | null {
+function selectAgeForTargetGroup(_targetGroup: TargetGroup): HeroAge | null {
   if (!charactersConfig?.hero_ages) return null;
 
   const ages = charactersConfig.hero_ages;
@@ -228,13 +228,13 @@ function generateRandomInspiration(): SelectedInspiration {
  * Generates story inspiration elements using weighted random selection
  * @param difficultyLevel Task difficulty level
  * @param targetGroup Target audience
- * @param customKeywords Optional custom keywords (currently not used for weighting)
+ * @param _customKeywords Optional custom keywords (currently not used for weighting)
  * @returns Selected story inspiration elements
  */
 export function generateInspiration(
   difficultyLevel: DifficultyLevel,
   targetGroup: TargetGroup,
-  customKeywords: string[] = []
+  _customKeywords: string[] = []
 ): SelectedInspiration {
   // Ensure configs are loaded
   loadAllConfigs();

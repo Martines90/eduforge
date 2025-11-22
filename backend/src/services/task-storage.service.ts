@@ -94,6 +94,10 @@ export class TaskStorageService {
     const solutionPath = this.getSolutionPath(taskId);
     const solutionData = {
       solution_steps: generatedTask.solution_steps,
+      final_answer: generatedTask.final_answer,
+      verification: generatedTask.verification,
+      common_mistakes: generatedTask.common_mistakes,
+      key_concepts: generatedTask.key_concepts,
       metadata: {
         created_at: generatedTask.created_at,
         difficulty_level: generatedTask.metadata.difficulty_level,

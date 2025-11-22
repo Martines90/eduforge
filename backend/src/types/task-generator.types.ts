@@ -105,10 +105,18 @@ export interface TaskGeneratorResponse {
 export interface GeneratedTask {
   // Task content
   title: string;
-  story_text: string; // Markdown formatted
+  story_chunks: string[]; // Array of story paragraphs
+  story_text: string; // Full story (joined chunks) - for backward compatibility
+  key_values?: Record<string, string>; // Key numerical values with units
+  question: string; // The specific question being asked
+  expected_answer_format?: string; // Format description for the answer
 
   // Solution
   solution_steps: SolutionStep[];
+  final_answer?: string; // Complete final answer with context
+  verification?: string; // How to verify the answer
+  common_mistakes?: string[]; // Common mistakes to avoid
+  key_concepts?: string[]; // Key mathematical concepts used
 
   // Images
   images: TaskImage[];
@@ -123,9 +131,11 @@ export interface GeneratedTask {
 
 export interface SolutionStep {
   step_number: number;
+  title?: string; // Brief title for the step
   description: string;
   formula?: string; // LaTeX formatted
   calculation?: string; // LaTeX formatted
+  result?: string; // Result of this step
   explanation?: string;
 }
 

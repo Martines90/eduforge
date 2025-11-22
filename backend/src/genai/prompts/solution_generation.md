@@ -60,6 +60,8 @@ Each step must include:
 
 ## Output Format
 
+**IMPORTANT**: You must respond with ONLY a valid JSON object. Do not include any text before or after the JSON, no markdown code blocks, no explanatory text.
+
 Provide your solution as a JSON object with the following structure:
 
 ```json
@@ -115,4 +117,4 @@ Before submitting your solution, verify:
 
 ---
 
-**Now generate the step-by-step solution following all guidelines above.**
+**Now generate the step-by-step solution following all guidelines above. Return ONLY the JSON object, nothing else.**

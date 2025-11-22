@@ -32,7 +32,11 @@ describe("Weighted Random Utility", () => {
 
     it("should return null for empty array", () => {
       const weights = {};
-      const result = weightedRandomPick<TestItem>([], weights, (item) => item.id);
+      const result = weightedRandomPick<TestItem>(
+        [],
+        weights,
+        (item) => item.id
+      );
 
       expect(result).toBeNull();
     });

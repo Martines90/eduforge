@@ -112,3 +112,58 @@ Transform abstract mathematical concepts into immersive narratives where problem
 ## Note on Adaptability
 
 This specification applies across all mathematical topics—from basic arithmetic to calculus—by adjusting the professional role, scenario complexity, and technical vocabulary while maintaining the core narrative immersion principle.
+
+---
+
+## OUTPUT FORMAT
+
+**IMPORTANT**: You must respond with ONLY a valid JSON object. Do not include any text before or after the JSON.
+
+Return your response in the following JSON structure:
+
+```json
+{
+  "title": "Short, engaging title that captures the scenario (5-10 words)",
+  "story_chunks": [
+    "First paragraph: Opening hook with time/place/role (50-100 words)",
+    "Second paragraph: Situation development with Element A and embedded data (100-150 words)",
+    "Third paragraph: Element B, tension, constraints (80-120 words)",
+    "Fourth paragraph: The challenge and specific question (40-70 words)"
+  ],
+  "key_values": {
+    "value1_name": "value1_with_unit",
+    "value2_name": "value2_with_unit"
+  },
+  "question": "Clear, specific question asking for quantitative answer",
+  "expected_answer_format": "Description of what format the answer should be in (e.g., 'distance in kilometers to 2 decimal places')"
+}
+```
+
+**Example Response:**
+
+```json
+{
+  "title": "The Great Canal Project of 1855",
+  "story_chunks": [
+    "As chief engineer for the Erie Extension Canal in March 1855, you oversee the final phase connecting Lake Michigan to the Illinois River. With spring flooding imminent, precise calculations become critical.",
+    "Your northern crew has excavated 12.7 miles at a steady pace of 0.41 miles per week, working through frozen ground since January. The terrain is relatively flat, allowing for consistent progress despite harsh conditions.",
+    "Meanwhile, the southern team tackles more challenging rocky terrain, having completed 8.3 miles at just 0.29 miles per week. Recent geological surveys revealed unexpected limestone deposits, further slowing their advance.",
+    "To coordinate the ceremonial meeting point by April 30th, you must determine the exact date when both crews will converge. How many weeks from today will the teams meet, assuming their current rates continue?"
+  ],
+  "key_values": {
+    "northern_progress": "12.7 miles",
+    "northern_rate": "0.41 miles/week",
+    "southern_progress": "8.3 miles",
+    "southern_rate": "0.29 miles/week"
+  },
+  "question": "How many weeks from today will the teams meet, assuming their current rates continue?",
+  "expected_answer_format": "Number of weeks as a decimal to 1 decimal place"
+}
+```
+
+Remember:
+- Return ONLY the JSON object, no markdown code blocks, no explanatory text
+- All story chunks should be complete paragraphs with proper flow
+- Embed all numerical data naturally within the narrative
+- Make the title compelling and era-specific
+- Ensure the question is clear and unambiguous

@@ -151,9 +151,15 @@ export class TaskGeneratorService {
   }
 
   /**
-   * Parses the AI-generated solution JSON into structured solution steps
+   * Parses the AI-generated solution JSON into structured solution data
    */
-  private parseSolutionSteps(solutionText: string): SolutionStep[] {
+  private parseSolutionResponse(solutionText: string): {
+    solution_steps: SolutionStep[];
+    final_answer?: string;
+    verification?: string;
+    common_mistakes?: string[];
+    key_concepts?: string[];
+  } {
     try {
       // Try to extract JSON from the response
       const jsonMatch = solutionText.match(/\{[\s\S]*\}/);
@@ -163,16 +169,24 @@ export class TaskGeneratorService {
           solutionData.solution_steps &&
           Array.isArray(solutionData.solution_steps)
         ) {
-          return solutionData.solution_steps.map((step: any) => ({
-            step_number: step.step_number,
-            description: step.description || step.title,
-            formula: step.formula,
-            calculation: step.calculation,
-            explanation: step.explanation,
-          }));
+          return {
+            solution_steps: solutionData.solution_steps.map((step: any) => ({
+              step_number: step.step_number,
+              title: step.title,
+              description: step.description,
+              formula: step.formula,
+              calculation: step.calculation,
+              result: step.result,
+              explanation: step.explanation,
+            })),
+            final_answer: solutionData.final_answer,
+            verification: solutionData.verification,
+            common_mistakes: solutionData.common_mistakes,
+            key_concepts: solutionData.key_concepts,
+          };
         }
       }
-    } catch (error) {
+    } catch (_error) {
       console.warn("⚠️  Failed to parse solution JSON, using fallback parsing");
     }
 
@@ -201,13 +215,54 @@ export class TaskGeneratorService {
       });
     }
 
-    return steps;
+    return { solution_steps: steps };
   }
 
   /**
-   * Extracts title from generated text
+   * Parses the AI-generated task JSON into structured task data
    */
-  private extractTitle(text: string): string {
+  private parseTaskResponse(taskText: string): {
+    title: string;
+    story_chunks: string[];
+    story_text: string;
+    key_values?: Record<string, string>;
+    question: string;
+    expected_answer_format?: string;
+  } {
+    try {
+      // Try to extract JSON from the response
+      const jsonMatch = taskText.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        const taskData = JSON.parse(jsonMatch[0]);
+        if (taskData.title && taskData.story_chunks && taskData.question) {
+          return {
+            title: taskData.title,
+            story_chunks: taskData.story_chunks,
+            story_text: taskData.story_chunks.join("\n\n"), // Join chunks for backward compatibility
+            key_values: taskData.key_values,
+            question: taskData.question,
+            expected_answer_format: taskData.expected_answer_format,
+          };
+        }
+      }
+    } catch (_error) {
+      console.warn("⚠️  Failed to parse task JSON, using fallback parsing");
+    }
+
+    // Fallback: extract title and use full text as story
+    const title = this.extractTitleFallback(taskText);
+    return {
+      title,
+      story_chunks: [taskText],
+      story_text: taskText,
+      question: "Solve the problem presented above.",
+    };
+  }
+
+  /**
+   * Extracts title from generated text (fallback method)
+   */
+  private extractTitleFallback(text: string): string {
     const lines = text.split("\n");
     for (const line of lines) {
       const trimmed = line.trim();
@@ -238,22 +293,26 @@ export class TaskGeneratorService {
       maxTokens: 2000,
     });
 
-    const taskStory = taskResult.text;
-    console.log(`✅ Generated task story (${taskId})\n`);
-
-    // Extract title from generated text
-    const title = this.extractTitle(taskStory);
+    // Parse the task JSON response
+    const taskData = this.parseTaskResponse(taskResult.text);
+    console.log(`✅ Generated task story: "${taskData.title}" (${taskId})\n`);
 
     // Step 2: Generate solution separately using solution_generation.md prompt
     console.log("🧮 Step 2: Generating step-by-step solution...");
-    const solutionPrompt = this.buildSolutionPrompt(taskStory, request);
+    const solutionPrompt = this.buildSolutionPrompt(
+      taskData.story_text,
+      request
+    );
     const solutionResult = await this.textGenerator.generate(solutionPrompt, {
       temperature: 0.7,
       maxTokens: 2500,
     });
 
-    const solutionSteps = this.parseSolutionSteps(solutionResult.text);
-    console.log(`✅ Generated ${solutionSteps.length} solution steps\n`);
+    // Parse the solution JSON response
+    const solutionData = this.parseSolutionResponse(solutionResult.text);
+    console.log(
+      `✅ Generated ${solutionData.solution_steps.length} solution steps\n`
+    );
 
     // Step 3: Generate images based on the task description
     const images: TaskImage[] = [];
@@ -262,7 +321,7 @@ export class TaskGeneratorService {
     if (numImages > 0) {
       console.log(`🎨 Step 3: Generating ${numImages} image(s)...`);
 
-      const imagePromptBase = `Educational illustration for a math problem, ${request.display_template} style, appropriate for ${request.target_group} students. Story context: ${taskStory.substring(0, 400)}`;
+      const imagePromptBase = `Educational illustration for a math problem, ${request.display_template} style, appropriate for ${request.target_group} students. Story context: ${taskData.story_text.substring(0, 400)}`;
 
       for (let i = 0; i < numImages; i++) {
         console.log(`   🎨 Generating image ${i + 1}/${numImages}...`);
@@ -306,9 +365,17 @@ export class TaskGeneratorService {
 
     // Create the generated task object
     const generatedTask: GeneratedTask = {
-      title,
-      story_text: taskStory,
-      solution_steps: solutionSteps,
+      title: taskData.title,
+      story_chunks: taskData.story_chunks,
+      story_text: taskData.story_text,
+      key_values: taskData.key_values,
+      question: taskData.question,
+      expected_answer_format: taskData.expected_answer_format,
+      solution_steps: solutionData.solution_steps,
+      final_answer: solutionData.final_answer,
+      verification: solutionData.verification,
+      common_mistakes: solutionData.common_mistakes,
+      key_concepts: solutionData.key_concepts,
       images,
       metadata,
       is_editable: true,
