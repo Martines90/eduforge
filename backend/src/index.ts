@@ -16,7 +16,9 @@ const server = app.listen(config.port, () => {
   console.log(`  GET    /storage/*      - Serve static files`);
   console.log(`  GET    /api-docs       - Swagger API documentation`);
   console.log(`  GET    /api-docs.json  - OpenAPI spec (JSON)\n`);
-  console.log(`📚 API Documentation: http://localhost:${config.port}/api-docs\n`);
+  console.log(
+    `📚 API Documentation: http://localhost:${config.port}/api-docs\n`
+  );
 });
 
 // Graceful shutdown

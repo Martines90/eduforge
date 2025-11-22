@@ -1,10 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { TaskGeneratorService } from "../services/task-generator.service";
 import { TaskStorageService } from "../services/task-storage.service";
-import {
-  TaskGeneratorRequest,
-  TaskGeneratorResponse,
-} from "../types";
+import { TaskGeneratorRequest, TaskGeneratorResponse } from "../types";
 
 export class TaskController {
   private taskGenerator: TaskGeneratorService;
@@ -20,7 +17,7 @@ export class TaskController {
    * Generates a new task with description and images based on comprehensive configuration
    */
   generateTask = async (
-    req: Request<{}, {}, TaskGeneratorRequest>,
+    req: Request<Record<string, never>, unknown, TaskGeneratorRequest>,
     res: Response,
     next: NextFunction
   ): Promise<void> => {

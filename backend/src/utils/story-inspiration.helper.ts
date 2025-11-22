@@ -6,22 +6,7 @@
 import * as path from "path";
 import * as fs from "fs";
 import {
-  Era,
-  Location,
-  HeroPersonality,
-  HeroRole,
   HeroAge,
-  Situation,
-  Theme,
-  Vibe,
-  Genre,
-  Field,
-  Stake,
-  ConflictType,
-  Environment,
-  StorytellingMode,
-  NarrativeStructure,
-  Pacing,
   ErasConfig,
   LocationsConfig,
   CharactersConfig,
@@ -229,7 +214,8 @@ function generateRandomInspiration(): SelectedInspiration {
     field: randomPick(fieldsConfig?.fields || []) || undefined,
     stake: randomPick(stakesConfig?.stakes || []) || undefined,
     conflict: randomPick(conflictsConfig?.conflict_types || []) || undefined,
-    environment: randomPick(environmentsConfig?.environments || []) || undefined,
+    environment:
+      randomPick(environmentsConfig?.environments || []) || undefined,
     storytellingMode:
       randomPick(narrativeConfig?.storytelling_modes || []) || undefined,
     narrativeStructure:
@@ -293,8 +279,7 @@ export function generateInspiration(
       ) || undefined;
 
     // Role - uniform random (no specific weights)
-    selected.role =
-      randomPick(charactersConfig.hero_roles || []) || undefined;
+    selected.role = randomPick(charactersConfig.hero_roles || []) || undefined;
 
     // Age - adapt to target group
     selected.age = selectAgeForTargetGroup(targetGroup) || undefined;
@@ -325,8 +310,7 @@ export function generateInspiration(
       ) || undefined;
 
     // Genre - uniform random
-    selected.genre =
-      randomPick(atmosphereConfig.genres || []) || undefined;
+    selected.genre = randomPick(atmosphereConfig.genres || []) || undefined;
   }
 
   // Select field (uniform random)
@@ -341,8 +325,7 @@ export function generateInspiration(
 
   // Select conflict type (uniform random)
   if (conflictsConfig?.conflict_types) {
-    selected.conflict =
-      randomPick(conflictsConfig.conflict_types) || undefined;
+    selected.conflict = randomPick(conflictsConfig.conflict_types) || undefined;
   }
 
   // Select environment (uniform random)
@@ -357,8 +340,7 @@ export function generateInspiration(
       randomPick(narrativeConfig.storytelling_modes || []) || undefined;
     selected.narrativeStructure =
       randomPick(narrativeConfig.narrative_structures || []) || undefined;
-    selected.pacing =
-      randomPick(narrativeConfig.pacing || []) || undefined;
+    selected.pacing = randomPick(narrativeConfig.pacing || []) || undefined;
   }
 
   return selected;
@@ -409,7 +391,9 @@ export function buildPromptEnhancement(selected: SelectedInspiration): string {
       enhancement += ` (${selected.role.specializations[0]})`;
     }
     enhancement += `\n`;
-    enhancement += `- Personality: ${selected.personality.name} - ${selected.personality.traits.join(", ")}\n`;
+    enhancement += `- Personality: ${
+      selected.personality.name
+    } - ${selected.personality.traits.join(", ")}\n`;
 
     if (selected.age) {
       enhancement += `- Age Range: ${selected.age.age_range}\n`;
@@ -450,12 +434,16 @@ export function buildPromptEnhancement(selected: SelectedInspiration): string {
 
   if (selected.vibe) {
     enhancement += `**Atmosphere/Tone:** ${selected.vibe.name} (${selected.vibe.mood})\n`;
-    enhancement += `- Tone descriptors: ${selected.vibe.tone_descriptors.slice(0, 3).join(", ")}\n\n`;
+    enhancement += `- Tone descriptors: ${selected.vibe.tone_descriptors
+      .slice(0, 3)
+      .join(", ")}\n\n`;
   }
 
   if (selected.genre) {
     enhancement += `**Genre Elements:** ${selected.genre.name}\n`;
-    enhancement += `- Characteristics: ${selected.genre.characteristics.join(", ")}\n\n`;
+    enhancement += `- Characteristics: ${selected.genre.characteristics.join(
+      ", "
+    )}\n\n`;
   }
 
   if (selected.storytellingMode) {
@@ -472,7 +460,9 @@ export function buildPromptEnhancement(selected: SelectedInspiration): string {
 
   if (selected.pacing) {
     enhancement += `**Pacing:** ${selected.pacing.name}\n`;
-    enhancement += `- Characteristics: ${selected.pacing.characteristics.join(", ")}\n\n`;
+    enhancement += `- Characteristics: ${selected.pacing.characteristics.join(
+      ", "
+    )}\n\n`;
   }
 
   enhancement += `**Important:** These elements are suggestions to inspire creativity. Adapt them naturally to fit the mathematical content and educational goals. Not all elements need to be explicitly included.\n`;

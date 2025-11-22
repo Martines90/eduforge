@@ -28,7 +28,8 @@ export function weightedRandomPick<T>(
   for (const item of items) {
     const id = getId(item);
     // Use specific weight or _other if not found
-    const weight = weights[id] !== undefined ? weights[id] : weights["_other"] || 1;
+    const weight =
+      weights[id] !== undefined ? weights[id] : weights["_other"] || 1;
 
     if (weight > 0) {
       totalWeight += weight;
@@ -82,7 +83,9 @@ export function weightedRandomPickMultiple<T>(
     if (picked) {
       selected.push(picked);
       // Remove picked item from remaining
-      const index = remaining.findIndex((item) => getId(item) === getId(picked));
+      const index = remaining.findIndex(
+        (item) => getId(item) === getId(picked)
+      );
       if (index !== -1) {
         remaining.splice(index, 1);
       }

@@ -8,7 +8,11 @@ import {
   TaskImage,
   TaskMetadata,
 } from "../types";
-import { generateTaskId, generateImageId, generateStoryInspiration } from "../utils";
+import {
+  generateTaskId,
+  generateImageId,
+  generateStoryInspiration,
+} from "../utils";
 import { TextGeneratorService } from "./text-generator.service";
 import { ImageGeneratorService } from "./image-generator.service";
 import { TaskStorageService } from "./task-storage.service";
@@ -155,7 +159,10 @@ export class TaskGeneratorService {
       const jsonMatch = solutionText.match(/\{[\s\S]*\}/);
       if (jsonMatch) {
         const solutionData = JSON.parse(jsonMatch[0]);
-        if (solutionData.solution_steps && Array.isArray(solutionData.solution_steps)) {
+        if (
+          solutionData.solution_steps &&
+          Array.isArray(solutionData.solution_steps)
+        ) {
           return solutionData.solution_steps.map((step: any) => ({
             step_number: step.step_number,
             description: step.description || step.title,
@@ -201,10 +208,10 @@ export class TaskGeneratorService {
    * Extracts title from generated text
    */
   private extractTitle(text: string): string {
-    const lines = text.split('\n');
+    const lines = text.split("\n");
     for (const line of lines) {
       const trimmed = line.trim();
-      if (trimmed.startsWith('# ')) {
+      if (trimmed.startsWith("# ")) {
         return trimmed.substring(2);
       }
     }

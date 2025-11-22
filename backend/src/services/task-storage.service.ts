@@ -71,7 +71,10 @@ export class TaskStorageService {
    * @param generatedTask The generated task data to save
    * @returns Promise that resolves to the storage path
    */
-  async saveTask(taskId: string, generatedTask: GeneratedTask): Promise<string> {
+  async saveTask(
+    taskId: string,
+    generatedTask: GeneratedTask
+  ): Promise<string> {
     const taskDir = this.getTaskDir(taskId);
     const imagesDir = this.getImagesDir(taskId);
 

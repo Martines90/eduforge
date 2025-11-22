@@ -82,8 +82,7 @@ const swaggerDefinition = {
           story_text: {
             type: "string",
             description: "Task story/problem text in markdown format",
-            example:
-              "# The Great Canal Project\n\nAs chief engineer...",
+            example: "# The Great Canal Project\n\nAs chief engineer...",
           },
           solution_steps: {
             type: "array",
@@ -155,8 +154,7 @@ const swaggerDefinition = {
           url: {
             type: "string",
             description: "URL path to the image file",
-            example:
-              "/storage/tasks/task_a1b2.../images/image_x1y2....png",
+            example: "/storage/tasks/task_a1b2.../images/image_x1y2....png",
           },
           type: {
             type: "string",
