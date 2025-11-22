@@ -32,15 +32,11 @@ describe("Story Inspiration Helper", () => {
       expect(hasAnyField).toBeTruthy();
     });
 
-    it("should generate inspiration for medium difficulty", () => {
-      const result = generateInspiration("medium", "boys", []);
-
-      expect(result).toBeDefined();
-      expect(typeof result).toBe("object");
-    });
-
-    it("should generate inspiration for hard difficulty", () => {
-      const result = generateInspiration("hard", "girls", []);
+    test.each([
+      { difficulty: "medium" as DifficultyLevel, targetGroup: "boys" as TargetGroup },
+      { difficulty: "hard" as DifficultyLevel, targetGroup: "girls" as TargetGroup },
+    ])("should generate inspiration for $difficulty difficulty", ({ difficulty, targetGroup }) => {
+      const result = generateInspiration(difficulty, targetGroup, []);
 
       expect(result).toBeDefined();
       expect(typeof result).toBe("object");

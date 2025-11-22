@@ -156,37 +156,58 @@ describe("Weighted Random Utility", () => {
   });
 
   describe("adjustWeightsForDifficulty", () => {
-    it("should boost specified IDs", () => {
-      const weights = { a: 10, b: 10, c: 10 };
-      const adjusted = adjustWeightsForDifficulty(weights, ["a"], [], 2, 1);
+    const baseWeights = { a: 10, b: 10, c: 10 };
 
-      expect(adjusted.a).toBeGreaterThan(weights.a);
-      expect(adjusted.b).toBe(weights.b);
-      expect(adjusted.c).toBe(weights.c);
-    });
-
-    it("should penalize specified IDs", () => {
-      const weights = { a: 10, b: 10, c: 10 };
-      const adjusted = adjustWeightsForDifficulty(weights, [], ["a"], 1, 0.5);
-
-      expect(adjusted.a).toBeLessThan(weights.a);
-      expect(adjusted.b).toBe(weights.b);
-      expect(adjusted.c).toBe(weights.c);
-    });
-
-    it("should handle both boost and penalize", () => {
-      const weights = { a: 10, b: 10, c: 10 };
+    test.each([
+      {
+        name: "should boost specified IDs",
+        boost: ["a"],
+        penalize: [],
+        boostMultiplier: 2,
+        penalizeMultiplier: 1,
+        expectations: {
+          a: (weight: number, adjusted: number) => adjusted > weight,
+          b: (weight: number, adjusted: number) => adjusted === weight,
+          c: (weight: number, adjusted: number) => adjusted === weight,
+        },
+      },
+      {
+        name: "should penalize specified IDs",
+        boost: [],
+        penalize: ["a"],
+        boostMultiplier: 1,
+        penalizeMultiplier: 0.5,
+        expectations: {
+          a: (weight: number, adjusted: number) => adjusted < weight,
+          b: (weight: number, adjusted: number) => adjusted === weight,
+          c: (weight: number, adjusted: number) => adjusted === weight,
+        },
+      },
+      {
+        name: "should handle both boost and penalize",
+        boost: ["a"],
+        penalize: ["c"],
+        boostMultiplier: 2,
+        penalizeMultiplier: 0.5,
+        expectations: {
+          a: (weight: number, adjusted: number) => adjusted > weight,
+          b: (weight: number, adjusted: number) => adjusted === weight,
+          c: (weight: number, adjusted: number) => adjusted < weight,
+        },
+      },
+    ])("$name", ({ boost, penalize, boostMultiplier, penalizeMultiplier, expectations }) => {
+      const weights = { ...baseWeights };
       const adjusted = adjustWeightsForDifficulty(
         weights,
-        ["a"],
-        ["c"],
-        2,
-        0.5
+        boost,
+        penalize,
+        boostMultiplier,
+        penalizeMultiplier
       );
 
-      expect(adjusted.a).toBeGreaterThan(weights.a);
-      expect(adjusted.b).toBe(weights.b);
-      expect(adjusted.c).toBeLessThan(weights.c);
+      expect(expectations.a(weights.a, adjusted.a)).toBe(true);
+      expect(expectations.b(weights.b, adjusted.b)).toBe(true);
+      expect(expectations.c(weights.c, adjusted.c)).toBe(true);
     });
 
     it("should not modify original weights object", () => {
