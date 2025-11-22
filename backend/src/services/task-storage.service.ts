@@ -31,10 +31,19 @@ export class TaskStorageService {
   /**
    * Gets the task description file path
    * @param taskId The task ID
-   * @returns The full path to the description.md file
+   * @returns The full path to the task_description.md file
    */
   private getDescriptionPath(taskId: string): string {
-    return path.join(this.getTaskDir(taskId), "description.md");
+    return path.join(this.getTaskDir(taskId), "task_description.md");
+  }
+
+  /**
+   * Gets the solution file path
+   * @param taskId The task ID
+   * @returns The full path to the solution.json file
+   */
+  private getSolutionPath(taskId: string): string {
+    return path.join(this.getTaskDir(taskId), "solution.json");
   }
 
   /**
@@ -68,24 +77,43 @@ export class TaskStorageService {
 
     // Create directories
     ensureDirectoryExists(taskDir);
-    ensureDirectoryExists(imagesDir);
-
-    // Save complete task data as JSON
-    const taskDataPath = this.getTaskDataPath(taskId);
-    await writeFile(taskDataPath, JSON.stringify(generatedTask, null, 2));
-
-    // Also save description as markdown for easy reading
-    const descriptionPath = this.getDescriptionPath(taskId);
-    await writeFile(descriptionPath, generatedTask.story_text);
-
-    // Download and save images
-    for (const image of generatedTask.images) {
-      const imagePath = this.getImagePath(taskId, image.image_id);
-      await downloadFile(image.url, imagePath);
-      console.log(`✅ Saved image: ${image.image_id}`);
+    if (generatedTask.images.length > 0) {
+      ensureDirectoryExists(imagesDir);
     }
 
-    console.log(`✅ Task saved to: ${taskDir}`);
+    // 1. Save task description as markdown (task_description.md)
+    const descriptionPath = this.getDescriptionPath(taskId);
+    const descriptionContent = `# ${generatedTask.title}\n\n${generatedTask.story_text}`;
+    await writeFile(descriptionPath, descriptionContent);
+    console.log(`   ✅ Saved: task_description.md`);
+
+    // 2. Save solution as JSON (solution.json)
+    const solutionPath = this.getSolutionPath(taskId);
+    const solutionData = {
+      solution_steps: generatedTask.solution_steps,
+      metadata: {
+        created_at: generatedTask.created_at,
+        difficulty_level: generatedTask.metadata.difficulty_level,
+        curriculum_path: generatedTask.metadata.curriculum_path,
+      },
+    };
+    await writeFile(solutionPath, JSON.stringify(solutionData, null, 2));
+    console.log(`   ✅ Saved: solution.json`);
+
+    // 3. Save complete task data as JSON (task.json) for API responses
+    const taskDataPath = this.getTaskDataPath(taskId);
+    await writeFile(taskDataPath, JSON.stringify(generatedTask, null, 2));
+    console.log(`   ✅ Saved: task.json`);
+
+    // 4. Download and save images to images/ folder
+    if (generatedTask.images.length > 0) {
+      for (const image of generatedTask.images) {
+        const imagePath = this.getImagePath(taskId, image.image_id);
+        await downloadFile(image.url, imagePath);
+        console.log(`   ✅ Saved: images/${image.image_id}.png`);
+      }
+    }
+
     return taskDir;
   }
 
