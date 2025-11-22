@@ -1,0 +1,792 @@
+{
+  "hero_personalities": [
+    {
+      "id": "analytical",
+      "name": "Analytical",
+      "traits": [
+        "logical",
+        "methodical",
+        "data-driven",
+        "precise",
+        "systematic"
+      ]
+    },
+    {
+      "id": "adventurous",
+      "name": "Adventurous",
+      "traits": [
+        "daring",
+        "bold",
+        "thrill-seeking",
+        "explorative",
+        "courageous"
+      ]
+    },
+    {
+      "id": "artistic",
+      "name": "Artistic",
+      "traits": [
+        "creative",
+        "expressive",
+        "imaginative",
+        "aesthetic",
+        "unconventional"
+      ]
+    },
+    {
+      "id": "competitive",
+      "name": "Competitive",
+      "traits": [
+        "driven",
+        "ambitious",
+        "goal-oriented",
+        "determined",
+        "achievement-focused"
+      ]
+    },
+    {
+      "id": "compassionate",
+      "name": "Compassionate",
+      "traits": ["empathetic", "caring", "kind", "altruistic", "helping"]
+    },
+    {
+      "id": "curious",
+      "name": "Curious",
+      "traits": [
+        "inquisitive",
+        "questioning",
+        "exploring",
+        "learning-oriented",
+        "wonder-filled"
+      ]
+    },
+    {
+      "id": "diplomatic",
+      "name": "Diplomatic",
+      "traits": [
+        "tactful",
+        "mediating",
+        "peacemaking",
+        "negotiating",
+        "balanced"
+      ]
+    },
+    {
+      "id": "entrepreneurial",
+      "name": "Entrepreneurial",
+      "traits": [
+        "innovative",
+        "risk-taking",
+        "visionary",
+        "opportunistic",
+        "resourceful"
+      ]
+    },
+    {
+      "id": "idealistic",
+      "name": "Idealistic",
+      "traits": [
+        "principled",
+        "optimistic",
+        "visionary",
+        "reform-minded",
+        "hopeful"
+      ]
+    },
+    {
+      "id": "introverted",
+      "name": "Introverted",
+      "traits": [
+        "reflective",
+        "thoughtful",
+        "independent",
+        "observant",
+        "reserved"
+      ]
+    },
+    {
+      "id": "leader",
+      "name": "Natural Leader",
+      "traits": [
+        "commanding",
+        "inspiring",
+        "decisive",
+        "influential",
+        "responsible"
+      ]
+    },
+    {
+      "id": "maverick",
+      "name": "Maverick",
+      "traits": [
+        "rebellious",
+        "unconventional",
+        "independent",
+        "rule-breaking",
+        "individualistic"
+      ]
+    },
+    {
+      "id": "meticulous",
+      "name": "Meticulous",
+      "traits": [
+        "detail-oriented",
+        "perfectionist",
+        "thorough",
+        "organized",
+        "careful"
+      ]
+    },
+    {
+      "id": "pragmatic",
+      "name": "Pragmatic",
+      "traits": [
+        "practical",
+        "realistic",
+        "down-to-earth",
+        "sensible",
+        "efficient"
+      ]
+    },
+    {
+      "id": "resilient",
+      "name": "Resilient",
+      "traits": ["persistent", "tough", "adaptable", "enduring", "determined"]
+    },
+    {
+      "id": "romantic",
+      "name": "Romantic",
+      "traits": [
+        "passionate",
+        "emotional",
+        "idealistic",
+        "expressive",
+        "sentimental"
+      ]
+    },
+    {
+      "id": "scientific",
+      "name": "Scientific",
+      "traits": [
+        "rational",
+        "evidence-based",
+        "experimental",
+        "skeptical",
+        "investigative"
+      ]
+    },
+    {
+      "id": "spiritual",
+      "name": "Spiritual",
+      "traits": [
+        "philosophical",
+        "contemplative",
+        "wisdom-seeking",
+        "transcendent",
+        "mindful"
+      ]
+    },
+    {
+      "id": "strategic",
+      "name": "Strategic",
+      "traits": [
+        "planning",
+        "calculating",
+        "long-term thinking",
+        "tactical",
+        "chess-player"
+      ]
+    },
+    {
+      "id": "tech_savvy",
+      "name": "Tech-Savvy",
+      "traits": [
+        "digital native",
+        "innovative",
+        "adaptable",
+        "connected",
+        "forward-thinking"
+      ]
+    },
+    {
+      "id": "warrior",
+      "name": "Warrior Spirit",
+      "traits": [
+        "brave",
+        "disciplined",
+        "protective",
+        "honor-bound",
+        "combat-ready"
+      ]
+    },
+    {
+      "id": "witty",
+      "name": "Witty",
+      "traits": [
+        "humorous",
+        "quick-thinking",
+        "clever",
+        "sarcastic",
+        "entertaining"
+      ]
+    }
+  ],
+  "hero_roles": [
+    {
+      "id": "academic_researcher",
+      "name": "Academic Researcher",
+      "category": "education_research",
+      "specializations": [
+        "laboratory research",
+        "field research",
+        "data analysis",
+        "publishing"
+      ]
+    },
+    {
+      "id": "activist",
+      "name": "Activist",
+      "category": "social",
+      "specializations": [
+        "environmental",
+        "social justice",
+        "human rights",
+        "community organizing"
+      ]
+    },
+    {
+      "id": "architect",
+      "name": "Architect",
+      "category": "design",
+      "specializations": [
+        "urban planning",
+        "sustainable design",
+        "restoration",
+        "interior design"
+      ]
+    },
+    {
+      "id": "artist",
+      "name": "Artist",
+      "category": "creative",
+      "specializations": [
+        "painter",
+        "sculptor",
+        "digital artist",
+        "installation artist",
+        "street artist"
+      ]
+    },
+    {
+      "id": "astronaut",
+      "name": "Astronaut",
+      "category": "aerospace",
+      "specializations": [
+        "pilot",
+        "mission specialist",
+        "scientist",
+        "engineer"
+      ]
+    },
+    {
+      "id": "athlete",
+      "name": "Professional Athlete",
+      "category": "sports",
+      "specializations": [
+        "team sports",
+        "individual sports",
+        "extreme sports",
+        "olympian",
+        "coach"
+      ]
+    },
+    {
+      "id": "business_executive",
+      "name": "Business Executive",
+      "category": "business",
+      "specializations": [
+        "CEO",
+        "startup founder",
+        "corporate strategist",
+        "consultant"
+      ]
+    },
+    {
+      "id": "chef",
+      "name": "Chef",
+      "category": "culinary",
+      "specializations": [
+        "head chef",
+        "pastry chef",
+        "food scientist",
+        "restaurant owner"
+      ]
+    },
+    {
+      "id": "construction_worker",
+      "name": "Construction Worker",
+      "category": "trades",
+      "specializations": [
+        "foreman",
+        "heavy equipment operator",
+        "skilled tradesperson",
+        "demolition"
+      ]
+    },
+    {
+      "id": "data_scientist",
+      "name": "Data Scientist",
+      "category": "technology",
+      "specializations": [
+        "machine learning",
+        "analytics",
+        "AI researcher",
+        "statistician"
+      ]
+    },
+    {
+      "id": "detective",
+      "name": "Detective",
+      "category": "law_enforcement",
+      "specializations": [
+        "homicide",
+        "cybercrime",
+        "forensics",
+        "private investigator"
+      ]
+    },
+    {
+      "id": "diplomat",
+      "name": "Diplomat",
+      "category": "government",
+      "specializations": [
+        "ambassador",
+        "negotiator",
+        "consul",
+        "international relations"
+      ]
+    },
+    {
+      "id": "doctor",
+      "name": "Doctor/Physician",
+      "category": "healthcare",
+      "specializations": [
+        "surgeon",
+        "emergency medicine",
+        "pediatrician",
+        "researcher",
+        "specialist"
+      ]
+    },
+    {
+      "id": "engineer",
+      "name": "Engineer",
+      "category": "engineering",
+      "specializations": [
+        "civil",
+        "mechanical",
+        "electrical",
+        "software",
+        "aerospace",
+        "biomedical",
+        "environmental"
+      ]
+    },
+    {
+      "id": "entrepreneur",
+      "name": "Entrepreneur",
+      "category": "business",
+      "specializations": [
+        "startup founder",
+        "innovator",
+        "tech entrepreneur",
+        "social entrepreneur"
+      ]
+    },
+    {
+      "id": "environmentalist",
+      "name": "Environmentalist",
+      "category": "environmental",
+      "specializations": [
+        "conservationist",
+        "climate scientist",
+        "wildlife protector",
+        "sustainability expert"
+      ]
+    },
+    {
+      "id": "explorer",
+      "name": "Explorer",
+      "category": "adventure",
+      "specializations": [
+        "geographic explorer",
+        "archaeological",
+        "marine",
+        "cave explorer",
+        "urban explorer"
+      ]
+    },
+    {
+      "id": "farmer",
+      "name": "Farmer",
+      "category": "agriculture",
+      "specializations": [
+        "crop farmer",
+        "rancher",
+        "organic farmer",
+        "agricultural scientist"
+      ]
+    },
+    {
+      "id": "firefighter",
+      "name": "Firefighter",
+      "category": "emergency_services",
+      "specializations": [
+        "structural firefighting",
+        "wildland firefighting",
+        "rescue",
+        "fire investigator"
+      ]
+    },
+    {
+      "id": "journalist",
+      "name": "Journalist",
+      "category": "media",
+      "specializations": [
+        "investigative",
+        "war correspondent",
+        "sports",
+        "science",
+        "broadcast"
+      ]
+    },
+    {
+      "id": "lawyer",
+      "name": "Lawyer",
+      "category": "legal",
+      "specializations": [
+        "defense attorney",
+        "prosecutor",
+        "corporate lawyer",
+        "civil rights lawyer"
+      ]
+    },
+    {
+      "id": "librarian",
+      "name": "Librarian",
+      "category": "information",
+      "specializations": [
+        "archivist",
+        "digital librarian",
+        "research librarian",
+        "curator"
+      ]
+    },
+    {
+      "id": "marine_biologist",
+      "name": "Marine Biologist",
+      "category": "science",
+      "specializations": [
+        "oceanographer",
+        "marine conservationist",
+        "underwater researcher"
+      ]
+    },
+    {
+      "id": "mathematician",
+      "name": "Mathematician",
+      "category": "science",
+      "specializations": [
+        "pure mathematics",
+        "applied mathematics",
+        "cryptographer",
+        "actuary"
+      ]
+    },
+    {
+      "id": "mechanic",
+      "name": "Mechanic",
+      "category": "trades",
+      "specializations": [
+        "auto mechanic",
+        "aircraft mechanic",
+        "industrial mechanic"
+      ]
+    },
+    {
+      "id": "military",
+      "name": "Military Personnel",
+      "category": "military",
+      "specializations": [
+        "soldier",
+        "officer",
+        "pilot",
+        "special forces",
+        "admiral",
+        "general",
+        "medic"
+      ]
+    },
+    {
+      "id": "musician",
+      "name": "Musician",
+      "category": "creative",
+      "specializations": [
+        "performer",
+        "composer",
+        "conductor",
+        "music producer",
+        "DJ"
+      ]
+    },
+    {
+      "id": "nurse",
+      "name": "Nurse",
+      "category": "healthcare",
+      "specializations": [
+        "ER nurse",
+        "surgical nurse",
+        "pediatric nurse",
+        "nurse practitioner"
+      ]
+    },
+    {
+      "id": "paramedic",
+      "name": "Paramedic",
+      "category": "emergency_services",
+      "specializations": ["ambulance", "flight paramedic", "tactical medic"]
+    },
+    {
+      "id": "photographer",
+      "name": "Photographer",
+      "category": "creative",
+      "specializations": [
+        "photojournalist",
+        "wildlife photographer",
+        "fashion",
+        "portrait",
+        "scientific"
+      ]
+    },
+    {
+      "id": "pilot",
+      "name": "Pilot",
+      "category": "aviation",
+      "specializations": [
+        "commercial airline",
+        "military",
+        "helicopter",
+        "test pilot",
+        "cargo"
+      ]
+    },
+    {
+      "id": "politician",
+      "name": "Politician",
+      "category": "government",
+      "specializations": [
+        "mayor",
+        "senator",
+        "president",
+        "councilperson",
+        "governor"
+      ]
+    },
+    {
+      "id": "programmer",
+      "name": "Programmer/Developer",
+      "category": "technology",
+      "specializations": [
+        "software engineer",
+        "web developer",
+        "game developer",
+        "systems programmer"
+      ]
+    },
+    {
+      "id": "psychologist",
+      "name": "Psychologist",
+      "category": "healthcare",
+      "specializations": [
+        "clinical",
+        "research",
+        "counselor",
+        "therapist",
+        "behavioral scientist"
+      ]
+    },
+    {
+      "id": "rescue_worker",
+      "name": "Rescue Worker",
+      "category": "emergency_services",
+      "specializations": [
+        "mountain rescue",
+        "search and rescue",
+        "disaster response"
+      ]
+    },
+    {
+      "id": "scientist",
+      "name": "Scientist",
+      "category": "science",
+      "specializations": [
+        "physicist",
+        "chemist",
+        "biologist",
+        "geologist",
+        "astronomer",
+        "neuroscientist"
+      ]
+    },
+    {
+      "id": "social_worker",
+      "name": "Social Worker",
+      "category": "social",
+      "specializations": [
+        "child services",
+        "healthcare",
+        "community outreach",
+        "crisis intervention"
+      ]
+    },
+    {
+      "id": "teacher",
+      "name": "Teacher",
+      "category": "education",
+      "specializations": [
+        "elementary",
+        "high school",
+        "special education",
+        "tutor",
+        "professor"
+      ]
+    },
+    {
+      "id": "technician",
+      "name": "Technician",
+      "category": "trades",
+      "specializations": [
+        "electrician",
+        "electronics",
+        "HVAC",
+        "telecommunications"
+      ]
+    },
+    {
+      "id": "trader",
+      "name": "Trader/Investor",
+      "category": "finance",
+      "specializations": [
+        "stock trader",
+        "crypto trader",
+        "commodities",
+        "financial analyst"
+      ]
+    },
+    {
+      "id": "urban_planner",
+      "name": "Urban Planner",
+      "category": "planning",
+      "specializations": [
+        "city planning",
+        "transportation",
+        "sustainability",
+        "community development"
+      ]
+    },
+    {
+      "id": "veterinarian",
+      "name": "Veterinarian",
+      "category": "healthcare",
+      "specializations": [
+        "small animal",
+        "large animal",
+        "wildlife",
+        "research"
+      ]
+    },
+    {
+      "id": "writer",
+      "name": "Writer",
+      "category": "creative",
+      "specializations": [
+        "novelist",
+        "screenwriter",
+        "technical writer",
+        "copywriter",
+        "poet"
+      ]
+    },
+    {
+      "id": "unconventional",
+      "name": "Unconventional Roles",
+      "category": "other",
+      "specializations": [
+        "treasure hunter",
+        "stunt performer",
+        "professional gambler",
+        "bounty hunter",
+        "drifter"
+      ]
+    }
+  ],
+  "hero_ages": [
+    {
+      "id": "child",
+      "name": "Child",
+      "age_range": "8-12",
+      "characteristics": ["curious", "learning", "imaginative", "energetic"]
+    },
+    {
+      "id": "teenager",
+      "name": "Teenager",
+      "age_range": "13-19",
+      "characteristics": [
+        "coming of age",
+        "discovering identity",
+        "rebellious",
+        "passionate"
+      ]
+    },
+    {
+      "id": "young_adult",
+      "name": "Young Adult",
+      "age_range": "20-30",
+      "characteristics": [
+        "ambitious",
+        "establishing career",
+        "idealistic",
+        "energetic"
+      ]
+    },
+    {
+      "id": "adult",
+      "name": "Adult",
+      "age_range": "31-45",
+      "characteristics": ["experienced", "established", "balanced", "confident"]
+    },
+    {
+      "id": "middle_aged",
+      "name": "Middle-Aged",
+      "age_range": "46-60",
+      "characteristics": ["wise", "seasoned", "mentoring", "accomplished"]
+    },
+    {
+      "id": "senior",
+      "name": "Senior",
+      "age_range": "61-75",
+      "characteristics": ["experienced", "wise", "reflective", "mentor"]
+    },
+    {
+      "id": "elderly",
+      "name": "Elderly",
+      "age_range": "76+",
+      "characteristics": [
+        "sage",
+        "legacy-focused",
+        "wisdom keeper",
+        "traditional"
+      ]
+    }
+  ]
+}

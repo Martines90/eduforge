@@ -1,0 +1,70 @@
+{
+  "description": "Weighting system for random selection - higher numbers = more likely to be selected",
+  "default_weights": {
+    "eras": {
+      "modern_2020s": 15,
+      "near_future": 12,
+      "ancient_greece": 8,
+      "ancient_rome": 8,
+      "renaissance": 7,
+      "industrial_revolution": 10,
+      "wwii": 6,
+      "cold_war": 7,
+      "far_future": 10,
+      "post_apocalyptic": 5,
+      "_other": 5
+    },
+    "locations": {
+      "metropolis": 12,
+      "small_city": 10,
+      "space_station": 8,
+      "mountains": 9,
+      "ocean": 9,
+      "laboratory": 11,
+      "forest": 8,
+      "desert": 7,
+      "_other": 6
+    },
+    "hero_personalities": {
+      "analytical": 15,
+      "curious": 14,
+      "scientific": 13,
+      "strategic": 12,
+      "adventurous": 11,
+      "resilient": 10,
+      "_other": 8
+    },
+    "situations": {
+      "competition": 12,
+      "time_pressure": 13,
+      "problem_solving": 14,
+      "discovery": 11,
+      "rescue": 10,
+      "investigation": 12,
+      "_other": 8
+    },
+    "vibes": {
+      "suspenseful": 12,
+      "inspirational": 13,
+      "action_packed": 11,
+      "mysterious": 10,
+      "dramatic": 9,
+      "_other": 7
+    }
+  },
+  "difficulty_adjustments": {
+    "easy": {
+      "prefer_simple_situations": true,
+      "avoid_complex_themes": true,
+      "lighter_vibes": true
+    },
+    "medium": {
+      "balanced": true
+    },
+    "hard": {
+      "complex_situations": true,
+      "deeper_themes": true,
+      "challenging_stakes": true
+    }
+  }
+}

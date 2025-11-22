@@ -1,0 +1,442 @@
+{
+  "fields": [
+    {
+      "id": "agriculture",
+      "name": "Agriculture",
+      "subcategories": [
+        "farming",
+        "livestock",
+        "horticulture",
+        "aquaculture",
+        "permaculture",
+        "irrigation",
+        "crop science",
+        "sustainable farming"
+      ]
+    },
+    {
+      "id": "aerospace",
+      "name": "Aerospace",
+      "subcategories": [
+        "aviation",
+        "space exploration",
+        "satellite technology",
+        "rocket science",
+        "aerodynamics",
+        "flight control"
+      ]
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture",
+      "subcategories": [
+        "urban planning",
+        "landscape design",
+        "structural design",
+        "sustainable architecture",
+        "interior design",
+        "historic preservation"
+      ]
+    },
+    {
+      "id": "arts",
+      "name": "Arts & Entertainment",
+      "subcategories": [
+        "visual arts",
+        "performing arts",
+        "music",
+        "theater",
+        "film",
+        "dance",
+        "digital art",
+        "sculpture"
+      ]
+    },
+    {
+      "id": "automotive",
+      "name": "Automotive",
+      "subcategories": [
+        "car manufacturing",
+        "racing",
+        "electric vehicles",
+        "autonomous vehicles",
+        "mechanics",
+        "design"
+      ]
+    },
+    {
+      "id": "biotechnology",
+      "name": "Biotechnology",
+      "subcategories": [
+        "genetic engineering",
+        "bioinformatics",
+        "synthetic biology",
+        "biopharmaceuticals",
+        "agricultural biotech"
+      ]
+    },
+    {
+      "id": "construction",
+      "name": "Construction",
+      "subcategories": [
+        "civil engineering",
+        "building",
+        "demolition",
+        "renovation",
+        "infrastructure",
+        "safety"
+      ]
+    },
+    {
+      "id": "economics",
+      "name": "Economics & Finance",
+      "subcategories": [
+        "banking",
+        "investment",
+        "trading",
+        "economics",
+        "insurance",
+        "accounting",
+        "cryptocurrency",
+        "financial planning"
+      ]
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "subcategories": [
+        "teaching",
+        "curriculum development",
+        "educational technology",
+        "research",
+        "training",
+        "tutoring"
+      ]
+    },
+    {
+      "id": "energy",
+      "name": "Energy",
+      "subcategories": [
+        "renewable energy",
+        "solar power",
+        "wind power",
+        "nuclear energy",
+        "oil and gas",
+        "energy storage",
+        "hydroelectric"
+      ]
+    },
+    {
+      "id": "environmental",
+      "name": "Environmental Science",
+      "subcategories": [
+        "climate science",
+        "conservation",
+        "ecology",
+        "waste management",
+        "pollution control",
+        "sustainability"
+      ]
+    },
+    {
+      "id": "fashion",
+      "name": "Fashion & Textiles",
+      "subcategories": [
+        "design",
+        "manufacturing",
+        "retail",
+        "modeling",
+        "fashion journalism",
+        "textile engineering"
+      ]
+    },
+    {
+      "id": "food_beverage",
+      "name": "Food & Beverage",
+      "subcategories": [
+        "culinary arts",
+        "food science",
+        "restaurants",
+        "brewing",
+        "nutrition",
+        "food safety",
+        "supply chain"
+      ]
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare & Medicine",
+      "subcategories": [
+        "surgery",
+        "diagnostics",
+        "nursing",
+        "pharmacy",
+        "medical research",
+        "public health",
+        "mental health",
+        "emergency medicine"
+      ]
+    },
+    {
+      "id": "hospitality",
+      "name": "Hospitality & Tourism",
+      "subcategories": [
+        "hotels",
+        "restaurants",
+        "travel",
+        "event planning",
+        "cruise industry",
+        "theme parks"
+      ]
+    },
+    {
+      "id": "information_technology",
+      "name": "Information Technology",
+      "subcategories": [
+        "software development",
+        "cybersecurity",
+        "data science",
+        "cloud computing",
+        "networking",
+        "IT support",
+        "database management"
+      ]
+    },
+    {
+      "id": "artificial_intelligence",
+      "name": "Artificial Intelligence",
+      "subcategories": [
+        "machine learning",
+        "deep learning",
+        "natural language processing",
+        "computer vision",
+        "robotics AI",
+        "AI ethics"
+      ]
+    },
+    {
+      "id": "law_justice",
+      "name": "Law & Justice",
+      "subcategories": [
+        "criminal law",
+        "civil law",
+        "international law",
+        "law enforcement",
+        "judiciary",
+        "legal research",
+        "human rights"
+      ]
+    },
+    {
+      "id": "logistics",
+      "name": "Logistics & Supply Chain",
+      "subcategories": [
+        "shipping",
+        "warehousing",
+        "inventory management",
+        "freight",
+        "last-mile delivery",
+        "supply chain optimization"
+      ]
+    },
+    {
+      "id": "manufacturing",
+      "name": "Manufacturing",
+      "subcategories": [
+        "production",
+        "quality control",
+        "automation",
+        "assembly",
+        "lean manufacturing",
+        "industrial design",
+        "3D printing"
+      ]
+    },
+    {
+      "id": "marine",
+      "name": "Marine & Maritime",
+      "subcategories": [
+        "shipping",
+        "naval",
+        "oceanography",
+        "marine biology",
+        "underwater exploration",
+        "fishing industry"
+      ]
+    },
+    {
+      "id": "media_communications",
+      "name": "Media & Communications",
+      "subcategories": [
+        "journalism",
+        "broadcasting",
+        "public relations",
+        "advertising",
+        "social media",
+        "content creation",
+        "podcasting"
+      ]
+    },
+    {
+      "id": "military_defense",
+      "name": "Military & Defense",
+      "subcategories": [
+        "armed forces",
+        "intelligence",
+        "defense technology",
+        "strategy",
+        "peacekeeping",
+        "veterans affairs"
+      ]
+    },
+    {
+      "id": "mining_resources",
+      "name": "Mining & Natural Resources",
+      "subcategories": [
+        "extraction",
+        "mineral processing",
+        "geology",
+        "surveying",
+        "resource management",
+        "safety"
+      ]
+    },
+    {
+      "id": "philosophy",
+      "name": "Philosophy",
+      "subcategories": [
+        "ethics",
+        "logic",
+        "metaphysics",
+        "epistemology",
+        "political philosophy",
+        "aesthetics"
+      ]
+    },
+    {
+      "id": "real_estate",
+      "name": "Real Estate",
+      "subcategories": [
+        "property development",
+        "real estate sales",
+        "property management",
+        "appraisal",
+        "commercial real estate"
+      ]
+    },
+    {
+      "id": "retail",
+      "name": "Retail & E-commerce",
+      "subcategories": [
+        "sales",
+        "merchandising",
+        "customer service",
+        "online retail",
+        "inventory",
+        "marketing"
+      ]
+    },
+    {
+      "id": "robotics",
+      "name": "Robotics",
+      "subcategories": [
+        "industrial robotics",
+        "service robots",
+        "drones",
+        "automation",
+        "humanoid robots",
+        "surgical robots"
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "subcategories": [
+        "physical security",
+        "cybersecurity",
+        "private security",
+        "surveillance",
+        "crisis management"
+      ]
+    },
+    {
+      "id": "social_services",
+      "name": "Social Services",
+      "subcategories": [
+        "social work",
+        "community development",
+        "non-profit",
+        "counseling",
+        "humanitarian aid",
+        "welfare"
+      ]
+    },
+    {
+      "id": "sports_recreation",
+      "name": "Sports & Recreation",
+      "subcategories": [
+        "professional sports",
+        "coaching",
+        "sports medicine",
+        "fitness",
+        "outdoor recreation",
+        "esports"
+      ]
+    },
+    {
+      "id": "telecommunications",
+      "name": "Telecommunications",
+      "subcategories": [
+        "mobile networks",
+        "internet infrastructure",
+        "satellite communications",
+        "5G/6G",
+        "telecom equipment"
+      ]
+    },
+    {
+      "id": "transportation",
+      "name": "Transportation",
+      "subcategories": [
+        "public transit",
+        "aviation",
+        "railways",
+        "shipping",
+        "ride-sharing",
+        "traffic management"
+      ]
+    },
+    {
+      "id": "anthropology",
+      "name": "Anthropology",
+      "subcategories": [
+        "cultural anthropology",
+        "archaeology",
+        "forensic anthropology",
+        "linguistic anthropology"
+      ]
+    },
+    {
+      "id": "psychology",
+      "name": "Psychology",
+      "subcategories": [
+        "clinical psychology",
+        "behavioral psychology",
+        "cognitive psychology",
+        "developmental psychology",
+        "research"
+      ]
+    },
+    {
+      "id": "space_exploration",
+      "name": "Space Exploration",
+      "subcategories": [
+        "astronautics",
+        "space stations",
+        "planetary science",
+        "astrobiology",
+        "space colonization"
+      ]
+    }
+  ]
+}
