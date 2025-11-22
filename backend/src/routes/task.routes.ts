@@ -9,29 +9,70 @@ const taskController = new TaskController();
  * /generate-task:
  *   post:
  *     summary: Generate a new educational math task
- *     description: Generates a new task with AI-powered description (using GPT-4o) and educational images (using DALL-E-3). The task is saved to storage with a unique ID.
+ *     description: |
+ *       Generates a comprehensive educational math task with AI-powered description (using GPT-4o)
+ *       and optional educational images (using DALL-E-3). The task is configured based on curriculum
+ *       path, target audience, difficulty level, educational model, and precision settings.
  *     tags: [Tasks]
  *     requestBody:
- *       description: Optional parameters for task generation
- *       required: false
+ *       description: Comprehensive configuration for task generation
+ *       required: true
  *       content:
  *         application/json:
  *           schema:
  *             $ref: '#/components/schemas/GenerateTaskRequest'
  *           examples:
- *             default:
- *               summary: Generate task with defaults
- *               value: {}
- *             withTopic:
- *               summary: Generate task with specific topic
+ *             basicAlgebra:
+ *               summary: Basic algebra task for mixed group
  *               value:
- *                 topic: "Ancient Roman architecture and engineering"
- *                 numImages: 2
- *             multipleImages:
- *               summary: Generate task with multiple images
+ *                 curriculum_path: "math:grade_9_10:algebra:linear_equations:solving_basic_equations"
+ *                 country_code: "US"
+ *                 target_group: "mixed"
+ *                 difficulty_level: "medium"
+ *                 educational_model: "secular"
+ *                 number_of_images: 2
+ *                 display_template: "modern"
+ *                 precision_settings:
+ *                   constant_precision: 2
+ *                   intermediate_precision: 4
+ *                   final_answer_precision: 2
+ *                   use_exact_values: false
+ *                 custom_keywords: []
+ *                 template_id: ""
+ *             advancedGeometry:
+ *               summary: Advanced geometry with custom keywords
  *               value:
- *                 topic: "Renaissance mathematics"
- *                 numImages: 3
+ *                 curriculum_path: "math:grade_11_12:geometry:circles:arc_length"
+ *                 country_code: "GB"
+ *                 target_group: "boys"
+ *                 difficulty_level: "hard"
+ *                 educational_model: "traditional"
+ *                 number_of_images: 1
+ *                 display_template: "classic"
+ *                 precision_settings:
+ *                   constant_precision: 4
+ *                   intermediate_precision: 6
+ *                   final_answer_precision: 3
+ *                   use_exact_values: true
+ *                 custom_keywords: ["Renaissance", "architecture", "astronomy"]
+ *                 template_id: ""
+ *             noImages:
+ *               summary: Text-only task
+ *               value:
+ *                 curriculum_path: "math:grade_7_8:statistics:mean_median_mode"
+ *                 country_code: "HU"
+ *                 target_group: "girls"
+ *                 difficulty_level: "easy"
+ *                 educational_model: "progressive"
+ *                 number_of_images: 0
+ *                 display_template: "minimal"
+ *                 precision_settings:
+ *                   constant_precision: 2
+ *                   intermediate_precision: 3
+ *                   final_answer_precision: 1
+ *                   use_exact_values: false
+ *                 custom_keywords: ["sports", "music"]
+ *                 template_id: ""
  *     responses:
  *       201:
  *         description: Task successfully generated
@@ -39,6 +80,12 @@ const taskController = new TaskController();
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Task'
+ *       400:
+ *         description: Invalid request parameters
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       500:
  *         $ref: '#/components/responses/InternalServerError'
  */

@@ -79,21 +79,128 @@ const swaggerDefinition = {
           },
         },
       },
+      PrecisionSettings: {
+        type: "object",
+        required: [
+          "constant_precision",
+          "intermediate_precision",
+          "final_answer_precision",
+        ],
+        properties: {
+          constant_precision: {
+            type: "integer",
+            description:
+              "Precision for constants like π (e.g., 2 for 3.14, 4 for 3.1416)",
+            example: 2,
+            minimum: 0,
+            maximum: 10,
+          },
+          intermediate_precision: {
+            type: "integer",
+            description: "Precision for intermediate calculations",
+            example: 4,
+            minimum: 0,
+            maximum: 10,
+          },
+          final_answer_precision: {
+            type: "integer",
+            description: "Precision for final answer",
+            example: 2,
+            minimum: 0,
+            maximum: 10,
+          },
+          use_exact_values: {
+            type: "boolean",
+            description:
+              "Whether to use exact values (fractions, π symbol) or decimals",
+            example: false,
+            default: false,
+          },
+        },
+      },
       GenerateTaskRequest: {
         type: "object",
+        required: [
+          "curriculum_path",
+          "country_code",
+          "target_group",
+          "difficulty_level",
+          "educational_model",
+          "number_of_images",
+          "display_template",
+          "precision_settings",
+        ],
         properties: {
-          topic: {
+          curriculum_path: {
             type: "string",
-            description: "Optional topic or theme for the task",
-            example: "Ancient Roman architecture and engineering",
+            description:
+              "Navigation path to the specific curriculum topic (colon-separated)",
+            example:
+              "math:grade_9_10:algebra:linear_equations:solving_basic_equations",
           },
-          numImages: {
+          country_code: {
+            type: "string",
+            description:
+              "User country/locale code - determines language and unit system",
+            example: "US",
+            pattern: "^[A-Z]{2}$",
+          },
+          target_group: {
+            type: "string",
+            description: "Target audience gender specification",
+            enum: ["boys", "girls", "mixed"],
+            example: "mixed",
+          },
+          difficulty_level: {
+            type: "string",
+            description: "Task difficulty level",
+            enum: ["easy", "medium", "hard"],
+            example: "medium",
+          },
+          educational_model: {
+            type: "string",
+            description: "Educational philosophy/approach",
+            enum: [
+              "secular",
+              "conservative",
+              "traditional",
+              "liberal",
+              "progressive",
+              "religious_christian",
+              "religious_islamic",
+              "religious_jewish",
+              "montessori",
+              "waldorf",
+            ],
+            example: "secular",
+          },
+          number_of_images: {
             type: "integer",
-            description: "Number of images to generate (1-5)",
-            minimum: 1,
-            maximum: 5,
-            default: 2,
+            description: "Number of illustration images to generate",
+            enum: [0, 1, 2],
             example: 2,
+          },
+          display_template: {
+            type: "string",
+            description: "Display template for task layout",
+            enum: ["classic", "modern", "comic", "minimal", "illustrated"],
+            example: "modern",
+          },
+          precision_settings: {
+            $ref: "#/components/schemas/PrecisionSettings",
+          },
+          custom_keywords: {
+            type: "array",
+            description: "Optional custom keywords for story inspiration",
+            items: {
+              type: "string",
+            },
+            example: ["Renaissance", "architecture", "trade"],
+          },
+          template_id: {
+            type: "string",
+            description: "Optional template ID if user has saved templates",
+            example: "template_abc123...",
           },
         },
       },

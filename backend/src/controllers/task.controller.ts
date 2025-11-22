@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { TaskGeneratorService } from "../services/task-generator.service";
 import { TaskStorageService } from "../services/task-storage.service";
+import { TaskGeneratorRequest } from "../types";
 
 export class TaskController {
   private taskGenerator: TaskGeneratorService;
@@ -13,30 +14,27 @@ export class TaskController {
 
   /**
    * POST /generate-task
-   * Generates a new task with description and images
+   * Generates a new task with description and images based on comprehensive configuration
    */
   generateTask = async (
-    req: Request,
+    req: Request<{}, {}, TaskGeneratorRequest>,
     res: Response,
     next: NextFunction
   ): Promise<void> => {
     try {
-      const { topic, numImages } = req.body;
-
-      // Validate numImages if provided
-      const imageCount =
-        numImages && !isNaN(parseInt(numImages))
-          ? Math.min(Math.max(parseInt(numImages), 1), 5)
-          : 2;
+      const requestData: TaskGeneratorRequest = req.body;
 
       console.log("📥 Request to generate task");
-      if (topic) {
-        console.log(`   Topic: ${topic}`);
-      }
-      console.log(`   Images: ${imageCount}\n`);
+      console.log(`   Curriculum: ${requestData.curriculum_path}`);
+      console.log(`   Country: ${requestData.country_code}`);
+      console.log(`   Target Group: ${requestData.target_group}`);
+      console.log(`   Difficulty: ${requestData.difficulty_level}`);
+      console.log(`   Model: ${requestData.educational_model}`);
+      console.log(`   Images: ${requestData.number_of_images}`);
+      console.log(`   Template: ${requestData.display_template}\n`);
 
-      // Generate the task
-      const result = await this.taskGenerator.generateTask(topic, imageCount);
+      // Generate the task with comprehensive configuration
+      const result = await this.taskGenerator.generateTask(requestData);
 
       // Return the task data
       res.status(201).json({

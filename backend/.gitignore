@@ -1,5 +1,31 @@
+# Environment variables
 /.env
 
+# Dependencies
 node_modules
 
+# Build output
+/dist
+
+# Storage (generated files)
 /storage
+
+# Output directory
+/output
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
