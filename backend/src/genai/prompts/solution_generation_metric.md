@@ -51,7 +51,22 @@ Each step must include:
 - Intermediate calculation precision: {INTERMEDIATE_PRECISION} decimal places
 - Final answer precision: {FINAL_ANSWER_PRECISION} decimal places
 
-### 5. Student-Friendly Language
+### 5. Number Formatting and Units
+
+**METRIC SYSTEM** - The task story uses metric units and formatting. Match it exactly:
+
+**Number Formatting (CRITICAL):**
+- Decimal separator: **comma** → `12,7 km`, `3,14159`
+- Thousands separator: **space** → `1 250 000`, `112 233`
+
+**Units:** km, m, cm, kg, g, L, mL, °C, km/h, m²
+
+**Rules:**
+- Always include units in every calculation and result
+- Use comma for decimals and space for thousands throughout ALL steps
+- Match the metric units used in the problem statement exactly
+
+### 6. Student-Friendly Language
 
 - Write as if explaining to a student who understands the topic but needs guidance
 - Use clear, concise language
@@ -83,16 +98,6 @@ Provide your solution as a JSON object with the following structure:
   "key_concepts": ["Concept 1 used", "Concept 2 used"]
 }
 ```
-
-## Example Step Structure
-
-**Step 3: Calculate the Total Distance**
-
-- **Description:** Now that we know the speed and time, we can find the total distance traveled using the distance formula.
-- **Formula:** `d = v \cdot t`
-- **Calculation:** `d = 15 \text{ m/s} \cdot 8 \text{ s} = 120 \text{ m}`
-- **Result:** 120 meters
-- **Explanation:** This tells us that the hero in our story needs to cover 120 meters to reach their destination in time.
 
 ## Quality Checklist
 

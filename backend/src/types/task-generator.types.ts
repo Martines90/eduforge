@@ -105,11 +105,10 @@ export interface TaskGeneratorResponse {
 export interface GeneratedTask {
   // Task content
   title: string;
-  story_chunks: string[]; // Array of story paragraphs
+  story_chunks: string[]; // Array of story paragraphs (use **bold** for key values)
   story_text: string; // Full story (joined chunks) - for backward compatibility
-  key_values?: Record<string, string>; // Key numerical values with units
-  question: string; // The specific question being asked
-  expected_answer_format?: string; // Format description for the answer
+  questions: string[]; // 1-2 questions (use 2 only when truly warranted)
+  expected_answer_formats?: string[]; // Format descriptions for each answer
 
   // Solution
   solution_steps: SolutionStep[];

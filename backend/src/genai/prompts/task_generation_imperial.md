@@ -126,44 +126,71 @@ Return your response in the following JSON structure:
   "title": "Short, engaging title that captures the scenario (5-10 words)",
   "story_chunks": [
     "First paragraph: Opening hook with time/place/role (50-100 words)",
-    "Second paragraph: Situation development with Element A and embedded data (100-150 words)",
-    "Third paragraph: Element B, tension, constraints (80-120 words)",
-    "Fourth paragraph: The challenge and specific question (40-70 words)"
+    "Second paragraph: Situation development with Element A and embedded data (100-150 words). Use **bold** for key numerical values.",
+    "Third paragraph: Element B, tension, constraints (80-120 words). Use **bold** for key numerical values.",
+    "Fourth paragraph: The challenge and specific questions (40-70 words)"
   ],
-  "key_values": {
-    "value1_name": "value1_with_unit",
-    "value2_name": "value2_with_unit"
-  },
-  "question": "Clear, specific question asking for quantitative answer",
-  "expected_answer_format": "Description of what format the answer should be in (e.g., 'distance in kilometers to 2 decimal places')"
+  "questions": [
+    "Question A: Clear, specific question asking for quantitative answer",
+    "Question B: Optional second question (ONLY if the problem naturally requires it)"
+  ],
+  "expected_answer_formats": [
+    "Format for answer A (e.g., 'distance in kilometers to 2 decimal places')",
+    "Format for answer B (optional, only if there's a second question)"
+  ]
 }
 ```
 
-**Example Response:**
+**IMPORTANT**: Use markdown **bold** formatting (double asterisks) to highlight key numerical values and important data points in your story. For example: "working at a pace of **0.41 miles per week**" or "completed **8.3 miles**".
 
-```json
-{
-  "title": "The Great Canal Project of 1855",
-  "story_chunks": [
-    "As chief engineer for the Erie Extension Canal in March 1855, you oversee the final phase connecting Lake Michigan to the Illinois River. With spring flooding imminent, precise calculations become critical.",
-    "Your northern crew has excavated 12.7 miles at a steady pace of 0.41 miles per week, working through frozen ground since January. The terrain is relatively flat, allowing for consistent progress despite harsh conditions.",
-    "Meanwhile, the southern team tackles more challenging rocky terrain, having completed 8.3 miles at just 0.29 miles per week. Recent geological surveys revealed unexpected limestone deposits, further slowing their advance.",
-    "To coordinate the ceremonial meeting point by April 30th, you must determine the exact date when both crews will converge. How many weeks from today will the teams meet, assuming their current rates continue?"
-  ],
-  "key_values": {
-    "northern_progress": "12.7 miles",
-    "northern_rate": "0.41 miles/week",
-    "southern_progress": "8.3 miles",
-    "southern_rate": "0.29 miles/week"
-  },
-  "question": "How many weeks from today will the teams meet, assuming their current rates continue?",
-  "expected_answer_format": "Number of weeks as a decimal to 1 decimal place"
-}
-```
+**IMPORTANT NOTES ON QUESTIONS:**
+- **Default: Use 1 question** - Most problems should have a single, focused question
+- **Maximum: 2 questions (A and B)** - Only use 2 questions when:
+  - The problem naturally has two distinct parts that build on each other
+  - Both questions are essential to fully exploring the scenario
+  - The second question adds pedagogical value (not just busywork)
+- **DO NOT force multiple questions** - If the problem works well with one question, use one question
+- **Questions should be labeled** as "A)" and "B)" in the last paragraph if there are 2
+
+---
+
+## MEASUREMENT SYSTEM AND NUMBER FORMATTING
+
+**IMPERIAL SYSTEM** - Use these units and formatting conventions:
+
+**Units to Use:**
+- Distance: miles (mi), yards (yd), feet (ft), inches (in)
+- Weight: pounds (lb), ounces (oz), tons
+- Volume: gallons (gal), quarts (qt), pints (pt), fluid ounces (fl oz)
+- Temperature: Fahrenheit (°F)
+- Speed: mph, ft/s
+- Area: square feet (ft²), acres
+
+**Number Formatting (CRITICAL):**
+- Decimal separator: **period** → `12.7 miles` (NOT 12,7)
+- Thousands separator: **comma** → `112,233,222` (NOT 112 233 222)
+
+**Examples:**
+- `3.98 miles` (three point nine eight miles)
+- `1,250,000 people` (one million two hundred fifty thousand)
+- `0.05 seconds` (zero point zero five)
+- `15.3 pounds` (fifteen point three pounds)
+
+**Rules:**
+- Use imperial system throughout the entire task
+- Match decimal precision to real-world measurement practices
+- Numbers should flow naturally in sentences
+- Always include units - never write bare numbers
+- Choose units that professionals would actually use in that scenario
+
+---
 
 Remember:
 - Return ONLY the JSON object, no markdown code blocks, no explanatory text
 - All story chunks should be complete paragraphs with proper flow
 - Embed all numerical data naturally within the narrative
+- Use **bold** markdown formatting to highlight key numerical values
 - Make the title compelling and era-specific
-- Ensure the question is clear and unambiguous
+- Default to 1 question unless 2 questions genuinely enhance the problem
+- Ensure each question is clear and unambiguous
+- If using 2 questions, label them as A) and B) in the story

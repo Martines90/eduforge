@@ -12,6 +12,7 @@ import {
   generateTaskId,
   generateImageId,
   generateStoryInspiration,
+  getMeasurementSystem,
 } from "../utils";
 import { TextGeneratorService } from "./text-generator.service";
 import { ImageGeneratorService } from "./image-generator.service";
@@ -21,17 +22,11 @@ export class TaskGeneratorService {
   private textGenerator: TextGeneratorService;
   private imageGenerator: ImageGeneratorService;
   private taskStorage: TaskStorageService;
-  private taskPromptTemplate: string;
-  private solutionPromptTemplate: string;
 
   constructor() {
     this.textGenerator = new TextGeneratorService();
     this.imageGenerator = new ImageGeneratorService();
     this.taskStorage = new TaskStorageService();
-    this.taskPromptTemplate = this.loadPromptTemplate("task_generation.md");
-    this.solutionPromptTemplate = this.loadPromptTemplate(
-      "solution_generation.md"
-    );
   }
 
   /**
@@ -52,7 +47,10 @@ export class TaskGeneratorService {
    * Builds a comprehensive prompt for task story generation
    */
   private buildTaskPrompt(request: TaskGeneratorRequest): string {
-    let prompt = this.taskPromptTemplate;
+    // Load the appropriate template based on measurement system
+    const measurementSystem = getMeasurementSystem(request.country_code);
+    const templateName = `task_generation_${measurementSystem}.md`;
+    let prompt = this.loadPromptTemplate(templateName);
 
     prompt += `\n\n## TASK CONFIGURATION\n`;
     prompt += `Curriculum Path: ${request.curriculum_path}\n`;
@@ -105,7 +103,10 @@ export class TaskGeneratorService {
     taskStory: string,
     request: TaskGeneratorRequest
   ): string {
-    let prompt = this.solutionPromptTemplate;
+    // Load the appropriate template based on measurement system
+    const measurementSystem = getMeasurementSystem(request.country_code);
+    const templateName = `solution_generation_${measurementSystem}.md`;
+    let prompt = this.loadPromptTemplate(templateName);
 
     // Replace placeholders in the solution template
     prompt = prompt.replace("{TASK_STORY_TEXT}", taskStory);
@@ -225,23 +226,42 @@ export class TaskGeneratorService {
     title: string;
     story_chunks: string[];
     story_text: string;
-    key_values?: Record<string, string>;
-    question: string;
-    expected_answer_format?: string;
+    questions: string[];
+    expected_answer_formats?: string[];
   } {
     try {
       // Try to extract JSON from the response
       const jsonMatch = taskText.match(/\{[\s\S]*\}/);
       if (jsonMatch) {
         const taskData = JSON.parse(jsonMatch[0]);
-        if (taskData.title && taskData.story_chunks && taskData.question) {
+
+        // Support both old (question) and new (questions) formats
+        let questions: string[] = [];
+        if (taskData.questions && Array.isArray(taskData.questions)) {
+          questions = taskData.questions;
+        } else if (taskData.question) {
+          // Backward compatibility: convert single question to array
+          questions = [taskData.question];
+        }
+
+        let expected_answer_formats: string[] | undefined = undefined;
+        if (
+          taskData.expected_answer_formats &&
+          Array.isArray(taskData.expected_answer_formats)
+        ) {
+          expected_answer_formats = taskData.expected_answer_formats;
+        } else if (taskData.expected_answer_format) {
+          // Backward compatibility: convert single format to array
+          expected_answer_formats = [taskData.expected_answer_format];
+        }
+
+        if (taskData.title && taskData.story_chunks && questions.length > 0) {
           return {
             title: taskData.title,
             story_chunks: taskData.story_chunks,
             story_text: taskData.story_chunks.join("\n\n"), // Join chunks for backward compatibility
-            key_values: taskData.key_values,
-            question: taskData.question,
-            expected_answer_format: taskData.expected_answer_format,
+            questions,
+            expected_answer_formats,
           };
         }
       }
@@ -255,7 +275,7 @@ export class TaskGeneratorService {
       title,
       story_chunks: [taskText],
       story_text: taskText,
-      question: "Solve the problem presented above.",
+      questions: ["Solve the problem presented above."],
     };
   }
 
@@ -368,9 +388,8 @@ export class TaskGeneratorService {
       title: taskData.title,
       story_chunks: taskData.story_chunks,
       story_text: taskData.story_text,
-      key_values: taskData.key_values,
-      question: taskData.question,
-      expected_answer_format: taskData.expected_answer_format,
+      questions: taskData.questions,
+      expected_answer_formats: taskData.expected_answer_formats,
       solution_steps: solutionData.solution_steps,
       final_answer: solutionData.final_answer,
       verification: solutionData.verification,
