@@ -13,6 +13,7 @@ import {
   generateImageId,
   generateStoryInspiration,
   getMeasurementSystem,
+  getLanguageForCountry,
 } from "../utils";
 import { TextGeneratorService } from "./text-generator.service";
 import { ImageGeneratorService } from "./image-generator.service";
@@ -52,9 +53,14 @@ export class TaskGeneratorService {
     const templateName = `task_generation_${measurementSystem}.md`;
     let prompt = this.loadPromptTemplate(templateName);
 
+    // Get language for the country
+    const language = getLanguageForCountry(request.country_code);
+
     prompt += `\n\n## TASK CONFIGURATION\n`;
+    prompt += `**IMPORTANT: Generate the entire task in ${language}.**\n\n`;
     prompt += `Curriculum Path: ${request.curriculum_path}\n`;
     prompt += `Country/Locale: ${request.country_code}\n`;
+    prompt += `Language: ${language}\n`;
     prompt += `Target Audience: ${request.target_group}\n`;
     prompt += `Difficulty Level: ${request.difficulty_level}\n`;
     prompt += `Educational Model: ${request.educational_model}\n`;
@@ -86,7 +92,8 @@ export class TaskGeneratorService {
 
     // Add specific instructions based on configuration
     prompt += `\n## SPECIFIC INSTRUCTIONS\n`;
-    prompt += `- Adapt language and cultural references for ${request.country_code}\n`;
+    prompt += `- **Write everything in ${language}** - title, story, questions, all text\n`;
+    prompt += `- Adapt cultural references appropriate for ${request.country_code}\n`;
     prompt += `- Create content appropriate for ${request.target_group}\n`;
     prompt += `- Follow ${request.educational_model} educational principles\n`;
     prompt += `- Design for ${request.display_template} display template\n`;
@@ -107,6 +114,14 @@ export class TaskGeneratorService {
     const measurementSystem = getMeasurementSystem(request.country_code);
     const templateName = `solution_generation_${measurementSystem}.md`;
     let prompt = this.loadPromptTemplate(templateName);
+
+    // Get language for the country
+    const language = getLanguageForCountry(request.country_code);
+
+    // Add language instruction at the top
+    prompt =
+      `**CRITICAL: Generate the entire solution in ${language}. All step descriptions, explanations, formulas, and text must be in ${language}.**\n\n` +
+      prompt;
 
     // Replace placeholders in the solution template
     prompt = prompt.replace("{TASK_STORY_TEXT}", taskStory);
