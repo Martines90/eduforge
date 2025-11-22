@@ -8,7 +8,7 @@ import {
   TaskImage,
   TaskMetadata,
 } from "../types";
-import { generateTaskId, generateImageId } from "../utils";
+import { generateTaskId, generateImageId, generateStoryInspiration } from "../utils";
 import { TextGeneratorService } from "./text-generator.service";
 import { ImageGeneratorService } from "./image-generator.service";
 import { TaskStorageService } from "./task-storage.service";
@@ -69,9 +69,18 @@ export class TaskGeneratorService {
 
     // Add custom keywords if provided
     if (request.custom_keywords && request.custom_keywords.length > 0) {
-      prompt += `\n## STORY INSPIRATION KEYWORDS\n`;
-      prompt += `Incorporate these themes/keywords: ${request.custom_keywords.join(", ")}\n`;
+      prompt += `\n## CUSTOM KEYWORDS\n`;
+      prompt += `User-provided themes/keywords: ${request.custom_keywords.join(", ")}\n`;
     }
+
+    // Generate and add story inspiration elements using helper
+    const inspiration = generateStoryInspiration(
+      request.difficulty_level,
+      request.target_group,
+      request.custom_keywords
+    );
+
+    prompt += inspiration.promptAdditions;
 
     // Add specific instructions based on configuration
     prompt += `\n## SPECIFIC INSTRUCTIONS\n`;
@@ -80,6 +89,7 @@ export class TaskGeneratorService {
     prompt += `- Follow ${request.educational_model} educational principles\n`;
     prompt += `- Design for ${request.display_template} display template\n`;
     prompt += `- Generate ONLY the task story and question, NOT the solution\n`;
+    prompt += `- Weave the story inspiration elements naturally into the narrative\n`;
 
     return prompt;
   }
