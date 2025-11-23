@@ -327,7 +327,7 @@ If task generation takes too long, it might be due to:
 ## Future Endpoints (Placeholder)
 
 The collection includes placeholder requests for future functionality:
-- `GET /api/tasks/:taskId` - Retrieve a specific task
-- `GET /api/tasks` - List all tasks for a curriculum location
+- `GET /tasks/:taskId` - Retrieve a specific task
+- `GET /tasks` - List all tasks for a curriculum location
 
 These will be implemented in future versions.
