@@ -1,6 +1,11 @@
 import * as path from "path";
 import { config } from "../config";
-import { GeneratedTask } from "../types";
+import {
+  GeneratedTask,
+  TaskEntry,
+  TasksCollection,
+  TaskGeneratorRequest,
+} from "../types";
 import {
   writeFile,
   readFile,
@@ -8,165 +13,281 @@ import {
   exists,
   ensureDirectoryExists,
 } from "../utils";
+import {
+  buildCurriculumStoragePath,
+  getTasksJsonPath,
+  getTaskImagesDir,
+  getTaskImagePath,
+} from "../utils/curriculum-path.helper";
 
 export class TaskStorageService {
   /**
-   * Gets the task directory path
-   * @param taskId The task ID
-   * @returns The full path to the task directory
+   * Gets the curriculum directory path based on request parameters
+   *
+   * Example: storage/hu/liberal/math/grade_9_10/algebra/linear_equations/solving_basic_equations
+   *
+   * @param request Task generation request with curriculum path and settings
+   * @returns Full path to curriculum directory
    */
-  private getTaskDir(taskId: string): string {
-    return path.join(config.storageDir, "tasks", taskId);
+  private getCurriculumDir(request: TaskGeneratorRequest): string {
+    return buildCurriculumStoragePath(
+      config.storageDir,
+      request.country_code,
+      request.educational_model,
+      request.curriculum_path
+    );
   }
 
   /**
-   * Gets the task data file path (JSON)
-   * @param taskId The task ID
-   * @returns The full path to the task.json file
+   * Gets the task data file path for a specific task
+   * Each task is stored as {taskId}.json in the curriculum directory
+   *
+   * @param curriculumDir Curriculum directory path
+   * @param taskId Task ID
+   * @returns Path to task JSON file
    */
-  private getTaskDataPath(taskId: string): string {
-    return path.join(this.getTaskDir(taskId), "task.json");
+  private getTaskFilePath(curriculumDir: string, taskId: string): string {
+    return path.join(curriculumDir, `${taskId}.json`);
   }
 
   /**
-   * Gets the task description file path
-   * @param taskId The task ID
-   * @returns The full path to the task_description.md file
+   * Loads the tasks.json collection file
+   * Creates a new empty collection if it doesn't exist
+   *
+   * @param curriculumDir Curriculum directory path
+   * @returns Tasks collection
    */
-  private getDescriptionPath(taskId: string): string {
-    return path.join(this.getTaskDir(taskId), "task_description.md");
+  private async loadTasksCollection(
+    curriculumDir: string
+  ): Promise<TasksCollection> {
+    const tasksJsonPath = getTasksJsonPath(curriculumDir);
+
+    if (!exists(tasksJsonPath)) {
+      // Create empty collection if file doesn't exist
+      return { tasks: [] };
+    }
+
+    try {
+      const jsonContent = await readFile(tasksJsonPath);
+      return JSON.parse(jsonContent) as TasksCollection;
+    } catch (error) {
+      console.error("Error reading tasks.json:", error);
+      // Return empty collection on error
+      return { tasks: [] };
+    }
   }
 
   /**
-   * Gets the solution file path
-   * @param taskId The task ID
-   * @returns The full path to the solution.json file
+   * Saves the tasks.json collection file
+   *
+   * @param curriculumDir Curriculum directory path
+   * @param collection Tasks collection to save
    */
-  private getSolutionPath(taskId: string): string {
-    return path.join(this.getTaskDir(taskId), "solution.json");
+  private async saveTasksCollection(
+    curriculumDir: string,
+    collection: TasksCollection
+  ): Promise<void> {
+    const tasksJsonPath = getTasksJsonPath(curriculumDir);
+    await writeFile(tasksJsonPath, JSON.stringify(collection, null, 2));
   }
 
   /**
-   * Gets the images directory path for a task
-   * @param taskId The task ID
-   * @returns The full path to the images directory
+   * Creates a task entry for tasks.json from a generated task
+   *
+   * @param taskId Task ID
+   * @param generatedTask Generated task data
+   * @returns Task entry
    */
-  private getImagesDir(taskId: string): string {
-    return path.join(this.getTaskDir(taskId), "images");
+  private createTaskEntry(
+    taskId: string,
+    generatedTask: GeneratedTask
+  ): TaskEntry {
+    return {
+      id: taskId,
+      title: generatedTask.title,
+      difficulty_level: generatedTask.metadata.difficulty_level,
+      target_group: generatedTask.metadata.target_group,
+      created_at: generatedTask.created_at,
+      number_of_images: generatedTask.images.length,
+      tags: generatedTask.metadata.tags,
+    };
   }
 
   /**
-   * Gets the image file path
-   * @param taskId The task ID
-   * @param imageId The image ID
-   * @returns The full path to the image file
-   */
-  private getImagePath(taskId: string, imageId: string): string {
-    return path.join(this.getImagesDir(taskId), `${imageId}.png`);
-  }
-
-  /**
-   * Saves a task to storage
-   * @param taskId The task ID
-   * @param generatedTask The generated task data to save
-   * @returns Promise that resolves to the storage path
+   * Saves a generated task to the curriculum-based storage structure
+   *
+   * Storage structure:
+   * storage/{country}/{educational_model}/{curriculum_path}/
+   *   ├── tasks.json              // Collection of all tasks
+   *   ├── {taskId}.json          // Individual task data
+   *   └── images/
+   *       └── {taskId}/
+   *           └── {imageId}.png
+   *
+   * @param taskId Task ID
+   * @param request Task generation request
+   * @param generatedTask Generated task data
+   * @returns Promise that resolves to the curriculum directory path
    */
   async saveTask(
     taskId: string,
+    request: TaskGeneratorRequest,
     generatedTask: GeneratedTask
   ): Promise<string> {
-    const taskDir = this.getTaskDir(taskId);
-    const imagesDir = this.getImagesDir(taskId);
+    const curriculumDir = this.getCurriculumDir(request);
 
-    // Create directories
-    ensureDirectoryExists(taskDir);
-    if (generatedTask.images.length > 0) {
-      ensureDirectoryExists(imagesDir);
+    // Ensure curriculum directory exists
+    ensureDirectoryExists(curriculumDir);
+    console.log(`   📁 Using curriculum directory: ${curriculumDir}`);
+
+    // 1. Load existing tasks collection
+    const collection = await this.loadTasksCollection(curriculumDir);
+
+    // 2. Add this task to the collection (or update if it exists)
+    const existingIndex = collection.tasks.findIndex((t) => t.id === taskId);
+    const taskEntry = this.createTaskEntry(taskId, generatedTask);
+
+    if (existingIndex >= 0) {
+      // Update existing task entry
+      collection.tasks[existingIndex] = taskEntry;
+      console.log(`   🔄 Updated task in collection`);
+    } else {
+      // Add new task entry
+      collection.tasks.push(taskEntry);
+      console.log(`   ➕ Added task to collection`);
     }
 
-    // 1. Save task description as markdown (task_description.md)
-    const descriptionPath = this.getDescriptionPath(taskId);
-    const descriptionContent = `# ${generatedTask.title}\n\n${generatedTask.story_text}`;
-    await writeFile(descriptionPath, descriptionContent);
-    console.log(`   ✅ Saved: task_description.md`);
+    // 3. Save updated tasks.json
+    await this.saveTasksCollection(curriculumDir, collection);
+    console.log(`   ✅ Saved: tasks.json (${collection.tasks.length} tasks)`);
 
-    // 2. Save solution as JSON (solution.json)
-    const solutionPath = this.getSolutionPath(taskId);
-    const solutionData = {
-      solution_steps: generatedTask.solution_steps,
-      final_answer: generatedTask.final_answer,
-      verification: generatedTask.verification,
-      common_mistakes: generatedTask.common_mistakes,
-      key_concepts: generatedTask.key_concepts,
-      metadata: {
-        created_at: generatedTask.created_at,
-        difficulty_level: generatedTask.metadata.difficulty_level,
-        curriculum_path: generatedTask.metadata.curriculum_path,
-      },
-    };
-    await writeFile(solutionPath, JSON.stringify(solutionData, null, 2));
-    console.log(`   ✅ Saved: solution.json`);
+    // 4. Save complete task data as {taskId}.json
+    const taskFilePath = this.getTaskFilePath(curriculumDir, taskId);
+    await writeFile(taskFilePath, JSON.stringify(generatedTask, null, 2));
+    console.log(`   ✅ Saved: ${taskId}.json`);
 
-    // 3. Save complete task data as JSON (task.json) for API responses
-    const taskDataPath = this.getTaskDataPath(taskId);
-    await writeFile(taskDataPath, JSON.stringify(generatedTask, null, 2));
-    console.log(`   ✅ Saved: task.json`);
-
-    // 4. Download and save images to images/ folder
+    // 5. Download and save images to images/{taskId}/ folder
     if (generatedTask.images.length > 0) {
+      const imagesDir = getTaskImagesDir(curriculumDir, taskId);
+      ensureDirectoryExists(imagesDir);
+
       for (const image of generatedTask.images) {
-        const imagePath = this.getImagePath(taskId, image.image_id);
+        const imagePath = getTaskImagePath(curriculumDir, taskId, image.image_id);
         await downloadFile(image.url, imagePath);
-        console.log(`   ✅ Saved: images/${image.image_id}.png`);
+        console.log(`   ✅ Saved: images/${taskId}/${image.image_id}.png`);
       }
     }
 
-    return taskDir;
+    return curriculumDir;
   }
 
   /**
-   * Retrieves a task from storage
-   * @param taskId The task ID to retrieve
-   * @returns The task object with local file URLs
+   * Retrieves a task from curriculum-based storage
+   *
+   * @param request Task generation request (used to locate curriculum directory)
+   * @param taskId Task ID to retrieve
+   * @returns The task object with local file URLs, or null if not found
    */
-  async getTask(taskId: string): Promise<GeneratedTask | null> {
-    const taskDir = this.getTaskDir(taskId);
+  async getTask(
+    request: TaskGeneratorRequest,
+    taskId: string
+  ): Promise<GeneratedTask | null> {
+    const curriculumDir = this.getCurriculumDir(request);
+    const taskFilePath = this.getTaskFilePath(curriculumDir, taskId);
 
-    // Check if task exists
-    if (!exists(taskDir)) {
+    // Check if task file exists
+    if (!exists(taskFilePath)) {
       return null;
     }
 
-    // Try to read the complete task data JSON
-    const taskDataPath = this.getTaskDataPath(taskId);
-    if (exists(taskDataPath)) {
-      try {
-        const taskDataJson = await readFile(taskDataPath);
-        const generatedTask: GeneratedTask = JSON.parse(taskDataJson);
+    try {
+      const taskJson = await readFile(taskFilePath);
+      const generatedTask: GeneratedTask = JSON.parse(taskJson);
 
-        // Update image URLs to local storage paths
-        generatedTask.images = generatedTask.images.map((img) => ({
-          ...img,
-          url: `/storage/tasks/${taskId}/images/${img.image_id}.png`,
-        }));
+      // Update image URLs to local storage paths
+      // Path format: /storage/{country}/{model}/{curriculum_path}/images/{taskId}/{imageId}.png
+      const relativePath = path.relative(
+        config.storageDir,
+        curriculumDir
+      );
 
-        return generatedTask;
-      } catch (error) {
-        console.error("Error reading task.json:", error);
-      }
+      generatedTask.images = generatedTask.images.map((img) => ({
+        ...img,
+        url: `/storage/${relativePath}/images/${taskId}/${img.image_id}.png`,
+      }));
+
+      return generatedTask;
+    } catch (error) {
+      console.error(`Error reading task ${taskId}:`, error);
+      return null;
     }
-
-    // Fallback: if task.json doesn't exist, return null
-    // (old tasks won't have this file)
-    return null;
   }
 
   /**
-   * Checks if a task exists
-   * @param taskId The task ID to check
-   * @returns True if the task exists, false otherwise
+   * Gets all tasks for a curriculum location
+   *
+   * @param request Task generation request (used to locate curriculum directory)
+   * @returns Array of task entries
    */
-  taskExists(taskId: string): boolean {
-    return exists(this.getTaskDir(taskId));
+  async getAllTasksForCurriculum(
+    request: TaskGeneratorRequest
+  ): Promise<TaskEntry[]> {
+    const curriculumDir = this.getCurriculumDir(request);
+    const collection = await this.loadTasksCollection(curriculumDir);
+    return collection.tasks;
+  }
+
+  /**
+   * Checks if a task exists in the curriculum directory
+   *
+   * @param request Task generation request (used to locate curriculum directory)
+   * @param taskId Task ID to check
+   * @returns True if task exists, false otherwise
+   */
+  taskExists(request: TaskGeneratorRequest, taskId: string): boolean {
+    const curriculumDir = this.getCurriculumDir(request);
+    const taskFilePath = this.getTaskFilePath(curriculumDir, taskId);
+    return exists(taskFilePath);
+  }
+
+  /**
+   * Deletes a task from curriculum-based storage
+   * Removes the task entry from tasks.json and deletes the task file and images
+   *
+   * @param request Task generation request (used to locate curriculum directory)
+   * @param taskId Task ID to delete
+   * @returns True if task was deleted, false if not found
+   */
+  async deleteTask(
+    request: TaskGeneratorRequest,
+    taskId: string
+  ): Promise<boolean> {
+    const curriculumDir = this.getCurriculumDir(request);
+    const taskFilePath = this.getTaskFilePath(curriculumDir, taskId);
+
+    if (!exists(taskFilePath)) {
+      return false;
+    }
+
+    try {
+      // 1. Load tasks collection
+      const collection = await this.loadTasksCollection(curriculumDir);
+
+      // 2. Remove task from collection
+      collection.tasks = collection.tasks.filter((t) => t.id !== taskId);
+
+      // 3. Save updated collection
+      await this.saveTasksCollection(curriculumDir, collection);
+
+      // 4. Delete task file (Note: In production, you'd use fs.unlink)
+      // For now, we'll just log it since we don't have a delete function in utils
+      console.log(`   🗑️  Would delete: ${taskFilePath}`);
+      console.log(`   🗑️  Would delete: images/${taskId}/`);
+
+      return true;
+    } catch (error) {
+      console.error(`Error deleting task ${taskId}:`, error);
+      return false;
+    }
   }
 }

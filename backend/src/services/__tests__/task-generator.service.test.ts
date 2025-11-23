@@ -105,7 +105,34 @@ describe("TaskGeneratorService - Prompt Generation", () => {
     });
 
     // Mock storage
-    mockTaskStorage.saveTask = jest.fn().mockResolvedValue("/storage/tasks/test_task_id");
+    mockTaskStorage.saveTask = jest
+      .fn()
+      .mockResolvedValue("/storage/hu/liberal/math/grade_9_10/algebra/linear_equations/solving_basic_equations");
+    mockTaskStorage.getTask = jest.fn().mockImplementation(async (request, taskId) => {
+      // Return a mock task with updated image URLs
+      return {
+        title: "Test Task Title",
+        story_chunks: ["First paragraph.", "Second paragraph."],
+        story_text: "First paragraph.\n\nSecond paragraph.",
+        questions: ["What is the answer?"],
+        expected_answer_formats: ["Number to 2 decimal places"],
+        solution_steps: [
+          { step_number: 1, title: "Step 1", description: "First step", result: "10" },
+        ],
+        final_answer: "The answer is 10",
+        images: [],
+        metadata: {
+          curriculum_path: request.curriculum_path,
+          target_group: request.target_group,
+          difficulty_level: request.difficulty_level,
+          educational_model: request.educational_model,
+          country_code: request.country_code,
+          tags: [],
+        },
+        is_editable: true,
+        created_at: new Date().toISOString(),
+      };
+    });
 
     // Create service instance
     service = new TaskGeneratorService();
@@ -280,11 +307,32 @@ describe("TaskGeneratorService - Prompt Generation", () => {
       await service.generateTask(metricRequest);
 
       expect(mockTaskStorage.saveTask).toHaveBeenCalledTimes(1);
-      const savedTask = mockTaskStorage.saveTask.mock.calls[0][1];
 
+      // Check that saveTask was called with: taskId, request, generatedTask
+      const saveTaskCall = mockTaskStorage.saveTask.mock.calls[0];
+      const taskId = saveTaskCall[0]; // First argument is taskId
+      const request = saveTaskCall[1]; // Second argument is request
+      const savedTask = saveTaskCall[2]; // Third argument is generatedTask
+
+      expect(typeof taskId).toBe("string");
+      expect(request).toEqual(metricRequest);
       expect(savedTask.title).toBe("Test Task Title");
       expect(savedTask.story_chunks).toEqual(["First paragraph.", "Second paragraph."]);
       expect(savedTask.questions).toEqual(["What is the answer?"]);
+    });
+
+    it("should retrieve task from storage after saving", async () => {
+      await service.generateTask(metricRequest);
+
+      expect(mockTaskStorage.getTask).toHaveBeenCalledTimes(1);
+
+      // Check that getTask was called with: request, taskId
+      const getTaskCall = mockTaskStorage.getTask.mock.calls[0];
+      const request = getTaskCall[0]; // First argument is request
+      const taskId = getTaskCall[1]; // Second argument is taskId
+
+      expect(request).toEqual(metricRequest);
+      expect(typeof taskId).toBe("string");
     });
   });
 

@@ -155,3 +155,33 @@ export interface TaskMetadata {
   estimated_time_minutes?: number;
   tags: string[];
 }
+
+/**
+ * Task entry in tasks.json file
+ * Lightweight reference stored in curriculum directory
+ */
+export interface TaskEntry {
+  id: string; // Task ID
+  title: string; // Task title for quick reference
+  difficulty_level: DifficultyLevel;
+  target_group: TargetGroup;
+  created_at: string; // ISO datetime
+  number_of_images: number;
+  tags: string[];
+}
+
+/**
+ * Tasks collection structure (tasks.json file)
+ */
+export interface TasksCollection {
+  tasks: TaskEntry[];
+}
+
+/**
+ * Result of task generation including storage location
+ */
+export interface TaskGenerationResult {
+  taskId: string;
+  storagePath: string; // Path to curriculum directory
+  generatedTask: GeneratedTask;
+}

@@ -416,24 +416,24 @@ export class TaskGeneratorService {
       created_at: new Date().toISOString(),
     };
 
-    // Step 4: Save task to storage (task_description.md + solution.json + images/)
-    console.log("💾 Step 4: Saving task to storage...");
-    const storagePath = await this.taskStorage.saveTask(taskId, generatedTask);
+    // Step 4: Save task to curriculum-based storage
+    console.log("💾 Step 4: Saving task to curriculum-based storage...");
+    const storagePath = await this.taskStorage.saveTask(
+      taskId,
+      request,
+      generatedTask
+    );
     console.log(`✅ Saved to: ${storagePath}\n`);
 
     console.log("🎉 Task generation completed!\n");
 
+    // Get the task back from storage to get correct image URLs
+    const savedTask = await this.taskStorage.getTask(request, taskId);
+
     return {
       taskId,
       storagePath,
-      generatedTask: {
-        ...generatedTask,
-        // Update image URLs to local storage paths
-        images: generatedTask.images.map((img) => ({
-          ...img,
-          url: `/storage/tasks/${taskId}/images/${img.image_id}.png`,
-        })),
-      },
+      generatedTask: savedTask || generatedTask,
     };
   }
 }
