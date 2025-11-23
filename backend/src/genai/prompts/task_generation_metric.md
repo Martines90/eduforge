@@ -113,6 +113,19 @@ Transform abstract mathematical concepts into immersive narratives where problem
 
 This specification applies across all mathematical topics—from basic arithmetic to calculus—by adjusting the professional role, scenario complexity, and technical vocabulary while maintaining the core narrative immersion principle.
 
+## Story-Math Consistency Requirements (CRITICAL)
+
+**MANDATORY VALIDATION**: The story must logically align with the mathematical operations required to solve it.
+
+1. **Time Unit Consistency**: If the story mentions "per week", "per day", "per hour", ensure calculations use these time units correctly
+2. **Frequency Reasonableness**: Check that the final answer makes sense in the story context
+   - Example BAD: "rehearses 3.85 hours per week" → calculation yields 51 rehearsals in 8 days (6.4/day) ❌
+   - Example GOOD: "rehearses 3.85 hours per rehearsal" → 51 rehearsals in 8 days makes sense ✓
+3. **Unit Conversion Clarity**: When converting units (days to hours, km to m), state it explicitly in the story
+4. **Realistic Numbers**: Use numbers that result in reasonable final answers (not 1000 steps per day, not 0.001 items per year)
+
+**BEFORE FINALIZING**: Ask yourself "Would this scenario actually make sense to someone solving it?" If the math produces absurd results given the story context, revise the story numbers.
+
 ---
 
 ## OUTPUT FORMAT

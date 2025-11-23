@@ -77,8 +77,12 @@ export class TaskGeneratorService {
 
     // Add custom keywords if provided
     if (request.custom_keywords && request.custom_keywords.length > 0) {
-      prompt += `\n## CUSTOM KEYWORDS\n`;
-      prompt += `User-provided themes/keywords: ${request.custom_keywords.join(", ")}\n`;
+      prompt += `\n## CUSTOM KEYWORDS (MANDATORY)\n`;
+      prompt += `**CRITICAL REQUIREMENT**: You MUST incorporate AT LEAST 2 of these keywords into the story as central elements:\n`;
+      prompt += `Keywords: ${request.custom_keywords.join(", ")}\n\n`;
+      prompt += `- These keywords should be integral to the plot, not just mentioned in passing\n`;
+      prompt += `- Build the narrative around these themes\n`;
+      prompt += `- Make them relevant to the mathematical problem\n`;
     }
 
     // Generate and add story inspiration elements using helper
@@ -309,6 +313,48 @@ export class TaskGeneratorService {
   }
 
   /**
+   * Creates a concise, complete image prompt from story without truncation
+   */
+  private createImagePromptFromStory(storyText: string, title: string): string {
+    // Extract first 2 sentences or up to 250 characters, whichever comes first
+    const sentences = storyText.match(/[^.!?]+[.!?]+/g) || [];
+    let context = sentences.slice(0, 2).join(" ");
+
+    // If still too long, trim at sentence boundary
+    if (context.length > 250) {
+      context = context.substring(0, 250);
+      const lastPeriod = context.lastIndexOf(".");
+      if (lastPeriod > 100) {
+        context = context.substring(0, lastPeriod + 1);
+      }
+    }
+
+    return `Scene: "${title}". ${context}`;
+  }
+
+  /**
+   * Calculates estimated time to complete task based on difficulty and complexity
+   */
+  private calculateEstimatedTime(
+    difficultyLevel: string,
+    numberOfSteps: number,
+    numberOfImages: number
+  ): number {
+    const baseTime = 5; // Base 5 minutes
+
+    // Time per step based on difficulty
+    const stepTime =
+      difficultyLevel === "easy" ? 2 :
+      difficultyLevel === "medium" ? 3 :
+      5; // hard
+
+    // Additional time for images (students need time to analyze them)
+    const imageTime = numberOfImages * 2;
+
+    return baseTime + (numberOfSteps * stepTime) + imageTime;
+  }
+
+  /**
    * Generates a complete task with description and images based on comprehensive configuration
    * @param request TaskGeneratorRequest with all configuration parameters
    * @returns Promise that resolves to the generated task and storage path
@@ -356,7 +402,12 @@ export class TaskGeneratorService {
     if (numImages > 0) {
       console.log(`🎨 Step 3: Generating ${numImages} image(s)...`);
 
-      const imagePromptBase = `Educational illustration for a math problem, ${request.display_template} style, appropriate for ${request.target_group} students. Story context: ${taskData.story_text.substring(0, 400)}`;
+      // Extract key visual elements for smarter image prompts (avoid truncation)
+      const storyPreview = this.createImagePromptFromStory(
+        taskData.story_text,
+        taskData.title
+      );
+      const imagePromptBase = `Educational illustration for a math problem, ${request.display_template} style, appropriate for ${request.target_group} students. ${storyPreview}`;
 
       for (let i = 0; i < numImages; i++) {
         console.log(`   🎨 Generating image ${i + 1}/${numImages}...`);
@@ -389,12 +440,19 @@ export class TaskGeneratorService {
     }
 
     // Create metadata
+    const estimatedTime = this.calculateEstimatedTime(
+      request.difficulty_level,
+      solutionData.solution_steps.length,
+      images.length
+    );
+
     const metadata: TaskMetadata = {
       curriculum_path: request.curriculum_path,
       target_group: request.target_group,
       difficulty_level: request.difficulty_level,
       educational_model: request.educational_model,
       country_code: request.country_code,
+      estimated_time_minutes: estimatedTime,
       tags: request.custom_keywords || [],
     };
 

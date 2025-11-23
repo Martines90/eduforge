@@ -93,8 +93,12 @@ Provide your solution as a JSON object with the following structure:
     }
   ],
   "final_answer": "Complete final answer with units and context",
-  "verification": "Optional: How to verify the answer makes sense in the story context",
-  "common_mistakes": ["Mistake 1 to avoid", "Mistake 2 to avoid"],
+  "verification": "REQUIRED: Perform reverse calculation to verify correctness. Show: (answer × relevant factors = original constraint). Confirm the answer is reasonable in the story context (not absurdly large/small).",
+  "common_mistakes": [
+    "SPECIFIC mistake related to THIS problem (e.g., 'Forgetting to convert days to hours before dividing')",
+    "SPECIFIC calculation error students might make (e.g., 'Rounding down instead of up when partial units aren't possible')",
+    "SPECIFIC conceptual error (e.g., 'Not recognizing that you can't have 0.43 of a rehearsal')"
+  ],
   "key_concepts": ["Concept 1 used", "Concept 2 used"]
 }
 ```
