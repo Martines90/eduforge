@@ -10,30 +10,27 @@ import * as path from "path";
  *
  * Example:
  * Input: "math:grade_9_10:algebra:linear_equations:solving_basic_equations"
- * With countryCode="HU" and educationalModel="liberal"
- * Output: "storage/hu/liberal/math/grade_9_10/algebra/linear_equations/solving_basic_equations"
+ * With countryCode="HU"
+ * Output: "storage/hu/math/grade_9_10/algebra/linear_equations/solving_basic_equations"
  *
  * @param storageBaseDir The base storage directory
  * @param countryCode ISO country code (e.g., "HU", "US")
- * @param educationalModel Educational model (e.g., "liberal", "secular")
  * @param curriculumPath Colon-separated curriculum path
  * @returns Full file system path
  */
 export function buildCurriculumStoragePath(
   storageBaseDir: string,
   countryCode: string,
-  educationalModel: string,
   curriculumPath: string
 ): string {
   // Convert curriculum path parts to file system path
   // "math:grade_9_10:algebra" => "math/grade_9_10/algebra"
   const curriculumParts = curriculumPath.split(":").filter(Boolean);
 
-  // Build the full path: storage/{country}/{model}/{curriculum_parts...}
+  // Build the full path: storage/{country}/{curriculum_parts...}
   return path.join(
     storageBaseDir,
     countryCode.toLowerCase(),
-    educationalModel.toLowerCase(),
     ...curriculumParts
   );
 }

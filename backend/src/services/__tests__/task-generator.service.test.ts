@@ -107,7 +107,7 @@ describe("TaskGeneratorService - Prompt Generation", () => {
     // Mock storage
     mockTaskStorage.saveTask = jest
       .fn()
-      .mockResolvedValue("/storage/hu/liberal/math/grade_9_10/algebra/linear_equations/solving_basic_equations");
+      .mockResolvedValue("/storage/hu/math/grade_9_10/algebra/linear_equations/solving_basic_equations");
     mockTaskStorage.getTask = jest.fn().mockImplementation(async (request, taskId) => {
       // Return a mock task with updated image URLs
       return {

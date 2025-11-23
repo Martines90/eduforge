@@ -24,7 +24,7 @@ export class TaskStorageService {
   /**
    * Gets the curriculum directory path based on request parameters
    *
-   * Example: storage/hu/liberal/math/grade_9_10/algebra/linear_equations/solving_basic_equations
+   * Example: storage/hu/math/grade_9_10/algebra/linear_equations/solving_basic_equations
    *
    * @param request Task generation request with curriculum path and settings
    * @returns Full path to curriculum directory
@@ -33,7 +33,6 @@ export class TaskStorageService {
     return buildCurriculumStoragePath(
       config.storageDir,
       request.country_code,
-      request.educational_model,
       request.curriculum_path
     );
   }
@@ -117,7 +116,7 @@ export class TaskStorageService {
    * Saves a generated task to the curriculum-based storage structure
    *
    * Storage structure:
-   * storage/{country}/{educational_model}/{curriculum_path}/
+   * storage/{country}/{curriculum_path}/
    *   ├── tasks.json              // Collection of all tasks
    *   ├── {taskId}.json          // Individual task data
    *   └── images/
@@ -205,7 +204,7 @@ export class TaskStorageService {
       const generatedTask: GeneratedTask = JSON.parse(taskJson);
 
       // Update image URLs to local storage paths
-      // Path format: /storage/{country}/{model}/{curriculum_path}/images/{taskId}/{imageId}.png
+      // Path format: /storage/{country}/{curriculum_path}/images/{taskId}/{imageId}.png
       const relativePath = path.relative(
         config.storageDir,
         curriculumDir

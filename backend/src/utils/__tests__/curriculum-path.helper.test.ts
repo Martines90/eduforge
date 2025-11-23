@@ -14,11 +14,10 @@ import {
 
 describe("Curriculum Path Helper", () => {
   describe("buildCurriculumStoragePath", () => {
-    it("should build correct path for Hungarian liberal math curriculum", () => {
+    it("should build correct path for Hungarian math curriculum", () => {
       const result = buildCurriculumStoragePath(
         "/storage",
         "HU",
-        "liberal",
         "math:grade_9_10:algebra:linear_equations:solving_basic_equations"
       );
 
@@ -26,7 +25,6 @@ describe("Curriculum Path Helper", () => {
         path.join(
           "/storage",
           "hu",
-          "liberal",
           "math",
           "grade_9_10",
           "algebra",
@@ -36,48 +34,37 @@ describe("Curriculum Path Helper", () => {
       );
     });
 
-    it("should build correct path for US secular science curriculum", () => {
+    it("should build correct path for US science curriculum", () => {
       const result = buildCurriculumStoragePath(
         "/storage",
         "US",
-        "secular",
         "science:grade_11_12:physics:mechanics:motion"
       );
 
       expect(result).toBe(
-        path.join("/storage", "us", "secular", "science", "grade_11_12", "physics", "mechanics", "motion")
+        path.join("/storage", "us", "science", "grade_11_12", "physics", "mechanics", "motion")
       );
     });
 
     it("should handle country codes case-insensitively", () => {
-      const result1 = buildCurriculumStoragePath("/storage", "HU", "liberal", "math:grade_5");
-      const result2 = buildCurriculumStoragePath("/storage", "hu", "liberal", "math:grade_5");
-      const result3 = buildCurriculumStoragePath("/storage", "Hu", "liberal", "math:grade_5");
-
-      expect(result1).toBe(result2);
-      expect(result2).toBe(result3);
-    });
-
-    it("should handle educational model case-insensitively", () => {
-      const result1 = buildCurriculumStoragePath("/storage", "HU", "LIBERAL", "math:grade_5");
-      const result2 = buildCurriculumStoragePath("/storage", "HU", "liberal", "math:grade_5");
-      const result3 = buildCurriculumStoragePath("/storage", "HU", "Liberal", "math:grade_5");
+      const result1 = buildCurriculumStoragePath("/storage", "HU", "math:grade_5");
+      const result2 = buildCurriculumStoragePath("/storage", "hu", "math:grade_5");
+      const result3 = buildCurriculumStoragePath("/storage", "Hu", "math:grade_5");
 
       expect(result1).toBe(result2);
       expect(result2).toBe(result3);
     });
 
     it("should handle simple curriculum paths", () => {
-      const result = buildCurriculumStoragePath("/storage", "GB", "secular", "math:grade_7");
+      const result = buildCurriculumStoragePath("/storage", "GB", "math:grade_7");
 
-      expect(result).toBe(path.join("/storage", "gb", "secular", "math", "grade_7"));
+      expect(result).toBe(path.join("/storage", "gb", "math", "grade_7"));
     });
 
     it("should handle deeply nested curriculum paths", () => {
       const result = buildCurriculumStoragePath(
         "/storage",
         "DE",
-        "traditional",
         "math:grade_10:calculus:derivatives:chain_rule:complex_cases"
       );
 
@@ -85,7 +72,6 @@ describe("Curriculum Path Helper", () => {
         path.join(
           "/storage",
           "de",
-          "traditional",
           "math",
           "grade_10",
           "calculus",
@@ -97,41 +83,40 @@ describe("Curriculum Path Helper", () => {
     });
 
     it("should handle empty curriculum path parts", () => {
-      const result = buildCurriculumStoragePath("/storage", "FR", "progressive", "math::grade_8");
+      const result = buildCurriculumStoragePath("/storage", "FR", "math::grade_8");
 
       // Empty parts should be filtered out
-      expect(result).toBe(path.join("/storage", "fr", "progressive", "math", "grade_8"));
+      expect(result).toBe(path.join("/storage", "fr", "math", "grade_8"));
     });
 
     it("should work with relative storage paths", () => {
       const result = buildCurriculumStoragePath(
         "./storage",
         "ES",
-        "montessori",
         "math:grade_6:geometry"
       );
 
-      expect(result).toBe(path.join("./storage", "es", "montessori", "math", "grade_6", "geometry"));
+      expect(result).toBe(path.join("./storage", "es", "math", "grade_6", "geometry"));
     });
   });
 
   describe("getTasksJsonPath", () => {
     it("should return correct tasks.json path", () => {
-      const curriculumDir = "/storage/hu/liberal/math/grade_9_10";
+      const curriculumDir = "/storage/hu/math/grade_9_10";
       const result = getTasksJsonPath(curriculumDir);
 
       expect(result).toBe(path.join(curriculumDir, "tasks.json"));
     });
 
     it("should work with relative paths", () => {
-      const curriculumDir = "./storage/hu/liberal/math";
+      const curriculumDir = "./storage/hu/math";
       const result = getTasksJsonPath(curriculumDir);
 
       expect(result).toBe(path.join(curriculumDir, "tasks.json"));
     });
 
     it("should work with Windows-style paths", () => {
-      const curriculumDir = "C:\\storage\\hu\\liberal\\math";
+      const curriculumDir = "C:\\storage\\hu\\math";
       const result = getTasksJsonPath(curriculumDir);
 
       expect(result).toBe(path.join(curriculumDir, "tasks.json"));
@@ -140,7 +125,7 @@ describe("Curriculum Path Helper", () => {
 
   describe("getTaskImagesDir", () => {
     it("should return correct images directory path", () => {
-      const curriculumDir = "/storage/hu/liberal/math/grade_9_10";
+      const curriculumDir = "/storage/hu/math/grade_9_10";
       const taskId = "task_abc123";
       const result = getTaskImagesDir(curriculumDir, taskId);
 
@@ -148,7 +133,7 @@ describe("Curriculum Path Helper", () => {
     });
 
     it("should handle different task ID formats", () => {
-      const curriculumDir = "/storage/us/secular/science";
+      const curriculumDir = "/storage/us/science";
 
       const result1 = getTaskImagesDir(curriculumDir, "task_123");
       const result2 = getTaskImagesDir(curriculumDir, "abc-def-456");
@@ -162,7 +147,7 @@ describe("Curriculum Path Helper", () => {
 
   describe("getTaskImagePath", () => {
     it("should return correct image file path", () => {
-      const curriculumDir = "/storage/hu/liberal/math/grade_9_10";
+      const curriculumDir = "/storage/hu/math/grade_9_10";
       const taskId = "task_abc123";
       const imageId = "image_001";
       const result = getTaskImagePath(curriculumDir, taskId, imageId);
@@ -171,7 +156,7 @@ describe("Curriculum Path Helper", () => {
     });
 
     it("should always add .png extension", () => {
-      const curriculumDir = "/storage/hu/liberal/math";
+      const curriculumDir = "/storage/hu/math";
       const result = getTaskImagePath(curriculumDir, "task_1", "img_xyz");
 
       expect(result).toContain(".png");
@@ -179,7 +164,7 @@ describe("Curriculum Path Helper", () => {
     });
 
     it("should handle complex image IDs", () => {
-      const curriculumDir = "/storage/de/traditional/science";
+      const curriculumDir = "/storage/de/science";
       const taskId = "task_complex_123";
       const imageId = "image_main_illustration_v2";
       const result = getTaskImagePath(curriculumDir, taskId, imageId);
@@ -297,7 +282,7 @@ describe("Curriculum Path Helper", () => {
       const parsed = parseCurriculumPath(curriculumPath);
 
       // Build a storage path
-      const storagePath = buildCurriculumStoragePath("/storage", "HU", "liberal", curriculumPath);
+      const storagePath = buildCurriculumStoragePath("/storage", "HU", curriculumPath);
 
       // Verify the storage path contains all parts
       expect(storagePath).toContain("math");
@@ -315,7 +300,6 @@ describe("Curriculum Path Helper", () => {
       const curriculumPath = "science:grade_11:physics:mechanics";
       const storageBase = "/app/storage";
       const countryCode = "US";
-      const educationalModel = "secular";
       const taskId = "task_xyz789";
       const imageId = "image_abc123";
 
@@ -323,7 +307,6 @@ describe("Curriculum Path Helper", () => {
       const curriculumDir = buildCurriculumStoragePath(
         storageBase,
         countryCode,
-        educationalModel,
         curriculumPath
       );
 
