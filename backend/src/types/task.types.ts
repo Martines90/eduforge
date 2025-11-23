@@ -10,8 +10,6 @@ export interface LegacyTask {
   images: LegacyTaskImage[];
 }
 
-export interface TaskGenerationResult {
-  taskId: string;
-  storagePath: string;
-  generatedTask: import("./task-generator.types").GeneratedTask;
-}
+// TaskGenerationResult is now defined in task-generator.types.ts
+// Re-export it for backward compatibility
+export type { TaskGenerationResult } from "./task-generator.types";

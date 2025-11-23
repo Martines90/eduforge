@@ -50,8 +50,9 @@ export class TaskController {
   };
 
   /**
-   * GET /tasks/:taskId
+   * GET /tasks/:taskId?country_code=XX&curriculum_path=...
    * Retrieves a specific task by ID
+   * Requires country_code and curriculum_path query parameters to locate the task
    */
   getTaskById = async (
     req: Request,
@@ -60,11 +61,40 @@ export class TaskController {
   ): Promise<void> => {
     try {
       const { taskId } = req.params;
+      const { country_code, curriculum_path } = req.query;
+
+      // Validate required query parameters
+      if (!country_code || typeof country_code !== "string") {
+        res.status(400).json({
+          error: "Missing required parameter",
+          message: "Query parameter 'country_code' is required",
+        });
+        return;
+      }
+
+      if (!curriculum_path || typeof curriculum_path !== "string") {
+        res.status(400).json({
+          error: "Missing required parameter",
+          message: "Query parameter 'curriculum_path' is required",
+        });
+        return;
+      }
 
       console.log(`📥 Request to get task: ${taskId}`);
+      console.log(`   Country: ${country_code}`);
+      console.log(`   Curriculum: ${curriculum_path}`);
+
+      // Create a minimal request object to locate the curriculum directory
+      const request: Pick<TaskGeneratorRequest, "country_code" | "curriculum_path"> = {
+        country_code: country_code as string,
+        curriculum_path: curriculum_path as string,
+      };
 
       // Retrieve the task
-      const generatedTask = await this.taskStorage.getTask(taskId);
+      const generatedTask = await this.taskStorage.getTask(
+        request as TaskGeneratorRequest,
+        taskId
+      );
 
       if (!generatedTask) {
         res.status(404).json({
