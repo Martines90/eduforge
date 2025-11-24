@@ -1,0 +1,93 @@
+@import '@/styles/mixins.scss';
+
+.pageContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: var(--spacing-lg) 0;
+
+  @include md {
+    padding: var(--spacing-xl) 0;
+  }
+}
+
+.container {
+  padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-xl);
+
+  @include md {
+    padding-top: var(--spacing-xl);
+    padding-bottom: calc(var(--spacing-xl) * 2);
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+
+  @include md {
+    margin-bottom: calc(var(--spacing-xl) * 1.5);
+  }
+}
+
+.title {
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+
+  @include md {
+    font-size: 1.2rem;
+  }
+}
+
+.gradeSelector {
+  margin-bottom: var(--spacing-xl);
+  overflow: hidden;
+}
+
+.tabs {
+  background: var(--background-color);
+}
+
+.resultSection {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+
+  @include md {
+    margin-top: calc(var(--spacing-xl) * 1.5);
+  }
+}
+
+.alert {
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+
+  @include md {
+    padding: var(--spacing-xl);
+  }
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+
+  @include sm {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.createButton {
+  @include sm {
+    min-width: 200px;
+  }
+}

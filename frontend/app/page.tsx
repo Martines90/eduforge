@@ -1,0 +1,46 @@
+import Link from 'next/link';
+import { Container, Typography, Box, Paper } from '@mui/material';
+import { Button } from '@/components/atoms/Button';
+
+export default function Home() {
+  return (
+    <Container maxWidth="lg">
+      <Box
+        sx={{
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          py: 4,
+        }}
+      >
+        <Paper
+          elevation={3}
+          sx={{
+            p: { xs: 3, md: 6 },
+            textAlign: 'center',
+            maxWidth: 600,
+          }}
+        >
+          <Typography variant="h1" component="h1" gutterBottom>
+            EduForge
+          </Typography>
+          <Typography variant="h5" color="text.secondary" paragraph>
+            Task Creator
+          </Typography>
+          <Typography variant="body1" color="text.secondary" paragraph>
+            Create educational tasks based on curriculum topics for grades 9-12
+          </Typography>
+          <Box sx={{ mt: 4 }}>
+            <Link href="/task_creator" passHref legacyBehavior>
+              <Button variant="primary" size="large">
+                Go to Task Creator
+              </Button>
+            </Link>
+          </Box>
+        </Paper>
+      </Box>
+    </Container>
+  );
+}

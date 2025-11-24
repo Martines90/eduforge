@@ -1,0 +1,21 @@
+@import '@/styles/mixins.scss';
+
+.selectControl {
+  margin-bottom: var(--spacing-md);
+
+  @include md {
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+.select {
+  width: 100%;
+
+  @include focus-visible;
+
+  &:hover {
+    .MuiOutlinedInput-notchedOutline {
+      border-color: var(--primary-color);
+    }
+  }
+}

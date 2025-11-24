@@ -1,0 +1,138 @@
+EduForge Frontend - Complete Project Structure
+===============================================
+
+frontend/
+├── __tests__/                          # Test files (Vitest)
+│   ├── components/
+│   │   └── atoms/
+│   │       ├── Button.test.tsx        # Button component tests
+│   │       └── Select.test.tsx        # Select component tests
+│   └── hooks/
+│       └── useCascadingSelect.test.ts # Hook tests
+│
+├── app/                                # Next.js 14 App Router
+│   ├── layout.tsx                     # Root layout (MUI Theme Provider)
+│   ├── page.tsx                       # Home page
+│   └── task_creator/                  # Task Creator feature
+│       ├── page.tsx                   # Main task creator page
+│       └── page.module.scss           # Page-specific styles
+│
+├── components/                         # Atomic Design Components
+│   ├── atoms/                         # Basic building blocks
+│   │   ├── Button/
+│   │   │   ├── Button.tsx            # Customized MUI Button
+│   │   │   ├── Button.module.scss     # Button styles
+│   │   │   └── index.ts              # Barrel export
+│   │   └── Select/
+│   │       ├── Select.tsx            # Reusable Select dropdown
+│   │       ├── Select.module.scss     # Select styles
+│   │       └── index.ts              # Barrel export
+│   │
+│   ├── molecules/                     # Simple component groups
+│   │   └── SelectGroup/
+│   │       ├── SelectGroup.tsx       # Groups multiple selects
+│   │       ├── SelectGroup.module.scss
+│   │       └── index.ts
+│   │
+│   └── organisms/                     # Complex components
+│       └── CascadingSelect/
+│           ├── CascadingSelect.tsx   # Main feature component
+│           ├── CascadingSelect.module.scss
+│           └── index.ts
+│
+├── data/                              # Static data
+│   └── navigation_mapping.json       # Curriculum topic hierarchy
+│
+├── lib/                               # Utilities and hooks
+│   ├── hooks/
+│   │   └── useCascadingSelect.ts     # Cascading select logic
+│   ├── theme.ts                      # MUI theme configuration
+│   └── utils/                        # Future utility functions
+│
+├── styles/                            # Global styles
+│   ├── globals.scss                  # Global CSS variables & reset
+│   └── mixins.scss                   # SCSS mixins (breakpoints, etc)
+│
+├── types/                             # TypeScript definitions
+│   └── navigation.ts                 # Navigation data types
+│
+├── .eslintrc.json                    # ESLint configuration
+├── .gitignore                        # Git ignore rules
+├── next.config.mjs                   # Next.js configuration
+├── package.json                      # Dependencies and scripts
+├── README.md                         # Comprehensive documentation
+├── QUICKSTART.md                     # Quick start guide
+├── tsconfig.json                     # TypeScript configuration
+├── vitest.config.ts                  # Vitest configuration
+└── vitest.setup.ts                   # Vitest setup file
+
+Key Features:
+=============
+
+✅ Next.js 14 with App Router
+✅ TypeScript (strict mode)
+✅ Material-UI (MUI) Components
+✅ SCSS Modules for styling
+✅ Vitest + React Testing Library
+✅ Atomic Design Pattern
+✅ Mobile-First Responsive Design
+✅ Accessibility (WCAG 2.1 AA)
+✅ Dynamic Cascading Selects
+✅ Grade-level topic navigation
+✅ Breadcrumb navigation
+✅ All tests passing (16/16)
+✅ Production build successful
+
+Component Hierarchy:
+====================
+
+Pages (Templates)
+  └── CascadingSelect (Organism)
+      └── SelectGroup (Molecule)
+          └── Select (Atom)
+              └── MUI Components
+
+Custom Hook: useCascadingSelect
+  - Manages selection state
+  - Computes available options
+  - Handles nested navigation
+
+Design Patterns:
+================
+
+1. Atomic Design - Clear component hierarchy
+2. Separation of Concerns - UI vs Logic
+3. Mobile-First - Responsive breakpoints
+4. Container/Presenter - Smart vs Dumb components
+5. Custom Hooks - Reusable logic
+6. Type Safety - Full TypeScript coverage
+7. Accessibility First - ARIA, keyboard nav
+
+Responsive Breakpoints:
+=======================
+
+- Mobile:  < 640px
+- SM:      640px+
+- MD:      768px+
+- LG:      1024px+
+- XL:      1280px+
+
+Testing Coverage:
+=================
+
+- Unit tests for atoms (Button, Select)
+- Hook tests (useCascadingSelect)
+- All core logic covered
+- 16 tests passing
+
+Next Steps:
+===========
+
+1. Add task creation form
+2. Integrate with backend API
+3. Add search/filter functionality
+4. Implement user authentication
+5. Add task management features
+6. Support for multiple languages
+7. Dark mode support
+8. PWA features

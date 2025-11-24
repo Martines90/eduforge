@@ -1,0 +1,2731 @@
+{
+  "grade_9_10": [
+    {
+      "name": "Halmazok",
+      "sub_topics": [
+        {
+          "name": "Halmaz fogalma és megadása",
+          "sub_topics": [
+            {
+              "name": "Halmaz megadása felsorolással"
+            },
+            {
+              "name": "Halmaz megadása utasítással"
+            }
+          ]
+        },
+        {
+          "name": "Halmazok közötti viszonyok",
+          "sub_topics": [
+            {
+              "name": "Részhalmaz"
+            },
+            {
+              "name": "Halmazok egyenlősége"
+            },
+            {
+              "name": "Üres halmaz"
+            }
+          ]
+        },
+        {
+          "name": "Halmazműveletek",
+          "sub_topics": [
+            {
+              "name": "Unió (egyesítés)"
+            },
+            {
+              "name": "Metszet"
+            },
+            {
+              "name": "Különbség"
+            },
+            {
+              "name": "Komplementer halmaz"
+            }
+          ]
+        },
+        {
+          "name": "Venn-diagramok"
+        },
+        {
+          "name": "Halmaz elemszáma",
+          "sub_topics": [
+            {
+              "name": "Logikai szita"
+            }
+          ]
+        },
+        {
+          "name": "Végtelen halmazok"
+        }
+      ]
+    },
+    {
+      "name": "Matematikai logika",
+      "sub_topics": [
+        {
+          "name": "Állítás fogalma",
+          "sub_topics": [
+            {
+              "name": "Állítás logikai értéke"
+            }
+          ]
+        },
+        {
+          "name": "Logikai műveletek",
+          "sub_topics": [
+            {
+              "name": "Tagadás (nem)"
+            },
+            {
+              "name": "Konjunkció (és)"
+            },
+            {
+              "name": "Diszjunkció (megengedő vagy)"
+            },
+            {
+              "name": "Kizáró vagy"
+            },
+            {
+              "name": "Implikáció (ha..., akkor...)"
+            },
+            {
+              "name": "Ekvivalencia (akkor és csak akkor)"
+            }
+          ]
+        },
+        {
+          "name": "Minden és van olyan",
+          "sub_topics": [
+            {
+              "name": "Általános állítás (minden)"
+            },
+            {
+              "name": "Egzisztenciális állítás (van olyan)"
+            }
+          ]
+        },
+        {
+          "name": "Állítás megfordítása"
+        },
+        {
+          "name": "Bizonyítás fogalma"
+        }
+      ]
+    },
+    {
+      "name": "Kombinatorika, gráfok",
+      "sub_topics": [
+        {
+          "name": "Sorba rendezés",
+          "sub_topics": [
+            {
+              "name": "Egyszerű sorba rendezés"
+            },
+            {
+              "name": "Feltételes sorba rendezés"
+            }
+          ]
+        },
+        {
+          "name": "Kiválasztás",
+          "sub_topics": [
+            {
+              "name": "Egyszerű kiválasztás"
+            },
+            {
+              "name": "Feltételes kiválasztás"
+            }
+          ]
+        },
+        {
+          "name": "Szorzási elv"
+        },
+        {
+          "name": "Esetszétválasztás"
+        },
+        {
+          "name": "Gráfok alapjai",
+          "sub_topics": [
+            {
+              "name": "Gráf fogalma"
+            },
+            {
+              "name": "Gráf ábrázolása"
+            },
+            {
+              "name": "Gráf alkalmazásai"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Számhalmazok, műveletek",
+      "sub_topics": [
+        {
+          "name": "Számhalmazok épülése",
+          "sub_topics": [
+            {
+              "name": "Természetes számok (ℕ)"
+            },
+            {
+              "name": "Egész számok (ℤ)",
+              "sub_topics": [
+                {
+                  "name": "Egész számok (ℤ)"
+                },
+                {
+                  "name": "Műveletek egész számokkal",
+                  "sub_topics": [
+                    {
+                      "name": "Egész számok összeadása"
+                    },
+                    {
+                      "name": "Egész számok kivonása"
+                    },
+                    {
+                      "name": "Egész számok szorzása"
+                    },
+                    {
+                      "name": "Egész számok osztása"
+                    },
+                    {
+                      "name": "Műveletek nullával"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Racionális számok (ℚ)"
+            },
+            {
+              "name": "Irracionális számok"
+            },
+            {
+              "name": "Valós számok (ℝ)"
+            }
+          ]
+        },
+        {
+          "name": "Műveletek valós számokkal",
+          "sub_topics": [
+            {
+              "name": "Műveleti azonosságok",
+              "sub_topics": [
+                {
+                  "name": "Szorzás kommutativitása"
+                },
+                {
+                  "name": "Szorzás asszociativitása"
+                },
+                {
+                  "name": "Szorzás disztributivitása"
+                }
+              ]
+            },
+            {
+              "name": "Osztás",
+              "sub_topics": [
+                {
+                  "name": "Osztás jelölése"
+                },
+                {
+                  "name": "Osztás tulajdonságai"
+                },
+                {
+                  "name": "Többjegyű osztás"
+                }
+              ]
+            },
+            {
+              "name": "Zárójelek használata"
+            },
+            {
+              "name": "Kivonás"
+            }
+          ]
+        },
+        {
+          "name": "Törtek",
+          "sub_topics": [
+            {
+              "name": "Közönséges tört"
+            },
+            {
+              "name": "Tizedes tört"
+            },
+            {
+              "name": "Törtalakok közötti átváltás"
+            }
+          ]
+        },
+        {
+          "name": "Számegyenes",
+          "sub_topics": [
+            {
+              "name": "Számok ábrázolása"
+            },
+            {
+              "name": "Intervallumok"
+            }
+          ]
+        },
+        {
+          "name": "Abszolút érték"
+        },
+        {
+          "name": "Ellentett és reciprok"
+        },
+        {
+          "name": "Kerekítés",
+          "sub_topics": [
+            {
+              "name": "Kerekítés szabályai"
+            },
+            {
+              "name": "Észszerű kerekítés"
+            }
+          ]
+        },
+        {
+          "name": "Becslés"
+        }
+      ]
+    },
+    {
+      "name": "Hatvány, gyök",
+      "sub_topics": [
+        {
+          "name": "Hatványozás",
+          "sub_topics": [
+            {
+              "name": "Pozitív egész kitevő"
+            },
+            {
+              "name": "Nulla kitevő"
+            },
+            {
+              "name": "Negatív egész kitevő"
+            }
+          ]
+        },
+        {
+          "name": "Hatványozás azonosságai",
+          "sub_topics": [
+            {
+              "name": "Hatványok szorzása"
+            },
+            {
+              "name": "Hatványok osztása"
+            },
+            {
+              "name": "Hatvány hatványozása"
+            },
+            {
+              "name": "Szorzat hatványozása"
+            },
+            {
+              "name": "Hányados hatványozása"
+            }
+          ]
+        },
+        {
+          "name": "Normálalak",
+          "sub_topics": [
+            {
+              "name": "Normálalak képzése"
+            },
+            {
+              "name": "Számolás normálalakkal"
+            }
+          ]
+        },
+        {
+          "name": "Négyzetgyök",
+          "sub_topics": [
+            {
+              "name": "Négyzetgyök fogalma"
+            },
+            {
+              "name": "Négyzetgyök azonosságai"
+            },
+            {
+              "name": "Négyzetgyök számítása"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Betűs kifejezések",
+      "sub_topics": [
+        {
+          "name": "Műveletek algebrai kifejezésekkel",
+          "sub_topics": [
+            {
+              "name": "Összevonás"
+            },
+            {
+              "name": "Zárójel felbontás"
+            },
+            {
+              "name": "Egytagú kifejezések szorzása"
+            }
+          ]
+        },
+        {
+          "name": "Nevezetes azonosságok",
+          "sub_topics": [
+            {
+              "name": "Binomok négyzete"
+            },
+            {
+              "name": "Összeg és különbség szorzata"
+            }
+          ]
+        },
+        {
+          "name": "Szorzattá alakítás",
+          "sub_topics": [
+            {
+              "name": "Kiemelés"
+            },
+            {
+              "name": "Nevezetes azonosságok alkalmazása"
+            }
+          ]
+        },
+        {
+          "name": "Teljes négyzet",
+          "sub_topics": [
+            {
+              "name": "Teljes négyzetté kiegészítés"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Arányosság, százalékszámítás",
+      "sub_topics": [
+        {
+          "name": "Egyenes arányosság",
+          "sub_topics": [
+            {
+              "name": "Egyenes arányosság felismerése"
+            },
+            {
+              "name": "Egyenes arányosság grafikonja"
+            },
+            {
+              "name": "Arányossági tényező"
+            }
+          ]
+        },
+        {
+          "name": "Fordított arányosság",
+          "sub_topics": [
+            {
+              "name": "Fordított arányosság felismerése"
+            },
+            {
+              "name": "Fordított arányosság grafikonja"
+            }
+          ]
+        },
+        {
+          "name": "Egyéb arányosságok"
+        },
+        {
+          "name": "Százalékszámítás",
+          "sub_topics": [
+            {
+              "name": "Százalék fogalma"
+            },
+            {
+              "name": "Százalékértékek számítása"
+            },
+            {
+              "name": "Százalékos változás"
+            },
+            {
+              "name": "Gyakorlati alkalmazások"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Elsőfokú egyenletek, egyenlőtlenségek, egyenletrendszerek",
+      "sub_topics": [
+        {
+          "name": "Elsőfokú egyismeretlenes egyenlet",
+          "sub_topics": [
+            {
+              "name": "Egyenlet fogalma"
+            },
+            {
+              "name": "Mérlegelv"
+            },
+            {
+              "name": "Egyenlet megoldása"
+            },
+            {
+              "name": "Ellenőrzés"
+            },
+            {
+              "name": "Grafikus megoldás"
+            }
+          ]
+        },
+        {
+          "name": "Elsőfokú egyenlőtlenség",
+          "sub_topics": [
+            {
+              "name": "Egyenlőtlenség fogalma"
+            },
+            {
+              "name": "Egyenlőtlenségek alaptulajdonságai"
+            },
+            {
+              "name": "Egyenlőtlenség megoldása"
+            },
+            {
+              "name": "Grafikus megoldás"
+            }
+          ]
+        },
+        {
+          "name": "Elsőfokú kétismeretlenes egyenletrendszer",
+          "sub_topics": [
+            {
+              "name": "Egyenletrendszer fogalma"
+            },
+            {
+              "name": "Behelyettesítéses módszer"
+            },
+            {
+              "name": "Közös együtthatók módszere"
+            },
+            {
+              "name": "Grafikus megoldás"
+            },
+            {
+              "name": "Kettőnél több ismeretlenes"
+            }
+          ]
+        },
+        {
+          "name": "Szöveges feladatok",
+          "sub_topics": [
+            {
+              "name": "Modellalkotás"
+            },
+            {
+              "name": "Út-idő-sebesség feladatok"
+            },
+            {
+              "name": "Keveréses feladatok"
+            },
+            {
+              "name": "Közös munkavégzés"
+            },
+            {
+              "name": "Pénzügyi feladatok"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Másodfokú egyenletek, egyenlőtlenségek",
+      "sub_topics": [
+        {
+          "name": "Másodfokú egyenlet",
+          "sub_topics": [
+            {
+              "name": "Másodfokú egyenlet fogalma"
+            },
+            {
+              "name": "Megoldás szorzattá alakítással"
+            },
+            {
+              "name": "Megoldás teljes négyzetté kiegészítéssel"
+            },
+            {
+              "name": "Megoldóképlet"
+            },
+            {
+              "name": "Diszkrimináns"
+            },
+            {
+              "name": "Gyöktényezős alak"
+            },
+            {
+              "name": "Grafikus megoldás"
+            },
+            {
+              "name": "Gyökök és együtthatók összefüggése"
+            }
+          ]
+        },
+        {
+          "name": "Másodfokúra visszavezethető egyenletek",
+          "sub_topics": [
+            {
+              "name": "Negyedfokú egyenlet"
+            },
+            {
+              "name": "Törtegyenlet"
+            }
+          ]
+        },
+        {
+          "name": "Másodfokú egyenlőtlenség",
+          "sub_topics": [
+            {
+              "name": "Alap megoldási módszerek"
+            },
+            {
+              "name": "Grafikus megoldás"
+            }
+          ]
+        },
+        {
+          "name": "Szöveges feladatok",
+          "sub_topics": [
+            {
+              "name": "Geometriai feladatok"
+            },
+            {
+              "name": "Mozgási feladatok"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A függvény fogalma, függvénytulajdonságok",
+      "sub_topics": [
+        {
+          "name": "Függvény fogalma",
+          "sub_topics": [
+            {
+              "name": "Hozzárendelés"
+            },
+            {
+              "name": "Egyértelmű hozzárendelés"
+            },
+            {
+              "name": "Kölcsönösen egyértelmű hozzárendelés"
+            }
+          ]
+        },
+        {
+          "name": "Függvény megadása",
+          "sub_topics": [
+            {
+              "name": "Képlettel megadás"
+            },
+            {
+              "name": "Táblázattal megadás"
+            },
+            {
+              "name": "Grafikonnal megadás"
+            }
+          ]
+        },
+        {
+          "name": "Függvény tulajdonságai",
+          "sub_topics": [
+            {
+              "name": "Értelmezési tartomány"
+            },
+            {
+              "name": "Értékkészlet"
+            },
+            {
+              "name": "Zérushelyek"
+            },
+            {
+              "name": "Szélsőértékek"
+            },
+            {
+              "name": "Növekedés és fogyás"
+            }
+          ]
+        },
+        {
+          "name": "Lineáris függvény",
+          "sub_topics": [
+            {
+              "name": "Lineáris függvény grafikonja"
+            },
+            {
+              "name": "Meredekség"
+            },
+            {
+              "name": "Tengelymetszet"
+            },
+            {
+              "name": "Egyenes egyenletének felírása"
+            }
+          ]
+        },
+        {
+          "name": "Másodfokú függvény",
+          "sub_topics": [
+            {
+              "name": "Parabola"
+            },
+            {
+              "name": "Parabola csúcspontja"
+            },
+            {
+              "name": "Parabola tengelye"
+            },
+            {
+              "name": "Nyílásirány"
+            }
+          ]
+        },
+        {
+          "name": "Négyzetgyökfüggvény",
+          "sub_topics": [
+            {
+              "name": "Négyzetgyökfüggvény grafikonja"
+            },
+            {
+              "name": "Tulajdonságok"
+            }
+          ]
+        },
+        {
+          "name": "Fordított arányosságot leíró függvény",
+          "sub_topics": [
+            {
+              "name": "Hiperbola"
+            },
+            {
+              "name": "Hiperbola tulajdonságai"
+            }
+          ]
+        },
+        {
+          "name": "Függvénytranszformációk",
+          "sub_topics": [
+            {
+              "name": "Függőleges eltolás"
+            },
+            {
+              "name": "Vízszintes eltolás"
+            },
+            {
+              "name": "Függőleges nyújtás/zsugorítás"
+            },
+            {
+              "name": "Abszolút érték alkalmazása"
+            }
+          ]
+        },
+        {
+          "name": "Inverz függvény",
+          "sub_topics": [
+            {
+              "name": "Hozzárendelés megfordítása"
+            },
+            {
+              "name": "Inverz függvény grafikonja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Geometriai alapismeretek",
+      "sub_topics": [
+        {
+          "name": "Térelemek",
+          "sub_topics": [
+            {
+              "name": "Pont"
+            },
+            {
+              "name": "Egyenes"
+            },
+            {
+              "name": "Sík"
+            },
+            {
+              "name": "Félegyenes"
+            },
+            {
+              "name": "Szakasz"
+            }
+          ]
+        },
+        {
+          "name": "Távolságok",
+          "sub_topics": [
+            {
+              "name": "Két pont távolsága"
+            },
+            {
+              "name": "Pont és egyenes távolsága"
+            },
+            {
+              "name": "Két párhuzamos egyenes távolsága"
+            }
+          ]
+        },
+        {
+          "name": "Egyenesek kölcsönös helyzete",
+          "sub_topics": [
+            {
+              "name": "Párhuzamos egyenesek"
+            },
+            {
+              "name": "Metsző egyenesek"
+            },
+            {
+              "name": "Merőleges egyenesek"
+            }
+          ]
+        },
+        {
+          "name": "Szögek",
+          "sub_topics": [
+            {
+              "name": "Szög fogalma"
+            },
+            {
+              "name": "Hegyesszög"
+            },
+            {
+              "name": "Derékszög"
+            },
+            {
+              "name": "Tompaszög"
+            },
+            {
+              "name": "Egyenesszög"
+            },
+            {
+              "name": "Homorúszög"
+            },
+            {
+              "name": "Teljesszög"
+            }
+          ]
+        },
+        {
+          "name": "Nevezetes szögpárok",
+          "sub_topics": [
+            {
+              "name": "Pótszögek"
+            },
+            {
+              "name": "Mellékszögek"
+            },
+            {
+              "name": "Kiegészítő szögek"
+            },
+            {
+              "name": "Csúcsszögek"
+            },
+            {
+              "name": "Egyállású szögek"
+            },
+            {
+              "name": "Váltószögek"
+            }
+          ]
+        },
+        {
+          "name": "Alapszerkesztések",
+          "sub_topics": [
+            {
+              "name": "Szakaszfelező merőleges"
+            },
+            {
+              "name": "Szögfelező"
+            },
+            {
+              "name": "Merőleges szerkesztése"
+            },
+            {
+              "name": "Párhuzamos szerkesztése"
+            },
+            {
+              "name": "Szög másolása"
+            }
+          ]
+        },
+        {
+          "name": "Ponthalmazok",
+          "sub_topics": [
+            {
+              "name": "Szakaszfelező merőleges mint ponthalmaz"
+            },
+            {
+              "name": "Szögfelező mint ponthalmaz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Háromszögek",
+      "sub_topics": [
+        {
+          "name": "Háromszög fogalma"
+        },
+        {
+          "name": "Háromszögek csoportosítása",
+          "sub_topics": [
+            {
+              "name": "Csoportosítás oldalak szerint",
+              "sub_topics": [
+                {
+                  "name": "Általános háromszög"
+                },
+                {
+                  "name": "Egyenlő szárú háromszög"
+                },
+                {
+                  "name": "Szabályos háromszög"
+                }
+              ]
+            },
+            {
+              "name": "Csoportosítás szögek szerint",
+              "sub_topics": [
+                {
+                  "name": "Hegyesszögű háromszög"
+                },
+                {
+                  "name": "Derékszögű háromszög"
+                },
+                {
+                  "name": "Tompaszögű háromszög"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Háromszög alapvető összefüggései",
+          "sub_topics": [
+            {
+              "name": "Belső szögösszeg"
+            },
+            {
+              "name": "Háromszög-egyenlőtlenség"
+            },
+            {
+              "name": "Nagyobb oldallal szemben nagyobb szög"
+            }
+          ]
+        },
+        {
+          "name": "Háromszög nevezetes vonalai",
+          "sub_topics": [
+            {
+              "name": "Magasságvonal",
+              "sub_topics": [
+                {
+                  "name": "Magasságpont"
+                }
+              ]
+            },
+            {
+              "name": "Súlyvonal",
+              "sub_topics": [
+                {
+                  "name": "Súlypont"
+                }
+              ]
+            },
+            {
+              "name": "Szögfelező",
+              "sub_topics": [
+                {
+                  "name": "Beírt kör középpontja"
+                }
+              ]
+            },
+            {
+              "name": "Középvonal",
+              "sub_topics": [
+                {
+                  "name": "Középvonal tétele"
+                }
+              ]
+            },
+            {
+              "name": "Oldalfelező merőleges",
+              "sub_topics": [
+                {
+                  "name": "Körülírt kör középpontja"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Háromszög körei",
+          "sub_topics": [
+            {
+              "name": "Beírt kör"
+            },
+            {
+              "name": "Körülírt kör"
+            }
+          ]
+        },
+        {
+          "name": "Pitagorasz-tétel",
+          "sub_topics": [
+            {
+              "name": "Pitagorasz-tétel kimondása"
+            },
+            {
+              "name": "Pitagorasz-tétel bizonyítása"
+            },
+            {
+              "name": "Pitagorasz-tétel megfordítása"
+            },
+            {
+              "name": "Pitagorasz-tétel alkalmazása"
+            }
+          ]
+        },
+        {
+          "name": "Háromszög területe",
+          "sub_topics": [
+            {
+              "name": "Alap és magasság szorzata"
+            },
+            {
+              "name": "Terület szögfüggvénnyel"
+            }
+          ]
+        },
+        {
+          "name": "Háromszögek egybevágósága",
+          "sub_topics": [
+            {
+              "name": "Oldal-oldal-oldal (OOO)"
+            },
+            {
+              "name": "Oldal-szög-oldal (OSO)"
+            },
+            {
+              "name": "Szög-oldal-szög (SZO)"
+            },
+            {
+              "name": "Oldal-oldal-szög (OFO) - derékszögű háromszögeknél"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Négyszögek, sokszögek",
+      "sub_topics": [
+        {
+          "name": "Négyszög fogalma"
+        },
+        {
+          "name": "Speciális négyszögek",
+          "sub_topics": [
+            {
+              "name": "Trapéz",
+              "sub_topics": [
+                {
+                  "name": "Húrtrapéz"
+                },
+                {
+                  "name": "Derékszögű trapéz"
+                },
+                {
+                  "name": "Trapéz területe"
+                }
+              ]
+            },
+            {
+              "name": "Paralelogramma",
+              "sub_topics": [
+                {
+                  "name": "Paralelogramma tulajdonságai"
+                },
+                {
+                  "name": "Paralelogramma területe"
+                }
+              ]
+            },
+            {
+              "name": "Deltoid",
+              "sub_topics": [
+                {
+                  "name": "Deltoid tulajdonságai"
+                },
+                {
+                  "name": "Deltoid területe"
+                }
+              ]
+            },
+            {
+              "name": "Rombusz",
+              "sub_topics": [
+                {
+                  "name": "Rombusz tulajdonságai"
+                },
+                {
+                  "name": "Rombusz területe"
+                }
+              ]
+            },
+            {
+              "name": "Téglalap",
+              "sub_topics": [
+                {
+                  "name": "Téglalap tulajdonságai"
+                },
+                {
+                  "name": "Téglalap területe"
+                }
+              ]
+            },
+            {
+              "name": "Négyzet",
+              "sub_topics": [
+                {
+                  "name": "Négyzet tulajdonságai"
+                },
+                {
+                  "name": "Négyzet területe"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Konvex sokszög",
+          "sub_topics": [
+            {
+              "name": "Sokszög belső szögösszege"
+            },
+            {
+              "name": "Sokszög külső szögösszege"
+            },
+            {
+              "name": "Átlók száma"
+            }
+          ]
+        },
+        {
+          "name": "Szabályos sokszög",
+          "sub_topics": [
+            {
+              "name": "Szabályos sokszög tulajdonságai"
+            },
+            {
+              "name": "Szabályos sokszög területe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A kör és részei",
+      "sub_topics": [
+        {
+          "name": "Kör fogalma",
+          "sub_topics": [
+            {
+              "name": "Kör elemei",
+              "sub_topics": [
+                {
+                  "name": "Sugár"
+                },
+                {
+                  "name": "Átmérő"
+                },
+                {
+                  "name": "Húr"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Középponti szög",
+          "sub_topics": [
+            {
+              "name": "Középponti szög és körív"
+            },
+            {
+              "name": "Középponti szög és körcikk"
+            }
+          ]
+        },
+        {
+          "name": "Kör kerülete",
+          "sub_topics": [
+            {
+              "name": "Körív hossza"
+            }
+          ]
+        },
+        {
+          "name": "Kör területe",
+          "sub_topics": [
+            {
+              "name": "Kör kerülete"
+            },
+            {
+              "name": "Körcikk területe"
+            },
+            {
+              "name": "Körgyűrű területe"
+            },
+            {
+              "name": "Körszelet területe"
+            }
+          ]
+        },
+        {
+          "name": "Kör érintője",
+          "sub_topics": [
+            {
+              "name": "Érintő tulajdonsága"
+            },
+            {
+              "name": "Érintőszakaszok"
+            }
+          ]
+        },
+        {
+          "name": "Thalész-tétel",
+          "sub_topics": [
+            {
+              "name": "Thalész-tétel kimondása"
+            },
+            {
+              "name": "Thalész-tétel bizonyítása"
+            },
+            {
+              "name": "Thalész-tétel megfordítása"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Transzformációk, szerkesztések",
+      "sub_topics": [
+        {
+          "name": "Geometriai transzformációk",
+          "sub_topics": [
+            {
+              "name": "Példák transzformációkra"
+            }
+          ]
+        },
+        {
+          "name": "Egybevágósági transzformációk",
+          "sub_topics": [
+            {
+              "name": "Tengelyes tükrözés",
+              "sub_topics": [
+                {
+                  "name": "Tengelyes tükrözés tulajdonságai"
+                },
+                {
+                  "name": "Tengelyes tükrözés szerkesztése"
+                }
+              ]
+            },
+            {
+              "name": "Középpontos tükrözés",
+              "sub_topics": [
+                {
+                  "name": "Középpontos tükrözés tulajdonságai"
+                },
+                {
+                  "name": "Középpontos tükrözés szerkesztése"
+                }
+              ]
+            },
+            {
+              "name": "Pont körüli forgatás",
+              "sub_topics": [
+                {
+                  "name": "Forgatás tulajdonságai"
+                },
+                {
+                  "name": "Forgatás szerkesztése"
+                }
+              ]
+            },
+            {
+              "name": "Párhuzamos eltolás",
+              "sub_topics": [
+                {
+                  "name": "Eltolás tulajdonságai"
+                },
+                {
+                  "name": "Eltolás szerkesztése"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vektorok",
+          "sub_topics": [
+            {
+              "name": "Vektor fogalma"
+            },
+            {
+              "name": "Vektor abszolút értéke"
+            },
+            {
+              "name": "Nullvektor"
+            },
+            {
+              "name": "Ellentett vektor"
+            },
+            {
+              "name": "Vektorok összege"
+            },
+            {
+              "name": "Vektorok különbsége"
+            },
+            {
+              "name": "Vektor számszorosa"
+            }
+          ]
+        },
+        {
+          "name": "Egybevágóság",
+          "sub_topics": [
+            {
+              "name": "Egybevágó alakzatok"
+            },
+            {
+              "name": "Szimmetria",
+              "sub_topics": [
+                {
+                  "name": "Tengelyesen szimmetrikus alakzat"
+                },
+                {
+                  "name": "Középpontosan szimmetrikus alakzat"
+                }
+              ]
+            },
+            {
+              "name": "Parkettázás"
+            }
+          ]
+        },
+        {
+          "name": "Hasonlósági transzformációk",
+          "sub_topics": [
+            {
+              "name": "Középpontos hasonlósági transzformáció",
+              "sub_topics": [
+                {
+                  "name": "Hasonlóság aránya"
+                },
+                {
+                  "name": "Hasonlóság középpontja"
+                }
+              ]
+            },
+            {
+              "name": "Hasonlósági transzformáció"
+            }
+          ]
+        },
+        {
+          "name": "Hasonlóság",
+          "sub_topics": [
+            {
+              "name": "Hasonló alakzatok"
+            },
+            {
+              "name": "Hasonló háromszögek"
+            },
+            {
+              "name": "Hasonló síkidomok kerülete és területe",
+              "sub_topics": [
+                {
+                  "name": "Kerületek aránya"
+                },
+                {
+                  "name": "Területek aránya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Szerkesztés hagyományos eszközökkel",
+          "sub_topics": [
+            {
+              "name": "Háromszög szerkesztése",
+              "sub_topics": [
+                {
+                  "name": "Diszkusszió"
+                }
+              ]
+            },
+            {
+              "name": "Négyszög szerkesztése"
+            }
+          ]
+        },
+        {
+          "name": "Dinamikus geometriai szoftver"
+        }
+      ]
+    },
+    {
+      "name": "Leíró statisztika",
+      "sub_topics": [
+        {
+          "name": "Statisztikai adatgyűjtés",
+          "sub_topics": [
+            {
+              "name": "Adatgyűjtés tervezése"
+            },
+            {
+              "name": "Adatgyűjtés forrásai"
+            }
+          ]
+        },
+        {
+          "name": "Adatok rendszerezése"
+        },
+        {
+          "name": "Középértékek",
+          "sub_topics": [
+            {
+              "name": "Átlag (számtani közép)"
+            },
+            {
+              "name": "Medián"
+            },
+            {
+              "name": "Módusz"
+            }
+          ]
+        },
+        {
+          "name": "Diagramok",
+          "sub_topics": [
+            {
+              "name": "Oszlopdiagram",
+              "sub_topics": [
+                {
+                  "name": "Oszlopdiagram készítése"
+                },
+                {
+                  "name": "Oszlopdiagram értelmezése"
+                }
+              ]
+            },
+            {
+              "name": "Kördiagram",
+              "sub_topics": [
+                {
+                  "name": "Kördiagram készítése"
+                },
+                {
+                  "name": "Kördiagram értelmezése"
+                }
+              ]
+            },
+            {
+              "name": "Megfelelő diagramtípus kiválasztása"
+            },
+            {
+              "name": "Diagramok közötti konverzió"
+            }
+          ]
+        },
+        {
+          "name": "Grafikus manipulációk",
+          "sub_topics": [
+            {
+              "name": "Tengelyek megtévesztése"
+            },
+            {
+              "name": "Manipulációk javítása"
+            }
+          ]
+        },
+        {
+          "name": "Adatok értelmezése és értékelése"
+        }
+      ]
+    },
+    {
+      "name": "Valószínűség-számítás",
+      "sub_topics": [
+        {
+          "name": "Véletlen jelenségek"
+        },
+        {
+          "name": "Valószínűségi kísérletek",
+          "sub_topics": [
+            {
+              "name": "Dobókocka"
+            },
+            {
+              "name": "Pénzérme"
+            }
+          ]
+        },
+        {
+          "name": "Esemény fogalma",
+          "sub_topics": [
+            {
+              "name": "Elemi esemény"
+            },
+            {
+              "name": "Eseménytér"
+            }
+          ]
+        },
+        {
+          "name": "Gyakoriság és relatív gyakoriság",
+          "sub_topics": [
+            {
+              "name": "Gyakoriság"
+            },
+            {
+              "name": "Relatív gyakoriság"
+            },
+            {
+              "name": "Gyakorisági táblázat"
+            }
+          ]
+        },
+        {
+          "name": "Valószínűség fogalma",
+          "sub_topics": [
+            {
+              "name": "Statisztikai valószínűség"
+            },
+            {
+              "name": "Klasszikus valószínűségi modell"
+            }
+          ]
+        },
+        {
+          "name": "Diszkrét valószínűség-eloszlás",
+          "sub_topics": [
+            {
+              "name": "Eloszlás ábrázolása"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "name": "Halmazok, matematikai logika",
+      "sub_topics": [
+        {
+          "name": "Halmazműveletek és logikai műveletek kapcsolata"
+        },
+        {
+          "name": "Logikai kifejezések használata"
+        },
+        {
+          "name": "Állítások indoklása"
+        },
+        {
+          "name": "Tételek bizonyítása"
+        }
+      ]
+    },
+    {
+      "name": "Kombinatorika, gráfok",
+      "sub_topics": [
+        {
+          "name": "Faktoriális",
+          "sub_topics": [
+            {
+              "name": "Faktoriális értelmezése"
+            }
+          ]
+        },
+        {
+          "name": "Binomiális együttható",
+          "sub_topics": [
+            {
+              "name": "Binomiális együttható számítása"
+            },
+            {
+              "name": "Pascal-háromszög"
+            }
+          ]
+        },
+        {
+          "name": "Mintavétel",
+          "sub_topics": [
+            {
+              "name": "Mintavétel visszatevéssel"
+            },
+            {
+              "name": "Mintavétel visszatevés nélkül"
+            }
+          ]
+        },
+        {
+          "name": "Gráf csúcsának fokszáma",
+          "sub_topics": [
+            {
+              "name": "Fokszámösszeg tétel"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Számelméleti ismeretek, számhalmazok épülése",
+      "sub_topics": [
+        {
+          "name": "Oszthatóság",
+          "sub_topics": [
+            {
+              "name": "Oszthatóság fogalma"
+            },
+            {
+              "name": "Oszthatósági szabályok",
+              "sub_topics": [
+                {
+                  "name": "2-vel oszthatóság"
+                },
+                {
+                  "name": "3-mal oszthatóság"
+                },
+                {
+                  "name": "4-gyel oszthatóság"
+                },
+                {
+                  "name": "5-tel oszthatóság"
+                },
+                {
+                  "name": "6-tal oszthatóság"
+                },
+                {
+                  "name": "7-tel oszthatóság"
+                },
+                {
+                  "name": "8-cal oszthatóság"
+                },
+                {
+                  "name": "9-cel oszthatóság"
+                },
+                {
+                  "name": "10-zel oszthatóság"
+                },
+                {
+                  "name": "11-gyel oszthatóság"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Prímszámok",
+          "sub_topics": [
+            {
+              "name": "Prímtényezős felbontás"
+            },
+            {
+              "name": "Prímtényezős felbontás egyértelműsége"
+            }
+          ]
+        },
+        {
+          "name": "Legnagyobb közös osztó és legkisebb közös többszörös",
+          "sub_topics": [
+            {
+              "name": "LNKO meghatározása"
+            },
+            {
+              "name": "LKKT meghatározása"
+            },
+            {
+              "name": "Relatív prímek"
+            }
+          ]
+        },
+        {
+          "name": "Számrendszerek",
+          "sub_topics": [
+            {
+              "name": "Tízes számrendszer"
+            },
+            {
+              "name": "Más alapú számrendszerek",
+              "sub_topics": [
+                {
+                  "name": "Számok felírása más alapon"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "A teljes indukció"
+        },
+        {
+          "name": "Számhalmazok épülése",
+          "sub_topics": [
+            {
+              "name": "Természetes számok (ℕ)"
+            },
+            {
+              "name": "Egész számok (ℤ)"
+            },
+            {
+              "name": "Racionális számok (ℚ)",
+              "sub_topics": [
+                {
+                  "name": "Véges tizedes törtek"
+                },
+                {
+                  "name": "Végtelen szakaszos tizedes törtek"
+                },
+                {
+                  "name": "Tizedes tört ↔ közönséges tört"
+                },
+                {
+                  "name": "Racionális számok tulajdonságai"
+                },
+                {
+                  "name": "Törtek egyszerűsítése és bővítése"
+                },
+                {
+                  "name": "Törtek összehasonlítása"
+                },
+                {
+                  "name": "Műveletek racionális számokkal",
+                  "sub_topics": [
+                    {
+                      "name": "Racionális számok összeadása és kivonása"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Irracionális számok",
+              "sub_topics": [
+                {
+                  "name": "Példák irracionális számokra"
+                }
+              ]
+            },
+            {
+              "name": "Valós számok (ℝ)"
+            }
+          ]
+        },
+        {
+          "name": "Műveleti zártság"
+        }
+      ]
+    },
+    {
+      "name": "Hatvány, gyök, exponenciális függvény, logaritmus",
+      "sub_topics": [
+        {
+          "name": "n-edik gyök",
+          "sub_topics": [
+            {
+              "name": "n-edik gyök definíciója"
+            },
+            {
+              "name": "n-edik gyök tulajdonságai"
+            }
+          ]
+        },
+        {
+          "name": "Racionális kitevőjű hatvány",
+          "sub_topics": [
+            {
+              "name": "Racionális kitevő értelmezése"
+            },
+            {
+              "name": "Hatványozás azonosságai"
+            }
+          ]
+        },
+        {
+          "name": "Irracionális kitevőjű hatvány",
+          "sub_topics": [
+            {
+              "name": "Irracionális kitevő közelítése"
+            }
+          ]
+        },
+        {
+          "name": "Exponenciális függvény",
+          "sub_topics": [
+            {
+              "name": "Exponenciális függvény grafikonja"
+            },
+            {
+              "name": "Exponenciális függvény tulajdonságai"
+            },
+            {
+              "name": "Különböző alapú exponenciális függvények"
+            }
+          ]
+        },
+        {
+          "name": "Logaritmus",
+          "sub_topics": [
+            {
+              "name": "Logaritmus definíciója"
+            },
+            {
+              "name": "Logaritmus tulajdonságai"
+            },
+            {
+              "name": "Áttérés más alapú logaritmusra"
+            },
+            {
+              "name": "Logaritmus számítása számológéppel"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Exponenciális folyamatok vizsgálata",
+      "sub_topics": [
+        {
+          "name": "Exponenciális folyamatok a természetben",
+          "sub_topics": [
+            {
+              "name": "Népesség növekedése"
+            },
+            {
+              "name": "Radioaktív bomlás"
+            }
+          ]
+        },
+        {
+          "name": "Exponenciális folyamatok a társadalomban",
+          "sub_topics": [
+            {
+              "name": "Kamatos kamat"
+            },
+            {
+              "name": "Infláció"
+            }
+          ]
+        },
+        {
+          "name": "Exponenciális egyenletek",
+          "sub_topics": [
+            {
+              "name": "Egyszerű exponenciális egyenletek"
+            },
+            {
+              "name": "Összetettebb exponenciális egyenletek"
+            }
+          ]
+        },
+        {
+          "name": "Exponenciális egyenlőtlenségek",
+          "sub_topics": [
+            {
+              "name": "Exponenciális egyenlőtlenség megoldása"
+            }
+          ]
+        },
+        {
+          "name": "Modellalkotás exponenciális folyamatokhoz"
+        }
+      ]
+    },
+    {
+      "name": "Sorozatok",
+      "sub_topics": [
+        {
+          "name": "Számsorozat fogalma",
+          "sub_topics": [
+            {
+              "name": "Sorozat megadása képlettel"
+            },
+            {
+              "name": "Sorozat megadása rekurzióval"
+            }
+          ]
+        },
+        {
+          "name": "Számtani sorozat",
+          "sub_topics": [
+            {
+              "name": "Számtani sorozat fogalma"
+            },
+            {
+              "name": "Számtani sorozat n-edik tagja"
+            },
+            {
+              "name": "Számtani sorozat első n tagjának összege",
+              "sub_topics": [
+                {
+                  "name": "Összegképlet bizonyítása"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Mértani sorozat",
+          "sub_topics": [
+            {
+              "name": "Mértani sorozat fogalma"
+            },
+            {
+              "name": "Mértani sorozat n-edik tagja"
+            },
+            {
+              "name": "Mértani sorozat első n tagjának összege",
+              "sub_topics": [
+                {
+                  "name": "Összegképlet bizonyítása"
+                }
+              ]
+            },
+            {
+              "name": "Végtelen mértani sor"
+            }
+          ]
+        },
+        {
+          "name": "Kamatozás",
+          "sub_topics": [
+            {
+              "name": "Egyszerű kamat"
+            },
+            {
+              "name": "Kamatos kamat",
+              "sub_topics": [
+                {
+                  "name": "Kamatos kamat képlete"
+                }
+              ]
+            },
+            {
+              "name": "Gyűjtőjáradék",
+              "sub_topics": [
+                {
+                  "name": "Gyűjtőjáradék képlete"
+                }
+              ]
+            },
+            {
+              "name": "Törlesztőrészlet",
+              "sub_topics": [
+                {
+                  "name": "Törlesztőrészlet számítása"
+                }
+              ]
+            },
+            {
+              "name": "Megtakarítási formák"
+            },
+            {
+              "name": "Befektetési formák"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trigonometria",
+      "sub_topics": [
+        {
+          "name": "Hegyesszög szögfüggvényei",
+          "sub_topics": [
+            {
+              "name": "Szinusz (sin)"
+            },
+            {
+              "name": "Koszinusz (cos)"
+            },
+            {
+              "name": "Tangens (tg vagy tan)"
+            }
+          ]
+        },
+        {
+          "name": "Számítások derékszögű háromszögben",
+          "sub_topics": [
+            {
+              "name": "Ismeretlen oldal számítása"
+            },
+            {
+              "name": "Ismeretlen szög számítása"
+            }
+          ]
+        },
+        {
+          "name": "Tompaszög szögfüggvényei",
+          "sub_topics": [
+            {
+              "name": "Tompaszög szinusza"
+            },
+            {
+              "name": "Tompaszög koszinusza"
+            },
+            {
+              "name": "Tompaszög tangense"
+            }
+          ]
+        },
+        {
+          "name": "Szögfüggvények összefüggései",
+          "sub_topics": [
+            {
+              "name": "Pitagoraszi összefüggés"
+            },
+            {
+              "name": "Tangens és szinusz/koszinusz"
+            },
+            {
+              "name": "Pótszögek szögfüggvényei"
+            },
+            {
+              "name": "Mellékszögek szögfüggvényei"
+            }
+          ]
+        },
+        {
+          "name": "Szögfüggvény értékéből a szög"
+        },
+        {
+          "name": "Háromszög területe szögfüggvénnyel"
+        },
+        {
+          "name": "Szinusztétel",
+          "sub_topics": [
+            {
+              "name": "Szinusztétel kimondása"
+            },
+            {
+              "name": "Szinusztétel bizonyítása"
+            },
+            {
+              "name": "Szinusztétel alkalmazása"
+            }
+          ]
+        },
+        {
+          "name": "Koszinusztétel",
+          "sub_topics": [
+            {
+              "name": "Koszinusztétel kimondása"
+            },
+            {
+              "name": "Koszinusztétel alkalmazása"
+            }
+          ]
+        },
+        {
+          "name": "Számítások négyszögekben",
+          "sub_topics": [
+            {
+              "name": "Négyszög átlóval való felosztása"
+            },
+            {
+              "name": "Négyszög területe"
+            }
+          ]
+        },
+        {
+          "name": "Számítások szabályos sokszögekben",
+          "sub_topics": [
+            {
+              "name": "Szabályos sokszög középponti szöge"
+            },
+            {
+              "name": "Szabályos sokszög területe"
+            }
+          ]
+        },
+        {
+          "name": "Gyakorlati alkalmazások",
+          "sub_topics": [
+            {
+              "name": "Magasság meghatározása"
+            },
+            {
+              "name": "Távolság meghatározása"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Térgeometria",
+      "sub_topics": [
+        {
+          "name": "Térelemek kölcsönös helyzete",
+          "sub_topics": [
+            {
+              "name": "Két egyenes a térben",
+              "sub_topics": [
+                {
+                  "name": "Metsző egyenesek"
+                },
+                {
+                  "name": "Párhuzamos egyenesek"
+                },
+                {
+                  "name": "Kitérő egyenesek"
+                }
+              ]
+            },
+            {
+              "name": "Egyenes és sík helyzete",
+              "sub_topics": [
+                {
+                  "name": "Egyenes párhuzamos a síkkal"
+                },
+                {
+                  "name": "Egyenes metszi a síkot"
+                },
+                {
+                  "name": "Egyenes a síkban van"
+                }
+              ]
+            },
+            {
+              "name": "Két sík helyzete",
+              "sub_topics": [
+                {
+                  "name": "Párhuzamos síkok"
+                },
+                {
+                  "name": "Metsző síkok"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Térelemek távolsága",
+          "sub_topics": [
+            {
+              "name": "Pont és sík távolsága"
+            },
+            {
+              "name": "Két párhuzamos sík távolsága"
+            },
+            {
+              "name": "Kitérő egyenesek távolsága"
+            }
+          ]
+        },
+        {
+          "name": "Térelemek hajlásszöge",
+          "sub_topics": [
+            {
+              "name": "Két egyenes hajlásszöge"
+            },
+            {
+              "name": "Egyenes és sík hajlásszöge"
+            },
+            {
+              "name": "Két sík hajlásszöge"
+            }
+          ]
+        },
+        {
+          "name": "Mértékegységek",
+          "sub_topics": [
+            {
+              "name": "Hosszúság mértékegységei"
+            },
+            {
+              "name": "Terület mértékegységei"
+            },
+            {
+              "name": "Térfogat mértékegységei"
+            },
+            {
+              "name": "Űrtartalom mértékegysegei"
+            },
+            {
+              "name": "Sűrűség mértékegységei"
+            }
+          ]
+        },
+        {
+          "name": "Testek tulajdonságai",
+          "sub_topics": [
+            {
+              "name": "Hasáb",
+              "sub_topics": [
+                {
+                  "name": "Egyenes hasáb"
+                },
+                {
+                  "name": "Téglatest"
+                },
+                {
+                  "name": "Kocka"
+                },
+                {
+                  "name": "Hasáb hálója"
+                },
+                {
+                  "name": "Hasáb felszíne"
+                },
+                {
+                  "name": "Hasáb térfogata"
+                }
+              ]
+            },
+            {
+              "name": "Henger",
+              "sub_topics": [
+                {
+                  "name": "Egyenes körhenger"
+                },
+                {
+                  "name": "Henger hálója"
+                },
+                {
+                  "name": "Henger felszíne"
+                },
+                {
+                  "name": "Henger térfogata"
+                }
+              ]
+            },
+            {
+              "name": "Gúla",
+              "sub_topics": [
+                {
+                  "name": "Egyenes gúla"
+                },
+                {
+                  "name": "Szabályos gúla"
+                },
+                {
+                  "name": "Tetraéder (négylap)"
+                },
+                {
+                  "name": "Gúla hálója"
+                },
+                {
+                  "name": "Gúla felszíne"
+                },
+                {
+                  "name": "Gúla térfogata"
+                }
+              ]
+            },
+            {
+              "name": "Kúp",
+              "sub_topics": [
+                {
+                  "name": "Forgáskúp"
+                },
+                {
+                  "name": "Kúp hálója"
+                },
+                {
+                  "name": "Kúp felszíne"
+                },
+                {
+                  "name": "Kúp térfogata"
+                }
+              ]
+            },
+            {
+              "name": "Gömb",
+              "sub_topics": [
+                {
+                  "name": "Gömb mint forgástest"
+                },
+                {
+                  "name": "Gömb felszíne"
+                },
+                {
+                  "name": "Gömb térfogata"
+                }
+              ]
+            },
+            {
+              "name": "Csonkagúla",
+              "sub_topics": [
+                {
+                  "name": "Csonkagúla felszíne"
+                },
+                {
+                  "name": "Csonkagúla térfogata"
+                }
+              ]
+            },
+            {
+              "name": "Csonkakúp",
+              "sub_topics": [
+                {
+                  "name": "Csonkakúp felszíne"
+                },
+                {
+                  "name": "Csonkakúp térfogata"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Forgástestek",
+          "sub_topics": [
+            {
+              "name": "Forgástestek keletkezése"
+            },
+            {
+              "name": "Összetett forgástestek"
+            }
+          ]
+        },
+        {
+          "name": "Hasonló testek",
+          "sub_topics": [
+            {
+              "name": "Hasonló testek felszíne",
+              "sub_topics": [
+                {
+                  "name": "Felszínek arányának tétele"
+                }
+              ]
+            },
+            {
+              "name": "Hasonló testek térfogata",
+              "sub_topics": [
+                {
+                  "name": "Térfogatok arányának tétele"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Gyakorlati alkalmazások",
+          "sub_topics": [
+            {
+              "name": "Csomagolások térfogata"
+            },
+            {
+              "name": "Építészeti alkalmazások"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Koordinátageometria",
+      "sub_topics": [
+        {
+          "name": "Vektorok",
+          "sub_topics": [
+            {
+              "name": "Alapfogalmak"
+            },
+            {
+              "name": "Vektorműveletek",
+              "sub_topics": [
+                {
+                  "name": "Vektorok összege"
+                },
+                {
+                  "name": "Vektorok különbsége"
+                },
+                {
+                  "name": "Vektor számszorosa"
+                }
+              ]
+            },
+            {
+              "name": "Vektorok alkalmazása"
+            }
+          ]
+        },
+        {
+          "name": "Koordináta-rendszer",
+          "sub_topics": [
+            {
+              "name": "Pont megadása koordinátákkal"
+            },
+            {
+              "name": "Vektor megadása koordinátákkal"
+            },
+            {
+              "name": "Helyvektor koordinátái"
+            }
+          ]
+        },
+        {
+          "name": "Számítások koordinátákkal",
+          "sub_topics": [
+            {
+              "name": "Két pont távolsága"
+            },
+            {
+              "name": "Vektor abszolút értéke"
+            },
+            {
+              "name": "Vektorműveletek koordinátákkal",
+              "sub_topics": [
+                {
+                  "name": "Vektorok összege"
+                },
+                {
+                  "name": "Vektorok különbsége"
+                },
+                {
+                  "name": "Vektor számszorosa"
+                }
+              ]
+            },
+            {
+              "name": "Szakaszfelezőpont koordinátái"
+            }
+          ]
+        },
+        {
+          "name": "Ponthalmazok koordináta-rendszerben",
+          "sub_topics": [
+            {
+              "name": "Egyenlet mint ponthalmaz"
+            },
+            {
+              "name": "Egyenlőtlenség mint ponthalmaz"
+            }
+          ]
+        },
+        {
+          "name": "Egyenes egyenlete",
+          "sub_topics": [
+            {
+              "name": "Meredekség-tengelymetszet alak"
+            },
+            {
+              "name": "Meredekség (m)",
+              "sub_topics": [
+                {
+                  "name": "Meredekség számítása"
+                }
+              ]
+            },
+            {
+              "name": "y-tengelymetszet (b)"
+            },
+            {
+              "name": "Függőleges egyenes"
+            },
+            {
+              "name": "Egyenes egyenletének felírása"
+            }
+          ]
+        },
+        {
+          "name": "Egyenesek kölcsönös helyzete",
+          "sub_topics": [
+            {
+              "name": "Párhuzamos egyenesek"
+            },
+            {
+              "name": "Merőleges egyenesek"
+            },
+            {
+              "name": "Egyenesek metszéspontja"
+            }
+          ]
+        },
+        {
+          "name": "Kör egyenlete",
+          "sub_topics": [
+            {
+              "name": "Kör egyenletének felírása"
+            },
+            {
+              "name": "Kör adatainak leolvasása"
+            },
+            {
+              "name": "Kör és egyenes metszése"
+            }
+          ]
+        },
+        {
+          "name": "Alakzat egyenlete"
+        }
+      ]
+    },
+    {
+      "name": "Leíró statisztika",
+      "sub_topics": [
+        {
+          "name": "Reprezentatív minta",
+          "sub_topics": [
+            {
+              "name": "Reprezentatív minta fogalma"
+            },
+            {
+              "name": "Példák reprezentatív mintára"
+            }
+          ]
+        },
+        {
+          "name": "Statisztikai adatgyűjtés tervezése"
+        },
+        {
+          "name": "Adatok rendszerezése"
+        },
+        {
+          "name": "Középértékek"
+        },
+        {
+          "name": "Szóródási mutatók",
+          "sub_topics": [
+            {
+              "name": "Minimum és maximum"
+            },
+            {
+              "name": "Terjedelem"
+            },
+            {
+              "name": "Kvartilisek",
+              "sub_topics": [
+                {
+                  "name": "Alsó kvartilis (Q₁)"
+                },
+                {
+                  "name": "Medián (Q₂)"
+                },
+                {
+                  "name": "Felső kvartilis (Q₃)"
+                }
+              ]
+            },
+            {
+              "name": "Kvartilis terjedelem"
+            },
+            {
+              "name": "Szórás"
+            },
+            {
+              "name": "Kiugró adat"
+            }
+          ]
+        },
+        {
+          "name": "Sodrófa (box-plot) diagram",
+          "sub_topics": [
+            {
+              "name": "Sodrófa diagram készítése"
+            },
+            {
+              "name": "Sodrófa diagram értelmezése"
+            },
+            {
+              "name": "Adathalmazok összehasonlítása"
+            }
+          ]
+        },
+        {
+          "name": "Nagy adathalmazok kezelése"
+        },
+        {
+          "name": "Statisztikai következtetések"
+        },
+        {
+          "name": "Statisztikai manipulációk",
+          "sub_topics": [
+            {
+              "name": "Grafikus manipulációk felismerése"
+            },
+            {
+              "name": "Szöveges manipulációk"
+            },
+            {
+              "name": "Simpson-paradoxon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Valószínűség-számítás",
+      "sub_topics": [
+        {
+          "name": "Események műveletei",
+          "sub_topics": [
+            {
+              "name": "Események összege"
+            },
+            {
+              "name": "Események szorzata"
+            },
+            {
+              "name": "Esemény komplementere"
+            },
+            {
+              "name": "Egymást kizáró események"
+            }
+          ]
+        },
+        {
+          "name": "Elemi események",
+          "sub_topics": [
+            {
+              "name": "Események előállítása"
+            }
+          ]
+        },
+        {
+          "name": "Független események",
+          "sub_topics": [
+            {
+              "name": "Példák független eseményekre"
+            },
+            {
+              "name": "Független események valószínűsége"
+            }
+          ]
+        },
+        {
+          "name": "Klasszikus valószínűségi modell",
+          "sub_topics": [
+            {
+              "name": "Laplace-képlet"
+            },
+            {
+              "name": "Klasszikus modell alkalmazása"
+            }
+          ]
+        },
+        {
+          "name": "Geometriai valószínűség",
+          "sub_topics": [
+            {
+              "name": "Geometriai valószínűség fogalma"
+            },
+            {
+              "name": "Geometriai valószínűség alkalmazása"
+            }
+          ]
+        },
+        {
+          "name": "Mintavétel valószínűség-számításban",
+          "sub_topics": [
+            {
+              "name": "Visszatevéses mintavétel"
+            },
+            {
+              "name": "Visszatevés nélküli mintavétel"
+            },
+            {
+              "name": "Valószínűségek meghatározása"
+            }
+          ]
+        },
+        {
+          "name": "Várható érték",
+          "sub_topics": [
+            {
+              "name": "Várható érték fogalma"
+            },
+            {
+              "name": "Várható érték számítása"
+            },
+            {
+              "name": "Várható érték játékokban"
+            }
+          ]
+        },
+        {
+          "name": "Pénzügyi alkalmazások",
+          "sub_topics": [
+            {
+              "name": "Biztosítás matematikája"
+            },
+            {
+              "name": "Befektetési kockázat"
+            },
+            {
+              "name": "Árfolyamkockázat"
+            }
+          ]
+        },
+        {
+          "name": "Valószínűségi játékok elemzése",
+          "sub_topics": [
+            {
+              "name": "Lottó, totó"
+            },
+            {
+              "name": "Kártyajátékok"
+            },
+            {
+              "name": "Sportfogadás"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rendszerező összefoglalás",
+      "sub_topics": [
+        {
+          "name": "Algebra összefoglalás"
+        },
+        {
+          "name": "Függvények összefoglalás"
+        },
+        {
+          "name": "Sorozatok összefoglalás"
+        },
+        {
+          "name": "Geometria összefoglalás"
+        },
+        {
+          "name": "Trigonometria összefoglalás"
+        },
+        {
+          "name": "Koordinátageometria összefoglalás"
+        },
+        {
+          "name": "Kombinatorika összefoglalás"
+        },
+        {
+          "name": "Statisztika és valószínűség összefoglalás"
+        },
+        {
+          "name": "Érettségi feladatsorok"
+        }
+      ]
+    }
+  ]
+}
