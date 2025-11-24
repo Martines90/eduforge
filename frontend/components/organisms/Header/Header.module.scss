@@ -34,3 +34,11 @@
     gap: var(--spacing-sm);
   }
 }
+
+.countrySelector {
+  margin-left: auto;
+
+  @include md {
+    margin-left: var(--spacing-md);
+  }
+}

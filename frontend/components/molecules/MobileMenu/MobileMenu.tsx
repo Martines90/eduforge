@@ -35,7 +35,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
         <Logo />
         <IconButton
           onClick={onClose}
-          aria-label="Close menu"
+          aria-label={typeof window !== 'undefined' ? 'Close menu' : 'Close menu'}
           className={styles.closeButton}
         >
           <CloseIcon />

@@ -1,0 +1,142 @@
+@import '@/styles/mixins.scss';
+
+.dialog {
+  z-index: 1400;
+}
+
+.paper {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-md);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.titleText {
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+  opacity: 0.95;
+}
+
+.content {
+  padding: var(--spacing-xl) var(--spacing-lg);
+
+  @include md {
+    padding: var(--spacing-xl);
+  }
+}
+
+.suggestion {
+  background: rgba(25, 118, 210, 0.1);
+  border-left: 4px solid var(--primary-color);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+}
+
+.suggestionText {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.countryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.countryCard {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+
+  &.selected {
+    border-color: var(--primary-color);
+    background: rgba(25, 118, 210, 0.05);
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.cardAction {
+  height: 100%;
+}
+
+.cardContent {
+  padding: var(--spacing-lg);
+  text-align: center;
+  position: relative;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  min-height: 48px;
+}
+
+.flag {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.checkIcon {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.countryName {
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.recommendedBadge {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  background: var(--primary-color);
+  color: white;
+  padding: 2px var(--spacing-sm);
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.helpText {
+  display: block;
+  text-align: center;
+  font-style: italic;
+}
+
+.actions {
+  padding: var(--spacing-md) var(--spacing-lg) var(--spacing-lg);
+}
+
+.confirmButton {
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: none;
+  border-radius: var(--border-radius);
+}

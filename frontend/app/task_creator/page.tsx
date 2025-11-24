@@ -5,6 +5,7 @@ import { Container, Typography, Box, Paper, Alert, Tabs, Tab } from '@mui/materi
 import { CascadingSelect } from '@/components/organisms/CascadingSelect';
 import { Button } from '@/components/atoms/Button';
 import { NavigationTopic, GradeLevel } from '@/types/navigation';
+import { useTranslation } from '@/lib/i18n';
 import navigationData from '@/data/navigation_mapping.json';
 import styles from './page.module.scss';
 
@@ -28,6 +29,7 @@ function TabPanel({ children, value, index }: TabPanelProps) {
 }
 
 export default function TaskCreatorPage() {
+  const { t } = useTranslation();
   const [selectedGrade, setSelectedGrade] = useState<number>(0);
   const [selectedTopic, setSelectedTopic] = useState<NavigationTopic | null>(null);
   const [selectionPath, setSelectionPath] = useState<string[]>([]);
@@ -59,10 +61,10 @@ export default function TaskCreatorPage() {
       <Container maxWidth="lg" className={styles.container}>
         <Box className={styles.header}>
           <Typography variant="h3" component="h1" className={styles.title}>
-            Task Creator
+            {t('Task Creator')}
           </Typography>
           <Typography variant="body1" color="text.secondary" className={styles.subtitle}>
-            Select a curriculum topic to create an educational task
+            {t('Select a curriculum topic to create an educational task')}
           </Typography>
         </Box>
 
@@ -74,15 +76,15 @@ export default function TaskCreatorPage() {
             variant="fullWidth"
             className={styles.tabs}
           >
-            <Tab label="Grade 9-10" id="grade-tab-0" aria-controls="grade-tabpanel-0" />
-            <Tab label="Grade 11-12" id="grade-tab-1" aria-controls="grade-tabpanel-1" />
+            <Tab label={t('Grade 9-10')} id="grade-tab-0" aria-controls="grade-tabpanel-0" />
+            <Tab label={t('Grade 11-12')} id="grade-tab-1" aria-controls="grade-tabpanel-1" />
           </Tabs>
         </Paper>
 
         <TabPanel value={selectedGrade} index={0}>
           <CascadingSelect
             data={currentData}
-            title="Select Topic (Grade 9-10)"
+            title={`${t('Select Topic')} (${t('Grade 9-10')})`}
             onSelectionComplete={handleSelectionComplete}
           />
         </TabPanel>
@@ -90,7 +92,7 @@ export default function TaskCreatorPage() {
         <TabPanel value={selectedGrade} index={1}>
           <CascadingSelect
             data={currentData}
-            title="Select Topic (Grade 11-12)"
+            title={`${t('Select Topic')} (${t('Grade 11-12')})`}
             onSelectionComplete={handleSelectionComplete}
           />
         </TabPanel>
@@ -99,16 +101,16 @@ export default function TaskCreatorPage() {
           <Box className={styles.resultSection}>
             <Alert severity="success" className={styles.alert}>
               <Typography variant="h6" component="h2" gutterBottom>
-                Selected Topic
+                {t('Selected Topic')}
               </Typography>
               <Typography variant="body2" gutterBottom>
-                <strong>Topic:</strong> {selectedTopic.name}
+                <strong>{t('Topic')}:</strong> {selectedTopic.name}
               </Typography>
               <Typography variant="body2" gutterBottom>
-                <strong>Path:</strong> {selectionPath.join(' > ')}
+                <strong>{t('Path')}:</strong> {selectionPath.join(' > ')}
               </Typography>
               <Typography variant="body2">
-                <strong>Grade Level:</strong> {gradeLevel === 'grade_9_10' ? '9-10' : '11-12'}
+                <strong>{t('Grade Level')}:</strong> {gradeLevel === 'grade_9_10' ? t('Grade 9-10') : t('Grade 11-12')}
               </Typography>
             </Alert>
 
@@ -119,7 +121,7 @@ export default function TaskCreatorPage() {
                 onClick={handleCreateTask}
                 className={styles.createButton}
               >
-                Create Task
+                {t('Create Task')}
               </Button>
               <Button
                 variant="secondary"
@@ -129,7 +131,7 @@ export default function TaskCreatorPage() {
                   setSelectionPath([]);
                 }}
               >
-                Clear Selection
+                {t('Clear Selection')}
               </Button>
             </Box>
           </Box>

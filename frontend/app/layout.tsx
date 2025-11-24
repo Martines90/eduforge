@@ -3,6 +3,9 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { Header } from '@/components/organisms/Header';
+import { UserProvider } from '@/lib/context';
+import { I18nProvider } from '@/lib/i18n';
+import { OnboardingHandler } from '@/components/organisms/OnboardingHandler';
 import theme from '@/lib/theme';
 import '@/styles/globals.scss';
 
@@ -26,9 +29,14 @@ export default function RootLayout({
       <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <Header />
-            <main>{children}</main>
+            <UserProvider>
+              <I18nProvider>
+                <CssBaseline />
+                <OnboardingHandler />
+                <Header />
+                <main>{children}</main>
+              </I18nProvider>
+            </UserProvider>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

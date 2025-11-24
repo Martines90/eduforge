@@ -5,6 +5,7 @@ import { Box, Paper, Typography, Chip } from '@mui/material';
 import { Select, SelectOption } from '@/components/atoms/Select';
 import { Button } from '@/components/atoms/Button';
 import { useCascadingSelect } from '@/lib/hooks/useCascadingSelect';
+import { useTranslation } from '@/lib/i18n';
 import { NavigationTopic } from '@/types/navigation';
 import styles from './CascadingSelect.module.scss';
 
@@ -26,6 +27,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
   onSelectionComplete,
   className,
 }) => {
+  const { t } = useTranslation();
   const {
     selectionPath,
     availableOptions,
@@ -50,7 +52,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
         </Typography>
         {selectionPath.length > 0 && (
           <Button variant="text" onClick={reset} size="small">
-            Reset
+            {t('Reset')}
           </Button>
         )}
       </div>
@@ -83,12 +85,12 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
             <Select
               key={`level-${level}`}
               id={`cascade-select-${level}`}
-              label={`Level ${level + 1}`}
+              label={`${t('Level')} ${level + 1}`}
               value={selectedValue}
               options={selectOptions}
               onChange={(value) => selectOption(level, value)}
-              placeholder={`Select ${level === 0 ? 'main topic' : 'sub-topic'}`}
-              aria-label={`Select level ${level + 1} topic`}
+              placeholder={level === 0 ? t('Select main topic') : t('Select sub-topic')}
+              aria-label={`${t('Level')} ${level + 1}`}
             />
           );
         })}
@@ -98,7 +100,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
       {isComplete && finalSelection && (
         <div className={styles.completeSection}>
           <Typography variant="body1" className={styles.completeText}>
-            Selection complete: <strong>{finalSelection.name}</strong>
+            {t('Selection complete')}: <strong>{finalSelection.name}</strong>
           </Typography>
           {onSelectionComplete && (
             <Button
@@ -106,7 +108,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
               onClick={handleSelectionComplete}
               className={styles.completeButton}
             >
-              Confirm Selection
+              {t('Confirm Selection')}
             </Button>
           )}
         </div>
@@ -115,7 +117,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
       {/* Empty state */}
       {selectionPath.length === 0 && (
         <Typography variant="body2" color="textSecondary" className={styles.emptyState}>
-          Please select a topic to begin
+          {t('Please select a topic to begin')}
         </Typography>
       )}
     </Paper>

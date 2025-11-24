@@ -1,8 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import { Container, Typography, Box, Paper } from '@mui/material';
 import { Button } from '@/components/atoms/Button';
+import { useTranslation } from '@/lib/i18n';
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <Container maxWidth="lg" sx={{ flex: 1, display: 'flex', alignItems: 'center' }}>
       <Box
@@ -27,15 +32,15 @@ export default function Home() {
             EduForge
           </Typography>
           <Typography variant="h5" color="text.secondary" paragraph>
-            Task Creator
+            {t('Task Creator')}
           </Typography>
           <Typography variant="body1" color="text.secondary" paragraph>
-            Create educational tasks based on curriculum topics for grades 9-12
+            {t('Create educational tasks based on curriculum topics for grades 9-12')}
           </Typography>
           <Box sx={{ mt: 4 }}>
             <Link href="/task_creator" passHref legacyBehavior>
               <Button variant="primary" size="large">
-                Go to Task Creator
+                {t('Go to Task Creator')}
               </Button>
             </Link>
           </Box>

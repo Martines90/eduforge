@@ -1,0 +1,63 @@
+@import '@/styles/mixins.scss';
+
+.select {
+  min-width: 100px;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  @include focus-visible;
+
+  .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+
+  &:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--primary-color);
+  }
+}
+
+.selectedValue {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.flag {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.code {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.menuItem {
+  padding: var(--spacing-sm) var(--spacing-md);
+
+  &:hover {
+    background-color: rgba(25, 118, 210, 0.08);
+  }
+}
+
+.menuItemContent {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 100%;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.countryName {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.language {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}

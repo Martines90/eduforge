@@ -6,23 +6,26 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Logo } from '@/components/atoms/Logo';
 import { NavLink } from '@/components/atoms/NavLink';
 import { MobileMenu } from '@/components/molecules/MobileMenu';
+import { CountrySelector } from '@/components/molecules/CountrySelector';
+import { useTranslation } from '@/lib/i18n';
 import styles from './Header.module.scss';
 
 export interface HeaderProps {
   className?: string;
 }
 
-const navigationItems = [
-  { href: '/', label: 'Home' },
-  { href: '/task_creator', label: 'Task Creator' },
-];
-
 /**
  * Header Organism Component
  * Main navigation header with hamburger menu for mobile
  */
 export const Header: React.FC<HeaderProps> = ({ className }) => {
+  const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navigationItems = [
+    { href: '/', label: t('Home') },
+    { href: '/task_creator', label: t('Task Creator') },
+  ];
 
   const handleMenuToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -41,7 +44,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
             <IconButton
               className={styles.menuButton}
               color="inherit"
-              aria-label="Open navigation menu"
+              aria-label={t('Open navigation menu')}
               edge="start"
               onClick={handleMenuToggle}
             >
@@ -59,6 +62,9 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
                 </NavLink>
               ))}
             </Box>
+
+            {/* Country Selector */}
+            <CountrySelector className={styles.countrySelector} />
           </Toolbar>
         </Container>
       </AppBar>
