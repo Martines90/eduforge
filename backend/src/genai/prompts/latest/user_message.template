@@ -1,0 +1,14 @@
+
+{
+  "curriculum_topic": {
+    "key": "{{TOPIC_KEY_FROM_HU_JSON}}",
+    "name": "{{TOPIC_NAME_FROM_HU_JSON}}",
+    "short_description": "{{TOPIC_SHORT_DESCRIPTION}}",
+    "example_tasks": [
+      {{LIST_OF_RELEVANT_EXAMPLE_TASK_STRINGS}}
+    ]
+  },
+  "selected_example_index": {{NON_NEGATIVE_INTEGER_INDEX}},
+  "reference_style_tasks": {{SMALL_ARRAY_OF_3_TO_6_OBJECTS_FROM_inspirational_reference_tasks_json}},
+  "task_id_hint": "{{OPTIONAL_PREDEFINED_ID_OR_EMPTY_STRING}}"
+}

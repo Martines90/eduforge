@@ -14,6 +14,8 @@ import {
   generateStoryInspiration,
   getMeasurementSystem,
   getLanguageForCountry,
+  buildSystemPrompt,
+  buildUserMessage,
 } from "../utils";
 import { TextGeneratorService } from "./text-generator.service";
 import { ImageGeneratorService } from "./image-generator.service";
@@ -45,66 +47,18 @@ export class TaskGeneratorService {
   }
 
   /**
-   * Builds a comprehensive prompt for task story generation
+   * Builds a comprehensive prompt for task story generation using the new system prompt approach
    */
-  private buildTaskPrompt(request: TaskGeneratorRequest): string {
-    // Load the appropriate template based on measurement system
-    const measurementSystem = getMeasurementSystem(request.country_code);
-    const templateName = `task_generation_${measurementSystem}.md`;
-    let prompt = this.loadPromptTemplate(templateName);
+  private buildTaskPrompt(
+    request: TaskGeneratorRequest
+  ): { systemPrompt: string; userMessage: string } {
+    // Build the enhanced system prompt with all context
+    const systemPrompt = buildSystemPrompt(request);
 
-    // Get language for the country
-    const language = getLanguageForCountry(request.country_code);
+    // Build the user message (JSON input)
+    const userMessage = buildUserMessage(request);
 
-    prompt += `\n\n## TASK CONFIGURATION\n`;
-    prompt += `**IMPORTANT: Generate the entire task in ${language}.**\n\n`;
-    prompt += `Curriculum Path: ${request.curriculum_path}\n`;
-    prompt += `Country/Locale: ${request.country_code}\n`;
-    prompt += `Language: ${language}\n`;
-    prompt += `Target Audience: ${request.target_group}\n`;
-    prompt += `Difficulty Level: ${request.difficulty_level}\n`;
-    prompt += `Educational Model: ${request.educational_model}\n`;
-    prompt += `Display Template: ${request.display_template}\n`;
-
-    // Add precision settings
-    prompt += `\n## MATHEMATICAL PRECISION\n`;
-    prompt += `Constant Precision: ${request.precision_settings.constant_precision} decimal places\n`;
-    prompt += `Intermediate Precision: ${request.precision_settings.intermediate_precision} decimal places\n`;
-    prompt += `Final Answer Precision: ${request.precision_settings.final_answer_precision} decimal places\n`;
-    if (request.precision_settings.use_exact_values) {
-      prompt += `Use exact values (fractions, π symbol) where appropriate\n`;
-    }
-
-    // Add custom keywords if provided
-    if (request.custom_keywords && request.custom_keywords.length > 0) {
-      prompt += `\n## CUSTOM KEYWORDS (MANDATORY)\n`;
-      prompt += `**CRITICAL REQUIREMENT**: You MUST incorporate AT LEAST 2 of these keywords into the story as central elements:\n`;
-      prompt += `Keywords: ${request.custom_keywords.join(", ")}\n\n`;
-      prompt += `- These keywords should be integral to the plot, not just mentioned in passing\n`;
-      prompt += `- Build the narrative around these themes\n`;
-      prompt += `- Make them relevant to the mathematical problem\n`;
-    }
-
-    // Generate and add story inspiration elements using helper
-    const inspiration = generateStoryInspiration(
-      request.difficulty_level,
-      request.target_group,
-      request.custom_keywords
-    );
-
-    prompt += inspiration.promptAdditions;
-
-    // Add specific instructions based on configuration
-    prompt += `\n## SPECIFIC INSTRUCTIONS\n`;
-    prompt += `- **Write everything in ${language}** - title, story, questions, all text\n`;
-    prompt += `- Adapt cultural references appropriate for ${request.country_code}\n`;
-    prompt += `- Create content appropriate for ${request.target_group}\n`;
-    prompt += `- Follow ${request.educational_model} educational principles\n`;
-    prompt += `- Design for ${request.display_template} display template\n`;
-    prompt += `- Generate ONLY the task story and question, NOT the solution\n`;
-    prompt += `- Weave the story inspiration elements naturally into the narrative\n`;
-
-    return prompt;
+    return { systemPrompt, userMessage };
   }
 
   /**
@@ -366,13 +320,17 @@ export class TaskGeneratorService {
 
     const taskId = generateTaskId();
 
-    // Step 1: Generate task story/description using task_generation.md prompt
-    console.log("📝 Step 1: Generating task story...");
-    const taskPrompt = this.buildTaskPrompt(request);
-    const taskResult = await this.textGenerator.generate(taskPrompt, {
-      temperature: 0.8,
-      maxTokens: 2000,
-    });
+    // Step 1: Generate task story/description using the new system prompt template approach
+    console.log("📝 Step 1: Generating task story with enhanced system prompt...");
+    const { systemPrompt, userMessage } = this.buildTaskPrompt(request);
+    const taskResult = await this.textGenerator.generateWithSystemPrompt(
+      systemPrompt,
+      userMessage,
+      {
+        temperature: 0.8,
+        maxTokens: 2000,
+      }
+    );
 
     // Parse the task JSON response
     const taskData = this.parseTaskResponse(taskResult.text);

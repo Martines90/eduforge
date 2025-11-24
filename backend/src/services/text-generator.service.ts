@@ -47,6 +47,50 @@ export class TextGeneratorService {
     };
   }
 
+  /**
+   * Generate text with separate system and user prompts
+   */
+  async generateWithSystemPrompt(
+    systemPrompt: string,
+    userPrompt: string,
+    options: TextOptions = {}
+  ): Promise<TextResult> {
+    const { temperature = 0.8, maxTokens = 2000 } = options;
+
+    console.log("🤖 Generating text with system prompt...");
+
+    const params: ChatCompletionCreateParamsNonStreaming = {
+      model: config.textModel,
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userPrompt },
+      ],
+      temperature,
+      max_tokens: maxTokens,
+    };
+
+    const response = await this.client.chat.completions.create(params);
+
+    const messageContent = response.choices[0]?.message?.content;
+    if (!messageContent) {
+      throw new Error("No content in response");
+    }
+
+    const promptTokens = response.usage?.prompt_tokens ?? 0;
+    const completionTokens = response.usage?.completion_tokens ?? 0;
+    const totalTokens = response.usage?.total_tokens ?? 0;
+
+    const cost = this.calculateCost(promptTokens, completionTokens);
+
+    console.log(`✅ Generated ${totalTokens} tokens ($${cost.toFixed(4)})\n`);
+
+    return {
+      text: messageContent,
+      tokens: totalTokens,
+      cost,
+    };
+  }
+
   private calculateCost(
     promptTokens: number,
     completionTokens: number

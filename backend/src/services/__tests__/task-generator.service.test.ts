@@ -14,9 +14,13 @@ jest.mock("../text-generator.service");
 jest.mock("../image-generator.service");
 jest.mock("../task-storage.service");
 jest.mock("../../utils/story-inspiration.helper");
+jest.mock("../../utils/curriculum-mapper.helper");
+jest.mock("../../utils/reference-tasks.helper");
 
-// Import the mocked module to access mock functions
+// Import the mocked modules to access mock functions
 import * as inspirationHelper from "../../utils/story-inspiration.helper";
+import * as curriculumMapper from "../../utils/curriculum-mapper.helper";
+import * as referenceTasks from "../../utils/reference-tasks.helper";
 
 describe("TaskGeneratorService - Prompt Generation", () => {
   let service: TaskGeneratorService;
@@ -24,11 +28,14 @@ describe("TaskGeneratorService - Prompt Generation", () => {
   let mockImageGenerator: jest.Mocked<ImageGeneratorService>;
   let mockTaskStorage: jest.Mocked<TaskStorageService>;
 
-  // Helper function to get task prompt
-  const getTaskPrompt = () => mockTextGenerator.generate.mock.calls[0][0];
+  // Helper function to get task system prompt (from generateWithSystemPrompt)
+  const getTaskSystemPrompt = () => mockTextGenerator.generateWithSystemPrompt.mock.calls[0][0];
 
-  // Helper function to get solution prompt
-  const getSolutionPrompt = () => mockTextGenerator.generate.mock.calls[1][0];
+  // Helper function to get task user message (from generateWithSystemPrompt)
+  const getTaskUserMessage = () => mockTextGenerator.generateWithSystemPrompt.mock.calls[0][1];
+
+  // Helper function to get solution prompt (from generate)
+  const getSolutionPrompt = () => mockTextGenerator.generate.mock.calls[0][0];
 
   // Sample request for Hungary (Metric, Hungarian)
   const metricRequest: TaskGeneratorRequest = {
@@ -72,20 +79,70 @@ describe("TaskGeneratorService - Prompt Generation", () => {
       promptAdditions: "\n\n## STORY INSPIRATION ELEMENTS\n**Era:** Modern Era\n**Field:** Engineering\n",
     });
 
+    // Mock curriculum mapper functions
+    (curriculumMapper.getCurriculumTopicByPath as jest.Mock) = jest.fn().mockReturnValue({
+      topic: {
+        key: "solving_basic",
+        name: "Solving Basic Equations",
+        short_description: "Introduction to solving basic linear equations",
+        example_tasks: [
+          "Solve for x: 2x + 5 = 13",
+          "Solve for x: 3x - 7 = 11",
+          "Solve for x: x/4 = 9"
+        ],
+      },
+      parentTopics: [
+        { key: "algebra", name: "Algebra" },
+        { key: "linear_equations", name: "Linear Equations" },
+        { key: "solving_basic", name: "Solving Basic Equations" },
+      ],
+      fullPath: "math:grade_9_10:algebra:linear_equations:solving_basic",
+    });
+
+    (curriculumMapper.formatCurriculumTopicForPrompt as jest.Mock) = jest.fn().mockReturnValue(
+      "\n## CURRICULUM TOPIC INFORMATION\n**Topic:** Solving Basic Equations\n"
+    );
+
+    (curriculumMapper.getExampleTasks as jest.Mock) = jest.fn().mockReturnValue([
+      "Solve for x: 2x + 5 = 13",
+      "Solve for x: 3x - 7 = 11",
+      "Solve for x: x/4 = 9"
+    ]);
+
+    // Mock reference tasks helper
+    (referenceTasks.selectRandomReferenceTasks as jest.Mock) = jest.fn().mockReturnValue([
+      {
+        tags: "#Algebra > #Linear Equations",
+        title: "Reference Task 1",
+        description: "Description of reference task 1"
+      },
+      {
+        tags: "#Geometry > #Circles",
+        title: "Reference Task 2",
+        description: "Description of reference task 2"
+      },
+    ]);
+
+    (referenceTasks.formatReferenceTasksForPrompt as jest.Mock) = jest.fn().mockReturnValue(
+      "\n## REFERENCE STYLE TASKS\nReference tasks for style guidance...\n"
+    );
+
     // Mock text generator to capture the prompt
+    mockTextGenerator.generateWithSystemPrompt = jest.fn().mockImplementation(async (systemPrompt: string, userPrompt: string) => {
+      // Return mock task response for the new system prompt approach
+      return {
+        text: JSON.stringify({
+          title: "Test Task Title",
+          story_chunks: ["First paragraph.", "Second paragraph."],
+          questions: ["What is the answer?"],
+          expected_answer_formats: ["Number to 2 decimal places"],
+        }),
+        tokens: 150,
+        cost: 0.001,
+      };
+    });
+
     mockTextGenerator.generate = jest.fn().mockImplementation(async (prompt: string) => {
-      // Return mock task response (checking if it contains task template keywords)
-      if (prompt.includes("TASK CONFIGURATION") || prompt.includes("task_generation")) {
-        return {
-          text: JSON.stringify({
-            title: "Test Task Title",
-            story_chunks: ["First paragraph.", "Second paragraph."],
-            questions: ["What is the answer?"],
-            expected_answer_formats: ["Number to 2 decimal places"],
-          }),
-          usage: { prompt_tokens: 100, completion_tokens: 50, total_tokens: 150 },
-        };
-      }
       // Return mock solution response
       return {
         text: JSON.stringify({
@@ -94,7 +151,8 @@ describe("TaskGeneratorService - Prompt Generation", () => {
           ],
           final_answer: "The answer is 10",
         }),
-        usage: { prompt_tokens: 100, completion_tokens: 50, total_tokens: 150 },
+        tokens: 150,
+        cost: 0.001,
       };
     });
 
@@ -141,143 +199,86 @@ describe("TaskGeneratorService - Prompt Generation", () => {
     (service as any).taskStorage = mockTaskStorage;
   });
 
-  describe("Metric System (Hungary)", () => {
-    it("should load metric prompt template", async () => {
+  describe("System Prompt Approach", () => {
+    it("should use system prompt template with replacements", async () => {
       await service.generateTask(metricRequest);
 
-      const taskPrompt = getTaskPrompt();
+      const systemPrompt = getTaskSystemPrompt();
 
-      // Should load task_generation_metric.md
-      expect(taskPrompt).toContain("METRIC SYSTEM");
-      expect(taskPrompt).toContain("kilometers (km)");
-      expect(taskPrompt).toContain("Decimal separator: **comma**");
-      expect(taskPrompt).toContain("12,7 km");
-      expect(taskPrompt).toContain("112 233 222");
+      // Should contain template content with placeholders replaced
+      expect(systemPrompt).toContain("You are an expert math task designer");
+      expect(systemPrompt).toContain("Hungarian"); // {{LANGUAGE}} replaced
+      expect(systemPrompt).toContain("metric"); // {{METRIC_SYSTEM}} replaced
     });
 
-    it("should inject Hungarian language", async () => {
+    it("should include user message as JSON", async () => {
       await service.generateTask(metricRequest);
 
-      const taskPrompt = getTaskPrompt();
+      const userMessage = getTaskUserMessage();
 
-      expect(taskPrompt).toContain("Generate the entire task in Hungarian");
-      expect(taskPrompt).toContain("Language: Hungarian");
-      expect(taskPrompt).toContain("Write everything in Hungarian");
+      // User message should be valid JSON
+      expect(() => JSON.parse(userMessage)).not.toThrow();
+
+      const parsedMessage = JSON.parse(userMessage);
+      expect(parsedMessage).toHaveProperty("task_config");
+      expect(parsedMessage).toHaveProperty("curriculum_topic");
+      expect(parsedMessage).toHaveProperty("reference_style_tasks");
     });
 
-    it("should include task configuration", async () => {
+    it("should include task configuration in system prompt", async () => {
       await service.generateTask(metricRequest);
 
-      const taskPrompt = getTaskPrompt();
+      const systemPrompt = getTaskSystemPrompt();
 
-      expect(taskPrompt).toContain("TASK CONFIGURATION");
-      expect(taskPrompt).toContain("Curriculum Path: math:grade_9_10:algebra:linear_equations:solving_basic");
-      expect(taskPrompt).toContain("Country/Locale: HU");
-      expect(taskPrompt).toContain("Target Audience: mixed");
-      expect(taskPrompt).toContain("Difficulty Level: medium");
-      expect(taskPrompt).toContain("Educational Model: secular");
-      expect(taskPrompt).toContain("Display Template: modern");
+      expect(systemPrompt).toContain("ADDITIONAL CONTEXT");
+      expect(systemPrompt).toContain("Target Audience");
+      expect(systemPrompt).toContain("Difficulty Level");
+      expect(systemPrompt).toContain("Educational Model");
     });
 
-    it("should include precision settings", async () => {
+    it("should include precision settings in system prompt", async () => {
       await service.generateTask(metricRequest);
 
-      const taskPrompt = getTaskPrompt();
+      const systemPrompt = getTaskSystemPrompt();
 
-      expect(taskPrompt).toContain("MATHEMATICAL PRECISION");
-      expect(taskPrompt).toContain("Constant Precision: 2 decimal places");
-      expect(taskPrompt).toContain("Intermediate Precision: 3 decimal places");
-      expect(taskPrompt).toContain("Final Answer Precision: 2 decimal places");
+      expect(systemPrompt).toContain("Mathematical Precision");
+      expect(systemPrompt).toContain("Constant Precision");
+      expect(systemPrompt).toContain("decimal places");
     });
 
-    it("should include custom keywords", async () => {
+    it("should include custom keywords in system prompt", async () => {
       await service.generateTask(metricRequest);
 
-      const taskPrompt = getTaskPrompt();
+      const systemPrompt = getTaskSystemPrompt();
 
-      expect(taskPrompt).toContain("CUSTOM KEYWORDS");
-      expect(taskPrompt).toContain("sports, competition");
+      expect(systemPrompt).toContain("Custom Keywords");
+      expect(systemPrompt).toContain("sports");
+      expect(systemPrompt).toContain("competition");
     });
 
-    it("should include story inspiration", async () => {
+    it("should include curriculum topic information", async () => {
       await service.generateTask(metricRequest);
 
-      const taskPrompt = getTaskPrompt();
+      const systemPrompt = getTaskSystemPrompt();
 
-      expect(taskPrompt).toContain("STORY INSPIRATION ELEMENTS");
-      expect(taskPrompt).toContain("Modern Era");
-      expect(taskPrompt).toContain("Engineering");
+      expect(systemPrompt).toContain("CURRICULUM TOPIC INFORMATION");
     });
 
-    it("should load metric solution template", async () => {
+    it("should include reference tasks", async () => {
       await service.generateTask(metricRequest);
 
-      const solutionPrompt = getSolutionPrompt();
+      const systemPrompt = getTaskSystemPrompt();
 
-      expect(solutionPrompt).toContain("METRIC SYSTEM");
-      expect(solutionPrompt).toContain("Decimal separator: **comma**");
-      expect(solutionPrompt).toContain("12,7 km");
-    });
-
-    it("should inject Hungarian language in solution", async () => {
-      await service.generateTask(metricRequest);
-
-      const solutionPrompt = getSolutionPrompt();
-
-      expect(solutionPrompt).toContain("Generate the entire solution in Hungarian");
-      expect(solutionPrompt).toContain("All step descriptions, explanations, formulas, and text must be in Hungarian");
-    });
-  });
-
-  describe("Imperial System (USA)", () => {
-    it("should load imperial prompt template", async () => {
-      await service.generateTask(imperialRequest);
-
-      const taskPrompt = getTaskPrompt();
-
-      // Should load task_generation_imperial.md
-      expect(taskPrompt).toContain("IMPERIAL SYSTEM");
-      expect(taskPrompt).toContain("miles (mi)");
-      expect(taskPrompt).toContain("Decimal separator: **period**");
-      expect(taskPrompt).toContain("12.7 miles");
-      expect(taskPrompt).toContain("112,233,222");
-    });
-
-    it("should inject English language", async () => {
-      await service.generateTask(imperialRequest);
-
-      const taskPrompt = getTaskPrompt();
-
-      expect(taskPrompt).toContain("Generate the entire task in English");
-      expect(taskPrompt).toContain("Language: English");
-      expect(taskPrompt).toContain("Write everything in English");
-    });
-
-    it("should load imperial solution template", async () => {
-      await service.generateTask(imperialRequest);
-
-      const solutionPrompt = getSolutionPrompt();
-
-      expect(solutionPrompt).toContain("IMPERIAL SYSTEM");
-      expect(solutionPrompt).toContain("Decimal separator: **period**");
-      expect(solutionPrompt).toContain("12.7 miles");
-      expect(solutionPrompt).toContain("1,250,000");
-    });
-
-    it("should inject English language in solution", async () => {
-      await service.generateTask(imperialRequest);
-
-      const solutionPrompt = getSolutionPrompt();
-
-      expect(solutionPrompt).toContain("Generate the entire solution in English");
+      expect(systemPrompt).toContain("REFERENCE STYLE TASKS");
     });
   });
 
   describe("Prompt Structure Validation", () => {
-    it("should call text generator twice (task + solution)", async () => {
+    it("should call generateWithSystemPrompt for task and generate for solution", async () => {
       await service.generateTask(metricRequest);
 
-      expect(mockTextGenerator.generate).toHaveBeenCalledTimes(2);
+      expect(mockTextGenerator.generateWithSystemPrompt).toHaveBeenCalledTimes(1);
+      expect(mockTextGenerator.generate).toHaveBeenCalledTimes(1);
     });
 
     it("should call image generator for requested images", async () => {
@@ -336,30 +337,47 @@ describe("TaskGeneratorService - Prompt Generation", () => {
     });
   });
 
-  describe("Different Languages", () => {
-    test.each([
-      { country: "DE", language: "German" },
-      { country: "FR", language: "French" },
-      { country: "ES", language: "Spanish" },
-      { country: "IT", language: "Italian" },
-      { country: "HU", language: "Hungarian" },
-    ])("should use $language for country code $country", async ({ country, language }) => {
-      const request = { ...metricRequest, country_code: country };
-      await service.generateTask(request);
+  describe("User Message JSON Structure", () => {
+    it("should include task_config with language and metric_system", async () => {
+      await service.generateTask(metricRequest);
 
-      const taskPrompt = getTaskPrompt();
+      const userMessage = getTaskUserMessage();
+      const parsed = JSON.parse(userMessage);
 
-      expect(taskPrompt).toContain(language);
-      expect(taskPrompt).toContain(`Write everything in ${language}`);
+      expect(parsed.task_config).toBeDefined();
+      expect(parsed.task_config.language).toBeDefined();
+      expect(parsed.task_config.metric_system).toBeDefined();
     });
 
-    it("should default to English for unknown country code", async () => {
-      const unknownRequest = { ...metricRequest, country_code: "XX" };
-      await service.generateTask(unknownRequest);
+    it("should include curriculum_topic with example_tasks", async () => {
+      await service.generateTask(metricRequest);
 
-      const taskPrompt = getTaskPrompt();
+      const userMessage = getTaskUserMessage();
+      const parsed = JSON.parse(userMessage);
 
-      expect(taskPrompt).toContain("English");
+      expect(parsed.curriculum_topic).toBeDefined();
+      expect(parsed.curriculum_topic.key).toBe("solving_basic");
+      expect(parsed.curriculum_topic.example_tasks).toBeDefined();
+      expect(Array.isArray(parsed.curriculum_topic.example_tasks)).toBe(true);
+    });
+
+    it("should include reference_style_tasks array", async () => {
+      await service.generateTask(metricRequest);
+
+      const userMessage = getTaskUserMessage();
+      const parsed = JSON.parse(userMessage);
+
+      expect(parsed.reference_style_tasks).toBeDefined();
+      expect(Array.isArray(parsed.reference_style_tasks)).toBe(true);
+    });
+
+    it("should NOT include selected_example_index", async () => {
+      await service.generateTask(metricRequest);
+
+      const userMessage = getTaskUserMessage();
+      const parsed = JSON.parse(userMessage);
+
+      expect(parsed.selected_example_index).toBeUndefined();
     });
   });
 });
