@@ -10,6 +10,7 @@ export interface CurriculumTopic {
   short_description?: string;
   example_tasks?: string[];
   "example_tasks (COMPLETED)"?: string[]; // For purged file compatibility
+  reference_task_keys?: string[]; // Keys of reference tasks from inspirational_reference_tasks.json
   sub_topics?: CurriculumTopic[];
 }
 
@@ -186,4 +187,24 @@ export function getExampleTasks(
   const exampleTasks = topic.example_tasks || topic["example_tasks (COMPLETED)"] || [];
 
   return exampleTasks;
+}
+
+/**
+ * Gets reference task keys from curriculum topic
+ * @param pathResult The curriculum path result
+ * @returns Array of reference task keys or empty array if none found
+ */
+export function getReferenceTaskKeys(
+  pathResult: CurriculumPathResult | null
+): string[] {
+  if (!pathResult || !pathResult.topic) {
+    return [];
+  }
+
+  const { topic } = pathResult;
+
+  // Get reference task keys if available
+  const referenceKeys = topic.reference_task_keys || [];
+
+  return referenceKeys;
 }

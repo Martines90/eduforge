@@ -3,12 +3,14 @@ import * as path from "path";
 import { TaskGeneratorRequest } from "../types";
 import {
   selectRandomReferenceTasks,
+  selectReferenceTasksByKeys,
   formatReferenceTasksForPrompt,
 } from "./reference-tasks.helper";
 import {
   getCurriculumTopicByPath,
   formatCurriculumTopicForPrompt,
   getExampleTasks,
+  getReferenceTaskKeys,
 } from "./curriculum-mapper.helper";
 import { getLanguageForCountry, getMeasurementSystem } from "./measurement-system.helper";
 
@@ -52,8 +54,19 @@ export function buildSystemPrompt(
     );
   }
 
-  // Step 3: Select 6 random reference tasks
-  const referenceTasks = selectRandomReferenceTasks(6);
+  // Step 3: Select reference tasks based on curriculum topic or random
+  let referenceTasks: any[] = [];
+  if (curriculumPathResult) {
+    const referenceKeys = getReferenceTaskKeys(curriculumPathResult);
+    if (referenceKeys && referenceKeys.length > 0) {
+      referenceTasks = selectReferenceTasksByKeys(referenceKeys);
+    }
+  }
+
+  // Fallback to random selection if no specific tasks found
+  if (referenceTasks.length === 0) {
+    referenceTasks = selectRandomReferenceTasks(6);
+  }
 
   // Step 4: Build the enriched JSON input object that represents what the USER MESSAGE will contain
   const taskInputJson = buildTaskInputJson(
@@ -205,8 +218,19 @@ export function buildUserMessage(
     request.curriculum_path
   );
 
-  // Select 6 random reference tasks
-  const referenceTasks = selectRandomReferenceTasks(6);
+  // Select reference tasks based on curriculum topic or random
+  let referenceTasks: any[] = [];
+  if (curriculumPathResult) {
+    const referenceKeys = getReferenceTaskKeys(curriculumPathResult);
+    if (referenceKeys && referenceKeys.length > 0) {
+      referenceTasks = selectReferenceTasksByKeys(referenceKeys);
+    }
+  }
+
+  // Fallback to random selection if no specific tasks found
+  if (referenceTasks.length === 0) {
+    referenceTasks = selectRandomReferenceTasks(6);
+  }
 
   // Build the input JSON
   const inputJson = buildTaskInputJson(

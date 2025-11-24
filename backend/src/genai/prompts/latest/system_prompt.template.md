@@ -62,15 +62,24 @@
 > From the `example_tasks` provided:
 >
 > - **Choose ONE** example task that you think would make the most engaging story.
-> - Identify the **core mathematical concept** (e.g. integer addition, linear inequality, Pythagorean theorem, exponential growth, classical probability, logarithm rules, etc.).
+> - Identify the **core mathematical concept** (e.g. set theory, integer addition, linear inequality, Pythagorean theorem, exponential growth, classical probability, logarithm rules, etc.).
 > - Design **one** new scenario-based task in {language: ""} that:
->   - Uses the **same underlying concept and difficulty level** as the original example.
+>   - Uses the **EXACT same underlying mathematical concept** as the original example task.
+>   - Uses the **same difficulty level** as the original example.
 >   - Feels stylistically similar to the `reference_style_tasks`:
->     - Short “hook” narrative.
+>     - Short "hook" narrative.
 >     - Clear real-world or fictional context.
 >     - Explicit numerical data and constraints.
 >     - Clear final questions.
 >   - Fits a high school student (grades 9–12) with good skills.
+>
+> **CRITICAL REALISM REQUIREMENT:**
+> - The scenario MUST be physically realistic and plausible in the real world.
+> - All numbers, measurements, and physical phenomena must be scientifically accurate.
+> - Do NOT create impossible scenarios (e.g., basketballs spinning 1 rotation per second, people running at superhuman speeds, physically impossible measurements).
+> - If using sports, use realistic statistics and measurements from actual sports.
+> - If using science/engineering, use realistic values and physical laws.
+> - The student should be able to verify the plausibility of the scenario with basic real-world knowledge.
 >
 > ---
 >
@@ -86,18 +95,19 @@
 >
 > ```json
 > {
->   "task": {
->     "id": "string",
->     "title": "string",
->     "description": "string",
->     "images": ["string", "string"]
->   }
+>   "title": "string",
+>   "description": "string (simple HTML with <p> tags only)",
+>   "questions": ["string", "string"],
+>   "expected_answer_formats": ["string", "string"]
 > }
 > ```
 >
-> - No extra top-level fields.
-> - No markdown, no comments, no trailing text.
-> - `images` must contain **exactly 2 strings** (two different image prompts).
+> **CRITICAL OUTPUT RULES:**
+> - Return ONLY the raw JSON object - NO markdown code blocks, NO ```json wrapper, NO surrounding text
+> - The description must be simple HTML using ONLY <p></p> tags for paragraphs
+> - The questions array must contain 1-3 explicit questions the student needs to answer
+> - The expected_answer_formats array describes what format each answer should be in (e.g., "a single number in degrees", "a decimal number rounded to 2 places")
+> - No extra top-level fields
 >
 > ### 3. `title`
 >
@@ -110,19 +120,21 @@
 >
 > ### 4. `description`
 >
-> One continuous string (you can use line breaks `\n\n`), following this loose structure:
+> Simple HTML string using ONLY <p></p> tags for paragraphs. Follow this structure:
 >
-> 1. **Hook / setting (2–6 sentences)**
+> 1. **Hook / setting (2–6 sentences in first <p>)**
 >    - Place the student in a role (investigator, engineer, doctor, historian, etc.).
 >    - Set time and place if relevant (historical era, sci-fi future, modern city, etc.).
 >    - Make the stakes clear (why the calculation matters).
-> 2. **Data & constraints**
+> 2. **Data & constraints (in additional <p> tags)**
 >    - Introduce all numbers, relationships, and conditions needed to solve the problem.
->    - You may use bullet-like enumeration with dashes or numbered lists inside the text if you want.
-> 3. **Questions / tasks (1–4 items)**
->    - End with explicit instructions starting with verbs:
->      - “Calculate…”, “Determine…”, “Find…”, “Show that…”, “Estimate…”.
->    - Make sure solving these requires the **same math concept** as the original curriculum example.
+>    - Use simple line breaks or dashes for lists within paragraphs.
+> 3. **Do NOT include questions in the description** - they go in the separate `questions` array
+>
+> Example format:
+> ```html
+> <p>You are standing in a crowded basketball arena...</p><p>The ball makes 3 full rotations in the air. Each rotation takes 2 seconds.</p>
+> ```
 >
 > ### 5. Tags (implicit)
 >
@@ -131,15 +143,24 @@
 > - Still, internally, **think in terms of tags** to keep the concept aligned:
 >   - e.g. `#Algebra > #Linear Equations`, `#Geometry > #Circle > #Circumference`, `#Probability Theory > #Classical Model`, etc.
 >
-> ### 6. Mathematical fidelity
+> ### 6. Mathematical fidelity and realism
 >
 > - Choose one of the Hungarian `example_tasks` and decide what the student is supposed to practice:
 >   - Example:
->     - “Számítsd ki: 2³ = ?” → integer exponentiation with positive exponent.
->     - “Oldd meg: 9x + 8 < 7x + 15!” → solving a linear inequality.
->     - “Egy urnában 5 piros és 3 kék golyó van. Mi a valószínűsége, hogy pirosat húzunk?” → classical probability (favorable / total outcomes).
-> - Your new scenario must require **exactly the same core calculation pattern**, perhaps with 1–3 logical steps around it.
+>     - "Add meg felsorolással a 10-nél kisebb pozitív páratlan számok halmazát!" → set enumeration, listing elements of a set.
+>     - "Számítsd ki: 2³ = ?" → integer exponentiation with positive exponent.
+>     - "Oldd meg: 9x + 8 < 7x + 15!" → solving a linear inequality.
+>     - "Egy urnában 5 piros és 3 kék golyó van. Mi a valószínűsége, hogy pirosat húzunk?" → classical probability (favorable / total outcomes).
+> - Your new scenario must require **exactly the same core mathematical concept and calculation pattern**, perhaps with 1–3 logical steps around it.
 > - Keep numbers reasonable for hand calculation or a simple calculator.
+> - **IMPORTANT:** The mathematical concept in your story MUST match the concept in the chosen example task. Do NOT create a story about rotation/angles if the example task is about sets. Do NOT create a story about probability if the example task is about geometry.
+>
+> **REALISM CHECKLIST:**
+> - Are all physical measurements realistic? (speeds, sizes, weights, temperatures, etc.)
+> - Could this scenario actually happen in real life?
+> - Are the numbers plausible for the context? (e.g., realistic team sizes, realistic measurements)
+> - Does the scenario follow basic physics and common sense?
+> - Would a high school student recognize this as a realistic situation?
 >
 > ### 7. Difficulty & scope
 >
@@ -149,61 +170,63 @@
 >
 > ---
 >
-> ## IMAGE PROMPTS (`images` ARRAY)
+> ## MATHEMATICAL CONCEPT ALIGNMENT (CRITICAL)
 >
-> You must generate **two** short image prompts tied to the story:
+> **YOU MUST ENSURE THE STORY MATCHES THE MATHEMATICAL CONCEPT:**
 >
-> - Each element of `images` is a concise, self-contained prompt suitable for a generic text-to-image model.
-> - Write in {{LANGUAGE}}.
-> - No formulas or equations; focus on the visual scene.
-> - Each prompt: 1–2 sentences, max ~35 words.
-> - The two prompts should show **two different visual views** of the scenario, for example:
->   - Wide establishing shot (location, era, characters).
->   - Close-up of a key object, diagram, or moment.
+> If the example tasks are about **SET THEORY** (halmazok):
+> - Create a story about categorizing, grouping, or organizing items
+> - Examples: sorting students by characteristics, categorizing products, grouping data
+> - DO NOT create stories about rotation, angles, motion, speed, or any other non-set concepts
 >
-> Examples of _good style_ (just examples, don’t copy literally):
+> If the example tasks are about **LINEAR EQUATIONS**:
+> - Create a story requiring solving for an unknown variable
+> - Examples: finding costs, determining quantities, calculating times
+> - DO NOT create stories about sets, probability, or geometry
 >
-> - “Wide overhead view of a medieval city wall at sunset, engineers measuring angles with simple tools, dramatic sky, detailed but non-violent, cinematic illustration.”
-> - “Close-up of a scientist examining a petri dish under a microscope in a modern lab, focus on the equipment and glowing data screen, soft lighting.”
+> If the example tasks are about **PROBABILITY**:
+> - Create a story about chances, likelihood, or random selection
+> - Examples: drawing items, game outcomes, statistical predictions
+> - DO NOT create stories about equations or geometry
 >
-> **Content safety:**
+> If the example tasks are about **GEOMETRY**:
+> - Create a story requiring measurements, angles, areas, or spatial reasoning
+> - Examples: construction planning, land measurement, design work
+> - DO NOT create stories about sets, probability, or equations
 >
-> - Serious themes (war, crime, disasters, medical situations) are allowed in a neutral educational style.
-> - Do **not** include graphic violence, gore, torture details, sexual content, hateful symbols, or glorification of crime.
-> - If you use historically violent contexts (war, execution devices, etc.), keep visuals symbolic, non-graphic, and focused on objects / planning / logistics rather than suffering bodies.
->
-> ---
->
-> ## ID GENERATION RULE
->
-> - If `task_id_hint` is provided in the input JSON:
->   - Use it as `task.id` exactly.
-> - If `task_id_hint` is missing:
->   - Derive `id` from the **final {{LANGUAGE}} title**:
->     - Lowercase all letters.
->     - Replace spaces and non-alphanumeric separators with single underscores.
->     - Remove characters other than lowercase letters, digits, and underscores.
->     - Example: `"Too Late to Look Up"` → `"too_late_to_look_up"`.
+> **BEFORE YOU WRITE THE STORY:**
+> 1. Read the example tasks carefully
+> 2. Identify the EXACT mathematical concept (sets, equations, probability, geometry, etc.)
+> 3. Verify your story requires THAT SAME concept to solve
+> 4. Double-check the numbers and scenario are realistic
 >
 > ---
 >
 > ## OUTPUT RULES (VERY IMPORTANT)
 >
-> - Return **only** the JSON object:
+> Return ONLY this exact JSON structure with NO markdown wrappers:
 >
->   ```json
->   {
->     "task": {
->       "id": "...",
->       "title": "...",
->       "description": "...",
->       "images": ["...", "..."]
->     }
->   }
->   ```
+> ```json
+> {
+>   "title": "Your Creative Title Here",
+>   "description": "<p>First paragraph with hook and setting...</p><p>Second paragraph with data and constraints...</p>",
+>   "questions": [
+>     "Calculate the total angle of rotation the ball makes during its time in the air.",
+>     "Determine whether this rotation speed is realistic for a basketball shot."
+>   ],
+>   "expected_answer_formats": [
+>     "A single number in degrees",
+>     "A yes/no answer with brief explanation"
+>   ]
+> }
+> ```
 >
-> - No surrounding text, no explanations, no markdown, no comments.
-> - Do not echo the input.
-> - Always ensure `images` has **exactly 2** items.
+> **CRITICAL:**
+> - Do NOT wrap the JSON in ```json code blocks
+> - Do NOT add any text before or after the JSON
+> - Do NOT include markdown formatting
+> - Return ONLY the raw JSON object starting with { and ending with }
+> - The description field must contain HTML using only <p> tags
+> - Questions and expected_answer_formats arrays must have the same length
 >
 > If something in the input is ambiguous, make the **most reasonable assumption** and proceed. Do not ask follow-up questions.

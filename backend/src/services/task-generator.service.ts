@@ -203,20 +203,38 @@ export class TaskGeneratorService {
     expected_answer_formats?: string[];
   } {
     try {
+      // Remove markdown code blocks if present
+      let cleanedText = taskText.trim();
+      cleanedText = cleanedText.replace(/^```json\s*/i, '');
+      cleanedText = cleanedText.replace(/^```\s*/i, '');
+      cleanedText = cleanedText.replace(/\s*```$/i, '');
+      cleanedText = cleanedText.trim();
+
       // Try to extract JSON from the response
-      const jsonMatch = taskText.match(/\{[\s\S]*\}/);
+      const jsonMatch = cleanedText.match(/\{[\s\S]*\}/);
       if (jsonMatch) {
         const taskData = JSON.parse(jsonMatch[0]);
 
-        // Support both old (question) and new (questions) formats
+        // Support both new format (description) and old format (story_chunks)
+        let description = taskData.description || "";
+        let story_text = description;
+        let story_chunks = [description];
+
+        // If old format with story_chunks, use that
+        if (taskData.story_chunks && Array.isArray(taskData.story_chunks)) {
+          story_chunks = taskData.story_chunks;
+          story_text = taskData.story_chunks.join("\n\n");
+        }
+
+        // Handle questions
         let questions: string[] = [];
         if (taskData.questions && Array.isArray(taskData.questions)) {
           questions = taskData.questions;
         } else if (taskData.question) {
-          // Backward compatibility: convert single question to array
           questions = [taskData.question];
         }
 
+        // Handle expected answer formats
         let expected_answer_formats: string[] | undefined = undefined;
         if (
           taskData.expected_answer_formats &&
@@ -224,22 +242,22 @@ export class TaskGeneratorService {
         ) {
           expected_answer_formats = taskData.expected_answer_formats;
         } else if (taskData.expected_answer_format) {
-          // Backward compatibility: convert single format to array
           expected_answer_formats = [taskData.expected_answer_format];
         }
 
-        if (taskData.title && taskData.story_chunks && questions.length > 0) {
+        if (taskData.title && (description || story_chunks.length > 0) && questions.length > 0) {
           return {
             title: taskData.title,
-            story_chunks: taskData.story_chunks,
-            story_text: taskData.story_chunks.join("\n\n"), // Join chunks for backward compatibility
+            story_chunks,
+            story_text,
             questions,
             expected_answer_formats,
           };
         }
       }
-    } catch (_error) {
-      console.warn("⚠️  Failed to parse task JSON, using fallback parsing");
+    } catch (error) {
+      console.warn("⚠️  Failed to parse task JSON:", error);
+      console.warn("⚠️  Raw response:", taskText.substring(0, 200));
     }
 
     // Fallback: extract title and use full text as story
@@ -355,9 +373,12 @@ export class TaskGeneratorService {
 
     // Step 3: Generate images based on the task description
     const images: TaskImage[] = [];
+    const disableImageGeneration = process.env.DISABLE_IMAGE_GENERATION === 'true';
     const numImages = Math.min(request.number_of_images, 2); // Max 2 images
 
-    if (numImages > 0) {
+    if (disableImageGeneration) {
+      console.log(`🚫 Step 3: Image generation disabled via DISABLE_IMAGE_GENERATION env variable\n`);
+    } else if (numImages > 0) {
       console.log(`🎨 Step 3: Generating ${numImages} image(s)...`);
 
       // Extract key visual elements for smarter image prompts (avoid truncation)

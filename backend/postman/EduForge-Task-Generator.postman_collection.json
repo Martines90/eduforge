@@ -21,19 +21,19 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"curriculum_path\": \"math:grade_9_10:algebra:linear_equations:solving_basic_equations\",\n  \"country_code\": \"HU\",\n  \"target_group\": \"mixed\",\n  \"difficulty_level\": \"medium\",\n  \"educational_model\": \"liberal\",\n  \"number_of_images\": 1,\n  \"display_template\": \"modern\",\n  \"precision_settings\": {\n    \"constant_precision\": 2,\n    \"intermediate_precision\": 3,\n    \"final_answer_precision\": 2,\n    \"use_exact_values\": false\n  },\n  \"custom_keywords\": [\"sports\", \"competition\"],\n  \"template_id\": \"\"\n}"
+              "raw": "{\n  \"curriculum_path\": \"math:grade_9_10:halmazok:halmaz_fogalma:halmaz_megadas_felsorolassal\",\n  \"country_code\": \"HU\",\n  \"target_group\": \"mixed\",\n  \"difficulty_level\": \"medium\",\n  \"educational_model\": \"liberal\",\n  \"number_of_images\": 1,\n  \"display_template\": \"modern\",\n  \"precision_settings\": {\n    \"constant_precision\": 2,\n    \"intermediate_precision\": 3,\n    \"final_answer_precision\": 2,\n    \"use_exact_values\": false\n  },\n  \"custom_keywords\": [\"sports\", \"competition\"],\n  \"template_id\": \"\"\n}"
             },
             "url": {
               "raw": "{{base_url}}/generate-task",
               "host": ["{{base_url}}"],
               "path": ["generate-task"]
             },
-            "description": "Generates a Hungarian math task for grades 9-10 about linear equations. Uses metric system and Hungarian language. Task will be stored in: storage/hu/math/grade_9_10/algebra/linear_equations/solving_basic_equations/"
+            "description": "Generates a Hungarian math task for grades 9-10 about sets (halmazok megadása felsorolással). Uses metric system and Hungarian language. Task will be stored in: storage/hu/math/grade_9_10/halmazok/halmaz_fogalma/halmaz_megadas_felsorolassal/"
           },
           "response": []
         },
         {
-          "name": "Generate US Task (Secular, Imperial)",
+          "name": "Generate Hungarian Task with Different Keywords",
           "request": {
             "method": "POST",
             "header": [
@@ -44,19 +44,19 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"curriculum_path\": \"math:grade_9_10:algebra:linear_equations:solving_basic_equations\",\n  \"country_code\": \"US\",\n  \"target_group\": \"boys\",\n  \"difficulty_level\": \"hard\",\n  \"educational_model\": \"secular\",\n  \"number_of_images\": 2,\n  \"display_template\": \"classic\",\n  \"precision_settings\": {\n    \"constant_precision\": 3,\n    \"intermediate_precision\": 4,\n    \"final_answer_precision\": 3,\n    \"use_exact_values\": true\n  },\n  \"custom_keywords\": [\"engineering\", \"construction\"],\n  \"template_id\": \"\"\n}"
+              "raw": "{\n  \"curriculum_path\": \"math:grade_9_10:halmazok:halmazok_kozotti_viszonyok:reszhalmaz\",\n  \"country_code\": \"HU\",\n  \"target_group\": \"boys\",\n  \"difficulty_level\": \"hard\",\n  \"educational_model\": \"secular\",\n  \"number_of_images\": 0,\n  \"display_template\": \"classic\",\n  \"precision_settings\": {\n    \"constant_precision\": 3,\n    \"intermediate_precision\": 4,\n    \"final_answer_precision\": 3,\n    \"use_exact_values\": true\n  },\n  \"custom_keywords\": [\"engineering\", \"construction\"],\n  \"template_id\": \"\"\n}"
             },
             "url": {
               "raw": "{{base_url}}/generate-task",
               "host": ["{{base_url}}"],
               "path": ["generate-task"]
             },
-            "description": "Generates a US math task using imperial system (miles, pounds, etc.) and English language. Hard difficulty for boys, with 2 images. Task will be stored in: storage/us/math/grade_9_10/algebra/linear_equations/solving_basic_equations/"
+            "description": "Generates a Hungarian math task about sets (részhalmaz). Hard difficulty with engineering/construction keywords. Task will be stored in: storage/hu/math/grade_9_10/halmazok/halmazok_kozotti_viszonyok/reszhalmaz/"
           },
           "response": []
         },
         {
-          "name": "Generate German Task (Traditional, Metric)",
+          "name": "Generate Hungarian Task - Unió (Easy)",
           "request": {
             "method": "POST",
             "header": [
@@ -67,19 +67,19 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"curriculum_path\": \"math:grade_7_8:geometry:triangles:pythagorean_theorem\",\n  \"country_code\": \"DE\",\n  \"target_group\": \"girls\",\n  \"difficulty_level\": \"easy\",\n  \"educational_model\": \"traditional\",\n  \"number_of_images\": 1,\n  \"display_template\": \"illustrated\",\n  \"precision_settings\": {\n    \"constant_precision\": 2,\n    \"intermediate_precision\": 2,\n    \"final_answer_precision\": 1,\n    \"use_exact_values\": false\n  },\n  \"custom_keywords\": [\"architecture\", \"design\"],\n  \"template_id\": \"\"\n}"
+              "raw": "{\n  \"curriculum_path\": \"math:grade_9_10:halmazok:halmazmuveletek:unio\",\n  \"country_code\": \"HU\",\n  \"target_group\": \"girls\",\n  \"difficulty_level\": \"easy\",\n  \"educational_model\": \"traditional\",\n  \"number_of_images\": 1,\n  \"display_template\": \"illustrated\",\n  \"precision_settings\": {\n    \"constant_precision\": 2,\n    \"intermediate_precision\": 2,\n    \"final_answer_precision\": 1,\n    \"use_exact_values\": false\n  },\n  \"custom_keywords\": [\"architecture\", \"design\"],\n  \"template_id\": \"\"\n}"
             },
             "url": {
               "raw": "{{base_url}}/generate-task",
               "host": ["{{base_url}}"],
               "path": ["generate-task"]
             },
-            "description": "Generates a German geometry task about Pythagorean theorem. Traditional educational model, easy difficulty for girls. Task will be stored in: storage/de/math/grade_7_8/geometry/triangles/pythagorean_theorem/"
+            "description": "Generates a Hungarian task about set union (unió). Easy difficulty, traditional educational model. Task will be stored in: storage/hu/math/grade_9_10/halmazok/halmazmuveletek/unio/"
           },
           "response": []
         },
         {
-          "name": "Generate French Task (Progressive, Metric)",
+          "name": "Generate Hungarian Task - Venn Diagram",
           "request": {
             "method": "POST",
             "header": [
@@ -90,106 +90,14 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"curriculum_path\": \"math:grade_11_12:calculus:derivatives:basic_rules\",\n  \"country_code\": \"FR\",\n  \"target_group\": \"mixed\",\n  \"difficulty_level\": \"hard\",\n  \"educational_model\": \"progressive\",\n  \"number_of_images\": 0,\n  \"display_template\": \"minimal\",\n  \"precision_settings\": {\n    \"constant_precision\": 4,\n    \"intermediate_precision\": 5,\n    \"final_answer_precision\": 4,\n    \"use_exact_values\": true\n  },\n  \"custom_keywords\": [\"physics\", \"motion\"],\n  \"template_id\": \"\"\n}"
+              "raw": "{\n  \"curriculum_path\": \"math:grade_9_10:halmazok:venn_diagram\",\n  \"country_code\": \"HU\",\n  \"target_group\": \"mixed\",\n  \"difficulty_level\": \"medium\",\n  \"educational_model\": \"progressive\",\n  \"number_of_images\": 0,\n  \"display_template\": \"minimal\",\n  \"precision_settings\": {\n    \"constant_precision\": 2,\n    \"intermediate_precision\": 3,\n    \"final_answer_precision\": 2,\n    \"use_exact_values\": false\n  },\n  \"custom_keywords\": [\"physics\", \"science\"],\n  \"template_id\": \"\"\n}"
             },
             "url": {
               "raw": "{{base_url}}/generate-task",
               "host": ["{{base_url}}"],
               "path": ["generate-task"]
             },
-            "description": "Generates a French calculus task about derivatives. Progressive educational model, hard difficulty, no images. Task will be stored in: storage/fr/math/grade_11_12/calculus/derivatives/basic_rules/"
-          },
-          "response": []
-        },
-        {
-          "name": "Generate Spanish Task (Conservative, Metric)",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"curriculum_path\": \"math:grade_5_6:arithmetic:fractions:addition_subtraction\",\n  \"country_code\": \"ES\",\n  \"target_group\": \"mixed\",\n  \"difficulty_level\": \"easy\",\n  \"educational_model\": \"conservative\",\n  \"number_of_images\": 1,\n  \"display_template\": \"classic\",\n  \"precision_settings\": {\n    \"constant_precision\": 2,\n    \"intermediate_precision\": 2,\n    \"final_answer_precision\": 2,\n    \"use_exact_values\": true\n  },\n  \"custom_keywords\": [\"cooking\", \"recipes\"],\n  \"template_id\": \"\"\n}"
-            },
-            "url": {
-              "raw": "{{base_url}}/generate-task",
-              "host": ["{{base_url}}"],
-              "path": ["generate-task"]
-            },
-            "description": "Generates a Spanish arithmetic task about fractions for younger students. Conservative educational model, easy difficulty. Task will be stored in: storage/es/math/grade_5_6/arithmetic/fractions/addition_subtraction/"
-          },
-          "response": []
-        },
-        {
-          "name": "Generate UK Task (Montessori, Metric)",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"curriculum_path\": \"math:grade_3_4:multiplication:tables:advanced\",\n  \"country_code\": \"GB\",\n  \"target_group\": \"mixed\",\n  \"difficulty_level\": \"medium\",\n  \"educational_model\": \"montessori\",\n  \"number_of_images\": 2,\n  \"display_template\": \"illustrated\",\n  \"precision_settings\": {\n    \"constant_precision\": 1,\n    \"intermediate_precision\": 2,\n    \"final_answer_precision\": 1,\n    \"use_exact_values\": false\n  },\n  \"custom_keywords\": [\"nature\", \"animals\"],\n  \"template_id\": \"\"\n}"
-            },
-            "url": {
-              "raw": "{{base_url}}/generate-task",
-              "host": ["{{base_url}}"],
-              "path": ["generate-task"]
-            },
-            "description": "Generates a UK (British English) multiplication task using Montessori educational approach. Task will be stored in: storage/gb/math/grade_3_4/multiplication/tables/advanced/"
-          },
-          "response": []
-        },
-        {
-          "name": "Generate Italian Task (Religious Christian, Metric)",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"curriculum_path\": \"math:grade_8_9:statistics:probability:basic_concepts\",\n  \"country_code\": \"IT\",\n  \"target_group\": \"mixed\",\n  \"difficulty_level\": \"medium\",\n  \"educational_model\": \"religious_christian\",\n  \"number_of_images\": 1,\n  \"display_template\": \"modern\",\n  \"precision_settings\": {\n    \"constant_precision\": 2,\n    \"intermediate_precision\": 3,\n    \"final_answer_precision\": 2,\n    \"use_exact_values\": false\n  },\n  \"custom_keywords\": [\"charity\", \"community\"],\n  \"template_id\": \"\"\n}"
-            },
-            "url": {
-              "raw": "{{base_url}}/generate-task",
-              "host": ["{{base_url}}"],
-              "path": ["generate-task"]
-            },
-            "description": "Generates an Italian statistics task with Christian religious educational principles. Task will be stored in: storage/it/math/grade_8_9/statistics/probability/basic_concepts/"
-          },
-          "response": []
-        },
-        {
-          "name": "Generate Canadian Task (Waldorf, Metric)",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"curriculum_path\": \"math:grade_6_7:ratios:proportions:word_problems\",\n  \"country_code\": \"CA\",\n  \"target_group\": \"mixed\",\n  \"difficulty_level\": \"medium\",\n  \"educational_model\": \"waldorf\",\n  \"number_of_images\": 1,\n  \"display_template\": \"illustrated\",\n  \"precision_settings\": {\n    \"constant_precision\": 2,\n    \"intermediate_precision\": 3,\n    \"final_answer_precision\": 2,\n    \"use_exact_values\": false\n  },\n  \"custom_keywords\": [\"gardening\", \"nature\"],\n  \"template_id\": \"\"\n}"
-            },
-            "url": {
-              "raw": "{{base_url}}/generate-task",
-              "host": ["{{base_url}}"],
-              "path": ["generate-task"]
-            },
-            "description": "Generates a Canadian task about ratios and proportions using Waldorf educational philosophy. Task will be stored in: storage/ca/math/grade_6_7/ratios/proportions/word_problems/"
+            "description": "Generates a Hungarian task about Venn diagrams. Medium difficulty, no images. Task will be stored in: storage/hu/math/grade_9_10/halmazok/venn_diagram/"
           },
           "response": []
         }
@@ -216,7 +124,7 @@
                 },
                 {
                   "key": "curriculum_path",
-                  "value": "math:grade_9_10:algebra:linear_equations:solving_basic_equations",
+                  "value": "math:grade_9_10:halmazok:halmaz_fogalma:halmaz_megadas_felsorolassal",
                   "description": "Full curriculum path"
                 }
               ],

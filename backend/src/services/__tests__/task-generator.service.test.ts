@@ -63,6 +63,9 @@ describe("TaskGeneratorService - Prompt Generation", () => {
   };
 
   beforeEach(() => {
+    // Clear DISABLE_IMAGE_GENERATION env variable for tests
+    delete process.env.DISABLE_IMAGE_GENERATION;
+
     // Create fresh mocks
     mockTextGenerator = new TextGeneratorService() as jest.Mocked<TextGeneratorService>;
     mockImageGenerator = new ImageGeneratorService() as jest.Mocked<ImageGeneratorService>;

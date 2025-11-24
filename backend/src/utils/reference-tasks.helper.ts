@@ -8,6 +8,44 @@ export interface ReferenceTask {
   tags: string;
   title: string;
   description: string;
+  key: string;
+}
+
+/**
+ * Selects reference tasks by their keys from the inspirational reference tasks JSON
+ * @param keys Array of reference task keys to select
+ * @returns Array of reference tasks matching the keys
+ */
+export function selectReferenceTasksByKeys(keys: string[]): ReferenceTask[] {
+  const tasksPath = path.join(
+    __dirname,
+    "../genai/prompts/inspirational_reference_tasks.json"
+  );
+
+  try {
+    const tasksData = fs.readFileSync(tasksPath, "utf-8");
+    const allTasks: ReferenceTask[] = JSON.parse(tasksData);
+
+    if (!Array.isArray(allTasks) || allTasks.length === 0) {
+      console.warn("⚠️  No reference tasks found in JSON");
+      return [];
+    }
+
+    // Select tasks by keys
+    const selected = allTasks.filter(task => keys.includes(task.key));
+
+    if (selected.length === 0) {
+      console.warn(`⚠️  No reference tasks found for keys: ${keys.join(", ")}`);
+      // Fallback to random selection
+      return selectRandomReferenceTasks(3);
+    }
+
+    console.log(`✅ Selected ${selected.length} reference tasks by keys`);
+    return selected;
+  } catch (error) {
+    console.error("❌ Error loading reference tasks:", error);
+    return [];
+  }
 }
 
 /**
