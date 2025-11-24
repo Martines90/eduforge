@@ -1,0 +1,53 @@
+@import '@/styles/mixins.scss';
+
+.navLink {
+  display: block;
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-radius: var(--border-radius);
+  position: relative;
+
+  @include focus-visible;
+
+  &:hover {
+    background-color: rgba(25, 118, 210, 0.08);
+    color: var(--primary-color);
+  }
+
+  &.active {
+    color: var(--primary-color);
+    font-weight: 600;
+    background-color: rgba(25, 118, 210, 0.12);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 60%;
+      background-color: var(--primary-color);
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  @include md {
+    padding: var(--spacing-sm) var(--spacing-md);
+
+    &.active::before {
+      left: auto;
+      right: auto;
+      top: auto;
+      bottom: 0;
+      transform: none;
+      width: 100%;
+      height: 3px;
+      border-radius: 4px 4px 0 0;
+    }
+  }
+}

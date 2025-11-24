@@ -4,10 +4,10 @@ import { Button } from '@/components/atoms/Button';
 
 export default function Home() {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" sx={{ flex: 1, display: 'flex', alignItems: 'center' }}>
       <Box
         sx={{
-          minHeight: '100vh',
+          width: '100%',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',

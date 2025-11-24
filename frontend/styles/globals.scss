@@ -40,6 +40,12 @@ body {
   min-height: 100vh;
 }
 
+main {
+  min-height: calc(100vh - 64px); // Subtract header height
+  display: flex;
+  flex-direction: column;
+}
+
 // Typography
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--spacing-md);
