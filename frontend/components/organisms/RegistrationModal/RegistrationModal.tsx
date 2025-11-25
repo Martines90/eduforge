@@ -39,6 +39,7 @@ export interface RegistrationModalProps {
   onRegister: (profile: UserProfile & { password: string; country: CountryCode; identity: UserIdentity; subject?: Subject }) => void;
   onBack?: () => void;
   detectedCountry?: CountryCode;
+  isTeacher: boolean;
 }
 
 const personalInfoSchema = Yup.object().shape({
@@ -56,18 +57,15 @@ const personalInfoSchema = Yup.object().shape({
     .required('Please confirm your password'),
 });
 
-// Teacher flow: Country → Role → Subject → Personal Info
-// Non-teacher flow: Country → Role → Personal Info
+// Teacher flow: Country & Subject → Personal Info (2 steps)
+// Non-teacher flow: Country → Personal Info (2 steps)
 const teacherSteps: StepConfig[] = [
-  { label: 'Country', description: 'Select your location' },
-  { label: 'Role', description: 'Teacher or Student' },
-  { label: 'Subject', description: 'Your expertise' },
+  { label: 'Country & Subject', description: 'Location and expertise' },
   { label: 'Personal Info', description: 'Name and Email' },
 ];
 
 const nonTeacherSteps: StepConfig[] = [
   { label: 'Country', description: 'Select your location' },
-  { label: 'Role', description: 'Teacher or Student' },
   { label: 'Personal Info', description: 'Name and Email' },
 ];
 
@@ -81,6 +79,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
   onRegister,
   onBack,
   detectedCountry,
+  isTeacher,
 }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -90,10 +89,8 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
 
   // Registration state
   const [selectedCountry, setSelectedCountry] = useState<CountryCode | null>(null);
-  const [selectedIdentity, setSelectedIdentity] = useState<UserIdentity | null>(null);
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
 
-  const isTeacher = selectedIdentity === 'teacher';
   const steps = isTeacher ? teacherSteps : nonTeacherSteps;
 
   const handleStepClick = (step: number) => {
@@ -102,31 +99,23 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
     }
   };
 
-  // Step 1: Country Selection
+  // Step 1: Country Selection (and Subject for teachers)
   const handleCountrySelect = (country: CountryCode) => {
     setSelectedCountry(country);
+  };
+
+  const handleSubjectSelect = (subject: Subject) => {
+    setSelectedSubject(subject);
+  };
+
+  const handleNext = () => {
     setCompletedSteps([...completedSteps, 0]);
     setActiveStep(1);
   };
 
-  // Step 2: Role Selection
-  const handleRoleSelect = (identity: UserIdentity) => {
-    setSelectedIdentity(identity);
-    setCompletedSteps([...completedSteps, 1]);
-
-    if (identity === 'teacher') {
-      setActiveStep(2); // Go to subject selection
-    } else {
-      setActiveStep(2); // Go to personal info (step index 2 in non-teacher flow)
-    }
-  };
-
-  // Step 3 (Teachers only): Subject Selection
-  const handleSubjectSelect = (subject: Subject) => {
-    setSelectedSubject(subject);
-    setCompletedSteps([...completedSteps, 2]);
-    setActiveStep(3); // Go to personal info
-  };
+  const isStep1Complete = isTeacher
+    ? selectedCountry !== null && selectedSubject !== null
+    : selectedCountry !== null;
 
   // Final Step: Personal Info Submission
   const handleSubmit = (values: {
@@ -135,7 +124,10 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
     password: string;
     confirmPassword: string;
   }) => {
-    if (!selectedCountry || !selectedIdentity) return;
+    if (!selectedCountry) return;
+    if (isTeacher && !selectedSubject) return;
+
+    const identity: UserIdentity = isTeacher ? 'teacher' : 'non-teacher';
 
     const profile: UserProfile & { password: string; country: CountryCode; identity: UserIdentity; subject?: Subject } = {
       name: values.name.trim(),
@@ -143,7 +135,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
       registeredAt: new Date().toISOString(),
       password: values.password,
       country: selectedCountry,
-      identity: selectedIdentity,
+      identity: identity,
       ...(isTeacher && selectedSubject ? { subject: selectedSubject } : {}),
     };
 
@@ -188,11 +180,11 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
       />
 
       <DialogContent className={styles.content}>
-        {/* Step 1: Country Selection */}
+        {/* Step 1: Country Selection (+ Subject for teachers) */}
         {activeStep === 0 && (
           <Box className={styles.stepContent}>
             <Typography variant="h6" className={styles.stepTitle}>
-              Select Your Country
+              {isTeacher ? 'Select Your Country & Subject' : 'Select Your Country'}
             </Typography>
 
             <FormControl fullWidth className={styles.formControl}>
@@ -214,108 +206,41 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
               </Select>
             </FormControl>
 
-            <Typography
-              variant="caption"
-              color="text.secondary"
-              className={styles.helpText}
-            >
-              Choose your country to personalize your experience
-            </Typography>
-          </Box>
-        )}
-
-        {/* Step 2: Role Selection */}
-        {activeStep === 1 && (
-          <Box className={styles.stepContent}>
-            <Typography variant="h6" className={styles.stepTitle}>
-              Who are you?
-            </Typography>
-
-            <Box className={styles.roleGrid}>
-              {[
-                {
-                  identity: 'teacher' as UserIdentity,
-                  title: 'Teacher',
-                  description: 'I am an educator creating tasks for my students',
-                  icon: <SchoolIcon sx={{ fontSize: 48 }} />,
-                },
-                {
-                  identity: 'non-teacher' as UserIdentity,
-                  title: 'Student / Parent / Other',
-                  description: 'I am looking for educational tasks and resources',
-                  icon: <PeopleIcon sx={{ fontSize: 48 }} />,
-                },
-              ].map((role) => (
-                <Card
-                  key={role.identity}
-                  className={`${styles.roleCard} ${
-                    selectedIdentity === role.identity ? styles.selected : ''
-                  }`}
-                  elevation={selectedIdentity === role.identity ? 8 : 2}
+            {isTeacher && selectedCountry && (
+              <FormControl fullWidth className={styles.formControl} sx={{ mt: 2 }}>
+                <InputLabel>Subject</InputLabel>
+                <Select
+                  value={selectedSubject || ''}
+                  onChange={(e) => handleSubjectSelect(e.target.value as Subject)}
+                  label="Subject"
+                  className={styles.select}
                 >
-                  <CardActionArea
-                    onClick={() => handleRoleSelect(role.identity)}
-                    className={styles.cardAction}
-                  >
-                    <CardContent className={styles.cardContent}>
-                      <Box className={styles.iconContainer}>
-                        {role.icon}
-                        {selectedIdentity === role.identity && (
-                          <CheckCircleIcon className={styles.checkIcon} />
-                        )}
+                  {getSubjectsForCountry(selectedCountry).map((subject) => (
+                    <MenuItem key={subject.value} value={subject.value}>
+                      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                        <span style={{ fontSize: '1.5rem' }}>{subject.emoji}</span>
+                        <span>{subject.label}</span>
                       </Box>
-                      <Typography variant="h6" className={styles.roleTitle}>
-                        {role.title}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {role.description}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              ))}
-            </Box>
-          </Box>
-        )}
-
-        {/* Step 3 (Teachers only): Subject Selection */}
-        {activeStep === 2 && isTeacher && (
-          <Box className={styles.stepContent}>
-            <Typography variant="h6" className={styles.stepTitle}>
-              What subject do you teach?
-            </Typography>
-
-            <FormControl fullWidth className={styles.formControl}>
-              <InputLabel>Select a subject</InputLabel>
-              <Select
-                value={selectedSubject || ''}
-                onChange={(e) => handleSubjectSelect(e.target.value as Subject)}
-                label="Select a subject"
-                className={styles.select}
-              >
-                {getSubjectsForCountry(selectedCountry!).map((subject) => (
-                  <MenuItem key={subject.value} value={subject.value}>
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                      <span style={{ fontSize: '1.5rem' }}>{subject.emoji}</span>
-                      <span>{subject.label}</span>
-                    </Box>
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            )}
 
             <Typography
               variant="caption"
               color="text.secondary"
               className={styles.helpText}
             >
-              Don&apos;t worry, you can create tasks for any subject later
+              {isTeacher
+                ? 'Choose your location and primary teaching subject'
+                : 'Choose your country to personalize your experience'}
             </Typography>
           </Box>
         )}
 
-        {/* Final Step: Personal Info */}
-        {((activeStep === 2 && !isTeacher) || (activeStep === 3 && isTeacher)) && (
+        {/* Step 2: Personal Info */}
+        {activeStep === 1 && (
           <Box className={styles.stepContent}>
             <Typography variant="h6" className={styles.stepTitle}>
               {isTeacher ? 'Your Work Information' : 'Your Information'}
@@ -430,7 +355,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         )}
 
         {/* Navigation for non-form steps */}
-        {activeStep < (isTeacher ? 3 : 2) && (
+        {activeStep === 0 && (
           <DialogActions className={styles.actions}>
             <Button
               onClick={handleBack}
@@ -438,7 +363,19 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
               className={styles.backButton}
               startIcon={<ArrowBackIcon />}
             >
-              {activeStep === 0 ? 'Back to Login' : 'Back'}
+              Back to Login
+            </Button>
+
+            <Box sx={{ flex: 1 }} />
+
+            <Button
+              onClick={handleNext}
+              variant="contained"
+              className={styles.nextButton}
+              disabled={!isStep1Complete}
+              endIcon={<ArrowForwardIcon />}
+            >
+              Next
             </Button>
           </DialogActions>
         )}

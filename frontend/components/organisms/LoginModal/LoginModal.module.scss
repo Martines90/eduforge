@@ -90,6 +90,17 @@
   }
 }
 
+.createTeacherButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-weight: 600;
+  padding: 12px 24px;
+  text-transform: none;
+
+  &:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #653a8b 100%);
+  }
+}
+
 .createAccountButton {
   border: 2px solid #667eea;
   color: #667eea;

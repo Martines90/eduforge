@@ -46,10 +46,6 @@ export const ProgressStepper: React.FC<ProgressStepperProps> = ({
 
   return (
     <Box className={styles.container}>
-      <Typography variant="h6" className={styles.title}>
-        Your Registration Journey
-      </Typography>
-
       <Stepper
         activeStep={activeStep}
         alternativeLabel

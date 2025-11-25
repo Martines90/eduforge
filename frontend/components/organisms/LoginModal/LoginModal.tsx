@@ -23,7 +23,7 @@ import styles from './LoginModal.module.scss';
 export interface LoginModalProps {
   open: boolean;
   onLogin: (email: string, password: string) => Promise<void>;
-  onCreateAccount: () => void;
+  onCreateAccount: (isTeacher: boolean) => void;
 }
 
 const loginSchema = Yup.object().shape({
@@ -157,16 +157,29 @@ export const LoginModal: React.FC<LoginModalProps> = ({
           </Typography>
         </Divider>
 
-        <Button
-          variant="outlined"
-          size="large"
-          fullWidth
-          className={styles.createAccountButton}
-          onClick={onCreateAccount}
-          startIcon={<PersonAddIcon />}
-        >
-          Create a New Account
-        </Button>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+          <Button
+            variant="contained"
+            size="large"
+            fullWidth
+            className={styles.createTeacherButton}
+            onClick={() => onCreateAccount(true)}
+            startIcon={<PersonAddIcon />}
+          >
+            Create Teacher Account
+          </Button>
+
+          <Button
+            variant="outlined"
+            size="large"
+            fullWidth
+            className={styles.createAccountButton}
+            onClick={() => onCreateAccount(false)}
+            startIcon={<PersonAddIcon />}
+          >
+            Create Account
+          </Button>
+        </Box>
 
         <Typography
           variant="caption"

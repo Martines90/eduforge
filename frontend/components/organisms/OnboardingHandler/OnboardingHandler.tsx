@@ -32,6 +32,7 @@ export const OnboardingHandler: React.FC = () => {
   const [step, setStep] = useState<OnboardingStep>('login');
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
   const [isCreatingAccount, setIsCreatingAccount] = useState(false);
+  const [isTeacherAccount, setIsTeacherAccount] = useState(false);
 
   useEffect(() => {
     // Determine starting step based on user state
@@ -52,8 +53,9 @@ export const OnboardingHandler: React.FC = () => {
     setStep('country');
   };
 
-  const handleCreateAccountClick = () => {
+  const handleCreateAccountClick = (isTeacher: boolean) => {
     setIsCreatingAccount(true);
+    setIsTeacherAccount(isTeacher);
     setStep('register');
   };
 
@@ -140,12 +142,13 @@ export const OnboardingHandler: React.FC = () => {
         onCreateAccount={handleCreateAccountClick}
       />
 
-      {/* Step 2: Registration (includes country, role, subject, personal info) */}
+      {/* Step 2: Registration (includes country, subject for teachers, personal info) */}
       <RegistrationModal
         open={step === 'register'}
         onRegister={handleRegister}
         onBack={handleBackToLogin}
         detectedCountry={user.country}
+        isTeacher={isTeacherAccount}
       />
 
       {/* Step 3: Action Selection (teachers only) */}
