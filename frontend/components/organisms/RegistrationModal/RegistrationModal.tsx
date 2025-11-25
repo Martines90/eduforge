@@ -10,24 +10,38 @@ import {
   Typography,
   Button,
   TextField,
-  Alert,
+  Card,
+  CardActionArea,
+  CardContent,
+  MenuItem,
+  Select,
+  FormControl,
+  InputLabel,
+  useMediaQuery,
+  useTheme,
 } from '@mui/material';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import SchoolIcon from '@mui/icons-material/School';
+import PeopleIcon from '@mui/icons-material/People';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
-import { UserProfile } from '@/types/i18n';
+import { CountryCode, UserIdentity, Subject, UserProfile } from '@/types/i18n';
 import { ProgressStepper, StepConfig } from '@/components/molecules/ProgressStepper';
+import { countries } from '@/lib/i18n/countries';
+import { SUBJECTS, getSubjectsForCountry } from '@/lib/data/subjects';
 import styles from './RegistrationModal.module.scss';
 
 export interface RegistrationModalProps {
   open: boolean;
-  onRegister: (profile: UserProfile & { password: string }) => void;
+  onRegister: (profile: UserProfile & { password: string; country: CountryCode; identity: UserIdentity; subject?: Subject }) => void;
   onBack?: () => void;
+  detectedCountry?: CountryCode;
 }
 
-const registrationSchema = Yup.object().shape({
+const personalInfoSchema = Yup.object().shape({
   name: Yup.string()
     .min(2, 'Name must be at least 2 characters')
     .required('Name is required'),
@@ -42,23 +56,45 @@ const registrationSchema = Yup.object().shape({
     .required('Please confirm your password'),
 });
 
-const steps: StepConfig[] = [
+// Teacher flow: Country → Role → Subject → Personal Info
+// Non-teacher flow: Country → Role → Personal Info
+const teacherSteps: StepConfig[] = [
+  { label: 'Country', description: 'Select your location' },
+  { label: 'Role', description: 'Teacher or Student' },
+  { label: 'Subject', description: 'Your expertise' },
   { label: 'Personal Info', description: 'Name and Email' },
-  { label: 'Security', description: 'Set Password' },
+];
+
+const nonTeacherSteps: StepConfig[] = [
+  { label: 'Country', description: 'Select your location' },
+  { label: 'Role', description: 'Teacher or Student' },
+  { label: 'Personal Info', description: 'Name and Email' },
 ];
 
 /**
  * RegistrationModal Organism Component
- * Multi-step registration with Formik and Yup validation
- * Shows progress stepper and allows back navigation
+ * Multi-step registration with progress roadmap
+ * Full screen on mobile devices
  */
 export const RegistrationModal: React.FC<RegistrationModalProps> = ({
   open,
   onRegister,
   onBack,
+  detectedCountry,
 }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   const [activeStep, setActiveStep] = useState(0);
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
+
+  // Registration state
+  const [selectedCountry, setSelectedCountry] = useState<CountryCode | null>(null);
+  const [selectedIdentity, setSelectedIdentity] = useState<UserIdentity | null>(null);
+  const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
+
+  const isTeacher = selectedIdentity === 'teacher';
+  const steps = isTeacher ? teacherSteps : nonTeacherSteps;
 
   const handleStepClick = (step: number) => {
     if (step < activeStep || completedSteps.includes(step)) {
@@ -66,19 +102,60 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
     }
   };
 
+  // Step 1: Country Selection
+  const handleCountrySelect = (country: CountryCode) => {
+    setSelectedCountry(country);
+    setCompletedSteps([...completedSteps, 0]);
+    setActiveStep(1);
+  };
+
+  // Step 2: Role Selection
+  const handleRoleSelect = (identity: UserIdentity) => {
+    setSelectedIdentity(identity);
+    setCompletedSteps([...completedSteps, 1]);
+
+    if (identity === 'teacher') {
+      setActiveStep(2); // Go to subject selection
+    } else {
+      setActiveStep(2); // Go to personal info (step index 2 in non-teacher flow)
+    }
+  };
+
+  // Step 3 (Teachers only): Subject Selection
+  const handleSubjectSelect = (subject: Subject) => {
+    setSelectedSubject(subject);
+    setCompletedSteps([...completedSteps, 2]);
+    setActiveStep(3); // Go to personal info
+  };
+
+  // Final Step: Personal Info Submission
   const handleSubmit = (values: {
     name: string;
     email: string;
     password: string;
     confirmPassword: string;
   }) => {
-    const profile: UserProfile & { password: string } = {
+    if (!selectedCountry || !selectedIdentity) return;
+
+    const profile: UserProfile & { password: string; country: CountryCode; identity: UserIdentity; subject?: Subject } = {
       name: values.name.trim(),
       email: values.email.trim().toLowerCase(),
       registeredAt: new Date().toISOString(),
       password: values.password,
+      country: selectedCountry,
+      identity: selectedIdentity,
+      ...(isTeacher && selectedSubject ? { subject: selectedSubject } : {}),
     };
+
     onRegister(profile);
+  };
+
+  const handleBack = () => {
+    if (activeStep > 0) {
+      setActiveStep(activeStep - 1);
+    } else if (onBack) {
+      onBack();
+    }
   };
 
   return (
@@ -86,6 +163,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
       open={open}
       maxWidth="md"
       fullWidth
+      fullScreen={isMobile}
       disableEscapeKeyDown
       className={styles.dialog}
       PaperProps={{
@@ -99,9 +177,6 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         <Typography variant="h4" component="h2" className={styles.titleText}>
           Create Your Account
         </Typography>
-        <Typography variant="body1" color="text.secondary" className={styles.subtitle}>
-          Join EduForge to create and manage educational tasks
-        </Typography>
       </DialogTitle>
 
       <ProgressStepper
@@ -112,30 +187,152 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         allowBackNavigation={true}
       />
 
-      <Formik
-        initialValues={{
-          name: '',
-          email: '',
-          password: '',
-          confirmPassword: '',
-        }}
-        validationSchema={registrationSchema}
-        onSubmit={handleSubmit}
-      >
-        {({ errors, touched, values, isValid, setFieldTouched }) => (
-          <Form>
-            <DialogContent className={styles.content}>
-              <Alert severity="info" sx={{ mb: 3 }}>
-                This is a simplified registration. In production, you would integrate with a proper authentication system.
-              </Alert>
+      <DialogContent className={styles.content}>
+        {/* Step 1: Country Selection */}
+        {activeStep === 0 && (
+          <Box className={styles.stepContent}>
+            <Typography variant="h6" className={styles.stepTitle}>
+              Select Your Country
+            </Typography>
 
-              {/* Step 1: Personal Info */}
-              {activeStep === 0 && (
-                <Box className={styles.stepContent}>
-                  <Typography variant="h6" className={styles.stepTitle}>
-                    Personal Information
-                  </Typography>
+            <FormControl fullWidth className={styles.formControl}>
+              <InputLabel>Country</InputLabel>
+              <Select
+                value={selectedCountry || ''}
+                onChange={(e) => handleCountrySelect(e.target.value as CountryCode)}
+                label="Country"
+                className={styles.select}
+              >
+                {countries.map((country) => (
+                  <MenuItem key={country.code} value={country.code}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                      <span style={{ fontSize: '1.5rem' }}>{country.flag}</span>
+                      <span>{country.name}</span>
+                    </Box>
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
 
+            <Typography
+              variant="caption"
+              color="text.secondary"
+              className={styles.helpText}
+            >
+              Choose your country to personalize your experience
+            </Typography>
+          </Box>
+        )}
+
+        {/* Step 2: Role Selection */}
+        {activeStep === 1 && (
+          <Box className={styles.stepContent}>
+            <Typography variant="h6" className={styles.stepTitle}>
+              Who are you?
+            </Typography>
+
+            <Box className={styles.roleGrid}>
+              {[
+                {
+                  identity: 'teacher' as UserIdentity,
+                  title: 'Teacher',
+                  description: 'I am an educator creating tasks for my students',
+                  icon: <SchoolIcon sx={{ fontSize: 48 }} />,
+                },
+                {
+                  identity: 'non-teacher' as UserIdentity,
+                  title: 'Student / Parent / Other',
+                  description: 'I am looking for educational tasks and resources',
+                  icon: <PeopleIcon sx={{ fontSize: 48 }} />,
+                },
+              ].map((role) => (
+                <Card
+                  key={role.identity}
+                  className={`${styles.roleCard} ${
+                    selectedIdentity === role.identity ? styles.selected : ''
+                  }`}
+                  elevation={selectedIdentity === role.identity ? 8 : 2}
+                >
+                  <CardActionArea
+                    onClick={() => handleRoleSelect(role.identity)}
+                    className={styles.cardAction}
+                  >
+                    <CardContent className={styles.cardContent}>
+                      <Box className={styles.iconContainer}>
+                        {role.icon}
+                        {selectedIdentity === role.identity && (
+                          <CheckCircleIcon className={styles.checkIcon} />
+                        )}
+                      </Box>
+                      <Typography variant="h6" className={styles.roleTitle}>
+                        {role.title}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {role.description}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              ))}
+            </Box>
+          </Box>
+        )}
+
+        {/* Step 3 (Teachers only): Subject Selection */}
+        {activeStep === 2 && isTeacher && (
+          <Box className={styles.stepContent}>
+            <Typography variant="h6" className={styles.stepTitle}>
+              What subject do you teach?
+            </Typography>
+
+            <FormControl fullWidth className={styles.formControl}>
+              <InputLabel>Select a subject</InputLabel>
+              <Select
+                value={selectedSubject || ''}
+                onChange={(e) => handleSubjectSelect(e.target.value as Subject)}
+                label="Select a subject"
+                className={styles.select}
+              >
+                {getSubjectsForCountry(selectedCountry!).map((subject) => (
+                  <MenuItem key={subject.value} value={subject.value}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                      <span style={{ fontSize: '1.5rem' }}>{subject.emoji}</span>
+                      <span>{subject.label}</span>
+                    </Box>
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+            <Typography
+              variant="caption"
+              color="text.secondary"
+              className={styles.helpText}
+            >
+              Don&apos;t worry, you can create tasks for any subject later
+            </Typography>
+          </Box>
+        )}
+
+        {/* Final Step: Personal Info */}
+        {((activeStep === 2 && !isTeacher) || (activeStep === 3 && isTeacher)) && (
+          <Box className={styles.stepContent}>
+            <Typography variant="h6" className={styles.stepTitle}>
+              {isTeacher ? 'Your Work Information' : 'Your Information'}
+            </Typography>
+
+            <Formik
+              initialValues={{
+                name: '',
+                email: '',
+                password: '',
+                confirmPassword: '',
+              }}
+              validationSchema={personalInfoSchema}
+              onSubmit={handleSubmit}
+            >
+              {({ errors, touched, isValid, values }) => (
+                <Form>
                   <Box className={styles.formContainer}>
                     <Field name="name">
                       {({ field }: any) => (
@@ -159,28 +356,18 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                         <TextField
                           {...field}
                           fullWidth
-                          label="Email Address"
+                          label={isTeacher ? 'Work Email Address' : 'Email Address'}
                           variant="outlined"
                           type="email"
                           error={touched.email && Boolean(errors.email)}
                           helperText={touched.email && errors.email}
-                          placeholder="your.email@example.com"
+                          placeholder={isTeacher ? 'your.name@school.edu' : 'your.email@example.com'}
                           className={styles.textField}
+                          sx={{ mb: 2 }}
                         />
                       )}
                     </Field>
-                  </Box>
-                </Box>
-              )}
 
-              {/* Step 2: Security */}
-              {activeStep === 1 && (
-                <Box className={styles.stepContent}>
-                  <Typography variant="h6" className={styles.stepTitle}>
-                    Set Your Password
-                  </Typography>
-
-                  <Box className={styles.formContainer}>
                     <Field name="password">
                       {({ field }: any) => (
                         <TextField
@@ -194,7 +381,6 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                           placeholder="At least 6 characters"
                           className={styles.textField}
                           sx={{ mb: 2 }}
-                          autoFocus
                         />
                       )}
                     </Field>
@@ -215,81 +401,48 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                       )}
                     </Field>
                   </Box>
-                </Box>
+
+                  <DialogActions className={styles.actions}>
+                    <Button
+                      onClick={handleBack}
+                      variant="outlined"
+                      className={styles.backButton}
+                      startIcon={<ArrowBackIcon />}
+                    >
+                      Back
+                    </Button>
+
+                    <Box sx={{ flex: 1 }} />
+
+                    <Button
+                      type="submit"
+                      variant="contained"
+                      className={styles.submitButton}
+                      disabled={!isValid || !values.name || !values.email || !values.password}
+                    >
+                      Create Account
+                    </Button>
+                  </DialogActions>
+                </Form>
               )}
-
-              <Typography
-                variant="caption"
-                color="text.secondary"
-                className={styles.helpText}
-              >
-                By registering, you agree to our Terms of Service and Privacy Policy
-              </Typography>
-            </DialogContent>
-
-            <DialogActions className={styles.actions}>
-              {/* Back Button */}
-              {activeStep === 0 && onBack && (
-                <Button
-                  onClick={onBack}
-                  variant="outlined"
-                  className={styles.backButton}
-                  startIcon={<ArrowBackIcon />}
-                >
-                  Back to Login
-                </Button>
-              )}
-
-              {activeStep > 0 && (
-                <Button
-                  onClick={() => {
-                    setActiveStep(activeStep - 1);
-                  }}
-                  variant="outlined"
-                  className={styles.backButton}
-                  startIcon={<ArrowBackIcon />}
-                >
-                  Back
-                </Button>
-              )}
-
-              <Box sx={{ flex: 1 }} />
-
-              {/* Next/Submit Button */}
-              {activeStep < steps.length - 1 ? (
-                <Button
-                  onClick={() => {
-                    // Touch fields to show validation
-                    setFieldTouched('name', true);
-                    setFieldTouched('email', true);
-
-                    // Only proceed if step 1 fields are valid
-                    if (values.name && values.email && !errors.name && !errors.email) {
-                      setCompletedSteps([...completedSteps, activeStep]);
-                      setActiveStep(activeStep + 1);
-                    }
-                  }}
-                  variant="contained"
-                  className={styles.nextButton}
-                  endIcon={<ArrowForwardIcon />}
-                  disabled={!values.name || !values.email || Boolean(errors.name) || Boolean(errors.email)}
-                >
-                  Next
-                </Button>
-              ) : (
-                <Button
-                  type="submit"
-                  variant="contained"
-                  className={styles.submitButton}
-                  disabled={!isValid || !touched.password || !touched.confirmPassword}
-                >
-                  Create Account
-                </Button>
-              )}
-            </DialogActions>
-          </Form>
+            </Formik>
+          </Box>
         )}
-      </Formik>
+
+        {/* Navigation for non-form steps */}
+        {activeStep < (isTeacher ? 3 : 2) && (
+          <DialogActions className={styles.actions}>
+            <Button
+              onClick={handleBack}
+              variant="outlined"
+              className={styles.backButton}
+              startIcon={<ArrowBackIcon />}
+            >
+              {activeStep === 0 ? 'Back to Login' : 'Back'}
+            </Button>
+          </DialogActions>
+        )}
+      </DialogContent>
     </Dialog>
   );
 };

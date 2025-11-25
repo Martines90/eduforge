@@ -22,11 +22,6 @@
 
   .titleText {
     font-weight: 700;
-    margin-bottom: 8px;
-  }
-
-  .subtitle {
-    opacity: 0.95;
   }
 }
 
@@ -44,6 +39,90 @@
   margin-bottom: 16px;
   color: #667eea;
   font-weight: 600;
+  text-align: center;
+}
+
+.countryGrid,
+.roleGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.countryCard,
+.roleCard {
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &.selected {
+    border-color: #667eea;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  }
+}
+
+.cardAction {
+  padding: 8px;
+}
+
+.cardContent {
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.flag {
+  font-size: 3rem;
+}
+
+.checkIcon {
+  position: absolute;
+  top: 0;
+  right: 20%;
+  color: #4caf50;
+  font-size: 24px;
+}
+
+.countryName,
+.roleTitle {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.iconContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  color: #667eea;
+
+  .checkIcon {
+    position: absolute;
+    top: 0;
+    right: 20%;
+    color: #4caf50;
+    font-size: 24px;
+  }
+}
+
+.formControl {
+  margin-bottom: 16px;
+
+  .select {
+    background: white;
+  }
 }
 
 .formContainer {

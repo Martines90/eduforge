@@ -30,14 +30,22 @@ const subjectLabels: Record<Subject, string> = {
   'physics': 'Physics',
   'chemistry': 'Chemistry',
   'biology': 'Biology',
+  'computer-science': 'Computer Science',
   'history': 'History',
   'geography': 'Geography',
+  'social-studies': 'Social Studies',
+  'economics': 'Economics',
+  'philosophy': 'Philosophy',
+  'psychology': 'Psychology',
   'literature': 'Literature',
   'english': 'English',
-  'computer-science': 'Computer Science',
+  'foreign-languages': 'Foreign Languages',
   'arts': 'Arts',
   'music': 'Music',
+  'drama': 'Drama',
   'physical-education': 'Physical Education',
+  'religious-studies': 'Religious Studies',
+  'health-education': 'Health Education',
 };
 
 /**

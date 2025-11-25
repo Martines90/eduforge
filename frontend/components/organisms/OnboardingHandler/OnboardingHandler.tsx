@@ -59,11 +59,29 @@ export const OnboardingHandler: React.FC = () => {
 
   // ===== REGISTRATION FLOW =====
 
-  const handleRegister = (profile: UserProfile & { password: string }) => {
+  const handleRegister = (profile: UserProfile & { password: string; country: CountryCode; identity: UserIdentity; subject?: Subject }) => {
+    // Registration now includes all onboarding data
     registerUser(profile);
+    setCountry(profile.country);
+    setIdentity(profile.identity);
+
+    if (profile.subject) {
+      setSubject(profile.subject);
+      setSelectedSubject(profile.subject);
+    }
+
     setIsCreatingAccount(false);
-    // After registration, go to country selection
-    setStep('country');
+
+    // Determine next step based on identity
+    if (profile.identity === 'teacher' && profile.subject) {
+      // Teachers with subject go to action selection
+      setStep('action');
+    } else {
+      // Non-teachers complete onboarding
+      completeOnboarding();
+      setStep('complete');
+      router.push('/');
+    }
   };
 
   const handleBackToLogin = () => {
@@ -122,48 +140,20 @@ export const OnboardingHandler: React.FC = () => {
         onCreateAccount={handleCreateAccountClick}
       />
 
-      {/* Step 2: Registration (optional) */}
+      {/* Step 2: Registration (includes country, role, subject, personal info) */}
       <RegistrationModal
         open={step === 'register'}
         onRegister={handleRegister}
         onBack={handleBackToLogin}
-      />
-
-      {/* Step 3: Country Selection */}
-      <CountrySelectionModal
-        open={step === 'country'}
-        onSelect={handleCountrySelect}
         detectedCountry={user.country}
       />
 
-      {/* Step 4: Role Selection */}
-      <RoleSelectionModal
-        open={step === 'role'}
-        onSelect={handleRoleSelect}
-      />
-
-      {/* Step 5: Subject Selection (teachers only) */}
+      {/* Step 3: Action Selection (teachers only) */}
       {selectedSubject && (
-        <>
-          <SubjectSelectionModal
-            open={step === 'subject'}
-            onSelect={handleSubjectSelect}
-          />
-
-          {/* Step 6: Action Selection (teachers only) */}
-          <ActionSelectionModal
-            open={step === 'action'}
-            subject={selectedSubject}
-            onSelect={handleActionSelect}
-          />
-        </>
-      )}
-
-      {/* Show subject modal without subject dependency */}
-      {!selectedSubject && (
-        <SubjectSelectionModal
-          open={step === 'subject'}
-          onSelect={handleSubjectSelect}
+        <ActionSelectionModal
+          open={step === 'action'}
+          subject={selectedSubject}
+          onSelect={handleActionSelect}
         />
       )}
     </>

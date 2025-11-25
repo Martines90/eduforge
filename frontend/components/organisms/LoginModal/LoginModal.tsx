@@ -79,9 +79,6 @@ export const LoginModal: React.FC<LoginModalProps> = ({
         <Typography variant="h4" component="h2" className={styles.titleText}>
           Welcome to EduForge
         </Typography>
-        <Typography variant="body1" color="text.secondary" className={styles.subtitle}>
-          Create and manage educational tasks
-        </Typography>
       </DialogTitle>
 
       <DialogContent className={styles.content}>
@@ -97,10 +94,6 @@ export const LoginModal: React.FC<LoginModalProps> = ({
                   {loginError}
                 </Alert>
               )}
-
-              <Alert severity="info" sx={{ mb: 3 }}>
-                This is a demo. Use any email and password (min 6 chars) to login.
-              </Alert>
 
               <Box className={styles.formContainer}>
                 <Field name="email">
