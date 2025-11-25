@@ -42,13 +42,39 @@ export interface RegistrationModalProps {
   isTeacher: boolean;
 }
 
-const personalInfoSchema = Yup.object().shape({
+// Common personal email domains to block for teacher accounts
+const PERSONAL_EMAIL_DOMAINS = [
+  'gmail.com',
+  'yahoo.com',
+  'hotmail.com',
+  'outlook.com',
+  'live.com',
+  'aol.com',
+  'icloud.com',
+  'mail.com',
+  'protonmail.com',
+  'zoho.com',
+  'yandex.com',
+  'gmx.com',
+  'me.com',
+  'msn.com',
+];
+
+const createPersonalInfoSchema = (isTeacher: boolean) => Yup.object().shape({
   name: Yup.string()
     .min(2, 'Name must be at least 2 characters')
     .required('Name is required'),
   email: Yup.string()
     .email('Please enter a valid email address')
-    .required('Email is required'),
+    .required('Email is required')
+    .test('work-email', 'Please use a work or school email address, not a personal email', function(value) {
+      if (!isTeacher || !value) return true;
+
+      const domain = value.split('@')[1]?.toLowerCase();
+      if (!domain) return true;
+
+      return !PERSONAL_EMAIL_DOMAINS.includes(domain);
+    }),
   password: Yup.string()
     .min(6, 'Password must be at least 6 characters')
     .required('Password is required'),
@@ -253,7 +279,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                 password: '',
                 confirmPassword: '',
               }}
-              validationSchema={personalInfoSchema}
+              validationSchema={createPersonalInfoSchema(isTeacher)}
               onSubmit={handleSubmit}
             >
               {({ errors, touched, isValid, values }) => (
