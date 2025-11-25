@@ -55,3 +55,35 @@ export interface Translations {
 }
 
 export type TranslationKey = keyof Translations;
+
+/**
+ * User identity types
+ */
+export type UserIdentity = 'teacher' | 'non-teacher';
+export type UserRole = 'guest' | 'registered' | 'admin';
+
+/**
+ * User authentication state
+ */
+export interface UserProfile {
+  email: string;
+  name: string;
+  registeredAt: string;
+}
+
+/**
+ * Subject types for teachers
+ */
+export type Subject =
+  | 'mathematics'
+  | 'physics'
+  | 'chemistry'
+  | 'biology'
+  | 'history'
+  | 'geography'
+  | 'literature'
+  | 'english'
+  | 'computer-science'
+  | 'arts'
+  | 'music'
+  | 'physical-education';

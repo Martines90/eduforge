@@ -3,6 +3,11 @@ import Cookies from 'js-cookie';
 export const COOKIE_NAMES = {
   COUNTRY: 'eduforge_country',
   FIRST_VISIT: 'eduforge_first_visit',
+  IDENTITY: 'eduforge_identity',
+  ROLE: 'eduforge_role',
+  SUBJECT: 'eduforge_subject',
+  USER_PROFILE: 'eduforge_user_profile',
+  IS_REGISTERED: 'eduforge_is_registered',
 } as const;
 
 // Cookie expiration: 365 days (1 year)

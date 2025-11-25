@@ -1,38 +1,172 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { LoginModal } from '@/components/organisms/LoginModal';
 import { CountrySelectionModal } from '@/components/organisms/CountrySelectionModal';
+import { RegistrationModal } from '@/components/organisms/RegistrationModal';
+import { RoleSelectionModal } from '@/components/organisms/RoleSelectionModal';
+import { SubjectSelectionModal } from '@/components/organisms/SubjectSelectionModal';
+import { ActionSelectionModal } from '@/components/organisms/ActionSelectionModal';
 import { useUser } from '@/lib/context';
-import { CountryCode } from '@/types/i18n';
+import { CountryCode, UserIdentity, Subject, UserProfile } from '@/types/i18n';
+
+type OnboardingStep = 'login' | 'register' | 'country' | 'role' | 'subject' | 'action' | 'complete';
 
 /**
  * OnboardingHandler Component
- * Manages the first-visit onboarding flow
- * Shows country selection modal for new users
+ * Manages the complete authentication and onboarding flow
+ *
+ * FLOW:
+ * 1. Login (if not authenticated)
+ * 2. Registration (if creating new account)
+ * 3. Country selection
+ * 4. Role selection (teacher/non-teacher)
+ * 5. Subject selection (teachers only)
+ * 6. Action selection (teachers only: create/search)
+ * 7. Complete - redirect to appropriate page
  */
 export const OnboardingHandler: React.FC = () => {
-  const { user, setCountry, completeOnboarding } = useUser();
-  const [modalOpen, setModalOpen] = useState(false);
+  const { user, setCountry, setIdentity, setSubject, registerUser, loginUser, completeOnboarding } = useUser();
+  const router = useRouter();
+  const [step, setStep] = useState<OnboardingStep>('login');
+  const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
+  const [isCreatingAccount, setIsCreatingAccount] = useState(false);
 
   useEffect(() => {
-    // Only show modal on first visit after component mounts
-    if (user.isFirstVisit && !user.hasCompletedOnboarding) {
-      setModalOpen(true);
+    // Determine starting step based on user state
+    if (!user.isRegistered) {
+      // Not logged in - show login
+      setStep('login');
+    } else if (user.isFirstVisit && !user.hasCompletedOnboarding) {
+      // Logged in but hasn't completed onboarding
+      setStep('country');
     }
-  }, [user.isFirstVisit, user.hasCompletedOnboarding]);
+  }, [user.isRegistered, user.isFirstVisit, user.hasCompletedOnboarding]);
+
+  // ===== LOGIN FLOW =====
+
+  const handleLogin = async (email: string, password: string) => {
+    await loginUser(email, password);
+    // After login, go to country selection
+    setStep('country');
+  };
+
+  const handleCreateAccountClick = () => {
+    setIsCreatingAccount(true);
+    setStep('register');
+  };
+
+  // ===== REGISTRATION FLOW =====
+
+  const handleRegister = (profile: UserProfile & { password: string }) => {
+    registerUser(profile);
+    setIsCreatingAccount(false);
+    // After registration, go to country selection
+    setStep('country');
+  };
+
+  const handleBackToLogin = () => {
+    setIsCreatingAccount(false);
+    setStep('login');
+  };
+
+  // ===== ONBOARDING FLOW =====
 
   const handleCountrySelect = (country: CountryCode) => {
     setCountry(country);
-    completeOnboarding();
-    setModalOpen(false);
+    setStep('role');
   };
 
+  const handleRoleSelect = (identity: UserIdentity) => {
+    setIdentity(identity);
+
+    if (identity === 'teacher') {
+      setStep('subject');
+    } else {
+      // Non-teachers complete onboarding and go to home
+      completeOnboarding();
+      setStep('complete');
+    }
+  };
+
+  const handleSubjectSelect = (subject: Subject) => {
+    setSubject(subject);
+    setSelectedSubject(subject);
+    setStep('action');
+  };
+
+  const handleActionSelect = (action: 'create' | 'search') => {
+    completeOnboarding();
+    setStep('complete');
+
+    // Navigate based on action
+    if (action === 'create') {
+      router.push('/task_creator');
+    } else {
+      router.push('/search_tasks');
+    }
+  };
+
+  // Don't render anything if onboarding is complete
+  if (user.hasCompletedOnboarding || step === 'complete') {
+    return null;
+  }
+
   return (
-    <CountrySelectionModal
-      open={modalOpen}
-      onSelect={handleCountrySelect}
-      detectedCountry={user.country}
-    />
+    <>
+      {/* Step 1: Login */}
+      <LoginModal
+        open={step === 'login' && !user.isRegistered}
+        onLogin={handleLogin}
+        onCreateAccount={handleCreateAccountClick}
+      />
+
+      {/* Step 2: Registration (optional) */}
+      <RegistrationModal
+        open={step === 'register'}
+        onRegister={handleRegister}
+        onBack={handleBackToLogin}
+      />
+
+      {/* Step 3: Country Selection */}
+      <CountrySelectionModal
+        open={step === 'country'}
+        onSelect={handleCountrySelect}
+        detectedCountry={user.country}
+      />
+
+      {/* Step 4: Role Selection */}
+      <RoleSelectionModal
+        open={step === 'role'}
+        onSelect={handleRoleSelect}
+      />
+
+      {/* Step 5: Subject Selection (teachers only) */}
+      {selectedSubject && (
+        <>
+          <SubjectSelectionModal
+            open={step === 'subject'}
+            onSelect={handleSubjectSelect}
+          />
+
+          {/* Step 6: Action Selection (teachers only) */}
+          <ActionSelectionModal
+            open={step === 'action'}
+            subject={selectedSubject}
+            onSelect={handleActionSelect}
+          />
+        </>
+      )}
+
+      {/* Show subject modal without subject dependency */}
+      {!selectedSubject && (
+        <SubjectSelectionModal
+          open={step === 'subject'}
+          onSelect={handleSubjectSelect}
+        />
+      )}
+    </>
   );
 };
 

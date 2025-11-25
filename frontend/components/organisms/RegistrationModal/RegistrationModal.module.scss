@@ -1,0 +1,116 @@
+.dialog {
+  .paper {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+}
+
+.title {
+  padding: 32px 24px 16px;
+  text-align: center;
+
+  .iconContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+
+    svg {
+      color: white;
+      opacity: 0.9;
+    }
+  }
+
+  .titleText {
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    opacity: 0.95;
+  }
+}
+
+.content {
+  padding: 24px;
+  background: white;
+  color: #333;
+}
+
+.stepContent {
+  margin-bottom: 16px;
+}
+
+.stepTitle {
+  margin-bottom: 16px;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.formContainer {
+  margin-bottom: 16px;
+}
+
+.textField {
+  background: white;
+
+  :global {
+    .MuiOutlinedInput-root {
+      &:hover .MuiOutlinedInput-notchedOutline {
+        border-color: #667eea;
+      }
+
+      &.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-color: #667eea;
+      }
+    }
+
+    .MuiInputLabel-root {
+      &.Mui-focused {
+        color: #667eea;
+      }
+    }
+  }
+}
+
+.helpText {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.75rem;
+}
+
+.actions {
+  padding: 16px 24px 24px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.backButton {
+  border-color: #999;
+  color: #999;
+  text-transform: none;
+
+  &:hover {
+    border-color: #667eea;
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.05);
+  }
+}
+
+.nextButton,
+.submitButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-weight: 600;
+  padding: 12px 24px;
+  text-transform: none;
+
+  &:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #653a8b 100%);
+  }
+
+  &:disabled {
+    background: #ccc;
+    color: #666;
+  }
+}
