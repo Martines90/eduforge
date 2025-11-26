@@ -1,5 +1,9 @@
 import { createApp } from "./app";
 import { config } from "./config";
+import { initializeFirebase } from "./config/firebase.config";
+
+// Initialize Firebase Admin SDK
+initializeFirebase();
 
 const app = createApp();
 

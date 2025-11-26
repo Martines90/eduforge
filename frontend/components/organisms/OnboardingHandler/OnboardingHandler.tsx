@@ -10,6 +10,7 @@ import { SubjectSelectionModal } from '@/components/organisms/SubjectSelectionMo
 import { ActionSelectionModal } from '@/components/organisms/ActionSelectionModal';
 import { useUser } from '@/lib/context';
 import { CountryCode, UserIdentity, Subject, UserProfile } from '@/types/i18n';
+import * as apiService from '@/lib/services/api.service';
 
 type OnboardingStep = 'login' | 'register' | 'country' | 'role' | 'subject' | 'action' | 'complete';
 
@@ -61,28 +62,45 @@ export const OnboardingHandler: React.FC = () => {
 
   // ===== REGISTRATION FLOW =====
 
-  const handleRegister = (profile: UserProfile & { password: string; country: CountryCode; identity: UserIdentity; subject?: Subject }) => {
-    // Registration now includes all onboarding data
-    registerUser(profile);
-    setCountry(profile.country);
-    setIdentity(profile.identity);
+  const handleRegister = async (profile: UserProfile & { password: string; country: CountryCode; identity: UserIdentity; subject?: Subject }) => {
+    try {
+      // User is already registered and verified at this point (done in RegistrationModal)
+      // The token was already stored in localStorage by RegistrationModal
+      // Just update the local user context with the profile data
 
-    if (profile.subject) {
-      setSubject(profile.subject);
-      setSelectedSubject(profile.subject);
-    }
+      const userProfile: UserProfile = {
+        name: profile.name,
+        email: profile.email,
+        registeredAt: new Date().toISOString(),
+        token: localStorage.getItem('authToken') || '',
+      };
 
-    setIsCreatingAccount(false);
+      registerUser(userProfile);
+      setCountry(profile.country);
+      setIdentity(profile.identity);
 
-    // Determine next step based on identity
-    if (profile.identity === 'teacher' && profile.subject) {
-      // Teachers with subject go to action selection
-      setStep('action');
-    } else {
-      // Non-teachers complete onboarding
-      completeOnboarding();
-      setStep('complete');
-      router.push('/');
+      if (profile.subject) {
+        setSubject(profile.subject);
+        setSelectedSubject(profile.subject);
+      }
+
+      setIsCreatingAccount(false);
+
+      // Determine next step based on identity
+      if (profile.identity === 'teacher' && profile.subject) {
+        // Teachers with subject go to action selection
+        setStep('action');
+      } else {
+        // Non-teachers complete onboarding
+        completeOnboarding();
+        setStep('complete');
+        router.push('/');
+      }
+    } catch (error: any) {
+      console.error('Error during registration:', error);
+      // Error is already handled in RegistrationModal
+      // Just re-throw to prevent navigation
+      throw error;
     }
   };
 

@@ -1,7 +1,11 @@
 import { Router } from "express";
 import taskRoutes from "./task.routes";
+import authRoutes from "./auth.routes";
 
 const router = Router();
+
+// Mount auth routes
+router.use("/api/auth", authRoutes);
 
 // Mount task routes
 router.use(taskRoutes);

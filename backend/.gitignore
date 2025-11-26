@@ -1,6 +1,10 @@
 # Environment variables
 /.env
 
+# Firebase service account keys
+*firebase-adminsdk*.json
+firebase-service-account.json
+
 # Dependencies
 node_modules
 

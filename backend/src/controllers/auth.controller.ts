@@ -1,0 +1,277 @@
+import { Request, Response } from 'express';
+import * as authService from '../services/auth.service';
+import {
+  RegisterRequest,
+  LoginRequest,
+  VerificationCodeRequest,
+  VerifyEmailRequest,
+  AuthResponse,
+} from '../types/auth.types';
+
+/**
+ * POST /api/auth/register
+ * Initiate registration - send verification code (no user created yet)
+ */
+export async function register(req: Request, res: Response): Promise<void> {
+  try {
+    const data: RegisterRequest = req.body;
+
+    // Validate required fields
+    if (!data.email || !data.password || !data.name || !data.role || !data.country) {
+      res.status(400).json({
+        success: false,
+        message: 'Missing required fields',
+        error: 'email, password, name, role, and country are required',
+      } as AuthResponse);
+      return;
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+      res.status(400).json({
+        success: false,
+        message: 'Invalid email format',
+      } as AuthResponse);
+      return;
+    }
+
+    // Validate password length
+    if (data.password.length < 6) {
+      res.status(400).json({
+        success: false,
+        message: 'Password must be at least 6 characters',
+      } as AuthResponse);
+      return;
+    }
+
+    // Initiate registration - store verification code only
+    const code = await authService.initiateRegistration(data);
+
+    res.status(200).json({
+      success: true,
+      message: 'Verification code sent to email. Please verify to complete registration.',
+      // In development, include code in response (remove in production!)
+      data: process.env.NODE_ENV === 'development' ? { code } : undefined,
+    } as AuthResponse);
+  } catch (error: any) {
+    console.error('Register error:', error);
+
+    if (error.message === 'Email already registered') {
+      res.status(409).json({
+        success: false,
+        message: 'Email already registered',
+        error: error.message,
+      } as AuthResponse);
+    } else {
+      res.status(500).json({
+        success: false,
+        message: 'Registration failed',
+        error: error.message,
+      } as AuthResponse);
+    }
+  }
+}
+
+/**
+ * POST /api/auth/send-verification-code
+ * Send verification code to email
+ */
+export async function sendVerificationCode(req: Request, res: Response): Promise<void> {
+  try {
+    const { email }: VerificationCodeRequest = req.body;
+
+    if (!email) {
+      res.status(400).json({
+        success: false,
+        message: 'Email is required',
+      } as AuthResponse);
+      return;
+    }
+
+    // Create and send verification code
+    const code = await authService.createVerificationCode(email);
+
+    // TODO: In production, send email via nodemailer or email service
+    // For now, code is logged to console
+
+    res.status(200).json({
+      success: true,
+      message: 'Verification code sent to email',
+      // In development, include code in response (remove in production!)
+      data: process.env.NODE_ENV === 'development' ? { code } : undefined,
+    } as AuthResponse);
+  } catch (error: any) {
+    console.error('Send verification code error:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Failed to send verification code',
+      error: error.message,
+    } as AuthResponse);
+  }
+}
+
+/**
+ * POST /api/auth/verify-email
+ * Verify email with code and create user account
+ */
+export async function verifyEmail(req: Request, res: Response): Promise<void> {
+  try {
+    const { email, code }: VerifyEmailRequest = req.body;
+
+    if (!email || !code) {
+      res.status(400).json({
+        success: false,
+        message: 'Email and code are required',
+      } as AuthResponse);
+      return;
+    }
+
+    // Verify code and create user
+    const { uid, token } = await authService.verifyCodeAndCreateUser(email, code);
+
+    // Get user data
+    const user = await authService.getUserById(uid);
+
+    res.status(201).json({
+      success: true,
+      message: 'Email verified successfully. Account created.',
+      data: {
+        user: user
+          ? {
+              uid: user.uid,
+              email: user.email,
+              name: user.name,
+              emailVerified: user.emailVerified,
+            }
+          : undefined,
+        token,
+      },
+    } as AuthResponse);
+  } catch (error: any) {
+    console.error('Verify email error:', error);
+    res.status(400).json({
+      success: false,
+      message: error.message || 'Email verification failed',
+      error: error.message,
+    } as AuthResponse);
+  }
+}
+
+/**
+ * POST /api/auth/login
+ * Login user
+ */
+export async function login(req: Request, res: Response): Promise<void> {
+  try {
+    const data: LoginRequest = req.body;
+
+    if (!data.email || !data.password) {
+      res.status(400).json({
+        success: false,
+        message: 'Email and password are required',
+      } as AuthResponse);
+      return;
+    }
+
+    // Login user
+    const { user, token } = await authService.loginUser(data);
+
+    res.status(200).json({
+      success: true,
+      message: 'Login successful',
+      data: {
+        user: {
+          uid: user.uid,
+          email: user.email,
+          name: user.name,
+          emailVerified: user.emailVerified,
+        },
+        token,
+      },
+    } as AuthResponse);
+  } catch (error: any) {
+    console.error('Login error:', error);
+
+    if (error.message === 'Invalid email or password') {
+      res.status(401).json({
+        success: false,
+        message: 'Invalid email or password',
+      } as AuthResponse);
+    } else if (error.message === 'Account has been banned') {
+      res.status(403).json({
+        success: false,
+        message: 'Account has been banned',
+      } as AuthResponse);
+    } else {
+      res.status(500).json({
+        success: false,
+        message: 'Login failed',
+        error: error.message,
+      } as AuthResponse);
+    }
+  }
+}
+
+/**
+ * GET /api/auth/me
+ * Get current user info
+ */
+export async function getCurrentUser(req: Request, res: Response): Promise<void> {
+  try {
+    // Get token from Authorization header
+    const authHeader = req.headers.authorization;
+
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      res.status(401).json({
+        success: false,
+        message: 'No token provided',
+      } as AuthResponse);
+      return;
+    }
+
+    const token = authHeader.substring(7);
+
+    // Verify token
+    const decoded = authService.verifyToken(token);
+
+    // Get user data
+    const user = await authService.getUserById(decoded.uid);
+
+    if (!user) {
+      res.status(404).json({
+        success: false,
+        message: 'User not found',
+      } as AuthResponse);
+      return;
+    }
+
+    res.status(200).json({
+      success: true,
+      message: 'User retrieved successfully',
+      data: {
+        user: {
+          uid: user.uid,
+          email: user.email,
+          name: user.name,
+          emailVerified: user.emailVerified,
+        },
+      },
+    } as AuthResponse);
+  } catch (error: any) {
+    console.error('Get current user error:', error);
+
+    if (error.message === 'Invalid token') {
+      res.status(401).json({
+        success: false,
+        message: 'Invalid token',
+      } as AuthResponse);
+    } else {
+      res.status(500).json({
+        success: false,
+        message: 'Failed to get user info',
+        error: error.message,
+      } as AuthResponse);
+    }
+  }
+}

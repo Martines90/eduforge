@@ -69,6 +69,7 @@ export interface UserProfile {
   email: string;
   name: string;
   registeredAt: string;
+  token?: string; // JWT token for future authentication
 }
 
 /**

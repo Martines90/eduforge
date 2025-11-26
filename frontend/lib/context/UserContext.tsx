@@ -143,14 +143,21 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
 
   // Register user and save profile
   const registerUser = useCallback((profile: UserProfile) => {
+    // In production, the backend would generate and return a JWT token
+    // For now, we'll create a placeholder token structure
+    const profileWithToken: UserProfile = {
+      ...profile,
+      token: profile.token || '', // Will be populated by backend in production
+    };
+
     setUser((prev) => ({
       ...prev,
       isRegistered: true,
-      profile,
+      profile: profileWithToken,
       role: 'registered',
     }));
     setCookie(COOKIE_NAMES.IS_REGISTERED, 'true');
-    setCookie(COOKIE_NAMES.USER_PROFILE, JSON.stringify(profile));
+    setCookie(COOKIE_NAMES.USER_PROFILE, JSON.stringify(profileWithToken));
     setCookie(COOKIE_NAMES.ROLE, 'registered');
   }, []);
 
