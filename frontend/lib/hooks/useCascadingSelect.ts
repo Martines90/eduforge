@@ -1,10 +1,11 @@
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import { NavigationTopic, SelectionPathItem, GradeLevel } from '@/types/navigation';
 
 export interface UseCascadingSelectProps {
   data: NavigationTopic[];
+  initialPath?: string[]; // Array of topic keys to pre-select
 }
 
 export interface UseCascadingSelectReturn {
@@ -21,8 +22,48 @@ export interface UseCascadingSelectReturn {
  * Custom hook for managing cascading select logic
  * Handles hierarchical navigation through topics and sub-topics
  */
-export const useCascadingSelect = ({ data }: UseCascadingSelectProps): UseCascadingSelectReturn => {
+export const useCascadingSelect = ({ data, initialPath }: UseCascadingSelectProps): UseCascadingSelectReturn => {
   const [selectionPath, setSelectionPath] = useState<SelectionPathItem[]>([]);
+  const [initialized, setInitialized] = useState(false);
+
+  // Initialize with preset path from URL params
+  useEffect(() => {
+    if (initialPath && initialPath.length > 0 && !initialized && data.length > 0) {
+      const buildPath = (names: string[], currentData: NavigationTopic[], level: number = 0): SelectionPathItem[] => {
+        if (names.length === 0 || !currentData) return [];
+
+        const currentName = names[0];
+        // Try to match by name (case-insensitive)
+        const found = currentData.find(topic =>
+          topic.name.toLowerCase() === currentName.toLowerCase()
+        );
+
+        if (!found) {
+          console.warn(`Topic name "${currentName}" not found at level ${level}`);
+          return [];
+        }
+
+        const pathItem: SelectionPathItem = {
+          level,
+          topic: found,
+          displayName: found.name,
+        };
+
+        if (names.length === 1) {
+          return [pathItem];
+        }
+
+        const subPath = buildPath(names.slice(1), found.sub_topics || [], level + 1);
+        return [pathItem, ...subPath];
+      };
+
+      const builtPath = buildPath(initialPath, data);
+      if (builtPath.length > 0) {
+        setSelectionPath(builtPath);
+      }
+      setInitialized(true);
+    }
+  }, [data, initialPath, initialized]);
 
   // Calculate available options for each level based on current selection path
   const availableOptions = useMemo(() => {

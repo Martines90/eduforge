@@ -63,6 +63,8 @@ export const hu: Translations = {
   'Views': 'Megtekintések',
   'Loading tasks...': 'Feladatok betöltése...',
   'No tasks available for this topic yet': 'Ehhez a témához még nincsenek feladatok',
+  'No teacher added any tasks yet.': 'Még egyik tanár sem adott hozzá feladatot.',
+  'Be the first one who creates a new task': 'Legyen Ön az első, aki új feladatot hoz létre',
 
   // Subjects
   'Mathematics': 'Matematika',

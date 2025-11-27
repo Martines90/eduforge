@@ -3,6 +3,7 @@ import taskRoutes from "./task.routes";
 import authRoutes from "./auth.routes";
 import subjectMappingRoutes from "./subject-mapping.routes";
 import tasksV2Routes from "./tasks-v2.routes";
+import treeMapRoutes from "./tree-map.routes";
 
 const router = Router();
 
@@ -15,6 +16,7 @@ router.use(taskRoutes);
 // Mount new Firestore-based routes
 router.use(subjectMappingRoutes);
 router.use(tasksV2Routes);
+router.use("/api/tree-map", treeMapRoutes);
 
 /**
  * @swagger

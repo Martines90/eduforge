@@ -76,6 +76,8 @@ export interface Translations {
   'Views': string;
   'Loading tasks...': string;
   'No tasks available for this topic yet': string;
+  'No teacher added any tasks yet.': string;
+  'Be the first one who creates a new task': string;
 
   // Subjects
   'Mathematics': string;

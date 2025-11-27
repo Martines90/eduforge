@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Container, Typography, Box, Paper, Alert, Tabs, Tab } from '@mui/material';
 import { CascadingSelect } from '@/components/organisms/CascadingSelect';
 import { Button } from '@/components/atoms/Button';
@@ -30,8 +31,9 @@ function TabPanel({ children, value, index }: TabPanelProps) {
   );
 }
 
-export default function TaskCreatorPage() {
+function TaskCreatorContent() {
   const { t } = useTranslation();
+  const searchParams = useSearchParams();
   const { isAuthorized, isLoading } = useRouteProtection({
     requireAuth: true,
     requireIdentity: 'teacher',
@@ -39,11 +41,34 @@ export default function TaskCreatorPage() {
   const [selectedGrade, setSelectedGrade] = useState<number>(0);
   const [selectedTopic, setSelectedTopic] = useState<NavigationTopic | null>(null);
   const [selectionPath, setSelectionPath] = useState<string[]>([]);
+  const [initialPath, setInitialPath] = useState<string[] | undefined>(undefined);
+
+  // Read URL params on mount
+  useEffect(() => {
+    const pathParam = searchParams.get('subject_path_selection');
+    const gradeParam = searchParams.get('gradeLevel');
+
+    if (pathParam) {
+      const keys = pathParam.split(':').filter(k => k.length > 0);
+      setInitialPath(keys);
+      console.log('Initial path from URL:', keys);
+    }
+
+    if (gradeParam) {
+      // Set the grade tab based on URL param
+      if (gradeParam === 'grade_11_12') {
+        setSelectedGrade(1);
+      } else {
+        setSelectedGrade(0);
+      }
+    }
+  }, [searchParams]);
 
   const handleGradeChange = (_event: React.SyntheticEvent, newValue: number) => {
     setSelectedGrade(newValue);
     setSelectedTopic(null);
     setSelectionPath([]);
+    setInitialPath(undefined); // Clear initial path when manually changing grade
   };
 
   const handleSelectionComplete = (topic: NavigationTopic, path: string[]) => {
@@ -102,6 +127,7 @@ export default function TaskCreatorPage() {
             data={currentData}
             title={`${t('Select Topic')} (${t('Grade 9-10')})`}
             onSelectionComplete={handleSelectionComplete}
+            initialPath={selectedGrade === 0 ? initialPath : undefined}
           />
         </TabPanel>
 
@@ -110,6 +136,7 @@ export default function TaskCreatorPage() {
             data={currentData}
             title={`${t('Select Topic')} (${t('Grade 11-12')})`}
             onSelectionComplete={handleSelectionComplete}
+            initialPath={selectedGrade === 1 ? initialPath : undefined}
           />
         </TabPanel>
 
@@ -154,5 +181,13 @@ export default function TaskCreatorPage() {
         )}
       </Container>
     </div>
+  );
+}
+
+export default function TaskCreatorPage() {
+  return (
+    <Suspense fallback={<LoadingSpinner message="Loading..." fullScreen />}>
+      <TaskCreatorContent />
+    </Suspense>
   );
 }

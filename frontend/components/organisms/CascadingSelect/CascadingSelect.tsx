@@ -14,6 +14,7 @@ export interface CascadingSelectProps {
   title?: string;
   onSelectionComplete?: (topic: NavigationTopic, path: string[]) => void;
   className?: string;
+  initialPath?: string[]; // Array of topic keys to pre-select
 }
 
 /**
@@ -26,6 +27,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
   title = 'Select Topic',
   onSelectionComplete,
   className,
+  initialPath,
 }) => {
   const { t } = useTranslation();
   const {
@@ -35,7 +37,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
     reset,
     isComplete,
     finalSelection,
-  } = useCascadingSelect({ data });
+  } = useCascadingSelect({ data, initialPath });
 
   const handleSelectionComplete = () => {
     if (finalSelection && onSelectionComplete) {

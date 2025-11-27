@@ -18,7 +18,15 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "check": "npm run typecheck && npm run lint && npm run test",
-    "purge:math_subject_tree_hu": "npx tsx src/data/subject_mapping/purge_example_tasks.ts"
+    "purge:math_subject_tree_hu": "npx tsx src/data/subject_mapping/purge_example_tasks.ts",
+    "emulators:start": "firebase emulators:start --only firestore",
+    "emulators:kill": "pkill -f firebase",
+    "test:rules": "node test-firestore-rules.js",
+    "test:rules:watch": "nodemon --watch firestore.rules --exec 'npm run test:rules'",
+    "firebase:deploy": "firebase deploy",
+    "firebase:deploy:indexes": "firebase deploy --only firestore:indexes",
+    "firebase:deploy:rules": "firebase deploy --only firestore:rules",
+    "firebase:deploy:firestore": "firebase deploy --only firestore"
   },
   "keywords": [
     "openai",

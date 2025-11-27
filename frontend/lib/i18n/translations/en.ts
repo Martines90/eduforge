@@ -63,6 +63,8 @@ export const en: Translations = {
   'Views': 'Views',
   'Loading tasks...': 'Loading tasks...',
   'No tasks available for this topic yet': 'No tasks available for this topic yet',
+  'No teacher added any tasks yet.': 'No teacher added any tasks yet.',
+  'Be the first one who creates a new task': 'Be the first one who creates a new task',
 
   // Subjects
   'Mathematics': 'Mathematics',

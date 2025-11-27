@@ -161,5 +161,10 @@ export function getCurrentUser(): User | null {
  * Listen to auth state changes
  */
 export function onAuthChange(callback: (user: User | null) => void): () => void {
+  if (typeof window === 'undefined' || !auth) {
+    console.warn('[onAuthChange] Auth not available (SSR or not initialized)');
+    return () => {}; // Return no-op unsubscribe function
+  }
+  console.log('[onAuthChange] Setting up Firebase auth listener');
   return onAuthStateChanged(auth, callback);
 }

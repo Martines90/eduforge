@@ -205,11 +205,31 @@ The backend follows best practices:
 
 ## Scripts
 
+### Development
 - `npm run build` - Compile TypeScript to JavaScript
 - `npm start` - Start the production server
 - `npm run dev` - Start development server
 - `npm run dev:watch` - Start development server with auto-reload
 - `npm run prod` - Build and start production server
+- `npm run typecheck` - Run TypeScript type checking
+- `npm run lint` - Lint TypeScript files
+- `npm run lint:fix` - Fix linting issues automatically
+- `npm run format` - Format code with Prettier
+- `npm test` - Run Jest tests
+- `npm run test:watch` - Run tests in watch mode
+- `npm run test:coverage` - Generate test coverage report
+
+### Firebase Deployment
+- `npm run firebase:deploy` - Deploy everything to Firebase
+- `npm run firebase:deploy:firestore` - Deploy Firestore indexes and rules
+- `npm run firebase:deploy:indexes` - Deploy only Firestore indexes
+- `npm run firebase:deploy:rules` - Deploy only Firestore security rules
+
+### Firebase Testing
+- `npm run emulators:start` - Start Firebase Firestore emulator
+- `npm run emulators:kill` - Kill Firebase emulator processes
+- `npm run test:rules` - Run Firestore security rules tests
+- `npm run test:rules:watch` - Run rules tests in watch mode
 
 ## Technology Stack
 
@@ -234,6 +254,71 @@ The Swagger UI provides:
 - Interactive "Try it out" functionality
 - Example requests and responses
 - Schema definitions for all data models
+
+## Firebase Setup
+
+### Firestore Database
+
+This project uses Firebase Firestore for data persistence. The following resources are configured:
+
+#### Collections
+- **users** - User profiles and authentication data
+- **tasks** - Educational tasks created by teachers
+- **subjectMappings** - Curriculum hierarchy (subjects, grades, topics)
+- **verificationCodes** - Email verification codes
+
+#### Composite Indexes
+
+The application requires 10 composite indexes for efficient querying. Deploy them using:
+
+```bash
+npm run firebase:deploy:indexes
+```
+
+See `firestore.indexes.json` for the complete index definitions.
+
+#### Security Rules
+
+Firestore security rules protect data access:
+- ✅ Published tasks are publicly readable
+- ✅ Only verified teachers can create tasks
+- ✅ Users can only modify their own data
+- ✅ Rating validation (0-5 stars)
+
+Deploy security rules using:
+
+```bash
+npm run firebase:deploy:rules
+```
+
+See `firestore.rules` for the complete rule definitions.
+
+#### Testing Security Rules
+
+Run automated tests for security rules:
+
+```bash
+# Terminal 1: Start emulator
+npm run emulators:start
+
+# Terminal 2: Run tests
+npm run test:rules
+```
+
+### Firebase Deployment Guide
+
+For detailed Firebase deployment instructions, see:
+- `FIREBASE_DEPLOYMENT_GUIDE.md` - Complete deployment documentation
+- `FIRESTORE_INDEXES_REQUIRED.md` - Index specifications and requirements
+
+Quick deployment:
+```bash
+# Deploy both indexes and rules
+npm run firebase:deploy:firestore
+
+# Wait 5-10 minutes for indexes to build
+# Check status at: https://console.firebase.google.com/project/eduforge-d29d9/firestore/indexes
+```
 
 ## License
 

@@ -1,0 +1,2720 @@
+
+📊 Exporting tree map for mathematics - grade_9_10...
+
+✅ Firebase Admin SDK initialized successfully (using /Users/martonhorvath/Documents/EduForge/app/backend/src/config/eduforge-d29d9-firebase-adminsdk-fbsvc-744c4f4757.json)
+✅ Found 429 nodes in Firestore
+📌 Root level: 1
+
+🔄 Unwrapping grade level container...
+
+🌳 Tree structure built successfully!
+📊 Root nodes: 17
+
+📈 Nodes per level:
+   Level 0: 17 nodes
+   Level 1: 98 nodes
+   Level 2: 254 nodes
+   Level 3: 54 nodes
+   Level 4: 5 nodes
+
+📄 Generating JSON output...
+
+[
+  {
+    "key": "aranyossag_szazalekszamitas",
+    "name": "Arányosság, százalékszámítás",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "egyeb_aranyossagok",
+        "name": "Egyéb arányosságok",
+        "level": 2,
+        "subTopics": []
+      },
+      {
+        "key": "egyenes_aranyossag",
+        "name": "Egyenes arányosság",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "aranyossagi_tenyezo",
+            "name": "Arányossági tényező",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "egyenes_aranyossag_felismerese",
+            "name": "Egyenes arányosság felismerése",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "egyenes_aranyossag_grafikonja",
+            "name": "Egyenes arányosság grafikonja",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "forditott_aranyossag",
+        "name": "Fordított arányosság",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "forditott_aranyossag_felismerese",
+            "name": "Fordított arányosság felismerése",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "forditott_aranyossag_grafikonja",
+            "name": "Fordított arányosság grafikonja",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "szazalekszamitas",
+        "name": "Százalékszámítás",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "gyakorlati_alkalmazasok",
+            "name": "Gyakorlati alkalmazások",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szazalek_fogalma",
+            "name": "Százalék fogalma",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szazalekertekek_szamitasa",
+            "name": "Százalékértékek számítása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szazalekos_valtozas",
+            "name": "Százalékos változás",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "betus_kifejezesek",
+    "name": "Betűs kifejezések",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "muveletek_algebrai_kifejezesekkel",
+        "name": "Műveletek algebrai kifejezésekkel",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "egytagu_kifejezesek_szorzasa",
+            "name": "Egytagú kifejezések szorzása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "osszevonas",
+            "name": "Összevonás",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "zarojel_felbontas",
+            "name": "Zárójel felbontás",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "nevezetes_azonossagok",
+        "name": "Nevezetes azonosságok",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "binomok_negyzete",
+            "name": "Binomok négyzete",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "osszeg_kulonbseg_szorzata",
+            "name": "Összeg és különbség szorzata",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "szorzatta_alakitas",
+        "name": "Szorzattá alakítás",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "kiemel és",
+            "name": "Kiemelés",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "nevezetes_azonossagok_alkalmazasa",
+            "name": "Nevezetes azonosságok alkalmazása",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "teljes_negyzet",
+        "name": "Teljes négyzet",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "teljes_negyzette_kiegeszites",
+            "name": "Teljes négyzetté kiegészítés",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "elsofoku_egyenletek",
+    "name": "Elsőfokú egyenletek, egyenlőtlenségek, egyenletrendszerek",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "elsofoku_egyenlet",
+        "name": "Elsőfokú egyismeretlenes egyenlet",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "egyenlet_fogalma",
+            "name": "Egyenlet fogalma",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "egyenlet_megoldasa",
+            "name": "Egyenlet megoldása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "ellenorzes",
+            "name": "Ellenőrzés",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "grafikus_megoldas",
+            "name": "Grafikus megoldás",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "merlegelv",
+            "name": "Mérlegelv",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "elsofoku_egyenletrendszer",
+        "name": "Elsőfokú kétismeretlenes egyenletrendszer",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "behelyettesiteses_modszer",
+            "name": "Behelyettesítéses módszer",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "egyenletrendszer_fogalma",
+            "name": "Egyenletrendszer fogalma",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "grafikus_megoldas_rendszer",
+            "name": "Grafikus megoldás",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "kettőnel_tobb_ismeretlenes",
+            "name": "Kettőnél több ismeretlenes",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "kozos_egyutthatók_modszere",
+            "name": "Közös együtthatók módszere",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "elsofoku_egyenlotlenseg",
+        "name": "Elsőfokú egyenlőtlenség",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "egyenlotlenseg_fogalma",
+            "name": "Egyenlőtlenség fogalma",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "egyenlotlenseg_megoldasa",
+            "name": "Egyenlőtlenség megoldása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "egyenlotlensegek_alaptulajdonsagai",
+            "name": "Egyenlőtlenségek alaptulajdonságai",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "grafikus_megoldas_egyenlotlenseg",
+            "name": "Grafikus megoldás",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "szoveges_feladatok",
+        "name": "Szöveges feladatok",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "kevereses_feladatok",
+            "name": "Keveréses feladatok",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "kozos_munkavegzes",
+            "name": "Közös munkavégzés",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "modellalkotas",
+            "name": "Modellalkotás",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "penzugyi_feladatok",
+            "name": "Pénzügyi feladatok",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "ut_ido_sebesseg",
+            "name": "Út-idő-sebesség feladatok",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "fuggvenyek",
+    "name": "A függvény fogalma, függvénytulajdonságok",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "forditott_aranyossag_fuggvenye",
+        "name": "Fordított arányosságot leíró függvény",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "hiperbola",
+            "name": "Hiperbola",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "hiperbola_tulajdonsagai",
+            "name": "Hiperbola tulajdonságai",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "fuggveny_fogalma",
+        "name": "Függvény fogalma",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "egyertelmű_hozzarendeles",
+            "name": "Egyértelmű hozzárendelés",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "hozzarendeles",
+            "name": "Hozzárendelés",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "kolcsonosen_egyertelmű",
+            "name": "Kölcsönösen egyértelmű hozzárendelés",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "fuggveny_megadasa",
+        "name": "Függvény megadása",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "grafikonnal",
+            "name": "Grafikonnal megadás",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "keplettel",
+            "name": "Képlettel megadás",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "tablazattal",
+            "name": "Táblázattal megadás",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "fuggveny_tulajdonsagai",
+        "name": "Függvény tulajdonságai",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "ertekk eszlet",
+            "name": "Értékkészlet",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "ertelmezesi_tartomany",
+            "name": "Értelmezési tartomány",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "noveked es_fogyas",
+            "name": "Növekedés és fogyás",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szelsőertekek",
+            "name": "Szélsőértékek",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "zerushelyek",
+            "name": "Zérushelyek",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "fuggvenytranszformaciok",
+        "name": "Függvénytranszformációk",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "abszolutErtek_alkalmazasa",
+            "name": "Abszolút érték alkalmazása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "fuggoleges_eltolas",
+            "name": "Függőleges eltolás",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "fuggoleges_nyujtas",
+            "name": "Függőleges nyújtás/zsugorítás",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "vizszintes_eltolas",
+            "name": "Vízszintes eltolás",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "inverz_fuggveny",
+        "name": "Inverz függvény",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "hozzarendeles_megforditasa",
+            "name": "Hozzárendelés megfordítása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "inverz_fuggveny_grafikonja",
+            "name": "Inverz függvény grafikonja",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "linearis_fuggveny",
+        "name": "Lineáris függvény",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "egyenes_egyenletenek_felirasa",
+            "name": "Egyenes egyenletének felírása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "linearis_fuggveny_grafikonja",
+            "name": "Lineáris függvény grafikonja",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "meredekseg",
+            "name": "Meredekség",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "tengelymetszet",
+            "name": "Tengelymetszet",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "masodfoku_fuggveny",
+        "name": "Másodfokú függvény",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "nyilasirany",
+            "name": "Nyílásirány",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "parabola",
+            "name": "Parabola",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "parabola_csucspontja",
+            "name": "Parabola csúcspontja",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "parabola_tengelye",
+            "name": "Parabola tengelye",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "negyzetgyok_fuggveny",
+        "name": "Négyzetgyökfüggvény",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "negyzetgyok_fuggveny_grafikonja",
+            "name": "Négyzetgyökfüggvény grafikonja",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "negyzetgyok_fuggveny_tulajdonsagai",
+            "name": "Tulajdonságok",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "geometriai_alapismeretek",
+    "name": "Geometriai alapismeretek",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "alapszerkesztesek",
+        "name": "Alapszerkesztések",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "meröleges_szerkesztese",
+            "name": "Merőleges szerkesztése",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "parhuzamos_szerkesztese",
+            "name": "Párhuzamos szerkesztése",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szakaszfelező_meröleges",
+            "name": "Szakaszfelező merőleges",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szog_masolasa",
+            "name": "Szög másolása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szogfelező",
+            "name": "Szögfelező",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "egyenesek_kolcsonos_helyzete",
+        "name": "Egyenesek kölcsönös helyzete",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "meröleges_egyenesek",
+            "name": "Merőleges egyenesek",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "metszö_egyenesek",
+            "name": "Metsző egyenesek",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "parhuzamos_egyenesek",
+            "name": "Párhuzamos egyenesek",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "nevezetes_szogparok",
+        "name": "Nevezetes szögpárok",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "csucsszogek",
+            "name": "Csúcsszögek",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "egyallásu_szogek",
+            "name": "Egyállású szögek",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "kiegeszito_szogek",
+            "name": "Kiegészítő szögek",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "mellekszogek",
+            "name": "Mellékszögek",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "potszogek",
+            "name": "Pótszögek",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "valtoszogek",
+            "name": "Váltószögek",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "ponthalmazok",
+        "name": "Ponthalmazok",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "szakaszfelező_meröleges_ponthalmaz",
+            "name": "Szakaszfelező merőleges mint ponthalmaz",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szogfelező_ponthalmaz",
+            "name": "Szögfelező mint ponthalmaz",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "szogek",
+        "name": "Szögek",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "dereks zog",
+            "name": "Derékszög",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "egyenes_szog",
+            "name": "Egyenesszög",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "hegyes_szog",
+            "name": "Hegyesszög",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "horvato_szog",
+            "name": "Homorúszög",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szog_fogalma",
+            "name": "Szög fogalma",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "teljes_szog",
+            "name": "Teljesszög",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "tompa_szog",
+            "name": "Tompaszög",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "tavolsagok",
+        "name": "Távolságok",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "ket_egyenes_tavolsaga",
+            "name": "Két párhuzamos egyenes távolsága",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "ket_pont_tavolsaga",
+            "name": "Két pont távolsága",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "pont_egyenes_tavolsaga",
+            "name": "Pont és egyenes távolsága",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "terelemek",
+        "name": "Térelemek",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "egyenes",
+            "name": "Egyenes",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "felegyenes",
+            "name": "Félegyenes",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "pont",
+            "name": "Pont",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "sik",
+            "name": "Sík",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szakasz",
+            "name": "Szakasz",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "halmazok",
+    "name": "Halmazok",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "halmaz_elemszama",
+        "name": "Halmaz elemszáma",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "logikai_szita",
+            "name": "Logikai szita",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "halmaz_fogalma",
+        "name": "Halmaz fogalma és megadása",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "halmaz_megadas_felsorolassal",
+            "name": "Halmaz megadása felsorolással",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "halmaz_megadas_utasitassal",
+            "name": "Halmaz megadása utasítással",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "halmazmuveletek",
+        "name": "Halmazműveletek",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "komplementer",
+            "name": "Komplementer halmaz",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "kulonbseg",
+            "name": "Különbség",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "metszet",
+            "name": "Metszet",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "unio",
+            "name": "Unió (egyesítés)",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "halmazok_kozotti_viszonyok",
+        "name": "Halmazok közötti viszonyok",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "halmazok_egyenlosege",
+            "name": "Halmazok egyenlősége",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "reszhalmaz",
+            "name": "Részhalmaz",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "ures_halmaz",
+            "name": "Üres halmaz",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "vegtelen_halmazok",
+        "name": "Végtelen halmazok",
+        "level": 2,
+        "subTopics": []
+      },
+      {
+        "key": "venn_diagram",
+        "name": "Venn-diagramok",
+        "level": 2,
+        "subTopics": []
+      }
+    ]
+  },
+  {
+    "key": "haromszogek",
+    "name": "Háromszögek",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "haromszog_alapveto_osszefuggesei",
+        "name": "Háromszög alapvető összefüggései",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "belső_szogosszeg",
+            "name": "Belső szögösszeg",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "haromszog_egyenlotlenseg",
+            "name": "Háromszög-egyenlőtlenség",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "nagyobb_oldallal_szemben",
+            "name": "Nagyobb oldallal szemben nagyobb szög",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "haromszog_fogalma",
+        "name": "Háromszög fogalma",
+        "level": 2,
+        "subTopics": []
+      },
+      {
+        "key": "haromszog_korei",
+        "name": "Háromszög körei",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "beirt_kor",
+            "name": "Beírt kör",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "korulirt_kor",
+            "name": "Körülírt kör",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "haromszog_nevezetes_vonalai",
+        "name": "Háromszög nevezetes vonalai",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "kozepvonal",
+            "name": "Középvonal",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "kozepvonal_tetele",
+                "name": "Középvonal tétele",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "magassagvonal",
+            "name": "Magasságvonal",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "magassagpont",
+                "name": "Magasságpont",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "oldalfelező_meröleges_haromszogben",
+            "name": "Oldalfelező merőleges",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "korulirt_kor_kozeppontja",
+                "name": "Körülírt kör középpontja",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "sulyvonal",
+            "name": "Súlyvonal",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "sulypont",
+                "name": "Súlypont",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "szogfelező_haromszogben",
+            "name": "Szögfelező",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "beirt_kor_kozeppontja",
+                "name": "Beírt kör középpontja",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "haromszog_terulete",
+        "name": "Háromszög területe",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "alap_magassag_szorzata",
+            "name": "Alap és magasság szorzata",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "terulet_szogfuggvennyel",
+            "name": "Terület szögfüggvénnyel",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "haromszogek_csoportositasa",
+        "name": "Háromszögek csoportosítása",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "csoportositas_oldalak_szerint",
+            "name": "Csoportosítás oldalak szerint",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "altalanos_haromszog",
+                "name": "Általános háromszög",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "egyenlo_szaru_haromszog",
+                "name": "Egyenlő szárú háromszög",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "szabályos_haromszog",
+                "name": "Szabályos háromszög",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "csoportositas_szogek_szerint",
+            "name": "Csoportosítás szögek szerint",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "derékszögű_haromszog",
+                "name": "Derékszögű háromszög",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "hegyesszogű_haromszog",
+                "name": "Hegyesszögű háromszög",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "tompaszogű_haromszog",
+                "name": "Tompaszögű háromszög",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "haromszogek_egybevagosaga",
+        "name": "Háromszögek egybevágósága",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "ofo",
+            "name": "Oldal-oldal-szög (OFO) - derékszögű háromszögeknél",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "ooo",
+            "name": "Oldal-oldal-oldal (OOO)",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "oso",
+            "name": "Oldal-szög-oldal (OSO)",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szo",
+            "name": "Szög-oldal-szög (SZO)",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "pitagorasz_tetel",
+        "name": "Pitagorasz-tétel",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "pitagorasz_tetel_alkalmazasa",
+            "name": "Pitagorasz-tétel alkalmazása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "pitagorasz_tetel_bizonytasa",
+            "name": "Pitagorasz-tétel bizonyítása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "pitagorasz_tetel_kimondasa",
+            "name": "Pitagorasz-tétel kimondása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "pitagorasz_tetel_megforditasa",
+            "name": "Pitagorasz-tétel megfordítása",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "hatvany_gyok",
+    "name": "Hatvány, gyök",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "hatvanyozas",
+        "name": "Hatványozás",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "negativ_egesz_kitevo",
+            "name": "Negatív egész kitevő",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "nulla_kitevo",
+            "name": "Nulla kitevő",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "pozitiv_egesz_kitevo",
+            "name": "Pozitív egész kitevő",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "hatvanyozas_azonossagai",
+        "name": "Hatványozás azonosságai",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "hanyados_hatvanyozasa",
+            "name": "Hányados hatványozása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "hatvany_hatvanyozasa",
+            "name": "Hatvány hatványozása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "hatvanyok_osztasa",
+            "name": "Hatványok osztása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "hatvanyok_szorzasa",
+            "name": "Hatványok szorzása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szorzat_hatvanyozasa",
+            "name": "Szorzat hatványozása",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "negyzetgyok",
+        "name": "Négyzetgyök",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "negyzetgyok_azonossagai",
+            "name": "Négyzetgyök azonosságai",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "negyzetgyok_fogalma",
+            "name": "Négyzetgyök fogalma",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "negyzetgyok_szamitas",
+            "name": "Négyzetgyök számítása",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "normalalak",
+        "name": "Normálalak",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "normalalak_kepzese",
+            "name": "Normálalak képzése",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szamolas_normalalakkal",
+            "name": "Számolás normálalakkal",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "kombinatorika",
+    "name": "Kombinatorika, gráfok",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "esetszet_valasztas",
+        "name": "Esetszétválasztás",
+        "level": 2,
+        "subTopics": []
+      },
+      {
+        "key": "grafok_alapjai",
+        "name": "Gráfok alapjai",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "graf_abrazolasa",
+            "name": "Gráf ábrázolása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "graf_alkalmazasai",
+            "name": "Gráf alkalmazásai",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "graf_fogalma",
+            "name": "Gráf fogalma",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "kivalasztas",
+        "name": "Kiválasztás",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "egyszeru_kivalasztas",
+            "name": "Egyszerű kiválasztás",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "felteteles_kivalasztas",
+            "name": "Feltételes kiválasztás",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "sorba_rendezes",
+        "name": "Sorba rendezés",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "egyszeru_sorba_rendezes",
+            "name": "Egyszerű sorba rendezés",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "felteteles_sorba_rendezes",
+            "name": "Feltételes sorba rendezés",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "szorzasi_elv",
+        "name": "Szorzási elv",
+        "level": 2,
+        "subTopics": []
+      }
+    ]
+  },
+  {
+    "key": "kor_reszei",
+    "name": "A kör és részei",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "kor_erintoje",
+        "name": "Kör érintője",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "erinto_tulajdonsaga",
+            "name": "Érintő tulajdonsága",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "erintoszakaszok",
+            "name": "Érintőszakaszok",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "kor_fogalma",
+        "name": "Kör fogalma",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "kor_elemei",
+            "name": "Kör elemei",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "atmero",
+                "name": "Átmérő",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "hur",
+                "name": "Húr",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "sugar",
+                "name": "Sugár",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "kor_kerulete",
+        "name": "Kör kerülete",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "koriv_hossza",
+            "name": "Körív hossza",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "kor_terulete",
+        "name": "Kör területe",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "kor_kerulete",
+            "name": "Kör kerülete",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "korcikk_terulete",
+            "name": "Körcikk területe",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "korgyűrű_terulete",
+            "name": "Körgyűrű területe",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "korszelet_terulete",
+            "name": "Körszelet területe",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "kozepponti_szog",
+        "name": "Középponti szög",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "kozepponti_szog_es_korcikk",
+            "name": "Középponti szög és körcikk",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "kozepponti_szog_es_koriv",
+            "name": "Középponti szög és körív",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "thalész_tetel",
+        "name": "Thalész-tétel",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "thalész_tetel_bizonytasa",
+            "name": "Thalész-tétel bizonyítása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "thalész_tetel_kimondasa",
+            "name": "Thalész-tétel kimondása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "thalész_tetel_megforditasa",
+            "name": "Thalész-tétel megfordítása",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "leiro_statisztika_9_10",
+    "name": "Leíró statisztika",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "adatok_ertelmezese_ertekelese",
+        "name": "Adatok értelmezése és értékelése",
+        "level": 2,
+        "subTopics": []
+      },
+      {
+        "key": "adatok_rendszerezese",
+        "name": "Adatok rendszerezése",
+        "level": 2,
+        "subTopics": []
+      },
+      {
+        "key": "diagramok",
+        "name": "Diagramok",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "diagramok_kozotti_konverzio",
+            "name": "Diagramok közötti konverzió",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "diagramtipus_kivalasztasa",
+            "name": "Megfelelő diagramtípus kiválasztása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "kordiagram",
+            "name": "Kördiagram",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "kordiagram_ertelmezese",
+                "name": "Kördiagram értelmezése",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "kordiagram_keszitese",
+                "name": "Kördiagram készítése",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "oszlopdiagram",
+            "name": "Oszlopdiagram",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "oszlopdiagram_ertelmezese",
+                "name": "Oszlopdiagram értelmezése",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "oszlopdiagram_keszitese",
+                "name": "Oszlopdiagram készítése",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "grafikus_manipulaciok",
+        "name": "Grafikus manipulációk",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "manipulaciok_javitasa",
+            "name": "Manipulációk javítása",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "tengelyek_megtevesztese",
+            "name": "Tengelyek megtévesztése",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "kozep_ertekek",
+        "name": "Középértékek",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "atlag",
+            "name": "Átlag (számtani közép)",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "median",
+            "name": "Medián",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "modusz",
+            "name": "Módusz",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "statisztikai_adatgyujtes",
+        "name": "Statisztikai adatgyűjtés",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "adatgyujtes_forrasai",
+            "name": "Adatgyűjtés forrásai",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "adatgyujtes_tervezese",
+            "name": "Adatgyűjtés tervezése",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "masodfoku_egyenletek",
+    "name": "Másodfokú egyenletek, egyenlőtlenségek",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "masodfoku_egyenlet",
+        "name": "Másodfokú egyenlet",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "diszkriminans",
+            "name": "Diszkrimináns",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "grafikus_megoldas_masodfoku",
+            "name": "Grafikus megoldás",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "gyokok_es_egyutthatók_osszefuggese",
+            "name": "Gyökök és együtthatók összefüggése",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "gyoktenyezos_alak",
+            "name": "Gyöktényezős alak",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "masodfoku_egyenlet_fogalma",
+            "name": "Másodfokú egyenlet fogalma",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "megoldokeplet",
+            "name": "Megoldóképlet",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szorzatta_alakitas_megoldas",
+            "name": "Megoldás szorzattá alakítással",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "teljes_negyzette_kiegeszites_megoldas",
+            "name": "Megoldás teljes négyzetté kiegészítéssel",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "masodfoku_egyenlotlenseg",
+        "name": "Másodfokú egyenlőtlenség",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "alap_megoldasi_modszerek_masodfoku_egyenlotlenseg",
+            "name": "Alap megoldási módszerek",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "grafikus_megoldas_egyenlotlenseg_masodfoku",
+            "name": "Grafikus megoldás",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "masodfokura_visszavezetheto",
+        "name": "Másodfokúra visszavezethető egyenletek",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "negyedfoku_egyenlet",
+            "name": "Negyedfokú egyenlet",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "tortes_egyenlet",
+            "name": "Törtegyenlet",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "szoveges_feladatok_masodfoku",
+        "name": "Szöveges feladatok",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "geometriai_feladatok",
+            "name": "Geometriai feladatok",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "mozgasi_feladatok",
+            "name": "Mozgási feladatok",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "matematikai_logika",
+    "name": "Matematikai logika",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "allitas_fogalma",
+        "name": "Állítás fogalma",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "allitas_logikai_erteke",
+            "name": "Állítás logikai értéke",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "allitas_megforditasa",
+        "name": "Állítás megfordítása",
+        "level": 2,
+        "subTopics": []
+      },
+      {
+        "key": "bizonytias_fogalma",
+        "name": "Bizonyítás fogalma",
+        "level": 2,
+        "subTopics": []
+      },
+      {
+        "key": "logikai_muveletek",
+        "name": "Logikai műveletek",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "diszjunkcio",
+            "name": "Diszjunkció (megengedő vagy)",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "ekvivalencia",
+            "name": "Ekvivalencia (akkor és csak akkor)",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "implikacio",
+            "name": "Implikáció (ha..., akkor...)",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "kizaro_vagy",
+            "name": "Kizáró vagy",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "konjunkcio",
+            "name": "Konjunkció (és)",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "tagadas",
+            "name": "Tagadás (nem)",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "minden_van_olyan",
+        "name": "Minden és van olyan",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "altalanos_allitas",
+            "name": "Általános állítás (minden)",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "egzisztencialis_allitas",
+            "name": "Egzisztenciális állítás (van olyan)",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "negyszogek_sokszogek",
+    "name": "Négyszögek, sokszögek",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "konvex_sokszog",
+        "name": "Konvex sokszög",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "atlok_szama",
+            "name": "Átlók száma",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "sokszog_belső_szogosszege",
+            "name": "Sokszög belső szögösszege",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "sokszog_külső_szogosszege",
+            "name": "Sokszög külső szögösszege",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "negyszog_fogalma",
+        "name": "Négyszög fogalma",
+        "level": 2,
+        "subTopics": []
+      },
+      {
+        "key": "specialis_negyszogek",
+        "name": "Speciális négyszögek",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "deltoid",
+            "name": "Deltoid",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "deltoid_terulete",
+                "name": "Deltoid területe",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "deltoid_tulajdonsagai",
+                "name": "Deltoid tulajdonságai",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "negyzet",
+            "name": "Négyzet",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "negyzet_terulete",
+                "name": "Négyzet területe",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "negyzet_tulajdonsagai",
+                "name": "Négyzet tulajdonságai",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "paralelogramma",
+            "name": "Paralelogramma",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "paralelogramma_terulete",
+                "name": "Paralelogramma területe",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "paralelogramma_tulajdonsagai",
+                "name": "Paralelogramma tulajdonságai",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "rombusz",
+            "name": "Rombusz",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "rombusz_terulete",
+                "name": "Rombusz területe",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "rombusz_tulajdonsagai",
+                "name": "Rombusz tulajdonságai",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "teglalap",
+            "name": "Téglalap",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "teglalap_terulete",
+                "name": "Téglalap területe",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "teglalap_tulajdonsagai",
+                "name": "Téglalap tulajdonságai",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "trapez",
+            "name": "Trapéz",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "derékszögű_trapez",
+                "name": "Derékszögű trapéz",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "hurtrapez",
+                "name": "Húrtrapéz",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "trapez_terulete",
+                "name": "Trapéz területe",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "szabályos_sokszog",
+        "name": "Szabályos sokszög",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "szabályos_sokszog_terulete",
+            "name": "Szabályos sokszög területe",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szabályos_sokszog_tulajdonsagai",
+            "name": "Szabályos sokszög tulajdonságai",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "szamhalmazok_muveletek",
+    "name": "Számhalmazok, műveletek",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "abszolut_ertek",
+        "name": "Abszolút érték",
+        "level": 2,
+        "subTopics": []
+      },
+      {
+        "key": "becsles",
+        "name": "Becslés",
+        "level": 2,
+        "subTopics": []
+      },
+      {
+        "key": "ellentett_reciprok",
+        "name": "Ellentett és reciprok",
+        "level": 2,
+        "subTopics": []
+      },
+      {
+        "key": "kerekites",
+        "name": "Kerekítés",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "eszszeru_kerekites",
+            "name": "Észszerű kerekítés",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "kerekites_szabalyai",
+            "name": "Kerekítés szabályai",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "muveletek_szamokkal",
+        "name": "Műveletek valós számokkal",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "kivonas_muvelete",
+            "name": "Kivonás",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "muveleti_azonossagok",
+            "name": "Műveleti azonosságok",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "szorzas_asszociativitasa",
+                "name": "Szorzás asszociativitása",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "szorzas_disztributivitasa",
+                "name": "Szorzás disztributivitása",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "szorzas_kommutativitasa",
+                "name": "Szorzás kommutativitása",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "osztas_muvelete",
+            "name": "Osztás",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "osztas_jelolese",
+                "name": "Osztás jelölése",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "osztas_tulajdonsagai",
+                "name": "Osztás tulajdonságai",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "tobbjeyu_osztas",
+                "name": "Többjegyű osztás",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "zarojelek_hasznalata",
+            "name": "Zárójelek használata",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "szamegyenes",
+        "name": "Számegyenes",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "intervallumok",
+            "name": "Intervallumok",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szamok_abrazolasa",
+            "name": "Számok ábrázolása",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "szamhalmazok_epulese",
+        "name": "Számhalmazok épülése",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "egesz_szamok",
+            "name": "Egész számok (ℤ)",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "egesz_szamok_bovitese",
+                "name": "Egész számok (ℤ)",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "muveletek_egesz_szamokkal",
+                "name": "Műveletek egész számokkal",
+                "level": 4,
+                "subTopics": [
+                  {
+                    "key": "egesz_szamok_kivonasa",
+                    "name": "Egész számok kivonása",
+                    "level": 5,
+                    "subTopics": []
+                  },
+                  {
+                    "key": "egesz_szamok_osszeadasa",
+                    "name": "Egész számok összeadása",
+                    "level": 5,
+                    "subTopics": []
+                  },
+                  {
+                    "key": "egesz_szamok_osztasa",
+                    "name": "Egész számok osztása",
+                    "level": 5,
+                    "subTopics": []
+                  },
+                  {
+                    "key": "egesz_szamok_szorzasa",
+                    "name": "Egész számok szorzása",
+                    "level": 5,
+                    "subTopics": []
+                  },
+                  {
+                    "key": "muveletek_nullaval",
+                    "name": "Műveletek nullával",
+                    "level": 5,
+                    "subTopics": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "irracionalis_szamok",
+            "name": "Irracionális számok",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "racionalis_szamok",
+            "name": "Racionális számok (ℚ)",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "termeszetes_szamok",
+            "name": "Természetes számok (ℕ)",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "valos_szamok",
+            "name": "Valós számok (ℝ)",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "tortek",
+        "name": "Törtek",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "kozonsegés_tort",
+            "name": "Közönséges tört",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "tizedes_tort",
+            "name": "Tizedes tört",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "tort_atvaltas",
+            "name": "Törtalakok közötti átváltás",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "transzformaciok",
+    "name": "Transzformációk, szerkesztések",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "dinamikus_geometriai_szoftver",
+        "name": "Dinamikus geometriai szoftver",
+        "level": 2,
+        "subTopics": []
+      },
+      {
+        "key": "egybevagosag",
+        "name": "Egybevágóság",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "egybevago_alakzatok",
+            "name": "Egybevágó alakzatok",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "parkettazas",
+            "name": "Parkettázás",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "szimmetria",
+            "name": "Szimmetria",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "kozeppontosan_szimmetrikus",
+                "name": "Középpontosan szimmetrikus alakzat",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "tengelyesen_szimmetrikus",
+                "name": "Tengelyesen szimmetrikus alakzat",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "egybevagosagi_transzformaciok",
+        "name": "Egybevágósági transzformációk",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "kozeppontos_tukrozes",
+            "name": "Középpontos tükrözés",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "kozeppontos_tukrozes_szerkesztese",
+                "name": "Középpontos tükrözés szerkesztése",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "kozeppontos_tukrozes_tulajdonsagai",
+                "name": "Középpontos tükrözés tulajdonságai",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "parhuzamos_eltolas",
+            "name": "Párhuzamos eltolás",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "eltolas_szerkesztese",
+                "name": "Eltolás szerkesztése",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "eltolas_tulajdonsagai",
+                "name": "Eltolás tulajdonságai",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "pont_koruli_forgatas",
+            "name": "Pont körüli forgatás",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "forgatas_szerkesztese",
+                "name": "Forgatás szerkesztése",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "forgatas_tulajdonsagai",
+                "name": "Forgatás tulajdonságai",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "tengelyes_tukrozes",
+            "name": "Tengelyes tükrözés",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "tengelyes_tukrozes_szerkesztese",
+                "name": "Tengelyes tükrözés szerkesztése",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "tengelyes_tukrozes_tulajdonsagai",
+                "name": "Tengelyes tükrözés tulajdonságai",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "geometriai_transzformaciok",
+        "name": "Geometriai transzformációk",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "peldak_transzformaciokra",
+            "name": "Példák transzformációkra",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "hasonlosag",
+        "name": "Hasonlóság",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "hasonlo_alakzatok",
+            "name": "Hasonló alakzatok",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "hasonlo_haromszogek",
+            "name": "Hasonló háromszögek",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "hasonlo_sikidomok_kerulete_terulete",
+            "name": "Hasonló síkidomok kerülete és területe",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "keruletek_aranya",
+                "name": "Kerületek aránya",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "teruletek_aranya",
+                "name": "Területek aránya",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "hasonlosagi_transzformaciok",
+        "name": "Hasonlósági transzformációk",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "hasonlosagi_transzformacio",
+            "name": "Hasonlósági transzformáció",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "kozeppontos_hasonlosag",
+            "name": "Középpontos hasonlósági transzformáció",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "hasonlosag_aranya",
+                "name": "Hasonlóság aránya",
+                "level": 4,
+                "subTopics": []
+              },
+              {
+                "key": "hasonlosag_kozeppontja",
+                "name": "Hasonlóság középpontja",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "szerkesztes_hagyomanyos_eszkozokkel",
+        "name": "Szerkesztés hagyományos eszközökkel",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "haromszog_szerkesztese",
+            "name": "Háromszög szerkesztése",
+            "level": 3,
+            "subTopics": [
+              {
+                "key": "diszkusszio",
+                "name": "Diszkusszió",
+                "level": 4,
+                "subTopics": []
+              }
+            ]
+          },
+          {
+            "key": "negyszog_szerkesztese",
+            "name": "Négyszög szerkesztése",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "vektorok",
+        "name": "Vektorok",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "ellentett_vektor",
+            "name": "Ellentett vektor",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "nullvektor",
+            "name": "Nullvektor",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "vektor_abszolut_erteke",
+            "name": "Vektor abszolút értéke",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "vektor_fogalma",
+            "name": "Vektor fogalma",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "vektor_szamszorosa",
+            "name": "Vektor számszorosa",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "vektorok_kulonbsege",
+            "name": "Vektorok különbsége",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "vektorok_osszege",
+            "name": "Vektorok összege",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "valoszinuseg_szamitas_9_10",
+    "name": "Valószínűség-számítás",
+    "level": 1,
+    "subTopics": [
+      {
+        "key": "diszkret_valoszinuseg_eloszlas",
+        "name": "Diszkrét valószínűség-eloszlás",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "eloszlas_abrazolasa",
+            "name": "Eloszlás ábrázolása",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "esemeny_fogalma",
+        "name": "Esemény fogalma",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "elemi_esemeny",
+            "name": "Elemi esemény",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "esemenyter",
+            "name": "Eseménytér",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "gyakorisag_relativ_gyakorisag",
+        "name": "Gyakoriság és relatív gyakoriság",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "gyakorisag",
+            "name": "Gyakoriság",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "gyakorisagi_tablazat",
+            "name": "Gyakorisági táblázat",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "relativ_gyakorisag",
+            "name": "Relatív gyakoriság",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "valoszinuseg_fogalma",
+        "name": "Valószínűség fogalma",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "klasszikus_valoszinusegi_modell",
+            "name": "Klasszikus valószínűségi modell",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "statisztikai_valoszinuseg",
+            "name": "Statisztikai valószínűség",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "valoszinusegi_kiserletek",
+        "name": "Valószínűségi kísérletek",
+        "level": 2,
+        "subTopics": [
+          {
+            "key": "dobokocka",
+            "name": "Dobókocka",
+            "level": 3,
+            "subTopics": []
+          },
+          {
+            "key": "penzérme",
+            "name": "Pénzérme",
+            "level": 3,
+            "subTopics": []
+          }
+        ]
+      },
+      {
+        "key": "veletlen_jelensegek",
+        "name": "Véletlen jelenségek",
+        "level": 2,
+        "subTopics": []
+      }
+    ]
+  }
+]
+
+✅ Export complete!

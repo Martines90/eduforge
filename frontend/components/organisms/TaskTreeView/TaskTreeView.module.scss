@@ -93,3 +93,15 @@
     font-size: 0.875rem;
   }
 }
+
+.emptyRow {
+  background-color: rgba($color-primary, 0.01);
+
+  td {
+    font-size: 0.875rem;
+  }
+
+  &:hover {
+    background-color: rgba($color-primary, 0.03);
+  }
+}

@@ -420,6 +420,8 @@ export default function TasksPage() {
       ) : (
         <TaskTreeView
           data={dataToDisplay}
+          subject={filterSubject}
+          gradeLevel={filterGrade}
           onTaskClick={(task) => {
             console.log('Task clicked:', task);
             // TODO: Navigate to task detail page
