@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { TaskController } from "../controllers/task.controller";
+import { requireAuthenticatedTeacher } from "../middleware/auth.middleware";
 
 const router = Router();
 const taskController = new TaskController();
@@ -14,6 +15,8 @@ const taskController = new TaskController();
  *       and optional educational images (using DALL-E-3). The task is configured based on curriculum
  *       path, target audience, difficulty level, educational model, and precision settings.
  *     tags: [Tasks]
+ *     security:
+ *       - bearerAuth: []
  *     requestBody:
  *       description: Comprehensive configuration for task generation
  *       required: true
@@ -86,10 +89,36 @@ const taskController = new TaskController();
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Error'
+ *       401:
+ *         description: Unauthorized - Authentication required
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 error:
+ *                   type: string
+ *                 message:
+ *                   type: string
+ *       403:
+ *         description: Forbidden - Teacher role required
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 error:
+ *                   type: string
+ *                 message:
+ *                   type: string
  *       500:
  *         $ref: '#/components/responses/InternalServerError'
  */
-router.post("/generate-task", taskController.generateTask);
+router.post("/generate-task", requireAuthenticatedTeacher, taskController.generateTask);
 
 /**
  * @swagger

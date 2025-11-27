@@ -4,8 +4,10 @@ import { useState } from 'react';
 import { Container, Typography, Box, Paper, Alert, Tabs, Tab } from '@mui/material';
 import { CascadingSelect } from '@/components/organisms/CascadingSelect';
 import { Button } from '@/components/atoms/Button';
+import { LoadingSpinner } from '@/components/atoms/LoadingSpinner/LoadingSpinner';
 import { NavigationTopic, GradeLevel } from '@/types/navigation';
 import { useTranslation } from '@/lib/i18n';
+import { useRouteProtection } from '@/lib/hooks/useRouteProtection';
 import navigationData from '@/data/navigation_mapping.json';
 import styles from './page.module.scss';
 
@@ -30,6 +32,10 @@ function TabPanel({ children, value, index }: TabPanelProps) {
 
 export default function TaskCreatorPage() {
   const { t } = useTranslation();
+  const { isAuthorized, isLoading } = useRouteProtection({
+    requireAuth: true,
+    requireIdentity: 'teacher',
+  });
   const [selectedGrade, setSelectedGrade] = useState<number>(0);
   const [selectedTopic, setSelectedTopic] = useState<NavigationTopic | null>(null);
   const [selectionPath, setSelectionPath] = useState<string[]>([]);
@@ -55,6 +61,16 @@ export default function TaskCreatorPage() {
 
   const gradeLevel: GradeLevel = selectedGrade === 0 ? 'grade_9_10' : 'grade_11_12';
   const currentData = navigationData[gradeLevel];
+
+  // Show loading state while checking authorization
+  if (isLoading) {
+    return <LoadingSpinner message="Loading..." fullScreen />;
+  }
+
+  // If not authorized, the hook will redirect - show loading
+  if (!isAuthorized) {
+    return <LoadingSpinner message="Redirecting..." fullScreen />;
+  }
 
   return (
     <div className={styles.pageContainer}>

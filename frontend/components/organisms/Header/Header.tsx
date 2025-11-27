@@ -6,7 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Logo } from '@/components/atoms/Logo';
 import { NavLink } from '@/components/atoms/NavLink';
 import { MobileMenu } from '@/components/molecules/MobileMenu';
-import { CountrySelector } from '@/components/molecules/CountrySelector';
+import { UserMenu } from '@/components/molecules/UserMenu';
 import { useTranslation } from '@/lib/i18n';
 import styles from './Header.module.scss';
 
@@ -63,8 +63,8 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
               ))}
             </Box>
 
-            {/* Country Selector */}
-            <CountrySelector className={styles.countrySelector} />
+            {/* User Menu */}
+            <UserMenu className={styles.userMenu} />
           </Toolbar>
         </Container>
       </AppBar>

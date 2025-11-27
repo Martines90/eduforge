@@ -3,9 +3,14 @@
 import { Container, Typography, Box, Paper } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { useUser } from '@/lib/context';
+import { useRouteProtection } from '@/lib/hooks/useRouteProtection';
+import { LoadingSpinner } from '@/components/atoms/LoadingSpinner/LoadingSpinner';
 
 export default function SearchTasks() {
   const { user } = useUser();
+  const { isAuthorized, isLoading } = useRouteProtection({
+    requireAuth: true,
+  });
 
   const subjectLabels: Record<string, string> = {
     'mathematics': 'Mathematics',
@@ -23,6 +28,16 @@ export default function SearchTasks() {
   };
 
   const subjectLabel = user.subject ? subjectLabels[user.subject] : 'All Subjects';
+
+  // Show loading state while checking authorization
+  if (isLoading) {
+    return <LoadingSpinner message="Loading..." fullScreen />;
+  }
+
+  // If not authorized, the hook will redirect - show loading
+  if (!isAuthorized) {
+    return <LoadingSpinner message="Redirecting..." fullScreen />;
+  }
 
   return (
     <Container maxWidth="lg" sx={{ flex: 1, display: 'flex', alignItems: 'center' }}>

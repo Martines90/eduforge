@@ -1,0 +1,46 @@
+@import '@/styles/mixins.scss';
+
+.userMenu {
+  display: flex;
+  align-items: center;
+}
+
+.avatarButton {
+  padding: 4px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.userInfo {
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.userName {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.userEmail {
+  font-size: 13px;
+  color: var(--text-secondary);
+  word-break: break-word;
+}

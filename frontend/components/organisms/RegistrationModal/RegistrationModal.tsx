@@ -512,6 +512,25 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                         prevInput?.focus();
                       }
                     }}
+                    onPaste={(e) => {
+                      e.preventDefault();
+                      const pastedData = e.clipboardData.getData('text/plain');
+
+                      // Extract only digits from pasted content
+                      const digits = pastedData.replace(/\D/g, '');
+
+                      if (digits.length > 0) {
+                        // Take up to 6 digits
+                        const code = digits.substring(0, 6);
+                        setVerificationCode(code);
+                        setVerificationError('');
+
+                        // Focus the last filled input or the next empty one
+                        const nextIndex = Math.min(code.length, 5);
+                        const nextInput = document.getElementById(`code-input-${nextIndex}`);
+                        nextInput?.focus();
+                      }
+                    }}
                     error={Boolean(verificationError)}
                   />
                 ))}
