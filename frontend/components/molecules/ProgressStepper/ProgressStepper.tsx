@@ -130,9 +130,6 @@ export const ProgressStepper: React.FC<ProgressStepperProps> = ({
             }}
           />
         </Box>
-        <Typography variant="caption" className={styles.progressText}>
-          Step {activeStep + 1} of {steps.length}
-        </Typography>
       </Box>
     </Box>
   );

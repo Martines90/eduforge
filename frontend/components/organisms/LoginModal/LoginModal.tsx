@@ -18,6 +18,7 @@ import LoginIcon from '@mui/icons-material/Login';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import { ForgotPasswordModal } from '../ForgotPasswordModal';
 import styles from './LoginModal.module.scss';
 
 export interface LoginModalProps {
@@ -46,6 +47,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
   onCreateAccount,
 }) => {
   const [loginError, setLoginError] = useState<string | null>(null);
+  const [forgotPasswordOpen, setForgotPasswordOpen] = useState(false);
 
   const handleSubmit = async (
     values: { email: string; password: string },
@@ -62,16 +64,17 @@ export const LoginModal: React.FC<LoginModalProps> = ({
   };
 
   return (
-    <Dialog
-      open={open}
-      maxWidth="sm"
-      fullWidth
-      disableEscapeKeyDown
-      className={styles.dialog}
-      PaperProps={{
-        className: styles.paper,
-      }}
-    >
+    <>
+      <Dialog
+        open={open}
+        maxWidth="sm"
+        fullWidth
+        disableEscapeKeyDown
+        className={styles.dialog}
+        PaperProps={{
+          className: styles.paper,
+        }}
+      >
       <DialogTitle className={styles.title}>
         <Box className={styles.iconContainer}>
           <LoginIcon sx={{ fontSize: 48 }} />
@@ -131,7 +134,16 @@ export const LoginModal: React.FC<LoginModalProps> = ({
               </Box>
 
               <Box className={styles.forgotPassword}>
-                <MuiLink href="#" variant="body2" className={styles.link}>
+                <MuiLink
+                  component="button"
+                  type="button"
+                  variant="body2"
+                  className={styles.link}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setForgotPasswordOpen(true);
+                  }}
+                >
                   Forgot password?
                 </MuiLink>
               </Box>
@@ -190,6 +202,12 @@ export const LoginModal: React.FC<LoginModalProps> = ({
         </Typography>
       </DialogContent>
     </Dialog>
+
+    <ForgotPasswordModal
+      open={forgotPasswordOpen}
+      onClose={() => setForgotPasswordOpen(false)}
+    />
+    </>
   );
 };
 

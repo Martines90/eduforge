@@ -12,25 +12,25 @@ export interface ButtonProps extends Omit<MuiButtonProps, 'variant'> {
  * Button Atom Component
  * A reusable button component following atomic design principles
  */
-export const Button: React.FC<ButtonProps> = ({
-  variant = 'primary',
-  children,
-  className,
-  ...props
-}) => {
-  const muiVariant = variant === 'text' ? 'text' : 'contained';
-  const color = variant === 'secondary' ? 'secondary' : 'primary';
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ variant = 'primary', children, className, ...props }, ref) => {
+    const muiVariant = variant === 'text' ? 'text' : 'contained';
+    const color = variant === 'secondary' ? 'secondary' : 'primary';
 
-  return (
-    <MuiButton
-      variant={muiVariant}
-      color={color}
-      className={`${styles.button} ${className || ''}`}
-      {...props}
-    >
-      {children}
-    </MuiButton>
-  );
-};
+    return (
+      <MuiButton
+        ref={ref}
+        variant={muiVariant}
+        color={color}
+        className={`${styles.button} ${className || ''}`}
+        {...props}
+      >
+        {children}
+      </MuiButton>
+    );
+  }
+);
+
+Button.displayName = 'Button';
 
 export default Button;

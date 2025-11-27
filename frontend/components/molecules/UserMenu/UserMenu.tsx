@@ -3,9 +3,11 @@
 import React, { useState } from 'react';
 import { IconButton, Menu, MenuItem, Avatar, Divider, ListItemIcon, ListItemText } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useUser } from '@/lib/context';
 import { useRouter } from 'next/navigation';
+import { useTranslation } from '@/lib/i18n';
 import styles from './UserMenu.module.scss';
 
 export interface UserMenuProps {
@@ -19,6 +21,7 @@ export interface UserMenuProps {
 export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
   const { user, logoutUser } = useUser();
   const router = useRouter();
+  const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -33,6 +36,11 @@ export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
   const handleProfile = () => {
     handleClose();
     router.push('/profile');
+  };
+
+  const handleMyTasks = () => {
+    handleClose();
+    router.push('/my-tasks');
   };
 
   const handleLogout = () => {
@@ -98,13 +106,22 @@ export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
           <ListItemIcon>
             <PersonIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Profile</ListItemText>
+          <ListItemText>{t('Profile')}</ListItemText>
         </MenuItem>
+        {user.identity === 'teacher' && (
+          <MenuItem onClick={handleMyTasks}>
+            <ListItemIcon>
+              <AssignmentIcon fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>{t('My Tasks')}</ListItemText>
+          </MenuItem>
+        )}
+        <Divider />
         <MenuItem onClick={handleLogout}>
           <ListItemIcon>
             <LogoutIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Logout</ListItemText>
+          <ListItemText>{t('Logout')}</ListItemText>
         </MenuItem>
       </Menu>
     </div>

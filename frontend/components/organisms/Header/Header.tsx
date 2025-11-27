@@ -24,6 +24,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
 
   const navigationItems = [
     { href: '/', label: t('Home') },
+    { href: '/tasks', label: t('Tasks') },
     { href: '/task_creator', label: t('Task Creator') },
   ];
 
@@ -54,14 +55,8 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
             {/* Logo */}
             <Logo />
 
-            {/* Desktop Navigation */}
-            <Box className={styles.desktopNav} component="nav" aria-label="Main navigation">
-              {navigationItems.map((item) => (
-                <NavLink key={item.href} href={item.href}>
-                  {item.label}
-                </NavLink>
-              ))}
-            </Box>
+            {/* Spacer to push UserMenu to the right */}
+            <Box sx={{ flexGrow: 1 }} />
 
             {/* User Menu */}
             <UserMenu className={styles.userMenu} />
