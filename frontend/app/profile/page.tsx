@@ -130,14 +130,14 @@ export default function ProfilePage() {
   };
 
   const getInitials = () => {
-    if (user.name) {
-      const names = user.name.split(' ');
+    if (user.profile?.name) {
+      const names = user.profile.name.split(' ');
       if (names.length >= 2) {
         return `${names[0][0]}${names[1][0]}`.toUpperCase();
       }
       return names[0][0].toUpperCase();
     }
-    return user.email ? user.email[0].toUpperCase() : 'U';
+    return user.profile?.email ? user.profile.email[0].toUpperCase() : 'U';
   };
 
   return (
@@ -181,7 +181,7 @@ export default function ProfilePage() {
                   {t('Name')}
                 </Typography>
               </Box>
-              <Typography variant="body1">{user.name || t('Not provided')}</Typography>
+              <Typography variant="body1">{user.profile?.name || t('Not provided')}</Typography>
             </Grid>
 
             <Grid item xs={12} sm={6}>
@@ -191,7 +191,7 @@ export default function ProfilePage() {
                   {t('Email')}
                 </Typography>
               </Box>
-              <Typography variant="body1">{user.email || t('Not provided')}</Typography>
+              <Typography variant="body1">{user.profile?.email || t('Not provided')}</Typography>
             </Grid>
 
             <Grid item xs={12} sm={6}>

@@ -221,7 +221,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
       const response = await apiService.verifyEmail(pendingUserData.email, verificationCode);
 
       // Code is valid - user is now created and verified
-      const identity: UserIdentity = isTeacher ? 'teacher' : 'general_user';
+      const identity: UserIdentity = isTeacher ? 'teacher' : 'non-teacher';
 
       const profile: UserProfile & { password: string; country: CountryCode; identity: UserIdentity; subject?: Subject } = {
         name: pendingUserData.name,

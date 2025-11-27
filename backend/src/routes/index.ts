@@ -1,14 +1,20 @@
 import { Router } from "express";
 import taskRoutes from "./task.routes";
 import authRoutes from "./auth.routes";
+import subjectMappingRoutes from "./subject-mapping.routes";
+import tasksV2Routes from "./tasks-v2.routes";
 
 const router = Router();
 
 // Mount auth routes
 router.use("/api/auth", authRoutes);
 
-// Mount task routes
+// Mount legacy task generation routes
 router.use(taskRoutes);
+
+// Mount new Firestore-based routes
+router.use(subjectMappingRoutes);
+router.use(tasksV2Routes);
 
 /**
  * @swagger

@@ -55,6 +55,14 @@ export const en: Translations = {
   'Start Task': 'Start Task',
   'Difficulty': 'Difficulty',
   'Medium': 'Medium',
+  'Tree View': 'Tree View',
+  'Grid View': 'Grid View',
+  'Category / Task Title': 'Category / Task Title',
+  'School System': 'School System',
+  'Rating': 'Rating',
+  'Views': 'Views',
+  'Loading tasks...': 'Loading tasks...',
+  'No tasks available for this topic yet': 'No tasks available for this topic yet',
 
   // Subjects
   'Mathematics': 'Mathematics',
@@ -105,6 +113,7 @@ export const en: Translations = {
   'Loading profile...': 'Loading profile...',
   'Redirecting...': 'Redirecting...',
   'All password fields are required': 'All password fields are required',
+  'New password must be at least 8 characters long': 'New password must be at least 8 characters long',
   'New password must be different from old password': 'New password must be different from old password',
   'New passwords do not match': 'New passwords do not match',
   'Failed to change password. Please check your old password and try again.': 'Failed to change password. Please check your old password and try again.',

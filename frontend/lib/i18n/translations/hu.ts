@@ -55,6 +55,14 @@ export const hu: Translations = {
   'Start Task': 'Feladat Indítása',
   'Difficulty': 'Nehézség',
   'Medium': 'Közepes',
+  'Tree View': 'Fa Nézet',
+  'Grid View': 'Rács Nézet',
+  'Category / Task Title': 'Kategória / Feladat Címe',
+  'School System': 'Oktatási Rendszer',
+  'Rating': 'Értékelés',
+  'Views': 'Megtekintések',
+  'Loading tasks...': 'Feladatok betöltése...',
+  'No tasks available for this topic yet': 'Ehhez a témához még nincsenek feladatok',
 
   // Subjects
   'Mathematics': 'Matematika',
@@ -105,6 +113,7 @@ export const hu: Translations = {
   'Loading profile...': 'Profil betöltése...',
   'Redirecting...': 'Átirányítás...',
   'All password fields are required': 'Minden jelszó mező kitöltése kötelező',
+  'New password must be at least 8 characters long': 'Az új jelszónak legalább 8 karakter hosszúnak kell lennie',
   'New password must be different from old password': 'Az új jelszónak különböznie kell a régitől',
   'New passwords do not match': 'Az új jelszavak nem egyeznek',
   'Failed to change password. Please check your old password and try again.': 'Nem sikerült megváltoztatni a jelszót. Ellenőrizze a régi jelszót és próbálja újra.',

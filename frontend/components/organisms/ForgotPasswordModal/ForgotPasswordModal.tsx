@@ -207,7 +207,7 @@ export function ForgotPasswordModal({ open, onClose }: ForgotPasswordModalProps)
         {currentStep === 'email' && (
           <Box>
             <Typography variant="body2" color="text.secondary" paragraph>
-              Enter your email address and we'll send you a verification code to reset your password.
+              Enter your email address and we&apos;ll send you a verification code to reset your password.
             </Typography>
 
             <TextField
@@ -236,7 +236,7 @@ export function ForgotPasswordModal({ open, onClose }: ForgotPasswordModalProps)
         {currentStep === 'code' && (
           <Box>
             <Typography variant="body2" color="text.secondary" paragraph>
-              We've sent a 6-digit verification code to <strong>{email}</strong>. Please enter it below.
+              We&apos;ve sent a 6-digit verification code to <strong>{email}</strong>. Please enter it below.
             </Typography>
 
             <TextField
@@ -274,7 +274,7 @@ export function ForgotPasswordModal({ open, onClose }: ForgotPasswordModalProps)
         {currentStep === 'newPassword' && (
           <Box>
             <Typography variant="body2" color="text.secondary" paragraph>
-              Enter your new password. Make sure it's at least 8 characters long.
+              Enter your new password. Make sure it&apos;s at least 8 characters long.
             </Typography>
 
             <TextField

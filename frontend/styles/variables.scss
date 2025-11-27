@@ -1,0 +1,31 @@
+// Color Variables
+$color-primary: #1976d2;
+$color-secondary: #dc004e;
+$color-background: #ffffff;
+$color-text-primary: #212121;
+$color-text-secondary: #757575;
+$color-border: #e0e0e0;
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// Border
+$border-radius: 8px;
+
+// Shadows
+$shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// Font
+$font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

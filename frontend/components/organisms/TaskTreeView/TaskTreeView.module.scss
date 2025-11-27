@@ -1,0 +1,95 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.treeContainer {
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 800px;
+
+  @include md {
+    max-height: none;
+  }
+}
+
+.headerRow {
+  background-color: rgba($color-primary, 0.08);
+
+  th {
+    font-weight: 600;
+  }
+}
+
+.treeRow {
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba($color-primary, 0.05);
+  }
+}
+
+.expandButton {
+  transition: transform 0.2s ease;
+}
+
+// Level-based styling
+.levelSubject {
+  background-color: rgba($color-primary, 0.08);
+  font-weight: 700;
+
+  td {
+    font-size: 1.1rem;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.levelGrade {
+  background-color: rgba($color-primary, 0.06);
+  font-weight: 600;
+
+  td {
+    font-size: 1rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+.levelMainCategory {
+  background-color: rgba($color-primary, 0.04);
+
+  td {
+    font-size: 0.95rem;
+  }
+}
+
+.levelSubCategory {
+  background-color: rgba($color-primary, 0.02);
+
+  td {
+    font-size: 0.9rem;
+  }
+}
+
+.levelDeep {
+  background-color: transparent;
+
+  td {
+    font-size: 0.875rem;
+  }
+}
+
+.taskRow {
+  background-color: rgba($color-secondary, 0.02);
+  border-left: 3px solid $color-secondary;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: rgba($color-secondary, 0.08);
+    transform: translateX(2px);
+  }
+
+  td {
+    font-size: 0.875rem;
+  }
+}
