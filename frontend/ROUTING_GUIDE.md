@@ -10,6 +10,10 @@ The application has three levels of page protection:
 2. **Authenticated pages** - Require user to be logged in (e.g., search tasks)
 3. **Role-protected pages** - Require specific user identity (e.g., task creator requires teacher)
 
+And two special pages:
+- **404 Not Found** (`/not-found`) - For non-existent routes
+- **403 Unauthorized** (`/unauthorized`) - For access denied (logged in but wrong role)
+
 ## Components & Hooks
 
 ### `useRouteProtection` Hook
@@ -46,7 +50,9 @@ function ProtectedPage() {
 
 - `requireAuth?: boolean` - Whether the route requires authentication (default: false)
 - `requireIdentity?: 'teacher' | 'non-teacher'` - Required user identity (optional)
-- `redirectTo?: string` - Custom redirect path (defaults to '/' for unauthorized access)
+- `redirectTo?: string` - Custom redirect path
+  - Defaults to `/` for missing authentication
+  - Defaults to `/unauthorized` for wrong role/identity
 
 **Return values:**
 
@@ -73,9 +79,25 @@ Next.js automatically shows this page when:
 - A page/component calls `notFound()` function
 
 The 404 page provides:
-- Clear error message
+- Clear error message (404 - Page Not Found)
 - Quick navigation to home page
 - Link to task creator
+
+### `unauthorized/page.tsx` - 403 Unauthorized Page
+
+Location: `/app/unauthorized/page.tsx`
+
+Shown when a logged-in user tries to access a route they don't have permission for.
+
+Common scenarios:
+- Non-teacher trying to access `/task_creator`
+- User with wrong role trying to access role-specific features
+
+The 403 page provides:
+- Clear error message (403 - Access Denied)
+- Explanation of why access was denied
+- "Go Back" button to return to previous page
+- Link to home page
 
 ## Protected Page Examples
 
@@ -181,7 +203,7 @@ export default function AdminPage() {
 
 3. **Authorization check**
    - Hook validates `user.identity` against `requireIdentity`
-   - If identity doesn't match, redirects to home or custom path
+   - If identity doesn't match, redirects to `/unauthorized` (or custom path)
 
 ### Identity Selection
 
@@ -205,12 +227,12 @@ Always show a loading spinner during these states to prevent content flash.
 
 ### `/task_creator` - Teacher Only
 - **Requires:** Authentication + Teacher identity
-- **Redirects to:** `/` (home)
+- **Redirects to:** `/unauthorized` (if logged in as non-teacher) or `/` (if not logged in)
 - **Purpose:** Only teachers can create educational tasks
 
 ### `/search_tasks` - Authenticated Users
 - **Requires:** Authentication only
-- **Redirects to:** `/` (home)
+- **Redirects to:** `/` (if not logged in)
 - **Purpose:** Registered users can search and browse tasks
 
 ### `/` - Public
@@ -254,7 +276,7 @@ if (!isAuthorized) {
 ### Test Role Protection
 
 1. Login as non-teacher
-2. Visit `/task_creator` → Should redirect to home
+2. Visit `/task_creator` → Should redirect to `/unauthorized` page
 3. Login as teacher → Should see task creator
 
 ### Test 404 Page
@@ -262,14 +284,21 @@ if (!isAuthorized) {
 1. Visit non-existent route (e.g., `/does-not-exist`) → Should see 404 page
 2. Click "Go to Home" → Should navigate to home page
 
+### Test Unauthorized Page
+
+1. Login as non-teacher
+2. Visit `/task_creator` → Should see 403 Unauthorized page
+3. Click "Go Back" → Should return to previous page
+4. Click "Go to Home" → Should navigate to home page
+
 ## Future Enhancements
 
 Consider adding:
-- **Unauthorized page** - Custom page explaining why access was denied
 - **Role-based navigation** - Hide/show nav links based on user role
 - **Permission system** - More granular permissions beyond teacher/non-teacher
 - **Middleware** - Server-side protection for API routes
 - **JWT validation** - Verify tokens on protected routes
+- **Analytics** - Track unauthorized access attempts
 
 ## Troubleshooting
 

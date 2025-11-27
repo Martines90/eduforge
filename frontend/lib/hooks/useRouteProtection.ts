@@ -46,6 +46,7 @@ export function useRouteProtection(options: RouteProtectionOptions = {}) {
 
     // Check authentication requirement
     if (requireAuth && !user.isRegistered) {
+      // If not authenticated, redirect to home (they need to log in)
       const redirect = redirectTo || '/';
       router.push(redirect);
       return;
@@ -53,7 +54,8 @@ export function useRouteProtection(options: RouteProtectionOptions = {}) {
 
     // Check identity/role requirement
     if (requireIdentity && user.identity !== requireIdentity) {
-      const redirect = redirectTo || '/';
+      // If authenticated but wrong role, redirect to unauthorized page
+      const redirect = redirectTo || '/unauthorized';
       router.push(redirect);
       return;
     }
