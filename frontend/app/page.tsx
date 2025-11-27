@@ -31,7 +31,7 @@ export default function Home() {
           <Typography variant="h1" component="h1" gutterBottom>
             EduForge
           </Typography>
-          <Typography variant="h5" color="text.secondary" paragraph>
+          <Typography variant="h5" component="div" color="text.secondary" paragraph>
             {t('Task Creator')}
           </Typography>
           <Typography variant="body1" color="text.secondary" paragraph>

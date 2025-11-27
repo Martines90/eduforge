@@ -78,7 +78,7 @@ export default function SearchTasks() {
           <Typography variant="h1" component="h1" gutterBottom>
             Search {subjectLabel} Tasks
           </Typography>
-          <Typography variant="h6" color="text.secondary" paragraph sx={{ mt: 2 }}>
+          <Typography variant="h6" component="div" color="text.secondary" paragraph sx={{ mt: 2 }}>
             Coming Soon!
           </Typography>
           <Typography variant="body1" color="text.secondary" paragraph>

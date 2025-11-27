@@ -168,7 +168,7 @@ export default function ProfilePage() {
 
         {/* User Information */}
         <Box sx={{ mb: 4 }}>
-          <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Typography variant="h6" component="div" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <PersonIcon color="primary" />
             {t('Personal Information')}
           </Typography>
@@ -220,7 +220,7 @@ export default function ProfilePage() {
 
         {/* Password Change Section */}
         <Box>
-          <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Typography variant="h6" component="div" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <LockIcon color="primary" />
             {t('Password & Security')}
           </Typography>

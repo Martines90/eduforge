@@ -55,7 +55,7 @@ export default function Unauthorized() {
           <Typography variant="h1" component="h1" gutterBottom>
             403
           </Typography>
-          <Typography variant="h5" color="text.secondary" paragraph>
+          <Typography variant="h5" component="div" color="text.secondary" paragraph>
             Access Denied
           </Typography>
           <Typography variant="body1" color="text.secondary" paragraph>

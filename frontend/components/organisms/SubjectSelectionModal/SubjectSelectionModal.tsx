@@ -69,7 +69,7 @@ export const SubjectSelectionModal: React.FC<SubjectSelectionModalProps> = ({
       }}
     >
       <DialogTitle className={styles.title}>
-        <Typography variant="h4" component="h2" className={styles.titleText}>
+        <Typography variant="h4" component="div" className={styles.titleText}>
           What subject do you teach?
         </Typography>
         <Typography variant="body1" color="text.secondary" className={styles.subtitle}>

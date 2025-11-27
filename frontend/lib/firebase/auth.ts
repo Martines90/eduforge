@@ -119,11 +119,14 @@ export async function verifyEmail(email: string, code: string): Promise<boolean>
  */
 export async function loginUser(email: string, password: string): Promise<User> {
   try {
+    console.log('[Firebase Auth] Attempting login for:', email);
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    console.log('User logged in successfully:', userCredential.user.uid);
+    console.log('[Firebase Auth] User logged in successfully:', userCredential.user.uid);
     return userCredential.user;
   } catch (error: any) {
-    console.error('Error logging in:', error);
+    console.error('[Firebase Auth] Error logging in:', error);
+    console.error('[Firebase Auth] Error code:', error.code);
+    console.error('[Firebase Auth] Error message:', error.message);
 
     if (error.code === 'auth/user-not-found') {
       throw new Error('No account found with this email');
@@ -131,6 +134,10 @@ export async function loginUser(email: string, password: string): Promise<User> 
       throw new Error('Incorrect password');
     } else if (error.code === 'auth/invalid-email') {
       throw new Error('Invalid email address');
+    } else if (error.code === 'auth/invalid-credential') {
+      throw new Error('Invalid email or password');
+    } else if (error.code === 'auth/too-many-requests') {
+      throw new Error('Too many failed login attempts. Please try again later.');
     }
 
     throw error;

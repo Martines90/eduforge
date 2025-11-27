@@ -67,7 +67,7 @@ export const RoleSelectionModal: React.FC<RoleSelectionModalProps> = ({
       }}
     >
       <DialogTitle className={styles.title}>
-        <Typography variant="h4" component="h2" className={styles.titleText}>
+        <Typography variant="h4" component="div" className={styles.titleText}>
           Who are you?
         </Typography>
         <Typography variant="body1" color="text.secondary" className={styles.subtitle}>
@@ -96,7 +96,7 @@ export const RoleSelectionModal: React.FC<RoleSelectionModalProps> = ({
                       <CheckCircleIcon className={styles.checkIcon} />
                     )}
                   </Box>
-                  <Typography variant="h6" className={styles.roleTitle}>
+                  <Typography variant="h6" component="div" className={styles.roleTitle}>
                     {role.title}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">

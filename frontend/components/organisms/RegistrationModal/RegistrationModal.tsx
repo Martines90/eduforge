@@ -271,7 +271,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         <Box className={styles.iconContainer}>
           <PersonAddIcon sx={{ fontSize: 48 }} />
         </Box>
-        <Typography variant="h4" component="h2" className={styles.titleText}>
+        <Typography variant="h4" component="div" className={styles.titleText}>
           Create Your Account
         </Typography>
       </DialogTitle>
@@ -288,7 +288,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         {/* Step 1: Country Selection (+ Subject for teachers) */}
         {activeStep === 0 && (
           <Box className={styles.stepContent}>
-            <Typography variant="h6" className={styles.stepTitle}>
+            <Typography variant="h6" component="div" className={styles.stepTitle}>
               {isTeacher ? 'Select Your Country & Subject' : 'Select Your Country'}
             </Typography>
 
@@ -347,7 +347,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         {/* Step 2: Personal Info */}
         {activeStep === 1 && (
           <Box className={styles.stepContent}>
-            <Typography variant="h6" className={styles.stepTitle}>
+            <Typography variant="h6" component="div" className={styles.stepTitle}>
               {isTeacher ? 'Your Work Information' : 'Your Information'}
             </Typography>
 
@@ -469,7 +469,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         {/* Step 3: Email Verification */}
         {activeStep === 2 && (
           <Box className={styles.stepContent}>
-            <Typography variant="h6" className={styles.stepTitle}>
+            <Typography variant="h6" component="div" className={styles.stepTitle}>
               Verify Your Email
             </Typography>
 

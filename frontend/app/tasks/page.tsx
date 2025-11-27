@@ -369,7 +369,7 @@ export default function TasksPage() {
       {/* Loading State */}
       {isLoading && (
         <Paper elevation={1} sx={{ p: 6, textAlign: 'center' }}>
-          <Typography variant="h6" gutterBottom>
+          <Typography variant="h6" component="div" gutterBottom>
             {t('Loading tasks...')}
           </Typography>
         </Paper>
@@ -378,7 +378,7 @@ export default function TasksPage() {
       {/* Error State */}
       {error && !isLoading && (
         <Paper elevation={1} sx={{ p: 6, textAlign: 'center', backgroundColor: 'error.light' }}>
-          <Typography variant="h6" gutterBottom color="error">
+          <Typography variant="h6" component="div" gutterBottom color="error">
             Error: {error}
           </Typography>
           <Typography variant="body2">
@@ -405,7 +405,7 @@ export default function TasksPage() {
               mb: 2,
             }}
           />
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" component="div" gutterBottom>
             {t('No Tasks Available Yet')}
           </Typography>
           <Typography variant="body1" color="text.secondary" paragraph>

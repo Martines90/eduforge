@@ -60,7 +60,7 @@ export const CountrySelectionModal: React.FC<CountrySelectionModalProps> = ({
       }}
     >
       <DialogTitle className={styles.title}>
-        <Typography variant="h4" component="h2" className={styles.titleText}>
+        <Typography variant="h4" component="div" className={styles.titleText}>
           Welcome to EduForge! 🎓
         </Typography>
         <Typography variant="body1" color="text.secondary" className={styles.subtitle}>
@@ -100,7 +100,7 @@ export const CountrySelectionModal: React.FC<CountrySelectionModalProps> = ({
                       <CheckCircleIcon className={styles.checkIcon} />
                     )}
                   </Box>
-                  <Typography variant="h6" className={styles.countryName}>
+                  <Typography variant="h6" component="div" className={styles.countryName}>
                     {country.name}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">

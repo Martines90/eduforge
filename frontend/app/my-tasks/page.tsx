@@ -84,7 +84,7 @@ export default function MyTasksPage() {
                 mb: 2,
               }}
             />
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h6" component="div" gutterBottom>
               {t('No Tasks Yet')}
             </Typography>
             <Typography variant="body1" color="text.secondary" paragraph>
@@ -117,7 +117,7 @@ export default function MyTasksPage() {
               <Grid item xs={12} md={6} lg={4}>
                 <Card>
                   <CardContent>
-                    <Typography variant="h6" gutterBottom>
+                    <Typography variant="h6" component="div" gutterBottom>
                       Example Task Title
                     </Typography>
                     <Typography variant="body2" color="text.secondary" paragraph>

@@ -5,6 +5,8 @@ import { CountryCode, UserIdentity, UserRole, Subject, UserProfile } from '@/typ
 import { DEFAULT_COUNTRY } from '@/lib/i18n/countries';
 import { getCookie, setCookie, COOKIE_NAMES, isFirstVisit } from '@/lib/utils/cookies';
 import { detectBrowserCountry } from '@/lib/utils/language-detection';
+import { logoutUser as firebaseLogout, loginUser as firebaseLogin, onAuthChange } from '@/lib/firebase/auth';
+import { getUserById } from '@/lib/firebase/users';
 
 /**
  * User state interface
@@ -33,7 +35,7 @@ interface UserContextType {
   setSubject: (subject: Subject) => void;
   registerUser: (profile: UserProfile) => void;
   loginUser: (email: string, password: string) => Promise<void>;
-  logoutUser: () => void;
+  logoutUser: () => Promise<void>;
   completeOnboarding: () => void;
   resetUser: () => void;
 }
@@ -57,8 +59,76 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   });
 
   const [mounted, setMounted] = useState(false);
+  const [authInitialized, setAuthInitialized] = useState(false);
 
-  // Initialize user state from cookies on mount
+  // Listen to Firebase Auth state changes to restore session on reload
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    console.log('[UserContext] Setting up Firebase Auth listener...');
+
+    const unsubscribe = onAuthChange(async (firebaseUser) => {
+      console.log('[UserContext] Firebase Auth state changed:', firebaseUser ? `User: ${firebaseUser.uid}` : 'No user');
+
+      if (firebaseUser) {
+        try {
+          // User is authenticated - restore session from Firestore
+          const userData = await getUserById(firebaseUser.uid);
+          console.log('[UserContext] Restored user data from Firestore:', userData);
+
+          if (!userData) {
+            console.warn('[UserContext] No user data found in Firestore for:', firebaseUser.uid);
+            setAuthInitialized(true);
+            return;
+          }
+
+          const profile: UserProfile = {
+            email: userData.email,
+            name: userData.name,
+            registeredAt: userData.createdAt?.toDate?.()?.toISOString() || new Date().toISOString(),
+            token: '',
+          };
+
+          // Update context state
+          setUser((prev) => ({
+            ...prev,
+            isRegistered: true,
+            profile,
+            role: 'registered',
+            identity: userData.role as UserIdentity,
+            subject: userData.subject || null,
+            hasCompletedOnboarding: true, // If they're in Firestore, they've completed onboarding
+            isFirstVisit: false,
+          }));
+
+          // Update cookies
+          setCookie(COOKIE_NAMES.IS_REGISTERED, 'true');
+          setCookie(COOKIE_NAMES.USER_PROFILE, JSON.stringify(profile));
+          setCookie(COOKIE_NAMES.ROLE, 'registered');
+          if (userData.role) {
+            setCookie(COOKIE_NAMES.IDENTITY, userData.role);
+          }
+          if (userData.subject) {
+            setCookie(COOKIE_NAMES.SUBJECT, userData.subject);
+          }
+        } catch (error) {
+          console.error('[UserContext] Error restoring user session:', error);
+        }
+      } else {
+        // No user authenticated
+        console.log('[UserContext] No Firebase user, checking cookies...');
+      }
+
+      setAuthInitialized(true);
+    });
+
+    return () => {
+      console.log('[UserContext] Cleaning up Firebase Auth listener');
+      unsubscribe();
+    };
+  }, []);
+
+  // Initialize user state from cookies on mount (fallback)
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -161,33 +231,70 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     setCookie(COOKIE_NAMES.ROLE, 'registered');
   }, []);
 
-  // Login user (simplified - in production, verify against backend)
+  // Login user with Firebase Auth
   const loginUser = useCallback(async (email: string, password: string) => {
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    try {
+      console.log('[UserContext] Logging in with Firebase Auth...');
 
-    // In a real app, verify credentials with backend
-    // For demo, just accept any email/password
-    const profile: UserProfile = {
-      email: email.toLowerCase(),
-      name: email.split('@')[0], // Simple name from email
-      registeredAt: new Date().toISOString(),
-    };
+      // Call Firebase Auth login
+      const firebaseUser = await firebaseLogin(email, password);
+      console.log('[UserContext] Firebase login successful:', firebaseUser.uid);
 
-    setUser((prev) => ({
-      ...prev,
-      isRegistered: true,
-      profile,
-      role: 'registered',
-    }));
+      // Get user data from Firestore
+      const userData = await getUserById(firebaseUser.uid);
+      console.log('[UserContext] User data loaded:', userData);
 
-    setCookie(COOKIE_NAMES.IS_REGISTERED, 'true');
-    setCookie(COOKIE_NAMES.USER_PROFILE, JSON.stringify(profile));
-    setCookie(COOKIE_NAMES.ROLE, 'registered');
+      if (!userData) {
+        throw new Error('User not found in Firestore. Please register first.');
+      }
+
+      // Build profile from Firestore data
+      const profile: UserProfile = {
+        email: userData.email,
+        name: userData.name,
+        registeredAt: userData.createdAt?.toDate?.()?.toISOString() || new Date().toISOString(),
+        token: '', // Token is managed by Firebase Auth
+      };
+
+      // Update local context state
+      setUser((prev) => ({
+        ...prev,
+        isRegistered: true,
+        profile,
+        role: 'registered',
+        identity: userData.role as UserIdentity,
+        subject: userData.subject || null,
+      }));
+
+      // Save to cookies
+      setCookie(COOKIE_NAMES.IS_REGISTERED, 'true');
+      setCookie(COOKIE_NAMES.USER_PROFILE, JSON.stringify(profile));
+      setCookie(COOKIE_NAMES.ROLE, 'registered');
+      if (userData.role) {
+        setCookie(COOKIE_NAMES.IDENTITY, userData.role);
+      }
+      if (userData.subject) {
+        setCookie(COOKIE_NAMES.SUBJECT, userData.subject);
+      }
+
+      console.log('[UserContext] Login complete, user state updated');
+    } catch (error) {
+      console.error('[UserContext] Login error:', error);
+      throw error;
+    }
   }, []);
 
   // Logout user
-  const logoutUser = useCallback(() => {
+  const logoutUser = useCallback(async () => {
+    try {
+      // Call Firebase Auth logout first
+      await firebaseLogout();
+      console.log('[UserContext] Firebase logout successful');
+    } catch (error) {
+      console.error('[UserContext] Firebase logout error:', error);
+    }
+
+    // Clear local state
     setUser((prev) => ({
       ...prev,
       isRegistered: false,
@@ -196,10 +303,16 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       identity: null,
       subject: null,
     }));
+
     // Clear auth cookies but keep country
     setCookie(COOKIE_NAMES.IS_REGISTERED, 'false');
     setCookie(COOKIE_NAMES.USER_PROFILE, '');
     setCookie(COOKIE_NAMES.ROLE, 'guest');
+
+    // Clear localStorage authToken
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('authToken');
+    }
   }, []);
 
   // Mark onboarding as complete

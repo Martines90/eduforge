@@ -175,7 +175,7 @@ export function ForgotPasswordModal({ open, onClose }: ForgotPasswordModalProps)
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <LockResetIcon color="primary" />
-            <Typography variant="h6">Reset Password</Typography>
+            <Typography variant="h6" component="div">Reset Password</Typography>
           </Box>
           <IconButton onClick={handleClose} size="small">
             <CloseIcon />
@@ -312,7 +312,7 @@ export function ForgotPasswordModal({ open, onClose }: ForgotPasswordModalProps)
         {/* Step 4: Success */}
         {currentStep === 'success' && (
           <Box sx={{ textAlign: 'center', py: 3 }}>
-            <Typography variant="h6" color="success.main" gutterBottom>
+            <Typography variant="h6" component="div" color="success.main" gutterBottom>
               Password Reset Successful!
             </Typography>
             <Typography variant="body2" color="text.secondary" paragraph>

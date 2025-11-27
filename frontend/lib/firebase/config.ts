@@ -1,6 +1,6 @@
 import { initializeApp, getApps, FirebaseApp } from 'firebase/app';
 import { getFirestore, Firestore } from 'firebase/firestore';
-import { getAuth, Auth } from 'firebase/auth';
+import { getAuth, Auth, setPersistence, browserLocalPersistence } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -27,6 +27,16 @@ if (typeof window !== 'undefined') {
 
   db = getFirestore(app);
   auth = getAuth(app);
+
+  // Set persistence to LOCAL (browser localStorage)
+  // This ensures the user stays logged in after page reloads
+  setPersistence(auth, browserLocalPersistence)
+    .then(() => {
+      console.log('[Firebase] Auth persistence set to LOCAL');
+    })
+    .catch((error) => {
+      console.error('[Firebase] Error setting auth persistence:', error);
+    });
 }
 
 export { app, db, auth };

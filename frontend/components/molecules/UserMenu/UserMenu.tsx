@@ -43,13 +43,11 @@ export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
     router.push('/my-tasks');
   };
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
     handleClose();
-    logoutUser();
-    // Clear auth token
-    if (typeof window !== 'undefined') {
-      localStorage.removeItem('authToken');
-    }
+    console.log('[UserMenu] Logging out...');
+    await logoutUser();
+    console.log('[UserMenu] Logout complete, redirecting to home');
     router.push('/');
   };
 

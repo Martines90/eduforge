@@ -94,7 +94,7 @@ export const ActionSelectionModal: React.FC<ActionSelectionModalProps> = ({
       }}
     >
       <DialogTitle className={styles.title}>
-        <Typography variant="h4" component="h2" className={styles.titleText}>
+        <Typography variant="h4" component="div" className={styles.titleText}>
           What would you like to do?
         </Typography>
         <Typography variant="body1" color="text.secondary" className={styles.subtitle}>
@@ -123,7 +123,7 @@ export const ActionSelectionModal: React.FC<ActionSelectionModalProps> = ({
                       <CheckCircleIcon className={styles.checkIcon} />
                     )}
                   </Box>
-                  <Typography variant="h6" className={styles.actionTitle}>
+                  <Typography variant="h6" component="div" className={styles.actionTitle}>
                     {action.title}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">

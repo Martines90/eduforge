@@ -135,6 +135,7 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
             {!hasChildren && !isLeaf && <Box sx={{ width: 40 }} />}
             <Typography
               variant={level <= 1 ? 'subtitle1' : 'body2'}
+              component="div"
               fontWeight={level <= 2 ? 600 : 400}
             >
               {node.name}
@@ -296,17 +297,17 @@ export const TaskTreeView: React.FC<TaskTreeViewProps> = ({ data, onTaskClick, s
         <TableHead>
           <TableRow className={styles.headerRow}>
             <TableCell>
-              <Typography variant="subtitle2" fontWeight={600}>
+              <Typography variant="subtitle2" component="div" fontWeight={600}>
                 {t('Category / Task Title')}
               </Typography>
             </TableCell>
             <TableCell>
-              <Typography variant="subtitle2" fontWeight={600}>
+              <Typography variant="subtitle2" component="div" fontWeight={600}>
                 {t('Rating')}
               </Typography>
             </TableCell>
             <TableCell>
-              <Typography variant="subtitle2" fontWeight={600}>
+              <Typography variant="subtitle2" component="div" fontWeight={600}>
                 {t('Views')}
               </Typography>
             </TableCell>
