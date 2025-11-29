@@ -212,18 +212,23 @@ export async function initiateRegistration(data: RegisterRequest): Promise<strin
 export async function loginUser(data: LoginRequest): Promise<{ user: UserDocument; token: string }> {
   const db = getFirestore();
 
+  console.log(`[Auth Service] Login attempt for email: ${data.email.toLowerCase()}`);
+
   // Get user by email
   const userSnapshot = await db.collection('users').where('email', '==', data.email.toLowerCase()).get();
 
   if (userSnapshot.empty) {
+    console.error(`[Auth Service] User not found in 'users' collection for email: ${data.email}`);
     throw new Error('Invalid email or password');
   }
 
   const userDoc = userSnapshot.docs[0];
   const user = userDoc.data() as UserDocument;
+  console.log(`[Auth Service] User found with UID: ${user.uid}`);
 
   // Check if user is banned
   if (user.status === 'banned') {
+    console.error(`[Auth Service] User is banned: ${user.uid}`);
     throw new Error('Account has been banned');
   }
 
@@ -231,15 +236,19 @@ export async function loginUser(data: LoginRequest): Promise<{ user: UserDocumen
   const credDoc = await db.collection('userCredentials').doc(user.uid).get();
 
   if (!credDoc.exists) {
+    console.error(`[Auth Service] No credentials found in 'userCredentials' collection for UID: ${user.uid}`);
     throw new Error('Invalid email or password');
   }
 
   const { hashedPassword } = credDoc.data() as { hashedPassword: string };
+  console.log(`[Auth Service] Found hashed password for user: ${user.uid}`);
 
   // Verify password
   const isValidPassword = await bcrypt.compare(data.password, hashedPassword);
+  console.log(`[Auth Service] Password validation result: ${isValidPassword}`);
 
   if (!isValidPassword) {
+    console.error(`[Auth Service] Password mismatch for user: ${user.uid}`);
     throw new Error('Invalid email or password');
   }
 

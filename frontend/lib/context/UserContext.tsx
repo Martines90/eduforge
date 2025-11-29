@@ -5,8 +5,9 @@ import { CountryCode, UserIdentity, UserRole, Subject, UserProfile } from '@/typ
 import { DEFAULT_COUNTRY } from '@/lib/i18n/countries';
 import { getCookie, setCookie, COOKIE_NAMES, isFirstVisit } from '@/lib/utils/cookies';
 import { detectBrowserCountry } from '@/lib/utils/language-detection';
-import { logoutUser as firebaseLogout, loginUser as firebaseLogin, onAuthChange } from '@/lib/firebase/auth';
+import { logoutUser as firebaseLogout, onAuthChange } from '@/lib/firebase/auth';
 import { getUserById } from '@/lib/firebase/users';
+import * as apiService from '@/lib/services/api.service';
 
 /**
  * User state interface
@@ -89,6 +90,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
             token: '',
           };
 
+          // Restore country from Firestore or cookies
+          const savedCountry = userData.country || (getCookie(COOKIE_NAMES.COUNTRY) as CountryCode);
+
           // Update context state
           setUser((prev) => ({
             ...prev,
@@ -97,6 +101,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
             role: 'registered',
             identity: userData.role as UserIdentity,
             subject: userData.subject || null,
+            country: savedCountry || prev.country,
             hasCompletedOnboarding: true, // If they're in Firestore, they've completed onboarding
             isFirstVisit: false,
           }));
@@ -115,8 +120,40 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
           console.error('[UserContext] Error restoring user session:', error);
         }
       } else {
-        // No user authenticated
-        console.log('[UserContext] No Firebase user, checking cookies...');
+        // No Firebase Auth user - check if we have a JWT token from backend login
+        console.log('[UserContext] No Firebase user, checking localStorage for JWT token...');
+
+        const authToken = localStorage.getItem('authToken');
+        const profileStr = getCookie(COOKIE_NAMES.USER_PROFILE);
+        const isRegistered = getCookie(COOKIE_NAMES.IS_REGISTERED) === 'true';
+
+        if (authToken && profileStr && isRegistered) {
+          try {
+            const profile = JSON.parse(profileStr) as UserProfile;
+            const identity = getCookie(COOKIE_NAMES.IDENTITY) as UserIdentity | undefined;
+            const subject = getCookie(COOKIE_NAMES.SUBJECT) as Subject | undefined;
+            const savedCountry = (getCookie(COOKIE_NAMES.COUNTRY) as CountryCode) || DEFAULT_COUNTRY;
+
+            console.log('[UserContext] Restoring session from localStorage/cookies');
+
+            // Restore user state from cookies/localStorage
+            setUser((prev) => ({
+              ...prev,
+              isRegistered: true,
+              profile: { ...profile, token: authToken },
+              role: 'registered',
+              identity: identity || null,
+              subject: subject || null,
+              country: savedCountry,
+              hasCompletedOnboarding: true,
+              isFirstVisit: false,
+            }));
+          } catch (error) {
+            console.error('[UserContext] Error parsing stored user data:', error);
+          }
+        } else {
+          console.log('[UserContext] No stored session found');
+        }
       }
 
       setAuthInitialized(true);
@@ -128,68 +165,27 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  // Initialize user state from cookies on mount (fallback)
+  // Initialize country from cookies (don't touch auth state - Firebase handles that)
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
     setMounted(true);
 
     const savedCountry = getCookie(COOKIE_NAMES.COUNTRY) as CountryCode | undefined;
-    const savedIdentity = getCookie(COOKIE_NAMES.IDENTITY) as UserIdentity | undefined;
-    const savedRole = getCookie(COOKIE_NAMES.ROLE) as UserRole | undefined;
-    const savedSubject = getCookie(COOKIE_NAMES.SUBJECT) as Subject | undefined;
-    const savedIsRegistered = getCookie(COOKIE_NAMES.IS_REGISTERED) === 'true';
-    const savedProfileStr = getCookie(COOKIE_NAMES.USER_PROFILE);
-    const firstVisit = isFirstVisit();
-
-    let savedProfile: UserProfile | null = null;
-    if (savedProfileStr) {
-      try {
-        savedProfile = JSON.parse(savedProfileStr);
-      } catch (e) {
-        console.error('Failed to parse user profile:', e);
-      }
-    }
 
     if (savedCountry && (savedCountry === 'US' || savedCountry === 'HU')) {
-      // User has previously completed onboarding
-      setUser({
+      // Restore country preference only (auth state is managed by Firebase listener)
+      setUser((prev) => ({
+        ...prev,
         country: savedCountry,
-        isFirstVisit: false,
-        hasCompletedOnboarding: true,
-        isRegistered: savedIsRegistered,
-        profile: savedProfile,
-        identity: savedIdentity || null,
-        role: savedIsRegistered ? 'registered' : 'guest',
-        subject: savedSubject || null,
-      });
-    } else if (!firstVisit) {
-      // Has visit cookie but no country (shouldn't happen, but handle it)
-      const detected = detectBrowserCountry();
-      setUser({
-        country: detected,
-        isFirstVisit: false,
-        hasCompletedOnboarding: true,
-        isRegistered: savedIsRegistered,
-        profile: savedProfile,
-        identity: savedIdentity || null,
-        role: savedIsRegistered ? 'registered' : 'guest',
-        subject: savedSubject || null,
-      });
-      setCookie(COOKIE_NAMES.COUNTRY, detected);
+      }));
     } else {
-      // True first visit - detect from browser but don't save yet
+      // Detect country from browser
       const detected = detectBrowserCountry();
-      setUser({
+      setUser((prev) => ({
+        ...prev,
         country: detected,
-        isFirstVisit: true,
-        hasCompletedOnboarding: false,
-        isRegistered: false,
-        profile: null,
-        identity: null,
-        role: 'guest',
-        subject: null,
-      });
+      }));
     }
   }, []);
 
@@ -231,30 +227,41 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     setCookie(COOKIE_NAMES.ROLE, 'registered');
   }, []);
 
-  // Login user with Firebase Auth
+  // Login user with backend API
   const loginUser = useCallback(async (email: string, password: string) => {
     try {
-      console.log('[UserContext] Logging in with Firebase Auth...');
+      console.log('[UserContext] Logging in with backend API...');
 
-      // Call Firebase Auth login
-      const firebaseUser = await firebaseLogin(email, password);
-      console.log('[UserContext] Firebase login successful:', firebaseUser.uid);
+      // Call backend login API (verifies password hash in Firestore)
+      const response = await apiService.loginUser({ email, password });
+      console.log('[UserContext] Backend login successful:', response);
 
-      // Get user data from Firestore
-      const userData = await getUserById(firebaseUser.uid);
-      console.log('[UserContext] User data loaded:', userData);
-
-      if (!userData) {
-        throw new Error('User not found in Firestore. Please register first.');
+      if (!response.success || !response.data) {
+        throw new Error(response.message || 'Login failed');
       }
 
-      // Build profile from Firestore data
+      const { user: userData, token } = response.data;
+
+      // Store auth token
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('authToken', token);
+      }
+
+      // Build profile from backend response (no need to fetch from Firestore again)
       const profile: UserProfile = {
         email: userData.email,
         name: userData.name,
-        registeredAt: userData.createdAt?.toDate?.()?.toISOString() || new Date().toISOString(),
-        token: '', // Token is managed by Firebase Auth
+        registeredAt: new Date().toISOString(), // Backend doesn't return createdAt in login response
+        token,
       };
+
+      // Get user data from backend response
+      const userRole = (userData as any).role as UserIdentity | undefined;
+      const userCountry = (userData as any).country as CountryCode | undefined;
+      const userSubject = (userData as any).subject as Subject | undefined;
+
+      // Use country from backend, fallback to cookie, then default
+      const savedCountry = userCountry || (getCookie(COOKIE_NAMES.COUNTRY) as CountryCode) || DEFAULT_COUNTRY;
 
       // Update local context state
       setUser((prev) => ({
@@ -262,19 +269,22 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
         isRegistered: true,
         profile,
         role: 'registered',
-        identity: userData.role as UserIdentity,
-        subject: userData.subject || null,
+        identity: userRole || prev.identity,
+        subject: userSubject || prev.subject,
+        country: savedCountry,
+        hasCompletedOnboarding: true,
+        isFirstVisit: false,
       }));
 
       // Save to cookies
       setCookie(COOKIE_NAMES.IS_REGISTERED, 'true');
       setCookie(COOKIE_NAMES.USER_PROFILE, JSON.stringify(profile));
       setCookie(COOKIE_NAMES.ROLE, 'registered');
-      if (userData.role) {
-        setCookie(COOKIE_NAMES.IDENTITY, userData.role);
+      if (userRole) {
+        setCookie(COOKIE_NAMES.IDENTITY, userRole);
       }
-      if (userData.subject) {
-        setCookie(COOKIE_NAMES.SUBJECT, userData.subject);
+      if (userSubject) {
+        setCookie(COOKIE_NAMES.SUBJECT, userSubject);
       }
 
       console.log('[UserContext] Login complete, user state updated');

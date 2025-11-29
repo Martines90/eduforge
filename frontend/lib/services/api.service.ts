@@ -104,6 +104,8 @@ export async function verifyEmail(email: string, code: string): Promise<ApiRespo
  * Login user
  */
 export async function loginUser(data: LoginData): Promise<ApiResponse<AuthData>> {
+  console.log('[API Service] Calling backend login API with:', { email: data.email });
+
   const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
     method: 'POST',
     headers: {
@@ -113,8 +115,11 @@ export async function loginUser(data: LoginData): Promise<ApiResponse<AuthData>>
   });
 
   const result = await response.json();
+  console.log('[API Service] Backend response status:', response.status);
+  console.log('[API Service] Backend response body:', result);
 
   if (!response.ok) {
+    console.error('[API Service] Login failed:', result);
     throw new Error(result.error || result.message || 'Login failed');
   }
 

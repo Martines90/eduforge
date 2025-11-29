@@ -25,8 +25,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import AddIcon from '@mui/icons-material/Add';
 import { TreeNode, TaskItem } from '@/types/task-tree';
 import { useTranslation } from '@/lib/i18n';
-import { onAuthChange } from '@/lib/firebase/auth';
-import { getUserById, FirebaseUser } from '@/lib/firebase/users';
+import { useUser } from '@/lib/context/UserContext';
 import { Button } from '@/components/atoms/Button';
 import styles from './TaskTreeView.module.scss';
 
@@ -44,14 +43,14 @@ interface RowProps {
   subject: string;
   gradeLevel: string;
   pathFromRoot: string[];
-  currentUser: FirebaseUser | null;
+  isTeacher: boolean;
 }
 
 /**
  * Recursive Row Component
  * Renders a single tree node with expand/collapse functionality
  */
-const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeLevel, pathFromRoot, currentUser }) => {
+const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeLevel, pathFromRoot, isTeacher }) => {
   const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
   const [tasks, setTasks] = useState<TaskItem[]>(node.tasks || []);
@@ -61,7 +60,6 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
   const hasChildren = node.subTopics && node.subTopics.length > 0;
   const isLeaf = !hasChildren; // Leaf nodes can have tasks
   const hasTasks = tasks.length > 0;
-  const isTeacher = currentUser?.role === 'teacher';
 
   // Build the full path for this node (using names for URL compatibility with navigation data)
   const currentPath = [...pathFromRoot, node.name];
@@ -163,7 +161,7 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
               subject={subject}
               gradeLevel={gradeLevel}
               pathFromRoot={currentPath}
-              currentUser={currentUser}
+              isTeacher={isTeacher}
             />
           ))}
         </>
@@ -256,40 +254,10 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
  */
 export const TaskTreeView: React.FC<TaskTreeViewProps> = ({ data, onTaskClick, subject, gradeLevel }) => {
   const { t } = useTranslation();
-  const [currentUser, setCurrentUser] = useState<FirebaseUser | null>(null);
-  const [loadingUser, setLoadingUser] = useState(true);
+  const { user } = useUser();
 
-  // Listen to auth state changes
-  React.useEffect(() => {
-    console.log('[TaskTreeView] Setting up auth listener...');
-
-    const unsubscribe = onAuthChange(async (authUser) => {
-      console.log('[TaskTreeView] Auth state changed:', authUser ? `User: ${authUser.uid}` : 'No user');
-
-      try {
-        if (authUser) {
-          console.log('[TaskTreeView] Fetching user data from Firestore...');
-          const userData = await getUserById(authUser.uid);
-          console.log('[TaskTreeView] User data loaded:', userData);
-          setCurrentUser(userData);
-        } else {
-          console.log('[TaskTreeView] No user authenticated');
-          setCurrentUser(null);
-        }
-      } catch (error) {
-        console.error('[TaskTreeView] Error fetching user data:', error);
-        setCurrentUser(null);
-      } finally {
-        setLoadingUser(false);
-      }
-    });
-
-    // Cleanup subscription on unmount
-    return () => {
-      console.log('[TaskTreeView] Cleaning up auth listener');
-      unsubscribe();
-    };
-  }, []);
+  // Determine if current user is a teacher
+  const isTeacher = user.identity === 'teacher' && user.isRegistered;
 
   return (
     <TableContainer component={Paper} className={styles.treeContainer}>
@@ -323,7 +291,7 @@ export const TaskTreeView: React.FC<TaskTreeViewProps> = ({ data, onTaskClick, s
               subject={subject}
               gradeLevel={gradeLevel}
               pathFromRoot={[]}
-              currentUser={currentUser}
+              isTeacher={isTeacher}
             />
           ))}
         </TableBody>
