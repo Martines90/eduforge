@@ -131,6 +131,63 @@ export interface Translations {
   // User Menu
   'Profile': string;
   'Logout': string;
+
+  // Educational Models
+  'Educational Model': string;
+  'Select educational model': string;
+  'Secular': string;
+  'Conservative': string;
+  'Traditional': string;
+  'Liberal': string;
+  'Progressive': string;
+  'Religious - Christian': string;
+  'Religious - Islamic': string;
+  'Religious - Jewish': string;
+  'Montessori': string;
+  'Waldorf': string;
+
+  // Registration Modal
+  'Create Your Account': string;
+  'Country & Subject': string;
+  'Location and expertise': string;
+  'Personal Info': string;
+  'Name and Email': string;
+  'Verify Email': string;
+  'Enter verification code': string;
+  'Select your location': string;
+  'Select Your Country & Subject': string;
+  'Select Your Country': string;
+  'Choose your location and primary teaching subject': string;
+  'Choose your country to personalize your experience': string;
+  'Your Work Information': string;
+  'Your Information': string;
+  'Full Name': string;
+  'Enter your full name': string;
+  'Work Email Address': string;
+  'Email Address': string;
+  'Password': string;
+  'At least 6 characters': string;
+  'Confirm Password': string;
+  'Re-enter your password': string;
+  'Back': string;
+  'Sending Code...': string;
+  'Create Account': string;
+  'Verify Your Email': string;
+  'We\'ve sent a 6-digit verification code to': string;
+  'Please enter a valid 6-digit code': string;
+  'Check the console for your verification code (email sending not yet implemented)': string;
+  'Verifying...': string;
+  'Verify & Create Account': string;
+  'Back to Login': string;
+  'Next': string;
+  'Failed to register user. Please try again.': string;
+  'Failed to verify code. Please try again.': string;
+  'Registration successful! Welcome to EduForge.': string;
+
+  // Action Selection Modal
+  'What would you like to do?': string;
+  'Choose your next step for': string;
+  'Continue': string;
 }
 
 export type TranslationKey = keyof Translations;

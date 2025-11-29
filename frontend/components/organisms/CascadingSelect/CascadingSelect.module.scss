@@ -74,6 +74,31 @@
   }
 }
 
+.configPanel {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: none !important;
+
+  &:before {
+    display: none;
+  }
+}
+
+.actionSection {
+  margin-top: var(--spacing-md);
+  display: flex;
+  justify-content: center;
+
+  button {
+    min-width: 200px;
+
+    @include md {
+      min-width: 250px;
+    }
+  }
+}
+
 .emptyState {
   text-align: center;
   padding: var(--spacing-xl);

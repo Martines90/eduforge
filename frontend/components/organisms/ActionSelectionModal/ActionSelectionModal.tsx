@@ -17,6 +17,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import SearchIcon from '@mui/icons-material/Search';
 import { Subject } from '@/types/i18n';
+import { useTranslation } from '@/lib/i18n';
 import styles from './ActionSelectionModal.module.scss';
 
 export interface ActionSelectionModalProps {
@@ -57,6 +58,7 @@ export const ActionSelectionModal: React.FC<ActionSelectionModalProps> = ({
   subject,
   onSelect,
 }) => {
+  const { t } = useTranslation();
   const [selectedAction, setSelectedAction] = useState<'create' | 'search' | null>(null);
 
   const handleConfirm = () => {
@@ -64,6 +66,13 @@ export const ActionSelectionModal: React.FC<ActionSelectionModalProps> = ({
       onSelect(selectedAction);
     }
   };
+
+  // Reset selection when modal closes to prevent state issues
+  React.useEffect(() => {
+    if (!open) {
+      setSelectedAction(null);
+    }
+  }, [open]);
 
   const subjectLabel = subjectLabels[subject];
 
@@ -88,6 +97,7 @@ export const ActionSelectionModal: React.FC<ActionSelectionModalProps> = ({
       maxWidth="sm"
       fullWidth
       disableEscapeKeyDown
+      disableRestoreFocus={false}
       className={styles.dialog}
       PaperProps={{
         className: styles.paper,
@@ -95,10 +105,10 @@ export const ActionSelectionModal: React.FC<ActionSelectionModalProps> = ({
     >
       <DialogTitle className={styles.title}>
         <Typography variant="h4" component="div" className={styles.titleText}>
-          What would you like to do?
+          {t('What would you like to do?')}
         </Typography>
-        <Typography variant="body1" color="text.secondary" className={styles.subtitle}>
-          Choose your next step for {subjectLabel}
+        <Typography variant="body1" sx={{ color: 'text.primary' }} className={styles.subtitle}>
+          {t('Choose your next step for')} {subjectLabel}
         </Typography>
       </DialogTitle>
 
@@ -145,7 +155,7 @@ export const ActionSelectionModal: React.FC<ActionSelectionModalProps> = ({
           fullWidth
           className={styles.confirmButton}
         >
-          Continue
+          {t('Continue')}
         </Button>
       </DialogActions>
     </Dialog>

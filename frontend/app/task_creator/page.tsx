@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { Container, Typography, Box, Paper, Alert, Tabs, Tab } from '@mui/material';
 import { CascadingSelect } from '@/components/organisms/CascadingSelect';
 import { Button } from '@/components/atoms/Button';
@@ -34,6 +34,7 @@ function TabPanel({ children, value, index }: TabPanelProps) {
 function TaskCreatorContent() {
   const { t } = useTranslation();
   const searchParams = useSearchParams();
+  const router = useRouter();
   const { isAuthorized, isLoading } = useRouteProtection({
     requireAuth: true,
     requireIdentity: 'teacher',
@@ -42,6 +43,7 @@ function TaskCreatorContent() {
   const [selectedTopic, setSelectedTopic] = useState<NavigationTopic | null>(null);
   const [selectionPath, setSelectionPath] = useState<string[]>([]);
   const [initialPath, setInitialPath] = useState<string[] | undefined>(undefined);
+  const [urlParamsApplied, setUrlParamsApplied] = useState(false);
 
   // Read URL params on mount
   useEffect(() => {
@@ -62,7 +64,24 @@ function TaskCreatorContent() {
         setSelectedGrade(0);
       }
     }
-  }, [searchParams]);
+
+    // Mark that we've applied the URL params
+    if ((pathParam || gradeParam) && !urlParamsApplied) {
+      setUrlParamsApplied(true);
+    }
+  }, [searchParams, urlParamsApplied]);
+
+  // Remove URL params after they've been applied to state
+  useEffect(() => {
+    if (urlParamsApplied && (searchParams.get('subject_path_selection') || searchParams.get('gradeLevel'))) {
+      // Wait a bit to ensure the CascadingSelect has processed the initialPath
+      const timer = setTimeout(() => {
+        router.replace('/task_creator', { scroll: false });
+      }, 500);
+
+      return () => clearTimeout(timer);
+    }
+  }, [urlParamsApplied, searchParams, router]);
 
   const handleGradeChange = (_event: React.SyntheticEvent, newValue: number) => {
     setSelectedGrade(newValue);
@@ -71,10 +90,10 @@ function TaskCreatorContent() {
     setInitialPath(undefined); // Clear initial path when manually changing grade
   };
 
-  const handleSelectionComplete = (topic: NavigationTopic, path: string[]) => {
+  const handleSelectionComplete = (topic: NavigationTopic, path: string[], config: any) => {
     setSelectedTopic(topic);
     setSelectionPath(path);
-    console.log('Selection complete:', { topic, path });
+    console.log('Selection complete:', { topic, path, config });
   };
 
   const handleCreateTask = () => {

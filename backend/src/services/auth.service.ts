@@ -46,6 +46,8 @@ export async function createVerificationCode(email: string, userData: RegisterRe
       password: await bcrypt.hash(userData.password, SALT_ROUNDS),
       role: userData.role,
       country: userData.country,
+      subject: userData.subject,
+      educationalModel: userData.educationalModel,
     },
   });
 
@@ -132,6 +134,8 @@ export async function verifyCodeAndCreateUser(email: string, code: string): Prom
     name: userData.name,
     role: userData.role,
     country: userData.country,
+    subject: userData.subject,
+    educationalModel: userData.educationalModel,
     status: 'active', // User is active immediately after verification
     emailVerified: true,
     createdAt: new Date() as any,

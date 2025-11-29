@@ -4,6 +4,8 @@ export interface RegisterRequest {
   name: string;
   role: 'teacher' | 'general_user';
   country: string;
+  subject?: string; // For teachers only
+  educationalModel?: string; // For teachers only
 }
 
 export interface LoginRequest {
@@ -41,6 +43,8 @@ export interface UserDocument {
   name: string;
   role: 'teacher' | 'general_user';
   country: string;
+  subject?: string; // For teachers only
+  educationalModel?: string; // For teachers only
   emailVerificationCode?: string;
   emailVerificationCodeExp?: FirebaseFirestore.Timestamp;
   status: 'active' | 'inactive' | 'banned';

@@ -86,6 +86,10 @@ export const OnboardingHandler: React.FC = () => {
 
       setIsCreatingAccount(false);
 
+      // Add a small delay to allow RegistrationModal to fully close and release focus
+      // before opening the next modal. This prevents focus trap conflicts.
+      await new Promise(resolve => setTimeout(resolve, 100));
+
       // Determine next step based on identity
       if (profile.identity === 'teacher' && profile.subject) {
         // Teachers with subject go to action selection
@@ -142,7 +146,7 @@ export const OnboardingHandler: React.FC = () => {
     if (action === 'create') {
       router.push('/task_creator');
     } else {
-      router.push('/search_tasks');
+      router.push('/tasks');
     }
   };
 

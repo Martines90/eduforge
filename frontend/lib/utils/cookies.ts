@@ -54,3 +54,21 @@ export function isFirstVisit(): boolean {
 export function markVisitComplete(): void {
   setCookie(COOKIE_NAMES.FIRST_VISIT, 'true');
 }
+
+/**
+ * Clear all authentication-related cookies, keeping only country preference
+ */
+export function clearAuthCookies(): void {
+  if (typeof window === 'undefined') return;
+
+  // Remove all auth-related cookies
+  removeCookie(COOKIE_NAMES.IS_REGISTERED);
+  removeCookie(COOKIE_NAMES.USER_PROFILE);
+  removeCookie(COOKIE_NAMES.ROLE);
+  removeCookie(COOKIE_NAMES.IDENTITY);
+  removeCookie(COOKIE_NAMES.SUBJECT);
+  removeCookie(COOKIE_NAMES.FIRST_VISIT);
+
+  // Keep COOKIE_NAMES.COUNTRY - don't remove it!
+  console.log('[Cookies] Cleared all auth cookies, kept country preference');
+}

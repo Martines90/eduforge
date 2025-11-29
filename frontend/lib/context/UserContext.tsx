@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { CountryCode, UserIdentity, UserRole, Subject, UserProfile } from '@/types/i18n';
 import { DEFAULT_COUNTRY } from '@/lib/i18n/countries';
-import { getCookie, setCookie, COOKIE_NAMES, isFirstVisit } from '@/lib/utils/cookies';
+import { getCookie, setCookie, COOKIE_NAMES, isFirstVisit, clearAuthCookies } from '@/lib/utils/cookies';
 import { detectBrowserCountry } from '@/lib/utils/language-detection';
 import { logoutUser as firebaseLogout, onAuthChange } from '@/lib/firebase/auth';
 import { getUserById } from '@/lib/firebase/users';
@@ -304,7 +304,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       console.error('[UserContext] Firebase logout error:', error);
     }
 
-    // Clear local state
+    // Clear local state - reset to guest state
     setUser((prev) => ({
       ...prev,
       isRegistered: false,
@@ -312,17 +312,19 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       role: 'guest',
       identity: null,
       subject: null,
+      hasCompletedOnboarding: false,
+      isFirstVisit: true,
     }));
 
-    // Clear auth cookies but keep country
-    setCookie(COOKIE_NAMES.IS_REGISTERED, 'false');
-    setCookie(COOKIE_NAMES.USER_PROFILE, '');
-    setCookie(COOKIE_NAMES.ROLE, 'guest');
+    // Clear all auth cookies (keeps country preference)
+    clearAuthCookies();
 
     // Clear localStorage authToken
     if (typeof window !== 'undefined') {
       localStorage.removeItem('authToken');
     }
+
+    console.log('[UserContext] Logout complete, all auth data cleared');
   }, []);
 
   // Mark onboarding as complete

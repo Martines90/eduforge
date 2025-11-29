@@ -75,7 +75,8 @@ export async function register(req: Request, res: Response): Promise<void> {
 
 /**
  * POST /api/auth/send-verification-code
- * Send verification code to email
+ * Send verification code to email (for resending)
+ * Note: This endpoint is deprecated - use /register endpoint which creates verification code
  */
 export async function sendVerificationCode(req: Request, res: Response): Promise<void> {
   try {
@@ -89,17 +90,10 @@ export async function sendVerificationCode(req: Request, res: Response): Promise
       return;
     }
 
-    // Create and send verification code
-    const code = await authService.createVerificationCode(email);
-
-    // TODO: In production, send email via nodemailer or email service
-    // For now, code is logged to console
-
-    res.status(200).json({
-      success: true,
-      message: 'Verification code sent to email',
-      // In development, include code in response (remove in production!)
-      data: process.env.NODE_ENV === 'development' ? { code } : undefined,
+    // This endpoint is deprecated - direct users to use /register instead
+    res.status(400).json({
+      success: false,
+      message: 'This endpoint is deprecated. Please use /api/auth/register to initiate registration.',
     } as AuthResponse);
   } catch (error: any) {
     console.error('Send verification code error:', error);
@@ -143,6 +137,10 @@ export async function verifyEmail(req: Request, res: Response): Promise<void> {
               email: user.email,
               name: user.name,
               emailVerified: user.emailVerified,
+              role: user.role,
+              country: user.country,
+              subject: user.subject,
+              educationalModel: user.educationalModel,
             }
           : undefined,
         token,
@@ -189,6 +187,7 @@ export async function login(req: Request, res: Response): Promise<void> {
           role: user.role,
           country: user.country,
           subject: user.subject,
+          educationalModel: user.educationalModel,
         },
         token,
       },
@@ -258,6 +257,10 @@ export async function getCurrentUser(req: Request, res: Response): Promise<void>
           email: user.email,
           name: user.name,
           emailVerified: user.emailVerified,
+          role: user.role,
+          country: user.country,
+          subject: user.subject,
+          educationalModel: user.educationalModel,
         },
       },
     } as AuthResponse);
