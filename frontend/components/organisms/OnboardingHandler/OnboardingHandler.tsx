@@ -25,7 +25,7 @@ type OnboardingStep = 'login' | 'register' | 'country' | 'role' | 'subject' | 'c
  *    - Non-teachers see only "Search Tasks" option
  */
 export const OnboardingHandler: React.FC = () => {
-  const { user, setCountry, setIdentity, setSubject, registerUser, loginUser, completeOnboarding } = useUser();
+  const { user, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser, completeOnboarding } = useUser();
   const router = useRouter();
   const [step, setStep] = useState<OnboardingStep>('login');
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
@@ -59,7 +59,7 @@ export const OnboardingHandler: React.FC = () => {
 
   // ===== REGISTRATION FLOW =====
 
-  const handleRegister = async (profile: UserProfile & { password: string; country: CountryCode; identity: UserIdentity; subject?: Subject }) => {
+  const handleRegister = async (profile: UserProfile & { password: string; country: CountryCode; identity: UserIdentity; subject?: Subject; educationalModel?: any }) => {
     try {
       // User is already registered and verified at this point (done in RegistrationModal)
       // The token was already stored in localStorage by RegistrationModal
@@ -79,6 +79,10 @@ export const OnboardingHandler: React.FC = () => {
       if (profile.subject) {
         setSubject(profile.subject);
         setSelectedSubject(profile.subject);
+      }
+
+      if (profile.educationalModel) {
+        setEducationalModel(profile.educationalModel);
       }
 
       setIsCreatingAccount(false);

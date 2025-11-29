@@ -6,6 +6,7 @@ export const COOKIE_NAMES = {
   IDENTITY: 'eduforge_identity',
   ROLE: 'eduforge_role',
   SUBJECT: 'eduforge_subject',
+  EDUCATIONAL_MODEL: 'eduforge_educational_model',
   USER_PROFILE: 'eduforge_user_profile',
   IS_REGISTERED: 'eduforge_is_registered',
 } as const;
@@ -67,6 +68,7 @@ export function clearAuthCookies(): void {
   removeCookie(COOKIE_NAMES.ROLE);
   removeCookie(COOKIE_NAMES.IDENTITY);
   removeCookie(COOKIE_NAMES.SUBJECT);
+  removeCookie(COOKIE_NAMES.EDUCATIONAL_MODEL);
   removeCookie(COOKIE_NAMES.FIRST_VISIT);
 
   // Keep COOKIE_NAMES.COUNTRY - don't remove it!

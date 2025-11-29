@@ -9,6 +9,18 @@ import { logoutUser as firebaseLogout, onAuthChange } from '@/lib/firebase/auth'
 import { getUserById } from '@/lib/firebase/users';
 import * as apiService from '@/lib/services/api.service';
 
+export type EducationalModel =
+  | 'secular'
+  | 'conservative'
+  | 'traditional'
+  | 'liberal'
+  | 'progressive'
+  | 'religious_christian'
+  | 'religious_islamic'
+  | 'religious_jewish'
+  | 'montessori'
+  | 'waldorf';
+
 /**
  * User state interface
  */
@@ -21,6 +33,7 @@ export interface UserState {
   identity: UserIdentity | null;
   role: UserRole;
   subject: Subject | null;
+  educationalModel: EducationalModel | null;
   // Future: can add more user preferences here
   // theme?: 'light' | 'dark';
   // notifications?: boolean;
@@ -34,6 +47,7 @@ interface UserContextType {
   setCountry: (country: CountryCode) => void;
   setIdentity: (identity: UserIdentity) => void;
   setSubject: (subject: Subject) => void;
+  setEducationalModel: (model: EducationalModel) => void;
   registerUser: (profile: UserProfile) => void;
   loginUser: (email: string, password: string) => Promise<void>;
   logoutUser: () => Promise<void>;
@@ -57,6 +71,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     identity: null,
     role: 'guest',
     subject: null,
+    educationalModel: null,
   });
 
   const [mounted, setMounted] = useState(false);
@@ -207,6 +222,12 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     setCookie(COOKIE_NAMES.SUBJECT, newSubject);
   }, []);
 
+  // Set educational model and save to cookie
+  const setEducationalModel = useCallback((newModel: EducationalModel) => {
+    setUser((prev) => ({ ...prev, educationalModel: newModel }));
+    setCookie(COOKIE_NAMES.EDUCATIONAL_MODEL, newModel);
+  }, []);
+
   // Register user and save profile
   const registerUser = useCallback((profile: UserProfile) => {
     // In production, the backend would generate and return a JWT token
@@ -312,6 +333,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       role: 'guest',
       identity: null,
       subject: null,
+      educationalModel: null,
       hasCompletedOnboarding: false,
       isFirstVisit: true,
     }));
@@ -348,11 +370,12 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       identity: null,
       role: 'guest',
       subject: null,
+      educationalModel: null,
     });
   }, []);
 
   return (
-    <UserContext.Provider value={{ user, setCountry, setIdentity, setSubject, registerUser, loginUser, logoutUser, completeOnboarding, resetUser }}>
+    <UserContext.Provider value={{ user, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser, logoutUser, completeOnboarding, resetUser }}>
       {children}
     </UserContext.Provider>
   );

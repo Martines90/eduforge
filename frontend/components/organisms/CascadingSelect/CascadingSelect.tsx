@@ -9,10 +9,6 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select as MuiSelect,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -22,20 +18,11 @@ import { useCascadingSelect } from '@/lib/hooks/useCascadingSelect';
 import { useTranslation } from '@/lib/i18n';
 import { useUser } from '@/lib/context/UserContext';
 import { NavigationTopic } from '@/types/navigation';
+import { EducationalModel } from '@/lib/context/UserContext';
+import { EducationalModelSelect } from '@/components/molecules/EducationalModelSelect';
+import { DifficultyLevelSelect } from '@/components/molecules/DifficultyLevelSelect';
+import { DifficultyLevel } from '@/lib/data/difficulty-levels';
 import styles from './CascadingSelect.module.scss';
-
-export type DifficultyLevel = 'easy' | 'medium' | 'hard';
-export type EducationalModel =
-  | 'secular'
-  | 'conservative'
-  | 'traditional'
-  | 'liberal'
-  | 'progressive'
-  | 'religious_christian'
-  | 'religious_islamic'
-  | 'religious_jewish'
-  | 'montessori'
-  | 'waldorf';
 
 export interface TaskConfiguration {
   difficulty: DifficultyLevel;
@@ -76,7 +63,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
   // Configuration state
   const [difficulty, setDifficulty] = useState<DifficultyLevel>('medium');
   const [educationalModel, setEducationalModel] = useState<EducationalModel>(
-    (user.profile as any)?.educationalModel || 'secular'
+    user.educationalModel || 'secular'
   );
 
   const handleSelectionComplete = () => {
@@ -161,41 +148,20 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
           <AccordionDetails>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
               {/* Difficulty Selector */}
-              <FormControl fullWidth>
-                <InputLabel id="difficulty-label">Nehézségi szint</InputLabel>
-                <MuiSelect
-                  labelId="difficulty-label"
-                  value={difficulty}
-                  label="Nehézségi szint"
-                  onChange={(e) => setDifficulty(e.target.value as DifficultyLevel)}
-                >
-                  <MenuItem value="easy">Könnyű</MenuItem>
-                  <MenuItem value="medium">Közepes</MenuItem>
-                  <MenuItem value="hard">Nehéz</MenuItem>
-                </MuiSelect>
-              </FormControl>
+              <DifficultyLevelSelect
+                value={difficulty}
+                onChange={setDifficulty}
+                country={user.country}
+                label="Nehézségi szint"
+              />
 
               {/* Educational Model Selector */}
-              <FormControl fullWidth>
-                <InputLabel id="educational-model-label">Oktatási modell</InputLabel>
-                <MuiSelect
-                  labelId="educational-model-label"
-                  value={educationalModel}
-                  label="Oktatási modell"
-                  onChange={(e) => setEducationalModel(e.target.value as EducationalModel)}
-                >
-                  <MenuItem value="secular">Szekuláris</MenuItem>
-                  <MenuItem value="conservative">Konzervatív</MenuItem>
-                  <MenuItem value="traditional">Hagyományos</MenuItem>
-                  <MenuItem value="liberal">Liberális</MenuItem>
-                  <MenuItem value="progressive">Progresszív</MenuItem>
-                  <MenuItem value="religious_christian">Vallási - Keresztény</MenuItem>
-                  <MenuItem value="religious_islamic">Vallási - Iszlám</MenuItem>
-                  <MenuItem value="religious_jewish">Vallási - Zsidó</MenuItem>
-                  <MenuItem value="montessori">Montessori</MenuItem>
-                  <MenuItem value="waldorf">Waldorf</MenuItem>
-                </MuiSelect>
-              </FormControl>
+              <EducationalModelSelect
+                value={educationalModel}
+                onChange={setEducationalModel}
+                country={user.country}
+                label="Oktatási modell"
+              />
             </Box>
           </AccordionDetails>
         </Accordion>

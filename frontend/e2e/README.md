@@ -12,6 +12,8 @@ e2e/
 ├── pages/
 │   └── registration.page.ts  # Page Object Model for registration
 ├── teacher-registration.spec.ts  # Teacher registration E2E tests
+├── non-teacher-registration.spec.ts  # Non-teacher registration E2E tests
+├── home-page.spec.ts         # Home page E2E tests (mocked user state)
 └── README.md
 ```
 
@@ -45,12 +47,26 @@ npm run test:e2e:report
 ## Test Coverage
 
 ### Teacher Registration Flow (Happy Path Only)
-- ✅ Complete registration with "Create Task" action
-- ✅ Complete registration with "Search Tasks" action
+- ✅ Complete registration and redirect to home page (sees both Create Task and Search Tasks cards)
 - ✅ Mobile viewport support - Complete flow (iPhone, Pixel)
 - ✅ Mobile viewport support - Verification code handling
 
+### Non-Teacher Registration Flow (Happy Path Only)
+- ✅ Complete registration and redirect to home page (sees only Search Tasks card)
+- ✅ Mobile viewport support - Complete flow (iPhone, Pixel)
+
+### Home Page
+- ✅ Teacher view - Display both Create Task and Search Tasks cards
+- ✅ Teacher view - Navigate to task creator
+- ✅ Teacher view - Navigate to tasks page
+- ✅ Non-teacher view - Display only Search Tasks card
+- ✅ Non-teacher view - Navigate to tasks page
+- ✅ Mobile view - Cards stacked vertically for teachers
+- ✅ Mobile view - Navigation for non-teachers
+
 **Focus**: All tests verify successful user flows only, checking critical state changes and messages at each step.
+
+**Total**: 36 tests passing across 3 browsers (Desktop Chrome, Mobile Chrome, Mobile Safari)
 
 ## API Mocking
 

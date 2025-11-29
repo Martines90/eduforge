@@ -1,36 +1,28 @@
 import { test, expect } from './fixtures/test-fixtures';
 
 /**
- * E2E Tests for Teacher Registration Flow
- * Covers the complete happy path from account creation to task selection
+ * E2E Tests for Non-Teacher (General User) Registration Flow
+ * Covers the complete happy path from account creation to tasks page
  */
-test.describe('Teacher Registration Flow', () => {
+test.describe('Non-Teacher Registration Flow', () => {
   test.beforeEach(async ({ apiMocks }) => {
     // Setup API mocks before each test
     await apiMocks.setupRegistrationMocks();
   });
 
-  test('should complete registration and navigate to task creator', async ({ registrationPage, page }) => {
+  test('should complete registration and navigate to home page', async ({ registrationPage, page }) => {
     // Navigate to homepage
     await registrationPage.goto();
 
     // Verify login modal is visible
-    await expect(registrationPage.createAccountTeacherButton).toBeVisible();
+    await expect(registrationPage.createAccountNonTeacherButton).toBeVisible();
 
-    // Click "Create Account" for teacher
-    await registrationPage.clickCreateTeacherAccount();
+    // Click "Create Account" for non-teacher
+    await registrationPage.clickCreateNonTeacherAccount();
 
-    // Step 1: Select Country, Subject, and Educational Model
-    await test.step('Step 1: Select country, subject, and educational model', async () => {
+    // Step 1: Select Country only (no subject for non-teachers)
+    await test.step('Step 1: Select country', async () => {
       await registrationPage.selectCountry('US');
-
-      // Verify subject dropdown appears after country selection
-      await expect(registrationPage.subjectSelect).toBeVisible();
-      await registrationPage.selectSubject('Mathematics');
-
-      // Verify educational model dropdown appears
-      await expect(registrationPage.educationalModelSelect).toBeVisible();
-      await registrationPage.selectEducationalModel('Secular');
 
       // Verify Next button is enabled and click it
       await expect(registrationPage.nextButton).toBeEnabled();
@@ -44,8 +36,8 @@ test.describe('Teacher Registration Flow', () => {
 
       // Fill in personal info
       await registrationPage.fillPersonalInfo({
-        name: 'John Teacher',
-        email: 'john.teacher@school.edu',
+        name: 'John Student',
+        email: 'john.student@example.com',
         password: 'SecurePass123',
       });
 
@@ -76,22 +68,22 @@ test.describe('Teacher Registration Flow', () => {
       // Should be redirected to home page after successful verification
       await expect(page).toHaveURL('/', { timeout: 10000 });
 
-      // Verify both "Create Task" and "Search Tasks" cards are visible for teachers
-      const createTaskHeading = page.getByRole('heading', { name: /^create task$/i });
+      // Verify "Search Tasks" card is visible (non-teachers only see this)
       const searchTasksHeading = page.getByRole('heading', { name: /search tasks/i });
-
-      await expect(createTaskHeading).toBeVisible();
       await expect(searchTasksHeading).toBeVisible();
+
+      // Verify "Create Task" card is NOT visible (only for teachers)
+      const createTaskHeading = page.getByRole('heading', { name: /^create task$/i, exact: true });
+      await expect(createTaskHeading).not.toBeVisible();
     });
   });
-
 
 });
 
 /**
- * Mobile-specific tests
+ * Mobile-specific tests for non-teacher registration
  */
-test.describe('Teacher Registration Flow - Mobile', () => {
+test.describe('Non-Teacher Registration Flow - Mobile', () => {
   test.use({
     viewport: { width: 375, height: 667 }, // iPhone SE size
   });
@@ -105,50 +97,34 @@ test.describe('Teacher Registration Flow - Mobile', () => {
 
     // Verify modal is fullscreen on mobile
     await test.step('Verify fullscreen modal on mobile', async () => {
-      await registrationPage.clickCreateTeacherAccount();
+      await registrationPage.clickCreateNonTeacherAccount();
 
       // Modal should be visible and take full screen
       await expect(registrationPage.countrySelect).toBeVisible();
     });
 
-    // Complete full registration flow on mobile
-    await registrationPage.completeTeacherRegistration({
-      country: 'US',
-      subject: 'Geography',
-      educationalModel: 'Liberal',
-      name: 'Mobile Teacher',
-      email: 'mobile@school.edu',
+    // Complete step 1 - Country only
+    await registrationPage.selectCountry('US');
+    await registrationPage.clickNext();
+
+    // Complete step 2 - Personal info
+    await registrationPage.fillPersonalInfo({
+      name: 'Mobile User',
+      email: 'mobile@example.com',
+      password: 'MobilePass123',
     });
+    await registrationPage.submitPersonalInfo();
 
-    // Verify navigation to home page
-    await expect(page).toHaveURL('/', { timeout: 10000 });
-
-    // Verify both cards are visible for teachers
-    const createTaskHeading = page.getByRole('heading', { name: /^create task$/i });
-    const searchTasksHeading = page.getByRole('heading', { name: /search tasks/i });
-
-    await expect(createTaskHeading).toBeVisible();
-    await expect(searchTasksHeading).toBeVisible();
-  });
-
-  test('should handle verification code input on mobile', async ({ registrationPage, page }) => {
-    await registrationPage.goto();
-    await registrationPage.clickCreateTeacherAccount();
-
-    // Complete full registration to test verification on mobile
-    await registrationPage.completeTeacherRegistration({
-      country: 'US',
-      subject: 'Mathematics',
-      educationalModel: 'Secular',
-      name: 'Mobile Test Teacher',
-      email: 'mobile.test@school.edu',
-    });
+    // Complete step 3 - Verification
+    await registrationPage.enterVerificationCode('123456');
+    await registrationPage.clickVerify();
 
     // Verify navigation to home page after successful verification
     await expect(page).toHaveURL('/', { timeout: 10000 });
 
-    // Verify both cards are visible for teachers
-    const createTaskHeading = page.getByRole('heading', { name: /^create task$/i });
-    await expect(createTaskHeading).toBeVisible();
+    // Verify only Search Tasks is visible on mobile
+    const searchTasksHeading = page.getByRole('heading', { name: /search tasks/i });
+    await expect(searchTasksHeading).toBeVisible();
   });
+
 });

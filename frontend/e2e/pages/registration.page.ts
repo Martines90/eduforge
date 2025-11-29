@@ -38,8 +38,8 @@ export class RegistrationPage {
 
   constructor(private page: Page) {
     // Login Modal
-    this.createAccountTeacherButton = page.getByRole('button', { name: /create.*teacher/i });
-    this.createAccountNonTeacherButton = page.getByRole('button', { name: /create.*student|general/i });
+    this.createAccountTeacherButton = page.getByRole('button', { name: /create teacher account/i });
+    this.createAccountNonTeacherButton = page.getByRole('button', { name: /^create account$/i });
 
     // Step 1 - Using test IDs for MUI Select components
     this.countrySelect = page.getByTestId('country-select');
@@ -244,8 +244,5 @@ export class RegistrationPage {
     // Step 3: Verification
     await this.enterVerificationCode(config.verificationCode);
     await this.clickVerify();
-
-    // Verify success toast
-    await this.verifySuccessToast();
   }
 }

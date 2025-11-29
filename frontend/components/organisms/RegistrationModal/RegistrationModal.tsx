@@ -32,26 +32,15 @@ import PeopleIcon from "@mui/icons-material/People";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { CountryCode, UserIdentity, Subject, UserProfile } from "@/types/i18n";
-
-export type EducationalModel =
-  | "secular"
-  | "conservative"
-  | "traditional"
-  | "liberal"
-  | "progressive"
-  | "religious_christian"
-  | "religious_islamic"
-  | "religious_jewish"
-  | "montessori"
-  | "waldorf";
 import {
   ProgressStepper,
   StepConfig,
 } from "@/components/molecules/ProgressStepper";
-import { countries } from "@/lib/i18n/countries";
-import { SUBJECTS, getSubjectsForCountry } from "@/lib/data/subjects";
 import { useTranslation } from "@/lib/i18n";
-import { useUser } from "@/lib/context/UserContext";
+import { useUser, EducationalModel } from "@/lib/context/UserContext";
+import { CountrySelect } from "@/components/molecules/CountrySelect";
+import { SubjectSelect } from "@/components/molecules/SubjectSelect";
+import { EducationalModelSelect } from "@/components/molecules/EducationalModelSelect";
 import * as apiService from "@/lib/services/api.service";
 import styles from "./RegistrationModal.module.scss";
 
@@ -391,113 +380,37 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   : t("Select Your Country")}
               </Typography>
 
-              <FormControl fullWidth className={styles.formControl}>
-                <InputLabel>{t("Country")}</InputLabel>
-                <Select
-                  value={selectedCountry || ""}
-                  onChange={(e) =>
-                    handleCountrySelect(e.target.value as CountryCode)
-                  }
-                  label={t("Country")}
-                  className={styles.select}
-                  data-testid="country-select"
-                >
-                  {countries.map((country) => (
-                    <MenuItem key={country.code} value={country.code}>
-                      <Box
-                        sx={{ display: "flex", alignItems: "center", gap: 1 }}
-                      >
-                        <span style={{ fontSize: "1.5rem" }}>
-                          {country.flag}
-                        </span>
-                        <span>{country.name}</span>
-                      </Box>
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
+              <CountrySelect
+                value={selectedCountry || ""}
+                onChange={handleCountrySelect}
+                label={t("Country")}
+                className={styles.formControl}
+                data-testid="country-select"
+              />
 
               {isTeacher && selectedCountry && (
                 <>
-                  <FormControl
-                    fullWidth
+                  <SubjectSelect
+                    value={selectedSubject || ""}
+                    onChange={handleSubjectSelect}
+                    country={selectedCountry}
+                    label={t("Subject")}
                     className={styles.formControl}
-                    sx={{ mt: 2 }}
-                  >
-                    <InputLabel>{t("Subject")}</InputLabel>
-                    <Select
-                      value={selectedSubject || ""}
-                      onChange={(e) =>
-                        handleSubjectSelect(e.target.value as Subject)
-                      }
-                      label={t("Subject")}
-                      className={styles.select}
-                      data-testid="subject-select"
-                    >
-                      {getSubjectsForCountry(selectedCountry).map((subject) => (
-                        <MenuItem key={subject.value} value={subject.value}>
-                          <Box
-                            sx={{
-                              display: "flex",
-                              alignItems: "center",
-                              gap: 1,
-                            }}
-                          >
-                            <span style={{ fontSize: "1.5rem" }}>
-                              {subject.emoji}
-                            </span>
-                            <span>{subject.label}</span>
-                          </Box>
-                        </MenuItem>
-                      ))}
-                    </Select>
-                  </FormControl>
+                    data-testid="subject-select"
+                  />
 
-                  <FormControl
-                    fullWidth
+                  <EducationalModelSelect
+                    value={selectedEducationalModel}
+                    onChange={(model) =>
+                      setSelectedEducationalModel(model as EducationalModel)
+                    }
+                    country={selectedCountry}
+                    label={t("Educational Model")}
                     className={styles.formControl}
-                    sx={{ mt: 2 }}
-                  >
-                    <InputLabel>{t("Educational Model")}</InputLabel>
-                    <Select
-                      value={selectedEducationalModel}
-                      onChange={(e) =>
-                        setSelectedEducationalModel(
-                          e.target.value as EducationalModel,
-                        )
-                      }
-                      label={t("Educational Model")}
-                      className={styles.select}
-                      displayEmpty={false}
-                      data-testid="educational-model-select"
-                    >
-                      <MenuItem value="" disabled>
-                        {t("Select educational model")}
-                      </MenuItem>
-                      <MenuItem value="secular">{t("Secular")}</MenuItem>
-                      <MenuItem value="conservative">
-                        {t("Conservative")}
-                      </MenuItem>
-                      <MenuItem value="traditional">
-                        {t("Traditional")}
-                      </MenuItem>
-                      <MenuItem value="liberal">{t("Liberal")}</MenuItem>
-                      <MenuItem value="progressive">
-                        {t("Progressive")}
-                      </MenuItem>
-                      <MenuItem value="religious_christian">
-                        {t("Religious - Christian")}
-                      </MenuItem>
-                      <MenuItem value="religious_islamic">
-                        {t("Religious - Islamic")}
-                      </MenuItem>
-                      <MenuItem value="religious_jewish">
-                        {t("Religious - Jewish")}
-                      </MenuItem>
-                      <MenuItem value="montessori">{t("Montessori")}</MenuItem>
-                      <MenuItem value="waldorf">{t("Waldorf")}</MenuItem>
-                    </Select>
-                  </FormControl>
+                    data-testid="educational-model-select"
+                    showPlaceholder={true}
+                    placeholderText={t("Select educational model")}
+                  />
                 </>
               )}
 
