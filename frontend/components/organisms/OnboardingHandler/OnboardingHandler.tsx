@@ -7,12 +7,11 @@ import { CountrySelectionModal } from '@/components/organisms/CountrySelectionMo
 import { RegistrationModal } from '@/components/organisms/RegistrationModal';
 import { RoleSelectionModal } from '@/components/organisms/RoleSelectionModal';
 import { SubjectSelectionModal } from '@/components/organisms/SubjectSelectionModal';
-import { ActionSelectionModal } from '@/components/organisms/ActionSelectionModal';
 import { useUser } from '@/lib/context';
 import { CountryCode, UserIdentity, Subject, UserProfile } from '@/types/i18n';
 import * as apiService from '@/lib/services/api.service';
 
-type OnboardingStep = 'login' | 'register' | 'country' | 'role' | 'subject' | 'action' | 'complete';
+type OnboardingStep = 'login' | 'register' | 'country' | 'role' | 'subject' | 'complete';
 
 /**
  * OnboardingHandler Component
@@ -21,11 +20,9 @@ type OnboardingStep = 'login' | 'register' | 'country' | 'role' | 'subject' | 'a
  * FLOW:
  * 1. Login (if not authenticated)
  * 2. Registration (if creating new account)
- * 3. Country selection
- * 4. Role selection (teacher/non-teacher)
- * 5. Subject selection (teachers only)
- * 6. Action selection (teachers only: create/search)
- * 7. Complete - redirect to appropriate page
+ * 3. Complete - redirect to home page
+ *    - Teachers see both "Create Task" and "Search Tasks" options
+ *    - Non-teachers see only "Search Tasks" option
  */
 export const OnboardingHandler: React.FC = () => {
   const { user, setCountry, setIdentity, setSubject, registerUser, loginUser, completeOnboarding } = useUser();
@@ -90,16 +87,11 @@ export const OnboardingHandler: React.FC = () => {
       // before opening the next modal. This prevents focus trap conflicts.
       await new Promise(resolve => setTimeout(resolve, 100));
 
-      // Determine next step based on identity
-      if (profile.identity === 'teacher' && profile.subject) {
-        // Teachers with subject go to action selection
-        setStep('action');
-      } else {
-        // Non-teachers complete onboarding
-        completeOnboarding();
-        setStep('complete');
-        router.push('/');
-      }
+      // All users complete onboarding and redirect to home page
+      // Home page will show appropriate options based on user identity
+      completeOnboarding();
+      setStep('complete');
+      router.push('/');
     } catch (error: any) {
       console.error('Error during registration:', error);
       // Error is already handled in RegistrationModal
@@ -138,17 +130,6 @@ export const OnboardingHandler: React.FC = () => {
     setStep('action');
   };
 
-  const handleActionSelect = (action: 'create' | 'search') => {
-    completeOnboarding();
-    setStep('complete');
-
-    // Navigate based on action
-    if (action === 'create') {
-      router.push('/task_creator');
-    } else {
-      router.push('/tasks');
-    }
-  };
 
   // Don't render anything if onboarding is complete
   if (user.hasCompletedOnboarding || step === 'complete') {
@@ -173,14 +154,6 @@ export const OnboardingHandler: React.FC = () => {
         isTeacher={isTeacherAccount}
       />
 
-      {/* Step 3: Action Selection (teachers only) */}
-      {selectedSubject && (
-        <ActionSelectionModal
-          open={step === 'action'}
-          subject={selectedSubject}
-          onSelect={handleActionSelect}
-        />
-      )}
     </>
   );
 };

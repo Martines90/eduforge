@@ -8,8 +8,12 @@ export const en: Translations = {
   'Close menu': 'Close menu',
 
   // Home page
+  'Educational Task Platform': 'Educational Task Platform',
   'Create educational tasks based on curriculum topics for grades 9-12': 'Create educational tasks based on curriculum topics for grades 9-12',
   'Go to Task Creator': 'Go to Task Creator',
+  'Search Tasks': 'Search Tasks',
+  'Browse and discover educational tasks created by teachers': 'Browse and discover educational tasks created by teachers',
+  'Browse Tasks': 'Browse Tasks',
 
   // Task Creator page
   'Select a curriculum topic to create an educational task': 'Select a curriculum topic to create an educational task',

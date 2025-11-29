@@ -8,8 +8,12 @@ export const hu: Translations = {
   'Close menu': 'Menü bezárása',
 
   // Home page
+  'Educational Task Platform': 'Oktatási Feladat Platform',
   'Create educational tasks based on curriculum topics for grades 9-12': 'Hozzon létre oktatási feladatokat a tantervi témák alapján a 9-12. évfolyamokhoz',
   'Go to Task Creator': 'Ugrás a Feladat Készítőhöz',
+  'Search Tasks': 'Feladatok Keresése',
+  'Browse and discover educational tasks created by teachers': 'Böngésszen és fedezze fel a tanárok által létrehozott oktatási feladatokat',
+  'Browse Tasks': 'Feladatok Böngészése',
 
   // Task Creator page
   'Select a curriculum topic to create an educational task': 'Válasszon egy tantervi témát oktatási feladat létrehozásához',
