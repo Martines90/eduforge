@@ -400,6 +400,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                   }
                   label={t("Country")}
                   className={styles.select}
+                  data-testid="country-select"
                 >
                   {countries.map((country) => (
                     <MenuItem key={country.code} value={country.code}>
@@ -431,6 +432,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                       }
                       label={t("Subject")}
                       className={styles.select}
+                      data-testid="subject-select"
                     >
                       {getSubjectsForCountry(selectedCountry).map((subject) => (
                         <MenuItem key={subject.value} value={subject.value}>
@@ -467,6 +469,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                       label={t("Educational Model")}
                       className={styles.select}
                       displayEmpty={false}
+                      data-testid="educational-model-select"
                     >
                       <MenuItem value="" disabled>
                         {t("Select educational model")}
