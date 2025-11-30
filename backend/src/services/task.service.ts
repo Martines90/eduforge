@@ -4,7 +4,7 @@
  */
 
 import { getFirestore } from '../config/firebase.config';
-import { Timestamp } from 'firebase-admin/firestore';
+import { Timestamp, FieldValue } from 'firebase-admin/firestore';
 import {
   TaskDocument,
   TaskRatingDocument,
@@ -183,7 +183,7 @@ export async function getTaskById(
       .collection('tasks')
       .doc(taskId)
       .update({
-        viewCount: (db as any).FieldValue.increment(1),
+        viewCount: FieldValue.increment(1),
       });
   }
 

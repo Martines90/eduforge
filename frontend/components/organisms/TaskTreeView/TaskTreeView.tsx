@@ -233,7 +233,7 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
             <TableRow
               key={task.id}
               className={styles.taskRow}
-              onClick={() => onTaskClick?.(task)}
+              onClick={() => window.open(`/tasks/${task.id}`, '_blank')}
               sx={{ cursor: 'pointer', '&:hover': { bgcolor: 'action.hover' } }}
             >
               <TableCell style={{ paddingLeft: `${(level + 1) * 24 + 48}px` }}>

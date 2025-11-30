@@ -424,8 +424,7 @@ export default function TasksPage() {
           gradeLevel={filterGrade}
           onTaskClick={(task) => {
             console.log('Task clicked:', task);
-            // TODO: Navigate to task detail page
-            // router.push(`/tasks/${task.id}`);
+            router.push(`/tasks/${task.id}`);
           }}
         />
       )}
