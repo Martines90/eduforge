@@ -23,12 +23,14 @@ import { EducationalModelSelect } from '@/components/molecules/EducationalModelS
 import { DifficultyLevelSelect } from '@/components/molecules/DifficultyLevelSelect';
 import { DifficultyLevel } from '@/lib/data/difficulty-levels';
 import { ImageNumberSelect, ImageNumber } from '@/components/molecules/ImageNumberSelect';
+import { TargetGroupSelect, TargetGroupSex } from '@/components/molecules/TargetGroupSelect';
 import styles from './CascadingSelect.module.scss';
 
 export interface TaskConfiguration {
   difficulty: DifficultyLevel;
   educationalModel: EducationalModel;
   numberOfImages: ImageNumber;
+  targetGroupSex: TargetGroupSex;
 }
 
 export interface CascadingSelectProps {
@@ -68,6 +70,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
     user.educationalModel || 'secular'
   );
   const [numberOfImages, setNumberOfImages] = useState<ImageNumber>(1);
+  const [targetGroupSex, setTargetGroupSex] = useState<TargetGroupSex>('mixed');
 
   const handleSelectionComplete = () => {
     if (finalSelection && onSelectionComplete) {
@@ -76,6 +79,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
         difficulty,
         educationalModel,
         numberOfImages,
+        targetGroupSex,
       };
       onSelectionComplete(finalSelection, path, config);
     }
@@ -165,6 +169,13 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
                 onChange={setEducationalModel}
                 country={user.country}
                 label="Oktatási modell"
+              />
+
+              {/* Target Group Sex Selector */}
+              <TargetGroupSelect
+                value={targetGroupSex}
+                onChange={setTargetGroupSex}
+                label={t('Target Group')}
               />
 
               {/* Image Number Selector */}

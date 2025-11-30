@@ -138,7 +138,7 @@ function TaskCreatorContent() {
       const request: TaskGeneratorRequest = {
         curriculum_path: curriculumPath,
         country_code: user.country,
-        target_group: 'mixed', // Default to mixed, can be made configurable
+        target_group: config.targetGroupSex,
         difficulty_level: config.difficulty,
         educational_model: config.educationalModel,
         number_of_images: config.numberOfImages,
@@ -201,8 +201,8 @@ function TaskCreatorContent() {
         html += `<div class="solution-step">\n`;
         html += `<h3>${step.step_number}. ${step.title}</h3>\n`;
         html += `<p>${step.description}</p>\n`;
-        if (step.formula) html += `<p><strong>Képlet:</strong> <code>${step.formula}</code></p>\n`;
-        if (step.calculation) html += `<p><strong>Számítás:</strong> <code>${step.calculation}</code></p>\n`;
+        if (step.formula) html += `<p><strong>Képlet:</strong> ${step.formula}</p>\n`;
+        if (step.calculation) html += `<p><strong>Számítás:</strong> ${step.calculation}</p>\n`;
         if (step.result) html += `<p><strong>Eredmény:</strong> ${step.result}</p>\n`;
         if (step.explanation) html += `<p><em>${step.explanation}</em></p>\n`;
         html += `</div>\n`;

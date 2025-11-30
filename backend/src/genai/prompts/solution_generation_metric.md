@@ -86,9 +86,9 @@ Provide your solution as a JSON object with the following structure:
       "step_number": 1,
       "title": "Brief descriptive title",
       "description": "Clear explanation of what we're doing and why",
-      "formula": "\\LaTeX formula if applicable",
-      "calculation": "\\LaTeX calculation with substituted values",
-      "result": "Result of this step",
+      "formula": "$$\\[\\LaTeX formula if applicable\\]$$",
+      "calculation": "$$\\[\\LaTeX calculation with substituted values\\]$$",
+      "result": "Result of this step with units",
       "explanation": "Why this step matters and how it connects to the story"
     }
   ],
@@ -102,6 +102,10 @@ Provide your solution as a JSON object with the following structure:
   "key_concepts": ["Concept 1 used", "Concept 2 used"]
 }
 ```
+
+**CRITICAL LaTeX FORMAT**: All mathematical formulas and calculations MUST be wrapped in `$$\\[...\\]$$` format for proper rendering. Example:
+- Formula: `$$\\[E_{kWh} = \\frac{E_{Wh}}{1\\ 000}\\]$$`
+- Calculation: `$$\\[a_2 = 3 \\cdot 2^{2-1} = 3 \\cdot 2 = 6\\]$$`
 
 ## Quality Checklist
 

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Box,
   Paper,
@@ -14,8 +14,10 @@ import EditIcon from '@mui/icons-material/Edit';
 import SaveIcon from '@mui/icons-material/Save';
 import CloseIcon from '@mui/icons-material/Close';
 import dynamic from 'next/dynamic';
+import Script from 'next/script';
 import { GeneratedTask } from '@/types/task';
 import { Button } from '@/components/atoms/Button';
+import { processLatexInHtml } from '@/lib/utils/latex-converter';
 import styles from './TaskResult.module.scss';
 import 'react-quill/dist/quill.snow.css';
 
@@ -49,6 +51,12 @@ export const TaskResult: React.FC<TaskResultProps> = ({
   const [isEditingSolution, setIsEditingSolution] = useState(false);
   const [editedDescription, setEditedDescription] = useState('');
   const [editedSolution, setEditedSolution] = useState('');
+  const [latexReady, setLatexReady] = useState(false);
+
+  const descriptionPreviewRef = useRef<HTMLDivElement>(null);
+  const solutionPreviewRef = useRef<HTMLDivElement>(null);
+  const retryCountRef = useRef(0);
+  const maxRetries = 10;
 
   useEffect(() => {
     if (task) {
@@ -56,6 +64,45 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       setEditedSolution(task.solution);
     }
   }, [task]);
+
+  // Process LaTeX after content changes and latex.js is loaded
+  useEffect(() => {
+    if (!latexReady || isEditingDescription || isEditingSolution) {
+      retryCountRef.current = 0; // Reset retry count
+      return;
+    }
+
+    const processLatex = () => {
+      if (typeof window !== 'undefined' && window.S2Latex && typeof window.S2Latex.processTree === 'function') {
+        try {
+          retryCountRef.current = 0; // Reset on success
+          if (descriptionPreviewRef.current) {
+            window.S2Latex.processTree(descriptionPreviewRef.current);
+          }
+          if (solutionPreviewRef.current) {
+            window.S2Latex.processTree(solutionPreviewRef.current);
+          }
+          console.log('✅ LaTeX rendering completed successfully');
+        } catch (error) {
+          console.error('LaTeX processing error:', error);
+        }
+      } else if (retryCountRef.current < maxRetries) {
+        retryCountRef.current++;
+        console.warn(`S2Latex not available yet, retry ${retryCountRef.current}/${maxRetries}...`);
+        // Retry after a delay if not ready
+        setTimeout(processLatex, 500);
+      } else {
+        console.error('S2Latex failed to load after maximum retries. LaTeX rendering unavailable.');
+      }
+    };
+
+    // Small delay to ensure DOM is ready
+    const timer = setTimeout(processLatex, 200);
+    return () => {
+      clearTimeout(timer);
+      retryCountRef.current = 0; // Reset on cleanup
+    };
+  }, [task, latexReady, isEditingDescription, isEditingSolution]);
 
   const handleEditDescription = () => {
     setIsEditingDescription(true);
@@ -168,8 +215,14 @@ export const TaskResult: React.FC<TaskResultProps> = ({
   }
 
   return (
-    <Paper elevation={2} className={styles.container}>
-      <Box className={styles.header}>
+    <>
+      <Script
+        src="/lib/utils/latex.js"
+        strategy="afterInteractive"
+        onLoad={() => setLatexReady(true)}
+      />
+      <Paper elevation={2} className={styles.container}>
+        <Box className={styles.header}>
         <Typography variant="h5" component="h2" className={styles.title}>
           Generált Feladat
         </Typography>
@@ -225,8 +278,9 @@ export const TaskResult: React.FC<TaskResultProps> = ({
             />
           ) : (
             <Box
+              ref={descriptionPreviewRef}
               className={styles.preview}
-              dangerouslySetInnerHTML={{ __html: task.description }}
+              dangerouslySetInnerHTML={{ __html: processLatexInHtml(task.description) }}
             />
           )}
         </Box>
@@ -275,8 +329,9 @@ export const TaskResult: React.FC<TaskResultProps> = ({
             />
           ) : (
             <Box
+              ref={solutionPreviewRef}
               className={styles.preview}
-              dangerouslySetInnerHTML={{ __html: task.solution }}
+              dangerouslySetInnerHTML={{ __html: processLatexInHtml(task.solution) }}
             />
           )}
         </Box>
@@ -311,7 +366,8 @@ export const TaskResult: React.FC<TaskResultProps> = ({
           Feladat ID: {task.id}
         </Typography>
       </Box>
-    </Paper>
+      </Paper>
+    </>
   );
 };
 

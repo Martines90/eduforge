@@ -181,4 +181,16 @@ export const en: Translations = {
   'What would you like to do?': 'What would you like to do?',
   'Choose your next step for': 'Choose your next step for',
   'Continue': 'Continue',
+
+  // Target Group
+  'Target Group': 'Target Group',
+  'Mixed (Boys and Girls)': 'Mixed (Boys and Girls)',
+  'Boys Only': 'Boys Only',
+  'Girls Only': 'Girls Only',
+
+  // Image Number
+  'Number of Images': 'Number of Images',
+  'No images (text only)': 'No images (text only)',
+  '1 image': '1 image',
+  '2 images': '2 images',
 };

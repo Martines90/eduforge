@@ -19,7 +19,11 @@
 >     "key": "hatvanyozas",
 >     "name": "Hatványozás",
 >     "short_description": "Számok hatványozása",
->     "example_tasks": ["Számítsd ki: 2³ = ?", "Számítsd ki: 5² = ?", "Számítsd ki: 10⁴ = ?"]
+>     "example_tasks": [
+>       "Számítsd ki: 2³ = ?",
+>       "Számítsd ki: 5² = ?",
+>       "Számítsd ki: 10⁴ = ?"
+>     ]
 >   },
 >   "reference_style_tasks": [
 >     {
@@ -74,12 +78,22 @@
 >   - Fits a high school student (grades 9–12) with good skills.
 >
 > **CRITICAL REALISM REQUIREMENT:**
+>
 > - The scenario MUST be physically realistic and plausible in the real world.
 > - All numbers, measurements, and physical phenomena must be scientifically accurate.
 > - Do NOT create impossible scenarios (e.g., basketballs spinning 1 rotation per second, people running at superhuman speeds, physically impossible measurements).
 > - If using sports, use realistic statistics and measurements from actual sports.
 > - If using science/engineering, use realistic values and physical laws.
 > - The student should be able to verify the plausibility of the scenario with basic real-world knowledge.
+>
+> **MAKE IT COOL & EXCITING:**
+>
+> - Transform boring everyday scenarios into ADVENTURES with real stakes
+> - Cast students as HEROES: astronauts, athletes, detectives, explorers, inventors, champions
+> - ❌ AVOID BORING: coffee shops, baristas, basic shopping, routine daily tasks, etc.
+> - ✅ AIM FOR COOL: space missions, extreme sports, treasure hunts, competitions, survival, gaming tournaments, scientific breakthroughs, rescue operations, etc.
+> - Add TIME PRESSURE and real consequences to success/failure
+> - Use exciting vocabulary: "mission critical," "breakthrough," "race against time," "game-changing"
 >
 > ---
 >
@@ -103,11 +117,22 @@
 > ```
 >
 > **CRITICAL OUTPUT RULES:**
+>
 > - Return ONLY the raw JSON object - NO markdown code blocks, NO ```json wrapper, NO surrounding text
 > - The description must be simple HTML using ONLY <p></p> tags for paragraphs
 > - The questions array must contain 1-3 explicit questions the student needs to answer
 > - The expected_answer_formats array describes what format each answer should be in (e.g., "a single number in degrees", "a decimal number rounded to 2 places")
 > - No extra top-level fields
+>
+> **CRITICAL QUESTION RULES:**
+>
+> - Questions MUST be pure, clean, and NOT reveal the solution method
+> - ❌ BAD: "Calculate using 2³ and 3×7 to find the total"
+> - ❌ BAD: "Add the espresso amount to 2³ grams for cappuccino and 3×7 for latte"
+> - ✅ GOOD: "How many grams total do you need?"
+> - ✅ GOOD: "What is the total amount required?"
+> - Let students DISCOVER the mathematical approach themselves
+> - Questions should ask for the answer WITHOUT hinting at the calculation steps
 >
 > ### 3. `title`
 >
@@ -132,8 +157,12 @@
 > 3. **Do NOT include questions in the description** - they go in the separate `questions` array
 >
 > Example format:
+>
 > ```html
-> <p>You are standing in a crowded basketball arena...</p><p>The ball makes 3 full rotations in the air. Each rotation takes 2 seconds.</p>
+> <p>You are standing in a crowded basketball arena...</p>
+> <p>
+>   The ball makes 3 full rotations in the air. Each rotation takes 2 seconds.
+> </p>
 > ```
 >
 > ### 5. Tags (implicit)
@@ -156,6 +185,7 @@
 > - **IMPORTANT:** The mathematical concept in your story MUST match the concept in the chosen example task. Do NOT create a story about rotation/angles if the example task is about sets. Do NOT create a story about probability if the example task is about geometry.
 >
 > **REALISM CHECKLIST:**
+>
 > - Are all physical measurements realistic? (speeds, sizes, weights, temperatures, etc.)
 > - Could this scenario actually happen in real life?
 > - Are the numbers plausible for the context? (e.g., realistic team sizes, realistic measurements)
@@ -175,26 +205,31 @@
 > **YOU MUST ENSURE THE STORY MATCHES THE MATHEMATICAL CONCEPT:**
 >
 > If the example tasks are about **SET THEORY** (halmazok):
+>
 > - Create a story about categorizing, grouping, or organizing items
 > - Examples: sorting students by characteristics, categorizing products, grouping data
 > - DO NOT create stories about rotation, angles, motion, speed, or any other non-set concepts
 >
 > If the example tasks are about **LINEAR EQUATIONS**:
+>
 > - Create a story requiring solving for an unknown variable
 > - Examples: finding costs, determining quantities, calculating times
 > - DO NOT create stories about sets, probability, or geometry
 >
 > If the example tasks are about **PROBABILITY**:
+>
 > - Create a story about chances, likelihood, or random selection
 > - Examples: drawing items, game outcomes, statistical predictions
 > - DO NOT create stories about equations or geometry
 >
 > If the example tasks are about **GEOMETRY**:
+>
 > - Create a story requiring measurements, angles, areas, or spatial reasoning
 > - Examples: construction planning, land measurement, design work
 > - DO NOT create stories about sets, probability, or equations
 >
 > **BEFORE YOU WRITE THE STORY:**
+>
 > 1. Read the example tasks carefully
 > 2. Identify the EXACT mathematical concept (sets, equations, probability, geometry, etc.)
 > 3. Verify your story requires THAT SAME concept to solve
@@ -222,6 +257,7 @@
 > ```
 >
 > **CRITICAL:**
+>
 > - Do NOT wrap the JSON in ```json code blocks
 > - Do NOT add any text before or after the JSON
 > - Do NOT include markdown formatting

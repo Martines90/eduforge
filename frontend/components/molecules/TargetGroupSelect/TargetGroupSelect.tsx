@@ -10,11 +10,11 @@ import {
 } from '@mui/material';
 import { useTranslation } from '@/lib/i18n';
 
-export type ImageNumber = 0 | 1 | 2;
+export type TargetGroupSex = 'mixed' | 'male' | 'female';
 
-export interface ImageNumberSelectProps {
-  value: ImageNumber;
-  onChange: (imageNumber: ImageNumber) => void;
+export interface TargetGroupSelectProps {
+  value: TargetGroupSex;
+  onChange: (targetGroupSex: TargetGroupSex) => void;
   label?: string;
   disabled?: boolean;
   required?: boolean;
@@ -24,10 +24,10 @@ export interface ImageNumberSelectProps {
 }
 
 /**
- * ImageNumberSelect Molecule Component
- * Selector for number of images to generate (0, 1, or 2)
+ * TargetGroupSelect Molecule Component
+ * Selector for target group sex (mixed, male, or female)
  */
-export const ImageNumberSelect: React.FC<ImageNumberSelectProps> = ({
+export const TargetGroupSelect: React.FC<TargetGroupSelectProps> = ({
   value,
   onChange,
   label,
@@ -39,25 +39,23 @@ export const ImageNumberSelect: React.FC<ImageNumberSelectProps> = ({
 }) => {
   const { t } = useTranslation();
 
-  const handleChange = (event: SelectChangeEvent<ImageNumber>) => {
-    onChange(event.target.value as ImageNumber);
+  const handleChange = (event: SelectChangeEvent<TargetGroupSex>) => {
+    onChange(event.target.value as TargetGroupSex);
   };
 
-  const options = [
-    { value: 0, label: t('No images (text only)') },
-    { value: 1, label: t('1 image') },
-    { value: 2, label: t('2 images') },
+  const options: { value: TargetGroupSex; label: string }[] = [
+    { value: 'mixed', label: t('Mixed (Boys and Girls)') },
+    { value: 'male', label: t('Boys Only') },
+    { value: 'female', label: t('Girls Only') },
   ];
-
-  const displayLabel = label || t('Number of Images');
 
   return (
     <FormControl fullWidth={fullWidth} disabled={disabled} className={className} required={required}>
-      <InputLabel>{displayLabel}</InputLabel>
+      <InputLabel>{label || t('Target Group')}</InputLabel>
       <MuiSelect
         value={value}
         onChange={handleChange}
-        label={displayLabel}
+        label={label || t('Target Group')}
         data-testid={dataTestId}
       >
         {options.map((option) => (
@@ -70,4 +68,4 @@ export const ImageNumberSelect: React.FC<ImageNumberSelectProps> = ({
   );
 };
 
-export default ImageNumberSelect;
+export default TargetGroupSelect;

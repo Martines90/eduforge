@@ -2,44 +2,50 @@
 
 ## Core Design Philosophy
 
-Transform abstract mathematical concepts into immersive narratives where problem-solving becomes a meaningful human endeavor with real stakes and context.
+Transform abstract mathematical concepts into EXCITING, HIGH-STAKES narratives where problem-solving becomes an adventure with real consequences. Kids should feel like heroes solving critical challenges, not just students doing homework.
+
+**MAKE IT COOL:** Think video games, space missions, extreme sports, treasure hunts, spy missions, survival scenarios, competitions with real stakes, scientific discoveries, or saving the day. Boring = coffee shops, basic shopping, simple daily tasks. COOL = adventure, danger, competition, discovery, achievement!
 
 ## Essential Components
 
 ### 1. **Narrative Framework (Required)**
 
-- **Historical/Real-World Anchor**: Ground the problem in an authentic time period, profession, or scenario that actually existed or could plausibly exist
-- **Role Assignment**: Cast the solver as a professional with authority and responsibility (engineer, architect, analyst, expedition leader, etc.)
-- **Stakes and Purpose**: Establish why solving this problem matters—connect it to completion, success, or resolution of a significant challenge
-- **Temporal Specificity**: Include exact dates, time periods, or deadlines to enhance realism
+- **Adventure/Challenge Anchor**: Ground the problem in an EXCITING scenario - space exploration, extreme sports competition, treasure hunt, spy mission, survival challenge, gaming tournament, scientific breakthrough, or rescue operation
+- **Hero Role Assignment**: Cast the solver as someone doing something COOL with real stakes:
+  - ✅ COOL: astronaut, game designer, athlete, detective, explorer, inventor, rescue coordinator, esports champion, marine biologist, drone pilot
+  - ❌ BORING: barista, shopkeeper, accountant, everyday person doing routine tasks
+- **Real Stakes**: The outcome must MATTER - winning a championship, saving lives, breaking a record, discovering something important, preventing disaster, claiming treasure
+- **Time Pressure**: Include countdown, deadline, or race-against-time element to create urgency
 
 ### 2. **Problem Context Structure**
 
-- **Opening Hook** (50-80 characters): Begin with time/place/role to immediately establish context
-- **Situation Setup** (150-250 characters): Describe the overarching project, challenge, or scenario
-- **Dual/Multiple Elements**: Present at least two competing factors, teams, resources, or constraints that must be balanced or reconciled
-- **Concrete Data Presentation**: Embed all numerical values within descriptive context rather than listing them separately
+- **Explosive Opening Hook** (50-80 characters): Drop the solver into ACTION immediately - the countdown has started, the competition is live, the mission is critical
+- **High-Stakes Setup** (150-250 characters): Describe the challenge with EXCITEMENT - What's at risk? What are you competing against? What will you discover/achieve/save?
+- **Competing Factors with Drama**: Present challenges, obstacles, or competing elements that make the problem exciting - limited resources in survival, opponents in competition, dangers to overcome
+- **Concrete Data Presentation**: Embed all numerical values within the exciting narrative - numbers should feel like mission parameters, not homework data
 
 ### 3. **Data Integration Style**
 
-- **Naturalistic Embedding**: Weave numbers seamlessly into narrative sentences (e.g., "working with 9,500 laborers" not "Team A: 9,500 workers")
-- **Precision with Purpose**: Use realistic, specific decimals that reflect actual measurement practices (3.98 km, not 4 km)
-- **Asymmetry**: Avoid overly round or symmetrical numbers—reality is messy
-- **Units Specified**: Always include appropriate units within the narrative flow
+- **Mission-Critical Data**: Present numbers as vital intel, game stats, survival metrics, or competition parameters (e.g., "sensors detect 9 500 hostile drones approaching" not "Team A: 9,500 workers")
+- **Realistic Precision**: Use specific numbers that feel authentic to the scenario (3,98 km remaining oxygen range, not 4 km)
+- **Asymmetry for Realism**: Avoid perfectly round numbers - real missions, games, and challenges have messy, real data
+- **Units as Context**: Include units that enhance the scenario's coolness (km/h for racing speeds, meters for diving depth, degrees for extreme temperatures)
 
 ### 4. **Challenge Articulation**
 
-- **Professional Voice**: Frame the task as a professional decision or calculation the solver must make in their role
-- **Action-Oriented Language**: Use verbs like "determine," "reorganize," "calculate," "optimize," "ensure"
-- **Constraint Specification**: Clearly state what must remain equal, balanced, optimized, or synchronized
-- **Goal Clarity**: End with a precise question asking for a specific quantitative answer
+- **Hero's Decision**: Frame the task as a CRITICAL calculation that determines success or failure - "Can you make it?", "Will you win?", "Can you save them?"
+- **Action Verbs with Impact**: Use powerful verbs: "calculate to survive," "determine if you can win," "compute before time runs out," "solve to unlock," "find the answer to succeed"
+- **Clear Victory Conditions**: State exactly what success looks like and what's at stake
+- **Pure Question Format**: The question should NEVER hint at the solution method.
+  - ❌ BAD: "Calculate using 2³ and 3×7 to find..."
+  - ✅ GOOD: "How many grams total do you need?"
 
 ### 5. **Linguistic Quality Standards**
 
-- **Varied Sentence Structure**: Mix short and long sentences; avoid repetitive patterns
-- **Active Voice Dominance**: Prioritize active constructions to maintain engagement
-- **Professional Vocabulary**: Use domain-appropriate terminology without over-complicating
-- **Transition Flow**: Connect ideas smoothly between setup, data, and challenge
+- **Dynamic Pacing**: Mix short, punchy sentences with longer ones for drama - "Time is running out. You have one shot. Can you calculate fast enough?"
+- **Active, Exciting Voice**: Use present tense and active voice to create immediacy - "You're diving deeper," not "You were diving"
+- **Cool Vocabulary**: Use exciting, age-appropriate terms - "mission critical," "game-changing," "breakthrough," "race against time"
+- **Build Tension**: Escalate from setup to challenge, making each paragraph raise the stakes
 
 ### 6. **Mathematical Authenticity**
 
@@ -101,17 +107,77 @@ Transform abstract mathematical concepts into immersive narratives where problem
 
 ## What to AVOID
 
-- Generic scenarios ("Two trains leave stations...")
+❌ BORING scenarios that kill excitement:
+- Coffee shops, grocery shopping, basic cooking, typical school situations
+- Generic travel problems ("Two trains leave stations...")
+- Everyday routine tasks with no stakes
+- Scenarios where nothing exciting happens
+
+❌ TECHNICAL mistakes that weaken engagement:
 - Artificially round numbers (100, 50, 25)
 - Data presented in lists or tables within narrative
-- Passive voice dominance
-- Present tense for historical scenarios
+- Passive voice that kills energy
+- Questions that reveal solution methods (e.g., "Calculate using 2³ and 3×7...")
 - Asking "Show your work" or "Explain your reasoning" (keep focus on the answer)
-- Mathematical terminology in the narrative (save for the challenge statement)
+- Mathematical terminology that spoils the discovery
+
+✅ INSTEAD aim for:
+- Adventure, competition, discovery, survival, achievement
+- Realistic but exciting numbers
+- Natural data integration
+- Active, present-tense narration
+- Pure questions that don't hint at methods
+- Letting students discover the math approach themselves
+
+## COOL Scenario Inspiration (Use These Vibes!)
+
+### Examples of EXCITING contexts that kids love:
+
+**🚀 Space & Exploration:**
+- Calculating oxygen reserves on Mars mission
+- Programming satellite trajectories
+- Analyzing asteroid collision courses
+- Planning rover battery usage on alien planets
+
+**🎮 Gaming & Esports:**
+- Optimizing character builds for tournament play
+- Calculating damage-per-second in pro matches
+- Determining loot drop probabilities in rare events
+- Analyzing streaming viewer growth rates
+
+**🏆 Extreme Sports & Competition:**
+- Computing skydiving descent rates for record attempts
+- Calculating BMX ramp angles for championship tricks
+- Determining marathon pacing strategies for world records
+- Analyzing parkour jump distances for viral videos
+
+**🔬 Science & Discovery:**
+- Tracking endangered species populations
+- Analyzing volcanic eruption predictions
+- Computing DNA sequence patterns for breakthroughs
+- Measuring deep-sea creature bioluminescence
+
+**🕵️ Mystery & Adventure:**
+- Decoding treasure map coordinates
+- Calculating escape room puzzle solutions under time pressure
+- Determining heist timing for perfect execution
+- Analyzing archaeological artifact dating
+
+**⚡ Survival & Challenges:**
+- Computing water rationing on desert expeditions
+- Calculating shelter construction in wilderness
+- Determining food supplies for Antarctic research
+- Analyzing storm paths for evacuation planning
+
+**🎯 Technology & Innovation:**
+- Optimizing drone flight paths for delivery records
+- Calculating robot arm precision for competitions
+- Designing 3D printer settings for breakthrough prototypes
+- Analyzing AI training time for cutting-edge models
 
 ## Note on Adaptability
 
-This specification applies across all mathematical topics—from basic arithmetic to calculus—by adjusting the professional role, scenario complexity, and technical vocabulary while maintaining the core narrative immersion principle.
+This specification applies across all mathematical topics—from basic arithmetic to calculus—by adjusting the exciting scenario, stakes level, and technical vocabulary while maintaining HIGH ENGAGEMENT and real consequences.
 
 ## Story-Math Consistency Requirements (CRITICAL)
 

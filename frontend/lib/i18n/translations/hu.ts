@@ -181,4 +181,16 @@ export const hu: Translations = {
   'What would you like to do?': 'Mit szeretne tenni?',
   'Choose your next step for': 'Válassza ki a következő lépést a',
   'Continue': 'Folytatás',
+
+  // Target Group
+  'Target Group': 'Célcsoport',
+  'Mixed (Boys and Girls)': 'Vegyes (Fiúk és Lányok)',
+  'Boys Only': 'Csak Fiúk',
+  'Girls Only': 'Csak Lányok',
+
+  // Image Number
+  'Number of Images': 'Képek Száma',
+  'No images (text only)': 'Nincs kép (csak szöveg)',
+  '1 image': '1 kép',
+  '2 images': '2 kép',
 };

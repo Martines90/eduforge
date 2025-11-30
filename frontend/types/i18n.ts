@@ -188,6 +188,18 @@ export interface Translations {
   'What would you like to do?': string;
   'Choose your next step for': string;
   'Continue': string;
+
+  // Target Group
+  'Target Group': string;
+  'Mixed (Boys and Girls)': string;
+  'Boys Only': string;
+  'Girls Only': string;
+
+  // Image Number
+  'Number of Images': string;
+  'No images (text only)': string;
+  '1 image': string;
+  '2 images': string;
 }
 
 export type TranslationKey = keyof Translations;
