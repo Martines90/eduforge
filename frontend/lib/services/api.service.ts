@@ -3,6 +3,8 @@
  * Base URL should be configured in environment variables
  */
 
+import { TaskGeneratorRequest, TaskGeneratorResponse } from '@/types/task';
+
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 
 export interface ApiResponse<T = any> {
@@ -145,4 +147,138 @@ export async function getCurrentUser(token: string): Promise<ApiResponse<{ user:
   }
 
   return result;
+}
+
+/**
+ * Generate a task
+ */
+export async function generateTask(data: TaskGeneratorRequest, token?: string): Promise<TaskGeneratorResponse> {
+  console.log('[API Service] Calling task generator API with:', data);
+
+  const headers: HeadersInit = {
+    'Content-Type': 'application/json',
+  };
+
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+
+  const response = await fetch(`${API_BASE_URL}/generate-task`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(data),
+  });
+
+  const result = await response.json();
+  console.log('[API Service] Task generator response status:', response.status);
+  console.log('[API Service] Task generator response body:', result);
+
+  if (!response.ok) {
+    console.error('[API Service] Task generation failed:', result);
+    return {
+      success: false,
+      error: result.error || 'Task generation failed',
+      message: result.message || 'Failed to generate task',
+    };
+  }
+
+  // Transform backend response to frontend format
+  const taskData = result.task_data || result;
+  const transformedTask = {
+    id: result.task_id || taskData.metadata?.curriculum_path || 'unknown',
+    description: formatTaskDescription(taskData),
+    solution: formatSolution(taskData),
+    images: taskData.images || [],
+  };
+
+  return {
+    success: true,
+    task: transformedTask,
+  };
+}
+
+/**
+ * Format task description (problem only, no solution)
+ */
+function formatTaskDescription(taskData: any): string {
+  let html = '';
+
+  // Title
+  if (taskData.title) {
+    html += `<h1>${taskData.title}</h1>\n`;
+  }
+
+  // Story/Problem Statement
+  if (taskData.story_text) {
+    html += `<div class="story">\n${taskData.story_text}\n</div>\n`;
+  }
+
+  // Questions
+  if (taskData.questions && taskData.questions.length > 0) {
+    html += `<h2>Feladatok:</h2>\n<ol>\n`;
+    taskData.questions.forEach((question: string) => {
+      html += `<li>${question}</li>\n`;
+    });
+    html += `</ol>\n`;
+  }
+
+  return html;
+}
+
+/**
+ * Format solution (separate from problem description)
+ */
+function formatSolution(taskData: any): string {
+  let html = '';
+
+  // Solution Steps
+  if (taskData.solution_steps && taskData.solution_steps.length > 0) {
+    html += `<h2>Megoldás lépései:</h2>\n`;
+    taskData.solution_steps.forEach((step: any) => {
+      html += `<div class="solution-step">\n`;
+      html += `<h3>${step.step_number}. ${step.title}</h3>\n`;
+      html += `<p>${step.description}</p>\n`;
+
+      if (step.formula) {
+        html += `<p><strong>Képlet:</strong> <code>${step.formula}</code></p>\n`;
+      }
+
+      if (step.calculation) {
+        html += `<p><strong>Számítás:</strong> <code>${step.calculation}</code></p>\n`;
+      }
+
+      if (step.result) {
+        html += `<p><strong>Eredmény:</strong> ${step.result}</p>\n`;
+      }
+
+      if (step.explanation) {
+        html += `<p><em>${step.explanation}</em></p>\n`;
+      }
+
+      html += `</div>\n`;
+    });
+  }
+
+  // Final Answer
+  if (taskData.final_answer) {
+    html += `<h2>Végeredmény:</h2>\n`;
+    html += `<p><strong>${taskData.final_answer}</strong></p>\n`;
+  }
+
+  // Verification
+  if (taskData.verification) {
+    html += `<h3>Ellenőrzés:</h3>\n`;
+    html += `<p>${taskData.verification}</p>\n`;
+  }
+
+  // Common Mistakes
+  if (taskData.common_mistakes && taskData.common_mistakes.length > 0) {
+    html += `<h3>Gyakori hibák:</h3>\n<ul>\n`;
+    taskData.common_mistakes.forEach((mistake: string) => {
+      html += `<li>${mistake}</li>\n`;
+    });
+    html += `</ul>\n`;
+  }
+
+  return html;
 }

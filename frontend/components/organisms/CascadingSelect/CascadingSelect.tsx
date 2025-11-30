@@ -22,11 +22,13 @@ import { EducationalModel } from '@/lib/context/UserContext';
 import { EducationalModelSelect } from '@/components/molecules/EducationalModelSelect';
 import { DifficultyLevelSelect } from '@/components/molecules/DifficultyLevelSelect';
 import { DifficultyLevel } from '@/lib/data/difficulty-levels';
+import { ImageNumberSelect, ImageNumber } from '@/components/molecules/ImageNumberSelect';
 import styles from './CascadingSelect.module.scss';
 
 export interface TaskConfiguration {
   difficulty: DifficultyLevel;
   educationalModel: EducationalModel;
+  numberOfImages: ImageNumber;
 }
 
 export interface CascadingSelectProps {
@@ -65,6 +67,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
   const [educationalModel, setEducationalModel] = useState<EducationalModel>(
     user.educationalModel || 'secular'
   );
+  const [numberOfImages, setNumberOfImages] = useState<ImageNumber>(1);
 
   const handleSelectionComplete = () => {
     if (finalSelection && onSelectionComplete) {
@@ -72,6 +75,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
       const config: TaskConfiguration = {
         difficulty,
         educationalModel,
+        numberOfImages,
       };
       onSelectionComplete(finalSelection, path, config);
     }
@@ -161,6 +165,13 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
                 onChange={setEducationalModel}
                 country={user.country}
                 label="Oktatási modell"
+              />
+
+              {/* Image Number Selector */}
+              <ImageNumberSelect
+                value={numberOfImages}
+                onChange={setNumberOfImages}
+                label="Képek száma"
               />
             </Box>
           </AccordionDetails>

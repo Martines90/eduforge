@@ -473,4 +473,164 @@ export class TaskGeneratorService {
       generatedTask: savedTask || generatedTask,
     };
   }
+
+  /**
+   * V2 API: Generates task text only (no solution, no images) with variation support
+   * Used for generating 3 variations in parallel
+   */
+  async generateTaskTextOnly(
+    request: TaskGeneratorRequest & { variation_index?: number }
+  ): Promise<{
+    title: string;
+    story_text: string;
+    questions: string[];
+    metadata: any;
+  }> {
+    console.log(`📝 Generating task text variation ${request.variation_index || 1}...`);
+
+    // Build task prompt with variation context
+    const { systemPrompt, userMessage } = this.buildTaskPrompt(request);
+
+    // Add variation instruction to system prompt if variation_index is provided
+    let enhancedSystemPrompt = systemPrompt;
+    if (request.variation_index) {
+      const variationStrategy =
+        request.variation_index === 1 ? "Common everyday scenario (shopping, travel, cooking, daily activities)" :
+        request.variation_index === 2 ? "Sports/games context (sports statistics, game scores, competitions, athletics)" :
+        "Technology/science context (data usage, physics problems, measurements, scientific applications)";
+
+      enhancedSystemPrompt += `\n\n**VARIATION REQUIREMENT**: This is variation #${request.variation_index} of 3. Use a ${variationStrategy}. Make this variation unique and distinct from typical problems, while maintaining the same curriculum requirements and difficulty level.`;
+    }
+
+    const taskResult = await this.textGenerator.generateWithSystemPrompt(
+      enhancedSystemPrompt,
+      userMessage,
+      {
+        temperature: 0.85, // Slightly higher for more variation
+        maxTokens: 2000,
+      }
+    );
+
+    // Parse the task JSON response
+    const taskData = this.parseTaskResponse(taskResult.text);
+    console.log(`✅ Generated task text variation: "${taskData.title}"`);
+
+    // Calculate estimated time
+    const estimatedTime = this.calculateEstimatedTime(
+      request.difficulty_level,
+      5, // Estimated number of steps
+      request.number_of_images
+    );
+
+    return {
+      title: taskData.title,
+      story_text: taskData.story_text,
+      questions: taskData.questions,
+      metadata: {
+        curriculum_path: request.curriculum_path,
+        difficulty_level: request.difficulty_level,
+        educational_model: request.educational_model,
+        target_group: request.target_group,
+        estimated_time_minutes: estimatedTime,
+        variation_index: request.variation_index,
+      },
+    };
+  }
+
+  /**
+   * V2 API: Generates solution only for given task text
+   */
+  async generateSolutionOnly(
+    taskText: {
+      title: string;
+      story_text: string;
+      questions: string[];
+    },
+    request: TaskGeneratorRequest
+  ): Promise<{
+    solution_steps: SolutionStep[];
+    final_answer?: string;
+    verification?: string;
+    common_mistakes?: string[];
+  }> {
+    console.log(`🧮 Generating solution for: "${taskText.title}"...`);
+
+    const solutionPrompt = this.buildSolutionPrompt(
+      taskText.story_text,
+      request
+    );
+
+    const solutionResult = await this.textGenerator.generate(solutionPrompt, {
+      temperature: 0.7,
+      maxTokens: 2500,
+    });
+
+    const solutionData = this.parseSolutionResponse(solutionResult.text);
+    console.log(`✅ Generated ${solutionData.solution_steps.length} solution steps`);
+
+    return solutionData;
+  }
+
+  /**
+   * V2 API: Generates images only for given task text
+   */
+  async generateImagesOnly(
+    taskText: {
+      title: string;
+      story_text: string;
+    },
+    numberOfImages: number,
+    displayTemplate: string,
+    targetGroup: string
+  ): Promise<TaskImage[]> {
+    const images: TaskImage[] = [];
+    const disableImageGeneration = process.env.DISABLE_IMAGE_GENERATION === 'true';
+    const numImages = Math.min(numberOfImages, 2);
+
+    if (disableImageGeneration) {
+      console.log(`🚫 Image generation disabled via DISABLE_IMAGE_GENERATION env variable`);
+      return images;
+    }
+
+    if (numImages === 0) {
+      console.log(`📝 No images requested (skipping)`);
+      return images;
+    }
+
+    console.log(`🎨 Generating ${numImages} image(s) for: "${taskText.title}"...`);
+
+    const storyPreview = this.createImagePromptFromStory(
+      taskText.story_text,
+      taskText.title
+    );
+    const imagePromptBase = `Educational illustration for a math problem, ${displayTemplate} style, appropriate for ${targetGroup} students. ${storyPreview}`;
+
+    for (let i = 0; i < numImages; i++) {
+      console.log(`   🎨 Generating image ${i + 1}/${numImages}...`);
+
+      const imagePrompt =
+        numImages > 1
+          ? `${imagePromptBase} (Perspective ${i + 1} of ${numImages})`
+          : imagePromptBase;
+
+      const imageResult = await this.imageGenerator.generate(imagePrompt, {
+        size: "1024x1024",
+        quality: "standard",
+        style: "vivid",
+      });
+
+      const imageId = generateImageId();
+      images.push({
+        image_id: imageId,
+        url: imageResult.url,
+        type: i === 0 ? "main" : "secondary",
+        aspect_ratio: "1:1",
+        prompt_used: imagePrompt,
+      });
+
+      console.log(`   ✅ Generated image ${i + 1}: ${imageId}`);
+    }
+
+    return images;
+  }
 }

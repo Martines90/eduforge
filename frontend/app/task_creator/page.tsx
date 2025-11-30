@@ -3,12 +3,17 @@
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Container, Typography, Box, Paper, Alert, Tabs, Tab } from '@mui/material';
-import { CascadingSelect } from '@/components/organisms/CascadingSelect';
+import { CascadingSelect, TaskConfiguration } from '@/components/organisms/CascadingSelect';
+import { TaskResult } from '@/components/organisms/TaskResult';
 import { Button } from '@/components/atoms/Button';
 import { LoadingSpinner } from '@/components/atoms/LoadingSpinner/LoadingSpinner';
 import { NavigationTopic, GradeLevel } from '@/types/navigation';
+import { GeneratedTask, TaskGeneratorRequest } from '@/types/task';
 import { useTranslation } from '@/lib/i18n';
 import { useRouteProtection } from '@/lib/hooks/useRouteProtection';
+import { useFirebaseToken } from '@/lib/hooks/useFirebaseToken';
+import { useUser } from '@/lib/context/UserContext';
+import { generateTaskComplete, TaskGenerationStep } from '@/lib/services/task-generator.service';
 import navigationData from '@/data/navigation_mapping.json';
 import styles from './page.module.scss';
 
@@ -35,6 +40,8 @@ function TaskCreatorContent() {
   const { t } = useTranslation();
   const searchParams = useSearchParams();
   const router = useRouter();
+  const { user } = useUser();
+  const { token: firebaseToken } = useFirebaseToken();
   const { isAuthorized, isLoading } = useRouteProtection({
     requireAuth: true,
     requireIdentity: 'teacher',
@@ -42,8 +49,13 @@ function TaskCreatorContent() {
   const [selectedGrade, setSelectedGrade] = useState<number>(0);
   const [selectedTopic, setSelectedTopic] = useState<NavigationTopic | null>(null);
   const [selectionPath, setSelectionPath] = useState<string[]>([]);
+  const [taskConfig, setTaskConfig] = useState<TaskConfiguration | null>(null);
   const [initialPath, setInitialPath] = useState<string[] | undefined>(undefined);
   const [urlParamsApplied, setUrlParamsApplied] = useState(false);
+  const [generatedTask, setGeneratedTask] = useState<GeneratedTask | null>(null);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generationError, setGenerationError] = useState<string | null>(null);
+  const [generationStep, setGenerationStep] = useState<TaskGenerationStep | null>(null);
 
   // Read URL params on mount
   useEffect(() => {
@@ -90,17 +102,135 @@ function TaskCreatorContent() {
     setInitialPath(undefined); // Clear initial path when manually changing grade
   };
 
-  const handleSelectionComplete = (topic: NavigationTopic, path: string[], config: any) => {
+  const handleSelectionComplete = async (topic: NavigationTopic, path: string[], config: TaskConfiguration) => {
     setSelectedTopic(topic);
     setSelectionPath(path);
+    setTaskConfig(config);
+    setGenerationError(null);
     console.log('Selection complete:', { topic, path, config });
+
+    // Automatically generate task
+    await handleGenerateTask(topic, path, config);
   };
 
-  const handleCreateTask = () => {
-    if (selectedTopic) {
-      alert(`Task creation initiated for: ${selectedTopic.name}\nPath: ${selectionPath.join(' > ')}`);
-      // Here you would typically send this data to your backend
+  const handleGenerateTask = async (topic: NavigationTopic, path: string[], config: TaskConfiguration) => {
+    if (!topic || !config) return;
+
+    setIsGenerating(true);
+    setGenerationError(null);
+    setGeneratedTask(null);
+    setGenerationStep(null);
+
+    try {
+      // Check if we have a Firebase token
+      if (!firebaseToken) {
+        setGenerationError('Authentication required. Please refresh the page and try again.');
+        setIsGenerating(false);
+        return;
+      }
+
+      console.log('[Task Creator] Starting multi-step task generation');
+
+      // Build curriculum path from selection
+      const curriculumPath = `math:${gradeLevel}:${path.join(':')}`;
+
+      // Build request payload
+      const request: TaskGeneratorRequest = {
+        curriculum_path: curriculumPath,
+        country_code: user.country,
+        target_group: 'mixed', // Default to mixed, can be made configurable
+        difficulty_level: config.difficulty,
+        educational_model: config.educationalModel,
+        number_of_images: config.numberOfImages,
+        display_template: 'modern', // Default to modern, can be made configurable
+        precision_settings: {
+          constant_precision: 2,
+          intermediate_precision: 4,
+          final_answer_precision: 2,
+          use_exact_values: false,
+        },
+        custom_keywords: [],
+        template_id: '',
+      };
+
+      console.log('Generating task with request:', request);
+
+      // Use multi-step generation with progress updates
+      const result = await generateTaskComplete(request, firebaseToken, (step) => {
+        console.log('[Task Creator] Generation step:', step);
+        setGenerationStep(step);
+      });
+
+      // Format the result for display
+      const generatedTask: GeneratedTask = {
+        id: result.taskId,
+        description: formatTaskDescription(result.taskText),
+        solution: formatSolution(result.solution),
+        images: result.images.images || [],
+      };
+
+      setGeneratedTask(generatedTask);
+      console.log('Task generated successfully:', generatedTask);
+    } catch (error) {
+      console.error('Task generation error:', error);
+      setGenerationError(error instanceof Error ? error.message : 'An unexpected error occurred');
+    } finally {
+      setIsGenerating(false);
+      setGenerationStep(null);
     }
+  };
+
+  // Helper functions to format task data
+  const formatTaskDescription = (taskText: any): string => {
+    let html = '';
+    if (taskText.title) html += `<h1>${taskText.title}</h1>\n`;
+    if (taskText.story_text) html += `<div class="story">\n${taskText.story_text}\n</div>\n`;
+    if (taskText.questions && taskText.questions.length > 0) {
+      html += `<h2>Feladatok:</h2>\n<ol>\n`;
+      taskText.questions.forEach((q: string) => html += `<li>${q}</li>\n`);
+      html += `</ol>\n`;
+    }
+    return html;
+  };
+
+  const formatSolution = (solution: any): string => {
+    let html = '';
+    if (solution.solution_steps && solution.solution_steps.length > 0) {
+      html += `<h2>Megoldás lépései:</h2>\n`;
+      solution.solution_steps.forEach((step: any) => {
+        html += `<div class="solution-step">\n`;
+        html += `<h3>${step.step_number}. ${step.title}</h3>\n`;
+        html += `<p>${step.description}</p>\n`;
+        if (step.formula) html += `<p><strong>Képlet:</strong> <code>${step.formula}</code></p>\n`;
+        if (step.calculation) html += `<p><strong>Számítás:</strong> <code>${step.calculation}</code></p>\n`;
+        if (step.result) html += `<p><strong>Eredmény:</strong> ${step.result}</p>\n`;
+        if (step.explanation) html += `<p><em>${step.explanation}</em></p>\n`;
+        html += `</div>\n`;
+      });
+    }
+    if (solution.final_answer) {
+      html += `<h2>Végeredmény:</h2>\n<p><strong>${solution.final_answer}</strong></p>\n`;
+    }
+    if (solution.verification) {
+      html += `<h3>Ellenőrzés:</h3>\n<p>${solution.verification}</p>\n`;
+    }
+    if (solution.common_mistakes && solution.common_mistakes.length > 0) {
+      html += `<h3>Gyakori hibák:</h3>\n<ul>\n`;
+      solution.common_mistakes.forEach((m: string) => html += `<li>${m}</li>\n`);
+      html += `</ul>\n`;
+    }
+    return html;
+  };
+
+  const handleSaveTask = (editedTask: GeneratedTask) => {
+    console.log('Saving edited task:', editedTask);
+    setGeneratedTask(editedTask);
+    // TODO: Save to backend/Firestore
+  };
+
+  const handleCloseResult = () => {
+    setGeneratedTask(null);
+    setGenerationError(null);
   };
 
   const gradeLevel: GradeLevel = selectedGrade === 0 ? 'grade_9_10' : 'grade_11_12';
@@ -159,44 +289,17 @@ function TaskCreatorContent() {
           />
         </TabPanel>
 
-        {selectedTopic && (
-          <Box className={styles.resultSection}>
-            <Alert severity="success" className={styles.alert}>
-              <Typography variant="h6" component="h2" gutterBottom>
-                {t('Selected Topic')}
-              </Typography>
-              <Typography variant="body2" gutterBottom>
-                <strong>{t('Topic')}:</strong> {selectedTopic.name}
-              </Typography>
-              <Typography variant="body2" gutterBottom>
-                <strong>{t('Path')}:</strong> {selectionPath.join(' > ')}
-              </Typography>
-              <Typography variant="body2">
-                <strong>{t('Grade Level')}:</strong> {gradeLevel === 'grade_9_10' ? t('Grade 9-10') : t('Grade 11-12')}
-              </Typography>
-            </Alert>
-
-            <Box className={styles.actionButtons}>
-              <Button
-                variant="primary"
-                size="large"
-                onClick={handleCreateTask}
-                className={styles.createButton}
-              >
-                {t('Create Task')}
-              </Button>
-              <Button
-                variant="secondary"
-                size="large"
-                onClick={() => {
-                  setSelectedTopic(null);
-                  setSelectionPath([]);
-                }}
-              >
-                {t('Clear Selection')}
-              </Button>
-            </Box>
-          </Box>
+        {/* Task Generation Result */}
+        {(isGenerating || generatedTask || generationError) && (
+          <TaskResult
+            task={generatedTask}
+            loading={isGenerating}
+            loadingMessage={generationStep?.message}
+            loadingProgress={generationStep?.progress}
+            error={generationError || undefined}
+            onClose={handleCloseResult}
+            onSave={handleSaveTask}
+          />
         )}
       </Container>
     </div>

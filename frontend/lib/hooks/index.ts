@@ -4,3 +4,5 @@
 
 export { useRouteProtection } from './useRouteProtection';
 export type { RouteProtectionOptions } from './useRouteProtection';
+
+export { useFirebaseToken } from './useFirebaseToken';

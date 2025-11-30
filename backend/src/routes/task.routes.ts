@@ -121,6 +121,30 @@ const taskController = new TaskController();
 router.post("/generate-task", requireAuthenticatedTeacher, taskController.generateTask);
 
 /**
+ * V2 API: Generate task text only (no solution, no images) with variation support
+ * POST /generate-task-text
+ */
+router.post("/generate-task-text", requireAuthenticatedTeacher, taskController.generateTaskText);
+
+/**
+ * V2 API: AI selects the best task from 3 variations
+ * POST /select-best-task
+ */
+router.post("/select-best-task", requireAuthenticatedTeacher, taskController.selectBestTask);
+
+/**
+ * V2 API: Generate solution only for given task text
+ * POST /generate-task-solution
+ */
+router.post("/generate-task-solution", requireAuthenticatedTeacher, taskController.generateTaskSolution);
+
+/**
+ * V2 API: Generate images only for given task text
+ * POST /generate-task-images
+ */
+router.post("/generate-task-images", requireAuthenticatedTeacher, taskController.generateTaskImages);
+
+/**
  * @swagger
  * /tasks/{taskId}:
  *   get:

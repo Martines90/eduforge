@@ -404,10 +404,10 @@ export async function searchTasks(
       id: doc.id,
       ...(doc.data() as TaskDocument),
     }))
-    .filter((task) => {
+    .filter((task: TaskDocument & { id: string }) => {
       const titleMatch = task.title.toLowerCase().includes(searchLower);
       const descMatch = task.description?.toLowerCase().includes(searchLower);
-      const tagsMatch = task.tags?.some((tag) => tag.toLowerCase().includes(searchLower));
+      const tagsMatch = task.tags?.some((tag: string) => tag.toLowerCase().includes(searchLower));
 
       return titleMatch || descMatch || tagsMatch;
     });
