@@ -8,6 +8,12 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: './vitest.setup.ts',
+    exclude: [
+      '**/node_modules/**',
+      '**/dist/**',
+      '**/e2e/**',
+      '**/.next/**',
+    ],
     coverage: {
       reporter: ['text', 'json', 'html'],
       exclude: [
@@ -15,6 +21,7 @@ export default defineConfig({
         '.next/',
         'vitest.config.ts',
         'vitest.setup.ts',
+        'e2e/',
       ],
     },
   },

@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, waitFor } from '@testing-library/react';
+import { screen, waitFor } from '@testing-library/react';
+import { render } from '@/lib/test-utils';
 import userEvent from '@testing-library/user-event';
 import { RegistrationModal } from '../RegistrationModal';
 import * as apiService from '@/lib/services/api.service';
@@ -13,6 +14,39 @@ vi.mock('next/navigation', () => ({
     push: vi.fn(),
     replace: vi.fn(),
   }),
+}));
+
+// Mock Firebase auth
+vi.mock('@/lib/firebase/auth', () => ({
+  onAuthChange: vi.fn(() => vi.fn()),
+  logoutUser: vi.fn(),
+}));
+
+// Mock Firebase users
+vi.mock('@/lib/firebase/users', () => ({
+  getUserById: vi.fn(),
+}));
+
+// Mock cookies
+vi.mock('@/lib/utils/cookies', () => ({
+  getCookie: vi.fn(),
+  setCookie: vi.fn(),
+  clearAuthCookies: vi.fn(),
+  isFirstVisit: vi.fn(() => true),
+  COOKIE_NAMES: {
+    COUNTRY: 'country',
+    IS_REGISTERED: 'is_registered',
+    USER_PROFILE: 'user_profile',
+    ROLE: 'role',
+    IDENTITY: 'identity',
+    SUBJECT: 'subject',
+    EDUCATIONAL_MODEL: 'educational_model',
+  },
+}));
+
+// Mock language detection
+vi.mock('@/lib/utils/language-detection', () => ({
+  detectBrowserCountry: vi.fn(() => 'US'),
 }));
 
 describe('RegistrationModal - Basic Functionality', () => {
