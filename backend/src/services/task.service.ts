@@ -200,7 +200,91 @@ export async function getTasks(query: GetTasksQuery): Promise<GetTasksResponse> 
   const db = getFirestore();
   let firestoreQuery: any = db.collection('tasks');
 
+  console.log('[getTasks] Query parameters:', JSON.stringify(query, null, 2));
+
+  // DEBUG: List ALL documents in the collection first
+  const allDocsSnapshot = await db.collection('tasks').limit(5).get();
+  console.log('[getTasks] Total documents in collection:', allDocsSnapshot.size);
+  allDocsSnapshot.docs.forEach((doc: any) => {
+    const data = doc.data();
+    console.log('[getTasks] Sample doc:', {
+      id: doc.id,
+      curriculum_path: data.curriculum_path,
+      isPublished: data.isPublished,
+    });
+  });
+
   // Apply filters
+  // TEMPORARY FIX: Only filter by curriculum_path without additional filters/sorting
+  // to avoid index requirements until indexes are fully built
+  if (query.curriculum_path) {
+    // Filter by full curriculum path (preferred method)
+    console.log('[getTasks] Filtering by curriculum_path:', query.curriculum_path);
+    firestoreQuery = firestoreQuery.where('curriculum_path', '==', query.curriculum_path);
+
+    // Get all matching documents without sorting (to avoid composite index requirement)
+    console.log('[getTasks] About to execute query (no sorting)...');
+    const snapshot = await firestoreQuery.get();
+    console.log('[getTasks] Query returned:', snapshot.size, 'documents');
+
+    let tasks = snapshot.docs.map((doc: any) => ({
+      id: doc.id,
+      ...(doc.data() as TaskDocument),
+    }));
+
+    // Apply filters in-memory
+    if (query.isPublished !== undefined) {
+      tasks = tasks.filter((t: any) => t.isPublished === query.isPublished);
+    }
+    if (query.difficultyLevel) {
+      tasks = tasks.filter((t: any) => t.difficultyLevel === query.difficultyLevel);
+    }
+    if (query.createdBy) {
+      tasks = tasks.filter((t: any) => t.createdBy === query.createdBy);
+    }
+
+    // Sort in-memory
+    const sort = query.sort || 'recent';
+    switch (sort) {
+      case 'rating':
+        tasks.sort((a: any, b: any) => {
+          if (b.ratingAverage !== a.ratingAverage) return b.ratingAverage - a.ratingAverage;
+          return b.ratingCount - a.ratingCount;
+        });
+        break;
+      case 'views':
+        tasks.sort((a: any, b: any) => b.viewCount - a.viewCount);
+        break;
+      case 'popular':
+        tasks.sort((a: any, b: any) => b.completionCount - a.completionCount);
+        break;
+      case 'recent':
+      default:
+        tasks.sort((a: any, b: any) => {
+          const aTime = (a.createdAt as any).toMillis ? (a.createdAt as any).toMillis() : new Date(a.createdAt as any).getTime();
+          const bTime = (b.createdAt as any).toMillis ? (b.createdAt as any).toMillis() : new Date(b.createdAt as any).getTime();
+          return bTime - aTime;
+        });
+        break;
+    }
+
+    const total = tasks.length;
+    const limit = query.limit || 20;
+    const offset = query.offset || 0;
+    const paginatedTasks = tasks.slice(offset, offset + limit);
+
+    console.log('[getTasks] Returning', paginatedTasks.length, 'tasks (total:', total, ')');
+
+    return {
+      tasks: paginatedTasks,
+      total,
+      page: Math.floor(offset / limit) + 1,
+      limit,
+      hasMore: offset + limit < total,
+    };
+  }
+
+  // Legacy filtering (non-curriculum_path queries)
   if (query.subject) {
     firestoreQuery = firestoreQuery.where('subject', '==', query.subject);
   }
@@ -244,8 +328,22 @@ export async function getTasks(query: GetTasksQuery): Promise<GetTasksResponse> 
   }
 
   // Get total count (before pagination)
+  console.log('[getTasks] About to execute count query...');
   const countSnapshot = await firestoreQuery.get();
   const total = countSnapshot.size;
+  console.log('[getTasks] Count query returned:', total, 'documents');
+
+  // Log all documents found
+  if (total > 0) {
+    countSnapshot.docs.forEach((doc: any, index: number) => {
+      const data = doc.data();
+      console.log(`[getTasks] Document ${index + 1}:`, {
+        id: doc.id,
+        curriculum_path: data.curriculum_path,
+        isPublished: data.isPublished,
+      });
+    });
+  }
 
   // Apply pagination
   const limit = query.limit || 20;
@@ -260,6 +358,11 @@ export async function getTasks(query: GetTasksQuery): Promise<GetTasksResponse> 
     id: doc.id,
     ...(doc.data() as TaskDocument),
   }));
+
+  console.log('[getTasks] Found', tasks.length, 'tasks (total:', total, ')');
+  if (tasks.length > 0) {
+    console.log('[getTasks] First task curriculum_path:', tasks[0].curriculum_path);
+  }
 
   return {
     tasks,

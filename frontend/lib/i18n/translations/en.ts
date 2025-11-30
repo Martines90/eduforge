@@ -193,4 +193,14 @@ export const en: Translations = {
   'No images (text only)': 'No images (text only)',
   '1 image': '1 image',
   '2 images': '2 images',
+
+  // Task Saved Modal
+  'Task Saved Successfully!': 'Task Saved Successfully!',
+  'Your task has been saved to the database and is now available publicly.': 'Your task has been saved to the database and is now available publicly.',
+  'Public Share Link:': 'Public Share Link:',
+  'Link copied to clipboard!': 'Link copied to clipboard!',
+  'Task ID:': 'Task ID:',
+  'Copy Public Share Link': 'Copy Public Share Link',
+  'Download as PDF': 'Download as PDF',
+  'PDF download will be implemented soon': 'PDF download will be implemented soon',
 };

@@ -200,6 +200,16 @@ export interface Translations {
   'No images (text only)': string;
   '1 image': string;
   '2 images': string;
+
+  // Task Saved Modal
+  'Task Saved Successfully!': string;
+  'Your task has been saved to the database and is now available publicly.': string;
+  'Public Share Link:': string;
+  'Link copied to clipboard!': string;
+  'Task ID:': string;
+  'Copy Public Share Link': string;
+  'Download as PDF': string;
+  'PDF download will be implemented soon': string;
 }
 
 export type TranslationKey = keyof Translations;

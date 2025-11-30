@@ -65,6 +65,9 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
   const currentPath = [...pathFromRoot, node.name];
   const pathString = currentPath.join(':');
 
+  // Build full curriculum path for API calls
+  const curriculumPath = `${subject}:${gradeLevel}:${pathString}`;
+
   const handleToggle = async () => {
     const newExpandedState = !isExpanded;
     setIsExpanded(newExpandedState);
@@ -73,14 +76,26 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
     if (newExpandedState && isLeaf && !tasksFetched && !loadingTasks) {
       setLoadingTasks(true);
       try {
-        // Fetch tasks from backend API
+        // Fetch tasks from backend API using full curriculum path
         const response = await fetch(
-          `http://localhost:3000/api/v2/tasks?subjectMappingId=${node.key}&isPublished=true`
+          `http://localhost:3000/api/v2/tasks?curriculum_path=${encodeURIComponent(curriculumPath)}&isPublished=true`
         );
         const data = await response.json();
 
-        if (data.success && data.data) {
-          setTasks(data.data);
+        if (data.success && data.tasks) {
+          // Map backend task format to frontend TaskItem format
+          const mappedTasks = data.tasks.map((task: any) => ({
+            id: task.id,
+            title: task.title,
+            subject: task.subject,
+            schoolSystem: task.schoolSystem,
+            rating: task.ratingAverage || 0,
+            views: task.viewCount || 0,
+            description: task.description,
+            createdAt: task.created_at,
+            gradeLevel: task.gradeLevel,
+          }));
+          setTasks(mappedTasks);
         }
         setTasksFetched(true);
       } catch (error) {

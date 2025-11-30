@@ -32,6 +32,8 @@ export interface TaskResultProps {
   error?: string;
   onClose?: () => void;
   onSave?: (editedTask: GeneratedTask) => void;
+  onSaveToDatabase?: () => void;
+  isSaving?: boolean;
 }
 
 /**
@@ -46,6 +48,8 @@ export const TaskResult: React.FC<TaskResultProps> = ({
   error,
   onClose,
   onSave,
+  onSaveToDatabase,
+  isSaving = false,
 }) => {
   const [isEditingDescription, setIsEditingDescription] = useState(false);
   const [isEditingSolution, setIsEditingSolution] = useState(false);
@@ -360,11 +364,21 @@ export const TaskResult: React.FC<TaskResultProps> = ({
         </>
       )}
 
-      {/* Task ID */}
+      {/* Task ID and Save Button */}
       <Box className={styles.footer}>
         <Typography variant="caption" color="text.secondary">
           Feladat ID: {task.id}
         </Typography>
+        {onSaveToDatabase && (
+          <Button
+            variant="primary"
+            onClick={onSaveToDatabase}
+            disabled={isSaving}
+            startIcon={<SaveIcon />}
+          >
+            {isSaving ? 'Mentés...' : 'Feladat Mentése'}
+          </Button>
+        )}
       </Box>
       </Paper>
     </>

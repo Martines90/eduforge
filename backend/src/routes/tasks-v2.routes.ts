@@ -87,6 +87,7 @@ router.post('/api/v2/tasks', authenticateUser, requireTeacher, async (req: Reque
 router.get('/api/v2/tasks', async (req: Request, res: Response) => {
   try {
     const query: GetTasksQuery = {
+      curriculum_path: req.query.curriculum_path as string,
       subject: req.query.subject as string,
       gradeLevel: req.query.gradeLevel as string,
       subjectMappingId: req.query.subjectMappingId as string,

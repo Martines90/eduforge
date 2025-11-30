@@ -193,4 +193,14 @@ export const hu: Translations = {
   'No images (text only)': 'Nincs kép (csak szöveg)',
   '1 image': '1 kép',
   '2 images': '2 kép',
+
+  // Task Saved Modal
+  'Task Saved Successfully!': 'Feladat Sikeresen Elmentve!',
+  'Your task has been saved to the database and is now available publicly.': 'A feladat elmentésre került az adatbázisba és mostantól nyilvánosan elérhető.',
+  'Public Share Link:': 'Nyilvános Megosztási Link:',
+  'Link copied to clipboard!': 'Link vágólapra másolva!',
+  'Task ID:': 'Feladat ID:',
+  'Copy Public Share Link': 'Nyilvános Link Másolása',
+  'Download as PDF': 'Letöltés PDF-ként',
+  'PDF download will be implemented soon': 'A PDF letöltés hamarosan elérhető lesz',
 };

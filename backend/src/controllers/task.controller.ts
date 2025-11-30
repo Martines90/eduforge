@@ -3,6 +3,7 @@ import { TaskGeneratorService } from "../services/task-generator.service";
 import { TaskStorageService } from "../services/task-storage.service";
 import { TaskSelectionService } from "../services/task-selection.service";
 import { TaskGeneratorRequest, TaskGeneratorResponse } from "../types";
+import { getFirestore } from "../config/firebase.config";
 
 export class TaskController {
   private taskGenerator: TaskGeneratorService;
@@ -284,4 +285,132 @@ export class TaskController {
       next(error);
     }
   };
+
+  /**
+   * POST /save-task
+   * Saves a generated task to Firestore database
+   */
+  saveTask = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<void> => {
+    try {
+      const { task_id, task_data, curriculum_path, country_code, created_by } = req.body;
+
+      // Validate required fields
+      if (!task_id || !task_data) {
+        res.status(400).json({
+          success: false,
+          message: "Missing required fields: task_id and task_data are required",
+        });
+        return;
+      }
+
+      console.log(`📥 Request to save task: ${task_id}`);
+      console.log(`   Curriculum path: ${curriculum_path}`);
+      console.log(`   Created by: ${created_by || 'unknown'}`);
+
+      const db = getFirestore();
+
+      // Parse curriculum path to extract fields for basic metadata
+      // Format: "mathematics:grade_9_10:Topic1:Topic2:SubTopic"
+      let subject = 'mathematics';
+      let gradeLevel = 'grade_9_10';
+      let subjectMappingPath = '';
+
+      if (curriculum_path) {
+        const parts = curriculum_path.split(':');
+        if (parts.length >= 2) {
+          subject = parts[0];
+          gradeLevel = parts[1];
+        }
+        if (parts.length >= 3) {
+          // Store the topic hierarchy for display purposes
+          subjectMappingPath = parts.slice(2).join(' > ');
+        }
+      }
+
+      console.log(`   Extracted - Subject: ${subject}, Grade: ${gradeLevel}`);
+
+      // Create the task document with proper schema for getTasks query
+      const taskDoc = {
+        // Original fields from save request
+        task_id,
+        task_data,
+        curriculum_path: curriculum_path || 'unknown',
+
+        // Extracted fields for metadata and display
+        subject,
+        gradeLevel,
+        subjectMappingPath, // Human-readable path like "Halmazok > Halmazműveletek > Unió"
+
+        // Task metadata
+        title: task_data.description ? this.extractTitleFromHtml(task_data.description) : 'Untitled Task',
+        description: task_data.description || '',
+        content: {
+          description: task_data.description,
+          solution: task_data.solution,
+          images: task_data.images || [],
+        },
+
+        // User and location info
+        country_code: country_code || 'US',
+        schoolSystem: country_code === 'HU' ? 'Magyar NAT' : 'US Common Core',
+        created_by: created_by || 'unknown',
+        creatorName: created_by || 'Unknown Teacher',
+
+        // Publishing and metrics
+        isPublished: true,
+        publishedAt: new Date().toISOString(),
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+
+        // Task properties (defaults)
+        difficultyLevel: 'medium',
+        estimatedDurationMinutes: 30,
+        tags: [],
+
+        // Statistics
+        viewCount: 0,
+        completionCount: 0,
+        ratingAverage: 0,
+        ratingCount: 0,
+      };
+
+      // Save to Firestore
+      await db.collection('tasks').doc(task_id).set(taskDoc);
+
+      console.log(`✅ Task saved successfully: ${task_id}`);
+
+      // Generate public share link
+      const baseUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
+      const publicShareLink = `${baseUrl}/tasks/${task_id}`;
+
+      res.status(201).json({
+        success: true,
+        message: "Task saved successfully",
+        task_id,
+        public_share_link: publicShareLink,
+      });
+    } catch (error) {
+      console.error('❌ Error saving task:', error);
+      next(error);
+    }
+  };
+
+  /**
+   * Helper method to extract title from HTML description
+   */
+  private extractTitleFromHtml(html: string): string {
+    // Extract text from <h1> tag if present
+    const h1Match = html.match(/<h1[^>]*>(.*?)<\/h1>/i);
+    if (h1Match && h1Match[1]) {
+      return h1Match[1].replace(/<[^>]*>/g, '').trim();
+    }
+
+    // Otherwise extract first 50 chars
+    const textOnly = html.replace(/<[^>]*>/g, '').trim();
+    return textOnly.substring(0, 50) + (textOnly.length > 50 ? '...' : '');
+  }
 }

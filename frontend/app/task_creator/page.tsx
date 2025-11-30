@@ -14,6 +14,8 @@ import { useRouteProtection } from '@/lib/hooks/useRouteProtection';
 import { useFirebaseToken } from '@/lib/hooks/useFirebaseToken';
 import { useUser } from '@/lib/context/UserContext';
 import { generateTaskComplete, TaskGenerationStep } from '@/lib/services/task-generator.service';
+import { saveTask, SaveTaskRequest } from '@/lib/services/task-save.service';
+import { TaskSavedModal } from '@/components/organisms/TaskSavedModal';
 import navigationData from '@/data/navigation_mapping.json';
 import styles from './page.module.scss';
 
@@ -56,6 +58,10 @@ function TaskCreatorContent() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [generationError, setGenerationError] = useState<string | null>(null);
   const [generationStep, setGenerationStep] = useState<TaskGenerationStep | null>(null);
+  const [isSaving, setIsSaving] = useState(false);
+  const [showSavedModal, setShowSavedModal] = useState(false);
+  const [savedTaskInfo, setSavedTaskInfo] = useState<{ taskId: string; publicShareLink: string } | null>(null);
+  const [currentCurriculumPath, setCurrentCurriculumPath] = useState<string>('');
 
   // Read URL params on mount
   useEffect(() => {
@@ -132,7 +138,9 @@ function TaskCreatorContent() {
       console.log('[Task Creator] Starting multi-step task generation');
 
       // Build curriculum path from selection
-      const curriculumPath = `math:${gradeLevel}:${path.join(':')}`;
+      // Use "mathematics" to match the subjectMappings collection format
+      const curriculumPath = `mathematics:${gradeLevel}:${path.join(':')}`;
+      setCurrentCurriculumPath(curriculumPath);
 
       // Build request payload
       const request: TaskGeneratorRequest = {
@@ -233,6 +241,47 @@ function TaskCreatorContent() {
     setGenerationError(null);
   };
 
+  const handleSaveTaskToDatabase = async () => {
+    if (!generatedTask || !firebaseToken) {
+      console.error('Cannot save task: missing task or token');
+      return;
+    }
+
+    setIsSaving(true);
+    try {
+      const saveRequest: SaveTaskRequest = {
+        task_id: generatedTask.id,
+        task_data: {
+          description: generatedTask.description,
+          solution: generatedTask.solution,
+          images: generatedTask.images,
+        },
+        curriculum_path: currentCurriculumPath,
+        country_code: user.country,
+        created_by: user.email,
+      };
+
+      const response = await saveTask(saveRequest, firebaseToken);
+
+      setSavedTaskInfo({
+        taskId: response.task_id,
+        publicShareLink: response.public_share_link,
+      });
+      setShowSavedModal(true);
+
+      console.log('Task saved successfully:', response);
+    } catch (error) {
+      console.error('Failed to save task:', error);
+      setGenerationError(error instanceof Error ? error.message : 'Failed to save task');
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const handleCloseSavedModal = () => {
+    setShowSavedModal(false);
+  };
+
   const gradeLevel: GradeLevel = selectedGrade === 0 ? 'grade_9_10' : 'grade_11_12';
   const currentData = navigationData[gradeLevel];
 
@@ -299,6 +348,18 @@ function TaskCreatorContent() {
             error={generationError || undefined}
             onClose={handleCloseResult}
             onSave={handleSaveTask}
+            onSaveToDatabase={handleSaveTaskToDatabase}
+            isSaving={isSaving}
+          />
+        )}
+
+        {/* Task Saved Success Modal */}
+        {showSavedModal && savedTaskInfo && (
+          <TaskSavedModal
+            open={showSavedModal}
+            onClose={handleCloseSavedModal}
+            taskId={savedTaskInfo.taskId}
+            publicShareLink={savedTaskInfo.publicShareLink}
           />
         )}
       </Container>

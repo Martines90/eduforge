@@ -184,6 +184,7 @@ export interface GetTasksQuery {
   subject?: string;
   gradeLevel?: string;
   subjectMappingId?: string;
+  curriculum_path?: string; // Full path like "math:grade_9_10:Halmazok:..."
   search?: string;
   difficultyLevel?: 'easy' | 'medium' | 'hard';
   tags?: string[];

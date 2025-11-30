@@ -174,4 +174,10 @@ router.post("/generate-task-images", requireAuthenticatedTeacher, taskController
  */
 router.get("/tasks/:taskId", taskController.getTaskById);
 
+/**
+ * POST /save-task
+ * Saves a generated task to Firestore database
+ */
+router.post("/save-task", requireAuthenticatedTeacher, taskController.saveTask);
+
 export default router;
