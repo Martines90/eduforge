@@ -5,6 +5,7 @@ import { Container, Typography, Box, Paper, Grid } from '@mui/material';
 import { Button } from '@/components/atoms/Button';
 import { useTranslation } from '@/lib/i18n';
 import { useUser } from '@/lib/context';
+import { AuthenticatedPage } from '@/components/templates/AuthenticatedPage';
 import AddIcon from '@mui/icons-material/Add';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -16,6 +17,7 @@ export default function Home() {
   const isNonTeacher = user.identity === 'non-teacher';
 
   return (
+    <AuthenticatedPage>
     <Container maxWidth="lg" sx={{ flex: 1, display: 'flex', alignItems: 'center' }}>
       <Box
         sx={{
@@ -105,5 +107,6 @@ export default function Home() {
         </Grid>
       </Box>
     </Container>
+    </AuthenticatedPage>
   );
 }

@@ -203,4 +203,16 @@ export const hu: Translations = {
   'Copy Public Share Link': 'Nyilvános Link Másolása',
   'Download as PDF': 'Letöltés PDF-ként',
   'PDF download will be implemented soon': 'A PDF letöltés hamarosan elérhető lesz',
+
+  // Task Detail Page
+  'Back to Tasks': 'Vissza a Feladatokhoz',
+  'Task': 'Feladat',
+  'Solution': 'Megoldás',
+  'Images': 'Képek',
+  'Created by': 'Létrehozta',
+  'Copy Share Link': 'Megosztási Link Másolása',
+  'Download PDF': 'PDF Letöltése',
+  'Share link copied to clipboard!': 'Megosztási link vágólapra másolva!',
+  'review': 'értékelés',
+  'reviews': 'értékelés',
 };

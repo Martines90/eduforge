@@ -22,11 +22,12 @@ import { Button } from '@/components/atoms/Button';
 import { TaskTreeView } from '@/components/organisms/TaskTreeView';
 import { TreeNode, TaskItem } from '@/types/task-tree';
 import { useTranslation } from '@/lib/i18n';
+import { AuthenticatedPage } from '@/components/templates/AuthenticatedPage';
 
 /**
  * Tasks Page
  * Browse and search available educational tasks
- * Accessible to all users (no authentication required)
+ * Requires authentication - content is only visible to logged-in users
  */
 export default function TasksPage() {
   const router = useRouter();
@@ -303,6 +304,7 @@ export default function TasksPage() {
   const dataToDisplay = treeData.length > 0 ? treeData : sampleTreeData;
 
   return (
+    <AuthenticatedPage>
     <Container maxWidth="lg" sx={{ py: 4 }}>
       {/* Header */}
       <Box sx={{ mb: 4, textAlign: 'center' }}>
@@ -429,5 +431,6 @@ export default function TasksPage() {
         />
       )}
     </Container>
+    </AuthenticatedPage>
   );
 }

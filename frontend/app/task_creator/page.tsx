@@ -258,7 +258,7 @@ function TaskCreatorContent() {
         },
         curriculum_path: currentCurriculumPath,
         country_code: user.country,
-        created_by: user.email,
+        created_by: user.profile?.email || '',
       };
 
       const response = await saveTask(saveRequest, firebaseToken);

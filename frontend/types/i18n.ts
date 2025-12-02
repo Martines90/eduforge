@@ -21,8 +21,12 @@ export interface Translations {
   'Close menu': string;
 
   // Home page
+  'Educational Task Platform': string;
   'Create educational tasks based on curriculum topics for grades 9-12': string;
   'Go to Task Creator': string;
+  'Search Tasks': string;
+  'Browse and discover educational tasks created by teachers': string;
+  'Browse Tasks': string;
 
   // Task Creator page
   'Select a curriculum topic to create an educational task': string;
@@ -210,6 +214,18 @@ export interface Translations {
   'Copy Public Share Link': string;
   'Download as PDF': string;
   'PDF download will be implemented soon': string;
+
+  // Task Detail Page
+  'Back to Tasks': string;
+  'Task': string;
+  'Solution': string;
+  'Images': string;
+  'Created by': string;
+  'Copy Share Link': string;
+  'Download PDF': string;
+  'Share link copied to clipboard!': string;
+  'review': string;
+  'reviews': string;
 }
 
 export type TranslationKey = keyof Translations;

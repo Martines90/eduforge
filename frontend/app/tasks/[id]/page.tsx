@@ -24,6 +24,9 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DownloadIcon from '@mui/icons-material/Download';
 import SchoolIcon from '@mui/icons-material/School';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import StarIcon from '@mui/icons-material/Star';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import RateReviewIcon from '@mui/icons-material/RateReview';
 import { Button } from '@/components/atoms/Button';
 import { LoadingSpinner } from '@/components/atoms/LoadingSpinner';
 import { processLatexInHtml } from '@/lib/utils/latex-converter';
@@ -215,10 +218,33 @@ export default function TaskDetailPage() {
           </Typography>
         )}
 
-        <Typography variant="caption" color="text.secondary" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+        <Typography variant="caption" color="text.secondary" sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb: 2 }}>
           <CalendarTodayIcon fontSize="small" />
           {t('Created by')} {task.creatorName} on {new Date(task.created_at).toLocaleDateString()}
         </Typography>
+
+        {/* Task Statistics */}
+        <Stack direction="row" spacing={3} sx={{ mb: 2 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+            <StarIcon sx={{ fontSize: 20, color: 'warning.main' }} />
+            <Typography variant="body2" fontWeight={600}>
+              {task.ratingAverage > 0 ? task.ratingAverage.toFixed(1) : 'N/A'}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              ({task.ratingCount} {task.ratingCount === 1 ? t('review') : t('reviews')})
+            </Typography>
+          </Box>
+
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+            <VisibilityIcon sx={{ fontSize: 20, color: 'info.main' }} />
+            <Typography variant="body2" fontWeight={600}>
+              {task.viewCount}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {t('Views')}
+            </Typography>
+          </Box>
+        </Stack>
 
         <Divider sx={{ my: 2 }} />
 

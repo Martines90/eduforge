@@ -203,4 +203,16 @@ export const en: Translations = {
   'Copy Public Share Link': 'Copy Public Share Link',
   'Download as PDF': 'Download as PDF',
   'PDF download will be implemented soon': 'PDF download will be implemented soon',
+
+  // Task Detail Page
+  'Back to Tasks': 'Back to Tasks',
+  'Task': 'Task',
+  'Solution': 'Solution',
+  'Images': 'Images',
+  'Created by': 'Created by',
+  'Copy Share Link': 'Copy Share Link',
+  'Download PDF': 'Download PDF',
+  'Share link copied to clipboard!': 'Share link copied to clipboard!',
+  'review': 'review',
+  'reviews': 'reviews',
 };
