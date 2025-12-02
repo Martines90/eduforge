@@ -1,0 +1,83 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isTeacher() {
+      return isAuthenticated() && request.auth.token.identity == 'teacher';
+    }
+
+    function userCountryMatches(country) {
+      return isAuthenticated() && request.auth.token.country == country;
+    }
+
+    // Country-based structure
+    match /countries/{country} {
+
+      // ===== USERS COLLECTION =====
+      match /users/{userId} {
+        // Users can read their own data
+        allow read: if isOwner(userId);
+
+        // Users can create their own account during registration
+        // Must match their auth UID and specified country
+        allow create: if isOwner(userId)
+                      && userCountryMatches(country)
+                      && request.resource.data.uid == userId
+                      && request.resource.data.country == country;
+
+        // Users can update their own profile
+        // Cannot change uid, country, or createdAt
+        allow update: if isOwner(userId)
+                      && userCountryMatches(country)
+                      && request.resource.data.uid == resource.data.uid
+                      && request.resource.data.country == resource.data.country
+                      && request.resource.data.createdAt == resource.data.createdAt;
+
+        // Users cannot delete their own account (use backend API)
+        allow delete: if false;
+      }
+
+      // ===== TASKS COLLECTION =====
+      match /tasks/{taskId} {
+        // Anyone (including unauthenticated users) can read tasks
+        // Task detail pages are publicly accessible
+        allow read: if true;
+
+        // Only authenticated teachers from the same country can create tasks
+        allow create: if isTeacher()
+                      && userCountryMatches(country)
+                      && request.resource.data.country_code == country;
+
+        // Only the task creator can update their task
+        allow update: if isAuthenticated()
+                      && request.auth.uid == resource.data.created_by_uid
+                      && userCountryMatches(country);
+
+        // Only the task creator can delete their task
+        allow delete: if isAuthenticated()
+                      && request.auth.uid == resource.data.created_by_uid
+                      && userCountryMatches(country);
+      }
+
+      // ===== VERIFICATION CODES COLLECTION =====
+      // Backend service account only - no client access
+      match /verificationCodes/{email} {
+        allow read, write: if false;
+      }
+    }
+
+    // Deny all other paths
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

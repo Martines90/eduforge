@@ -75,9 +75,9 @@ export async function registerUser(data: RegistrationData): Promise<User> {
  * Send verification code to email
  * In production, this would trigger a Cloud Function to send email
  */
-export async function sendVerificationCode(email: string): Promise<void> {
+export async function sendVerificationCode(email: string, country: CountryCode): Promise<void> {
   try {
-    const code = await createVerificationCode(email);
+    const code = await createVerificationCode(email, country);
 
     // TODO: In production, trigger Cloud Function to send email
     // For now, just log it
@@ -98,13 +98,13 @@ export async function sendVerificationCode(email: string): Promise<void> {
 /**
  * Verify email with code
  */
-export async function verifyEmail(email: string, code: string): Promise<boolean> {
+export async function verifyEmail(email: string, code: string, country: CountryCode): Promise<boolean> {
   try {
-    const isValid = await verifyCode(email, code);
+    const isValid = await verifyCode(email, code, country);
 
     if (isValid && auth.currentUser) {
       // Mark user as verified in Firestore
-      await markEmailAsVerified(auth.currentUser.uid);
+      await markEmailAsVerified(auth.currentUser.uid, country);
     }
 
     return isValid;

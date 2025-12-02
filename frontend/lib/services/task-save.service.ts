@@ -1,6 +1,11 @@
 /**
  * Task Save Service
  * Handles saving generated tasks to the database
+ *
+ * IMPORTANT: Backend must store tasks using country-based structure:
+ * countries/{country_code}/tasks/{task_id}
+ *
+ * See DATABASE_STRUCTURE.md for complete details.
  */
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';

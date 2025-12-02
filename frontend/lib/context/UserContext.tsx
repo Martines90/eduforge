@@ -88,8 +88,11 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
 
       if (firebaseUser) {
         try {
+          // Get country from cookies first (we need it to construct the Firestore path)
+          const cookieCountry = (getCookie(COOKIE_NAMES.COUNTRY) as CountryCode) || DEFAULT_COUNTRY;
+
           // User is authenticated - restore session from Firestore
-          const userData = await getUserById(firebaseUser.uid);
+          const userData = await getUserById(firebaseUser.uid, cookieCountry);
           console.log('[UserContext] Restored user data from Firestore:', userData);
 
           if (!userData) {
@@ -105,8 +108,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
             token: '',
           };
 
-          // Restore country from Firestore or cookies
-          const savedCountry = userData.country || (getCookie(COOKIE_NAMES.COUNTRY) as CountryCode);
+          // Use country from Firestore (it should match the cookie)
+          const savedCountry = userData.country;
 
           // Update context state
           setUser((prev) => ({

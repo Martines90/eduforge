@@ -8,6 +8,8 @@ import {
   Timestamp
 } from 'firebase/firestore';
 import { db } from './config';
+import { CountryCode } from '@/types/i18n';
+import { getVerificationCodePath } from './paths';
 
 /**
  * Verification code document structure
@@ -30,11 +32,13 @@ export function generateVerificationCode(): string {
 /**
  * Store verification code in Firestore
  * Expires after 15 minutes
+ * Now stores under country: countries/{country}/verificationCodes/{email}
  */
-export async function createVerificationCode(email: string): Promise<string> {
+export async function createVerificationCode(email: string, country: CountryCode): Promise<string> {
   try {
     const code = generateVerificationCode();
-    const codeRef = doc(db, 'verificationCodes', email.toLowerCase());
+    const codePath = getVerificationCodePath(country, email);
+    const codeRef = doc(db, codePath);
 
     // Create expiration time (15 minutes from now)
     const expiresAt = new Date();
@@ -48,7 +52,7 @@ export async function createVerificationCode(email: string): Promise<string> {
       attempts: 0,
     });
 
-    console.log('Verification code created for:', email);
+    console.log(`Verification code created for ${email} at ${codePath}`);
     console.log('Code (for testing):', code); // In production, send via email
 
     return code;
@@ -61,9 +65,10 @@ export async function createVerificationCode(email: string): Promise<string> {
 /**
  * Verify the code entered by user
  */
-export async function verifyCode(email: string, code: string): Promise<boolean> {
+export async function verifyCode(email: string, code: string, country: CountryCode): Promise<boolean> {
   try {
-    const codeRef = doc(db, 'verificationCodes', email.toLowerCase());
+    const codePath = getVerificationCodePath(country, email);
+    const codeRef = doc(db, codePath);
     const codeSnap = await getDoc(codeRef);
 
     if (!codeSnap.exists()) {
@@ -114,11 +119,12 @@ export async function verifyCode(email: string, code: string): Promise<boolean> 
 /**
  * Delete verification code (cleanup)
  */
-export async function deleteVerificationCode(email: string): Promise<void> {
+export async function deleteVerificationCode(email: string, country: CountryCode): Promise<void> {
   try {
-    const codeRef = doc(db, 'verificationCodes', email.toLowerCase());
+    const codePath = getVerificationCodePath(country, email);
+    const codeRef = doc(db, codePath);
     await deleteDoc(codeRef);
-    console.log('Verification code deleted for:', email);
+    console.log(`Verification code deleted for ${email} at ${codePath}`);
   } catch (error) {
     console.error('Error deleting verification code:', error);
     throw error;
@@ -128,13 +134,13 @@ export async function deleteVerificationCode(email: string): Promise<void> {
 /**
  * Resend verification code (generates new code)
  */
-export async function resendVerificationCode(email: string): Promise<string> {
+export async function resendVerificationCode(email: string, country: CountryCode): Promise<string> {
   try {
     // Delete old code if exists
-    await deleteVerificationCode(email);
+    await deleteVerificationCode(email, country);
 
     // Create new code
-    const newCode = await createVerificationCode(email);
+    const newCode = await createVerificationCode(email, country);
 
     return newCode;
   } catch (error) {

@@ -76,6 +76,9 @@ export default function TaskDetailPage() {
       setError(null);
 
       try {
+        // NOTE: Backend must extract country from task ID or query string
+        // and fetch from: countries/{country}/tasks/{taskId}
+        // See DATABASE_STRUCTURE.md for details
         const response = await fetch(`http://localhost:3000/api/v2/tasks/${taskId}?view=true`);
         const data = await response.json();
 

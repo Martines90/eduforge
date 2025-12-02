@@ -12,6 +12,7 @@ import {
 } from 'firebase/firestore';
 import { db } from './config';
 import { UserIdentity, Subject, CountryCode } from '@/types/i18n';
+import { getUserPath, getUsersCollectionPath } from './paths';
 
 /**
  * User document structure in Firestore
@@ -30,6 +31,7 @@ export interface FirebaseUser {
 
 /**
  * Create a new user in Firestore
+ * Now stores users under their country: countries/{country}/users/{uid}
  */
 export async function createUser(userData: {
   uid: string;
@@ -40,7 +42,8 @@ export async function createUser(userData: {
   country: CountryCode;
 }): Promise<void> {
   try {
-    const userRef = doc(db, 'users', userData.uid);
+    const userPath = getUserPath(userData.country, userData.uid);
+    const userRef = doc(db, userPath);
 
     await setDoc(userRef, {
       ...userData,
@@ -49,7 +52,7 @@ export async function createUser(userData: {
       updatedAt: serverTimestamp(),
     });
 
-    console.log('User created successfully in Firestore:', userData.uid);
+    console.log(`User created successfully in Firestore: ${userPath}`);
   } catch (error) {
     console.error('Error creating user:', error);
     throw error;
@@ -58,10 +61,13 @@ export async function createUser(userData: {
 
 /**
  * Get user by UID
+ * Note: Since we need the country to construct the path, we must know the user's country
+ * In practice, this will be called after authentication when we have the country info
  */
-export async function getUserById(uid: string): Promise<FirebaseUser | null> {
+export async function getUserById(uid: string, country: CountryCode): Promise<FirebaseUser | null> {
   try {
-    const userRef = doc(db, 'users', uid);
+    const userPath = getUserPath(country, uid);
+    const userRef = doc(db, userPath);
     const userSnap = await getDoc(userRef);
 
     if (userSnap.exists()) {
@@ -75,11 +81,12 @@ export async function getUserById(uid: string): Promise<FirebaseUser | null> {
 }
 
 /**
- * Get user by email
+ * Get user by email within a specific country
  */
-export async function getUserByEmail(email: string): Promise<FirebaseUser | null> {
+export async function getUserByEmail(email: string, country: CountryCode): Promise<FirebaseUser | null> {
   try {
-    const usersRef = collection(db, 'users');
+    const usersPath = getUsersCollectionPath(country);
+    const usersRef = collection(db, usersPath);
     const q = query(usersRef, where('email', '==', email.toLowerCase()));
     const querySnapshot = await getDocs(q);
 
@@ -96,15 +103,16 @@ export async function getUserByEmail(email: string): Promise<FirebaseUser | null
 /**
  * Update user email verification status
  */
-export async function markEmailAsVerified(uid: string): Promise<void> {
+export async function markEmailAsVerified(uid: string, country: CountryCode): Promise<void> {
   try {
-    const userRef = doc(db, 'users', uid);
+    const userPath = getUserPath(country, uid);
+    const userRef = doc(db, userPath);
     await updateDoc(userRef, {
       emailVerified: true,
       updatedAt: serverTimestamp(),
     });
 
-    console.log('User email marked as verified:', uid);
+    console.log(`User email marked as verified: ${userPath}`);
   } catch (error) {
     console.error('Error marking email as verified:', error);
     throw error;
@@ -116,16 +124,18 @@ export async function markEmailAsVerified(uid: string): Promise<void> {
  */
 export async function updateUserProfile(
   uid: string,
+  country: CountryCode,
   updates: Partial<Omit<FirebaseUser, 'uid' | 'createdAt'>>
 ): Promise<void> {
   try {
-    const userRef = doc(db, 'users', uid);
+    const userPath = getUserPath(country, uid);
+    const userRef = doc(db, userPath);
     await updateDoc(userRef, {
       ...updates,
       updatedAt: serverTimestamp(),
     });
 
-    console.log('User profile updated:', uid);
+    console.log(`User profile updated: ${userPath}`);
   } catch (error) {
     console.error('Error updating user profile:', error);
     throw error;
