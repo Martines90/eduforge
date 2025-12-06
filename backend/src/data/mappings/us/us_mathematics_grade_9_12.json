@@ -1,0 +1,2269 @@
+{
+  "grade_9_10": [
+    {
+      "key": "algebra_1",
+      "name": "Algebra I",
+      "short_description": "Introductory high school algebra: equations, inequalities, linear functions, basic exponents and polynomials.",
+      "sub_topics": [
+        {
+          "key": "algebra_foundations",
+          "name": "Algebra Foundations",
+          "short_description": "Pre-algebra concepts needed for high school math.",
+          "sub_topics": [
+            {
+              "key": "properties_of_numbers",
+              "name": "Properties of Numbers",
+              "short_description": "Number properties and operations.",
+              "sub_topics": [
+                {
+                  "key": "commutative_property",
+                  "name": "Commutative Property",
+                  "short_description": "Order of operations for addition and multiplication.",
+                  "example_tasks": [
+                    "Rewrite 7 + 4 using the commutative property of addition.",
+                    "Explain why 3 × 12 = 12 × 3 using the commutative property.",
+                    "Identify whether the equation 5 − 2 = 2 − 5 shows the commutative property or not, and explain."
+                  ]
+                },
+                {
+                  "key": "associative_property",
+                  "name": "Associative Property",
+                  "short_description": "Grouping of terms without changing value.",
+                  "example_tasks": [
+                    "Use the associative property to rewrite (2 + 6) + 4.",
+                    "Show how you can regroup 5 × (3 × 2) using the associative property.",
+                    "Does (8 − 3) − 1 = 8 − (3 − 1) demonstrate the associative property? Explain."
+                  ]
+                },
+                {
+                  "key": "distributive_property",
+                  "name": "Distributive Property",
+                  "short_description": "a(b + c) = ab + ac.",
+                  "example_tasks": [
+                    "Expand using the distributive property: 6(4 + 7).",
+                    "Factor using the distributive property: 18x + 3.",
+                    "Simplify: −5(2y − 3) using the distributive property."
+                  ]
+                },
+                {
+                  "key": "inverse_identity_properties",
+                  "name": "Identity & Inverse Properties",
+                  "short_description": "Additive/multiplicative identity and inverses.",
+                  "example_tasks": [
+                    "Identify the additive identity in the equation 14 + 0 = 14.",
+                    "Find the multiplicative inverse of 5/7.",
+                    "Explain why 9 × 1 = 9 represents the multiplicative identity property."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "real_number_system",
+              "name": "Real Number System",
+              "short_description": "Types of numbers and their properties.",
+              "sub_topics": [
+                {
+                  "key": "rational_numbers",
+                  "name": "Rational Numbers",
+                  "short_description": "Fractions, integers, repeating decimals.",
+                  "example_tasks": [
+                    "Determine whether 0.333... is rational and justify your answer.",
+                    "Write the fraction 7/4 as a decimal.",
+                    "Convert the repeating decimal 0.18̅ into a fraction."
+                  ]
+                },
+                {
+                  "key": "irrational_numbers",
+                  "name": "Irrational Numbers",
+                  "short_description": "Non-repeating and non-terminating decimals.",
+                  "example_tasks": [
+                    "Explain why √5 is irrational.",
+                    "Is π − 3 rational or irrational? Justify your reasoning.",
+                    "Determine whether the decimal 1.01001000100001... is irrational and explain why."
+                  ]
+                },
+                {
+                  "key": "absolute_value",
+                  "name": "Absolute Value",
+                  "short_description": "Distance from zero.",
+                  "example_tasks": [
+                    "Evaluate |−12|.",
+                    "Solve the equation |x| = 9.",
+                    "Which is greater: |−7| or |5|? Explain your reasoning."
+                  ]
+                },
+                {
+                  "key": "ordering_real_numbers",
+                  "name": "Ordering Real Numbers",
+                  "short_description": "Comparing and placing numbers on a number line.",
+                  "example_tasks": [
+                    "Order the numbers from least to greatest: −4, 3.2, 0, −1.5.",
+                    "Place √11 and 3.25 on a number line and determine which is larger.",
+                    "Compare: Which is greater, −8 or −3? Explain using number line reasoning."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "expressions_variables",
+              "name": "Expressions & Variables",
+              "short_description": "Simplifying expressions and evaluating variable expressions.",
+              "sub_topics": [
+                {
+                  "key": "simplifying_expressions",
+                  "name": "Simplifying Expressions",
+                  "short_description": "Combining like terms and distributive property.",
+                  "example_tasks": [
+                    "Simplify: 5x + 3x − 12.",
+                    "Combine like terms: 4a − 7 + 2a + 9.",
+                    "Simplify using distribution: 3(2y + 5) − y."
+                  ]
+                },
+                {
+                  "key": "evaluating_expressions",
+                  "name": "Evaluating Expressions",
+                  "short_description": "Substituting values into expressions.",
+                  "example_tasks": [
+                    "Evaluate 4x − 7 when x = −2.",
+                    "Find the value of 2a² + 3b when a = 3 and b = −1.",
+                    "Evaluate √(x + 9) for x = 7."
+                  ]
+                },
+                {
+                  "key": "expression_translation",
+                  "name": "Translating Verbal Expressions",
+                  "short_description": "Converting words to algebraic expressions.",
+                  "example_tasks": [
+                    "Write an algebraic expression for: 'seven more than twice a number n'.",
+                    "Translate into an expression: 'the quotient of a number x and 6'.",
+                    "Write an expression for: 'three less than the square of y'."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "linear_equations",
+          "name": "Linear Equations",
+          "short_description": "Solving and writing linear equations.",
+          "sub_topics": [
+            {
+              "key": "one_step_equations",
+              "name": "One-Step Equations",
+              "short_description": "Solving by inverse operations.",
+              "example_tasks": [
+                "Solve: x + 7 = 19.",
+                "Solve: 5x = 45.",
+                "Solve: x − 12 = −3."
+              ]
+            },
+            {
+              "key": "two_step_equations",
+              "name": "Two-Step Equations",
+              "short_description": "Isolating the variable.",
+              "example_tasks": [
+                "Solve: 3x − 4 = 17.",
+                "Solve: 2x + 9 = −5.",
+                "Solve: −5x − 2 = 18."
+              ]
+            },
+            {
+              "key": "multi_step_equations",
+              "name": "Multi-Step Equations",
+              "short_description": "Combining like terms and distributing.",
+              "example_tasks": [
+                "Solve: 5(x − 2) + 3 = 28.",
+                "Solve: 4x − 7 + x = 3x + 9.",
+                "Solve: 2(x + 6) − 3x = 9."
+              ]
+            },
+            {
+              "key": "variables_both_sides",
+              "name": "Equations with Variables on Both Sides",
+              "short_description": "Moving variables to one side.",
+              "example_tasks": [
+                "Solve: 7x − 4 = 3x + 20.",
+                "Solve: 5x + 6 = 2x − 9.",
+                "Solve: 3(x − 2) = 2x + 5."
+              ]
+            },
+            {
+              "key": "proportional_equations",
+              "name": "Proportional Equations",
+              "short_description": "Cross-multiplying, ratios, rates.",
+              "example_tasks": [
+                "Solve the proportion: 3/5 = x/20.",
+                "If a recipe uses 4 cups of flour for 6 servings, how many cups for 9 servings?",
+                "Solve: 7/x = 14/6."
+              ]
+            },
+            {
+              "key": "absolute_value_equations",
+              "name": "Absolute Value Equations",
+              "short_description": "Splitting into two linear equations.",
+              "example_tasks": [
+                "Solve: |x − 3| = 7.",
+                "Solve: |2x + 1| = 9.",
+                "Solve: 5|x| = 20."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "linear_inequalities",
+          "name": "Linear Inequalities",
+          "short_description": "Solving inequalities and graphing on number lines.",
+          "sub_topics": [
+            {
+              "key": "one_step_inequalities",
+              "name": "One-Step Inequalities",
+              "short_description": "Using inverse operations.",
+              "example_tasks": [
+                "Solve and graph: x − 5 > 3.",
+                "Solve and graph: 7x < 21.",
+                "Solve and graph: x + 8 ≤ 2."
+              ]
+            },
+            {
+              "key": "multi_step_inequalities",
+              "name": "Multi-Step Inequalities",
+              "short_description": "Handling distribution and combining terms.",
+              "example_tasks": [
+                "Solve: 2(x − 3) + 4 ≤ 10.",
+                "Solve: 5x − 7 ≥ 3x + 9.",
+                "Solve: −3(x + 4) < 9."
+              ]
+            },
+            {
+              "key": "compound_inequalities",
+              "name": "Compound Inequalities",
+              "short_description": "AND / OR inequalities.",
+              "example_tasks": [
+                "Solve: 3 < 2x + 1 ≤ 11.",
+                "Solve: x − 4 < −2 OR x + 1 > 7.",
+                "Solve and graph: −5 ≤ 3x − 2 ≤ 10."
+              ]
+            },
+            {
+              "key": "absolute_value_inequalities",
+              "name": "Absolute Value Inequalities",
+              "short_description": "Split-case solving.",
+              "example_tasks": [
+                "Solve: |x − 2| < 5.",
+                "Solve: |3x + 1| ≥ 7.",
+                "Solve: |x| ≤ 12."
+              ]
+            }
+          ]
+        },
+
+        {
+          "key": "linear_functions",
+          "name": "Linear Functions",
+          "short_description": "Graphing, slope, intercepts, forms of linear equations.",
+          "sub_topics": [
+            {
+              "key": "slope_rate_change",
+              "name": "Slope & Rate of Change",
+              "short_description": "Using rise/run and slope formula.",
+              "example_tasks": [
+                "Find the slope of a line passing through (2, 5) and (6, 9).",
+                "A car travels 140 miles in 2 hours. Find its rate of change.",
+                "Determine the slope of the line shown on a graph with points (−1, 4) and (3, −2)."
+              ]
+            },
+            {
+              "key": "slope_intercept_form",
+              "name": "Slope-Intercept Form",
+              "short_description": "y = mx + b.",
+              "example_tasks": [
+                "Write the equation of a line with slope 3 and y-intercept −5.",
+                "Convert 4x − y = 12 into slope-intercept form.",
+                "Identify m and b: y = −2x + 9."
+              ]
+            },
+            {
+              "key": "point_slope_form",
+              "name": "Point-Slope Form",
+              "short_description": "y − y1 = m(x − x1).",
+              "example_tasks": [
+                "Write the equation of a line with slope 4 passing through (1, −3).",
+                "Convert y + 2 = 5(x − 6) to slope-intercept form.",
+                "Graph the line: y − 7 = −3(x + 1)."
+              ]
+            },
+            {
+              "key": "standard_form",
+              "name": "Standard Form",
+              "short_description": "Ax + By = C.",
+              "example_tasks": [
+                "Rewrite y = 2x − 6 in standard form.",
+                "Put 4x + 9 = 3y into Ax + By = C form.",
+                "Determine whether 3x − 2y = 12 is in standard form, and if not, rewrite it."
+              ]
+            },
+            {
+              "key": "function_notation",
+              "name": "Function Notation",
+              "short_description": "f(x) interpretation and evaluation.",
+              "example_tasks": [
+                "If f(x) = 3x − 7, find f(5).",
+                "Given g(x) = x² − 4x, find g(−2).",
+                "Determine whether the pair (3, 14) fits the function f(x) = 2x + 8."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "systems_of_equations",
+          "name": "Systems of Linear Equations",
+          "short_description": "Solving systems using graphing, substitution, elimination.",
+          "sub_topics": [
+            {
+              "key": "solve_graphing",
+              "name": "Solving by Graphing",
+              "short_description": "Intersection point of two lines.",
+              "example_tasks": [
+                "Solve by graphing: y = 2x + 3 and y = −x + 9.",
+                "Graph both lines and estimate the solution: y = 4 − x and y = 2x − 5.",
+                "Determine the intersection of y = 3x and y = −2x + 10."
+              ]
+            },
+            {
+              "key": "solve_substitution",
+              "name": "Solving by Substitution",
+              "short_description": "Replacing variables.",
+              "example_tasks": [
+                "Solve: y = 2x − 1 and 3x + y = 14.",
+                "Solve: y = −4x + 6 and 2y = x + 9.",
+                "Solve: x = 3y − 7 and 2x + y = 5."
+              ]
+            },
+            {
+              "key": "solve_elimination",
+              "name": "Solving by Elimination",
+              "short_description": "Adding/subtracting equations.",
+              "example_tasks": [
+                "Solve using elimination: 2x + 3y = 19 and x − 3y = −4.",
+                "Solve: 5x − 2y = 18 and −5x + y = −7.",
+                "Solve: 3x + 4y = 2 and 6x − 8y = 20."
+              ]
+            },
+            {
+              "key": "no_solution_infinitely_many",
+              "name": "No Solution / Infinitely Many Solutions",
+              "short_description": "Parallel and overlapping lines.",
+              "example_tasks": [
+                "Determine whether the system has no solution, one solution, or infinitely many: 2x − 4 = y and 4x − 8 = 2y.",
+                "Classify the system: y = 3x + 5 and y − 3x = −5.",
+                "Explain why 5x + 10 = y and y = −5x − 10 cannot intersect."
+              ]
+            }
+          ]
+        },
+
+        {
+          "key": "exponents_powers",
+          "name": "Exponents & Powers",
+          "short_description": "Exponent rules and scientific notation.",
+          "sub_topics": [
+            {
+              "key": "product_of_powers",
+              "name": "Product of Powers",
+              "short_description": "a^m · a^n = a^(m+n).",
+              "example_tasks": [
+                "Simplify: x³ · x⁵.",
+                "Simplify: 7² · 7⁴.",
+                "Write (a²)(a³)(a) as a single power."
+              ]
+            },
+            {
+              "key": "quotient_of_powers",
+              "name": "Quotient of Powers",
+              "short_description": "a^m / a^n = a^(m−n).",
+              "example_tasks": [
+                "Simplify: x⁷ / x³.",
+                "Simplify: 5⁹ / 5⁵.",
+                "Rewrite y⁸ / y² as one power."
+              ]
+            },
+            {
+              "key": "power_of_power",
+              "name": "Power of a Power",
+              "short_description": "(a^m)^n = a^(mn).",
+              "example_tasks": [
+                "Simplify: (x²)³.",
+                "Simplify: (5⁴)².",
+                "Rewrite (a³)⁴ as a single exponent."
+              ]
+            },
+            {
+              "key": "zero_negative_exponents",
+              "name": "Zero & Negative Exponents",
+              "short_description": "a^0 = 1, a^(−n) = 1/a^n.",
+              "example_tasks": [
+                "Simplify: x⁰.",
+                "Rewrite: x⁻³ as a fraction.",
+                "Simplify: 7⁻²."
+              ]
+            },
+            {
+              "key": "scientific_notation",
+              "name": "Scientific Notation",
+              "short_description": "Representing large and small numbers.",
+              "example_tasks": [
+                "Write 45,600 in scientific notation.",
+                "Convert 3.2 × 10⁻⁴ into standard form.",
+                "Multiply (2.5 × 10³)(4 × 10²)."
+              ]
+            }
+          ]
+        },
+
+        {
+          "key": "polynomials_basics",
+          "name": "Polynomials Basics",
+          "short_description": "Classifying, adding, subtracting, and basic multiplication.",
+          "sub_topics": [
+            {
+              "key": "classifying_polynomials",
+              "name": "Classifying Polynomials",
+              "short_description": "Degree and terms.",
+              "example_tasks": [
+                "Classify: 5x² − 3x + 1 (degree & number of terms).",
+                "Identify the degree of 7x⁵ − 4.",
+                "Is 9x − 2x³ + 5 a polynomial? Explain."
+              ]
+            },
+            {
+              "key": "addition_polynomials",
+              "name": "Adding Polynomials",
+              "short_description": "Combine like terms.",
+              "example_tasks": [
+                "Add: (3x² + 5x − 1) + (x² − 3x + 7).",
+                "Add: (4x − 9) + (−2x + 5).",
+                "Add: (2a² + 3a) + (−a² + 6)."
+              ]
+            },
+            {
+              "key": "subtraction_polynomials",
+              "name": "Subtracting Polynomials",
+              "short_description": "Group and subtract like terms.",
+              "example_tasks": [
+                "Subtract: (5x² − 3x + 2) − (2x² + x − 4).",
+                "Subtract: (3a + 7) − (4a − 1).",
+                "Subtract: (x³ + 2x) − (x³ − 5x + 8)."
+              ]
+            },
+            {
+              "key": "multiplying_polynomials",
+              "name": "Multiplying Polynomials",
+              "short_description": "Distributive property and FOIL.",
+              "example_tasks": [
+                "Multiply: (x + 3)(x − 4).",
+                "Multiply: 2x(x² + 5x − 1).",
+                "Multiply: (3x − 2)(2x + 5)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "geometry_core",
+      "name": "Geometry",
+      "short_description": "Plane and solid geometry, congruence, similarity, right triangles, circles, and measurement.",
+      "sub_topics": [
+        {
+          "key": "geometry_foundations_2d",
+          "name": "Foundations of 2D Geometry",
+          "short_description": "Basic geometric objects, notation, and measurement.",
+          "sub_topics": [
+            {
+              "key": "points_lines_planes",
+              "name": "Points, Lines, and Planes",
+              "short_description": "Undefined terms and basic postulates.",
+              "sub_topics": [
+                {
+                  "key": "collinearity_coplanarity",
+                  "name": "Collinearity and Coplanarity",
+                  "short_description": "Points on a line and in a plane.",
+                  "example_tasks": [
+                    "Determine whether the points A(1,2), B(3,6), and C(5,10) are collinear.",
+                    "Explain the difference between collinear and coplanar points.",
+                    "Given four points, identify a set that must be coplanar."
+                  ]
+                },
+                {
+                  "key": "segment_ray",
+                  "name": "Segments and Rays",
+                  "short_description": "Notation and basic properties.",
+                  "example_tasks": [
+                    "Draw ray AB and identify its endpoint.",
+                    "Find the length of segment PQ if P(1,3) and Q(7,3).",
+                    "Explain why a ray has one endpoint but a line does not."
+                  ]
+                },
+                {
+                  "key": "parallel_perpendicular_lines",
+                  "name": "Parallel and Perpendicular Lines",
+                  "short_description": "Relationships and notation.",
+                  "example_tasks": [
+                    "Determine whether lines with slopes 4 and −1/4 are perpendicular.",
+                    "Explain how to identify parallel lines on a coordinate grid.",
+                    "Draw two lines that are parallel to line ℓ and one line perpendicular to ℓ."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "segment_angle_measure",
+              "name": "Segment and Angle Measure",
+              "short_description": "Measuring and comparing lengths and angles.",
+              "sub_topics": [
+                {
+                  "key": "segment_addition_postulate",
+                  "name": "Segment Addition Postulate",
+                  "short_description": "Relating parts of a segment to the whole.",
+                  "example_tasks": [
+                    "If AB = 6 and BC = 11, find AC.",
+                    "Point D is between C and E. If CE = 19 and CD = 7, find DE.",
+                    "Given AC = 25 and AB = 14, find BC."
+                  ]
+                },
+                {
+                  "key": "angle_classification",
+                  "name": "Angle Classification",
+                  "short_description": "Acute, right, obtuse, straight angles.",
+                  "example_tasks": [
+                    "Classify a 122° angle as acute, obtuse, right, or straight.",
+                    "Is a 90° angle both right and acute? Explain.",
+                    "Given angle ∠XYZ = 15°, classify it."
+                  ]
+                },
+                {
+                  "key": "angle_addition_postulate",
+                  "name": "Angle Addition Postulate",
+                  "short_description": "Sum of adjacent angles.",
+                  "example_tasks": [
+                    "If m∠ABC = 30° and m∠CBD = 50°, find m∠ABD.",
+                    "Given m∠ABD = 75° and m∠ABC = 40°, find m∠CBD.",
+                    "Point E is inside ∠FGH; write an equation expressing the angle addition postulate."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "angle_pairs",
+              "name": "Angle Pairs and Relationships",
+              "short_description": "Adjacent, vertical, complementary, supplementary angles.",
+              "sub_topics": [
+                {
+                  "key": "vertical_adjacent_angles",
+                  "name": "Vertical and Adjacent Angles",
+                  "short_description": "Definitions and properties.",
+                  "example_tasks": [
+                    "Find the value of x if vertical angles measure 3x and 54°.",
+                    "Explain why vertical angles are always congruent.",
+                    "Determine whether two given angles are adjacent or vertical."
+                  ]
+                },
+                {
+                  "key": "complementary_supplementary_angles",
+                  "name": "Complementary and Supplementary Angles",
+                  "short_description": "Angle sum relationships.",
+                  "example_tasks": [
+                    "If ∠A and ∠B are complementary and ∠A = 27°, find ∠B.",
+                    "Find the supplement of a 113° angle.",
+                    "Two supplementary angles differ by 28°. Find both angles."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "key": "geometric_reasoning_proof",
+          "name": "Geometric Reasoning and Proof",
+          "short_description": "Logical reasoning, conjectures, and formal geometric proofs.",
+          "sub_topics": [
+            {
+              "key": "inductive_deductive_reasoning",
+              "name": "Inductive and Deductive Reasoning",
+              "short_description": "Patterns, conjectures, and logical arguments.",
+              "sub_topics": [
+                {
+                  "key": "conjectures_counterexamples",
+                  "name": "Conjectures and Counterexamples",
+                  "short_description": "Testing and refuting statements.",
+                  "example_tasks": [
+                    "Provide a counterexample to the statement: 'All even numbers are divisible by 4.'",
+                    "Write a conjecture for the sequence: 3, 6, 12, 24, ...",
+                    "Explain why one counterexample disproves a conjecture."
+                  ]
+                },
+                {
+                  "key": "conditional_statements",
+                  "name": "Conditional Statements",
+                  "short_description": "If-then form, converse, inverse, contrapositive.",
+                  "example_tasks": [
+                    "Write the converse of: 'If it rains, then the ground is wet.'",
+                    "Determine if the inverse of a true statement is always true.",
+                    "Write a biconditional statement for: 'A figure is a square if and only if it is a rectangle with four equal sides.'"
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "proof_structures",
+              "name": "Proof Structures",
+              "short_description": "Two-column, paragraph, and flow proofs.",
+              "sub_topics": [
+                {
+                  "key": "two_column_proofs",
+                  "name": "Two-Column Proofs",
+                  "short_description": "Statements and reasons.",
+                  "example_tasks": [
+                    "Complete a two-column proof showing that vertical angles are congruent.",
+                    "Prove: If AB ≅ CD and CD ≅ EF, then AB ≅ EF.",
+                    "Prove that supplementary angles cannot both be acute."
+                  ]
+                },
+                {
+                  "key": "paragraph_flow_proofs",
+                  "name": "Paragraph and Flow Proofs",
+                  "short_description": "Narrative and diagram-based proofs.",
+                  "example_tasks": [
+                    "Write a paragraph proof showing that the base angles of an isosceles triangle are congruent.",
+                    "Create a flowchart proof demonstrating that alternate interior angles are congruent when lines are parallel.",
+                    "Write a paragraph justification explaining the midpoint definition."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "parallel_lines_transversals",
+              "name": "Parallel Lines and Transversals",
+              "short_description": "Angle relationships and proofs with parallel lines.",
+              "sub_topics": [
+                {
+                  "key": "angle_pairs_transversal",
+                  "name": "Angle Pairs with a Transversal",
+                  "short_description": "Corresponding, alternate interior, alternate exterior, same-side interior angles.",
+                  "example_tasks": [
+                    "If corresponding angles measure 4x and 60°, find x.",
+                    "Identify all pairs of alternate interior angles in a given diagram.",
+                    "Determine whether two lines are parallel using angle measurements."
+                  ]
+                },
+                {
+                  "key": "proving_lines_parallel",
+                  "name": "Proving Lines Are Parallel",
+                  "short_description": "Using angle relationships to prove parallelism.",
+                  "example_tasks": [
+                    "Prove lines are parallel if same-side interior angles are supplementary.",
+                    "Use converse theorems to show ℓ ∥ m.",
+                    "Explain why two angles measuring 120° and 120° imply the lines are parallel (via corresponding angle converse)."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "key": "congruence_transformations",
+          "name": "Congruence and Transformations",
+          "short_description": "Rigid motions, congruent figures, and symmetry.",
+          "sub_topics": [
+            {
+              "key": "rigid_transformations",
+              "name": "Rigid Transformations",
+              "short_description": "Translations, rotations, and reflections.",
+              "sub_topics": [
+                {
+                  "key": "translations",
+                  "name": "Translations",
+                  "short_description": "Sliding figures without rotation.",
+                  "example_tasks": [
+                    "Translate point A(3, −2) by the vector (4, 6).",
+                    "Describe the translation that maps B(−1,3) to B′(5,7).",
+                    "Graph triangle ABC and translate it 3 units right and 2 units down."
+                  ]
+                },
+                {
+                  "key": "reflections",
+                  "name": "Reflections",
+                  "short_description": "Flipping across a line.",
+                  "example_tasks": [
+                    "Reflect point P(4,1) across the y-axis.",
+                    "Reflect a triangle across x = −3.",
+                    "Explain why reflections preserve angle measure."
+                  ]
+                },
+                {
+                  "key": "rotations",
+                  "name": "Rotations",
+                  "short_description": "Turning around a point.",
+                  "example_tasks": [
+                    "Rotate point (2,5) by 90° counterclockwise around the origin.",
+                    "Rotate triangle ABC by 180° around the origin.",
+                    "Explain the effect of a 270° clockwise rotation."
+                  ]
+                },
+                {
+                  "key": "composition_transformations",
+                  "name": "Compositions of Transformations",
+                  "short_description": "Applying multiple transformations in sequence.",
+                  "example_tasks": [
+                    "Reflect point (3,2) across the x-axis, then translate it 5 units right.",
+                    "Apply a rotation then a reflection to triangle ABC; describe the resulting image.",
+                    "Explain whether the order of transformations matters in a composition."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "congruence_rigid_motions",
+              "name": "Congruence Using Rigid Motions",
+              "short_description": "Defining congruence via transformations.",
+              "sub_topics": [
+                {
+                  "key": "mapping_congruent_figures",
+                  "name": "Mapping Congruent Figures",
+                  "short_description": "Mapping one figure onto another with rigid motions.",
+                  "example_tasks": [
+                    "Determine whether triangle A′B′C′ is congruent to ABC using rigid motions.",
+                    "Describe a sequence of rigid motions mapping one pentagon onto another.",
+                    "Explain why a rotation preserves segment lengths."
+                  ]
+                },
+                {
+                  "key": "symmetry_lines_rotation",
+                  "name": "Line and Rotational Symmetry",
+                  "short_description": "Identifying and using symmetry.",
+                  "example_tasks": [
+                    "Identify all lines of symmetry of a regular octagon.",
+                    "Determine the order of rotational symmetry of an equilateral triangle.",
+                    "Explain why a rectangle has rotational symmetry of 180°."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "key": "similarity_dilations",
+          "name": "Similarity and Dilations",
+          "short_description": "Similar figures, scale factors, and dilations in the plane.",
+          "sub_topics": [
+            {
+              "key": "dilations_scale_factor",
+              "name": "Dilations and Scale Factor",
+              "short_description": "Enlargements and reductions about a center.",
+              "sub_topics": [
+                {
+                  "key": "coordinate_dilations",
+                  "name": "Coordinate Dilations",
+                  "short_description": "Dilations in the coordinate plane.",
+                  "example_tasks": [
+                    "Dilate point (3,4) by a scale factor of 2 about the origin.",
+                    "Dilate triangle ABC with k = 1/2 about the origin.",
+                    "Explain how coordinates change when dilated by scale factor k."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "triangle_similarity_criteria",
+              "name": "Triangle Similarity Criteria",
+              "short_description": "AA, SSS~, and SAS~ similarity conditions.",
+              "sub_topics": [
+                {
+                  "key": "aa_similarity",
+                  "name": "AA Similarity",
+                  "short_description": "Angle-angle similarity.",
+                  "example_tasks": [
+                    "Show triangles ABC and DEF are similar using AA.",
+                    "Given two angles of a triangle are 48° and 67°, find the third angle and prove similarity with another triangle.",
+                    "Explain why AA is sufficient to prove similarity."
+                  ]
+                },
+                {
+                  "key": "sss_sas_similarity",
+                  "name": "SSS~ and SAS~ Similarity",
+                  "short_description": "Side ratios and included angles.",
+                  "example_tasks": [
+                    "Determine whether triangles with sides 4,6,8 and 2,3,4 are similar.",
+                    "Use SAS~ to prove two triangles are similar given angle and side ratios.",
+                    "Explain why proportional sides alone are not enough without angle checking."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "applications_similarity",
+              "name": "Applications of Similarity",
+              "short_description": "Indirect measurement and scale drawings.",
+              "sub_topics": [
+                {
+                  "key": "scale_drawings_models",
+                  "name": "Scale Drawings and Models",
+                  "short_description": "Maps, blueprints, and models.",
+                  "example_tasks": [
+                    "A blueprint has a scale of 1 inch = 6 feet. Find the actual length of a 5-inch wall on the plan.",
+                    "Determine the scale factor for two similar polygons.",
+                    "Explain how scale drawings use similarity."
+                  ]
+                },
+                {
+                  "key": "indirect_measurement",
+                  "name": "Indirect Measurement",
+                  "short_description": "Using similar triangles to measure distances.",
+                  "example_tasks": [
+                    "Use shadow lengths to estimate the height of a flagpole.",
+                    "Find the width of a river using indirect measurement.",
+                    "Explain a real-world situation where triangle similarity helps measure inaccessible distances."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "key": "triangle_geometry",
+          "name": "Triangles",
+          "short_description": "Classification, congruence, inequalities, and special segments in triangles.",
+          "sub_topics": [
+            {
+              "key": "triangle_classification",
+              "name": "Classifying Triangles",
+              "short_description": "By sides and by angles.",
+              "sub_topics": [
+                {
+                  "key": "scalene_isosceles_equilateral",
+                  "name": "Scalene, Isosceles, Equilateral",
+                  "short_description": "Side-based classification.",
+                  "example_tasks": [
+                    "Classify a triangle with sides 5, 5, and 8.",
+                    "Give an example of an equilateral triangle and explain why.",
+                    "Identify the triangle type given side lengths 3, 4, and 5."
+                  ]
+                },
+                {
+                  "key": "acute_right_obtuse",
+                  "name": "Acute, Right, Obtuse",
+                  "short_description": "Angle-based classification.",
+                  "example_tasks": [
+                    "Determine whether angles 35°, 65°, and 80° form an acute triangle.",
+                    "Classify a triangle with a 120° angle.",
+                    "Explain why a triangle cannot have more than one obtuse angle."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "triangle_congruence_criteria",
+              "name": "Triangle Congruence Criteria",
+              "short_description": "SSS, SAS, ASA, AAS, and HL.",
+              "sub_topics": [
+                {
+                  "key": "sss_sas_congruence",
+                  "name": "SSS and SAS Congruence",
+                  "short_description": "Side-based criteria.",
+                  "example_tasks": [
+                    "Determine whether two triangles are congruent using SSS.",
+                    "Use SAS to show triangles are congruent.",
+                    "Explain why SSA is not a valid congruence criterion."
+                  ]
+                },
+                {
+                  "key": "asa_aas_congruence",
+                  "name": "ASA and AAS Congruence",
+                  "short_description": "Angle-based criteria.",
+                  "example_tasks": [
+                    "Prove two triangles are congruent using ASA.",
+                    "Determine whether AAS applies for two given triangles.",
+                    "Explain the difference between ASA and AAS."
+                  ]
+                },
+                {
+                  "key": "hl_right_triangle_congruence",
+                  "name": "HL for Right Triangles",
+                  "short_description": "Hypotenuse-leg congruence.",
+                  "example_tasks": [
+                    "Use HL to prove two right triangles are congruent.",
+                    "Identify the hypotenuse in a right-triangle diagram.",
+                    "Explain why HL only works for right triangles."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "triangle_inequalities",
+              "name": "Triangle Inequalities",
+              "short_description": "Side and angle inequalities in triangles.",
+              "sub_topics": [
+                {
+                  "key": "triangle_inequality_theorem",
+                  "name": "Triangle Inequality Theorem",
+                  "short_description": "Conditions to form a triangle.",
+                  "example_tasks": [
+                    "Determine whether sides 4, 9, and 15 can form a triangle.",
+                    "Find the possible range of x for sides 7, 10, and x.",
+                    "Explain why 2, 3, and 6 cannot form a triangle."
+                  ]
+                },
+                {
+                  "key": "side_angle_relationships",
+                  "name": "Side-Angle Relationships",
+                  "short_description": "Longest side opposite largest angle.",
+                  "example_tasks": [
+                    "Given sides 8, 12, and 5, identify the largest angle.",
+                    "Order the sides of a triangle with angles 30°, 60°, 90°.",
+                    "Explain which angle is opposite the shortest side."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "triangle_centers_segments",
+              "name": "Special Segments and Triangle Centers",
+              "short_description": "Medians, altitudes, angle bisectors, perpendicular bisectors.",
+              "sub_topics": [
+                {
+                  "key": "medians_centroid",
+                  "name": "Medians and Centroid",
+                  "short_description": "Intersection of medians and balancing point.",
+                  "example_tasks": [
+                    "Find the centroid of a triangle with given vertices.",
+                    "Explain how medians divide each other in a 2:1 ratio.",
+                    "Draw all medians of a triangle and identify the centroid."
+                  ]
+                },
+                {
+                  "key": "altitudes_orthocenter",
+                  "name": "Altitudes and Orthocenter",
+                  "short_description": "Intersection of altitudes.",
+                  "example_tasks": [
+                    "Draw the altitudes of an obtuse triangle.",
+                    "Identify the orthocenter in a right triangle.",
+                    "Explain why the orthocenter can lie outside the triangle."
+                  ]
+                },
+                {
+                  "key": "angle_bisectors_incenter",
+                  "name": "Angle Bisectors and Incenter",
+                  "short_description": "Equidistant from sides.",
+                  "example_tasks": [
+                    "Construct the incenter of a triangle.",
+                    "Explain why the incenter is equidistant from all sides.",
+                    "Use angle bisectors to find the incenter coordinates."
+                  ]
+                },
+                {
+                  "key": "perpendicular_bisectors_circumcenter",
+                  "name": "Perpendicular Bisectors and Circumcenter",
+                  "short_description": "Equidistant from vertices.",
+                  "example_tasks": [
+                    "Construct the circumcenter of a triangle.",
+                    "Explain why circumcenter is the center of the circumscribed circle.",
+                    "Determine whether the circumcenter lies inside or outside a given triangle."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "key": "right_triangles_trigonometry",
+          "name": "Right Triangles and Basic Trigonometry",
+          "short_description": "Pythagorean theorem, special right triangles, and basic trig ratios.",
+          "sub_topics": [
+            {
+              "key": "pythagorean_theorem_applications",
+              "name": "Pythagorean Theorem and Converse",
+              "short_description": "Finding side lengths, checking right triangles.",
+              "sub_topics": [
+                {
+                  "key": "distance_with_pythagorean",
+                  "name": "Distance Applications",
+                  "short_description": "Using right triangles to find distances.",
+                  "example_tasks": [
+                    "Find the distance between (4,7) and (10,2).",
+                    "A ladder leans 12 ft against a wall; its base is 5 ft from the wall. How high does it reach?",
+                    "Check whether sides 9, 40, 41 form a right triangle."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "special_right_triangles",
+              "name": "Special Right Triangles",
+              "short_description": "45–45–90 and 30–60–90 relationships.",
+              "example_tasks": [
+                "Find the hypotenuse of a 45–45–90 triangle with legs 8.",
+                "In a 30–60–90 triangle, the shorter leg is 7. Find the other two sides.",
+                "Determine whether a triangle with sides 10, 10√3, and 20 follows a special right triangle pattern."
+              ]
+            },
+            {
+              "key": "basic_trig_ratios",
+              "name": "Basic Trigonometric Ratios",
+              "short_description": "Sine, cosine, and tangent in right triangles.",
+              "sub_topics": [
+                {
+                  "key": "trig_ratios_definitions",
+                  "name": "Definitions of Trig Ratios",
+                  "short_description": "Opposite, adjacent, hypotenuse.",
+                  "example_tasks": [
+                    "Given angle θ in a right triangle, define sinθ using sides.",
+                    "Find cosθ if opposite = 15 and hypotenuse = 25.",
+                    "Calculate tanθ given opposite = 9 and adjacent = 12."
+                  ]
+                },
+                {
+                  "key": "angle_of_elevation_depression",
+                  "name": "Angles of Elevation and Depression",
+                  "short_description": "Modeling real-world situations.",
+                  "example_tasks": [
+                    "A person sees the top of a tower at a 32° angle of elevation from 50 ft away. Find the height.",
+                    "Explain the difference between elevation and depression angles.",
+                    "Use tangent to estimate the height of a tree using angle of elevation."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "key": "quadrilaterals_polygons",
+          "name": "Quadrilaterals and Polygons",
+          "short_description": "Properties and classification of quadrilaterals and polygons.",
+          "sub_topics": [
+            {
+              "key": "polygon_angle_sums",
+              "name": "Polygon Angle Sums",
+              "short_description": "Interior and exterior angles.",
+              "sub_topics": [
+                {
+                  "key": "interior_angle_sum",
+                  "name": "Sum of Interior Angles",
+                  "short_description": "Formula for n-gons.",
+                  "example_tasks": [
+                    "Find the sum of interior angles of a 12-gon.",
+                    "Determine each interior angle of a regular octagon.",
+                    "Explain why a triangle has 180° as its interior sum."
+                  ]
+                },
+                {
+                  "key": "exterior_angle_sum",
+                  "name": "Sum of Exterior Angles",
+                  "short_description": "Exterior angles of polygons.",
+                  "example_tasks": [
+                    "Find the measure of one exterior angle of a regular decagon.",
+                    "Explain why the sum of exterior angles of any polygon is 360°.",
+                    "Determine the exterior angle of a regular 18-gon."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "parallelograms_properties",
+              "name": "Parallelograms and Special Parallelograms",
+              "short_description": "Rectangles, rhombi, and squares.",
+              "sub_topics": [
+                {
+                  "key": "parallelogram_conditions",
+                  "name": "Conditions for Parallelograms",
+                  "short_description": "Both pairs of opposite sides parallel.",
+                  "example_tasks": [
+                    "Determine whether a quadrilateral with opposite sides 7,7 and 12,12 is a parallelogram.",
+                    "Explain why opposite angles in a parallelogram are congruent.",
+                    "Use slope to test whether a quadrilateral is a parallelogram."
+                  ]
+                },
+                {
+                  "key": "rectangles_properties",
+                  "name": "Rectangles",
+                  "short_description": "Right angles and diagonals.",
+                  "example_tasks": [
+                    "Determine whether a parallelogram with diagonals of equal length must be a rectangle.",
+                    "Find the missing side lengths of a rectangle with perimeter 36.",
+                    "Explain why rectangles are always parallelograms."
+                  ]
+                },
+                {
+                  "key": "rhombi_properties",
+                  "name": "Rhombi",
+                  "short_description": "All sides congruent and diagonal properties.",
+                  "example_tasks": [
+                    "Explain why a rhombus has perpendicular diagonals.",
+                    "Determine whether a quadrilateral with four equal sides is always a rhombus.",
+                    "Find area of a rhombus using diagonals of lengths 8 and 12."
+                  ]
+                },
+                {
+                  "key": "squares_properties",
+                  "name": "Squares",
+                  "short_description": "Properties of rectangles and rhombi combined.",
+                  "example_tasks": [
+                    "Explain why every square is a rectangle and a rhombus.",
+                    "Determine the diagonal length of a square with side length 9.",
+                    "Classify a quadrilateral with equal sides and right angles."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "trapezoids_kites",
+              "name": "Trapezoids and Kites",
+              "short_description": "Isosceles trapezoids and kite properties.",
+              "example_tasks": [
+                "Find the median length of a trapezoid with bases 10 and 18.",
+                "Explain why an isosceles trapezoid has congruent base angles.",
+                "Determine if a quadrilateral with two pairs of adjacent equal sides is a kite."
+              ]
+            }
+          ]
+        },
+
+        {
+          "key": "circle_geometry",
+          "name": "Circles",
+          "short_description": "Arcs, angles, chords, secants, tangents, and circle equations.",
+          "sub_topics": [
+            {
+              "key": "circle_basics",
+              "name": "Circle Basics",
+              "short_description": "Radius, diameter, circumference.",
+              "example_tasks": [
+                "Find the circumference of a circle with radius 9.",
+                "Determine the diameter of a circle with circumference 31.4.",
+                "Explain the difference between radius and diameter."
+              ]
+            },
+
+            {
+              "key": "arcs_central_inscribed_angles",
+              "name": "Arcs, Central Angles, and Inscribed Angles",
+              "short_description": "Measuring arcs and related angles.",
+              "sub_topics": [
+                {
+                  "key": "central_angles_arcs",
+                  "name": "Central Angles and Arcs",
+                  "short_description": "Relationships between central angles and intercepted arcs.",
+                  "example_tasks": [
+                    "Find the arc measure intercepted by a central angle of 72°.",
+                    "Explain why the measure of a central angle equals the measure of its arc.",
+                    "Given arc AB = 120°, find m∠AOB (central angle)."
+                  ]
+                },
+                {
+                  "key": "inscribed_angles",
+                  "name": "Inscribed Angles",
+                  "short_description": "Angle measure relationships in circles.",
+                  "example_tasks": [
+                    "Find m∠ACB if arc AB = 90°.",
+                    "Explain why an inscribed angle is half its intercepted arc.",
+                    "Determine the arc intercepted by an inscribed angle measuring 42°."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "chords_secants_tangents",
+              "name": "Chords, Secants, and Tangents",
+              "short_description": "Theorems involving segments and angles.",
+              "sub_topics": [
+                {
+                  "key": "chord_properties",
+                  "name": "Chord Properties",
+                  "short_description": "Distance from center and arcs.",
+                  "example_tasks": [
+                    "Determine the length of a chord 8 inches from the center of a circle with radius 10.",
+                    "Explain why congruent chords intercept congruent arcs.",
+                    "Find the radius given a chord length of 12 and distance to center 4."
+                  ]
+                },
+                {
+                  "key": "secant_tangent_theorems",
+                  "name": "Secant and Tangent Theorems",
+                  "short_description": "Segment length relationships.",
+                  "example_tasks": [
+                    "If a tangent is 9 and a secant external part is 4 with whole = 20, solve for missing values.",
+                    "Use the secant–secant theorem to find unknown lengths.",
+                    "Explain why a tangent is perpendicular to the radius at the point of tangency."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "circle_area_sector",
+              "name": "Circle Area and Sectors",
+              "short_description": "Area of circles, sectors, and segments.",
+              "example_tasks": [
+                "Find area of a circle with radius 15.",
+                "Find the area of a sector with radius 10 and central angle 60°.",
+                "Explain the fraction used for sector area."
+              ]
+            },
+
+            {
+              "key": "circles_coordinate_geometry",
+              "name": "Circles in the Coordinate Plane",
+              "short_description": "Equations and graphs of circles.",
+              "example_tasks": [
+                "Identify the center and radius of (x − 2)² + (y + 5)² = 49.",
+                "Write the equation of a circle with center (3,−1) and radius 8.",
+                "Graph the circle (x + 4)² + (y − 2)² = 16."
+              ]
+            }
+          ]
+        },
+
+        {
+          "key": "coordinate_geometry",
+          "name": "Coordinate Geometry",
+          "short_description": "Using algebraic tools to study geometric figures.",
+          "sub_topics": [
+            {
+              "key": "distance_midpoint_formulas",
+              "name": "Distance and Midpoint Formulas",
+              "short_description": "Working with segments in the plane.",
+              "example_tasks": [
+                "Find the midpoint of A(2,3) and B(8,−1).",
+                "Find the distance between (−4,6) and (3,2).",
+                "Explain the geometric meaning of the midpoint formula."
+              ]
+            },
+            {
+              "key": "slope_parallel_perpendicular",
+              "name": "Slope, Parallel, and Perpendicular Lines",
+              "short_description": "Relating slopes to angle relationships.",
+              "example_tasks": [
+                "Find the slope of a line parallel to y = −3x + 1.",
+                "Determine whether lines with slopes 2 and −1/2 are perpendicular.",
+                "Write the equation of a line perpendicular to y = 5x − 7 through (1,4)."
+              ]
+            },
+            {
+              "key": "proving_figures_with_coordinates",
+              "name": "Proving Figures with Coordinates",
+              "short_description": "Using coordinates to prove parallelograms, rectangles, etc.",
+              "example_tasks": [
+                "Prove a quadrilateral is a rectangle using slope.",
+                "Determine whether a set of points forms a parallelogram using midpoint tests.",
+                "Explain how coordinates can prove a rhombus."
+              ]
+            },
+            {
+              "key": "partitioning_segments",
+              "name": "Partitioning Segments",
+              "short_description": "Dividing segments into given ratios.",
+              "example_tasks": [
+                "Divide segment AB with A(1,3) and B(7,9) in a 1:2 ratio from A.",
+                "Find the point that divides CD in the ratio 3:5.",
+                "Explain what a weighted average has to do with segment partitioning."
+              ]
+            }
+          ]
+        },
+
+        {
+          "key": "geometric_measurement_2d_3d",
+          "name": "Geometric Measurement in 2D and 3D",
+          "short_description": "Perimeter, area, surface area, and volume of geometric figures.",
+          "sub_topics": [
+            {
+              "key": "perimeter_area_2d",
+              "name": "Perimeter and Area in 2D",
+              "short_description": "Polygons and circles.",
+              "sub_topics": [
+                {
+                  "key": "area_polygons",
+                  "name": "Areas of Polygons",
+                  "short_description": "Rectangles, triangles, trapezoids, regular polygons.",
+                  "example_tasks": [
+                    "Find the area of a triangle with base 12 and height 9.",
+                    "Find the area of a regular hexagon with side 6.",
+                    "Compute the area of a trapezoid with bases 4, 10 and height 7."
+                  ]
+                },
+                {
+                  "key": "area_circles_sectors",
+                  "name": "Areas of Circles and Sectors",
+                  "short_description": "Using radius and central angle.",
+                  "example_tasks": [
+                    "Find the area of a circle with radius 11.",
+                    "Find the area of a 45° sector of a radius-16 circle.",
+                    "Explain how fraction-of-circle area works for sectors."
+                  ]
+                }
+              ]
+            },
+
+            {
+              "key": "surface_area_3d_solids",
+              "name": "Surface Area of 3D Solids",
+              "short_description": "Prisms, cylinders, pyramids, cones, and spheres.",
+              "example_tasks": [
+                "Find the surface area of a cylinder with radius 4 and height 10.",
+                "Find the surface area of a right rectangular prism with dimensions 5×3×2.",
+                "Determine the surface area of a cone with radius 6 and slant height 10."
+              ]
+            },
+
+            {
+              "key": "volume_3d_solids",
+              "name": "Volume of 3D Solids",
+              "short_description": "Prisms, cylinders, pyramids, cones, and spheres.",
+              "example_tasks": [
+                "Find the volume of a sphere with radius 7.",
+                "Determine the volume of a cylinder with radius 5 and height 20.",
+                "Find the volume of a cone with height 9 and radius 4."
+              ]
+            },
+
+            {
+              "key": "density_and_measurement",
+              "name": "Density and Measurement Applications",
+              "short_description": "Mass, volume, and area applications.",
+              "example_tasks": [
+                "A metal block has mass 120 g and volume 15 cm³. Find its density.",
+                "Find the mass of a wooden beam with density 0.8 g/cm³ and volume 250 cm³.",
+                "Explain how density relates mass and volume."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "key": "algebra_2",
+      "name": "Algebra II",
+      "short_description": "Advanced algebra: function families, polynomial and rational behavior, exponentials/logarithms, sequences, and introductory matrices.",
+      "sub_topics": [
+        {
+          "key": "functions_advanced",
+          "name": "Advanced Functions",
+          "short_description": "Families of functions, transformations, composition, inverses, and piecewise definitions.",
+          "sub_topics": [
+            {
+              "key": "function_families",
+              "name": "Families of Functions",
+              "short_description": "Linear, quadratic, polynomial, rational, exponential, logarithmic, power, and trigonometric functions.",
+              "sub_topics": [
+                {
+                  "key": "parent_functions",
+                  "name": "Parent Functions",
+                  "short_description": "Basic graphs of common function families.",
+                  "example_tasks": [
+                    "Sketch the parent functions for y = x, y = x², and y = √x on the same coordinate plane.",
+                    "Identify the parent function for each: y = 3x − 5, y = −2x² + 1, y = 5 · 2^x.",
+                    "State the domain and range of the parent function y = 1/x."
+                  ]
+                },
+                {
+                  "key": "domain_range_behavior",
+                  "name": "Domain, Range, and Behavior",
+                  "short_description": "End behavior, intercepts, and key features.",
+                  "example_tasks": [
+                    "Find the domain and range of f(x) = √(x − 4).",
+                    "Describe the end behavior of f(x) = −2x³ + x.",
+                    "Determine all x-intercepts and the y-intercept of f(x) = (x − 1)(x + 3)."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "function_transformations",
+              "name": "Function Transformations",
+              "short_description": "Translations, reflections, stretches, and compressions.",
+              "sub_topics": [
+                {
+                  "key": "vertical_horizontal_shifts",
+                  "name": "Vertical and Horizontal Shifts",
+                  "short_description": "f(x − h) + k transformations.",
+                  "example_tasks": [
+                    "Describe how the graph of g(x) = (x − 4)² + 3 is obtained from f(x) = x².",
+                    "Write a function that shifts f(x) = √x right 5 units and down 2 units.",
+                    "Find the new vertex of y = (x + 1)² − 7 compared to y = x²."
+                  ]
+                },
+                {
+                  "key": "reflections_axes",
+                  "name": "Reflections Across Axes",
+                  "short_description": "f(−x) and −f(x) behavior.",
+                  "example_tasks": [
+                    "Describe the transformation from f(x) to g(x) if g(x) = −f(x).",
+                    "Given f(x) = x³, sketch y = f(−x) and describe the change.",
+                    "Explain the difference between y = −f(x) and y = f(−x) using an example."
+                  ]
+                },
+                {
+                  "key": "vertical_horizontal_stretch",
+                  "name": "Vertical and Horizontal Stretch/Compression",
+                  "short_description": "af(x) and f(bx) effects.",
+                  "example_tasks": [
+                    "Describe how y = 3f(x) changes the graph of f(x) = |x|.",
+                    "Compare the graphs of y = sin(x) and y = sin(2x).",
+                    "Explain the effect on the graph of y = x² when it becomes y = (1/2)x²."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "piecewise_functions",
+              "name": "Piecewise Functions",
+              "short_description": "Defining and graphing piecewise functions.",
+              "sub_topics": [
+                {
+                  "key": "piecewise_definition",
+                  "name": "Definition and Notation",
+                  "short_description": "Multiple rules on different intervals.",
+                  "example_tasks": [
+                    "Write a piecewise definition for f(x) that equals x² when x < 0 and 2x + 1 when x ≥ 0.",
+                    "Evaluate the piecewise function f(x) = { x + 2 if x ≤ −1 ; x² if x > −1 } at x = −3, −1, and 2.",
+                    "Describe a real-life scenario that could be modeled by a piecewise function with two rules."
+                  ]
+                },
+                {
+                  "key": "piecewise_graphing",
+                  "name": "Graphing Piecewise Functions",
+                  "short_description": "Joining segments and endpoint behavior.",
+                  "example_tasks": [
+                    "Graph f(x) = { −x if x < 0 ; x + 1 if x ≥ 0 } and label any open or closed circles.",
+                    "Determine whether the piecewise function has a jump at x = 2.",
+                    "Sketch the graph of a function that is constant for x < 1 and linear for x ≥ 1."
+                  ]
+                },
+                {
+                  "key": "continuity_piecewise",
+                  "name": "Continuity of Piecewise Functions",
+                  "short_description": "Matching function values at boundaries.",
+                  "example_tasks": [
+                    "Find the value of k so that f(x) = { 2x + 1 if x < 3 ; kx − 5 if x ≥ 3 } is continuous at x = 3.",
+                    "Explain in words what it means for a piecewise function to be continuous at a point.",
+                    "Determine whether the given piecewise function is continuous at x = 0 using limits."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "composition_inverses",
+              "name": "Composition and Inverse Functions",
+              "short_description": "Function composition and inverse relationships.",
+              "sub_topics": [
+                {
+                  "key": "function_composition",
+                  "name": "Function Composition",
+                  "short_description": "Combining functions: (f∘g)(x).",
+                  "example_tasks": [
+                    "Given f(x) = 2x − 1 and g(x) = x², find (f ∘ g)(x).",
+                    "If f(x) = √x and g(x) = x + 4, compute (g ∘ f)(9).",
+                    "Given two tables for f and g, find (f ∘ g)(2)."
+                  ]
+                },
+                {
+                  "key": "inverse_functions",
+                  "name": "Inverse Functions",
+                  "short_description": "Determining and verifying inverses.",
+                  "example_tasks": [
+                    "Find the inverse of f(x) = 3x − 5 and verify that f(f⁻¹(x)) = x.",
+                    "Determine whether f(x) = x² is one-to-one on (−∞, ∞). If not, restrict the domain to make it invertible.",
+                    "Find the inverse of f(x) = (x − 2)/(x + 3), if it exists, on an appropriate domain."
+                  ]
+                },
+                {
+                  "key": "one_to_one_functions",
+                  "name": "One-to-One Functions",
+                  "short_description": "Horizontal line test and invertibility.",
+                  "example_tasks": [
+                    "Use the horizontal line test on the graph of f(x) = x³ − x to decide if it is one-to-one.",
+                    "Explain why one-to-one functions have inverses that are also functions.",
+                    "Give an example of a function that is not one-to-one and explain why."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "vectors_matrices",
+          "name": "Vectors and Matrices",
+          "short_description": "Vector operations, dot product, and basic matrix algebra.",
+          "sub_topics": [
+            {
+              "key": "vectors_plane",
+              "name": "Vectors in the Plane",
+              "short_description": "Magnitude, direction, and components.",
+              "sub_topics": [
+                {
+                  "key": "vector_components_magnitude",
+                  "name": "Components and Magnitude",
+                  "short_description": "Vector notation and length.",
+                  "example_tasks": [
+                    "Write the vector from A(2, 3) to B(7, −1) in component form and find its magnitude.",
+                    "Find the magnitude of v = ⟨−4, 5⟩.",
+                    "Express the vector with magnitude 10 in the direction of ⟨3, 4⟩."
+                  ]
+                },
+                {
+                  "key": "vector_addition_subtraction",
+                  "name": "Vector Addition and Subtraction",
+                  "short_description": "Parallelogram and triangle rules.",
+                  "example_tasks": [
+                    "Given u = ⟨2, −1⟩ and v = ⟨−3, 4⟩, find u + v and u − v.",
+                    "Graphically add vectors u and v using the parallelogram method.",
+                    "A person walks 4 km east then 3 km north. Represent the total displacement as a vector."
+                  ]
+                },
+                {
+                  "key": "scalar_multiplication",
+                  "name": "Scalar Multiplication",
+                  "short_description": "Scaling vectors and direction changes.",
+                  "example_tasks": [
+                    "Find 3v for v = ⟨−2, 5⟩ and describe how length and direction change.",
+                    "If a = ⟨6, −9⟩, find (−1/3)a.",
+                    "Explain why multiplying a vector by a negative scalar reverses its direction."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "dot_product_vectors",
+              "name": "Dot Product of Vectors",
+              "short_description": "Algebraic and geometric definitions.",
+              "sub_topics": [
+                {
+                  "key": "dot_product_computation",
+                  "name": "Computing Dot Product",
+                  "short_description": "Component-wise multiplication and sum.",
+                  "example_tasks": [
+                    "Compute u · v for u = ⟨3, −2⟩ and v = ⟨1, 4⟩.",
+                    "Find the dot product of ⟨−5, 2⟩ and ⟨4, 0⟩.",
+                    "Explain how the dot product differs from vector multiplication by a scalar."
+                  ]
+                },
+                {
+                  "key": "angle_between_vectors",
+                  "name": "Angle Between Vectors",
+                  "short_description": "Using dot product to find angles.",
+                  "example_tasks": [
+                    "Find the angle between u = ⟨3, 4⟩ and v = ⟨4, −3⟩.",
+                    "Use the formula u · v = |u||v|cosθ to solve for cosθ given u · v and magnitudes.",
+                    "Explain why the angle between perpendicular vectors is 90° using the dot product."
+                  ]
+                },
+                {
+                  "key": "orthogonality_vectors",
+                  "name": "Orthogonality",
+                  "short_description": "Perpendicular vectors and zero dot product.",
+                  "example_tasks": [
+                    "Determine whether ⟨2, 5⟩ and ⟨−5, 2⟩ are orthogonal.",
+                    "Give two nonzero vectors whose dot product is zero.",
+                    "Explain why a zero dot product implies orthogonality in 2D."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "matrices_intro",
+              "name": "Matrices (Intro)",
+              "short_description": "Matrix operations and solving systems.",
+              "sub_topics": [
+                {
+                  "key": "matrix_representation",
+                  "name": "Matrix Representation",
+                  "short_description": "Matrices as arrays and transformations.",
+                  "example_tasks": [
+                    "Write a 2×2 matrix representing the coefficients of the system: 2x + 3y = 7, 4x − y = 5.",
+                    "Identify the dimensions of the matrix A = [[1, 3, 5], [2, 4, 6]].",
+                    "Explain how a matrix can represent a transformation in the plane."
+                  ]
+                },
+                {
+                  "key": "matrix_addition_scalar_mult",
+                  "name": "Matrix Addition and Scalar Multiplication",
+                  "short_description": "Element-wise operations.",
+                  "example_tasks": [
+                    "Compute A + B for A = [[1, 2], [3, 4]] and B = [[−1, 0], [5, 2]].",
+                    "Find 3A for A = [[2, −1], [0, 4]].",
+                    "Explain why matrices of different dimensions cannot be added."
+                  ]
+                },
+                {
+                  "key": "matrix_multiplication",
+                  "name": "Matrix Multiplication",
+                  "short_description": "Row-by-column rule and dimensionality.",
+                  "example_tasks": [
+                    "Multiply A = [[1, 2], [3, 4]] by B = [[2], [−1]].",
+                    "Explain the condition on dimensions for the product AB to be defined.",
+                    "Compute the product of a 1×3 matrix and a 3×1 matrix and state the result’s dimensions."
+                  ]
+                },
+                {
+                  "key": "matrix_determinant_inverse",
+                  "name": "Determinant and Inverse (2×2)",
+                  "short_description": "Computing determinant and inverse of 2×2 matrices.",
+                  "example_tasks": [
+                    "Find the determinant of A = [[3, 5], [2, 4]].",
+                    "Determine whether A = [[1, 2], [2, 4]] is invertible and explain why.",
+                    "Find A⁻¹ for A = [[4, 1], [3, 2]] if it exists."
+                  ]
+                },
+                {
+                  "key": "systems_matrices",
+                  "name": "Systems of Equations with Matrices",
+                  "short_description": "Using matrices to represent and solve linear systems.",
+                  "example_tasks": [
+                    "Write the augmented matrix for the system: x + 2y = 5, 3x − y = 4.",
+                    "Solve a 2×2 system using an inverse matrix: AX = B.",
+                    "Explain the meaning of each row in an augmented matrix representing a system."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "sequences_series_precalculus",
+          "name": "Sequences and Series (Precalculus Level)",
+          "short_description": "Arithmetic, geometric, and sigma notation.",
+          "sub_topics": [
+            {
+              "key": "sequences_general",
+              "name": "General Sequences",
+              "short_description": "Definitions, notation, and recursion.",
+              "sub_topics": [
+                {
+                  "key": "sequence_notation_indexing",
+                  "name": "Sequence Notation and Indexing",
+                  "short_description": "aₙ, indexing, and patterns.",
+                  "example_tasks": [
+                    "Write the first five terms of the sequence aₙ = 2n − 3.",
+                    "Given the sequence 3, 6, 12, 24, ... write a formula for aₙ in terms of n.",
+                    "Explain the meaning of a₇ in terms of a general sequence."
+                  ]
+                },
+                {
+                  "key": "recursive_definitions",
+                  "name": "Recursive Definitions",
+                  "short_description": "Defining sequences iteratively.",
+                  "example_tasks": [
+                    "Write a recursive definition for the arithmetic sequence 5, 9, 13, 17, ...",
+                    "Given a₁ = 2 and aₙ = 3aₙ₋₁ − 1, find a₂ and a₃.",
+                    "Explain one advantage of using recursive definitions for sequences."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "arithmetic_sequences_precalc",
+              "name": "Arithmetic Sequences",
+              "short_description": "Linear growth with constant difference.",
+              "sub_topics": [
+                {
+                  "key": "arithmetic_explicit_precalc",
+                  "name": "Explicit Form (Arithmetic)",
+                  "short_description": "aₙ = a₁ + (n−1)d.",
+                  "example_tasks": [
+                    "Find the explicit formula for the arithmetic sequence with a₁ = 7 and d = 4.",
+                    "Determine the 20th term of the sequence 10, 13, 16, 19, ...",
+                    "Find n if aₙ = 50 in the sequence with a₁ = 2 and d = 3."
+                  ]
+                },
+                {
+                  "key": "arithmetic_recursive_precalc",
+                  "name": "Recursive Form (Arithmetic)",
+                  "short_description": "Defining with previous term and difference.",
+                  "example_tasks": [
+                    "Write a recursive definition for the sequence with a₁ = 12 and d = −2.",
+                    "Given the recursive rule a₁ = 4 and aₙ = aₙ₋₁ + 5, list the first four terms.",
+                    "Explain how to convert from an explicit arithmetic formula to a recursive one."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "geometric_sequences_precalc",
+              "name": "Geometric Sequences",
+              "short_description": "Multiplicative growth with constant ratio.",
+              "sub_topics": [
+                {
+                  "key": "geometric_explicit_precalc",
+                  "name": "Explicit Form (Geometric)",
+                  "short_description": "aₙ = a₁·r^(n−1).",
+                  "example_tasks": [
+                    "Find the explicit formula for a geometric sequence with a₁ = 3 and r = 2.",
+                    "Determine the 8th term of the sequence 5, 15, 45, 135, ...",
+                    "Given a geometric sequence with a₁ = 16 and a₄ = 2, find r."
+                  ]
+                },
+                {
+                  "key": "geometric_recursive_precalc",
+                  "name": "Recursive Form (Geometric)",
+                  "short_description": "Defining with previous term and ratio.",
+                  "example_tasks": [
+                    "Write a recursive formula for the sequence with a₁ = 9 and r = 1/3.",
+                    "Given a₁ = 2 and aₙ = 4aₙ₋₁, list the first four terms.",
+                    "Explain why r must remain constant for a sequence to be geometric."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "series_sigma_notation",
+              "name": "Series and Sigma Notation",
+              "short_description": "Finite and simple infinite sums.",
+              "sub_topics": [
+                {
+                  "key": "sigma_notation_basics",
+                  "name": "Basics of Σ Notation",
+                  "short_description": "Interpreting and writing sums.",
+                  "example_tasks": [
+                    "Expand the sum Σ (from k=1 to 4) of (2k − 1).",
+                    "Write Σ (from n=1 to 5) of 3n in expanded form and evaluate.",
+                    "Express 2 + 4 + 6 + 8 + ... + 2n using sigma notation."
+                  ]
+                },
+                {
+                  "key": "arithmetic_series_precalc",
+                  "name": "Arithmetic Series",
+                  "short_description": "Sum formulas for arithmetic series.",
+                  "example_tasks": [
+                    "Find the sum of the first 50 terms of the arithmetic sequence 3, 7, 11, 15, ...",
+                    "Find the sum of the integers from 1 to 100 using the arithmetic series formula.",
+                    "Determine Sₙ for an arithmetic series with a₁ = 10, aₙ = 90, and n = 9."
+                  ]
+                },
+                {
+                  "key": "geometric_series_precalc",
+                  "name": "Geometric Series",
+                  "short_description": "Finite and convergent infinite geometric series (intro).",
+                  "example_tasks": [
+                    "Find the sum of the first 6 terms of the geometric series 2 + 6 + 18 + ...",
+                    "Determine whether the infinite geometric series with a₁ = 5 and r = 1/2 converges and, if so, find its sum.",
+                    "Explain why an infinite geometric series converges only when |r| < 1."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "precalculus_core",
+      "name": "Precalculus",
+      "short_description": "Preparation for calculus: full trigonometry, conic sections, vectors/matrices review as needed, and introductory limits and continuity.",
+      "sub_topics": [
+        {
+          "key": "trigonometry_full",
+          "name": "Trigonometry",
+          "short_description": "Right triangle trigonometry, unit circle, radian measure, identities, equations, and applications.",
+          "sub_topics": [
+            {
+              "key": "angles_radians",
+              "name": "Angles and Radian Measure",
+              "short_description": "Degrees, radians, and arc length.",
+              "sub_topics": [
+                {
+                  "key": "degree_radian_conversion",
+                  "name": "Degree–Radian Conversion",
+                  "short_description": "Converting between units.",
+                  "example_tasks": [
+                    "Convert 150° to radians.",
+                    "Convert 5π/6 radians to degrees.",
+                    "Express 270° in radians and simplify."
+                  ]
+                },
+                {
+                  "key": "arc_length_sector_area",
+                  "name": "Arc Length and Sector Area",
+                  "short_description": "Using radius and central angle.",
+                  "example_tasks": [
+                    "Find the arc length of a circle with radius 8 and central angle 60°.",
+                    "Find the area of a sector with radius 10 and central angle π/3 radians.",
+                    "A Ferris wheel of radius 15 m rotates through an angle of 2 radians. How far does a passenger travel along the rim?"
+                  ]
+                },
+                {
+                  "key": "coterminal_reference_angles",
+                  "name": "Coterminal and Reference Angles",
+                  "short_description": "Finding equivalent and reference angles.",
+                  "example_tasks": [
+                    "Find two coterminal angles (one positive, one negative) for 45°.",
+                    "Determine the reference angle for 210°.",
+                    "Find the reference angle for −5π/6 radians."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "unit_circle_trig",
+              "name": "Unit Circle and Trig Functions",
+              "short_description": "Coordinates on the unit circle and fundamental trig values.",
+              "sub_topics": [
+                {
+                  "key": "unit_circle_values",
+                  "name": "Key Unit Circle Values",
+                  "short_description": "Common angles and exact trig values.",
+                  "example_tasks": [
+                    "Give the coordinates of the point on the unit circle corresponding to θ = π/3.",
+                    "Find exact values of sin(π/4), cos(π/4), and tan(π/4).",
+                    "Determine sin(−π/6) and cos(−π/6) using symmetry of the unit circle."
+                  ]
+                },
+                {
+                  "key": "trig_functions_real_line",
+                  "name": "Trig Functions on the Real Line",
+                  "short_description": "Extending definitions beyond 0–360°/0–2π.",
+                  "example_tasks": [
+                    "Find sin(5π/4) and cos(5π/4).",
+                    "Explain how to find sin(13π/6) by using a coterminal angle between 0 and 2π.",
+                    "Evaluate cos(−7π/3) by finding a coterminal angle in [0, 2π)."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "trig_functions_graphs",
+              "name": "Graphs of Trigonometric Functions",
+              "short_description": "Graphs of sine, cosine, tangent, and their transformations.",
+              "sub_topics": [
+                {
+                  "key": "sine_cosine_graphs",
+                  "name": "Sine and Cosine Graphs",
+                  "short_description": "Amplitude, period, phase shift, and vertical shift.",
+                  "example_tasks": [
+                    "State the amplitude and period of y = 3sin(2x).",
+                    "Graph one period of y = cos(x − π/2).",
+                    "Describe how the graph of y = sin(x) changes to become y = −2sin(x + π/4) − 1."
+                  ]
+                },
+                {
+                  "key": "tangent_cotangent_graphs",
+                  "name": "Tangent and Cotangent Graphs",
+                  "short_description": "Asymptotes and periodicity.",
+                  "example_tasks": [
+                    "Find the period of y = tan(2x).",
+                    "Locate the vertical asymptotes of y = tan(x).",
+                    "Sketch one period of y = cot(x)."
+                  ]
+                },
+                {
+                  "key": "secant_cosecant_graphs",
+                  "name": "Secant and Cosecant Graphs",
+                  "short_description": "Reciprocal function graphs and asymptotes.",
+                  "example_tasks": [
+                    "Use the graph of y = cos(x) to sketch y = sec(x).",
+                    "Explain where the vertical asymptotes of y = csc(x) occur.",
+                    "Identify the domain and range of y = sec(x)."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "trig_identities",
+              "name": "Trigonometric Identities",
+              "short_description": "Algebraic relationships among trig functions.",
+              "sub_topics": [
+                {
+                  "key": "pythagorean_identities",
+                  "name": "Pythagorean Identities",
+                  "short_description": "sin²θ + cos²θ = 1 and related forms.",
+                  "example_tasks": [
+                    "Use sin²θ + cos²θ = 1 to find cosθ if sinθ = 3/5 and θ is in Quadrant II.",
+                    "Rewrite tan²θ + 1 using a Pythagorean identity.",
+                    "Show that sec²θ − tan²θ = 1 using known identities."
+                  ]
+                },
+                {
+                  "key": "reciprocal_quotient_identities",
+                  "name": "Reciprocal and Quotient Identities",
+                  "short_description": "Relationships involving sec, csc, tan, and cot.",
+                  "example_tasks": [
+                    "Write tanθ as a quotient of sine and cosine.",
+                    "Express secθ and cscθ in terms of cosθ and sinθ.",
+                    "Verify the identity tanθ · cotθ = 1 using definitions."
+                  ]
+                },
+                {
+                  "key": "sum_difference_formulas",
+                  "name": "Sum and Difference Formulas",
+                  "short_description": "Formulas for sin(α ± β), cos(α ± β), tan(α ± β).",
+                  "example_tasks": [
+                    "Find exact value of cos(75°) using a sum or difference formula.",
+                    "Express sin(α + β) in terms of sinα, cosα, sinβ, and cosβ.",
+                    "Use a difference formula to evaluate sin(15°)."
+                  ]
+                },
+                {
+                  "key": "double_half_angle_formulas",
+                  "name": "Double- and Half-Angle Formulas",
+                  "short_description": "cos(2θ), sin(2θ), and half-angle identities.",
+                  "example_tasks": [
+                    "Find cos(2θ) if cosθ = 4/5 and θ is in Quadrant IV.",
+                    "Use a half-angle formula to find sin(π/8).",
+                    "Show that cos(2θ) can be written as 1 − 2sin²θ and as 2cos²θ − 1."
+                  ]
+                },
+                {
+                  "key": "trig_simplification_proofs",
+                  "name": "Simplifying and Proving Identities",
+                  "short_description": "Manipulating trig expressions to verify equalities.",
+                  "example_tasks": [
+                    "Verify the identity (1 − cosθ)(1 + cosθ) = sin²θ.",
+                    "Simplify (sinθ · secθ) − (cosθ · tanθ).",
+                    "Prove that (1 + tan²θ)/(1 + cot²θ) = tan²θ."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "trig_equations",
+              "name": "Trigonometric Equations",
+              "short_description": "Solving basic and advanced trig equations.",
+              "sub_topics": [
+                {
+                  "key": "basic_trig_equations",
+                  "name": "Basic Trig Equations",
+                  "short_description": "Solving sin(θ)=k, cos(θ)=k, tan(θ)=k.",
+                  "example_tasks": [
+                    "Solve sin(x) = 1/2 for 0 ≤ x < 2π.",
+                    "Solve cos(x) = −√3/2 on [0, 2π).",
+                    "Solve tan(x) = 1 in the interval (−π, π]."
+                  ]
+                },
+                {
+                  "key": "multi_angle_equations",
+                  "name": "Multi-Angle and Factored Equations",
+                  "short_description": "Equations with 2θ, 3θ, and factored forms.",
+                  "example_tasks": [
+                    "Solve sin(2x) = 0 for 0 ≤ x < 2π.",
+                    "Solve 2sin²x − sinx = 0 on [0, 2π).",
+                    "Solve cos(3x) = 1/2 for 0 ≤ x < 2π."
+                  ]
+                },
+                {
+                  "key": "domain_general_solutions",
+                  "name": "Domain and General Solutions",
+                  "short_description": "Solutions on [0,2π) and all real numbers.",
+                  "example_tasks": [
+                    "Give the general solution to sin(x) = 0.",
+                    "Solve cos(x) = 1/2 and express all solutions using integer k.",
+                    "Explain the difference between a specific interval solution and a general solution."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "trig_applications",
+              "name": "Applications of Trigonometry",
+              "short_description": "Modeling periodic phenomena and solving real-world problems.",
+              "sub_topics": [
+                {
+                  "key": "harmonic_motion_models",
+                  "name": "Harmonic Motion",
+                  "short_description": "Modeling oscillations with sine and cosine.",
+                  "example_tasks": [
+                    "Write a sinusoidal model for height h(t) of a point on a Ferris wheel with amplitude 20 ft and period 40 s.",
+                    "Given h(t) = 3sin(πt/4) + 5, identify the amplitude, period, and midline.",
+                    "Explain how phase shift affects the starting position in a harmonic motion model."
+                  ]
+                },
+                {
+                  "key": "height_distance_problems",
+                  "name": "Height and Distance Problems",
+                  "short_description": "Angles of elevation and depression.",
+                  "example_tasks": [
+                    "A surveyor measures an angle of elevation of 35° to the top of a building from 60 m away. Find the building’s height.",
+                    "A plane is descending at an angle of depression of 7°. If the plane is 2000 m above the ground, how far horizontally until landing?",
+                    "Explain how to draw a right triangle representing an angle of elevation situation."
+                  ]
+                },
+                {
+                  "key": "trig_regression",
+                  "name": "Trigonometric Regression",
+                  "short_description": "Fitting trig models to data (introductory).",
+                  "example_tasks": [
+                    "Given a table of average daylight hours versus month, describe how a sinusoidal function could model the data.",
+                    "Identify approximate amplitude and midline from a scatter plot of periodic data.",
+                    "Explain why a sine or cosine model is appropriate for seasonal temperature data."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "law_sines_cosines",
+              "name": "Law of Sines and Law of Cosines",
+              "short_description": "Solving oblique triangles.",
+              "sub_topics": [
+                {
+                  "key": "law_of_sines",
+                  "name": "Law of Sines",
+                  "short_description": "Relating sides and angles in non-right triangles.",
+                  "example_tasks": [
+                    "Use the Law of Sines to find a missing side given two angles and one side (AAS).",
+                    "Solve triangle ABC with A = 40°, B = 75°, and a = 12.",
+                    "Explain when the Law of Sines is more convenient than the Law of Cosines."
+                  ]
+                },
+                {
+                  "key": "law_of_cosines",
+                  "name": "Law of Cosines",
+                  "short_description": "Generalization of the Pythagorean theorem.",
+                  "example_tasks": [
+                    "Use the Law of Cosines to find side c of a triangle with a = 8, b = 11, and C = 65°.",
+                    "Solve a triangle given three sides 7, 9, and 12.",
+                    "Explain how the Law of Cosines reduces to the Pythagorean theorem in a right triangle."
+                  ]
+                },
+                {
+                  "key": "ambiguous_case",
+                  "name": "Ambiguous Case (SSA)",
+                  "short_description": "Multiple or no solutions in Law of Sines.",
+                  "example_tasks": [
+                    "Given a = 10, b = 14, and A = 30°, determine how many possible triangles exist.",
+                    "Explain the term 'ambiguous case' in the context of the Law of Sines.",
+                    "Provide an example of SSA data where no triangle can be formed."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "analytic_geometry_conics",
+          "name": "Analytic Geometry and Conic Sections",
+          "short_description": "Algebraic and geometric analysis of conics in the coordinate plane.",
+          "sub_topics": [
+            {
+              "key": "parabolas_conics",
+              "name": "Parabolas",
+              "short_description": "Vertex form, focus, directrix, and applications.",
+              "sub_topics": [
+                {
+                  "key": "parabola_standard_vertex",
+                  "name": "Standard and Vertex Form",
+                  "short_description": "Rewriting and interpreting equations.",
+                  "example_tasks": [
+                    "Rewrite y = x² − 6x + 5 in vertex form and identify the vertex.",
+                    "Given y = 2(x − 3)² + 4, state the vertex and axis of symmetry.",
+                    "Determine whether the parabola y = −(x + 1)² + 9 opens upward or downward and find its maximum or minimum value."
+                  ]
+                },
+                {
+                  "key": "parabola_focus_directrix",
+                  "name": "Focus and Directrix",
+                  "short_description": "Geometric definition of parabolas.",
+                  "example_tasks": [
+                    "Find the focus and directrix of y = (1/8)x².",
+                    "Write an equation of a parabola with vertex at the origin and focus at (0, 3).",
+                    "Explain the geometric meaning of the focus and directrix of a parabola."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "circles_conics",
+              "name": "Circles (Analytic)",
+              "short_description": "Standard form and center-radius interpretation.",
+              "sub_topics": [
+                {
+                  "key": "circle_standard_form",
+                  "name": "Standard Form of Circle",
+                  "short_description": "(x − h)² + (y − k)² = r².",
+                  "example_tasks": [
+                    "Write the equation of a circle with center (−2, 5) and radius 6.",
+                    "Identify the center and radius of x² + y² − 4x + 6y − 12 = 0 after rewriting in standard form.",
+                    "Determine whether the equation (x − 1)² + (y + 2)² = 0 represents a single point or a circle."
+                  ]
+                },
+                {
+                  "key": "completing_square_circles",
+                  "name": "Completing the Square for Circles",
+                  "short_description": "Rewriting general form to standard form.",
+                  "example_tasks": [
+                    "Convert x² + y² + 8x − 10y + 4 = 0 to standard form by completing the square.",
+                    "Given x² + y² − 2x + 12y − 7 = 0, complete the square to find the center and radius.",
+                    "Explain why completing the square is needed to identify circle parameters."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "ellipses",
+              "name": "Ellipses",
+              "short_description": "Standard form, major/minor axes, and eccentricity (intro).",
+              "sub_topics": [
+                {
+                  "key": "ellipse_standard_form",
+                  "name": "Standard Form of Ellipse",
+                  "short_description": "Horizontal and vertical ellipses.",
+                  "example_tasks": [
+                    "Write the standard form of an ellipse centered at the origin with major axis length 10 on the x-axis and minor axis length 6.",
+                    "Identify a, b, and center from (x − 3)²/16 + (y + 1)²/9 = 1.",
+                    "Determine if the ellipse (x²/9) + (y²/4) = 1 is wider horizontally or vertically."
+                  ]
+                },
+                {
+                  "key": "ellipse_axes_foci",
+                  "name": "Axes and Foci",
+                  "short_description": "Relationship between a, b, and c.",
+                  "example_tasks": [
+                    "For the ellipse x²/25 + y²/9 = 1, find the coordinates of its foci.",
+                    "Explain the relationship c² = a² − b² for ellipses.",
+                    "Given an ellipse with a = 7 and b = 5, compute c and describe the foci."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "hyperbolas",
+              "name": "Hyperbolas",
+              "short_description": "Standard form and asymptotes.",
+              "sub_topics": [
+                {
+                  "key": "hyperbola_standard_form",
+                  "name": "Standard Form of Hyperbola",
+                  "short_description": "Horizontal and vertical hyperbolas.",
+                  "example_tasks": [
+                    "Write the standard form of a horizontal hyperbola centered at the origin with vertices at (±4, 0) and asymptotes y = ±(3/4)x.",
+                    "Determine whether the hyperbola (x − 1)²/9 − (y + 2)²/16 = 1 opens left-right or up-down.",
+                    "Identify a, b, center, and orientation for x²/4 − y²/9 = 1."
+                  ]
+                },
+                {
+                  "key": "hyperbola_asymptotes",
+                  "name": "Asymptotes of Hyperbolas",
+                  "short_description": "Equations of asymptotes and graph behavior.",
+                  "example_tasks": [
+                    "Find the asymptote equations for the hyperbola x²/25 − y²/9 = 1.",
+                    "Determine the asymptotes of (y − 2)²/4 − (x + 1)²/16 = 1.",
+                    "Explain how the asymptotes help sketch a hyperbola quickly."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          "key": "limits_intro_precalculus",
+          "name": "Introductory Limits (Precalculus)",
+          "short_description": "Concept of limits, numerical and graphical approaches, and continuity.",
+          "sub_topics": [
+            {
+              "key": "limit_concept",
+              "name": "Concept of a Limit",
+              "short_description": "Approaching values and informal understanding.",
+              "sub_topics": [
+                {
+                  "key": "numerical_limits_tables",
+                  "name": "Numerical Limits Using Tables",
+                  "short_description": "Approximating limits with values near a point.",
+                  "example_tasks": [
+                    "Use a table of values approaching x = 2 from both sides to estimate lim (x→2) (x² − 4)/(x − 2).",
+                    "Create a table to approximate lim (x→0) sin(x)/x (x in radians).",
+                    "Explain what it means for the table values to approach a limit."
+                  ]
+                },
+                {
+                  "key": "graphical_limits",
+                  "name": "Graphical Interpretation of Limits",
+                  "short_description": "Reading limits from graphs.",
+                  "example_tasks": [
+                    "Given a graph of f(x), estimate lim (x→1) f(x) even if f(1) is undefined.",
+                    "Explain the difference between lim (x→3) f(x) and f(3) using a graph with a hole.",
+                    "Determine whether lim (x→0) f(x) exists from a given piecewise graph."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "limit_laws_basic",
+              "name": "Basic Limit Laws",
+              "short_description": "Combining limits using algebraic rules.",
+              "sub_topics": [
+                {
+                  "key": "sum_product_quotient_limits",
+                  "name": "Sum, Product, and Quotient Rules",
+                  "short_description": "Using limit laws for simple expressions.",
+                  "example_tasks": [
+                    "Given lim (x→2) f(x) = 5 and lim (x→2) g(x) = −1, find lim (x→2) [3f(x) − 2g(x)].",
+                    "Use limit laws to find lim (x→1) (x² + 3x − 4).",
+                    "Explain why lim (x→a) [f(x)g(x)] = (lim f(x))(lim g(x)) when both limits exist."
+                  ]
+                },
+                {
+                  "key": "limits_polynomials_rationals",
+                  "name": "Limits of Polynomials and Rational Functions",
+                  "short_description": "Direct substitution and simplification.",
+                  "example_tasks": [
+                    "Evaluate lim (x→3) (2x² − x + 1).",
+                    "Find lim (x→−1) (x² − 1)/(x + 1) by algebraic simplification.",
+                    "Explain why limits of polynomials can be found by direct substitution."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "continuity_precalc",
+              "name": "Continuity in Precalculus",
+              "short_description": "Continuous functions and types of discontinuities.",
+              "sub_topics": [
+                {
+                  "key": "continuous_functions",
+                  "name": "Continuous Functions",
+                  "short_description": "Intuitive definition and examples.",
+                  "example_tasks": [
+                    "State the three conditions for a function f to be continuous at x = a.",
+                    "Determine whether f(x) = (x² − 1)/(x − 1) is continuous at x = 1.",
+                    "Give an example of a function that is continuous everywhere except at one point."
+                  ]
+                },
+                {
+                  "key": "discontinuities_types",
+                  "name": "Types of Discontinuities",
+                  "short_description": "Removable, jump, and infinite discontinuities.",
+                  "example_tasks": [
+                    "Classify the discontinuity at x = 2 for a function with a hole at that point.",
+                    "Explain the difference between a jump discontinuity and an infinite discontinuity.",
+                    "Sketch an example of a function with a removable discontinuity at x = 1 and label it."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

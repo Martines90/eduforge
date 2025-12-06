@@ -1,0 +1,2864 @@
+{
+  "grade_9_10": [
+    {
+      "key": "halmazok",
+      "name": "Conjuntos",
+      "short_description": "Conceptos básicos de teoría de conjuntos, relaciones entre conjuntos, operaciones y diagramas de Venn.",
+      "sub_topics": [
+        {
+          "key": "halmaz_fogalma",
+          "name": "Concepto y descripción de un conjunto",
+          "short_description": "Descripción de conjuntos mediante lista de elementos o por medio de una condición.",
+          "sub_topics": [
+            {
+              "key": "halmaz_megadas_felsorolassal",
+              "name": "Conjuntos dados por enumeración",
+              "short_description": "Conjuntos finitos descritos listando explícitamente sus elementos.",
+              "example_tasks": [
+                "Escribe por enumeración el conjunto de días laborales de la semana en México.",
+                "Da por enumeración el conjunto de números naturales menores que 8.",
+                "En una secundaria, un grupo de estudiantes participa en fútbol, basquetbol y voleibol. Escribe por enumeración el conjunto de deportes ofrecidos."
+              ]
+            },
+            {
+              "key": "halmaz_megadas_utasitassal",
+              "name": "Conjuntos dados por condición",
+              "short_description": "Conjuntos descritos mediante una propiedad que cumplen sus elementos.",
+              "example_tasks": [
+                "Describe con una condición el conjunto de números naturales múltiplos de 3.",
+                "Escribe usando notación de conjuntos el conjunto de estudiantes que miden más de 1.70 m en tu grupo.",
+                "Describe el conjunto de soluciones de la desigualdad x > 5 con una condición apropiada."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "halmazok_kozotti_viszonyok",
+          "name": "Relaciones entre conjuntos",
+          "short_description": "Subconjuntos, igualdad de conjuntos y conjunto vacío.",
+          "sub_topics": [
+            {
+              "key": "reszhalmaz",
+              "name": "Subconjunto",
+              "short_description": "Concepto de subconjunto y su notación.",
+              "example_tasks": [
+                "Sea A = {1, 2, 3, 4} y B = {2, 4}. Verifica si B es subconjunto de A.",
+                "En una preparatoria, el conjunto A es el de todos los estudiantes y el conjunto B es el de quienes practican fútbol. Explica por qué B es un subconjunto de A.",
+                "Da un ejemplo de un conjunto C que sea subconjunto propio de D, usando conjuntos de asignaturas cursadas en bachillerato."
+              ]
+            },
+            {
+              "key": "halmazok_egyenlosege",
+              "name": "Igualdad de conjuntos",
+              "short_description": "Condición para que dos conjuntos sean iguales.",
+              "example_tasks": [
+                "Sean A = {1, 2, 3} y B = {3, 2, 1}. ¿Son iguales A y B? Justifica tu respuesta.",
+                "Construye dos conjuntos que tengan los mismos elementos pero estén escritos en orden diferente y explica por qué siguen siendo iguales.",
+                "Un maestro registra las materias optativas de un grupo en dos listas diferentes. ¿Qué debes verificar para concluir que las dos listas representan el mismo conjunto de materias?"
+              ]
+            },
+            {
+              "key": "ures_halmaz",
+              "name": "Conjunto vacío",
+              "short_description": "Concepto y propiedades básicas del conjunto vacío.",
+              "example_tasks": [
+                "Da un ejemplo de una situación real en la que el conjunto de soluciones sea vacío (por ejemplo, estudiantes con promedio mayor a 10).",
+                "Explica por qué el conjunto de números naturales menores que 0 es un conjunto vacío.",
+                "En un grupo de bachillerato, nadie habla japonés. ¿Cómo representarías el conjunto de estudiantes que hablan japonés en ese grupo?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "halmazmuveletek",
+          "name": "Operaciones con conjuntos",
+          "short_description": "Unión, intersección, diferencia y complemento de conjuntos.",
+          "sub_topics": [
+            {
+              "key": "unio",
+              "name": "Unión",
+              "short_description": "Unión de dos o más conjuntos.",
+              "example_tasks": [
+                "En una preparatoria, A es el conjunto de alumnos que practican fútbol y B el conjunto de alumnos que practican básquetbol. Describe A ∪ B en palabras.",
+                "Sean A = {1, 2, 3} y B = {3, 4, 5}. Calcula A ∪ B.",
+                "En una escuela, algunos alumnos participan en ciencia y otros en arte. Escribe un ejemplo numérico de A y B y determina la unión A ∪ B."
+              ]
+            },
+            {
+              "key": "metszet",
+              "name": "Intersección",
+              "short_description": "Intersección de dos o más conjuntos.",
+              "example_tasks": [
+                "Usando el contexto de la escuela, A es el conjunto de alumnos que tocan guitarra y B el conjunto de alumnos que tocan piano. Describe A ∩ B.",
+                "Sean A = {2, 4, 6, 8} y B = {4, 5, 6}. Calcula A ∩ B.",
+                "En un grupo, algunos estudiantes hablan inglés, otros hablan francés y algunos ambos idiomas. Describe con un ejemplo la intersección de estos conjuntos."
+              ]
+            },
+            {
+              "key": "kulonbseg",
+              "name": "Diferencia de conjuntos",
+              "short_description": "Diferencia entre dos conjuntos.",
+              "example_tasks": [
+                "Sean A = {1, 2, 3, 4, 5} y B = {3, 4}. Calcula A \\ B y explica su significado.",
+                "En una escuela, A es el conjunto de alumnos que asisten al turno matutino y B al turno vespertino. ¿Qué representa A \\ B?",
+                "Da un ejemplo de dos conjuntos de materias optativas donde la diferencia A \\ B represente las materias que ofrece la escuela pero no el taller externo."
+              ]
+            },
+            {
+              "key": "komplementer",
+              "name": "Complemento de un conjunto",
+              "short_description": "Complemento de un conjunto respecto al conjunto universal.",
+              "example_tasks": [
+                "En un grupo de 40 estudiantes, U es el conjunto de todos los estudiantes y A el conjunto de los que practican algún deporte. ¿Qué representa el complemento Aᶜ?",
+                "Si el conjunto universal U son los números del 1 al 10 y A = {2, 4, 6, 8}, determina Aᶜ.",
+                "En una encuesta sobre medios de transporte, el conjunto A representa a quienes llegan en transporte público. Describe qué significa el complemento Aᶜ."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "venn_diagram",
+          "name": "Diagramas de Venn",
+          "short_description": "Representación de conjuntos y operaciones entre conjuntos mediante diagramas de Venn.",
+          "example_tasks": [
+            "Dibuja un diagrama de Venn para representar dos conjuntos A y B con intersección no vacía y marca las regiones que corresponden a A ∪ B y A ∩ B.",
+            "En un grupo de bachillerato, 20 estudiantes practican fútbol, 15 practican básquetbol y 5 practican ambos. Representa la situación con un diagrama de Venn.",
+            "A partir de un diagrama de Venn que muestra cuántos estudiantes usan redes sociales A y B, identifica cuántos usan solo A, solo B, ambos y ninguno."
+          ]
+        },
+        {
+          "key": "halmaz_elemszama",
+          "name": "Cardinalidad de un conjunto",
+          "short_description": "Número de elementos de un conjunto y uso de la técnica de conteo con diagrama de Venn.",
+          "sub_topics": [
+            {
+              "key": "logikai_szita",
+              "name": "Principio de inclusión-exclusión (lógica de conteo)",
+              "short_description": "Determinación del número de elementos en la unión de dos o tres conjuntos.",
+              "example_tasks": [
+                "En un grupo de 40 estudiantes, 25 estudian inglés y 18 estudian francés; 10 estudian ambos idiomas. ¿Cuántos estudian al menos uno de los dos idiomas?",
+                "En una preparatoria, 100 alumnos participan en deportes: 60 en fútbol, 45 en básquetbol y 20 en ambos. Usa un diagrama de Venn para determinar cuántos participan solo en fútbol, solo en básquetbol y en al menos uno.",
+                "Describe un problema cotidiano (por ejemplo, asistencia a talleres o clubes) que se pueda resolver usando el principio de inclusión-exclusión con dos conjuntos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "vegtelen_halmazok",
+          "name": "Conjuntos infinitos",
+          "short_description": "Idea intuitiva de conjuntos infinitos y ejemplos sencillos.",
+          "example_tasks": [
+            "Da ejemplos de conjuntos infinitos numéricos, como el conjunto de los números naturales o enteros.",
+            "Explica con tus palabras en qué se diferencia un conjunto finito de uno infinito, usando ejemplos de la vida diaria.",
+            "En el contexto de las matemáticas, ¿por qué decimos que el conjunto de los números pares es infinito? Justifica tu respuesta."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "matematikai_logika",
+      "name": "Lógica matemática",
+      "short_description": "Proposiciones, conectores lógicos, tablas de verdad y razonamiento deductivo.",
+      "sub_topics": [
+        {
+          "key": "allitasok",
+          "name": "Proposiciones y su valoración",
+          "short_description": "Identificación de proposiciones y su valor de verdad.",
+          "sub_topics": [
+            {
+              "key": "allitas_igaz_hamis",
+              "name": "Proposiciones verdaderas o falsas",
+              "short_description": "Determinación del valor de verdad.",
+              "example_tasks": [
+                "Determina si las siguientes frases son proposiciones: a) '2 + 3 = 5', b) 'Cierra la puerta', c) 'Hoy lloverá'.",
+                "Decide si es verdadero o falso: 'Todos los múltiplos de 4 son pares'.",
+                "Enuncia tres proposiciones verdaderas relacionadas con la vida escolar."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "logikai_kapcsolatok",
+          "name": "Conectores lógicos",
+          "short_description": "Negación, conjunción, disyunción, implicación y bicondicional.",
+          "sub_topics": [
+            {
+              "key": "negacio",
+              "name": "Negación",
+              "short_description": "Uso de la negación de proposiciones.",
+              "example_tasks": [
+                "Niega la proposición: 'Todos los estudiantes aprobaron el examen'.",
+                "Escribe la negación correcta de: 'Hoy es sábado'.",
+                "Explica con tus palabras qué significa negar una afirmación en un contexto cotidiano."
+              ]
+            },
+            {
+              "key": "konjunkcio",
+              "name": "Conjunción",
+              "short_description": "Proposiciones unidas por 'y'.",
+              "example_tasks": [
+                "Construye la conjunción de las proposiciones P: 'Juan estudia' y Q: 'Juan hace ejercicio'.",
+                "Evalúa P ∧ Q para P: '2 es par', Q: '5 es par'.",
+                "Da un ejemplo real donde una conjunción sea verdadera solo si ambas partes lo son."
+              ]
+            },
+            {
+              "key": "diszjunkcio",
+              "name": "Disyunción",
+              "short_description": "Proposiciones unidas por 'o'.",
+              "example_tasks": [
+                "Evalúa P ∨ Q para P: 'Hoy es lunes' y Q: 'Hoy es martes'.",
+                "Explica la diferencia entre 'o inclusiva' y 'o exclusiva' con ejemplos cotidianos.",
+                "Construye una disyunción verdadera usando dos proposiciones relacionadas con actividades escolares."
+              ]
+            },
+            {
+              "key": "implikacio",
+              "name": "Implicación",
+              "short_description": "Proposiciones del tipo 'si..., entonces...'.",
+              "example_tasks": [
+                "Explica con tus palabras la proposición: 'Si estudias, entonces apruebas'.",
+                "Evalúa el valor de verdad de: 'Si 3 es par, entonces 2 es par'.",
+                "Crea un ejemplo de implicación verdadera en un contexto cotidiano."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "tabla_de_verdad",
+          "name": "Tablas de verdad",
+          "short_description": "Construcción de tablas de verdad para conectores básicos.",
+          "example_tasks": [
+            "Construye la tabla de verdad para P ∧ Q.",
+            "Construye la tabla de verdad para la implicación P → Q.",
+            "Analiza la tabla de verdad de P ∨ Q y explica cuándo es falsa."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "kombinatorika",
+      "name": "Combinatoria",
+      "short_description": "Conteo sistemático, principios multiplicativos y aditivos, permutaciones y combinaciones básicas.",
+      "sub_topics": [
+        {
+          "key": "felsorolasos_kombinatorika",
+          "name": "Conteo por enumeración",
+          "short_description": "Listados simples de casos posibles.",
+          "sub_topics": [
+            {
+              "key": "osszes_lehetoseg_felsorolasa",
+              "name": "Listar todas las posibilidades",
+              "short_description": "Diagramas, tablas y listados.",
+              "example_tasks": [
+                "Una heladería tiene 2 tipos de cono y 3 sabores. Lista todas las combinaciones posibles.",
+                "Lanza dos dados y enumera todos los resultados posibles como pares ordenados.",
+                "En un menú escolar hay 2 sopas y 3 platos fuertes. Lista todas las combinaciones."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "szorzasi_szabaly",
+          "name": "Principio multiplicativo",
+          "short_description": "Número total de opciones como producto de alternativas.",
+          "example_tasks": [
+            "Un alumno tiene 4 playeras y 2 pantalones. ¿Cuántos atuendos puede formar?",
+            "Un candado tiene 3 ruedas con 10 dígitos cada una. ¿Cuántas combinaciones posibles hay?",
+            "Una computadora ofrece 3 procesadores y 2 tipos de memoria. ¿Cuántas configuraciones básicas existen?"
+          ]
+        },
+        {
+          "key": "osszeadasi_szabaly",
+          "name": "Principio aditivo",
+          "short_description": "Cuando se suman posibilidades que no se traslapan.",
+          "example_tasks": [
+            "Para llegar a la escuela, un estudiante puede tomar 2 rutas de autobús o caminar por 1 camino distinto. ¿Cuántas formas de llegar hay?",
+            "Un menú tiene 4 postres con azúcar y 3 sin azúcar. ¿Cuántas opciones diferentes existen?",
+            "Si en un concurso puedes elegir entre canto (3 niveles) o baile (2 niveles), ¿cuántas opciones hay?"
+          ]
+        },
+        {
+          "key": "permutaciok",
+          "name": "Permutaciones básicas",
+          "short_description": "Ordenamientos sin repetición.",
+          "sub_topics": [
+            {
+              "key": "permutation_without_repetition",
+              "name": "Permutaciones sin repetición",
+              "short_description": "Orden de objetos distintos.",
+              "example_tasks": [
+                "¿Cuántas formas hay de ordenar las letras A, B y C?",
+                "Tres estudiantes deben presentar en diferentes horarios. ¿Cuántas maneras de ordenarlos hay?",
+                "Enumera todas las permutaciones de los números 1, 2 y 3."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "szamhalmazok_muveletek",
+      "name": "Conjuntos numéricos y operaciones",
+      "short_description": "Números naturales, enteros, racionales, reales y operaciones fundamentales.",
+      "sub_topics": [
+        {
+          "key": "szamhalmazok",
+          "name": "Conjuntos numéricos",
+          "short_description": "Clasificación N, Z, Q, R y sus relaciones.",
+          "sub_topics": [
+            {
+              "key": "natural_szamok",
+              "name": "Números naturales",
+              "short_description": "0, 1, 2, 3, ...",
+              "example_tasks": [
+                "Escribe los primeros 10 números naturales.",
+                "Explica por qué los números naturales son infinitos.",
+                "Da un ejemplo de situación real donde solo se usan números naturales."
+              ]
+            },
+            {
+              "key": "egesz_szamok",
+              "name": "Números enteros",
+              "short_description": "…, −3, −2, −1, 0, 1, 2, …",
+              "example_tasks": [
+                "Representa en la recta numérica los enteros −4, −1, 0, 2 y 5.",
+                "Explica con un ejemplo cómo se usan números negativos en la vida cotidiana (temperatura, deudas).",
+                "Ordena de menor a mayor: −3, 4, 0, −1, 7."
+              ]
+            },
+            {
+              "key": "rationals",
+              "name": "Números racionales",
+              "short_description": "Fracciones y decimales.",
+              "example_tasks": [
+                "Escribe 3 fracciones equivalentes a 2/3.",
+                "Convierte 0.125 a fracción.",
+                "Da un ejemplo real donde un número racional describa una proporción."
+              ]
+            },
+            {
+              "key": "real_numbers",
+              "name": "Números reales",
+              "short_description": "Racionales e irracionales.",
+              "example_tasks": [
+                "Da ejemplos de números irracionales conocidos (π, √2).",
+                "Explica qué significa que una raíz no tenga representación decimal exacta.",
+                "Clasifica los números: 3, −2.5, √3, 0.333…, π."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "muveletek",
+          "name": "Operaciones fundamentales",
+          "short_description": "Suma, resta, multiplicación y división.",
+          "sub_topics": [
+            {
+              "key": "osszeadas_kivonas",
+              "name": "Suma y resta",
+              "short_description": "Con números naturales, enteros y racionales.",
+              "example_tasks": [
+                "Calcula: 7 − (−3).",
+                "Explica con un ejemplo gráfico cómo se suma un número negativo en la recta numérica.",
+                "Resuelve: 5/6 − 1/3."
+              ]
+            },
+            {
+              "key": "szorzas_osztas",
+              "name": "Multiplicación y división",
+              "short_description": "Operaciones con enteros y fracciones.",
+              "example_tasks": [
+                "Calcula: (−4) × (−3).",
+                "Divide 3/4 entre 1/2.",
+                "Explica por qué dividir entre una fracción equivale a multiplicar por su inverso."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "abszolutertek",
+          "name": "Valor absoluto",
+          "short_description": "Distancia de un número al cero.",
+          "example_tasks": [
+            "Calcula: |−7|, |4|, |−2.5|.",
+            "Explica qué representa el valor absoluto en términos de distancia.",
+            "En la recta numérica, ¿qué números están a distancia 3 del 0?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hatvany_gyok",
+      "name": "Potencias y raíces",
+      "short_description": "Propiedades de las potencias, raíces cuadradas y relaciones fundamentales.",
+      "sub_topics": [
+        {
+          "key": "hatvanyozas",
+          "name": "Potenciación",
+          "short_description": "Concepto de potencia y sus elementos: base y exponente.",
+          "sub_topics": [
+            {
+              "key": "hatvany_fogalma",
+              "name": "Concepto de potencia",
+              "short_description": "Repetición multiplicativa y notación.",
+              "example_tasks": [
+                "Explica qué representa 3^4 en términos de multiplicación repetida.",
+                "Escribe tres ejemplos de potencias usando base positiva y exponente natural.",
+                "Evalúa 2^5, 5^3 y 10^2."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hatvany_tulajdonsagok",
+          "name": "Propiedades de las potencias",
+          "short_description": "Producto, cociente y potencia de una potencia.",
+          "sub_topics": [
+            {
+              "key": "power_product_rule",
+              "name": "Regla del producto",
+              "short_description": "a^m × a^n = a^(m+n)",
+              "example_tasks": [
+                "Simplifica: 2^3 × 2^4.",
+                "Aplica la regla del producto para 5^2 × 5^3.",
+                "Explica con un ejemplo por qué a^m × a^n = a^(m+n)."
+              ]
+            },
+            {
+              "key": "power_quotient_rule",
+              "name": "Regla del cociente",
+              "short_description": "a^m ÷ a^n = a^(m−n)",
+              "example_tasks": [
+                "Simplifica: 7^5 ÷ 7^2.",
+                "Calcula: 10^4 ÷ 10^1.",
+                "Explica cómo se interpreta restar exponentes."
+              ]
+            },
+            {
+              "key": "power_of_power",
+              "name": "Potencia de una potencia",
+              "short_description": "(a^m)^n = a^(m·n)",
+              "example_tasks": [
+                "Simplifica: (3^2)^3.",
+                "Calcula: (5^1)^4.",
+                "Explica qué significa elevar una potencia a otra potencia."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "negyzetgyok",
+          "name": "Raíz cuadrada",
+          "short_description": "Concepto e interpretación geométrica mediante áreas.",
+          "sub_topics": [
+            {
+              "key": "square_root_concept",
+              "name": "Concepto de raíz cuadrada",
+              "short_description": "Relación con cuadrados perfectos.",
+              "example_tasks": [
+                "Calcula las raíces cuadradas de 16, 25 y 36.",
+                "Explica por qué √50 es un número irracional.",
+                "Una plaza cuadrada tiene área de 225 m². ¿Cuánto mide cada lado?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betus_kifejezesek",
+      "name": "Expresiones algebraicas",
+      "short_description": "Uso de variables, términos semejantes, simplificación y sustitución numérica.",
+      "sub_topics": [
+        {
+          "key": "kifejezes_fogalma",
+          "name": "Concepto de expresión algebraica",
+          "short_description": "Variables, coeficientes y términos.",
+          "sub_topics": [
+            {
+              "key": "alapfogalmak",
+              "name": "Términos y coeficientes",
+              "short_description": "Identificación de partes en una expresión.",
+              "example_tasks": [
+                "En la expresión 5x − 3, identifica el coeficiente, la variable y el término independiente.",
+                "Escribe una expresión algebraica que represente 'el triple de un número menos 4'.",
+                "Identifica los términos semejantes en: 3x + 2y − 4x + 5."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "egyszerusites",
+          "name": "Simplificación de expresiones",
+          "short_description": "Agrupación de términos semejantes y operaciones básicas.",
+          "example_tasks": [
+            "Simplifica: 3x + 5x − 2.",
+            "Reduce la expresión: 7y − 3y + 4 − 2.",
+            "Explica con tus palabras cómo identificar términos semejantes."
+          ]
+        },
+        {
+          "key": "helyettesites",
+          "name": "Sustitución numérica",
+          "short_description": "Evaluación de expresiones para valores dados.",
+          "example_tasks": [
+            "Evalúa 3x − 2 para x = 5.",
+            "Calcula el valor de 2x^2 − x + 1 para x = −2.",
+            "En una fórmula de física s = vt, sustituye v = 3 m/s y t = 4 s."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "aranyossag_szazalekszamitas",
+      "name": "Proporcionalidad y cálculo porcentual",
+      "short_description": "Razones, proporciones, regla de tres y porcentajes en situaciones reales.",
+      "sub_topics": [
+        {
+          "key": "aranyossag",
+          "name": "Proporcionalidad",
+          "short_description": "Relaciones proporcionales directas y uso de razones.",
+          "sub_topics": [
+            {
+              "key": "direct_proportion",
+              "name": "Proporcionalidad directa",
+              "short_description": "Si una magnitud aumenta, la otra también.",
+              "example_tasks": [
+                "Si 3 cuadernos cuestan 45 pesos, ¿cuánto cuestan 5 cuadernos?",
+                "Un auto recorre 120 km con 8 litros. ¿Cuántos litros necesita para 180 km?",
+                "Explica un caso cotidiano de proporcionalidad directa."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "szazalekok",
+          "name": "Porcentajes",
+          "short_description": "Cálculo de porcentajes, aumentos y descuentos.",
+          "sub_topics": [
+            {
+              "key": "basic_percentage",
+              "name": "Porcentajes básicos",
+              "short_description": "Significado de “por ciento”.",
+              "example_tasks": [
+                "Calcula el 15% de 200.",
+                "Un artículo cuesta 500 pesos y tiene 20% de descuento. ¿Cuál es el precio final?",
+                "En una encuesta, 30 de 120 estudiantes prefieren matemáticas. ¿Qué porcentaje representa?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "regla_de_tres",
+          "name": "Regla de tres",
+          "short_description": "Método para resolver problemas proporcionales simples.",
+          "example_tasks": [
+            "Si 4 trabajadores construyen una barda en 6 días, ¿cuántos días tardarían 8 trabajadores en la misma tarea (proporcionalidad inversa)?",
+            "Si 7 litros de pintura cubren 28 m², ¿cuántos m² cubrirán 10 litros?",
+            "En un laboratorio, 5 ml de reactivo alcanzan para 2 muestras. ¿Cuántas muestras se procesan con 20 ml?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "elsofoku_egyenletek",
+      "name": "Ecuaciones lineales",
+      "short_description": "Ecuaciones de primer grado, despejes y aplicaciones.",
+      "sub_topics": [
+        {
+          "key": "egyenlet_fogalma",
+          "name": "Concepto de ecuación",
+          "short_description": "Igualdades con incógnitas.",
+          "sub_topics": [
+            {
+              "key": "egyenlet_reszitese",
+              "name": "Resolución básica de ecuaciones",
+              "short_description": "Uso de operaciones inversas.",
+              "example_tasks": [
+                "Resuelve: x + 5 = 12.",
+                "Resuelve: 3x − 2 = 10.",
+                "Explica el significado de 'despejar una variable'."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bonyolultabb_egyenletek",
+          "name": "Ecuaciones lineales más complejas",
+          "short_description": "Paréntesis, cambios de signo y transposición de términos.",
+          "sub_topics": [
+            {
+              "key": "linear_equations_with_parens",
+              "name": "Ecuaciones con paréntesis",
+              "short_description": "Distribución y simplificación.",
+              "example_tasks": [
+                "Resuelve: 2(x − 3) = 10.",
+                "Resuelve: 5 − 3(x + 1) = −4.",
+                "Explica por qué es necesario distribuir antes de despejar."
+              ]
+            },
+            {
+              "key": "linear_equations_fractions",
+              "name": "Ecuaciones con fracciones",
+              "short_description": "Multiplicación por mínimo común múltiplo.",
+              "example_tasks": [
+                "Resuelve: (x/3) + 2 = 5.",
+                "Resuelve: (2x/5) − (1/2) = 1.",
+                "Explica cómo eliminar denominadores en una ecuación."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "masodfoku_egyenletek",
+      "name": "Ecuaciones cuadráticas",
+      "short_description": "Ecuaciones de segundo grado, factorización, fórmula general y aplicaciones.",
+      "sub_topics": [
+        {
+          "key": "standard_form",
+          "name": "Forma estándar",
+          "short_description": "ax² + bx + c = 0.",
+          "sub_topics": [
+            {
+              "key": "identify_coefficients",
+              "name": "Identificación de coeficientes",
+              "short_description": "Coeficientes a, b, c.",
+              "example_tasks": [
+                "En la ecuación 2x² − 5x + 3 = 0, identifica a, b y c.",
+                "Determina a, b y c en la ecuación x² + 4x − 7 = 0.",
+                "Explica qué significa que a ≠ 0 en una ecuación cuadrática."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "factoring_quadratics",
+          "name": "Factorización de ecuaciones cuadráticas",
+          "short_description": "Transformación a un producto de binomios.",
+          "sub_topics": [
+            {
+              "key": "simple_factorization",
+              "name": "Factorización simple",
+              "short_description": "Casos donde c es pequeño.",
+              "example_tasks": [
+                "Factoriza x² − 5x + 6.",
+                "Resuelve por factorización: x² + x − 12 = 0.",
+                "Explica con tus palabras cómo encontrar dos números que sumen b y multipliquen c."
+              ]
+            },
+            {
+              "key": "perfect_square_trinomial",
+              "name": "Trinomio cuadrado perfecto",
+              "short_description": "Expresiones de la forma (x ± k)².",
+              "example_tasks": [
+                "Determina si x² + 6x + 9 es un trinomio cuadrado perfecto.",
+                "Factoriza: x² − 10x + 25.",
+                "Explica por qué (x − 4)² = x² − 8x + 16."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "quadratic_formula",
+          "name": "Fórmula general",
+          "short_description": "x = (-b ± √(b² - 4ac)) / 2a",
+          "example_tasks": [
+            "Resuelve 2x² − 3x − 2 = 0 usando la fórmula general.",
+            "Aplica la fórmula a x² + 4x + 1 = 0 y da las dos soluciones.",
+            "Explica cómo el discriminante determina el número de soluciones reales."
+          ]
+        },
+        {
+          "key": "quadratic_applications",
+          "name": "Aplicaciones",
+          "short_description": "Problemas de movimiento, área y economía.",
+          "example_tasks": [
+            "Un objeto es lanzado verticalmente con altura h(t) = −5t² + 20t. Determina cuándo alcanza su altura máxima.",
+            "Un terreno rectangular tiene área 48 m² y un lado mide (x + 2). Escribe y resuelve la ecuación para encontrar x.",
+            "Un ingreso se modela como G(x) = −x² + 8x − 12. Determina el máximo ingreso."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fuggvenyek",
+      "name": "Funciones",
+      "short_description": "Concepto de función, dominio, rango, representaciones gráficas y tipos básicos.",
+      "sub_topics": [
+        {
+          "key": "function_concept",
+          "name": "Concepto de función",
+          "short_description": "Relaciones donde cada entrada tiene una única salida.",
+          "sub_topics": [
+            {
+              "key": "domain_range",
+              "name": "Dominio y rango",
+              "short_description": "Conjuntos de valores permitidos.",
+              "example_tasks": [
+                "Determina el dominio de f(x) = 1/(x − 2).",
+                "Determina el rango aproximado de la función f(x) = x² para x entre −3 y 3.",
+                "Explica con tus palabras qué significa que una función asigne exactamente una salida por cada entrada."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "linear_functions",
+          "name": "Funciones lineales",
+          "short_description": "Funciones de la forma y = mx + b.",
+          "sub_topics": [
+            {
+              "key": "slope_intercept",
+              "name": "Pendiente e intersección",
+              "short_description": "Interpretación y cálculo.",
+              "example_tasks": [
+                "Determina la pendiente de la función y = 3x − 5.",
+                "Calcula la intersección con el eje y de y = −2x + 4.",
+                "Explica qué significa que la pendiente sea positiva, negativa o cero."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "quadratic_functions",
+          "name": "Funciones cuadráticas",
+          "short_description": "Parábolas y su interpretación gráfica.",
+          "sub_topics": [
+            {
+              "key": "quadratic_vertex",
+              "name": "Vértice de una parábola",
+              "short_description": "Punto de máximo o mínimo.",
+              "example_tasks": [
+                "Encuentra el vértice de la parábola y = x² − 4x + 1.",
+                "Determina si y = −2x² + 3x − 1 abre hacia arriba o hacia abajo.",
+                "Explica el significado del vértice en un problema de trayectoria."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "absolute_value_functions",
+          "name": "Funciones de valor absoluto",
+          "short_description": "Gráficas en forma de 'V'.",
+          "example_tasks": [
+            "Grafica y = |x| para valores de x entre −5 y 5.",
+            "Explica por qué y = |x − 2| se traslada a la derecha.",
+            "Calcula f(3) y f(−3) para f(x) = |x − 1|."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "geometriai_alapismeretek",
+      "name": "Geometría básica",
+      "short_description": "Puntos, rectas, planos, ángulos y propiedades fundamentales.",
+      "sub_topics": [
+        {
+          "key": "geometric_elements",
+          "name": "Elementos geométricos",
+          "short_description": "Punto, recta, segmento, rayo y plano.",
+          "sub_topics": [
+            {
+              "key": "basic_definitions",
+              "name": "Definiciones básicas",
+              "short_description": "Conceptos fundamentales.",
+              "example_tasks": [
+                "Da ejemplos reales de puntos, rectas y segmentos.",
+                "Dibuja una recta, un rayo y un segmento, y etiquétalos correctamente.",
+                "Explica en qué se diferencia un segmento de una recta."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "angles",
+          "name": "Ángulos",
+          "short_description": "Clasificación y medición.",
+          "sub_topics": [
+            {
+              "key": "angle_types",
+              "name": "Tipos de ángulos",
+              "short_description": "Agudo, recto, obtuso y llano.",
+              "example_tasks": [
+                "Clasifica ángulos de 30°, 90°, 140° y 180°.",
+                "Dibuja un ángulo obtuso y uno agudo.",
+                "Explica con ejemplos dónde aparecen ángulos rectos en la arquitectura."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "parallel_perpendicular",
+          "name": "Rectas paralelas y perpendiculares",
+          "short_description": "Relaciones comunes en geometría.",
+          "example_tasks": [
+            "Dibuja dos rectas paralelas y una transversal que forme ángulos alternos.",
+            "Explica qué significa que dos rectas sean perpendiculares.",
+            "Da ejemplos de rectas paralelas en una ciudad (calles, avenidas)."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "haromszogek",
+      "name": "Triángulos",
+      "short_description": "Clasificación, propiedades y relaciones angulares fundamentales.",
+      "sub_topics": [
+        {
+          "key": "triangle_types",
+          "name": "Tipos de triángulos",
+          "short_description": "Según sus lados y ángulos.",
+          "sub_topics": [
+            {
+              "key": "triangle_by_sides",
+              "name": "Por sus lados",
+              "short_description": "Equilátero, isósceles y escaleno.",
+              "example_tasks": [
+                "Clasifica los triángulos con lados 5–5–6, 3–4–5 y 7–7–7.",
+                "Dibuja un triángulo isósceles y marca sus lados iguales.",
+                "Explica cómo identificar un triángulo escaleno."
+              ]
+            },
+            {
+              "key": "triangle_by_angles",
+              "name": "Por sus ángulos",
+              "short_description": "Acutángulo, rectángulo y obtusángulo.",
+              "example_tasks": [
+                "Identifica si los ángulos 40°, 60° y 80° forman un triángulo acutángulo.",
+                "Da un ejemplo de triángulo rectángulo con medidas reales.",
+                "Explica por qué un triángulo no puede tener dos ángulos rectos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "triangle_properties",
+          "name": "Propiedades de los triángulos",
+          "short_description": "Suma de ángulos y desigualdad triangular.",
+          "sub_topics": [
+            {
+              "key": "angle_sum_property",
+              "name": "Suma de los ángulos interiores",
+              "short_description": "Los ángulos siempre suman 180°.",
+              "example_tasks": [
+                "Si un triángulo tiene ángulos de 30° y 70°, ¿cuánto mide el tercero?",
+                "Explica por qué los tres ángulos de un triángulo suman 180° usando una figura.",
+                "Dibuja un triángulo y verifica la suma con un transportador."
+              ]
+            },
+            {
+              "key": "triangle_inequality",
+              "name": "Desigualdad triangular",
+              "short_description": "La suma de dos lados es mayor que el tercero.",
+              "example_tasks": [
+                "Determina si los lados 2, 5 y 8 pueden formar un triángulo.",
+                "Verifica si 4, 6 y 9 cumplen la desigualdad triangular.",
+                "Explica por qué 3, 3 y 6 no pueden formar un triángulo."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sikidomok_quadrilateros",
+      "name": "Cuadriláteros",
+      "short_description": "Cuadrados, rectángulos, paralelogramos, rombos y trapecios: propiedades, lados y ángulos.",
+      "sub_topics": [
+        {
+          "key": "square",
+          "name": "Cuadrado",
+          "short_description": "Todos los lados iguales y ángulos rectos.",
+          "example_tasks": [
+            "Dibuja un cuadrado con lado de 5 cm y marca todos sus ángulos.",
+            "Explica por qué un cuadrado es un rectángulo y también un rombo.",
+            "Si el perímetro de un cuadrado es 36 cm, ¿cuánto mide cada lado?"
+          ]
+        },
+        {
+          "key": "rectangle",
+          "name": "Rectángulo",
+          "short_description": "Lados opuestos paralelos e iguales, ángulos rectos.",
+          "example_tasks": [
+            "Un rectángulo tiene lados de 8 cm y 3 cm. Calcula su perímetro.",
+            "Explica por qué todos los rectángulos tienen ángulos de 90°.",
+            "Dibuja un rectángulo y marca sus diagonales. ¿Qué observas?"
+          ]
+        },
+        {
+          "key": "parallelogram",
+          "name": "Paralelogramo",
+          "short_description": "Pares de lados opuestos paralelos.",
+          "example_tasks": [
+            "Explica con un dibujo por qué los lados opuestos de un paralelogramo son iguales.",
+            "Un paralelogramo tiene base 10 cm y lado 6 cm. Calcula el perímetro.",
+            "Dibuja un paralelogramo y observa la relación entre sus ángulos opuestos."
+          ]
+        },
+        {
+          "key": "rhombus",
+          "name": "Rombo",
+          "short_description": "Todos los lados iguales; diagonales perpendiculares.",
+          "example_tasks": [
+            "Dibuja un rombo y marca sus diagonales. ¿Qué relación tienen?",
+            "Si el lado de un rombo mide 7 cm, calcula su perímetro.",
+            "Explica con tus palabras por qué un rombo no necesariamente tiene ángulos rectos."
+          ]
+        },
+        {
+          "key": "trapezoid",
+          "name": "Trapecio",
+          "short_description": "Un par de lados paralelos.",
+          "example_tasks": [
+            "Dibuja un trapecio y marca sus bases.",
+            "Explica la diferencia entre un trapecio isósceles y uno escaleno.",
+            "Un trapecio tiene bases 6 cm y 10 cm y lados no paralelos de 4 cm y 5 cm. Calcula su perímetro."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sikidomok_terulete",
+      "name": "Áreas de figuras planas",
+      "short_description": "Fórmulas y aplicaciones del área en cuadriláteros y triángulos.",
+      "sub_topics": [
+        {
+          "key": "area_triangle",
+          "name": "Área del triángulo",
+          "short_description": "A = (base × altura) / 2",
+          "example_tasks": [
+            "Calcula el área de un triángulo con base 12 cm y altura 5 cm.",
+            "Un triángulo tiene área 24 cm² y base 8 cm. ¿Cuál es su altura?",
+            "Dibuja un triángulo y marca base y altura para justificar la fórmula."
+          ]
+        },
+        {
+          "key": "area_rectangle_square",
+          "name": "Área de rectángulos y cuadrados",
+          "short_description": "A = base × altura",
+          "example_tasks": [
+            "Calcula el área de un rectángulo de 7 cm por 3 cm.",
+            "Un cuadrado tiene área 64 cm². ¿Cuánto mide cada lado?",
+            "Explica cómo usar el área de un rectángulo para modelar problemas cotidianos."
+          ]
+        },
+        {
+          "key": "area_parallelogram",
+          "name": "Área del paralelogramo",
+          "short_description": "A = base × altura",
+          "example_tasks": [
+            "Calcula el área de un paralelogramo con base 10 cm y altura 6 cm.",
+            "Un paralelogramo tiene área 45 cm² y base 9 cm. ¿Cuál es su altura?",
+            "Explica por qué se usa la altura perpendicular, no el lado inclinado."
+          ]
+        },
+        {
+          "key": "area_trapezoid",
+          "name": "Área del trapecio",
+          "short_description": "A = (B + b) × h / 2",
+          "example_tasks": [
+            "Calcula el área de un trapecio con bases 8 cm y 12 cm, altura 5 cm.",
+            "Un trapecio tiene área 30 cm² y altura 3 cm. Las bases suman 20 cm. Verifica la fórmula.",
+            "Dibuja un trapecio y marca sus bases y altura."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "kor_koriv",
+      "name": "Círculo y arco",
+      "short_description": "Conceptos básicos del círculo: radio, diámetro, circunferencia, sector y arco.",
+      "sub_topics": [
+        {
+          "key": "circle_elements",
+          "name": "Elementos del círculo",
+          "short_description": "Radio, diámetro y centro.",
+          "example_tasks": [
+            "Dibuja un círculo y marca centro, radio y diámetro.",
+            "Si el radio es 7 cm, ¿cuánto mide el diámetro?",
+            "Explica por qué el diámetro siempre es el doble del radio."
+          ]
+        },
+        {
+          "key": "circumference",
+          "name": "Circunferencia",
+          "short_description": "Longitud de la circunferencia: C = 2πr.",
+          "example_tasks": [
+            "Calcula la circunferencia de un círculo con radio 6 cm.",
+            "Si la circunferencia es 31.4 cm, aproxima el radio.",
+            "Explica dónde aparece π en la fórmula de la circunferencia."
+          ]
+        },
+        {
+          "key": "arc_sector",
+          "name": "Arco y sector circular",
+          "short_description": "Partes del círculo determinadas por un ángulo central.",
+          "example_tasks": [
+            "Dibuja un círculo y marca un arco de 60°.",
+            "Explica la diferencia entre sector y arco en tus propias palabras.",
+            "En una pizza, un sector tiene ángulo central de 45°. ¿Qué fracción de la pizza representa?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "statisztika",
+      "name": "Estadística básica",
+      "short_description": "Recolección de datos, tablas, gráficos, media, mediana y moda.",
+      "sub_topics": [
+        {
+          "key": "data_collection",
+          "name": "Recolección y organización de datos",
+          "short_description": "Tablas de frecuencia y organización básica.",
+          "example_tasks": [
+            "Recoge datos sobre las edades de tu grupo y elabora una tabla de frecuencias.",
+            "Organiza los datos: 5, 7, 5, 8, 6, 7, 5 en una tabla de frecuencias.",
+            "Explica la diferencia entre datos brutos y tabla organizada."
+          ]
+        },
+        {
+          "key": "bar_and_line_graphs",
+          "name": "Gráficos de barras y líneas",
+          "short_description": "Representación visual de datos discretos o continuos.",
+          "example_tasks": [
+            "Representa en un gráfico de barras las calificaciones: 7, 8, 9, 8, 6, 9.",
+            "Dibuja un gráfico de líneas que muestre la temperatura de un día cada hora de 6 a 12.",
+            "Explica cuándo es preferible usar un gráfico de barras en lugar de uno de líneas."
+          ]
+        },
+        {
+          "key": "measures_of_central_tendency",
+          "name": "Medidas de tendencia central",
+          "short_description": "Media, mediana y moda.",
+          "example_tasks": [
+            "Calcula la media de: 4, 6, 10, 6, 8.",
+            "Determina la mediana del conjunto: 2, 3, 5, 7, 9.",
+            "Encuentra la moda en: 12, 15, 12, 18, 19, 12."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mertekegysegek_atvaltasok",
+      "name": "Unidades de medida y conversiones",
+      "short_description": "Longitud, masa, volumen, tiempo y conversiones dentro del sistema métrico.",
+      "sub_topics": [
+        {
+          "key": "length_units",
+          "name": "Unidades de longitud",
+          "short_description": "mm, cm, m, km.",
+          "example_tasks": [
+            "Convierte 5000 mm a metros.",
+            "Explica cuántos metros hay en 2.3 km.",
+            "En un mapa, la distancia entre dos ciudades es de 12 cm en la hoja. Si el mapa está a escala 1:100000, ¿cuál es la distancia real en km?"
+          ]
+        },
+        {
+          "key": "mass_units",
+          "name": "Unidades de masa",
+          "short_description": "g, kg.",
+          "example_tasks": [
+            "Convierte 3500 g a kg.",
+            "Explica por qué 1 kg = 1000 g con ejemplos cotidianos.",
+            "Un paquete pesa 2.4 kg. ¿Cuánto es esto en gramos?"
+          ]
+        },
+        {
+          "key": "volume_units",
+          "name": "Unidades de volumen",
+          "short_description": "mL, L.",
+          "example_tasks": [
+            "Convierte 3.5 L a mililitros.",
+            "Si una botella tiene 750 mL, ¿cuántos litros son?",
+            "Una receta requiere 0.8 L de agua. ¿A cuántos mililitros equivale?"
+          ]
+        },
+        {
+          "key": "time_units",
+          "name": "Unidades de tiempo",
+          "short_description": "s, min, h, días.",
+          "example_tasks": [
+            "Convierte 2 horas con 30 minutos a minutos.",
+            "Explica en cuántos segundos hay en 5 minutos.",
+            "Si una clase dura 50 minutos, ¿cuántas clases caben en 5 horas?"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "distance_speed_time",
+      "name": "Distancia · Velocidad · Tiempo (D–S–T)",
+      "short_description": "Relación fundamental entre movimiento uniforme y su representación.",
+      "sub_topics": [
+        {
+          "key": "dst_relationship",
+          "name": "Relación D = v · t",
+          "short_description": "Cálculo de cualquiera de las tres magnitudes.",
+          "sub_topics": [
+            {
+              "key": "solve_for_distance",
+              "name": "Resolver para distancia",
+              "short_description": "Distancia recorrida con velocidad constante.",
+              "example_tasks": [
+                "Un coche viaja a 60 km/h durante 2 horas. ¿Qué distancia recorre?",
+                "Una bicicleta avanza a 15 km/h por 40 minutos. Calcula la distancia recorrida.",
+                "Explica un ejemplo cotidiano donde se calcule distancia a partir de velocidad y tiempo."
+              ]
+            },
+            {
+              "key": "solve_for_speed",
+              "name": "Resolver para velocidad",
+              "short_description": "v = D / t.",
+              "example_tasks": [
+                "Un corredor recorre 10 km en 50 minutos. Calcula su velocidad en km/h.",
+                "Un tren viaja 180 km en 3 horas. ¿Cuál es su velocidad?",
+                "Explica cómo convertir velocidad de m/s a km/h."
+              ]
+            },
+            {
+              "key": "solve_for_time",
+              "name": "Resolver para tiempo",
+              "short_description": "t = D / v.",
+              "example_tasks": [
+                "Un auto viaja 150 km a 75 km/h. ¿Cuánto tiempo tarda?",
+                "Un autobús recorre 54 km a 18 km/h. ¿Cuántas horas viaja?",
+                "Explica cómo estimar tiempos de viaje usando velocidades promedio."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "basic_coordinate_geometry",
+      "name": "Geometría analítica básica",
+      "short_description": "Plano cartesiano, puntos, distancias y pendientes sencillas.",
+      "sub_topics": [
+        {
+          "key": "coordinate_plane",
+          "name": "Plano cartesiano",
+          "short_description": "Ejes x y y, cuadrantes e identificación de puntos.",
+          "sub_topics": [
+            {
+              "key": "plotting_points",
+              "name": "Ubicación de puntos",
+              "short_description": "Representar pares ordenados.",
+              "example_tasks": [
+                "Ubica los puntos A(3,2), B(−1,4) y C(0,−3) en el plano cartesiano.",
+                "Explica qué cuadrante ocupa el punto (−4, 5).",
+                "Dibuja tres puntos que estén en el eje x."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "distance_between_points",
+          "name": "Distancia entre dos puntos",
+          "short_description": "Uso de la fórmula de distancia.",
+          "example_tasks": [
+            "Calcula la distancia entre A(0,0) y B(3,4).",
+            "Determina la distancia entre (−2,5) y (4,5).",
+            "Explica por qué la fórmula de distancia deriva del Teorema de Pitágoras."
+          ]
+        },
+        {
+          "key": "slope_concept",
+          "name": "Concepto de pendiente",
+          "short_description": "Pendiente como razón de cambio.",
+          "example_tasks": [
+            "Calcula la pendiente entre los puntos (1,2) y (4,8).",
+            "Determina si la recta que pasa por (3,5) y (3,−2) es vertical.",
+            "Explica un ejemplo real donde la pendiente represente “inclinación”."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "meretarany_es_rajz",
+      "name": "Escalas y planos",
+      "short_description": "Interpretación de escalas en mapas, planos y dibujos técnicos.",
+      "sub_topics": [
+        {
+          "key": "scale_factor",
+          "name": "Factor de escala",
+          "short_description": "Relación entre medidas reales y representadas.",
+          "example_tasks": [
+            "Un mapa tiene escala 1:50000. ¿Qué distancia real representan 2 cm en el mapa?",
+            "En un plano arquitectónico, una pared mide 4 cm y la escala es 1:100. ¿Cuál es la medida real?",
+            "Explica con un ejemplo cómo se usa la escala en una maqueta escolar."
+          ]
+        },
+        {
+          "key": "map_reading",
+          "name": "Lectura de mapas",
+          "short_description": "Trayectorias, estimaciones y distancias.",
+          "example_tasks": [
+            "En un mapa, la distancia entre dos pueblos es de 7 cm y la escala es 1:200000. Calcula la distancia real.",
+            "Traza en un mapa una ruta de 3 km y explica cómo estimaste la longitud.",
+            "Explica por qué la escala afecta la precisión de las distancias."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "basic_spatial_geometry",
+      "name": "Geometría espacial básica",
+      "short_description": "Cuerpos geométricos, vistas, redes y volumen básico.",
+      "sub_topics": [
+        {
+          "key": "solid_figures",
+          "name": "Cuerpos geométricos",
+          "short_description": "Cubo, prisma, cilindro, pirámide.",
+          "sub_topics": [
+            {
+              "key": "solid_recognition",
+              "name": "Reconocimiento de sólidos",
+              "short_description": "Identificación de caras, aristas y vértices.",
+              "example_tasks": [
+                "Cuenta cuántas caras, aristas y vértices tiene un cubo.",
+                "Dibuja un prisma rectangular y marca sus elementos.",
+                "Explica la diferencia entre un prisma y una pirámide."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "volume_basic",
+          "name": "Volumen básico",
+          "short_description": "Volumen de cubos y prismas rectos.",
+          "example_tasks": [
+            "Calcula el volumen de un cubo de lado 5 cm.",
+            "Un prisma rectangular mide 4 × 3 × 10 cm. ¿Cuál es su volumen?",
+            "Explica un ejemplo de la vida real donde se usa volumen."
+          ]
+        },
+        {
+          "key": "nets_of_solids",
+          "name": "Desarrollo de cuerpos",
+          "short_description": "Redes planas de cubos y prismas.",
+          "example_tasks": [
+            "Dibuja la red de un cubo.",
+            "Identifica cuál de varias figuras planas puede plegarse en un prisma rectangular.",
+            "Explica por qué un desarrollo debe contener todas las caras del sólido."
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "key": "algebra_avanzada_1",
+      "name": "Álgebra Avanzada I",
+      "short_description": "Polinomios, operaciones avanzadas, factorización profunda y ecuaciones derivadas.",
+      "sub_topics": [
+        {
+          "key": "polynomial_structure",
+          "name": "Estructura de polinomios",
+          "short_description": "Grado, término líder, coeficientes y forma estándar.",
+          "sub_topics": [
+            {
+              "key": "identify_polynomial_components",
+              "name": "Componentes de un polinomio",
+              "short_description": "Coeficientes, términos y grado.",
+              "example_tasks": [
+                "Identifica grado, término principal y coeficientes del polinomio P(x) = 4x^5 − 3x^3 + 7x − 2.",
+                "Ordena el siguiente polinomio en forma estándar: 5 − 2x^4 + 3x − 7x^2.",
+                "Explica por qué el grado de un polinomio corresponde al exponente más alto con coeficiente no nulo."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "polynomial_operations",
+          "name": "Operaciones con polinomios",
+          "short_description": "Suma, resta, multiplicación y división entre polinomios.",
+          "sub_topics": [
+            {
+              "key": "polynomial_add_sub",
+              "name": "Suma y resta",
+              "short_description": "Combinación de términos semejantes.",
+              "example_tasks": [
+                "Simplifica: (3x^4 − 2x^2 + 5) + (−x^4 + 4x^2 − 3).",
+                "Resta: (7x^3 + 2x − 1) − (3x^3 − 4x + 5).",
+                "Da un ejemplo donde se sumen dos polinomios que representen cantidades físicas (como velocidad o distancia)."
+              ]
+            },
+            {
+              "key": "polynomial_multiplication",
+              "name": "Multiplicación de polinomios",
+              "short_description": "Distribución, FOIL y multiplicación por binomios.",
+              "example_tasks": [
+                "Multiplica (x + 3)(x − 5).",
+                "Calcula (2x − 1)(x^2 + 3x + 4).",
+                "Explica cómo aplicar correctamente el método FOIL en (a + b)(c + d)."
+              ]
+            },
+            {
+              "key": "polynomial_division",
+              "name": "División de polinomios",
+              "short_description": "División larga y división sintética.",
+              "example_tasks": [
+                "Divide x^3 − 5x + 4 entre (x − 1).",
+                "Usa división sintética para dividir 2x^3 + 3x^2 − x + 6 entre (x + 2).",
+                "Explica por qué la división de polinomios es útil en factorización."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "advanced_factorization",
+          "name": "Factorización avanzada",
+          "short_description": "Casos especiales, factorización por reglas y factorización por sustitución.",
+          "sub_topics": [
+            {
+              "key": "sum_difference_cubes",
+              "name": "Suma y diferencia de cubos",
+              "short_description": "a³ ± b³.",
+              "example_tasks": [
+                "Factoriza x^3 − 8.",
+                "Factoriza 27 + y^3.",
+                "Explica la estructura (a − b)(a² + ab + b²) usando un ejemplo numérico."
+              ]
+            },
+            {
+              "key": "grouping_factorization",
+              "name": "Factorización por agrupación",
+              "short_description": "Agrupación de términos en pares.",
+              "example_tasks": [
+                "Factoriza: x^3 + x^2 − x − 1.",
+                "Factoriza por agrupación: 3x^3 − 6x^2 + x − 2.",
+                "Explica cómo identificar una agrupación conveniente."
+              ]
+            },
+            {
+              "key": "quadratic_in_disguise",
+              "name": "Cuadrática disfrazada",
+              "short_description": "Polinomios que pueden verse como ax² + bx + c al aplicar sustituciones.",
+              "example_tasks": [
+                "Resuelve x^4 − 5x^2 + 4 = 0 usando sustitución u = x².",
+                "Factoriza x^6 − 2x^3 − 35 usando u = x³.",
+                "Explica por qué una ecuación de grado mayor puede volverse cuadrática mediante sustitución."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ecuaciones_sistemas_avanzados",
+      "name": "Ecuaciones y Sistemas Avanzados",
+      "short_description": "Ecuaciones racionales, radicales y sistemas de dos y tres ecuaciones.",
+      "sub_topics": [
+        {
+          "key": "rational_equations",
+          "name": "Ecuaciones racionales",
+          "short_description": "Ecuaciones con fracciones algebraicas.",
+          "sub_topics": [
+            {
+              "key": "clear_denominators",
+              "name": "Eliminación de denominadores",
+              "short_description": "Multiplicar por el MCM.",
+              "example_tasks": [
+                "Resuelve la ecuación (x/3) + (2/(x − 1)) = 1.",
+                "Resuelve: (2/(x + 2)) − (1/4) = 0.",
+                "Explica cómo evitar soluciones extraviadas en ecuaciones racionales."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "radical_equations",
+          "name": "Ecuaciones con radicales",
+          "short_description": "Ecuaciones que incluyen raíces cuadradas.",
+          "sub_topics": [
+            {
+              "key": "isolating_radical",
+              "name": "Aislar el radical",
+              "short_description": "Elevar al cuadrado ambos lados.",
+              "example_tasks": [
+                "Resuelve: √(x + 3) = x − 1.",
+                "Resuelve: √(2x − 1) + 3 = x.",
+                "Explica por qué deben verificarse todas las soluciones al final."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "systems_two_eq_two_var",
+          "name": "Sistemas de dos ecuaciones con dos incógnitas",
+          "short_description": "Sustitución, igualación y método gráfico.",
+          "sub_topics": [
+            {
+              "key": "substitution_method",
+              "name": "Método de sustitución",
+              "short_description": "Despeje y sustitución.",
+              "example_tasks": [
+                "Resuelve por sustitución: { x + y = 6 ; 2x − y = 3 }.",
+                "Un padre compra 3 refrescos y 2 aguas por 68 pesos. Una botella de agua cuesta 12 pesos. ¿Cuánto cuesta un refresco?",
+                "Resuelve: { 3x + y = 12 ; x − 2y = 4 }."
+              ]
+            },
+            {
+              "key": "elimination_method",
+              "name": "Método de eliminación",
+              "short_description": "Multiplicar ecuaciones para cancelar variables.",
+              "example_tasks": [
+                "Resuelve por eliminación: { 2x + 3y = 8 ; 4x − 3y = 4 }.",
+                "Resuelve { x + 2y = 11 ; 2x + 4y = 20 } y explica el tipo de solución.",
+                "Una empresa produce dos tipos de paquetes. Con dos ecuaciones sobre precio y cantidad, determina los costos unitarios."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "systems_three_eq_three_var",
+          "name": "Sistemas de tres ecuaciones con tres incógnitas",
+          "short_description": "Primer contacto: eliminación múltiple.",
+          "example_tasks": [
+            "Resuelve el sistema: { x + y + z = 6, 2x − y + z = 5, x + 3y − z = 4 }. (Paso a paso).",
+            "Explica cómo eliminar una variable usando dos ecuaciones antes de proceder.",
+            "Da un ejemplo real donde tres variables representen cantidades distintas (por ejemplo, tipos de boletos vendidos)."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "funciones_avanzadas_1",
+      "name": "Funciones Avanzadas I",
+      "short_description": "Profundización en funciones lineales, cuadráticas y polinomiales.",
+      "sub_topics": [
+        {
+          "key": "advanced_linear",
+          "name": "Funciones lineales avanzadas",
+          "short_description": "Interpretación profunda de pendiente e intersecciones.",
+          "sub_topics": [
+            {
+              "key": "rate_of_change",
+              "name": "Razón de cambio",
+              "short_description": "Pendiente como cambio constante.",
+              "example_tasks": [
+                "Una empresa cobra 50 pesos de base más 8 por kilómetro. Escribe la función y encuentra la pendiente.",
+                "Explica el significado de la pendiente en un problema de temperatura que cambia 2°C cada hora.",
+                "Determina cuándo dos funciones lineales tienen la misma pendiente pero diferentes intersecciones."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "advanced_quadratic",
+          "name": "Funciones cuadráticas avanzadas",
+          "short_description": "Vértice, forma canónica y transformaciones.",
+          "sub_topics": [
+            {
+              "key": "vertex_form",
+              "name": "Forma de vértice",
+              "short_description": "y = a(x − h)² + k.",
+              "example_tasks": [
+                "Convierte y = x² − 6x + 5 a forma de vértice.",
+                "Encuentra vértice, eje de simetría y dirección de apertura de y = −2(x − 3)² + 4.",
+                "Explica cómo la forma de vértice facilita hallar máximos y mínimos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "polynomial_functions",
+          "name": "Funciones polinomiales",
+          "short_description": "Comportamiento extremo, intersecciones y gráficos.",
+          "sub_topics": [
+            {
+              "key": "end_behavior",
+              "name": "Comportamiento al infinito",
+              "short_description": "Dominio, rango y tendencia.",
+              "example_tasks": [
+                "Describe el comportamiento de f(x) = 3x^4 − x^2 + 5 cuando x → ±∞.",
+                "Grafica aproximadamente una función cúbica que cambie de signo y explica los cortes con el eje x.",
+                "Explica cómo el grado afecta la forma general del gráfico."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "geometria_analitica_1",
+      "name": "Geometría Analítica I",
+      "short_description": "Rectas, pendientes, distancias, mediatrices y simetrías básicas.",
+      "sub_topics": [
+        {
+          "key": "line_equations",
+          "name": "Ecuaciones de la recta",
+          "short_description": "Formas pendiente–intersección, punto–pendiente y general.",
+          "sub_topics": [
+            {
+              "key": "slope_intercept_form",
+              "name": "Forma pendiente–intersección",
+              "short_description": "y = mx + b.",
+              "example_tasks": [
+                "Encuentra m y b para la recta que pasa por A(1,3) y B(4,9).",
+                "Expresa en forma y = mx + b la ecuación 3x − 2y + 6 = 0.",
+                "Da un ejemplo donde una recta tenga pendiente cero."
+              ]
+            },
+            {
+              "key": "point_slope_form",
+              "name": "Forma punto–pendiente",
+              "short_description": "y − y₁ = m(x − x₁).",
+              "example_tasks": [
+                "Escribe la ecuación de la recta con pendiente 5 que pasa por (2,−3).",
+                "Convierte una ecuación punto–pendiente a la forma general.",
+                "Explica cuándo es más útil usar la forma punto–pendiente."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "midpoint_mediatrix",
+          "name": "Punto medio y mediatriz",
+          "short_description": "Cálculo y uso geométrico.",
+          "sub_topics": [
+            {
+              "key": "midpoint_formula",
+              "name": "Fórmula del punto medio",
+              "short_description": "((x1+x2)/2 , (y1+y2)/2).",
+              "example_tasks": [
+                "Encuentra el punto medio entre (−2,5) y (6,1).",
+                "Explica cómo usar el punto medio para dividir un segmento en partes iguales.",
+                "Dibuja un segmento y su punto medio."
+              ]
+            },
+            {
+              "key": "perpendicular_bisector",
+              "name": "Mediatriz",
+              "short_description": "Recta perpendicular que pasa por el punto medio.",
+              "example_tasks": [
+                "Dibuja la mediatriz del segmento que une (0,0) y (4,4).",
+                "Explica por qué cualquier punto de la mediatriz es equidistante de los dos extremos.",
+                "Calcula la ecuación de la mediatriz del segmento entre (1,2) y (5,2)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "symmetry_reflection",
+          "name": "Simetrías en el plano",
+          "short_description": "Reflexiones en los ejes y en rectas simples.",
+          "example_tasks": [
+            "Refleja el punto (3,5) respecto al eje x.",
+            "Refleja (−2,1) respecto al eje y.",
+            "Explica cómo cambia la gráfica de una figura al reflejarla."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "trigonometria_avanzada_2",
+      "name": "Trigonometría Avanzada II",
+      "short_description": "Profundización en identidades trigonométricas, ángulos notables, ley de senos y cosenos.",
+      "sub_topics": [
+        {
+          "key": "trig_identities_extended",
+          "name": "Identidades trigonométricas ampliadas",
+          "short_description": "Uso combinado de identidades para simplificar expresiones.",
+          "sub_topics": [
+            {
+              "key": "pythagorean_and_quotient_ids",
+              "name": "Identidades pitagóricas y de cociente",
+              "short_description": "Variantes de sin²(x) + cos²(x) = 1 y definiciones de tan(x), cot(x).",
+              "example_tasks": [
+                "Usa las identidades pitagóricas para demostrar que 1 + tan²(x) = sec²(x).",
+                "Si cos(x) = 5/13 y x está en el primer cuadrante, calcula sin(x) y tan(x).",
+                "Simplifica la expresión tan(x) · cos(x) usando identidades básicas."
+              ]
+            },
+            {
+              "key": "even_odd_and_periodic_ids",
+              "name": "Identidades de paridad y periodicidad",
+              "short_description": "Funciones pares, impares y periodos.",
+              "example_tasks": [
+                "Demuestra con la circunferencia trigonométrica que sin(−x) = −sin(x) y cos(−x) = cos(x).",
+                "Explica por qué sin(x + 2π) = sin(x) y cos(x + 2π) = cos(x).",
+                "Determina si la función f(x) = sin(x) + cos(x) es par, impar o ninguna de las dos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "trig_special_angles",
+          "name": "Ángulos notables",
+          "short_description": "Valores trigonométricos de 0°, 30°, 45°, 60° y 90°.",
+          "sub_topics": [
+            {
+              "key": "exact_values_special_angles",
+              "name": "Valores exactos de ángulos especiales",
+              "short_description": "Uso de triángulos especiales 30–60–90 y 45–45–90.",
+              "example_tasks": [
+                "Escribe los valores exactos de sin(30°), cos(30°), sin(60°) y cos(60°).",
+                "Calcula sin(45°), cos(45°) y tan(45°) usando un triángulo isósceles rectángulo.",
+                "Explica cómo se pueden deducir los valores de sin(30°) y cos(60°) de un triángulo equilátero."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "law_of_sines",
+          "name": "Ley de senos",
+          "short_description": "Resolución de triángulos oblicuángulos con la ley de senos.",
+          "sub_topics": [
+            {
+              "key": "law_of_sines_basic",
+              "name": "Aplicación básica de la ley de senos",
+              "short_description": "Relación entre lados y senos de ángulos opuestos.",
+              "example_tasks": [
+                "En un triángulo, se conocen a = 8, A = 40° y B = 60°. Usa la ley de senos para encontrar el lado b.",
+                "Un triángulo tiene lados a = 10, b = 7 y ángulo A = 30°. Calcula el ángulo B aproximadamente.",
+                "Explica una situación de la vida real (por ejemplo, medición de distancias inaccesibles) que pueda modelarse con la ley de senos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "law_of_cosines",
+          "name": "Ley de cosenos",
+          "short_description": "Generalización del Teorema de Pitágoras para cualquier triángulo.",
+          "sub_topics": [
+            {
+              "key": "law_of_cosines_sides",
+              "name": "Cálculo de lados con ley de cosenos",
+              "short_description": "Uso cuando se conocen dos lados y el ángulo comprendido.",
+              "example_tasks": [
+                "En un triángulo, a = 7, b = 9 y el ángulo entre ellos es 60°. Calcula el lado c.",
+                "Un triángulo tiene lados 5, 6 y 8. Usa la ley de cosenos para hallar uno de sus ángulos.",
+                "Explica cómo la ley de cosenos se reduce al Teorema de Pitágoras cuando el ángulo es recto."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "funciones_exponenciales_logaritmicas",
+      "name": "Funciones exponenciales y logarítmicas",
+      "short_description": "Modelos de crecimiento y decaimiento, propiedades y ecuaciones con exponentes y logaritmos.",
+      "sub_topics": [
+        {
+          "key": "exponential_models",
+          "name": "Modelos exponenciales",
+          "short_description": "Crecimiento y decaimiento exponencial en contextos reales.",
+          "sub_topics": [
+            {
+              "key": "growth_decay_context",
+              "name": "Crecimiento y decaimiento en contexto",
+              "short_description": "Poblaciones, finanzas, desintegración aproximada.",
+              "example_tasks": [
+                "Modela la población de una ciudad que crece 3% anual con una función exponencial.",
+                "Un medicamento se reduce en el cuerpo a la mitad cada 6 horas. Escribe una expresión para la cantidad en función del tiempo.",
+                "Compara un modelo lineal y uno exponencial para describir el número de usuarios de una red social en sus primeros meses."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "logarithmic_functions",
+          "name": "Funciones logarítmicas",
+          "short_description": "Relación inversa con las exponenciales y propiedades.",
+          "sub_topics": [
+            {
+              "key": "log_properties",
+              "name": "Propiedades de los logaritmos",
+              "short_description": "log(ab) = log a + log b, log(a/b) = log a − log b, log(a^k) = k log a.",
+              "example_tasks": [
+                "Simplifica usando propiedades de logaritmos: log(5) + log(4).",
+                "Escribe 3 log(2) como log de una sola potencia.",
+                "Explica cómo las propiedades de logaritmos facilitan el cálculo de productos grandes."
+              ]
+            },
+            {
+              "key": "log_exponential_inverse",
+              "name": "Relación inversa exp–log",
+              "short_description": "log_a(a^x) = x y a^(log_a x) = x.",
+              "example_tasks": [
+                "Evalúa log_3(3^5).",
+                "Resuelve la ecuación 2^x = 7 usando logaritmos.",
+                "Explica con tus palabras por qué log_a(a^x) = x."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "exp_log_equations_advanced",
+          "name": "Ecuaciones exponenciales y logarítmicas avanzadas",
+          "short_description": "Uso combinado de exponentes y logaritmos.",
+          "sub_topics": [
+            {
+              "key": "exponential_equations",
+              "name": "Ecuaciones exponenciales",
+              "short_description": "Igualación de bases, logaritmos y cambios de base.",
+              "example_tasks": [
+                "Resuelve 5^(2x−1) = 125.",
+                "Resuelve 2^x = 10 usando logaritmos naturales o decimales.",
+                "Explica cómo el logaritmo permite 'bajar' exponentes para resolver ecuaciones."
+              ]
+            },
+            {
+              "key": "logarithmic_equations",
+              "name": "Ecuaciones logarítmicas",
+              "short_description": "Ecuaciones con logaritmos en ambos lados.",
+              "example_tasks": [
+                "Resuelve log(x − 1) = 1.",
+                "Resuelve log_2(x) + log_2(x − 2) = 3.",
+                "Explica por qué es necesario verificar que las soluciones hagan positivos los argumentos de los logaritmos."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "calculo_diferencial_1",
+      "name": "Cálculo Diferencial I",
+      "short_description": "Límites, continuidad y derivadas de funciones elementales, con aplicaciones básicas.",
+      "sub_topics": [
+        {
+          "key": "limits_intro",
+          "name": "Introducción a límites",
+          "short_description": "Límites de funciones polinomiales y racionales simples.",
+          "sub_topics": [
+            {
+              "key": "limit_polynomials",
+              "name": "Límites de polinomios",
+              "short_description": "Uso de sustitución directa.",
+              "example_tasks": [
+                "Calcula lim_{x→2} (3x^2 − x + 1).",
+                "Calcula lim_{x→−1} (x^3 + 2x^2 − x).",
+                "Explica por qué el límite de un polinomio en un punto se obtiene por sustitución directa."
+              ]
+            },
+            {
+              "key": "limit_rationals",
+              "name": "Límites de funciones racionales",
+              "short_description": "Simplificación algebraica en puntos problemáticos.",
+              "example_tasks": [
+                "Calcula lim_{x→1} (x^2 − 1)/(x − 1).",
+                "Calcula lim_{x→3} (x^2 − 9)/(x − 3).",
+                "Explica qué significa un “hueco” en la gráfica de una función racional."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "continuity_concept",
+          "name": "Concepto de continuidad",
+          "short_description": "Funciones continuas y discontinuidades simples.",
+          "sub_topics": [
+            {
+              "key": "continuous_poly",
+              "name": "Continuidad de polinomios",
+              "short_description": "Polinomios y racionales con denominador no nulo.",
+              "example_tasks": [
+                "Explica por qué una función polinómica es continua en todos los reales.",
+                "Da un ejemplo de una función racional que no sea continua en cierto punto y explica por qué.",
+                "Dibuja una función con una discontinuidad de salto y describe su comportamiento."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "derivatives_basic_rules",
+          "name": "Derivadas: reglas básicas",
+          "short_description": "Derivada de potencias, sumas, restas y constantes por función.",
+          "sub_topics": [
+            {
+              "key": "power_rule",
+              "name": "Regla de la potencia",
+              "short_description": "Derivada de x^n.",
+              "example_tasks": [
+                "Calcula la derivada de f(x) = x^5 − 3x^2 + 7.",
+                "Encuentra f'(x) para f(x) = 4x^3 − x + 9.",
+                "Explica la regla general para derivar x^n con n entero positivo."
+              ]
+            },
+            {
+              "key": "sum_difference_rule",
+              "name": "Regla de suma y diferencia",
+              "short_description": "Derivación término a término.",
+              "example_tasks": [
+                "Deriva g(x) = 3x^4 − 2x^2 + x − 5.",
+                "Calcula la derivada de h(x) = 7 − 2x + x^3 − x^5.",
+                "Explica por qué la derivada de una suma es la suma de las derivadas."
+              ]
+            },
+            {
+              "key": "constant_multiple_rule",
+              "name": "Regla del factor constante",
+              "short_description": "k · f(x) → k · f'(x).",
+              "example_tasks": [
+                "Calcula la derivada de f(x) = 7x^3.",
+                "Deriva g(x) = −5x^4 + 2x.",
+                "Explica con un ejemplo numérico cómo se aplica la regla del factor constante."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "derivative_applications_basic",
+          "name": "Aplicaciones básicas de la derivada",
+          "short_description": "Crecimiento, decrecimiento y máximos/mínimos sencillos.",
+          "sub_topics": [
+            {
+              "key": "increasing_decreasing_crit_points",
+              "name": "Creciente, decreciente y puntos críticos",
+              "short_description": "Uso del signo de f'(x).",
+              "example_tasks": [
+                "Dada f(x) = x^2 − 4x + 3, encuentra los intervalos donde es creciente y decreciente.",
+                "Calcula los puntos críticos de g(x) = −x^2 + 6x − 5 y clasifícalos como máximo o mínimo.",
+                "Explica cómo el signo de la derivada indica si la función sube o baja en un intervalo."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "probabilidad_estadistica_2",
+      "name": "Probabilidad y Estadística II",
+      "short_description": "Probabilidad compuesta, condicional, conteo avanzado e interpretación de datos.",
+      "sub_topics": [
+        {
+          "key": "advanced_counting",
+          "name": "Conteo avanzado",
+          "short_description": "Permutaciones, combinaciones y principio multiplicativo generalizado.",
+          "sub_topics": [
+            {
+              "key": "permutations_with_n",
+              "name": "Permutaciones de n elementos",
+              "short_description": "P(n) = n!",
+              "example_tasks": [
+                "¿Cuántas maneras hay de ordenar 6 libros distintos en un estante?",
+                "Calcula el número de permutaciones de 8 alumnos en una fila.",
+                "Explica por qué P(n) = n! cuenta el número de ordenamientos posibles."
+              ]
+            },
+            {
+              "key": "combinations_basic",
+              "name": "Combinaciones",
+              "short_description": "Elección de subconjuntos sin considerar el orden.",
+              "example_tasks": [
+                "¿Cuántos equipos de 3 estudiantes se pueden formar a partir de 7 alumnos?",
+                "En un grupo hay 10 personas. ¿De cuántas formas se pueden elegir 4 para un comité?",
+                "Explica la diferencia entre permutaciones y combinaciones con un ejemplo de concursos o equipos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "compound_and_conditional_prob",
+          "name": "Probabilidad compuesta y condicional",
+          "short_description": "Eventos independientes y dependientes, P(A ∩ B), P(A|B).",
+          "sub_topics": [
+            {
+              "key": "independent_events",
+              "name": "Eventos independientes",
+              "short_description": "P(A ∩ B) = P(A)·P(B).",
+              "example_tasks": [
+                "Se lanza una moneda y se tira un dado. ¿Cuál es la probabilidad de obtener águila y un número par?",
+                "Si la probabilidad de aprobar matemáticas es 0.7 y la de aprobar física es 0.6, asumiendo independencia, ¿cuál es la probabilidad de aprobar ambas?",
+                "Explica un ejemplo cotidiano de eventos aproximadamente independientes."
+              ]
+            },
+            {
+              "key": "conditional_probability",
+              "name": "Probabilidad condicional",
+              "short_description": "Interpretación de P(A|B) en tablas de frecuencia.",
+              "example_tasks": [
+                "En una escuela, 40% de estudiantes son mujeres. De ellas, 30% practica voleibol. ¿Cuál es la probabilidad de que un estudiante sea mujer y practique voleibol?",
+                "Con la tabla anterior, calcula la probabilidad de que un estudiante practique voleibol dado que es mujer.",
+                "Explica con tus palabras qué significa 'probabilidad condicional' usando un ejemplo médico (pruebas de diagnóstico)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "data_analysis_inference",
+          "name": "Análisis e interpretación de datos",
+          "short_description": "Distribuciones, gráficas y conclusiones a partir de datos.",
+          "sub_topics": [
+            {
+              "key": "boxplots_and_spread",
+              "name": "Diagramas de caja y dispersión",
+              "short_description": "Mediana, cuartiles y rango intercuartílico.",
+              "example_tasks": [
+                "Construye un diagrama de caja para un conjunto de datos de calificaciones y marca mediana y cuartiles.",
+                "Explica qué significa que un dato sea un valor atípico (outlier) en un diagrama de caja.",
+                "Compara dos diagramas de caja y describe cuál grupo tiene mayor dispersión."
+              ]
+            },
+            {
+              "key": "correlation_concepts",
+              "name": "Correlación y relación entre variables",
+              "short_description": "Correlación positiva, negativa y nula.",
+              "example_tasks": [
+                "Da un ejemplo de dos variables con correlación positiva (por ejemplo, horas de estudio y calificación).",
+                "Da un ejemplo de dos variables con correlación negativa (por ejemplo, precio y cantidad vendida en algunos contextos).",
+                "Explica por qué correlación no implica causalidad usando un ejemplo absurdo pero ilustrativo."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "polinomios_avanzados_2",
+      "name": "Polinomios Avanzados II",
+      "short_description": "Teorema del resto, teorema del factor, raíces racionales y análisis de signos.",
+      "sub_topics": [
+        {
+          "key": "remainder_theorem",
+          "name": "Teorema del resto",
+          "short_description": "P(c) es el residuo de dividir P(x) entre (x − c).",
+          "sub_topics": [
+            {
+              "key": "remainder_evaluation",
+              "name": "Evaluación del resto por sustitución",
+              "short_description": "Uso directo de P(c).",
+              "example_tasks": [
+                "Calcula el resto de dividir P(x) = 3x^3 − 5x + 2 entre (x − 2) usando el teorema del resto.",
+                "Evalúa P(−1) para el polinomio P(x) = x^4 − 2x^2 + x − 3.",
+                "Explica por qué sustituir x = c en un polinomio da como resultado el residuo."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "factor_theorem",
+          "name": "Teorema del factor",
+          "short_description": "(x − c) es factor de P(x) si P(c) = 0.",
+          "sub_topics": [
+            {
+              "key": "detecting_factors",
+              "name": "Detección de factores",
+              "short_description": "Identificar raíces y factores lineales.",
+              "example_tasks": [
+                "Comprueba si (x − 3) es factor de P(x) = x^3 − 7x + 6.",
+                "Determina una raíz de P(x) = x^3 − 4x^2 − 7x + 10 aplicando el teorema del factor.",
+                "Si P(5) = 0, ¿qué significa en términos de factorización?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "rational_root_theorem",
+          "name": "Teorema de raíces racionales",
+          "short_description": "Posibles raíces racionales ±(factores de c)/(factores de a).",
+          "sub_topics": [
+            {
+              "key": "list_rational_roots",
+              "name": "Listar raíces racionales posibles",
+              "short_description": "Identificación de candidatos.",
+              "example_tasks": [
+                "Enumera todas las posibles raíces racionales de P(x) = 2x^3 − 3x^2 − 8.",
+                "Usa el teorema de raíces racionales para localizar una raíz real de P(x) = x^3 − 5x + 6.",
+                "Explica cómo reducir la lista de candidatos usando cambios de signo en la gráfica."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "sign_analysis",
+          "name": "Análisis de signos",
+          "short_description": "Cambios de signo en polinomios, intervalos positivos y negativos.",
+          "example_tasks": [
+            "Determina los intervalos donde f(x) = (x − 1)(x + 2)(x − 4) es positiva.",
+            "Explica cómo identificar dónde un polinomio cruza el eje x.",
+            "Dibuja un bosquejo de f(x) = −(x − 3)(x + 1)^2 y determina en qué intervalos es negativa."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "funciones_racionales_avanzadas",
+      "name": "Funciones Racionales Avanzadas",
+      "short_description": "Asíntotas, discontinuidades, simplificación y análisis del comportamiento.",
+      "sub_topics": [
+        {
+          "key": "vertical_asymptotes",
+          "name": "Asíntotas verticales",
+          "short_description": "Puntos donde el denominador se hace 0.",
+          "sub_topics": [
+            {
+              "key": "identify_vertical_asymptotes",
+              "name": "Identificar asíntotas verticales",
+              "short_description": "Resolver denominador = 0.",
+              "example_tasks": [
+                "Encuentra las asíntotas verticales de f(x) = 1/(x − 3).",
+                "Determina las asíntotas verticales de f(x) = (2x)/(x^2 − 9).",
+                "Explica por qué los valores que anulan el denominador generan asíntotas o huecos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "horizontal_asymptotes",
+          "name": "Asíntotas horizontales",
+          "short_description": "Comparación de grados del numerador y denominador.",
+          "sub_topics": [
+            {
+              "key": "degree_comparison",
+              "name": "Comparación de grados",
+              "short_description": "Reglas para hallar asíntotas horizontales.",
+              "example_tasks": [
+                "Determina la asíntota horizontal de f(x) = (3x^2 + 1)/(x^2 − 7).",
+                "Encuentra la asíntota horizontal de f(x) = (5x)/(x^2 + 1).",
+                "Explica: ¿qué ocurre si el grado del numerador es menor que el del denominador?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "oblique_asymptotes",
+          "name": "Asíntotas oblicuas",
+          "short_description": "Surgen cuando el grado del numerador es uno mayor.",
+          "sub_topics": [
+            {
+              "key": "polynomial_division_slant",
+              "name": "División para obtener la asíntota",
+              "short_description": "Dividir polinomios para hallar la línea oblicua.",
+              "example_tasks": [
+                "Encuentra la asíntota oblicua de f(x) = (x^2 + 3x − 5)/(x − 1).",
+                "Determina la asíntota oblicua de f(x) = (2x^2 − 7)/(x + 2).",
+                "Explica cuándo una función racional tiene asíntota oblicua."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "rational_holes",
+          "name": "Huecos en funciones racionales",
+          "short_description": "Simplificación de factores comunes.",
+          "example_tasks": [
+            "Identifica si f(x) = (x^2 − 1)/(x − 1) tiene un hueco y en qué punto.",
+            "Explica la diferencia entre una asíntota vertical y un hueco.",
+            "Simplifica (x^2 − 4)/(x − 2) y describe la discontinuidad resultante."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "funciones_piecewise",
+      "name": "Funciones definidas por tramos",
+      "short_description": "Funciones con diferentes reglas según intervalos del dominio.",
+      "sub_topics": [
+        {
+          "key": "piecewise_definition",
+          "name": "Definición por tramos",
+          "short_description": "Interpretar descripciones a trozos y escribirlas formalmente.",
+          "sub_topics": [
+            {
+              "key": "Reading_piecewise",
+              "name": "Lectura de funciones por tramos",
+              "short_description": "Identificar qué regla aplica en cada intervalo.",
+              "example_tasks": [
+                "Interpreta la función: f(x)= {x+2 si x<0; x^2 si x≥0}. Evalúa f(−3), f(0), f(2).",
+                "Dibuja la gráfica de f(x)= {1 si x≤−1; x+1 si −1<x<2; 5 si x≥2}.",
+                "Explica con un ejemplo de la vida real una función que cambie regla según condiciones (ej. tarifas de agua)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "piecewise_continuity",
+          "name": "Continuidad de funciones por tramos",
+          "short_description": "Revisión de límites laterales y continuidad en puntos frontera.",
+          "example_tasks": [
+            "Determina si la función f(x)= {2x si x<1; 3 si x≥1} es continua en x=1.",
+            "Calcula los límites laterales de la función g(x)= {x^2 si x≤2; 4x−4 si x>2}.",
+            "Explica cómo garantizar continuidad al pegar dos funciones."
+          ]
+        },
+        {
+          "key": "piecewise_modeling",
+          "name": "Modelación con funciones por tramos",
+          "short_description": "Problemas reales que requieren diferentes reglas en distintos intervalos.",
+          "example_tasks": [
+            "Modela el costo de estacionamiento: $10 la primera hora, $5 cada hora extra.",
+            "Escribe una función por tramos para la velocidad de un coche que acelera linealmente y luego mantiene velocidad constante.",
+            "Modela una tarifa de electricidad basada en consumo en bloques (0–50, 51–100, 100+)."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "funciones_inversas",
+      "name": "Funciones inversas",
+      "short_description": "Criterios de invertibilidad, pruebas de inyección, reflexión y construcción de la inversa.",
+      "sub_topics": [
+        {
+          "key": "inverse_concept",
+          "name": "Concepto de función inversa",
+          "short_description": "Relación que deshace la función original.",
+          "sub_topics": [
+            {
+              "key": "horizontal_line_test",
+              "name": "Prueba de la línea horizontal",
+              "short_description": "Determinar si una función es inyectiva.",
+              "example_tasks": [
+                "Explica por qué una función que no pasa la prueba de la línea horizontal no tiene inversa.",
+                "Dibuja una función que sí es invertible y una que no.",
+                "Determina si y = x² es invertible en ℝ. ¿Qué dominio restringido la vuelve invertible?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "inverse_construction",
+          "name": "Construcción de la inversa",
+          "short_description": "Intercambio de variables y resolución para y.",
+          "sub_topics": [
+            {
+              "key": "inverse_linear",
+              "name": "Inversa de funciones lineales",
+              "short_description": "Despejar x en y = mx + b.",
+              "example_tasks": [
+                "Encuentra la inversa de f(x) = 3x − 5.",
+                "Determina la inversa de g(x) = −2x + 7.",
+                "Explica qué significa gráficamente reflejar una función respecto a la recta y = x."
+              ]
+            },
+            {
+              "key": "inverse_exponential",
+              "name": "Inversas exponenciales y logarítmicas",
+              "short_description": "Relación entre e^x y ln(x).",
+              "example_tasks": [
+                "Halla la inversa de f(x) = 2e^(x).",
+                "Encuentra la inversa de f(x) = ln(x + 3).",
+                "Explica por qué solo funciones estrictamente crecientes o decrecientes poseen inversa."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "trigonometria_avanzada_3",
+      "name": "Trigonometría Avanzada III",
+      "short_description": "Identidades de ángulos suma/diferencia, doble, mitad y transformaciones producto–suma.",
+      "sub_topics": [
+        {
+          "key": "sum_and_difference",
+          "name": "Identidades de suma y diferencia",
+          "short_description": "sin(a±b), cos(a±b), tan(a±b).",
+          "sub_topics": [
+            {
+              "key": "sin_cos_sum_diff",
+              "name": "Fórmulas básicas",
+              "short_description": "Aplicaciones de sin(a±b) y cos(a±b).",
+              "example_tasks": [
+                "Calcula sin(75°) usando sin(45°+30°).",
+                "Explica cómo usar cos(a−b) para calcular cos(15°).",
+                "Demuestra que sin(a−b)=sin(a)cos(b)−cos(a)sin(b)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "double_angle",
+          "name": "Ángulos dobles",
+          "short_description": "sin(2x), cos(2x), tan(2x).",
+          "sub_topics": [
+            {
+              "key": "double_angle_formulas",
+              "name": "Fórmulas de ángulo doble",
+              "short_description": "Identidades estándar.",
+              "example_tasks": [
+                "Calcula sin(2·30°).",
+                "Usa cos(2x)=1−2sin²(x) para determinar cos(2x) si sin(x)=3/5.",
+                "Demuestra que tan(2x)=2tan(x)/(1−tan²(x))."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "half_angle",
+          "name": "Ángulos mitad",
+          "short_description": "Fórmulas raíz-cuadrada.",
+          "sub_topics": [
+            {
+              "key": "half_angle_formulas",
+              "name": "Fórmulas de ángulo mitad",
+              "short_description": "sin(x/2), cos(x/2).",
+              "example_tasks": [
+                "Calcula cos(22.5°) usando la fórmula de mitad.",
+                "Determina sin(θ/2) si cos(θ)=−1/2 y θ está en el tercer cuadrante.",
+                "Explica por qué las fórmulas de ángulo mitad involucran raíces."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "product_to_sum",
+          "name": "Transformaciones producto–suma",
+          "short_description": "Pasar de productos a sumas y viceversa.",
+          "example_tasks": [
+            "Transforma sin(a)cos(b) en suma de senos.",
+            "Convierte sin(a)+sin(b) en producto de senos y cosenos.",
+            "Explica por qué estas identidades son útiles en análisis de señales (música, ondas)."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "conicas_completas",
+      "name": "Cónicas completas",
+      "short_description": "Parábola, elipse e hipérbola: ecuaciones, elementos, gráficas y aplicaciones.",
+      "sub_topics": [
+        {
+          "key": "parabola",
+          "name": "Parábola",
+          "short_description": "Definición por foco y directriz, forma estándar y canónica.",
+          "sub_topics": [
+            {
+              "key": "parabola_standard",
+              "name": "Forma estándar",
+              "short_description": "y = ax² + bx + c.",
+              "example_tasks": [
+                "Determina el vértice de y = 2x² − 8x + 5.",
+                "Dibuja la parábola y = −x² + 4x e identifica ejes y dirección.",
+                "Explica cómo completar el cuadrado para obtener una forma útil para graficar."
+              ]
+            },
+            {
+              "key": "parabola_vertex_form",
+              "name": "Forma de vértice",
+              "short_description": "y = a(x − h)² + k.",
+              "example_tasks": [
+                "Convierte y = x² + 6x − 1 a forma de vértice.",
+                "Encuentra h y k en y = −3(x + 2)² + 7.",
+                "Explica por qué la forma vértice facilita identificar máximos y mínimos."
+              ]
+            },
+            {
+              "key": "parabola_focus_directrix",
+              "name": "Foco y directriz",
+              "short_description": "Distancia equidistante foco–recta.",
+              "example_tasks": [
+                "Halla el foco y la directriz de y = (1/4)x².",
+                "Encuentra el parámetro p en y = (1/(8p))x² si el foco está en (0,p).",
+                "Explica cómo los reflectores parabólicos usan esta propiedad."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ellipse",
+          "name": "Elipse",
+          "short_description": "Forma estándar, focos, ejes y excentricidad.",
+          "sub_topics": [
+            {
+              "key": "ellipse_standard",
+              "name": "Forma estándar horizontal/vertical",
+              "short_description": "(x−h)²/a² + (y−k)²/b² = 1.",
+              "example_tasks": [
+                "Identifica a, b y los focos de (x²/25) + (y²/9) = 1.",
+                "Determina el centro y los ejes en ((x−2)²/16) + ((y+1)²/4)=1.",
+                "Explica cómo distinguir si la elipse es horizontal o vertical."
+              ]
+            },
+            {
+              "key": "ellipse_foci",
+              "name": "Cálculo de focos",
+              "short_description": "c² = a² − b².",
+              "example_tasks": [
+                "Encuentra los focos de (x²/36)+(y²/16)=1.",
+                "Calcula la excentricidad e si a=10 y b=8.",
+                "Explica el significado geométrico de la excentricidad en elipse."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hyperbola",
+          "name": "Hipérbola",
+          "short_description": "Asíntotas, focos y forma estándar.",
+          "sub_topics": [
+            {
+              "key": "hyperbola_standard",
+              "name": "Forma estándar",
+              "short_description": "(x−h)²/a² − (y−k)²/b² = 1.",
+              "example_tasks": [
+                "Identifica centro y asíntotas de (x²/9) − (y²/4)=1.",
+                "Dibuja la hipérbola con ecuación ((x−1)²/16) − ((y+2)²/9)=1.",
+                "Explica por qué la hipérbola tiene dos ramas."
+              ]
+            },
+            {
+              "key": "hyperbola_foci",
+              "name": "Focos y excentricidad",
+              "short_description": "c² = a² + b².",
+              "example_tasks": [
+                "Encuentra los focos de (x²/25) − (y²/9)=1.",
+                "Calcula la excentricidad e de una hipérbola con a=5, b=4.",
+                "Explica qué relación guarda la hipérbola con los sistemas de navegación GPS."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "derivadas_avanzadas",
+      "name": "Derivadas avanzadas",
+      "short_description": "Reglas de producto, cociente, cadena y derivadas de funciones trigonométricas, exponenciales y logarítmicas.",
+      "sub_topics": [
+        {
+          "key": "product_rule",
+          "name": "Regla del producto",
+          "short_description": "(fg)' = f'g + fg'",
+          "example_tasks": [
+            "Calcula la derivada de f(x) = (x^2 + 1)(3x − 4).",
+            "Si f(x) = x^3 y g(x) = sin(x), calcula (fg)'.",
+            "Explica por qué NO se puede derivar un producto derivando cada factor por separado."
+          ]
+        },
+        {
+          "key": "quotient_rule",
+          "name": "Regla del cociente",
+          "short_description": "(f/g)' = (f'g − fg') / g²",
+          "example_tasks": [
+            "Deriva h(x) = (3x^2 − 1)/(x + 2).",
+            "Calcula la derivada de f(x) = (x)/(2x − 5).",
+            "Explica por qué la regla del cociente requiere dividir entre g(x)^2."
+          ]
+        },
+        {
+          "key": "chain_rule",
+          "name": "Regla de la cadena",
+          "short_description": "Derivación de funciones compuestas.",
+          "example_tasks": [
+            "Deriva f(x) = (5x − 3)^4.",
+            "Encuentra la derivada de y = e^(2x^3 − x).",
+            "Explica cómo identificar correctamente la función externa e interna."
+          ]
+        },
+        {
+          "key": "trig_derivatives",
+          "name": "Derivadas trigonométricas",
+          "short_description": "sin, cos, tan y cot, con combinaciones avanzadas.",
+          "example_tasks": [
+            "Deriva f(x) = sin(3x).",
+            "Calcula (d/dx)[x^2 cos(x)].",
+            "Si y = tan(x)/(x^2), deriva usando producto + cociente."
+          ]
+        },
+        {
+          "key": "exp_log_derivatives",
+          "name": "Derivadas exponenciales y logarítmicas",
+          "short_description": "e^x, a^x, ln(x) y log_a(x).",
+          "example_tasks": [
+            "Deriva f(x) = e^(5x).",
+            "Deriva g(x) = ln(x^2 + 1).",
+            "Explica por qué la derivada de a^x es a^x ln(a)."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "aplicaciones_derivada_2",
+      "name": "Aplicaciones de la derivada II",
+      "short_description": "Optimización, movimiento, concavidad, inflexión y análisis gráfico avanzado.",
+      "sub_topics": [
+        {
+          "key": "max_min_optimization",
+          "name": "Optimización y extremos absolutos",
+          "short_description": "Usos reales de máximos y mínimos.",
+          "example_tasks": [
+            "Una cerca rectangular debe tener perímetro fijo de 40 m. ¿Qué dimensiones maximizan el área?",
+            "Una lata cilíndrica debe tener 500 cm³ de volumen. ¿Qué relación entre radio y altura minimiza el material?",
+            "Explica una situación de economía donde se usa maximización con derivadas."
+          ]
+        },
+        {
+          "key": "motion_calculus",
+          "name": "Movimiento rectilíneo con derivadas",
+          "short_description": "Posición, velocidad y aceleración.",
+          "example_tasks": [
+            "Si s(t)=3t^3 − 2t^2 + t, calcula velocidad y aceleración.",
+            "Determina cuándo un objeto cambia de dirección analizando v(t).",
+            "Explica qué significa que la aceleración sea negativa."
+          ]
+        },
+        {
+          "key": "concavity_inflexion",
+          "name": "Concavidad y puntos de inflexión",
+          "short_description": "Segunda derivada y comportamiento de la curva.",
+          "example_tasks": [
+            "Determina concavidad e inflexión para f(x)=x^3 − 6x.",
+            "Explica por qué un punto donde f''(x)=0 no siempre es inflexión.",
+            "Identifica visualmente puntos de inflexión en una gráfica compleja."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "integrales_1",
+      "name": "Integrales I — Introducción",
+      "short_description": "Antiderivadas, área bajo la curva y reglas básicas.",
+      "sub_topics": [
+        {
+          "key": "antiderivatives_power_rule",
+          "name": "Antiderivadas por regla de potencia",
+          "short_description": "∫x^n dx = x^(n+1)/(n+1) + C",
+          "example_tasks": [
+            "Calcula ∫ (3x^2 − 4x + 7) dx.",
+            "Encuentra una función cuya derivada sea f'(x) = x^5 − 6x.",
+            "Explica por qué al integrar se suma 1 al exponente."
+          ]
+        },
+        {
+          "key": "basic_integrals",
+          "name": "Integrales básicas",
+          "short_description": "Funciones constantes, exponenciales y trigonométricas simples.",
+          "example_tasks": [
+            "Calcula ∫ e^x dx.",
+            "Encuentra ∫ cos(x) dx.",
+            "Determina ∫ 5 dx e interpreta el resultado geométricamente."
+          ]
+        },
+        {
+          "key": "area_under_curve",
+          "name": "Área bajo la curva",
+          "short_description": "Interpretación de integrales definidas.",
+          "example_tasks": [
+            "Calcula el área bajo f(x)=x desde x=0 hasta x=3.",
+            "Determina ∫_1^4 (2x−1) dx.",
+            "Explica la idea de aproximación usando rectángulos (sumas de Riemann)."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "probabilidad_estadistica_3",
+      "name": "Probabilidad y Estadística III",
+      "short_description": "Distribución binomial, normal, valores Z e interpretación de datos estadísticos avanzados.",
+      "sub_topics": [
+        {
+          "key": "binomial_distribution",
+          "name": "Distribución binomial",
+          "short_description": "Modelos de éxito/fracaso con n ensayos.",
+          "example_tasks": [
+            "En un examen tipo test, un alumno responde 10 preguntas al azar (p=0.25). ¿Cuál es la probabilidad de acertar exactamente 3?",
+            "Calcula P(X ≥ 2) si X~Bin(n=5,p=0.4).",
+            "Explica un ejemplo real donde un fenómeno se modela con una Binomial."
+          ]
+        },
+        {
+          "key": "normal_distribution",
+          "name": "Distribución normal",
+          "short_description": "Campana de Gauss, simetría y dispersión.",
+          "example_tasks": [
+            "En una población, las alturas tienen media 170 cm y σ=8. ¿Qué porcentaje está entre 162 y 178 cm?",
+            "Explica la regla 68–95–99.7 con un caso de calificaciones escolares.",
+            "Identifica si un conjunto de datos es aproximadamente normal usando un histograma."
+          ]
+        },
+        {
+          "key": "z_scores",
+          "name": "Valores Z",
+          "short_description": "Estandarización: Z = (X − μ)/σ.",
+          "example_tasks": [
+            "Calcula el Z-score de un estudiante con calificación 92 si μ=80 y σ=10.",
+            "Interpreta un valor Z = −2 en un contexto deportivo.",
+            "Determina qué valor corresponde al percentil 97 en una normal estándar."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "vectores_geometria_espacial",
+      "name": "Vectores y geometría espacial avanzada",
+      "short_description": "Operaciones vectoriales, producto punto y cruz, rectas y planos en 3D, ángulos y distancias.",
+      "sub_topics": [
+        {
+          "key": "vector_operations",
+          "name": "Operaciones con vectores",
+          "short_description": "Suma, resta, vectores paralelos y magnitud.",
+          "sub_topics": [
+            {
+              "key": "vector_basic_ops",
+              "name": "Suma y resta de vectores",
+              "short_description": "Operaciones componente a componente.",
+              "example_tasks": [
+                "Calcula (2,−3,1)+(−1,4,5).",
+                "Determina la magnitud de v=(3,4,12).",
+                "Explica cómo identificar si dos vectores son paralelos revisando proporciones."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "dot_product",
+          "name": "Producto punto",
+          "short_description": "Ángulos entre vectores y ortogonalidad.",
+          "sub_topics": [
+            {
+              "key": "dot_product_formula",
+              "name": "Cálculo del producto punto",
+              "short_description": "u·v = x1x2 + y1y2 + z1z2.",
+              "example_tasks": [
+                "Calcula el ángulo entre u=(1,0,2) y v=(2,−1,3).",
+                "Verifica si los vectores (3,1,−2) y (2,−6,1) son ortogonales.",
+                "Explica cómo el producto punto ayuda a determinar si dos vectores forman 90°."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "cross_product",
+          "name": "Producto cruz",
+          "short_description": "Vectores perpendiculares y áreas de paralelogramos.",
+          "sub_topics": [
+            {
+              "key": "cross_product_formula",
+              "name": "Cálculo del producto cruz",
+              "short_description": "u×v = determinante de matriz 3×3.",
+              "example_tasks": [
+                "Calcula u×v para u=(1,2,3) y v=(4,5,6).",
+                "Determina el área del paralelogramo generado por los vectores (2,1,−1) y (3,0,2).",
+                "Explica por qué el producto cruz genera un vector perpendicular a ambos vectores."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "lines_planes_3d",
+          "name": "Rectas y planos en 3D",
+          "short_description": "Ecuación paramétrica de rectas y ecuación general de un plano.",
+          "sub_topics": [
+            {
+              "key": "line_parametric",
+              "name": "Rectas en forma paramétrica",
+              "short_description": "r = r0 + t·v",
+              "example_tasks": [
+                "Escribe la recta que pasa por (1,2,3) con dirección (2,−1,4).",
+                "Determina si el punto (5,1,11) pertenece a la recta r=(1,2,0)+t(2,1,3).",
+                "Explica qué representa el parámetro t en una recta en 3D."
+              ]
+            },
+            {
+              "key": "plane_equation",
+              "name": "Ecuación de un plano",
+              "short_description": "Forma Ax + By + Cz + D = 0.",
+              "example_tasks": [
+                "Encuentra la ecuación del plano que contiene (1,2,3) y tiene normal (2,−1,4).",
+                "Determina si el punto (3,5,−2) pertenece al plano 2x−y+4z−9=0.",
+                "Explica cómo un vector normal define completamente un plano."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "distances_and_angles",
+          "name": "Distancias y ángulos en 3D",
+          "short_description": "Distancia punto-plano, punto-recta y ángulos entre rectas/planos.",
+          "sub_topics": [
+            {
+              "key": "distance_point_plane",
+              "name": "Distancia punto–plano",
+              "short_description": "Fórmula estándar de proyección.",
+              "example_tasks": [
+                "Calcula la distancia del punto (3,1,2) al plano x+2y−2z+5=0.",
+                "Determina la distancia del punto (1,1,1) al plano 2x−y+2z−3=0.",
+                "Explica el significado geométrico de la distancia mínima."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sucesiones_y_series",
+      "name": "Sucesiones y series",
+      "short_description": "Patrones numéricos, progresiones aritméticas y geométricas, sumas parciales.",
+      "sub_topics": [
+        {
+          "key": "arithmetic_sequences",
+          "name": "Sucesiones aritméticas",
+          "short_description": "aₙ = a₁ + (n−1)d",
+          "sub_topics": [
+            {
+              "key": "arithmetic_examples",
+              "name": "Problemas con progresiones aritméticas",
+              "short_description": "Términos y sumas.",
+              "example_tasks": [
+                "Una sucesión comienza con 5 y tiene diferencia 3. Calcula a₁₀.",
+                "Determina la suma de los primeros 20 términos de la sucesión 2,5,8,...",
+                "Explica cómo identificar si una sucesión es aritmética a partir de sus términos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "geometric_sequences",
+          "name": "Sucesiones geométricas",
+          "short_description": "aₙ = a₁·r^(n−1)",
+          "sub_topics": [
+            {
+              "key": "geometric_examples",
+              "name": "Problemas con progresiones geométricas",
+              "short_description": "Razón, términos y suma.",
+              "example_tasks": [
+                "En una sucesión geométrica con a₁=4 y razón 3, calcula a₅.",
+                "Determina la suma de los primeros 6 términos cuando a₁=2 y r=2.",
+                "Explica un ejemplo real donde aparece crecimiento geométrico."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "series_summation",
+          "name": "Series y sumas",
+          "short_description": "Sumas parciales y fórmulas cerradas.",
+          "example_tasks": [
+            "Encuentra S₁₀ para la serie 1+2+3+...+10.",
+            "Determina la suma de la serie geométrica de 5 términos con a₁=3 y r=1/2.",
+            "Explica por qué una serie geométrica infinita converge solo si |r|<1."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "matematicas_financieras",
+      "name": "Matemáticas financieras",
+      "short_description": "Interés simple, compuesto, anualidades y valor presente.",
+      "sub_topics": [
+        {
+          "key": "simple_interest",
+          "name": "Interés simple",
+          "short_description": "I = P·r·t",
+          "sub_topics": [
+            {
+              "key": "simple_interest_calc",
+              "name": "Cálculo de interés simple",
+              "short_description": "Aplicación directa de fórmula.",
+              "example_tasks": [
+                "Un capital de $5000 se invierte al 8% anual durante 3 años. Calcula el interés generado.",
+                "Determina el monto final de una inversión de $12,000 al 5% simple por 4 años.",
+                "Explica la diferencia entre interés simple y compuesto."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "compound_interest",
+          "name": "Interés compuesto",
+          "short_description": "A = P(1+r)^t",
+          "sub_topics": [
+            {
+              "key": "compound_growth",
+              "name": "Crecimiento compuesto",
+              "short_description": "Aplicaciones financieras reales.",
+              "example_tasks": [
+                "Calcula el valor futuro de $10,000 invertidos al 6% anual por 5 años.",
+                "Determina cuánto capital inicial se necesita para obtener $20,000 en 4 años al 9% compuesto.",
+                "Explica un ejemplo real de crecimiento compuesto (inflación, inversiones)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "annuities_basic",
+          "name": "Anualidades simples",
+          "short_description": "Pagos periódicos, valor presente y valor futuro.",
+          "sub_topics": [
+            {
+              "key": "annuity_future_value",
+              "name": "Valor futuro de anualidades",
+              "short_description": "Pagos iguales + interés compuesto.",
+              "example_tasks": [
+                "Una persona invierte $100 cada mes por 2 años al 1% mensual. Calcula el valor futuro.",
+                "Determina el valor futuro de una anualidad anual de $1500 durante 5 años al 7%.",
+                "Explica qué es una anualidad y da un ejemplo real (renta, colegiatura)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "calculo_2_integrales_avanzadas",
+      "name": "Cálculo II — Integrales avanzadas",
+      "short_description": "Integración por sustitución, áreas entre curvas, integrales definidas y volumen.",
+      "sub_topics": [
+        {
+          "key": "substitution_rule",
+          "name": "Regla de sustitución",
+          "short_description": "u-substitution para integrar funciones compuestas.",
+          "sub_topics": [
+            {
+              "key": "basic_substitution",
+              "name": "Sustitución básica",
+              "short_description": "Cambiar variable para simplificar integrales.",
+              "example_tasks": [
+                "Calcula ∫ 2x·(x²+1)^4 dx usando sustitución.",
+                "Evalúa ∫ cos(3x) dx usando u = 3x.",
+                "Explica por qué la sustitución se considera el 'inverso' de la regla de la cadena."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "areas_between_curves",
+          "name": "Áreas entre curvas",
+          "short_description": "Uso de integrales definidas para medir regiones.",
+          "sub_topics": [
+            {
+              "key": "region_area",
+              "name": "Área entre dos funciones",
+              "short_description": "∫ (f(x) − g(x)) dx",
+              "example_tasks": [
+                "Encuentra el área entre y = x² y y = x en el intervalo [0,1].",
+                "Calcula el área encerrada entre y = 4 − x² y y = 0.",
+                "Explica cómo distinguir cuál función va arriba o abajo en un intervalo."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "definite_integrals",
+          "name": "Integrales definidas",
+          "short_description": "Teorema Fundamental del Cálculo.",
+          "sub_topics": [
+            {
+              "key": "ftc_applications",
+              "name": "Aplicaciones del Teorema Fundamental",
+              "short_description": "Derivada e integral como procesos inversos.",
+              "example_tasks": [
+                "Evalúa ∫_0^3 (2x + 1) dx.",
+                "Usa el Teorema Fundamental para calcular ∫_1^2 (x³) dx.",
+                "Explica la diferencia conceptual entre integral definida e indefinida."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "volume_intro",
+          "name": "Introducción a volúmenes por integración",
+          "short_description": "Método de discos y anillos (nivel introductorio).",
+          "sub_topics": [
+            {
+              "key": "disk_method",
+              "name": "Método de discos",
+              "short_description": "Rotación alrededor de ejes.",
+              "example_tasks": [
+                "Calcula el volumen al rotar y = x en [0,1] alrededor del eje x.",
+                "Determina el volumen generado por la región entre y = √x y el eje x en [0,4].",
+                "Explica cómo el radio del disco se relaciona con la función original."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "modelacion_matematica_compleja",
+      "name": "Modelación matemática compleja",
+      "short_description": "Modelos físicos, económicos y biológicos mediante funciones, derivadas e integrales.",
+      "sub_topics": [
+        {
+          "key": "physical_models",
+          "name": "Modelos físicos",
+          "short_description": "Movimiento, caída libre, velocidad instantánea.",
+          "sub_topics": [
+            {
+              "key": "gravity_motion",
+              "name": "Movimiento bajo gravedad",
+              "short_description": "s(t), v(t), a(t) con gravedad constante.",
+              "example_tasks": [
+                "Un objeto se lanza hacia arriba con v₀ = 20 m/s. Modela su altura con una ecuación.",
+                "Determina el tiempo máximo de altura usando derivadas.",
+                "Explica por qué la aceleración es constante en caída libre."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "economic_models",
+          "name": "Modelos económicos",
+          "short_description": "Costos, ingresos y optimización económica.",
+          "sub_topics": [
+            {
+              "key": "marginal_analysis",
+              "name": "Análisis marginal",
+              "short_description": "Costo marginal, ingreso marginal.",
+              "example_tasks": [
+                "Si C(x) = 100 + 5x + 0.1x², calcula el costo marginal.",
+                "Determina cuántas unidades maximizan la ganancia P(x)=I(x)−C(x).",
+                "Explica el significado económico de una derivada en un modelo de costos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "biological_models",
+          "name": "Modelos biológicos",
+          "short_description": "Crecimiento poblacional y tasas de cambio.",
+          "sub_topics": [
+            {
+              "key": "population_growth",
+              "name": "Crecimiento poblacional",
+              "short_description": "Modelos logísticos simplificados.",
+              "example_tasks": [
+                "Modela la población de una colonia bacteriana con crecimiento exponencial inicial.",
+                "Determina la tasa de cambio poblacional con una función dada.",
+                "Explica con tus palabras qué representa una capacidad límite."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "matematicas_discretas_logica",
+      "name": "Matemáticas discretas y lógica",
+      "short_description": "Lógica proposicional, tablas de verdad y grafos básicos.",
+      "sub_topics": [
+        {
+          "key": "logic_propositions",
+          "name": "Proposiciones y conectores lógicos",
+          "short_description": "AND, OR, NOT, implicación.",
+          "sub_topics": [
+            {
+              "key": "truth_tables",
+              "name": "Tablas de verdad",
+              "short_description": "Evaluación de conectores.",
+              "example_tasks": [
+                "Construye la tabla de verdad para p→q.",
+                "Determina si la proposición (p∧¬q)∨q es siempre verdadera.",
+                "Explica qué significa una tautología en lógica."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "basic_graph_theory",
+          "name": "Teoría de grafos básica",
+          "short_description": "Vértices, aristas, grados y caminos.",
+          "sub_topics": [
+            {
+              "key": "graph_concepts",
+              "name": "Conceptos fundamentales",
+              "short_description": "Grafos simples y dirigidos.",
+              "example_tasks": [
+                "Dibuja un grafo con 5 vértices donde cada vértice tenga grado 2.",
+                "Determina si un grafo dado contiene un camino Euleriano.",
+                "Explica una aplicación de grafos en redes sociales o mapas."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
