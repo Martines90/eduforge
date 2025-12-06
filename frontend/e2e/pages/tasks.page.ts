@@ -53,8 +53,9 @@ export class TasksPage {
    * Navigate to tasks page
    */
   async goto() {
-    await this.page.goto('/tasks');
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto('/tasks', { waitUntil: 'domcontentloaded' });
+    // Wait for the main content to be visible
+    await this.page.waitForSelector('h1, h2, [role="main"]', { state: 'visible', timeout: 10000 });
   }
 
   /**
@@ -157,7 +158,9 @@ export class TasksPage {
       taskRow.click()
     ]);
 
-    await newPage.waitForLoadState('networkidle');
+    await newPage.waitForLoadState('domcontentloaded');
+    // Wait for main content to be visible
+    await newPage.waitForSelector('h1, h2, main', { state: 'visible', timeout: 10000 });
     return newPage;
   }
 

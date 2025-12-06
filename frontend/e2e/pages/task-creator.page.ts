@@ -75,8 +75,9 @@ export class TaskCreatorPage {
    * Navigate to task creator page
    */
   async goto() {
-    await this.page.goto('/task_creator');
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto('/task_creator', { waitUntil: 'domcontentloaded' });
+    // Wait for the page title to be visible
+    await this.page.waitForSelector('h1, h2', { state: 'visible', timeout: 10000 });
   }
 
   /**

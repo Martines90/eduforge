@@ -83,8 +83,9 @@ export class TaskDetailPage {
    * Navigate to specific task detail page
    */
   async goto(taskId: string) {
-    await this.page.goto(`/tasks/${taskId}`);
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto(`/tasks/${taskId}`, { waitUntil: 'domcontentloaded' });
+    // Wait for the main task content to be visible
+    await this.page.waitForSelector('h1, h2, main', { state: 'visible', timeout: 10000 });
   }
 
   /**

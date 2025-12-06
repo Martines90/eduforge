@@ -73,8 +73,9 @@ export class RegistrationPage {
    * Navigate to homepage (which shows login/registration modal)
    */
   async goto() {
-    await this.page.goto('/');
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto('/', { waitUntil: 'domcontentloaded' });
+    // Wait for the main content to be visible instead of networkidle (more reliable)
+    await this.page.waitForSelector('body', { state: 'visible', timeout: 10000 });
   }
 
   /**

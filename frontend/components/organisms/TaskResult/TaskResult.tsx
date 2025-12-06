@@ -18,6 +18,7 @@ import Script from 'next/script';
 import { GeneratedTask } from '@/types/task';
 import { Button } from '@/components/atoms/Button';
 import { processLatexInHtml } from '@/lib/utils/latex-converter';
+import { validateCharacterLength, TASK_CHARACTER_LENGTH } from '@/lib/config/task-generation.config';
 import styles from './TaskResult.module.scss';
 import 'react-quill/dist/quill.snow.css';
 
@@ -56,6 +57,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
   const [editedDescription, setEditedDescription] = useState('');
   const [editedSolution, setEditedSolution] = useState('');
   const [latexReady, setLatexReady] = useState(false);
+  const [descriptionValidation, setDescriptionValidation] = useState(validateCharacterLength(''));
 
   const descriptionPreviewRef = useRef<HTMLDivElement>(null);
   const solutionPreviewRef = useRef<HTMLDivElement>(null);
@@ -66,8 +68,14 @@ export const TaskResult: React.FC<TaskResultProps> = ({
     if (task) {
       setEditedDescription(task.description);
       setEditedSolution(task.solution);
+      setDescriptionValidation(validateCharacterLength(task.description));
     }
   }, [task]);
+
+  // Validate description length whenever it changes
+  useEffect(() => {
+    setDescriptionValidation(validateCharacterLength(editedDescription));
+  }, [editedDescription]);
 
   // Process LaTeX after content changes and latex.js is loaded
   useEffect(() => {
@@ -131,6 +139,16 @@ export const TaskResult: React.FC<TaskResultProps> = ({
   };
 
   const handleSaveDescription = () => {
+    // Validate character length before saving
+    if (!descriptionValidation.isValid) {
+      if (descriptionValidation.isTooShort) {
+        alert(`A feladat leírása túl rövid! Legalább ${descriptionValidation.min} karakter szükséges. Jelenleg: ${descriptionValidation.count} karakter.`);
+      } else if (descriptionValidation.isTooLong) {
+        alert(`A feladat leírása túl hosszú! Maximum ${descriptionValidation.max} karakter megengedett. Jelenleg: ${descriptionValidation.count} karakter.`);
+      }
+      return;
+    }
+
     if (task && onSave) {
       onSave({
         ...task,
@@ -273,13 +291,49 @@ export const TaskResult: React.FC<TaskResultProps> = ({
 
         <Box className={styles.content}>
           {isEditingDescription ? (
-            <ReactQuill
-              value={editedDescription}
-              onChange={setEditedDescription}
-              modules={modules}
-              theme="snow"
-              className={styles.editor}
-            />
+            <>
+              <ReactQuill
+                value={editedDescription}
+                onChange={setEditedDescription}
+                modules={modules}
+                theme="snow"
+                className={styles.editor}
+              />
+              <Box sx={{
+                mt: 1,
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                fontSize: '0.875rem'
+              }}>
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: descriptionValidation.isTooLong
+                      ? 'error.main'
+                      : descriptionValidation.isTooShort
+                        ? 'warning.main'
+                        : 'text.secondary'
+                  }}
+                >
+                  {descriptionValidation.count} / {descriptionValidation.max} karakter
+                </Typography>
+                {!descriptionValidation.isValid && (
+                  <Typography
+                    variant="caption"
+                    sx={{
+                      color: descriptionValidation.isTooLong ? 'error.main' : 'warning.main',
+                      fontWeight: 600
+                    }}
+                  >
+                    {descriptionValidation.isTooShort
+                      ? `Még ${descriptionValidation.min - descriptionValidation.count} karakter szükséges`
+                      : `${descriptionValidation.count - descriptionValidation.max} karakterrel túllépve`
+                    }
+                  </Typography>
+                )}
+              </Box>
+            </>
           ) : (
             <Box
               ref={descriptionPreviewRef}
