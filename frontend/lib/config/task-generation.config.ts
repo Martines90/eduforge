@@ -18,9 +18,33 @@ export const TASK_CHARACTER_LENGTH = {
 
 /**
  * Helper to get character count from HTML string
+ * Only counts characters in the story section, excluding:
+ * - HTML tags
+ * - Image placeholders ([IMAGE_1], etc.)
+ * - Questions section
+ * - Title
  */
 export function getCharacterCount(html: string): number {
-  return html.length;
+  if (!html) return 0;
+
+  // Extract only the story div content
+  const storyMatch = html.match(/<div class="story">([\s\S]*?)<\/div>/);
+  if (!storyMatch) {
+    // If no story div, count all text content (strip HTML tags)
+    const textOnly = html.replace(/<[^>]*>/g, '').replace(/\[IMAGE_\d+\]/g, '');
+    return textOnly.trim().length;
+  }
+
+  let storyContent = storyMatch[1];
+
+  // Remove image placeholders
+  storyContent = storyContent.replace(/\[IMAGE_\d+\]/g, '');
+
+  // Remove HTML tags to get plain text
+  storyContent = storyContent.replace(/<[^>]*>/g, '');
+
+  // Trim and count
+  return storyContent.trim().length;
 }
 
 /**

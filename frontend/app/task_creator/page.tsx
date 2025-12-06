@@ -170,15 +170,20 @@ function TaskCreatorContent() {
       });
 
       // Format the result for display
+      console.log('[Task Creator] Raw result from API:', result);
+      console.log('[Task Creator] result.images:', result.images);
+      console.log('[Task Creator] result.images.images:', result.images?.images);
+
       const generatedTask: GeneratedTask = {
         id: result.taskId,
-        description: formatTaskDescription(result.taskText),
+        description: formatTaskDescription(result.taskText, request.number_of_images),
         solution: formatSolution(result.solution),
         images: result.images.images || [],
       };
 
+      console.log('[Task Creator] Formatted generatedTask:', generatedTask);
+      console.log('[Task Creator] generatedTask.images:', generatedTask.images);
       setGeneratedTask(generatedTask);
-      console.log('Task generated successfully:', generatedTask);
     } catch (error) {
       console.error('Task generation error:', error);
       setGenerationError(error instanceof Error ? error.message : 'An unexpected error occurred');
@@ -189,10 +194,21 @@ function TaskCreatorContent() {
   };
 
   // Helper functions to format task data
-  const formatTaskDescription = (taskText: any): string => {
+  const formatTaskDescription = (taskText: any, numberOfImages: number): string => {
     let html = '';
     if (taskText.title) html += `<h1>${taskText.title}</h1>\n`;
-    if (taskText.story_text) html += `<div class="story">\n${taskText.story_text}\n</div>\n`;
+    if (taskText.story_text) {
+      // Add image placeholders as first child inside the story div
+      let storyContent = '';
+      if (numberOfImages > 0) {
+        for (let i = 1; i <= numberOfImages; i++) {
+          storyContent += `[IMAGE_${i}]\n`;
+        }
+      }
+      storyContent += taskText.story_text;
+
+      html += `<div class="story">\n${storyContent}\n</div>\n`;
+    }
     if (taskText.questions && taskText.questions.length > 0) {
       html += `<h2>Feladatok:</h2>\n<ol>\n`;
       taskText.questions.forEach((q: string) => html += `<li>${q}</li>\n`);

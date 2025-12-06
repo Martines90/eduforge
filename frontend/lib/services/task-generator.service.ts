@@ -150,21 +150,23 @@ export async function generateTaskImages(
   token: string,
   onProgress?: (step: TaskGenerationStep) => void
 ): Promise<GeneratedImages> {
+  console.log('[Task Generator - generateTaskImages] Called with:', {
+    numberOfImages,
+    taskTitle: taskText.title
+  });
+
   onProgress?.({
     step: 'generating_images',
     message: `${numberOfImages} kép generálása...`,
     progress: 60,
   });
 
-  // Check if image generation is disabled via environment variable
-  if (process.env.NEXT_PUBLIC_DISABLE_IMAGE_GENERATION === 'true') {
-    console.log('[Task Generator] Image generation disabled via NEXT_PUBLIC_DISABLE_IMAGE_GENERATION');
+  if (numberOfImages === 0) {
+    console.log('[Task Generator] numberOfImages is 0, skipping image generation');
     return { images: [] };
   }
 
-  if (numberOfImages === 0) {
-    return { images: [] };
-  }
+  console.log('[Task Generator] Proceeding with image generation API call...');
 
   const response = await fetch(`${API_BASE_URL}/generate-task-images`, {
     method: 'POST',
@@ -184,7 +186,13 @@ export async function generateTaskImages(
   }
 
   const result = await response.json();
-  return result;
+  console.log('[Task Generator] Image generation result:', result);
+
+  // Backend returns { success: true, images: [...] }
+  // We need to return { images: [...] } to match GeneratedImages interface
+  return {
+    images: result.images || []
+  };
 }
 
 /**
@@ -252,6 +260,9 @@ export async function generateTaskComplete(
   const selectedTask = selectionResult.selected_task;
 
   // Steps 3 & 4: Generate images and solution in parallel (for efficiency)
+  console.log('[Task Generator] About to generate images and solution');
+  console.log('[Task Generator] Number of images requested:', request.number_of_images);
+
   onProgress?.({
     step: 'generating_images',
     message: 'Képek és megoldás generálása...',
@@ -262,6 +273,9 @@ export async function generateTaskComplete(
     generateTaskImages(selectedTask, request.number_of_images, token, onProgress),
     generateTaskSolution(selectedTask, request, token, onProgress),
   ]);
+
+  console.log('[Task Generator] Images generated:', images);
+  console.log('[Task Generator] Solution generated:', solution);
 
   onProgress?.({
     step: 'completed',

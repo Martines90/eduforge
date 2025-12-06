@@ -13,6 +13,7 @@ import {
 import EditIcon from '@mui/icons-material/Edit';
 import SaveIcon from '@mui/icons-material/Save';
 import CloseIcon from '@mui/icons-material/Close';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import dynamic from 'next/dynamic';
 import Script from 'next/script';
 import { GeneratedTask } from '@/types/task';
@@ -59,6 +60,34 @@ export const TaskResult: React.FC<TaskResultProps> = ({
   const [latexReady, setLatexReady] = useState(false);
   const [descriptionValidation, setDescriptionValidation] = useState(validateCharacterLength(''));
 
+  // Process HTML to inject image URLs in place of [IMAGE_X] placeholders
+  const processImagePlaceholders = (html: string, images: { id: string; url: string }[]): string => {
+    console.log('[TaskResult] Processing image placeholders:', {
+      imagesCount: images?.length || 0,
+      images,
+      htmlLength: html?.length || 0,
+      htmlSnippet: html?.substring(0, 200)
+    });
+
+    if (!images || images.length === 0) {
+      console.log('[TaskResult] No images to process, returning original HTML');
+      return html;
+    }
+
+    let processedHtml = html;
+    images.forEach((image, index) => {
+      const placeholder = `[IMAGE_${index + 1}]`;
+      // Responsive image: 50% width on desktop (float right), 100% on mobile
+      const imgTag = `<img src="${image.url}" alt="Task illustration ${index + 1}" style="width: 100%; max-width: 50%; height: auto; margin: 10px 0 10px 20px; border-radius: 8px; float: right; clear: right;" class="task-image task-image-${index + 1}" />`;
+      console.log(`[TaskResult] Replacing "${placeholder}" with img tag, URL: ${image.url}`);
+      // Replace only the FIRST occurrence (not global) to avoid duplicates
+      processedHtml = processedHtml.replace(placeholder, imgTag);
+    });
+
+    console.log('[TaskResult] Processed HTML snippet:', processedHtml.substring(0, 300));
+    return processedHtml;
+  };
+
   const descriptionPreviewRef = useRef<HTMLDivElement>(null);
   const solutionPreviewRef = useRef<HTMLDivElement>(null);
   const retryCountRef = useRef(0);
@@ -66,11 +95,18 @@ export const TaskResult: React.FC<TaskResultProps> = ({
 
   useEffect(() => {
     if (task) {
+      // Store the raw description with placeholders for editing
       setEditedDescription(task.description);
       setEditedSolution(task.solution);
       setDescriptionValidation(validateCharacterLength(task.description));
     }
   }, [task]);
+
+  // Get the display version of description (with images injected)
+  const getDisplayDescription = (): string => {
+    if (!task) return '';
+    return processImagePlaceholders(editedDescription || task.description, task.images);
+  };
 
   // Validate description length whenever it changes
   useEffect(() => {
@@ -166,6 +202,106 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       });
     }
     setIsEditingSolution(false);
+  };
+
+  const handleDownloadPDF = async () => {
+    if (!task) return;
+
+    try {
+      // Dynamically import jsPDF and html2canvas to avoid SSR issues
+      const { default: jsPDF } = await import('jspdf');
+      const { default: html2canvas } = await import('html2canvas');
+
+      // Create a temporary container for PDF rendering
+      const pdfContainer = document.createElement('div');
+      pdfContainer.style.position = 'absolute';
+      pdfContainer.style.left = '-9999px';
+      pdfContainer.style.width = '210mm'; // A4 width
+      pdfContainer.style.padding = '20mm';
+      pdfContainer.style.backgroundColor = 'white';
+      pdfContainer.style.fontFamily = 'Arial, sans-serif';
+      pdfContainer.style.fontSize = '14px';
+      pdfContainer.style.lineHeight = '1.6';
+
+      // Build the PDF content (task description only, with images)
+      const displayDescription = processImagePlaceholders(editedDescription || task.description, task.images);
+
+      pdfContainer.innerHTML = `
+        <div style="margin-bottom: 30px;">
+          <h1 style="color: #667eea; font-size: 24px; margin-bottom: 20px; font-weight: bold;">Feladat</h1>
+          <div style="font-size: 14px; line-height: 1.8;">
+            ${processLatexInHtml(displayDescription)}
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(pdfContainer);
+
+      // Process all images to ensure they're loaded
+      const images = pdfContainer.getElementsByTagName('img');
+      const imagePromises = Array.from(images).map((img) => {
+        return new Promise((resolve, reject) => {
+          if (img.complete) {
+            resolve(null);
+          } else {
+            img.onload = () => resolve(null);
+            img.onerror = () => reject(new Error(`Failed to load image: ${img.src}`));
+          }
+        });
+      });
+
+      // Wait for all images to load
+      await Promise.all(imagePromises);
+
+      // Render LaTeX if available
+      if (window.S2Latex && typeof window.S2Latex.processTree === 'function') {
+        window.S2Latex.processTree(pdfContainer);
+        // Wait a bit for LaTeX to render
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      }
+
+      // Convert to canvas
+      const canvas = await html2canvas(pdfContainer, {
+        scale: 2,
+        useCORS: true,
+        allowTaint: true,
+        logging: false,
+        backgroundColor: '#ffffff',
+      });
+
+      // Remove temporary container
+      document.body.removeChild(pdfContainer);
+
+      // Create PDF
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = pdfWidth;
+      const imgHeight = (canvas.height * pdfWidth) / canvas.width;
+
+      let heightLeft = imgHeight;
+      let position = 0;
+
+      // Add first page
+      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pdfHeight;
+
+      // Add additional pages if needed
+      while (heightLeft > 0) {
+        position = heightLeft - imgHeight;
+        pdf.addPage();
+        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pdfHeight;
+      }
+
+      // Download PDF
+      const fileName = `feladat_${task.id}.pdf`;
+      pdf.save(fileName);
+    } catch (error) {
+      console.error('PDF generation error:', error);
+      alert('Hiba történt a PDF generálása során. Kérjük, próbálja újra.');
+    }
   };
 
   const modules = {
@@ -338,7 +474,9 @@ export const TaskResult: React.FC<TaskResultProps> = ({
             <Box
               ref={descriptionPreviewRef}
               className={styles.preview}
-              dangerouslySetInnerHTML={{ __html: processLatexInHtml(task.description) }}
+              dangerouslySetInnerHTML={{
+                __html: processLatexInHtml(getDisplayDescription())
+              }}
             />
           )}
         </Box>
@@ -395,44 +533,30 @@ export const TaskResult: React.FC<TaskResultProps> = ({
         </Box>
       </Box>
 
-      {/* Task Images */}
-      {task.images && task.images.length > 0 && (
-        <>
-          <Divider sx={{ my: 3 }} />
-          <Box className={styles.imagesSection}>
-            <Typography variant="h6" gutterBottom>
-              Képek
-            </Typography>
-            <Box className={styles.imagesGrid}>
-              {task.images.map((image, index) => (
-                <Box key={image.id} className={styles.imageContainer}>
-                  <img
-                    src={image.url}
-                    alt={`Task illustration ${index + 1}`}
-                    className={styles.image}
-                  />
-                </Box>
-              ))}
-            </Box>
-          </Box>
-        </>
-      )}
-
-      {/* Task ID and Save Button */}
+      {/* Task ID and Action Buttons */}
       <Box className={styles.footer}>
         <Typography variant="caption" color="text.secondary">
           Feladat ID: {task.id}
         </Typography>
-        {onSaveToDatabase && (
+        <Box sx={{ display: 'flex', gap: 1 }}>
           <Button
-            variant="primary"
-            onClick={onSaveToDatabase}
-            disabled={isSaving}
-            startIcon={<SaveIcon />}
+            variant="secondary"
+            onClick={handleDownloadPDF}
+            startIcon={<PictureAsPdfIcon />}
           >
-            {isSaving ? 'Mentés...' : 'Feladat Mentése'}
+            PDF Letöltés
           </Button>
-        )}
+          {onSaveToDatabase && (
+            <Button
+              variant="primary"
+              onClick={onSaveToDatabase}
+              disabled={isSaving}
+              startIcon={<SaveIcon />}
+            >
+              {isSaving ? 'Mentés...' : 'Feladat Mentése'}
+            </Button>
+          )}
+        </Box>
       </Box>
       </Paper>
     </>

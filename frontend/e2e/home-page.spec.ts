@@ -57,8 +57,8 @@ test.describe('Home Page - Teacher View', () => {
     });
 
     // Navigate to home page
-    await page.goto('/');
-    await page.waitForLoadState('networkidle');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
+    await page.waitForSelector('h1, body', { state: 'visible', timeout: 10000 });
   });
 
   test('should display both Create Task and Search Tasks cards for teachers', async ({ page }) => {
@@ -94,7 +94,8 @@ test.describe('Home Page - Teacher View', () => {
 
   test('should navigate to task creator when clicking Create Task button', async ({ page }) => {
     // Wait for page to be fully loaded
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
+    await page.waitForSelector('h1, body', { state: 'visible', timeout: 10000 });
 
     // Click "Go to Task Creator" button
     const createTaskButton = page.getByRole('link', { name: /Go to Task Creator/i });
@@ -111,7 +112,8 @@ test.describe('Home Page - Teacher View', () => {
 
   test('should navigate to tasks page when clicking Browse Tasks button', async ({ page }) => {
     // Wait for page to be fully loaded
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
+    await page.waitForSelector('h1, body', { state: 'visible', timeout: 10000 });
 
     // Click "Browse Tasks" button
     const browseTasksButton = page.getByRole('link', { name: /Browse Tasks/i });
@@ -175,8 +177,8 @@ test.describe('Home Page - Non-Teacher View', () => {
     });
 
     // Navigate to home page
-    await page.goto('/');
-    await page.waitForLoadState('networkidle');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
+    await page.waitForSelector('h1, body', { state: 'visible', timeout: 10000 });
   });
 
   test('should display only Search Tasks card for non-teachers', async ({ page }) => {
@@ -210,7 +212,8 @@ test.describe('Home Page - Non-Teacher View', () => {
 
   test('should navigate to tasks page when clicking Browse Tasks button', async ({ page }) => {
     // Wait for page to be fully loaded
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
+    await page.waitForSelector('h1, body', { state: 'visible', timeout: 10000 });
 
     // Click "Browse Tasks" button
     const browseTasksButton = page.getByRole('link', { name: /Browse Tasks/i });
@@ -283,8 +286,8 @@ test.describe('Home Page - Mobile View', () => {
       localStorage.setItem('authToken', 'mock-token-789');
     });
 
-    await page.goto('/');
-    await page.waitForLoadState('networkidle');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
+    await page.waitForSelector('h1, body', { state: 'visible', timeout: 10000 });
 
     // Verify both cards are visible on mobile
     const createTaskHeading = page.getByRole('heading', { name: /^Create Task$/i });
@@ -352,8 +355,8 @@ test.describe('Home Page - Mobile View', () => {
       localStorage.setItem('authToken', 'mock-token-321');
     });
 
-    await page.goto('/');
-    await page.waitForLoadState('networkidle');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
+    await page.waitForSelector('h1, body', { state: 'visible', timeout: 10000 });
 
     // Verify only Search Tasks is visible
     const searchTasksHeading = page.getByRole('heading', { name: /^Search Tasks$/i });

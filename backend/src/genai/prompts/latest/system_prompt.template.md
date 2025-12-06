@@ -228,10 +228,11 @@
 > **CRITICAL STORY LENGTH REQUIREMENT:**
 >
 > - The total description (all <p> tags combined) MUST be between **{{TASK_CHARACTER_MIN_LENGTH}} and {{TASK_CHARACTER_MAX_LENGTH}} characters** in length
-> - Count the character length of the entire HTML string including tags
+> - **Count ONLY the plain text content WITHOUT HTML tags** (e.g., `<p>Hello world</p>` counts as 11 characters, not 18)
+> - This means the actual story text content (excluding `<p>` and `</p>` tags) must be within this range
 > - If your story is too short, add more context, details, or background about the stakes
 > - If your story is too long, trim unnecessary words while keeping the HIGH-STAKES elements
-> - Verify the length before returning the JSON
+> - Verify the length before returning the JSON by counting characters without HTML tags
 >
 > **Story Template Example:**
 >
@@ -309,7 +310,7 @@
 > - Do NOT include markdown formatting
 > - Return ONLY the raw JSON object starting with { and ending with }
 > - The description field must contain HTML using only <p> tags
-> - The description field must be between {{TASK_CHARACTER_MIN_LENGTH}}-{{TASK_CHARACTER_MAX_LENGTH}} characters in length
+> - The description field's PLAIN TEXT CONTENT (without HTML tags) must be between {{TASK_CHARACTER_MIN_LENGTH}}-{{TASK_CHARACTER_MAX_LENGTH}} characters in length
 > - Questions and expected_answer_formats arrays must have the same length
 >
 > ---
