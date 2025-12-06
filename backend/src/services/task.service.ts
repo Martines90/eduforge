@@ -37,11 +37,15 @@ export async function createTask(
     throw new Error('Only teachers can create tasks');
   }
 
+  // TODO: Get country from request or user profile
+  // For now, defaulting to 'HU' for backward compatibility
+  const country = data.country_code || 'HU';
+
   // Validate that the subject mapping exists and is a leaf node
-  await validateLeafMapping(data.subjectMappingId);
+  await validateLeafMapping(country, data.subjectMappingId);
 
   // Get the subject mapping details
-  const mapping = await getSubjectMappingById(data.subjectMappingId);
+  const mapping = await getSubjectMappingById(country, data.subjectMappingId);
   if (!mapping) {
     throw new Error('Subject mapping not found');
   }
@@ -76,7 +80,7 @@ export async function createTask(
 
   // Increment task count on the mapping if published
   if (taskDoc.isPublished) {
-    await incrementTaskCount(data.subjectMappingId);
+    await incrementTaskCount(country, data.subjectMappingId);
   }
 
   return docRef.id;
@@ -125,11 +129,13 @@ export async function updateTask(
   await taskRef.update(updateData);
 
   // Update task count on mapping if publishing status changed
+  // TODO: Get country from task document or request
+  const country = 'HU'; // Default for backward compatibility
   if (wasPublished !== willBePublished) {
     if (willBePublished) {
-      await incrementTaskCount(existingTask.subjectMappingId);
+      await incrementTaskCount(country, existingTask.subjectMappingId);
     } else {
-      await decrementTaskCount(existingTask.subjectMappingId);
+      await decrementTaskCount(country, existingTask.subjectMappingId);
     }
   }
 }
@@ -158,8 +164,10 @@ export async function deleteTask(taskId: string, creatorUid: string): Promise<vo
   await taskRef.delete();
 
   // Decrement task count if was published
+  // TODO: Get country from task document
+  const country = 'HU'; // Default for backward compatibility
   if (existingTask.isPublished) {
-    await decrementTaskCount(existingTask.subjectMappingId);
+    await decrementTaskCount(country, existingTask.subjectMappingId);
   }
 }
 

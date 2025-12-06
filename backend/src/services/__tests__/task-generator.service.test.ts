@@ -15,12 +15,10 @@ jest.mock("../image-generator.service");
 jest.mock("../task-storage.service");
 jest.mock("../../utils/story-inspiration.helper");
 jest.mock("../../utils/curriculum-mapper.helper");
-jest.mock("../../utils/reference-tasks.helper");
 
 // Import the mocked modules to access mock functions
 import * as inspirationHelper from "../../utils/story-inspiration.helper";
 import * as curriculumMapper from "../../utils/curriculum-mapper.helper";
-import * as referenceTasks from "../../utils/reference-tasks.helper";
 
 describe("TaskGeneratorService - Prompt Generation", () => {
   let service: TaskGeneratorService;
@@ -111,24 +109,6 @@ describe("TaskGeneratorService - Prompt Generation", () => {
       "Solve for x: 3x - 7 = 11",
       "Solve for x: x/4 = 9"
     ]);
-
-    // Mock reference tasks helper
-    (referenceTasks.selectRandomReferenceTasks as jest.Mock) = jest.fn().mockReturnValue([
-      {
-        tags: "#Algebra > #Linear Equations",
-        title: "Reference Task 1",
-        description: "Description of reference task 1"
-      },
-      {
-        tags: "#Geometry > #Circles",
-        title: "Reference Task 2",
-        description: "Description of reference task 2"
-      },
-    ]);
-
-    (referenceTasks.formatReferenceTasksForPrompt as jest.Mock) = jest.fn().mockReturnValue(
-      "\n## REFERENCE STYLE TASKS\nReference tasks for style guidance...\n"
-    );
 
     // Mock text generator to capture the prompt
     mockTextGenerator.generateWithSystemPrompt = jest.fn().mockImplementation(async (systemPrompt: string, userPrompt: string) => {
@@ -225,7 +205,6 @@ describe("TaskGeneratorService - Prompt Generation", () => {
       const parsedMessage = JSON.parse(userMessage);
       expect(parsedMessage).toHaveProperty("task_config");
       expect(parsedMessage).toHaveProperty("curriculum_topic");
-      expect(parsedMessage).toHaveProperty("reference_style_tasks");
     });
 
     it("should include task configuration in system prompt", async () => {
@@ -265,14 +244,6 @@ describe("TaskGeneratorService - Prompt Generation", () => {
       const systemPrompt = getTaskSystemPrompt();
 
       expect(systemPrompt).toContain("CURRICULUM TOPIC INFORMATION");
-    });
-
-    it("should include reference tasks", async () => {
-      await service.generateTask(metricRequest);
-
-      const systemPrompt = getTaskSystemPrompt();
-
-      expect(systemPrompt).toContain("REFERENCE STYLE TASKS");
     });
   });
 
@@ -362,16 +333,6 @@ describe("TaskGeneratorService - Prompt Generation", () => {
       expect(parsed.curriculum_topic.key).toBe("solving_basic");
       expect(parsed.curriculum_topic.example_tasks).toBeDefined();
       expect(Array.isArray(parsed.curriculum_topic.example_tasks)).toBe(true);
-    });
-
-    it("should include reference_style_tasks array", async () => {
-      await service.generateTask(metricRequest);
-
-      const userMessage = getTaskUserMessage();
-      const parsed = JSON.parse(userMessage);
-
-      expect(parsed.reference_style_tasks).toBeDefined();
-      expect(Array.isArray(parsed.reference_style_tasks)).toBe(true);
     });
 
     it("should NOT include selected_example_index", async () => {

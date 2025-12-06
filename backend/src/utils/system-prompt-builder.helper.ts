@@ -2,17 +2,12 @@ import * as fs from "fs";
 import * as path from "path";
 import { TaskGeneratorRequest } from "../types";
 import {
-  selectRandomReferenceTasks,
-  selectReferenceTasksByKeys,
-  formatReferenceTasksForPrompt,
-} from "./reference-tasks.helper";
-import {
   getCurriculumTopicByPath,
   formatCurriculumTopicForPrompt,
   getExampleTasks,
-  getReferenceTaskKeys,
 } from "./curriculum-mapper.helper";
 import { getLanguageForCountry, getMeasurementSystem } from "./measurement-system.helper";
+import { TASK_CHARACTER_LENGTH } from "../config/task-generation.config";
 
 /**
  * Builds a complete system prompt by interpolating the template with all required data
@@ -43,6 +38,8 @@ export function buildSystemPrompt(
   // Step 1: Replace basic placeholders in template
   systemPrompt = systemPrompt.replace(/\{\{LANGUAGE\}\}/g, language);
   systemPrompt = systemPrompt.replace(/\{\{METRIC_SYSTEM\}\}/g, metricSystem);
+  systemPrompt = systemPrompt.replace(/\{\{TASK_CHARACTER_MIN_LENGTH\}\}/g, TASK_CHARACTER_LENGTH.min.toString());
+  systemPrompt = systemPrompt.replace(/\{\{TASK_CHARACTER_MAX_LENGTH\}\}/g, TASK_CHARACTER_LENGTH.max.toString());
 
   // Step 2: Get curriculum topic information
   const curriculumPathResult = getCurriculumTopicByPath(
@@ -54,25 +51,10 @@ export function buildSystemPrompt(
     );
   }
 
-  // Step 3: Select reference tasks based on curriculum topic or random
-  let referenceTasks: any[] = [];
-  if (curriculumPathResult) {
-    const referenceKeys = getReferenceTaskKeys(curriculumPathResult);
-    if (referenceKeys && referenceKeys.length > 0) {
-      referenceTasks = selectReferenceTasksByKeys(referenceKeys);
-    }
-  }
-
-  // Fallback to random selection if no specific tasks found
-  if (referenceTasks.length === 0) {
-    referenceTasks = selectRandomReferenceTasks(6);
-  }
-
-  // Step 4: Build the enriched JSON input object that represents what the USER MESSAGE will contain
+  // Step 3: Build the enriched JSON input object that represents what the USER MESSAGE will contain
   const taskInputJson = buildTaskInputJson(
     request,
-    curriculumPathResult,
-    referenceTasks
+    curriculumPathResult
   );
 
   // Step 5: Add additional context sections to the system prompt
@@ -121,11 +103,6 @@ export function buildSystemPrompt(
     additionalContext += formatCurriculumTopicForPrompt(curriculumPathResult);
   }
 
-  // Add reference tasks for style guidance
-  if (referenceTasks.length > 0) {
-    additionalContext += formatReferenceTasksForPrompt(referenceTasks);
-  }
-
   // Add reminder about the input format
   additionalContext += "\n## EXPECTED USER MESSAGE FORMAT\n\n";
   additionalContext +=
@@ -143,7 +120,6 @@ export function buildSystemPrompt(
   console.log(`   - Template length: ${systemPrompt.length} chars`);
   console.log(`   - Additional context: ${additionalContext.length} chars`);
   console.log(`   - Total prompt length: ${finalPrompt.length} chars`);
-  console.log(`   - Reference tasks included: ${referenceTasks.length}`);
   console.log(
     `   - Curriculum topic: ${curriculumPathResult?.topic.name || "N/A"}`
   );
@@ -157,8 +133,7 @@ export function buildSystemPrompt(
  */
 function buildTaskInputJson(
   request: TaskGeneratorRequest,
-  curriculumPathResult: any,
-  referenceTasks: any[]
+  curriculumPathResult: any
 ): any {
   const language = getLanguageForCountry(request.country_code);
   const metricSystem = getMeasurementSystem(request.country_code);
@@ -182,15 +157,6 @@ function buildTaskInputJson(
       short_description: topic.short_description || "",
       example_tasks: exampleTasks,
     };
-  }
-
-  // Add reference style tasks (simplified format for the user message)
-  if (referenceTasks.length > 0) {
-    inputJson.reference_style_tasks = referenceTasks.map((task) => ({
-      tags: task.tags,
-      title: task.title,
-      description: task.description,
-    }));
   }
 
   // Add task ID hint from curriculum path if available
@@ -218,25 +184,10 @@ export function buildUserMessage(
     request.curriculum_path
   );
 
-  // Select reference tasks based on curriculum topic or random
-  let referenceTasks: any[] = [];
-  if (curriculumPathResult) {
-    const referenceKeys = getReferenceTaskKeys(curriculumPathResult);
-    if (referenceKeys && referenceKeys.length > 0) {
-      referenceTasks = selectReferenceTasksByKeys(referenceKeys);
-    }
-  }
-
-  // Fallback to random selection if no specific tasks found
-  if (referenceTasks.length === 0) {
-    referenceTasks = selectRandomReferenceTasks(6);
-  }
-
   // Build the input JSON
   const inputJson = buildTaskInputJson(
     request,
-    curriculumPathResult,
-    referenceTasks
+    curriculumPathResult
   );
 
   return JSON.stringify(inputJson, null, 2);
