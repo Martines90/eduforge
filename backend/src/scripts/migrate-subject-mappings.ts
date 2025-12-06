@@ -1,14 +1,18 @@
 /**
- * Migration Script: Import Subject Mappings to Firestore
+ * Migration Script: Import Subject Mappings to Firestore (Country-Based)
  *
- * This script reads the curriculum JSON files and imports them into Firestore
- * as a hierarchical structure suitable for the task tree view.
+ * This script reads curriculum JSON files and imports them into Firestore
+ * using a country-based hierarchical structure.
+ *
+ * Structure: countries/{country}/subjectMappings/{docId}
  *
  * Usage:
- *   npm run migrate:subjects
+ *   npm run migrate:subjects -- --country HU --subject mathematics
+ *   npm run migrate:subjects -- --country US --subject mathematics --clear
+ *   npm run migrate:subjects -- --all  # Migrate all countries and subjects
  *
  * Or directly:
- *   ts-node src/scripts/migrate-subject-mappings.ts
+ *   ts-node src/scripts/migrate-subject-mappings.ts --country HU --subject mathematics
  */
 
 import * as fs from 'fs';
@@ -30,20 +34,33 @@ interface JSONData {
   grade_11_12?: JSONNode[];
 }
 
+interface SubjectConfig {
+  name: string;
+  file: string;
+}
+
+interface CountryConfig {
+  name: string;
+  subjects: Record<string, SubjectConfig>;
+}
+
+interface MappingConfig {
+  countries: Record<string, CountryConfig>;
+}
+
 /**
- * Subject metadata
+ * Load configuration from JSON file
  */
-const SUBJECT_METADATA: Record<string, { name: string; file: string }> = {
-  mathematics: {
-    name: 'Mathematics',
-    file: 'hu_math_grade_9_12_purged.json',
-  },
-  // Add other subjects as they become available
-  // physics: {
-  //   name: 'Physics',
-  //   file: 'hu_physics_grade_9_12_purged.json',
-  // },
-};
+function loadConfig(): MappingConfig {
+  const configPath = path.join(__dirname, '../config/subject-mappings.config.json');
+
+  if (!fs.existsSync(configPath)) {
+    throw new Error(`Configuration file not found: ${configPath}`);
+  }
+
+  const configContent = fs.readFileSync(configPath, 'utf-8');
+  return JSON.parse(configContent) as MappingConfig;
+}
 
 /**
  * Generate document ID from path components
@@ -54,11 +71,12 @@ function generateDocId(subject: string, gradeLevel: string, ...pathParts: string
 }
 
 /**
- * Recursively insert nodes into Firestore
+ * Recursively insert nodes into Firestore (country-based)
  */
 async function insertNode(
   db: FirebaseFirestore.Firestore,
   node: JSONNode,
+  country: string,
   subject: string,
   gradeLevel: string,
   parentId: string | null,
@@ -91,8 +109,9 @@ async function insertNode(
 
   console.log(`  ${'  '.repeat(level)}[${level}] ${node.name} (${currentPath})`);
 
-  // Insert document
-  await db.collection('subjectMappings').doc(docId).set(mappingDoc);
+  // Insert document into country-based path
+  await db.collection('countries').doc(country)
+    .collection('subjectMappings').doc(docId).set(mappingDoc);
 
   // Recursively insert children
   if (hasSubTopics) {
@@ -100,6 +119,7 @@ async function insertNode(
       await insertNode(
         db,
         node.sub_topics![i],
+        country,
         subject,
         gradeLevel,
         docId,
@@ -114,16 +134,17 @@ async function insertNode(
 }
 
 /**
- * Import a single subject's data
+ * Import a single subject's data for a specific country
  */
 async function importSubject(
   db: FirebaseFirestore.Firestore,
+  country: string,
   subjectKey: string,
   subjectName: string,
   jsonData: JSONData
 ): Promise<void> {
   console.log(`\n${'='.repeat(60)}`);
-  console.log(`Importing ${subjectName} (${subjectKey})`);
+  console.log(`Importing ${subjectName} (${subjectKey}) for ${country}`);
   console.log('='.repeat(60));
 
   const grades = ['grade_9_10', 'grade_11_12'] as const;
@@ -157,7 +178,9 @@ async function importSubject(
       updatedAt: Timestamp.now(),
     };
 
-    await db.collection('subjectMappings').doc(gradeDocId).set(gradeDoc);
+    // Insert grade doc into country-based path
+    await db.collection('countries').doc(country)
+      .collection('subjectMappings').doc(gradeDocId).set(gradeDoc);
     console.log(`  [1] ${gradeDisplayName}`);
 
     // Insert all main topics
@@ -165,6 +188,7 @@ async function importSubject(
       await insertNode(
         db,
         gradeData[i],
+        country,
         subjectKey,
         gradeLevel,
         gradeDocId,
@@ -175,19 +199,21 @@ async function importSubject(
     }
   }
 
-  console.log(`\n✅ ${subjectName} import complete!`);
+  console.log(`\n✅ ${subjectName} import complete for ${country}!`);
 }
 
 /**
- * Clear existing subject mappings (optional)
+ * Clear existing subject mappings for a specific country (optional)
  */
 async function clearExistingMappings(
   db: FirebaseFirestore.Firestore,
+  country: string,
   subject?: string
 ): Promise<void> {
-  console.log('\n🗑️  Clearing existing subject mappings...');
+  console.log(`\n🗑️  Clearing existing subject mappings for ${country}...`);
 
-  let query = db.collection('subjectMappings');
+  let query = db.collection('countries').doc(country).collection('subjectMappings');
+
   if (subject) {
     query = query.where('subject', '==', subject) as any;
   }
@@ -195,85 +221,159 @@ async function clearExistingMappings(
   const snapshot = await query.get();
   console.log(`   Found ${snapshot.size} documents to delete`);
 
-  const batch = db.batch();
+  if (snapshot.size === 0) {
+    console.log('   No documents to delete');
+    return;
+  }
+
+  // Delete in batches (Firestore limit is 500 per batch)
+  const batches: FirebaseFirestore.WriteBatch[] = [];
+  let currentBatch = db.batch();
   let count = 0;
 
   snapshot.docs.forEach((doc) => {
-    batch.delete(doc.ref);
+    currentBatch.delete(doc.ref);
     count++;
 
-    // Firestore batch limit is 500
-    if (count >= 500) {
-      throw new Error('Too many documents to delete in one batch. Run multiple times or implement chunked deletion.');
+    // Create new batch every 500 operations
+    if (count % 500 === 0) {
+      batches.push(currentBatch);
+      currentBatch = db.batch();
     }
   });
 
-  if (count > 0) {
-    await batch.commit();
-    console.log(`   ✅ Deleted ${count} documents`);
-  } else {
-    console.log('   No documents to delete');
+  // Add remaining operations
+  if (count % 500 !== 0) {
+    batches.push(currentBatch);
   }
+
+  // Commit all batches
+  for (let i = 0; i < batches.length; i++) {
+    await batches[i].commit();
+    console.log(`   Batch ${i + 1}/${batches.length} committed`);
+  }
+
+  console.log(`   ✅ Deleted ${count} documents`);
+}
+
+/**
+ * Get file path for a specific country and subject
+ */
+function getDataFilePath(country: string, subject: string, fileName: string): string {
+  // Try new structure first: src/data/mappings/{country}/{fileName}
+  const newPath = path.join(__dirname, '../data/mappings', country.toLowerCase(), fileName);
+  if (fs.existsSync(newPath)) {
+    return newPath;
+  }
+
+  // Fallback to old structure: src/data/subject_mapping/{fileName}
+  const oldPath = path.join(__dirname, '../data/subject_mapping', fileName);
+  if (fs.existsSync(oldPath)) {
+    console.log(`⚠️  Using legacy path for ${country}/${subject}: ${oldPath}`);
+    return oldPath;
+  }
+
+  throw new Error(`Data file not found: ${newPath} or ${oldPath}`);
 }
 
 /**
  * Main migration function
  */
-async function migrate(options: { clear?: boolean; subject?: string } = {}): Promise<void> {
+async function migrate(options: {
+  clear?: boolean;
+  country?: string;
+  subject?: string;
+  all?: boolean;
+} = {}): Promise<void> {
   try {
-    console.log('\n🚀 Starting Subject Mappings Migration');
-    console.log('=====================================\n');
+    console.log('\n🚀 Starting Subject Mappings Migration (Country-Based)');
+    console.log('=====================================================\n');
+
+    // Load configuration
+    const config = loadConfig();
 
     // Initialize Firebase
     console.log('Initializing Firebase...');
     initializeFirebase();
-
     const db = getFirestore();
 
-    // Clear existing data if requested
-    if (options.clear) {
-      await clearExistingMappings(db, options.subject);
+    // Determine what to migrate
+    let countriesToMigrate: string[];
+
+    if (options.all) {
+      // Migrate all countries
+      countriesToMigrate = Object.keys(config.countries);
+      console.log(`\n📍 Migrating ALL countries: ${countriesToMigrate.join(', ')}`);
+    } else if (options.country) {
+      // Migrate specific country
+      const countryCode = options.country.toUpperCase();
+      if (!config.countries[countryCode]) {
+        throw new Error(`Unknown country: ${countryCode}. Available: ${Object.keys(config.countries).join(', ')}`);
+      }
+      countriesToMigrate = [countryCode];
+    } else {
+      throw new Error('Please specify --country or --all');
     }
 
-    // Determine which subjects to import
-    const subjectsToImport = options.subject
-      ? [options.subject]
-      : Object.keys(SUBJECT_METADATA);
+    // Process each country
+    for (const countryCode of countriesToMigrate) {
+      const countryConfig = config.countries[countryCode];
 
-    // Import each subject
-    for (const subjectKey of subjectsToImport) {
-      const metadata = SUBJECT_METADATA[subjectKey];
-      if (!metadata) {
-        console.warn(`⚠️  Unknown subject: ${subjectKey}`);
-        continue;
+      console.log(`\n${'█'.repeat(60)}`);
+      console.log(`🌍 Processing ${countryConfig.name} (${countryCode})`);
+      console.log('█'.repeat(60));
+
+      // Clear existing data if requested
+      if (options.clear) {
+        await clearExistingMappings(db, countryCode, options.subject);
       }
 
-      // Read JSON file
-      const jsonPath = path.join(
-        __dirname,
-        '../data/subject_mapping',
-        metadata.file
-      );
+      // Determine which subjects to import
+      const subjectsToImport = options.subject
+        ? [options.subject]
+        : Object.keys(countryConfig.subjects);
 
-      if (!fs.existsSync(jsonPath)) {
-        console.warn(`⚠️  File not found: ${jsonPath}`);
-        continue;
+      // Import each subject
+      for (const subjectKey of subjectsToImport) {
+        const subjectConfig = countryConfig.subjects[subjectKey];
+
+        if (!subjectConfig) {
+          console.warn(`⚠️  Subject '${subjectKey}' not configured for ${countryCode}`);
+          continue;
+        }
+
+        // Get file path
+        const jsonPath = getDataFilePath(countryCode, subjectKey, subjectConfig.file);
+        console.log(`📁 Reading: ${jsonPath}`);
+
+        // Read and parse JSON
+        const jsonContent = fs.readFileSync(jsonPath, 'utf-8');
+        const jsonData: JSONData = JSON.parse(jsonContent);
+
+        // Import to Firestore
+        await importSubject(db, countryCode, subjectKey, subjectConfig.name, jsonData);
       }
-
-      const jsonContent = fs.readFileSync(jsonPath, 'utf-8');
-      const jsonData: JSONData = JSON.parse(jsonContent);
-
-      // Import to Firestore
-      await importSubject(db, subjectKey, metadata.name, jsonData);
     }
 
+    // Final summary
     console.log('\n' + '='.repeat(60));
     console.log('🎉 Migration Complete!');
     console.log('='.repeat(60));
+    console.log('\nMigrated:');
+    console.log(`  Countries: ${countriesToMigrate.join(', ')}`);
+    if (options.subject) {
+      console.log(`  Subject: ${options.subject}`);
+    } else {
+      console.log(`  Subjects: All configured subjects`);
+    }
+    console.log('\nFirestore structure:');
+    countriesToMigrate.forEach(country => {
+      console.log(`  countries/${country}/subjectMappings/{docId}`);
+    });
     console.log('\nNext steps:');
     console.log('  1. Check Firestore console to verify data');
-    console.log('  2. Create some test tasks');
-    console.log('  3. Test the API endpoints\n');
+    console.log('  2. Test API endpoints');
+    console.log('  3. Create some test tasks\n');
 
   } catch (error) {
     console.error('\n❌ Migration failed:', error);
@@ -282,20 +382,87 @@ async function migrate(options: { clear?: boolean; subject?: string } = {}): Pro
 }
 
 /**
+ * Show usage help
+ */
+function showHelp(): void {
+  console.log(`
+📚 Subject Mappings Migration Script
+
+Usage:
+  npm run migrate:subjects -- [options]
+
+Options:
+  --country <code>    Country code (HU, US, MX, etc.)
+  --subject <name>    Subject name (mathematics, physics, etc.)
+  --clear             Clear existing mappings before import
+  --all               Migrate all countries and subjects
+  --help              Show this help message
+
+Examples:
+  # Migrate mathematics for Hungary
+  npm run migrate:subjects -- --country HU --subject mathematics
+
+  # Migrate all subjects for US, clearing existing data
+  npm run migrate:subjects -- --country US --clear
+
+  # Migrate all countries and subjects
+  npm run migrate:subjects -- --all
+
+  # Migrate specific subject for all countries
+  npm run migrate:subjects -- --all --subject mathematics
+
+Configuration:
+  Edit src/config/subject-mappings.config.json to add countries/subjects
+
+Data Files:
+  Place JSON files in: src/data/mappings/{country}/{filename}
+  Example: src/data/mappings/hu/hu_mathematics_grade_9_12.json
+`);
+}
+
+/**
  * CLI execution
  */
 if (require.main === module) {
   // Parse command line arguments
   const args = process.argv.slice(2);
-  const options: { clear?: boolean; subject?: string } = {};
+
+  // Show help
+  if (args.includes('--help') || args.includes('-h')) {
+    showHelp();
+    process.exit(0);
+  }
+
+  const options: {
+    clear?: boolean;
+    country?: string;
+    subject?: string;
+    all?: boolean;
+  } = {};
 
   if (args.includes('--clear')) {
     options.clear = true;
   }
 
+  if (args.includes('--all')) {
+    options.all = true;
+  }
+
+  const countryIndex = args.indexOf('--country');
+  if (countryIndex !== -1 && args[countryIndex + 1]) {
+    options.country = args[countryIndex + 1];
+  }
+
   const subjectIndex = args.indexOf('--subject');
   if (subjectIndex !== -1 && args[subjectIndex + 1]) {
     options.subject = args[subjectIndex + 1];
+  }
+
+  // Validate
+  if (!options.country && !options.all) {
+    console.error('\n❌ Error: Please specify --country or --all\n');
+    showHelp();
+    process.exit(1);
   }
 
   // Run migration

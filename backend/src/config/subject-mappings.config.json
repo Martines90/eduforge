@@ -1,0 +1,31 @@
+{
+  "countries": {
+    "HU": {
+      "name": "Hungary",
+      "subjects": {
+        "mathematics": {
+          "name": "Mathematics",
+          "file": "hu_mathematics_grade_9_12.json"
+        }
+      }
+    },
+    "US": {
+      "name": "United States",
+      "subjects": {
+        "mathematics": {
+          "name": "Mathematics",
+          "file": "us_mathematics_grade_9_12.json"
+        }
+      }
+    },
+    "MX": {
+      "name": "Mexico",
+      "subjects": {
+        "mathematics": {
+          "name": "Mathematics",
+          "file": "mx_mathematics_grade_9_12.json"
+        }
+      }
+    }
+  }
+}

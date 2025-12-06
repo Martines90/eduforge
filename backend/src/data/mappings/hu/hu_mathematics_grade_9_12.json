@@ -1,0 +1,4750 @@
+{
+  "grade_9_10": [
+    {
+      "key": "halmazok",
+      "name": "Halmazok",
+      "short_description": "Halmazelméleti alapfogalmak, halmazműveletek, Venn-diagramok, logikai szita",
+      "sub_topics": [
+        {
+          "key": "halmaz_fogalma",
+          "name": "Halmaz fogalma és megadása",
+          "short_description": "Halmaz megadása elemek felsorolásával és utasítással",
+          "sub_topics": [
+            {
+              "key": "halmaz_megadas_felsorolassal",
+              "name": "Halmaz megadása felsorolással",
+              "short_description": "Véges halmazok elemeinek explicit felsorolása",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "halmaz_megadas_utasitassal",
+              "name": "Halmaz megadása utasítással",
+              "short_description": "Halmaz megadása tulajdonságok meghatározásával",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "halmazok_kozotti_viszonyok",
+          "name": "Halmazok közötti viszonyok",
+          "short_description": "Részhalmaz, egyenlőség, üres halmaz, alaphalmaz",
+          "sub_topics": [
+            {
+              "key": "reszhalmaz",
+              "name": "Részhalmaz",
+              "short_description": "Részhalmaz fogalma és jelölése",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "halmazok_egyenlosege",
+              "name": "Halmazok egyenlősége",
+              "short_description": "Két halmaz egyenlőségének feltétele",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "ures_halmaz",
+              "name": "Üres halmaz",
+              "short_description": "Az üres halmaz fogalma és tulajdonságai",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "halmazmuveletek",
+          "name": "Halmazműveletek",
+          "short_description": "Unió, metszet, különbség, komplementer",
+          "sub_topics": [
+            {
+              "key": "unio",
+              "name": "Unió (egyesítés)",
+              "short_description": "Két vagy több halmaz uniója",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "metszet",
+              "name": "Metszet",
+              "short_description": "Két vagy több halmaz metszete",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kulonbseg",
+              "name": "Különbség",
+              "short_description": "Két halmaz különbsége",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "komplementer",
+              "name": "Komplementer halmaz",
+              "short_description": "Halmaz komplementere az alaphalmazban",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "venn_diagram",
+          "name": "Venn-diagramok",
+          "short_description": "Halmazok és halmazműveletek ábrázolása Venn-diagrammal",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "halmaz_elemszama",
+          "name": "Halmaz elemszáma",
+          "sub_topics": [
+            {
+              "key": "logikai_szita",
+              "name": "Logikai szita",
+              "short_description": "Két-három halmaz elemszámának meghatározása logikai szitával",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "vegtelen_halmazok",
+          "name": "Végtelen halmazok",
+          "short_description": "Szemléletes kép végtelen halmazokról",
+          "example_tasks (COMPLETED)": []
+        }
+      ]
+    },
+    {
+      "key": "matematikai_logika",
+      "name": "Matematikai logika",
+      "sub_topics": [
+        {
+          "key": "allitas_fogalma",
+          "name": "Állítás fogalma",
+          "sub_topics": [
+            {
+              "key": "allitas_logikai_erteke",
+              "name": "Állítás logikai értéke",
+              "short_description": "Állítás igazságértékének megállapítása",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "logikai_muveletek",
+          "name": "Logikai műveletek",
+          "sub_topics": [
+            {
+              "key": "tagadas",
+              "name": "Tagadás (nem)",
+              "short_description": "Állítás tagadása",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "konjunkcio",
+              "name": "Konjunkció (és)",
+              "short_description": "Két állítás összekapcsolása 'és' kötőszóval",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "diszjunkcio",
+              "name": "Diszjunkció (megengedő vagy)",
+              "short_description": "Két állítás összekapcsolása megengedő 'vagy' kötőszóval",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kizaro_vagy",
+              "name": "Kizáró vagy",
+              "short_description": "Két állítás közül pontosan az egyik igaz",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "implikacio",
+              "name": "Implikáció (ha..., akkor...)",
+              "short_description": "Feltételes állítás",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "ekvivalencia",
+              "name": "Ekvivalencia (akkor és csak akkor)",
+              "short_description": "Kölcsönös feltétel",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "minden_van_olyan",
+          "name": "Minden és van olyan",
+          "sub_topics": [
+            {
+              "key": "altalanos_allitas",
+              "name": "Általános állítás (minden)",
+              "short_description": "Minden elemre vonatkozó állítás",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egzisztencialis_allitas",
+              "name": "Egzisztenciális állítás (van olyan)",
+              "short_description": "Legalább egy elemre vonatkozó állítás",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "allitas_megforditasa",
+          "name": "Állítás megfordítása",
+          "short_description": "Implikáció megfordítása",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "bizonytias_fogalma",
+          "name": "Bizonyítás fogalma",
+          "short_description": "Matematikai bizonyítás alapjai",
+          "example_tasks (COMPLETED)": []
+        }
+      ]
+    },
+    {
+      "key": "kombinatorika",
+      "name": "Kombinatorika, gráfok",
+      "short_description": "Sorba rendezés, kiválasztás, gráfok alapjai",
+      "sub_topics": [
+        {
+          "key": "sorba_rendezes",
+          "name": "Sorba rendezés",
+          "short_description": "Permutációk, variációk",
+          "sub_topics": [
+            {
+              "key": "egyszeru_sorba_rendezes",
+              "name": "Egyszerű sorba rendezés",
+              "short_description": "n elem sorba rendezése rendszerezett leszámlálással",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "felteteles_sorba_rendezes",
+              "name": "Feltételes sorba rendezés",
+              "short_description": "Sorba rendezés megkötésekkel",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "kivalasztas",
+          "name": "Kiválasztás",
+          "short_description": "Kombinációk",
+          "sub_topics": [
+            {
+              "key": "egyszeru_kivalasztas",
+              "name": "Egyszerű kiválasztás",
+              "short_description": "k elem kiválasztása n elemből",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "felteteles_kivalasztas",
+              "name": "Feltételes kiválasztás",
+              "short_description": "Kiválasztás megkötésekkel",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szorzasi_elv",
+          "name": "Szorzási elv",
+          "short_description": "Egymást követő döntések számának meghatározása",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "esetszet_valasztas",
+          "name": "Esetszétválasztás",
+          "short_description": "Különböző esetek külön-külön vizsgálata",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "grafok_alapjai",
+          "name": "Gráfok alapjai",
+          "short_description": "Gráf fogalma, csúcsok, élek",
+          "sub_topics": [
+            {
+              "key": "graf_fogalma",
+              "name": "Gráf fogalma",
+              "short_description": "Gráf mint pontok és élek halmaza",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "graf_abrazolasa",
+              "name": "Gráf ábrázolása",
+              "short_description": "Gráfok rajzolása és értelmezése",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "graf_alkalmazasai",
+              "name": "Gráf alkalmazásai",
+              "short_description": "Gráfok használata hétköznapi problémák modellezésére",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "szamhalmazok_muveletek",
+      "name": "Számhalmazok, műveletek",
+      "short_description": "Természetes, egész, racionális, irracionális és valós számok",
+      "sub_topics": [
+        {
+          "key": "szamhalmazok_epulese",
+          "name": "Számhalmazok épülése",
+          "short_description": "ℕ, ℤ, ℚ, ℝ halmazok kapcsolata",
+          "sub_topics": [
+            {
+              "key": "termeszetes_szamok",
+              "name": "Természetes számok (ℕ)",
+              "short_description": "Pozitív egész számok és a 0",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egesz_szamok",
+              "name": "Egész számok (ℤ)",
+              "short_description": "Pozitív és negatív egész számok",
+              "sub_topics": [
+                {
+                  "key": "egesz_szamok_bovitese",
+                  "name": "Egész számok (ℤ)",
+                  "short_description": "Negatív számok bevezetése",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "muveletek_egesz_szamokkal",
+                  "name": "Műveletek egész számokkal",
+                  "short_description": "Összeadás, kivonás, szorzás, osztás egész számokkal",
+                  "sub_topics": [
+                    {
+                      "key": "egesz_szamok_osszeadasa",
+                      "name": "Egész számok összeadása",
+                      "short_description": "Pozitív és negatív számok összeadása",
+                      "example_tasks (COMPLETED)": []
+                    },
+                    {
+                      "key": "egesz_szamok_kivonasa",
+                      "name": "Egész számok kivonása",
+                      "short_description": "Kivonás mint ellentett hozzáadása",
+                      "example_tasks (COMPLETED)": []
+                    },
+                    {
+                      "key": "egesz_szamok_szorzasa",
+                      "name": "Egész számok szorzása",
+                      "short_description": "Előjeles számok szorzása",
+                      "example_tasks (COMPLETED)": []
+                    },
+                    {
+                      "key": "egesz_szamok_osztasa",
+                      "name": "Egész számok osztása",
+                      "short_description": "Előjeles számok osztása",
+                      "example_tasks (COMPLETED)": []
+                    },
+                    {
+                      "key": "muveletek_nullaval",
+                      "name": "Műveletek nullával",
+                      "short_description": "Nulla szerepe a műveletekben",
+                      "example_tasks (COMPLETED)": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "racionalis_szamok",
+              "name": "Racionális számok (ℚ)",
+              "short_description": "Törtek, véges és végtelen szakaszos tizedes törtek",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "irracionalis_szamok",
+              "name": "Irracionális számok",
+              "short_description": "Végtelen nem szakaszos tizedes törtek",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "valos_szamok",
+              "name": "Valós számok (ℝ)",
+              "short_description": "Racionális és irracionális számok együtt",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "muveletek_szamokkal",
+          "name": "Műveletek valós számokkal",
+          "short_description": "Összeadás, kivonás, szorzás, osztás",
+          "sub_topics": [
+            {
+              "key": "muveleti_azonossagok",
+              "name": "Műveleti azonosságok",
+              "short_description": "Kommutativitás, asszociativitás, disztributivitás",
+              "sub_topics": [
+                {
+                  "key": "szorzas_kommutativitasa",
+                  "name": "Szorzás kommutativitása",
+                  "short_description": "a·b = b·a",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "szorzas_asszociativitasa",
+                  "name": "Szorzás asszociativitása",
+                  "short_description": "(a·b)·c = a·(b·c)",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "szorzas_disztributivitasa",
+                  "name": "Szorzás disztributivitása",
+                  "short_description": "a·(b+c) = a·b + a·c",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "osztas_muvelete",
+              "name": "Osztás",
+              "short_description": "osztandó : osztó = hányados",
+              "sub_topics": [
+                {
+                  "key": "osztas_jelolese",
+                  "name": "Osztás jelölése",
+                  "short_description": "kettőspont vagy ferde törtvonal",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "osztas_tulajdonsagai",
+                  "name": "Osztás tulajdonságai",
+                  "short_description": "Hányados változatlansága",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "tobbjeyu_osztas",
+                  "name": "Többjegyű osztás",
+                  "short_description": "Osztás algoritmus",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "zarojelek_hasznalata",
+              "name": "Zárójelek használata",
+              "short_description": "Műveleti sorrend és zárójelezés",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kivonas_muvelete",
+              "name": "Kivonás",
+              "short_description": "Kisebbítendő - kivonandó = különbség",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "tortek",
+          "name": "Törtek",
+          "short_description": "Közönséges és tizedes törtek",
+          "sub_topics": [
+            {
+              "key": "kozonsegés_tort",
+              "name": "Közönséges tört",
+              "short_description": "Törtekkel végzett műveletek",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "tizedes_tort",
+              "name": "Tizedes tört",
+              "short_description": "Véges és végtelen tizedes törtek",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "tort_atvaltas",
+              "name": "Törtalakok közötti átváltás",
+              "short_description": "Közönséges tört ↔ tizedes tört",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szamegyenes",
+          "name": "Számegyenes",
+          "short_description": "Számok ábrázolása számegyenesen",
+          "sub_topics": [
+            {
+              "key": "szamok_abrazolasa",
+              "name": "Számok ábrázolása",
+              "short_description": "Valós számok elhelyezése a számegyenesen",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "intervallumok",
+              "name": "Intervallumok",
+              "short_description": "Nyílt és zárt intervallumok",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "abszolut_ertek",
+          "name": "Abszolút érték",
+          "short_description": "Szám origótól való távolsága",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "ellentett_reciprok",
+          "name": "Ellentett és reciprok",
+          "short_description": "Szám ellentettje és reciproka",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "kerekites",
+          "name": "Kerekítés",
+          "short_description": "Számok kerekítése adott jegyre",
+          "sub_topics": [
+            {
+              "key": "kerekites_szabalyai",
+              "name": "Kerekítés szabályai",
+              "short_description": "Matematikai kerekítési szabályok",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "eszszeru_kerekites",
+              "name": "Észszerű kerekítés",
+              "short_description": "Gyakorlati helyzetekben való kerekítés",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "becsles",
+          "name": "Becslés",
+          "short_description": "Eredmények nagyságrendi ellenőrzése",
+          "example_tasks (COMPLETED)": []
+        }
+      ]
+    },
+    {
+      "key": "hatvany_gyok",
+      "name": "Hatvány, gyök",
+      "short_description": "Hatványozás, gyökvonás, normálalak",
+      "sub_topics": [
+        {
+          "key": "hatvanyozas",
+          "name": "Hatványozás",
+          "short_description": "Számok hatványozása",
+          "sub_topics": [
+            {
+              "key": "pozitiv_egesz_kitevo",
+              "name": "Pozitív egész kitevő",
+              "short_description": "a^n, ahol n pozitív egész",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "nulla_kitevo",
+              "name": "Nulla kitevő",
+              "short_description": "a^0 = 1 (a ≠ 0)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "negativ_egesz_kitevo",
+              "name": "Negatív egész kitevő",
+              "short_description": "a^(-n) = 1/a^n",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "hatvanyozas_azonossagai",
+          "name": "Hatványozás azonosságai",
+          "short_description": "Hatványok szorzása, osztása, hatványozása",
+          "sub_topics": [
+            {
+              "key": "hatvanyok_szorzasa",
+              "name": "Hatványok szorzása",
+              "short_description": "a^m · a^n = a^(m+n)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "hatvanyok_osztasa",
+              "name": "Hatványok osztása",
+              "short_description": "a^m / a^n = a^(m-n)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "hatvany_hatvanyozasa",
+              "name": "Hatvány hatványozása",
+              "short_description": "(a^m)^n = a^(m·n)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szorzat_hatvanyozasa",
+              "name": "Szorzat hatványozása",
+              "short_description": "(a·b)^n = a^n · b^n",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "hanyados_hatvanyozasa",
+              "name": "Hányados hatványozása",
+              "short_description": "(a/b)^n = a^n / b^n",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "normalalak",
+          "name": "Normálalak",
+          "short_description": "Számok felírása a·10^n alakban",
+          "sub_topics": [
+            {
+              "key": "normalalak_kepzese",
+              "name": "Normálalak képzése",
+              "short_description": "Nagy és kicsi számok normálalakja",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szamolas_normalalakkal",
+              "name": "Számolás normálalakkal",
+              "short_description": "Műveletek normálalakban felírt számokkal",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "negyzetgyok",
+          "name": "Négyzetgyök",
+          "short_description": "Második gyök",
+          "sub_topics": [
+            {
+              "key": "negyzetgyok_fogalma",
+              "name": "Négyzetgyök fogalma",
+              "short_description": "√a definíciója",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "negyzetgyok_azonossagai",
+              "name": "Négyzetgyök azonosságai",
+              "short_description": "√(a·b) = √a · √b, √(a/b) = √a / √b",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "negyzetgyok_szamitas",
+              "name": "Négyzetgyök számítása",
+              "short_description": "Négyzetgyök meghatározása számológéppel",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "betus_kifejezesek",
+      "name": "Betűs kifejezések",
+      "short_description": "Algebrai kifejezések, azonosságok, átalakítások",
+      "sub_topics": [
+        {
+          "key": "muveletek_algebrai_kifejezesekkel",
+          "name": "Műveletek algebrai kifejezésekkel",
+          "short_description": "Összeadás, kivonás, szorzás, osztás",
+          "sub_topics": [
+            {
+              "key": "osszevonas",
+              "name": "Összevonás",
+              "short_description": "Egynemű tagok összevonása",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "zarojel_felbontas",
+              "name": "Zárójel felbontás",
+              "short_description": "Zárójelek eltüntetése kifejezésekből",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egytagu_kifejezesek_szorzasa",
+              "name": "Egytagú kifejezések szorzása",
+              "short_description": "Együtthatók és változók szorzása",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "nevezetes_azonossagok",
+          "name": "Nevezetes azonosságok",
+          "short_description": "(a±b)², (a+b)(a-b)",
+          "sub_topics": [
+            {
+              "key": "binomok_negyzete",
+              "name": "Binomok négyzete",
+              "short_description": "(a+b)² = a² + 2ab + b², (a-b)² = a² - 2ab + b²",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "osszeg_kulonbseg_szorzata",
+              "name": "Összeg és különbség szorzata",
+              "short_description": "(a+b)(a-b) = a² - b²",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szorzatta_alakitas",
+          "name": "Szorzattá alakítás",
+          "short_description": "Kifejezések faktorizálása",
+          "sub_topics": [
+            {
+              "key": "kiemel és",
+              "name": "Kiemelés",
+              "short_description": "Közös tényező kiemelése",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "nevezetes_azonossagok_alkalmazasa",
+              "name": "Nevezetes azonosságok alkalmazása",
+              "short_description": "Szorzattá alakítás azonosságok segítségével",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "teljes_negyzet",
+          "name": "Teljes négyzet",
+          "short_description": "Másodfokú kifejezés teljes négyzetté alakítása",
+          "sub_topics": [
+            {
+              "key": "teljes_negyzette_kiegeszites",
+              "name": "Teljes négyzetté kiegészítés",
+              "short_description": "x² + px kifejezés teljes négyzetté alakítása",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "aranyossag_szazalekszamitas",
+      "name": "Arányosság, százalékszámítás",
+      "short_description": "Egyenes és fordított arányosság, százalékszámítás",
+      "sub_topics": [
+        {
+          "key": "egyenes_aranyossag",
+          "name": "Egyenes arányosság",
+          "short_description": "y = k·x kapcsolat",
+          "sub_topics": [
+            {
+              "key": "egyenes_aranyossag_felismerese",
+              "name": "Egyenes arányosság felismerése",
+              "short_description": "Egyenes arányosság azonosítása gyakorlati helyzetekben",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egyenes_aranyossag_grafikonja",
+              "name": "Egyenes arányosság grafikonja",
+              "short_description": "Origón átmenő egyenes",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "aranyossagi_tenyezo",
+              "name": "Arányossági tényező",
+              "short_description": "k értéke az y = k·x összefüggésben",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "forditott_aranyossag",
+          "name": "Fordított arányosság",
+          "short_description": "y = k/x kapcsolat",
+          "sub_topics": [
+            {
+              "key": "forditott_aranyossag_felismerese",
+              "name": "Fordított arányosság felismerése",
+              "short_description": "Fordított arányosság azonosítása gyakorlati helyzetekben",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "forditott_aranyossag_grafikonja",
+              "name": "Fordított arányosság grafikonja",
+              "short_description": "Hiperbola",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "egyeb_aranyossagok",
+          "name": "Egyéb arányosságok",
+          "short_description": "Négyzetes, gyökös arányosság példái",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "szazalekszamitas",
+          "name": "Százalékszámítás",
+          "short_description": "Százalékalap, -érték, -láb",
+          "sub_topics": [
+            {
+              "key": "szazalek_fogalma",
+              "name": "Százalék fogalma",
+              "short_description": "Százalék mint arány",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szazalekertekek_szamitasa",
+              "name": "Százalékértékek számítása",
+              "short_description": "Alap, érték, láb meghatározása",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szazalekos_valtozas",
+              "name": "Százalékos változás",
+              "short_description": "Növekedés, csökkenés százalékban",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "gyakorlati_alkalmazasok",
+              "name": "Gyakorlati alkalmazások",
+              "short_description": "ÁFA, kedvezmény, kamat stb.",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "elsofoku_egyenletek",
+      "name": "Elsőfokú egyenletek, egyenlőtlenségek, egyenletrendszerek",
+      "short_description": "Egyismeretlenes egyenletek és egyenlőtlenségek, kétismeretlenes egyenletrendszerek",
+      "sub_topics": [
+        {
+          "key": "elsofoku_egyenlet",
+          "name": "Elsőfokú egyismeretlenes egyenlet",
+          "short_description": "ax + b = c típusú egyenletek",
+          "sub_topics": [
+            {
+              "key": "egyenlet_fogalma",
+              "name": "Egyenlet fogalma",
+              "short_description": "Alaphalmaz, megoldáshalmaz",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "merlegelv",
+              "name": "Mérlegelv",
+              "short_description": "Egyenletek megoldása ekvivalens átalakításokkal",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egyenlet_megoldasa",
+              "name": "Egyenlet megoldása",
+              "short_description": "Lépésről lépésre megoldás",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "ellenorzes",
+              "name": "Ellenőrzés",
+              "short_description": "Megoldás helyességének vizsgálata",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "grafikus_megoldas",
+              "name": "Grafikus megoldás",
+              "short_description": "Egyenlet megoldása grafikon segítségével"
+            }
+          ]
+        },
+        {
+          "key": "elsofoku_egyenlotlenseg",
+          "name": "Elsőfokú egyenlőtlenség",
+          "short_description": "ax + b < c, ax + b > c típusú egyenlőtlenségek",
+          "sub_topics": [
+            {
+              "key": "egyenlotlenseg_fogalma",
+              "name": "Egyenlőtlenség fogalma",
+              "short_description": "Egyenlőtlenség megoldáshalmazának értelmezése",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egyenlotlensegek_alaptulajdonsagai",
+              "name": "Egyenlőtlenségek alaptulajdonságai",
+              "short_description": "Egyenlőtlenségek transzitivitása, műveletek egyenlőtlenségekkel",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egyenlotlenseg_megoldasa",
+              "name": "Egyenlőtlenség megoldása",
+              "short_description": "Mérlegelv alkalmazása egyenlőtlenségekre",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "grafikus_megoldas_egyenlotlenseg",
+              "name": "Grafikus megoldás",
+              "short_description": "Egyenlőtlenség megoldása grafikon segítségével",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "elsofoku_egyenletrendszer",
+          "name": "Elsőfokú kétismeretlenes egyenletrendszer",
+          "short_description": "Két egyenlet két ismeretlennel",
+          "sub_topics": [
+            {
+              "key": "egyenletrendszer_fogalma",
+              "name": "Egyenletrendszer fogalma",
+              "short_description": "Közös megoldás keresése",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "behelyettesiteses_modszer",
+              "name": "Behelyettesítéses módszer",
+              "short_description": "Egyik ismeretlen kifejezése és behelyettesítése",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kozos_egyutthatók_modszere",
+              "name": "Közös együtthatók módszere",
+              "short_description": "Egyenletek összeadása vagy kivonása",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "grafikus_megoldas_rendszer",
+              "name": "Grafikus megoldás",
+              "short_description": "Egyenesek metszéspontjának meghatározása",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kettőnel_tobb_ismeretlenes",
+              "name": "Kettőnél több ismeretlenes",
+              "short_description": "Kettőnél több ismeretlenes egyenletek",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szoveges_feladatok",
+          "name": "Szöveges feladatok",
+          "short_description": "Gyakorlati problémák matematikai modellezése",
+          "sub_topics": [
+            {
+              "key": "modellalkotas",
+              "name": "Modellalkotás",
+              "short_description": "Szöveges feladat egyenletté alakítása",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "ut_ido_sebesseg",
+              "name": "Út-idő-sebesség feladatok",
+              "short_description": "Mozgással kapcsolatos problémák",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kevereses_feladatok",
+              "name": "Keveréses feladatok",
+              "short_description": "Különböző anyagok keverése"
+            },
+            {
+              "key": "kozos_munkavegzes",
+              "name": "Közös munkavégzés",
+              "short_description": "Együttes teljesítmény számítása"
+            },
+            {
+              "key": "penzugyi_feladatok",
+              "name": "Pénzügyi feladatok",
+              "short_description": "Gyakorlati gazdasági problémák"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "masodfoku_egyenletek",
+      "name": "Másodfokú egyenletek, egyenlőtlenségek",
+      "short_description": "Másodfokú egyismeretlenes egyenletek és egyenlőtlenségek",
+      "sub_topics": [
+        {
+          "key": "masodfoku_egyenlet",
+          "name": "Másodfokú egyenlet",
+          "short_description": "ax² + bx + c = 0 típusú egyenletek",
+          "sub_topics": [
+            {
+              "key": "masodfoku_egyenlet_fogalma",
+              "name": "Másodfokú egyenlet fogalma",
+              "short_description": "Általános alak: ax² + bx + c = 0"
+            },
+            {
+              "key": "szorzatta_alakitas_megoldas",
+              "name": "Megoldás szorzattá alakítással",
+              "short_description": "Nullszorzat elve alkalmazása",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "teljes_negyzette_kiegeszites_megoldas",
+              "name": "Megoldás teljes négyzetté kiegészítéssel",
+              "short_description": "Egyenlet átalakítása teljes négyzetté",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "megoldokeplet",
+              "name": "Megoldóképlet",
+              "short_description": "x = (-b ± √D) / 2a",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "diszkriminans",
+              "name": "Diszkrimináns",
+              "short_description": "D = b² - 4ac és a gyökök száma",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "gyoktenyezos_alak",
+              "name": "Gyöktényezős alak",
+              "short_description": "a(x - x₁)(x - x₂) alakra hozás",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "grafikus_megoldas_masodfoku",
+              "name": "Grafikus megoldás",
+              "short_description": "Parabola és x-tengely metszéspontjai",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "gyokok_es_egyutthatók_osszefuggese",
+              "name": "Gyökök és együtthatók összefüggése",
+              "short_description": "Vieta-formulák: x₁ + x₂ = -b/a, x₁ · x₂ = c/a",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "masodfokura_visszavezetheto",
+          "name": "Másodfokúra visszavezethető egyenletek",
+          "short_description": "Egyszerű speciális esetek",
+          "sub_topics": [
+            {
+              "key": "negyedfoku_egyenlet",
+              "name": "Negyedfokú egyenlet",
+              "short_description": "ax⁴ + bx² + c = 0 típus",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "tortes_egyenlet",
+              "name": "Törtegyenlet",
+              "short_description": "Nevezőben szereplő ismeretlen",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "masodfoku_egyenlotlenseg",
+          "name": "Másodfokú egyenlőtlenség",
+          "short_description": "ax² + bx + c < 0, ax² + bx + c > 0",
+          "sub_topics": [
+            {
+              "key": "alap_megoldasi_modszerek_masodfoku_egyenlotlenseg",
+              "name": "Alap megoldási módszerek",
+              "short_description": "Másodfokú egyenlőtlenségek megoldása algebrai úton",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "grafikus_megoldas_egyenlotlenseg_masodfoku",
+              "name": "Grafikus megoldás",
+              "short_description": "Parabola és előjel vizsgálata",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szoveges_feladatok_masodfoku",
+          "name": "Szöveges feladatok",
+          "short_description": "Másodfokú egyenlettel megoldható problémák",
+          "sub_topics": [
+            {
+              "key": "geometriai_feladatok",
+              "name": "Geometriai feladatok",
+              "short_description": "Terület, kerület számítások",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "mozgasi_feladatok",
+              "name": "Mozgási feladatok",
+              "short_description": "Szabadesés, hajítás",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fuggvenyek",
+      "name": "A függvény fogalma, függvénytulajdonságok",
+      "short_description": "Függvények ábrázolása, tulajdonságai, elemi függvények",
+      "sub_topics": [
+        {
+          "key": "fuggveny_fogalma",
+          "name": "Függvény fogalma",
+          "short_description": "Egyértelmű hozzárendelés",
+          "sub_topics": [
+            {
+              "key": "hozzarendeles",
+              "name": "Hozzárendelés",
+              "short_description": "Értelmezési tartomány és értékkészlet",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egyertelmű_hozzarendeles",
+              "name": "Egyértelmű hozzárendelés",
+              "short_description": "Minden elemhez pontosan egy érték tartozik",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kolcsonosen_egyertelmű",
+              "name": "Kölcsönösen egyértelmű hozzárendelés",
+              "short_description": "Bijekció",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "fuggveny_megadasa",
+          "name": "Függvény megadása",
+          "short_description": "Különböző reprezentációk",
+          "sub_topics": [
+            {
+              "key": "keplettel",
+              "name": "Képlettel megadás",
+              "short_description": "f(x) = ... forma",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "tablazattal",
+              "name": "Táblázattal megadás",
+              "short_description": "x és f(x) értékek táblázata",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "grafikonnal",
+              "name": "Grafikonnal megadás",
+              "short_description": "Grafikus ábrázolás koordináta-rendszerben",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "fuggveny_tulajdonsagai",
+          "name": "Függvény tulajdonságai",
+          "short_description": "Alapvető jellemzők",
+          "sub_topics": [
+            {
+              "key": "ertelmezesi_tartomany",
+              "name": "Értelmezési tartomány",
+              "short_description": "Függvény által elfogadott x értékek",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "ertekk eszlet",
+              "name": "Értékkészlet",
+              "short_description": "Függvény által felvett y értékek",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "zerushelyek",
+              "name": "Zérushelyek",
+              "short_description": "f(x) = 0 megoldásai",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szelsőertekek",
+              "name": "Szélsőértékek",
+              "short_description": "Minimum és maximum",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "noveked es_fogyas",
+              "name": "Növekedés és fogyás",
+              "short_description": "Monoton szakaszok",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "linearis_fuggveny",
+          "name": "Lineáris függvény",
+          "short_description": "f(x) = mx + b",
+          "sub_topics": [
+            {
+              "key": "linearis_fuggveny_grafikonja",
+              "name": "Lineáris függvény grafikonja",
+              "short_description": "Egyenes",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "meredekseg",
+              "name": "Meredekség",
+              "short_description": "m paraméter értelmezése",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "tengelymetszet",
+              "name": "Tengelymetszet",
+              "short_description": "b paraméter értelmezése",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egyenes_egyenletenek_felirasa",
+              "name": "Egyenes egyenletének felírása",
+              "short_description": "Grafikon alapján vagy két pont ismeretében",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "masodfoku_fuggveny",
+          "name": "Másodfokú függvény",
+          "short_description": "f(x) = ax² + bx + c",
+          "sub_topics": [
+            {
+              "key": "parabola",
+              "name": "Parabola",
+              "short_description": "Másodfokú függvény grafikonja",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "parabola_csucspontja",
+              "name": "Parabola csúcspontja",
+              "short_description": "Szélsőérték helye",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "parabola_tengelye",
+              "name": "Parabola tengelye",
+              "short_description": "Szimmetriatengely",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "nyilasirany",
+              "name": "Nyílásirány",
+              "short_description": "a > 0: felfelé, a < 0: lefelé",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "negyzetgyok_fuggveny",
+          "name": "Négyzetgyökfüggvény",
+          "short_description": "f(x) = √x",
+          "sub_topics": [
+            {
+              "key": "negyzetgyok_fuggveny_grafikonja",
+              "name": "Négyzetgyökfüggvény grafikonja",
+              "short_description": "Parabola fele",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "negyzetgyok_fuggveny_tulajdonsagai",
+              "name": "Tulajdonságok",
+              "short_description": "Értelmezési tartomány, értékkészlet",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "forditott_aranyossag_fuggvenye",
+          "name": "Fordított arányosságot leíró függvény",
+          "short_description": "f(x) = k/x",
+          "sub_topics": [
+            {
+              "key": "hiperbola",
+              "name": "Hiperbola",
+              "short_description": "Fordított arányosság grafikonja",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "hiperbola_tulajdonsagai",
+              "name": "Hiperbola tulajdonságai",
+              "short_description": "Aszimptóták, tartományok",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "fuggvenytranszformaciok",
+          "name": "Függvénytranszformációk",
+          "short_description": "Egyszerű átalakítások",
+          "sub_topics": [
+            {
+              "key": "fuggoleges_eltolas",
+              "name": "Függőleges eltolás",
+              "short_description": "f(x) + c",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "vizszintes_eltolas",
+              "name": "Vízszintes eltolás",
+              "short_description": "f(x + c)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "fuggoleges_nyujtas",
+              "name": "Függőleges nyújtás/zsugorítás",
+              "short_description": "c·f(x)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "abszolutErtek_alkalmazasa",
+              "name": "Abszolút érték alkalmazása",
+              "short_description": "|f(x)|",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "inverz_fuggveny",
+          "name": "Inverz függvény",
+          "short_description": "Függvény megfordítása",
+          "sub_topics": [
+            {
+              "key": "hozzarendeles_megforditasa",
+              "name": "Hozzárendelés megfordítása",
+              "short_description": "x és y szerepének cseréje",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "inverz_fuggveny_grafikonja",
+              "name": "Inverz függvény grafikonja",
+              "short_description": "Tükrözés az y = x egyenesre",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "geometriai_alapismeretek",
+      "name": "Geometriai alapismeretek",
+      "short_description": "Térelemek, távolságok, szögek, alapszerkesztések",
+      "sub_topics": [
+        {
+          "key": "terelemek",
+          "name": "Térelemek",
+          "short_description": "Pont, egyenes, sík",
+          "sub_topics": [
+            {
+              "key": "pont",
+              "name": "Pont",
+              "short_description": "Helyet jelölő alapelem",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egyenes",
+              "name": "Egyenes",
+              "short_description": "Végtelen hosszú egydimenziós alakzat",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "sik",
+              "name": "Sík",
+              "short_description": "Végtelen kiterjedésű kétdimenziós felület",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "felegyenes",
+              "name": "Félegyenes",
+              "short_description": "Egyenes félsíkja",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szakasz",
+              "name": "Szakasz",
+              "short_description": "Két pont közötti rész",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "tavolsagok",
+          "name": "Távolságok",
+          "short_description": "Különböző térelemek távolsága",
+          "sub_topics": [
+            {
+              "key": "ket_pont_tavolsaga",
+              "name": "Két pont távolsága",
+              "short_description": "Pontokat összekötő szakasz hossza",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "pont_egyenes_tavolsaga",
+              "name": "Pont és egyenes távolsága",
+              "short_description": "Merőleges távolság",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "ket_egyenes_tavolsaga",
+              "name": "Két párhuzamos egyenes távolsága",
+              "short_description": "Állandó merőleges távolság",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "egyenesek_kolcsonos_helyzete",
+          "name": "Egyenesek kölcsönös helyzete",
+          "short_description": "Síkban és térben",
+          "sub_topics": [
+            {
+              "key": "parhuzamos_egyenesek",
+              "name": "Párhuzamos egyenesek",
+              "short_description": "Nem metszik egymást",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "metszö_egyenesek",
+              "name": "Metsző egyenesek",
+              "short_description": "Egy közös pontjuk van",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "meröleges_egyenesek",
+              "name": "Merőleges egyenesek",
+              "short_description": "90°-os szöget zárnak be",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szogek",
+          "name": "Szögek",
+          "short_description": "Szögfajták és tulajdonságaik",
+          "sub_topics": [
+            {
+              "key": "szog_fogalma",
+              "name": "Szög fogalma",
+              "short_description": "Két félegyenes által bezárt rész",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "hegyes_szog",
+              "name": "Hegyesszög",
+              "short_description": "0° < α < 90°",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "dereks zog",
+              "name": "Derékszög",
+              "short_description": "α = 90°",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "tompa_szog",
+              "name": "Tompaszög",
+              "short_description": "90° < α < 180°",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egyenes_szog",
+              "name": "Egyenesszög",
+              "short_description": "α = 180°",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "horvato_szog",
+              "name": "Homorúszög",
+              "short_description": "180° < α < 360°",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "teljes_szog",
+              "name": "Teljesszög",
+              "short_description": "α = 360°",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "nevezetes_szogparok",
+          "name": "Nevezetes szögpárok",
+          "short_description": "Kapcsolatban lévő szögek",
+          "sub_topics": [
+            {
+              "key": "potszogek",
+              "name": "Pótszögek",
+              "short_description": "Összegük 90°",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "mellekszogek",
+              "name": "Mellékszögek",
+              "short_description": "Közös szárú, egyenesszöget alkotó szögek, összegük 180°",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kiegeszito_szogek",
+              "name": "Kiegészítő szögek",
+              "short_description": "Összegük 180° (nem feltétlenül szomszédosak)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "csucsszogek",
+              "name": "Csúcsszögek",
+              "short_description": "Két metsző egyenes által alkotott, egymással szemközti, egyenlő szögek",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egyallásu_szogek",
+              "name": "Egyállású szögek",
+              "short_description": "Párhuzamos egyeneseket metsző egyenes által alkotott, egyenlő szögek",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "valtoszogek",
+              "name": "Váltószögek",
+              "short_description": "Párhuzamos egyeneseket metsző egyenes által alkotott, egymással szemben fekvő, egyenlő szögek",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "alapszerkesztesek",
+          "name": "Alapszerkesztések",
+          "short_description": "Euklideszi szerkesztések",
+          "sub_topics": [
+            {
+              "key": "szakaszfelező_meröleges",
+              "name": "Szakaszfelező merőleges",
+              "short_description": "Szakaszt felező merőleges egyenes",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szogfelező",
+              "name": "Szögfelező",
+              "short_description": "Szöget két egyenlő részre osztó félegyenes",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "meröleges_szerkesztese",
+              "name": "Merőleges szerkesztése",
+              "short_description": "Adott ponton át merőleges egyenes",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "parhuzamos_szerkesztese",
+              "name": "Párhuzamos szerkesztése",
+              "short_description": "Adott egyenessel párhuzamos egyenes",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szog_masolasa",
+              "name": "Szög másolása",
+              "short_description": "Adott szöggel egyenlő szög szerkesztése",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "ponthalmazok",
+          "name": "Ponthalmazok",
+          "short_description": "Speciális ponthalmazok",
+          "sub_topics": [
+            {
+              "key": "szakaszfelező_meröleges_ponthalmaz",
+              "name": "Szakaszfelező merőleges mint ponthalmaz",
+              "short_description": "Szakasz végpontjaitól egyenlő távolságra lévő pontok",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szogfelező_ponthalmaz",
+              "name": "Szögfelező mint ponthalmaz",
+              "short_description": "Szögszáraitól egyenlő távolságra lévő pontok",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "haromszogek",
+      "name": "Háromszögek",
+      "short_description": "Háromszögek tulajdonságai, nevezetes vonalai, Pitagorasz-tétel",
+      "sub_topics": [
+        {
+          "key": "haromszog_fogalma",
+          "name": "Háromszög fogalma",
+          "short_description": "Három szakaszból álló zárt síkidom",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "haromszogek_csoportositasa",
+          "name": "Háromszögek csoportosítása",
+          "short_description": "Oldalak és szögek szerint",
+          "sub_topics": [
+            {
+              "key": "csoportositas_oldalak_szerint",
+              "name": "Csoportosítás oldalak szerint",
+              "short_description": "Általános, egyenlő szárú, szabályos",
+              "sub_topics": [
+                {
+                  "key": "altalanos_haromszog",
+                  "name": "Általános háromszög",
+                  "short_description": "Különböző oldalú háromszög",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "egyenlo_szaru_haromszog",
+                  "name": "Egyenlő szárú háromszög",
+                  "short_description": "Két oldala egyenlő",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "szabályos_haromszog",
+                  "name": "Szabályos háromszög",
+                  "short_description": "Mindhárom oldala egyenlő",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "csoportositas_szogek_szerint",
+              "name": "Csoportosítás szögek szerint",
+              "short_description": "Hegyesszögű, derékszögű, tompaszögű",
+              "sub_topics": [
+                {
+                  "key": "hegyesszogű_haromszog",
+                  "name": "Hegyesszögű háromszög",
+                  "short_description": "Minden szöge hegyesszög",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "derékszögű_haromszog",
+                  "name": "Derékszögű háromszög",
+                  "short_description": "Egyik szöge derékszög",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "tompaszogű_haromszog",
+                  "name": "Tompaszögű háromszög",
+                  "short_description": "Egyik szöge tompaszög",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "haromszog_alapveto_osszefuggesei",
+          "name": "Háromszög alapvető összefüggései",
+          "short_description": "Oldalak és szögek közötti kapcsolatok",
+          "sub_topics": [
+            {
+              "key": "belső_szogosszeg",
+              "name": "Belső szögösszeg",
+              "short_description": "A háromszög belső szögeinek összege 180°",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "haromszog_egyenlotlenseg",
+              "name": "Háromszög-egyenlőtlenség",
+              "short_description": "Bármely két oldal összege nagyobb a harmadik oldalnál",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "nagyobb_oldallal_szemben",
+              "name": "Nagyobb oldallal szemben nagyobb szög",
+              "short_description": "Oldalak és szembeni szögek viszonya",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "haromszog_nevezetes_vonalai",
+          "name": "Háromszög nevezetes vonalai",
+          "short_description": "Magasságvonal, súlyvonal, szögfelező, középvonal, oldalfelező merőleges",
+          "sub_topics": [
+            {
+              "key": "magassagvonal",
+              "name": "Magasságvonal",
+              "short_description": "Csúcsból az átellenes oldalra bocsátott merőleges",
+              "sub_topics": [
+                {
+                  "key": "magassagpont",
+                  "name": "Magasságpont",
+                  "short_description": "Magasságvonalak metszéspontja",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "sulyvonal",
+              "name": "Súlyvonal",
+              "short_description": "Csúcsot és szemközti oldal felezőpontját összekötő szakasz",
+              "sub_topics": [
+                {
+                  "key": "sulypont",
+                  "name": "Súlypont",
+                  "short_description": "Súlyvonalak metszéspontja",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "szogfelező_haromszogben",
+              "name": "Szögfelező",
+              "short_description": "Belső szöget két egyenlő részre osztó félegyenes",
+              "sub_topics": [
+                {
+                  "key": "beirt_kor_kozeppontja",
+                  "name": "Beírt kör középpontja",
+                  "short_description": "Belső szögfelezők metszéspontja",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "kozepvonal",
+              "name": "Középvonal",
+              "short_description": "Két oldal felezőpontját összekötő szakasz",
+              "sub_topics": [
+                {
+                  "key": "kozepvonal_tetele",
+                  "name": "Középvonal tétele",
+                  "short_description": "Párhuzamos a harmadik oldallal és hossza annak fele",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "oldalfelező_meröleges_haromszogben",
+              "name": "Oldalfelező merőleges",
+              "short_description": "Oldal felezőpontjára állított merőleges egyenes",
+              "sub_topics": [
+                {
+                  "key": "korulirt_kor_kozeppontja",
+                  "name": "Körülírt kör középpontja",
+                  "short_description": "Oldalfelező merőlegesek metszéspontja",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "haromszog_korei",
+          "name": "Háromszög körei",
+          "short_description": "Beírt és körülírt kör",
+          "sub_topics": [
+            {
+              "key": "beirt_kor",
+              "name": "Beírt kör",
+              "short_description": "A háromszög mindhárom oldalát érinti",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "korulirt_kor",
+              "name": "Körülírt kör",
+              "short_description": "A háromszög mindhárom csúcsán átmegy",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "pitagorasz_tetel",
+          "name": "Pitagorasz-tétel",
+          "short_description": "Derékszögű háromszög oldalai között összefüggés",
+          "sub_topics": [
+            {
+              "key": "pitagorasz_tetel_kimondasa",
+              "name": "Pitagorasz-tétel kimondása",
+              "short_description": "a² + b² = c² (c az átfogó)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "pitagorasz_tetel_bizonytasa",
+              "name": "Pitagorasz-tétel bizonyítása",
+              "short_description": "Területekkel való bizonyítás",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "pitagorasz_tetel_megforditasa",
+              "name": "Pitagorasz-tétel megfordítása",
+              "short_description": "Ha a² + b² = c², akkor derékszögű a háromszög",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "pitagorasz_tetel_alkalmazasa",
+              "name": "Pitagorasz-tétel alkalmazása",
+              "short_description": "Gyakorlati feladatok megoldása",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "haromszog_terulete",
+          "name": "Háromszög területe",
+          "short_description": "Terület számítása különböző módszerekkel",
+          "sub_topics": [
+            {
+              "key": "alap_magassag_szorzata",
+              "name": "Alap és magasság szorzata",
+              "short_description": "T = (a · ma) / 2",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "terulet_szogfuggvennyel",
+              "name": "Terület szögfüggvénnyel",
+              "short_description": "T = (a · b · sin γ) / 2",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "haromszogek_egybevagosaga",
+          "name": "Háromszögek egybevágósága",
+          "short_description": "Egybevágóság alapesetei",
+          "sub_topics": [
+            {
+              "key": "ooo",
+              "name": "Oldal-oldal-oldal (OOO)",
+              "short_description": "Három megfelelő oldal egyenlősége",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "oso",
+              "name": "Oldal-szög-oldal (OSO)",
+              "short_description": "Két oldal és közbezárt szög egyenlősége",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szo",
+              "name": "Szög-oldal-szög (SZO)",
+              "short_description": "Egy oldal és a végpontjaiban lévő szögek egyenlősége",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "ofo",
+              "name": "Oldal-oldal-szög (OFO) - derékszögű háromszögeknél",
+              "short_description": "Átfogó és befogó egyenlősége",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "negyszogek_sokszogek",
+      "name": "Négyszögek, sokszögek",
+      "short_description": "Speciális négyszögek, konvex sokszögek tulajdonságai",
+      "sub_topics": [
+        {
+          "key": "negyszog_fogalma",
+          "name": "Négyszög fogalma",
+          "short_description": "Négy szakaszból álló zárt síkidom",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "specialis_negyszogek",
+          "name": "Speciális négyszögek",
+          "short_description": "Trapéz, paralelogramma, rombusz, téglalap, négyzet",
+          "sub_topics": [
+            {
+              "key": "trapez",
+              "name": "Trapéz",
+              "short_description": "Egy pár szemközti oldala párhuzamos",
+              "sub_topics": [
+                {
+                  "key": "hurtrapez",
+                  "name": "Húrtrapéz",
+                  "short_description": "Szárai egyenlő hosszúak",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "derékszögű_trapez",
+                  "name": "Derékszögű trapéz",
+                  "short_description": "Egyik szára merőleges az alapokra",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "trapez_terulete",
+                  "name": "Trapéz területe",
+                  "short_description": "T = (a + c) · m / 2",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "paralelogramma",
+              "name": "Paralelogramma",
+              "short_description": "Szemközti oldalai párhuzamosak és egyenlők",
+              "sub_topics": [
+                {
+                  "key": "paralelogramma_tulajdonsagai",
+                  "name": "Paralelogramma tulajdonságai",
+                  "short_description": "Átlók felezik egymást, szemközti szögek egyenlők",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "paralelogramma_terulete",
+                  "name": "Paralelogramma területe",
+                  "short_description": "T = a · ma",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "deltoid",
+              "name": "Deltoid",
+              "short_description": "Két-két szomszédos oldala egyenlő",
+              "sub_topics": [
+                {
+                  "key": "deltoid_tulajdonsagai",
+                  "name": "Deltoid tulajdonságai",
+                  "short_description": "Átlók merőlegesek, egyik átló felezi a másikat",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "deltoid_terulete",
+                  "name": "Deltoid területe",
+                  "short_description": "T = (e · f) / 2",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "rombusz",
+              "name": "Rombusz",
+              "short_description": "Minden oldala egyenlő",
+              "sub_topics": [
+                {
+                  "key": "rombusz_tulajdonsagai",
+                  "name": "Rombusz tulajdonságai",
+                  "short_description": "Átlók felezik egymást és merőlegesek",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "rombusz_terulete",
+                  "name": "Rombusz területe",
+                  "short_description": "T = (e · f) / 2 vagy T = a² · sin α",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "teglalap",
+              "name": "Téglalap",
+              "short_description": "Minden szöge derékszög",
+              "sub_topics": [
+                {
+                  "key": "teglalap_tulajdonsagai",
+                  "name": "Téglalap tulajdonságai",
+                  "short_description": "Átlók egyenlők és felezik egymást",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "teglalap_terulete",
+                  "name": "Téglalap területe",
+                  "short_description": "T = a · b",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "negyzet",
+              "name": "Négyzet",
+              "short_description": "Minden oldala egyenlő, minden szöge derékszög",
+              "sub_topics": [
+                {
+                  "key": "negyzet_tulajdonsagai",
+                  "name": "Négyzet tulajdonságai",
+                  "short_description": "Átlók egyenlők, merőlegesek és felezik egymást",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "negyzet_terulete",
+                  "name": "Négyzet területe",
+                  "short_description": "T = a²",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "konvex_sokszog",
+          "name": "Konvex sokszög",
+          "short_description": "Minden belső szöge kisebb 180°-nál",
+          "sub_topics": [
+            {
+              "key": "sokszog_belső_szogosszege",
+              "name": "Sokszög belső szögösszege",
+              "short_description": "(n - 2) · 180°",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "sokszog_külső_szogosszege",
+              "name": "Sokszög külső szögösszege",
+              "short_description": "360°",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "atlok_szama",
+              "name": "Átlók száma",
+              "short_description": "n · (n - 3) / 2",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szabályos_sokszog",
+          "name": "Szabályos sokszög",
+          "short_description": "Minden oldala és szöge egyenlő",
+          "sub_topics": [
+            {
+              "key": "szabályos_sokszog_tulajdonsagai",
+              "name": "Szabályos sokszög tulajdonságai",
+              "short_description": "Körbe írható és köré írható",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szabályos_sokszog_terulete",
+              "name": "Szabályos sokszög területe",
+              "short_description": "Átdarabolással való számítás",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "kor_reszei",
+      "name": "A kör és részei",
+      "short_description": "Kör, körcikk, körgyűrű, érintő, Thalész-tétel",
+      "sub_topics": [
+        {
+          "key": "kor_fogalma",
+          "name": "Kör fogalma",
+          "short_description": "Adott ponttól egyenlő távolságra lévő pontok halmaza",
+          "sub_topics": [
+            {
+              "key": "kor_elemei",
+              "name": "Kör elemei",
+              "short_description": "Középpont, sugár, átmérő, húr, szelő",
+              "sub_topics": [
+                {
+                  "key": "sugar",
+                  "name": "Sugár",
+                  "short_description": "Középpontot és kerületi pontot összekötő szakasz",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "atmero",
+                  "name": "Átmérő",
+                  "short_description": "Középponton átmenő húr",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "hur",
+                  "name": "Húr",
+                  "short_description": "Két kerületi pontot összekötő szakasz",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kozepponti_szog",
+          "name": "Középponti szög",
+          "short_description": "Csúcsa a kör középpontja",
+          "sub_topics": [
+            {
+              "key": "kozepponti_szog_es_koriv",
+              "name": "Középponti szög és körív",
+              "short_description": "Egyenesen arányosak",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kozepponti_szog_es_korcikk",
+              "name": "Középponti szög és körcikk",
+              "short_description": "A körcikk területe arányos a középponti szöggel",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "kor_kerulete",
+          "name": "Kör kerülete",
+          "short_description": "K = 2r · π",
+          "sub_topics": [
+            {
+              "key": "koriv_hossza",
+              "name": "Körív hossza",
+              "short_description": "ív = (α / 360°) · 2r · π",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "kor_terulete",
+          "name": "Kör területe",
+          "short_description": "T = r² · π",
+          "sub_topics": [
+            {
+              "key": "kor_kerulete",
+              "name": "Kör kerülete",
+              "short_description": "K = 2r · π",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "korcikk_terulete",
+              "name": "Körcikk területe",
+              "short_description": "T = (α / 360°) · r² · π",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "korgyűrű_terulete",
+              "name": "Körgyűrű területe",
+              "short_description": "T = π · (R² - r²)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "korszelet_terulete",
+              "name": "Körszelet területe",
+              "short_description": "Körcikk és háromszög területének különbsége",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "kor_erintoje",
+          "name": "Kör érintője",
+          "short_description": "Egy pontban érinti a kört",
+          "sub_topics": [
+            {
+              "key": "erinto_tulajdonsaga",
+              "name": "Érintő tulajdonsága",
+              "short_description": "Merőleges az érintési pontba húzott sugárra",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "erintoszakaszok",
+              "name": "Érintőszakaszok",
+              "short_description": "Külső pontból húzott érintők egyenlők",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "thalész_tetel",
+          "name": "Thalész-tétel",
+          "short_description": "Átmérő fölötti kerületi szög derékszög",
+          "sub_topics": [
+            {
+              "key": "thalész_tetel_kimondasa",
+              "name": "Thalész-tétel kimondása",
+              "short_description": "Félkör fölötti kerületi szög 90°",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "thalész_tetel_bizonytasa",
+              "name": "Thalész-tétel bizonyítása",
+              "short_description": "Egyenlő szárú háromszögekkel",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "thalész_tetel_megforditasa",
+              "name": "Thalész-tétel megfordítása",
+              "short_description": "Ha derékszögű, akkor átmérő fölötti",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "transzformaciok",
+      "name": "Transzformációk, szerkesztések",
+      "short_description": "Egybevágósági és hasonlósági transzformációk, vektorok",
+      "sub_topics": [
+        {
+          "key": "geometriai_transzformaciok",
+          "name": "Geometriai transzformációk",
+          "short_description": "Sík pontjainak leképezése",
+          "sub_topics": [
+            {
+              "key": "peldak_transzformaciokra",
+              "name": "Példák transzformációkra",
+              "short_description": "Vetítés, térkép, fényképezés",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "egybevagosagi_transzformaciok",
+          "name": "Egybevágósági transzformációk",
+          "short_description": "Távolságtartó leképezések",
+          "sub_topics": [
+            {
+              "key": "tengelyes_tukrozes",
+              "name": "Tengelyes tükrözés",
+              "short_description": "Tükrözés egyenesre",
+              "sub_topics": [
+                {
+                  "key": "tengelyes_tukrozes_tulajdonsagai",
+                  "name": "Tengelyes tükrözés tulajdonságai",
+                  "short_description": "Távolságtartó, szögtartó",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "tengelyes_tukrozes_szerkesztese",
+                  "name": "Tengelyes tükrözés szerkesztése",
+                  "short_description": "Pont tükörképének megszerkesztése",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "kozeppontos_tukrozes",
+              "name": "Középpontos tükrözés",
+              "short_description": "Tükrözés pontra",
+              "sub_topics": [
+                {
+                  "key": "kozeppontos_tukrozes_tulajdonsagai",
+                  "name": "Középpontos tükrözés tulajdonságai",
+                  "short_description": "Két tengelyes tükrözés egymásutánja",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "kozeppontos_tukrozes_szerkesztese",
+                  "name": "Középpontos tükrözés szerkesztése",
+                  "short_description": "Pont tükörképének megszerkesztése",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "pont_koruli_forgatas",
+              "name": "Pont körüli forgatás",
+              "short_description": "Elforgatás adott pont körül",
+              "sub_topics": [
+                {
+                  "key": "forgatas_tulajdonsagai",
+                  "name": "Forgatás tulajdonságai",
+                  "short_description": "Forgásszög, forgásközéppont",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "forgatas_szerkesztese",
+                  "name": "Forgatás szerkesztése",
+                  "short_description": "Pont elforgatott képének megszerkesztése",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "parhuzamos_eltolas",
+              "name": "Párhuzamos eltolás",
+              "short_description": "Eltolás vektor mentén",
+              "sub_topics": [
+                {
+                  "key": "eltolas_tulajdonsagai",
+                  "name": "Eltolás tulajdonságai",
+                  "short_description": "Eltolás vektor",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "eltolas_szerkesztese",
+                  "name": "Eltolás szerkesztése",
+                  "short_description": "Pont eltolt képének megszerkesztése",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "vektorok",
+          "name": "Vektorok",
+          "short_description": "Vektor fogalma, vektorműveletek",
+          "sub_topics": [
+            {
+              "key": "vektor_fogalma",
+              "name": "Vektor fogalma",
+              "short_description": "Irányított szakasz",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "vektor_abszolut_erteke",
+              "name": "Vektor abszolút értéke",
+              "short_description": "Vektor hossza",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "nullvektor",
+              "name": "Nullvektor",
+              "short_description": "Hossza zérus",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "ellentett_vektor",
+              "name": "Ellentett vektor",
+              "short_description": "Ellentétes irányú, egyenlő hosszú",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "vektorok_osszege",
+              "name": "Vektorok összege",
+              "short_description": "Háromszög-szabály, paralelogramma-szabály",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "vektorok_kulonbsege",
+              "name": "Vektorok különbsége",
+              "short_description": "Ellentett vektor hozzáadása",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "vektor_szamszorosa",
+              "name": "Vektor számszorosa",
+              "short_description": "Vektor hosszának és irányának változtatása",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "egybevagosag",
+          "name": "Egybevágóság",
+          "short_description": "Alakzatok egybevágósága",
+          "sub_topics": [
+            {
+              "key": "egybevago_alakzatok",
+              "name": "Egybevágó alakzatok",
+              "short_description": "Egybevágósági transzformációval egymásba vihetők",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szimmetria",
+              "name": "Szimmetria",
+              "short_description": "Tengelyes és középpontos szimmetria",
+              "sub_topics": [
+                {
+                  "key": "tengelyesen_szimmetrikus",
+                  "name": "Tengelyesen szimmetrikus alakzat",
+                  "short_description": "Önmagába tükrözhető egyenesre",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "kozeppontosan_szimmetrikus",
+                  "name": "Középpontosan szimmetrikus alakzat",
+                  "short_description": "Önmagába tükrözhető pontra",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "parkettazas",
+              "name": "Parkettázás",
+              "short_description": "Sík lefedése egybevágó síkidomokkal",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "hasonlosagi_transzformaciok",
+          "name": "Hasonlósági transzformációk",
+          "short_description": "Alakot megtartó, méretet változtató leképezések",
+          "sub_topics": [
+            {
+              "key": "kozeppontos_hasonlosag",
+              "name": "Középpontos hasonlósági transzformáció",
+              "short_description": "Középpontból való nagyítás/kicsinyítés",
+              "sub_topics": [
+                {
+                  "key": "hasonlosag_aranya",
+                  "name": "Hasonlóság aránya",
+                  "short_description": "Nagyítás/kicsinyítés mértéke (k)",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "hasonlosag_kozeppontja",
+                  "name": "Hasonlóság középpontja",
+                  "short_description": "Fix pont a transzformációban",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "hasonlosagi_transzformacio",
+              "name": "Hasonlósági transzformáció",
+              "short_description": "Középpontos hasonlóság és egybevágóság összetétele",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "hasonlosag",
+          "name": "Hasonlóság",
+          "short_description": "Alakzatok hasonlósága",
+          "sub_topics": [
+            {
+              "key": "hasonlo_alakzatok",
+              "name": "Hasonló alakzatok",
+              "short_description": "Hasonlósági transzformációval egymásba vihetők",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "hasonlo_haromszogek",
+              "name": "Hasonló háromszögek",
+              "short_description": "Megfelelő szögek egyenlők, megfelelő oldalak arányosak",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "hasonlo_sikidomok_kerulete_terulete",
+              "name": "Hasonló síkidomok kerülete és területe",
+              "short_description": "Kerület k-szoros, terület k²-szeres",
+              "sub_topics": [
+                {
+                  "key": "keruletek_aranya",
+                  "name": "Kerületek aránya",
+                  "short_description": "Egyenlő a hasonlóság arányával",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "teruletek_aranya",
+                  "name": "Területek aránya",
+                  "short_description": "A hasonlóság arányának négyzete",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "szerkesztes_hagyomanyos_eszkozokkel",
+          "name": "Szerkesztés hagyományos eszközökkel",
+          "short_description": "Körzővel és vonalzóval",
+          "sub_topics": [
+            {
+              "key": "haromszog_szerkesztese",
+              "name": "Háromszög szerkesztése",
+              "short_description": "Különböző adatokból",
+              "sub_topics": [
+                {
+                  "key": "diszkusszio",
+                  "name": "Diszkusszió",
+                  "short_description": "Szerkeszthetőség feltételei",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "negyszog_szerkesztese",
+              "name": "Négyszög szerkesztése",
+              "short_description": "Különböző adatokból",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "dinamikus_geometriai_szoftver",
+          "name": "Dinamikus geometriai szoftver",
+          "short_description": "Digitális szerkesztés és felfedezés",
+          "example_tasks (COMPLETED)": []
+        }
+      ]
+    },
+    {
+      "key": "leiro_statisztika_9_10",
+      "name": "Leíró statisztika",
+      "short_description": "Adatgyűjtés, rendszerezés, középértékek, diagramok",
+      "sub_topics": [
+        {
+          "key": "statisztikai_adatgyujtes",
+          "name": "Statisztikai adatgyűjtés",
+          "short_description": "Adatok tervezett gyűjtése",
+          "sub_topics": [
+            {
+              "key": "adatgyujtes_tervezese",
+              "name": "Adatgyűjtés tervezése",
+              "short_description": "Célok és módszerek meghatározása",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "adatgyujtes_forrasai",
+              "name": "Adatgyűjtés forrásai",
+              "short_description": "Hagyományos és internetes források",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "adatok_rendszerezese",
+          "name": "Adatok rendszerezése",
+          "short_description": "Adatok táblázatba rendezése",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "kozep_ertekek",
+          "name": "Középértékek",
+          "short_description": "Átlag, medián, módusz",
+          "sub_topics": [
+            {
+              "key": "atlag",
+              "name": "Átlag (számtani közép)",
+              "short_description": "Összeg osztva az elemszámmal",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "median",
+              "name": "Medián",
+              "short_description": "Sorba rendezett adatok középső értéke",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "modusz",
+              "name": "Módusz",
+              "short_description": "Leggyakoribb érték",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "diagramok",
+          "name": "Diagramok",
+          "short_description": "Adatok grafikus megjelenítése",
+          "sub_topics": [
+            {
+              "key": "oszlopdiagram",
+              "name": "Oszlopdiagram",
+              "short_description": "Oszlopokkal való ábrázolás",
+              "sub_topics": [
+                {
+                  "key": "oszlopdiagram_keszitese",
+                  "name": "Oszlopdiagram készítése",
+                  "short_description": "Hagyományosan és digitálisan",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "oszlopdiagram_ertelmezese",
+                  "name": "Oszlopdiagram értelmezése",
+                  "short_description": "Információk leolvasása",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "kordiagram",
+              "name": "Kördiagram",
+              "short_description": "Körcikkekkel való ábrázolás",
+              "sub_topics": [
+                {
+                  "key": "kordiagram_keszitese",
+                  "name": "Kördiagram készítése",
+                  "short_description": "Százalékok és középponti szögek számítása",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "kordiagram_ertelmezese",
+                  "name": "Kördiagram értelmezése",
+                  "short_description": "Arányok leolvasása",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "diagramtipus_kivalasztasa",
+              "name": "Megfelelő diagramtípus kiválasztása",
+              "short_description": "Adatoknak megfelelő ábrázolásmód",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "diagramok_kozotti_konverzio",
+              "name": "Diagramok közötti konverzió",
+              "short_description": "Oszlopdiagram ↔ kördiagram",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "grafikus_manipulaciok",
+          "name": "Grafikus manipulációk",
+          "short_description": "Megtévesztő ábrázolások felismerése",
+          "sub_topics": [
+            {
+              "key": "tengelyek_megtevesztese",
+              "name": "Tengelyek megtévesztése",
+              "short_description": "Hamis kezdőpont, arányok",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "manipulaciok_javitasa",
+              "name": "Manipulációk javítása",
+              "short_description": "Helyes ábrázolás elkészítése",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "adatok_ertelmezese_ertekelese",
+          "name": "Adatok értelmezése és értékelése",
+          "short_description": "Statisztikai következtetések levonása",
+          "example_tasks (COMPLETED)": []
+        }
+      ]
+    },
+    {
+      "key": "valoszinuseg_szamitas_9_10",
+      "name": "Valószínűség-számítás",
+      "short_description": "Véletlen jelenségek, valószínűség, relatív gyakoriság",
+      "sub_topics": [
+        {
+          "key": "veletlen_jelensegek",
+          "name": "Véletlen jelenségek",
+          "short_description": "Kimenetele nem biztos",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "valoszinusegi_kiserletek",
+          "name": "Valószínűségi kísérletek",
+          "short_description": "Dobások, húzások végrehajtása",
+          "sub_topics": [
+            {
+              "key": "dobokocka",
+              "name": "Dobókocka",
+              "short_description": "Szabályos dobókocka tulajdonságai",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "penzérme",
+              "name": "Pénzérme",
+              "short_description": "Fej vagy írás",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "esemeny_fogalma",
+          "name": "Esemény fogalma",
+          "short_description": "A kísérlet lehetséges kimenetele",
+          "sub_topics": [
+            {
+              "key": "elemi_esemeny",
+              "name": "Elemi esemény",
+              "short_description": "Tovább nem bontható kimenetel",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "esemenyter",
+              "name": "Eseménytér",
+              "short_description": "Összes lehetséges kimenetel",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "gyakorisag_relativ_gyakorisag",
+          "name": "Gyakoriság és relatív gyakoriság",
+          "short_description": "Esemény bekövetkezésének száma és aránya",
+          "sub_topics": [
+            {
+              "key": "gyakorisag",
+              "name": "Gyakoriság",
+              "short_description": "Hányszor következett be az esemény",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "relativ_gyakorisag",
+              "name": "Relatív gyakoriság",
+              "short_description": "Gyakoriság / összes kísérlet",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "gyakorisagi_tablazat",
+              "name": "Gyakorisági táblázat",
+              "short_description": "Adatok rendszerezése táblázatba",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "valoszinuseg_fogalma",
+          "name": "Valószínűség fogalma",
+          "short_description": "Statisztikai alapon",
+          "sub_topics": [
+            {
+              "key": "statisztikai_valoszinuseg",
+              "name": "Statisztikai valószínűség",
+              "short_description": "Relatív gyakoriság nagy elemszám mellett",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "klasszikus_valoszinusegi_modell",
+              "name": "Klasszikus valószínűségi modell",
+              "short_description": "Kedvező esetek / összes eset",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "diszkret_valoszinuseg_eloszlas",
+          "name": "Diszkrét valószínűség-eloszlás",
+          "short_description": "Véges számú kimenetel valószínűségeloszlása",
+          "sub_topics": [
+            {
+              "key": "eloszlas_abrazolasa",
+              "name": "Eloszlás ábrázolása",
+              "short_description": "Oszlopdiagrammal vagy táblázattal",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "key": "halmazok_logika_ismetles",
+      "name": "Halmazok, matematikai logika",
+      "short_description": "Halmazműveletek és logikai műveletek kapcsolata, állítások bizonyítása",
+      "sub_topics": [
+        {
+          "key": "halmazmuveletek_logikai_muveletek",
+          "name": "Halmazműveletek és logikai műveletek kapcsolata",
+          "short_description": "Kapcsolatok példákon keresztül",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "logikai_kifejezesek",
+          "name": "Logikai kifejezések használata",
+          "short_description": "Helyes alkalmazás matematikában",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "allitasok_indoklasa",
+          "name": "Állítások indoklása",
+          "short_description": "Érvelés, bizonyítás",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "tetelek_bizonytasa",
+          "name": "Tételek bizonyítása",
+          "short_description": "Matematikai bizonyítások",
+          "example_tasks (COMPLETED)": []
+        }
+      ]
+    },
+    {
+      "key": "kombinatorika_grafok_11_12",
+      "name": "Kombinatorika, gráfok",
+      "short_description": "Faktoriális, binomiális együttható, mintavétel, gráfok",
+      "sub_topics": [
+        {
+          "key": "faktori alis",
+          "name": "Faktoriális",
+          "short_description": "n! = 1 · 2 · 3 · ... · n",
+          "sub_topics": [
+            {
+              "key": "faktorialis_ertelmezese",
+              "name": "Faktoriális értelmezése",
+              "short_description": "n elem sorba rendezésének száma",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "binomialis_egyutthato",
+          "name": "Binomiális együttható",
+          "short_description": "C(n, k) vagy 'n alatt a k'",
+          "sub_topics": [
+            {
+              "key": "binomialis_egyutthato_szamitasa",
+              "name": "Binomiális együttható számítása",
+              "short_description": "C(n, k) = n! / (k! · (n-k)!)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "pascal_haromszog",
+              "name": "Pascal-háromszög",
+              "short_description": "Binomiális együtthatók háromszög alakban",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "mintavetel",
+          "name": "Mintavétel",
+          "short_description": "Visszatevéses és visszatevés nélküli",
+          "sub_topics": [
+            {
+              "key": "visszatevessel",
+              "name": "Mintavétel visszatevéssel",
+              "short_description": "Ismétlődés megengedett",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "visszateves_nelkul",
+              "name": "Mintavétel visszatevés nélkül",
+              "short_description": "Ismétlődés nem megengedett",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "graf_fokszama",
+          "name": "Gráf csúcsának fokszáma",
+          "short_description": "Csúcsból kiinduló élek száma",
+          "sub_topics": [
+            {
+              "key": "fokszamosszeg_tetel",
+              "name": "Fokszámösszeg tétel",
+              "short_description": "Fokszámok összege = 2 · élek száma",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "szamelmeleti_ismeretek",
+      "name": "Számelméleti ismeretek, számhalmazok épülése",
+      "short_description": "Oszthatóság, prímszámok, számrendszerek, számhalmazok kapcsolata",
+      "sub_topics": [
+        {
+          "key": "oszthato sag",
+          "name": "Oszthatóság",
+          "short_description": "Alapfogalmak és szabályok",
+          "sub_topics": [
+            {
+              "key": "oszthatosag_fogalma",
+              "name": "Oszthatóság fogalma",
+              "short_description": "a | b, ha létezik k, hogy b = k · a",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "oszthatosagi_szabalyok",
+              "name": "Oszthatósági szabályok",
+              "short_description": "2, 3, 4, 5, 6, 8, 9, 10-zel való oszthatóság",
+              "sub_topics": [
+                {
+                  "key": "ket_oszthatosaga",
+                  "name": "2-vel oszthatóság",
+                  "short_description": "Páros számok",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "harom_oszthatosaga",
+                  "name": "3-mal oszthatóság",
+                  "short_description": "Számjegyek összege osztható 3-mal",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "negy_oszthatosaga",
+                  "name": "4-gyel oszthatóság",
+                  "short_description": "Utolsó két jegy osztható 4-gyel",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "ot_oszthatosaga",
+                  "name": "5-tel oszthatóság",
+                  "short_description": "Utolsó jegy 0 vagy 5",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "hat_oszthatosaga",
+                  "name": "6-tal oszthatóság",
+                  "short_description": "Páros és 3-mal osztható",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "het_oszthatosaga",
+                  "name": "7-tel oszthatóság",
+                  "short_description": "Csoportosítva, váltakozó előjellel összeadva",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "nyolc_oszthatosaga",
+                  "name": "8-cal oszthatóság",
+                  "short_description": "Utolsó három jegy osztható 8-cal",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "kilenc_oszthatosaga",
+                  "name": "9-cel oszthatóság",
+                  "short_description": "Számjegyek összege osztható 9-cel",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "tiz_oszthatosaga",
+                  "name": "10-zel oszthatóság",
+                  "short_description": "Utolsó jegy 0",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "tizenegy_oszthatosaga",
+                  "name": "11-gyel oszthatóság",
+                  "short_description": "Páros és páratlan helyen álló jegyek különbsége osztható 11-gyel",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "primszamok",
+          "name": "Prímszámok",
+          "short_description": "Csak 1-gyel és önmagával osztható számok",
+          "sub_topics": [
+            {
+              "key": "primtenyezos_felbontas",
+              "name": "Prímtényezős felbontás",
+              "short_description": "Összetett szám prímszámok szorzataként",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "primtenyezos_felbontas_egyertelmusege",
+              "name": "Prímtényezős felbontás egyértelműsége",
+              "short_description": "Számelmélet alaptétele",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "lnko_lkkt",
+          "name": "Legnagyobb közös osztó és legkisebb közös többszörös",
+          "short_description": "LNKO és LKKT",
+          "sub_topics": [
+            {
+              "key": "lnko_meghatarozasa",
+              "name": "LNKO meghatározása",
+              "short_description": "Prímtényezős felbontásból",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "lkkt_meghatarozasa",
+              "name": "LKKT meghatározása",
+              "short_description": "Prímtényezős felbontásból",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "relativ_primek",
+              "name": "Relatív prímek",
+              "short_description": "LNKO = 1",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szamrendszerek",
+          "name": "Számrendszerek",
+          "short_description": "Különböző alapú számrendszerek",
+          "sub_topics": [
+            {
+              "key": "tizes_szamrendszer",
+              "name": "Tízes számrendszer",
+              "short_description": "Helyi értékes írásmód",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "mas_alap u_szamrendszerek",
+              "name": "Más alapú számrendszerek",
+              "short_description": "2-es, 8-as, 16-os stb.",
+              "sub_topics": [
+                {
+                  "key": "szamok_felirasa_mas_alapon",
+                  "name": "Számok felírása más alapon",
+                  "short_description": "Átváltás különböző alapok között",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "teljes_indukcio",
+          "name": "A teljes indukció",
+          "short_description": "Bizonyítási módszer természetes számokra",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "szamhalmazok_epulese_reszletes",
+          "name": "Számhalmazok épülése",
+          "short_description": "ℕ → ℤ → ℚ → ℝ",
+          "sub_topics": [
+            {
+              "key": "termeszetes_szamok_tulajdonsagai",
+              "name": "Természetes számok (ℕ)",
+              "short_description": "Számolás, sorbarendezés alapja",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egesz_szamok_bovitese",
+              "name": "Egész számok (ℤ)",
+              "short_description": "Negatív számok bevezetése",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "racionalis_szamok_reszletes",
+              "name": "Racionális számok (ℚ)",
+              "short_description": "Törtek, tizedes törtek",
+              "sub_topics": [
+                {
+                  "key": "veges_tizedes_tortek",
+                  "name": "Véges tizedes törtek",
+                  "short_description": "Véget érő tizedesjegyek",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "vegtelen_szakaszos_tizedes_tortek",
+                  "name": "Végtelen szakaszos tizedes törtek",
+                  "short_description": "Ismétlődő számjegysorozat",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "tizedes_tort_kozonseg es_tort",
+                  "name": "Tizedes tört ↔ közönséges tört",
+                  "short_description": "Átváltások között",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "racionalis_szamok_tulajdonsagai",
+                  "name": "Racionális számok tulajdonságai",
+                  "short_description": "Törtek, vegyes számok, áltörtek",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "tortek_egyszerusitese_bovitese",
+                  "name": "Törtek egyszerűsítése és bővítése",
+                  "short_description": "Törtalakítások",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "tortek_osszehasonlitasa",
+                  "name": "Törtek összehasonlítása",
+                  "short_description": "Közös nevezőre hozás",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "muveletek_racionalis_szamokkal",
+                  "name": "Műveletek racionális számokkal",
+                  "short_description": "Összeadás, kivonás, szorzás, osztás törtekkel",
+                  "sub_topics": [
+                    {
+                      "key": "racionalis_szamok_osszeadasa_kivonasa",
+                      "name": "Racionális számok összeadása és kivonása",
+                      "short_description": "Törtek összeadása és kivonása",
+                      "example_tasks (COMPLETED)": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "irracionalis_szamok_reszletes",
+              "name": "Irracionális számok",
+              "short_description": "Végtelen nem szakaszos tizedes törtek",
+              "sub_topics": [
+                {
+                  "key": "peldak_irracionalis_szamokra",
+                  "name": "Példák irracionális számokra",
+                  "short_description": "√2, π, e",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "valos_szamok_teljes_halmaza",
+              "name": "Valós számok (ℝ)",
+              "short_description": "Racionális és irracionális számok egyesítése",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "muveleti_zartsag",
+          "name": "Műveleti zártság",
+          "short_description": "Számhalmazok zárt műveletek alatt",
+          "example_tasks (COMPLETED)": []
+        }
+      ]
+    },
+    {
+      "key": "hatvany_gyok_exp_log",
+      "name": "Hatvány, gyök, exponenciális függvény, logaritmus",
+      "short_description": "Kiterjesztett hatványozás, gyökvonás, exponenciális függvény, logaritmus",
+      "sub_topics": [
+        {
+          "key": "n_edik_gyok",
+          "name": "n-edik gyök",
+          "short_description": "ⁿ√a fogalma",
+          "sub_topics": [
+            {
+              "key": "n_edik_gyok_definicioja",
+              "name": "n-edik gyök definíciója",
+              "short_description": "ⁿ√a olyan szám, amelynek n-edik hatványa a",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "n_edik_gyok_tulajdonsagai",
+              "name": "n-edik gyök tulajdonságai",
+              "short_description": "Gyökök szorzata, hányadosa",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "racionalis_kitevoju_hatvany",
+          "name": "Racionális kitevőjű hatvány",
+          "short_description": "a^(m/n) = ⁿ√(a^m)",
+          "sub_topics": [
+            {
+              "key": "racionalis_kitevo_ertelmezese",
+              "name": "Racionális kitevő értelmezése",
+              "short_description": "Permanencia-elv alkalmazása",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "hatvanyozas_azonossagai_racionalis",
+              "name": "Hatványozás azonosságai",
+              "short_description": "Azonosságok kiterjesztése racionális kitevőre",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "irracionalis_kitevoju_hatvany",
+          "name": "Irracionális kitevőjű hatvány",
+          "short_description": "Szemléletes értelmezés",
+          "sub_topics": [
+            {
+              "key": "irracionalis_kitevo_kozelitese",
+              "name": "Irracionális kitevő közelítése",
+              "short_description": "Racionális közelítésekkel",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "exponencialis_fuggveny",
+          "name": "Exponenciális függvény",
+          "short_description": "f(x) = a^x (a > 0, a ≠ 1)",
+          "sub_topics": [
+            {
+              "key": "exponencialis_fuggveny_grafikonja",
+              "name": "Exponenciális függvény grafikonja",
+              "short_description": "Alap szerint növekvő vagy csökkenő",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "exponencialis_fuggveny_tulajdonsagai",
+              "name": "Exponenciális függvény tulajdonságai",
+              "short_description": "Értelmezési tartomány, értékkészlet, monot onitás",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kulonbozo_alapu_exponencialis_fuggvenyek",
+              "name": "Különböző alapú exponenciális függvények",
+              "short_description": "a > 1 és 0 < a < 1 esetei",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "logaritmus",
+          "name": "Logaritmus",
+          "short_description": "log_a(b) meghatározása",
+          "sub_topics": [
+            {
+              "key": "logaritmus_definicioja",
+              "name": "Logaritmus definíciója",
+              "short_description": "log_a(b) = x, ha a^x = b",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "logaritmus_tulajdonsagai",
+              "name": "Logaritmus tulajdonságai",
+              "short_description": "Szorzat, hányados, hatvány logaritmusa",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "attalanos_logaritmusra",
+              "name": "Áttérés más alapú logaritmusra",
+              "short_description": "log_a(b) = log_c(b) / log_c(a)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "logaritmus_szamitas_szamologeppel",
+              "name": "Logaritmus számítása számológéppel",
+              "short_description": "10-es és e alapú logaritmus",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "exponencialis_folyamatok",
+      "name": "Exponenciális folyamatok vizsgálata",
+      "short_description": "Exponenciális egyenletek, növekedés és csökkenés modellje",
+      "sub_topics": [
+        {
+          "key": "exponencialis_folyamatok_termeszetben",
+          "name": "Exponenciális folyamatok a természetben",
+          "short_description": "Populációnövekedés, bomlás",
+          "sub_topics": [
+            {
+              "key": "nepesseg_novekedesSe",
+              "name": "Népesség növekedése",
+              "short_description": "Exponenciális modell",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "radioaktiv_bomlas",
+              "name": "Radioaktív bomlás",
+              "short_description": "Felezési idő",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "exponencialis_folyamatok_tarsadalomban",
+          "name": "Exponenciális folyamatok a társadalomban",
+          "short_description": "Gazdasági és pénzügyi alkalmazások",
+          "sub_topics": [
+            {
+              "key": "kamatos_kamat_exponencialis",
+              "name": "Kamatos kamat",
+              "short_description": "Exponenciális növekedés",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "inflacio",
+              "name": "Infláció",
+              "short_description": "Pénz értékcsökkenése",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "exponencialis_egyenletek",
+          "name": "Exponenciális egyenletek",
+          "short_description": "Egyenletek megoldása logaritmussal",
+          "sub_topics": [
+            {
+              "key": "egyszeru_exponencialis_egyenletek",
+              "name": "Egyszerű exponenciális egyenletek",
+              "short_description": "a^x = b típusú egyenletek",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "osszetettebb_exponencialis_egyenletek",
+              "name": "Összetettebb exponenciális egyenletek",
+              "short_description": "Helyettesítéssel megoldható",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "exponencialis_egyenlotlensegek",
+          "name": "Exponenciális egyenlőtlenségek",
+          "short_description": "Egyenlőtlenségek megoldása",
+          "sub_topics": [
+            {
+              "key": "exponencialis_egyenlotlenseg_megoldasa",
+              "name": "Exponenciális egyenlőtlenség megoldása",
+              "short_description": "Monotonitás figyelembevétele",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "modellalkotas_exponencialis",
+          "name": "Modellalkotás exponenciális folyamatokhoz",
+          "short_description": "Valódi adatok modellezése",
+          "example_tasks (COMPLETED)": []
+        }
+      ]
+    },
+    {
+      "key": "sorozatok",
+      "name": "Sorozatok",
+      "short_description": "Számsorozatok, számtani és mértani sorozatok, kamatozás",
+      "sub_topics": [
+        {
+          "key": "szamsorozat_fogalma",
+          "name": "Számsorozat fogalma",
+          "short_description": "Számok rendezett halmaza",
+          "sub_topics": [
+            {
+              "key": "sorozat_megadasa_keplettel",
+              "name": "Sorozat megadása képlettel",
+              "short_description": "a_n = f(n)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "sorozat_megadasa_rekurzoval",
+              "name": "Sorozat megadása rekurzióval",
+              "short_description": "a_(n+1) = f(a_n)",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szamtani_sorozat",
+          "name": "Számtani sorozat",
+          "short_description": "Különbség állandó",
+          "sub_topics": [
+            {
+              "key": "szamtani_sorozat_fogalma",
+              "name": "Számtani sorozat fogalma",
+              "short_description": "a_(n+1) = a_n + d",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szamtani_sorozat_n_edik_tagja",
+              "name": "Számtani sorozat n-edik tagja",
+              "short_description": "a_n = a_1 + (n-1) · d",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szamtani_sorozat_osszege",
+              "name": "Számtani sorozat első n tagjának összege",
+              "short_description": "S_n = n · (a_1 + a_n) / 2",
+              "sub_topics": [
+                {
+                  "key": "szamtani_sorozat_osszeg_bizonyt asa",
+                  "name": "Összegképlet bizonyítása",
+                  "short_description": "Gauss-féle módszer",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "mertani_sorozat",
+          "name": "Mértani sorozat",
+          "short_description": "Hányados állandó",
+          "sub_topics": [
+            {
+              "key": "mertani_sorozat_fogalma",
+              "name": "Mértani sorozat fogalma",
+              "short_description": "a_(n+1) = a_n · q",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "mertani_sorozat_n_edik_tagja",
+              "name": "Mértani sorozat n-edik tagja",
+              "short_description": "a_n = a_1 · q^(n-1)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "mertani_sorozat_osszege",
+              "name": "Mértani sorozat első n tagjának összege",
+              "short_description": "S_n = a_1 · (q^n − 1) / (q − 1)",
+              "sub_topics": [
+                {
+                  "key": "mertani_sorozat_osszeg_bizonytasa",
+                  "name": "Összegképlet bizonyítása",
+                  "short_description": "Telescoping sum módszer",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "vegtelen_mertani_sor",
+              "name": "Végtelen mértani sor",
+              "short_description": "Összeg, ha |q| < 1",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "kamatozas",
+          "name": "Kamatozás",
+          "short_description": "Pénzügyi alkalmazások",
+          "sub_topics": [
+            {
+              "key": "egyszeru_kamat",
+              "name": "Egyszerű kamat",
+              "short_description": "Csak a tőkét kamatoztatjuk",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kamatos_kamat",
+              "name": "Kamatos kamat",
+              "short_description": "Kamatot is kamatoztatjuk",
+              "sub_topics": [
+                {
+                  "key": "kamatos_kamat_keplete",
+                  "name": "Kamatos kamat képlete",
+                  "short_description": "K_n = K_0 · (1 + p)^n",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "gyűjtojáradek",
+              "name": "Gyűjtőjáradék",
+              "short_description": "Rendszeres befizetések",
+              "sub_topics": [
+                {
+                  "key": "gyűjtojáradek_keplete",
+                  "name": "Gyűjtőjáradék képlete",
+                  "short_description": "Mértani sorozat összege",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "torlesztoresz let",
+              "name": "Törlesztőrészlet",
+              "short_description": "Hitel törlesztése",
+              "sub_topics": [
+                {
+                  "key": "torlesztoreszlet_szamitasa",
+                  "name": "Törlesztőrészlet számítása",
+                  "short_description": "Annuitás számítás",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "megtakaritasi_formak",
+              "name": "Megtakarítási formák",
+              "short_description": "Összehasonlítás",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "befektetesi_formak",
+              "name": "Befektetési formák",
+              "short_description": "Kockázat és hozam",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "trigonometria",
+      "name": "Trigonometria",
+      "short_description": "Szögfüggvények, szinusz- és koszinusztétel, számítások síkidomokban",
+      "sub_topics": [
+        {
+          "key": "hegyesszog_szogfuggvenyei",
+          "name": "Hegyesszög szögfüggvényei",
+          "short_description": "Derékszögű háromszögben",
+          "sub_topics": [
+            {
+              "key": "szinusz",
+              "name": "Szinusz (sin)",
+              "short_description": "Szemközti befogó / átfogó",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "koszinusz",
+              "name": "Koszinusz (cos)",
+              "short_description": "Szomszédos befogó / átfogó",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "tangens",
+              "name": "Tangens (tg vagy tan)",
+              "short_description": "Szemközti befogó / szomszédos befogó",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szamitasok_derékszögű_haromszogben",
+          "name": "Számítások derékszögű háromszögben",
+          "short_description": "Szögfüggvények alkalmazása",
+          "sub_topics": [
+            {
+              "key": "ismeretlen_oldal_szamitasa",
+              "name": "Ismeretlen oldal számítása",
+              "short_description": "Szögfüggvények segítségével",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "ismeretlen_szog_szamitasa",
+              "name": "Ismeretlen szög számítása",
+              "short_description": "Inverz szögfüggvények használata",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "tompaszog_szogfuggvenyei",
+          "name": "Tompaszög szögfüggvényei",
+          "short_description": "90° < α < 180°",
+          "sub_topics": [
+            {
+              "key": "tompaszog_szinusza",
+              "name": "Tompaszög szinusza",
+              "short_description": "sin(180° - α) = sin(α)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "tompaszog_koszinusza",
+              "name": "Tompaszög koszinusza",
+              "short_description": "cos(180° - α) = -cos(α)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "tompaszog_tangense",
+              "name": "Tompaszög tangense",
+              "short_description": "tg(180° - α) = -tg(α)",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szogfuggvenyek_osszefuggesei",
+          "name": "Szögfüggvények összefüggései",
+          "short_description": "Azonosságok",
+          "sub_topics": [
+            {
+              "key": "pitagoraszi_osszefugges",
+              "name": "Pitagoraszi összefüggés",
+              "short_description": "sin²α + cos²α = 1",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "tangens_szinusz_koszinusz",
+              "name": "Tangens és szinusz/koszinusz",
+              "short_description": "tg(α) = sin(α) / cos(α)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "potszogek_szogfuggvenyei",
+              "name": "Pótszögek szögfüggvényei",
+              "short_description": "sin, cos, tg viszonyai",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "mellekszogek_szogfuggvenyei",
+              "name": "Mellékszögek szögfüggvényei",
+              "short_description": "sin, cos, tg viszonyai",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szogfuggveny_ertekebol_szog",
+          "name": "Szögfüggvény értékéből a szög",
+          "short_description": "Inverz függvények használata számológéppel",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "haromszog_terulete_szogfuggvennyel",
+          "name": "Háromszög területe szögfüggvénnyel",
+          "short_description": "T = (a · b · sin γ) / 2",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "szinusztetel",
+          "name": "Szinusztétel",
+          "short_description": "a/sin α = b/sin β = c/sin γ = 2R",
+          "sub_topics": [
+            {
+              "key": "szinusztetel_kimondasa",
+              "name": "Szinusztétel kimondása",
+              "short_description": "Oldalak és szemközti szögek aránya",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szinusztetel_bizonytasa",
+              "name": "Szinusztétel bizonyítása",
+              "short_description": "Terület segítségével",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szinusztetel_alkalmazasa",
+              "name": "Szinusztétel alkalmazása",
+              "short_description": "Háromszögek megoldása",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "koszinusztetel",
+          "name": "Koszinusztétel",
+          "short_description": "c² = a² + b² - 2ab · cos γ",
+          "sub_topics": [
+            {
+              "key": "koszinusztetel_kimondasa",
+              "name": "Koszinusztétel kimondása",
+              "short_description": "Általánosított Pitagorasz-tétel",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "koszinusztetel_alkalmazasa",
+              "name": "Koszinusztétel alkalmazása",
+              "short_description": "Háromszögek megoldása",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szamitasok_negyszogekben",
+          "name": "Számítások négyszögekben",
+          "short_description": "Átlók, szögek, területek",
+          "sub_topics": [
+            {
+              "key": "negyszog_atlojaval",
+              "name": "Négyszög átlóval való felosztása",
+              "short_description": "Háromszögekre bontás",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "negyszog_terulete_szogfuggvennyel",
+              "name": "Négyszög területe",
+              "short_description": "Átlók és közbezárt szög alapján",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szamitasok_szabályos_sokszogekben",
+          "name": "Számítások szabályos sokszögekben",
+          "short_description": "Oldal, sugár, terület",
+          "sub_topics": [
+            {
+              "key": "szabályos_sokszog_kozepponti_szoge",
+              "name": "Szabályos sokszög középponti szöge",
+              "short_description": "360° / n",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "szabályos_sokszog_terulete_szogfuggvennyel",
+              "name": "Szabályos sokszög területe",
+              "short_description": "Háromszögekre bontással",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "gyakorlati_alkalmazasok_trigonometria",
+          "name": "Gyakorlati alkalmazások",
+          "short_description": "Magasság, távolság meghatározása",
+          "sub_topics": [
+            {
+              "key": "magassag_meghatarozasa",
+              "name": "Magasság meghatározása",
+              "short_description": "Látószög és távolság alapján",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "tavolsag_meghatarozasa",
+              "name": "Távolság meghatározása",
+              "short_description": "Háromszögelés módszere",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tergeometria",
+      "name": "Térgeometria",
+      "short_description": "Térelemek, testek, felszín, térfogat, hasonló testek",
+      "sub_topics": [
+        {
+          "key": "terelemek_kolcsonos_helyzete",
+          "name": "Térelemek kölcsönös helyzete",
+          "short_description": "Pont, egyenes, sík a térben",
+          "sub_topics": [
+            {
+              "key": "ket_egyenes_terben",
+              "name": "Két egyenes a térben",
+              "short_description": "Metsző, párhuzamos, kitérő",
+              "sub_topics": [
+                {
+                  "key": "metszö_egyenesek_terben",
+                  "name": "Metsző egyenesek",
+                  "short_description": "Egy közös pontjuk van",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "parhuzamos_egyenesek_terben",
+                  "name": "Párhuzamos egyenesek",
+                  "short_description": "Egy síkban vannak, nem metszik egymást",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "kitero_egyenesek",
+                  "name": "Kitérő egyenesek",
+                  "short_description": "Nem egy síkban vannak",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "egyenes_sik_helyzete",
+              "name": "Egyenes és sík helyzete",
+              "short_description": "Párhuzamos, metszi, benne van",
+              "sub_topics": [
+                {
+                  "key": "egyenes_sikal_parhuzamos",
+                  "name": "Egyenes párhuzamos a síkkal",
+                  "short_description": "Nincs közös pontjuk",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "egyenes_metszi_sikot",
+                  "name": "Egyenes metszi a síkot",
+                  "short_description": "Egy közös pontjuk van",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "egyenes_sikban_van",
+                  "name": "Egyenes a síkban van",
+                  "short_description": "Végtelen sok közös pont",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "ket_sik_helyzete",
+              "name": "Két sík helyzete",
+              "short_description": "Párhuzamos vagy metsző",
+              "sub_topics": [
+                {
+                  "key": "parhuzamos_sikok",
+                  "name": "Párhuzamos síkok",
+                  "short_description": "Nincs közös pontjuk",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "metszö_sikok",
+                  "name": "Metsző síkok",
+                  "short_description": "Közös egyenesük van (metszésvonal)",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "terelemek_tavolsaga",
+          "name": "Térelemek távolsága",
+          "short_description": "Pontok, egyenesek, síkok távolsága",
+          "sub_topics": [
+            {
+              "key": "pont_sik_tavolsaga",
+              "name": "Pont és sík távolsága",
+              "short_description": "Merőleges szakasz hossza",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "ket_parhuzamos_sik_tavolsaga",
+              "name": "Két párhuzamos sík távolsága",
+              "short_description": "Közös merőleges szakasz",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kitero_egyenesek_tavolsaga",
+              "name": "Kitérő egyenesek távolsága",
+              "short_description": "Közös merőleges szakasz",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "terelemek_hajlasszoge",
+          "name": "Térelemek hajlásszöge",
+          "short_description": "Egyenesek és síkok szöge",
+          "sub_topics": [
+            {
+              "key": "ket_egyenes_hajlasszoge",
+              "name": "Két egyenes hajlásszöge",
+              "short_description": "Párhuzamos eltolással",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egyenes_sik_hajlasszoge",
+              "name": "Egyenes és sík hajlásszöge",
+              "short_description": "Egyenes és vetülete szöge",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "ket_sik_hajlasszoge",
+              "name": "Két sík hajlásszöge",
+              "short_description": "Metszésvonalra merőleges egyenesek szöge",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "mertekegysegek_ter",
+          "name": "Mértékegységek",
+          "short_description": "Hosszúság, terület, térfogat, űrtartalom",
+          "sub_topics": [
+            {
+              "key": "hosszusag_mertekegysegei",
+              "name": "Hosszúság mértékegységei",
+              "short_description": "mm, cm, dm, m, km",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "terulet_mertekegysegei",
+              "name": "Terület mértékegységei",
+              "short_description": "mm², cm², dm², m², km², hektár, ár",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "terfogat_mertekegysegei",
+              "name": "Térfogat mértékegységei",
+              "short_description": "mm³, cm³, dm³, m³",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "urtartalom_mertekegysegei",
+              "name": "Űrtartalom mértékegysegei",
+              "short_description": "ml, cl, dl, l, hl",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "suruseg_mertekegysegei",
+              "name": "Sűrűség mértékegységei",
+              "short_description": "g/cm³, kg/dm³, kg/m³, t/m³",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "testek_tulajdonsagai",
+          "name": "Testek tulajdonságai",
+          "short_description": "Speciális testek",
+          "sub_topics": [
+            {
+              "key": "hasab",
+              "name": "Hasáb",
+              "short_description": "Két egybevágó alaplap",
+              "sub_topics": [
+                {
+                  "key": "egyenes_hasab",
+                  "name": "Egyenes hasáb",
+                  "short_description": "Oldalélek merőlegesek az alapra",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "teglatestest",
+                  "name": "Téglatest",
+                  "short_description": "Téglalap alapú egyenes hasáb",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "kocka",
+                  "name": "Kocka",
+                  "short_description": "Négyzet alapú egyenes hasáb, minden él egyenlő",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "hasab_haloja",
+                  "name": "Hasáb hálója",
+                  "short_description": "Síkba kiterített felszín",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "hasab_felszine",
+                  "name": "Hasáb felszíne",
+                  "short_description": "Alapok + palást",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "hasab_terfogata",
+                  "name": "Hasáb térfogata",
+                  "short_description": "V = alapterület · magasság",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "henger",
+              "name": "Henger",
+              "short_description": "Két egybevágó körlap",
+              "sub_topics": [
+                {
+                  "key": "egyenes_korhenger",
+                  "name": "Egyenes körhenger",
+                  "short_description": "Forgástest",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "henger_haloja",
+                  "name": "Henger hálója",
+                  "short_description": "Két kör + téglalap",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "henger_felszine",
+                  "name": "Henger felszíne",
+                  "short_description": "A = 2πr² + 2πrm",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "henger_terfogata",
+                  "name": "Henger térfogata",
+                  "short_description": "V = πr²m",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "gula",
+              "name": "Gúla",
+              "short_description": "Sokszög alapú, csúcsban végződő",
+              "sub_topics": [
+                {
+                  "key": "egyenes_gula",
+                  "name": "Egyenes gúla",
+                  "short_description": "Csúcs az alap középpontja felett",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "szabályos_gula",
+                  "name": "Szabályos gúla",
+                  "short_description": "Szabályos sokszög alapú egyenes gúla",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "tetraeder",
+                  "name": "Tetraéder (négylap)",
+                  "short_description": "Háromszög alapú gúla",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "gula_haloja",
+                  "name": "Gúla hálója",
+                  "short_description": "Alaplap + háromszög oldallapok",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "gula_felszine",
+                  "name": "Gúla felszíne",
+                  "short_description": "Alap + palást",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "gula_terfogata",
+                  "name": "Gúla térfogata",
+                  "short_description": "V = (alapterület · magasság) / 3",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "kup",
+              "name": "Kúp",
+              "short_description": "Körlap alapú, csúcsban végződő",
+              "sub_topics": [
+                {
+                  "key": "forgaskup",
+                  "name": "Forgáskúp",
+                  "short_description": "Derékszögű háromszög forgatásából",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "kup_haloja",
+                  "name": "Kúp hálója",
+                  "short_description": "Körlap + körcikk",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "kup_felszine",
+                  "name": "Kúp felszíne",
+                  "short_description": "A = πr² + πra",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "kup_terfogata",
+                  "name": "Kúp térfogata",
+                  "short_description": "V = (πr²m) / 3",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "gomb",
+              "name": "Gömb",
+              "short_description": "Térben adott ponttól egyenlő távolságra lévő pontok",
+              "sub_topics": [
+                {
+                  "key": "gomb_mint_forgastest",
+                  "name": "Gömb mint forgástest",
+                  "short_description": "Félkör forgatásából",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "gomb_felszine",
+                  "name": "Gömb felszíne",
+                  "short_description": "A = 4πr²",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "gomb_terfogata",
+                  "name": "Gömb térfogata",
+                  "short_description": "V = (4πr³) / 3",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "csonkagula",
+              "name": "Csonkagúla",
+              "short_description": "Gúla csúcsának levágásával",
+              "sub_topics": [
+                {
+                  "key": "csonkagula_felszine",
+                  "name": "Csonkagúla felszíne",
+                  "short_description": "Két alap + palást",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "csonkagula_terfogata",
+                  "name": "Csonkagúla térfogata",
+                  "short_description": "V = (m/3) · (T₁ + T₂ + √(T₁·T₂))",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "csonkakup",
+              "name": "Csonkakúp",
+              "short_description": "Kúp csúcsának levágásával",
+              "sub_topics": [
+                {
+                  "key": "csonkakup_felszine",
+                  "name": "Csonkakúp felszíne",
+                  "short_description": "Két körlap + palást",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "csonkakup_terfogata",
+                  "name": "Csonkakúp térfogata",
+                  "short_description": "V = (πm/3) · (r₁² + r₂² + r₁·r₂)",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "forgastestek",
+          "name": "Forgástestek",
+          "short_description": "Síkidom forgatásával keletkező testek",
+          "sub_topics": [
+            {
+              "key": "forgastestek_keletkezese",
+              "name": "Forgástestek keletkezése",
+              "short_description": "Síkidom forgatása tengely körül",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "osszetett_forgastestek",
+              "name": "Összetett forgástestek",
+              "short_description": "Több egyszerű test kombinációja",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "hasonlo_testek",
+          "name": "Hasonló testek",
+          "short_description": "Felszín és térfogat aránya",
+          "sub_topics": [
+            {
+              "key": "hasonlo_testek_felszine",
+              "name": "Hasonló testek felszíne",
+              "short_description": "A₂/A₁ = k²",
+              "sub_topics": [
+                {
+                  "key": "felszinek_aranya_tetel",
+                  "name": "Felszínek arányának tétele",
+                  "short_description": "Bizonyítás és alkalmazás",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "hasonlo_testek_terfogata",
+              "name": "Hasonló testek térfogata",
+              "short_description": "V₂/V₁ = k³",
+              "sub_topics": [
+                {
+                  "key": "terfogatok_aranya_tetel",
+                  "name": "Térfogatok arányának tétele",
+                  "short_description": "Bizonyítás és alkalmazás",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "gyakorlati_alkalmazasok_ter",
+          "name": "Gyakorlati alkalmazások",
+          "short_description": "Mindennapi tárgyak mérése",
+          "sub_topics": [
+            {
+              "key": "csomagolasok_terfogata",
+              "name": "Csomagolások térfogata",
+              "short_description": "Valós tárgyak méretei",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "epiteszeti_alkalmazasok",
+              "name": "Építészeti alkalmazások",
+              "short_description": "Épületek, szerkezetek",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "koordinatageometria",
+      "name": "Koordinátageometria",
+      "short_description": "Vektorok, koordináta-rendszer, egyenes és kör egyenlete",
+      "sub_topics": [
+        {
+          "key": "vektorok_reszletesen",
+          "name": "Vektorok",
+          "short_description": "Vektor műveletek, koordináták",
+          "sub_topics": [
+            {
+              "key": "vektor_alap_fogalmak",
+              "name": "Alapfogalmak",
+              "short_description": "Vektor, abszolút érték, nullvektor, ellentett, helyvektor",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "vektormuveletek",
+              "name": "Vektorműveletek",
+              "short_description": "Összeadás, kivonás, skalárral szorzás",
+              "sub_topics": [
+                {
+                  "key": "vektorok_osszege_reszletes",
+                  "name": "Vektorok összege",
+                  "short_description": "Háromszög- és paralelogramma-szabály",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "vektorok_kulonbsege_reszletes",
+                  "name": "Vektorok különbsége",
+                  "short_description": "Ellentett vektor hozzáadása",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "vektor_szamszorosa_reszletes",
+                  "name": "Vektor számszorosa",
+                  "short_description": "c · v, ahol c skalár",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "vektorok_alkalmazasa",
+              "name": "Vektorok alkalmazása",
+              "short_description": "Feladatmegoldás vektorokkal",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "koordinata_rendszer",
+          "name": "Koordináta-rendszer",
+          "short_description": "Derékszögű koordináta-rendszer",
+          "sub_topics": [
+            {
+              "key": "pont_koordinataival",
+              "name": "Pont megadása koordinátákkal",
+              "short_description": "P(x, y)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "vektor_koordinataival",
+              "name": "Vektor megadása koordinátákkal",
+              "short_description": "v = (v_x, v_y)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "helyvektor_koordinatai",
+              "name": "Helyvektor koordinátái",
+              "short_description": "Origóból induló vektor",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "szamitasok_koordinatakkal",
+          "name": "Számítások koordinátákkal",
+          "short_description": "Távolság, műveletek",
+          "sub_topics": [
+            {
+              "key": "ket_pont_tavolsaga_koordinatakkal",
+              "name": "Két pont távolsága",
+              "short_description": "d = √[(x₂-x₁)² + (y₂-y₁)²]",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "vektor_abszolut_erteke_koordinatakkal",
+              "name": "Vektor abszolút értéke",
+              "short_description": "|v| = √(v_x² + v_y²)",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "vektormuveletek_koordinatakkal",
+              "name": "Vektorműveletek koordinátákkal",
+              "short_description": "Komponensenkénti műveletek",
+              "sub_topics": [
+                {
+                  "key": "vektorok_osszege_koordinatakkal",
+                  "name": "Vektorok összege",
+                  "short_description": "u + v = (u_x + v_x, u_y + v_y)",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "vektorok_kulonbsege_koordinatakkal",
+                  "name": "Vektorok különbsége",
+                  "short_description": "u - v = (u_x - v_x, u_y - v_y)",
+                  "example_tasks (COMPLETED)": []
+                },
+                {
+                  "key": "vektor_szamszorosa_koordinatakkal",
+                  "name": "Vektor számszorosa",
+                  "short_description": "c · v = (c·v_x, c·v_y)",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "szakaszfelezopont_koordinataival",
+              "name": "Szakaszfelezőpont koordinátái",
+              "short_description": "F = ((x₁+x₂)/2, (y₁+y₂)/2)",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "ponthalmazok_koordinata_rendszerben",
+          "name": "Ponthalmazok koordináta-rendszerben",
+          "short_description": "Egyenletek és egyenlőtlenségek ábrázolása",
+          "sub_topics": [
+            {
+              "key": "egyenlet_ponthalmazként",
+              "name": "Egyenlet mint ponthalmaz",
+              "short_description": "Feltételeknek megfelelő pontok",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egyenlotlenseg_ponthalmazként",
+              "name": "Egyenlőtlenség mint ponthalmaz",
+              "short_description": "Tartomány ábrázolása",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "egyenes_egyenlete",
+          "name": "Egyenes egyenlete",
+          "short_description": "y = mx + b vagy x = c",
+          "sub_topics": [
+            {
+              "key": "egyenes_egyenlete_meredekseg_tengelymetszet",
+              "name": "Meredekség-tengelymetszet alak",
+              "short_description": "y = mx + b",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "meredekseg_fogalma",
+              "name": "Meredekség (m)",
+              "short_description": "Egyenes iránytangense",
+              "sub_topics": [
+                {
+                  "key": "meredekseg_szamitasa",
+                  "name": "Meredekség számítása",
+                  "short_description": "m = (y₂ - y₁) / (x₂ - x₁)",
+                  "example_tasks (COMPLETED)": []
+                }
+              ]
+            },
+            {
+              "key": "tengelymetszet_b",
+              "name": "y-tengelymetszet (b)",
+              "short_description": "Az egyenes és y-tengely metszéspontja",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "fuggoleges_egyenes",
+              "name": "Függőleges egyenes",
+              "short_description": "x = c alakú",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egyenes_egyenletenek_felirasa_grafikonrol",
+              "name": "Egyenes egyenletének felírása",
+              "short_description": "Grafikon vagy két pont alapján",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "egyenesek_kolcsonos_helyzete_koordinatakkal",
+          "name": "Egyenesek kölcsönös helyzete",
+          "short_description": "Párhuzamosság, merőlegesség, metszéspont",
+          "sub_topics": [
+            {
+              "key": "parhuzamos_egyenesek_meredekseg",
+              "name": "Párhuzamos egyenesek",
+              "short_description": "m₁ = m₂",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "meroleges_egyenesek_meredekseg",
+              "name": "Merőleges egyenesek",
+              "short_description": "m₁ · m₂ = -1",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egyenesek_metszespontja",
+              "name": "Egyenesek metszéspontja",
+              "short_description": "Egyenletrendszer megoldása",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "kor_egyenlete",
+          "name": "Kör egyenlete",
+          "short_description": "(x - a)² + (y - b)² = r²",
+          "sub_topics": [
+            {
+              "key": "kor_egyenletenek_felirasa",
+              "name": "Kör egyenletének felírása",
+              "short_description": "Középpont (a, b) és sugár r ismeretében",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kor_adatainak_leolvasasa",
+              "name": "Kör adatainak leolvasása",
+              "short_description": "Középpont és sugár az egyenletből",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kor_es_egyenes_metszese",
+              "name": "Kör és egyenes metszése",
+              "short_description": "Metszéspontok meghatározása",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "alakzat_egyenlete",
+          "name": "Alakzat egyenlete",
+          "short_description": "Geometriai alakzatok analitikus leírása",
+          "example_tasks (COMPLETED)": []
+        }
+      ]
+    },
+    {
+      "key": "leiro_statisztika_11_12",
+      "name": "Leíró statisztika",
+      "short_description": "Adatgyűjtés, reprezentatív minta, szóródási mutatók, sodrófa diagram",
+      "sub_topics": [
+        {
+          "key": "reprezentativ_minta",
+          "name": "Reprezentatív minta",
+          "short_description": "Mintavétel alapelvei",
+          "sub_topics": [
+            {
+              "key": "reprezentativ_minta_fogalma",
+              "name": "Reprezentatív minta fogalma",
+              "short_description": "A teljes sokaságot jól reprezentálja"
+            },
+            {
+              "key": "peldak_reprezentativ_mintara",
+              "name": "Példák reprezentatív mintára",
+              "short_description": "Helyes és helytelen mintavétel"
+            }
+          ]
+        },
+        {
+          "key": "statisztikai_adatgyűjtes_tervezes",
+          "name": "Statisztikai adatgyűjtés tervezése",
+          "short_description": "Célok, módszerek, források"
+        },
+        {
+          "key": "adatok_rendszerezese_11_12",
+          "name": "Adatok rendszerezése",
+          "short_description": "Táblázatok, csoportosítás"
+        },
+        {
+          "key": "kozepertekek_11_12",
+          "name": "Középértékek",
+          "short_description": "Átlag, medián, módusz ismétlése"
+        },
+        {
+          "key": "szorasi_mutatokat",
+          "name": "Szóródási mutatók",
+          "short_description": "Terjedelem, kvartilisek, szórás",
+          "sub_topics": [
+            {
+              "key": "minimum_maximum",
+              "name": "Minimum és maximum",
+              "short_description": "Legkisebb és legnagyobb érték"
+            },
+            {
+              "key": "terjedelem",
+              "name": "Terjedelem",
+              "short_description": "Maximum - minimum"
+            },
+            {
+              "key": "kvartilisek",
+              "name": "Kvartilisek",
+              "short_description": "Q₁, Q₂ (medián), Q₃",
+              "sub_topics": [
+                {
+                  "key": "also_kvartilis",
+                  "name": "Alsó kvartilis (Q₁)",
+                  "short_description": "25. percentilis"
+                },
+                {
+                  "key": "median_mint_kvartilis",
+                  "name": "Medián (Q₂)",
+                  "short_description": "50. percentilis"
+                },
+                {
+                  "key": "felso_kvartilis",
+                  "name": "Felső kvartilis (Q₃)",
+                  "short_description": "75. percentilis"
+                }
+              ]
+            },
+            {
+              "key": "kvartilis_terjedelem",
+              "name": "Kvartilis terjedelem",
+              "short_description": "IQR = Q₃ - Q₁"
+            },
+            {
+              "key": "szoras",
+              "name": "Szórás",
+              "short_description": "Átlagtól való eltérések mértéke"
+            },
+            {
+              "key": "kiugro_adat",
+              "name": "Kiugró adat",
+              "short_description": "Szokatlanul kicsi vagy nagy érték"
+            }
+          ]
+        },
+        {
+          "key": "sodrofa_diagram",
+          "name": "Sodrófa (box-plot) diagram",
+          "short_description": "Ötszámos összefoglaló ábrázolása",
+          "sub_topics": [
+            {
+              "key": "sodrofa_keszitese",
+              "name": "Sodrófa diagram készítése",
+              "short_description": "Min, Q₁, Q₂, Q₃, max ábrázolása"
+            },
+            {
+              "key": "sodrofa_ertelmezese",
+              "name": "Sodrófa diagram értelmezése",
+              "short_description": "Adatok eloszlásának megértése"
+            },
+            {
+              "key": "adathalmazok_osszehasonlitasa",
+              "name": "Adathalmazok összehasonlítása",
+              "short_description": "Több sodrófa egymás mellé helyezése"
+            }
+          ]
+        },
+        {
+          "key": "nagy_adathalmazok_kezelese",
+          "name": "Nagy adathalmazok kezelése",
+          "short_description": "Táblázatkezelő program használata"
+        },
+        {
+          "key": "statisztikai_kovetkeztetsek",
+          "name": "Statisztikai következtetések",
+          "short_description": "Adatok értelmezése, értékelése"
+        },
+        {
+          "key": "statisztikai_manipulaciok",
+          "name": "Statisztikai manipulációk",
+          "short_description": "Megtévesztő ábrázolások és szövegek",
+          "sub_topics": [
+            {
+              "key": "grafikus_manipulaciok_felismerese",
+              "name": "Grafikus manipulációk felismerése",
+              "short_description": "Megtévesztő diagramok"
+            },
+            {
+              "key": "szoveges_manipulaciok",
+              "name": "Szöveges manipulációk",
+              "short_description": "Félrevezető statisztikai állítások"
+            },
+            {
+              "key": "simpson_paradoxon",
+              "name": "Simpson-paradoxon",
+              "short_description": "Csoportosítás hatása az eredményre"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "valoszinuseg_szamitas_11_12",
+      "name": "Valószínűség-számítás",
+      "short_description": "Eseményműveletek, klasszikus modell, geometriai valószínűség, várható érték",
+      "sub_topics": [
+        {
+          "key": "esemenyek_muvelete",
+          "name": "Események műveletei",
+          "short_description": "Összeg, szorzat, komplementer",
+          "sub_topics": [
+            {
+              "key": "esemenyek_osszege",
+              "name": "Események összege",
+              "short_description": "A vagy B bekövetkezik",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "esemenyek_szorzata",
+              "name": "Események szorzata",
+              "short_description": "A és B egyaránt bekövetkezik",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "esemeny_komplementere",
+              "name": "Esemény komplementere",
+              "short_description": "A esemény nem következik be",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "egymast_kizaro_esemenyek",
+              "name": "Egymást kizáró események",
+              "short_description": "Nem következhetnek be egyszerre",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "elemi_esemenyek",
+          "name": "Elemi események",
+          "short_description": "Tovább nem bontható kimenetelek",
+          "sub_topics": [
+            {
+              "key": "esemenyek_eloallitasa",
+              "name": "Események előállítása",
+              "short_description": "Elemi események összege",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "fuggetlen_esemenyek",
+          "name": "Független események",
+          "short_description": "Egyik nem befolyásolja a másikat",
+          "sub_topics": [
+            {
+              "key": "peldak_fuggetlen_esemenyekre",
+              "name": "Példák független eseményekre",
+              "short_description": "Független és nem független események",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "fuggetlen_esemenyek_valoszinusege",
+              "name": "Független események valószínűsége",
+              "short_description": "P(A és B) = P(A) · P(B)",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "klasszikus_valoszinusegi_modell",
+          "name": "Klasszikus valószínűségi modell",
+          "short_description": "Laplace-képlet",
+          "sub_topics": [
+            {
+              "key": "laplace_keplet",
+              "name": "Laplace-képlet",
+              "short_description": "P(A) = kedvező / összes eset",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "klasszikus_modell_alkalmazasa",
+              "name": "Klasszikus modell alkalmazása",
+              "short_description": "Dobókocka, pénzérme, kártyahúzás",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "geometriai_valoszinuseg",
+          "name": "Geometriai valószínűség",
+          "short_description": "Terület vagy hossz alapú valószínűség",
+          "sub_topics": [
+            {
+              "key": "geometriai_valoszinuseg_fogalma",
+              "name": "Geometriai valószínűség fogalma",
+              "short_description": "P(A) = kedvező terület / összes terület",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "geometriai_valoszinuseg_alkalmazasa",
+              "name": "Geometriai valószínűség alkalmazása",
+              "short_description": "Célba dobás, találkozás problémái",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "mintavetel_valoszinuseg",
+          "name": "Mintavétel valószínűség-számításban",
+          "short_description": "Visszatevéses és visszatevés nélküli",
+          "sub_topics": [
+            {
+              "key": "visszatevessel_valoszinuseg",
+              "name": "Visszatevéses mintavétel",
+              "short_description": "Független húzások",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "visszateves_nelkul_valoszinuseg",
+              "name": "Visszatevés nélküli mintavétel",
+              "short_description": "Nem független húzások",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "valoszinusegek_meghatarozasa",
+              "name": "Valószínűségek meghatározása",
+              "short_description": "Kombinatorika használata",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "varhato_ertek",
+          "name": "Várható érték",
+          "short_description": "Átlagos kimenetel hosszú távon",
+          "sub_topics": [
+            {
+              "key": "varhato_ertek_fogalma",
+              "name": "Várható érték fogalma",
+              "short_description": "E(X) = Σ x_i · P(x_i)"
+            },
+            {
+              "key": "varhato_ertek_szamitasa",
+              "name": "Várható érték számítása",
+              "short_description": "Konkrét feladatokban"
+            },
+            {
+              "key": "varhato_ertek_jatekokban",
+              "name": "Várható érték játékokban",
+              "short_description": "Igazságos játék, várható nyeremény"
+            }
+          ]
+        },
+        {
+          "key": "penzugyi_valoszinuseg",
+          "name": "Pénzügyi alkalmazások",
+          "short_description": "Biztosítás, befektetési kockázat",
+          "sub_topics": [
+            {
+              "key": "biztositas_matemetikaja",
+              "name": "Biztosítás matematikája",
+              "short_description": "Díj, kockázat, várható érték",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "befektetesi_kockazat",
+              "name": "Befektetési kockázat",
+              "short_description": "Hozam és valószínűség",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "arfolyamkockazat",
+              "name": "Árfolyamkockázat",
+              "short_description": "Deviza, részvény ingadozás",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        },
+        {
+          "key": "valoszinusegi_jatekok",
+          "name": "Valószínűségi játékok elemzése",
+          "short_description": "Szerencsejátékok, stratégia",
+          "sub_topics": [
+            {
+              "key": "lotto_toto",
+              "name": "Lottó, totó",
+              "short_description": "Nyerési esélyek",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "kartya_jatekok",
+              "name": "Kártyajátékok",
+              "short_description": "Póker, blackjack valószínűségei",
+              "example_tasks (COMPLETED)": []
+            },
+            {
+              "key": "sportfogadas",
+              "name": "Sportfogadás",
+              "short_description": "Esélyek és kifizetések",
+              "example_tasks (COMPLETED)": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "rendszerező_osszefoglalas",
+      "name": "Rendszerező összefoglalás",
+      "short_description": "Érettségi előkészítés, témakörök átismétlése",
+      "sub_topics": [
+        {
+          "key": "algebra_osszefoglalo",
+          "name": "Algebra összefoglalás",
+          "short_description": "Kifejezések, egyenletek, egyenlőtlenségek",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "fuggvenyek_osszefoglalo",
+          "name": "Függvények összefoglalás",
+          "short_description": "Elemi függvények, tulajdonságok",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "sorozatok_osszefoglalo",
+          "name": "Sorozatok összefoglalás",
+          "short_description": "Számtani és mértani sorozatok",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "geometria_osszefoglalo",
+          "name": "Geometria összefoglalás",
+          "short_description": "Síkgeometria és térgeometria",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "trigonometria_osszefoglalo",
+          "name": "Trigonometria összefoglalás",
+          "short_description": "Szögfüggvények, tételek",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "koordinatageometria_osszefoglalo",
+          "name": "Koordinátageometria összefoglalás",
+          "short_description": "Vektorok, egyenesek, kör",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "kombinatorika_osszefoglalo",
+          "name": "Kombinatorika összefoglalás",
+          "short_description": "Sorba rendezés, kiválasztás",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "statisztika_valoszinuseg_osszefoglalo",
+          "name": "Statisztika és valószínűség összefoglalás",
+          "short_description": "Adatelemzés, valószínűségi modellek",
+          "example_tasks (COMPLETED)": []
+        },
+        {
+          "key": "erettsegi_feladatsorok",
+          "name": "Érettségi feladatsorok",
+          "short_description": "Gyakorlás valódi feladatokkal",
+          "example_tasks (COMPLETED)": []
+        }
+      ]
+    }
+  ]
+}
