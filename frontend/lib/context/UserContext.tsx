@@ -128,6 +128,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
           setCookie(COOKIE_NAMES.IS_REGISTERED, 'true');
           setCookie(COOKIE_NAMES.USER_PROFILE, JSON.stringify(profile));
           setCookie(COOKIE_NAMES.ROLE, 'registered');
+          if (savedCountry) {
+            setCookie(COOKIE_NAMES.COUNTRY, savedCountry);
+          }
           if (userData.role) {
             setCookie(COOKIE_NAMES.IDENTITY, userData.role);
           }
@@ -304,6 +307,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       setCookie(COOKIE_NAMES.IS_REGISTERED, 'true');
       setCookie(COOKIE_NAMES.USER_PROFILE, JSON.stringify(profile));
       setCookie(COOKIE_NAMES.ROLE, 'registered');
+      setCookie(COOKIE_NAMES.COUNTRY, savedCountry);
       if (userRole) {
         setCookie(COOKIE_NAMES.IDENTITY, userRole);
       }
