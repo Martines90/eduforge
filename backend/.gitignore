@@ -3,6 +3,10 @@
 /.env.production
 /.env.yaml
 
+# Extension configurations (contains SMTP credentials)
+/extensions/*.env
+!/extensions/*.env.example
+
 # Firebase service account keys
 *firebase-adminsdk*.json
 firebase-service-account.json

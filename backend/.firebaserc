@@ -1,5 +1,13 @@
 {
   "projects": {
     "default": "eduforge-d29d9"
+  },
+  "targets": {},
+  "etags": {
+    "eduforge-d29d9": {
+      "extensionInstances": {
+        "firestore-send-email": "3daf71ffa3fcc5cfd1aa4f9e8818f860d51b107525aceeaf9faa5240e7310b7d"
+      }
+    }
   }
 }
