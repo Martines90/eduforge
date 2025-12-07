@@ -24,6 +24,7 @@ import { TreeNode, TaskItem } from '@/types/task-tree';
 import { useTranslation } from '@/lib/i18n';
 import { AuthenticatedPage } from '@/components/templates/AuthenticatedPage';
 import { fetchTreeMap } from '@/lib/services/api.service';
+import { useUser } from '@/lib/context/UserContext';
 
 /**
  * Tasks Page
@@ -33,6 +34,7 @@ import { fetchTreeMap } from '@/lib/services/api.service';
 export default function TasksPage() {
   const router = useRouter();
   const { t } = useTranslation();
+  const { user } = useUser();
   const [searchQuery, setSearchQuery] = useState('');
   const [filterSubject, setFilterSubject] = useState('mathematics');
   const [filterGrade, setFilterGrade] = useState('grade_9_10');
@@ -47,7 +49,9 @@ export default function TasksPage() {
       setError(null);
 
       try {
-        const data = await fetchTreeMap(filterSubject, filterGrade);
+        // Use user's country for curriculum, fallback to HU if not set
+        const country = user.isRegistered && user.country ? user.country : 'HU';
+        const data = await fetchTreeMap(country, filterSubject, filterGrade);
         if (data.success && data.data) {
           setTreeData(data.data.tree);
         } else {
@@ -62,7 +66,7 @@ export default function TasksPage() {
     };
 
     fetchTreeData();
-  }, [filterSubject, filterGrade]);
+  }, [filterSubject, filterGrade, user.country, user.isRegistered]);
 
   // Sample hierarchical data (fallback if API fails)
   const sampleTreeData: TreeNode[] = [

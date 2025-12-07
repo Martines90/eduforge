@@ -289,8 +289,8 @@ function formatSolution(taskData: any): string {
 /**
  * Fetch curriculum tree data
  */
-export async function fetchTreeMap(subject: string, gradeLevel: string): Promise<ApiResponse<{ tree: any[] }>> {
-  const response = await fetch(`${API_BASE_URL}/api/tree-map/${subject}/${gradeLevel}`);
+export async function fetchTreeMap(country: string, subject: string, gradeLevel: string): Promise<ApiResponse<{ tree: any[] }>> {
+  const response = await fetch(`${API_BASE_URL}/api/tree-map/${country}/${subject}/${gradeLevel}`);
   const data = await response.json();
 
   if (!response.ok) {
