@@ -13,6 +13,12 @@ export const countries: Country[] = [
     flag: '🇺🇸',
     language: 'English',
   },
+  {
+    code: 'MX',
+    name: 'Mexico',
+    flag: '🇲🇽',
+    language: 'Español',
+  },
 ];
 
 export const DEFAULT_COUNTRY: CountryCode = 'HU';

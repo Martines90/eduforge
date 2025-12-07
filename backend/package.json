@@ -23,10 +23,13 @@
     "emulators:kill": "pkill -f firebase",
     "test:rules": "node test-firestore-rules.js",
     "test:rules:watch": "nodemon --watch firestore.rules --exec 'npm run test:rules'",
-    "firebase:deploy": "firebase deploy",
-    "firebase:deploy:indexes": "firebase deploy --only firestore:indexes",
-    "firebase:deploy:rules": "firebase deploy --only firestore:rules",
-    "firebase:deploy:firestore": "firebase deploy --only firestore"
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "deploy:functions": "firebase deploy --only functions",
+    "deploy:extensions": "firebase deploy --only extensions",
+    "deploy:firestore": "firebase deploy --only firestore",
+    "deploy:firestore:indexes": "firebase deploy --only firestore:indexes",
+    "deploy:firestore:rules": "firebase deploy --only firestore:rules"
   },
   "keywords": [
     "openai",
