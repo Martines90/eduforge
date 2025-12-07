@@ -173,7 +173,25 @@ export default function TaskDetailPage() {
     );
   }
 
-  const processedDescription = processLatexInHtml(task.content.description || task.description);
+  // Process image placeholders to inject actual image tags
+  const processImagePlaceholders = (html: string, images: any[]): string => {
+    if (!images || images.length === 0) return html;
+
+    let processedHtml = html;
+    images.forEach((image, index) => {
+      const placeholder = `[IMAGE_${index + 1}]`;
+      const imageUrl = typeof image === 'string' ? image : image.url;
+      const imgTag = `<img src="${imageUrl}" alt="Task illustration ${index + 1}" style="width: 100%; max-width: 50%; height: auto; margin: 10px 0 10px 20px; border-radius: 8px; float: right; clear: right;" class="task-image task-image-${index + 1}" />`;
+      processedHtml = processedHtml.replace(placeholder, imgTag);
+    });
+    return processedHtml;
+  };
+
+  const descriptionWithImages = processImagePlaceholders(
+    task.content.description || task.description,
+    task.content.images
+  );
+  const processedDescription = processLatexInHtml(descriptionWithImages);
   const processedSolution = processLatexInHtml(task.content.solution);
 
   return (
@@ -293,37 +311,18 @@ export default function TaskDetailPage() {
               borderLeft: '4px solid',
               borderColor: 'primary.main'
             },
+            '& .task-image': {
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+              '@media (max-width: 768px)': {
+                maxWidth: '100% !important',
+                float: 'none !important',
+                margin: '1rem 0 !important',
+              }
+            },
           }}
           dangerouslySetInnerHTML={{ __html: processedDescription }}
         />
       </Paper>
-
-      {/* Task Images */}
-      {task.content.images && task.content.images.length > 0 && (
-        <Paper elevation={2} sx={{ p: 4, mb: 3 }}>
-          <Typography variant="h6" gutterBottom fontWeight={600}>
-            {t('Images')}
-          </Typography>
-          <Divider sx={{ mb: 3 }} />
-          <Stack spacing={2}>
-            {task.content.images.map((imageUrl, index) => (
-              <Box
-                key={index}
-                component="img"
-                src={imageUrl}
-                alt={`Task image ${index + 1}`}
-                sx={{
-                  maxWidth: '100%',
-                  height: 'auto',
-                  borderRadius: 1,
-                  border: '1px solid',
-                  borderColor: 'divider',
-                }}
-              />
-            ))}
-          </Stack>
-        </Paper>
-      )}
 
       {/* Solution Section (Collapsible) */}
       <Paper elevation={2} sx={{ mb: 3 }}>

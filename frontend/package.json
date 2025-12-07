@@ -25,6 +25,7 @@
     "firebase": "^12.6.0",
     "formik": "^2.4.9",
     "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.12.1",
     "js-cookie": "^3.0.5",
     "jspdf": "^3.0.4",
     "next": "^14.2.3",

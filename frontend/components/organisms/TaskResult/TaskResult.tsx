@@ -208,9 +208,8 @@ export const TaskResult: React.FC<TaskResultProps> = ({
     if (!task) return;
 
     try {
-      // Dynamically import jsPDF and html2canvas to avoid SSR issues
-      const { default: jsPDF } = await import('jspdf');
-      const { default: html2canvas } = await import('html2canvas');
+      // Dynamically import html2pdf to avoid SSR issues
+      const html2pdf = (await import('html2pdf.js')).default;
 
       // Create a temporary container for PDF rendering
       const pdfContainer = document.createElement('div');
@@ -222,12 +221,13 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       pdfContainer.style.fontFamily = 'Arial, sans-serif';
       pdfContainer.style.fontSize = '14px';
       pdfContainer.style.lineHeight = '1.6';
+      pdfContainer.style.color = '#333';
 
       // Build the PDF content (task description only, with images)
       const displayDescription = processImagePlaceholders(editedDescription || task.description, task.images);
 
       pdfContainer.innerHTML = `
-        <div style="margin-bottom: 30px;">
+        <div style="padding: 10px;">
           <h1 style="color: #667eea; font-size: 24px; margin-bottom: 20px; font-weight: bold;">Feladat</h1>
           <div style="font-size: 14px; line-height: 1.8;">
             ${processLatexInHtml(displayDescription)}
@@ -240,12 +240,15 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       // Process all images to ensure they're loaded
       const images = pdfContainer.getElementsByTagName('img');
       const imagePromises = Array.from(images).map((img) => {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
           if (img.complete) {
             resolve(null);
           } else {
             img.onload = () => resolve(null);
-            img.onerror = () => reject(new Error(`Failed to load image: ${img.src}`));
+            img.onerror = () => {
+              console.warn(`Failed to load image: ${img.src}`);
+              resolve(null);
+            };
           }
         });
       });
@@ -260,44 +263,29 @@ export const TaskResult: React.FC<TaskResultProps> = ({
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
 
-      // Convert to canvas
-      const canvas = await html2canvas(pdfContainer, {
-        scale: 2,
-        useCORS: true,
-        allowTaint: true,
-        logging: false,
-        backgroundColor: '#ffffff',
-      });
+      // Configure PDF options
+      const opt = {
+        margin: 10,
+        filename: `feladat_${task.id}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
+          logging: false,
+          letterRendering: true,
+        },
+        jsPDF: {
+          unit: 'mm',
+          format: 'a4',
+          orientation: 'portrait'
+        }
+      };
+
+      // Generate and download PDF
+      await html2pdf().set(opt).from(pdfContainer).save();
 
       // Remove temporary container
       document.body.removeChild(pdfContainer);
-
-      // Create PDF
-      const imgData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF('p', 'mm', 'a4');
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = pdf.internal.pageSize.getHeight();
-      const imgWidth = pdfWidth;
-      const imgHeight = (canvas.height * pdfWidth) / canvas.width;
-
-      let heightLeft = imgHeight;
-      let position = 0;
-
-      // Add first page
-      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-      heightLeft -= pdfHeight;
-
-      // Add additional pages if needed
-      while (heightLeft > 0) {
-        position = heightLeft - imgHeight;
-        pdf.addPage();
-        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-        heightLeft -= pdfHeight;
-      }
-
-      // Download PDF
-      const fileName = `feladat_${task.id}.pdf`;
-      pdf.save(fileName);
     } catch (error) {
       console.error('PDF generation error:', error);
       alert('Hiba történt a PDF generálása során. Kérjük, próbálja újra.');
