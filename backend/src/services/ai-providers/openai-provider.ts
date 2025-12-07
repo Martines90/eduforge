@@ -82,6 +82,10 @@ export class OpenAIProvider implements IAIProvider {
         n: 1,
       });
 
+      if (!response.data || response.data.length === 0) {
+        throw new Error("OpenAI returned no image data");
+      }
+
       const image = response.data[0];
       if (!image || !image.url) {
         throw new Error("OpenAI returned no image URL");

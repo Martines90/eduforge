@@ -27,6 +27,7 @@ import { TreeNode, TaskItem } from '@/types/task-tree';
 import { useTranslation } from '@/lib/i18n';
 import { useUser } from '@/lib/context/UserContext';
 import { Button } from '@/components/atoms/Button';
+import { fetchTasksByCurriculumPath } from '@/lib/services/api.service';
 import styles from './TaskTreeView.module.scss';
 
 export interface TaskTreeViewProps {
@@ -77,14 +78,11 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
       setLoadingTasks(true);
       try {
         // Fetch tasks from backend API using full curriculum path
-        const response = await fetch(
-          `http://localhost:3000/api/v2/tasks?curriculum_path=${encodeURIComponent(curriculumPath)}&isPublished=true`
-        );
-        const data = await response.json();
+        const data = await fetchTasksByCurriculumPath(curriculumPath, true);
 
-        if (data.success && data.tasks) {
+        if (data.success && data.data?.tasks) {
           // Map backend task format to frontend TaskItem format
-          const mappedTasks = data.tasks.map((task: any) => ({
+          const mappedTasks = data.data.tasks.map((task: any) => ({
             id: task.id,
             title: task.title,
             subject: task.subject,

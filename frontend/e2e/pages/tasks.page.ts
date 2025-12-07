@@ -133,7 +133,7 @@ export class TasksPage {
     // Wait for at least one task to be visible
     await expect(this.page.locator('tr').filter({
       has: this.page.locator('td').first()
-    })).toHaveCount({ timeout: 10000 }, { gte: minCount });
+    })).toHaveCount(minCount, { timeout: 10000 });
   }
 
   /**

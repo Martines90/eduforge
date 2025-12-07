@@ -23,6 +23,7 @@ import { TaskTreeView } from '@/components/organisms/TaskTreeView';
 import { TreeNode, TaskItem } from '@/types/task-tree';
 import { useTranslation } from '@/lib/i18n';
 import { AuthenticatedPage } from '@/components/templates/AuthenticatedPage';
+import { fetchTreeMap } from '@/lib/services/api.service';
 
 /**
  * Tasks Page
@@ -46,17 +47,15 @@ export default function TasksPage() {
       setError(null);
 
       try {
-        const response = await fetch(`http://localhost:3000/api/tree-map/${filterSubject}/${filterGrade}`);
-        const data = await response.json();
-
-        if (data.success) {
+        const data = await fetchTreeMap(filterSubject, filterGrade);
+        if (data.success && data.data) {
           setTreeData(data.data.tree);
         } else {
           setError(data.message || 'Failed to load curriculum tree');
         }
       } catch (err: any) {
         console.error('Error fetching tree data:', err);
-        setError('Failed to connect to server');
+        setError(err.message || 'Failed to connect to server');
       } finally {
         setIsLoading(false);
       }

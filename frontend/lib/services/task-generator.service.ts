@@ -4,8 +4,7 @@
  */
 
 import { TaskGeneratorRequest } from '@/types/task';
-
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+import { API_BASE_URL } from './api.service';
 
 export interface TaskGenerationStep {
   step: 'generating_variations' | 'selecting_best' | 'generating_images' | 'generating_solution' | 'completed';

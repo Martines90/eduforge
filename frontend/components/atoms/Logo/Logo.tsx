@@ -16,7 +16,7 @@ export interface LogoProps {
 export const Logo: React.FC<LogoProps> = ({ className }) => {
   return (
     <Link href="/" className={`${styles.logo} ${className || ''}`}>
-      <Typography variant="h6" component="div" component="span" className={styles.text}>
+      <Typography variant="h6" component="span" className={styles.text}>
         EduForge
       </Typography>
     </Link>

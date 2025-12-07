@@ -31,6 +31,7 @@ import { Button } from '@/components/atoms/Button';
 import { LoadingSpinner } from '@/components/atoms/LoadingSpinner';
 import { processLatexInHtml } from '@/lib/utils/latex-converter';
 import { useTranslation } from '@/lib/i18n';
+import { fetchTaskById } from '@/lib/services/api.service';
 
 interface TaskData {
   id: string;
@@ -71,7 +72,7 @@ export default function TaskDetailPage() {
   const maxRetries = 10;
 
   useEffect(() => {
-    const fetchTask = async () => {
+    const loadTask = async () => {
       setIsLoading(true);
       setError(null);
 
@@ -79,8 +80,7 @@ export default function TaskDetailPage() {
         // NOTE: Backend must extract country from task ID or query string
         // and fetch from: countries/{country}/tasks/{taskId}
         // See DATABASE_STRUCTURE.md for details
-        const response = await fetch(`http://localhost:3000/api/v2/tasks/${taskId}?view=true`);
-        const data = await response.json();
+        const data = await fetchTaskById(taskId, true);
 
         if (data.success && data.data) {
           setTask(data.data);
@@ -89,14 +89,14 @@ export default function TaskDetailPage() {
         }
       } catch (err: any) {
         console.error('Error fetching task:', err);
-        setError('Failed to load task');
+        setError(err.message || 'Failed to load task');
       } finally {
         setIsLoading(false);
       }
     };
 
     if (taskId) {
-      fetchTask();
+      loadTask();
     }
   }, [taskId]);
 

@@ -1,7 +1,7 @@
 /**
  * Supported countries and their language codes
  */
-export type CountryCode = 'US' | 'HU';
+export type CountryCode = 'US' | 'HU' | 'MX';
 
 export interface Country {
   code: CountryCode;

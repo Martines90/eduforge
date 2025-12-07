@@ -5,7 +5,10 @@
 
 import { TaskGeneratorRequest, TaskGeneratorResponse } from '@/types/task';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+// For Firebase Hosting with Cloud Functions rewrites, use empty string in production
+// This makes requests relative to the current domain
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL ||
+  (typeof window !== 'undefined' && window.location.hostname !== 'localhost' ? '' : 'http://localhost:3000');
 
 export interface ApiResponse<T = any> {
   success: boolean;
@@ -281,4 +284,52 @@ function formatSolution(taskData: any): string {
   }
 
   return html;
+}
+
+/**
+ * Fetch curriculum tree data
+ */
+export async function fetchTreeMap(subject: string, gradeLevel: string): Promise<ApiResponse<{ tree: any[] }>> {
+  const response = await fetch(`${API_BASE_URL}/api/tree-map/${subject}/${gradeLevel}`);
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || 'Failed to load curriculum tree');
+  }
+
+  return data;
+}
+
+/**
+ * Fetch tasks by curriculum path
+ */
+export async function fetchTasksByCurriculumPath(
+  curriculumPath: string,
+  isPublished: boolean = true
+): Promise<ApiResponse<{ tasks: any[] }>> {
+  const response = await fetch(
+    `${API_BASE_URL}/api/v2/tasks?curriculum_path=${encodeURIComponent(curriculumPath)}&isPublished=${isPublished}`
+  );
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || 'Failed to load tasks');
+  }
+
+  return data;
+}
+
+/**
+ * Fetch task by ID
+ */
+export async function fetchTaskById(taskId: string, view: boolean = false): Promise<ApiResponse<any>> {
+  const viewParam = view ? '?view=true' : '';
+  const response = await fetch(`${API_BASE_URL}/api/v2/tasks/${taskId}${viewParam}`);
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || 'Task not found');
+  }
+
+  return data;
 }

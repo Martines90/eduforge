@@ -8,7 +8,7 @@
  * See DATABASE_STRUCTURE.md for complete details.
  */
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+import { API_BASE_URL } from './api.service';
 
 export interface SaveTaskRequest {
   task_id: string;

@@ -142,11 +142,18 @@ function TaskCreatorContent() {
       const curriculumPath = `mathematics:${gradeLevel}:${path.join(':')}`;
       setCurrentCurriculumPath(curriculumPath);
 
+      // Map targetGroupSex to TargetGroup type
+      const mapTargetGroup = (sex: 'mixed' | 'male' | 'female'): 'mixed' | 'boys' | 'girls' => {
+        if (sex === 'male') return 'boys';
+        if (sex === 'female') return 'girls';
+        return 'mixed';
+      };
+
       // Build request payload
       const request: TaskGeneratorRequest = {
         curriculum_path: curriculumPath,
         country_code: user.country,
-        target_group: config.targetGroupSex,
+        target_group: mapTargetGroup(config.targetGroupSex),
         difficulty_level: config.difficulty,
         educational_model: config.educationalModel,
         number_of_images: config.numberOfImages,

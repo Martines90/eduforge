@@ -267,7 +267,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       const opt = {
         margin: 10,
         filename: `feladat_${task.id}.pdf`,
-        image: { type: 'jpeg', quality: 0.98 },
+        image: { type: 'jpeg' as const, quality: 0.98 },
         html2canvas: {
           scale: 2,
           useCORS: true,
@@ -277,7 +277,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
         jsPDF: {
           unit: 'mm',
           format: 'a4',
-          orientation: 'portrait'
+          orientation: 'portrait' as const
         }
       };
 
