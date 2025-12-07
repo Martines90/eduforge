@@ -111,13 +111,17 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
           // Use country from Firestore (it should match the cookie)
           const savedCountry = userData.country;
 
+          // Normalize backend role to frontend UserIdentity (backend uses 'general_user', frontend uses 'non-teacher')
+          const backendRole = userData.role as string;
+          const normalizedIdentity: UserIdentity = backendRole === 'general_user' ? 'non-teacher' : backendRole as UserIdentity;
+
           // Update context state
           setUser((prev) => ({
             ...prev,
             isRegistered: true,
             profile,
             role: 'registered',
-            identity: userData.role as UserIdentity,
+            identity: normalizedIdentity,
             subject: userData.subject || null,
             country: savedCountry || prev.country,
             hasCompletedOnboarding: true, // If they're in Firestore, they've completed onboarding
@@ -131,8 +135,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
           if (savedCountry) {
             setCookie(COOKIE_NAMES.COUNTRY, savedCountry);
           }
-          if (userData.role) {
-            setCookie(COOKIE_NAMES.IDENTITY, userData.role);
+          if (normalizedIdentity) {
+            setCookie(COOKIE_NAMES.IDENTITY, normalizedIdentity);
           }
           if (userData.subject) {
             setCookie(COOKIE_NAMES.SUBJECT, userData.subject);
@@ -151,7 +155,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
         if (authToken && profileStr && isRegistered) {
           try {
             const profile = JSON.parse(profileStr) as UserProfile;
-            const identity = getCookie(COOKIE_NAMES.IDENTITY) as UserIdentity | undefined;
+            const cookieIdentity = getCookie(COOKIE_NAMES.IDENTITY);
+            // Normalize backend role to frontend UserIdentity (backend uses 'general_user', frontend uses 'non-teacher')
+            const identity: UserIdentity | undefined = cookieIdentity === 'general_user' ? 'non-teacher' : cookieIdentity as UserIdentity | undefined;
             const subject = getCookie(COOKIE_NAMES.SUBJECT) as Subject | undefined;
             const savedCountry = (getCookie(COOKIE_NAMES.COUNTRY) as CountryCode) || DEFAULT_COUNTRY;
 
@@ -283,7 +289,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       };
 
       // Get user data from backend response
-      const userRole = (userData as any).role as UserIdentity | undefined;
+      const backendRole = (userData as any).role as string | undefined;
+      // Normalize backend role to frontend UserIdentity (backend uses 'general_user', frontend uses 'non-teacher')
+      const userRole: UserIdentity | undefined = backendRole === 'general_user' ? 'non-teacher' : backendRole as UserIdentity | undefined;
       const userCountry = (userData as any).country as CountryCode | undefined;
       const userSubject = (userData as any).subject as Subject | undefined;
 
