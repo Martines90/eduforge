@@ -1,12 +1,10 @@
-import OpenAI from "openai";
 import { config } from "../config";
 import { ImageOptions, ImageResult, ImageSize, ImageQuality } from "../types";
+import { AIProviderFactory, ImageGenerationRequest } from "./ai-providers";
 
 export class ImageGeneratorService {
-  private client: OpenAI;
-
   constructor() {
-    this.client = new OpenAI({ apiKey: config.apiKey });
+    // Provider is initialized in index.ts, we just use the factory
   }
 
   async generate(
@@ -21,27 +19,23 @@ export class ImageGeneratorService {
 
     console.log(`🎨 Generating image (${size}, ${quality})...`);
 
-    const response = await this.client.images.generate({
-      model: config.imageModel,
+    const provider = AIProviderFactory.getImageProvider();
+
+    const request: ImageGenerationRequest = {
       prompt,
       size,
       quality,
       style,
-      n: 1,
-      response_format: "url",
-    });
+    };
 
-    const imageUrl = response.data?.[0]?.url;
-    if (!imageUrl) {
-      throw new Error("No URL in response");
-    }
+    const response = await provider.generateImage!(request);
 
     const cost = this.calculateCost(size, quality);
     const filename = this.generateFilename();
 
     console.log(`✅ Image generated ($${cost.toFixed(4)})\n`);
 
-    return { url: imageUrl, filename, cost };
+    return { url: response.url, filename, cost };
   }
 
   private calculateCost(size: ImageSize, quality: ImageQuality): number {

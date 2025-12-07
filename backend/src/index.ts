@@ -1,9 +1,18 @@
 import { createApp } from "./app";
 import { config } from "./config";
 import { initializeFirebase } from "./config/firebase.config";
+import { AIProviderFactory } from "./services/ai-providers";
 
 // Initialize Firebase Admin SDK
 initializeFirebase();
+
+// Initialize AI Provider Factory
+AIProviderFactory.initialize({
+  openaiApiKey: process.env.OPENAI_API_KEY,
+  anthropicApiKey: process.env.ANTHROPIC_API_KEY,
+  textModel: config.textModel,
+  imageModel: config.imageModel,
+});
 
 const app = createApp();
 
