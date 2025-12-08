@@ -449,7 +449,7 @@ function TaskCreatorContent() {
           <TaskResult
             task={generatedTask}
             loading={isGenerating}
-            loadingMessage={generationStep?.message ? t(generationStep.message) : undefined}
+            loadingMessage={generationStep?.message ? t(generationStep.message as any) : undefined}
             loadingProgress={generationStep?.progress}
             error={generationError || undefined}
             onClose={handleCloseResult}
