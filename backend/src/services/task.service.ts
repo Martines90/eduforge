@@ -59,7 +59,7 @@ export async function createTask(
     subjectMappingPath: mapping.path,
     subject: mapping.subject,
     gradeLevel: mapping.gradeLevel,
-    schoolSystem: data.schoolSystem || 'Magyar NAT',
+    educationalModel: data.educationalModel || 'secular',
     difficultyLevel: data.difficultyLevel,
     estimatedDurationMinutes: data.estimatedDurationMinutes,
     tags: data.tags || [],

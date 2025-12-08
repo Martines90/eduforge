@@ -44,7 +44,7 @@ interface TaskData {
   };
   subject: string;
   gradeLevel: string;
-  schoolSystem: string;
+  educationalModel: string;
   difficultyLevel: string;
   created_at: string;
   creatorName: string;
@@ -228,7 +228,7 @@ export default function TaskDetailPage() {
             variant="outlined"
           />
           <Chip
-            label={task.schoolSystem}
+            label={task.educationalModel}
             variant="outlined"
           />
         </Stack>

@@ -227,6 +227,10 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         password: userData.password,
         role,
         country: selectedCountry,
+        ...(isTeacher && selectedSubject ? { subject: selectedSubject } : {}),
+        ...(isTeacher && selectedEducationalModel
+          ? { educationalModel: selectedEducationalModel as string }
+          : {}),
       });
 
       // Move to verification step

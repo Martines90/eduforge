@@ -38,7 +38,7 @@ countries/
             - images: string[]
         - subject: string
         - gradeLevel: string
-        - schoolSystem: string
+        - educationalModel: string
         - difficultyLevel: string
         - curriculum_path: string
         - created_by: string

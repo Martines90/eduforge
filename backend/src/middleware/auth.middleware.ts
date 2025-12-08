@@ -9,6 +9,7 @@ export interface AuthRequest extends Request {
     uid: string;
     email: string;
     role: 'teacher' | 'general_user';
+    name: string;
   };
 }
 
@@ -58,6 +59,7 @@ export const authenticate = async (
       uid: decoded.uid,
       email: decoded.email,
       role: decoded.role as 'teacher' | 'general_user',
+      name: decoded.name,
     };
 
     next();

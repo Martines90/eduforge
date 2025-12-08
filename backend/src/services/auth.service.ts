@@ -182,6 +182,7 @@ export async function verifyCodeAndCreateUser(email: string, code: string): Prom
       uid: userRecord.uid,
       email: email.toLowerCase(),
       role: userData.role,
+      name: userData.name,
     },
     JWT_SECRET,
     { expiresIn: JWT_EXPIRES_IN }
@@ -285,6 +286,7 @@ export async function loginUser(data: LoginRequest): Promise<{ user: UserDocumen
       uid: user.uid,
       email: user.email,
       role: user.role,
+      name: user.name,
     },
     JWT_SECRET,
     { expiresIn: JWT_EXPIRES_IN }
@@ -310,9 +312,9 @@ export async function getUserById(uid: string): Promise<UserDocument | null> {
 /**
  * Verify JWT token
  */
-export function verifyToken(token: string): { uid: string; email: string; role: string } {
+export function verifyToken(token: string): { uid: string; email: string; role: string; name: string } {
   try {
-    const decoded = jwt.verify(token, JWT_SECRET) as { uid: string; email: string; role: string };
+    const decoded = jwt.verify(token, JWT_SECRET) as { uid: string; email: string; role: string; name: string };
     return decoded;
   } catch (error) {
     throw new Error('Invalid token');

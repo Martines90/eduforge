@@ -97,7 +97,7 @@ interface TaskDocument {
   gradeLevel: string;             // Denormalized: "grade_9_10"
 
   // Metadata
-  schoolSystem: string;           // "Magyar NAT"
+  educationalModel: string;       // "secular", "traditional", etc.
   difficultyLevel?: string;       // "easy", "medium", "hard"
   estimatedDurationMinutes?: number;
   tags?: string[];                // Additional searchable tags
@@ -139,7 +139,7 @@ interface TaskDocument {
   "subjectMappingPath": "mathematics/grade_9_10/halmazok/halmaz_fogalma/halmaz_megadas_felsorolassal",
   "subject": "mathematics",
   "gradeLevel": "grade_9_10",
-  "schoolSystem": "Magyar NAT",
+  "educationalModel": "secular",
   "difficultyLevel": "easy",
   "estimatedDurationMinutes": 15,
   "tags": ["halmazok", "alapok"],

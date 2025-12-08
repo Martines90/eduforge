@@ -7,7 +7,7 @@ export interface TaskItem {
   id: string;
   title: string;
   subject: string;
-  schoolSystem: string;
+  educationalModel: string;
   rating: number; // 0-5 stars
   views: number;
   description?: string;

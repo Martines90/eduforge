@@ -4,6 +4,7 @@ import { TaskStorageService } from "../services/task-storage.service";
 import { TaskSelectionService } from "../services/task-selection.service";
 import { TaskGeneratorRequest, TaskGeneratorResponse } from "../types";
 import { getFirestore } from "../config/firebase.config";
+import { AuthRequest } from "../middleware/auth.middleware";
 
 export class TaskController {
   private taskGenerator: TaskGeneratorService;
@@ -296,7 +297,7 @@ export class TaskController {
     next: NextFunction
   ): Promise<void> => {
     try {
-      const { task_id, task_data, curriculum_path, country_code, created_by } = req.body;
+      const { task_id, task_data, curriculum_path, country_code } = req.body;
 
       // Validate required fields
       if (!task_id || !task_data) {
@@ -307,9 +308,24 @@ export class TaskController {
         return;
       }
 
+      // Get authenticated user from request (added by auth middleware)
+      const authReq = req as AuthRequest;
+      const authenticatedUser = authReq.user;
+
+      if (!authenticatedUser) {
+        res.status(401).json({
+          success: false,
+          message: "Authentication required to save tasks",
+        });
+        return;
+      }
+
+      // Get creator name from JWT token (no database lookup needed!)
+      const creatorName = authenticatedUser.name || authenticatedUser.email || 'Unknown Teacher';
+
       console.log(`📥 Request to save task: ${task_id}`);
       console.log(`   Curriculum path: ${curriculum_path}`);
-      console.log(`   Created by: ${created_by || 'unknown'}`);
+      console.log(`   Created by: ${authenticatedUser.uid} (${creatorName})`);
 
       const db = getFirestore();
 
@@ -332,6 +348,9 @@ export class TaskController {
       }
 
       console.log(`   Extracted - Subject: ${subject}, Grade: ${gradeLevel}`);
+
+      // Extract educational model from task_data metadata
+      const educationalModel = task_data.metadata?.educational_model || 'secular';
 
       // Create the task document with proper schema for getTasks query
       const taskDoc = {
@@ -356,9 +375,9 @@ export class TaskController {
 
         // User and location info
         country_code: country_code || 'US',
-        schoolSystem: country_code === 'HU' ? 'Magyar NAT' : 'US Common Core',
-        created_by: created_by || 'unknown',
-        creatorName: created_by || 'Unknown Teacher',
+        educationalModel: educationalModel,
+        created_by: authenticatedUser.uid,
+        creatorName: creatorName,
 
         // Publishing and metrics
         isPublished: true,
@@ -366,10 +385,10 @@ export class TaskController {
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString(),
 
-        // Task properties (defaults)
-        difficultyLevel: 'medium',
-        estimatedDurationMinutes: 30,
-        tags: [],
+        // Task properties (from metadata or defaults)
+        difficultyLevel: task_data.metadata?.difficulty_level || 'medium',
+        estimatedDurationMinutes: task_data.metadata?.estimated_time_minutes || 30,
+        tags: task_data.metadata?.tags || [],
 
         // Statistics
         viewCount: 0,

@@ -86,7 +86,7 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
             id: task.id,
             title: task.title,
             subject: task.subject,
-            schoolSystem: task.schoolSystem,
+            educationalModel: task.educationalModel,
             rating: task.ratingAverage || 0,
             views: task.viewCount || 0,
             description: task.description,

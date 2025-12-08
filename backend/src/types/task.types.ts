@@ -109,7 +109,7 @@ export interface TaskDocument {
   gradeLevel: string; // Denormalized
 
   // Metadata
-  schoolSystem: string;
+  educationalModel: string;
   difficultyLevel?: 'easy' | 'medium' | 'hard';
   estimatedDurationMinutes?: number;
   tags?: string[];
@@ -163,7 +163,7 @@ export interface CreateTaskRequest {
   content: TaskContent;
   subjectMappingId: string;
   country_code?: string; // ISO country code (e.g., 'HU', 'US', 'MX')
-  schoolSystem?: string;
+  educationalModel?: string;
   difficultyLevel?: 'easy' | 'medium' | 'hard';
   estimatedDurationMinutes?: number;
   tags?: string[];
@@ -174,7 +174,7 @@ export interface UpdateTaskRequest {
   title?: string;
   description?: string;
   content?: TaskContent;
-  schoolSystem?: string;
+  educationalModel?: string;
   difficultyLevel?: 'easy' | 'medium' | 'hard';
   estimatedDurationMinutes?: number;
   tags?: string[];

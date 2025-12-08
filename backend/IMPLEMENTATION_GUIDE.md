@@ -208,7 +208,7 @@ Content-Type: application/json
     "hints": ["Természetes számok 1-től indulnak"]
   },
   "subjectMappingId": "mathematics_grade_9_10_halmazok_megadas_felsorolassal",
-  "schoolSystem": "Magyar NAT",
+  "educationalModel": "secular",
   "difficultyLevel": "easy",
   "estimatedDurationMinutes": 15,
   "tags": ["halmazok", "alapok"],

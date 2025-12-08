@@ -72,7 +72,7 @@ CREATE TABLE tasks (
   grade_level VARCHAR(50) NOT NULL, -- Denormalized for faster queries
 
   -- Metadata
-  school_system VARCHAR(100) DEFAULT 'Magyar NAT',
+  educational_model VARCHAR(100) DEFAULT 'secular',
   difficulty_level VARCHAR(50), -- 'easy', 'medium', 'hard'
   estimated_duration_minutes INTEGER,
 

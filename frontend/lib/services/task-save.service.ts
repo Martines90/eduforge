@@ -15,7 +15,7 @@ export interface SaveTaskRequest {
   task_data: any;
   curriculum_path: string;
   country_code: string;
-  created_by?: string;
+  // Note: created_by is not sent from frontend - it's extracted from JWT token on backend
 }
 
 export interface SaveTaskResponse {

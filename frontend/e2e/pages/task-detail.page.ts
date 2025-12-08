@@ -11,7 +11,7 @@ export class TaskDetailPage {
   readonly gradeChip: Locator;
   readonly subjectChip: Locator;
   readonly difficultyChip: Locator;
-  readonly schoolSystemChip: Locator;
+  readonly educationalModelChip: Locator;
   readonly subjectMappingPath: Locator;
   readonly creatorInfo: Locator;
 
@@ -49,7 +49,7 @@ export class TaskDetailPage {
     this.gradeChip = page.locator('[class*="MuiChip"]').filter({ hasText: /grade/i }).first();
     this.subjectChip = page.locator('[class*="MuiChip"]').filter({ hasText: /mathematics|physics|chemistry/i }).first();
     this.difficultyChip = page.locator('[class*="MuiChip"]').filter({ hasText: /difficulty/i });
-    this.schoolSystemChip = page.locator('[class*="MuiChip"]').filter({ hasText: /NAT|Common Core/i });
+    this.educationalModelChip = page.locator('[class*="MuiChip"]').filter({ hasText: /secular|traditional|progressive|conservative/i });
     this.subjectMappingPath = page.locator('p').filter({ hasText: />/i }).first();
     this.creatorInfo = page.locator('text=/Created by/i');
 
