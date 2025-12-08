@@ -239,6 +239,7 @@ export const mx: Translations = {
   'Your task has been saved to the database and is now available publicly.': 'Tu tarea ha sido guardada en la base de datos y ahora está disponible públicamente.',
   'Public Share Link:': 'Enlace Público para Compartir:',
   'Link copied to clipboard!': '¡Enlace copiado al portapapeles!',
+  'Task ID': 'ID de Tarea',
   'Task ID:': 'ID de Tarea:',
   'Copy Public Share Link': 'Copiar Enlace Público',
   'Download as PDF': 'Descargar como PDF',

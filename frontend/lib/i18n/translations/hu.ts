@@ -239,6 +239,7 @@ export const hu: Translations = {
   'Your task has been saved to the database and is now available publicly.': 'A feladat elmentésre került az adatbázisba és mostantól nyilvánosan elérhető.',
   'Public Share Link:': 'Nyilvános Megosztási Link:',
   'Link copied to clipboard!': 'Link vágólapra másolva!',
+  'Task ID': 'Feladat ID',
   'Task ID:': 'Feladat ID:',
   'Copy Public Share Link': 'Nyilvános Link Másolása',
   'Download as PDF': 'Letöltés PDF-ként',

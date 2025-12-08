@@ -250,6 +250,7 @@ export interface Translations {
   'Your task has been saved to the database and is now available publicly.': string;
   'Public Share Link:': string;
   'Link copied to clipboard!': string;
+  'Task ID': string;
   'Task ID:': string;
   'Copy Public Share Link': string;
   'Download as PDF': string;

@@ -180,9 +180,17 @@ export const TaskResult: React.FC<TaskResultProps> = ({
     // Validate character length before saving
     if (!descriptionValidation.isValid) {
       if (descriptionValidation.isTooShort) {
-        alert(t('Task description is too short! At least {{min}} characters required. Current: {{count}} characters.', { min: descriptionValidation.min, count: descriptionValidation.count }));
+        alert(
+          t('Task description is too short! At least {{min}} characters required. Current: {{count}} characters.')
+            .replace('{{min}}', String(descriptionValidation.min))
+            .replace('{{count}}', String(descriptionValidation.count))
+        );
       } else if (descriptionValidation.isTooLong) {
-        alert(t('Task description is too long! Maximum {{max}} characters allowed. Current: {{count}} characters.', { max: descriptionValidation.max, count: descriptionValidation.count }));
+        alert(
+          t('Task description is too long! Maximum {{max}} characters allowed. Current: {{count}} characters.')
+            .replace('{{max}}', String(descriptionValidation.max))
+            .replace('{{count}}', String(descriptionValidation.count))
+        );
       }
       return;
     }
@@ -453,8 +461,8 @@ export const TaskResult: React.FC<TaskResultProps> = ({
                     }}
                   >
                     {descriptionValidation.isTooShort
-                      ? t('{{count}} more characters needed', { count: descriptionValidation.min - descriptionValidation.count })
-                      : t('{{count}} characters over limit', { count: descriptionValidation.count - descriptionValidation.max })
+                      ? t('{{count}} more characters needed').replace('{{count}}', String(descriptionValidation.min - descriptionValidation.count))
+                      : t('{{count}} characters over limit').replace('{{count}}', String(descriptionValidation.count - descriptionValidation.max))
                     }
                   </Typography>
                 )}
