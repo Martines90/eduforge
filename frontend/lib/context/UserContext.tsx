@@ -200,7 +200,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
 
     const savedCountry = getCookie(COOKIE_NAMES.COUNTRY) as CountryCode | undefined;
 
-    if (savedCountry && (savedCountry === 'US' || savedCountry === 'HU')) {
+    if (savedCountry) {
       // Restore country preference only (auth state is managed by Firebase listener)
       setUser((prev) => ({
         ...prev,

@@ -149,7 +149,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
               <SettingsIcon fontSize="small" />
               <Typography variant="subtitle1" fontWeight={600}>
-                Feladat beállítások
+                {t('Task Settings')}
               </Typography>
             </Box>
           </AccordionSummary>
@@ -160,7 +160,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
                 value={difficulty}
                 onChange={setDifficulty}
                 country={user.country}
-                label="Nehézségi szint"
+                label={t('Difficulty Level')}
               />
 
               {/* Educational Model Selector */}
@@ -168,7 +168,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
                 value={educationalModel}
                 onChange={setEducationalModel}
                 country={user.country}
-                label="Oktatási modell"
+                label={t('Educational Model')}
               />
 
               {/* Target Group Sex Selector */}
@@ -182,7 +182,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
               <ImageNumberSelect
                 value={numberOfImages}
                 onChange={setNumberOfImages}
-                label="Képek száma"
+                label={t('Number of Images')}
               />
             </Box>
           </AccordionDetails>
@@ -199,7 +199,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
             disabled={!isComplete || !finalSelection}
             fullWidth
           >
-            Feladat generálása
+            {t('Generate Task')}
           </Button>
         </div>
       )}

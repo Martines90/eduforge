@@ -203,7 +203,7 @@ export class TaskController {
     next: NextFunction
   ): Promise<void> => {
     try {
-      const { task_text, precision_settings, educational_model } = req.body;
+      const { task_text, precision_settings, educational_model, country_code } = req.body;
 
       if (!task_text || !task_text.title || !task_text.story_text) {
         res.status(400).json({
@@ -215,6 +215,7 @@ export class TaskController {
 
       console.log("📥 Request to generate solution");
       console.log(`   Task: ${task_text.title}`);
+      console.log(`   Country: ${country_code || task_text.metadata?.country_code || 'US'}`);
 
       // Build a minimal request object for solution generation
       const request: any = {
@@ -228,7 +229,7 @@ export class TaskController {
         curriculum_path: task_text.metadata?.curriculum_path || "math:general",
         difficulty_level: task_text.metadata?.difficulty_level || "medium",
         target_group: task_text.metadata?.target_group || "mixed",
-        country_code: "HU",
+        country_code: country_code || task_text.metadata?.country_code || "US",
       };
 
       const solutionData = await this.taskGenerator.generateSolutionOnly(

@@ -205,6 +205,46 @@ export interface Translations {
   '1 image': string;
   '2 images': string;
 
+  // Task Settings
+  'Task Settings': string;
+  'Difficulty Level': string;
+  'Generate Task': string;
+
+  // Task Generation Progress Messages
+  'Generating task...': string;
+  'Generating 3 task variations in parallel...': string;
+  '3 task variations successfully generated!': string;
+  'AI is selecting the best variation...': string;
+  'Best variation selected (variation': string;
+  'Generating images...': string;
+  'Generating images and solution...': string;
+  'Generating solution...': string;
+  'Task successfully completed!': string;
+  'Please wait...': string;
+
+  // Task Result Component
+  'Generated Task': string;
+  'Edit task': string;
+  'Edit solution': string;
+  'Save': string;
+  'characters': string;
+  '{{count}} more characters needed': string;
+  '{{count}} characters over limit': string;
+  'Task description is too short! At least {{min}} characters required. Current: {{count}} characters.': string;
+  'Task description is too long! Maximum {{max}} characters allowed. Current: {{count}} characters.': string;
+  'An error occurred while generating the PDF. Please try again.': string;
+  'An error occurred': string;
+  'Save Task': string;
+  'Saving...': string;
+  'Questions': string;
+  'Solution Steps': string;
+  'Formula': string;
+  'Calculation': string;
+  'Result': string;
+  'Final Answer': string;
+  'Verification': string;
+  'Common Mistakes': string;
+
   // Task Saved Modal
   'Task Saved Successfully!': string;
   'Your task has been saved to the database and is now available publicly.': string;

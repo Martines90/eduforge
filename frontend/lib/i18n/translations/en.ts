@@ -194,6 +194,46 @@ export const en: Translations = {
   '1 image': '1 image',
   '2 images': '2 images',
 
+  // Task Settings
+  'Task Settings': 'Task Settings',
+  'Difficulty Level': 'Difficulty Level',
+  'Generate Task': 'Generate Task',
+
+  // Task Generation Progress Messages
+  'Generating task...': 'Generating task...',
+  'Generating 3 task variations in parallel...': 'Generating 3 task variations in parallel...',
+  '3 task variations successfully generated!': '3 task variations successfully generated!',
+  'AI is selecting the best variation...': 'AI is selecting the best variation...',
+  'Best variation selected (variation': 'Best variation selected (variation',
+  'Generating images...': 'Generating images...',
+  'Generating images and solution...': 'Generating images and solution...',
+  'Generating solution...': 'Generating solution...',
+  'Task successfully completed!': 'Task successfully completed!',
+  'Please wait...': 'Please wait...',
+
+  // Task Result Component
+  'Generated Task': 'Generated Task',
+  'Edit task': 'Edit task',
+  'Edit solution': 'Edit solution',
+  'Save': 'Save',
+  'characters': 'characters',
+  '{{count}} more characters needed': '{{count}} more characters needed',
+  '{{count}} characters over limit': '{{count}} characters over limit',
+  'Task description is too short! At least {{min}} characters required. Current: {{count}} characters.': 'Task description is too short! At least {{min}} characters required. Current: {{count}} characters.',
+  'Task description is too long! Maximum {{max}} characters allowed. Current: {{count}} characters.': 'Task description is too long! Maximum {{max}} characters allowed. Current: {{count}} characters.',
+  'An error occurred while generating the PDF. Please try again.': 'An error occurred while generating the PDF. Please try again.',
+  'An error occurred': 'An error occurred',
+  'Save Task': 'Save Task',
+  'Saving...': 'Saving...',
+  'Questions': 'Questions',
+  'Solution Steps': 'Solution Steps',
+  'Formula': 'Formula',
+  'Calculation': 'Calculation',
+  'Result': 'Result',
+  'Final Answer': 'Final Answer',
+  'Verification': 'Verification',
+  'Common Mistakes': 'Common Mistakes',
+
   // Task Saved Modal
   'Task Saved Successfully!': 'Task Saved Successfully!',
   'Your task has been saved to the database and is now available publicly.': 'Your task has been saved to the database and is now available publicly.',

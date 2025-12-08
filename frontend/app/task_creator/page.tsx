@@ -16,7 +16,7 @@ import { useUser } from '@/lib/context/UserContext';
 import { generateTaskComplete, TaskGenerationStep } from '@/lib/services/task-generator.service';
 import { saveTask, SaveTaskRequest } from '@/lib/services/task-save.service';
 import { TaskSavedModal } from '@/components/organisms/TaskSavedModal';
-import navigationData from '@/data/navigation_mapping.json';
+import { fetchAllGradeTrees } from '@/lib/services/subject-mapping.service';
 import styles from './page.module.scss';
 
 interface TabPanelProps {
@@ -62,6 +62,52 @@ function TaskCreatorContent() {
   const [showSavedModal, setShowSavedModal] = useState(false);
   const [savedTaskInfo, setSavedTaskInfo] = useState<{ taskId: string; publicShareLink: string } | null>(null);
   const [currentCurriculumPath, setCurrentCurriculumPath] = useState<string>('');
+  const [navigationData, setNavigationData] = useState<{ grade_9_10: NavigationTopic[]; grade_11_12: NavigationTopic[] } | null>(null);
+  const [isLoadingNavigation, setIsLoadingNavigation] = useState(true);
+  const [navigationError, setNavigationError] = useState<string | null>(null);
+
+  // Fetch navigation data from API based on user's country
+  // Only fetch once when user is fully loaded and isAuthorized
+  useEffect(() => {
+    const loadNavigationData = async () => {
+      console.log('[Task Creator] User object:', user);
+      console.log('[Task Creator] User country:', user.country);
+      console.log('[Task Creator] isAuthorized:', isAuthorized);
+
+      // Wait for authorization check to complete
+      if (isLoading) {
+        console.log('[Task Creator] Waiting for authorization check...');
+        return;
+      }
+
+      if (!isAuthorized) {
+        console.log('[Task Creator] User not authorized, skipping data fetch');
+        return;
+      }
+
+      if (!user.country) {
+        console.log('[Task Creator] Waiting for user country...');
+        return;
+      }
+
+      setIsLoadingNavigation(true);
+      setNavigationError(null);
+
+      try {
+        console.log('[Task Creator] Fetching navigation data for country:', user.country);
+        const data = await fetchAllGradeTrees(user.country, 'mathematics');
+        setNavigationData(data);
+        console.log('[Task Creator] Navigation data loaded successfully');
+      } catch (error) {
+        console.error('[Task Creator] Error loading navigation data:', error);
+        setNavigationError(error instanceof Error ? error.message : 'Failed to load curriculum data');
+      } finally {
+        setIsLoadingNavigation(false);
+      }
+    };
+
+    loadNavigationData();
+  }, [user.country, isAuthorized, isLoading]);
 
   // Read URL params on mount
   useEffect(() => {
@@ -217,7 +263,7 @@ function TaskCreatorContent() {
       html += `<div class="story">\n${storyContent}\n</div>\n`;
     }
     if (taskText.questions && taskText.questions.length > 0) {
-      html += `<h2>Feladatok:</h2>\n<ol>\n`;
+      html += `<h2>${t('Questions')}:</h2>\n<ol>\n`;
       taskText.questions.forEach((q: string) => html += `<li>${q}</li>\n`);
       html += `</ol>\n`;
     }
@@ -227,26 +273,26 @@ function TaskCreatorContent() {
   const formatSolution = (solution: any): string => {
     let html = '';
     if (solution.solution_steps && solution.solution_steps.length > 0) {
-      html += `<h2>Megoldás lépései:</h2>\n`;
+      html += `<h2>${t('Solution Steps')}:</h2>\n`;
       solution.solution_steps.forEach((step: any) => {
         html += `<div class="solution-step">\n`;
         html += `<h3>${step.step_number}. ${step.title}</h3>\n`;
         html += `<p>${step.description}</p>\n`;
-        if (step.formula) html += `<p><strong>Képlet:</strong> ${step.formula}</p>\n`;
-        if (step.calculation) html += `<p><strong>Számítás:</strong> ${step.calculation}</p>\n`;
-        if (step.result) html += `<p><strong>Eredmény:</strong> ${step.result}</p>\n`;
+        if (step.formula) html += `<p><strong>${t('Formula')}:</strong> ${step.formula}</p>\n`;
+        if (step.calculation) html += `<p><strong>${t('Calculation')}:</strong> ${step.calculation}</p>\n`;
+        if (step.result) html += `<p><strong>${t('Result')}:</strong> ${step.result}</p>\n`;
         if (step.explanation) html += `<p><em>${step.explanation}</em></p>\n`;
         html += `</div>\n`;
       });
     }
     if (solution.final_answer) {
-      html += `<h2>Végeredmény:</h2>\n<p><strong>${solution.final_answer}</strong></p>\n`;
+      html += `<h2>${t('Final Answer')}:</h2>\n<p><strong>${solution.final_answer}</strong></p>\n`;
     }
     if (solution.verification) {
-      html += `<h3>Ellenőrzés:</h3>\n<p>${solution.verification}</p>\n`;
+      html += `<h3>${t('Verification')}:</h3>\n<p>${solution.verification}</p>\n`;
     }
     if (solution.common_mistakes && solution.common_mistakes.length > 0) {
-      html += `<h3>Gyakori hibák:</h3>\n<ul>\n`;
+      html += `<h3>${t('Common Mistakes')}:</h3>\n<ul>\n`;
       solution.common_mistakes.forEach((m: string) => html += `<li>${m}</li>\n`);
       html += `</ul>\n`;
     }
@@ -305,7 +351,7 @@ function TaskCreatorContent() {
   };
 
   const gradeLevel: GradeLevel = selectedGrade === 0 ? 'grade_9_10' : 'grade_11_12';
-  const currentData = navigationData[gradeLevel];
+  const currentData = navigationData ? navigationData[gradeLevel] : [];
 
   // Show loading state while checking authorization
   if (isLoading) {
@@ -315,6 +361,44 @@ function TaskCreatorContent() {
   // If not authorized, the hook will redirect - show loading
   if (!isAuthorized) {
     return <LoadingSpinner message="Redirecting..." fullScreen />;
+  }
+
+  // Show loading state while fetching navigation data
+  if (isLoadingNavigation) {
+    return <LoadingSpinner message="Loading curriculum data..." fullScreen />;
+  }
+
+  // Show error if navigation data failed to load
+  if (navigationError) {
+    return (
+      <Container maxWidth="lg" sx={{ py: 4 }}>
+        <Alert severity="error">
+          <Typography variant="h6" gutterBottom>Failed to load curriculum data</Typography>
+          <Typography variant="body2">{navigationError}</Typography>
+          <Button
+            variant="primary"
+            onClick={() => window.location.reload()}
+            sx={{ mt: 2 }}
+          >
+            Retry
+          </Button>
+        </Alert>
+      </Container>
+    );
+  }
+
+  // Show error if navigation data is empty
+  if (!navigationData || !currentData || currentData.length === 0) {
+    return (
+      <Container maxWidth="lg" sx={{ py: 4 }}>
+        <Alert severity="warning">
+          <Typography variant="h6" gutterBottom>No curriculum data available</Typography>
+          <Typography variant="body2">
+            Curriculum data for {user.country} is not yet available. Please contact support.
+          </Typography>
+        </Alert>
+      </Container>
+    );
   }
 
   return (
@@ -365,7 +449,7 @@ function TaskCreatorContent() {
           <TaskResult
             task={generatedTask}
             loading={isGenerating}
-            loadingMessage={generationStep?.message}
+            loadingMessage={generationStep?.message ? t(generationStep.message) : undefined}
             loadingProgress={generationStep?.progress}
             error={generationError || undefined}
             onClose={handleCloseResult}

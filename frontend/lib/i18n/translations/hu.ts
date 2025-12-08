@@ -194,6 +194,46 @@ export const hu: Translations = {
   '1 image': '1 kép',
   '2 images': '2 kép',
 
+  // Task Settings
+  'Task Settings': 'Feladat Beállítások',
+  'Difficulty Level': 'Nehézségi Szint',
+  'Generate Task': 'Feladat Generálása',
+
+  // Task Generation Progress Messages
+  'Generating task...': 'Feladat generálása folyamatban...',
+  'Generating 3 task variations in parallel...': '3 feladat változat generálása párhuzamosan...',
+  '3 task variations successfully generated!': '3 feladat változat sikeresen generálva!',
+  'AI is selecting the best variation...': 'AI kiválasztja a legjobb változatot...',
+  'Best variation selected (variation': 'Legjobb változat kiválasztva (',
+  'Generating images...': 'Képek generálása...',
+  'Generating images and solution...': 'Képek és megoldás generálása...',
+  'Generating solution...': 'Megoldás generálása...',
+  'Task successfully completed!': 'Feladat sikeresen elkészült!',
+  'Please wait...': 'Kérjük, várjon...',
+
+  // Task Result Component
+  'Generated Task': 'Generált Feladat',
+  'Edit task': 'Feladat szerkesztése',
+  'Edit solution': 'Megoldás szerkesztése',
+  'Save': 'Mentés',
+  'characters': 'karakter',
+  '{{count}} more characters needed': 'Még {{count}} karakter szükséges',
+  '{{count}} characters over limit': '{{count}} karakterrel túllépve',
+  'Task description is too short! At least {{min}} characters required. Current: {{count}} characters.': 'A feladat leírása túl rövid! Legalább {{min}} karakter szükséges. Jelenleg: {{count}} karakter.',
+  'Task description is too long! Maximum {{max}} characters allowed. Current: {{count}} characters.': 'A feladat leírása túl hosszú! Maximum {{max}} karakter megengedett. Jelenleg: {{count}} karakter.',
+  'An error occurred while generating the PDF. Please try again.': 'Hiba történt a PDF generálása során. Kérjük, próbálja újra.',
+  'An error occurred': 'Hiba történt',
+  'Save Task': 'Feladat Mentése',
+  'Saving...': 'Mentés...',
+  'Questions': 'Feladatok',
+  'Solution Steps': 'Megoldás lépései',
+  'Formula': 'Képlet',
+  'Calculation': 'Számítás',
+  'Result': 'Eredmény',
+  'Final Answer': 'Végeredmény',
+  'Verification': 'Ellenőrzés',
+  'Common Mistakes': 'Gyakori hibák',
+
   // Task Saved Modal
   'Task Saved Successfully!': 'Feladat Sikeresen Elmentve!',
   'Your task has been saved to the database and is now available publicly.': 'A feladat elmentésre került az adatbázisba és mostantól nyilvánosan elérhető.',

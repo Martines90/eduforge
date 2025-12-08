@@ -20,6 +20,7 @@ import { GeneratedTask } from '@/types/task';
 import { Button } from '@/components/atoms/Button';
 import { processLatexInHtml } from '@/lib/utils/latex-converter';
 import { validateCharacterLength, TASK_CHARACTER_LENGTH } from '@/lib/config/task-generation.config';
+import { useTranslation } from '@/lib/i18n';
 import styles from './TaskResult.module.scss';
 import 'react-quill/dist/quill.snow.css';
 
@@ -45,7 +46,7 @@ export interface TaskResultProps {
 export const TaskResult: React.FC<TaskResultProps> = ({
   task,
   loading = false,
-  loadingMessage = 'Feladat generálása folyamatban...',
+  loadingMessage,
   loadingProgress = 0,
   error,
   onClose,
@@ -53,6 +54,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
   onSaveToDatabase,
   isSaving = false,
 }) => {
+  const { t } = useTranslation();
   const [isEditingDescription, setIsEditingDescription] = useState(false);
   const [isEditingSolution, setIsEditingSolution] = useState(false);
   const [editedDescription, setEditedDescription] = useState('');
@@ -178,9 +180,9 @@ export const TaskResult: React.FC<TaskResultProps> = ({
     // Validate character length before saving
     if (!descriptionValidation.isValid) {
       if (descriptionValidation.isTooShort) {
-        alert(`A feladat leírása túl rövid! Legalább ${descriptionValidation.min} karakter szükséges. Jelenleg: ${descriptionValidation.count} karakter.`);
+        alert(t('Task description is too short! At least {{min}} characters required. Current: {{count}} characters.', { min: descriptionValidation.min, count: descriptionValidation.count }));
       } else if (descriptionValidation.isTooLong) {
-        alert(`A feladat leírása túl hosszú! Maximum ${descriptionValidation.max} karakter megengedett. Jelenleg: ${descriptionValidation.count} karakter.`);
+        alert(t('Task description is too long! Maximum {{max}} characters allowed. Current: {{count}} characters.', { max: descriptionValidation.max, count: descriptionValidation.count }));
       }
       return;
     }
@@ -228,7 +230,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
 
       pdfContainer.innerHTML = `
         <div style="padding: 10px;">
-          <h1 style="color: #667eea; font-size: 24px; margin-bottom: 20px; font-weight: bold;">Feladat</h1>
+          <h1 style="color: #667eea; font-size: 24px; margin-bottom: 20px; font-weight: bold;">${t('Task')}</h1>
           <div style="font-size: 14px; line-height: 1.8;">
             ${processLatexInHtml(displayDescription)}
           </div>
@@ -288,7 +290,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       document.body.removeChild(pdfContainer);
     } catch (error) {
       console.error('PDF generation error:', error);
-      alert('Hiba történt a PDF generálása során. Kérjük, próbálja újra.');
+      alert(t('An error occurred while generating the PDF. Please try again.'));
     }
   };
 
@@ -333,10 +335,10 @@ export const TaskResult: React.FC<TaskResultProps> = ({
             )}
           </Box>
           <Typography variant="h6" sx={{ mt: 2 }}>
-            {loadingMessage}
+            {loadingMessage || t('Generating task...')}
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-            Kérjük, várjon...
+            {t('Please wait...')}
           </Typography>
         </Box>
       </Paper>
@@ -348,7 +350,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       <Paper elevation={2} className={styles.container}>
         <Alert severity="error" onClose={onClose}>
           <Typography variant="subtitle1" fontWeight={600}>
-            Hiba történt
+            {t('An error occurred')}
           </Typography>
           <Typography variant="body2">{error}</Typography>
         </Alert>
@@ -370,11 +372,11 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       <Paper elevation={2} className={styles.container}>
         <Box className={styles.header}>
         <Typography variant="h5" component="h2" className={styles.title}>
-          Generált Feladat
+          {t('Generated Task')}
         </Typography>
         <Box className={styles.actions}>
           {onClose && (
-            <IconButton onClick={onClose} title="Bezárás">
+            <IconButton onClick={onClose} title={t('Close')}>
               <CloseIcon />
             </IconButton>
           )}
@@ -387,10 +389,10 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       <Box className={styles.section}>
         <Box className={styles.sectionHeader}>
           <Typography variant="h6" component="h3" className={styles.sectionTitle}>
-            Feladat
+            {t('Task')}
           </Typography>
           {!isEditingDescription ? (
-            <IconButton onClick={handleEditDescription} color="primary" size="small" title="Feladat szerkesztése">
+            <IconButton onClick={handleEditDescription} color="primary" size="small" title={t('Edit task')}>
               <EditIcon />
             </IconButton>
           ) : (
@@ -400,14 +402,14 @@ export const TaskResult: React.FC<TaskResultProps> = ({
                 onClick={handleSaveDescription}
                 size="small"
               >
-                Mentés
+                {t('Save')}
               </Button>
               <Button
                 variant="secondary"
                 onClick={handleCancelDescription}
                 size="small"
               >
-                Mégse
+                {t('Cancel')}
               </Button>
             </Box>
           )}
@@ -440,7 +442,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
                         : 'text.secondary'
                   }}
                 >
-                  {descriptionValidation.count} / {descriptionValidation.max} karakter
+                  {descriptionValidation.count} / {descriptionValidation.max} {t('characters')}
                 </Typography>
                 {!descriptionValidation.isValid && (
                   <Typography
@@ -451,8 +453,8 @@ export const TaskResult: React.FC<TaskResultProps> = ({
                     }}
                   >
                     {descriptionValidation.isTooShort
-                      ? `Még ${descriptionValidation.min - descriptionValidation.count} karakter szükséges`
-                      : `${descriptionValidation.count - descriptionValidation.max} karakterrel túllépve`
+                      ? t('{{count}} more characters needed', { count: descriptionValidation.min - descriptionValidation.count })
+                      : t('{{count}} characters over limit', { count: descriptionValidation.count - descriptionValidation.max })
                     }
                   </Typography>
                 )}
@@ -476,10 +478,10 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       <Box className={styles.section}>
         <Box className={styles.sectionHeader}>
           <Typography variant="h6" component="h3" className={styles.sectionTitle}>
-            Megoldás
+            {t('Solution')}
           </Typography>
           {!isEditingSolution ? (
-            <IconButton onClick={handleEditSolution} color="primary" size="small" title="Megoldás szerkesztése">
+            <IconButton onClick={handleEditSolution} color="primary" size="small" title={t('Edit solution')}>
               <EditIcon />
             </IconButton>
           ) : (
@@ -489,14 +491,14 @@ export const TaskResult: React.FC<TaskResultProps> = ({
                 onClick={handleSaveSolution}
                 size="small"
               >
-                Mentés
+                {t('Save')}
               </Button>
               <Button
                 variant="secondary"
                 onClick={handleCancelSolution}
                 size="small"
               >
-                Mégse
+                {t('Cancel')}
               </Button>
             </Box>
           )}
@@ -524,7 +526,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       {/* Task ID and Action Buttons */}
       <Box className={styles.footer}>
         <Typography variant="caption" color="text.secondary">
-          Feladat ID: {task.id}
+          {t('Task ID')}: {task.id}
         </Typography>
         <Box sx={{ display: 'flex', gap: 1 }}>
           <Button
@@ -532,7 +534,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
             onClick={handleDownloadPDF}
             startIcon={<PictureAsPdfIcon />}
           >
-            PDF Letöltés
+            {t('Download PDF')}
           </Button>
           {onSaveToDatabase && (
             <Button
@@ -541,7 +543,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
               disabled={isSaving}
               startIcon={<SaveIcon />}
             >
-              {isSaving ? 'Mentés...' : 'Feladat Mentése'}
+              {isSaving ? t('Saving...') : t('Save Task')}
             </Button>
           )}
         </Box>

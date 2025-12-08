@@ -54,7 +54,7 @@ export async function generateTaskVariations(
 ): Promise<GeneratedTaskText[]> {
   onProgress?.({
     step: 'generating_variations',
-    message: '3 feladat változat generálása párhuzamosan...',
+    message: 'Generating 3 task variations in parallel...',
     progress: 10,
   });
 
@@ -85,7 +85,7 @@ export async function generateTaskVariations(
 
   onProgress?.({
     step: 'generating_variations',
-    message: '3 feladat változat sikeresen generálva!',
+    message: '3 task variations successfully generated!',
     progress: 30,
   });
 
@@ -103,7 +103,7 @@ export async function selectBestTask(
 ): Promise<TaskSelectionResult> {
   onProgress?.({
     step: 'selecting_best',
-    message: 'AI kiválasztja a legjobb változatot...',
+    message: 'AI is selecting the best variation...',
     progress: 40,
   });
 
@@ -133,7 +133,7 @@ export async function selectBestTask(
 
   onProgress?.({
     step: 'selecting_best',
-    message: `Legjobb változat kiválasztva (${result.selected_index + 1}. változat)!`,
+    message: `Best variation selected (variation ${result.selected_index + 1})!`,
     progress: 50,
   });
 
@@ -156,7 +156,7 @@ export async function generateTaskImages(
 
   onProgress?.({
     step: 'generating_images',
-    message: `${numberOfImages} kép generálása...`,
+    message: `Generating ${numberOfImages} images...`,
     progress: 60,
   });
 
@@ -205,7 +205,7 @@ export async function generateTaskSolution(
 ): Promise<GeneratedSolution> {
   onProgress?.({
     step: 'generating_solution',
-    message: 'Megoldás generálása...',
+    message: 'Generating solution...',
     progress: 80,
   });
 
@@ -219,6 +219,7 @@ export async function generateTaskSolution(
       task_text: taskText,
       precision_settings: request.precision_settings,
       educational_model: request.educational_model,
+      country_code: request.country_code,
     }),
   });
 
@@ -264,7 +265,7 @@ export async function generateTaskComplete(
 
   onProgress?.({
     step: 'generating_images',
-    message: 'Képek és megoldás generálása...',
+    message: 'Generating images and solution...',
     progress: 60,
   });
 
@@ -278,7 +279,7 @@ export async function generateTaskComplete(
 
   onProgress?.({
     step: 'completed',
-    message: 'Feladat sikeresen elkészült!',
+    message: 'Task successfully completed!',
     progress: 100,
   });
 

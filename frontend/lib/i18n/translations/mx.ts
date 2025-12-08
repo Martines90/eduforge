@@ -194,6 +194,46 @@ export const mx: Translations = {
   '1 image': '1 imagen',
   '2 images': '2 imágenes',
 
+  // Task Settings
+  'Task Settings': 'Configuración de Tarea',
+  'Difficulty Level': 'Nivel de Dificultad',
+  'Generate Task': 'Generar Tarea',
+
+  // Task Generation Progress Messages
+  'Generating task...': 'Generando tarea...',
+  'Generating 3 task variations in parallel...': 'Generando 3 variaciones de tarea en paralelo...',
+  '3 task variations successfully generated!': '¡3 variaciones de tarea generadas exitosamente!',
+  'AI is selecting the best variation...': 'La IA está seleccionando la mejor variación...',
+  'Best variation selected (variation': 'Mejor variación seleccionada (variación',
+  'Generating images...': 'Generando imágenes...',
+  'Generating images and solution...': 'Generando imágenes y solución...',
+  'Generating solution...': 'Generando solución...',
+  'Task successfully completed!': '¡Tarea completada exitosamente!',
+  'Please wait...': 'Por favor espera...',
+
+  // Task Result Component
+  'Generated Task': 'Tarea Generada',
+  'Edit task': 'Editar tarea',
+  'Edit solution': 'Editar solución',
+  'Save': 'Guardar',
+  'characters': 'caracteres',
+  '{{count}} more characters needed': '{{count}} caracteres más necesarios',
+  '{{count}} characters over limit': '{{count}} caracteres sobre el límite',
+  'Task description is too short! At least {{min}} characters required. Current: {{count}} characters.': '¡La descripción de la tarea es demasiado corta! Se requieren al menos {{min}} caracteres. Actual: {{count}} caracteres.',
+  'Task description is too long! Maximum {{max}} characters allowed. Current: {{count}} characters.': '¡La descripción de la tarea es demasiado larga! Máximo {{max}} caracteres permitidos. Actual: {{count}} caracteres.',
+  'An error occurred while generating the PDF. Please try again.': 'Ocurrió un error al generar el PDF. Por favor intenta de nuevo.',
+  'An error occurred': 'Ocurrió un error',
+  'Save Task': 'Guardar Tarea',
+  'Saving...': 'Guardando...',
+  'Questions': 'Preguntas',
+  'Solution Steps': 'Pasos de Solución',
+  'Formula': 'Fórmula',
+  'Calculation': 'Cálculo',
+  'Result': 'Resultado',
+  'Final Answer': 'Respuesta Final',
+  'Verification': 'Verificación',
+  'Common Mistakes': 'Errores Comunes',
+
   // Task Saved Modal
   'Task Saved Successfully!': '¡Tarea Guardada Exitosamente!',
   'Your task has been saved to the database and is now available publicly.': 'Tu tarea ha sido guardada en la base de datos y ahora está disponible públicamente.',
