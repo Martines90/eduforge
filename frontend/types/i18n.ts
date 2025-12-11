@@ -134,6 +134,7 @@ export interface Translations {
 
   // User Menu
   'Profile': string;
+  'My Subscription': string;
   'Logout': string;
 
   // Educational Models
@@ -267,6 +268,37 @@ export interface Translations {
   'Share link copied to clipboard!': string;
   'review': string;
   'reviews': string;
+
+  // Subscription Page
+  'Manage Your Subscription': string;
+  'View and manage your subscription plan and credits': string;
+  'Current Plan': string;
+  'Trial Plan': string;
+  'Annual Plan': string;
+  'No Active Plan': string;
+  'Status': string;
+  'Active': string;
+  'Expired': string;
+  'Cancelled': string;
+  'Trial Period': string;
+  'Started': string;
+  'Expires': string;
+  'Subscription Period': string;
+  'Task Generation Credits': string;
+  'Remaining Credits': string;
+  'credits': string;
+  'You have {{count}} task generation credits remaining.': string;
+  'Annual Subscription': string;
+  'Subscribe to our annual plan for unlimited access to all features.': string;
+  'Unlimited task generation': string;
+  'Priority support': string;
+  'Early access to new features': string;
+  'Subscribe Now': string;
+  'Coming Soon': string;
+  'Annual subscription will be available soon. Stay tuned!': string;
+
+  // Registration Success Message
+  'Registration successful, your 3-month free trial subscription just started!': string;
 }
 
 export type TranslationKey = keyof Translations;

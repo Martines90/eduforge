@@ -165,6 +165,21 @@ export async function verifyCodeAndCreateUser(email: string, code: string): Prom
     updatedAt: new Date() as any,
   };
 
+  // Initialize subscription and credits for teachers
+  if (userData.role === 'teacher') {
+    const trialStartDate = new Date();
+    const trialEndDate = new Date();
+    trialEndDate.setMonth(trialEndDate.getMonth() + 3); // 3 months from now
+
+    userDoc.subscription = {
+      plan: 'trial',
+      status: 'active',
+      trialStartDate: trialStartDate as any,
+      trialEndDate: trialEndDate as any,
+    };
+    userDoc.taskCredits = 100; // Initial 100 task generation credits
+  }
+
   await db.collection('users').doc(userRecord.uid).set(userDoc);
 
   // Store hashed password separately

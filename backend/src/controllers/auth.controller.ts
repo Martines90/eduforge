@@ -141,6 +141,8 @@ export async function verifyEmail(req: Request, res: Response): Promise<void> {
               country: user.country,
               subject: user.subject,
               educationalModel: user.educationalModel,
+              subscription: user.subscription,
+              taskCredits: user.taskCredits,
             }
           : undefined,
         token,
@@ -188,6 +190,8 @@ export async function login(req: Request, res: Response): Promise<void> {
           country: user.country,
           subject: user.subject,
           educationalModel: user.educationalModel,
+          subscription: user.subscription,
+          taskCredits: user.taskCredits,
         },
         token,
       },
@@ -261,6 +265,8 @@ export async function getCurrentUser(req: Request, res: Response): Promise<void>
           country: user.country,
           subject: user.subject,
           educationalModel: user.educationalModel,
+          subscription: user.subscription,
+          taskCredits: user.taskCredits,
         },
       },
     } as AuthResponse);

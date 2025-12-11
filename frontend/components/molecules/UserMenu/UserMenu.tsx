@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { IconButton, Menu, MenuItem, Avatar, Divider, ListItemIcon, ListItemText } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useUser } from '@/lib/context';
 import { useRouter } from 'next/navigation';
@@ -41,6 +42,11 @@ export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
   const handleMyTasks = () => {
     handleClose();
     router.push('/my-tasks');
+  };
+
+  const handleMySubscription = () => {
+    handleClose();
+    router.push('/my-subscription');
   };
 
   const handleLogout = async () => {
@@ -112,6 +118,14 @@ export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
               <AssignmentIcon fontSize="small" />
             </ListItemIcon>
             <ListItemText>{t('My Tasks')}</ListItemText>
+          </MenuItem>
+        )}
+        {user.identity === 'teacher' && (
+          <MenuItem onClick={handleMySubscription}>
+            <ListItemIcon>
+              <SubscriptionsIcon fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>{t('My Subscription')}</ListItemText>
           </MenuItem>
         )}
         <Divider />

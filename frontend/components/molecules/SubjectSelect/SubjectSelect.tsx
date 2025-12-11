@@ -22,6 +22,7 @@ export interface SubjectSelectProps {
   fullWidth?: boolean;
   className?: string;
   'data-testid'?: string;
+  sx?: object;
 }
 
 /**
@@ -38,6 +39,7 @@ export const SubjectSelect: React.FC<SubjectSelectProps> = ({
   fullWidth = true,
   className,
   'data-testid': dataTestId,
+  sx,
 }) => {
   const subjects = getSubjectsForCountry(country);
 
@@ -49,7 +51,7 @@ export const SubjectSelect: React.FC<SubjectSelectProps> = ({
   };
 
   return (
-    <FormControl fullWidth={fullWidth} disabled={disabled} className={className} required={required}>
+    <FormControl fullWidth={fullWidth} disabled={disabled} className={className} required={required} sx={sx}>
       <InputLabel>{label}</InputLabel>
       <MuiSelect
         value={value}

@@ -111,6 +111,7 @@ export const mx: Translations = {
 
   // User Menu
   'Profile': 'Perfil',
+  'My Subscription': 'Mi Suscripción',
   'Logout': 'Cerrar Sesión',
 
   // Additional Profile page
@@ -256,4 +257,35 @@ export const mx: Translations = {
   'Share link copied to clipboard!': '¡Enlace copiado al portapapeles!',
   'review': 'reseña',
   'reviews': 'reseñas',
+
+  // Subscription Page
+  'Manage Your Subscription': 'Gestiona Tu Suscripción',
+  'View and manage your subscription plan and credits': 'Ver y gestionar tu plan de suscripción y créditos',
+  'Current Plan': 'Plan Actual',
+  'Trial Plan': 'Plan de Prueba',
+  'Annual Plan': 'Plan Anual',
+  'No Active Plan': 'Sin Plan Activo',
+  'Status': 'Estado',
+  'Active': 'Activo',
+  'Expired': 'Expirado',
+  'Cancelled': 'Cancelado',
+  'Trial Period': 'Período de Prueba',
+  'Started': 'Inicio',
+  'Expires': 'Expira',
+  'Subscription Period': 'Período de Suscripción',
+  'Task Generation Credits': 'Créditos de Generación de Tareas',
+  'Remaining Credits': 'Créditos Restantes',
+  'credits': 'créditos',
+  'You have {{count}} task generation credits remaining.': 'Tienes {{count}} créditos de generación de tareas restantes.',
+  'Annual Subscription': 'Suscripción Anual',
+  'Subscribe to our annual plan for unlimited access to all features.': 'Suscríbete a nuestro plan anual para acceso ilimitado a todas las funciones.',
+  'Unlimited task generation': 'Generación ilimitada de tareas',
+  'Priority support': 'Soporte prioritario',
+  'Early access to new features': 'Acceso anticipado a nuevas funciones',
+  'Subscribe Now': 'Suscribirse Ahora',
+  'Coming Soon': 'Próximamente',
+  'Annual subscription will be available soon. Stay tuned!': '¡La suscripción anual estará disponible pronto. Mantente atento!',
+
+  // Registration Success Message
+  'Registration successful, your 3-month free trial subscription just started!': '¡Registro exitoso, tu suscripción de prueba gratuita de 3 meses acaba de comenzar!',
 };

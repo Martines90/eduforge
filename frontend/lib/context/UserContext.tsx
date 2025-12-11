@@ -21,6 +21,15 @@ export type EducationalModel =
   | 'montessori'
   | 'waldorf';
 
+export interface SubscriptionInfo {
+  plan: 'trial' | 'annual' | 'none';
+  status: 'active' | 'expired' | 'cancelled';
+  trialStartDate?: string;
+  trialEndDate?: string;
+  annualStartDate?: string;
+  annualEndDate?: string;
+}
+
 /**
  * User state interface
  */
@@ -34,6 +43,8 @@ export interface UserState {
   role: UserRole;
   subject: Subject | null;
   educationalModel: EducationalModel | null;
+  subscription?: SubscriptionInfo;
+  taskCredits?: number;
   // Future: can add more user preferences here
   // theme?: 'light' | 'dark';
   // notifications?: boolean;
@@ -115,6 +126,19 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
           const backendRole = userData.role as string;
           const normalizedIdentity: UserIdentity = backendRole === 'general_user' ? 'non-teacher' : backendRole as UserIdentity;
 
+          // Convert subscription from Firestore to frontend format
+          let subscription: SubscriptionInfo | undefined;
+          if (userData.subscription) {
+            subscription = {
+              plan: userData.subscription.plan,
+              status: userData.subscription.status,
+              trialStartDate: userData.subscription.trialStartDate?.toDate?.()?.toISOString(),
+              trialEndDate: userData.subscription.trialEndDate?.toDate?.()?.toISOString(),
+              annualStartDate: userData.subscription.annualStartDate?.toDate?.()?.toISOString(),
+              annualEndDate: userData.subscription.annualEndDate?.toDate?.()?.toISOString(),
+            };
+          }
+
           // Update context state
           setUser((prev) => ({
             ...prev,
@@ -126,6 +150,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
             country: savedCountry || prev.country,
             hasCompletedOnboarding: true, // If they're in Firestore, they've completed onboarding
             isFirstVisit: false,
+            subscription,
+            taskCredits: userData.taskCredits,
           }));
 
           // Update cookies
@@ -294,6 +320,21 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       const userRole: UserIdentity | undefined = backendRole === 'general_user' ? 'non-teacher' : backendRole as UserIdentity | undefined;
       const userCountry = (userData as any).country as CountryCode | undefined;
       const userSubject = (userData as any).subject as Subject | undefined;
+      const userSubscription = (userData as any).subscription as any;
+      const userTaskCredits = (userData as any).taskCredits as number | undefined;
+
+      // Convert subscription to frontend format
+      let subscription: SubscriptionInfo | undefined;
+      if (userSubscription) {
+        subscription = {
+          plan: userSubscription.plan,
+          status: userSubscription.status,
+          trialStartDate: userSubscription.trialStartDate,
+          trialEndDate: userSubscription.trialEndDate,
+          annualStartDate: userSubscription.annualStartDate,
+          annualEndDate: userSubscription.annualEndDate,
+        };
+      }
 
       // Use country from backend, fallback to cookie, then default
       const savedCountry = userCountry || (getCookie(COOKIE_NAMES.COUNTRY) as CountryCode) || DEFAULT_COUNTRY;
@@ -309,6 +350,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
         country: savedCountry,
         hasCompletedOnboarding: true,
         isFirstVisit: false,
+        subscription,
+        taskCredits: userTaskCredits,
       }));
 
       // Save to cookies

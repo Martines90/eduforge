@@ -292,6 +292,11 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         localStorage.setItem("authToken", response.data.token);
       }
 
+      // Set flag for trial subscription message (only for teachers)
+      if (isTeacher && typeof window !== 'undefined') {
+        sessionStorage.setItem('showTrialMessage', 'true');
+      }
+
       // Show success toast
       setShowSuccessToast(true);
 
@@ -401,6 +406,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                     label={t("Subject")}
                     className={styles.formControl}
                     data-testid="subject-select"
+                    sx={{ mt: 3 }}
                   />
 
                   <EducationalModelSelect
@@ -414,6 +420,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                     data-testid="educational-model-select"
                     showPlaceholder={true}
                     placeholderText={t("Select educational model")}
+                    sx={{ mt: 3 }}
                   />
                 </>
               )}

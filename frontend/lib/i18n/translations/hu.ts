@@ -111,6 +111,7 @@ export const hu: Translations = {
 
   // User Menu
   'Profile': 'Profil',
+  'My Subscription': 'Előfizetésem',
   'Logout': 'Kijelentkezés',
 
   // Additional Profile page
@@ -256,4 +257,35 @@ export const hu: Translations = {
   'Share link copied to clipboard!': 'Megosztási link vágólapra másolva!',
   'review': 'értékelés',
   'reviews': 'értékelés',
+
+  // Subscription Page
+  'Manage Your Subscription': 'Előfizetés Kezelése',
+  'View and manage your subscription plan and credits': 'Tekintse meg és kezelje előfizetését és kreditjeit',
+  'Current Plan': 'Jelenlegi Előfizetés',
+  'Trial Plan': 'Próba Előfizetés',
+  'Annual Plan': 'Éves Előfizetés',
+  'No Active Plan': 'Nincs Aktív Előfizetés',
+  'Status': 'Állapot',
+  'Active': 'Aktív',
+  'Expired': 'Lejárt',
+  'Cancelled': 'Lemondva',
+  'Trial Period': 'Próbaidőszak',
+  'Started': 'Kezdés',
+  'Expires': 'Lejár',
+  'Subscription Period': 'Előfizetési Időszak',
+  'Task Generation Credits': 'Feladatgenerálási Kreditek',
+  'Remaining Credits': 'Hátralévő Kreditek',
+  'credits': 'kredit',
+  'You have {{count}} task generation credits remaining.': '{{count}} feladatgenerálási kreditje van még.',
+  'Annual Subscription': 'Éves Előfizetés',
+  'Subscribe to our annual plan for unlimited access to all features.': 'Iratkozzon fel éves előfizetésünkre az összes funkció korlátlan eléréséért.',
+  'Unlimited task generation': 'Korlátlan feladatgenerálás',
+  'Priority support': 'Elsőbbségi támogatás',
+  'Early access to new features': 'Korai hozzáférés az új funkciókhoz',
+  'Subscribe Now': 'Előfizetés Most',
+  'Coming Soon': 'Hamarosan',
+  'Annual subscription will be available soon. Stay tuned!': 'Az éves előfizetés hamarosan elérhető lesz. Maradjon velünk!',
+
+  // Registration Success Message
+  'Registration successful, your 3-month free trial subscription just started!': 'Sikeres regisztráció, 3 hónapos ingyenes próba előfizetése most kezdődött!',
 };

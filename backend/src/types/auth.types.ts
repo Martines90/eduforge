@@ -49,6 +49,15 @@ export interface UserDocument {
   emailVerificationCodeExp?: FirebaseFirestore.Timestamp;
   status: 'active' | 'inactive' | 'banned';
   emailVerified: boolean;
+  subscription?: {
+    plan: 'trial' | 'annual' | 'none';
+    status: 'active' | 'expired' | 'cancelled';
+    trialStartDate?: FirebaseFirestore.Timestamp;
+    trialEndDate?: FirebaseFirestore.Timestamp;
+    annualStartDate?: FirebaseFirestore.Timestamp;
+    annualEndDate?: FirebaseFirestore.Timestamp;
+  };
+  taskCredits?: number; // Remaining task generation credits (for teachers)
   createdAt: FirebaseFirestore.Timestamp;
   updatedAt: FirebaseFirestore.Timestamp;
 }

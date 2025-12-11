@@ -111,6 +111,7 @@ export const en: Translations = {
 
   // User Menu
   'Profile': 'Profile',
+  'My Subscription': 'My Subscription',
   'Logout': 'Logout',
 
   // Additional Profile page
@@ -256,4 +257,35 @@ export const en: Translations = {
   'Share link copied to clipboard!': 'Share link copied to clipboard!',
   'review': 'review',
   'reviews': 'reviews',
+
+  // Subscription Page
+  'Manage Your Subscription': 'Manage Your Subscription',
+  'View and manage your subscription plan and credits': 'View and manage your subscription plan and credits',
+  'Current Plan': 'Current Plan',
+  'Trial Plan': 'Trial Plan',
+  'Annual Plan': 'Annual Plan',
+  'No Active Plan': 'No Active Plan',
+  'Status': 'Status',
+  'Active': 'Active',
+  'Expired': 'Expired',
+  'Cancelled': 'Cancelled',
+  'Trial Period': 'Trial Period',
+  'Started': 'Started',
+  'Expires': 'Expires',
+  'Subscription Period': 'Subscription Period',
+  'Task Generation Credits': 'Task Generation Credits',
+  'Remaining Credits': 'Remaining Credits',
+  'credits': 'credits',
+  'You have {{count}} task generation credits remaining.': 'You have {{count}} task generation credits remaining.',
+  'Annual Subscription': 'Annual Subscription',
+  'Subscribe to our annual plan for unlimited access to all features.': 'Subscribe to our annual plan for unlimited access to all features.',
+  'Unlimited task generation': 'Unlimited task generation',
+  'Priority support': 'Priority support',
+  'Early access to new features': 'Early access to new features',
+  'Subscribe Now': 'Subscribe Now',
+  'Coming Soon': 'Coming Soon',
+  'Annual subscription will be available soon. Stay tuned!': 'Annual subscription will be available soon. Stay tuned!',
+
+  // Registration Success Message
+  'Registration successful, your 3-month free trial subscription just started!': 'Registration successful, your 3-month free trial subscription just started!',
 };

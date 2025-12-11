@@ -24,6 +24,7 @@ export interface EducationalModelSelectProps {
   'data-testid'?: string;
   showPlaceholder?: boolean;
   placeholderText?: string;
+  sx?: object;
 }
 
 /**
@@ -42,6 +43,7 @@ export const EducationalModelSelect: React.FC<EducationalModelSelectProps> = ({
   'data-testid': dataTestId,
   showPlaceholder = false,
   placeholderText = 'Select educational model',
+  sx,
 }) => {
   const models = getEducationalModelsForCountry(country);
 
@@ -53,14 +55,15 @@ export const EducationalModelSelect: React.FC<EducationalModelSelectProps> = ({
   };
 
   return (
-    <FormControl fullWidth={fullWidth} disabled={disabled} className={className} required={required}>
-      <InputLabel>{label}</InputLabel>
+    <FormControl fullWidth={fullWidth} disabled={disabled} className={className} required={required} sx={sx}>
+      <InputLabel shrink={showPlaceholder || !!value}>{label}</InputLabel>
       <MuiSelect
         value={value}
         onChange={handleChange}
         label={label}
         data-testid={dataTestId}
         displayEmpty={showPlaceholder}
+        notched={showPlaceholder || !!value}
       >
         {showPlaceholder && (
           <MenuItem value="" disabled>

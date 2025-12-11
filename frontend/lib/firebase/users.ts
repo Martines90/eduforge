@@ -25,6 +25,15 @@ export interface FirebaseUser {
   subject?: Subject;
   country: CountryCode;
   emailVerified: boolean;
+  subscription?: {
+    plan: 'trial' | 'annual' | 'none';
+    status: 'active' | 'expired' | 'cancelled';
+    trialStartDate?: Timestamp;
+    trialEndDate?: Timestamp;
+    annualStartDate?: Timestamp;
+    annualEndDate?: Timestamp;
+  };
+  taskCredits?: number;
   createdAt: Timestamp;
   updatedAt: Timestamp;
 }

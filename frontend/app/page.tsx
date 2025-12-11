@@ -1,20 +1,34 @@
 'use client';
 
 import Link from 'next/link';
-import { Container, Typography, Box, Paper, Grid } from '@mui/material';
+import { Container, Typography, Box, Paper, Grid, Alert } from '@mui/material';
 import { Button } from '@/components/atoms/Button';
 import { useTranslation } from '@/lib/i18n';
 import { useUser } from '@/lib/context';
 import { AuthenticatedPage } from '@/components/templates/AuthenticatedPage';
 import AddIcon from '@mui/icons-material/Add';
 import SearchIcon from '@mui/icons-material/Search';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
   const { t } = useTranslation();
   const { user } = useUser();
+  const [showTrialMessage, setShowTrialMessage] = useState(false);
 
   const isTeacher = user.identity === 'teacher';
   const isNonTeacher = user.identity === 'non-teacher';
+
+  // Check if we should show the trial subscription message
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const showMessage = sessionStorage.getItem('showTrialMessage');
+    if (showMessage === 'true' && isTeacher) {
+      setShowTrialMessage(true);
+      // Clear the flag so it only shows once
+      sessionStorage.removeItem('showTrialMessage');
+    }
+  }, [isTeacher]);
 
   return (
     <AuthenticatedPage>
@@ -35,6 +49,19 @@ export default function Home() {
         <Typography variant="h5" component="div" color="text.secondary" paragraph textAlign="center" mb={4}>
           {t('Educational Task Platform')}
         </Typography>
+
+        {/* One-time success message after registration */}
+        {showTrialMessage && (
+          <Box sx={{ width: '100%', maxWidth: 800, mb: 3 }}>
+            <Alert
+              severity="success"
+              onClose={() => setShowTrialMessage(false)}
+              sx={{ fontSize: '1rem' }}
+            >
+              {t('Registration successful, your 3-month free trial subscription just started!')}
+            </Alert>
+          </Box>
+        )}
 
         <Grid container spacing={3} maxWidth={800}>
           {/* Create Task Card - Only for teachers */}
