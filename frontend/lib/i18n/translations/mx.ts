@@ -75,7 +75,9 @@ export const mx: Translations = {
   'Physics': 'Física',
   'Chemistry': 'Química',
   'Biology': 'Biología',
+  'History': 'Historia',
   'Geography': 'Geografía',
+  'Literature': 'Literatura',
 
   // Profile page
   'My Profile': 'Mi Perfil',

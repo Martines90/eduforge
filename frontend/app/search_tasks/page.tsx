@@ -20,11 +20,6 @@ export default function SearchTasks() {
     'history': 'History',
     'geography': 'Geography',
     'literature': 'Literature',
-    'english': 'English',
-    'computer-science': 'Computer Science',
-    'arts': 'Arts',
-    'music': 'Music',
-    'physical-education': 'Physical Education',
   };
 
   const subjectLabel = user.subject ? subjectLabels[user.subject] : 'All Subjects';

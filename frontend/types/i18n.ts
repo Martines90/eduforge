@@ -88,7 +88,9 @@ export interface Translations {
   'Physics': string;
   'Chemistry': string;
   'Biology': string;
+  'History': string;
   'Geography': string;
+  'Literature': string;
 
   // Profile page
   'My Profile': string;
@@ -327,19 +329,6 @@ export type Subject =
   | 'physics'
   | 'chemistry'
   | 'biology'
-  | 'computer-science'
   | 'history'
   | 'geography'
-  | 'social-studies'
-  | 'economics'
-  | 'philosophy'
-  | 'psychology'
-  | 'literature'
-  | 'english'
-  | 'foreign-languages'
-  | 'arts'
-  | 'music'
-  | 'drama'
-  | 'physical-education'
-  | 'religious-studies'
-  | 'health-education';
+  | 'literature';

@@ -75,7 +75,9 @@ export const hu: Translations = {
   'Physics': 'Fizika',
   'Chemistry': 'Kémia',
   'Biology': 'Biológia',
+  'History': 'Történelem',
   'Geography': 'Földrajz',
+  'Literature': 'Irodalom',
 
   // Profile page
   'My Profile': 'Profilom',
