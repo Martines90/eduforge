@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { TaskController } from "../controllers/task.controller";
 import { requireAuthenticatedTeacher } from "../middleware/auth.middleware";
+import { requireTeacher, requireTaskCredits } from "../middleware/role.middleware";
 
 const router = Router();
 const taskController = new TaskController();
@@ -177,7 +178,8 @@ router.get("/tasks/:taskId", taskController.getTaskById);
 /**
  * POST /save-task
  * Saves a generated task to Firestore database
+ * Requires authentication, teacher role, and available task credits
  */
-router.post("/save-task", requireAuthenticatedTeacher, taskController.saveTask);
+router.post("/save-task", requireAuthenticatedTeacher, requireTaskCredits, taskController.saveTask);
 
 export default router;

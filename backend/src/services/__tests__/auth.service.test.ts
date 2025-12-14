@@ -498,4 +498,151 @@ describe('Auth Service', () => {
       ).rejects.toThrow('Email already registered');
     });
   });
+
+  describe('deductTaskCredit', () => {
+    it('should successfully deduct one credit from teacher account', async () => {
+      const mockUserData = {
+        uid: 'teacher123',
+        role: 'teacher',
+        taskCredits: 50,
+      };
+
+      const mockGet = jest.fn().mockResolvedValue({
+        exists: true,
+        data: () => mockUserData,
+      });
+
+      const mockUpdate = jest.fn().mockResolvedValue(undefined);
+
+      mockFirestore.collection = jest.fn().mockReturnValue({
+        doc: jest.fn().mockReturnValue({
+          get: mockGet,
+          update: mockUpdate,
+        }),
+      });
+
+      const result = await authService.deductTaskCredit('teacher123');
+
+      expect(result).toBe(49);
+      expect(mockUpdate).toHaveBeenCalledWith({
+        taskCredits: 49,
+        updatedAt: expect.any(Date),
+      });
+    });
+
+    it('should throw error if user not found', async () => {
+      const mockGet = jest.fn().mockResolvedValue({
+        exists: false,
+      });
+
+      mockFirestore.collection = jest.fn().mockReturnValue({
+        doc: jest.fn().mockReturnValue({
+          get: mockGet,
+        }),
+      });
+
+      await expect(
+        authService.deductTaskCredit('nonexistent')
+      ).rejects.toThrow('User not found');
+    });
+
+    it('should throw error if user is not a teacher', async () => {
+      const mockUserData = {
+        uid: 'user123',
+        role: 'general_user',
+        taskCredits: 10,
+      };
+
+      const mockGet = jest.fn().mockResolvedValue({
+        exists: true,
+        data: () => mockUserData,
+      });
+
+      mockFirestore.collection = jest.fn().mockReturnValue({
+        doc: jest.fn().mockReturnValue({
+          get: mockGet,
+        }),
+      });
+
+      await expect(
+        authService.deductTaskCredit('user123')
+      ).rejects.toThrow('Only teachers can create tasks');
+    });
+
+    it('should throw error if no credits remaining', async () => {
+      const mockUserData = {
+        uid: 'teacher123',
+        role: 'teacher',
+        taskCredits: 0,
+      };
+
+      const mockGet = jest.fn().mockResolvedValue({
+        exists: true,
+        data: () => mockUserData,
+      });
+
+      mockFirestore.collection = jest.fn().mockReturnValue({
+        doc: jest.fn().mockReturnValue({
+          get: mockGet,
+        }),
+      });
+
+      await expect(
+        authService.deductTaskCredit('teacher123')
+      ).rejects.toThrow('No task creation credits remaining');
+    });
+
+    it('should handle undefined taskCredits as 0', async () => {
+      const mockUserData = {
+        uid: 'teacher123',
+        role: 'teacher',
+        // taskCredits field missing
+      };
+
+      const mockGet = jest.fn().mockResolvedValue({
+        exists: true,
+        data: () => mockUserData,
+      });
+
+      mockFirestore.collection = jest.fn().mockReturnValue({
+        doc: jest.fn().mockReturnValue({
+          get: mockGet,
+        }),
+      });
+
+      await expect(
+        authService.deductTaskCredit('teacher123')
+      ).rejects.toThrow('No task creation credits remaining');
+    });
+
+    it('should deduct from 1 credit to 0 successfully', async () => {
+      const mockUserData = {
+        uid: 'teacher123',
+        role: 'teacher',
+        taskCredits: 1,
+      };
+
+      const mockGet = jest.fn().mockResolvedValue({
+        exists: true,
+        data: () => mockUserData,
+      });
+
+      const mockUpdate = jest.fn().mockResolvedValue(undefined);
+
+      mockFirestore.collection = jest.fn().mockReturnValue({
+        doc: jest.fn().mockReturnValue({
+          get: mockGet,
+          update: mockUpdate,
+        }),
+      });
+
+      const result = await authService.deductTaskCredit('teacher123');
+
+      expect(result).toBe(0);
+      expect(mockUpdate).toHaveBeenCalledWith({
+        taskCredits: 0,
+        updatedAt: expect.any(Date),
+      });
+    });
+  });
 });

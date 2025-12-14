@@ -64,16 +64,17 @@ function loadConfig(): MappingConfig {
 
 /**
  * Generate document ID from path components
+ * Note: subject is now implicit in the collection structure, so we don't include it in the docId
  */
-function generateDocId(subject: string, gradeLevel: string, ...pathParts: string[]): string {
-  const parts = [subject, gradeLevel, ...pathParts].filter(Boolean);
+function generateDocId(...pathParts: string[]): string {
+  const parts = pathParts.filter(Boolean);
   return parts.join('_').replace(/[^a-zA-Z0-9_]/g, '_');
 }
 
 /**
- * Recursively insert nodes into Firestore (country-based)
+ * Recursively collect nodes to be inserted (batch-optimized)
  */
-async function insertNode(
+function collectNodes(
   db: FirebaseFirestore.Firestore,
   node: JSONNode,
   country: string,
@@ -82,10 +83,11 @@ async function insertNode(
   parentId: string | null,
   parentPath: string,
   level: number,
-  orderIndex: number
-): Promise<string> {
+  orderIndex: number,
+  documents: Map<string, { ref: FirebaseFirestore.DocumentReference; data: SubjectMappingDocument }>
+): string {
   const currentPath = parentPath ? `${parentPath}/${node.key}` : node.key;
-  const docId = generateDocId(subject, gradeLevel, ...currentPath.split('/'));
+  const docId = generateDocId(gradeLevel, ...currentPath.split('/'));
 
   // Check if node has children
   const hasSubTopics = node.sub_topics && node.sub_topics.length > 0;
@@ -109,14 +111,17 @@ async function insertNode(
 
   console.log(`  ${'  '.repeat(level)}[${level}] ${node.name} (${currentPath})`);
 
-  // Insert document into country-based path
-  await db.collection('countries').doc(country)
-    .collection('subjectMappings').doc(docId).set(mappingDoc);
+  // Collect document reference and data
+  const docRef = db.collection('countries').doc(country)
+    .collection('subjectMappings').doc(subject)
+    .collection(gradeLevel).doc(docId);
 
-  // Recursively insert children
+  documents.set(docId, { ref: docRef, data: mappingDoc });
+
+  // Recursively collect children
   if (hasSubTopics) {
     for (let i = 0; i < node.sub_topics!.length; i++) {
-      await insertNode(
+      collectNodes(
         db,
         node.sub_topics![i],
         country,
@@ -125,12 +130,52 @@ async function insertNode(
         docId,
         currentPath,
         level + 1,
-        i
+        i,
+        documents
       );
     }
   }
 
   return docId;
+}
+
+/**
+ * Write documents in batches to Firestore
+ */
+async function writeBatches(
+  db: FirebaseFirestore.Firestore,
+  documents: Map<string, { ref: FirebaseFirestore.DocumentReference; data: SubjectMappingDocument }>
+): Promise<void> {
+  const allDocs = Array.from(documents.values());
+  const batches: FirebaseFirestore.WriteBatch[] = [];
+  let currentBatch = db.batch();
+  let count = 0;
+
+  console.log(`\n💾 Writing ${allDocs.length} documents in batches...`);
+
+  for (const doc of allDocs) {
+    currentBatch.set(doc.ref, doc.data);
+    count++;
+
+    // Firestore batch limit is 500
+    if (count % 500 === 0) {
+      batches.push(currentBatch);
+      currentBatch = db.batch();
+    }
+  }
+
+  // Add remaining documents
+  if (count % 500 !== 0) {
+    batches.push(currentBatch);
+  }
+
+  // Commit all batches
+  for (let i = 0; i < batches.length; i++) {
+    await batches[i].commit();
+    console.log(`   ✓ Batch ${i + 1}/${batches.length} committed (${Math.min((i + 1) * 500, allDocs.length)}/${allDocs.length} documents)`);
+  }
+
+  console.log(`   ✅ Successfully wrote ${allDocs.length} documents`);
 }
 
 /**
@@ -148,6 +193,7 @@ async function importSubject(
   console.log('='.repeat(60));
 
   const grades = ['grade_9_10', 'grade_11_12'] as const;
+  const allDocuments = new Map<string, { ref: FirebaseFirestore.DocumentReference; data: SubjectMappingDocument }>();
 
   for (const gradeLevel of grades) {
     const gradeData = jsonData[gradeLevel];
@@ -159,7 +205,7 @@ async function importSubject(
     console.log(`\n📚 Processing ${gradeLevel.replace('_', '-')} (${gradeData.length} main topics)`);
 
     // Create root node for this grade
-    const gradeDocId = generateDocId(subjectKey, gradeLevel, 'root');
+    const gradeDocId = generateDocId(gradeLevel, 'root');
     const gradeDisplayName = gradeLevel === 'grade_9_10' ? 'Grade 9-10' : 'Grade 11-12';
 
     const gradeDoc: SubjectMappingDocument = {
@@ -178,14 +224,17 @@ async function importSubject(
       updatedAt: Timestamp.now(),
     };
 
-    // Insert grade doc into country-based path
-    await db.collection('countries').doc(country)
-      .collection('subjectMappings').doc(gradeDocId).set(gradeDoc);
+    // Add grade doc to collection
+    const gradeDocRef = db.collection('countries').doc(country)
+      .collection('subjectMappings').doc(subjectKey)
+      .collection(gradeLevel).doc(gradeDocId);
+
+    allDocuments.set(gradeDocId, { ref: gradeDocRef, data: gradeDoc });
     console.log(`  [1] ${gradeDisplayName}`);
 
-    // Insert all main topics
+    // Collect all main topics and their children
     for (let i = 0; i < gradeData.length; i++) {
-      await insertNode(
+      collectNodes(
         db,
         gradeData[i],
         country,
@@ -194,10 +243,14 @@ async function importSubject(
         gradeDocId,
         `${subjectKey}/${gradeLevel}`,
         2,
-        i
+        i,
+        allDocuments
       );
     }
   }
+
+  // Write all collected documents in batches
+  await writeBatches(db, allDocuments);
 
   console.log(`\n✅ ${subjectName} import complete for ${country}!`);
 }
@@ -212,48 +265,91 @@ async function clearExistingMappings(
 ): Promise<void> {
   console.log(`\n🗑️  Clearing existing subject mappings for ${country}...`);
 
-  let query = db.collection('countries').doc(country).collection('subjectMappings');
+  const subjectMappingsRef = db.collection('countries').doc(country)
+    .collection('subjectMappings');
 
   if (subject) {
-    query = query.where('subject', '==', subject) as any;
-  }
+    // Delete specific subject's grade collections
+    console.log(`   Clearing subject: ${subject}`);
+    const grades = ['grade_9_10', 'grade_11_12'];
+    let totalDeleted = 0;
 
-  const snapshot = await query.get();
-  console.log(`   Found ${snapshot.size} documents to delete`);
+    for (const grade of grades) {
+      const gradeSnapshot = await subjectMappingsRef.doc(subject).collection(grade).get();
 
-  if (snapshot.size === 0) {
-    console.log('   No documents to delete');
-    return;
-  }
+      if (gradeSnapshot.size > 0) {
+        const batches: FirebaseFirestore.WriteBatch[] = [];
+        let currentBatch = db.batch();
+        let count = 0;
 
-  // Delete in batches (Firestore limit is 500 per batch)
-  const batches: FirebaseFirestore.WriteBatch[] = [];
-  let currentBatch = db.batch();
-  let count = 0;
+        gradeSnapshot.docs.forEach((doc) => {
+          currentBatch.delete(doc.ref);
+          count++;
 
-  snapshot.docs.forEach((doc) => {
-    currentBatch.delete(doc.ref);
-    count++;
+          if (count % 500 === 0) {
+            batches.push(currentBatch);
+            currentBatch = db.batch();
+          }
+        });
 
-    // Create new batch every 500 operations
-    if (count % 500 === 0) {
-      batches.push(currentBatch);
-      currentBatch = db.batch();
+        if (count % 500 !== 0) {
+          batches.push(currentBatch);
+        }
+
+        for (let i = 0; i < batches.length; i++) {
+          await batches[i].commit();
+        }
+
+        totalDeleted += count;
+        console.log(`   Deleted ${count} documents from ${subject}/${grade}`);
+      }
     }
-  });
 
-  // Add remaining operations
-  if (count % 500 !== 0) {
-    batches.push(currentBatch);
+    console.log(`   ✅ Total deleted: ${totalDeleted} documents for ${subject}`);
+  } else {
+    // Delete all subjects
+    const subjectsSnapshot = await subjectMappingsRef.get();
+    console.log(`   Found ${subjectsSnapshot.size} subjects to clear`);
+
+    for (const subjectDoc of subjectsSnapshot.docs) {
+      const subjectKey = subjectDoc.id;
+      console.log(`   Clearing subject: ${subjectKey}`);
+
+      const grades = ['grade_9_10', 'grade_11_12'];
+
+      for (const grade of grades) {
+        const gradeSnapshot = await subjectMappingsRef.doc(subjectKey).collection(grade).get();
+
+        if (gradeSnapshot.size > 0) {
+          const batches: FirebaseFirestore.WriteBatch[] = [];
+          let currentBatch = db.batch();
+          let count = 0;
+
+          gradeSnapshot.docs.forEach((doc) => {
+            currentBatch.delete(doc.ref);
+            count++;
+
+            if (count % 500 === 0) {
+              batches.push(currentBatch);
+              currentBatch = db.batch();
+            }
+          });
+
+          if (count % 500 !== 0) {
+            batches.push(currentBatch);
+          }
+
+          for (let i = 0; i < batches.length; i++) {
+            await batches[i].commit();
+          }
+
+          console.log(`   Deleted ${count} documents from ${subjectKey}/${grade}`);
+        }
+      }
+    }
+
+    console.log(`   ✅ Cleared all subjects for ${country}`);
   }
-
-  // Commit all batches
-  for (let i = 0; i < batches.length; i++) {
-    await batches[i].commit();
-    console.log(`   Batch ${i + 1}/${batches.length} committed`);
-  }
-
-  console.log(`   ✅ Deleted ${count} documents`);
 }
 
 /**
@@ -368,7 +464,7 @@ async function migrate(options: {
     }
     console.log('\nFirestore structure:');
     countriesToMigrate.forEach(country => {
-      console.log(`  countries/${country}/subjectMappings/{docId}`);
+      console.log(`  countries/${country}/subjectMappings/{subject}/{gradeLevel}/{docId}`);
     });
     console.log('\nNext steps:');
     console.log('  1. Check Firestore console to verify data');

@@ -5,6 +5,7 @@ import { TaskSelectionService } from "../services/task-selection.service";
 import { TaskGeneratorRequest, TaskGeneratorResponse } from "../types";
 import { getFirestore } from "../config/firebase.config";
 import { AuthRequest } from "../middleware/auth.middleware";
+import { deductTaskCredit } from "../services/auth.service";
 
 export class TaskController {
   private taskGenerator: TaskGeneratorService;
@@ -403,6 +404,18 @@ export class TaskController {
 
       console.log(`✅ Task saved successfully: ${task_id}`);
 
+      // Deduct one task credit from the teacher
+      let remainingCredits: number;
+      try {
+        remainingCredits = await deductTaskCredit(authenticatedUser.uid);
+        console.log(`✅ Task credit deducted. Remaining credits: ${remainingCredits}`);
+      } catch (creditError: any) {
+        // If credit deduction fails, we should still return success since the task is saved
+        // But log the error for monitoring
+        console.error('⚠️ Failed to deduct task credit:', creditError.message);
+        remainingCredits = 0; // Default to 0 if we couldn't deduct
+      }
+
       // Generate public share link
       const baseUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
       const publicShareLink = `${baseUrl}/tasks/${task_id}`;
@@ -412,6 +425,7 @@ export class TaskController {
         message: "Task saved successfully",
         task_id,
         public_share_link: publicShareLink,
+        remaining_credits: remainingCredits,
       });
     } catch (error) {
       console.error('❌ Error saving task:', error);

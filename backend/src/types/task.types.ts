@@ -162,6 +162,7 @@ export interface CreateTaskRequest {
   description?: string;
   content: TaskContent;
   subjectMappingId: string;
+  subject?: string; // Subject key (e.g., 'mathematics', 'physics')
   country_code?: string; // ISO country code (e.g., 'HU', 'US', 'MX')
   educationalModel?: string;
   difficultyLevel?: 'easy' | 'medium' | 'hard';

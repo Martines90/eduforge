@@ -335,3 +335,46 @@ export function verifyToken(token: string): { uid: string; email: string; role: 
     throw new Error('Invalid token');
   }
 }
+
+/**
+ * Deduct one task credit from teacher's account
+ * @param uid - User ID
+ * @returns The new credit balance
+ * @throws Error if user is not found, not a teacher, or has no credits
+ */
+export async function deductTaskCredit(uid: string): Promise<number> {
+  const db = getFirestore();
+
+  // Get user
+  const userDoc = await db.collection('users').doc(uid).get();
+
+  if (!userDoc.exists) {
+    throw new Error('User not found');
+  }
+
+  const user = userDoc.data() as UserDocument;
+
+  // Verify user is a teacher
+  if (user.role !== 'teacher') {
+    throw new Error('Only teachers can create tasks');
+  }
+
+  // Check current credits
+  const currentCredits = user.taskCredits || 0;
+
+  if (currentCredits <= 0) {
+    throw new Error('No task creation credits remaining');
+  }
+
+  // Deduct one credit
+  const newCredits = currentCredits - 1;
+
+  await db.collection('users').doc(uid).update({
+    taskCredits: newCredits,
+    updatedAt: new Date(),
+  });
+
+  console.log(`[Auth Service] Deducted 1 credit from user ${uid}. Remaining: ${newCredits}`);
+
+  return newCredits;
+}

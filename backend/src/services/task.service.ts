@@ -41,11 +41,24 @@ export async function createTask(
   // For now, defaulting to 'HU' for backward compatibility
   const country = data.country_code || 'HU';
 
+  // Extract subject from CreateTaskRequest (it should be provided)
+  const subject = data.subject || 'mathematics'; // Default to mathematics for backward compatibility
+
+  // TODO: Get gradeLevel from request
+  // For now, we need to determine the gradeLevel from the subjectMappingId
+  // The gradeLevel should be passed in the request in the future
+  // Temporary: extract from subjectMappingId (e.g., "grade_9_10_..." starts with grade level)
+  const gradeLevelMatch = data.subjectMappingId.match(/^(grade_\d+_\d+)/);
+  if (!gradeLevelMatch) {
+    throw new Error('Invalid subjectMappingId format: must start with grade level (e.g., grade_9_10_...)');
+  }
+  const gradeLevel = gradeLevelMatch[1];
+
   // Validate that the subject mapping exists and is a leaf node
-  await validateLeafMapping(country, data.subjectMappingId);
+  await validateLeafMapping(country, subject, data.subjectMappingId, gradeLevel);
 
   // Get the subject mapping details
-  const mapping = await getSubjectMappingById(country, data.subjectMappingId);
+  const mapping = await getSubjectMappingById(country, subject, data.subjectMappingId, gradeLevel);
   if (!mapping) {
     throw new Error('Subject mapping not found');
   }
@@ -80,7 +93,7 @@ export async function createTask(
 
   // Increment task count on the mapping if published
   if (taskDoc.isPublished) {
-    await incrementTaskCount(country, data.subjectMappingId);
+    await incrementTaskCount(country, subject, data.subjectMappingId, gradeLevel);
   }
 
   return docRef.id;
@@ -131,11 +144,13 @@ export async function updateTask(
   // Update task count on mapping if publishing status changed
   // TODO: Get country from task document or request
   const country = 'HU'; // Default for backward compatibility
-  if (wasPublished !== willBePublished) {
+  const subject = existingTask.subject || 'mathematics'; // Get from existing task or default
+  const gradeLevel = existingTask.gradeLevel; // Get from existing task
+  if (wasPublished !== willBePublished && gradeLevel) {
     if (willBePublished) {
-      await incrementTaskCount(country, existingTask.subjectMappingId);
+      await incrementTaskCount(country, subject, existingTask.subjectMappingId, gradeLevel);
     } else {
-      await decrementTaskCount(country, existingTask.subjectMappingId);
+      await decrementTaskCount(country, subject, existingTask.subjectMappingId, gradeLevel);
     }
   }
 }
@@ -166,8 +181,10 @@ export async function deleteTask(taskId: string, creatorUid: string): Promise<vo
   // Decrement task count if was published
   // TODO: Get country from task document
   const country = 'HU'; // Default for backward compatibility
-  if (existingTask.isPublished) {
-    await decrementTaskCount(country, existingTask.subjectMappingId);
+  const subject = existingTask.subject || 'mathematics'; // Get from existing task or default
+  const gradeLevel = existingTask.gradeLevel; // Get from existing task
+  if (existingTask.isPublished && gradeLevel) {
+    await decrementTaskCount(country, subject, existingTask.subjectMappingId, gradeLevel);
   }
 }
 

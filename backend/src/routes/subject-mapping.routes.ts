@@ -80,14 +80,14 @@ router.get('/api/countries/:country/subjects/:subject/grades/:grade/leaf-nodes',
 });
 
 /**
- * GET /api/countries/:country/subject-mappings/:id
+ * GET /api/countries/:country/subjects/:subject/grades/:grade/mappings/:id
  * Get a specific subject mapping by ID
  */
-router.get('/api/countries/:country/subject-mappings/:id', async (req: Request, res: Response) => {
+router.get('/api/countries/:country/subjects/:subject/grades/:grade/mappings/:id', async (req: Request, res: Response) => {
   try {
-    const { country, id } = req.params;
+    const { country, subject, grade, id } = req.params;
 
-    const mapping = await subjectMappingService.getSubjectMappingById(country, id);
+    const mapping = await subjectMappingService.getSubjectMappingById(country, subject, id, grade);
 
     if (!mapping) {
       return res.status(404).json({
@@ -110,14 +110,14 @@ router.get('/api/countries/:country/subject-mappings/:id', async (req: Request, 
 });
 
 /**
- * GET /api/countries/:country/subject-mappings/:id/children
+ * GET /api/countries/:country/subjects/:subject/grades/:grade/mappings/:id/children
  * Get children of a specific node
  */
-router.get('/api/countries/:country/subject-mappings/:id/children', async (req: Request, res: Response) => {
+router.get('/api/countries/:country/subjects/:subject/grades/:grade/mappings/:id/children', async (req: Request, res: Response) => {
   try {
-    const { country, id } = req.params;
+    const { country, subject, grade, id } = req.params;
 
-    const children = await subjectMappingService.getChildren(country, id);
+    const children = await subjectMappingService.getChildren(country, subject, id, grade);
 
     res.status(200).json({
       success: true,
@@ -134,14 +134,14 @@ router.get('/api/countries/:country/subject-mappings/:id/children', async (req: 
 });
 
 /**
- * GET /api/countries/:country/subject-mappings/:id/breadcrumb
+ * GET /api/countries/:country/subjects/:subject/grades/:grade/mappings/:id/breadcrumb
  * Get breadcrumb path from root to this node
  */
-router.get('/api/countries/:country/subject-mappings/:id/breadcrumb', async (req: Request, res: Response) => {
+router.get('/api/countries/:country/subjects/:subject/grades/:grade/mappings/:id/breadcrumb', async (req: Request, res: Response) => {
   try {
-    const { country, id } = req.params;
+    const { country, subject, grade, id } = req.params;
 
-    const breadcrumb = await subjectMappingService.getBreadcrumbPath(country, id);
+    const breadcrumb = await subjectMappingService.getBreadcrumbPath(country, subject, id, grade);
 
     res.status(200).json({
       success: true,

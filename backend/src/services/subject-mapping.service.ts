@@ -18,9 +18,8 @@ export async function getSubjectMappings(
 
   const snapshot = await db
     .collection('countries').doc(country)
-    .collection('subjectMappings')
-    .where('subject', '==', subject)
-    .where('gradeLevel', '==', gradeLevel)
+    .collection('subjectMappings').doc(subject)
+    .collection(gradeLevel)
     .orderBy('level')
     .orderBy('orderIndex')
     .get();
@@ -94,9 +93,8 @@ export async function getLeafNodes(
 
   const snapshot = await db
     .collection('countries').doc(country)
-    .collection('subjectMappings')
-    .where('subject', '==', subject)
-    .where('gradeLevel', '==', gradeLevel)
+    .collection('subjectMappings').doc(subject)
+    .collection(gradeLevel)
     .where('isLeaf', '==', true)
     .orderBy('path')
     .get();
@@ -112,11 +110,14 @@ export async function getLeafNodes(
  */
 export async function getSubjectMappingById(
   country: string,
-  id: string
+  subject: string,
+  id: string,
+  gradeLevel: string
 ): Promise<(SubjectMappingDocument & { id: string }) | null> {
   const db = getFirestore();
   const doc = await db.collection('countries').doc(country)
-    .collection('subjectMappings').doc(id).get();
+    .collection('subjectMappings').doc(subject)
+    .collection(gradeLevel).doc(id).get();
 
   if (!doc.exists) {
     return null;
@@ -131,12 +132,18 @@ export async function getSubjectMappingById(
 /**
  * Get children of a specific node
  */
-export async function getChildren(country: string, parentId: string): Promise<(SubjectMappingDocument & { id: string })[]> {
+export async function getChildren(
+  country: string,
+  subject: string,
+  parentId: string,
+  gradeLevel: string
+): Promise<(SubjectMappingDocument & { id: string })[]> {
   const db = getFirestore();
 
   const snapshot = await db
     .collection('countries').doc(country)
-    .collection('subjectMappings')
+    .collection('subjectMappings').doc(subject)
+    .collection(gradeLevel)
     .where('parentId', '==', parentId)
     .orderBy('orderIndex')
     .get();
@@ -150,10 +157,16 @@ export async function getChildren(country: string, parentId: string): Promise<(S
 /**
  * Increment task count for a subject mapping
  */
-export async function incrementTaskCount(country: string, mappingId: string): Promise<void> {
+export async function incrementTaskCount(
+  country: string,
+  subject: string,
+  mappingId: string,
+  gradeLevel: string
+): Promise<void> {
   const db = getFirestore();
   const docRef = db.collection('countries').doc(country)
-    .collection('subjectMappings').doc(mappingId);
+    .collection('subjectMappings').doc(subject)
+    .collection(gradeLevel).doc(mappingId);
 
   await docRef.update({
     taskCount: (db as any).FieldValue.increment(1),
@@ -164,10 +177,16 @@ export async function incrementTaskCount(country: string, mappingId: string): Pr
 /**
  * Decrement task count for a subject mapping
  */
-export async function decrementTaskCount(country: string, mappingId: string): Promise<void> {
+export async function decrementTaskCount(
+  country: string,
+  subject: string,
+  mappingId: string,
+  gradeLevel: string
+): Promise<void> {
   const db = getFirestore();
   const docRef = db.collection('countries').doc(country)
-    .collection('subjectMappings').doc(mappingId);
+    .collection('subjectMappings').doc(subject)
+    .collection(gradeLevel).doc(mappingId);
 
   await docRef.update({
     taskCount: (db as any).FieldValue.increment(-1),
@@ -178,8 +197,13 @@ export async function decrementTaskCount(country: string, mappingId: string): Pr
 /**
  * Validate that a mapping exists and is a leaf node
  */
-export async function validateLeafMapping(country: string, mappingId: string): Promise<boolean> {
-  const mapping = await getSubjectMappingById(country, mappingId);
+export async function validateLeafMapping(
+  country: string,
+  subject: string,
+  mappingId: string,
+  gradeLevel: string
+): Promise<boolean> {
+  const mapping = await getSubjectMappingById(country, subject, mappingId, gradeLevel);
 
   if (!mapping) {
     throw new Error('Subject mapping not found');
@@ -198,7 +222,9 @@ export async function validateLeafMapping(country: string, mappingId: string): P
  */
 export async function getBreadcrumbPath(
   country: string,
-  mappingId: string
+  subject: string,
+  mappingId: string,
+  gradeLevel: string
 ): Promise<(SubjectMappingDocument & { id: string })[]> {
   const db = getFirestore();
   const breadcrumbs: (SubjectMappingDocument & { id: string })[] = [];
@@ -207,7 +233,8 @@ export async function getBreadcrumbPath(
 
   while (currentId) {
     const doc = await db.collection('countries').doc(country)
-      .collection('subjectMappings').doc(currentId).get();
+      .collection('subjectMappings').doc(subject)
+      .collection(gradeLevel).doc(currentId).get();
 
     if (!doc.exists) {
       break;
