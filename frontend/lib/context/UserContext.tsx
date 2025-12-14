@@ -187,20 +187,76 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
             const subject = getCookie(COOKIE_NAMES.SUBJECT) as Subject | undefined;
             const savedCountry = (getCookie(COOKIE_NAMES.COUNTRY) as CountryCode) || DEFAULT_COUNTRY;
 
-            console.log('[UserContext] Restoring session from localStorage/cookies');
+            console.log('[UserContext] Restoring session from localStorage/cookies, fetching fresh user data...');
 
-            // Restore user state from cookies/localStorage
-            setUser((prev) => ({
-              ...prev,
-              isRegistered: true,
-              profile: { ...profile, token: authToken },
-              role: 'registered',
-              identity: identity || null,
-              subject: subject || null,
-              country: savedCountry,
-              hasCompletedOnboarding: true,
-              isFirstVisit: false,
-            }));
+            // Fetch fresh user data from backend to get subscription and credits
+            try {
+              const response = await apiService.getCurrentUser(authToken);
+
+              if (response.success && response.data?.user) {
+                const userData = response.data.user;
+                const backendRole = (userData as any).role as string | undefined;
+                const userIdentity: UserIdentity | undefined = backendRole === 'general_user' ? 'non-teacher' : backendRole as UserIdentity | undefined;
+                const userSubscription = (userData as any).subscription as any;
+                const userTaskCredits = (userData as any).taskCredits as number | undefined;
+
+                // Convert subscription to frontend format
+                let subscription: SubscriptionInfo | undefined;
+                if (userSubscription) {
+                  subscription = {
+                    plan: userSubscription.plan,
+                    status: userSubscription.status,
+                    trialStartDate: userSubscription.trialStartDate,
+                    trialEndDate: userSubscription.trialEndDate,
+                    annualStartDate: userSubscription.annualStartDate,
+                    annualEndDate: userSubscription.annualEndDate,
+                  };
+                }
+
+                // Restore user state with fresh subscription data
+                setUser((prev) => ({
+                  ...prev,
+                  isRegistered: true,
+                  profile: { ...profile, token: authToken },
+                  role: 'registered',
+                  identity: userIdentity || identity || null,
+                  subject: subject || null,
+                  country: savedCountry,
+                  hasCompletedOnboarding: true,
+                  isFirstVisit: false,
+                  subscription,
+                  taskCredits: userTaskCredits,
+                }));
+              } else {
+                // Fallback to cookies if API call fails
+                console.warn('[UserContext] Failed to fetch fresh user data, using cookies');
+                setUser((prev) => ({
+                  ...prev,
+                  isRegistered: true,
+                  profile: { ...profile, token: authToken },
+                  role: 'registered',
+                  identity: identity || null,
+                  subject: subject || null,
+                  country: savedCountry,
+                  hasCompletedOnboarding: true,
+                  isFirstVisit: false,
+                }));
+              }
+            } catch (error) {
+              console.error('[UserContext] Error fetching fresh user data:', error);
+              // Fallback to cookies if API call fails
+              setUser((prev) => ({
+                ...prev,
+                isRegistered: true,
+                profile: { ...profile, token: authToken },
+                role: 'registered',
+                identity: identity || null,
+                subject: subject || null,
+                country: savedCountry,
+                hasCompletedOnboarding: true,
+                isFirstVisit: false,
+              }));
+            }
           } catch (error) {
             console.error('[UserContext] Error parsing stored user data:', error);
           }
