@@ -329,6 +329,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
         subscription = {
           plan: userSubscription.plan,
           status: userSubscription.status,
+          // Backend returns ISO strings, not Firestore Timestamps
           trialStartDate: userSubscription.trialStartDate,
           trialEndDate: userSubscription.trialEndDate,
           annualStartDate: userSubscription.annualStartDate,

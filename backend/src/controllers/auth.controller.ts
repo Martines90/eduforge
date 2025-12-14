@@ -127,6 +127,16 @@ export async function verifyEmail(req: Request, res: Response): Promise<void> {
     // Get user data
     const user = await authService.getUserById(uid);
 
+    // Serialize subscription timestamps to ISO strings for JSON response
+    const serializedSubscription = user?.subscription ? {
+      plan: user.subscription.plan,
+      status: user.subscription.status,
+      trialStartDate: user.subscription.trialStartDate?.toDate?.()?.toISOString() || user.subscription.trialStartDate,
+      trialEndDate: user.subscription.trialEndDate?.toDate?.()?.toISOString() || user.subscription.trialEndDate,
+      annualStartDate: user.subscription.annualStartDate?.toDate?.()?.toISOString() || user.subscription.annualStartDate,
+      annualEndDate: user.subscription.annualEndDate?.toDate?.()?.toISOString() || user.subscription.annualEndDate,
+    } : undefined;
+
     res.status(201).json({
       success: true,
       message: 'Email verified successfully. Account created.',
@@ -141,7 +151,7 @@ export async function verifyEmail(req: Request, res: Response): Promise<void> {
               country: user.country,
               subject: user.subject,
               educationalModel: user.educationalModel,
-              subscription: user.subscription,
+              subscription: serializedSubscription,
               taskCredits: user.taskCredits,
             }
           : undefined,
@@ -177,6 +187,16 @@ export async function login(req: Request, res: Response): Promise<void> {
     // Login user
     const { user, token } = await authService.loginUser(data);
 
+    // Serialize subscription timestamps to ISO strings for JSON response
+    const serializedSubscription = user.subscription ? {
+      plan: user.subscription.plan,
+      status: user.subscription.status,
+      trialStartDate: user.subscription.trialStartDate?.toDate?.()?.toISOString() || user.subscription.trialStartDate,
+      trialEndDate: user.subscription.trialEndDate?.toDate?.()?.toISOString() || user.subscription.trialEndDate,
+      annualStartDate: user.subscription.annualStartDate?.toDate?.()?.toISOString() || user.subscription.annualStartDate,
+      annualEndDate: user.subscription.annualEndDate?.toDate?.()?.toISOString() || user.subscription.annualEndDate,
+    } : undefined;
+
     res.status(200).json({
       success: true,
       message: 'Login successful',
@@ -190,7 +210,7 @@ export async function login(req: Request, res: Response): Promise<void> {
           country: user.country,
           subject: user.subject,
           educationalModel: user.educationalModel,
-          subscription: user.subscription,
+          subscription: serializedSubscription,
           taskCredits: user.taskCredits,
         },
         token,
@@ -252,6 +272,16 @@ export async function getCurrentUser(req: Request, res: Response): Promise<void>
       return;
     }
 
+    // Serialize subscription timestamps to ISO strings for JSON response
+    const serializedSubscription = user.subscription ? {
+      plan: user.subscription.plan,
+      status: user.subscription.status,
+      trialStartDate: user.subscription.trialStartDate?.toDate?.()?.toISOString() || user.subscription.trialStartDate,
+      trialEndDate: user.subscription.trialEndDate?.toDate?.()?.toISOString() || user.subscription.trialEndDate,
+      annualStartDate: user.subscription.annualStartDate?.toDate?.()?.toISOString() || user.subscription.annualStartDate,
+      annualEndDate: user.subscription.annualEndDate?.toDate?.()?.toISOString() || user.subscription.annualEndDate,
+    } : undefined;
+
     res.status(200).json({
       success: true,
       message: 'User retrieved successfully',
@@ -265,7 +295,7 @@ export async function getCurrentUser(req: Request, res: Response): Promise<void>
           country: user.country,
           subject: user.subject,
           educationalModel: user.educationalModel,
-          subscription: user.subscription,
+          subscription: serializedSubscription,
           taskCredits: user.taskCredits,
         },
       },

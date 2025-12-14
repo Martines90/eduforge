@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import { useTranslation } from '@/lib/i18n';
 
-export type ImageNumber = 0 | 1 | 2;
+export type ImageNumber = 0 | 1;
 
 export interface ImageNumberSelectProps {
   value: ImageNumber;
@@ -25,7 +25,7 @@ export interface ImageNumberSelectProps {
 
 /**
  * ImageNumberSelect Molecule Component
- * Selector for number of images to generate (0, 1, or 2)
+ * Selector for number of images to generate (0 or 1)
  */
 export const ImageNumberSelect: React.FC<ImageNumberSelectProps> = ({
   value,
@@ -46,7 +46,6 @@ export const ImageNumberSelect: React.FC<ImageNumberSelectProps> = ({
   const options = [
     { value: 0, label: t('No images (text only)') },
     { value: 1, label: t('1 image') },
-    { value: 2, label: t('2 images') },
   ];
 
   const displayLabel = label || t('Number of Images');
