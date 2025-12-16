@@ -1,0 +1,1709 @@
+{
+  "grade_9_10": [
+    {
+      "key": "bevezetes_a_fizikaba_es_merestan",
+      "name": "Bevezetés a fizikába és méréstan",
+      "short_description": "A fizika szerepe a természettudományok között, az alapvető fizikai mennyiségek és mértékegységek használata, valamint a mérés, adatfeldolgozás és kísérletezés biztonságos gyakorlata.",
+      "sub_topics": [
+        {
+          "key": "fizikai_mennyisegek_es_si",
+          "name": "Fizikai mennyiségek és SI mértékegységrendszer",
+          "short_description": "A legfontosabb alap- és származtatott mennyiségek, mértékegységek, előtagok és a dimenzió fogalma.",
+          "sub_topics": [
+            {
+              "key": "alapmennyisegek_es_mertekegysegek",
+              "name": "Alapmennyiségek és mértékegységek",
+              "short_description": "Ismerje fel és használja helyesen az SI alapmennyiségeit (pl. hossz, tömeg, idő) és mértékegységeit, valamint végezzen egyszerű átváltásokat.",
+              "example_tasks": [
+                "Írd fel az alábbi mennyiségeket SI mértékegységben: 2,5 km; 350 g; 18 perc; 72 km/h.",
+                "Egy futó 12,0 km-t tesz meg 55 perc alatt. Add meg az átlagsebességét m/s-ban!",
+                "Egy laborban 0,00075 m³ gázt mértek. Add meg a térfogatot cm³-ben és literben is!"
+              ]
+            },
+            {
+              "key": "szarmaztatott_mennyisegek_dimenzio",
+              "name": "Származtatott mennyiségek és dimenzió",
+              "short_description": "Értelmezze a származtatott mennyiségek mértékegységét dimenzióelemzéssel, és ellenőrizzen képleteket egységek alapján.",
+              "example_tasks": [
+                "Mutasd meg dimenzióelemzéssel, hogy a nyomás mértékegysége Pa = N/m²!",
+                "Ellenőrizd egységekkel a képletet: s = v·t. Milyen mértékegység adódik az s-re, ha v m/s és t s?",
+                "Egy képletben E = F·v szerepel. Egységek alapján döntsd el, hogy E energia (J) lehet-e, és indokold!"
+              ]
+            },
+            {
+              "key": "tizes_hatvanyok_es_elotagok",
+              "name": "Tízes hatványok és előtagok",
+              "short_description": "Használja a tízes hatványokat és az SI előtagokat (milli-, mikro-, kilo-, mega-), és becsülje nagyságrendileg a kapott eredményeket.",
+              "example_tasks": [
+                "Írd fel tudományos jelöléssel: 0,00032; 5 600 000; 0,045.",
+                "Váltsd át: 3,4 ms → s; 250 μm → m; 6,2 MW → W.",
+                "Egy LED árama 18 mA, a feszültsége 2,1 V. Becsüld meg a teljesítményt wattban, és add meg mW-ban is!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "meres_kiserletezes_es_biztonsag",
+          "name": "Mérés, kísérletezés és biztonság",
+          "short_description": "Mérőeszközök leolvasása, mérési eljárások megtervezése, valamint a laboratóriumi munkavédelmi és balesetvédelmi alapelvek.",
+          "sub_topics": [
+            {
+              "key": "meroeszkozok_leolvasasa_es_karakterisztikaja",
+              "name": "Mérőeszközök leolvasása és jellemzői",
+              "short_description": "Olvassa le helyesen a skálás és digitális mérőeszközöket, és értelmezze a felbontás, pontosság és mérési tartomány fogalmát.",
+              "example_tasks": [
+                "Egy analóg hőmérő skálaosztása 1 °C. A higanyszál 23 és 24 °C között félúton áll. Add meg a leolvasott értéket!",
+                "Egy digitális mérleg 0,01 g felbontású. Mit jelent ez a gyakorlatban a mérési eredmény megadásánál?",
+                "Egy vonalzó legkisebb osztása 1 mm. Mekkora a lehetséges leolvasási bizonytalanság egyetlen hosszúságmérésnél?"
+              ]
+            },
+            {
+              "key": "kiserlet_tervezes_valtozok_kontrollja",
+              "name": "Kísérlettervezés: változók és kontroll",
+              "short_description": "Különítse el a független és függő változót, tervezzen kontrollált kísérletet, és fogalmazzon meg vizsgálható hipotézist.",
+              "example_tasks": [
+                "Tervezz kísérletet annak vizsgálatára, hogy a lejtő dőlésszöge hogyan hat egy kocsi gyorsulására! Nevezd meg a független, függő és kontrollváltozókat!",
+                "Egy diák azt állítja, hogy a víz forráspontja függ az edény anyagától. Írj le egy kísérleti tervet, amellyel ezt ellenőrizni lehet!",
+                "Sorolj fel legalább 3 biztonsági szabályt elektromos áramkörök építésekor, és indokold röviden!"
+              ]
+            },
+            {
+              "key": "munkavedelem_es_laborbiztonsag",
+              "name": "Munkavédelem és laborbiztonság",
+              "short_description": "Alkalmazza a kémiai és fizikai kockázatokhoz kapcsolódó alapvető biztonsági előírásokat (pl. forró testek, üveg, áram, sugárzás, lézerek).",
+              "example_tasks": [
+                "Miért veszélyes repedt üvegedényt használni melegítéskor? Írj két okot!",
+                "Egy kísérletben forró vízgőz keletkezik. Milyen védőeszközöket és óvintézkedéseket alkalmaznál?",
+                "A tanár lézerpointerrel szemléltet optikai jelenségeket. Fogalmazz meg 3 konkrét szabályt a szem védelmére!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "meresi_hiba_es_adatkezeles",
+          "name": "Mérési hiba és adatkezelés",
+          "short_description": "A mérési bizonytalanság, ismételt mérések értékelése, átlagolás, és az eredmények szakszerű megadása.",
+          "sub_topics": [
+            {
+              "key": "pontossag_felbontas_bizonytalansag",
+              "name": "Pontosság, felbontás, bizonytalanság",
+              "short_description": "Különítse el a felbontásból és leolvasásból adódó bizonytalanságot, és adja meg a mérési eredményt megfelelő alakban.",
+              "example_tasks": [
+                "Egy hosszmérést 12,3 cm-re olvastál le 1 mm osztású vonalzóval. Add meg az eredményt bizonytalansággal!",
+                "Egy digitális stopper 0,01 s felbontású. Két futásidő mérésénél hogyan jelenik meg ez a bizonytalanság az eredményben?",
+                "Egy rugó megnyúlását 4,2 cm-nek mérted, de a skála döntve állt a szemeddel. Nevezd meg a hibát és írd le, hogyan csökkentenéd!"
+              ]
+            },
+            {
+              "key": "ismetelt_meres_atlag_es_szoras_egyszeruen",
+              "name": "Ismételt mérés: átlag és szórás egyszerű értelmezése",
+              "short_description": "Számolja ki ismételt mérések átlagát, és értelmezze a szóródást mint a mérés megbízhatóságának jelzőjét (kvalitatív szinten).",
+              "example_tasks": [
+                "Egy test tömegét 5-ször megmérted: 102 g; 101 g; 103 g; 102 g; 102 g. Számold ki az átlagot!",
+                "Két csoport ugyanazt a hosszúságot méri. Az A csoport eredményei szorosak, a B csoporté nagyon szórnak. Melyik mérés megbízhatóbb és miért?",
+                "Írj le egy helyzetet, amikor a mérési sorozatban kiugró érték jelenik meg, és mondd el, hogyan döntesz a felhasználásáról!"
+              ]
+            },
+            {
+              "key": "eredmeny_kozlse_erevenyes_jegyek",
+              "name": "Eredményközlés és érvényes jegyek",
+              "short_description": "Adja meg a mérési eredményeket érvényes jegyekkel, és kerekítsen a mérési bizonytalansághoz illeszkedően.",
+              "example_tasks": [
+                "Egy távolságot 1,248 m-nek kaptál, de a mérőszalag bizonytalansága ±0,01 m. Hogyan írnád fel helyesen az eredményt?",
+                "Egy sebességet 3,14159 m/s-ra számoltál, de az időmérés bizonytalansága miatt legfeljebb két tizedesig indokolt. Add meg kerekítve!",
+                "Magyarázd el röviden, mit jelentenek az érvényes jegyek, és adj példát egy rosszul megadott mérési eredményre!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "grafikonok_es_adatabrazolas",
+          "name": "Grafikonok és adatábrázolás",
+          "short_description": "Táblázatok, grafikonok készítése és értelmezése, lineáris összefüggések felismerése, meredekség jelentése fizikai kontextusban.",
+          "sub_topics": [
+            {
+              "key": "diagram_tipusok_es_tengelyek",
+              "name": "Diagramtípusok és tengelyek használata",
+              "short_description": "Készítsen helyes tengelyfeliratokat, mértékegységeket, és válasszon megfelelő skálát a mérési adatokhoz.",
+              "example_tasks": [
+                "Egy hőmérséklet-idő táblázatból készíts grafikonvázlatot! Jelöld a tengelyeken a mennyiségeket és mértékegységeket!",
+                "Miért hibás, ha egy grafikonon nem tüntetjük fel a mértékegységet? Írj két következményt!",
+                "Adott adatsorhoz (pl. feszültség–áram) válaszd ki, hogy oszlopdiagram vagy pontdiagram a célszerűbb, és indokold!"
+              ]
+            },
+            {
+              "key": "linearis_kapcsolat_meredekseg",
+              "name": "Lineáris kapcsolat és meredekség fizikai jelentése",
+              "short_description": "Értelmezze a meredekséget mint fizikai mennyiséget (pl. sebesség, gyorsulás), és becsülje meg grafikon alapján.",
+              "example_tasks": [
+                "Egy s–t grafikon egyenes: 0 s-nál 0 m, 5 s-nál 20 m. Add meg a sebességet a grafikon meredekségéből!",
+                "Egy v–t grafikonon a sebesség 2 s alatt 3 m/s-ról 9 m/s-ra nő. Számold ki a gyorsulást!",
+                "Egy I–U grafikon egyenes az origón át. Mit mond ez az alkatrészről? Nevezd meg a fizikai törvényt!"
+              ]
+            },
+            {
+              "key": "aranyossag_es_modellalkotas",
+              "name": "Arányosság és modellalkotás egyszerű esetekben",
+              "short_description": "Ismerje fel a (fordított) arányosságot mérési adatokból, és fogalmazzon meg egyszerű modellt a jelenség leírására.",
+              "example_tasks": [
+                "Egy kísérletben a tömeg duplázására a rugó megnyúlása is megduplázódik. Milyen típusú kapcsolat ez? Írj fel egy arányossági alakot!",
+                "Egy autó ugyanazt az utat nagyobb sebességgel rövidebb idő alatt teszi meg. Írd le, hogyan függ az idő a sebességtől azonos út esetén!",
+                "Adott mérési adatok alapján döntsd el, hogy a kapcsolat lineáris-e: (t, s) = (1 s, 2 m), (2 s, 4 m), (3 s, 6 m). Mit jelent ez a mozgásra?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "kinematika_mozgasok_leirasa",
+      "name": "Kinematika (mozgások leírása)",
+      "short_description": "A mozgások leírása hely-, idő-, sebesség- és gyorsulásfogalmakkal, grafikonokkal és egyszerű egyenletekkel; a jelenségek értelmezése mérések és modellek alapján.",
+      "sub_topics": [
+        {
+          "key": "egyenesvonalu_egyenletes_mozgas",
+          "name": "Egyenesvonalú egyenletes mozgás",
+          "short_description": "Az út, idő és sebesség kapcsolata; átlagsebesség; mozgásleírás táblázattal és grafikonokkal.",
+          "sub_topics": [
+            {
+              "key": "atlagsebesseg_es_ut_ido_kapcsolat",
+              "name": "Átlagsebesség és az út–idő kapcsolat",
+              "short_description": "Számolja ki az átlagsebességet, és alkalmazza az s = v·t összefüggést egyszerű feladatokban.",
+              "example_tasks": [
+                "Egy busz 18 km-t tesz meg 30 perc alatt. Add meg az átlagsebességet km/h-ban és m/s-ban!",
+                "Mekkora utat tesz meg egy kerékpáros 6,0 m/s sebességgel 12 s alatt?",
+                "Egy futó 1,5 km-t fut 7 perc 30 s alatt. Mekkora az átlagsebessége, és mennyi idő alatt futna 2,0 km-t ugyanezzel a tempóval?"
+              ]
+            },
+            {
+              "key": "s_t_es_v_t_grafikon_ertelmezese",
+              "name": "s–t és v–t grafikonok értelmezése",
+              "short_description": "Olvassa le és értelmezze az út-idő és sebesség-idő grafikonokat, és határozza meg belőlük a mozgás jellemzőit.",
+              "example_tasks": [
+                "Egy s–t grafikonon 0–4 s között az út 0 m-ről 12 m-re nő egyenes vonallal. Mekkora a sebesség?",
+                "Egy v–t grafikonon a sebesség 5 s-ig állandó 3 m/s, majd 0-ra csökken. Mikor áll meg a test? Írd le a mozgást szövegesen!",
+                "Egy s–t grafikon töréspontot tartalmaz: 0–3 s között meredek, 3–6 s között laposabb. Mit jelent ez a sebesség változására?"
+              ]
+            },
+            {
+              "key": "relativ_mozgas_es_kozeg",
+              "name": "Relatív mozgás és közeghez viszonyítás",
+              "short_description": "Értelmezze a sebességet különböző vonatkoztatási rendszerekben (pl. vonat, mozgólépcső, folyó), és végezzen egyszerű relatív sebességszámításokat.",
+              "example_tasks": [
+                "Egy ember 1,2 m/s sebességgel sétál előre egy 0,8 m/s sebességű mozgójárdán. Mekkora a sebessége a talajhoz képest?",
+                "Egy hajó 4,0 m/s sebességgel halad a vízhez képest, a folyó sodrása 1,5 m/s. Mekkora a hajó sebessége a parthoz képest, ha lefelé halad?",
+                "Egy vonat 90 km/h-val halad. Egy utas 5 km/h-val sétál előre a kocsiban. Mekkora a sebessége a földhöz képest?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "egyenesvonalu_egyenletesen_valtozo_mozgas",
+          "name": "Egyenesvonalú egyenletesen változó mozgás",
+          "short_description": "Gyorsulás fogalma, gyorsuló és lassuló mozgás, v–t és s–t grafikonok; alapösszefüggések alkalmazása.",
+          "sub_topics": [
+            {
+              "key": "gyorsulas_fogalma_es_szamitasa",
+              "name": "Gyorsulás fogalma és számítása",
+              "short_description": "Számolja ki az átlagos gyorsulást a sebességváltozás és az idő alapján, és értelmezze az előjelet gyorsulás/lassulás esetén.",
+              "example_tasks": [
+                "Egy autó sebessége 5 s alatt 10 m/s-ról 25 m/s-ra nő. Mekkora a gyorsulása?",
+                "Egy fékező kerékpár 3 s alatt 6 m/s-ról 0 m/s-ra lassul. Add meg a gyorsulást (előjellel)!",
+                "Egy lift 2,0 s alatt 0-ról 1,6 m/s-ra gyorsul. Mekkora az átlagos gyorsulás, és mit jelent ez a mozgásra?"
+              ]
+            },
+            {
+              "key": "v_t_grafikon_alatti_terulet",
+              "name": "A v–t grafikon alatti terület jelentése",
+              "short_description": "Értelmezze a v–t grafikon alatti területet mint megtett utat, és számolja ki egyszerű alakzatok esetén.",
+              "example_tasks": [
+                "Egy test sebessége 0–4 s között állandó 3 m/s. Mennyi utat tesz meg? Mutasd meg grafikon alatti területtel is!",
+                "Egy test sebessége 0-ról 8 m/s-ra nő 4 s alatt egyenletesen. Mennyi utat tesz meg ezalatt?",
+                "Egy v–t grafikon trapéz alakú: 2 s-ig 4 m/s, majd 6 s-ig lineárisan 10 m/s-ig nő. Számold ki a 0–6 s közti utat!"
+              ]
+            },
+            {
+              "key": "szabadeses_es_gravitacios_gyorsulas",
+              "name": "Szabadesés és a gravitációs gyorsulás",
+              "short_description": "Ismerje a szabadesés modelljét, a g ≈ 9,81 m/s² jelentését, és alkalmazza egyszerű feladatokban (levegőellenállás elhanyagolásával).",
+              "example_tasks": [
+                "Egy test nyugalomból esik. Mennyi a sebessége 2,0 s múlva? Használd g = 9,81 m/s²!",
+                "Mekkora utat tesz meg egy szabadeső test 3,0 s alatt nyugalomból indulva? (g = 9,81 m/s²)",
+                "Egy követ ledobnak egy hídról, és 1,8 s múlva ér vizet. Becsüld meg a híd magasságát (g = 9,81 m/s²)!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "osszetett_mozgasok_alapjai",
+          "name": "Összetett mozgások alapjai",
+          "short_description": "Egyszerű összetett mozgások szemlélete (pl. vízszintes hajítás, körmozgás alapfogalmai), valamint a mozgások kvalitatív elemzése.",
+          "sub_topics": [
+            {
+              "key": "vizszintes_hajitas_szemlelete",
+              "name": "Vízszintes hajítás szemlélete",
+              "short_description": "Értelmezze a vízszintes hajítást két független mozgás (egyenletes vízszintes + szabadesés függőleges) összetevőjeként, egyszerű becslésekkel.",
+              "example_tasks": [
+                "Egy labdát 5,0 m/s vízszintes sebességgel gurítanak le egy 1,25 m magas asztalról. Mennyi idő alatt ér földet? (g = 9,81 m/s²)",
+                "Az előző feladatban mekkora vízszintes távolságra esik le a labda?",
+                "Mi változik a röppályában, ha a vízszintes kezdősebesség duplájára nő, de a magasság ugyanaz marad?"
+              ]
+            },
+            {
+              "key": "egyenletes_kormozgas_alapfogalmak",
+              "name": "Egyenletes körmozgás alapfogalmak",
+              "short_description": "Ismerje a periódusidő, frekvencia, szögsebesség és kerületi sebesség fogalmát, és alkalmazza egyszerű számításokban.",
+              "example_tasks": [
+                "Egy körhinta 12 s alatt tesz meg egy teljes fordulatot. Add meg a frekvenciát és a szögsebességet!",
+                "A körhinta sugara 3,0 m. Mekkora a kerületi sebesség az előző adatokkal?",
+                "Egy ventilátor percenként 1800-at fordul. Add meg a fordulatszámot Hz-ben és a periódusidőt!"
+              ]
+            },
+            {
+              "key": "mozgaselemzes_valos_helyzetekben",
+              "name": "Mozgáselemzés valós helyzetekben",
+              "short_description": "Elemezzen egyszerű mindennapi mozgásokat (pl. fékezés, gyorsítás, út–idő szakaszok), és válasszon megfelelő modellt és mennyiségeket a leíráshoz.",
+              "example_tasks": [
+                "Egy autó városban 10 s-ig egyenletesen halad, majd 5 s-ig gyorsít, végül 3 s alatt megáll. Készíts v–t grafikon vázlatot!",
+                "Egy futó 100 m-es távon az első 20 m-en gyorsul, majd közel állandó sebességgel halad. Hogyan nézne ki az s–t grafikonja? Indokold!",
+                "Egy megfigyelés szerint a buszmegállóból induló busz 0–6 s között egyenletesen gyorsul 0-ról 9 m/s-ra. Becsüld meg, mekkora utat tett meg indulás után 6 s alatt!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "meres_a_mozgasvizsgalatban",
+          "name": "Mérés a mozgásvizsgálatban",
+          "short_description": "Mozgások kísérletes vizsgálata (pl. csúszó kocsi, videóelemzés), adatrögzítés, grafikonok és következtetések.",
+          "sub_topics": [
+            {
+              "key": "idomeres_es_tavolsagmeres_mozgasnal",
+              "name": "Idő- és távolságmérés mozgásoknál",
+              "short_description": "Válasszon megfelelő mérőeszközöket (stopper, mérőszalag, videó), és becsülje a mérések bizonytalanságát.",
+              "example_tasks": [
+                "Írj le egy mérési elrendezést, amellyel meghatározod egy guruló kocsi sebességét két jel között!",
+                "Egy videón 30 fps a felvétel. Mit jelent ez az időfelbontás szempontjából, és milyen hiba adódhat belőle?",
+                "Egy 2,00 m-es pályaszakaszt 1,28 s alatt tett meg a kocsi. Add meg a sebességet és becsüld a relatív hibát, ha az időmérés hibája ±0,05 s!"
+              ]
+            },
+            {
+              "key": "grafikonillesztes_es_kovetkeztetes",
+              "name": "Grafikonillesztés és következtetés",
+              "short_description": "Vonjon le következtetést mért adatokból: a grafikon alakja alapján döntse el, hogy a mozgás egyenletes, gyorsuló vagy összetettebb.",
+              "example_tasks": [
+                "Egy s–t grafikon parabolaszerű. Milyen mozgásra utal ez? Indokold a grafikon alakja alapján!",
+                "Egy v–t grafikon egyenes, negatív meredekséggel. Mit jelent ez a gyorsulás előjelére és a mozgás jellegére?",
+                "Egy mérési sorozatban a v–t grafikon nem tökéletesen egyenes. Sorolj fel 2 lehetséges okot (mérési hiba vagy modellkorlát)!"
+              ]
+            },
+            {
+              "key": "kiserlet_szabadeses_merese",
+              "name": "Szabadesés kísérletes mérése",
+              "short_description": "Tervezzen és értékeljen egyszerű kísérletet a g meghatározására (pl. ejtési idő és magasság mérése), és értelmezze az eltéréseket.",
+              "example_tasks": [
+                "Tervezz kísérletet a g meghatározására ismert magasságból ejtett testekkel! Milyen adatokat mérsz, és hogyan számolsz?",
+                "Egy 1,50 m magasról ejtett golyó esési ideje átlagosan 0,56 s. Számold ki a g becsült értékét, majd hasonlítsd a 9,81 m/s²-hez!",
+                "Sorolj fel 3 tényezőt, ami miatt a mért g eltérhet a táblázatos értéktől (pl. reakcióidő, légellenállás, magasságmérés)!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "erotan_es_egyensuly",
+      "name": "Erőtan és egyensúly",
+      "short_description": "Az erőhatások jellemzése, Newton törvényei, a testek egyensúlya és egyszerű mechanikai szerkezetek működésének fizikai értelmezése.",
+      "sub_topics": [
+        {
+          "key": "ero_fogalma_es_erohatok",
+          "name": "Az erő fogalma és erőhatások",
+          "short_description": "Az erő mint kölcsönhatás, hatása a mozgásállapotra és alakváltozásra; erők ábrázolása és jellemzése.",
+          "sub_topics": [
+            {
+              "key": "ero_jellemzoi_es_abrzolasa",
+              "name": "Az erő jellemzői és ábrázolása",
+              "short_description": "Határozza meg az erő nagyságát, irányát, hatásvonalát és támadáspontját, és ábrázolja vektorként.",
+              "example_tasks": [
+                "Rajzold fel egy asztalon nyugvó könyvre ható erőket, és nevezd meg mindegyiket!",
+                "Egy 10 N nagyságú erőt ábrázolj 1 cm = 2 N méretarányban! Mekkora lesz a nyíl hossza?",
+                "Mi változik az erőhatásban, ha ugyanazt az erőt más támadáspontban fejtjük ki? Adj hétköznapi példát!"
+              ]
+            },
+            {
+              "key": "ero_merese_es_dinamometer",
+              "name": "Erő mérése dinamométerrel",
+              "short_description": "Az erő mérése rugós erőmérővel, a skála leolvasása és a mérési bizonytalanság értelmezése.",
+              "example_tasks": [
+                "Egy dinamométer skálaosztása 0,5 N. A mutató 3,5 N-nál áll. Add meg a mérési eredményt!",
+                "Egy test súlyát dinamométerrel mérjük. Hogyan változik a mérés eredménye, ha a testet gyorsuló liftben mérjük?",
+                "Miért nem alkalmas a dinamométer tömeg mérésére? Magyarázd meg röviden!"
+              ]
+            },
+            {
+              "key": "erohatasok_kolcsonos_jellege",
+              "name": "Az erőhatások kölcsönös jellege",
+              "short_description": "Ismerje fel, hogy az erők kölcsönhatások, és minden erőhatás párban lép fel.",
+              "example_tasks": [
+                "Egy diák meglöki a falat. Milyen erőkkel hatnak egymásra? Miért nem mozdul el a fal?",
+                "Egy könyv az asztalon nyugszik. Az asztal milyen erővel hat a könyvre, és miért?",
+                "Magyarázd el egy példán keresztül, miért nem lehet „egyoldalú” erőhatás!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "newton_torvenyei",
+          "name": "Newton törvényei",
+          "short_description": "A mozgás alaptörvényei, tehetetlenség, gyorsulás és az erő–tömeg–gyorsulás kapcsolata.",
+          "sub_topics": [
+            {
+              "key": "tehetetlenseg_es_elso_torveny",
+              "name": "Tehetetlenség és az I. törvény",
+              "short_description": "Értelmezze a tehetetlenség fogalmát és a nyugalom, illetve az egyenesvonalú egyenletes mozgás feltételeit.",
+              "example_tasks": [
+                "Mi történik egy autóban lévő tárggyal hirtelen fékezéskor, és miért?",
+                "Miért nehéz elindítani egy nagy tömegű szekrényt, de könnyebb mozgásban tartani?",
+                "Adj példát olyan helyzetre, ahol az I. törvény mindennapi tapasztalatként megjelenik!"
+              ]
+            },
+            {
+              "key": "masodik_torveny_gyorsulas",
+              "name": "A II. törvény és a gyorsulás",
+              "short_description": "Alkalmazza az F = m·a összefüggést, és értelmezze az erő és a tömeg szerepét a gyorsulásban.",
+              "example_tasks": [
+                "Egy 2,0 kg tömegű testre 6,0 N erő hat. Mekkora a gyorsulása?",
+                "Ugyanakkora erő hat egy 1 kg-os és egy 4 kg-os testre. Melyik gyorsul jobban és miért?",
+                "Egy bevásárlókocsi tolásakor miért nő a gyorsulás, ha nagyobb erőt fejtünk ki?"
+              ]
+            },
+            {
+              "key": "harmadik_torveny_hatas_ellenhatas",
+              "name": "A III. törvény (hatás–ellenhatás)",
+              "short_description": "Ismerje fel az erő–ellen­erő párokat és különítse el őket az egyensúlyi erőktől.",
+              "example_tasks": [
+                "Egy ember a talajt tolja járás közben. Milyen erők hatnak, és melyek alkotnak erőpárt?",
+                "Miért nem oltják ki egymást a hatás–ellenhatás erői?",
+                "Azonosítsd az erőpárokat egy úszó ember és a víz kölcsönhatásában!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "surlodas_es_ellenallas",
+          "name": "Súrlódás és közegellenállás",
+          "short_description": "A súrlódási erő fajtái, hatása a mozgásra, valamint a levegő- és közegellenállás kvalitatív értelmezése.",
+          "sub_topics": [
+            {
+              "key": "tapadasi_es_csuszasi_surlodas",
+              "name": "Tapadási és csúszási súrlódás",
+              "short_description": "Különítse el a tapadási és csúszási súrlódást, és értelmezze szerepüket a mozgás megindulásában és fenntartásában.",
+              "example_tasks": [
+                "Miért nehezebb elindítani egy nehéz ládát, mint egyenletesen húzni?",
+                "Egy test egyenes vonalú mozgását hogyan befolyásolja a csúszási súrlódás?",
+                "Adj két példát, amikor a nagy súrlódás előnyös, és kettőt, amikor hátrányos!"
+              ]
+            },
+            {
+              "key": "surlodasi_ero_szamitasa_egyszeruen",
+              "name": "A súrlódási erő egyszerű számítása",
+              "short_description": "Alkalmazza az Fs = μ·N összefüggést egyszerű feladatokban, vízszintes felületen.",
+              "example_tasks": [
+                "Egy 5,0 kg-os test vízszintes asztalon csúszik, μ = 0,20. Mekkora a súrlódási erő? (g = 9,81 m/s²)",
+                "Hogyan változik a súrlódási erő, ha a test tömege megkétszereződik?",
+                "Mi történik a súrlódási erővel, ha a felület anyagát megváltoztatjuk?"
+              ]
+            },
+            {
+              "key": "kozegellenallas_szemlelete",
+              "name": "Közegellenállás szemlélete",
+              "short_description": "Értelmezze a közegellenállás szerepét nagy sebességeknél, és a hatását a végsebesség kialakulására.",
+              "example_tasks": [
+                "Miért esik lassabban egy ejtőernyős nyitott ernyővel?",
+                "Miért fontos az autók és kerékpárok áramvonalas kialakítása?",
+                "Adj példát arra, amikor a közegellenállás elhanyagolható, és amikor nem!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "egyensuly_es_egyszeru_gepek",
+          "name": "Egyensúly és egyszerű gépek",
+          "short_description": "A testek egyensúlyának feltételei, erők eredője, valamint az egyszerű gépek működési elve.",
+          "sub_topics": [
+            {
+              "key": "eroeredmeny_es_egyensuly",
+              "name": "Erőeredő és egyensúly",
+              "short_description": "Határozza meg több erő eredőjét és az egyensúly feltételeit egyenes vonal mentén.",
+              "example_tasks": [
+                "Két ellentétes irányú erő hat egy testre: 8 N és 5 N. Mekkora az eredő és merre mutat?",
+                "Milyen feltétel mellett marad egy test nyugalomban több erő hatása alatt?",
+                "Rajzolj erőábrát egy függesztett lámpáról!"
+              ]
+            },
+            {
+              "key": "emelo_egyszeru_gep",
+              "name": "Az emelő mint egyszerű gép",
+              "short_description": "Értelmezze az emelő működését, az erőkar és teherkar szerepét, valamint az erőmegtakarítást.",
+              "example_tasks": [
+                "Egy kétkarú emelőn a teherkar 0,20 m, az erőkar 0,80 m. Mekkora erő szükséges 200 N teher emeléséhez?",
+                "Miért nem „spórolunk” munkát az emelő használatával?",
+                "Adj hétköznapi példát emelő alkalmazására!"
+              ]
+            },
+            {
+              "key": "csiga_es_lejto",
+              "name": "Csiga és lejtő",
+              "short_description": "Az álló- és mozgócsiga, valamint a lejtő működésének szemléletes értelmezése és egyszerű számítások.",
+              "example_tasks": [
+                "Egy állócsigával felemelünk egy terhet. Mekkora erő szükséges ideális esetben?",
+                "Mi a különbség az álló- és a mozgócsiga között az erő szempontjából?",
+                "Miért könnyebb felhúzni egy ládát lejtőn, mint függőlegesen?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "munka_energia_teljesitmeny",
+      "name": "Munka, energia és teljesítmény",
+      "short_description": "A mechanikai munka és energia fogalma, az energiamegmaradás elve, valamint a teljesítmény és hatásfok értelmezése gyakorlati példákon.",
+      "sub_topics": [
+        {
+          "key": "mechanikai_munka",
+          "name": "Mechanikai munka",
+          "short_description": "A munka definíciója, számítása állandó erő esetén, és a munka előjele.",
+          "sub_topics": [
+            {
+              "key": "munka_fogalma_es_szamitasa",
+              "name": "A munka fogalma és számítása",
+              "short_description": "Számolja ki a munkát F·s alakban, és értelmezze pozitív, negatív és zérus munkaként.",
+              "example_tasks": [
+                "Egy 50 N nagyságú erő 4,0 m-rel tol el egy testet az erő irányában. Mekkora munkát végzünk?",
+                "Mekkora munkát végez a súrlódási erő, ha 10 m-en 5 N nagyságú és a mozgással ellentétes irányú?",
+                "Miért nem végzünk munkát, amikor egy falat tolunk, de az nem mozdul el?"
+              ]
+            },
+            {
+              "key": "ferde_iranyu_ero_munkaja",
+              "name": "Ferde irányú erő munkája",
+              "short_description": "Értelmezze, hogy csak az elmozdulás irányába eső erőkomponens végez munkát.",
+              "example_tasks": [
+                "Egy testet 30°-os szögben húzunk 20 N erővel 5 m-en. Mekkora a végzett munka?",
+                "Miért nem végez munkát a centripetális erő egyenletes körmozgásnál?",
+                "Adj példát, amikor egy erő hat, de nem végez munkát!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "mechanikai_energia",
+          "name": "Mechanikai energia",
+          "short_description": "A mozgási, helyzeti és rugalmas energia fogalma és számítása.",
+          "sub_topics": [
+            {
+              "key": "mozgasienergia",
+              "name": "Mozgási energia",
+              "short_description": "Számolja ki a mozgási energiát és értelmezze a sebesség és tömeg szerepét.",
+              "example_tasks": [
+                "Egy 1,5 kg-os test 4,0 m/s sebességgel mozog. Mekkora a mozgási energiája?",
+                "Hogyan változik a mozgási energia, ha a sebességet megduplázzuk?",
+                "Miért veszélyesebb a gyorsabb jármű ütközése?"
+              ]
+            },
+            {
+              "key": "helyzeti_es_rugalmas_energia",
+              "name": "Helyzeti és rugalmas energia",
+              "short_description": "Értelmezze a gravitációs helyzeti energiát és a rugalmas energia tárolását.",
+              "example_tasks": [
+                "Egy 2,0 kg-os test 3,0 m magasan van. Mekkora a helyzeti energiája? (g = 9,81 m/s²)",
+                "Mi történik a helyzeti energiával, amikor a test leesik?",
+                "Egy megnyújtott rugó milyen formában tárol energiát?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "energiamegmaradas_es_teljesitmeny",
+          "name": "Energiamegmaradás és teljesítmény",
+          "short_description": "Az energiamegmaradás elve, a teljesítmény fogalma és a hatásfok értelmezése technikai alkalmazásokban.",
+          "sub_topics": [
+            {
+              "key": "energiamegmaradas_elv",
+              "name": "Az energiamegmaradás elve",
+              "short_description": "Ismerje fel, hogy zárt rendszerben az energia nem vész el, csak átalakul.",
+              "example_tasks": [
+                "Írd le egy inga mozgásában az energiaátalakulásokat!",
+                "Miért nem emelkedik vissza ugyanakkora magasságba egy labda minden pattogás után?",
+                "Adj példát energiamegmaradásra egy hétköznapi eszköz működésében!"
+              ]
+            },
+            {
+              "key": "teljesitmeny_es_hatasfok",
+              "name": "Teljesítmény és hatásfok",
+              "short_description": "Számolja ki a teljesítményt és értelmezze a hatásfokot egyszerű gépeknél.",
+              "example_tasks": [
+                "Egy motor 600 J munkát végez 10 s alatt. Mekkora a teljesítménye?",
+                "Egy gép 1000 J energiát vesz fel és 750 J hasznos munkát végez. Mekkora a hatásfoka?",
+                "Miért fontos a nagy hatásfok a technikai eszközöknél?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "impulzus_lenduletmegmaradas_utkozesek",
+      "name": "Impulzus, lendületmegmaradás, ütközések",
+      "short_description": "Az impulzus fogalma és megmaradása zárt rendszerben, az erőhatás időtartama (impulzusváltozás), valamint egyszerű rugalmas és rugalmatlan ütközések értelmezése.",
+      "sub_topics": [
+        {
+          "key": "impulzus_fogalma_es_impulzustetel",
+          "name": "Impulzus fogalma és impulzustétel",
+          "short_description": "Az impulzus vektormennyiségként való értelmezése, valamint az impulzusváltozás kapcsolata az erővel és a hatásidővel.",
+          "sub_topics": [
+            {
+              "key": "impulzus_definicio_es_egysegek",
+              "name": "Impulzus definíciója és mértékegysége",
+              "short_description": "Alkalmazza az I = m·v összefüggést, és adja meg az impulzus mértékegységét és irányát.",
+              "example_tasks": [
+                "Egy 0,50 kg-os labda 8,0 m/s sebességgel halad kelet felé. Add meg az impulzusát nagysággal és iránnyal!",
+                "Egy 1200 kg-os autó 54 km/h sebességgel halad. Számold ki az impulzusát m/s-ban megadott sebességgel!",
+                "Két azonos tömegű test közül az egyik kétszer akkora sebességgel halad. Hányszor akkora az impulzusa, és miért?"
+              ]
+            },
+            {
+              "key": "impulzustetel_es_atlagero",
+              "name": "Impulzustétel és átlagos erő",
+              "short_description": "Használja az ΔI = Fátlag·Δt kapcsolatot az erőhatás és a megállítási idő szerepének értelmezésére.",
+              "example_tasks": [
+                "Egy 0,20 kg-os labda 10 m/s-ról 0-ra fékeződik 0,05 s alatt. Mekkora az átlagos fékezőerő nagysága?",
+                "Ugyanazt a labdát 0,10 s alatt állítjuk meg. Hogyan változik az átlagos erő az előző feladathoz képest?",
+                "Magyarázd el, miért csökkenti a légzsák a sérülésveszélyt az impulzustétel alapján!"
+              ]
+            },
+            {
+              "key": "erohatas_idotartama_es_utkozes",
+              "name": "Az erőhatás időtartama ütközéseknél",
+              "short_description": "Értelmezze, hogyan befolyásolja az ütközési idő az erők nagyságát, és kapcsolja ezt védelmi megoldásokhoz (sisak, gyűrődő zóna).",
+              "example_tasks": [
+                "Egy autó ütközéskor 0,15 s alatt áll meg, gyűrődő zónával 0,30 s alatt. Melyik esetben nagyobb az átlagos erő, és miért?",
+                "Miért előnyös a puha talaj (pl. homok) ugrásnál a láb ízületei számára impulzus szempontból?",
+                "Adj két példát olyan eszközre, ami az ütközési idő növelésével csökkenti a káros erőt!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "lenduletmegmaradas_zart_rendszerben",
+          "name": "Lendületmegmaradás zárt rendszerben",
+          "short_description": "A rendszer szintű gondolkodás, külső erők elhanyagolása és a teljes impulzus megmaradása kölcsönhatások során.",
+          "sub_topics": [
+            {
+              "key": "zart_rendszer_feltetele",
+              "name": "Zárt rendszer feltétele és külső erők",
+              "short_description": "Döntse el, mikor tekinthető egy rendszer zártnak, és értelmezze a külső erők hatását a lendületmegmaradásra.",
+              "example_tasks": [
+                "Két korcsolyázó ellöki egymást sima jégen. Miért alkalmazható jól a lendületmegmaradás?",
+                "Egy guruló kocsi ütközik, de a talaj súrlódása jelentős. Milyen irányba torzíthatja az eredményt a súrlódás?",
+                "Nevezd meg, mi számít külső erőnek egy két testből álló rendszer vizsgálatánál!"
+              ]
+            },
+            {
+              "key": "kettestes_kolcsonhatas_egyszeru_szamitas",
+              "name": "Két test kölcsönhatása: egyszerű számítások",
+              "short_description": "Alkalmazza a pössz = állandó elvet két testre 1D-ben, és oldjon meg alap lendületmegmaradási feladatokat.",
+              "example_tasks": [
+                "Két kocsi ütközik: m1 = 1,0 kg, v1 = 3,0 m/s; m2 = 2,0 kg, v2 = 0. Rugalmatlanul összetapadnak. Mekkora lesz a közös sebesség?",
+                "Egy 60 kg-os ember 2,0 m/s sebességgel ugrik egy 20 kg-os, nyugalomban lévő csónakba. Tegyük fel, hogy együtt mozognak tovább. Mekkora a közös sebesség?",
+                "Két azonos tömegű korong közül az egyik 4,0 m/s-al halad, a másik áll. Ütközés után az első megáll. Mekkora sebességgel indul a második, ha a lendület megmarad?"
+              ]
+            },
+            {
+              "key": "robbanas_es_visszalokes",
+              "name": "Robbanás és visszalökés jelensége",
+              "short_description": "Értelmezze a belső erők okozta sebességváltozásokat (pl. robbanás, rakétaelv) lendületmegmaradással.",
+              "example_tasks": [
+                "Egy 3,0 kg-os test két darabra esik szét: 1,0 kg és 2,0 kg. A 1,0 kg-os darab 6,0 m/s sebességgel repül jobbra. Mekkora a 2,0 kg-os darab sebessége, ha a kezdeti sebesség 0?",
+                "Miért „rúg vissza” egy fegyver elsütéskor? Fogalmazz meg magyarázatot lendület alapján!",
+                "Egy rakéta miért képes vákuumban is gyorsulni? Írd le a jelenséget a lendületmegmaradással!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "utkozesek_tipusai_es_energia",
+          "name": "Ütközések típusai és energia",
+          "short_description": "Rugalmas és rugalmatlan ütközések különbsége, az impulzus megmaradása és a mozgási energia változásának értelmezése.",
+          "sub_topics": [
+            {
+              "key": "rugalmas_utkozes_szemlelete",
+              "name": "Rugalmas ütközés szemlélete",
+              "short_description": "Ismerje fel, hogy rugalmas ütközésnél a mozgási energia (közel) megmarad, és értelmezze ezt példákon.",
+              "example_tasks": [
+                "Miért közel rugalmas ütközés a biliárdgolyók ütközése? Milyen feltételnek kell közel teljesülnie?",
+                "Két azonos tömegű golyó ütközik: az egyik halad, a másik áll. Mi történik ideális rugalmas ütközésnél a sebességekkel?",
+                "Egy rugalmas ütközés után miért nem melegszik fel jelentősen a két test? Magyarázd meg!"
+              ]
+            },
+            {
+              "key": "rugalmatlan_utkozes_es_energiaveszteseg",
+              "name": "Rugalmatlan ütközés és energiaveszteség",
+              "short_description": "Értelmezze, hogy rugalmatlan ütközésnél a mozgási energia egy része belső energiává alakul (de az impulzus megmarad).",
+              "example_tasks": [
+                "Egy golyó belefúródik egy fa tuskóba (összetapadnak). Miért csökken a mozgási energia, és hová „tűnik”?",
+                "Két kocsi összetapadva halad tovább ütközés után. Miért marad meg az impulzus, de miért nem marad meg a mozgási energia?",
+                "Adj két hétköznapi példát rugalmatlan ütközésre!"
+              ]
+            },
+            {
+              "key": "utkozesek_osszefoglalasa_grafikon_es_kiserlet",
+              "name": "Ütközések összefoglalása: grafikon és kísérleti értelmezés",
+              "short_description": "Hasonlítsa össze az ütközéstípusokat mérések és grafikonok alapján (pl. v–t, F–t), és vonjon le következtetéseket.",
+              "example_tasks": [
+                "Képzeld el, hogy egy ütközésnél az erő-idő grafikon csúcsa magas, de keskeny. Mit jelent ez az ütközési időre és az erőre?",
+                "Egy kísérletben a kocsi ütközés után visszapattan. Melyik ütközéstípushoz áll közelebb, és mi a jel erre?",
+                "Egy ütközésnél az impulzusváltozás ugyanakkora, de a maximum erő kisebb. Hogyan változhatott az ütközési idő?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "anyag_szerkezet_es_hotani_alapjelensegek",
+      "name": "Anyagszerkezet és hőtani alapjelenségek",
+      "short_description": "Az anyag részecskemodellje, hőmérséklet és belső energia, hőterjedési módok és a mindennapi hőjelenségek fizikai magyarázata.",
+      "sub_topics": [
+        {
+          "key": "reszecskemodell_es_belso_energia",
+          "name": "Részecskemodell és belső energia",
+          "short_description": "Az anyag szemcsés szerkezete, részecskék mozgása, hőmérséklet és belső energia kapcsolata.",
+          "sub_topics": [
+            {
+              "key": "reszecskek_mozgasa_es_homerseklet",
+              "name": "A részecskék mozgása és a hőmérséklet",
+              "short_description": "Értelmezze a hőmérsékletet a részecskék átlagos mozgási állapotával összefüggésben, és különítse el a hőmérsékletet a hőtől.",
+              "example_tasks": [
+                "Miért érezzük hidegebbnek a fémet, mint a fát ugyanabban a szobában, ha mindkettő azonos hőmérsékletű?",
+                "Magyarázd el részecskemodellel, mi történik melegítéskor egy szilárd test részecskéivel!",
+                "Egy diák azt mondja: „a testben sok a hőmérséklet”. Mi a hiba ebben a megfogalmazásban?"
+              ]
+            },
+            {
+              "key": "belso_energia_valtozasa_munka_es_hokozles",
+              "name": "A belső energia változása: munka és hőközlés",
+              "short_description": "Ismerje fel, hogy a belső energia hőközléssel és munkavégzéssel is változhat, és értelmezze ezt példákon.",
+              "example_tasks": [
+                "Miért melegszik fel a kerékpár pumpája használat közben? Hőközlés vagy munkavégzés miatt nő a belső energia?",
+                "Egy fékbetét használat közben felmelegszik. Írd le, milyen energiaátalakulás történik!",
+                "Adj példát, amikor a belső energia úgy nő, hogy közben nincs külső hőközlés!"
+              ]
+            },
+            {
+              "key": "allapotok_es_reszecskerendezettseg",
+              "name": "Halmazállapotok és részecskerendezettség",
+              "short_description": "Hasonlítsa össze a szilárd, folyékony és gáz halmazállapotot részecskemodell alapján (kötések, mozgás, rendezettség).",
+              "example_tasks": [
+                "Miért tartja meg alakját a szilárd test, de a folyadék felveszi az edény alakját? Magyarázd részecskemodellel!",
+                "Miért könnyen összenyomható a gáz, de a folyadék alig? Írj rövid magyarázatot!",
+                "Sorolj fel 2-2 jellemzőt a részecskék mozgására szilárd, folyékony és gáz állapotban!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hotagulas_es_homerseklet_merese",
+          "name": "Hőtágulás és hőmérséklet mérése",
+          "short_description": "A hőtágulás jelensége szilárd, folyékony és gáz anyagoknál, valamint a hőmérséklet mérésének elve és gyakorlata.",
+          "sub_topics": [
+            {
+              "key": "linearis_es_terfogati_hotagulas",
+              "name": "Lineáris és térfogati hőtágulás",
+              "short_description": "Értelmezze a hőtágulást és alkalmazza egyszerű helyzetekben (pl. dilatációs hézag), kvalitatív szinten.",
+              "example_tasks": [
+                "Miért hagynak dilatációs hézagot a vasúti síneknél és hidaknál? Magyarázd meg!",
+                "Miért nehéz lecsavarni egy befőttesüveg fém tetejét, és miért segít, ha meleg víz alá tartjuk?",
+                "Adj példát a hőtágulás káros és hasznos felhasználására a mindennapokból!"
+              ]
+            },
+            {
+              "key": "homerseklet_skala_es_homero_mukodese",
+              "name": "Hőmérsékleti skálák és hőmérők működése",
+              "short_description": "Ismerje a Celsius-skálát, a Kelvin-skála alapötletét, és értse a hőmérők működésének alapelvét (pl. folyadékos hőmérő).",
+              "example_tasks": [
+                "Írd le, mit jelent a 0 °C és a 100 °C a Celsius-skálán! Milyen fizikai jelenségekhez kötődik?",
+                "Váltsd át: 25 °C → K (használd: T(K) = t(°C) + 273)!",
+                "Miért nem alkalmas egy folyadékos hőmérő nagyon magas hőmérsékletek mérésére? Adj két okot!"
+              ]
+            },
+            {
+              "key": "hotagulas_kiserlet_es_hibaforrasok",
+              "name": "Hőtágulás kísérleti vizsgálata és hibaforrások",
+              "short_description": "Tervezzen egyszerű kísérletet a hőtágulás kimutatására, és azonosítsa a mérési hibaforrásokat.",
+              "example_tasks": [
+                "Írj le egy kísérletet, amellyel kimutatható egy fémrúd hőtágulása melegítéskor!",
+                "Egy hőtágulási kísérletben a rúd egyik vége is melegszik a befogásnál. Miért okozhat ez hibát?",
+                "Sorolj fel 3 biztonsági szabályt, amit melegítéses kísérletnél be kell tartani!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hoterjedes_modjai",
+          "name": "Hőterjedés módjai",
+          "short_description": "A hővezetés, hőáramlás és hősugárzás jelenségeinek összehasonlítása és alkalmazása hétköznapi és technikai példákban.",
+          "sub_topics": [
+            {
+              "key": "hovetetes_anyagfuggese",
+              "name": "Hővezetés és anyagfüggés",
+              "short_description": "Értelmezze, hogy az anyagok hővezető képessége eltérő, és kapcsolja ezt szigeteléshez és mindennapi tapasztalatokhoz.",
+              "example_tasks": [
+                "Miért készül a fazék nyele gyakran műanyagból vagy fából? Melyik hőterjedési mód a lényeges?",
+                "Rendezd sorba várható hővezetés szerint: réz, üveg, fa, levegő! Indokold röviden!",
+                "Miért segít a réteges öltözködés télen? Magyarázd hővezetés szempontból!"
+              ]
+            },
+            {
+              "key": "hoaramlas_legkor_es_viz",
+              "name": "Hőáramlás levegőben és folyadékban",
+              "short_description": "Írja le a konvekció kialakulását sűrűségkülönbségek miatt, és értelmezze meteorológiai és hétköznapi példákban.",
+              "example_tasks": [
+                "Miért emelkedik fel a meleg levegő a szobában, és hol lesz a hidegebb levegő?",
+                "Miért forr fel gyorsabban a víz, ha alulról melegítjük, mint ha felülről tennénk?",
+                "Tervezz egyszerű kísérletet (pl. színezett vízzel) a hőáramlás kimutatására!"
+              ]
+            },
+            {
+              "key": "hosugarzas_es_felszin",
+              "name": "Hősugárzás és a felület szerepe",
+              "short_description": "Értelmezze a hősugárzást, a fekete és fényes felületek eltérő viselkedését, és kapcsolja energiahatékonysághoz.",
+              "example_tasks": [
+                "Miért melegszik fel jobban a sötét póló napsütésben, mint a fehér?",
+                "Miért használnak sokszor fényes (tükröző) fóliát termoszokban vagy mentőtakarón?",
+                "Egy radiátor mögé fényes fóliát tesznek. Melyik hőterjedési módot befolyásolja főként, és hogyan?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "allapotvaltozasok_es_kalorimetria",
+      "name": "Állapotváltozások és kalorimetria",
+      "short_description": "Az anyag halmazállapot-változásaihoz kapcsolódó hőjelenségek, a látens hő fogalma, valamint egyszerű hőmérleg-feladatok kísérletes és számításos értelmezése.",
+      "sub_topics": [
+        {
+          "key": "olvadás_fagyás_parolgás_lecsapodas",
+          "name": "Olvadás, fagyás, párolgás, lecsapódás",
+          "short_description": "Az állapotváltozások energetikai jellemzése, hőmérséklet állandósága az átalakulás közben, mindennapi példák.",
+          "sub_topics": [
+            {
+              "key": "latens_ho_fogalma",
+              "name": "A látens hő fogalma",
+              "short_description": "Értelmezze, hogy állapotváltozáskor a hőmérséklet nem változik, miközben a belső energia nő vagy csökken.",
+              "example_tasks": [
+                "Miért nem nő a jég hőmérséklete 0 °C fölé olvadás közben, hiába melegítjük?",
+                "Mi történik a részecskékkel olvadáskor a részecskemodell szerint?",
+                "Adj két példát olyan helyzetre, amikor állapotváltozás zajlik hőmérséklet-változás nélkül!"
+              ]
+            },
+            {
+              "key": "parolgas_hutohatasa",
+              "name": "A párolgás hűtőhatása",
+              "short_description": "Magyarázza meg a párolgás hűtőhatását a nagyobb energiájú részecskék eltávozásával.",
+              "example_tasks": [
+                "Miért hűl le a bőrünk, ha alkoholos fertőtlenítőt használunk?",
+                "Miért hatékonyabb a szélben a párolgás okozta hűtés?",
+                "Miért izzad az ember melegben, és hogyan segít ez a test hőszabályozásában?"
+              ]
+            },
+            {
+              "key": "forras_es_forrasponthatasok",
+              "name": "Forrás és forráspontot befolyásoló tényezők",
+              "short_description": "Értelmezze a forrást és a forráspont nyomásfüggését egyszerű példákon.",
+              "example_tasks": [
+                "Miért forr alacsonyabb hőmérsékleten a víz magas hegyekben?",
+                "Miért lehet kuktában gyorsabban főzni az ételt?",
+                "Hogyan különbözik a forrás a párolgástól részecskemodell szempontjából?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kalorimetria_es_homersekletvaltozas",
+          "name": "Kalorimetria és hőmérséklet-változás",
+          "short_description": "A hőközlés és hőmérséklet-változás kapcsolata, fajhő fogalma és egyszerű hőmennyiség-számítások.",
+          "sub_topics": [
+            {
+              "key": "fajho_fogalma",
+              "name": "A fajhő fogalma",
+              "short_description": "Értelmezze a fajhőt mint anyagi jellemzőt, és alkalmazza a Q = m·c·ΔT összefüggést.",
+              "example_tasks": [
+                "Mennyi hő szükséges 2,0 kg víz 20 °C-ról 30 °C-ra melegítéséhez? (c = 4200 J/kg·°C)",
+                "Miért melegszik fel gyorsabban a homok a napon, mint a víz?",
+                "Melyik anyag alkalmasabb hőtárolásra: nagy vagy kis fajhőjű? Indokold!"
+              ]
+            },
+            {
+              "key": "homersekletvaltozas_merese_kiserletben",
+              "name": "Hőmérséklet-változás mérése kísérletben",
+              "short_description": "Egyszerű kalorimetriai kísérletek tervezése, mérési bizonytalanságok és hőveszteségek értelmezése.",
+              "example_tasks": [
+                "Írj le egy kísérletet, amellyel meghatározod egy fém fajhőjét víz segítségével!",
+                "Miért kell a kalorimétert hőszigetelni a mérés során?",
+                "Sorolj fel két okot, ami miatt a mért fajhő eltérhet a táblázatos értéktől!"
+              ]
+            },
+            {
+              "key": "homero_es_energiamerleg",
+              "name": "Hőmérleg és energiamérleg",
+              "short_description": "Alkalmazza az energiamérleg elvét keverési és hőcsere-feladatokban.",
+              "example_tasks": [
+                "Keverünk 1,0 kg 20 °C-os és 1,0 kg 60 °C-os vizet. Mi lesz a keverék hőmérséklete hőveszteség nélkül?",
+                "Egy forró fémtestet hideg vízbe teszünk. Írd fel az energiamérleg egyenletét!",
+                "Miért nem pontos a számítás, ha nem vesszük figyelembe az edény hőkapacitását?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "termodinamika_gazok_es_hőerogepek",
+      "name": "Termodinamika, gázok és hőerőgépek",
+      "short_description": "A gázok állapotjellemzői, az ideális gáz modellje, a termodinamika főtételeinek szemlélete és hőerőgépek alapelvei.",
+      "sub_topics": [
+        {
+          "key": "gazok_allapotjellemzoi",
+          "name": "Gázok állapotjellemzői",
+          "short_description": "A nyomás, térfogat és hőmérséklet értelmezése gázoknál, mérésük és mindennapi példák.",
+          "sub_topics": [
+            {
+              "key": "nyomas_ertelmezese_gazoknal",
+              "name": "A nyomás értelmezése gázoknál",
+              "short_description": "Értelmezze a gáznyomást részecskemodell alapján és kapcsolja mindennapi jelenségekhez.",
+              "example_tasks": [
+                "Miért nő a gumiabroncs nyomása melegedéskor?",
+                "Miért nehéz összenyomni a levegőt egy fecskendőben?",
+                "Hogyan magyaráznád részecskemodellel a nyomás fogalmát?"
+              ]
+            },
+            {
+              "key": "allapotegyenlet_idealis_gaz",
+              "name": "Az ideális gáz állapotegyenlete",
+              "short_description": "Alkalmazza az ideális gáz állapotegyenletét kvalitatív és egyszerű számításos szinten.",
+              "example_tasks": [
+                "Egy gázt állandó térfogaton melegítünk. Hogyan változik a nyomás?",
+                "Mi történik a gáz térfogatával állandó nyomáson melegítéskor?",
+                "Fogalmazd meg szövegesen az ideális gáz állapotegyenletének jelentését!"
+              ]
+            },
+            {
+              "key": "gaztorvenyek_szemlelete",
+              "name": "Gáztörvények szemlélete",
+              "short_description": "Ismerje a Boyle–Mariotte- és Gay-Lussac-törvény alapgondolatát grafikonok és példák alapján.",
+              "example_tasks": [
+                "Egy p–V grafikon hiperbola alakú. Melyik gáztörvényhez kapcsolható?",
+                "Mi történik a térfogattal, ha állandó hőmérsékleten megkétszerezzük a nyomást?",
+                "Adj hétköznapi példát valamelyik gáztörvény megnyilvánulására!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "termodinamika_fotetelek",
+          "name": "A termodinamika főtételei",
+          "short_description": "Az energia megmaradása hőjelenségeknél és az irreverzibilis folyamatok szemlélete.",
+          "sub_topics": [
+            {
+              "key": "elso_fotetel",
+              "name": "Az első főtétel",
+              "short_description": "Értelmezze a belső energia változását hőközlés és munkavégzés esetén.",
+              "example_tasks": [
+                "Egy gázt összenyomunk. Hogyan változik a belső energiája, ha nincs hőcsere?",
+                "Mi történik a belső energiával, ha a gázt melegítjük, de nem végez munkát?",
+                "Adj példát az első főtétel alkalmazására egy hétköznapi folyamatban!"
+              ]
+            },
+            {
+              "key": "masodik_fotetel_szemlelete",
+              "name": "A második főtétel szemlélete",
+              "short_description": "Értelmezze az irreverzibilitást és a hő spontán áramlásának irányát.",
+              "example_tasks": [
+                "Miért nem folyik magától a hő a hidegebb testről a melegebbre?",
+                "Miért nem lehet 100%-os hatásfokú hőerőgépet készíteni?",
+                "Adj példát visszafordíthatatlan folyamatra a mindennapokból!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hoerogepek_es_hutogepek",
+          "name": "Hőerőgépek és hűtőgépek",
+          "short_description": "A hő–munka átalakítás alapelvei, hőerőgépek működése és hűtőgépek szemlélete.",
+          "sub_topics": [
+            {
+              "key": "hoerogep_mukodesi_elv",
+              "name": "A hőerőgép működési elve",
+              "short_description": "Értelmezze, hogyan alakul a hő részben munkává ciklikus működés során.",
+              "example_tasks": [
+                "Mi a szerepe a meleg és a hideg hőtartálynak egy hőerőgépben?",
+                "Miért ad le mindig hőt a hőerőgép a környezetnek?",
+                "Adj példát hőerőgépre a közlekedésben vagy az energiatermelésben!"
+              ]
+            },
+            {
+              "key": "hutogep_es_hoszivattyu",
+              "name": "Hűtőgép és hőszivattyú",
+              "short_description": "Értelmezze a hűtőgépek és hőszivattyúk működését energiatranszport szempontjából.",
+              "example_tasks": [
+                "Miért meleg a hűtőszekrény hátulja működés közben?",
+                "Hogyan szállít hőt a hőszivattyú hidegebb helyről melegebb felé?",
+                "Miért hatékony fűtési megoldás a hőszivattyú?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "folyadekok_es_gazok_nyugalma_es_aramlasa",
+      "name": "Folyadékok és gázok nyugalma és áramlása",
+      "short_description": "A nyomás, felhajtóerő és áramlási jelenségek alapjai folyadékokban és gázokban, gyakorlati és természeti alkalmazásokkal.",
+      "sub_topics": [
+        {
+          "key": "hidrosztatika_nyomas_felhajtoero",
+          "name": "Hidrosztatika: nyomás és felhajtóerő",
+          "short_description": "A folyadéknyomás mélységfüggése és a felhajtóerő értelmezése.",
+          "sub_topics": [
+            {
+              "key": "folyadeknyomas_melysegfuggese",
+              "name": "A folyadéknyomás mélységfüggése",
+              "short_description": "Értelmezze, hogy a nyomás nő a mélységgel, és alkalmazza ezt egyszerű helyzetekben.",
+              "example_tasks": [
+                "Miért hat nagyobb nyomás a búvárra nagyobb mélységben?",
+                "Miért vastagabb egy gát fala alul, mint felül?",
+                "Hogyan változik a nyomás, ha ugyanabba a folyadékba mélyebbre merülünk?"
+              ]
+            },
+            {
+              "key": "felhajtoero_archimedes",
+              "name": "Felhajtóerő (Arkhimédész törvénye)",
+              "short_description": "Alkalmazza a felhajtóerő törvényét úszásra, lebegésre és elsüllyedésre.",
+              "example_tasks": [
+                "Miért úszik a hajó, ha acélból készült?",
+                "Egy test térfogata 0,01 m³. Mekkora felhajtóerő hat rá vízben?",
+                "Mi a feltétele annak, hogy egy test lebegjen a folyadékban?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "aramlas_alapjai",
+          "name": "Áramlás alapjai",
+          "short_description": "Az áramlás jellemzése térfogatárammal és sebességgel, egyszerű gyakorlati példák.",
+          "sub_topics": [
+            {
+              "key": "terfogatáram_es_folytonossag",
+              "name": "Térfogatáram és folytonosság",
+              "short_description": "Értelmezze a térfogatáramot és a keresztmetszet szerepét az áramlásban.",
+              "example_tasks": [
+                "Miért folyik gyorsabban a víz egy szűk csőben?",
+                "Mi történik a folyadék sebességével, ha a cső keresztmetszete csökken?",
+                "Adj példát a folytonossági elv megjelenésére a mindennapokban!"
+              ]
+            },
+            {
+              "key": "aramlas_alkalmazasai",
+              "name": "Áramlás alkalmazásai",
+              "short_description": "Értelmezze az áramlási jelenségeket technikai és természeti példákban.",
+              "example_tasks": [
+                "Miért emelkedik fel a repülőgép szárnya körül kialakuló áramlás miatt?",
+                "Miért erősebb a szél a szűk utcákban?",
+                "Adj példát áramlási jelenségre a természetben vagy a technikában!"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "key": "rezgesek",
+      "name": "Rezgések",
+      "short_description": "A rezgőmozgás alapfogalmai, a harmonikus rezgés modellje, energiaviszonyok, valamint a csillapított és kényszerrezgés szemléletes értelmezése.",
+      "sub_topics": [
+        {
+          "key": "harmonikus_rezges_alapjai",
+          "name": "A harmonikus rezgés alapjai",
+          "short_description": "A kitérés, amplitúdó, periódusidő és frekvencia fogalma, valamint a rezgőmozgás időbeli leírása.",
+          "sub_topics": [
+            {
+              "key": "rezges_jellemzoi",
+              "name": "A rezgés jellemző mennyiségei",
+              "short_description": "Határozza meg és használja a kitérés, amplitúdó, periódusidő és frekvencia fogalmát egyszerű helyzetekben.",
+              "example_tasks": [
+                "Egy rezgő test periódusideje 0,50 s. Add meg a frekvenciát!",
+                "Egy rugóra függesztett test maximális kitérése 4,0 cm. Mit jelent ez az amplitúdó szempontjából?",
+                "Hányszor rezeg egy test 2 perc alatt, ha a frekvenciája 5 Hz?"
+              ]
+            },
+            {
+              "key": "harmonikus_rezges_ero_es_mozgas",
+              "name": "A harmonikus rezgés erő- és mozgásviszonyai",
+              "short_description": "Értelmezze a visszatérítő erő szerepét és irányát, valamint a gyorsulás kapcsolatát a kitéréssel.",
+              "example_tasks": [
+                "Miért tekinthető a rugóra függesztett test mozgása kis kitéréseknél harmonikusnak?",
+                "Mikor a legnagyobb a gyorsulás egy harmonikusan rezgő testnél: a középpontban vagy a szélső helyzetekben?",
+                "Rajzold fel a visszatérítő erő irányát a rezgés különböző helyzeteiben!"
+              ]
+            },
+            {
+              "key": "rezges_idografikonok",
+              "name": "Időgrafikonok harmonikus rezgésnél",
+              "short_description": "Értelmezze a kitérés–idő, sebesség–idő grafikonokat és azok jellemzőit.",
+              "example_tasks": [
+                "Rajzold fel vázlatosan egy harmonikus rezgés kitérés–idő grafikonját!",
+                "Mely időpillanatokban zérus a sebesség egy harmonikus rezgésnél?",
+                "Mi a kapcsolat a kitérés–idő és a sebesség–idő grafikon között?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "rezgesi_energia",
+          "name": "Rezgési energia",
+          "short_description": "A mozgási és rugalmas energia váltakozása rezgés közben, az energiamegmaradás szemlélete.",
+          "sub_topics": [
+            {
+              "key": "energia_megoszlas_rezgesnel",
+              "name": "Energia megoszlása rezgés közben",
+              "short_description": "Értelmezze a mozgási és rugalmas energia arányának változását a rezgés különböző pontjain.",
+              "example_tasks": [
+                "Mikor maximális a mozgási energia egy harmonikus rezgés során?",
+                "Mikor maximális a rugalmas energia a rugóra függesztett testnél?",
+                "Miért marad állandó a teljes mechanikai energia ideális rezgésnél?"
+              ]
+            },
+            {
+              "key": "energiamegmaradas_rezgesnel",
+              "name": "Energiamegmaradás rezgéseknél",
+              "short_description": "Alkalmazza az energiamegmaradás elvét ideális rezgő rendszerekre.",
+              "example_tasks": [
+                "Írd le egy inga mozgásában az energiaátalakulásokat!",
+                "Mi történik a rezgés amplitúdójával ideális és nem ideális esetben?",
+                "Miért csökken a rezgés energiája valós rendszerekben?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "csillapitott_es_kenszerrezges",
+          "name": "Csillapított és kényszerrezgés",
+          "short_description": "A valós rezgések csillapodása, a külső periodikus gerjesztés hatása és a rezonancia jelensége.",
+          "sub_topics": [
+            {
+              "key": "csillapitas_okai_es_hatasa",
+              "name": "A csillapítás okai és hatása",
+              "short_description": "Értelmezze a csillapítás szerepét súrlódás és közegellenállás miatt.",
+              "example_tasks": [
+                "Miért áll le idővel egy inga rezgése?",
+                "Hogyan változik az amplitúdó csillapított rezgésnél?",
+                "Adj példát csillapított rezgésre a technikában!"
+              ]
+            },
+            {
+              "key": "kenszerrezges_es_rezonancia",
+              "name": "Kényszerrezgés és rezonancia",
+              "short_description": "Ismerje fel a rezonancia feltételét és hatásait különböző rendszerekben.",
+              "example_tasks": [
+                "Mi történik, ha a kényszerrezgés frekvenciája megegyezik a sajátfrekvenciával?",
+                "Miért veszélyes a rezonancia hidaknál vagy épületeknél?",
+                "Adj két példát hasznos rezonancia-jelenségre!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hullamok_es_hangtan",
+      "name": "Hullámok és hangtan",
+      "short_description": "A hullámjelenségek alapfogalmai, mechanikai hullámok terjedése, szuperpozíció, valamint a hang fizikai jellemzői.",
+      "sub_topics": [
+        {
+          "key": "hullamterjedes_alapfogalmai",
+          "name": "Hullámterjedés alapfogalmai",
+          "short_description": "A hullámhossz, terjedési sebesség, frekvencia és periódusidő kapcsolata.",
+          "sub_topics": [
+            {
+              "key": "hullamjellemzok",
+              "name": "Hullámjellemzők és kapcsolatuk",
+              "short_description": "Alkalmazza a v = λ·f összefüggést és értelmezze a hullámjellemzőket.",
+              "example_tasks": [
+                "Egy hullám hullámhossza 0,80 m, frekvenciája 2,5 Hz. Mekkora a terjedési sebesség?",
+                "Mi történik a hullámhosszal, ha azonos közegben nő a frekvencia?",
+                "Adj példát különböző terjedési sebességű hullámokra!"
+              ]
+            },
+            {
+              "key": "mechanikai_hullamok_kozeghez_kotottsege",
+              "name": "Mechanikai hullámok közeghez kötöttsége",
+              "short_description": "Értelmezze, hogy a mechanikai hullámok csak anyagi közegben terjednek.",
+              "example_tasks": [
+                "Miért nem terjed a hang vákuumban?",
+                "Mi a szerepe a közeg részecskéinek a hullámterjedésben?",
+                "Adj példát különböző közegekben terjedő mechanikai hullámokra!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "szuperpozicio_es_allohullam",
+          "name": "Szuperpozíció és állóhullám",
+          "short_description": "Hullámok találkozása, erősítés és kioltás, valamint az állóhullám kialakulása.",
+          "sub_topics": [
+            {
+              "key": "szuperpozicio_elv",
+              "name": "A szuperpozíció elve",
+              "short_description": "Értelmezze hullámok találkozásakor az eredő kitérést.",
+              "example_tasks": [
+                "Mi történik, ha két azonos fázisú hullám találkozik?",
+                "Mi a különbség az erősítés és a kioltás között?",
+                "Adj példát szuperpozícióra a hangtanban!"
+              ]
+            },
+            {
+              "key": "allohullam_hurok_es_csomopont",
+              "name": "Állóhullám: csomópontok és duzzadóhelyek",
+              "short_description": "Ismerje fel az állóhullám kialakulását és jellemző pontjait húron vagy levegőoszlopban.",
+              "example_tasks": [
+                "Miért alakul ki állóhullám kifeszített húron?",
+                "Hol találhatók a csomópontok és a duzzadóhelyek?",
+                "Hogyan függ az állóhullám frekvenciája a húr hosszától?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hang_fizikai_jellemzoi",
+          "name": "A hang fizikai jellemzői",
+          "short_description": "A hangmagasság, hangerő és hangszín fizikai értelmezése, valamint hallásunk korlátai.",
+          "sub_topics": [
+            {
+              "key": "hangmagassag_es_frekvencia",
+              "name": "Hangmagasság és frekvencia",
+              "short_description": "Kapcsolja össze a hangmagasságot a frekvenciával.",
+              "example_tasks": [
+                "Melyik hang magasabb: 200 Hz vagy 800 Hz?",
+                "Miért változik a hangmagasság, ha gyorsabban rezeg a hangforrás?",
+                "Adj példát frekvenciaváltozásra a zenében!"
+              ]
+            },
+            {
+              "key": "hangerő_es_hangintenzitas",
+              "name": "Hangerő és hangintenzitás",
+              "short_description": "Értelmezze a hangerőt az intenzitással és a decibelskálával.",
+              "example_tasks": [
+                "Miért nem lineáris a decibelskála?",
+                "Miért tűnik sokkal hangosabbnak egy kis intenzitásnövekedés?",
+                "Miért káros a tartósan nagy hangerő a hallásra?"
+              ]
+            },
+            {
+              "key": "hangszin_es_felhangok",
+              "name": "Hangszín és felhangok",
+              "short_description": "Értelmezze a hangszínt a felhangok jelenlétével és arányával.",
+              "example_tasks": [
+                "Miért különbözik egy hegedű és egy fuvola hangja azonos hangmagasságnál?",
+                "Mi a szerepe a felhangoknak a hangszín kialakulásában?",
+                "Hogyan változik a hangszín különböző hangszereknél?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "elektrosztatika_es_egyenaram",
+      "name": "Elektrosztatika és egyenáram",
+      "short_description": "Az elektromos kölcsönhatások alapjai, töltés és elektromos mező szemlélete, valamint az egyenáramú áramkörök törvényszerűségei és gyakorlati alkalmazásai.",
+      "sub_topics": [
+        {
+          "key": "elektromos_toltes_es_mezo",
+          "name": "Elektromos töltés és elektromos mező",
+          "short_description": "Az elektromos töltés fajtái, kölcsönhatásuk, valamint az elektromos mező kvalitatív értelmezése.",
+          "sub_topics": [
+            {
+              "key": "toltesek_kolcsonhatasa",
+              "name": "Töltések kölcsönhatása",
+              "short_description": "Értelmezze az azonos és ellentétes töltések közti erőhatást, és kapcsolja mindennapi jelenségekhez.",
+              "example_tasks": [
+                "Mi történik két azonos előjelű töltéssel, ha közel visszük őket egymáshoz?",
+                "Miért tapad a feltöltött lufi a falhoz?",
+                "Adj példát elektromos töltések kölcsönhatására a mindennapokból!"
+              ]
+            },
+            {
+              "key": "elektromos_mezo_szemlelete",
+              "name": "Az elektromos mező szemlélete",
+              "short_description": "Értelmezze az elektromos mezőt mint a töltések környezetének fizikai állapotát.",
+              "example_tasks": [
+                "Miért nem kell közvetlen érintkezés az elektromos erőhatáshoz?",
+                "Hogyan szemléltethető az elektromos mező erővonalakkal?",
+                "Mi változik az elektromos mezőben, ha a töltés nagysága nő?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "feszultseg_aram_ellenallas",
+          "name": "Feszültség, áramerősség, ellenállás",
+          "short_description": "Az elektromos alapmennyiségek értelmezése és mérése, Ohm törvénye egyszerű áramkörökben.",
+          "sub_topics": [
+            {
+              "key": "aram_fogalma_es_merese",
+              "name": "Az elektromos áram fogalma és mérése",
+              "short_description": "Értelmezze az áramerősséget töltésáramlásként és ismerje az árammérés alapelveit.",
+              "example_tasks": [
+                "Mit jelent az, hogy egy vezetőben 2 A áram folyik?",
+                "Miért kell az árammérőt sorosan kapcsolni?",
+                "Mi történik az áramerősséggel, ha megszakítjuk az áramkört?"
+              ]
+            },
+            {
+              "key": "feszultseg_es_energia",
+              "name": "Feszültség és elektromos energia",
+              "short_description": "Értelmezze a feszültséget mint egységnyi töltésre jutó energiát.",
+              "example_tasks": [
+                "Mit jelent az, hogy egy elem feszültsége 1,5 V?",
+                "Miért nagyobb az áram egy nagyobb feszültségű áramforrásnál azonos ellenállás esetén?",
+                "Adj példát feszültségkülönbség kihasználására a technikában!"
+              ]
+            },
+            {
+              "key": "ohm_torvenye",
+              "name": "Ohm törvénye",
+              "short_description": "Alkalmazza az U = R·I összefüggést egyszerű számításos feladatokban.",
+              "example_tasks": [
+                "Egy ellenálláson 6 V feszültség van, az áram 0,5 A. Mekkora az ellenállás?",
+                "Hogyan változik az áram, ha az ellenállást megduplázzuk?",
+                "Miért nem ohmos egy izzólámpa izzószála?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "egyenaramu_aramkorok",
+          "name": "Egyenáramú áramkörök",
+          "short_description": "Soros és párhuzamos kapcsolások, teljesítmény és energia számítása, valamint biztonságos használat.",
+          "sub_topics": [
+            {
+              "key": "soros_es_parhuzamos_kapcsolas",
+              "name": "Soros és párhuzamos kapcsolások",
+              "short_description": "Hasonlítsa össze a soros és párhuzamos kapcsolások tulajdonságait feszültség és áram szempontjából.",
+              "example_tasks": [
+                "Mi történik az áramerősséggel soros kapcsolásban, ha egy izzó kiég?",
+                "Miért világítanak az izzók azonos fényerővel párhuzamos kapcsolásnál?",
+                "Rajzolj egyszerű soros és párhuzamos áramkört!"
+              ]
+            },
+            {
+              "key": "elektromos_teljesitmeny",
+              "name": "Elektromos teljesítmény",
+              "short_description": "Számolja ki a teljesítményt és az elfogyasztott energiát elektromos berendezéseknél.",
+              "example_tasks": [
+                "Egy készülék 230 V-on 2,0 A áramot vesz fel. Mekkora a teljesítménye?",
+                "Mennyi energiát fogyaszt egy 100 W-os izzó 5 óra alatt?",
+                "Miért fontos a teljesítmény megadása elektromos eszközöknél?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "magneses_jelensegek_es_indukcio",
+      "name": "Mágneses jelenségek és elektromágneses indukció",
+      "short_description": "A mágneses mező hatásai, árammal keltett mágneses tér, valamint az elektromágneses indukció alapjelenségei és technikai alkalmazásai.",
+      "sub_topics": [
+        {
+          "key": "magneses_mezo_es_aram",
+          "name": "Mágneses mező és áram",
+          "short_description": "A mágneses mező kialakulása áram körül és annak hatása mozgó töltésekre.",
+          "sub_topics": [
+            {
+              "key": "aram_koruli_magneses_mezo",
+              "name": "Áram körüli mágneses mező",
+              "short_description": "Értelmezze, hogy az áram mágneses teret hoz létre.",
+              "example_tasks": [
+                "Mi történik egy iránytűvel egy árammal átjárt vezető közelében?",
+                "Miért tekercselik fel a vezetéket elektromágnesek készítéséhez?",
+                "Adj példát áram által keltett mágneses tér alkalmazására!"
+              ]
+            },
+            {
+              "key": "vezeto_magneses_mezoben",
+              "name": "Árammal átjárt vezető mágneses mezőben",
+              "short_description": "Értelmezze a mágneses térben lévő áramvezetőre ható erőt.",
+              "example_tasks": [
+                "Miért mozdul el az árammal átjárt vezető mágneses mezőben?",
+                "Mely tényezők befolyásolják a vezetőre ható erő nagyságát?",
+                "Hol hasznosítják ezt a jelenséget a technikában?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "elektromagneses_indukcio",
+          "name": "Elektromágneses indukció",
+          "short_description": "A változó mágneses tér által keltett feszültség és áram szemlélete.",
+          "sub_topics": [
+            {
+              "key": "faraday_lenz_torveny",
+              "name": "Faraday–Lenz törvény",
+              "short_description": "Értelmezze az indukált áram irányát és keletkezésének feltételeit.",
+              "example_tasks": [
+                "Mi történik egy tekercsben, ha mágnest mozgatunk benne?",
+                "Mi határozza meg az indukált áram irányát?",
+                "Miért nem keletkezik áram állandó mágneses térben?"
+              ]
+            },
+            {
+              "key": "generator_es_transzformator",
+              "name": "Generátor és transzformátor",
+              "short_description": "Ismerje fel az indukció szerepét az elektromos energia termelésében és átalakításában.",
+              "example_tasks": [
+                "Hogyan alakítja át a generátor a mechanikai energiát elektromos energiává?",
+                "Miért csak váltakozó áramnál működik a transzformátor?",
+                "Miért csökkentik nagy távolságú energiaátvitelkor az áram erősségét?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "optika",
+      "name": "Optika",
+      "short_description": "A fény terjedésének modelljei, a geometriai optika alapjelenségei, valamint a képalkotás és az optikai eszközök működése.",
+      "sub_topics": [
+        {
+          "key": "feny_terjedese_es_visszaverodes",
+          "name": "A fény terjedése és visszaverődése",
+          "short_description": "A fény egyenes vonalú terjedése homogén közegben, valamint a visszaverődés törvényeinek alkalmazása.",
+          "sub_topics": [
+            {
+              "key": "visszaverodes_torvenyei",
+              "name": "A visszaverődés törvényei",
+              "short_description": "Ismerje és alkalmazza a beesési és visszaverődési szög egyenlőségét síktükörnél.",
+              "example_tasks": [
+                "Egy fénysugár 30°-os beesési szöggel érkezik síktükörre. Mekkora a visszaverődési szög?",
+                "Rajzold meg egy beeső fénysugár visszaverődését síktükörnél!",
+                "Miért látjuk magunkat tükörben azonos távolságra a tükör mögött?"
+              ]
+            },
+            {
+              "key": "sik_es_gombtukor",
+              "name": "Sík- és gömbtükrök",
+              "short_description": "A sík-, homorú- és domború tükrök képalkotásának szemléletes értelmezése.",
+              "example_tasks": [
+                "Miért használunk domború tükröt közlekedési tükröknél?",
+                "Egy homorú tükör fókusztávolsága 20 cm. Hol keletkezik a kép, ha a tárgy 40 cm-re van?",
+                "Hasonlítsd össze a síktükör és a homorú tükör által alkotott képet!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fenytoredes_es_lencsek",
+          "name": "Fénytörés és lencsék",
+          "short_description": "A fénytörés jelensége különböző közegek határán, valamint a gyűjtő- és szórólencsék képalkotása.",
+          "sub_topics": [
+            {
+              "key": "fenytoredes_torvenye",
+              "name": "A fénytörés törvénye",
+              "short_description": "Értelmezze a fény irányváltozását töréskor és a törésmutató fogalmát.",
+              "example_tasks": [
+                "Miért törik meg a fény, amikor levegőből vízbe lép?",
+                "Miért látszik a vízben lévő pálca megtörve?",
+                "Hogyan változik a fény terjedési sebessége különböző közegekben?"
+              ]
+            },
+            {
+              "key": "lencsek_kepalkotas",
+              "name": "Lencsék képalkotása",
+              "short_description": "Ismerje a gyűjtő- és szórólencsék képalkotását és az egyszerű lencseegyenlet szemléletét.",
+              "example_tasks": [
+                "Egy gyűjtőlencse fókusztávolsága 10 cm. Hol keletkezik a kép, ha a tárgy 20 cm-re van?",
+                "Miért használunk gyűjtőlencsét nagyítóként?",
+                "Miért nem hoz létre valódi képet a szórólencse?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "optikai_eszkozok",
+          "name": "Optikai eszközök",
+          "short_description": "Az egyszerű optikai eszközök működésének fizikai alapjai és gyakorlati alkalmazásai.",
+          "sub_topics": [
+            {
+              "key": "szem_es_latashibak",
+              "name": "A szem működése és látáshibák",
+              "short_description": "A szem mint optikai rendszer és a leggyakoribb látáshibák korrekciója.",
+              "example_tasks": [
+                "Miért szükséges szemüveg rövidlátás esetén?",
+                "Milyen lencsével korrigálható a távollátás?",
+                "Hogyan változik a szem fókuszálása közelre és távolra nézéskor?"
+              ]
+            },
+            {
+              "key": "mikroszkop_tavcso",
+              "name": "Mikroszkóp és távcső",
+              "short_description": "A nagyítás elve és az összetett optikai eszközök működésének szemlélete.",
+              "example_tasks": [
+                "Miért használunk mikroszkópot nagyon kis tárgyak megfigyelésére?",
+                "Mi a különbség a távcső és a mikroszkóp nagyítása között?",
+                "Milyen szerepe van az objektívnek és az okulárnak?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "modern_fizika_alapjai",
+      "name": "A modern fizika alapjai",
+      "short_description": "A klasszikus fizika korlátai, kvantumos és relativisztikus jelenségek szemlélete, valamint az anyag mikroszkopikus szerkezetének fizikai alapjai.",
+      "sub_topics": [
+        {
+          "key": "feny_kettos_termeszete",
+          "name": "A fény kettős természete",
+          "short_description": "A hullám- és részecskemodell kiegészítő szerepe a fény viselkedésének leírásában.",
+          "sub_topics": [
+            {
+              "key": "fotoeffektus",
+              "name": "Fotoeffektus",
+              "short_description": "Értelmezze a fotoeffektust mint a fény részecsketermészetének bizonyítékát.",
+              "example_tasks": [
+                "Miért nem indít el elektronkilépést a gyenge, de alacsony frekvenciájú fény?",
+                "Mi történik az elektronok energiájával, ha növeljük a fény frekvenciáját?",
+                "Miért volt a fotoeffektus fontos bizonyíték a kvantumelmélet számára?"
+              ]
+            },
+            {
+              "key": "foton_fogalma",
+              "name": "A foton fogalma",
+              "short_description": "Ismerje a foton energiájának frekvenciafüggését szemléleti szinten.",
+              "example_tasks": [
+                "Mi a kapcsolat a foton energiája és a fény frekvenciája között?",
+                "Miért nagyobb energiájú a kék fény fotonja, mint a vörösé?",
+                "Adj példát fotonok szerepére technikai eszközökben!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "relativitas_szemlelete",
+          "name": "Relativitás szemlélete",
+          "short_description": "A speciális relativitáselmélet alapgondolatai és következményei kvalitatív szinten.",
+          "sub_topics": [
+            {
+              "key": "fenysebesseg_allandosaga",
+              "name": "A fénysebesség állandósága",
+              "short_description": "Értelmezze, hogy a fénysebesség vákuumban minden megfigyelő számára azonos.",
+              "example_tasks": [
+                "Miért nem lehet a fénysebességet meghaladni?",
+                "Miért okozott problémát a klasszikus fizikának a fénysebesség állandósága?",
+                "Adj példát olyan jelenségre, ahol a fénysebesség korlátja fontos!"
+              ]
+            },
+            {
+              "key": "tomeg_energia_ekvivalencia",
+              "name": "Tömeg–energia ekvivalencia",
+              "short_description": "Ismerje az E = m·c² jelentését és következményeit szemléleti szinten.",
+              "example_tasks": [
+                "Mit jelent fizikailag az E = m·c² összefüggés?",
+                "Miért szabadul fel nagy energia kis tömeg átalakulásakor?",
+                "Hol jelenik meg a tömeg–energia átalakulás a természetben vagy a technikában?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "atomfizika",
+      "name": "Atomfizika",
+      "short_description": "Az atom szerkezete, atommodellek fejlődése, energiaszintek és spektrumok, valamint az atomfizika technikai alkalmazásainak szemlélete.",
+      "sub_topics": [
+        {
+          "key": "atommodellek_fejlodese",
+          "name": "Atommodellek fejlődése",
+          "short_description": "Az atom szerkezetének megértése a klasszikus és kvantumos modellek alapján.",
+          "sub_topics": [
+            {
+              "key": "thomson_rutherford_bohr",
+              "name": "Thomson-, Rutherford- és Bohr-modell",
+              "short_description": "Ismerje az atommodellek alapfeltevéseit és korlátait.",
+              "example_tasks": [
+                "Miben különbözik a Rutherford-modell a Thomson-modelltől?",
+                "Milyen kísérleti eredmény vezetett a Rutherford-féle atommodellhez?",
+                "Miért volt szükség a Bohr-modell bevezetésére?"
+              ]
+            },
+            {
+              "key": "energiaszintek_es_spektrum",
+              "name": "Energiaszintek és vonalas spektrum",
+              "short_description": "Értelmezze az energiaszintek közti átmeneteket és a spektrum keletkezését.",
+              "example_tasks": [
+                "Miért vonalas a hidrogén emissziós spektruma?",
+                "Mi történik az atom energiájával foton kibocsátásakor?",
+                "Hogyan használható a spektrum az anyag azonosítására?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "atomfizika_alkalmazasai",
+          "name": "Atomfizika alkalmazásai",
+          "short_description": "Az atomfizika szerepe a modern technológiában és a tudományban.",
+          "sub_topics": [
+            {
+              "key": "lezer_es_spektroszkopia",
+              "name": "Lézer és spektroszkópia",
+              "short_description": "A lézer működésének alapelve és a spektroszkópia alkalmazásai.",
+              "example_tasks": [
+                "Miért különleges a lézerfény a hagyományos fényforrásokhoz képest?",
+                "Hol alkalmazzák a lézereket az orvostudományban vagy az iparban?",
+                "Miért fontos a spektroszkópia a csillagászatban?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "magfizika_es_radioaktivitas",
+      "name": "Magfizika és radioaktivitás",
+      "short_description": "Az atommag szerkezete, radioaktív bomlások, magreakciók, valamint az atomenergia felhasználása és kockázatai.",
+      "sub_topics": [
+        {
+          "key": "radioaktiv_bomlas",
+          "name": "Radioaktív bomlás",
+          "short_description": "Az alfa-, béta- és gamma-sugárzás jellemzői és hatásai.",
+          "sub_topics": [
+            {
+              "key": "bomlastipusok",
+              "name": "Bomlástípusok és sugárzások",
+              "short_description": "Ismerje a különböző radioaktív sugárzások áthatoló képességét és ionizáló hatását.",
+              "example_tasks": [
+                "Melyik sugárzás árnyékolható papírlappal, és miért?",
+                "Miért veszélyes az ionizáló sugárzás az élő szervezetekre?",
+                "Hol találkozunk természetes radioaktív sugárzással?"
+              ]
+            },
+            {
+              "key": "felezesi_ido",
+              "name": "Felezési idő",
+              "short_description": "Értelmezze a felezési idő fogalmát és alkalmazza egyszerű bomlási feladatokban.",
+              "example_tasks": [
+                "Egy izotóp felezési ideje 10 év. Mennyi marad az anyagból 20 év után?",
+                "Miért nem függ a felezési idő a minta kezdeti mennyiségétől?",
+                "Hol használják a felezési idő fogalmát a gyakorlatban?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "magreakciok_es_atomenergia",
+          "name": "Magreakciók és atomenergia",
+          "short_description": "Maghasadás és magfúzió alapelvei, energetikai és társadalmi vonatkozások.",
+          "sub_topics": [
+            {
+              "key": "maghasadas_es_fuzio",
+              "name": "Maghasadás és magfúzió",
+              "short_description": "Hasonlítsa össze a két magreakciót energiafelszabadulás és alkalmazás szempontjából.",
+              "example_tasks": [
+                "Mi a különbség a maghasadás és a magfúzió között?",
+                "Miért ígéretes energiaforrás a magfúzió?",
+                "Hol alkalmazzák jelenleg a maghasadást?"
+              ]
+            },
+            {
+              "key": "sugarvedelem_es_biztonsag",
+              "name": "Sugárvédelem és biztonság",
+              "short_description": "A sugárzás egészségügyi kockázatai és az alapvető védelmi elvek.",
+              "example_tasks": [
+                "Milyen elveken alapul a sugárvédelem (idő, távolság, árnyékolás)?",
+                "Miért fontos a sugárterhelés mérése?",
+                "Adj példát sugárvédelmi intézkedésekre!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "csillagaszat_es_kozmikus_jelensegek",
+      "name": "Csillagászat és kozmikus jelenségek",
+      "short_description": "A Világegyetem alapvető szerkezete, a Naprendszer, csillagok és galaxisok, valamint modern megfigyelési módszerek.",
+      "sub_topics": [
+        {
+          "key": "naprendszer_es_fold",
+          "name": "A Naprendszer és a Föld helye",
+          "short_description": "A Naprendszer felépítése, bolygók mozgása és a Föld különleges tulajdonságai.",
+          "sub_topics": [
+            {
+              "key": "bolygok_mozgasa",
+              "name": "Bolygók mozgása",
+              "short_description": "Értelmezze a bolygók keringését és Kepler törvényeinek alapgondolatát.",
+              "example_tasks": [
+                "Miért hosszabb egy távolabbi bolygó keringési ideje?",
+                "Miért elliptikus pályán mozognak a bolygók?",
+                "Hogyan befolyásolja a Nap tömege a bolygók mozgását?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "csillagok_es_galaxisok",
+          "name": "Csillagok és galaxisok",
+          "short_description": "A csillagok fejlődése, energiatermelése és a galaxisok szerkezete.",
+          "sub_topics": [
+            {
+              "key": "csillagfejlodes",
+              "name": "Csillagfejlődés",
+              "short_description": "A csillagok születése, élete és halála tömegfüggés szerint.",
+              "example_tasks": [
+                "Hogyan keletkezik egy csillag egy gázfelhőből?",
+                "Mi történik egy nagy tömegű csillag életének végén?",
+                "Miért fontos a tömeg a csillagfejlődésben?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "modern_megfigyelesi_modszerek",
+          "name": "Modern megfigyelési módszerek",
+          "short_description": "A csillagászatban alkalmazott műszerek és mérési eljárások.",
+          "sub_topics": [
+            {
+              "key": "tavcsovek_es_urteleszkopok",
+              "name": "Távcsövek és űrteleszkópok",
+              "short_description": "A földi és űrbéli megfigyelések előnyei és korlátai.",
+              "example_tasks": [
+                "Miért hasznos az űrteleszkóp a légkörön kívül?",
+                "Milyen előnye van a rádiótávcsöveknek?",
+                "Hogyan járulnak hozzá a modern távcsövek az univerzum megértéséhez?"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

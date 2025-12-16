@@ -1,0 +1,1607 @@
+{
+  "grade_9_10": [
+    {
+      "key": "tortenelem_modszertan_alapok",
+      "name": "Bevezetés a történelmi gondolkodásba és forráshasználatba",
+      "short_description": "A tanulók megismerik a történelmi megismerés alapfogalmait, az idő- és térbeli tájékozódás eszközeit, valamint a források értelmezésének és kritikus használatának elemeit.",
+      "sub_topics": [
+        {
+          "key": "tortenelmi_ido_es_periodizacio",
+          "name": "Történelmi idő, időszámítás, korszakolás",
+          "short_description": "Az időszámítási rendszerek, a kronológia és a korszakhatárok értelmezése; idővonal készítése és események időrendbe helyezése.",
+          "sub_topics": [
+            {
+              "key": "idovonal_es_kronologia",
+              "name": "Idővonal és kronológiai rendezés",
+              "short_description": "Képes eseményeket időrendbe állítani, egyszerű idővonalat készíteni és leolvasni, valamint időtartamot számolni (évszázad, évezred).",
+              "example_tasks": [
+                "Rendezd időrendbe az alábbi eseményeket: Hammurapi törvényoszlopa, a marathóni csata, Julius Caesar meggyilkolása, a Nyugatrómai Birodalom bukása. Írd melléjük a hozzávetőleges évszázadot is!",
+                "Készíts idővonalat Kr. e. 800 és Kr. u. 500 között, és jelöld rajta: az első olimpia (Kr. e. 776), a perzsa háborúk főbb csatái közül egyet, Augustus principátusának kezdetét (Kr. e. 27), valamint a kereszténység elterjedésének egy fontos állomását!",
+                "Számold ki: hány év telt el a marathóni csata (Kr. e. 490) és a mogyoródi csata (1074) között! Írd le azt is, hogy ez hány teljes évszázadnak felel meg!"
+              ]
+            },
+            {
+              "key": "korszakolas_es_korszakhatárok",
+              "name": "Korszakolás és korszakhatárok értelmezése",
+              "short_description": "Megérti, hogy a korszakhatárok értelmezések; példákkal indokolja, miért tekinthető egy esemény korszakváltónak.",
+              "example_tasks": [
+                "Magyarázd meg 6–8 mondatban, miért szokták 476-ot (a Nyugatrómai Birodalom bukását) a középkor kezdetéhez kapcsolni! Írj legalább két érvet!",
+                "Válassz egy eseményt az alábbiak közül, és érvelj mellette vagy ellene, hogy korszakhatárnak tekinthető-e: a kereszténység államvallássá tétele (380), Konstantinápoly eleste (1453), Amerika felfedezése (1492).",
+                "Készíts két különböző korszakolási javaslatot az ókor–középkor határára (két külön dátummal), és mindkettőhöz írj 2–2 indokot!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "tortenelmi_forrasok_es_forraskritika",
+          "name": "Történelmi források és forráskritika",
+          "short_description": "A forrástípusok felismerése, a szerzőség–szándék–körülmények vizsgálata, valamint a hitelesség és torzítás kérdései.",
+          "sub_topics": [
+            {
+              "key": "forrastipusok_azonositasa",
+              "name": "Forrástípusok azonosítása és csoportosítása",
+              "short_description": "Megkülönbözteti az írott, tárgyi, képi, szóbeli és digitális forrásokat; példát ad elsődleges és másodlagos forrásra.",
+              "example_tasks": [
+                "Sorold be az alábbiakat forrástípus szerint (írott/képi/tárgyi/szóbeli/digitális), majd jelöld, hogy szerinted elsődleges vagy másodlagos forrás-e: érme, krónikarészlet, festmény, régészeti lelet, tankönyvi összefoglaló!",
+                "Egy múzeumi kiállításon látsz egy római sisakot és mellette egy modern ismertető szöveget. Melyik tekinthető elsődleges, melyik másodlagos forrásnak, és miért?",
+                "Gyűjts 3 példát olyan digitális forrásra, amely történelmi kutatásban használható (pl. adatbázis, digitalizált levéltári anyag), és írd le, milyen előnye és milyen kockázata van a használatuknak!"
+              ]
+            },
+            {
+              "key": "forraskritika_alapkerdesei",
+              "name": "Forráskritika alapvető kérdései",
+              "short_description": "Képes a forrás szerzőjét, célját, keletkezési körülményeit azonosítani, és ezek alapján következtetni a forrás megbízhatóságára.",
+              "example_tasks": [
+                "Olvasd el a megadott (tanári) rövid forrásrészletet egy ókori uralkodói feliratról, majd válaszolj: Ki a szerző? Kinek szól? Mi lehet a célja? Milyen információt tartasz benne elfogultnak, és miért?",
+                "Egy középkori krónika dicsőíti a királyt. Sorolj fel 3 okot, amiért a krónika torzíthat, és írj 2 módszert, amivel ellenőriznéd az állításait más források segítségével!",
+                "Két eltérő beszámolót kapsz ugyanarról a csatáról (egy győztes és egy vesztes fél krónikáját). Írd le 8–10 mondatban, hogyan állítanál össze „valószínű” eseményleírást a két forrásból!"
+              ]
+            },
+            {
+              "key": "terkepek_es_adatok_ertelmezese",
+              "name": "Térképek, ábrák és adatok értelmezése történelmi kontextusban",
+              "short_description": "Történelmi térképről és egyszerű statisztikai ábráról információt olvas le, és következtetést fogalmaz meg a változás irányáról és okairól.",
+              "example_tasks": [
+                "Egy térképen jelölve van a Római Birodalom kiterjedése Kr. u. 117-ben. Nevezd meg legalább 3 mai ország területét, amely részben a birodalomhoz tartozott!",
+                "Egy oszlopdiagram Róma lakosságának becsült alakulását mutatja (Kr. e. 200 – Kr. u. 200). Írd le, melyik időszakban nőtt a leggyorsabban, és adj 2 lehetséges magyarázatot!",
+                "Hasonlíts össze két térképet (a tanár adja): a Mediterráneum kereskedelmi útvonalai az ókorban és a középkorban. Írj 5–6 mondatot arról, mi változott és mi lehet ennek az oka!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "tortenelmi_okok_es_kovetkezmenyek",
+          "name": "Ok–okozat, változás és folyamatok a történelemben",
+          "short_description": "Az események okainak és következményeinek feltárása; rövid és hosszú távú hatások, folyamatok és fordulópontok megkülönböztetése.",
+          "sub_topics": [
+            {
+              "key": "okok_tipusai_es_szinjei",
+              "name": "Okok típusai: közvetlen és mélyebb okok",
+              "short_description": "Megkülönbözteti a közvetlen kiváltó okot és a háttérokokat; egyszerű oksági láncot állít fel.",
+              "example_tasks": [
+                "A peloponnészoszi háború kapcsán sorolj fel 1 közvetlen okot és 2 háttérokot! Írd le, melyik miért tartozik az adott kategóriába!",
+                "Készíts oksági láncot (legalább 5 lépés) arról, hogyan vezethetett a poliszok rivalizálása Hellász meggyengüléséhez!",
+                "Válassz egy eseményt az ókori Keletből (pl. birodalom szétesése), és különítsd el benne a gazdasági, társadalmi és politikai okokat!"
+              ]
+            },
+            {
+              "key": "rovid_es_hosszu_tavu_kovetkezmenyek",
+              "name": "Rövid és hosszú távú következmények",
+              "short_description": "Képes egy esemény rövid távú eredményeit és hosszú távú hatásait elkülöníteni, és példákkal alátámasztani.",
+              "example_tasks": [
+                "Írd le a római hódítások két rövid távú következményét (pl. hadizsákmány, rabszolgák) és két hosszú távú következményét (pl. romanizáció, társadalmi feszültségek)!",
+                "Készíts táblázat nélküli felsorolásban 3–3 pontot: mi változott rövid távon és mi hosszú távon a kereszténység elterjedése nyomán a Római Birodalomban!",
+                "Válassz egy technológiai újítást (pl. vasmegmunkálás, pénzverés) az ókorból, és magyarázd el, milyen hosszú távú társadalmi következményei lehettek!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "okori_kelet_civilizaciok",
+      "name": "Az ókori Kelet civilizációi",
+      "short_description": "A tanulók áttekintik az első államok kialakulását, a társadalmi rétegződést, a vallások szerepét és az írásbeliség, jog, gazdaság fejlődését az ókori Kelet nagy civilizációiban.",
+      "sub_topics": [
+        {
+          "key": "allam_es_tarsadalom_okori_kelet",
+          "name": "Állam, társadalom és hatalom az ókori Keleten",
+          "short_description": "Az államszervezetek, uralkodói legitimáció és társadalmi rétegek összehasonlítása Mezopotámiában és Egyiptomban.",
+          "sub_topics": [
+            {
+              "key": "varosallamok_es_birodalmak",
+              "name": "Városállamok és birodalmak Mezopotámiában",
+              "short_description": "Megérti a városállamok működését, és felismeri, hogyan jöttek létre nagyobb birodalmi struktúrák.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, miért a folyóvölgyekben (Tigris–Eufrátesz) alakultak ki korán városok és államok! Említs legalább 3 természeti tényezőt!",
+                "Képzeld el, hogy egy sumér városállam tanácsadója vagy. Írj 5 pontban javaslatot az öntözés, a védelem és a kereskedelem megszervezésére!",
+                "Hasonlítsd össze a városállam és a birodalom fogalmát 5–6 mondatban, és adj egy-egy ókori keleti példát mindkettőre!"
+              ]
+            },
+            {
+              "key": "uralkodoi_hatalom_es_legitimacio",
+              "name": "Uralkodói hatalom és legitimáció (istenkirályság, hivatalnoki állam)",
+              "short_description": "Felismeri a vallási legitimáció szerepét és az adminisztráció (hivatalnokréteg) jelentőségét a hatalom fenntartásában.",
+              "example_tasks": [
+                "Írd le, mit jelent az istenkirályság fogalma Egyiptomban, és mutasd be 3 példával, hogyan jelenhetett meg ez a mindennapokban (építkezés, vallás, ünnepek)!",
+                "Egy ókori uralkodói feliraton a király saját tetteit dicséri. Sorolj fel 3 állítást, amit ilyen szövegben várnál, és magyarázd el, mi lehet a céljuk!",
+                "Készíts rövid (8–10 mondatos) összehasonlítást: milyen előnyei voltak a központosított hivatalnoki államnak, és milyen kockázatokat hordozhatott!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "irasbeliseg_jog_es_gazdasag",
+          "name": "Írásbeliség, jog és gazdaság",
+          "short_description": "Az írás kialakulása és szerepe, a törvények társadalmi funkciója, valamint a gazdaság alapformái (földművelés, adó, kereskedelem).",
+          "sub_topics": [
+            {
+              "key": "iras_es_adminisztracio",
+              "name": "Az írás kialakulása és az adminisztráció",
+              "short_description": "Megérti, hogyan segítette az írás az állam működését (nyilvántartás, adózás, kereskedelem), és példákat hoz korai írásrendszerekre.",
+              "example_tasks": [
+                "Sorolj fel 3 okot, amiért az írás megjelenése fordulópont az emberiség történetében! Mindegyikhez írj egy konkrét példát (pl. adó, szerződés, vallás)!",
+                "Hasonlítsd össze 6–8 mondatban az ékírást és a hieroglif írást: hol használták, mire, és mi volt a közös funkciójuk az államban!",
+                "Készíts egy „ősi raktárnaplót” 10 tétellel (pl. gabona, olaj, sör), és írd le, miért volt ez fontos az állam számára!"
+              ]
+            },
+            {
+              "key": "torvenyek_es_tarsadalmi_rend",
+              "name": "Törvények és a társadalmi rend (pl. Hammurapi)",
+              "short_description": "Képes értelmezni a korai törvényalkotás célját, és egyszerű példákon bemutatja, mit árul el a társadalom szerkezetéről.",
+              "example_tasks": [
+                "Olvass el 2–3 rövid Hammurapi-törvényrészletet (tanári anyag), és válaszolj: milyen társadalmi különbségeket tükröznek (szabad–szolga, rang, nem)?",
+                "Írj 8–10 mondatos miniesszét: miért volt hasznos az uralkodónak, ha „kőtáblára vésette” a törvényeket? Térj ki a hatalom és a rend kapcsolatára!",
+                "Készíts saját „iskolai törvényoszlopot” 6 szabállyal, majd írd le, milyen értékeket tükröz (igazságosság, fegyelem, közösség) és miért!"
+              ]
+            },
+            {
+              "key": "kereskedelem_es_cserekapcsolatok",
+              "name": "Kereskedelem és cserekapcsolatok a térségben",
+              "short_description": "Felismeri a nyersanyaghiány és a specializáció szerepét; térképen beazonosítja a főbb útvonalakat és cserecikkeket.",
+              "example_tasks": [
+                "Magyarázd el, miért ösztönözhette a nyersanyaghiány (pl. fa, fém) Mezopotámia városait távolsági kereskedelemre! Nevezz meg legalább 3 lehetséges cserecikket!",
+                "Egy térképen jelöld be (szövegesen): honnan érkezhetett réz, ón, cédrusfa a Közel-Keletre! Írj 5–6 mondatot a kereskedelem jelentőségéről!",
+                "Hasonlíts össze két kereskedelmi helyzetet: (A) folyami szállítás (Nílus), (B) karavánút. Sorolj fel 2 előnyt és 2 hátrányt mindkettőnél!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "vallas_es_kultura_okori_kelet",
+          "name": "Vallás és kultúra az ókori Keleten",
+          "short_description": "A politeizmus és monoteizmus alapjai, a vallás társadalomszervező szerepe, valamint a monumentális építészet és kulturális örökség.",
+          "sub_topics": [
+            {
+              "key": "vallasok_tipusai_es_szerepe",
+              "name": "Politeizmus, monoteizmus és a vallás szerepe",
+              "short_description": "Megkülönbözteti a többistenhitet és az egyistenhitet, és példákkal bemutatja a vallás szerepét a legitimációban és a közösségi életben.",
+              "example_tasks": [
+                "Írd le a politeizmus és monoteizmus fogalmát, majd hozz 1–1 ókori példát mindkettőre! Magyarázd el 4–6 mondatban, miért volt jelentős a különbség!",
+                "Készíts rövid összehasonlítást (8–10 mondat): hogyan kapcsolódott az uralkodói hatalom a valláshoz Egyiptomban, és hogyan Izraelben!",
+                "Egy ünnepi körmenetet ábrázoló képet kapsz (tanári anyag). Írj forráselemzést: mit látsz, milyen szereplők vannak, és milyen társadalmi funkciót tölthetett be az esemény!"
+              ]
+            },
+            {
+              "key": "monumentalis_epiteszet_es_orokseg",
+              "name": "Monumentális építészet és kulturális örökség (piramisok, templomok)",
+              "short_description": "Értelmezi a nagy építkezések céljait (vallási, hatalmi, gazdasági), és következtet a társadalom szervezettségére.",
+              "example_tasks": [
+                "Sorolj fel 3 okot, amiért egy állam képes lehetett piramisokat vagy hatalmas templomokat építeni! Mindegyikhez kapcsolj egy feltételt (munkaerő, szervezés, erőforrás)!",
+                "Írj 10–12 mondatban érvelő választ: a monumentális építészet inkább vallási vagy inkább politikai (hatalmi) célokat szolgált? Használj legalább 2 példát!",
+                "Készíts „múzeumi feliratot” (max. 80 szó) egy képzeletbeli ókori templomról: mit tudunk róla, mire használták, és mit árul el az adott civilizációról?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "okori_gorog_romai_vilag",
+      "name": "Az ókori görög–római világ",
+      "short_description": "A tanulók megismerik a görög poliszvilág és a római államfejlődés főbb jellemzőit, a demokrácia és köztársaság intézményeit, valamint az antik kultúra és birodalmi integráció örökségét.",
+      "sub_topics": [
+        {
+          "key": "hellasz_polisz_es_demokracia",
+          "name": "Hellász: poliszok, társadalom és demokrácia",
+          "short_description": "A polisz működése, Athén demokráciája, Spárta sajátosságai, valamint a görög–perzsa és peloponnészoszi háborúk hatásai.",
+          "sub_topics": [
+            {
+              "key": "atheni_demokracia_intezmenyek",
+              "name": "Az athéni demokrácia intézményei és korlátai",
+              "short_description": "Felismeri a népgyűlés, tanács, tisztségviselők szerepét, és kritikai szempontból értékeli, kik vehettek részt a döntéshozatalban.",
+              "example_tasks": [
+                "Készíts vázlatot Athén politikai intézményeiről (népgyűlés, bulé, sztratégoszok). Mindegyikhez írj 1–2 mondatot a feladatáról!",
+                "Írj 8–10 mondatban választ: miért nem tekinthető az athéni demokrácia „mindenkire kiterjedő” demokráciának? Nevezz meg legalább 3 kizárt csoportot!",
+                "Hasonlítsd össze a mai magyarországi választásokat az athéni demokrácia egy elemével (pl. sorsolás, közvetlen döntés). Írj 5–6 hasonlóságot/különbséget!"
+              ]
+            },
+            {
+              "key": "spartha_es_athen_osszehasonlitas",
+              "name": "Spárta és Athén összehasonlítása",
+              "short_description": "Összeveti a két polisz társadalmi és politikai berendezkedését, és következtet a katonai–gazdasági eltérések hatásaira.",
+              "example_tasks": [
+                "Készíts 10–12 mondatos összehasonlítást Spárta és Athén között (nevelés, társadalmi rétegek, gazdaság, politika). Legalább 4 szempontot használj!",
+                "Egy spártai és egy athéni forrásrészletet kapsz (tanári). Írd le, milyen értékeket dicsérnek, és melyik poliszhoz melyik illik jobban!",
+                "Érvelj: ha egy polisz hosszú háborúra készül, melyik modell lehet előnyösebb (spártai vagy athéni)? Adj 3 érvet!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "roma_allamfejlodes_es_birodalom",
+          "name": "Róma: államfejlődés, társadalom és birodalom",
+          "short_description": "A királyság–köztársaság–császárság főbb jellemzői, a társadalmi konfliktusok, valamint a birodalom kiépülése és igazgatása.",
+          "sub_topics": [
+            {
+              "key": "koztarsasag_es_tarsadalmi_kuzdelmek",
+              "name": "A köztársaság intézményei és a rendek küzdelme",
+              "short_description": "Megérti a consul, senatus, néptribunus szerepét, és példákon bemutatja a patrícius–plebejus ellentét politikai következményeit.",
+              "example_tasks": [
+                "Rajzolj (szövegesen leírva) egyszerű „hatalmi térképet” a római köztársaságban: kik hozták a döntéseket, kik ellenőriztek, és kik képviselték a népet?",
+                "Írd le 8–10 mondatban, mi volt a rendek küzdelmének tétje! Nevezz meg 2 követelést és 2 eredményt!",
+                "Képzeld el, hogy plebejus vagy a Kr. e. 5. században. Írj rövid kérvényt (max. 120 szó) a senatusnak: mit követelsz és miért?"
+              ]
+            },
+            {
+              "key": "csaszarsag_es_principatus",
+              "name": "A principátus kialakulása és a császári hatalom",
+              "short_description": "Felismeri Augustus hatalomgyakorlásának lényegét, és megkülönbözteti a köztársasági formák fennmaradását a tényleges egyeduralomtól.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, hogyan tudott Augustus úgy egyeduralmat kialakítani, hogy közben „köztársasági” formák is megmaradtak!",
+                "Készíts forráselemzést egy Augustus-kori propagandaszöveg alapján (tanári): milyen képet fest a császárról, és mi lehet a célja?",
+                "Írj 8–10 mondatban összehasonlítást: milyen előnyei és hátrányai lehettek a principátusnak a köztársasághoz képest!"
+              ]
+            },
+            {
+              "key": "romanizacio_es_birodalmi_integracio",
+              "name": "Romanizáció és a birodalom integrációja",
+              "short_description": "Megérti, hogyan terjedt a római jog, nyelv és városi életmód a provinciákban, és felismeri ennek hosszú távú európai örökségét.",
+              "example_tasks": [
+                "Magyarázd el a romanizáció fogalmát 4–6 mondatban, majd hozz 2 példát arra, hogyan látszik ez egy provinciában (város, út, fürdő, közigazgatás)!",
+                "Egy térképen jelölve vannak a római utak. Írd le, miért volt stratégiai jelentőségük (katonaság, kereskedelem, igazgatás), legalább 3 szemponttal!",
+                "Készíts rövid esszét (12–14 mondat): milyen elemei élnek tovább ma is a római örökségnek (jog, nyelv, építészet, államszervezet)? Minimum 3 példát adj!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "antik_kultura_es_orokseg",
+          "name": "Antik kultúra, vallás és örökség",
+          "short_description": "Az antik műveltség (filozófia, művészet, tudomány), a vallási változások és a kereszténység megjelenése, valamint az antik hagyomány továbbélése.",
+          "sub_topics": [
+            {
+              "key": "gondolkodas_es_tudomany",
+              "name": "Antik gondolkodás és tudomány",
+              "short_description": "Példákon bemutatja a filozófia és tudomány jelentőségét, és felismeri a kritikai gondolkodás korai formáit.",
+              "example_tasks": [
+                "Válassz egy görög filozófust (pl. Szókratész, Platón, Arisztotelész), és írd le 8–10 mondatban, milyen kérdésekkel foglalkozott és miért volt ez új!",
+                "Készíts rövid (max. 150 szavas) ismertetőt arról, hogyan járult hozzá az antik tudomány a világ megértéséhez (pl. csillagászat, matematika, orvoslás) legalább 2 példával!",
+                "Értelmezz egy ókori idézetet (tanári). Írd le, milyen értéket közvetít, és hogyan lehetne ezt ma egy iskolai helyzetben alkalmazni!"
+              ]
+            },
+            {
+              "key": "keresztenyseg_megjelenese",
+              "name": "A kereszténység megjelenése és elterjedése",
+              "short_description": "Megérti a kereszténység kialakulásának történelmi hátterét, és alapvetően képes magyarázni terjedésének társadalmi okait.",
+              "example_tasks": [
+                "Sorolj fel 3 társadalmi vagy politikai tényezőt, ami segíthette a kereszténység terjedését a birodalomban! Mindegyikhez írj 1 magyarázó mondatot!",
+                "Készíts időrendi vázlatot 5 állomással a kereszténység helyzetéről a Római Birodalomban (üldözés–elfogadás–államvallás).",
+                "Írj 10–12 mondatos ok–okozati elemzést: hogyan változtathatta meg a kereszténység elterjedése a közösségi életet és a hatalom legitimációját?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "keresztenyseg_es_kozepkori_europa_alapjai",
+      "name": "A kereszténység és a középkori Európa alapjai",
+      "short_description": "A tanulók megismerik a Nyugatrómai Birodalom bukása utáni átalakulást, a keresztény egyház szerepét, a feudális/rendi világ alapjait, valamint a középkori mindennapokat és kultúrát.",
+      "sub_topics": [
+        {
+          "key": "a_kozepkor_kezdete_es_orokseg",
+          "name": "Az ókor vége és a középkor kezdete",
+          "short_description": "A késő antik átalakulás, a népvándorlás és az új politikai-társadalmi rend kialakulásának értelmezése ok–okozati összefüggésekben.",
+          "sub_topics": [
+            {
+              "key": "nepvandorlas_es_birodalmak_atrendezodese",
+              "name": "Népvándorlás, birodalmi átrendeződés és kontinuitás",
+              "short_description": "Megkülönbözteti a folyamat jellegű változásokat az eseményszerű fordulópontoktól; példákkal mutatja be, mi maradt fenn a római örökségből.",
+              "example_tasks": [
+                "Írj 8–10 mondatban magyarázatot: miért nem egyetlen évben „kezdődött” a középkor? Használj legalább 2 példát (pl. intézmények, vallás, nyelv) a folytonosságra!",
+                "Készíts ok–okozati láncot (legalább 6 lépés) arról, hogyan járulhattak hozzá a népvándorlás hullámai a Nyugatrómai Birodalom meggyengüléséhez!",
+                "Válassz 3 római örökségelem közül (jog, latin nyelv, úthálózat, városok, kereszténység), és mindegyikhez írd le 2–2 mondatban, hogyan élhetett tovább a középkorban!"
+              ]
+            },
+            {
+              "key": "frank_allam_es_karolingok",
+              "name": "A Frank Birodalom és a Karolingok szerepe Európa formálásában",
+              "short_description": "Felismeri a keresztény királyság és a pápaság kapcsolatát, valamint a birodalomszervezés jelentőségét a nyugati középkorban.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, miért tekinthető Nagy Károly uralma fordulópontnak a nyugati Európa történetében!",
+                "Készíts rövid forráselemzést (tanári részlet alapján): milyen célokat szolgálhatott a császárrá koronázás, és kiknek lehetett ez előnyös?",
+                "Írj 10–12 mondatos összehasonlítást: miben különbözött egy korai középkori birodalom működése a Római Birodalométól (igazgatás, hadsereg, gazdaság)!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kereszteny_egyhaz_es_papasag",
+          "name": "A keresztény egyház és a pápaság szerepe",
+          "short_description": "Az egyház intézményrendszere, kulturális és társadalomszervező funkciói, valamint az invesztitúraharc és az egyház–világi hatalom viszonya.",
+          "sub_topics": [
+            {
+              "key": "monostorok_iskolak_es_kulturaatadas",
+              "name": "Monostorok, műveltség és kultúraátadás",
+              "short_description": "Megérti a kolostorok szerepét az írásbeliség, oktatás, gazdálkodás és a kulturális örökség megőrzésében.",
+              "example_tasks": [
+                "Sorolj fel 5 funkciót, amit egy középkori kolostor betölthetett (pl. könyvmásolás, gyógyítás). Mindegyikhez írj 1 magyarázó mondatot!",
+                "Képzeld el, hogy egy apátság gazdasági vezetője vagy. Írj 6–8 pontos tervet: miből tartanád fenn a monostort (földművelés, kézművesség, vendégfogadás stb.)!",
+                "Írj 10–12 mondatos miniesszét: miért volt döntő jelentőségű az egyházi intézményrendszer a középkori Európa kulturális egységének kialakulásában?"
+              ]
+            },
+            {
+              "key": "invesztituraharc_es_hatalmi_konfliktusok",
+              "name": "Invesztitúraharc és a hatalmi konfliktusok",
+              "short_description": "Képes bemutatni, miért volt tétje a püspökök kinevezésének, és hogyan alakította ez a király–császár–pápa viszonyát.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, mi az invesztitúraharc lényege! Nevezz meg legalább 2 érvet mindkét fél oldaláról!",
+                "Készíts „vita-párbeszédet” (10–12 sor) egy császár és egy pápa között: ki miért tart igényt a kinevezési jogra?",
+                "Írj ok–okozati elemzést (10–12 mondat): hogyan járulhatott hozzá az invesztitúraharc az államhatalom és az egyházi hatalom hosszú távú elkülönüléséhez?"
+              ]
+            },
+            {
+              "key": "kereszteny_univerzalizmus_es_keresztes_haboruk",
+              "name": "Keresztény univerzalizmus és a keresztes háborúk",
+              "short_description": "Megérti a keresztes hadjáratok vallási, politikai és gazdasági mozgatórugóit, és értékeli következményeiket Európa és a Közel-Kelet viszonyára.",
+              "example_tasks": [
+                "Sorolj fel 3 vallási és 2 világi (politikai/gazdasági) okot, amiért keresztes hadjáratok indultak! Mindegyikhez írj 1–1 magyarázatot!",
+                "Készíts térképi feladatot (szövegesen): mely térségeket érinthetett egy hadjárat Nyugat-Európától a Szentföldig? Nevezz meg legalább 4 „állomást”!",
+                "Írj 12–14 mondatos értékelést: a keresztes háborúk inkább összekötötték vagy inkább elmélyítették Európa és a muszlim világ közötti ellentéteket? Használj 3 konkrét következményt!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "feudalizmus_rendisag_es_kozepkori_allam",
+          "name": "Feudalizmus, rendiség és középkori államiság",
+          "short_description": "A hűbéri viszonyok, a rendi társadalom kialakulása, a királyi hatalom és a rendek együttműködése/konfliktusa, valamint a középkori államszervezés alapjai.",
+          "sub_topics": [
+            {
+              "key": "huberi_lanc_es_tarsadalmi_hierarchia",
+              "name": "Hűbéri lánc és társadalmi hierarchia",
+              "short_description": "Képes a hűbéri kapcsolatrendszert (kölcsönös szolgáltatások) értelmezni, és példákkal bemutatni a társadalmi rétegek szerepét.",
+              "example_tasks": [
+                "Rajz helyett írd le szövegesen egy hűbéri lánc példáját 5 szereplővel (király–főúr–lovag stb.). Minden kapcsolathoz írd oda: mit ad és mit kap!",
+                "Készíts 8–10 mondatos magyarázatot: miért volt a föld a hatalom egyik fő alapja a középkorban? Kapcsold össze a hadviseléssel és a szolgáltatásokkal!",
+                "Érvelj 10–12 mondatban: a hűbéri rendszer inkább stabilitást vagy inkább széthúzást okozott? Adj 2–2 érvet!"
+              ]
+            },
+            {
+              "key": "rendi_gyules_es_jogok",
+              "name": "Rendiség, rendi gyűlés és jogok",
+              "short_description": "Megérti a rendek (nemesség, papság, polgárság) szerepét, és bemutatja a rendi képviselet és a királyi hatalom viszonyát.",
+              "example_tasks": [
+                "Sorold fel a három rendet, és mindegyikhez írj 2 tipikus jogot vagy feladatot a középkori társadalomban!",
+                "Képzeld el, hogy egy rendi gyűlésen vagy. Írj 6–8 pontos követeléslistát egy rend nevében (adó, hadkötelezettség, kiváltságok)!",
+                "Írj 10–12 mondatos összehasonlítást: miben hasonlít és miben különbözik a rendi képviselet a mai parlamenti képviselettől?"
+              ]
+            },
+            {
+              "key": "kozepkori_hadsereg_es_vedelmi_rendszerek",
+              "name": "Középkori hadseregek és védelmi rendszerek",
+              "short_description": "Megérti a lovagi hadviselés és a várak szerepét, valamint a hadszervezés társadalmi-gazdasági feltételeit.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, miért volt fontos a várépítés a középkorban! Térj ki a hatalomra, védelemre és igazgatásra is!",
+                "Készíts „költségvetési” gondolkodtatót: sorolj fel 5 erőforrást, ami egy lovagi felszereléshez és hadjárathoz kellett (ló, páncél, élelem stb.), és írd le, ki biztosíthatta!",
+                "Írj 10–12 mondatos ok–okozati elemzést: hogyan változtatta meg a hadviselést a zsoldossereg és a pénzgazdálkodás terjedése?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kozepkori_varosok_gazdasag_es_mindennapok",
+          "name": "Középkori városok, gazdaság és mindennapok",
+          "short_description": "A városfejlődés, kereskedelem, céhek és polgárság szerepe, valamint a mindennapi élet, járványok és mentalitások a középkorban.",
+          "sub_topics": [
+            {
+              "key": "varosfejlodes_es_polgarsag",
+              "name": "Városfejlődés és polgárság",
+              "short_description": "Felismeri, miért erősödtek meg a városok, és hogyan alakult ki a polgárság mint új társadalmi csoport.",
+              "example_tasks": [
+                "Sorolj fel 4 okot, amiért a középkorban városok fejlődtek (kereskedelem, kézműipar, földesúri központok). Mindegyikhez írj 1 példát!",
+                "Írj 8–10 mondatos magyarázatot: mit jelentett a „városi szabadság”, és miért volt ez vonzó a jobbágyok számára?",
+                "Képzeld el, hogy egy középkori város tanácstagja vagy. Írj 6–8 pontban szabályokat a piac rendjére és a városi biztonságra!"
+              ]
+            },
+            {
+              "key": "cehek_es_kereskedelem",
+              "name": "Céhek, kézműipar és távolsági kereskedelem",
+              "short_description": "Megérti a céhek szabályozó szerepét, és bemutatja a középkori kereskedelmi útvonalak és vásárok jelentőségét.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, miért hoztak létre céheket a kézművesek! Térj ki a minőségre, árakra és a tanuló–legény–mester útra!",
+                "Készíts „céhszabályzatot” 8 pontban egy választott mesterséghez (pl. pék, kovács, takács). Legyen benne minőségi előírás és vizsga is!",
+                "Írj 10–12 mondatos elemzést: hogyan változtathatta meg a távolsági kereskedelem (vásárok, tengeri útvonalak) a városok gazdagságát és a társadalmi viszonyokat?"
+              ]
+            },
+            {
+              "key": "jarvanyok_es_eletmod",
+              "name": "Járványok, életmód és mentalitás",
+              "short_description": "Értelmezi a pestis és más járványok társadalmi hatásait, és következtet a mindennapi élet, higiénia és vallásosság összefüggéseire.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: milyen rövid távú és milyen hosszú távú következményei lehettek a pestisjárványnak Európában? Adj legalább 2–2 példát!",
+                "Képzeld el, hogy egy városi krónikás vagy a 14. században. Írj 120–150 szavas beszámolót a járványról úgy, hogy érződjön a korabeli gondolkodásmód!",
+                "Készíts forráselemzést egy középkori ábrázolás (tanári) alapján: mit fejez ki a halálról, félelemről vagy vallásról, és mit árul el a korszak mentalitásáról?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "kozepkori_magyar_kiralysag",
+      "name": "A középkori Magyar Királyság",
+      "short_description": "A tanulók áttekintik a magyar államalapítás és a királyi hatalom kiépülését, a rendi berendezkedés kialakulását, valamint a 11–15. századi magyar történelem főbb fordulópontjait és társadalmi folyamatait.",
+      "sub_topics": [
+        {
+          "key": "allamalapitas_es_kereszteny_kiralysag",
+          "name": "Államalapítás és a keresztény királyság megszilárdítása",
+          "short_description": "A fejedelemségből királyságba való átmenet, a kereszténység felvétele, egyházszervezet, vármegye-rendszer és királyi hatalom alapjai.",
+          "sub_topics": [
+            {
+              "key": "istvan_kora_es_intezmenyek",
+              "name": "Szent István kora: intézmények és államszervezés",
+              "short_description": "Képes bemutatni a vármegyerendszer és az egyházszervezet szerepét, valamint az uralkodói legitimáció eszközeit.",
+              "example_tasks": [
+                "Sorolj fel 5 államszervező intézkedést Szent István korából (pl. vármegyék, püspökségek). Mindegyikhez írd le, miért volt fontos!",
+                "Készíts forráselemzést a (tanári) Intelmek egy rövid részlete alapján: milyen uralkodói értékeket hangsúlyoz, és milyen célból?",
+                "Írj 10–12 mondatos ok–okozati elemzést: miért segítette a kereszténység felvétele Magyarország beilleszkedését a nyugati Európába?"
+              ]
+            },
+            {
+              "key": "kiralyi_birtok_es_hatalom",
+              "name": "Királyi birtok, várispánság és hatalmi központok",
+              "short_description": "Megérti a királyi jövedelmek forrásait és a várispánság működését; következtet a központi hatalom erejére.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, miből származhattak a király jövedelmei a 11–12. században! Nevezz meg legalább 4 forrást!",
+                "Képzeld el, hogy egy várispán vagy. Írj 6–8 pontos feladatlistát: mit kell megszervezned békében és háborúban?",
+                "Írj 10–12 mondatos értékelést: hogyan befolyásolta a királyi birtokok aránya a király és a főurak viszonyát?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "aranybulla_rendisag_es_kiralyi_hatalom",
+          "name": "Az Aranybulla és a rendiség kialakulása",
+          "short_description": "A királyi hatalom korlátai, a nemesség jogai és a rendi gondolkodás kezdetei; a politikai konfliktusok értelmezése.",
+          "sub_topics": [
+            {
+              "key": "aranybulla_jogok_es_ellenallas",
+              "name": "Az Aranybulla: jogok és ellenállási záradék",
+              "short_description": "Képes az Aranybulla fő pontjait értelmezni, és bemutatni, hogyan jelenik meg benne a királyi hatalom korlátozása.",
+              "example_tasks": [
+                "Sorolj fel 5 fontos rendelkezést az Aranybullából, és mindegyikhez írd le 1 mondatban, kinek volt előnyös és miért!",
+                "Magyarázd el 6–8 mondatban az ellenállási záradék jelentőségét! Miért számít különlegesnek a korszakban?",
+                "Írj 10–12 mondatos összehasonlítást: milyen módon korlátozható ma egy állami vezető hatalma, és miben hasonlít/ különbözik ez az Aranybullától?"
+              ]
+            },
+            {
+              "key": "kivaltasok_es_nemesseg",
+              "name": "Kiváltságok, nemesség és társadalmi átalakulás",
+              "short_description": "Felismeri, hogyan alakult át a szolgálónépi és várjobbágyi réteg, és miként formálódott a nemesség egységesebb renddé.",
+              "example_tasks": [
+                "Készíts 8–10 mondatos magyarázatot: hogyan lett valakiből nemes a középkori Magyarországon? Térj ki a szolgálatra, földbirtokra és jogokra!",
+                "Sorolj fel 3 társadalmi csoportot (nemes, jobbágy, egyházi), és mindegyikhez írj 2–2 jellemző kötelezettséget/jogot!",
+                "Érvelj 10–12 mondatban: a kiváltságok rendszere inkább stabilitást vagy inkább társadalmi feszültséget okozott? Adj 2–2 érvet!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "tatárjárás_es_orszag_epitese",
+          "name": "A tatárjárás és IV. Béla országépítése",
+          "short_description": "A tatárjárás okai és következményei, a védelem átszervezése, várépítések és telepítések; a tanulságok hosszú távú értékelése.",
+          "sub_topics": [
+            {
+              "key": "tatárjárás_okok_es_tapasztalatok",
+              "name": "A tatárjárás okai, lefolyása és következményei",
+              "short_description": "Képes ok–okozati összefüggésekben magyarázni a pusztítást, és példákkal bemutatni a demográfiai és gazdasági hatásokat.",
+              "sub_topics": [
+                {
+                  "key": "vedelmi_hianyossagok_es_pusztitas",
+                  "name": "Védelmi hiányosságok és a pusztítás mértéke",
+                  "short_description": "Felismeri a hadszervezet és erődrendszer gyengeségeit, és következtet a gyors vereség okaira.",
+                  "example_tasks": [
+                    "Sorolj fel 4 okot, amiért a tatár támadás ekkora pusztítást okozott! Mindegyikhez írj 1 magyarázatot (pl. várak hiánya, hadszervezet)!",
+                    "Készíts 10–12 mondatos ok–okozati elemzést: hogyan befolyásolta a földrajz (Alföld, folyók) a tatár hadjárat lefolyását?",
+                    "Értékelő feladat: miért lehet félrevezető csak a muhi csatát „okként” megnevezni? Írj 6–8 mondatot a folyamat-jellegű okokról!"
+                  ]
+                },
+                {
+                  "key": "demografia_es_gazdasagi_hatasok",
+                  "name": "Demográfiai és gazdasági következmények",
+                  "short_description": "Megkülönbözteti a rövid távú károkat és a hosszú távú átalakulásokat (telepítések, birtokviszonyok, városfejlődés).",
+                  "example_tasks": [
+                    "Írj 8–10 mondatot: milyen rövid távú és hosszú távú gazdasági következményei lehettek a tatárjárásnak? Adj 2–2 példát!",
+                    "Képzeld el, hogy egy megyei tisztviselő vagy a tatárjárás után. Írj 6–8 pontos helyreállítási tervet (népesség, védelem, termelés)!",
+                    "Hasonlítsd össze a tatárjárás utáni telepítéseket egy modern válság utáni újjáépítéssel: írj 10–12 mondatban 3 hasonlóságot és 3 különbséget!"
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "iv_bela_reformok_es_varrendszer",
+              "name": "IV. Béla reformjai: várépítés, telepítések, királyi politika",
+              "short_description": "A kővárak szerepe, a nemesi–királyi együttműködés változása, valamint az ország újjászervezésének fő elemei.",
+              "sub_topics": [
+                {
+                  "key": "kovarak_es_vedelmi_strategia",
+                  "name": "Kővárak és védelmi stratégia",
+                  "short_description": "Megérti, miért vált kulccsá a kővárépítés, és hogyan alakította át a hatalmi viszonyokat.",
+                  "example_tasks": [
+                    "Magyarázd el 6–8 mondatban, miért volt hatékonyabb a kővár, mint a korábbi föld-fa erődítmények! Térj ki a hadviselésre!",
+                    "Készíts érvelést (10–12 mondat): a várépítések inkább a király hatalmát erősítették vagy inkább a főurakét? Használj 3 konkrét érvet!",
+                    "Térképi gondolkodás: hol lenne ésszerű kővárat építeni (hegytető, folyóátkelő, határvidék)? Írj 5–6 mondatot 3 választott helyszínről!"
+                  ]
+                },
+                {
+                  "key": "telepitesek_es_varosok",
+                  "name": "Telepítések, hospesek és a városfejlődés ösztönzése",
+                  "short_description": "Felismeri a betelepítések gazdasági és társadalmi célját, és összekapcsolja a városiasodás erősödésével.",
+                  "example_tasks": [
+                    "Sorolj fel 3 okot, amiért a király hospeseket (betelepülőket) hívhatott! Mindegyikhez írj 1 konkrét gazdasági vagy védelmi célt!",
+                    "Készíts 8–10 mondatos magyarázatot: miért volt fontos a kiváltságadás (pl. városi jogok) az újjáépítésben?",
+                    "Írj 10–12 mondatos összehasonlítást: milyen előnyöket hozhatott a sokszínű (különböző nyelvű) betelepülés, és milyen konfliktusokat okozhatott?"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "kora_ujkor_felfedezesek_reformacio_hatalmi_atrendezodesek",
+      "name": "Kora újkor: felfedezések, reformáció, hatalmi átrendeződések",
+      "short_description": "A tanulók megismerik a földrajzi felfedezések okait és következményeit, a reformáció és ellenreformáció főbb jelenségeit, valamint a kora újkori államfejlődés és világgazdaság alapvető folyamatait.",
+      "sub_topics": [
+        {
+          "key": "foldrajzi_felfedezesek_es_vilaggazdasag",
+          "name": "Földrajzi felfedezések és a világgazdaság kialakulása",
+          "short_description": "A felfedezések motivációi, technikai feltételei, a gyarmatosítás és a kereskedelmi központok átrendeződése; következmények Európára és a meghódított térségekre.",
+          "sub_topics": [
+            {
+              "key": "felfedezesek_okai_es_feltetelei",
+              "name": "A felfedezések okai és technikai feltételei",
+              "short_description": "Képes bemutatni a gazdasági ösztönzőket (fűszerkereskedelem, nemesfém), a politikai versengést és a hajózási/ térképészeti fejlődést.",
+              "example_tasks": [
+                "Sorolj fel 3 gazdasági és 2 politikai okot, amiért a 15–16. században felerősödött a tengeri terjeszkedés! Mindegyikhez írj 1 magyarázó mondatot!",
+                "Készíts 6–8 mondatos magyarázatot: hogyan segítette a karavella, az iránytű és a portolán térkép a hosszú tengeri utakat? Nevezz meg legalább 2 technikai újítást!",
+                "Képzeld el, hogy egy portugál udvari tanácsadó vagy 1480 körül. Írj 6 pontos érvelést amellett, miért érdemes új tengeri utat keresni India felé!"
+              ]
+            },
+            {
+              "key": "gyarmatositas_es_kolumbusz_csere",
+              "name": "Gyarmatosítás és a „kolumbuszcsere” hatásai",
+              "short_description": "Megérti az európai hódítás és kizsákmányolás formáit, valamint a növények, állatok, betegségek és népességmozgások globális következményeit.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: milyen hatással volt az amerikai nemesfém beáramlása az európai gazdaságra? Térj ki az árakra és a kereskedelemre!",
+                "Készíts két listát (táblázat nélkül): 5 olyan termék/élőlény, ami Amerikából Európába került, és 5, ami Európából Amerikába került. Minden elemhez írj 1 rövid következményt!",
+                "Értékelő feladat (12–14 mondat): a gyarmatosítás a 16. században inkább technológiai-gazdasági fejlődést vagy inkább emberi tragédiát jelentett? Használj 3 konkrét példát (őslakosság, munka, erőforrás)!"
+              ]
+            },
+            {
+              "key": "kereskedelmi_kozpontok_atrendezodese",
+              "name": "Kereskedelmi központok átrendeződése (Földközi-tenger → Atlanti-óceán)",
+              "short_description": "Képes térképi és gazdasági összefüggésekben bemutatni, hogyan tolódtak el a kereskedelmi útvonalak és a hatalmi súlypontok.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, miért csökkent a Földközi-tenger szerepe és miért nőtt az Atlanti-óceáné a 16. századtól!",
+                "Egy térképen jelöld szövegesen a fő kereskedelmi csomópontokat a 15. században és a 17. században (legalább 3–3). Írj 5–6 mondatot a változás okairól!",
+                "Készíts ok–okozati láncot (legalább 6 lépés) arról, hogyan vezethetett a kereskedelmi súlypontváltás új nagyhatalmak felemelkedéséhez!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "reformacio_es_ellenreformacio",
+          "name": "Reformáció és ellenreformáció",
+          "short_description": "A reformáció okai, irányzatai és társadalmi hatásai, valamint a katolikus megújulás (ellenreformáció) eszközei és következményei Európában és Magyarországon.",
+          "sub_topics": [
+            {
+              "key": "reformacio_okai_es_iranyzatok",
+              "name": "A reformáció okai és fő irányzatai",
+              "short_description": "Képes bemutatni a reformáció vallási és társadalmi hátterét, valamint a lutheránus, kálvinista és más reformirányzatok fő jellemzőit.",
+              "example_tasks": [
+                "Sorolj fel 3 egyházi és 2 társadalmi okot, ami hozzájárult a reformáció kibontakozásához! Mindegyikhez írj 1 példát!",
+                "Készíts rövid (10–12 mondatos) összehasonlítást: miben hasonlít és miben különbözik a lutheri és a kálvini tanítás (hit, egyházszervezet, szertartás)?",
+                "Forráselemzés (tanári részlet alapján): azonosítsd a szerző célját és célközönségét, majd írd le 6–8 mondatban, milyen problémára reagál!"
+              ]
+            },
+            {
+              "key": "ellenreformacio_es_jezsuitak",
+              "name": "Ellenreformáció, katolikus megújulás és a jezsuiták szerepe",
+              "short_description": "Megérti a katolikus egyház válaszait (zsinatok, rendek, oktatás), és képes értékelni ezek hatását a vallási megosztottságra és kultúrára.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: milyen eszközökkel próbálta a katolikus egyház megállítani a reformáció terjedését? Nevezz meg legalább 4 eszközt!",
+                "Képzeld el, hogy egy 17. századi város tanácsa dönt iskoláról. Írj 6–8 pontos érvelést a jezsuita iskola alapítása mellett vagy ellen!",
+                "Értékelő esszé (12–14 mondat): az ellenreformáció inkább vallási megújulást vagy inkább politikai kényszert jelentett? Használj 3 konkrét példát!"
+              ]
+            },
+            {
+              "key": "vallas_es_politika_osszefonodasa",
+              "name": "Vallás és politika összefonódása a kora újkorban",
+              "short_description": "Képes bemutatni, hogyan váltak a vallási konfliktusok politikai-hatalmi küzdelmeken belüli tényezővé, és hogyan vezetett ez háborúkhoz, kompromisszumokhoz.",
+              "example_tasks": [
+                "Készíts ok–okozati vázlatot (legalább 6 pont): hogyan vezethetett a vallási megosztottság fegyveres konfliktusokhoz egy európai térségben!",
+                "Írj 10–12 mondatos példát: mutasd be egy kompromisszum (pl. vallásbéke jellegű megoldás) előnyeit és hátrányait a béke szempontjából!",
+                "Hasonlíts össze két nézőpontot (8–10 mondat): egy uralkodó és egy városi polgár szemszögéből miért volt fontos a vallás kérdése?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kora_ujkori_allamfejlodes_es_hatalmi_rendszerek",
+          "name": "Kora újkori államfejlődés és hatalmi rendszerek",
+          "short_description": "Az abszolutizmus és rendi monarchia jellemzői, a modern állam alapjai, a diplomácia és háborúk szerepe, valamint Európa hatalmi egyensúlyának változásai.",
+          "sub_topics": [
+            {
+              "key": "abszolutizmus_es_rendi_monarchia",
+              "name": "Abszolutizmus és rendi monarchia",
+              "short_description": "Képes megkülönböztetni az abszolutizmus és a rendi berendezkedés intézményeit, és példákkal bemutatni a hatalomgyakorlás eltéréseit.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban az abszolutizmus fogalmát! Nevezz meg 3 jellemzőt (hadsereg, hivatalnokok, adózás) és 1 példát!",
+                "Készíts 10–12 mondatos összehasonlítást: milyen előnyei és hátrányai vannak az abszolutizmusnak és a rendi monarchiának az állam működése szempontjából!",
+                "Képzeld el, hogy rendi követ vagy egy abszolutista uralkodó tanácsadója vagy. Írj 6–8 pontban érveket a saját rendszered mellett!"
+              ]
+            },
+            {
+              "key": "haboruk_diplomacia_es_hatalmi_egyensuly",
+              "name": "Háborúk, diplomácia és a hatalmi egyensúly",
+              "short_description": "Megérti, hogyan szerveződtek szövetségek, és hogyan alakította a diplomácia és hadviselés Európa politikai térképét.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: miért vált a diplomácia egyre fontosabbá a kora újkorban? Térj ki a szövetségekre és az állandó képviseletekre!",
+                "Térképi feladat (szöveges): nevezz meg 3 nagyhatalmat a 17–18. században, és mindegyikről írd le 1 mondatban, milyen érdekei lehettek!",
+                "Készíts ok–okozati láncot (legalább 7 lépés): hogyan vezethetett egy dinasztikus konfliktus európai méretű háborúhoz!"
+              ]
+            },
+            {
+              "key": "hadsereg_adozas_es_allami_kozpontositás",
+              "name": "Állandó hadsereg, adózás és állami központosítás",
+              "short_description": "Felismeri, hogy a modern állam erősödése összefügg a pénzügyekkel, hivatalnoksággal és a hadsereg fenntartásával.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, miért igényelt az állandó hadsereg rendszeres adózást! Kapcsold össze a központi hatalom erősödésével!",
+                "Képzeld el, hogy egy kincstári tisztviselő vagy. Írj 6–8 pontban javaslatot: milyen adóformákat és ellenőrzéseket vezetnél be a bevételek növelésére!",
+                "Értékelő feladat (12–14 mondat): a központosítás inkább hatékonyabb államot vagy inkább társadalmi ellenállást eredményezett? Használj 3 példát (rendek, parasztság, városok)!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "torok_kor_es_habsburg_magyar_egyutteles",
+      "name": "A török kor és a Habsburg–magyar együttélés",
+      "short_description": "A tanulók megismerik a Magyar Királyság három részre szakadását, a végvári rendszert és mindennapokat, a török uralom és felszabadító háborúk következményeit, valamint a Habsburg-berendezkedés és rendi küzdelmek alapjait.",
+      "sub_topics": [
+        {
+          "key": "mohacs_es_harom_reszre_szakadas",
+          "name": "Mohács és az ország három részre szakadása",
+          "short_description": "A mohácsi vereség okai, a belpolitikai válság és a Habsburg–Szapolyai rivalizálás; a három országrész sajátosságai.",
+          "sub_topics": [
+            {
+              "key": "mohacs_okok_es_kovetkezmenyek",
+              "name": "A mohácsi csata okai és következményei",
+              "short_description": "Képes a katonai, politikai és gazdasági tényezőket elkülöníteni, és bemutatni a vereség hosszú távú hatását.",
+              "example_tasks": [
+                "Sorolj fel 2 katonai, 2 politikai és 1 gazdasági okot, ami hozzájárulhatott Mohács kimeneteléhez! Mindegyikhez írj 1 magyarázatot!",
+                "Írj 10–12 mondatos ok–okozati elemzést: hogyan vezetett Mohács a belpolitikai megosztottsághoz és végül az ország három részre szakadásához!",
+                "Értékelő kérdés (12–14 mondat): Mohács inkább „hirtelen katasztrófa” vagy inkább egy hosszabb folyamat következménye? Használj 3 érvet!"
+              ]
+            },
+            {
+              "key": "harom_orszagresz_osszevetese",
+              "name": "A három országrész összehasonlítása (Királyi Mo., Hódoltság, Erdély)",
+              "short_description": "Megérti az eltérő közigazgatási és társadalmi viszonyokat, és példákkal bemutatja a gazdasági és kulturális különbségeket.",
+              "example_tasks": [
+                "Készíts 10–12 mondatos összehasonlítást a három országrész között (adózás, hadsereg, vallás, mindennapok). Legalább 4 szempontot használj!",
+                "Térképi gondolkodás: írd le, mely területek tartoztak nagyjából a Királyi Magyarországhoz, a Hódoltsághoz és Erdélyhez. Nevezz meg 2–2 fontos várost mindegyikből!",
+                "Írj 8–10 mondatot: milyen előnyei és kockázatai voltak Erdély külpolitikájának a két nagyhatalom (Habsburg és Oszmán) között?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "vegvari_rendszer_es_hadviseles",
+          "name": "Végvári rendszer, hadviselés és mindennapok",
+          "short_description": "A határvédelem szervezete, a végvárak szerepe, a katonaság és a helyi társadalom együttélése, valamint a háborús mindennapok.",
+          "sub_topics": [
+            {
+              "key": "vegvarak_strategiai_szerepe",
+              "name": "A végvárak stratégiai szerepe és hálózata",
+              "short_description": "Képes bemutatni, miért volt kulcsfontosságú a végvári vonal, és hogyan kapcsolódott össze logisztikával és hadjáratokkal.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, miért nem egyetlen vár védte az országot, hanem egy rendszer! Térj ki a távolságokra, utánpótlásra és riasztásra!",
+                "Képzeld el, hogy egy várkapitány vagy. Írj 8 pontos védelmi tervet: őrség, készletek, felderítés, jelzések, javítások!",
+                "Térképi feladat (szöveges): válassz 3 végvárat, és írd le, miért lehetett fontos a helyük (folyóátkelő, útvonal, domborzat)!"
+              ]
+            },
+            {
+              "key": "katona_elet_es_tarsadalmi_kapcsolatok",
+              "name": "Katonai életmód és társadalmi kapcsolatok a határvidéken",
+              "short_description": "Felismeri a végvári katonaság összetételét és a helyi társadalomra gyakorolt hatását (gazdaság, biztonság, konfliktusok).",
+              "example_tasks": [
+                "Írj 8–10 mondatot: milyen forrásokból élhetett egy végvári katona, és milyen problémákhoz vezethetett a zsold késése?",
+                "Készíts két nézőpontból rövid beszámolót (2×80–100 szó): (A) egy paraszt, (B) egy végvári katona szemével ugyanarról a portyázásos időszakról!",
+                "Értékelő feladat (10–12 mondat): a végvári rendszer inkább védelmet vagy inkább folyamatos bizonytalanságot jelentett a lakosságnak? Adj 3 példát!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "felszabadito_haboruk_es_ujjarendezkedes",
+          "name": "Felszabadító háborúk és az újjárendeződés",
+          "short_description": "A török kiűzése, a háborúk pusztítása, betelepítések és birtokrendezés; a Habsburg-kormányzat és a rendek viszonyának alakulása.",
+          "sub_topics": [
+            {
+              "key": "torok_kiuzese_es_bekek",
+              "name": "A török kiűzése és a békerendezés",
+              "short_description": "Képes ok–okozati összefüggésekben bemutatni a hadjáratok céljait, és a békék következményeit Magyarország területi helyzetére.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: miért tartott hosszú ideig a török kiűzése? Térj ki a nemzetközi erőviszonyokra és a logisztikára!",
+                "Készíts időrendi vázlatot 6 állomással a felszabadító háborúk főbb eseményeiről (tanári útmutató alapján), és mindegyikhez írj 1 következményt!",
+                "Értékelő esszé (12–14 mondat): a felszabadítás után miért nem lett automatikusan „könnyebb” a lakosság élete? Használj 3 konkrét tényezőt!"
+              ]
+            },
+            {
+              "key": "betelepitesek_es_birtokrendezes",
+              "name": "Betelepítések, birtokrendezés és társadalmi változások",
+              "short_description": "Megérti az elnéptelenedés okait és a betelepítések célját; következtet a soknemzetiségű társadalom kialakulására.",
+              "example_tasks": [
+                "Sorolj fel 3 okot az elnéptelenedésre és 3 okot a betelepítésekre! Mindegyikhez írj 1 magyarázó mondatot!",
+                "Képzeld el, hogy egy földbirtokos vagy az újjáépítés idején. Írj 6–8 pontos tervet: hogyan szerveznéd meg a munkaerőt, a földhasználatot és a falvak újraindítását!",
+                "Írj 10–12 mondatos elemzést: milyen előnyöket és feszültségeket hozhatott a soknemzetiségű együttélés a 18. században?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "felvilagosodas_es_polgari_atalakulas_elozmenyei",
+      "name": "A felvilágosodás és a polgári átalakulás előzményei",
+      "short_description": "A tanulók megismerik a felvilágosodás eszméit, a 18. századi társadalmi-gazdasági változásokat, valamint a reformok és modernizáció előkészítő folyamatait Európában és a Habsburg Birodalomban.",
+      "sub_topics": [
+        {
+          "key": "felvilagosodas_es_eszmék",
+          "name": "A felvilágosodás eszméi és hatásai",
+          "short_description": "Az ész, haladás, természetjog, társadalmi szerződés és hatalommegosztás fogalmai; az eszmék kapcsolata a reformokkal és forradalmakkal.",
+          "sub_topics": [
+            {
+              "key": "tarsadalmi_szerzodes_es_allamelmeletek",
+              "name": "Társadalmi szerződés és államelméletek",
+              "short_description": "Képes bemutatni a felvilágosodás fő politikai gondolatait, és egyszerű példákon értelmezni a hatalom legitimációját.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban a társadalmi szerződés gondolatát! Írd le, mit ad fel az egyén és mit kap cserébe az államtól!",
+                "Készíts 10–12 mondatos összehasonlítást: miben különbözik az isteni eredetű uralkodói legitimáció és a népszuverenitás elve?",
+                "Írj érvelő választ (10–12 mondat): miért volt „veszélyes” a felvilágosodás az abszolutista rendszerekre nézve? Használj legalább 3 érvet!"
+              ]
+            },
+            {
+              "key": "hatalommegosztas_es_jogallamisag",
+              "name": "Hatalommegosztás, jogállamiság és emberi jogok",
+              "short_description": "Megérti a törvényhozó–végrehajtó–igazságszolgáltató hatalom elválasztásának célját, és kapcsolja a jogegyenlőség gondolatához.",
+              "example_tasks": [
+                "Sorold fel a hatalommegosztás három ágát, és mindegyikhez írj 1 példát, hogy ma milyen intézményhez kapcsolható!",
+                "Képzeld el, hogy egy város új szabályzatát készíted. Írj 6–8 pontban olyan szabályokat, amelyek a jogegyenlőséget és a visszaélések megelőzését szolgálják!",
+                "Forráselemzés (tanári): egy felvilágosodás kori szöveg alapján azonosíts 3 alapelvet, és írd le 6–8 mondatban, hogyan változtatná meg a társadalmat!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "gazdasagi_es_tarsadalmi_valtozasok_18_szazad",
+          "name": "Gazdasági és társadalmi változások a 18. században",
+          "short_description": "A mezőgazdasági termelés és demográfia változásai, a manufaktúrák és piacok bővülése, valamint a társadalmi mobilitás és polgárosodás kezdetei.",
+          "sub_topics": [
+            {
+              "key": "nepessegnovekedes_es_termeles",
+              "name": "Népességnövekedés, mezőgazdasági fejlődés és piacbővülés",
+              "short_description": "Felismeri, hogyan függ össze a termelékenység növekedése, a népesség emelkedése és az árutermelés terjedése.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: miért növekedett a népesség Európában a 18. században? Nevezz meg 3 tényezőt (élelmezés, járványok, békésebb időszakok)!",
+                "Készíts ok–okozati láncot (legalább 6 lépés): hogyan vezethetett a mezőgazdasági termelékenység növekedése a városok gyarapodásához!",
+                "Értelmező feladat: magyarázd el 6–8 mondatban, mit jelent az árutermelés, és miért változtatta meg a falusi életet!"
+              ]
+            },
+            {
+              "key": "manufaktura_es_kereskedelem",
+              "name": "Manufaktúrák, kereskedelem és a polgárság erősödése",
+              "short_description": "Megérti a manufaktúra fogalmát, és bemutatja, hogyan alakult át a termelés és a kereskedelem a modern gazdaság irányába.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban a manufaktúra és a céhes kézműipar közötti különbséget! Térj ki a munkamegosztásra!",
+                "Képzeld el, hogy egy kereskedő vagy. Írj 6–8 pontos tervet, hogyan növelnéd a nyereséget (útvonal, raktár, hitel, biztosítás) a 18. században!",
+                "Írj 10–12 mondatos elemzést: miért erősödhetett meg a polgárság, és milyen társadalmi feszültségekhez vezethetett ez a rendi világban?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "reformok_es_modernizacio_a_habsburg_birodalomban",
+          "name": "Reformok és modernizáció a Habsburg Birodalomban",
+          "short_description": "A felvilágosult abszolutizmus céljai és eszközei, állami centralizáció, oktatás és valláspolitika; a magyar rendek és a birodalmi kormányzat viszonya.",
+          "sub_topics": [
+            {
+              "key": "felvilagosult_abszolutizmus_celok",
+              "name": "Felvilágosult abszolutizmus: célok és eszközök",
+              "short_description": "Képes bemutatni, hogyan próbálták az uralkodók hatékonyabbá tenni az államot reformokkal, miközben a politikai hatalom központosított maradt.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: mit jelent a felvilágosult abszolutizmus? Nevezz meg 3 reformterületet (adózás, igazgatás, hadsereg, oktatás)!",
+                "Képzeld el, hogy egy uralkodói rendeletet készítesz. Írj 6–8 pontban reformjavaslatot az állami adminisztráció hatékonyságának növelésére!",
+                "Értékelő feladat (12–14 mondat): a felvilágosult abszolutizmus inkább a társadalom javát vagy inkább a központi hatalom megerősítését szolgálta? Adj 3 érvet!"
+              ]
+            },
+            {
+              "key": "oktatas_es_allami_szabalyozas",
+              "name": "Oktatás, művelődés és állami szabályozás",
+              "short_description": "Megérti, miért vált az oktatás állami üggyé, és hogyan kapcsolódott ez a modern állam igényeihez (hivatalnokok, hadsereg, gazdaság).",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, miért érdeke egy központosodó államnak az iskoláztatás kiterjesztése! Hozz 2 gyakorlati példát!",
+                "Írj 10–12 mondatos összehasonlítást: milyen különbségek vannak a középkori egyházi oktatás és a felvilágosodás kori állami oktatáspolitika között?",
+                "Készíts egy „iskolai reformtervet” 8 pontban: milyen tantárgyakat és készségeket erősítenél, ha a cél a modern állam működtetése?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "forradalmak_kora_es_nemzetallami_torekvesek_1789_1849",
+      "name": "A forradalmak kora és a nemzetállami törekvések (1789–1849)",
+      "short_description": "A tanulók áttekintik a francia forradalom és a napóleoni korszak főbb fordulópontjait, a nemzeti eszmék terjedését, valamint az 1848–49-es európai és magyar forradalmak okait és következményeit.",
+      "sub_topics": [
+        {
+          "key": "francia_forradalom_es_jogegyenloseg",
+          "name": "A francia forradalom és a jogegyenlőség programja",
+          "short_description": "A rendi társadalom válsága, a politikai fordulatok (alkotmányosság, köztársaság), valamint a jogegyenlőség és állampolgári jogok kibontakozása.",
+          "sub_topics": [
+            {
+              "key": "rendi_valsag_es_forradalmi_kitorés",
+              "name": "A rendi válság és a forradalom kitörése",
+              "short_description": "Képes ok–okozati összefüggésekben értelmezni a pénzügyi válságot, társadalmi feszültségeket és a politikai döntések szerepét.",
+              "example_tasks": [
+                "Sorolj fel 3 gazdasági és 2 társadalmi okot a francia forradalom kitörésére! Mindegyikhez írj 1 magyarázó mondatot!",
+                "Készíts ok–okozati láncot (legalább 7 lépés): hogyan vezethetett az állam pénzügyi válsága a rendi rendszer összeomlásához!",
+                "Írj 10–12 mondatos érvelést: miért vált a politikai képviselet kérdése központivá 1789-ben? Térj ki a rendekre és a nemzetfogalomra!"
+              ]
+            },
+            {
+              "key": "emberi_es_allampolgari_jogok",
+              "name": "Az Emberi és Polgári Jogok Nyilatkozata: alapelvek",
+              "short_description": "Megérti a szabadság, jogegyenlőség és népszuverenitás elveit; képes forrásszöveg alapján azonosítani kulcsfogalmakat.",
+              "example_tasks": [
+                "Válassz 3 alapelvet az Emberi és Polgári Jogok Nyilatkozatából (tanári kivonat), és mindegyikhez írj 2 mondatot: mit jelent és miért volt új!",
+                "Készíts 10–12 mondatos összehasonlítást: melyik nyilatkozati elv jelenik meg ma a magyar alkotmányos rendszerben, és hogyan?",
+                "Forráselemzés: írj 6–8 mondatot arról, kinek szólt a nyilatkozat, és milyen társadalmi rendet akart megváltoztatni!"
+              ]
+            },
+            {
+              "key": "radikalizalodas_es_terror",
+              "name": "Radikalizálódás és a terror időszaka",
+              "short_description": "Képes értelmezni, hogyan és miért radikalizálódhat egy forradalom; felismeri a külső háború és belső ellenállás hatását.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: milyen tényezők gyorsíthatják fel egy forradalom radikalizálódását? Használj 3 példát (háború, élelmiszerhiány, ellenforradalom)!",
+                "Képzeld el, hogy egy párizsi polgár vagy 1793-ban. Írj 120–150 szavas naplórészletet: mitől félsz és mit remélsz?",
+                "Értékelő esszé (12–14 mondat): a terror inkább „szükséghelyzeti védekezés” vagy inkább „hatalmi visszaélés” volt? Adj 3 érvet és hivatkozz 2 történelmi körülményre!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "napoleoni_korszak_es_europa",
+          "name": "A napóleoni korszak és Európa átalakulása",
+          "short_description": "Napóleon hatalomra jutása, reformok és háborúk; a kontinens politikai átrendeződése, a bécsi kongresszus és restauráció.",
+          "sub_topics": [
+            {
+              "key": "napoleon_hatalomgyakorlas_es_reformok",
+              "name": "Napóleon hatalomgyakorlása és reformjai",
+              "short_description": "Felismeri a hatékony államszervezés és az autoriter hatalomgyakorlás kettősségét; példákkal mutatja be a Napóleoni Kódex jelentőségét.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: milyen reformokkal próbálta Napóleon stabilizálni Franciaországot? Nevezz meg legalább 3 területet (jog, közigazgatás, oktatás)!",
+                "Magyarázd el 6–8 mondatban, miért volt fontos a Napóleoni Kódex a polgári társadalom szempontjából! Hozz 2 példát a jogegyenlőségre!",
+                "Értékelő feladat (12–14 mondat): Napóleon inkább a forradalom eszméinek „terjesztője” vagy inkább „korlátozója” volt? Adj 3 érvet és 1 ellenérvet!"
+              ]
+            },
+            {
+              "key": "bécsi_kongresszus_es_restauracio",
+              "name": "Bécsi kongresszus, restauráció és hatalmi egyensúly",
+              "short_description": "Képes bemutatni a restauráció célját, a legitimista elvet és a hatalmi egyensúly működését, valamint a nemzeti mozgalmak feszültségét.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, mit akart elérni a bécsi kongresszus! Használd a „legitimitás” és „hatalmi egyensúly” fogalmat!",
+                "Képzeld el, hogy egy kis állam diplomatája vagy 1815-ben. Írj 6–8 pontban tárgyalási célokat: mit kérnél és mitől félnél?",
+                "Írj 10–12 mondatos elemzést: miért jelentett kihívást a restauráció rendjének a liberalizmus és a nacionalizmus terjedése?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nemzeti_es_liberalis_mozgalmak_es_1848",
+          "name": "Nemzeti és liberális mozgalmak, 1848 Európában és Magyarországon",
+          "short_description": "A reformkor és a polgári átalakulás programja, az 1848-as forradalmak közös okai, valamint a magyar szabadságharc főbb eseményei és dilemmái.",
+          "sub_topics": [
+            {
+              "key": "magyar_reformkor_es_polgari_program",
+              "name": "A magyar reformkor és a polgári átalakulás programja",
+              "short_description": "A reformellenzék céljai (jobbágyfelszabadítás, közteherviselés, népképviselet), a modern nemzetfogalom és a gazdasági modernizáció kérdései.",
+              "example_tasks": [
+                "Sorolj fel 5 reformkori követelést, és mindegyikhez írd le 1 mondatban, mely társadalmi problémára reagált!",
+                "Írj 10–12 mondatos összehasonlítást: Széchenyi és Kossuth modernizációs elképzelései miben tértek el és miben volt közös céljuk?",
+                "Érvelő feladat (12–14 mondat): melyik reform lehetett a legfontosabb a polgári átalakulás szempontjából (jobbágyfelszabadítás/közteherviselés/népképviselet)? Adj 3 érvet!"
+              ]
+            },
+            {
+              "key": "marcius_15_es_aprilisi_torvenyek",
+              "name": "Március 15. és az áprilisi törvények",
+              "short_description": "A forradalom követelései, a törvényhozási eredmények és a modern alkotmányos állam felé tett lépések; konfliktusok és korlátok.",
+              "example_tasks": [
+                "Válassz 4 pontot a 12 pontból, és mindegyikhez írd le 2 mondatban, miért volt fontos és kinek kedvezett leginkább!",
+                "Magyarázd el 8–10 mondatban, miért tekinthetők az áprilisi törvények a polgári átalakulás alapjának! Nevezz meg 3 konkrét változást!",
+                "Forráselemzés (tanári): egy korabeli újságcikk részlete alapján azonosítsd a szerző hangnemét és célját, majd írd le 6–8 mondatban, milyen képet fest a forradalomról!"
+              ]
+            },
+            {
+              "key": "szabadsagharc_es_nemzetisegi_kerdes",
+              "name": "A szabadságharc, nemzetiségi kérdés és a bukás okai",
+              "short_description": "A katonai és diplomáciai tényezők, a belső politikai konfliktusok, valamint a nemzetiségi kérdés összetett szerepe a szabadságharc kimenetelében.",
+              "example_tasks": [
+                "Készíts ok–okozati láncot (legalább 7 lépés): hogyan vezethetett a belső konfliktusok és a külső beavatkozás a szabadságharc bukásához!",
+                "Írj 10–12 mondatos elemzést: milyen dilemmát jelentett a nemzetiségi kérdés 1848–49-ben? Használj 2 konkrét példát a követelésekre!",
+                "Értékelő esszé (12–14 mondat): a szabadságharc bukását inkább katonai, diplomáciai vagy társadalmi okok magyarázzák? Adj 2 érvet a választott fő ok mellett és 1 ellenérvet!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ipari_forradalom_es_gazdasagi_tarsadalmi_atalakulas",
+      "name": "Gazdasági–társadalmi átalakulások az ipari forradalom nyomán",
+      "short_description": "A tanulók megértik az ipari forradalom technológiai és szerkezeti változásait, a városiasodás és társadalmi rétegződés átalakulását, valamint a modern gazdaság és munkaviszonyok kialakulását a 19. század közepéig.",
+      "sub_topics": [
+        {
+          "key": "technikai_ujitasok_es_termelesi_fordulat",
+          "name": "Technikai újítások és a termelési fordulat",
+          "short_description": "A gépesítés, gyáripar, energiaforrások (gőz) és a munkamegosztás új szintje; a termelékenység növekedése és következményei.",
+          "sub_topics": [
+            {
+              "key": "gepesites_es_gyaripar",
+              "name": "Gépesítés, gyáripar és munkamegosztás",
+              "short_description": "Képes bemutatni, hogyan változott a termelés szerkezete (céh/manufaktúra → gyár), és milyen hatása volt ez a munka világára.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: miben különbözik a gyári termelés a manufaktúrától és a céhes kézműipartól? Használd a munkamegosztás fogalmát!",
+                "Készíts ok–okozati láncot (legalább 6 lépés): hogyan vezethetett egy technikai újítás (pl. fonógép) a társadalmi szerkezet átalakulásához!",
+                "Értékelő feladat (12–14 mondat): a gépesítés inkább javította vagy inkább rontotta a munkások életét az ipari forradalom első szakaszában? Adj 3 érvet és 1 ellenérvet!"
+              ]
+            },
+            {
+              "key": "energia_es_kozlekedes",
+              "name": "Energiaforrások és közlekedési forradalom",
+              "short_description": "Megérti a gőzgép és a vasút/hajózás szerepét a piacok bővülésében, idő- és költségcsökkenésben, regionális átalakulásokban.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, miért volt a vasút forradalmi hatású a 19. században! Térj ki az áruszállításra, időre és piacokra!",
+                "Képzeld el, hogy egy városvezető vagy. Írj 6–8 pontban érveket a vasútvonal megépítése mellett (gazdaság, munkahely, ellátás, hadsereg)!",
+                "Egy térképen két város között új vasút épül. Írj 10–12 mondatos elemzést: milyen társadalmi és gazdasági változásokat indíthat el a térségben?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "varosiasodas_es_tarsadalmi_kerdesek",
+          "name": "Városiasodás és a „szociális kérdés”",
+          "short_description": "Urbanizáció, lakhatás, közegészségügy, gyermekmunka, munkásmozgalmak; a modern társadalmi konfliktusok kialakulása.",
+          "sub_topics": [
+            {
+              "key": "urbanizacio_es_eletkorulmenyek",
+              "name": "Urbanizáció és életkörülmények a nagyvárosokban",
+              "short_description": "Képes bemutatni a gyors városnövekedés okait és következményeit (zsúfoltság, járványok, infrastruktúra), és értelmezi a társadalmi különbségeket.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: miért költöztek tömegek a városokba az ipari forradalom idején? Nevezz meg 3 okot, és 2 következményt!",
+                "Forráselemzés (tanári kép/ szöveg): azonosíts 3 problémát a munkásnegyedek életkörülményeiből, és javasolj 2 lehetséges korabeli megoldást!",
+                "Érvelő feladat (12–14 mondat): a városiasodás inkább lehetőséget vagy inkább veszélyt jelentett az átlagember számára? Adj 3 érvet mindkét oldalról!"
+              ]
+            },
+            {
+              "key": "munkaviszonyok_es_munkasmozgalmak",
+              "name": "Munkaviszonyok, érdekvédelem és munkásmozgalmak",
+              "short_description": "Megérti a bérmunka és munkaidő kérdését, a sztrájkok és szakszervezetek szerepét, valamint a reformok és szabályozások megjelenését.",
+              "example_tasks": [
+                "Sorolj fel 4 tipikus problémát a korai gyári munkában (munkaidő, baleset, bér). Mindegyikhez írj 1 mondatot, miért okozott feszültséget!",
+                "Képzeld el, hogy egy munkásküldött vagy. Írj 6–8 pontos követeléslistát a gyár tulajdonosának, és indokold röviden a pontokat!",
+                "Írj 10–12 mondatos elemzést: miért jelenthetett a szakszervezet egyszerre fenyegetést és stabilizáló tényezőt a társadalom számára?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "polgari_tarsadalom_es_eszmerendszerek",
+          "name": "Polgári társadalom és új eszmerendszerek",
+          "short_description": "A liberalizmus, nacionalizmus és szocializmus alapgondolatai; a politikai részvétel bővülése és a modern közvélemény kialakulása.",
+          "sub_topics": [
+            {
+              "key": "liberalizmus_nacionalizmus_szocializmus",
+              "name": "Liberalizmus, nacionalizmus, szocializmus – alapfogalmak",
+              "short_description": "Képes az alapelveket elkülöníteni, és példákkal bemutatni, hogyan reagáltak ezek az eszmék a modernizáció kihívásaira.",
+              "example_tasks": [
+                "Írd le 3–3 pontban a liberalizmus, a nacionalizmus és a szocializmus alapgondolatait, majd mindegyikhez adj 1 történelmi példát!",
+                "Készíts 10–12 mondatos összehasonlítást: milyen problémákra adott választ a liberalizmus és milyenre a szocializmus az ipari társadalomban?",
+                "Érvelő feladat (12–14 mondat): miért erősödhetett fel a nacionalizmus a 19. században? Kapcsold össze a nyelvvel, állammal és a tömegtársadalommal!"
+              ]
+            },
+            {
+              "key": "kozvelemeny_sajto_es_politikai_reszvetel",
+              "name": "Közvélemény, sajtó és politikai részvétel bővülése",
+              "short_description": "Megérti a sajtó szerepét a politikai mobilizációban és a nyilvánosság formálásában; összekapcsolja a választójog kérdésével.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: hogyan változtatta meg a sajtó és az olvasáskultúra a politikát a 19. században? Térj ki a propaganda és viták szerepére!",
+                "Képzeld el, hogy egy korabeli újság szerkesztője vagy. Írj 120–150 szavas vezércikket a választójog kiterjesztéséről (pro vagy kontra)!",
+                "Értékelő feladat (10–12 mondat): miért fontos a nyilvánosság a jogállami működésben? Hozz 2 történelmi és 1 mai példát!"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "key": "nemzetallamok_es_imperializmus_19_szazad_masodik_fele",
+      "name": "Nemzetállamok és imperializmus a 19. század második felében",
+      "short_description": "A nemzetállamok kialakulása és megerősödése, az imperializmus gazdasági–politikai mozgatórugói, valamint a nagyhatalmi rivalizálás következményei Európában és a világban.",
+      "sub_topics": [
+        {
+          "key": "nemzetallami_egyesitesek",
+          "name": "Nemzetállami egyesítések és politikai átalakulások",
+          "short_description": "A nemzeti egység megteremtésének útjai, politikai stratégiák és háborúk szerepe az államalapításban.",
+          "sub_topics": [
+            {
+              "key": "olasz_egyesites",
+              "name": "Az olasz nemzeti egység létrejötte",
+              "short_description": "Megérti az olasz egység politikai és társadalmi feltételeit, valamint a vezető szereplők és háborúk jelentőségét.",
+              "example_tasks": [
+                "Sorolj fel 3 politikai és 2 katonai tényezőt, amelyek hozzájárultak az olasz egység létrejöttéhez! Mindegyikhez írj rövid magyarázatot!",
+                "Készíts 8–10 mondatos ok–okozati elemzést: miért volt nehéz az olasz területek egyesítése a 19. század közepén?",
+                "Értékelő feladat (10–12 mondat): az olasz egység inkább diplomáciai vagy inkább katonai eredmény volt? Adj 2–2 érvet!"
+              ]
+            },
+            {
+              "key": "nemet_egyesites",
+              "name": "A német egység és a porosz vezető szerep",
+              "short_description": "Felismeri a gazdasági integráció (vámunió) és a politikai-hatalmi eszközök szerepét a német nemzetállam létrejöttében.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, hogyan segítette a vámunió (Zollverein) a német egység kialakulását!",
+                "Készíts időrendi vázlatot 5 állomással a német egység felé vezető útról, és mindegyikhez írj 1 következményt!",
+                "Írj 10–12 mondatos értékelést: milyen szerepet játszott a hadsereg és a diplomácia a német egység megteremtésében?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "imperializmus_es_gyarmatositas",
+          "name": "Imperializmus és gyarmatosítás",
+          "short_description": "A nagyhatalmak terjeszkedésének gazdasági, politikai és ideológiai indítékai, valamint a gyarmati uralom következményei.",
+          "sub_topics": [
+            {
+              "key": "imperializmus_okai",
+              "name": "Az imperializmus gazdasági és politikai okai",
+              "short_description": "Megérti a nyersanyagigény, piacbővítés és nagyhatalmi presztízs szerepét az imperialista politikában.",
+              "example_tasks": [
+                "Sorolj fel 3 gazdasági és 2 politikai okot az imperializmus kibontakozására, és mindegyikhez írj 1 példát!",
+                "Írj 8–10 mondatos elemzést: miért vált Afrika a nagyhatalmi rivalizálás egyik fő színterévé a 19. század végén?",
+                "Értékelő kérdés (10–12 mondat): az imperializmus inkább gazdasági szükségszerűség vagy inkább hatalmi ambíció volt? Adj érveket!"
+              ]
+            },
+            {
+              "key": "gyarmati_uralom_kovetkezmenyei",
+              "name": "A gyarmati uralom következményei",
+              "short_description": "Képes bemutatni a gyarmatosítás társadalmi, gazdasági és kulturális hatásait a meghódított területeken.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: milyen változásokat hozott a gyarmati uralom a helyi gazdaságban és társadalomban?",
+                "Készíts összehasonlítást (10–12 mondat): rövid és hosszú távú következmények Európa és a gyarmatok szempontjából!",
+                "Érvelő esszé (12–14 mondat): a gyarmatosítás hagyatéka ma inkább problémát vagy inkább lehetőséget jelent az érintett térségekben?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "dualizmus_kora_magyarorszagon",
+      "name": "A dualizmus kora Magyarországon",
+      "short_description": "Az Osztrák–Magyar Monarchia létrejötte, politikai rendszere, gazdasági modernizációja és társadalmi átalakulása a 19. század második felében.",
+      "sub_topics": [
+        {
+          "key": "kiegyezes_es_allamszervezet",
+          "name": "A kiegyezés és az államszervezet",
+          "short_description": "A kiegyezés tartalma, a közös ügyek rendszere és a magyar alkotmányos berendezkedés működése.",
+          "sub_topics": [
+            {
+              "key": "kiegyezes_tartalma",
+              "name": "A kiegyezés tartalma és jelentősége",
+              "short_description": "Megérti a kompromisszumos megoldás lényegét és a politikai stabilitás feltételeit.",
+              "example_tasks": [
+                "Sorolj fel 4 közös ügyet a kiegyezés alapján, és írd le, miért volt szükség közös irányításukra!",
+                "Írj 8–10 mondatos magyarázatot: miért fogadták el a kiegyezést a magyar politikai elit vezetői?",
+                "Értékelő feladat (10–12 mondat): a kiegyezés inkább sikert vagy inkább kényszerű kompromisszumot jelentett Magyarország számára?"
+              ]
+            },
+            {
+              "key": "parlamentarizmus_es_politikai_elet",
+              "name": "Parlamentarizmus és politikai élet",
+              "short_description": "A parlament működése, pártok és választójog kérdése a dualizmus idején.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, hogyan működött a magyar országgyűlés a dualizmus idején!",
+                "Készíts 10–12 mondatos összehasonlítást: miben különbözött a korabeli választójog a maitól?",
+                "Érvelő feladat (10–12 mondat): a korlátozott választójog inkább stabilitást vagy inkább társadalmi feszültséget eredményezett?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "gazdasagi_fejlodes_es_tarsadalom",
+          "name": "Gazdasági fejlődés és társadalmi átalakulás",
+          "short_description": "Iparosodás, közlekedés, városiasodás és a társadalmi rétegek átrendeződése Magyarországon.",
+          "sub_topics": [
+            {
+              "key": "iparosodas_es_infrastruktura",
+              "name": "Iparosodás és infrastruktúra-fejlesztés",
+              "short_description": "Felismeri a gazdasági növekedés hajtóerejét és a közlekedési hálózat szerepét.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: milyen tényezők segítették elő az iparosodást Magyarországon a dualizmus korában?",
+                "Képzeld el, hogy egy várostervező vagy. Írj 6–8 pontban fejlesztési javaslatot egy gyorsan növekvő iparváros számára!",
+                "Értékelő feladat (10–12 mondat): az iparosodás inkább javította vagy inkább rontotta az életminőséget a városokban?"
+              ]
+            },
+            {
+              "key": "tarsadalmi_retegek_es_nemzetisegi_kerdes",
+              "name": "Társadalmi rétegek és a nemzetiségi kérdés",
+              "short_description": "Megérti a polgárság, munkásság és parasztság helyzetét, valamint a nemzetiségek politikai és kulturális törekvéseit.",
+              "example_tasks": [
+                "Sorolj fel 3 társadalmi réteget a dualizmus kori Magyarországon, és mindegyikhez írj 2 jellemzőt!",
+                "Írj 10–12 mondatos elemzést: miért vált kiélezetté a nemzetiségi kérdés a Monarchiában?",
+                "Érvelő esszé (12–14 mondat): a nemzetiségi politika inkább integráló vagy inkább konfliktusokat erősítő tényező volt?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "elso_vilaghaboru_es_kovetkezmenyek",
+      "name": "Az első világháború és következményei",
+      "short_description": "A tanulók megismerik az első világháború okrendszerét, a totális háború jellegét, a háború társadalmi hatásait, valamint a békerendezést és annak következményeit Európában és Magyarországon.",
+      "sub_topics": [
+        {
+          "key": "haboru_okai_szovetsegi_rendszerek",
+          "name": "A háború okai és a szövetségi rendszerek",
+          "short_description": "A nagyhatalmi rivalizálás, imperializmus, nacionalizmus és fegyverkezés összefüggései; a válságok és a szövetségek szerepe.",
+          "sub_topics": [
+            {
+              "key": "hosszu_tavu_okok_es_valosag",
+              "name": "Hosszú távú okok: rivalizálás, nacionalizmus, fegyverkezés",
+              "short_description": "Képes többtényezős okmagyarázatot adni, és elkülöníti a háttérokokat a közvetlen kiváltó eseménytől.",
+              "example_tasks": [
+                "Sorolj fel 3 hosszú távú okot (pl. nagyhatalmi rivalizálás, fegyverkezés, nacionalizmus), és mindegyikhez írj 1 konkrét példát a 19–20. század fordulójáról!",
+                "Készíts ok–okozati láncot (legalább 7 lépés): hogyan erősíthette egymást a fegyverkezés és a szövetségi rendszerek kialakulása?",
+                "Értékelő feladat (10–12 mondat): miért félrevezető csak egyetlen „fő okkal” magyarázni az első világháborút? Adj legalább 3 érvet!"
+              ]
+            },
+            {
+              "key": "kozvetlen_kivalto_ok_es_juliusi_valsag",
+              "name": "Közvetlen kiváltó ok és a júliusi válság",
+              "short_description": "Megérti, hogyan eszkalálódhat egy regionális konfliktus világháborúvá a diplomácia és a mozgósítási tervek miatt.",
+              "example_tasks": [
+                "Írj 8–10 mondatban magyarázatot: hogyan vezethetett egy merénylet a háború kirobbanásához? Térj ki a szövetségi kötelezettségekre!",
+                "Készíts időrendi vázlatot 6 állomással a júliusi válság eseményeiről (tanári segítséggel), és mindegyikhez írj 1 döntési pontot!",
+                "Képzeld el, hogy egy diplomata vagy 1914 júliusában. Írj 6–8 pontos javaslatot arra, hogyan lehetne csökkenteni az eszkaláció esélyét!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "totalis_haboru_es_hadviseles",
+          "name": "Totális háború és hadviselés",
+          "short_description": "Állóháború, új fegyverek, hátország mozgósítása, propaganda; a háború emberi és anyagi terhei.",
+          "sub_topics": [
+            {
+              "key": "allohaboru_es_technologia",
+              "name": "Állóháború, technológiai újítások és veszteségek",
+              "short_description": "Képes bemutatni az állóháború okait, az új fegyverek hatását és a veszteségek nagyságrendjét.",
+              "example_tasks": [
+                "Magyarázd el 6–8 mondatban, miért alakult ki állóháború a nyugati fronton! Használj legalább 2 katonai tényezőt!",
+                "Sorolj fel 4 új haditechnikai eszközt (pl. géppuska, harci gáz, tank, repülő), és mindegyikhez írd le 1 mondatban, hogyan változtatta meg a hadviselést!",
+                "Értelmező feladat: egy veszteségi diagram alapján (tanári) írd le 6–8 mondatban, mely időszak volt a legvéresebb, és adj 2 lehetséges magyarázatot!"
+              ]
+            },
+            {
+              "key": "hatorszag_gazdasag_es_propaganda",
+              "name": "Hátország, gazdaság és propaganda",
+              "short_description": "Megérti a hadigazdaság, jegyrendszer, női munkavállalás és propaganda szerepét a totális háborúban.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: hogyan változott a mindennapi élet a hátországban a háború alatt? Nevezz meg 3 példát (jegyrendszer, munka, hiány)!",
+                "Készíts forráselemzést egy propaganda-plakát alapján (tanári): mi az üzenet, kik a célcsoportok, és milyen érzelmekre hat?",
+                "Érvelő feladat (10–12 mondat): a propaganda inkább szükséges mozgósító eszköz vagy inkább manipuláció volt? Adj 2–2 érvet!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bekerendezes_es_trianon",
+          "name": "Békerendezés és Trianon",
+          "short_description": "A párizsi békerendszer céljai, a határok újrarajzolása, a nemzetállami elv és ellentmondásai, valamint a trianoni döntés társadalmi-gazdasági következményei Magyarországon.",
+          "sub_topics": [
+            {
+              "key": "parizsi_bekerendszer_elvek",
+              "name": "A párizsi békerendszer elvei és ellentmondásai",
+              "short_description": "Képes bemutatni a békekonferencia céljait, és értelmezni a nemzeti önrendelkezés és a hatalmi érdekek feszültségét.",
+              "example_tasks": [
+                "Sorolj fel 3 célt, amit a győztes hatalmak a békerendezéssel elérni akartak, és mindegyikhez írj 1 lehetséges ellentmondást!",
+                "Írj 10–12 mondatos elemzést: miért volt nehéz a nemzeti önrendelkezés elvét következetesen alkalmazni Közép-Európában?",
+                "Értékelő feladat (12–14 mondat): a békerendszer inkább stabil békét vagy inkább új konfliktusokat készített elő? Adj 3 érvet!"
+              ]
+            },
+            {
+              "key": "trianon_kovetkezmenyek_magyarorszag",
+              "name": "Trianon következményei Magyarországon",
+              "short_description": "Megérti a területi, népességi és gazdasági veszteségek hatását, valamint a társadalmi és politikai reakciókat.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: sorolj fel 3 területi és 3 gazdasági következményt, amelyek Magyarországot érintették a trianoni döntés után!",
+                "Térképi feladat (szöveges): nevezd meg a történelmi Magyarország peremvidékei közül legalább 3-at, amelyek az új határokon kívülre kerültek, és írd le 1 mondatban, miért volt ez jelentős!",
+                "Érvelő esszé (12–14 mondat): a trianoni trauma inkább társadalmi-pszichológiai vagy inkább gazdasági-politikai következményekben volt erősebb? Adj 3 érvet!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ket_vilaghaboru_kozott_diktaturak_es_valsagok",
+      "name": "Két világháború között: diktatúrák és válságok",
+      "short_description": "A tanulók megismerik a háború utáni válságokat, a demokráciák nehézségeit, a diktatórikus rendszerek kialakulását, valamint a gazdasági világválság és a nemzetközi politika következményeit.",
+      "sub_topics": [
+        {
+          "key": "gazdasagi_vilagvalsag_es_tarsadalmi_hatasa",
+          "name": "Gazdasági világválság és társadalmi hatásai",
+          "short_description": "A válság okai, terjedése, munkanélküliség és állami beavatkozás; különböző válaszmodellek.",
+          "sub_topics": [
+            {
+              "key": "valsag_okai_es_terjedese",
+              "name": "A világválság okai és terjedése",
+              "short_description": "Képes összekapcsolni a pénzügyi rendszer sebezhetőségét, túltermelést és a nemzetközi gazdasági függéseket.",
+              "example_tasks": [
+                "Sorolj fel 3 gazdasági tényezőt, ami hozzájárult a válság kialakulásához, és mindegyikhez írj 1 magyarázatot!",
+                "Készíts ok–okozati láncot (legalább 7 lépés): hogyan terjedhetett át egy tőzsdei összeomlás a reálgazdaságra és a mindennapi életre?",
+                "Értelmező feladat (10–12 mondat): miért volt „globális” a válság? Térj ki a hitelekre, kereskedelemre és a bankrendszerre!"
+              ]
+            },
+            {
+              "key": "valsagkezelesi_modellek",
+              "name": "Válságkezelési modellek: állami beavatkozás és megszorítás",
+              "short_description": "Megérti, hogy eltérő gazdaságpolitikai válaszok léteztek, és képes ezek előnyeit/hátrányait mérlegelni.",
+              "example_tasks": [
+                "Írj 10–12 mondatos összehasonlítást: milyen lehet egy megszorító és milyen egy élénkítő (állami beavatkozó) válságkezelés? Adj 2–2 előnyt és 2–2 hátrányt!",
+                "Képzeld el, hogy miniszter vagy 1931-ben. Írj 6–8 pontos válságkezelő csomagot, és röviden indokold a pontokat!",
+                "Érvelő feladat (12–14 mondat): a válság növelte vagy csökkentette a demokráciába vetett bizalmat? Használj 3 társadalmi példát!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "diktaturak_kialakulasa",
+          "name": "Diktatúrák kialakulása és működése",
+          "short_description": "A fasizmus/nácizmus és a sztálini típusú diktatúra jellemzői, propaganda és terror, valamint a társadalmi támogatás és kényszer összefüggései.",
+          "sub_topics": [
+            {
+              "key": "fasizmus_es_nacizmus_jellemzoi",
+              "name": "Fasizmus és nácizmus: ideológia és hatalomtechnika",
+              "short_description": "Képes azonosítani a diktatúrák közös jegyeit (vezér, propaganda, ellenségkép), és megkülönböztetni a fajelmélet szerepét a nácizmusban.",
+              "example_tasks": [
+                "Sorolj fel 5 közös jellemzőt egy diktatúrában (pl. egypárt, propaganda), és mindegyikhez írj 1 példát a működésre!",
+                "Írj 10–12 mondatos elemzést: miért lehetett vonzó a diktatúra ígérete válsághelyzetben? Térj ki a rend, munka, nemzeti sérelmek témáira!",
+                "Forráselemzés (tanári propaganda-szöveg/kép): azonosíts 3 meggyőzési technikát, és írd le 6–8 mondatban, milyen érzelmekre hat!"
+              ]
+            },
+            {
+              "key": "sztalini_diktatura_es_terror",
+              "name": "Sztálini diktatúra: állam, párt és terror",
+              "short_description": "Megérti a pártállam működését, kollektivizálás és iparosítás céljait, valamint a terror szerepét a társadalom feletti kontrollban.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: milyen célokat szolgált az erőltetett iparosítás és a kollektivizálás? Térj ki a gyorsítás és az emberi költségek kapcsolatára!",
+                "Készíts ok–okozati láncot (legalább 6 lépés): hogyan vezethet a félelem és besúgórendszer a társadalmi bizalom széteséséhez?",
+                "Értékelő esszé (12–14 mondat): a terror inkább „rendszerhiba” vagy inkább tudatos kormányzási eszköz volt? Adj 3 érvet és 1 ellenérvet!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nemzetkozi_politika_es_uj_haboru_fele",
+          "name": "Nemzetközi politika és az út a második világháború felé",
+          "short_description": "A revíziós törekvések, megbékélés politikája, szövetségi rendszerek átrendeződése és a konfliktus eszkalációja.",
+          "sub_topics": [
+            {
+              "key": "revisiok_es_megbekeles",
+              "name": "Revízió és megbékélés politikája",
+              "short_description": "Képes bemutatni, hogyan függött össze a békerendszer kritikája, a területi igények és a nagyhatalmi engedmények politikája.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: mi volt a megbékélés politikájának célja, és miért bizonyult kockázatosnak? Adj 2 konkrét példát a következményekre!",
+                "Készíts 10–12 mondatos elemzést: hogyan kapcsolódott össze a revíziós törekvések erősödése a diktatúrák külpolitikájával?",
+                "Érvelő feladat (12–14 mondat): a második világháború kitörése elkerülhető lett volna erősebb fellépéssel? Adj 3 érvet és 1 ellenérvet!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "masodik_vilaghaboru_es_holokauszt",
+      "name": "A második világháború és a holokauszt",
+      "short_description": "A világháború okai és szakaszai, a totális hadviselés és hátország, valamint a holokauszt mechanizmusai, magyarországi eseményei és történelmi emlékezete.",
+      "sub_topics": [
+        {
+          "key": "haboru_kitorese_es_fobb_szakaszok",
+          "name": "A háború kitörése és főbb szakaszai",
+          "short_description": "A hadműveletek globális kiterjedése, a szövetségi rendszerek és a fordulópontok értelmezése.",
+          "sub_topics": [
+            {
+              "key": "villamhaboru_es_fordulopontok",
+              "name": "Villámháború, frontok és fordulópontok",
+              "short_description": "Képes azonosítani a hadműveleti stratégiákat és a háború menetét megfordító eseményeket.",
+              "example_tasks": [
+                "Sorolj fel 3 tényezőt, amely a villámháború kezdeti sikereit magyarázza, és 2 okot, amiért ez a stratégia kifulladt!",
+                "Készíts időrendi vázlatot 6 fordulóponttal (pl. Sztálingrád, El-Alamein, Midway), és mindegyikhez írj 1 következményt!",
+                "Értékelő feladat (10–12 mondat): miért vált a háború valóban globálissá 1941 után? Térj ki a hadszínterekre!"
+              ]
+            },
+            {
+              "key": "hatorszag_es_totalis_mobilizacio",
+              "name": "Hátország és totális mobilizáció",
+              "short_description": "Megérti a hadigazdaság, propaganda és civil lakosság szerepét a háborús erőfeszítésben.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: hogyan alakította át a totális mobilizáció a mindennapi életet (munka, ellátás, nők szerepe)?",
+                "Forráselemzés (tanári): egy háborús plakát alapján azonosíts 3 mozgósító üzenetet és célcsoportot!",
+                "Érvelő feladat (10–12 mondat): a civil célpontok bombázása katonailag indokolható volt-e? Adj 2 érvet és 1 ellenérvet!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "holokauszt_mechanizmusai_es_emlekezete",
+          "name": "A holokauszt mechanizmusai és emlékezete",
+          "short_description": "Az állami antiszemitizmus, gettósítás és megsemmisítés folyamata; felelősség, emlékezet és tanulságok.",
+          "sub_topics": [
+            {
+              "key": "antiszemitizmus_es_allami_vegrehajtas",
+              "name": "Antiszemitizmus, jogfosztás és állami végrehajtás",
+              "short_description": "Képes bemutatni a jogi és adminisztratív lépések láncolatát a népirtásig.",
+              "example_tasks": [
+                "Készíts ok–okozati láncot (legalább 7 lépés): hogyan vezethetett a jogfosztás a tömeges deportálásokhoz!",
+                "Írj 10–12 mondatos elemzést: miért volt kulcsszerepe az állami apparátusnak a végrehajtásban?",
+                "Forráselemzés (tanári): azonosíts 3 kirekesztő elemet egy korabeli rendeletben, és írd le hatásukat!"
+              ]
+            },
+            {
+              "key": "magyarorszagi_esemenyek_es_emlekezet",
+              "name": "Magyarországi események és az emlékezetpolitikák",
+              "short_description": "A magyarországi deportálások menete, embermentés és a háború utáni emlékezet kérdései.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: mely tényezők gyorsították fel a deportálásokat 1944-ben Magyarországon?",
+                "Készíts összehasonlítást (10–12 mondat): állami felelősség és egyéni cselekvés (ellenállás, embermentés) szerepe!",
+                "Értékelő esszé (12–14 mondat): miért fontos a holokauszt emlékezete a demokratikus kultúra számára?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hideghaboru_es_dekolonizacio",
+      "name": "A hidegháború világa és a dekolonizáció",
+      "short_description": "A blokkosodás, fegyverkezési verseny, regionális konfliktusok, valamint a gyarmati rendszer felbomlása és új államok kialakulása.",
+      "sub_topics": [
+        {
+          "key": "blokkosodas_es_fegyverkezesi_verseny",
+          "name": "Blokkosodás és fegyverkezési verseny",
+          "short_description": "A kétpólusú világrend logikája, szövetségek és elrettentés.",
+          "sub_topics": [
+            {
+              "key": "szovetsegek_es_elrettentes",
+              "name": "Szövetségek, elrettentés és válságkezelés",
+              "short_description": "Megérti az elrettentés működését és a válságok eszkalációs kockázatait.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: hogyan működött az elrettentés a hidegháborúban? Használd a „kölcsönösen biztosított megsemmisítés” fogalmat!",
+                "Készíts ok–okozati vázlatot (6 lépés): hogyan vezethetett egy regionális válság globális feszültséghez?",
+                "Értékelő feladat (10–12 mondat): a fegyverkezési verseny inkább növelte vagy csökkentette a háború esélyét?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "dekolonizacio_es_uj_allamok",
+          "name": "Dekolonizáció és új államok",
+          "short_description": "A függetlenedés útjai, konfliktusok és gazdasági kihívások az új államokban.",
+          "sub_topics": [
+            {
+              "key": "függetlenedesi_modellek",
+              "name": "Függetlenedési modellek és következmények",
+              "short_description": "Képes összevetni békés és erőszakos függetlenedési folyamatokat.",
+              "example_tasks": [
+                "Sorolj fel 2 békés és 2 fegyveres függetlenedési példát, és mindegyikhez írj 1 következményt!",
+                "Írj 10–12 mondatos elemzést: milyen kihívásokkal szembesültek az új államok az első évtizedben?",
+                "Érvelő esszé (12–14 mondat): a dekolonizáció inkább lezárta vagy inkább újranyitotta a konfliktusokat?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "magyarorszag_1945_1990_kommunista_rendszer",
+      "name": "Magyarország 1945–1990: kommunista rendszer, 1956, kádárizmus",
+      "short_description": "A szovjet megszállástól a pártállam kiépülésén át az 1956-os forradalomig és a kádári konszolidációig; hatalomtechnika, mindennapok és ellenállás.",
+      "sub_topics": [
+        {
+          "key": "hatalomatvetel_es_parallam",
+          "name": "Hatalomátvétel és a pártállam kiépítése",
+          "short_description": "A koalíciós időszak felszámolása, az egypártrendszer és az állambiztonság szerepe.",
+          "sub_topics": [
+            {
+              "key": "koalicio_felszamolasa_es_egypart",
+              "name": "Koalíció felszámolása és egypártrendszer",
+              "short_description": "Képes bemutatni a politikai verseny megszüntetésének eszközeit és következményeit.",
+              "example_tasks": [
+                "Sorolj fel 4 módszert, amellyel a többpártrendszert felszámolták! Mindegyikhez írj 1 példát!",
+                "Írj 8–10 mondatos elemzést: miért volt kulcsfontosságú a rendőrség és az állambiztonság szerepe a hatalom megtartásában?",
+                "Forráselemzés (tanári): azonosíts 3 propagandatechnikát egy korabeli plakáton!"
+              ]
+            },
+            {
+              "key": "allamositas_es_tervgazdasag",
+              "name": "Államosítás és tervgazdaság",
+              "short_description": "Megérti a tulajdonviszonyok átalakítását és a központi tervezés logikáját.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: milyen előnyöket és hátrányokat okozott az államosítás rövid távon?",
+                "Készíts ok–okozati láncot (6 lépés): hogyan vezethet a tervutasítás a hiánygazdasághoz?",
+                "Értékelő feladat (10–12 mondat): a tervgazdaság miért bizonyult rugalmatlannak?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "forradalom_1956",
+          "name": "Az 1956-os forradalom és szabadságharc",
+          "short_description": "Okok, követelések, események és leverés; nemzetközi összefüggések.",
+          "sub_topics": [
+            {
+              "key": "okok_es_kovetelesek_1956",
+              "name": "Okok és követelések",
+              "short_description": "Képes elkülöníteni a társadalmi, gazdasági és politikai okokat.",
+              "example_tasks": [
+                "Sorolj fel 3 társadalmi és 2 politikai okot 1956 kitörésére!",
+                "Válassz 4 követelést, és mindegyikhez írd le, milyen problémára reagált!",
+                "Forráselemzés (tanári): értelmezd egy röplap hangnemét és célját!"
+              ]
+            },
+            {
+              "key": "leveres_es_nemzetkozi_kontextus",
+              "name": "Leverés és nemzetközi kontextus",
+              "short_description": "Megérti a nagyhatalmi viszonyok szerepét a kimenetelben.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: miért maradt el a nemzetközi segítség?",
+                "Készíts időrendi vázlatot 5 kulcspillanattal!",
+                "Értékelő esszé (12–14 mondat): 1956 történelmi jelentősége ma."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kadar_korszak_es_mindennapok",
+          "name": "A Kádár-korszak: konszolidáció és mindennapok",
+          "short_description": "Politikai stabilizáció, gazdasági reformkísérletek és életmód.",
+          "sub_topics": [
+            {
+              "key": "konszolidacio_es_gazdasagi_reform",
+              "name": "Konszolidáció és gazdasági reform",
+              "short_description": "Megérti a kompromisszumos kormányzás logikáját.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: mit jelentett a „kádári alku” a társadalom számára?",
+                "Hasonlíts össze két időszakot (1960-as vs. 1980-as évek) 10–12 mondatban!",
+                "Értékelő feladat (10–12 mondat): miért merült ki a modell?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "rendszervaltas_es_jelenkor",
+      "name": "Rendszerváltás és a jelenkor",
+      "short_description": "Demokratikus átmenet, piacgazdaság, EU-csatlakozás és globalizáció kihívásai.",
+      "sub_topics": [
+        {
+          "key": "rendszervaltas_folyamata",
+          "name": "A rendszerváltás folyamata",
+          "short_description": "Tárgyalásos átmenet, intézményi változások.",
+          "sub_topics": [
+            {
+              "key": "alkotmanyos_intezmenyek",
+              "name": "Alkotmányos intézmények és jogállam",
+              "short_description": "Képes bemutatni a hatalommegosztás működését.",
+              "example_tasks": [
+                "Sorolj fel 3 új intézményt és szerepüket!",
+                "Írj 8–10 mondatot: miért volt fontos a békés átmenet?",
+                "Értékelő feladat (10–12 mondat): kihívások az átmenetben."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "eu_globalizacio_kihivasok",
+          "name": "EU, globalizáció és kortárs kihívások",
+          "short_description": "Integráció előnyei/kockázatai és társadalmi hatások.",
+          "sub_topics": [
+            {
+              "key": "eu_csatlakozas_es_hatasa",
+              "name": "EU-csatlakozás és hatásai",
+              "short_description": "Megérti a gazdasági és politikai következményeket.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: 3 előny és 2 kockázat az EU-tagságból!",
+                "Készíts érvelést (10–12 mondat): integráció vs. szuverenitás!",
+                "Forráselemzés (tanári): értelmezz egy statisztikát!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tortenelmi_keszsegek_emelt_szinten",
+      "name": "Történelmi készségek emelt szinten",
+      "short_description": "Forráselemzés, érvelés, historiográfia és többnézőpontúság.",
+      "sub_topics": [
+        {
+          "key": "forraselemzes_es_erveles",
+          "name": "Forráselemzés és érvelő írás",
+          "short_description": "Komplex források értelmezése és bizonyítás.",
+          "sub_topics": [
+            {
+              "key": "komplex_forraselemzes",
+              "name": "Komplex forráselemzés",
+              "short_description": "Képes több forrás összevetésére.",
+              "example_tasks": [
+                "Elemezz 2 eltérő nézőpontú forrást 10–12 mondatban!",
+                "Azonosíts szerzői szándékot és torzítást!",
+                "Készíts bizonyíték-alapú következtetést!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "historiografia_es_nezopontok",
+          "name": "Historiográfia és többnézőpontúság",
+          "short_description": "Eltérő értelmezések megértése.",
+          "sub_topics": [
+            {
+              "key": "ertelmezesek_osszevetese",
+              "name": "Értelmezések összevetése",
+              "short_description": "Képes viták összegzésére.",
+              "example_tasks": [
+                "Hasonlíts össze 2 történészi értelmezést!",
+                "Írj mérlegelő esszét (12–14 mondat)!",
+                "Értékeld az érvek erejét!"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

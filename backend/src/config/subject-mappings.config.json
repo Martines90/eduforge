@@ -6,6 +6,34 @@
         "mathematics": {
           "name": "Mathematics",
           "file": "hu_mathematics_grade_9_12.json"
+        },
+        "physics": {
+          "name": "Physics",
+          "file": "hu_physics_grade_9_12.json"
+        },
+        "chemistry": {
+          "name": "Chemistry",
+          "file": "hu_chemistry_grade_9_12.json"
+        },
+        "biology": {
+          "name": "Biology",
+          "file": "hu_biology_grade_9_12.json"
+        },
+        "history": {
+          "name": "History",
+          "file": "hu_history_grade_9_12.json"
+        },
+        "geography": {
+          "name": "Geography",
+          "file": "hu_geography_grade_9_12.json"
+        },
+        "literature": {
+          "name": "Literature",
+          "file": "hu_literature_grade_9_12.json"
+        },
+        "informatics": {
+          "name": "Informatics",
+          "file": "hu_informatics_grade_9_12.json"
         }
       }
     },

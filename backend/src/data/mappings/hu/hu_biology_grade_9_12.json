@@ -1,0 +1,2047 @@
+{
+  "grade_9_10": [
+    {
+      "key": "bevezetes_a_biologiaba_es_modszerek",
+      "name": "Bevezetés a biológiába és módszerek",
+      "short_description": "A biológia mint természettudomány alapjai, a megfigyelés–kísérlet–modellalkotás logikája, valamint az adatok rögzítése és értelmezése a laboratóriumi és terepi vizsgálatokban.",
+      "sub_topics": [
+        {
+          "key": "tudomanyos_gondolkodas_es_modellalkotas",
+          "name": "Tudományos gondolkodás és modellalkotás",
+          "short_description": "A biológiai jelenségek vizsgálata során alkalmazott kérdésfeltevés, hipotézis, modell és következtetés lépéseinek megértése.",
+          "sub_topics": [
+            {
+              "key": "megfigyeles_hipotezis_es_valtozok",
+              "name": "Megfigyelés, hipotézis és változók",
+              "short_description": "A megfigyelésből kiinduló hipotézisalkotás és a független–függő–kontrollált változók azonosítása egyszerű biológiai problémákban.",
+              "example_tasks": [
+                "Olvasd el a rövid leírást: „A palánták közül a fényhez közelebbiek gyorsabban nőttek.” Fogalmazz meg egy vizsgálható hipotézist, és nevezd meg a független, függő és legalább két kontrollált változót.",
+                "Egy osztály azt vizsgálja, hogy a víz hőmérséklete befolyásolja-e a csírázási időt. Írd le, milyen kontrollcsoportot alakítanál ki, és miért fontos a kontroll.",
+                "Készíts két különböző hipotézist ugyanarra a megfigyelésre (pl. „a levelek sárgulnak”), majd írd le, milyen méréssel tudnád eldönteni, melyik hipotézis támogatott."
+              ]
+            },
+            {
+              "key": "meresi_pontossag_es_hibak",
+              "name": "Mérési pontosság és hibák",
+              "short_description": "Mérési bizonytalanság, ismétlés, átlag, szóródás és a lehetséges hibaforrások felismerése alapmérésekben.",
+              "example_tasks": [
+                "Háromszor megméred egy növény magasságát: 12,4 cm; 12,1 cm; 12,5 cm. Számítsd ki az átlagot, és írd le, mit jelent a szóródás a mérések megbízhatósága szempontjából.",
+                "Sorolj fel legalább négy lehetséges hibaforrást, amikor mikroszkóp alatt sejtméretet becsülsz (pl. skála, fókusz, látómező), és mindegyikhez írj egy megelőzési javaslatot.",
+                "Egy grafikonon a pontok erősen szórnak. Adj két magyarázatot (módszertani és biológiai okot), és javasolj egy módosítást, amellyel csökkenthető a szórás."
+              ]
+            },
+            {
+              "key": "biologiai_modellek_es_korlataik",
+              "name": "Biológiai modellek és korlátaik",
+              "short_description": "Egyszerű modellek (pl. sejtről, ökoszisztémáról) szerepe és korlátai: mit magyaráznak, és mit hagynak figyelmen kívül.",
+              "example_tasks": [
+                "Magyarázd el, miért tekinthető „modellnek” a sejtről készült sematikus rajz, és sorolj fel két információt, amit egy ilyen rajz általában nem mutat meg.",
+                "Egy tápláléklánc-ábra alapján írd le, milyen kölcsönhatásokat ábrázol a modell, majd adj példát két olyan tényezőre (pl. évszak, betegségek), amit a modell nem tartalmaz.",
+                "Hasonlíts össze egy „populáció növekedése korlátlan erőforrások mellett” modellt a valósággal: írj le három okot, amiért a valós populációk ritkán nőnek korlátlanul."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "laboratoriumi_munkavegzes_es_biztonsag",
+          "name": "Laboratóriumi munkavégzés és biztonság",
+          "short_description": "Alapvető laboratóriumi eszközök használata, mintavétel és jelölés, valamint a balesetmegelőzés és higiénia szabályai.",
+          "sub_topics": [
+            {
+              "key": "laborbiztonsagi_szabalyok_es_kockazat",
+              "name": "Laborbiztonsági szabályok és kockázat",
+              "short_description": "Védőeszközök, veszélypiktogramok, vegyszerek és biológiai minták biztonságos kezelése.",
+              "example_tasks": [
+                "Készíts rövid „laborbiztonsági ellenőrzőlistát” egy mikroszkópos preparáláshoz (legalább 8 pont), külön kitérve a kések/tűk és a fertőtlenítés használatára.",
+                "Egy oldat címkéjén a következő jelzések vannak: irritáló és környezetkárosító. Írd le, milyen egyéni védőeszközöket használnál, és hogyan kezelnéd a hulladékot.",
+                "Szituáció: valaki kiönt egy ismeretlen folyadékot az asztalra. Sorold fel lépésről lépésre, mit kell tenni (értesítés, elkülönítés, felitatás, dokumentálás)."
+              ]
+            },
+            {
+              "key": "mintavetel_jeloles_es_dokumentalas",
+              "name": "Mintavétel, jelölés és dokumentálás",
+              "short_description": "Minták azonosítható jelölése, jegyzőkönyv, mérési táblázat és fotódokumentáció készítése.",
+              "example_tasks": [
+                "Tervezz címkét három különböző mintához (talaj, levél, víz): milyen adatokat írnál rá (hely, idő, kód, kezelés), és miért szükséges mindegyik?",
+                "Írj rövid mintajegyzőkönyvet egy 20 perces terepmegfigyeléshez (időjárás, helyszín, fajok, darabszámok, megjegyzések), majd emeld ki, mely adatok segítik az összehasonlíthatóságot.",
+                "Kapsz egy hiányos adatlapot: nincs mérési egység és nincs dátum. Magyarázd el, miért teszi ez használhatatlanná az adatot, és hogyan javítanád."
+              ]
+            },
+            {
+              "key": "laborat_es_terepi_etika",
+              "name": "Laboratóriumi és terepi etika",
+              "short_description": "Élőlényekkel végzett vizsgálatok etikai alapelvei, minimális beavatkozás, természetvédelmi szempontok.",
+              "example_tasks": [
+                "Sorolj fel három szabályt, amelyet egy rovarok megfigyelésére irányuló terepgyakorlaton be kell tartani a természetkímélés érdekében, és indokold mindegyiket.",
+                "Egy kísérlet élő csíranövényeket használ. Írd le, hogyan biztosítanád a felesleges szenvedés elkerülését és a hulladék felelős kezelését.",
+                "Vitaindító: „Szabad-e védett területen mintát gyűjteni oktatási célra?” Írj pro és kontra érveket, majd fogalmazz meg egy etikus kompromisszumot."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "mikroszkopia_es_sejtmegfigyeles_alapjai",
+          "name": "Mikroszkópia és sejtmegfigyelés alapjai",
+          "short_description": "Fénymikroszkóp használata, nagyítás és felbontás értelmezése, egyszerű preparátumok készítése és rajzos dokumentálása.",
+          "sub_topics": [
+            {
+              "key": "mikroszkop_reszei_es_beallitasa",
+              "name": "A mikroszkóp részei és beállítása",
+              "short_description": "A fénymikroszkóp fő részei, fókuszálás, megvilágítás és nagyításváltás szabályai.",
+              "example_tasks": [
+                "Nevezd meg a fénymikroszkóp legalább 10 részét (pl. okulár, objektív, tárgyasztal), és mindegyikhez írj egy rövid funkciót.",
+                "Írd le a fókuszálás biztonságos lépéseit nagyításváltáskor (kis nagyítás → nagy nagyítás), és magyarázd el, miért nem szabad rögtön a legnagyobb objektívvel kezdeni.",
+                "Egy kép elmosódott és túl sötét. Adj három beállítási javaslatot (megvilágítás, rekesz, fókusz), és írd le, várhatóan hogyan változik a kép."
+              ]
+            },
+            {
+              "key": "preparatum_keszites_es_festes",
+              "name": "Preparátumkészítés és festés",
+              "short_description": "Egyszerű nedves preparátum készítése (pl. hagymahéj), fedőlemez használata, alapfestések célja.",
+              "example_tasks": [
+                "Írd le lépésről lépésre, hogyan készítenél nedves preparátumot hagymahéjból úgy, hogy ne keletkezzen légbuborék.",
+                "Magyarázd el, miért használunk festést (pl. jódoldatot) növényi sejtek megfigyelésénél, és mely sejtalkotók válnak így könnyebben láthatóvá.",
+                "Készíts összehasonlító megfigyelési listát: mit vársz hagymahéj- és szájnyálkahártya-sejtekben látni (sejtmag, sejtfal, alak), és jelöld, mi a bizonyítékod."
+              ]
+            },
+            {
+              "key": "rajzos_dokumentalas_es_meretarany",
+              "name": "Rajzos dokumentálás és méretarány",
+              "short_description": "Biológiai rajz szabályai, jelölések, méretarány és egyszerű sejtméret-becslés látómező alapján.",
+              "example_tasks": [
+                "Készíts biológiai rajzot egy általad megfigyelt sejtről (vázlatosan), és írd le a rajz szabályait (vonalvezetés, feliratok, nagyítás feltüntetése).",
+                "Ha a látómező átmérője 1,8 mm, és egy sejt a látómező kb. 1/6-át tölti ki, becsüld meg a sejt méretét mikrométerben, és írd le a számítás menetét.",
+                "Egy tanuló túl sok árnyékolást és „művészi” részletet használ a sejtrajzon. Írd le, miért problémás ez tudományos dokumentálásban, és hogyan javítanád."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "adatkezeles_es_biostatisztika_alapok",
+          "name": "Adatkezelés és biostatisztika alapok",
+          "short_description": "Alap grafikonok, táblázatok, százalékos arányok, egyszerű következtetések és kommunikáció biológiai adatok alapján.",
+          "sub_topics": [
+            {
+              "key": "tablazat_es_grafikon_keszites",
+              "name": "Táblázat- és grafikon készítés",
+              "short_description": "Megfelelő tengelyválasztás, egységek, jelmagyarázat és trendek azonosítása biológiai adatsorokban.",
+              "example_tasks": [
+                "Egy csírázási kísérlet adatai alapján készíts táblázatot és vonaldiagramot (idő–csírázott magok száma), majd fogalmazz meg két trendet és egy lehetséges magyarázatot.",
+                "Döntsd el, hogy az alábbi adatokhoz oszlopdiagram vagy kördiagram illik jobban (fajok százalékos megoszlása egy réten), és indokold a választásodat.",
+                "Egy grafikonon hiányoznak az egységek. Írd le, milyen félreértésekhez vezethet ez, és hogyan egészítenéd ki a grafikont szabályosan."
+              ]
+            },
+            {
+              "key": "aranyok_szazalek_es_egyszeru_mutatok",
+              "name": "Arányok, százalék és egyszerű mutatók",
+              "short_description": "Gyakoriság, százalékos arány és egyszerű összehasonlító mutatók használata biológiai példákon.",
+              "example_tasks": [
+                "Egy mintában 80 vízibolha közül 18 fehér színű. Számítsd ki a fehér egyedek százalékos arányát, és írd le, hogyan változna az arány, ha 20 új, nem fehér egyed jelenne meg.",
+                "Egy iskolai felmérésben 120 diákból 45 alszik 8 óránál kevesebbet. Ábrázold az arányt százalékban, és fogalmazz meg egy biológiai vonatkozású kérdést (pl. tanulás, hormonális szabályozás) a jelenséghez.",
+                "Két tóban a nitrátkoncentráció 12 mg/L és 18 mg/L. Számítsd ki, hányszoros a különbség, és írd le, milyen ökológiai következményeket feltételeznél."
+              ]
+            },
+            {
+              "key": "kovetkeztetes_es_tudomanyos_kommunikacio",
+              "name": "Következtetés és tudományos kommunikáció",
+              "short_description": "Következtetések megfogalmazása adatok alapján, korlátok és bizonytalanságok jelzése, rövid „mini-absztrakt” készítése.",
+              "example_tasks": [
+                "Adott egy rövid kísérleti eredmény (2–3 adatpont). Írj 4–5 mondatos összefoglalót, amely tartalmazza a célkitűzést, módszert, eredményt és egy óvatos következtetést.",
+                "Egy tanuló azt állítja: „A kísérlet bizonyította, hogy X ok okozza Y-t.” Írd át a mondatot tudományosan óvatosabb megfogalmazásra, és indokold, miért fontos ez.",
+                "Készíts posztervázlatot (cím, bevezetés, módszer, eredmények, következtetés) egy egyszerű iskolai biológia vizsgálathoz."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "az_elet_eredete_es_szervezodesi_szintjei",
+      "name": "Az élet eredete és szerveződési szintjei",
+      "short_description": "Az élet kritériumai, az élő rendszerek hierarchiája és a biológiai folyamatok értelmezése a molekuláris szinttől az ökoszisztémáig, valamint az élet eredetével kapcsolatos alapvető elképzelések.",
+      "sub_topics": [
+        {
+          "key": "az_elet_jellemzoi_es_eletfolyamatok",
+          "name": "Az élet jellemzői és életfolyamatok",
+          "short_description": "Az élő rendszerek közös tulajdonságai (anyagcsere, homeosztázis, szaporodás, öröklődés, evolúció) és ezek példái.",
+          "sub_topics": [
+            {
+              "key": "anyagcsere_es_energiafelhasznalas_alapelvei",
+              "name": "Anyagcsere és energiafelhasználás alapelvei",
+              "short_description": "Az anyag- és energiaforgalom szerepe az élet fenntartásában, felépítő és lebontó folyamatok alapfogalmai.",
+              "example_tasks": [
+                "Magyarázd el saját szavaiddal a felépítő (asszimiláció) és lebontó (disszimiláció) folyamatok különbségét, és írj mindkettőre egy konkrét biológiai példát.",
+                "Rendezd sorba az alábbi fogalmakat logikailag: tápanyag, enzim, energia, ATP, sejtműködés. Írd le 4–5 mondatban, hogyan kapcsolódnak egymáshoz.",
+                "Egy élesztős kísérletben a cukor fogyása gyors, de a hőmérséklet csökken. Fogalmazz meg két lehetséges magyarázatot az energiaáramlás szempontjából."
+              ]
+            },
+            {
+              "key": "homeosztazis_es_visszacsatolas",
+              "name": "Homeosztázis és visszacsatolás",
+              "short_description": "A belső környezet viszonylagos állandósága és a negatív visszacsatolás szerepe egyszerű szabályozási példákon.",
+              "example_tasks": [
+                "Rajzolj egyszerű folyamatábrát a testhőmérséklet-szabályozásról, és jelöld benne az inger, érzékelő, szabályozó központ és végrehajtó elemet.",
+                "Adj két példát negatív visszacsatolásra az emberi szervezetben (pl. vércukorszint), és írd le, mi történik a változó növekedésekor és csökkenésekor.",
+                "Vita: „A homeosztázis minden körülmények között fenntartható.” Írj ellenérvet egy extrém környezeti példával, és magyarázd el, hol a rendszer korlátja."
+              ]
+            },
+            {
+              "key": "szaporodas_oroklodes_es_evolucio_kapcsolata",
+              "name": "Szaporodás, öröklődés és evolúció kapcsolata",
+              "short_description": "A szaporodás és öröklődés mint az evolúció feltételei; változékonyság és szelekció szemléleti bevezetése.",
+              "example_tasks": [
+                "Magyarázd el, miért szükséges az öröklődés és a változékonyság ahhoz, hogy evolúció történjen. Írj egy egyszerű példát (pl. baktériumok antibiotikum-rezisztenciája).",
+                "Képzeld el, hogy egy populációban minden egyed genetikailag azonos. Írd le, miért lenne nehezebb alkalmazkodni egy hirtelen környezeti változáshoz.",
+                "Adj példát ivaros és ivartalan szaporodásra, majd írd le, melyik teremthet nagyobb genetikai változatosságot, és miért."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "szervezodesi_szintek_es_rendszerszemlelet",
+          "name": "Szerveződési szintek és rendszerszemlélet",
+          "short_description": "A biológiai szerveződés szintjei és az emergens tulajdonságok: hogyan jelennek meg új jellemzők magasabb szinteken.",
+          "sub_topics": [
+            {
+              "key": "szervezodesi_szintek_felsorolasa_es_peldak",
+              "name": "Szerveződési szintek és példák",
+              "short_description": "A molekula–sejt–szövet–szerv–szervrendszer–egyed–populáció–társulás–ökoszisztéma szintek felismerése és konkrét példák hozzárendelése.",
+              "example_tasks": [
+                "Rendezd a következőket a szerveződési szintek szerint: mitokondrium, gyomor, ember, bélhámszövet, erdő ökoszisztéma, szarvaspopuláció. Indokold röviden a sorrendet.",
+                "Válassz egy hazai példát (pl. Duna-árterek), és írd le, hogyan jelenik meg benne a populáció, társulás és ökoszisztéma fogalma.",
+                "Adj két példát arra, amikor egy magasabb szinten új tulajdonság jelenik meg (emergens jelleg), ami az alkotó részekből önmagukban nem nyilvánvaló."
+              ]
+            },
+            {
+              "key": "emergens_tulajdonsagok_es_kolcsonhatasok",
+              "name": "Emergens tulajdonságok és kölcsönhatások",
+              "short_description": "A rendszer elemei közötti kölcsönhatások jelentősége és az emergens működések értelmezése (pl. idegrendszeri működés, ökológiai stabilitás).",
+              "example_tasks": [
+                "Magyarázd el, miért nem érthető meg teljesen az idegrendszer működése csak egyetlen idegsejt vizsgálatával. Adj példát hálózati jelenségre.",
+                "Egy akváriumban túl sok algát figyelsz meg. Írd le, milyen kölcsönhatások (fény, tápanyag, fogyasztók) vezethetnek az állapothoz rendszerszemléletben.",
+                "Készíts ok-okozati hálót (legalább 6 csomóponttal) egy erdei ökoszisztéma stabilitására ható tényezőkről (pl. csapadék, rovarok, ragadozók, emberi beavatkozás)."
+              ]
+            },
+            {
+              "key": "visszacsatolasok_biologiai_rendszerekben",
+              "name": "Visszacsatolások biológiai rendszerekben",
+              "short_description": "Pozitív és negatív visszacsatolások felismerése sejtszintű, szervezetszintű és ökológiai példákon.",
+              "example_tasks": [
+                "Adj egy példát pozitív visszacsatolásra (pl. véralvadás), és írd le, miért lehet veszélyes, ha nincs korlátozó mechanizmus.",
+                "Egy ragadozó–zsákmány rendszerben a zsákmány fogyása után késéssel csökken a ragadozók száma. Magyarázd el ezt visszacsatolási szemlélettel.",
+                "Sorolj fel három különböző szerveződési szinten megjelenő visszacsatolást (sejt, szervrendszer, ökoszisztéma), és mindegyikhez írj egy rövid működési leírást."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "az_elet_eredeterol_szolo_elkepzelesek",
+          "name": "Az élet eredetéről szóló elképzelések",
+          "short_description": "Az élet kialakulására vonatkozó tudományos hipotézisek alapjai, kísérleti bizonyítékok típusai és a tudományos bizonyítás korlátai.",
+          "sub_topics": [
+            {
+              "key": "kemiai_evolucio_es_osleves_hipotezis",
+              "name": "Kémiai evolúció és „ősleves” hipotézis",
+              "short_description": "Egyszerű szerves molekulák keletkezése, polimerizáció és protosejtek elméleti modelljei.",
+              "example_tasks": [
+                "Fogalmazd meg, milyen feltételek szükségesek ahhoz, hogy egyszerű szerves molekulák nagyobb mennyiségben keletkezzenek egy korai Föld-szerű környezetben.",
+                "Egy ábrán koacervátum-szerű cseppeket látsz. Írd le, miben hasonlítanak ezek egy sejt előfutárához, és miben különböznek a valódi sejtektől.",
+                "Készíts listát legalább 5 bizonyítéktípusról, amely az élet eredetére vonatkozó elképzelések vizsgálatában szerepet játszhat (kísérlet, geológia, összehasonlító biokémia)."
+              ]
+            },
+            {
+              "key": "rna_vilag_es_informacios_molekulak",
+              "name": "RNS-világ és információs molekulák",
+              "short_description": "Az RNS lehetséges kettős szerepe (információ és katalízis) és ennek jelentősége az élet kialakulásában.",
+              "example_tasks": [
+                "Magyarázd el, miért lehetett előnyös, ha egy molekula egyszerre tudott információt tárolni és kémiai reakciókat gyorsítani. Kapcsold ezt az RNS-hez.",
+                "Adj két érvet az „RNS-világ” hipotézis mellett és egy ellenérvet vagy nyitott kérdést, amit a hipotézisnek meg kell magyaráznia.",
+                "Készíts egyszerű összehasonlítást: DNS, RNS, fehérje – melyiknek mi a fő szerepe a mai sejtekben, és miért érdekes ez az élet eredete szempontjából?"
+              ]
+            },
+            {
+              "key": "tudos_vita_es_bizonyitekok_ertekelese",
+              "name": "Tudományos vita és bizonyítékok értékelése",
+              "short_description": "Hipotézisek összevetése, bizonyítékok erőssége, valamint a „mit tudunk” és „mit feltételezünk” megkülönböztetése.",
+              "example_tasks": [
+                "Olvass el két rövid állítást az élet eredetéről (tanári anyag alapján). Jelöld, melyik állítás ténymegfigyelés és melyik értelmezés, majd indokold a döntésed.",
+                "Készíts érvelést 6–8 mondatban: miért nehéz az élet eredetét egyetlen kísérlettel „bizonyítani”, és milyen tudományos megközelítések erősítik mégis a hipotéziseket.",
+                "Írj rövid vitaszabályt egy osztálytermi tudományos vitához (forráshivatkozás, definíciók, ellenérvek kezelése), majd alkalmazd egy választott hipotézisre."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sejtbiologia_alapjai",
+      "name": "Sejtbiológia alapjai",
+      "short_description": "A sejtek szerkezete és működése mint az élet alapegysége; a prokarióta és eukarióta sejtek összehasonlítása, valamint a sejtalkotók és membránfolyamatok alapjai.",
+      "sub_topics": [
+        {
+          "key": "a_sejt_elmelete_es_sejttipusok",
+          "name": "A sejtelmélet és sejttípusok",
+          "short_description": "A sejtelmélet fő tételei, a prokarióta és eukarióta sejtek alapvető különbségei és közös vonásai.",
+          "sub_topics": [
+            {
+              "key": "sejtelmelet_es_bizonyitekai",
+              "name": "Sejtelmélet és bizonyítékai",
+              "short_description": "A sejtelmélet állításainak megfogalmazása és a mikroszkópos megfigyelések szerepe a bizonyításban.",
+              "example_tasks": [
+                "Fogalmazd meg a sejtelmélet három klasszikus tételét, majd írj mindegyikhez egy példát, amely alátámasztja azt.",
+                "Egy mikroszkópos képen különböző szövetek sejtjei láthatók. Magyarázd el 4–5 mondatban, hogyan támogatja ez a sejtelméletet.",
+                "Válassz egy történeti példát (pl. mikroszkóp fejlődése), és írd le, hogyan változtatta meg az élőlényekről alkotott képet."
+              ]
+            },
+            {
+              "key": "prokariota_es_eukariota_osszehasonlitas",
+              "name": "Prokarióta és eukarióta sejtek összehasonlítása",
+              "short_description": "Sejtmag, örökítőanyag elhelyezkedése, membrános sejtalkotók és sejtméret összevetése táblázatos szemlélettel.",
+              "example_tasks": [
+                "Készíts összehasonlító listát legalább 6 szemponttal a prokarióta és eukarióta sejtek között (pl. sejtmag, riboszóma, DNS alakja).",
+                "Egy ismeretlen mintáról tudod, hogy van benne sejtfal, de nincs sejtmag. Írd le, milyen sejttípusra következtetsz, és sorolj fel két további várható jellemzőt.",
+                "Magyarázd el, miért lehetnek a prokarióta sejtek gyorsabban osztódók bizonyos körülmények között, mint az eukarióták."
+              ]
+            },
+            {
+              "key": "sejtspecializacio_es_munkamegosztas",
+              "name": "Sejtspecializáció és munkamegosztás",
+              "short_description": "A többsejtű szervezetekben a sejtek differenciálódása, szövetek kialakulása és a működésbeli következmények.",
+              "example_tasks": [
+                "Hasonlíts össze egy idegsejtet és egy izomsejtet: nevezd meg 2–2 szerkezeti sajátosságukat, és magyarázd el, hogyan kapcsolódik ez a funkciójukhoz.",
+                "Adj példát arra, hogy egy sejt differenciálódása milyen génműködésbeli változásokkal járhat (fogalmi szinten).",
+                "Egy sérülés után a bőr gyorsan regenerálódik, az idegszövet viszont lassabban. Fogalmazz meg két biológiai okot a különbségre."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "sejtalkotok_es_funkcioik",
+          "name": "Sejtalkotók és funkcióik",
+          "short_description": "A fő sejtalkotók (membrán, sejtmag, mitokondrium, kloroplasztisz, ER, Golgi, riboszóma, lizoszóma, vakuólum) szerepe és kapcsolatrendszere.",
+          "sub_topics": [
+            {
+              "key": "sejtmag_es_orokitoanyag_szervezodese",
+              "name": "Sejtmag és örökítőanyag szerveződése",
+              "short_description": "A sejtmag szerepe, kromatin–kromoszóma fogalmak és a génkifejeződés nagyon alapvető keretei.",
+              "example_tasks": [
+                "Címkézz egy sematikus sejtmag-rajzon: maghártya, pórus, magvacska, kromatin. Írd le mindegyik funkcióját 1 mondatban.",
+                "Magyarázd el, miért szükséges a magpórusok jelenléte a sejt működéséhez (anyagforgalom a mag és a citoplazma között).",
+                "Egy sejtben sérül a maghártya. Sorolj fel két lehetséges következményt a sejtműködésre (fogalmi szinten)."
+              ]
+            },
+            {
+              "key": "energia_atvitel_mitokondrium_es_kloroplasztisz",
+              "name": "Energiaátvitel: mitokondrium és kloroplasztisz",
+              "short_description": "A mitokondrium szerepe a sejtlégzésben, a kloroplasztisz szerepe a fotoszintézisben és a sejten belüli energiaellátás kapcsolata.",
+              "example_tasks": [
+                "Hasonlítsd össze a mitokondrium és a kloroplasztisz felépítését (kettős membrán, belső felszín), és írd le, miért fontos a nagy belső membránfelszín.",
+                "Egy növényi sejtben kevés a mitokondrium, sok a kloroplasztisz. Milyen sejt lehet ez (pl. levél alapszövet), és miért ilyen az arány?",
+                "Magyarázd el, miért található mitokondrium a növényi sejtekben is, még akkor is, ha fotoszintetizálnak."
+              ]
+            },
+            {
+              "key": "membranos_rendszerek_er_es_golgi",
+              "name": "Membrános rendszerek: endoplazmatikus retikulum és Golgi-készülék",
+              "short_description": "Fehérjeszintézis és -módosítás, csomagolás, szállítás és kiválasztás a sejt belső membránrendszereiben.",
+              "example_tasks": [
+                "Készíts folyamatleírást: riboszóma → durva ER → Golgi → vezikula → sejthártya. Írd le, mi történik minden lépésnél 1 mondatban.",
+                "Egy mirigysejtben sok a durva ER és a Golgi. Magyarázd el, milyen feladatot végezhet ez a sejt, és milyen fehérjéket termelhet.",
+                "Egy fehérje hibásan hajtogatódik az ER-ben. Írd le, miért lehet ez káros a sejtre, és milyen következményekhez vezethet."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "sejthartya_es_anyagforgalom",
+          "name": "Sejthártya és anyagforgalom",
+          "short_description": "A membrán felépítése, szelektív áteresztés, passzív és aktív transzport, ozmózis és a sejtek közötti anyagcsere-kapcsolatok alapjai.",
+          "sub_topics": [
+            {
+              "key": "folyekony_mozaik_modell_es_membrankomponensek",
+              "name": "A folyékony mozaik modell és membránkomponensek",
+              "short_description": "Foszfolipid kettősréteg, membránfehérjék és szénhidrátok szerepe a szelektivitásban és kommunikációban.",
+              "example_tasks": [
+                "Rajzolj egy egyszerű sejthártya-modellt, jelöld a foszfolipidek hidrofil és hidrofób részeit, majd magyarázd el, miért így rendeződnek vízben.",
+                "Sorolj fel háromféle membránfehérje-típust (pl. csatorna, receptor), és mindegyikhez írj egy példafeladatot vagy élettani példát.",
+                "Magyarázd el, hogyan segíthetik a sejtfelszíni szénhidrátok a sejtek felismerését (pl. immunrendszer)."
+              ]
+            },
+            {
+              "key": "passziv_transzport_diffuzio_es_ozmozis",
+              "name": "Passzív transzport: diffúzió és ozmózis",
+              "short_description": "Koncentrációkülönbség, diffúzió sebességét befolyásoló tényezők, valamint az ozmózis hatása állati és növényi sejtekben.",
+              "example_tasks": [
+                "Magyarázd el, mi történik egy vörösvértesttel hipotóniás és hipertóniás oldatban, és indokold az ozmózis fogalmával.",
+                "Egy burgonyahasáb tömege 30 perc áztatás után nőtt. Következtess az oldat töménységére (hipo/hipertóniás), és írd le, milyen mérés erősítené meg a következtetésed.",
+                "Sorolj fel két tényezőt, amely gyorsítja a diffúziót, és mindegyikhez adj egy hétköznapi vagy biológiai példát."
+              ]
+            },
+            {
+              "key": "aktiv_transzport_es_vezikulas_szallitas",
+              "name": "Aktív transzport és vezikulás szállítás",
+              "short_description": "ATP-igényes pumpák, kotranszport és az endocitózis–exocitózis alapfogalmai.",
+              "example_tasks": [
+                "Írd le, miért igényel energiát az aktív transzport, majd adj példát olyan esetre, amikor a sejt „a koncentrációgradiens ellenében” szállít anyagot.",
+                "Egy sejttípus nagy részecskéket vesz fel a környezetéből. Nevezd meg a folyamatot (endocitózis egyik típusa), és írj egy lehetséges biológiai példát.",
+                "Magyarázd el, miért lehet fontos a nátrium–kálium pumpa az idegsejtek működésében (fogalmi szinten)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sejtciklus_es_sejtosztodas",
+      "name": "Sejtciklus és sejtosztódás",
+      "short_description": "A sejtciklus szakaszai és szabályozása, valamint a mitózis és meiózis folyamata és jelentősége a növekedésben, regenerációban és ivarsejtképzésben.",
+      "sub_topics": [
+        {
+          "key": "a_sejtciklus_szakaszai_es_szabalyozasa",
+          "name": "A sejtciklus szakaszai és szabályozása",
+          "short_description": "Interfázis (G1, S, G2) és M-fázis, ellenőrzőpontok és a szabályozás jelentősége a sejtek működésében.",
+          "sub_topics": [
+            {
+              "key": "interfazis_folyamatai_g1_s_g2",
+              "name": "Interfázis folyamatai (G1, S, G2)",
+              "short_description": "Növekedés, fehérjeszintézis és DNS-megkettőződés szerepe a sejtosztódás előkészítésében.",
+              "example_tasks": [
+                "Rendezd sorrendbe a G1, S, G2 szakaszokat, és mindegyikhez írj egy kulcsfolyamatot (pl. DNS-replikáció).",
+                "Magyarázd el, miért szükséges, hogy a DNS pontosan megkettőződjön az osztódás előtt, és mi történhet, ha hibás a replikáció.",
+                "Egy sejt sok fehérjét termel, de még nem másolja a DNS-ét. Melyik szakaszban lehet, és miért?"
+              ]
+            },
+            {
+              "key": "ellenorzopontok_es_daganatkepzodes_kapcsolata",
+              "name": "Ellenőrzőpontok és daganatképződés kapcsolata",
+              "short_description": "Az osztódás ellenőrzése, a hibás sejtciklus-szabályozás lehetséges következményei és a rák szemléleti bevezetése.",
+              "example_tasks": [
+                "Írd le, mi a szerepe az ellenőrzőpontoknak a sejtciklusban, és miért fontosak a genom stabilitásának megőrzésében.",
+                "Egy mutáció miatt egy sejt nem áll le osztódni. Fogalmazz meg két lehetséges következményt szövetszinten (pl. daganatképződés).",
+                "Vitaindító: miért nem „csak” gyors osztódás a rák? Írj 3–4 mondatban rendszerszemléletű választ (invázió, szabályozás, immunrendszer)."
+              ]
+            },
+            {
+              "key": "mitozis_merese_es_adosor_elemzese",
+              "name": "Mitózis mérése és adatsor elemzése",
+              "short_description": "Mitotikus index értelmezése és a sejtciklus-aktivitás összehasonlítása egyszerű adatok alapján.",
+              "example_tasks": [
+                "Egy gyökércsúcsban 200 sejtből 36 osztódik. Számítsd ki a mitotikus indexet százalékban, és magyarázd el, mit jelent az érték.",
+                "Két szövet mitotikus indexe 3% és 18%. Következtess, melyik lehet aktívabban növekvő szövet, és indokold.",
+                "Tervezd meg, hogyan hasonlítanád össze a fény és sötét körülmények között nevelt növények gyökércsúcsának mitotikus indexét (mintavétel, kontroll)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "mitozis_es_jelentosege",
+          "name": "Mitózis és jelentősége",
+          "short_description": "A mitózis fázisai és a genetikai állandóság biztosítása; növekedés, regeneráció és ivartalan szaporodás kapcsolatai.",
+          "sub_topics": [
+            {
+              "key": "mitozis_fazisai_es_kromoszoma_viselkedes",
+              "name": "A mitózis fázisai és a kromoszómák viselkedése",
+              "short_description": "Profázis–metafázis–anafázis–telofázis (és citokinézis) felismerése, valamint a testvérkromatidák szétválása.",
+              "example_tasks": [
+                "Egy ábrasorozaton a kromoszómák rendeződése látható. Azonosítsd a fázisokat, és indokold 1–1 jellegzetes megfigyeléssel mindegyiket.",
+                "Magyarázd el, miért biztosít genetikai azonosságot a mitózis a keletkező leánysejtek között (testvérkromatidák fogalma).",
+                "Készíts összehasonlító listát: mi történik a sejtmaggal és a sejtvázzal a mitózis különböző szakaszaiban."
+              ]
+            },
+            {
+              "key": "citokinezis_allati_es_novenyi_sejtben",
+              "name": "Citokinézis állati és növényi sejtben",
+              "short_description": "Barázdálódás és sejtfal-képződés különbsége, a sejtfal szerepe növényi osztódás során.",
+              "example_tasks": [
+                "Írd le, miért különbözik a citokinézis folyamata állati és növényi sejtekben, és nevezd meg a két jellegzetes mechanizmust.",
+                "Egy mikroszkópos képen sejtfal-képződés látható. Következtess, hogy növényi vagy állati sejt osztódik, és indokold.",
+                "Magyarázd el, hogyan befolyásolja a sejtfal jelenléte a sejtek alakját és osztódását növényekben."
+              ]
+            },
+            {
+              "key": "mitozis_szerepe_novekedesben_es_regeneracioban",
+              "name": "A mitózis szerepe növekedésben és regenerációban",
+              "short_description": "Szöveti megújulás (pl. bélhám, bőr) és regeneráció, valamint a sejtosztódás korlátai és szabályozása.",
+              "example_tasks": [
+                "Adj két példát emberi szövetekre, ahol gyors a sejtcserélődés, és magyarázd el, miért szükséges a gyakori mitózis.",
+                "Egy seb gyógyulása során milyen sejtes folyamatok szükségesek? Írj rövid leírást a sejtosztódás és sejtvándorlás szerepéről.",
+                "Készíts egyszerű ok-okozati láncot: mitózis gátlása → szöveti megújulás → lehetséges következmények (pl. sebgyógyulás lassulása)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "meiozis_es_genetikai_valtozatossag",
+          "name": "Meiózis és genetikai változatosság",
+          "short_description": "A meiózis két osztódása, a kromoszómaszám-felezés, rekombináció és a genetikai változatosság forrásai.",
+          "sub_topics": [
+            {
+              "key": "meiozis_i_es_ii_alaplepesek",
+              "name": "Meiózis I. és II. alaplépések",
+              "short_description": "Homológ kromoszómák párosodása és szétválása (I.), testvérkromatidák szétválása (II.), valamint az ivarsejtek kromoszómaszáma.",
+              "example_tasks": [
+                "Hasonlítsd össze röviden a meiózis I. és II. osztódást: mi válik szét mindkettőben, és mi lesz a végső kromoszómaszám?",
+                "Egy 2n = 12 kromoszómájú fajban mennyi kromoszóma lesz az ivarsejtekben? Írd le a gondolatmenetet.",
+                "Magyarázd el, miért nevezhető a meiózis „kromoszómaszám-felező” osztódásnak, és miért fontos ez a fajra jellemző szám fenntartásához."
+              ]
+            },
+            {
+              "key": "atkeresztezodes_es_fuggetlen_oroklodes",
+              "name": "Átkereszteződés és független öröklődés",
+              "short_description": "A rekombináció (crossing-over) és a kromoszómák független szétválása mint változatosságot növelő mechanizmusok.",
+              "example_tasks": [
+                "Írd le, mikor történik az átkereszteződés a meiózis során, és magyarázd el, hogyan hoz létre új alléleloszlást.",
+                "Képzeld el, hogy egy egyedben 3 pár homológ kromoszóma van. Hányféle kromoszómakombináció jöhet létre a független szétválás miatt (fogalmi szinten, számszerűen is)?",
+                "Adj egy példát arra, hogy a rekombináció miért lehet előnyös változó környezetben egy populáció számára."
+              ]
+            },
+            {
+              "key": "kromoszoma_rendellenessegek_alapok",
+              "name": "Kromoszóma-rendellenességek alapok",
+              "short_description": "A nem megfelelő szétválás (nondiszjunkció) szemléleti következményei és egyszerű példák a kromoszómaszám-változásra.",
+              "example_tasks": [
+                "Magyarázd el, mi történik nondiszjunkció esetén a meiózis során, és miért jönnek létre rendellenes kromoszómaszámú ivarsejtek.",
+                "Egy ivarsejt a normálisnál egy kromoszómával többet tartalmaz. Írd le, mi történhet a megtermékenyítés után (fogalmi szinten: triszómia).",
+                "Miért nőhet bizonyos kromoszóma-rendellenességek kockázata az anyai életkorral? Fogalmazz meg egy óvatos, biológiai szemléletű magyarázatot."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "biokemia_es_enzimmukodes",
+      "name": "Biokémia és enzimműködés",
+      "short_description": "A sejtek kémiai felépítése és a biomolekulák (víz, szénhidrátok, lipidek, fehérjék, nukleinsavak) szerepe, valamint az enzimek működése és az anyagcsere alapjai.",
+      "sub_topics": [
+        {
+          "key": "a_viz_es_az_asvanyi_anyagok_szerepe",
+          "name": "A víz és az ásványi anyagok szerepe",
+          "short_description": "A víz fizikai-kémiai tulajdonságai és biológiai jelentősége, illetve az ionok/ásványi anyagok alapvető szerepei az élő rendszerekben.",
+          "sub_topics": [
+            {
+              "key": "viz_polaritasa_oldokepesseg_es_homerseklet_stabilizalas",
+              "name": "A víz polaritása, oldóképessége és hőmérséklet-stabilizáló szerepe",
+              "short_description": "A víz mint univerzális oldószer, a hidrogénkötések következményei és a fajhő/párolgáshő biológiai jelentősége.",
+              "example_tasks": [
+                "Magyarázd el, miért jó oldószer a víz ionos és poláris anyagok számára, és adj két biológiai példát (pl. vérplazma, sejtnedv).",
+                "Írd le, hogyan segíti a víz nagy fajhője a testhőmérséklet és a tavak hőmérsékletének stabilizálását, és adj egy hazai példát (pl. Balaton lassú felmelegedése).",
+                "Miért hűt az izzadás? Kapcsold a párolgáshő fogalmához, és írd le, milyen körülmények között kevésbé hatékony (pl. magas páratartalom)."
+              ]
+            },
+            {
+              "key": "ozmozis_ionegyensuly_es_sejtmukodes",
+              "name": "Ozmózis, ionegyensúly és sejtműködés",
+              "short_description": "A vízháztartás és az ionkoncentrációk szerepe a sejtek térfogatában, membránpotenciálban és általános működésben.",
+              "example_tasks": [
+                "Egy növényi sejt hipertóniás oldatba kerül. Írd le, mi történik a sejttel (plazmolízis), és magyarázd meg az ozmózis alapján.",
+                "Magyarázd el, miért fontos a nátrium-, kálium- és kalciumionok koncentrációkülönbsége a sejtekben (fogalmi szinten: ingerület, izomműködés).",
+                "Tervezz egyszerű kísérletet (burgonyával vagy hagymával), amellyel kimutatható az ozmózis. Írd le a kontrollt és a várható eredményt."
+              ]
+            },
+            {
+              "key": "asvanyi_anyagok_hianybetegsegek_alapok",
+              "name": "Ásványi anyagok és hiánybetegségek alapok",
+              "short_description": "Makro- és mikroelemek szerepe (pl. Ca, Fe, I, Mg) és a hiány következményei az emberi szervezetben.",
+              "example_tasks": [
+                "Párosítsd az alábbi elemeket a fő szerepükkel: Ca, Fe, I, Mg (pl. csontozat, hemoglobin, pajzsmirigy, enzimek).",
+                "Írd le két hiányállapot (pl. vashiány, jódhiány) jellegzetes következményét, és javasolj élelmiszer-forrást a megelőzésre.",
+                "Egy sportoló görcsökre panaszkodik és kevés folyadékot fogyaszt. Fogalmazz meg két lehetséges magyarázatot a víz–ionháztartás alapján."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "szenhidratok_es_lipidek",
+          "name": "Szénhidrátok és lipidek",
+          "short_description": "A szénhidrátok és lipidek szerkezeti típusai, szerepük az energiaraktározásban és sejtszerkezetben, valamint táplálkozási vonatkozásaik.",
+          "sub_topics": [
+            {
+              "key": "mono_di_poliszaharidok_es_peldak",
+              "name": "Mono-, di- és poliszacharidok és példák",
+              "short_description": "A cukrok alapvető felépítése és biológiai szerepe (energiaforrás, raktározás, sejtfal).",
+              "example_tasks": [
+                "Sorolj fel 2 monoszacharidot, 2 diszacharidot és 2 poliszacharidot, és mindegyikhez írj egy biológiai szerepet (pl. glükóz: energia).",
+                "Magyarázd el, miért alkalmas a keményítő és a glikogén energiaraktározásra, míg a cellulóz szerkezeti anyag.",
+                "Egy élelmiszer címkéjén magas a „rost” tartalom. Írd le, hogy a rost (pl. cellulóz) miért fontos az emésztés szempontjából."
+              ]
+            },
+            {
+              "key": "lipidek_feladatok_zsirok_foszfolipidek_szteroidok",
+              "name": "Lipidek: zsírok, foszfolipidek, szteroidok",
+              "short_description": "A lipidek fő típusai és szerepeik (energia, membrán, hormonok), valamint egyszerű egészségügyi kapcsolódások.",
+              "example_tasks": [
+                "Hasonlítsd össze a triglicerideket és foszfolipideket: szerkezet és funkció szerint (energia-raktár vs. membránalkotó).",
+                "Magyarázd el, miért lehet energiadúsabb a zsír, mint a szénhidrát, és mikor előnyös a zsírraktár a szervezet számára.",
+                "Adj példát egy szteroid hormonra, és írd le, miért lipidszerű a működése szempontjából (sejthártyán való átjutás)."
+              ]
+            },
+            {
+              "key": "telitett_es_telitetlen_zsirsavak_es_taplalkozas",
+              "name": "Telített és telítetlen zsírsavak és táplálkozás",
+              "short_description": "Zsírsavak szerkezete, olvadáspont, növényi–állati zsírok jellemzői, valamint egészségügyi következtetések.",
+              "example_tasks": [
+                "Magyarázd el, miért folyékonyabbak a telítetlen zsírok szobahőmérsékleten, mint a telítettek (kettős kötések hatása).",
+                "Egy menüben sok a gyorséttermi étel. Írj le két lehetséges egészségügyi kockázatot a túlzott telített zsír bevitelével kapcsolatban (általános szinten).",
+                "Javasolj három élelmiszert, amely jó telítetlen zsírforrás lehet, és indokold, miért érdemes ezekből mérsékelten fogyasztani."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "feherjek_es_enzimek",
+          "name": "Fehérjék és enzimek",
+          "short_description": "A fehérjék szerkezeti szintjei és funkciói, valamint az enzimek mint biokatalizátorok működése, szabályozása és környezeti érzékenysége.",
+          "sub_topics": [
+            {
+              "key": "aminosavak_es_feherjeszerkezeti_szintek",
+              "name": "Aminosavak és fehérjeszerkezeti szintek",
+              "short_description": "Primer–szekunder–tercier–kvaterner szerkezet és a szerkezet–funkció kapcsolat alapjai.",
+              "example_tasks": [
+                "Sorold fel a fehérjeszerkezeti szinteket, és mindegyikhez írj 1 mondatban, hogy milyen kötések vagy kölcsönhatások stabilizálják.",
+                "Magyarázd el, miért befolyásolhatja egyetlen aminosav cseréje egy fehérje működését, és adj egy elvi példát (pl. enzimműködés csökken).",
+                "Egy fehérje hő hatására „kicsapódik”. Írd le, mit jelent a denaturáció, és miért változik a működés."
+              ]
+            },
+            {
+              "key": "enzim_mukodes_aktiv_centrum_es_specificitas",
+              "name": "Enzimműködés: aktív centrum és specificitás",
+              "short_description": "Enzim–szubsztrát kölcsönhatás, aktív centrum, kulcs–zár/indukált illeszkedés szemlélet és a reakciók gyorsítása.",
+              "example_tasks": [
+                "Rajzolj egyszerű vázlatot enzim–szubsztrát komplexről, és magyarázd el az aktív centrum szerepét a reakcióban.",
+                "Miért nevezhető egy enzim „specifikusnak”? Adj példát: melyik enzim bontja a keményítőt, és miért nem bontja ugyanúgy a fehérjéket?",
+                "Fogalmazz meg egy mindennapi példát arra, amikor az enzimaktivitás érzékelhető (pl. tejcukor-mentesítés, mosószerek)."
+              ]
+            },
+            {
+              "key": "enzimaktivitast_befolyasolo_tenyezok",
+              "name": "Az enzimaktivitást befolyásoló tényezők",
+              "short_description": "Hőmérséklet, pH, szubsztrát-koncentráció, gátlók és aktivátorok hatása az enzim működésére.",
+              "example_tasks": [
+                "Készíts grafikonvázlatot: enzimaktivitás a hőmérséklet függvényében. Jelöld az optimumot, és írd le, mi történik túl magas hőmérsékleten.",
+                "Miért működik más pH-n optimálisan a gyomor pepszine és a vékonybél enzimei? Kapcsold a fehérjeszerkezethez.",
+                "Tervezd meg, hogyan vizsgálnád egy enzim (pl. kataláz) működését különböző szubsztrát-koncentrációknál. Mi lenne a mérhető kimenet (pl. habképződés)?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nukleinsavak_es_atp_alapok",
+          "name": "Nukleinsavak és ATP alapok",
+          "short_description": "A nukleinsavak felépítése és szerepe az öröklődésben, valamint az ATP mint univerzális energiahordozó alapfogalma.",
+          "sub_topics": [
+            {
+              "key": "dns_es_rns_felépites_es_kulonbsegek",
+              "name": "DNS és RNS felépítés és különbségek",
+              "short_description": "Nukleotidok, kettős spirál, bázispárosodás, valamint a DNS és RNS funkcionális különbségei.",
+              "sub_topics": [
+                {
+                  "key": "nukleotid_osszetevok_es_bazisparosodas",
+                  "name": "Nukleotid összetevők és bázispárosodás",
+                  "short_description": "Cukor–foszfát–bázis felépítés, A–T és G–C párosodás és ennek jelentősége a másolódásban.",
+                  "example_tasks": [
+                    "Nevezd meg a nukleotid három fő részét, és írd le, miben különbözik a DNS és az RNS cukra.",
+                    "Egy DNS-szakaszban az adenin aránya 30%. Mennyi lehet a timin aránya? Indokold a bázispárosodás szabályával.",
+                    "Magyarázd el, miért fontos a komplementer bázispárosodás a DNS megkettőződésében (fogalmi szinten)."
+                  ]
+                },
+                {
+                  "key": "dns_rns_szerepek_es_peldak_a_sejtben",
+                  "name": "DNS/RNS szerepek és példák a sejtben",
+                  "short_description": "DNS mint örökítőanyag, RNS típusok alapfogalmai (mRNS, tRNS, rRNS) és a fehérjeszintézishez való kapcsolódás.",
+                  "example_tasks": [
+                    "Párosítsd: mRNS, tRNS, rRNS – mindegyikhez írd le 1 mondatban a szerepét a fehérjeszintézisben.",
+                    "Egy sejtműködés során a DNS nem hagyja el a sejtmagot, mégis fehérje készül a citoplazmában. Magyarázd el, milyen „közvetítő” molekula oldja meg ezt.",
+                    "Adj egy példát, hogy a vírusok miért tekinthetők különlegesnek az örökítőanyag szempontjából (DNS- vagy RNS-genom)."
+                  ]
+                },
+                {
+                  "key": "atp_mint_energia_valuta",
+                  "name": "ATP mint „energia-valuta”",
+                  "short_description": "Az ATP szerepe a sejtek energiaátvitelében, és példák arra, milyen folyamatok igényelnek ATP-t.",
+                  "example_tasks": [
+                    "Magyarázd el 4–5 mondatban, miért nevezik az ATP-t a sejtek „energia-valutájának”, és mi történik ATP-bontáskor.",
+                    "Sorolj fel három olyan sejtes folyamatot, amelyhez ATP szükséges (pl. aktív transzport), és mindegyikhez írj 1 mondatos indoklást.",
+                    "Egy sejtben csökken az ATP-termelés. Írj le két várható következményt (pl. ionpumpák leállása, izomműködés gyengülése)."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "elet_es_energiaforgalom",
+      "name": "Élet és energiaforgalom",
+      "short_description": "A fotoszintézis és a sejtlégzés alapfolyamatai, az energiaátalakítások biológiai szerepe és az anyag-energia áramlás kapcsolata a szerveződési szinteken.",
+      "sub_topics": [
+        {
+          "key": "fotoszintezis_alapjai",
+          "name": "Fotoszintézis alapjai",
+          "short_description": "A fotoszintézis feltételei, fő lépései és szerepe az élővilág anyag- és energiaellátásában.",
+          "sub_topics": [
+            {
+              "key": "fotoszintezis_egyenlet_es_feltetelek",
+              "name": "Fotoszintézis egyenlet és feltételek",
+              "short_description": "Alapegyenlet (szén-dioxid, víz, fény → szerves anyag, oxigén) és a fény, CO₂, hőmérséklet szerepe.",
+              "example_tasks": [
+                "Írd fel a fotoszintézis alapegyenletét szavakkal, majd magyarázd el, melyik anyagból lesz a glükóz szénváza.",
+                "Sorolj fel három környezeti tényezőt, amely befolyásolja a fotoszintézis sebességét, és mindegyikhez írj egy várható hatásirányt.",
+                "Tervezd meg, hogyan vizsgálnád a fény intenzitásának hatását egy vízinövény oxigéntermelésére (mérőszám, kontroll)."
+              ]
+            },
+            {
+              "key": "kloroplasztisz_szerkezete_es_pigmentek",
+              "name": "Kloroplasztisz szerkezete és pigmentek",
+              "short_description": "Tilakoidok, gránumok és pigmentek (klorofill) szerepe a fényenergia elnyelésében.",
+              "example_tasks": [
+                "Címkézz egy kloroplasztisz sematikus ábráján legalább 6 részt (kettős membrán, stroma, tilakoid, gránum), és írd le mindegyik szerepét 1 mondatban.",
+                "Miért tűnnek zöldnek a levelek? Kapcsold a klorofill fényelnyeléséhez és visszaveréséhez.",
+                "Adj két magyarázatot, miért lehet előnyös, ha egy növénynek többféle pigmentje van (fényhasznosítás különböző hullámhosszakon)."
+              ]
+            },
+            {
+              "key": "fotoszintezis_es_kornyezeti_alkalmazkodas",
+              "name": "Fotoszintézis és környezeti alkalmazkodás",
+              "short_description": "A fotoszintézis hatékonysága különböző környezetekben (fény, víz, hő), és egyszerű következtetések növények alkalmazkodására.",
+              "example_tasks": [
+                "Hasonlíts össze egy árnyékkedvelő és egy napkedvelő növényt: mit vársz a leveleik felépítésében és fotoszintézisükben?",
+                "Egy nyári hőhullámban a növények bezárják a sztómáikat. Magyarázd el, hogyan hat ez a fotoszintézisre és miért kompromisszum.",
+                "Adj egy hazai példát (pl. alföldi homokpuszta), és írd le, milyen növényi jellemzők segíthetik a fotoszintézist vízhiány esetén."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "sejlegzes_es_anaerob_anyagcsere",
+          "name": "Sejtlégzés és anaerob anyagcsere",
+          "short_description": "A sejtlégzés szerepe az ATP-termelésben, aerob és anaerob lebontási utak, valamint ezek élettani és gyakorlati jelentősége.",
+          "sub_topics": [
+            {
+              "key": "aerob_sejlegzes_attekintes",
+              "name": "Aerob sejtlégzés áttekintés",
+              "short_description": "Glükóz lebontása oxigén jelenlétében, energiamérleg szemléleti értelmezése és a mitokondrium szerepe.",
+              "example_tasks": [
+                "Írd le szavakkal az aerob sejtlégzés lényegét (glükóz + oxigén → szén-dioxid + víz + energia), és magyarázd el, miért kapcsolódik a mitokondriumhoz.",
+                "Miért nő a légzésszám fizikai terheléskor? Kapcsold az oxigénigényhez és az ATP-termeléshez.",
+                "Készíts összehasonlítást: fotoszintézis vs. sejtlégzés – melyik anyagokat használja fel és termeli, és mi a kapcsolatuk egy ökoszisztémában?"
+              ]
+            },
+            {
+              "key": "erjedes_tejsavas_es_alkoholos",
+              "name": "Erjedés: tejsavas és alkoholos",
+              "short_description": "Anaerob energia-nyerés példái (izommunka, élesztő), termékek és gyakorlati alkalmazások.",
+              "example_tasks": [
+                "Magyarázd el, mikor és miért vált át az izomsejt részben anaerob anyagcserére, és milyen anyag halmozódhat fel.",
+                "Adj két élelmiszeripari példát az alkoholos erjedésre és kettőt a tejsavas erjedésre (pl. kenyér, joghurt), majd írd le a biológiai alapot.",
+                "Egy kísérletben élesztőt és cukrot langyos vízbe tesznek, majd lufit húznak a palackra. Magyarázd el, miért fúvódik fel a lufi, és mi termelődik."
+              ]
+            },
+            {
+              "key": "energiahozam_osszevetese_es_kovetkezmenyek",
+              "name": "Energiahozam összevetése és következmények",
+              "short_description": "Aerob és anaerob lebontás különbségei energiaszempontból és a szervezetre gyakorolt hatások.",
+              "example_tasks": [
+                "Miért „hatékonyabb” energetikailag az aerob lebontás, mint az erjedés? Írd le fogalmi szinten az okát.",
+                "Egy sportoló sprintel, majd kifullad. Kapcsold az anaerob folyamatokhoz, és javasolj két regenerációs biológiai magyarázatot (pl. oxigénadósság).",
+                "Készíts egy rövid érvelést: miért nem képes az ember hosszú ideig kizárólag anaerob úton energiát termelni?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "a_mikrovilag_alapjai",
+      "name": "A mikrovilág alapjai",
+      "short_description": "A baktériumok, vírusok és gombák alapvető felépítése és életmódja, szerepük a természetben és az ember életében, valamint a fertőzések és védekezés alapfogalmai.",
+      "sub_topics": [
+        {
+          "key": "bakteriumok_felepitese_es_eletmodja",
+          "name": "Baktériumok felépítése és életmódja",
+          "short_description": "A prokarióta sejtfelépítés sajátosságai, szaporodás, anyagcsere-típusok és a baktériumok hasznos/kórokozó szerepei.",
+          "sub_topics": [
+            {
+              "key": "bakterium_sejt_fobb_jellemzok",
+              "name": "A baktériumsejt főbb jellemzői",
+              "short_description": "Sejtmag nélküli szerveződés, sejtfal, plazmid, riboszóma és felszíni képletek (pl. ostor, tok) szerepe.",
+              "example_tasks": [
+                "Készíts sematikus rajzot egy baktériumsejtről, jelöld: sejthártya, sejtfal, örökítőanyag, riboszóma, esetleg tok/ostor, majd írd le mindegyik funkcióját 1 mondatban.",
+                "Magyarázd el, mi a plazmid, és adj egy példát, miért lehet fontos (pl. antibiotikum-rezisztencia génjei).",
+                "Egy baktériumnak vastag tokja van. Írd le, milyen előnyt adhat ez a baktériumnak az emberi szervezetben vagy a környezetben."
+              ]
+            },
+            {
+              "key": "bakteriumok_szaporodasa_es_genetikai_valtozekonysag",
+              "name": "Baktériumok szaporodása és genetikai változékonyság",
+              "short_description": "Kettéosztódás, gyors generációváltás és a genetikai változatosság forrásai (mutáció, horizontális génátadás alapjai).",
+              "example_tasks": [
+                "Magyarázd el, miért tud egy baktériumpopuláció nagyon gyorsan növekedni kedvező körülmények között, és mit jelent a „generációs idő”.",
+                "Egy tenyészetben 20 percenként duplázódik a baktériumszám. Ha induláskor 100 sejt van, mennyi lesz 2 óra múlva? Írd le a gondolatmeneted.",
+                "Fogalmazz meg egy rövid, fogalmi magyarázatot: miért terjedhet gyorsan az antibiotikum-rezisztencia baktériumok között (horizontális génátadás)."
+              ]
+            },
+            {
+              "key": "hasznos_es_korokozo_bakteriumok",
+              "name": "Hasznos és kórokozó baktériumok",
+              "short_description": "A baktériumok szerepe a lebontásban, szimbiózisban és élelmiszeriparban, valamint alapvető kórokozó példák és megelőzés.",
+              "example_tasks": [
+                "Sorolj fel három hasznos baktérium-szerepet (pl. nitrogénkötés, bélflóra, erjesztés) és mindegyikhez írj egy konkrét példát.",
+                "Adj két példát bakteriális eredetű betegségre, és írd le, milyen megelőzési lehetőségek vannak (higiénia, oltás, élelmiszerbiztonság).",
+                "Magyarázd el, miért nem ugyanúgy hat az antibiotikum a vírusokra, mint a baktériumokra, és miért fontos ez a felelős gyógyszerhasználatban."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "virusok_felepitese_es_fertozes",
+          "name": "Vírusok felépítése és fertőzés",
+          "short_description": "A vírusok felépítése, szaporodásuk gazdasejthez kötöttsége, valamint a fertőzés terjedése és megelőzése.",
+          "sub_topics": [
+            {
+              "key": "virus_reszecske_alkotoelemek",
+              "name": "A vírusrészecske alkotóelemei",
+              "short_description": "Örökítőanyag (DNS vagy RNS), kapszid, esetenként burok és felszíni fehérjék szerepe a gazdasejt-felismerésben.",
+              "example_tasks": [
+                "Készíts egyszerű ábrát egy burkos vírus felépítéséről (genom, kapszid, burok, tüskefehérjék), és írd le, melyik rész miért fontos a fertőzésben.",
+                "Miért mondjuk, hogy a vírusok „a sejten kívül nem élnek” a klasszikus értelemben? Írj 3–4 mondatos magyarázatot.",
+                "Adj példát arra, hogyan befolyásolja a vírus örökítőanyagának típusa (DNS/RNS) a változékonyságot (fogalmi szinten)."
+              ]
+            },
+            {
+              "key": "virusok_szaporodasi_ciklusa",
+              "name": "A vírusok szaporodási ciklusa",
+              "short_description": "Tapadás, bejutás, sokszorozás, összeszerelés és kijutás lépései; lítikus szemlélet és gazdasejt-károsodás.",
+              "example_tasks": [
+                "Rendezd sorrendbe a vírusfertőzés fő lépéseit, és mindegyikhez írj 1 mondatos magyarázatot.",
+                "Magyarázd el, miért kulcsfontosságú a vírus számára a sejtfelszíni receptorokhoz való kötődés, és miért határozza meg ez a fertőzhető sejttípusokat.",
+                "Egy vírus a gazdasejt pusztulását okozza. Írd le két lehetséges következményét a szervezet szintjén (pl. tünetek, gyulladás)."
+              ]
+            },
+            {
+              "key": "jarvanyterjedes_es_megelozes_alapok",
+              "name": "Járványterjedés és megelőzés alapok",
+              "short_description": "Fertőzési lánc, terjedési módok (csepp, kontakt, vektor), alapvető megelőzési eszközök és felelős viselkedés.",
+              "example_tasks": [
+                "Sorolj fel három különböző terjedési módot vírusoknál, és mindegyikhez adj egy példát, hogyan csökkenthető a kockázat.",
+                "Készíts egyszerű „fertőzési lánc” ábrát (forrás–átvitel–fogékony személy), és jelöld be, hol lehet megszakítani a láncot.",
+                "Miért fontos a kézmosás akkor is, ha a betegséget cseppfertőzéssel terjedőnek mondják? Írj magyarázatot a kontakt felületekre (fomite) hivatkozva."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "gombak_es_egyeb_mikroszervezetek",
+          "name": "Gombák és egyéb mikroszervezetek",
+          "short_description": "A gombák fő jellemzői, életmódjai és ökológiai szerepük, valamint alapvető hasznos és káros hatásaik.",
+          "sub_topics": [
+            {
+              "key": "gombak_felepitese_es_eletmod",
+              "name": "Gombák felépítése és életmód",
+              "short_description": "Sejtfal, hifák, micélium, spórás szaporodás, lebontó és szimbionta életmódok (pl. mikorrhiza).",
+              "example_tasks": [
+                "Magyarázd el, mi a hifa és a micélium, és miért előnyös a nagy felület a gombák tápanyagfelvételéhez.",
+                "Adj két példát a gombák lebontó szerepére egy erdei ökoszisztémában, és írd le, miért nélkülözhetetlenek az anyagkörforgásban.",
+                "Írj 4–5 mondatban a mikorrhiza kapcsolat előnyeiről a növény és a gomba szempontjából."
+              ]
+            },
+            {
+              "key": "elesztok_es_erjesztes_gyakorlat",
+              "name": "Élesztők és erjesztés (gyakorlat)",
+              "short_description": "Az élesztők mint egysejtű gombák szerepe az erjesztésben és a mindennapi alkalmazások (kenyér, italok) biológiai alapja.",
+              "example_tasks": [
+                "Tervezd meg egy egyszerű kísérlet lépéseit, amellyel kimutatható az élesztő erjesztése (cukor, hőmérséklet, gázfejlődés). Jelöld a kontrollt is.",
+                "Miért gyorsabb az élesztő erjedése langyos környezetben, mint hidegben? Kapcsold az enzimaktivitás fogalmához.",
+                "Egy tésztát kelesztenek, de nem nő meg. Adj két lehetséges okot (biológiai/környezet), és javasolj megoldást mindegyikre."
+              ]
+            },
+            {
+              "key": "korokozo_gombak_es_megelozes",
+              "name": "Kórokozó gombák és megelőzés",
+              "short_description": "Emberi és növényi gombás fertőzések alapjai, terjedésük és megelőzésük higiéniai és életmódbeli eszközökkel.",
+              "example_tasks": [
+                "Sorolj fel két emberi gombás fertőzést (pl. lábgomba) és írd le, milyen körülmények kedveznek nekik (nedvesség, meleg).",
+                "Miért lehet problémás a penész a lakásban? Írj két egészségügyi és két épületfizikai következményt, valamint két megelőzési lépést.",
+                "Egy növény levelein lisztharmat jelenik meg. Fogalmazz meg egy egyszerű védekezési tervet (szellőzés, öntözés, fertőzött részek eltávolítása)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "immunvedekezes_alapjai",
+          "name": "Immunvédekezés alapjai",
+          "short_description": "A szervezet védekezési vonalai, veleszületett és szerzett immunválasz alapfogalmai, valamint az oltások működésének alapelvei.",
+          "sub_topics": [
+            {
+              "key": "veleszuletett_immunitas_es_gatfunkciok",
+              "name": "Veleszületett immunitás és gátfunkciók",
+              "short_description": "Bőr és nyálkahártyák, gyulladás, falósejtek és a gyors, nem specifikus védekezés szerepe.",
+              "sub_topics": [
+                {
+                  "key": "bor_nyalkahartya_es_mikrobiom",
+                  "name": "Bőr, nyálkahártya és mikrobiom",
+                  "short_description": "Fizikai és kémiai védelem (pl. savas pH), valamint a normál flóra szerepe a kórokozók kiszorításában.",
+                  "example_tasks": [
+                    "Sorolj fel legalább 5 védelmi tényezőt a bőrön és nyálkahártyákon (pl. faggyú, nyák), és mindegyikhez írd le a működési elvet.",
+                    "Magyarázd el, hogyan segíthet a bélflóra a kórokozók elleni védelemben, és miért okozhat problémát az indokolatlan antibiotikum-használat.",
+                    "Egy megfázás során a nyálkahártya gyulladt. Írd le, milyen előnye lehet a gyulladásnak a védekezésben (fokozott véráramlás, sejtek)."
+                  ]
+                },
+                {
+                  "key": "falosejtek_es_gyulladas",
+                  "name": "Falósejtek és gyulladás",
+                  "short_description": "Fagocitózis és a gyulladás fő jelei, valamint a védekezés célja rövid távon.",
+                  "example_tasks": [
+                    "Írd le a fagocitózis lépéseit (felismerés → bekebelezés → lebontás), és magyarázd el, mi a szerepe a lizoszómáknak.",
+                    "Sorold fel a gyulladás klasszikus jeleit, és mindegyikhez adj egy egyszerű magyarázatot (pl. miért lesz meleg és piros).",
+                    "Miért lehet veszélyes, ha a gyulladás túl erős vagy túl hosszan tart? Írj két példát a lehetséges károkra."
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "szerzett_immunitas_es_oltasok",
+              "name": "Szerzett immunitás és oltások",
+              "short_description": "Specifikus immunválasz alapjai (ellenanyagok, immunmemória) és az aktív/passzív immunizálás egyszerű értelmezése.",
+              "sub_topics": [
+                {
+                  "key": "ellenanyagok_es_immunmemoria",
+                  "name": "Ellenanyagok és immunmemória",
+                  "short_description": "Az ellenanyagok szerepe a kórokozók semlegesítésében és a másodlagos immunválasz gyorsasága.",
+                  "example_tasks": [
+                    "Magyarázd el, miért gyorsabb és erősebb a második találkozáskor az immunválasz ugyanazzal a kórokozóval szemben (immunmemória).",
+                    "Készíts egyszerű idő–ellenanyagszint grafikonvázlatot elsődleges és másodlagos immunválaszra, és jelöld a különbségeket.",
+                    "Adj példát passzív immunizálásra (pl. ellenanyag beadása), és írd le, miért rövid ideig tart a hatása."
+                  ]
+                },
+                {
+                  "key": "oltasok_mukodese_es_kozossegi_vedettseg",
+                  "name": "Oltások működése és közösségi védettség",
+                  "short_description": "Az oltások elve (immunrendszer „tanítása”) és a közösségi szintű védelem fogalma egyszerű, felelős értelmezéssel.",
+                  "example_tasks": [
+                    "Írd le 4–5 mondatban, hogyan segít egy védőoltás abban, hogy a szervezet később gyorsabban védekezzen (immunmemória).",
+                    "Mi az a közösségi védettség? Magyarázd el egy egyszerű példával (pl. osztályközösség), és írd le, miért fontos a magas átoltottság.",
+                    "Vita: „A megelőzés mindig jobb, mint a kezelés.” Írj érvet az oltások mellett közegészségügyi szempontból, és említs meg egy felelősségteljes ellenpontot (pl. orvosi ellenjavallat)."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "novenyek_es_allatok_szervezodese",
+      "name": "Növények és állatok szerveződése",
+      "short_description": "A többsejtű élőlények testfelépítése: szövetek, szervek és szervrendszerek alapjai, valamint az életműködések összehasonlító szemlélete növényekben és állatokban.",
+      "sub_topics": [
+        {
+          "key": "szovetek_es_szervek_alapjai",
+          "name": "Szövetek és szervek alapjai",
+          "short_description": "Alapszövet-típusok felismerése növényekben és állatokban, és a szerkezet–funkció kapcsolat megértése.",
+          "sub_topics": [
+            {
+              "key": "novenyi_szovetek_alaptipusai",
+              "name": "Növényi szövetek alaptípusai",
+              "short_description": "Bőrszövet, alapszövet, szállítószövet, támasztószövet és osztódószövet szerepe és példái.",
+              "example_tasks": [
+                "Párosítsd a növényi szöveteket a fő funkcióikkal: bőrszövet, alapszövet, szállítószövet, osztódószövet. Írj mindegyikhez egy konkrét példát (pl. gyökércsúcs).",
+                "Magyarázd el, miért fontos az osztódószövet a növény növekedésében, és hol található jellemzően.",
+                "Egy metszeten edénynyalábok láthatók. Következtess, mely szövetek alkotják, és írd le, milyen anyagokat szállíthatnak."
+              ]
+            },
+            {
+              "key": "allati_szovetek_alaptipusai",
+              "name": "Állati szövetek alaptípusai",
+              "short_description": "Hámszövet, kötő- és támasztószövet, izomszövet és idegszövet alapfunkciói és példái.",
+              "example_tasks": [
+                "Sorolj fel négy alapvető állati szövettípust, és mindegyikhez írj egy szerv- vagy testszintű példát (pl. izomszövet: szív).",
+                "Magyarázd el, miért alkalmas a hámszövet a védelemre és anyagforgalomra (rétegzettség, sejtkapcsolatok).",
+                "Egy sérülés után véralvadás indul. Kapcsold össze a kötőszövet és a vér szerepét 4–5 mondatban."
+              ]
+            },
+            {
+              "key": "szerkezet_funkcio_kapcsolat_peldak",
+              "name": "Szerkezet–funkció kapcsolat: példák",
+              "short_description": "Hogyan tükrözi a szövet/szerv felépítése a funkciót: egyszerű összehasonlító példák növények és állatok között.",
+              "example_tasks": [
+                "Hasonlítsd össze a gyökérszőr és a bélbolyhok szerepét: mi a közös elv, és miben különböznek?",
+                "Miért előnyös a levelek nagy felülete a fotoszintézishez, és milyen hátrányt jelenthet ez vízvesztés szempontjából?",
+                "Adj két példát arra, hogyan alkalmazkodik egy szerv felépítése a feladatához (pl. tüdő alveolusok, csont szivacsos szerkezete)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "tapasztas_es_anyagfelvetel",
+          "name": "Táplálkozás és anyagfelvétel",
+          "short_description": "Anyagfelvétel és -szállítás növényekben és állatokban, valamint a táplálkozási stratégiák alapjai.",
+          "sub_topics": [
+            {
+              "key": "novenyek_viz_es_asvanyi_anyag_felvetele",
+              "name": "Növények víz- és ásványianyag-felvétele",
+              "short_description": "Gyökér felépítése, ozmózis és aktív ionfelvétel, valamint a párologtatás szerepe a vízszállításban.",
+              "example_tasks": [
+                "Magyarázd el, hogyan jut be a víz a gyökérszőrsejtekbe, és miért fontos az ozmózis a folyamatban.",
+                "Miért párologtat a növény? Írj 4–5 mondatban a párologtatás szerepéről a vízszállításban és a hűtésben.",
+                "Egy növényt túl sós talajba ültetnek. Írd le, mi történhet a vízfelvétellel és miért (ozmózis)."
+              ]
+            },
+            {
+              "key": "allatok_taplalkozasi_tipusai_es_emesztes_alapok",
+              "name": "Állatok táplálkozási típusai és emésztés alapok",
+              "short_description": "Táplálkozási típusok (növényevő, ragadozó, mindenevő) és az emésztés alapfogalmai (mechanikai/kémiai).",
+              "example_tasks": [
+                "Adj példát három különböző táplálkozási típusra, és mindegyikhez írd le egy jellegzetes alkalmazkodást (fogazat, bélhossz).",
+                "Magyarázd el a mechanikai és kémiai emésztés különbségét, és adj példát mindkettőre az emberi emésztőrendszerből.",
+                "Egy nyúl bélrendszere hosszabb, mint egy ragadozóé. Fogalmazd meg, miért lehet ez előnyös növényi táplálék esetén."
+              ]
+            },
+            {
+              "key": "anyagok_szallitasa_allatokban_alapelvek",
+              "name": "Anyagok szállítása állatokban: alapelvek",
+              "short_description": "Keringési rendszerek alapgondolata (szállítás, gázcsere, tápanyagok), és a diffúzió korlátai többsejtűekben.",
+              "example_tasks": [
+                "Miért nem elég a diffúzió egy nagy testű állatban a tápanyagok elosztására? Írj 3–4 mondatos magyarázatot a távolság és idő szerepével.",
+                "Sorolj fel három anyagot, amit a keringési rendszer szállít (pl. oxigén), és mindegyikhez írd le, miért fontos a szállítás.",
+                "Hasonlítsd össze egy kis testű élőlény (pl. hidra) és egy nagy testű gerinces anyagszállítási lehetőségeit."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "oroklodes_es_valtozekonysag_alapjai",
+      "name": "Öröklődés és változékonyság alapjai",
+      "short_description": "Az öröklődés sejt- és molekuláris alapjai, a Mendel-szabályok egyszerű esetei, valamint a változékonyság forrásai (mutáció, rekombináció) és gyakorlati következményei.",
+      "sub_topics": [
+        {
+          "key": "orokitoanyag_es_gen_allel_fogalma",
+          "name": "Örökítőanyag és a gén/allél fogalma",
+          "short_description": "DNS, gén, allél, kromoszóma és genom alapfogalmai, valamint ezek kapcsolata a tulajdonságok kialakulásával.",
+          "sub_topics": [
+            {
+              "key": "gen_kromoszoma_genom_megkulonboztetese",
+              "name": "Gén, kromoszóma, genom megkülönböztetése",
+              "short_description": "A fogalmak hierarchikus kapcsolata: gén a kromoszómán, kromoszómák a genomban; példák emberi sejtekre.",
+              "example_tasks": [
+                "Definiáld a következő fogalmakat: gén, allél, kromoszóma, genom. Mindegyikhez írj egy egyszerű példamondatot.",
+                "Magyarázd el, hogyan fér el sok ezer gén a sejtmagban: utalj a DNS felcsavarodására és a kromatin fogalmára.",
+                "Egy családban öröklődik egy tulajdonság. Írd le fogalmi szinten, hogyan kapcsolódik ehhez a gén és az allél kifejezés."
+              ]
+            },
+            {
+              "key": "genotipus_es_fenotipus",
+              "name": "Genotípus és fenotípus",
+              "short_description": "A genetikai állomány és a megjelenő tulajdonságok kapcsolata, környezeti hatások és példák.",
+              "example_tasks": [
+                "Magyarázd el a genotípus és fenotípus különbségét, és adj két olyan példát, ahol a környezet is befolyásolja a fenotípust (pl. növénymagasság).",
+                "Egy ikerpár genetikailag azonos, mégis különbözhet a testtömegük. Írj két lehetséges környezeti okot és kösd a fenotípushoz.",
+                "Írj 4–5 mondatban arról, miért nem „egy gén = egy tulajdonság” minden esetben (többgénes hatás, környezet, szabályozás – alap szinten)."
+              ]
+            },
+            {
+              "key": "dominans_recessziv_es_hordozosag",
+              "name": "Domináns, recesszív és hordozóság",
+              "short_description": "Domináns/recesszív allélok jelentése, heterozigóta/homozigóta fogalom és a hordozóság értelmezése egyszerű esetekben.",
+              "example_tasks": [
+                "Írd le, mit jelent a domináns és recesszív öröklődés, majd adj egy egyszerű példát (jelölésekkel: A, a).",
+                "Egy tulajdonság recesszív. Milyen genotípusok adhatják a fenotípust? Írd le homogén és heterozigóta esetben is.",
+                "Szituáció: két egészséges szülőnek recesszív betegségben szenvedő gyereke születik. Magyarázd el, mit jelenthet ez a szülők genotípusára nézve (hordozók)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "mendeli_oroklodes_alapesetek",
+          "name": "Mendeli öröklődés alapesetek",
+          "short_description": "Monohibrid keresztezések, genotípus- és fenotípusarányok, valamint egyszerű családfák értelmezése Mendel-törvények alapján.",
+          "sub_topics": [
+            {
+              "key": "monohibrid_keresztezesk_es_punnett_negyzet",
+              "name": "Monohibrid keresztezések és Punnett-négyzet",
+              "short_description": "Egy tulajdonság öröklődésének számítása, gaméták és utódgenotípusok meghatározása.",
+              "example_tasks": [
+                "Végezz monohibrid keresztezést: Aa × Aa. Készíts Punnett-négyzetet és add meg a genotípus- és fenotípusarányt.",
+                "Egy domináns tulajdonságú egyed genotípusa ismeretlen (AA vagy Aa). Írd le, milyen próbakeresztezéssel dönthető el, és mi lenne a várható utódkép két esetben.",
+                "Egy populációban a recesszív fenotípus aránya 25% egy keresztezés eredményeként. Írd le, milyen szülői genotípusok lehettek (egy egyszerű, valószínű jellegű érveléssel)."
+              ]
+            },
+            {
+              "key": "alaptorvenyek_szegregacio_es_fuggetlen_oroklodes",
+              "name": "Alaptörvények: szegregáció és független öröklődés",
+              "short_description": "A gamétaképzés során az allélek szétválása (szegregáció) és két tulajdonság független öröklődésének szemléleti megértése.",
+              "example_tasks": [
+                "Magyarázd el saját szavaiddal Mendel szegregációs törvényét, és kapcsold a meiózis során történő szétváláshoz.",
+                "Két tulajdonság független öröklődésénél miért többféle gaméta keletkezhet? Írd le egy AaBb genotípusú egyed lehetséges gamétáit.",
+                "Mi történik akkor, ha két gén nem öröklődik függetlenül? Írj 2–3 mondatban bevezető magyarázatot a kapcsoltságról (részletezés nélkül)."
+              ]
+            },
+            {
+              "key": "csaladfak_elemzese_egyszeru_esetek",
+              "name": "Családfák elemzése (egyszerű esetek)",
+              "short_description": "Domináns és recesszív öröklődés felismerése családfákban és valószínű genotípusok megadása egyszerű példákon.",
+              "example_tasks": [
+                "Egy családfán a tulajdonság minden generációban előfordul. Írd le, miért utalhat ez domináns öröklődésre, és adj két ellenőrző kérdést.",
+                "Egy recesszív tulajdonság csak néhány testvérnél jelenik meg, a szülők egészségesek. Magyarázd el, miért valószínű a hordozóság.",
+                "Készíts egy mini családfát szövegesen (3 generáció), amely recesszív öröklődést mutat, és jelöld a lehetséges genotípusokat."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "valtozekonysag_forrasai_mutacio_es_rekombinacio",
+          "name": "Változékonyság forrásai: mutáció és rekombináció",
+          "short_description": "Mutációk típusai és következményei, valamint a rekombináció szerepe az ivaros szaporodásban és a genetikai sokféleségben.",
+          "sub_topics": [
+            {
+              "key": "mutaciok_tipusai_es_okai_alapok",
+              "name": "Mutációk típusai és okai (alapok)",
+              "short_description": "Génmutációk és kromoszóma-szintű eltérések alapfogalma, mutagének és a javító mechanizmusok szerepe.",
+              "example_tasks": [
+                "Sorolj fel három lehetséges mutációs okot (pl. UV-sugárzás), és mindegyikhez írj egy rövid megelőzési vagy kockázatcsökkentési példát.",
+                "Magyarázd el, miért lehet a mutáció egyszerre káros, semleges vagy ritkán előnyös. Adj mindháromra egy elvi példát.",
+                "Egy DNS-javító mechanizmus hibás. Miért nőhet a mutációk száma? Írj 3–4 mondatos magyarázatot."
+              ]
+            },
+            {
+              "key": "rekombinacio_meiozis_es_valtozatossag",
+              "name": "Rekombináció, meiózis és változatosság",
+              "short_description": "Átkereszteződés és független szétválás mint új allélkombinációk forrásai; a populáció szintű jelentőség.",
+              "example_tasks": [
+                "Írd le, mi az átkereszteződés, és miért eredményezhet új tulajdonságkombinációkat ugyanazon génekből.",
+                "Készíts példát két gén (A/a és B/b) kombinációjára, és magyarázd el, hogyan jöhetnek létre új kombinációk a szülőkhöz képest.",
+                "Miért lehet előnyös a genetikai változatosság járvány vagy gyors környezeti változás esetén? Írj 4–5 mondatos választ."
+              ]
+            },
+            {
+              "key": "genetikai_valtozatossag_es_tulajdonsagok_gyakorisaga",
+              "name": "Genetikai változatosság és tulajdonságok gyakorisága",
+              "short_description": "A változatosság megjelenése a populációban, egyszerű gyakorisági gondolkodás és példák (pl. rezisztencia).",
+              "example_tasks": [
+                "Egy baktériumpopulációban néhány egyed rezisztens egy antibiotikumra. Magyarázd el, miért nőhet a rezisztens egyedek aránya kezelés után.",
+                "Készíts egyszerű számolós példát: 1000 rovarból 10 hordoz egy védő jellegű mutációt. Ha csak a mutánsok élik túl a permetezést, milyen lesz az arány a túlélők között?",
+                "Írj rövid választ: miért nem „célzottan” jönnek létre a mutációk, még akkor sem, ha az adott környezetben hasznosnak tűnnek?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "genetika_es_etika_alapkapcsolatok",
+          "name": "Genetika és etika alapkapcsolatok",
+          "short_description": "A genetikai információ értelmezésének korlátai, genetikai vizsgálatok lehetőségei és alapvető etikai kérdések (adatvédelem, döntési felelősség).",
+          "sub_topics": [
+            {
+              "key": "genetikai_tesztek_mit_mondanak_es_mit_nem",
+              "name": "Genetikai tesztek: mit mondanak és mit nem",
+              "short_description": "Genetikai hajlam vs. biztos kimenet, környezeti hatások és a félreértelmezés veszélyei.",
+              "sub_topics": [
+                {
+                  "key": "hajlam_valoszinuseg_es_kornyezeti_tenyezok",
+                  "name": "Hajlam, valószínűség és környezeti tényezők",
+                  "short_description": "A genetikai kockázat értelmezése valószínűségi szemlélettel és a környezet szerepének felismerése.",
+                  "example_tasks": [
+                    "Magyarázd el, miért nem jelenti egy „kockázati génváltozat” azt, hogy biztosan kialakul egy betegség. Írj példát környezeti tényezőre.",
+                    "Írj 4–5 mondatban arról, hogy a táplálkozás és mozgás hogyan módosíthatja egy genetikai hajlam megjelenését (általános, nem orvosi részletekkel).",
+                    "Készíts két mondatpárt: egy túlzottan determinisztikus és egy tudományosan óvatos megfogalmazást ugyanarról a genetikai eredményről."
+                  ]
+                },
+                {
+                  "key": "genetikai_adatok_es_adatvedelem",
+                  "name": "Genetikai adatok és adatvédelem",
+                  "short_description": "Genetikai információ érzékenysége, beleegyezés, tárolás és felhasználás alapelvei.",
+                  "example_tasks": [
+                    "Sorolj fel három okot, amiért a genetikai adatok különösen érzékenyek, és mindegyikhez adj egy kockázati példát (pl. biztosítás).",
+                    "Írj rövid szabálylistát (5 pont) arról, milyen etikai elvek mentén kezelhető egy iskolai projektben gyűjtött egészség/genetikai jellegű adat.",
+                    "Vita: „Kell-e a munkáltatónak tudnia a genetikai kockázatokat?” Írj pro és kontra érveket, majd állásfoglalást indoklással."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "okologia_es_fenntarthatosag",
+      "name": "Ökológia és fenntarthatóság",
+      "short_description": "A populációk, társulások és ökoszisztémák működése, az anyag- és energiaáramlás, valamint az emberi hatások és a fenntarthatósági döntések biológiai alapjai.",
+      "sub_topics": [
+        {
+          "key": "populaciok_es_populaciodinamika",
+          "name": "Populációk és populációdinamika",
+          "short_description": "Populáció fogalma, egyedszám-változás, korlátozó tényezők és egyszerű növekedési modellek értelmezése.",
+          "sub_topics": [
+            {
+              "key": "populacio_merete_surusege_es_korlatozo_tenyezok",
+              "name": "Populáció mérete, sűrűsége és korlátozó tényezők",
+              "short_description": "Sűrűségfüggő és sűrűségfüggetlen tényezők, eltartóképesség fogalma és példák.",
+              "example_tasks": [
+                "Adj két példát sűrűségfüggő és két példát sűrűségfüggetlen korlátozó tényezőre, és indokold a besorolást.",
+                "Egy tóban a halállomány gyorsan nő, majd stabilizálódik. Magyarázd el az eltartóképesség fogalmával.",
+                "Tervezd meg, hogyan becsülnéd meg egy parkban élő galambpopuláció méretét (mintavétel, becslés, hibaforrások)."
+              ]
+            },
+            {
+              "key": "ragadozo_zsakmany_kapcsolat_es_oszcillacio",
+              "name": "Ragadozó–zsákmány kapcsolat és oszcilláció",
+              "short_description": "Kölcsönhatások hatása az egyedszámokra, időbeli késés és ciklikus változások alapértelmezése.",
+              "example_tasks": [
+                "Rajzolj egy egyszerű idősor-grafikont ragadozó és zsákmány egyedszámáról, és jelöld, melyik miért követi késéssel a másikat.",
+                "Magyarázd el, mi történhet a ragadozópopulációval, ha a zsákmány hirtelen eltűnik egy területről (következmények).",
+                "Adj példát egy hazai ragadozó–zsákmány kapcsolatra (pl. róka–mezei nyúl), és írj 3–4 mondatot a kölcsönhatásról."
+              ]
+            },
+            {
+              "key": "mintavetel_es_adatelemzes_populacioknal",
+              "name": "Mintavétel és adatelemzés populációknál",
+              "short_description": "Mintavételi módszerek (kvadrát, transzekt), gyakoriság és becslés, egyszerű grafikonok értelmezése.",
+              "example_tasks": [
+                "Tervezz transzekt mintavételt egy réten: írd le a lépéseket, milyen adatokat rögzítesz, és hogyan biztosítod az összehasonlíthatóságot.",
+                "Egy kvadrátmintavételben 10 kvadrátból 4-ben találtál egy fajt. Becsüld meg a gyakoriságot, és írd le, miért nem ad ez pontos egyedszámot.",
+                "Kapsz két mintavételi adatsort (tavasz/ősz). Írj két lehetséges ökológiai magyarázatot a különbségekre (pl. szaporodás, vándorlás)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "okoszisztemak_anyag_es_energiaaramlas",
+          "name": "Ökoszisztémák: anyag- és energiaáramlás",
+          "short_description": "Táplálékhálózatok, energiaáramlás és anyagkörforgás, valamint az ökoszisztéma-szolgáltatások alapjai.",
+          "sub_topics": [
+            {
+              "key": "taplaleklanc_es_taplalekhalo",
+              "name": "Tápláléklánc és táplálékháló",
+              "short_description": "Termelők–fogyasztók–lebontók szerepe, trofikus szintek és következmények a rendszer stabilitására.",
+              "example_tasks": [
+                "Készíts táplálékláncot egy hazai élőhelyhez (pl. rét vagy erdő) legalább 5 taggal, majd alakítsd át táplálékhálóvá egy plusz kapcsolattal.",
+                "Magyarázd el, miért csökken általában a biomassza a magasabb trofikus szinteken, és milyen következményei vannak ennek.",
+                "Egy csúcsragadozó eltűnik az élőhelyről. Írj 4–5 mondatban egy lehetséges „trofikus kaszkád” hatásról."
+              ]
+            },
+            {
+              "key": "anyagkorforgas_szenciklus_es_nitrogenciklus_alapok",
+              "name": "Anyagkörforgás: szén- és nitrogénkörforgás (alapok)",
+              "short_description": "A szén és nitrogén körforgásának fő lépései és az emberi tevékenység hatásai (égetés, műtrágyázás).",
+              "example_tasks": [
+                "Rajzolj vázlatot a szénkörforgás fő elemeiről (fotoszintézis, légzés, lebontás, égetés), és írd le, hol kerül a CO₂ a légkörbe.",
+                "Magyarázd el, hogyan járulhat hozzá a túlzott műtrágyázás a vizek eutrofizációjához, és milyen következményei lehetnek (algavirágzás).",
+                "Adj két példát arra, hogyan csökkenthető egy település vagy háztartás ökológiai lábnyoma biológiai-ökológiai szemlélettel."
+              ]
+            },
+            {
+              "key": "okoszisztema_szolgaltatasok_es_ertekeles",
+              "name": "Ökoszisztéma-szolgáltatások és értékelés",
+              "short_description": "Az ökoszisztémák által nyújtott szolgáltatások (termelő, szabályozó, kulturális) felismerése és példák hazai környezetből.",
+              "example_tasks": [
+                "Sorolj fel legalább 6 ökoszisztéma-szolgáltatást (pl. beporzás), és mindegyikhez adj egy magyarországi vagy helyi példát.",
+                "Egy vizes élőhelyet lecsapolnak. Írj 4–6 mondatban, milyen ökoszisztéma-szolgáltatások csökkenhetnek, és milyen társadalmi következményekkel járhat.",
+                "Készíts döntési mátrixot (szövegesen): erdőirtás vs. természetvédelem – sorolj fel 3 rövid távú és 3 hosszú távú hatást."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "biodiverzitas_es_termeszetvedelem",
+          "name": "Biodiverzitás és természetvédelem",
+          "short_description": "A biológiai sokféleség szintjei, a veszélyeztető tényezők és a természetvédelem alapelvei, kiemelten hazai példákkal.",
+          "sub_topics": [
+            {
+              "key": "biodiverzitas_szintjei_es_jelentosege",
+              "name": "A biodiverzitás szintjei és jelentősége",
+              "short_description": "Genetikai, faj- és élőhely-szintű sokféleség és a stabilitás/alkalmazkodóképesség kapcsolata.",
+              "example_tasks": [
+                "Magyarázd el, mi a különbség a genetikai sokféleség és a fajdiverzitás között, és miért fontos mindkettő.",
+                "Adj példát arra, hogyan csökkentheti a biodiverzitás a járványok vagy kártevők terjedésének kockázatát (fogalmi szinten).",
+                "Válassz egy hazai élőhelyet (pl. puszta, ártér), és írj 4–5 mondatot arról, milyen biodiverzitás-értékei lehetnek."
+              ]
+            },
+            {
+              "key": "veszelyezteto_tenyezok_es_elohhely_fragmentacio",
+              "name": "Veszélyeztető tényezők és élőhely-fragmentáció",
+              "short_description": "Élőhelypusztulás, szennyezés, inváziós fajok és klímaváltozás alapvető hatásai a fajokra és ökoszisztémákra.",
+              "example_tasks": [
+                "Sorolj fel négy fő veszélyeztető tényezőt a biodiverzitásra, és mindegyikhez írj egy konkrét példát (hazai vagy általános).",
+                "Magyarázd el, mi az élőhely-fragmentáció, és miért különösen veszélyes nagy területigényű fajokra.",
+                "Írj rövid javaslatot (5 pont) egy település „zöldítésére” úgy, hogy a biodiverzitásnak is kedvezzen (pl. méhlegelő, őshonos fajok)."
+              ]
+            },
+            {
+              "key": "termeszetvedelmi_eszközok_es_kozossegi_szerep",
+              "name": "Természetvédelmi eszközök és közösségi szerep",
+              "short_description": "Védett területek, fajvédelem, élőhely-rehabilitáció és a lakossági döntések szerepe a természetvédelemben.",
+              "example_tasks": [
+                "Nevezd meg, mit jelenthet a gyakorlatban: fajvédelem, élőhelyvédelem, rehabilitáció. Mindegyikhez írj egy példát.",
+                "Készíts iskolai projektötletet egy helyi élőhely megóvására (cél, módszer, adatgyűjtés, kommunikáció).",
+                "Vita: „A természetvédelem luxus.” Írj 3–4 érvet, miért alapvető társadalmi érdek (víz, levegő, talaj, egészség)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "evolucio_es_rendszertan",
+      "name": "Evolúció és rendszertan",
+      "short_description": "Az evolúció bizonyítékai és mechanizmusai, a természetes szelekció és a fajképződés alapjai, valamint a rendszerezés szemlélete és a modern taxonómia fő elvei.",
+      "sub_topics": [
+        {
+          "key": "evolucio_bizonyitekai_es_alapfogalmak",
+          "name": "Az evolúció bizonyítékai és alapfogalmak",
+          "short_description": "Őslénytani, anatómiai, embriológiai és molekuláris bizonyítékok, illetve az alkalmazkodás és fitness fogalmi kerete.",
+          "sub_topics": [
+            {
+              "key": "oslenytani_bizonyitekok_es_retegtan",
+              "name": "Őslénytani bizonyítékok és rétegtan",
+              "short_description": "A fosszíliák szerepe az evolúciós történet rekonstruálásában, rétegtani elvek és átmeneti formák fogalma.",
+              "example_tasks": [
+                "Magyarázd el, miért tekinthetők a fosszíliák az evolúció fontos bizonyítékainak, és sorolj fel két információt, amit egy fosszília alapján következtethetünk.",
+                "Egy rétegsorban az alsóbb rétegekben egyszerűbb, a felsőbbekben összetettebb formák fosszíliái vannak. Írj 4–5 mondatos értelmezést a relatív kormeghatározás elvével.",
+                "Adj példát arra, mit nevezünk „átmeneti formának”, és magyarázd el, miért nem várható, hogy minden átmenet fosszíliája fennmaradjon."
+              ]
+            },
+            {
+              "key": "homolog_analog_es_csokeveny_szervek",
+              "name": "Homológ, analóg és csökevényes szervek",
+              "short_description": "Közös eredetre utaló és hasonló funkcióból eredő hasonlóságok megkülönböztetése, valamint csökevényes szervek mint evolúciós nyomok.",
+              "example_tasks": [
+                "Döntsd el a példák alapján, melyik homológ és melyik analóg: denevér szárny–emberi kar; cápa uszony–delfin uszony; rovar szárny–madár szárny. Indokold röviden.",
+                "Sorolj fel két csökevényes szervet vagy jelleget az embernél vagy más állatoknál, és írd le, milyen evolúciós magyarázat adható rá.",
+                "Készíts összehasonlító táblázat helyett szöveges listát: milyen bizonyíték-típusokra épülhet a „közös származás” állítása?"
+              ]
+            },
+            {
+              "key": "molekularis_bizonyitekok_dns_es_feherjek",
+              "name": "Molekuláris bizonyítékok: DNS és fehérjék",
+              "short_description": "Szekvenciahasonlóságok és molekuláris órák alapötlete; rokonsági kapcsolatok következtetése biomolekulákból.",
+              "example_tasks": [
+                "Magyarázd el, miért utalhat közeli rokonságra, ha két faj DNS-szekvenciája nagyon hasonló egy adott génben.",
+                "Egy rövid (kitalált) aminosavsorrend-hasonlítás alapján döntsd el, melyik két faj állhat közelebb egymáshoz, és indokold a különbségekkel.",
+                "Írj 4–5 mondatot a „molekuláris óra” alapötletéről és egy korlátjáról (pl. mutációs ráta változása)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "a_termeszetes_szelekcio_es_alkalmazkodas",
+          "name": "A természetes szelekció és alkalmazkodás",
+          "short_description": "A szelekció feltételei, a változatosság és öröklődés szerepe, valamint szelekciótípusok és konkrét példák értelmezése.",
+          "sub_topics": [
+            {
+              "key": "szelekcio_feltetelei_es_fitness",
+              "name": "Szelekció feltételei és fitness",
+              "short_description": "Változékonyság, öröklődés, differenciált túlélés és szaporodás; a fitness biológiai értelme.",
+              "example_tasks": [
+                "Sorold fel a természetes szelekció három alapfeltételét, és mindegyikhez adj egy rövid példát.",
+                "Magyarázd el, mi a különbség a „legerősebb túlél” hétköznapi kifejezés és a biológiai fitness fogalma között.",
+                "Adj egy példát olyan tulajdonságra, amely növeli a szaporodási sikert, de lehet költsége is (trade-off)."
+              ]
+            },
+            {
+              "key": "szelekcio_tipusai_es_peldak",
+              "name": "Szelekció típusai és példák",
+              "short_description": "Stabilizáló, irányító és szétválasztó szelekció felismerése grafikonok és példák alapján.",
+              "example_tasks": [
+                "Egy populációban az átlagos testméret előnyös, a szélsőségek hátrányosak. Nevezd meg a szelekció típusát, és magyarázd el, hogyan változik az eloszlás.",
+                "Készíts saját példát irányító szelekcióra (pl. környezeti változás), és írd le, milyen irányba tolódik a tulajdonság átlaga.",
+                "Magyarázd el, hogyan vezethet a szétválasztó szelekció két eltérő típus kialakulásához ugyanazon populáción belül."
+              ]
+            },
+            {
+              "key": "antibiotikum_rezisztencia_es_evolucio",
+              "name": "Antibiotikum-rezisztencia mint evolúciós példa",
+              "short_description": "Rezisztencia kialakulása szelekcióval, a túlhasználat következményei és megelőzési szemlélet a közegészségügyben.",
+              "example_tasks": [
+                "Írd le lépésről lépésre, hogyan növeli az antibiotikum-kezelés a rezisztens baktériumok arányát egy populációban (szelekciós érvelés).",
+                "Miért nem ugyanaz a „szervezet hozzászokik” és a „baktériumok rezisztensek lesznek”? Magyarázd el a különbséget.",
+                "Készíts 5 pontos ajánlást a felelős antibiotikum-használatról (pl. kúra befejezése), és mindegyik pontot indokold biológiai szemlélettel."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fajkepzodes_es_populaciogenetika_alapok",
+          "name": "Fajképződés és populációgenetika alapok",
+          "short_description": "A faj fogalma, szaporodási izoláció, fajképződési utak és a populációk genetikai összetételének változása (drift, génáramlás) alapokon.",
+          "sub_topics": [
+            {
+              "key": "fajfogalom_es_izolacios_mechanizmusok",
+              "name": "Fajfogalom és izolációs mechanizmusok",
+              "short_description": "Biológiai fajfogalom, pre- és posztzigótikus izoláció és példák különböző élőlénycsoportokból.",
+              "example_tasks": [
+                "Magyarázd el a biológiai fajfogalmat, és adj két esetet, amikor nehezen alkalmazható (pl. ivartalan szaporodás, fosszíliák).",
+                "Sorolj fel két prezigótikus és két posztzigótikus izolációs mechanizmust, és mindegyikhez adj példát.",
+                "Egy hegyvonulat kettévág egy populációt. Írd le, milyen izoláció alakulhat ki, és miért vezethet fajképződéshez."
+              ]
+            },
+            {
+              "key": "allopatrikus_es_szimpatrikus_fajkepzodes",
+              "name": "Allopatrikus és szimpatrikus fajképződés",
+              "short_description": "Földrajzi elkülönülésen alapuló és ugyanazon élőhelyen végbemenő fajképződés szemléleti összehasonlítása.",
+              "example_tasks": [
+                "Hasonlítsd össze az allopatrikus és szimpatrikus fajképződést: mi a kulcskülönbség, és milyen feltételek szükségesek?",
+                "Készíts egy kitalált példát allopatrikus fajképződésre (sziget), és írd le 5–6 mondatban a folyamat lépéseit.",
+                "Adj egy lehetséges szimpatrikus példát (pl. eltérő táplálékspecializáció), és magyarázd el, hogyan csökkenhet a génáramlás."
+              ]
+            },
+            {
+              "key": "genetikai_drift_gensodrodes_es_genszukulet",
+              "name": "Genetikai drift (génsodródás) és génszűkület",
+              "short_description": "Véletlen gyakoriságváltozások kicsi populációkban, alapítóhatás és palacknyak-hatás következményei.",
+              "example_tasks": [
+                "Magyarázd el, mi a genetikai drift, és miért erősebb kis populációban, mint nagyban.",
+                "Egy kis szigetre néhány egyed kerül át egy fajból. Írd le, mi az alapítóhatás, és milyen genetikai következmények várhatók.",
+                "Készíts példát palacknyak-hatásra (pl. katasztrófa után), és írd le, miért csökkenhet a genetikai változatosság."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "rendszertan_es_klasszifikacio_modern_szemlelet",
+          "name": "Rendszertan és klasszifikáció modern szemlélet",
+          "short_description": "Az élőlények csoportosítása rokonság alapján, a törzsfejlődési fák olvasása és a főbb élőlénycsoportok áttekintése.",
+          "sub_topics": [
+            {
+              "key": "rendszertani_kategoriak_es_nevezektan",
+              "name": "Rendszertani kategóriák és nevezéktan",
+              "short_description": "Faj, nem, család, rend stb. és a kettős nevezéktan szerepe a tudományos kommunikációban.",
+              "example_tasks": [
+                "Sorold fel a fő rendszertani kategóriákat fajtól országig, és magyarázd el, miért hasznos a hierarchia.",
+                "Írd le, mit jelent a kettős nevezéktan, és miért jobb, mint a köznyelvi nevek használata nemzetközi kontextusban.",
+                "Adj példát egy élőlényre (magyar név + latin név), és írd le, melyik rész jelöli a nemet és melyik a fajt."
+              ]
+            },
+            {
+              "key": "torzsfejlodesi_fak_olvasasa_es_kovetkeztetesek",
+              "name": "Törzsfejlődési fák olvasása és következtetések",
+              "short_description": "Közös ős, elágazások értelmezése és rokonsági következtetések fenotípusos vagy molekuláris adatok alapján.",
+              "example_tasks": [
+                "Egy egyszerű törzsfejlődési fán jelöld be, melyik két faj áll legközelebbi rokonságban, és indokold a közös ős alapján.",
+                "Magyarázd el, miért nem a „fa tetején” lévő faj a „legfejlettebb”. Írj 3–4 mondatos szemléleti választ.",
+                "Kapsz három fajról egy jelleghalmazt (pl. gerinc, szőr, tojás). Készíts egyszerű elágazási rajzot, amely minimális változással magyarázza a mintázatot."
+              ]
+            },
+            {
+              "key": "hazai_biodiverzitas_es_fajismeret_kiemelesek",
+              "name": "Hazai biodiverzitás és fajismeret kiemelések",
+              "short_description": "Magyarországi élőlénycsoportok és élőhelyek példái, fajismereti alapok és természetvédelmi vonatkozások.",
+              "example_tasks": [
+                "Válassz egy hazai élőhelyet (pl. Tisza-ártér, Bükk erdei), és sorolj fel 6 jellemző fajt (növény/állat/gomba vegyesen) és röviden a szerepüket.",
+                "Magyarázd el, miért fontos az őshonos és inváziós fajok megkülönböztetése, és adj egy inváziós faj példát.",
+                "Készíts egy rövid „terepi határozó” vázlatot 5 gyakori városi fajhoz (pl. galamb, veréb), megadva 1-1 felismerési bélyeget."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "emberi_szervezet_anatomia_es_elettan",
+      "name": "Emberi szervezet: anatómia és élettan",
+      "short_description": "Az emberi szervrendszerek felépítése és működése integrált szemléletben: homeosztázis, szabályozás, anyagszállítás, gázcsere, kiválasztás és idegi-hormonális koordináció.",
+      "sub_topics": [
+        {
+          "key": "keringes_es_ver",
+          "name": "Keringés és vér",
+          "short_description": "A szív és erek működése, a vér összetétele és szállító szerepe, valamint a keringés alkalmazkodása terheléshez.",
+          "sub_topics": [
+            {
+              "key": "sziv_mukodese_es_kis_nagy_verkor",
+              "name": "A szív működése és a kis/nagy vérkör",
+              "short_description": "A vér útja, billentyűk szerepe és a két vérkör funkcionális jelentősége az oxigenizációban.",
+              "example_tasks": [
+                "Rajzold le sematikusan a kis- és nagyvérkört, jelöld a főbb állomásokat (szívüregek, tüdő, test), és írd le a vér oxigéntartalmának változását.",
+                "Magyarázd el, miért van szükség billentyűkre a szívben, és mi történhet, ha egy billentyű nem zár rendesen (fogalmi szinten).",
+                "Egy ember terhelés közben gyorsabban ver a szíve. Írd le két okát, és kapcsold az oxigén- és tápanyagigényhez."
+              ]
+            },
+            {
+              "key": "ver_osszetevok_es_funkcioik",
+              "name": "A vér összetevői és funkcióik",
+              "short_description": "Vörösvértest, fehérvérsejt, vérlemezke és plazma szerepe; gázszállítás, immunvédelem és alvadás alapjai.",
+              "example_tasks": [
+                "Párosítsd a vér összetevőit a fő funkcióikkal: vörösvértest, fehérvérsejt, vérlemezke, plazma. Írj mindegyikhez 1 példát.",
+                "Miért alakult ki a vörösvértestekben a hemoglobin? Magyarázd el, hogyan növeli az oxigénszállítás hatékonyságát.",
+                "Szituáció: vérzés esetén mi a vérlemezkék szerepe? Írd le lépésről lépésre az alvadás kezdeti fázisát alap szinten."
+              ]
+            },
+            {
+              "key": "vernyomas_es_eletmod_tenyezok",
+              "name": "Vérnyomás és életmód-tényezők",
+              "short_description": "A vérnyomás fogalma, egyszerű szabályozási tényezők és életmódbeli hatások (mozgás, só, stressz) szemléleti értelmezése.",
+              "example_tasks": [
+                "Magyarázd el, mit jelent a szisztolés és diasztolés vérnyomás, és miért két számként adják meg.",
+                "Sorolj fel három életmód-tényezőt, amely befolyásolhatja a vérnyomást, és mindegyikhez írj 1 mondatos biológiai magyarázatot.",
+                "Készíts egy rövid, felelős tájékoztató szöveget (5–6 mondat) arról, miért fontos a rendszeres mozgás a keringés egészsége szempontjából."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "legzes_es_gazcsere",
+          "name": "Légzés és gázcsere",
+          "short_description": "A légzőrendszer felépítése, a gázcsere mechanizmusa és a légzés szabályozása terhelésnél és nyugalomban.",
+          "sub_topics": [
+            {
+              "key": "tudo_felepitese_es_alveolusok",
+              "name": "A tüdő felépítése és alveolusok",
+              "short_description": "Bronchusok, hörgőcskék, alveolusok és a nagy felület szerepe a hatékony diffúzióban.",
+              "example_tasks": [
+                "Magyarázd el, miért hatékony a gázcsere az alveolusokban: sorolj fel három anatómiai-funkcionális okot (felület, falvastagság, kapilláris).",
+                "Egy dohányosnál csökkenhet az alveolusok hatékony felülete. Írd le, milyen következménye lehet ez a terhelhetőségre (fogalmi szinten).",
+                "Készíts vázlatot (szöveges leírással), hogyan változik az oxigén és szén-dioxid koncentrációja az alveolus és a vér között."
+              ]
+            },
+            {
+              "key": "legzes_mechanikaja_es_rekeszizom",
+              "name": "A légzés mechanikája és rekeszizom",
+              "short_description": "Belégzés–kilégzés térfogatváltozásai, mellkas és rekeszizom szerepe, nyomáskülönbség elve.",
+              "example_tasks": [
+                "Írd le lépésről lépésre, mi történik belégzéskor a rekeszizommal, a mellkasi térfogattal és a tüdőben lévő nyomással.",
+                "Magyarázd el, miért passzív többnyire a nyugalmi kilégzés, és mikor válik aktívvá (pl. sport).",
+                "Készíts egyszerű modellkísérlet-leírást (pl. palack + lufi), amellyel szemléltethető a légzés mechanikája."
+              ]
+            },
+            {
+              "key": "legzes_szabalyozasa_es_oxigenigeny",
+              "name": "A légzés szabályozása és oxigénigény",
+              "short_description": "A CO₂ szerepe a légzés szabályozásában, terheléskor változó légzésfrekvencia és kapcsolódás a sejtlégzéshez.",
+              "example_tasks": [
+                "Magyarázd el, miért növeli a szervezet a légzést terheléskor: kapcsold a CO₂-termeléshez és a pH-változáshoz (alap szinten).",
+                "Egy ember gyorsan lélegzik, majd lassan normalizálódik. Írj 3–4 mondatot a szabályozás visszacsatolásos jellegéről.",
+                "Készíts rövid összehasonlítást: mi történik oxigénhiányos környezetben (magashegy) a légzés és a keringés szempontjából (általános szint)."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "key": "emberi_szabalyozas_idegrendszer_es_hormonrendszer",
+      "name": "Emberi szabályozás: idegrendszer és hormonrendszer",
+      "short_description": "Az idegi és hormonális szabályozás alapelvei, az ingerület keletkezése és továbbítása, valamint a homeosztázis fenntartása visszacsatolásokkal és szervrendszeri együttműködéssel.",
+      "sub_topics": [
+        {
+          "key": "idegrendszer_alapjai",
+          "name": "Idegrendszer alapjai",
+          "short_description": "Neuron felépítése, ingerületvezetés, szinapszisok működése és az idegrendszer fő tagolása.",
+          "sub_topics": [
+            {
+              "key": "neuron_felepitese_es_ingeruletvezetes",
+              "name": "A neuron felépítése és ingerületvezetés",
+              "short_description": "Dendrit, axon, velőshüvely szerepe; ingerületvezetés iránya és sebessége, myelinizáció előnye.",
+              "example_tasks": [
+                "Címkézz egy neuron-rajzon: dendrit, sejttest, axon, velőshüvely, Ranvier-befűződés. Írd le mindegyik szerepét 1 mondatban.",
+                "Magyarázd el, miért gyorsabb a velőshüvelyes axonban az ingerületvezetés, és mi a „szaltatorikus” vezetés lényege.",
+                "Egy sérülés károsítja a velőshüvelyt. Írj 3–4 mondatban a várható következményekről a jelátvitel hatékonyságára."
+              ]
+            },
+            {
+              "key": "szinapszis_es_jelatvitel",
+              "name": "Szinapszis és jelátvitel",
+              "short_description": "Kémiai szinapszisok működése, neurotranszmitterek szerepe és a gátlás/serkentés alapjai.",
+              "example_tasks": [
+                "Írd le lépésről lépésre, hogyan jut el a jel a preszinaptikus végződéstől a posztszinaptikus sejthez kémiai szinapszisban.",
+                "Mi a különbség serkentő és gátló szinapszis között? Írj egy egyszerű példát arra, miért fontos a gátlás az idegrendszerben.",
+                "Egy gyógyszer gátolja egy neurotranszmitter lebontását. Fogalmazz meg két lehetséges hatást a jelátvitelre (általános szinten)."
+              ]
+            },
+            {
+              "key": "kozponti_es_periferias_idegrendszer",
+              "name": "Központi és perifériás idegrendszer",
+              "short_description": "A központi idegrendszer (agy, gerincvelő) és a perifériás idegrendszer feladatai, alap reflexív fogalma.",
+              "example_tasks": [
+                "Sorold fel a központi és perifériás idegrendszer fő részeit, és írj 1–1 funkciót mindegyikhez.",
+                "Írd le a térdreflex reflexívének elemeit (inger, receptor, érző neuron, központ, mozgató neuron, effektor).",
+                "Miért hasznosak a reflexek? Írj 3–4 mondatos magyarázatot a gyorsaság és védelem szempontjából."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hormonrendszer_es_homeosztazis",
+          "name": "Hormonrendszer és homeosztázis",
+          "short_description": "Endokrin mirigyek, hormonhatások és visszacsatolásos szabályozás; klasszikus példák vércukorszint és vízháztartás szabályozására.",
+          "sub_topics": [
+            {
+              "key": "endokrin_mirigyek_es_hormonhatas",
+              "name": "Endokrin mirigyek és hormonhatás",
+              "short_description": "Hormontermelő mirigyek főbb példái, célsejt-receptor elv és a hormonok hatásának időbeli sajátosságai.",
+              "example_tasks": [
+                "Sorolj fel legalább 5 endokrin mirigyet (pl. pajzsmirigy), és mindegyikhez írj 1 hormonpéldát és fő hatást (általános).",
+                "Magyarázd el, miért szükséges receptor a hormonhatáshoz, és miért nem reagál minden sejt ugyanarra a hormonra.",
+                "Hasonlítsd össze az idegi és hormonális szabályozást: gyorsaság, hatástartam és célpont (3–4 pontban)."
+              ]
+            },
+            {
+              "key": "vercukorszint_szabalyozas_inzulin_glukagon",
+              "name": "Vércukorszint-szabályozás: inzulin és glukagon",
+              "short_description": "Negatív visszacsatolás, inzulin és glukagon szerepe és a máj/izom glikogénraktározásának alapjai.",
+              "example_tasks": [
+                "Rajzolj szöveges folyamatábrát: étkezés → vércukorszint nő → inzulin → sejtek felveszik a glükózt → vércukorszint csökken. Jelöld a visszacsatolást.",
+                "Mi történik éhezéskor a vércukorszinttel és melyik hormon aktiválódik? Írj 3–4 mondatos választ a glukagon szerepével.",
+                "Egy embernél tartósan magas a vércukorszint. Fogalmazz meg két lehetséges biológiai okot (inzulinhiány vagy -rezisztencia) fogalmi szinten."
+              ]
+            },
+            {
+              "key": "vizhaztartas_es_homerseklet_szabalyozas_alapok",
+              "name": "Vízháztartás és hőmérséklet-szabályozás alapok",
+              "short_description": "ADH szerepe, veseműködéshez kapcsolódó alapelv és a testhőmérséklet fenntartásának mechanizmusai.",
+              "example_tasks": [
+                "Magyarázd el, hogyan segíti az ADH a víz visszaszívását a vesében (fogalmi szinten), és milyen hatása van a vizelet mennyiségére.",
+                "Miért izzadunk melegben? Kapcsold a párolgáshőhöz és a hőleadás növeléséhez, és említs meg egy korlátot (páratartalom).",
+                "Készíts rövid leírást egy negatív visszacsatolási körre testhőmérséklet esetén (receptor → központ → effektor)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "emberi_taplalekfelvetel_emesztes_es_kivalasztas",
+      "name": "Emberi táplálékfelvétel: emésztés és kiválasztás",
+      "short_description": "Az emésztőrendszer és a kiválasztás felépítése és működése, a tápanyagok lebontása és felszívása, valamint a víz–ionháztartás és a méregtelenítés alapjai.",
+      "sub_topics": [
+        {
+          "key": "emesztoreszervek_es_emesztoenzimek",
+          "name": "Emésztőszervek és emésztőenzimek",
+          "short_description": "A tápcsatorna szakaszai, mirigyek szerepe, mechanikai és kémiai emésztés, valamint enzimek működésének helye.",
+          "sub_topics": [
+            {
+              "key": "tapcsatorna_szakaszai_es_funkcioik",
+              "name": "A tápcsatorna szakaszai és funkcióik",
+              "short_description": "Szájüreg, nyelőcső, gyomor, vékony- és vastagbél funkciói és alkalmazkodásai.",
+              "example_tasks": [
+                "Sorold fel a tápcsatorna fő szakaszait sorrendben, és mindegyikhez írj 1–2 kulcsfunkciót.",
+                "Magyarázd el, miért savas a gyomor környezete, és hogyan segíti ez az emésztést és a kórokozók elleni védelmet.",
+                "Miért nagy a vékonybél felszívó felülete? Kapcsold a bélbolyhokhoz és a tápanyagok felszívásához."
+              ]
+            },
+            {
+              "key": "emesztoenzimek_es_tapanyagok_bontasa",
+              "name": "Emésztőenzimek és tápanyagok bontása",
+              "short_description": "Szénhidrát-, fehérje- és zsírbontás fő helyei, enzimek példái és végtermékek szemléleti áttekintése.",
+              "example_tasks": [
+                "Párosítsd: amiláz, pepszin, lipáz – hol hatnak és milyen tápanyagot bontanak. Írd le a végtermékeket általános szinten.",
+                "Magyarázd el, miért szükséges a zsírok emésztéséhez az epe (emulgeálás), és miért növeli ez a lipáz hatékonyságát.",
+                "Egy embernek emésztési panasza van zsíros ételek után. Fogalmazz meg két lehetséges magyarázatot (epe/enzimek) fogalmi szinten."
+              ]
+            },
+            {
+              "key": "felszivas_es_szallitas_a_keringessel",
+              "name": "Felszívás és szállítás a keringéssel",
+              "short_description": "A felszívott tápanyagok útja (vér/nyirok), máj szerepe és a raktározás alapfogalmai.",
+              "example_tasks": [
+                "Írd le, miért kerülnek egyes zsírok a nyirokerekbe felszívás után, míg a glükóz közvetlenül a vérbe jut (fogalmi szinten).",
+                "Magyarázd el, mi a máj szerepe a tápanyagok feldolgozásában és raktározásában (pl. glikogén).",
+                "Készíts rövid folyamatábrát: felszívás → szállítás → raktározás/hasznosítás, és írj mindegyik lépéshez példát."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kivalasztas_vese_es_vizeletkepzes",
+          "name": "Kiválasztás: vese és vizeletképzés",
+          "short_description": "A vese felépítése, nefron működése (szűrés, visszaszívás, kiválasztás) és a víz–ionháztartás szabályozása.",
+          "sub_topics": [
+            {
+              "key": "nefron_felepitese_es_alapfolyamatok",
+              "name": "A nefron felépítése és alapfolyamatok",
+              "short_description": "Glomerulus, Bowman-tok, csatornarendszer és gyűjtőcsatorna szerepe; szűrés-visszaszívás-kiválasztás fogalmai.",
+              "example_tasks": [
+                "Címkézz egy nefron-ábrán: glomerulus, Bowman-tok, kanyarulatos csatornák, Henle-kacs, gyűjtőcsatorna. Írd le mindegyik szerepét 1 mondatban.",
+                "Magyarázd el a szűrés és visszaszívás különbségét, és adj példát arra, miért nem kerül ki a glükóz normálisan a vizeletbe.",
+                "Miért előnyös, hogy a vese „finomhangolja” a visszaszívást? Írj 3–4 mondatot a víz- és ionegyensúlyról."
+              ]
+            },
+            {
+              "key": "vizeletkoncentralas_es_hormonalis_szabalyozas",
+              "name": "Vizeletkoncentrálás és hormonális szabályozás",
+              "short_description": "ADH és aldoszteron alap hatásai, vizelet mennyiségének és koncentrációjának szabályozása élethelyzetekben.",
+              "example_tasks": [
+                "Hasonlítsd össze, milyen vizelet várható erős izzadás után és nagy folyadékbevitel után: mennyiség és koncentráció, indoklással.",
+                "Magyarázd el, hogyan befolyásolhatja az ADH a vizelet mennyiségét, és mi történhet, ha kevés ADH termelődik (fogalmi szinten).",
+                "Készíts egy rövid esettanulmányt: sós étel után szomjúság jelentkezik. Írd le, hogyan reagálhat a szervezet (vízbevitel, hormonok)."
+              ]
+            },
+            {
+              "key": "kivalasztas_es_mergtelenites_kapcsolat_a_majjal",
+              "name": "Kiválasztás és méregtelenítés kapcsolata a májjal",
+              "short_description": "A máj méregtelenítő szerepe, karbamidképzés alapelve és a kiválasztás integrált szemlélete.",
+              "example_tasks": [
+                "Magyarázd el, miért kell az ammóniát átalakítani karbamiddá az emberi szervezetben, és hol történik ez.",
+                "Sorolj fel két példát arra, hogy a máj milyen anyagokat alakíthat át méregtelenítés során (általános szinten), és miért hasznos ez.",
+                "Egy ember alkoholt fogyaszt. Írj 4–5 mondatban arról, hogyan kapcsolódik ehhez a máj és miért jelenthet terhelést a méregtelenítés."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "emberi_szabalyozas_idegrendszer_es_hormonrendszer",
+      "name": "Emberi szabályozás: idegrendszer és hormonrendszer",
+      "short_description": "Az idegi és hormonális szabályozás alapelvei, az ingerület keletkezése és továbbítása, valamint a homeosztázis fenntartása visszacsatolásokkal és szervrendszeri együttműködéssel.",
+      "sub_topics": [
+        {
+          "key": "idegrendszer_alapjai",
+          "name": "Idegrendszer alapjai",
+          "short_description": "Neuron felépítése, ingerületvezetés, szinapszisok működése és az idegrendszer fő tagolása.",
+          "sub_topics": [
+            {
+              "key": "neuron_felepitese_es_ingeruletvezetes",
+              "name": "A neuron felépítése és ingerületvezetés",
+              "short_description": "Dendrit, axon, velőshüvely szerepe; ingerületvezetés iránya és sebessége, myelinizáció előnye.",
+              "example_tasks": [
+                "Címkézz egy neuron-rajzon: dendrit, sejttest, axon, velőshüvely, Ranvier-befűződés. Írd le mindegyik szerepét 1 mondatban.",
+                "Magyarázd el, miért gyorsabb a velőshüvelyes axonban az ingerületvezetés, és mi a „szaltatorikus” vezetés lényege.",
+                "Egy sérülés károsítja a velőshüvelyt. Írj 3–4 mondatban a várható következményekről a jelátvitel hatékonyságára."
+              ]
+            },
+            {
+              "key": "szinapszis_es_jelatvitel",
+              "name": "Szinapszis és jelátvitel",
+              "short_description": "Kémiai szinapszisok működése, neurotranszmitterek szerepe és a gátlás/serkentés alapjai.",
+              "example_tasks": [
+                "Írd le lépésről lépésre, hogyan jut el a jel a preszinaptikus végződéstől a posztszinaptikus sejthez kémiai szinapszisban.",
+                "Mi a különbség serkentő és gátló szinapszis között? Írj egy egyszerű példát arra, miért fontos a gátlás az idegrendszerben.",
+                "Egy gyógyszer gátolja egy neurotranszmitter lebontását. Fogalmazz meg két lehetséges hatást a jelátvitelre (általános szinten)."
+              ]
+            },
+            {
+              "key": "kozponti_es_periferias_idegrendszer",
+              "name": "Központi és perifériás idegrendszer",
+              "short_description": "A központi idegrendszer (agy, gerincvelő) és a perifériás idegrendszer feladatai, alap reflexív fogalma.",
+              "example_tasks": [
+                "Sorold fel a központi és perifériás idegrendszer fő részeit, és írj 1–1 funkciót mindegyikhez.",
+                "Írd le a térdreflex reflexívének elemeit (inger, receptor, érző neuron, központ, mozgató neuron, effektor).",
+                "Miért hasznosak a reflexek? Írj 3–4 mondatos magyarázatot a gyorsaság és védelem szempontjából."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hormonrendszer_es_homeosztazis",
+          "name": "Hormonrendszer és homeosztázis",
+          "short_description": "Endokrin mirigyek, hormonhatások és visszacsatolásos szabályozás; klasszikus példák vércukorszint és vízháztartás szabályozására.",
+          "sub_topics": [
+            {
+              "key": "endokrin_mirigyek_es_hormonhatas",
+              "name": "Endokrin mirigyek és hormonhatás",
+              "short_description": "Hormontermelő mirigyek főbb példái, célsejt-receptor elv és a hormonok hatásának időbeli sajátosságai.",
+              "example_tasks": [
+                "Sorolj fel legalább 5 endokrin mirigyet (pl. pajzsmirigy), és mindegyikhez írj 1 hormonpéldát és fő hatást (általános).",
+                "Magyarázd el, miért szükséges receptor a hormonhatáshoz, és miért nem reagál minden sejt ugyanarra a hormonra.",
+                "Hasonlítsd össze az idegi és hormonális szabályozást: gyorsaság, hatástartam és célpont (3–4 pontban)."
+              ]
+            },
+            {
+              "key": "vercukorszint_szabalyozas_inzulin_glukagon",
+              "name": "Vércukorszint-szabályozás: inzulin és glukagon",
+              "short_description": "Negatív visszacsatolás, inzulin és glukagon szerepe és a máj/izom glikogénraktározásának alapjai.",
+              "example_tasks": [
+                "Rajzolj szöveges folyamatábrát: étkezés → vércukorszint nő → inzulin → sejtek felveszik a glükózt → vércukorszint csökken. Jelöld a visszacsatolást.",
+                "Mi történik éhezéskor a vércukorszinttel és melyik hormon aktiválódik? Írj 3–4 mondatos választ a glukagon szerepével.",
+                "Egy embernél tartósan magas a vércukorszint. Fogalmazz meg két lehetséges biológiai okot (inzulinhiány vagy -rezisztencia) fogalmi szinten."
+              ]
+            },
+            {
+              "key": "vizhaztartas_es_homerseklet_szabalyozas_alapok",
+              "name": "Vízháztartás és hőmérséklet-szabályozás alapok",
+              "short_description": "ADH szerepe, veseműködéshez kapcsolódó alapelv és a testhőmérséklet fenntartásának mechanizmusai.",
+              "example_tasks": [
+                "Magyarázd el, hogyan segíti az ADH a víz visszaszívását a vesében (fogalmi szinten), és milyen hatása van a vizelet mennyiségére.",
+                "Miért izzadunk melegben? Kapcsold a párolgáshőhöz és a hőleadás növeléséhez, és említs meg egy korlátot (páratartalom).",
+                "Készíts rövid leírást egy negatív visszacsatolási körre testhőmérséklet esetén (receptor → központ → effektor)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "emberi_taplalekfelvetel_emesztes_es_kivalasztas",
+      "name": "Emberi táplálékfelvétel: emésztés és kiválasztás",
+      "short_description": "Az emésztőrendszer és a kiválasztás felépítése és működése, a tápanyagok lebontása és felszívása, valamint a víz–ionháztartás és a méregtelenítés alapjai.",
+      "sub_topics": [
+        {
+          "key": "emesztoreszervek_es_emesztoenzimek",
+          "name": "Emésztőszervek és emésztőenzimek",
+          "short_description": "A tápcsatorna szakaszai, mirigyek szerepe, mechanikai és kémiai emésztés, valamint enzimek működésének helye.",
+          "sub_topics": [
+            {
+              "key": "tapcsatorna_szakaszai_es_funkcioik",
+              "name": "A tápcsatorna szakaszai és funkcióik",
+              "short_description": "Szájüreg, nyelőcső, gyomor, vékony- és vastagbél funkciói és alkalmazkodásai.",
+              "example_tasks": [
+                "Sorold fel a tápcsatorna fő szakaszait sorrendben, és mindegyikhez írj 1–2 kulcsfunkciót.",
+                "Magyarázd el, miért savas a gyomor környezete, és hogyan segíti ez az emésztést és a kórokozók elleni védelmet.",
+                "Miért nagy a vékonybél felszívó felülete? Kapcsold a bélbolyhokhoz és a tápanyagok felszívásához."
+              ]
+            },
+            {
+              "key": "emesztoenzimek_es_tapanyagok_bontasa",
+              "name": "Emésztőenzimek és tápanyagok bontása",
+              "short_description": "Szénhidrát-, fehérje- és zsírbontás fő helyei, enzimek példái és végtermékek szemléleti áttekintése.",
+              "example_tasks": [
+                "Párosítsd: amiláz, pepszin, lipáz – hol hatnak és milyen tápanyagot bontanak. Írd le a végtermékeket általános szinten.",
+                "Magyarázd el, miért szükséges a zsírok emésztéséhez az epe (emulgeálás), és miért növeli ez a lipáz hatékonyságát.",
+                "Egy embernek emésztési panasza van zsíros ételek után. Fogalmazz meg két lehetséges magyarázatot (epe/enzimek) fogalmi szinten."
+              ]
+            },
+            {
+              "key": "felszivas_es_szallitas_a_keringessel",
+              "name": "Felszívás és szállítás a keringéssel",
+              "short_description": "A felszívott tápanyagok útja (vér/nyirok), máj szerepe és a raktározás alapfogalmai.",
+              "example_tasks": [
+                "Írd le, miért kerülnek egyes zsírok a nyirokerekbe felszívás után, míg a glükóz közvetlenül a vérbe jut (fogalmi szinten).",
+                "Magyarázd el, mi a máj szerepe a tápanyagok feldolgozásában és raktározásában (pl. glikogén).",
+                "Készíts rövid folyamatábrát: felszívás → szállítás → raktározás/hasznosítás, és írj mindegyik lépéshez példát."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kivalasztas_vese_es_vizeletkepzes",
+          "name": "Kiválasztás: vese és vizeletképzés",
+          "short_description": "A vese felépítése, nefron működése (szűrés, visszaszívás, kiválasztás) és a víz–ionháztartás szabályozása.",
+          "sub_topics": [
+            {
+              "key": "nefron_felepitese_es_alapfolyamatok",
+              "name": "A nefron felépítése és alapfolyamatok",
+              "short_description": "Glomerulus, Bowman-tok, csatornarendszer és gyűjtőcsatorna szerepe; szűrés-visszaszívás-kiválasztás fogalmai.",
+              "example_tasks": [
+                "Címkézz egy nefron-ábrán: glomerulus, Bowman-tok, kanyarulatos csatornák, Henle-kacs, gyűjtőcsatorna. Írd le mindegyik szerepét 1 mondatban.",
+                "Magyarázd el a szűrés és visszaszívás különbségét, és adj példát arra, miért nem kerül ki a glükóz normálisan a vizeletbe.",
+                "Miért előnyös, hogy a vese „finomhangolja” a visszaszívást? Írj 3–4 mondatot a víz- és ionegyensúlyról."
+              ]
+            },
+            {
+              "key": "vizeletkoncentralas_es_hormonalis_szabalyozas",
+              "name": "Vizeletkoncentrálás és hormonális szabályozás",
+              "short_description": "ADH és aldoszteron alap hatásai, vizelet mennyiségének és koncentrációjának szabályozása élethelyzetekben.",
+              "example_tasks": [
+                "Hasonlítsd össze, milyen vizelet várható erős izzadás után és nagy folyadékbevitel után: mennyiség és koncentráció, indoklással.",
+                "Magyarázd el, hogyan befolyásolhatja az ADH a vizelet mennyiségét, és mi történhet, ha kevés ADH termelődik (fogalmi szinten).",
+                "Készíts egy rövid esettanulmányt: sós étel után szomjúság jelentkezik. Írd le, hogyan reagálhat a szervezet (vízbevitel, hormonok)."
+              ]
+            },
+            {
+              "key": "kivalasztas_es_mergtelenites_kapcsolat_a_majjal",
+              "name": "Kiválasztás és méregtelenítés kapcsolata a májjal",
+              "short_description": "A máj méregtelenítő szerepe, karbamidképzés alapelve és a kiválasztás integrált szemlélete.",
+              "example_tasks": [
+                "Magyarázd el, miért kell az ammóniát átalakítani karbamiddá az emberi szervezetben, és hol történik ez.",
+                "Sorolj fel két példát arra, hogy a máj milyen anyagokat alakíthat át méregtelenítés során (általános szinten), és miért hasznos ez.",
+                "Egy ember alkoholt fogyaszt. Írj 4–5 mondatban arról, hogyan kapcsolódik ehhez a máj és miért jelenthet terhelést a méregtelenítés."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "emberi_szaporodas_fejlodes_es_viselkedes",
+      "name": "Emberi szaporodás, fejlődés és viselkedés",
+      "short_description": "Az emberi szaporodás biológiai alapjai, az egyedfejlődés fő szakaszai, valamint a viselkedés biológiai háttere és környezeti meghatározottsága.",
+      "sub_topics": [
+        {
+          "key": "szaporodoszervek_es_megtermekenyites",
+          "name": "Szaporodószervek és megtermékenyítés",
+          "short_description": "Női és férfi szaporítószervek felépítése, ivarsejtek képződése és a megtermékenyítés folyamata.",
+          "sub_topics": [
+            {
+              "key": "ivarsejtkepzes_es_hormonalis_szabalyozas",
+              "name": "Ivarsejtképzés és hormonális szabályozás",
+              "short_description": "Spermatogenezis és oogenezis alapjai, valamint a hormonális szabályozás szerepe az ivarsejtek érésében.",
+              "example_tasks": [
+                "Hasonlítsd össze a spermatogenezist és az oogenezist: hely, időtartam és keletkező ivarsejtek száma szerint.",
+                "Magyarázd el, milyen hormonok szabályozzák az ivarsejtképzést, és mi a szerepük (fogalmi szinten).",
+                "Miért termelődik a nőknél lényegesen kevesebb ivarsejt, mint a férfiaknál? Írj 3–4 mondatos biológiai magyarázatot."
+              ]
+            },
+            {
+              "key": "megtermekenyites_es_beagyazodas",
+              "name": "Megtermékenyítés és beágyazódás",
+              "short_description": "A hímivarsejt és petesejt egyesülése, a zigóta kialakulása és a beágyazódás jelentősége.",
+              "example_tasks": [
+                "Írd le a megtermékenyítés fő lépéseit a hímivarsejt találkozásától a zigóta kialakulásáig.",
+                "Magyarázd el, miért fontos a beágyazódás a további fejlődéshez, és mi történhet sikertelen beágyazódás esetén.",
+                "Készíts időrendi felsorolást: ovuláció → megtermékenyítés → osztódások → beágyazódás."
+              ]
+            },
+            {
+              "key": "fogamzasgatlas_alapelvek",
+              "name": "Fogamzásgátlás alapelvek",
+              "short_description": "Fogamzásgátló módszerek biológiai alapjai és hatásmechanizmusai felelős, egészségközpontú szemlélettel.",
+              "example_tasks": [
+                "Sorolj fel három különböző fogamzásgátló módszert, és mindegyikhez írd le a biológiai hatáselvet.",
+                "Magyarázd el, miért nem csak a nem kívánt terhesség megelőzése lehet cél (pl. fertőzések elleni védelem).",
+                "Vitaindító: miért fontos a tájékozott döntés a fogamzásgátlásban? Írj 4–5 mondatos választ biológiai és társadalmi szempontból."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "egyedfejlodes_es_magzati_fejlodes",
+          "name": "Egyedfejlődés és magzati fejlődés",
+          "short_description": "Az embrionális és magzati fejlődés fő szakaszai, szervképződés és a fejlődést befolyásoló tényezők.",
+          "sub_topics": [
+            {
+              "key": "embrionalis_fejlodes_szakaszai",
+              "name": "Embrionális fejlődés szakaszai",
+              "short_description": "Barázdálódás, csíralemezek kialakulása és a szervkezdemények megjelenése.",
+              "example_tasks": [
+                "Rendezd sorrendbe az embrionális fejlődés fő szakaszait, és mindegyikhez írj egy kulcseseményt.",
+                "Magyarázd el, miért fontos a csíralemezek kialakulása a szervfejlődés szempontjából.",
+                "Egy ábrán különböző fejlődési stádiumok láthatók. Azonosítsd őket és indokold a felismerést."
+              ]
+            },
+            {
+              "key": "magzati_fejlodes_es_anyai_hatasok",
+              "name": "Magzati fejlődés és anyai hatások",
+              "short_description": "A magzat növekedése, placenta szerepe és a környezeti/anyai tényezők hatása.",
+              "example_tasks": [
+                "Magyarázd el, milyen szerepet tölt be a placenta az anyagcsere és gázcsere során.",
+                "Sorolj fel három anyai tényezőt (pl. táplálkozás, káros anyagok), amely befolyásolhatja a magzati fejlődést, és írd le a lehetséges hatást.",
+                "Írj 4–5 mondatot arról, miért különösen érzékeny a fejlődés korai szakasza a környezeti hatásokra."
+              ]
+            },
+            {
+              "key": "szulestes_es_ujszulott_kori_alkalmazkodas",
+              "name": "Születés és újszülöttkori alkalmazkodás",
+              "short_description": "A szülés biológiai folyamata és az újszülött alkalmazkodása az önálló élethez.",
+              "example_tasks": [
+                "Írd le a szülés fő szakaszait röviden, és nevezd meg a hormonális háttér egyik elemét.",
+                "Magyarázd el, milyen változások történnek a keringésben és légzésben a születés után.",
+                "Miért fontos az újszülött gyors alkalmazkodása? Írj 3–4 mondatos választ az életfunkciók szempontjából."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "viselkedes_biologiai_alapjai",
+          "name": "Viselkedés biológiai alapjai",
+          "short_description": "A viselkedés öröklött és tanult elemei, tanulási formák és az idegrendszeri–hormonális háttér alapjai.",
+          "sub_topics": [
+            {
+              "key": "oroklott_es_tanult_viselkedes",
+              "name": "Öröklött és tanult viselkedés",
+              "short_description": "Ösztönös viselkedések, bevésődés és tanulás szerepe az alkalmazkodásban.",
+              "example_tasks": [
+                "Adj két példát öröklött és két példát tanult viselkedésre embernél vagy állatoknál, és indokold a besorolást.",
+                "Magyarázd el, mi a bevésődés, és miért csak egy meghatározott időszakban lehetséges.",
+                "Írj rövid magyarázatot arra, hogyan segítheti a tanulás az egyed túlélését változó környezetben."
+              ]
+            },
+            {
+              "key": "tanulasi_formak_es_peldak",
+              "name": "Tanulási formák és példák",
+              "short_description": "Klasszikus és operáns kondicionálás, valamint megfigyeléses tanulás alapjai.",
+              "example_tasks": [
+                "Hasonlítsd össze a klasszikus és operáns kondicionálást egy-egy egyszerű példával.",
+                "Adj példát megfigyeléses tanulásra, és magyarázd el, miért hatékony ez a tanulási forma.",
+                "Készíts egy rövid esettanulmányt, amelyben több tanulási forma is szerepet játszik (pl. sport, iskolai helyzet)."
+              ]
+            },
+            {
+              "key": "stressz_es_viselkedes",
+              "name": "Stressz és viselkedés",
+              "short_description": "A stressz élettani háttere, hormonális válaszok és a viselkedésre gyakorolt hatások.",
+              "example_tasks": [
+                "Magyarázd el, mi történik a szervezetben stresszhelyzetben hormonális szinten (fogalmi szinten).",
+                "Sorolj fel két rövid és két hosszú távú stresszhatást a viselkedésre vagy egészségre.",
+                "Írj 4–5 mondatos javaslatot arra, hogyan csökkenthető a tartós stressz biológiai szemlélettel."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "biotechnologia_es_bioetika",
+      "name": "Biotechnológia és bioetika",
+      "short_description": "A modern biotechnológia alapelvei, alkalmazásai az orvoslásban és mezőgazdaságban, valamint a kapcsolódó etikai kérdések.",
+      "sub_topics": [
+        {
+          "key": "modern_biotechnologia_alapjai",
+          "name": "Modern biotechnológia alapjai",
+          "short_description": "Géntechnológia, DNS-módosítás és sejttenyésztés alapelvei középiskolai szinten.",
+          "sub_topics": [
+            {
+              "key": "dns_technologiak_pcr_es_szekvenalas",
+              "name": "DNS-technológiák: PCR és szekvenálás",
+              "short_description": "A DNS felsokszorozásának és elemzésének alapelvei és alkalmazásai.",
+              "example_tasks": [
+                "Magyarázd el, mi a PCR célja és miért hasznos kis mennyiségű DNS vizsgálatakor.",
+                "Sorolj fel két területet, ahol a DNS-szekvenálást alkalmazzák (pl. orvoslás, törvényszéki vizsgálat), és írd le röviden a célt.",
+                "Írj 4–5 mondatot arról, hogyan járulhat hozzá a molekuláris genetika a betegségek felismeréséhez."
+              ]
+            },
+            {
+              "key": "gmo_es_genkeszites_alapelvek",
+              "name": "GMO és génszerkesztés alapelvek",
+              "short_description": "Genetikailag módosított szervezetek és célzott génszerkesztés alapfogalmai, lehetőségek és korlátok.",
+              "example_tasks": [
+                "Magyarázd el, mit jelent a GMO fogalma, és adj egy mezőgazdasági példát.",
+                "Írd le fogalmi szinten, miben különbözik a klasszikus nemesítés a célzott génszerkesztéstől.",
+                "Vitaindító: sorolj fel egy lehetséges előnyt és egy kockázatot a GMO-k alkalmazásával kapcsolatban."
+              ]
+            },
+            {
+              "key": "biotechnologia_orvosi_alkalmazasok",
+              "name": "Biotechnológia orvosi alkalmazások",
+              "short_description": "Gyógyszergyártás, vakcinák és diagnosztikai módszerek biológiai alapjai.",
+              "example_tasks": [
+                "Adj példát arra, hogyan állítanak elő biotechnológiai módszerrel egy fehérjealapú gyógyszert (általános szinten).",
+                "Magyarázd el, miért előnyös a biotechnológia alkalmazása a vakcinák fejlesztésében.",
+                "Írj 4–5 mondatot arról, hogyan segítheti a biotechnológia a személyre szabott orvoslást."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bioetikai_kerdesek_es_tarsadalmi_vonatkozasok",
+          "name": "Bioetikai kérdések és társadalmi vonatkozások",
+          "short_description": "Biológiai kutatások és alkalmazások etikai dilemmái, döntési felelősség és társadalmi hatások.",
+          "sub_topics": [
+            {
+              "key": "genetikai_adatok_es_emberi_jogok",
+              "name": "Genetikai adatok és emberi jogok",
+              "short_description": "Genetikai információ védelme, diszkrimináció megelőzése és informált beleegyezés.",
+              "example_tasks": [
+                "Írj 4–5 mondatot arról, miért kell különösen védeni a genetikai adatokat.",
+                "Sorolj fel két lehetséges visszaélési kockázatot genetikai információkkal kapcsolatban, és javasolj megelőző elveket.",
+                "Vita: megosztható-e genetikai adat családtagokkal? Írj pro és kontra érveket."
+              ]
+            },
+            {
+              "key": "kutatas_es_allatkiserletek_etikaja",
+              "name": "Kutatás és állatkísérletek etikája",
+              "short_description": "Az állatkísérletek indokai, alternatívák és etikai szabályozás alapelvei.",
+              "example_tasks": [
+                "Magyarázd el, miért alkalmaznak még mindig állatkísérleteket bizonyos kutatásokban.",
+                "Sorolj fel két alternatív módszert az állatkísérletek kiváltására, és írd le az előnyeiket.",
+                "Írj 4–5 mondatos állásfoglalást az állatkísérletek etikus alkalmazásáról szabályozási keretek között."
+              ]
+            },
+            {
+              "key": "biotechnologia_es_tarsadalmi_felelosseg",
+              "name": "Biotechnológia és társadalmi felelősség",
+              "short_description": "A tudományos fejlődés hatása a társadalomra, felelős döntéshozatal és fenntartható alkalmazások.",
+              "example_tasks": [
+                "Adj példát arra, hogyan befolyásolhatja a biotechnológia a mezőgazdaság fenntarthatóságát pozitív és negatív irányban.",
+                "Magyarázd el, miért fontos a társadalmi párbeszéd a biotechnológiai újítások bevezetésekor.",
+                "Készíts rövid javaslatot (5 pont) egy felelős biotechnológiai projekt alapelveire."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

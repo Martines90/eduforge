@@ -19,6 +19,7 @@
     "test:coverage": "jest --coverage",
     "check": "npm run typecheck && npm run lint && npm run test",
     "purge:math_subject_tree_hu": "npx tsx src/data/subject_mapping/purge_example_tasks.ts",
+    "migrate:subjects": "npx ts-node src/scripts/migrate-subject-mappings.ts",
     "emulators:start": "firebase emulators:start --only firestore",
     "emulators:kill": "pkill -f firebase",
     "test:rules": "node test-firestore-rules.js",
@@ -43,6 +44,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.71.2",
+    "axios": "^1.13.2",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",

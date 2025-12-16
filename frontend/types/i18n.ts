@@ -1,7 +1,7 @@
 /**
  * Supported countries and their language codes
  */
-export type CountryCode = 'US' | 'HU' | 'MX';
+export type CountryCode = "US" | "HU" | "MX";
 
 export interface Country {
   code: CountryCode;
@@ -15,292 +15,293 @@ export interface Country {
  */
 export interface Translations {
   // Navigation
-  'Home': string;
-  'Task Creator': string;
-  'Open navigation menu': string;
-  'Close menu': string;
+  Home: string;
+  "Task Creator": string;
+  "Open navigation menu": string;
+  "Close menu": string;
 
   // Home page
-  'Educational Task Platform': string;
-  'Create educational tasks based on curriculum topics for grades 9-12': string;
-  'Go to Task Creator': string;
-  'Search Tasks': string;
-  'Browse and discover educational tasks created by teachers': string;
-  'Browse Tasks': string;
+  "Educational Task Platform": string;
+  "Create educational tasks based on curriculum topics for grades 9-12": string;
+  "Go to Task Creator": string;
+  "Search Tasks": string;
+  "Browse and discover educational tasks created by teachers": string;
+  "Browse Tasks": string;
 
   // Task Creator page
-  'Select a curriculum topic to create an educational task': string;
-  'Select Topic': string;
-  'Grade 9-10': string;
-  'Grade 11-12': string;
-  'Reset': string;
-  'Selection complete': string;
-  'Please select a topic to begin': string;
-  'Confirm Selection': string;
-  'Topic': string;
-  'Path': string;
-  'Grade Level': string;
-  'Selected Topic': string;
-  'Create Task': string;
-  'Clear Selection': string;
+  "Select a curriculum topic to create an educational task": string;
+  "Select Topic": string;
+  "Grade 9-10": string;
+  "Grade 11-12": string;
+  Reset: string;
+  "Selection complete": string;
+  "Please select a topic to begin": string;
+  "Confirm Selection": string;
+  Topic: string;
+  Path: string;
+  "Grade Level": string;
+  "Selected Topic": string;
+  "Create Task": string;
+  "Clear Selection": string;
 
   // Select component
-  'Select an option': string;
-  'Select main topic': string;
-  'Select sub-topic': string;
-  'Level': string;
+  "Select an option": string;
+  "Select main topic": string;
+  "Select sub-topic": string;
+  Level: string;
 
   // General
-  'Close': string;
-  'Open': string;
-  'Menu': string;
-  'Language': string;
-  'Country': string;
+  Close: string;
+  Open: string;
+  Menu: string;
+  Language: string;
+  Country: string;
 
   // Tasks page
-  'Tasks': string;
-  'Educational Tasks': string;
-  'Browse and explore educational tasks for grades 9-12': string;
-  'Search tasks...': string;
-  'Subject': string;
-  'Grade': string;
-  'All Subjects': string;
-  'All Grades': string;
-  'No Tasks Available Yet': string;
-  'Educational tasks will appear here once teachers start creating them. Check back soon!': string;
-  'Back to Home': string;
-  'Start Task': string;
-  'Difficulty': string;
-  'Medium': string;
-  'Tree View': string;
-  'Grid View': string;
-  'Category / Task Title': string;
-  'School System': string;
-  'Rating': string;
-  'Views': string;
-  'Loading tasks...': string;
-  'No tasks available for this topic yet': string;
-  'No teacher added any tasks yet.': string;
-  'Be the first one who creates a new task': string;
+  Tasks: string;
+  "Educational Tasks": string;
+  "Browse and explore educational tasks for grades 9-12": string;
+  "Search tasks...": string;
+  Subject: string;
+  Grade: string;
+  "All Subjects": string;
+  "All Grades": string;
+  "No Tasks Available Yet": string;
+  "Educational tasks will appear here once teachers start creating them. Check back soon!": string;
+  "Back to Home": string;
+  "Start Task": string;
+  Difficulty: string;
+  Medium: string;
+  "Tree View": string;
+  "Grid View": string;
+  "Category / Task Title": string;
+  "School System": string;
+  Rating: string;
+  Views: string;
+  "Loading tasks...": string;
+  "No tasks available for this topic yet": string;
+  "No teacher added any tasks yet.": string;
+  "Be the first one who creates a new task": string;
 
   // Subjects
-  'Mathematics': string;
-  'Physics': string;
-  'Chemistry': string;
-  'Biology': string;
-  'History': string;
-  'Geography': string;
-  'Literature': string;
+  Mathematics: string;
+  Physics: string;
+  Chemistry: string;
+  Biology: string;
+  Informatics: string;
+  History: string;
+  Geography: string;
+  Literature: string;
 
   // Profile page
-  'My Profile': string;
-  'View and manage your account information': string;
-  'Personal Information': string;
-  'Name': string;
-  'Email': string;
-  'Role': string;
-  'Teacher': string;
-  'Student / General User': string;
-  'Password & Security': string;
-  'Keep your account secure by changing your password regularly.': string;
-  'Change Password': string;
-  'Current Password': string;
-  'New Password': string;
-  'Confirm New Password': string;
-  'Must be at least 8 characters long': string;
-  'Cancel': string;
-  'Changing Password...': string;
-  'Password changed successfully!': string;
-  'View My Tasks': string;
-  'Not provided': string;
-  'Loading...': string;
-  'Loading profile...': string;
-  'Redirecting...': string;
-  'All password fields are required': string;
-  'New password must be at least 8 characters long': string;
-  'New password must be different from old password': string;
-  'New passwords do not match': string;
-  'Failed to change password. Please check your old password and try again.': string;
-  'Password change functionality will be implemented with backend API': string;
+  "My Profile": string;
+  "View and manage your account information": string;
+  "Personal Information": string;
+  Name: string;
+  Email: string;
+  Role: string;
+  Teacher: string;
+  "Student / General User": string;
+  "Password & Security": string;
+  "Keep your account secure by changing your password regularly.": string;
+  "Change Password": string;
+  "Current Password": string;
+  "New Password": string;
+  "Confirm New Password": string;
+  "Must be at least 8 characters long": string;
+  Cancel: string;
+  "Changing Password...": string;
+  "Password changed successfully!": string;
+  "View My Tasks": string;
+  "Not provided": string;
+  "Loading...": string;
+  "Loading profile...": string;
+  "Redirecting...": string;
+  "All password fields are required": string;
+  "New password must be at least 8 characters long": string;
+  "New password must be different from old password": string;
+  "New passwords do not match": string;
+  "Failed to change password. Please check your old password and try again.": string;
+  "Password change functionality will be implemented with backend API": string;
 
   // My Tasks page
-  'My Tasks': string;
-  'View and manage all tasks you\'ve created': string;
-  'This page will display all educational tasks you have created. You\'ll be able to view, edit, and manage your tasks from here.': string;
-  'No Tasks Yet': string;
-  'You haven\'t created any tasks yet. Start by creating your first educational task!': string;
-  'Create Your First Task': string;
-  'Create New Task': string;
-  'View Profile': string;
-  'Created': string;
+  "My Tasks": string;
+  "View and manage all tasks you've created": string;
+  "This page will display all educational tasks you have created. You'll be able to view, edit, and manage your tasks from here.": string;
+  "No Tasks Yet": string;
+  "You haven't created any tasks yet. Start by creating your first educational task!": string;
+  "Create Your First Task": string;
+  "Create New Task": string;
+  "View Profile": string;
+  Created: string;
 
   // User Menu
-  'Profile': string;
-  'My Subscription': string;
-  'Logout': string;
+  Profile: string;
+  "My Subscription": string;
+  Logout: string;
 
   // Educational Models
-  'Educational Model': string;
-  'Select educational model': string;
-  'Secular': string;
-  'Conservative': string;
-  'Traditional': string;
-  'Liberal': string;
-  'Progressive': string;
-  'Religious - Christian': string;
-  'Religious - Islamic': string;
-  'Religious - Jewish': string;
-  'Montessori': string;
-  'Waldorf': string;
+  "Educational Model": string;
+  "Select educational model": string;
+  Secular: string;
+  Conservative: string;
+  Traditional: string;
+  Liberal: string;
+  Progressive: string;
+  "Religious - Christian": string;
+  "Religious - Islamic": string;
+  "Religious - Jewish": string;
+  Montessori: string;
+  Waldorf: string;
 
   // Registration Modal
-  'Create Your Account': string;
-  'Country & Subject': string;
-  'Location and expertise': string;
-  'Personal Info': string;
-  'Name and Email': string;
-  'Verify Email': string;
-  'Enter verification code': string;
-  'Select your location': string;
-  'Select Your Country & Subject': string;
-  'Select Your Country': string;
-  'Choose your location and primary teaching subject': string;
-  'Choose your country to personalize your experience': string;
-  'Your Work Information': string;
-  'Your Information': string;
-  'Full Name': string;
-  'Enter your full name': string;
-  'Work Email Address': string;
-  'Email Address': string;
-  'Password': string;
-  'At least 6 characters': string;
-  'Confirm Password': string;
-  'Re-enter your password': string;
-  'Back': string;
-  'Sending Code...': string;
-  'Create Account': string;
-  'Verify Your Email': string;
-  'We\'ve sent a 6-digit verification code to': string;
-  'Please enter a valid 6-digit code': string;
-  'Check the console for your verification code (email sending not yet implemented)': string;
-  'Verifying...': string;
-  'Verify & Create Account': string;
-  'Back to Login': string;
-  'Next': string;
-  'Failed to register user. Please try again.': string;
-  'Failed to verify code. Please try again.': string;
-  'Registration successful! Welcome to EduForge.': string;
+  "Create Your Account": string;
+  "Country & Subject": string;
+  "Location and expertise": string;
+  "Personal Info": string;
+  "Name and Email": string;
+  "Verify Email": string;
+  "Enter verification code": string;
+  "Select your location": string;
+  "Select Your Country & Subject": string;
+  "Select Your Country": string;
+  "Choose your location and primary teaching subject": string;
+  "Choose your country to personalize your experience": string;
+  "Your Work Information": string;
+  "Your Information": string;
+  "Full Name": string;
+  "Enter your full name": string;
+  "Work Email Address": string;
+  "Email Address": string;
+  Password: string;
+  "At least 6 characters": string;
+  "Confirm Password": string;
+  "Re-enter your password": string;
+  Back: string;
+  "Sending Code...": string;
+  "Create Account": string;
+  "Verify Your Email": string;
+  "We've sent a 6-digit verification code to": string;
+  "Please enter a valid 6-digit code": string;
+  "Check the console for your verification code (email sending not yet implemented)": string;
+  "Verifying...": string;
+  "Verify & Create Account": string;
+  "Back to Login": string;
+  Next: string;
+  "Failed to register user. Please try again.": string;
+  "Failed to verify code. Please try again.": string;
+  "Registration successful! Welcome to EduForge.": string;
 
   // Action Selection Modal
-  'What would you like to do?': string;
-  'Choose your next step for': string;
-  'Continue': string;
+  "What would you like to do?": string;
+  "Choose your next step for": string;
+  Continue: string;
 
   // Target Group
-  'Target Group': string;
-  'Mixed (Boys and Girls)': string;
-  'Boys Only': string;
-  'Girls Only': string;
+  "Target Group": string;
+  "Mixed (Boys and Girls)": string;
+  "Boys Only": string;
+  "Girls Only": string;
 
   // Image Number
-  'Number of Images': string;
-  'No images (text only)': string;
-  '1 image': string;
-  '2 images': string;
+  "Number of Images": string;
+  "No images (text only)": string;
+  "1 image": string;
+  "2 images": string;
 
   // Task Settings
-  'Task Settings': string;
-  'Difficulty Level': string;
-  'Generate Task': string;
+  "Task Settings": string;
+  "Difficulty Level": string;
+  "Generate Task": string;
 
   // Task Generation Progress Messages
-  'Generating task...': string;
-  'Generating 3 task variations in parallel...': string;
-  '3 task variations successfully generated!': string;
-  'AI is selecting the best variation...': string;
-  'Best variation selected (variation': string;
-  'Generating images...': string;
-  'Generating images and solution...': string;
-  'Generating solution...': string;
-  'Task successfully completed!': string;
-  'Please wait...': string;
+  "Generating task...": string;
+  "Generating 3 task variations in parallel...": string;
+  "3 task variations successfully generated!": string;
+  "AI is selecting the best variation...": string;
+  "Best variation selected (variation": string;
+  "Generating images...": string;
+  "Generating images and solution...": string;
+  "Generating solution...": string;
+  "Task successfully completed!": string;
+  "Please wait...": string;
 
   // Task Result Component
-  'Generated Task': string;
-  'Edit task': string;
-  'Edit solution': string;
-  'Save': string;
-  'characters': string;
-  '{{count}} more characters needed': string;
-  '{{count}} characters over limit': string;
-  'Task description is too short! At least {{min}} characters required. Current: {{count}} characters.': string;
-  'Task description is too long! Maximum {{max}} characters allowed. Current: {{count}} characters.': string;
-  'An error occurred while generating the PDF. Please try again.': string;
-  'An error occurred': string;
-  'Save Task': string;
-  'Saving...': string;
-  'Questions': string;
-  'Solution Steps': string;
-  'Formula': string;
-  'Calculation': string;
-  'Result': string;
-  'Final Answer': string;
-  'Verification': string;
-  'Common Mistakes': string;
+  "Generated Task": string;
+  "Edit task": string;
+  "Edit solution": string;
+  Save: string;
+  characters: string;
+  "{{count}} more characters needed": string;
+  "{{count}} characters over limit": string;
+  "Task description is too short! At least {{min}} characters required. Current: {{count}} characters.": string;
+  "Task description is too long! Maximum {{max}} characters allowed. Current: {{count}} characters.": string;
+  "An error occurred while generating the PDF. Please try again.": string;
+  "An error occurred": string;
+  "Save Task": string;
+  "Saving...": string;
+  Questions: string;
+  "Solution Steps": string;
+  Formula: string;
+  Calculation: string;
+  Result: string;
+  "Final Answer": string;
+  Verification: string;
+  "Common Mistakes": string;
 
   // Task Saved Modal
-  'Task Saved Successfully!': string;
-  'Your task has been saved to the database and is now available publicly.': string;
-  'Public Share Link:': string;
-  'Link copied to clipboard!': string;
-  'Task ID': string;
-  'Task ID:': string;
-  'Copy Public Share Link': string;
-  'Download as PDF': string;
-  'PDF download will be implemented soon': string;
+  "Task Saved Successfully!": string;
+  "Your task has been saved to the database and is now available publicly.": string;
+  "Public Share Link:": string;
+  "Link copied to clipboard!": string;
+  "Task ID": string;
+  "Task ID:": string;
+  "Copy Public Share Link": string;
+  "Download as PDF": string;
+  "PDF download will be implemented soon": string;
 
   // Task Detail Page
-  'Back to Tasks': string;
-  'Task': string;
-  'Solution': string;
-  'Images': string;
-  'Created by': string;
-  'Copy Share Link': string;
-  'Download PDF': string;
-  'Share link copied to clipboard!': string;
-  'review': string;
-  'reviews': string;
+  "Back to Tasks": string;
+  Task: string;
+  Solution: string;
+  Images: string;
+  "Created by": string;
+  "Copy Share Link": string;
+  "Download PDF": string;
+  "Share link copied to clipboard!": string;
+  review: string;
+  reviews: string;
 
   // Subscription Page
-  'Manage Your Subscription': string;
-  'View and manage your subscription plan and credits': string;
-  'Current Plan': string;
-  'Trial Plan': string;
-  'Annual Plan': string;
-  'No Active Plan': string;
-  'Status': string;
-  'Active': string;
-  'Expired': string;
-  'Cancelled': string;
-  'Trial Period': string;
-  'Started': string;
-  'Expires': string;
-  'Subscription Period': string;
-  'Task Generation Credits': string;
-  'Remaining Credits': string;
-  'credits': string;
-  'You have {{count}} task generation credits remaining.': string;
-  'Annual Subscription': string;
-  'Subscribe to our annual plan for unlimited access to all features.': string;
-  'Unlimited task generation': string;
-  'Priority support': string;
-  'Early access to new features': string;
-  'Subscribe Now': string;
-  'Coming Soon': string;
-  'Annual subscription will be available soon. Stay tuned!': string;
+  "Manage Your Subscription": string;
+  "View and manage your subscription plan and credits": string;
+  "Current Plan": string;
+  "Trial Plan": string;
+  "Annual Plan": string;
+  "No Active Plan": string;
+  Status: string;
+  Active: string;
+  Expired: string;
+  Cancelled: string;
+  "Trial Period": string;
+  Started: string;
+  Expires: string;
+  "Subscription Period": string;
+  "Task Generation Credits": string;
+  "Remaining Credits": string;
+  credits: string;
+  "You have {{count}} task generation credits remaining.": string;
+  "Annual Subscription": string;
+  "Subscribe to our annual plan for unlimited access to all features.": string;
+  "Unlimited task generation": string;
+  "Priority support": string;
+  "Early access to new features": string;
+  "Subscribe Now": string;
+  "Coming Soon": string;
+  "Annual subscription will be available soon. Stay tuned!": string;
 
   // Registration Success Message
-  'Registration successful, your 3-month free trial subscription just started!': string;
+  "Registration successful, your 3-month free trial subscription just started!": string;
 }
 
 export type TranslationKey = keyof Translations;
@@ -308,8 +309,8 @@ export type TranslationKey = keyof Translations;
 /**
  * User identity types
  */
-export type UserIdentity = 'teacher' | 'non-teacher';
-export type UserRole = 'guest' | 'registered' | 'admin';
+export type UserIdentity = "teacher" | "non-teacher";
+export type UserRole = "guest" | "registered" | "admin";
 
 /**
  * User authentication state
@@ -325,10 +326,11 @@ export interface UserProfile {
  * Subject types for teachers
  */
 export type Subject =
-  | 'mathematics'
-  | 'physics'
-  | 'chemistry'
-  | 'biology'
-  | 'history'
-  | 'geography'
-  | 'literature';
+  | "mathematics"
+  | "physics"
+  | "chemistry"
+  | "biology"
+  | "information_technology"
+  | "history"
+  | "geography"
+  | "literature";

@@ -6,10 +6,12 @@
 import { IAIProvider } from "./base-provider.interface";
 import { OpenAIProvider } from "./openai-provider";
 import { AnthropicProvider } from "./anthropic-provider";
+import { FluxProvider } from "./flux-provider";
 
 export interface AIProviderConfig {
   openaiApiKey?: string;
   anthropicApiKey?: string;
+  fluxApiKey?: string;
   textModel: string;
   imageModel?: string;
 }
@@ -18,7 +20,7 @@ export interface AIProviderConfig {
  * Model name to provider mapping
  * This determines which provider to use based on the model name
  */
-const MODEL_PROVIDER_MAP: Record<string, "openai" | "anthropic"> = {
+const MODEL_PROVIDER_MAP: Record<string, "openai" | "anthropic" | "flux"> = {
   // OpenAI models
   "gpt-4": "openai",
   "gpt-4-turbo": "openai",
@@ -51,24 +53,37 @@ const MODEL_PROVIDER_MAP: Record<string, "openai" | "anthropic"> = {
   "claude-3-opus": "anthropic",
   "claude-3-sonnet": "anthropic",
   "claude-3-haiku": "anthropic",
+
+  // FLUX models (Black Forest Labs)
+  "flux-2-pro": "flux",
+  "flux-2-flex": "flux",
+  "flux-pro-1.1-ultra": "flux",
+  "flux-pro-1.1": "flux",
+  "flux-pro": "flux",
+  "flux-dev": "flux",
+  "dall-e-3": "openai",
 };
 
 /**
  * Detect which provider should be used for a given model
  */
-function detectProvider(modelName: string): "openai" | "anthropic" {
+function detectProvider(modelName: string): "openai" | "anthropic" | "flux" {
   // Check exact match first
   if (MODEL_PROVIDER_MAP[modelName]) {
     return MODEL_PROVIDER_MAP[modelName];
   }
 
   // Check if model name starts with known prefixes
-  if (modelName.startsWith("gpt-") || modelName.startsWith("o1") || modelName.startsWith("o3")) {
+  if (modelName.startsWith("gpt-") || modelName.startsWith("o1") || modelName.startsWith("o3") || modelName.startsWith("dall-e")) {
     return "openai";
   }
 
   if (modelName.startsWith("claude")) {
     return "anthropic";
+  }
+
+  if (modelName.startsWith("flux")) {
+    return "flux";
   }
 
   // Default to OpenAI for unknown models
@@ -161,6 +176,11 @@ export class AIProviderFactory {
         throw new Error("ANTHROPIC_API_KEY not configured but required for model: " + modelName);
       }
       provider = new AnthropicProvider(this.config!.anthropicApiKey, modelName);
+    } else if (providerType === "flux") {
+      if (!this.config!.fluxApiKey) {
+        throw new Error("FLUX_API_KEY not configured but required for model: " + modelName);
+      }
+      provider = new FluxProvider(this.config!.fluxApiKey, modelName);
     } else {
       throw new Error(`Unknown provider type: ${providerType}`);
     }

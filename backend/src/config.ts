@@ -8,8 +8,12 @@ export const config = {
   port: parseInt(process.env.PORT || "3000", 10),
   nodeEnv: process.env.NODE_ENV || "development",
 
-  // OpenAI API configuration
+  // AI API Keys
   apiKey: process.env.OPENAI_API_KEY || "",
+  anthropicApiKey: process.env.ANTHROPIC_API_KEY || "",
+  fluxApiKey: process.env.FLUX_API_KEY || "",
+
+  // AI Model configuration
   textModel: process.env.TEXT_MODEL || "gpt-4o",
   imageModel: process.env.IMAGE_MODEL || "dall-e-3",
 

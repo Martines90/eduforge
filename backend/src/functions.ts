@@ -11,6 +11,7 @@ initializeFirebase();
 AIProviderFactory.initialize({
   openaiApiKey: process.env.OPENAI_API_KEY,
   anthropicApiKey: process.env.ANTHROPIC_API_KEY,
+  fluxApiKey: process.env.FLUX_API_KEY,
   textModel: config.textModel,
   imageModel: config.imageModel,
 });

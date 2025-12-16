@@ -1,0 +1,1829 @@
+{
+  "grade_9_10": [
+    {
+      "key": "irodalmi_alapismeretek_es_szovegertes",
+      "name": "Irodalmi alapismeretek és szövegértés",
+      "short_description": "A tanulók a középiskolai irodalomtanulás alapját képező szövegértési és -értelmezési stratégiákat, valamint a legfontosabb irodalmi fogalmakat gyakorolják, fokozatosan összetettebb szövegeken.",
+      "sub_topics": [
+        {
+          "key": "olvasasi_strategiak_es_szovegertes",
+          "name": "Olvasási stratégiák és szövegértés",
+          "short_description": "Különböző műfajú szövegek értő olvasása: információkinyerés, következtetés, összegzés, értelmező kérdések megválaszolása.",
+          "sub_topics": [
+            {
+              "key": "kulcsinformaciok_azonositasa",
+              "name": "Kulcsinformációk és szerkezet felismerése",
+              "short_description": "A tanuló azonosítja a szöveg témáját, fő gondolatát, szerkezeti egységeit és a logikai kapcsolóelemek szerepét.",
+              "example_tasks": [
+                "Olvass el egy 1–2 oldalas elbeszélésrészletet, majd írd le 3–5 mondatban a szöveg fő gondolatát, és jelöld be a bekezdések funkcióját (bevezetés–kibontás–fordulat–lezárás).",
+                "Egy publicisztikai szövegben húzd alá a tézist és a legfontosabb érveket; készíts vázlatot pontokba szedve a gondolatmenetről.",
+                "Kapott versszövegben jelöld ki a kulcsképeket és ismétlődéseket, majd magyarázd el röviden, hogyan segítik a téma kibontását."
+              ]
+            },
+            {
+              "key": "kovetkeztetes_es_ertelemadas",
+              "name": "Következtetés és jelentésképzés",
+              "short_description": "A tanuló a kimondott és a sejtetett információk alapján következtet, értelmezi a beszélő szándékát és a befogadói hatást.",
+              "example_tasks": [
+                "Olvass el egy párbeszédes prózarészletet, és írd le, mit gondolhat valójában a szereplő, amikor mást mond (utalások, irónia, elhallgatás).",
+                "Egy rövid novella zárómondatához írj két lehetséges értelmezést, és mindkettőt támaszd alá 2–2 szöveghelyre hivatkozva.",
+                "Egy versben jelöld meg a hangnemváltás pontját, és írd le, milyen érzelmi hatást vált ki, illetve milyen következtetésre jutsz a beszélő helyzetéről."
+              ]
+            },
+            {
+              "key": "osszefoglalo_es_reflektalo_iras",
+              "name": "Összefoglaló és reflektáló írás",
+              "short_description": "A tanuló rövid, koherens összefoglalót és személyes, de szöveghez kötött reflexiót ír, megfelelő idézetkezeléssel.",
+              "example_tasks": [
+                "Írj 120–150 szavas összefoglalót egy megadott tanulmányrészletről, ügyelve arra, hogy ne tegyél hozzá új információt.",
+                "Egy elbeszélés alapján írj 8–10 mondatos reflektáló bekezdést: mi volt számodra a legfontosabb kérdés, és melyik két mondat támasztja ezt alá a szövegben?",
+                "Készíts „kétoszlopos jegyzetet”: balra kulcsmondatok/idézetek, jobbra rövid értelmező megjegyzések (legalább 6–6 elem)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "irodalmi_fogalmak_es_poetika",
+          "name": "Irodalmi fogalmak és poétikai alapismeretek",
+          "short_description": "A műnemek, műfajok és alapvető poétikai fogalmak megismerése és alkalmazása rövid elemző feladatokban.",
+          "sub_topics": [
+            {
+              "key": "munemek_mufajok_alapjai",
+              "name": "Műnemek és műfajok alapjai (líra–epika–dráma)",
+              "short_description": "A tanuló felismeri a műnemek jellegzetességeit, és egyszerű műfaji besorolást indokol.",
+              "example_tasks": [
+                "Három rövid szöveg (vers, novella, jelenet) alapján döntsd el, melyik műnemhez tartoznak, és írj mindegyikhez 2 indokot.",
+                "Egy elbeszélő szövegben jelöld be az elbeszélő személyét (E/1, E/3), és írd le, hogyan befolyásolja a történet hitelességét.",
+                "Egy drámarészletben jelöld meg a szereplői instrukciók (színpadi utasítások) funkcióját, és írj 5 mondatot arról, mit ad hozzá a jelentéshez."
+              ]
+            },
+            {
+              "key": "alakzatok_es_kolt_eszkozok",
+              "name": "Költői eszközök és alakzatok",
+              "short_description": "A tanuló azonosítja és értelmezi a leggyakoribb képeket és alakzatokat (metafora, hasonlat, megszemélyesítés, ismétlés, ellentét).",
+              "example_tasks": [
+                "Kapott versszakban jelöld meg a metaforákat és hasonlatokat, majd írd le, milyen jelentéstöbbletet hordoznak (3–4 mondat).",
+                "Keress egy választott dal/vers szövegében legalább 5 alakzatot (ismétlés, fokozás, ellentét, kérdés), és röviden magyarázd a hatásukat.",
+                "Írj át egy bekezdést „száraz” prózából képekben gazdagabb változatba legalább 4 költői eszköz tudatos használatával, majd jelöld be őket."
+              ]
+            },
+            {
+              "key": "verseles_es_ritmus_alapok",
+              "name": "Verselés és ritmus – alapok",
+              "short_description": "A tanuló felismeri a ritmikai szerveződés alapjelenségeit (ütemhangsúly, rím, strófaszerkezet), és egyszerűen leírja a formát.",
+              "example_tasks": [
+                "Egy megadott versben jelöld a rímképletet, nevezd meg a rímfajtákat (páros, keresztrím, ölelkező), és írd le a strófák számát.",
+                "Két versrészlet közül döntsd el, melyik ütemhangsúlyos jellegű, és indokold 3 sor konkrét megfigyelésével (hangsúlyok, tagolás).",
+                "Készíts saját 8 soros verset megadott rímképlettel (pl. abab), majd írd le 4 mondatban, miért ezt a formát választottad a témához."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "szobeli_es_irasbeli_kifejezes",
+          "name": "Szóbeli és írásbeli kifejezés, érvelés",
+          "short_description": "A tanuló szabatosan fogalmaz, vitázik, rövid elemző/érvelő szövegeket ír, és tudatosan szerkeszti a bekezdéseket.",
+          "sub_topics": [
+            {
+              "key": "ertetelmezo_felelet_es_prezi",
+              "name": "Értelmező felelet és rövid prezentáció",
+              "short_description": "A tanuló lényegkiemelő, szövegre támaszkodó szóbeli feleletet/prezentációt tart megfelelő felépítéssel.",
+              "example_tasks": [
+                "Készíts 2 perces értelmező feleletet egy versről: téma, beszélő, hangnem, 2 kulcsidézet és következtetés.",
+                "Tarts 3 perces prezentációt egy választott irodalmi toposzról (pl. út, tavasz, halál) 2 mű példájával; a végén tegyél fel 2 vitaindító kérdést.",
+                "Készíts vázlatot egy felelethez, majd jelöld, hol használsz idézetet és hol saját megfogalmazást (legalább 3 idézethely)."
+              ]
+            },
+            {
+              "key": "ervenyes_erveles_alapjai",
+              "name": "Érvényes érvelés alapjai",
+              "short_description": "A tanuló megkülönbözteti a tényt és véleményt, felépít egy egyszerű érvelést és felismeri a gyakori érvelési hibákat.",
+              "example_tasks": [
+                "Írj 200–250 szavas érvelést a kérdésről: „Kötelező olvasmányok nélkül is lehet-e irodalmi műveltséget szerezni?” Legalább 3 érvet és 1 ellenérvet használj.",
+                "Kapott vitaszövegben jelöld a tényállításokat és véleményeket külön, majd nevezd meg az érvelés 2 gyenge pontját (pl. általánosítás, személyeskedés).",
+                "Készíts érvtérképet egy állításhoz (tézis–érvek–példák–következtetés), és írj hozzá 5 mondatos összegzést."
+              ]
+            },
+            {
+              "key": "idezet_es_hivatkozas_alapok",
+              "name": "Idézetkezelés és hivatkozás alapjai",
+              "short_description": "A tanuló pontosan idéz, jelöli a forrást, és beépíti az idézetet saját mondatszerkezetbe értelmező megjegyzéssel.",
+              "example_tasks": [
+                "Adj meg 3 rövid idézetet egy versből, és mindegyikhez írj 2–3 mondatos értelmezést úgy, hogy az idézet a saját mondatod része legyen.",
+                "Egy novella elemzésében használj legalább 2 szó szerinti és 2 tartalmi idézetet; jelöld, melyik melyik, és indokold a választásodat.",
+                "Javíts ki egy hibás idézetkezelést tartalmazó bekezdést (idézőjelek, forrásjelölés, bevezető mondat), majd írd át szabályosan."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mitosz_es_antik_irodalom",
+      "name": "Mítosz és antik irodalom",
+      "short_description": "A tanulók a mítosz mint kulturális alapminta működését és az antik görög–római irodalom meghatározó műfajait és alkotásait értelmezik, a későbbi európai irodalomra gyakorolt hatásukkal együtt.",
+      "sub_topics": [
+        {
+          "key": "mitologiai_gondolkodas_es_toposzok",
+          "name": "Mitológiai gondolkodás és toposzok",
+          "short_description": "A görög és római mítoszok alapmotívumainak, archetípusainak és kulturális funkcióinak felismerése.",
+          "sub_topics": [
+            {
+              "key": "archetipusok_hos_utja",
+              "name": "Archetípusok és a hős útja",
+              "short_description": "A tanuló azonosítja a hőstípusokat, próbatételeket, segítőket és ellenfeleket, és értelmezi a mintázatot egy történetben.",
+              "example_tasks": [
+                "Válassz egy ismert mítoszt (pl. Héraklész-történet), és készíts „hős útja” vázlatot 8–10 lépésben (kihívás–segítség–próba–jutalom–hazatérés).",
+                "Hasonlíts össze egy mítoszbeli hőst egy modern film/sorozat hősével: írj 10 mondatot 3 hasonlósággal és 2 különbséggel, konkrét példákkal.",
+                "Írj 150–200 szavas értelmezést arról, miért alkalmasak a mítoszok közösségi normák és félelmek „elmesélésére”, legalább 2 mítoszbeli helyzetre hivatkozva."
+              ]
+            },
+            {
+              "key": "toposzok_motivumok_atvivodese",
+              "name": "Toposzok és motívumok továbbélése",
+              "short_description": "A tanuló felismeri a mítoszokból eredő toposzokat (pl. hybris, végzet, alvilágjárás) későbbi szövegekben.",
+              "example_tasks": [
+                "Kapott vers/novellarészlet alapján azonosíts 2 mitológiai eredetű toposzt, és írd le, hogyan módosul a jelentésük a modern szövegben.",
+                "Készíts plakátvázlatot (szöveges leírással) egy „alvilágjárás” toposzú műhöz: jelöld a szimbólumokat és írd le a magyarázatukat.",
+                "Írj össze 6 magyar köznyelvi kifejezést vagy utalást mitológiai eredettel (pl. „sziszifuszi munka”), és mindegyikhez adj 1 mondatos eredetmagyarázatot."
+              ]
+            },
+            {
+              "key": "mitosz_es_valosag_viszonya",
+              "name": "Mítosz és valóság viszonya",
+              "short_description": "A tanuló megkülönbözteti a mítosz magyarázó, példázó és identitásképző funkcióit, és értelmezi a világkép elemeit.",
+              "example_tasks": [
+                "Egy teremtésmítosz rövid összefoglalása után írd le 5 pontban, milyen kérdésekre ad választ (eredet, rend, erkölcs, hatalom, halál).",
+                "Hasonlíts össze egy mítoszbeli ok-okozati magyarázatot egy természettudományos magyarázattal: írj 8–10 mondatos összevetést stílusra és célra fókuszálva.",
+                "Fogalmazz meg 3 állítást arról, hogyan hat a mítosz a közösség identitására, és mindegyiket támaszd alá 1 példával (név, jelképek, ünnepek)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "antik_epika_es_hoskolteszet",
+          "name": "Antik epika és hősköltészet",
+          "short_description": "Az eposz műfaji sajátosságainak, a hőseszménynek és az epikus elbeszélés technikáinak vizsgálata.",
+          "sub_topics": [
+            {
+              "key": "eposzi_kellekek_es_szerkezet",
+              "name": "Eposzi kellékek és szerkezet",
+              "short_description": "A tanuló felismeri az eposz jellegzetes eszközeit (invokáció, seregszemle, eposzi hasonlat) és a kompozíciós elveket.",
+              "example_tasks": [
+                "Olvass el egy eposzrészletet (pl. Iliász vagy Odüsszeia választott részlet), és jelöld meg benne az eposzi hasonlatot, majd írd le a funkcióját.",
+                "Készíts táblázat nélküli felsorolást 6 eposzi kellékről, és mindegyikhez írj 1 példamondatot (szöveghely nélkül, saját megfogalmazással).",
+                "Írj 180–220 szavas mini-elemzést arról, hogyan épít feszültséget az epikus elbeszélő egy csatajelenetben (időkezelés, részletezés, ismétlés)."
+              ]
+            },
+            {
+              "key": "hoseszmeny_es_ertekrend",
+              "name": "Hőseszmény és értékrend az antik epikában",
+              "short_description": "A tanuló értelmezi a hős döntéseit (becsület, dicsőség, sors) és összeveti modern értékválasztásokkal.",
+              "example_tasks": [
+                "Írj 10–12 mondatos jellemzést egy antik hősről (pl. Akhilleusz vagy Odüsszeusz): 3 erény, 2 gyengeség, 2 döntési helyzet példával.",
+                "Vitaindító: „A hősnek kötelessége a közösségért áldozatot hozni.” Írj pro és kontra érveket (legalább 3–3), antik példával.",
+                "Készíts „értéktérképet” egy jelenethez: sorold fel a konfliktusban ütköző értékeket, és írd le, melyik miért kerül előtérbe."
+              ]
+            },
+            {
+              "key": "elbeszeles_modja_es_nezopont",
+              "name": "Elbeszélésmód és nézőpont az epikában",
+              "short_description": "A tanuló azonosítja az elbeszélő szerepét, a nézőpontváltásokat és a késleltetés eszközeit.",
+              "example_tasks": [
+                "Egy elbeszélő részletben jelöld meg, hol szólal meg az elbeszélő közvetlenül (kommentár), és írd le, milyen hatást kelt.",
+                "Írj át egy rövid epizódot más nézőpontból (pl. mellékszereplő szemével) 120–160 szóban, majd jelöld, mi változott az értékelésben.",
+                "Keresd meg egy történetben a „késleltetés” jelét (pl. kitérők, ismétlések), és magyarázd el 6–8 mondatban, miért működik."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "antik_drama_es_tragedia",
+          "name": "Antik dráma és tragédia",
+          "short_description": "A görög tragédia alapfogalmai (konfliktus, katarzis, kar) és a sors–szabadság kérdésének elemzése kiemelt művek részletein.",
+          "sub_topics": [
+            {
+              "key": "tragedia_szerkezete_es_kar",
+              "name": "A tragédia szerkezete és a kar szerepe",
+              "short_description": "A tanuló megérti a tragédia felépítését, és értelmezi a kar kommentáló, közösségi funkcióját.",
+              "example_tasks": [
+                "Olvass el egy tragédiarészletet (pl. Antigoné választott jelenet), és írd le a konfliktus két pólusát 5 mondatban.",
+                "Jelöld meg a kar megszólalását egy részletben, és írj 6–8 mondatot arról, milyen „közösségi nézőpontot” képvisel.",
+                "Készíts rövid (max. 1 oldal) jelenetvázlatot: hogyan állítanád színpadra ugyanazt a konfliktust mai iskolai környezetben?"
+              ]
+            },
+            {
+              "key": "sors_hybris_es_felelosseg",
+              "name": "Sors, hybris és felelősség",
+              "short_description": "A tanuló elemzi, hogyan ütközik az isteni/sorsszerű rend és az emberi döntés, és milyen erkölcsi kérdéseket vet fel.",
+              "example_tasks": [
+                "Írj 200–250 szavas értelmezést: a tragikus hős hibája inkább jellemhiba vagy helyzetkényszer? Támaszd alá 2 szöveghelyre utalva.",
+                "Válassz ki 3 kulcsmondatot egy tragédiából, és mindegyikhez írd le, milyen döntési felelősséget fejez ki.",
+                "Készíts vitakártyát: „A végzet elkerülhetetlen” vs. „A döntéseink számítanak” – mindkét oldalra 3 érv, antik példával."
+              ]
+            },
+            {
+              "key": "katarzis_es_befogadoi_hatas",
+              "name": "Katarzis és befogadói hatás",
+              "short_description": "A tanuló értelmezi a katarzis fogalmát, és megfogalmazza, milyen érzelmi-erkölcsi hatást gyakorolhat egy dráma a befogadóra.",
+              "example_tasks": [
+                "Írj 8–10 mondatot arról, milyen érzéseket váltott ki belőled egy tragédiarészlet, és melyik szöveghely idézte elő ezt a hatást.",
+                "Magyarázd el saját szavaiddal a katarzis fogalmát, majd adj 2 példát (egy antik és egy modern film/irodalmi élmény) párhuzamként.",
+                "Készíts rövid (max. 150 szavas) ajánlót egy tragédiához osztálytársadnak: mire figyeljen olvasáskor, hogy megértse a hatását?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "bibliai_hagyomany_es_kozepkori_irodalom",
+      "name": "Bibliai hagyomány és középkori irodalom",
+      "short_description": "A tanulók a bibliai történetek és motívumok irodalmi továbbélését, valamint a középkori európai és magyar irodalom alapműfajait és értékrendjét vizsgálják szövegközpontú megközelítéssel.",
+      "sub_topics": [
+        {
+          "key": "bibliai_mufajok_es_alapmotivumok",
+          "name": "Bibliai műfajok és alapmotívumok",
+          "short_description": "Zsoltár, példázat, evangéliumi történet, apokaliptikus képek: a bibliai szöveg nyelvi és gondolati sajátosságainak értelmezése.",
+          "sub_topics": [
+            {
+              "key": "parabola_es_tanulsag",
+              "name": "Példázat (parabola) és tanulság",
+              "short_description": "A tanuló felismeri a példázat szerkezetét, és megfogalmazza a tanulságot több lehetséges értelmezésben.",
+              "example_tasks": [
+                "Olvass el egy rövid példázatot, és írd le 2–3 mondatban a történet szó szerinti jelentését, majd 2–3 mondatban a tanulságot.",
+                "Írj két eltérő értelmezést ugyanahhoz a példázathoz (pl. egyéni és közösségi nézőpont), és mindkettőhöz adj 1 kortárs példát.",
+                "Készíts saját rövid (8–10 mondatos) példázatot egy mai helyzetről (pl. közösségi média), majd írd le a tanulságot 1 mondatban."
+              ]
+            },
+            {
+              "key": "zsoltar_hangnem_es_kepek",
+              "name": "Zsoltár: hangnem és képiség",
+              "short_description": "A tanuló azonosítja a megszólítás, könyörgés, hálaadás elemeit, és értelmezi a képeket és párhuzamokat.",
+              "example_tasks": [
+                "Egy zsoltár részletében jelöld a megszólításokat és a párhuzamos szerkezeteket, majd írd le, milyen ritmust és hatást hoznak létre.",
+                "Írj 120–160 szavas értelmezést arról, milyen élethelyzet rajzolódik ki a beszélő szavaiból, és idézz legalább 2 rövid szöveghelyet.",
+                "Készíts modern „átiratot” (max. 12 sor) egy zsoltár hangulatára: tartsd meg a megszólítás és kérés szerkezetét, de mai képekkel dolgozz."
+              ]
+            },
+            {
+              "key": "bibliai_toposzok_irodalomban",
+              "name": "Bibliai toposzok az irodalomban",
+              "short_description": "A tanuló felismeri a bibliai utalásokat (pl. bűn–bűnhődés, áldozat, testvérviszály, puszta) más szövegekben.",
+              "example_tasks": [
+                "Kapott versben/novellában azonosíts 2 bibliai utalást (szó, kép, motívum), és írd le, hogyan változik a jelentés az új környezetben.",
+                "Gyűjts 5 magyar közmondást/szólást bibliai eredettel (pl. „a tékozló fiú”), és mindegyikhez írj 1 mondatos magyarázatot.",
+                "Írj 200 szavas összehasonlítást: egy bibliai történet (választott) és egy modern történet konfliktusa miben hasonló és miben eltér?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kozepkori_vilagkep_es_mufajok",
+          "name": "Középkori világkép és irodalmi műfajok",
+          "short_description": "A középkori gondolkodás (vallás, rendiség, lovagi eszmény) és a jellegzetes műfajok (legenda, eposz, lovagregény) megismerése.",
+          "sub_topics": [
+            {
+              "key": "legenda_es_peldaadas",
+              "name": "Legenda és példázatosság",
+              "short_description": "A tanuló érti a legendák didaktikus célját, és elemzi a szentségábrázolás eszközeit.",
+              "example_tasks": [
+                "Olvass el egy legendaszöveg-részletet, és írd le 5 pontban, milyen erényeket állít példának.",
+                "Keress 3 tipikus „csodás” elemet a legendában, és magyarázd el, hogyan erősítik a példázatosságot.",
+                "Írj 150–180 szavas reflexiót: ma milyen műfajok tölthetnek be hasonló példamutató szerepet (pl. életrajzi film, portré)?"
+              ]
+            },
+            {
+              "key": "lovagi_kultura_es_szerelmi_lira",
+              "name": "Lovagi kultúra és udvari szerelem",
+              "short_description": "A tanuló felismeri a lovagi értékrendet és az udvari szerelem konvencióit, és összeveti modern kapcsolati mintákkal.",
+              "example_tasks": [
+                "Egy lovagi történet összefoglalása alapján írd le a lovagi eszmény 5 elemét (bátorság, hűség stb.) és adj mindegyikhez 1 példát.",
+                "Írj 10 mondatos összehasonlítást: udvari szerelem vs. mai romantikus ideál – legalább 3 hasonlóság és 3 különbség.",
+                "Készíts kreatív feladatot: írj egy „udvari szerelmi” üzenetet mai környezetben (pl. chat), úgy, hogy megtartod a tiszteletadó formákat."
+              ]
+            },
+            {
+              "key": "kozepkori_epika_es_hos",
+              "name": "Középkori epika és hőskép",
+              "short_description": "A tanuló elemzi a középkori hős típusát, a közösségi értékeket és a történelmi háttér szerepét az elbeszélésben.",
+              "example_tasks": [
+                "Kapott eposzrészlet alapján készíts jellemrajzot a főhősről 8 mondatban, legalább 2 konkrét szövegmegfigyeléssel.",
+                "Írj 180–220 szavas elemzést: hogyan jelenik meg a közösség és az egyén viszonya a történetben (kötelesség, becsület, hit)?",
+                "Készíts jelenetvázlatot: hogyan dolgoznál fel egy középkori hőstörténetet rövidfilmben (helyszín, konfliktus, zene, narráció)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kozepkori_magyar_irodalom_es_nyelvemlekek",
+          "name": "Középkori magyar irodalom és nyelvemlékek",
+          "short_description": "A magyar írásbeliség kezdetei, nyelvemlékek szerepe és a vallásos líra/próza megjelenése; a nyelv változásának tudatosítása.",
+          "sub_topics": [
+            {
+              "key": "nyelvemlekek_szovegvilaga",
+              "name": "Nyelvemlékek szövegvilága és nyelvi jelenségek",
+              "short_description": "A tanuló megfigyel egyszerű nyelvi változásokat (szókincs, helyesírás, mondatszerkezet) régi magyar szövegekben.",
+              "example_tasks": [
+                "Egy rövid nyelvemlék-részlet alapján gyűjts 10 olyan szót/írásmódot, amely eltér a maitól, és írd mellé a mai megfelelőjét.",
+                "Írj 8–10 mondatos magyarázatot: miért nehéz egy régi szöveget olvasni, és milyen „fogódzókat” használhatsz (kontekstus, ismétlés, hasonló szavak).",
+                "Készíts 120–150 szavas „mai nyelvű” átfogalmazást egy rövid részletről, majd jelöld, hol kellett a mondatszerkezetet átalakítanod."
+              ]
+            },
+            {
+              "key": "vallasi_lira_es_imadsag",
+              "name": "Vallásos líra és imádságos beszédmód",
+              "short_description": "A tanuló értelmezi a könyörgés, bűnvallás, hálaadás beszédmódját, és felismeri a retorikai elemeket.",
+              "example_tasks": [
+                "Kapott imádságos szövegben jelöld a megszólítást, a kéréseket és az indoklást; írj 6 mondatot a szerkezet funkciójáról.",
+                "Írj 150–200 szavas rövid elemzést: milyen képekkel és érvekkel próbálja a beszélő „meggyőzni” a megszólítottat?",
+                "Kreatív feladat: írj 10–12 soros „könyörgő” szöveget egy mai problémáról (pl. vizsga, konfliktus), a vallásos beszédmód szerkezetét követve."
+              ]
+            },
+            {
+              "key": "kulturhistorikus_kontextus_kozepkor",
+              "name": "Kultúrtörténeti háttér: középkor és írásbeliség",
+              "short_description": "A tanuló megérti az egyház, az iskola és a könyvkultúra szerepét, és összekapcsolja a szövegek témáival.",
+              "example_tasks": [
+                "Készíts 6 pontos időrendi vázlatot: milyen intézmények segítették az írásbeliséget a középkorban, és miért?",
+                "Írj 180–220 szavas magyarázatot arról, hogyan befolyásolja a szöveg témáját és stílusát az, hogy kéziratban, szűk közösségnek készült.",
+                "Válassz egy középkori témát (zarándoklat, kolostor, lovagság), és írj hozzá 5 lehetséges „irodalmi kérdést”, amire egy korabeli szöveg választ adhat."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "humanizmus_reneszansz_es_kora_ujkor",
+      "name": "Humanizmus, reneszánsz és kora újkor",
+      "short_description": "A tanulók megismerik a reneszánsz ember- és világképét, a humanista műveltségeszményt, valamint a korszak jellegzetes műfajait és stílusát, különös tekintettel a magyar vonatkozásokra.",
+      "sub_topics": [
+        {
+          "key": "humanista_muveszeti_eszmey_es_mufajok",
+          "name": "Humanista műveltségeszmény és műfaji megújulás",
+          "short_description": "Az antik minták újrafelfedezése, az emberközpontúság és a műfajok (levél, dialógus, epigramma) reneszánsz átalakulása.",
+          "sub_topics": [
+            {
+              "key": "antik_mintak_utanaerese",
+              "name": "Antik minták utánérése és imitáció",
+              "short_description": "A tanuló felismeri az antik hagyomány tudatos követését (téma, forma, toposz), és megfogalmazza, miben tér el a reneszánsz változat az eredetitől.",
+              "example_tasks": [
+                "Kapott rövid reneszánsz szövegrészletben jelöld meg az antik utalásokat (istennevek, toposzok, hősök), majd írd le 5–6 mondatban, mit szolgálnak ezek az utalások.",
+                "Válassz egy ókori témát (pl. carpe diem) és keress hozzá egy reneszánsz példát az órán olvasott szövegek közül; írj 180–220 szavas összehasonlítást a hangnemről és célról.",
+                "Írj 6–8 soros epigrammát egy mai iskolai helyzetről (pl. dolgozat, szünet), antik/reneszánsz hangütést utánozva, majd jelöld benne a használt retorikai eszközöket."
+              ]
+            },
+            {
+              "key": "humanista_level_es_onreprezentacio",
+              "name": "Humanista levél és önreprezentáció",
+              "short_description": "A tanuló értelmezi a levél műfajának célját (meggyőzés, kapcsolattartás, önkép), és tudatosan szerkeszt rövid, koherens levelet.",
+              "example_tasks": [
+                "Egy humanista levélrészlet alapján írd le 5 pontban, hogyan építi fel a szerző a saját hitelességét (tekintély, tudás, érvelés, hangnem).",
+                "Írj 180–220 szavas levelet egy képzeletbeli mecénásnak, amelyben támogatást kérsz egy iskolai kulturális projektre; legyen benne tézis, 3 érv, és udvarias zárás.",
+                "Kapott „nyers” levélszöveget szerkessz át humanista stílusban: javítsd a megszólítást, a gondolatmenetet és a zárást, majd indokold 4 mondatban a változtatásokat."
+              ]
+            },
+            {
+              "key": "egyeni_hang_es_szemelyesseg",
+              "name": "Személyesség, egyéni hang, énkép",
+              "short_description": "A tanuló felismeri a személyes megszólalás formáit (önéletrajzi mozzanat, vallomásosság), és ezek hatását a befogadóra.",
+              "example_tasks": [
+                "Olvass el egy rövid reneszánsz vallomásos szöveget/részletet, és jelöld meg 3 nyelvi jelet, ami személyességet teremt (E/1, érzelmi szókincs, megszólítás).",
+                "Írj 120–160 szavas reflektáló bekezdést: mikor hiteles számodra egy „én-beszéd”, és mikor érzed retorikai szerepnek? Hivatkozz 2 szövegjelenségre.",
+                "Kreatív feladat: írj egy 10–12 mondatos „önbemutatkozó” szöveget reneszánsz hangnemben, amelyben tudatosan építesz fel egy ideális énképet; utána jelöld a retorikai fogásokat."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "reneszansz_lira_es_toposzok",
+          "name": "Reneszánsz líra és toposzok",
+          "short_description": "A reneszánsz líra témái (szerelem, természet, mulandóság) és jellegzetes toposzai (carpe diem, locus amoenus) értelmezése.",
+          "sub_topics": [
+            {
+              "key": "carpe_diem_es_mulandosag",
+              "name": "Carpe diem és mulandóságtudat",
+              "short_description": "A tanuló értelmezi a pillanat megragadásának gondolatát és a mulandóságra reflektáló képeket, valamint ezek érzelmi hatását.",
+              "example_tasks": [
+                "Egy carpe diem témájú versrészletben jelöld a mulandóság képeit (idő, évszak, hervadás), majd írd le 6–8 mondatban, milyen érzelmi logikára épül a szöveg.",
+                "Készíts 200–240 szavas összehasonlító elemzést: carpe diem vs. „memento mori” szemlélet – miben eltér a cél és a hangnem? Használj 2–2 konkrét példát.",
+                "Írj 8 soros verset, amelyben a carpe diem gondolatot mai környezetben (pl. telefon, város, utazás) jeleníted meg; jelöld a 3 legfontosabb költői képet."
+              ]
+            },
+            {
+              "key": "locus_amoenus_es_term_esztetika",
+              "name": "Locus amoenus és a természet esztétikája",
+              "short_description": "A tanuló felismeri az idilli hely toposzát, és megfogalmazza, hogyan válik a természet a belső állapot tükörképévé.",
+              "example_tasks": [
+                "Kapott szövegben jelöld meg az idill elemeit (helyszín, fény, hangok, illatok), majd írd le, milyen hangulatot teremtenek (5–6 mondat).",
+                "Készíts rövid (max. 1 oldal) „helyleírás-elemzést”: hogyan épül fel a tájleírás, és milyen szerepe van a történet/vers jelentésében?",
+                "Kreatív: írj 120–160 szavas prózarészletet egy „locus amoenus” helyszínről Magyarországon, és adj 3 utalást a beszélő lelkiállapotára képekben."
+              ]
+            },
+            {
+              "key": "szerelem_es_retoria",
+              "name": "Szerelem, udvarlás és retorikai szerepjáték",
+              "short_description": "A tanuló megfigyeli a szerelmi líra retorikai helyzeteit (megszólítás, dicséret, panasz), és értelmezi a szerepversek működését.",
+              "example_tasks": [
+                "Egy szerelmi versben jelöld a megszólítást, a dicséret elemeit és a panasz fordulatait; írd le 6 mondatban a beszélő stratégiáját.",
+                "Írj 180–220 szavas érvelést: a szerelmi líra inkább őszinte vallomás vagy inkább művészi szerepjáték? Használj 2 szövegmegfigyelést és 1 ellenérvet.",
+                "Készíts két rövid (6–6 soros) versváltozatot ugyanarról a helyzetről: az egyik dicsérő, a másik ironikus; utána írd le, mi változott a retorikai eszközökben."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kora_ujkori_pr_oza_es_gondolkodas",
+          "name": "Kora újkori próza és gondolkodás",
+          "short_description": "A kora újkor társadalmi-világképi változásai és a prózai műfajok (útleírás, értekező próza, dialógus) kibontakozása.",
+          "sub_topics": [
+            {
+              "key": "utleiras_es_nezopont",
+              "name": "Útleírás és nézőpont",
+              "short_description": "A tanuló értelmezi, hogyan alakítja a szerző a látottak bemutatását (válogatás, értékelés, kulturális összehasonlítás).",
+              "example_tasks": [
+                "Egy útleírásrészlet alapján gyűjts 5 megfigyelést és 5 értékelő jelzőt; írd le, mit árul el ez a szerző nézőpontjáról.",
+                "Írj 200 szavas „útinapló” részletet egy budapesti helyszínről úgy, hogy egy 16. századi humanista szemével látod; jelöld a használt összehasonlításokat.",
+                "Kapott két útleírásrészletből döntsd el, melyik tárgyilagosabb, és indokold 6–8 mondatban konkrét nyelvi példákkal."
+              ]
+            },
+            {
+              "key": "ertekezo_proza_es_erveles",
+              "name": "Értekező próza és érvelés",
+              "short_description": "A tanuló felismeri az értekező szöveg tézis–érv–példa szerkezetét, és röviden alkalmazza azt.",
+              "example_tasks": [
+                "Egy értekező prózarészletben jelöld a tézist és 3 érvet, majd készíts 6 pontos vázlatot a gondolatmenetről.",
+                "Írj 220–260 szavas mini-esszét a kérdésről: „Miért fontos a műveltség?” – legyen benne bevezetés, 3 érv, ellenérv és következtetés.",
+                "Javíts ki egy érvelési hibákat tartalmazó bekezdést (pl. általánosítás, hamis ok-okozat), és írd le 4 mondatban, miért volt hibás."
+              ]
+            },
+            {
+              "key": "dialogus_es_nezetek_utkoztetese",
+              "name": "Dialógus és nézetek ütköztetése",
+              "short_description": "A tanuló megérti a dialógus műfaját mint nézetek vitáját, és felismeri a beszélők szerepét és stratégiáját.",
+              "example_tasks": [
+                "Egy dialógus-részletben jelöld, ki képviseli az egyik és a másik álláspontot; írd le 8–10 mondatban, melyik érvelés a meggyőzőbb és miért.",
+                "Írj 12–14 soros dialógust két szereplő között a témáról: „klasszikus könyvek vs. rövid videók” – mindkét oldal használjon legalább 2 érvet és 1 példát.",
+                "Készíts „beszédaktus-térképet”: jelöld meg egy dialógusban a kérdést, állítást, ellenérvet, engedményt és lezárást (legalább 8 elem)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "szinhaz_es_dramatortenet_antikig_shakespeareig",
+      "name": "Színház és drámatörténet az antiktól Shakespeare-ig",
+      "short_description": "A tanulók a dráma és a színház alapfogalmait, a konfliktus- és jellemábrázolás módjait, valamint a drámatörténet kiemelt állomásait vizsgálják az antik hagyománytól az angol reneszánszig.",
+      "sub_topics": [
+        {
+          "key": "dramafogalmak_es_szinhazi_nyelv",
+          "name": "Drámafogalmak és színházi nyelv",
+          "short_description": "Alapfogalmak: konfliktus, cselekmény, jelenet, felvonás, dialógus, monológ, tragédia/komédia, színpadi utasítások.",
+          "sub_topics": [
+            {
+              "key": "konfliktus_es_cselekmeny",
+              "name": "Konfliktus és cselekményszervezés",
+              "short_description": "A tanuló azonosítja a fő konfliktust, a konfliktus eszkalációját, a fordulópontokat és a lezárás típusát.",
+              "example_tasks": [
+                "Egy drámarészletben jelöld a konfliktus kirobbanásának pillanatát és a tétet; írd le 6 mondatban, miért nem oldható könnyen a helyzet.",
+                "Készíts „cselekmény-lépcsőt” egy jelenetről 7 pontban (kiindulás–bonyodalom–fordulat–tetőpont–következmény–lecsengés–lezárás).",
+                "Írj 180–220 szavas értelmezést: milyen alternatív döntés oldhatná fel a konfliktust, és miért nem választja ezt a szereplő?"
+              ]
+            },
+            {
+              "key": "monolog_es_rejtett_informacio",
+              "name": "Monológ és rejtett információ",
+              "short_description": "A tanuló értelmezi a monológ szerepét (belső beszéd, terv, dilemmák), és megfigyeli, hogyan irányítja a befogadót.",
+              "example_tasks": [
+                "Egy monológban jelöld 3 olyan sort, ahol a szereplő „leleplezi” a valódi szándékát; írd le 5–6 mondatban, ez hogyan változtatja a nézői tudást.",
+                "Írj egy 10–12 soros monológot egy mai helyzetben (pl. iskolai konfliktus), ahol a szereplő mást mond kifelé, mint amit gondol; jelöld a kettősséget.",
+                "Kapott monológ alapján készíts jellemrajzot: 3 motiváció, 2 félelem, 2 cél – mindegyikhez utalj egy konkrét szövegjelre."
+              ]
+            },
+            {
+              "key": "szinpadi_utasitasok_es_jatekter",
+              "name": "Színpadi utasítások és játéktér",
+              "short_description": "A tanuló megérti a színpadi utasítások funkcióját (mozgás, gesztus, tér), és képes egyszerű rendezői koncepciót megfogalmazni.",
+              "example_tasks": [
+                "Egy jelenetben gyűjts ki 6 színpadi utasítást, és írd le, mit tesznek hozzá a hangulathoz és a konfliktushoz.",
+                "Készíts rövid rendezői tervet (max. 12 mondat): díszlet, fény, zene, szereplők mozgása – hogyan emelnéd ki a feszültséget?",
+                "Írj át egy jelenetet úgy, hogy a színpadi utasításokból legalább 4-et megváltoztatsz (pl. csend vs. zene, távolság vs. közelség), majd magyarázd el a hatást."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "shakespeare_es_angol_reneszansz",
+          "name": "Shakespeare és az angol reneszánsz",
+          "short_description": "Shakespeare drámáinak alapkonfliktusai, jellemábrázolása, nyelvi rétegzettsége és műfaji sokszínűsége (tragédia, vígjáték, történelmi dráma).",
+          "sub_topics": [
+            {
+              "key": "tragikus_hos_es_belso_vivodas",
+              "name": "Tragikus hős és belső vívódás",
+              "short_description": "A tanuló elemzi a tragikus hős döntéseit, dilemmáit és felelősségét, valamint a sors és jellem szerepét a bukásban.",
+              "example_tasks": [
+                "Egy Shakespeare-tragédia részletében jelöld a hős dilemmáját 2–3 kulcsmondattal, majd írd le 8–10 mondatban a döntés tétjét.",
+                "Írj 220–260 szavas elemzést: a hős bukását inkább a külső körülmények vagy a jelleme okozza? Használj 3 konkrét szövegmegfigyelést.",
+                "Készíts rövid vitafeladatot: írd le 3 érvvel, miért sajnáljuk a tragikus hőst, és 3 érvvel, miért hibáztatjuk – mindkettőhöz példát kapcsolva."
+              ]
+            },
+            {
+              "key": "nyelvi_retegzettesseg_es_stilus",
+              "name": "Nyelvi rétegzettség és stílus",
+              "short_description": "A tanuló megfigyeli a magas és alacsony stílusréteg váltakozását, a szójátékot, képiséget és retorikai eszközöket.",
+              "example_tasks": [
+                "Kapott részletben gyűjts 5 képet/alakzatot (metafora, ellentét, kérdés), és írd le, hogyan erősítik a feszültséget vagy humort.",
+                "Hasonlíts össze két jelenetet (udvari vs. „népi” szereplők): írj 180–220 szavas összevetést a szóhasználatról és mondatszerkesztésről.",
+                "Készíts saját rövid (10–12 soros) dialógust, amelyben tudatosan váltasz stílusréteget (udvarias–szlenges), majd jelöld a váltás pontjait."
+              ]
+            },
+            {
+              "key": "mufaji_keveredes_es_jatek",
+              "name": "Műfaji keveredés és színházi játékosság",
+              "short_description": "A tanuló felismeri a tragikomikus elemeket, az álcázás, félreértés, szerepcsere dramaturgiai funkcióját.",
+              "example_tasks": [
+                "Egy vígjátéki részletben jelöld a félreértés okát és következményeit; készíts 6 pontos cselekményvázlatot.",
+                "Írj 200–240 szavas értelmezést: miért hatásos az álcázás motívuma, és hogyan teszi próbára a szereplők önismeretét?",
+                "Kreatív: írj egy 1 oldalas jelenetet, ahol egy szereplő „szerepet játszik” (pl. hamis identitás), és a végén derül ki az igazság; jelöld a fordulópontot."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "szinhazi_konvenciok_es_korabeli_kontextus",
+          "name": "Színházi konvenciók és korabeli kontextus",
+          "short_description": "A korabeli színház társadalmi szerepe, a játszóhelyek és a nézői szokások, valamint a dráma befogadásának történeti keretei.",
+          "sub_topics": [
+            {
+              "key": "jatszohelyek_es_nezoi_szerep",
+              "name": "Játszóhelyek és nézői szerep",
+              "short_description": "A tanuló megérti, hogyan befolyásolja a színházi tér és a közönség összetétele a játékstílust és a dráma hatását.",
+              "example_tasks": [
+                "Írj 8–10 mondatot arról, miben más egy nyitott, zsúfolt játszóhely (pl. korabeli színház) befogadói élménye, mint egy mai kőszínházé.",
+                "Készíts rövid „színpadrajzot” szövegesen: hol lenne a színpad, hol a közönség, és hol történne egy titkos beszélgetés úgy, hogy a néző mindent értsen.",
+                "Válassz egy jelenetet, és írd le 6 pontban, milyen rendezői megoldással emelnéd ki a közönséggel való „összejátszást” (kiszólás, gesztus, fény)."
+              ]
+            },
+            {
+              "key": "tortenelmi_es_kulturalis_utalasok",
+              "name": "Történelmi és kulturális utalások",
+              "short_description": "A tanuló felismeri a drámák korabeli utalásait, és megérti, hogyan segít a kontextus az értelmezésben.",
+              "example_tasks": [
+                "Egy részletben jelöld meg 2 olyan kifejezést/utalást, amely korabeli társadalmi viszonyokra utal; írd le, mit jelenthetett a kor nézőjének.",
+                "Írj 180–220 szavas magyarázatot: miért lehet ugyanaz a konfliktus ma is érthető, még ha a környezet megváltozott is? Használj 2 párhuzamot.",
+                "Készíts 6 kérdésből álló „kontekstukvízt” egy drámához (kor, helyszín, társadalmi normák), majd válaszold meg röviden."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "reformacio_es_magyar_kora_ujkori_irodalom",
+      "name": "Reformáció és magyar kora újkori irodalom",
+      "short_description": "A tanulók a reformáció művelődéstörténeti hátterét, az anyanyelvi írásbeliség erősödését, valamint a 16–17. századi magyar irodalom jellegzetes műfajait és beszédmódjait értelmezik.",
+      "sub_topics": [
+        {
+          "key": "reformacio_kontekstus_es_anyak_nyelv",
+          "name": "A reformáció kontextusa és az anyanyelv szerepe",
+          "short_description": "A vallási megújulás hatása az oktatásra, könyvnyomtatásra, fordításirodalomra és a nyelvi normák alakulására.",
+          "sub_topics": [
+            {
+              "key": "forditas_es_ertelemadas",
+              "name": "Fordítás, értelmezés, közvetítés",
+              "short_description": "A tanuló megérti a fordítás kulturális jelentőségét, és megfigyeli, hogyan alakítja a nyelv a jelentést (szókincs, stílus, ritmus).",
+              "example_tasks": [
+                "Kapott régi magyar bibliafordítás-részletben gyűjts 8 archaikus szót, írd mellé a mai megfelelőjüket, majd írd le 4 mondatban, milyen hatást kelt az archaikus nyelv.",
+                "Hasonlíts össze egy rövid szöveg két változatát (régebbi vs. mai): írj 180–220 szavas elemzést a hangnem és érthetőség különbségeiről.",
+                "Írj 120–160 szavas „mai nyelvű” átfogalmazást egy rövid részletről úgy, hogy a tartalom maradjon, de a stílus közelebb legyen a mai beszédhez; jelöld a 3 legnagyobb változtatást."
+              ]
+            },
+            {
+              "key": "iskola_es_olvasokozonseg",
+              "name": "Iskola, olvasóközönség, nyilvánosság",
+              "short_description": "A tanuló megérti, hogyan bővül az olvasóközönség és milyen szerepe lesz az iskolának, prédikációnak, énekeskönyvnek a műveltség terjedésében.",
+              "example_tasks": [
+                "Készíts 7 pontos ok-okozati vázlatot: miért növeli a könyvnyomtatás és az iskola az anyanyelvi irodalom jelentőségét?",
+                "Írj 200–240 szavas magyarázatot: milyen típusú szövegek juthattak el a legtöbb emberhez a 16–17. században, és miért?",
+                "Válassz egy mai kommunikációs csatornát (pl. podcast, videó), és írj 10 mondatos párhuzamot arról, milyen szerepet tölthet be ma, mint akkor a prédikáció/ének."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "protestans_irodalom_es_vallasos_kolteszet",
+          "name": "Protestáns irodalom és vallásos költészet",
+          "short_description": "Zsoltárparafrázisok, hitvitázó és prédikációs szövegek, vallomásosság és közösségi hang a magyar református/evangélikus hagyományban.",
+          "sub_topics": [
+            {
+              "key": "zsoltarparafrazis_es_enek",
+              "name": "Zsoltárparafrázis és énekkultúra",
+              "short_description": "A tanuló felismeri az átdolgozás célját (közösségi éneklés), és elemzi a ritmust, ismétlést, megszólítást.",
+              "example_tasks": [
+                "Egy zsoltárparafrázis részletében jelöld meg az ismétléseket és párhuzamokat, majd írd le 6–8 mondatban, hogyan segítik a megjegyezhetőséget.",
+                "Írj 180–220 szavas elemzést: miben más egy közösségi ének szövegének nyelve, mint egy személyes lírai vallomásé? Használj 2 szövegjelenséget.",
+                "Kreatív: készíts 8 soros „parafrázist” egy mai témára (pl. vizsgadrukk), zsoltáros megszólítással és ismétléssel; jelöld a szerkezeti elemeket."
+              ]
+            },
+            {
+              "key": "hitvita_es_erveles",
+              "name": "Hitvitázó szöveg és érvelés",
+              "short_description": "A tanuló azonosítja a vitaszöveg érvelését (tézis, bizonyítás, cáfolat), és megfigyeli a retorikai eszközöket.",
+              "example_tasks": [
+                "Kapott hitvitázó részletben jelöld a tézist, 2 bizonyítékot és 1 cáfolatot; készíts 6 pontos gondolatmenet-vázlatot.",
+                "Írj 220–260 szavas érvelő szöveget egy iskolai vitatémáról (pl. telefonhasználat), a hitvita logikáját követve: állítás–ellenfél érve–cáfolat–következtetés.",
+                "Keress 5 retorikai fogást a részletben (kérdés, felszólítás, ellentét), és írd le mindegyikről 1 mondatban, mire szolgál."
+              ]
+            },
+            {
+              "key": "predikacio_es_pelda",
+              "name": "Prédikáció: példázat és erkölcsi tanítás",
+              "short_description": "A tanuló felismeri a prédikáció szerkezetét (idézet–magyarázat–alkalmazás), és értelmezi a példák szerepét.",
+              "example_tasks": [
+                "Egy prédikációrészletben jelöld a bibliai idézetet és a magyarázatot; írd le 6 mondatban, hogyan jut el a szerző a gyakorlati tanulsághoz.",
+                "Készíts 180–220 szavas „mini-prédikációt” egy közösségi szabályról (pl. tisztelet a vitában), példával és következtetéssel.",
+                "Írj 8–10 mondatos összehasonlítást: miben hasonlít a prédikáció szerkezete egy mai motivációs beszédhez, és miben különbözik?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "historia_es_irodalmi_emlekezet",
+          "name": "História, krónika és irodalmi emlékezet",
+          "short_description": "A történeti elbeszélés (krónika, história) mint identitás- és emlékezetképző forma; a tény és értelmezés viszonya.",
+          "sub_topics": [
+            {
+              "key": "elbeszelo_hitelesseg_es_perspektiva",
+              "name": "Elbeszélői hitelesség és perspektíva",
+              "short_description": "A tanuló megkülönbözteti a beszámoló és az értelmező kommentár rétegeit, és felismeri az elbeszélő célját.",
+              "example_tasks": [
+                "Egy krónikarészletben jelöld meg 3 „tényt” és 3 értékelő megjegyzést; írd le, hogyan befolyásolják a hitelességet.",
+                "Írj 200–240 szavas elemzést: miért fontos, hogy tudjuk, ki beszél és kinek a szemszögéből? Használj 2 konkrét példát a szövegből.",
+                "Kreatív: írj 10–12 mondatos „krónikarészletet” egy mai iskolai eseményről (pl. verseny), majd írd át ugyanazt egy másik szereplő nézőpontjából."
+              ]
+            },
+            {
+              "key": "hosok_es_peldakepek",
+              "name": "Hősök és példaképek a történeti elbeszélésben",
+              "short_description": "A tanuló értelmezi, hogyan válik egy szereplő példaképpé (erények, áldozat, közösségi haszon), és milyen eszközökkel épül a hőskép.",
+              "example_tasks": [
+                "Válassz egy történeti hőst bemutató részletet, és gyűjts 6 olyan kifejezést, amely „felemeli” a hőst; írd le, milyen képet építenek.",
+                "Írj 180–220 szavas összehasonlítást: történeti hős vs. modern „hős” (sportoló, influencer) – milyen erények számítanak és miért?",
+                "Készíts 5 pontban egy „pédaképpé válás” folyamatábrát: esemény–elbeszélés–kiemelés–közösségi érték–emlékezet."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "barokk_klasszicizmus_felvilagosodas_europaban",
+      "name": "Barokk, klasszicizmus és felvilágosodás Európában",
+      "short_description": "A tanulók a 17–18. századi európai irodalom korszakváltásait, poétikai jellemzőit és világképi hátterét értelmezik, különös tekintettel a barokk érzelmi-retorikai gazdagságára, a klasszicizmus normáira és a felvilágosodás racionális, társadalomkritikus szemléletére.",
+      "sub_topics": [
+        {
+          "key": "barokk_poetika_es_retorika",
+          "name": "Barokk poétika és retorika",
+          "short_description": "A barokk túlzás, ellentét, dinamizmus és hatáskeltés eszközeinek felismerése lírai és prózai szövegekben.",
+          "sub_topics": [
+            {
+              "key": "pátosz_ellentet_es_tulzas",
+              "name": "Pátosz, ellentét és túlzás",
+              "short_description": "A tanuló megfigyeli a barokk feszültségteremtés eszközeit (hiperbola, antitézis, halmozás) és értelmezi a hatásukat.",
+              "example_tasks": [
+                "Kapott barokk szövegrészletben jelöld meg a halmozásokat és túlzásokat, majd írd le 6–8 mondatban, milyen érzelmi hatást keltenek.",
+                "Gyűjts 5 antitézist (ellentétpárt) a szövegben, és mindegyikhez írd le, milyen világképi feszültséget fejez ki (pl. élet–halál, földi–égi).",
+                "Írj 10–12 mondatos mini-elemzést: miért működik a barokkban a „sok” és a „nagy”, és mikor válhat ez túlzóvá a befogadó számára?"
+              ]
+            },
+            {
+              "key": "metaforika_es_keprendszer",
+              "name": "Metaforika és képrendszer",
+              "short_description": "A tanuló értelmezi a barokk képek (vanitas, mulandóság, fény–árnyék) jelentéshálózatát és visszatérő motívumait.",
+              "example_tasks": [
+                "Egy vanitas jellegű részletben jelöld a mulandóság képeit (óra, hamu, por, hervadás), és írd le 5–6 mondatban, milyen üzenetet közvetítenek.",
+                "Készíts motívumtérképet: válassz 3 visszatérő barokk motívumot, és írd le mindegyikhez 2 lehetséges jelentést és 1 hatást.",
+                "Kreatív: írj 8 soros verset barokk képekkel egy mai témáról (pl. fogyasztás, hírfolyam), majd jelöld a használt képeket és magyarázd a jelentésüket."
+              ]
+            },
+            {
+              "key": "szonoklat_es_meggyozes",
+              "name": "Szónoklat és meggyőzés (retorikai szerkezet)",
+              "short_description": "A tanuló felismeri a retorikai felépítést (megszólítás–érvek–példák–zárás) és a hatáskeltő eszközöket (kérdések, felszólítások).",
+              "example_tasks": [
+                "Egy barokk jellegű szónoklatszövegben jelöld meg a bevezetést, a fő érveket és a lezárást; készíts 6 pontos összefoglaló vázlatot.",
+                "Írj 200–240 szavas meggyőző beszédet egy iskolai ügyben (pl. jótékonysági akció), használva legalább 2 retorikai kérdést és 1 halmozást.",
+                "Jelöld meg egy beszédben 5 hatáskeltő eszközt, és mindegyikhez írd le 1 mondatban, miért lehet hatásos a hallgatóra."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "klasszicizmus_norma_es_mintakovetes",
+          "name": "Klasszicizmus: norma, mérték és mintakövetés",
+          "short_description": "A klasszicizmus esztétikai elvei (arány, mérték, szabályosság) és a műfaji normák (dráma, óda, szatíra) megértése.",
+          "sub_topics": [
+            {
+              "key": "mufaji_szabalyok_es_harmonia",
+              "name": "Műfaji szabályok és harmónia",
+              "short_description": "A tanuló felismeri a klasszicista törekvést a rend, tisztaság és világos szerkezet iránt, és ezt példákkal támasztja alá.",
+              "example_tasks": [
+                "Kapott klasszicista szövegben jelöld a logikus szerkezeti egységeket, és írd le 6 mondatban, mitől „átlátható” a gondolatmenet.",
+                "Készíts 8 pontos ellenőrzőlistát: milyen jegyek alapján neveznél egy szöveget klasszicistának (nyelv, szerkezet, téma, hangnem).",
+                "Írj 150–180 szavas mini-esszét: mikor segít a szabályosság a művészi hatásban, és mikor válhat unalmassá? Hozz 2 példát."
+              ]
+            },
+            {
+              "key": "klasszicista_drama_alapelvek",
+              "name": "Klasszicista dráma alapelvek (rend, konfliktus, erkölcs)",
+              "short_description": "A tanuló érti a dráma erkölcsi tétjét és a konfliktus rendezett, világos kibontását, valamint a nézőre gyakorolt nevelő hatást.",
+              "example_tasks": [
+                "Egy drámai részletben jelöld a konfliktus erkölcsi kérdését 1 mondatban, majd sorolj fel 3 bizonyítékot a szövegből.",
+                "Írj 200–240 szavas elemzést: hogyan épül fel a konfliktus lépésről lépésre, és melyik ponton válik visszafordíthatatlanná?",
+                "Készíts rövid jelenetvázlatot (10–12 mondat): egy klasszicista „erkölcsi dilemmát” ültess át mai iskolai szituációba, megtartva a rendet és világosságot."
+              ]
+            },
+            {
+              "key": "szatira_es_tarsadalomkritika",
+              "name": "Szatíra és társadalomkritika",
+              "short_description": "A tanuló felismeri az irónia és gúny eszközeit, és megérti, hogyan bírál társadalmi jelenségeket egy szatirikus szöveg.",
+              "example_tasks": [
+                "Kapott szatírában jelöld meg 5 ironikus kifejezést vagy túlzást, és írd le, mit kritizálnak.",
+                "Írj 180–220 szavas érvelést: miért hatásosabb néha a gúny, mint a komoly figyelmeztetés? Támaszd alá 2 példával.",
+                "Kreatív: írj 10–12 mondatos rövid szatirikus jelenetet egy mai jelenségről (pl. „látszat-tanulás”), és jelöld benne a gúny eszközeit."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "felvilagosodas_eszmetortenet_es_irodalom",
+          "name": "Felvilágosodás: eszmetörténet és irodalom",
+          "short_description": "A felvilágosodás racionalizmusa, társadalmi reformgondolatai, szövegtípusai (esszé, pamflet, filozófiai párbeszéd) és az irodalom közéleti szerepe.",
+          "sub_topics": [
+            {
+              "key": "eszme_es_kozjo",
+              "name": "Ész, haladás és közjó",
+              "short_description": "A tanuló megérti a korszak központi fogalmait (ésszerűség, nevelés, szabadság), és felismeri ezek megjelenését irodalmi szövegekben.",
+              "example_tasks": [
+                "Egy felvilágosodás kori esszérészlet alapján írj 6 pontos vázlatot: mi a tézis, és milyen érvekkel támasztja alá a szerző.",
+                "Írj 200–240 szavas mini-esszét: „Miért fontos a kritikus gondolkodás?” – legyen benne 3 érv és 1 ellenérv, majd következtetés.",
+                "Kapott szövegben jelöld meg 5 olyan kifejezést, amely az „ész” vagy „haladás” eszméjét fejezi ki, és írd mellé 1 mondatban a jelentését."
+              ]
+            },
+            {
+              "key": "tarsadalomkritika_es_pamflet",
+              "name": "Társadalomkritika és pamflet",
+              "short_description": "A tanuló felismeri a pamflet célját (bírálat, provokáció), és elemzi a retorikai eszközöket (irónia, túlzás, példázat).",
+              "example_tasks": [
+                "Kapott pamfletszövegben jelöld meg a fő bírálati tárgyat és 3 retorikai fogást; írd le 6 mondatban, hogyan hat a szöveg.",
+                "Írj 180–220 szavas pamfletszerű szöveget egy iskolai problémáról (pl. késések), úgy, hogy a cél a változás elérése; legyen benne 2 ironikus fordulat.",
+                "Készíts összehasonlítást 10 mondatban: pamflet vs. tárgyilagos cikk – miben különböznek a célban, hangnemben, eszközökben?"
+              ]
+            },
+            {
+              "key": "filozofiai_dialogus_es_nezetvita",
+              "name": "Filozófiai dialógus és nézetvita",
+              "short_description": "A tanuló megérti a dialógus mint műfaj vitaszerkezetét, és képes érvek ütköztetésére és összegzésére.",
+              "example_tasks": [
+                "Egy filozófiai dialógusban jelöld, melyik szereplő milyen álláspontot képvisel; írj 8–10 mondatban összegzést a vita lényegéről.",
+                "Írj 12–14 soros dialógust a témáról: „szabadság vs. biztonság” – mindkét fél használjon legalább 2 érvet és 1 példát.",
+                "Készíts „vitaösszegző” bekezdést (120–150 szó): nevezd meg a legerősebb érvet mindkét oldalon, és írd le, te melyikhez állsz közelebb és miért."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "felvilagosodas_es_a_magyar_irodalom_kezdetei",
+      "name": "Felvilágosodás és a magyar irodalom kezdetei",
+      "short_description": "A tanulók a magyar felvilágosodás irodalmi és nyelvi törekvéseit, a nyelvújítás és nemzeti kultúra kapcsolatát, valamint a korszak jellegzetes műfajait és témáit dolgozzák fel.",
+      "sub_topics": [
+        {
+          "key": "nyelvujitas_es_nyelvi_tudatossag",
+          "name": "Nyelvújítás és nyelvi tudatosság",
+          "short_description": "A nyelvi változás tudatos irányítása: új szavak, stílusrétegek, nyelvi norma és identitás kérdései.",
+          "sub_topics": [
+            {
+              "key": "uj_szavak_es_szokincs_epites",
+              "name": "Új szavak és szókincséptés",
+              "short_description": "A tanuló felismeri a szóalkotás módjait (képzés, összetétel, tükörfordítás), és értelmezi a nyelvújítás célját.",
+              "example_tasks": [
+                "Gyűjts 10 ma használt, nyelvújítás korához köthető szót (tanári lista alapján), és mindegyikhez írj 1 mondatos magyarázatot a szóalkotás módjáról.",
+                "Kapott 10 idegen eredetű szóhoz javasolj magyarosabb megfelelőket (vagy körülírást), majd írd le 6 mondatban, mi lehet az előnye/hátránya a cserének.",
+                "Kreatív: alkoss 8 új szót modern jelenségekre (pl. értesítésáradat), és mindegyikhez írj 1 definíciót és 1 példamondatot."
+              ]
+            },
+            {
+              "key": "nyelvi_norma_es_stilus",
+              "name": "Nyelvi norma, stílus és viták",
+              "short_description": "A tanuló megérti a nyelvi viták tétjét (közérthetőség vs. műveltség), és érvel pro/kontra álláspontok mellett.",
+              "example_tasks": [
+                "Írj 200–240 szavas érvelést: „A nyelvet hagyni kell változni, nem irányítani.” – legyen benne 3 érv és 1 ellenérv.",
+                "Kapott vitaidézetek alapján készíts kétoszlopos jegyzetet: az egyik oldalon az „újítók”, a másikon az „óvók” fő érvei (legalább 4–4 pont).",
+                "Készíts rövid (max. 10 mondatos) állásfoglalást: milyen legyen egy iskolai hivatalos szöveg nyelve (egyszerű, választékos, vegyes)? Indokold 2 példával."
+              ]
+            },
+            {
+              "key": "identitas_es_anyanyelv",
+              "name": "Identitás és anyanyelv",
+              "short_description": "A tanuló összekapcsolja a nyelv kérdését a nemzeti kultúrával, és értelmezi a nyelv közösségformáló szerepét.",
+              "example_tasks": [
+                "Írj 8–10 mondatot: hogyan befolyásolja a nyelv a közösség összetartozását? Hozz 2 történelmi vagy mai példát.",
+                "Kapott irodalmi részlet alapján jelöld meg 3 helyen, ahol az anyanyelvhez érzelmi érték kapcsolódik; magyarázd a hatást 5 mondatban.",
+                "Készíts mini-interjút (8 kérdés) otthon: mit jelent a családban az anyanyelv? Írd le röviden 5 válasz tanulságát, és kösd össze a témával."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kozep_es_irodalom_es_kozvelemeny",
+          "name": "Közélet, irodalom és nyilvánosság",
+          "short_description": "Az irodalom közösségi szerepe: közéleti beszédmódok, vita, sajtó és a művek társadalmi hatása a felvilágosodás idején.",
+          "sub_topics": [
+            {
+              "key": "publicisztika_es_ervelesi_modok",
+              "name": "Publicisztika és érvelési módok",
+              "short_description": "A tanuló felismeri a publicisztikai szövegek célját (meggyőzés, vitaindítás) és megfigyeli a hangnemet, érvelést, példákat.",
+              "example_tasks": [
+                "Egy publicisztikai szövegben jelöld a tézist és 3 érvet; írd le 6 mondatban, milyen hangnemben szól az olvasóhoz és miért.",
+                "Írj 220–260 szavas véleménycikket egy iskolai témáról (pl. olvasási szokások), úgy, hogy legyen benne bevezetés–érvek–ellenérv–lezárás.",
+                "Keress 5 „manipulatív” vagy erős hatáskeltő fordulatot egy cikkben (pl. túlzás, érzelmi szavak), és írd le, miért lehetnek hatásosak."
+              ]
+            },
+            {
+              "key": "vita_es_kozossegi_ertekek",
+              "name": "Vita és közösségi értékek",
+              "short_description": "A tanuló kulturált vitában érvel, megfogalmaz ellenérvet és összegzést, és reflektál a közösségi normákra.",
+              "example_tasks": [
+                "Szervezzetek osztályvitát: „Kell-e szabályozni a közösségi médiát?” Készíts 6 érvből álló beszédvázlatot, és 3 várható ellenérvre válaszokat.",
+                "Írj 150–180 szavas vitaösszegzést: nevezd meg a legerősebb érvet mindkét oldalon és a saját álláspontodat 2 indokkal.",
+                "Készíts „vitaetikett” posztert 8 szabállyal (szövegesen), és mindegyikhez írj 1 példát helyes és helytelen megfogalmazásra."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "mufajok_a_magyar_felvilagosodasban",
+          "name": "Műfajok a magyar felvilágosodás irodalmában",
+          "short_description": "A korszak műfaji sokszínűsége: óda, elégia, szatíra, epigramma, levél, esszé – forma és tartalom összefüggései.",
+          "sub_topics": [
+            {
+              "key": "oda_es_kozossegi_hang",
+              "name": "Óda: közösségi emelkedettség és megszólítás",
+              "short_description": "A tanuló megfigyeli az óda emelkedett hangnemét, megszólító szerkezetét és a közösségi értékek megjelenítését.",
+              "example_tasks": [
+                "Kapott ódarészletben jelöld a megszólítást, a fokozást és az értékszavakat; írd le 6–8 mondatban, milyen eszményt közvetít.",
+                "Írj 8–10 soros „iskolai ódát” (pl. a tudáshoz), emelkedett hangnemben, legalább 2 megszólítással és 1 fokozással.",
+                "Készíts 180–220 szavas elemzést: hogyan teremti meg az óda a „nagy közös ügy” érzetét? Használj 2 konkrét szövegmegfigyelést."
+              ]
+            },
+            {
+              "key": "elegia_es_szemelyes_hang",
+              "name": "Elégia: személyes veszteség és elmélkedés",
+              "short_description": "A tanuló értelmezi az elégia rezignált hangnemét, a múlt–jelen ellentétét és az elmélkedő szerkezetet.",
+              "example_tasks": [
+                "Egy elégia részletében jelöld a múlt–jelen ellentétet kifejező sorokat, és írd le 6 mondatban, mitől lesz rezignált a hangnem.",
+                "Írj 150–180 szavas elégikus prózarészletet egy elveszett lehetőségről (pl. kihagyott nyár), majd jelöld a 3 kulcsképet.",
+                "Készíts összehasonlítást 10 mondatban: elégia vs. óda – miben más a megszólalás célja és érzelmi íve?"
+              ]
+            },
+            {
+              "key": "epigramma_es_szellemes_kritika",
+              "name": "Epigramma: szellemes kritika és csattanó",
+              "short_description": "A tanuló megérti az epigramma tömörségét és csattanóját, és képes rövid, hatásos szöveget alkotni.",
+              "example_tasks": [
+                "Kapott epigrammában jelöld a csattanót, és írd le 4–5 mondatban, hogyan készíti elő a szöveg a végső fordulatot.",
+                "Írj 6–8 soros epigrammát egy mai jelenségről (pl. halogatás), ahol a csattanó az utolsó sorban van.",
+                "Szerkessz át egy 8–10 mondatos kritikát epigrammává: tömörítsd 6–8 sorba úgy, hogy a lényeg és a csattanó megmaradjon."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "romantika_es_nemzeti_kultura",
+      "name": "Romantika és nemzeti kultúra",
+      "short_description": "A tanulók megismerik a romantika világképét, a nemzeti irodalom és identitás erősödését, valamint a líra, epika és dráma romantikus beszédmódjait, kiemelten magyar példákkal.",
+      "sub_topics": [
+        {
+          "key": "romantikus_vilagkep_es_eszmenyek",
+          "name": "Romantikus világkép és eszmények",
+          "short_description": "A szenvedély, szabadság, természetkultusz, történelemszemlélet és a rendkívüli egyén (zseni, lázadó) szerepe az irodalomban.",
+          "sub_topics": [
+            {
+              "key": "szabadsag_es_lazadas_toposzai",
+              "name": "Szabadság és lázadás toposzai",
+              "short_description": "A tanuló felismeri a romantikus szabadságeszmény nyelvi és képi megjelenítését, és értelmezi a lázadás erkölcsi-politikai tétjét.",
+              "example_tasks": [
+                "Olvass el egy romantikus hangvételű versrészletet, és jelöld meg benne a szabadsághoz kapcsolódó képeket és kulcsszavakat; írd le 6–8 mondatban, milyen értékrendet közvetít a szöveg.",
+                "Írj 200–240 szavas elemzést: a „lázadó hős” inkább erkölcsi példakép vagy veszélyes figura? Támaszd alá 2 konkrét szövegjelenséggel és 1 ellenérvvel.",
+                "Kreatív: írj 10–12 soros verset egy mai „szabadságkonfliktusról” (pl. szabályok vs. önkifejezés), romantikus pátosszal, legalább 2 megszólítással és 1 fokozással."
+              ]
+            },
+            {
+              "key": "termeszetkultusz_es_belso_allapot",
+              "name": "Természetkultusz és belső állapot",
+              "short_description": "A tanuló értelmezi, hogyan válik a táj a lelkiállapot és világlátás kivetülésévé (szimbólumok, hangulati megfelelések).",
+              "example_tasks": [
+                "Egy tájleíró versben jelöld meg 5 olyan elemet (fény, időjárás, évszak, hang), amely a beszélő érzelmi állapotát tükrözi; magyarázd a kapcsolatot 6 mondatban.",
+                "Hasonlíts össze két tájleíró részletet: az egyik idilli, a másik viharos; írj 180–220 szavas összevetést arról, hogyan alakítják a képek a hangulatot.",
+                "Készíts 120–160 szavas prózarészletet egy magyarországi helyszínről (pl. Duna-part), úgy, hogy a táj leírja a szereplő belső konfliktusát; jelöld a 3 szimbólumot."
+              ]
+            },
+            {
+              "key": "zseni_es_hos_tipusok",
+              "name": "Zseni, hős és rendkívüli egyén",
+              "short_description": "A tanuló megfigyeli a romantikus hőstípusokat (magányos zseni, végzetes hős, hazafi), és elemzi a jellem és sors viszonyát.",
+              "example_tasks": [
+                "Készíts 10–12 mondatos jellemzést egy romantikus hősről egy olvasott mű alapján: 3 erény, 2 gyengeség, 2 döntési helyzet és a következmények.",
+                "Írj 200–240 szavas érvelést: a romantikus hős tragédiája inkább a társadalom hibája vagy a saját jelleméé? Használj 3 konkrét bizonyítékot.",
+                "Vitaindító feladat: fogalmazz meg 3 kérdést, amely egy romantikus hős „önigazolását” vizsgálja, majd írj hozzá 3 rövid (2–3 mondatos) lehetséges választ."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nemzeti_irodalom_es_kanon_epitese",
+          "name": "Nemzeti irodalom és kánonépítés",
+          "short_description": "A magyar romantika szerepe a nemzeti identitásban: történelem, népköltészet, nyelv, közösségi emlékezet és kulturális minták.",
+          "sub_topics": [
+            {
+              "key": "nepkolteszet_es_mufaji_jegyek",
+              "name": "Népköltészet és műfaji jegyek",
+              "short_description": "A tanuló felismeri a népköltészet jellemzőit (ismétlés, párhuzam, formulák), és megérti a népi kultúra romantikus felértékelését.",
+              "example_tasks": [
+                "Kapott népdalban/balladában jelöld meg az ismétléseket és párhuzamokat, majd írd le 6–8 mondatban, hogyan segítik a ritmust és a jelentést.",
+                "Írj 180–220 szavas magyarázatot: miért lett a népköltészet a romantika idején a „nemzeti” egyik alapja? Hozz 2 példát szövegjegyekkel.",
+                "Kreatív: írj 8–10 soros népdal-stílusú szöveget egy mai témáról (pl. buszra várás), használva ismétlést és egyszerű képeket; jelöld a használt formulákat."
+              ]
+            },
+            {
+              "key": "tortenelmi_tema_es_emlekezet",
+              "name": "Történelmi téma és emlékezet",
+              "short_description": "A tanuló értelmezi, hogyan kapcsolódik a romantikus irodalom a nemzeti múlt képeihez (hősök, veszteségek, ünnepek), és hogyan formál közösségi emlékezetet.",
+              "example_tasks": [
+                "Egy történelmi témájú vers/epikai részlet alapján írd le 5 pontban, milyen képet ad a múltról (hősies, tragikus, példázó), és jelöld meg 2 konkrét szövegjelet.",
+                "Írj 200–240 szavas összehasonlító elemzést: a történelmi téma inkább tanít vagy lelkesít? Támaszd alá 2–2 példával (hangnem, megszólítás, értékszavak).",
+                "Készíts rövid (max. 12 mondatos) „emléknapi beszéd” vázlatot egy választott történelmi eseményhez, irodalmi idézethelyek beépítésével (legalább 2 utalás)."
+              ]
+            },
+            {
+              "key": "hazafias_lira_es_kozosssegi_beszedmod",
+              "name": "Hazafias líra és közösségi beszédmód",
+              "short_description": "A tanuló megfigyeli a közösségi megszólítás, felszólítás és értékkijelölés nyelvi eszközeit, és értelmezi a vers közéleti funkcióját.",
+              "example_tasks": [
+                "Egy hazafias versben jelöld meg a megszólításokat és felszólításokat, majd írd le 6 mondatban, hogyan teremt közösséget a beszélő.",
+                "Írj 220–260 szavas érvelést: lehet-e egy vers „politikai” anélkül, hogy propaganda lenne? Használj 2 irodalmi és 1 mai példát.",
+                "Készíts 8–10 soros „közösségi üzenet” verset egy iskolai ügyben (pl. összefogás), romantikus eszközökkel (fokozás, ismétlés), majd jelöld a használt alakzatokat."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "romantikus_epika_es_ballada",
+          "name": "Romantikus epika és ballada",
+          "short_description": "A romantikus elbeszélésmódok: fordulatos cselekmény, titok, végzet, hősies vagy tragikus sors; kiemelten a ballada tömörsége és homálya.",
+          "sub_topics": [
+            {
+              "key": "ballada_jellemzoi_es_hiany",
+              "name": "Ballada jellemzői: kihagyás, homály, sűrítés",
+              "short_description": "A tanuló felismeri a balladai kihagyásokat, a sűrített szerkezetet és a tragikus feszültséget, és következtet a kimondatlan részletekre.",
+              "example_tasks": [
+                "Kapott balladában jelöld meg 3 olyan pontot, ahol a történet „ugrik” (kihagyás), majd írd le 6–8 mondatban, mit kell a befogadónak hozzátennie következtetéssel.",
+                "Készíts 180–220 szavas balladaértelmezést: mi a konfliktus, mi a tetőpont, és hogyan teremt a szöveg homályt? Hivatkozz 2 kulcsmondatra.",
+                "Kreatív: írj 12–16 soros mini-balladát egy mai tragikus félreértésről, szándékos kihagyásokkal; utána írd le 5 mondatban, hol és miért hagytál ki információt."
+              ]
+            },
+            {
+              "key": "elbeszelo_nezopont_es_feszultseg",
+              "name": "Elbeszélői nézőpont és feszültségkeltés",
+              "short_description": "A tanuló megfigyeli, hogyan irányítja a narrátor a feszültséget (késleltetés, sejtetés, információadagolás).",
+              "example_tasks": [
+                "Egy epikai részletben jelöld meg 3 sejtető elemet (utalás, előrejelzés), és írd le 6 mondatban, milyen várakozást kelt a befogadóban.",
+                "Írj 200–240 szavas elemzést: a narrátor mindent tud vagy korlátozott? Milyen hatása van ennek a szereplők megítélésére? Adj 2 példát.",
+                "Írj át egy rövid jelenetet kétféle narrációval (E/1 és E/3) 120–120 szóban, majd 6 mondatban hasonlítsd össze a hatást."
+              ]
+            },
+            {
+              "key": "motívumhalo_es_szimbolumok_epikaban",
+              "name": "Motívumháló és szimbólumok az epikában",
+              "short_description": "A tanuló felismeri a visszatérő motívumokat (végzet, út, titok, tárgyak), és értelmezi a szimbólumok szerepét a jelentésépítésben.",
+              "example_tasks": [
+                "Gyűjts ki egy elbeszélésből 5 visszatérő motívumot vagy tárgyat, és mindegyikhez írj 1–2 lehetséges jelentést.",
+                "Készíts motívumtérképet: válassz 1 központi szimbólumot, és írd le, hogyan változik a jelentése a történet elején–közepén–végén (3 bekezdésben).",
+                "Kreatív: írj 150–180 szavas rövid történetet úgy, hogy egy tárgy (pl. gyűrű, levél, kulcs) szimbolikus szerepet kap; jelöld, mely mondatok építik a szimbólumot."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mufajok_es_mediavaltozatok_bevezetes",
+      "name": "Műfajok és médiaváltozatok – bevezetés",
+      "short_description": "A tanulók összehasonlítják a líra, epika és dráma alapvető sajátosságait, megfigyelik az elbeszélő és lírai beszédmódok eltéréseit, és alapvető betekintést kapnak az adaptációk (színház, film, képregény, dal) működésébe.",
+      "sub_topics": [
+        {
+          "key": "mufaji_osszehasonlitas_es_atjarasok",
+          "name": "Műfaji összehasonlítás és átjárások",
+          "short_description": "Az irodalmi műnemek és műfajok közötti hasonlóságok-különbségek tudatosítása, hatás és cél szerinti elemzés.",
+          "sub_topics": [
+            {
+              "key": "lira_epika_drama_kulonbsegei",
+              "name": "Líra–epika–dráma: funkció és megszólalás",
+              "short_description": "A tanuló megkülönbözteti a lírai beszélőt, az elbeszélőt és a drámai szereplőt, és felismeri, hogyan hat ez a befogadásra.",
+              "example_tasks": [
+                "Három rövid szöveg (vers, novella, jelenet) alapján írd le 6–8 mondatban, ki „beszél” bennük, és mit tudunk meg a világról az adott megszólalásmódból.",
+                "Készíts 3×5 mondatos mini-elemzést ugyanarra a témára: hogyan jelenne meg lírában, epikában és drámában? Adj mindháromhoz 1–1 nyelvi jellegzetességet.",
+                "Írj át egy rövid verset (8–10 sor) elbeszélő prózává (120–160 szó), majd jelöld meg, mely képeket kellett „történetté” alakítanod."
+              ]
+            },
+            {
+              "key": "mufaji_elvarasok_es_olvasoi_strategiak",
+              "name": "Műfaji elvárások és olvasói stratégiák",
+              "short_description": "A tanuló felismeri, milyen elvárásokkal olvasunk különböző műfajokat (pl. novella csattanója, ballada homálya, dráma konfliktusa), és ennek megfelelően értelmez.",
+              "example_tasks": [
+                "Válassz két különböző műfajú szöveget (pl. novella és ballada), és írj 200–240 szavas összehasonlítást: milyen olvasói stratégiát igényelnek és miért.",
+                "Készíts 10 pontos „műfaji jel-listát” egy választott műfajhoz (pl. novella): mit keresel első olvasáskor és mit második olvasáskor?",
+                "Kapott szövegrészletnél döntsd el, milyen műfaji elvárás sérül (pl. hiányzik a csattanó), és írd le 6–8 mondatban, mit okoz ez a hatásban."
+              ]
+            },
+            {
+              "key": "tematikus_atjarasok_es_toposzok",
+              "name": "Tematikus átjárások és toposzok",
+              "short_description": "A tanuló megfigyeli, hogy ugyanaz a téma (szerelem, haza, idő, halál) hogyan alakul át különböző műnemekben és korszakokban.",
+              "example_tasks": [
+                "Válassz egy témát (pl. idő) és keress hozzá 2 műrészletet különböző korszakból; írj 180–220 szavas összevetést a képek és hangnem alapján.",
+                "Készíts „toposz-kártyákat” 6 toposzról (pl. carpe diem, alvilágjárás): mindegyikhez írj 1 definíciót és 1 példát egy olvasott műből.",
+                "Kreatív: írj 3 rövid szöveget ugyanarról a témáról (3×60–80 szó) három különböző beszédmóddal: lírai, elbeszélő, drámai."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "adaptacio_es_intermedialitas",
+          "name": "Adaptáció és intermedialitás",
+          "short_description": "Az irodalmi művek átalakulása más médiumokban: mit nyer és mit veszít a történet/vers, ha filmet, színházat vagy képregényt készítünk belőle.",
+          "sub_topics": [
+            {
+              "key": "tortenet_es_forgatokonyv",
+              "name": "Történetből forgatókönyv: jelenetek és képek",
+              "short_description": "A tanuló megérti az adaptáció alapdöntéseit (kihagyás, átrendezés, fókusz), és képes egyszerű jelenettervet készíteni.",
+              "example_tasks": [
+                "Válassz egy 1–2 oldalas novellarészletet, és bontsd 6 jelenetre (helyszín–szereplők–cél–konfliktus) forgatókönyv-vázlatként.",
+                "Írj 200–240 szavas magyarázatot: melyik 3 részletet hagynád ki a filmváltozatból és miért? (idő, tempó, vizualitás).",
+                "Készíts storyboard-leírást 8 képkockára egy jelenethez: mit látunk, mit hallunk, milyen érzelmi hatást akarsz."
+              ]
+            },
+            {
+              "key": "szoveg_es_zene_dal_szoveg",
+              "name": "Szöveg és zene: dal, megzenésítés",
+              "short_description": "A tanuló megfigyeli, hogyan változik a vers ritmusa és hatása megzenésítve, és értelmezi a refrén, ismétlés szerepét.",
+              "example_tasks": [
+                "Hallgassatok meg egy megzenésített verset (tanári választás), majd írj 8–10 mondatot: mit tesz hozzá a zene a hangnemhez és az értelmezéshez?",
+                "Válassz egy 8–12 soros verset, és jelöld be, mely sorok működnének refrénként; indokold 5 mondatban (ismétlés, kulcsszavak).",
+                "Kreatív: írj 12 soros dalszöveget egy irodalmi témára (pl. hős útja), és jelöld, hol van a refrén és milyen ritmust képzelsz."
+              ]
+            },
+            {
+              "key": "kep_es_szoveg_kepregeny_plakat",
+              "name": "Kép és szöveg: képregény, plakát, vizuális értelmezés",
+              "short_description": "A tanuló vizuális elemekkel (szimbólum, kompozíció, nézőpont) támogatja a szövegértelmezést, és tudatosan választ jelenetet/idézetet.",
+              "example_tasks": [
+                "Készíts plakáttervet (szöveges leírással) egy drámához vagy balladához: jelöld a 3 fő szimbólumot és írd le a jelentésüket.",
+                "Alakíts át egy jelenetet 6 képkockás képregény-vázlattá (leírással): minden kockához 1 mondat képaláírás és 1 idézet vagy kulcsszó.",
+                "Írj 180–220 szavas reflektálást: mi változik, ha a szöveg helyett képekkel kell elmondanod a történetet? Adj 2 konkrét példát a választott jelenetből."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "irodalmi_kommunikacio_es_etikett",
+          "name": "Irodalmi kommunikáció és befogadói etikett",
+          "short_description": "Kulturált beszélgetés irodalomról: kérdezés, vitázás, hivatkozás, más nézőpont elfogadása és a szövegre támaszkodó érvelés.",
+          "sub_topics": [
+            {
+              "key": "interpretacios_kerdesek_fogalmazasa",
+              "name": "Interpretációs kérdések megfogalmazása",
+              "short_description": "A tanuló jó kérdéseket tesz fel a szöveghez (tartalom, forma, hatás), és ezekre több lehetséges választ is megfogalmaz.",
+              "example_tasks": [
+                "Olvasott műhöz készíts 8 interpretációs kérdést: 3 tartalmi, 3 formai, 2 befogadói hatásra vonatkozót.",
+                "Válassz 2 kérdést, és írj mindkettőre 2 lehetséges választ 4–5 mondatban, szöveghelyre utalva.",
+                "Cseréljetek kérdéslistát a társaddal, és írj 6–8 mondatos reflektálást: melyik kérdés segített a legjobban mélyebbre menni és miért."
+              ]
+            },
+            {
+              "key": "szovegkozpontu_vita_es_bizonyitas",
+              "name": "Szövegközpontú vita és bizonyítás",
+              "short_description": "A tanuló állítást fogalmaz meg a műről, és idézetekkel, szövegjelenségekkel támasztja alá, miközben tiszteletben tartja az eltérő értelmezéseket.",
+              "example_tasks": [
+                "Írj 150–180 szavas állítást egy műről (pl. „a főhős döntése önző”), és támaszd alá 2 rövid idézettel és 2 szövegmegfigyeléssel.",
+                "Készíts 10 mondatos ellenérvet egy társad állítására úgy, hogy nem személyeskedsz: minden bekezdésben legyen 1 szöveghivatkozás.",
+                "Vitaösszegzés: írj 120–150 szót arról, miben értettetek egyet, miben nem, és melyik szöveghely volt a „kulcspont” a vitában."
+              ]
+            },
+            {
+              "key": "forrashasznalat_es_plagium_elkerulese",
+              "name": "Forráshasználat és plágium elkerülése",
+              "short_description": "A tanuló megkülönbözteti a saját gondolatot és a forrásból átvett megállapítást, és alapvető hivatkozási fegyelmet tart.",
+              "example_tasks": [
+                "Kapott rövid elemzésben jelöld, mely mondatok lehetnek forrásból átvettek; írd át őket saját szavaiddal úgy, hogy a jelentés megmaradjon.",
+                "Készíts 200 szavas rövid ismertetőt egy szerzőről/műről úgy, hogy 2 állítást forrásként jelölsz (pl. „tankönyv szerint”), a többi saját megfogalmazás.",
+                "Írj 8 pontos „plágium-ellenőrzőlistát” magadnak dolgozatíráshoz, és mindegyik ponthoz adj 1 példát (mit kell/mit nem szabad)."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "key": "realizmus_es_modern_polgarisag",
+      "name": "Realizmus és modern polgáriság",
+      "short_description": "A tanulók a 19. századi realizmus társadalomképét és elbeszélő technikáit vizsgálják, különös tekintettel a hitelesség, részletezés, jellemábrázolás és kritikai szemlélet működésére.",
+      "sub_topics": [
+        {
+          "key": "realista_elbeszeles_es_narracio",
+          "name": "Realista elbeszélés és narráció",
+          "short_description": "A valószerűség megteremtése: elbeszélői pozíció, nézőpont, időkezelés, leírás és cselekmény aránya.",
+          "sub_topics": [
+            {
+              "key": "elbeszelo_pozicio_es_fokalizacio",
+              "name": "Elbeszélői pozíció és fokalizáció",
+              "short_description": "A tanuló megkülönbözteti az elbeszélő tudásszintjét és a szereplői nézőpontot, és elemzi, hogyan irányítják a befogadói együttérzést és ítéletet.",
+              "example_tasks": [
+                "Kapott realista prózarészletben jelöld meg, hol „mindentudó” az elbeszélő és hol követ egy szereplői nézőpontot; írd le 6–8 mondatban, hogyan változik ettől a szereplő megítélése.",
+                "Írj 180–220 szavas elemzést: milyen információt tart vissza az elbeszélő, és ez hogyan fokozza a feszültséget vagy iróniát? Hivatkozz 2 konkrét szövegjelenségre.",
+                "Írj át egy rövid (120–160 szavas) elbeszélőrészletet úgy, hogy a nézőpont E/3-ról E/1-re vált; utána 6 mondatban írd le, mi lett intimebb vagy kevésbé hiteles."
+              ]
+            },
+            {
+              "key": "leiras_reszletezes_es_tarsadalomkep",
+              "name": "Leírás, részletezés és társadalomkép",
+              "short_description": "A tanuló értelmezi, hogyan épít társadalmi hátteret a tárgyi környezet, a helyszín és a mindennapi részletek bemutatása.",
+              "example_tasks": [
+                "Egy prózarészletben gyűjts 8 tárgyi részletet (ruha, lakás, utca), és írd le mindegyikről 1 mondatban, mit sugall a szereplők társadalmi helyzetéről.",
+                "Írj 200–240 szavas elemzést: a leírás inkább hangulatot teremt vagy kritizál? Támaszd alá 3 szövegmegfigyeléssel (jelzők, hasonlatok, ellentétek).",
+                "Kreatív: írj 150–180 szavas realista leírást egy budapesti/vidéki helyszínről úgy, hogy a környezetből következtetni lehessen a szereplő élethelyzetére; jelöld a 3 „árulkodó” részletet."
+              ]
+            },
+            {
+              "key": "idokezeles_es_szerkezet_realizmus",
+              "name": "Időkezelés és szerkezet a realista prózában",
+              "short_description": "A tanuló felismeri az elbeszélés tempóját (jelenetezés, összefoglalás, kihagyás) és megmagyarázza a szerkezeti döntések funkcióját.",
+              "example_tasks": [
+                "Jelöld meg egy szövegben, hol lassul le az elbeszélés (részletes jelenet) és hol gyorsul fel (összegzés/átkötés); írd le 6 mondatban, miért pont ott.",
+                "Készíts 7 pontos cselekményvázlatot, majd jelöld be, mely pontok lennének „jelenetben”, és melyek „elbeszélve”; indokold 4 mondatban.",
+                "Írj 180–220 szavas mini-esszét: mikor hasznos a kihagyás egy realista történetben, és mikor veszélyes a hitelességre? Adj 2 példát."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "jellem_es_tarsadalmi_konfliktus",
+          "name": "Jellemábrázolás és társadalmi konfliktus",
+          "short_description": "A szereplők motivációi, értékrendje, társadalmi meghatározottsága és a konfliktusok realista megjelenítése.",
+          "sub_topics": [
+            {
+              "key": "motivacio_es_karakterfejlodes",
+              "name": "Motiváció és karakterfejlődés",
+              "short_description": "A tanuló feltárja a szereplők céljait, belső konfliktusait és változásait, és ezt szöveghelyekkel bizonyítja.",
+              "example_tasks": [
+                "Készíts 10–12 mondatos jellemrajzot egy főszereplőről: 3 cél, 2 félelem, 2 döntési helyzet és a következmények; mindegyikhez utalj 1 szövegjelre.",
+                "Írj 220–260 szavas elemzést: mi a szereplő „vakfoltja” (amit nem lát be magáról), és hogyan vezeti ez konfliktusba? Hozz 2 példát a párbeszédekből.",
+                "Válassz egy döntési jelenetet, és írj 120–160 szavas belső monológot a szereplő szemszögéből; utána jelöld, mely mondatok feleltethetők meg a szövegben megfigyelt motivációknak."
+              ]
+            },
+            {
+              "key": "tarsadalmi_retegek_es_ertekellentetek",
+              "name": "Társadalmi rétegek és értékellentétek",
+              "short_description": "A tanuló megérti, hogyan ütköznek életmódok és értékek (polgári ambíció, szegénység, hatalom), és hogyan jelenik meg mindez a konfliktusban.",
+              "example_tasks": [
+                "Egy prózarészlet alapján készíts 8 pontos listát: milyen jelek mutatják a társadalmi különbségeket (beszédmód, tárgyak, viselkedés)?",
+                "Írj 200–240 szavas összehasonlítást két szereplőről: milyen értékeket képviselnek, és miért kerülnek konfliktusba? Hivatkozz 3 konkrét jelenetre vagy részletre.",
+                "Vitaindító: „A társadalmi helyzet felment-e a rossz döntések alól?” Készíts pro és kontra érveket (3–3), és mindkét oldalon használj irodalmi példát."
+              ]
+            },
+            {
+              "key": "ironikus_nezopont_es_kritika",
+              "name": "Ironikus nézőpont és társadalomkritika",
+              "short_description": "A tanuló felismeri az irónia, távolságtartás és leleplezés eszközeit, és értelmezi a kritikai üzenetet.",
+              "example_tasks": [
+                "Jelöld meg egy szövegben 5 ironikus vagy kettős értelmű megfogalmazást, és írd le 1–1 mondatban, mit lepleznek le a társadalomból.",
+                "Írj 180–220 szavas elemzést: mi a különbség a narrátori irónia és a szereplői naivitás között? Adj 2 példát mindkettőre.",
+                "Kreatív: írj 150–180 szavas rövid jelenetet, amelyben udvarias szavak mögött kritika bújik meg; jelöld a 3 „kettős” mondatot és magyarázd a rejtett jelentést."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "realizmus_mufaji_valtozatok",
+          "name": "Realizmus műfaji változatok (novella, regény, tárca)",
+          "short_description": "A realista próza rövidebb és hosszabb formái, a cselekmény és jellemábrázolás eltérő lehetőségei.",
+          "sub_topics": [
+            {
+              "key": "novella_csattano_es_szerkezet",
+              "name": "Novella: csattanó, sűrítés, fordulat",
+              "short_description": "A tanuló felismeri a novella feszes szerkezetét, a fordulat és csattanó szerepét, és értelmezi a lezárás nyitottságát.",
+              "example_tasks": [
+                "Kapott novellában jelöld a fordulópontot és a csattanót; írd le 6–8 mondatban, hogyan készíti elő a szöveg a végkifejletet.",
+                "Írj 200–240 szavas elemzést: a novella lezárása inkább lezár vagy kérdéseket hagy? Támaszd alá 2 szövegjelenséggel (utalás, elhallgatás).",
+                "Kreatív: írj 250–300 szavas realista novellát egy mindennapi konfliktusról, csattanós befejezéssel; utána jelöld a 3 előrejelző motívumot."
+              ]
+            },
+            {
+              "key": "regenyvilag_es_szalak",
+              "name": "Regényvilág: szereplőháló és társadalmi panoráma",
+              "short_description": "A tanuló megérti a regény tágabb világépítését (szereplőháló, mellékszálak), és felismeri a társadalmi panoráma funkcióját.",
+              "example_tasks": [
+                "Készíts szereplőhálót egy regényrészlet alapján: minimum 6 szereplő és kapcsolataik; írd le 6 mondatban, melyik kapcsolat a konfliktus magja.",
+                "Írj 180–220 szavas elemzést: hogyan teremt „panorámát” a szerző (tér, intézmények, szokások)? Hivatkozz 3 konkrét leíró elemre.",
+                "Írj 120–160 szavas összefoglalót egy mellékszálról, majd 6 mondatban magyarázd el, miért fontos a főszál szempontjából."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "a_modernseg_poetikai_fordulata",
+      "name": "A modernség poétikai fordulata",
+      "short_description": "A tanulók a modern irodalom nyelvi és szemléleti újításait vizsgálják: a hagyományos ábrázolás válságát, a szubjektivitás erősödését, a képiség és forma tudatos átalakítását, valamint az olvasói szerep megváltozását.",
+      "sub_topics": [
+        {
+          "key": "modern_lira_es_szimb",
+          "name": "Modern líra: szimbolizmus, impresszionizmus, hangulat",
+          "short_description": "A modern lírai megszólalás jellemzői: többszólamúság, sejtetés, képháló, zeneiség, hangulati logika.",
+          "sub_topics": [
+            {
+              "key": "szimbolum_es_tobbertelmuseg",
+              "name": "Szimbólum és többértelműség",
+              "short_description": "A tanuló megkülönbözteti a jelképet a díszítő képtől, és több lehetséges értelmezést fogalmaz meg szövegre támaszkodva.",
+              "example_tasks": [
+                "Egy modern versben válassz 2 központi szimbólumot, és írj mindkettőhöz 2 lehetséges jelentést 4–4 mondatban, legalább 1 idézhető szó/fordulat megjelölésével.",
+                "Írj 200–240 szavas mini-értelmezést: hogyan kapcsolódnak össze a szimbólumok képhálóvá? Mutass be 3 kapcsolatot (ismétlés, ellentét, fokozás).",
+                "Kreatív: írj 8–10 soros verset egyetlen központi szimbólum köré (pl. „ablak”), úgy, hogy a jelentés ne legyen egyértelmű; utána írd le 3 lehetséges olvasatát."
+              ]
+            },
+            {
+              "key": "hangulat_es_erzekszervi_leiras",
+              "name": "Hangulat és érzékszervi poétika",
+              "short_description": "A tanuló megfigyeli az érzékszervi képeket (színek, hangok, illatok), és értelmezi, hogyan épül fel belőlük a vers hangulata.",
+              "example_tasks": [
+                "Jelöld meg egy versben 8 érzékszervi kifejezést, és csoportosítsd őket (látás/hallás/szaglás/tapintás); írd le 6 mondatban, milyen hangulatot alkotnak együtt.",
+                "Írj 180–220 szavas elemzést: a hangulat inkább nyugodt vagy nyugtalan? Támaszd alá 3 nyelvi jelenséggel (ritmus, szótőismétlés, hangutánzás).",
+                "Kreatív: írj 120–160 szavas prózaverset egy városi esti jelenetről, legalább 6 érzékszervi képpel; jelöld a 3 legerősebb képet és magyarázd a hatásukat."
+              ]
+            },
+            {
+              "key": "forma_ritmus_es_tores",
+              "name": "Forma, ritmus és a hagyomány „törése”",
+              "short_description": "A tanuló felismeri a kötöttség lazulását (szabadvers, ritmusváltás), és értelmezi, hogyan kapcsolódik a forma a tartalomhoz.",
+              "example_tasks": [
+                "Egy modern versben jelöld, hol törik meg a ritmus vagy a mondatszerkezet; írd le 6–8 mondatban, milyen érzelmi vagy gondolati váltást jelez.",
+                "Hasonlíts össze egy kötött formájú és egy szabadvers részletet 200–240 szóban: mit ad a kötöttség, és mit ad a szabadság a jelentéshez?",
+                "Kreatív: írj 12–16 soros szabadverset, amelyben tudatosan használsz sor- és mondattörést a feszültség növelésére; jelöld a 3 legfontosabb töréspontot."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "modern_proza_es_empo",
+          "name": "Modern próza: tudat, idő, nézőpont",
+          "short_description": "A modern próza új elbeszélő technikái: belső nézőpont, szubjektív idő, töredezett szerkezet, megbízhatatlan elbeszélő.",
+          "sub_topics": [
+            {
+              "key": "megbizhatatlan_elbeszelo",
+              "name": "Megbízhatatlan elbeszélő és bizonytalan igazság",
+              "short_description": "A tanuló felismeri, ha az elbeszélő torzít, hiányos információt ad vagy önigazol, és több értelmezési lehetőséget fogalmaz meg.",
+              "example_tasks": [
+                "Kapott prózarészletben jelöld meg 3 olyan mondatot, amely gyanúsan önigazoló vagy ellentmondásos; írd le 6 mondatban, miért lehet megbízhatatlan az elbeszélő.",
+                "Írj 200–240 szavas elemzést: milyen „rés” marad az elbeszélésben, amit az olvasónak kell kitöltenie? Adj 2 hipotézist és támaszd alá szövegjelekkel.",
+                "Kreatív: írj 150–180 szavas történetet egy narrátorral, aki szépíti a tetteit; utána jelöld a 4 nyelvi jelet, ami lebuktatja (túlzás, elhallgatás, ellentmondás)."
+              ]
+            },
+            {
+              "key": "szubjektiv_ido_es_emlekezet",
+              "name": "Szubjektív idő és emlékezet",
+              "short_description": "A tanuló értelmezi az emlékezés szerkezetét, az idősíkok váltását, és megfigyeli, hogyan keveredik a jelen és múlt.",
+              "example_tasks": [
+                "Egy szövegben jelöld meg az idősíkváltásokat, és készíts 6 pontos idővonalat (jelen–múlt–még régebbi múlt); írd le 4 mondatban, miért ilyen a sorrend.",
+                "Írj 180–220 szavas elemzést: az emlékezés inkább „pontosan” vagy „hangulat szerint” épül? Támaszd alá 3 szövegjelenséggel (asszociáció, ismétlés, kihagyás).",
+                "Kreatív: írj 200–240 szavas rövid prózát, ahol egy tárgy (pl. fénykép) indít el emlékfolyamot; jelöld a 3 idősíkot és a váltás jelzéseit."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "avantgard_es_kiserletezes",
+          "name": "Avantgárd és kísérletezés",
+          "short_description": "A formabontás és újító programok: montázs, kollázs, nyelvjáték, provokáció; a művészet és társadalom viszonyának újragondolása.",
+          "sub_topics": [
+            {
+              "key": "montazs_kollazs_szerkesztes",
+              "name": "Montázs, kollázs, töredezett szerkesztés",
+              "short_description": "A tanuló felismeri a darabosság, váratlan kapcsolások és idézet-jellegű betétek hatását, és értelmezi a jelentésépítést.",
+              "example_tasks": [
+                "Kapott avantgárd szövegben jelöld a „töréseket” (váratlan képcserék, stílusváltások), és írd le 6–8 mondatban, milyen élményt ad a befogadónak.",
+                "Készíts saját 10–12 soros kollázsverset újságcímek és hétköznapi mondatok felhasználásával; utána írd le 5 mondatban, milyen üzenet áll össze belőle.",
+                "Írj 180–220 szavas elemzést: miért lehet a töredezettség a modern világ élményének megfelelő forma? Hozz 2 irodalmi és 1 mai példát."
+              ]
+            },
+            {
+              "key": "nyelvjatek_es_provokacio",
+              "name": "Nyelvjáték és provokáció",
+              "short_description": "A tanuló megfigyeli a szabályszegés tudatosságát (hangzás, értelmetlenség látszata), és értelmezi a provokatív célokat.",
+              "example_tasks": [
+                "Jelöld ki egy kísérletező szövegben 5 „furcsa” nyelvi megoldást (szótorzítás, hangismétlés), és írd le mindegyikről 1 mondatban, mi lehet a funkciója.",
+                "Írj 8–10 soros hangjáték-verset (alliterációval, hangutánzó elemekkel), majd jelöld a 4 legfontosabb hangzásbeli eszközt.",
+                "Írj 200–240 szavas érvelést: hol a határ a művészi kísérlet és a „csak botrány” között? Adj 2 szempontot és 1 ellenpéldát."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "irodalom_a_20_szazadban_tortenelmi_tapasztalat",
+      "name": "Irodalom a 20. században: történelmi tapasztalat és identitás",
+      "short_description": "A tanulók a 20. század sorsfordító történelmi eseményeinek irodalmi lenyomatait, az egyéni és közösségi identitás kérdéseit, valamint a tanúságtétel és emlékezet poétikáit vizsgálják magyar és világirodalmi példákon.",
+      "sub_topics": [
+        {
+          "key": "haboru_trauma_es_tanuskodas",
+          "name": "Háború, trauma és tanúskodás",
+          "short_description": "A háborús tapasztalat ábrázolása: veszteség, kiszolgáltatottság, erkölcsi dilemmák, a tanúságtétel nyelve és hitelessége.",
+          "sub_topics": [
+            {
+              "key": "tanusagtevő_hang_es_hitelesseg",
+              "name": "Tanúságtevő hang és hitelesség",
+              "short_description": "A tanuló felismeri a tanúságtétel retorikáját (pontosság, részlet, visszafogottság), és értelmezi, mitől tűnik hitelesnek egy elbeszélés traumáról.",
+              "example_tasks": [
+                "Kapott tanúságtétel jellegű prózarészletben jelöld meg 5 olyan nyelvi elemet, amely hitelességet sugall (konkrétumok, dátum/név, egyszerű mondatok), majd írd le 6–8 mondatban a hatásukat.",
+                "Írj 200–240 szavas elemzést: milyen ponton válik a szöveg személyes emlékezésből közösségi üzenetté? Hivatkozz 2 konkrét részletre.",
+                "Vitaindító: „Lehet-e szépen írni a borzalomról?” Készíts pro és kontra érveket (3–3), és mindkét oldalon kapcsolj hozzá szövegjelenségeket (stílus, képek, hangnem)."
+              ]
+            },
+            {
+              "key": "trauma_nyelvtelenseg_es_elhallgatas",
+              "name": "Trauma, „nyelvtelenség” és elhallgatás",
+              "short_description": "A tanuló megfigyeli, hogyan jelzi a szöveg a kimondhatatlanságot (töredezettség, kihagyás, hallgatás), és értelmezi ezek poétikai funkcióját.",
+              "example_tasks": [
+                "Egy töredezett szerkezetű részletben jelöld a kihagyásokat és félbehagyott gondolatokat; írd le 6 mondatban, hogyan fejezik ki a trauma tapasztalatát.",
+                "Írj 180–220 szavas összehasonlítást: egy „kerek” elbeszélés vs. egy töredékes elbeszélés – melyik miért lehet hatásosabb traumáról?",
+                "Kreatív: írj 120–160 szavas rövid monológot egy szereplőtől, aki nem tud kimondani valamit; használd a hallgatás jeleit (szünet, ismétlés, kerülő beszéd), majd jelöld a 3 legerősebb megoldást."
+              ]
+            },
+            {
+              "key": "erkolcsi_dilemma_es_felelosseg",
+              "name": "Erkölcsi dilemma és felelősség",
+              "short_description": "A tanuló elemzi a szélsőséges helyzetekben hozott döntéseket, és megfogalmazza, milyen értékek ütköznek a történetben.",
+              "example_tasks": [
+                "Válassz egy döntési helyzetet a szövegből, és írd le 8–10 mondatban: milyen értékek ütköznek (élet, hűség, igazság, túlélés)?",
+                "Írj 220–260 szavas érvelést: a szereplő felelős-e a döntéséért, ha kényszerhelyzetben van? Használj 2 szöveghelyre utaló bizonyítékot és 1 ellenérvet.",
+                "Készíts „értéktérképet” 6 csomóponttal: érték–kísértés–kényszer–következmény–bűntudat–tanulság; töltsd fel a választott mű példáival."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "diktaturak_es_szabadsag_nyelv",
+          "name": "Diktatúrák, elnyomás és a szabadság nyelve",
+          "short_description": "Az elnyomó rendszerek irodalmi ábrázolása: félelem, kettős beszéd, cenzúra, szatíra, allegória és ellenállás.",
+          "sub_topics": [
+            {
+              "key": "kettosbeszed_es_ironia",
+              "name": "Kettős beszéd és irónia",
+              "short_description": "A tanuló felismeri a rejtett jelentést, célzást, iróniát és öncenzúrát, és értelmezi, hogyan lehet „két szinten” olvasni a szöveget.",
+              "example_tasks": [
+                "Kapott részletben jelöld meg 5 olyan mondatot, amelynek lehet rejtett jelentése; írd le mindegyikhez 1 mondatban a „felszíni” és a „mély” olvasatot.",
+                "Írj 200–240 szavas elemzést: milyen nyelvi jelekből sejthető a cenzúra vagy félelem jelenléte (körülírás, általánosítás, elhallgatás)? Adj 3 példát.",
+                "Kreatív: írj 150–180 szavas rövid jelenetet, ahol a szereplők nem mondhatják ki, amit gondolnak; jelöld a 4 legfontosabb utalást és magyarázd a rejtett üzenetet."
+              ]
+            },
+            {
+              "key": "allegoria_es_disztopia",
+              "name": "Allegória és disztópia",
+              "short_description": "A tanuló megérti az allegória működését, és felismeri a disztópia jellegzetes elemeit (kontroll, megfigyelés, nyelvtorzítás).",
+              "example_tasks": [
+                "Egy allegorikus részletben jelöld meg a „képi” elemet és a lehetséges „jelentett” fogalmat (legalább 5 pár), majd írd le 6 mondatban az üzenetet.",
+                "Írj 220–260 szavas összehasonlítást: egy disztópikus világ szabályai hogyan hatnak az egyénre? Használj 3 konkrét példát (tiltás, megfigyelés, nyelv).",
+                "Kreatív: készíts 10 pontos „disztópia-szabálykönyvet” egy kitalált városhoz, majd írj 120–160 szavas történetindítót, amelyben ezek a szabályok konfliktust okoznak."
+              ]
+            },
+            {
+              "key": "szatira_es_ellenallas",
+              "name": "Szatíra, groteszk és ellenállás",
+              "short_description": "A tanuló elemzi a humor, groteszk és szatíra kritikai szerepét, és megfogalmazza, hogyan működik az irodalom mint ellenállás.",
+              "example_tasks": [
+                "Kapott szatirikus részletben jelöld meg 5 túlzást vagy abszurd elemet, és írd le 1–1 mondatban, mit bírál a szöveg.",
+                "Írj 200–240 szavas érvelést: a humor segít túlélni vagy elkeni a problémát? Használj 2 irodalmi példát és 1 mai analógiát.",
+                "Kreatív: írj 10–12 mondatos groteszk jelenetet egy „túlzott szabályozású” iskoláról, és jelöld a 3 legabszurdabb elemet, magyarázva a kritikai céljukat."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "emlekezet_kultura_es_trauma_narrativak",
+          "name": "Emlékezetkultúra és trauma-narratívák",
+          "short_description": "Az emlékezés formái: napló, memoár, levél, dokumentum- és fikcióhatár; az egyéni emlék közösségi emlékezetté válása.",
+          "sub_topics": [
+            {
+              "key": "naplo_es_onreflexio",
+              "name": "Napló és önreflexió",
+              "short_description": "A tanuló értelmezi a napló intimitását, az önmegfigyelést és az időben íródó énkép változását.",
+              "example_tasks": [
+                "Egy naplórészletben jelöld meg 6 olyan mondatot, amely önreflexiót tartalmaz (önértékelés, kétely, vágy), majd írd le 6 mondatban, hogyan változik a beszélő énképe.",
+                "Írj 150–180 szavas naplórészletet egy döntés előtti napról, majd jelöld, hol jelenik meg a bizonytalanság és hol a megnyugvás (legalább 3–3 jel).",
+                "Készíts 200–240 szavas elemzést: miben különbözik a napló „őszintesége” egy utólagos emlékirattól? Adj 2–2 szempontot és példát."
+              ]
+            },
+            {
+              "key": "dokumentum_es_fikcio_hatar",
+              "name": "Dokumentum és fikció határa",
+              "short_description": "A tanuló megkülönbözteti a dokumentumszerű elemeket és a fikciós szerkesztést, és értelmezi, miért keveredhet a két forma.",
+              "example_tasks": [
+                "Kapott szövegben jelöld meg a dokumentumszerű jeleket (dátum, helyszín, név, tárgyi részlet) és a fikciós jeleket (kompozíció, párbeszéd, szimbólum); írj 8–10 mondatos összegzést.",
+                "Írj 200–240 szavas érvelést: a dokumentumszerűség növeli a hitelességet vagy korlátozza a művészi igazságot? Használj 2 érvet és 1 ellenérvet.",
+                "Kreatív: írj 180–220 szavas „dokumentumfikció” részletet egy képzeletbeli iskolai eseményről: legyen benne 3 dokumentumjel és 2 tudatosan szerkesztett fikciós elem."
+              ]
+            },
+            {
+              "key": "kozosssegi_emlekezet_es_megemlekezes",
+              "name": "Közösségi emlékezet és megemlékezés",
+              "short_description": "A tanuló megérti a megemlékezés beszédmódját, és elemzi, hogyan alakul át az egyéni történet közösségi narratívává.",
+              "example_tasks": [
+                "Írj 180–220 szavas megemlékező szöveget egy helyi közösségi eseményről (pl. iskolatörténet), amelyben 2 idézetet és 2 jelképes képet használsz.",
+                "Kapott megemlékező beszédben jelöld a közösségteremtő elemeket (mi/nekünk, közös értékek), és írd le 6–8 mondatban a funkciójukat.",
+                "Készíts 8 pontos tervet: hogyan lehet egy személyes történetet (interjú alapján) úgy elmesélni, hogy közösségi tanulsága legyen?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "a_kortars_irodalom_es_olvasoi_szerep",
+      "name": "A kortárs irodalom és az olvasói szerep",
+      "short_description": "A tanulók a kortárs irodalom témáit, nyelvi regisztereit és műfaji határátlépéseit vizsgálják, valamint tudatosítják az olvasói szerep változásait (intertextualitás, töredékesség, többnézőpontúság) és a digitális nyilvánosság hatását.",
+      "sub_topics": [
+        {
+          "key": "kortars_temak_identitas_es_kozeg",
+          "name": "Kortárs témák: identitás, közeg, mindennapok",
+          "short_description": "A kortárs szövegek gyakori témái: önazonosság, család, város, generációs konfliktusok, társadalmi érzékenység és hétköznapi nyelv.",
+          "sub_topics": [
+            {
+              "key": "identitas_elbeszeles_es_onkep",
+              "name": "Identitás-elbeszélés és énkép",
+              "short_description": "A tanuló megfigyeli, hogyan épül fel az énkép (önirónia, sebezhetőség, szerepek), és értelmezi a szöveg önazonosság-kérdéseit.",
+              "example_tasks": [
+                "Kapott kortárs szövegben jelöld meg 5 nyelvi elemet, amely az énkép bizonytalanságát jelzi (kétely, önirónia, elhallgatás), majd írd le 6–8 mondatban a hatásukat.",
+                "Írj 200–240 szavas elemzést: milyen „szerepeket” vesz fel a beszélő (diák, gyerek, barát), és mikor ütköznek ezek? Hivatkozz 2 részletre.",
+                "Kreatív: írj 150–180 szavas kortárs „én-elbeszélést” egy hétköznapi konfliktusról, ahol a narrátor egyszerre komoly és önironikus; jelöld a 3 önironikus fordulatot."
+              ]
+            },
+            {
+              "key": "varos_es_ter_elmeny",
+              "name": "Város és térélmény",
+              "short_description": "A tanuló elemzi a városi környezet nyelvi megformálását (tempó, zaj, idegenség), és megfigyeli, hogyan válik a tér identitásképző tényezővé.",
+              "example_tasks": [
+                "Egy városról szóló szövegben jelöld meg 8 térleíró és 8 hangulatjelző elemet; írd le 6 mondatban, milyen városképet épít a szöveg.",
+                "Írj 180–220 szavas összehasonlítást: ugyanaz a helyszín (pl. metró) hogyan lehet felszabadító vagy nyomasztó? Használj 3 konkrét képet.",
+                "Kreatív: írj 120–160 szavas prózarészletet egy „átmeneti térről” (megálló, folyosó), ahol a tér a szereplő belső állapotát tükrözi; jelöld a 3 kulcsképet."
+              ]
+            },
+            {
+              "key": "generacios_konfliktus_es_parbeszed",
+              "name": "Generációs konfliktus és párbeszéd",
+              "short_description": "A tanuló megfigyeli a beszédmódok ütközését, a félreértések nyelvi okait, és értelmezi a konfliktus mögötti értékrendet.",
+              "example_tasks": [
+                "Kapott párbeszédes részletben jelöld meg 5 félreértés-forrást (más jelentés, elhallgatás, indulat), és írd le 6–8 mondatban, hogyan lehetne tisztázni.",
+                "Írj 200–240 szavas elemzést: mitől „generációs” a konfliktus? Nevezz meg 3 eltérő értéket (idő, munka, szabadság), és támaszd alá példákkal.",
+                "Kreatív: írj 14–16 soros dialógust egy szülő és diák között a témáról: „telefon vs. figyelem”, úgy, hogy mindkét félnek legyen 2 erős érve és 1 engedménye."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "intertextualitas_es_kulturalis_utalasok",
+          "name": "Intertextualitás és kulturális utalások",
+          "short_description": "A kortárs szövegek kapcsolódásai a hagyományhoz: idézet, átirat, parafrázis, allúzió, műfaji játék és popkulturális hivatkozások.",
+          "sub_topics": [
+            {
+              "key": "utalas_idezet_atiras",
+              "name": "Utalás, idézet, átirat",
+              "short_description": "A tanuló felismeri az utalás típusait, és megérti, hogyan változik a jelentés, ha egy régi szöveg új környezetbe kerül.",
+              "example_tasks": [
+                "Kapott kortárs szövegben jelöld meg 3 lehetséges irodalmi utalást, majd írd le 6–8 mondatban, mit ad hozzá az utalás a jelentéshez (hangnem, irónia, tét).",
+                "Írj 200–240 szavas összehasonlítást: egy választott klasszikus toposz (pl. carpe diem) hogyan jelenik meg kortárs szövegben? Mutass be 2 hasonlóságot és 2 eltérést.",
+                "Kreatív: írj 8–10 soros parafrázist egy ismert vers hangjára, de mai témával; utána jelöld, mely elemek őrzik az eredeti stílust (ritmus, kép, megszólítás)."
+              ]
+            },
+            {
+              "key": "mufaji_jatek_es_hataratlepes",
+              "name": "Műfaji játék és határátlépés",
+              "short_description": "A tanuló megfigyeli a műfajkeverést (lírai próza, slam, naplóregény), és értelmezi, miért illik a forma a témához.",
+              "example_tasks": [
+                "Válassz egy kevert műfajú szöveget (tanári anyag), és írj 180–220 szavas elemzést: mely műfaji jegyek keverednek és milyen hatást keltenek.",
+                "Írj 12–16 soros slam-szöveget egy iskolai témáról, tudatos ritmussal és ismétléssel; jelöld a 3 legerősebb retorikai fogást.",
+                "Írj 200–240 szavas érvelést: a műfaji szabályok segítenek vagy korlátoznak? Használj 2 kortárs és 1 klasszikus példát."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "digitalis_nyilvanossag_es_irodalom",
+          "name": "Digitális nyilvánosság és irodalom",
+          "short_description": "Az olvasás és írás új terei: online platformok, rövid formák, kommentkultúra, szerzőség és hitelesség kérdései a digitális korban.",
+          "sub_topics": [
+            {
+              "key": "rovid_formak_es_figyelemgazdalkodas",
+              "name": "Rövid formák és figyelemgazdálkodás",
+              "short_description": "A tanuló megérti a rövid műfajok (mikronovella, poszt, versfragmentum) eszközeit és korlátait, és tudatosan alkalmazza a sűrítést.",
+              "example_tasks": [
+                "Írj 3 mikronovellát (3×60–80 szó) ugyanarról a helyzetről (pl. késés), 3 különböző hangnemben: ironikus, tragikus, tárgyilagos.",
+                "Kapott rövid szövegben jelöld meg 5 sűrítő eszközt (kihagyás, csattanó, kulcsszóismétlés), és írd le 6 mondatban, hogyan működnek.",
+                "Írj 180–220 szavas reflektálást: hogyan változtatja meg a rövid formák világa az olvasói figyelmet és elmélyülést? Adj 2 személyes és 2 szövegközpontú érvet."
+              ]
+            },
+            {
+              "key": "szerzoseg_es_hitelesseg_online",
+              "name": "Szerzőség, forrás és hitelesség online",
+              "short_description": "A tanuló kritikusan viszonyul az online szövegekhez: szerző, kontextus, manipuláció, plágium, és az idézés/hivatkozás szerepe.",
+              "example_tasks": [
+                "Kapott online szövegrészlet alapján készíts 8 pontos „hitelesség-ellenőrzést”: milyen jelek alapján bízol benne vagy kételkedsz? Írd le röviden a döntést.",
+                "Írj 200–240 szavas érvelést: a szerző neve fontosabb-e, mint a szöveg minősége? Használj 2 példát (irodalmi és online).",
+                "Készíts rövid útmutatót (10 pont) osztálytársadnak: hogyan idézz helyesen online forrásból, és hogyan kerüld el a plágiumot? Mindegyik ponthoz adj 1 példát."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "irodalom_es_filozofia_ertek_es_ertelemkereses",
+      "name": "Irodalom és filozófia: érték, etika, értelemkeresés",
+      "short_description": "A tanulók az irodalmi művekben megjelenő etikai kérdéseket, életértelmezési modelleket és filozófiai problémákat vizsgálják; gyakorolják az érvelő-interpretáló írásmódot és a szövegközpontú gondolkodást.",
+      "sub_topics": [
+        {
+          "key": "etikai_dilemmak_es_donteshelyzetek",
+          "name": "Etikai dilemmák és döntéshelyzetek",
+          "short_description": "Klasszikus és modern erkölcsi konfliktusok: felelősség, bűn és bűnhődés, igazságosság, szolidaritás, önazonosság.",
+          "sub_topics": [
+            {
+              "key": "felelosseg_bun_es_kovetkezmeny",
+              "name": "Felelősség, bűn és következmény",
+              "short_description": "A tanuló elemzi a szereplők döntéseit, a motivációk és következmények kapcsolatát, és értelmezi a „bűn” fogalmának változó jelentését.",
+              "example_tasks": [
+                "Válassz egy műből egy döntési helyzetet, és készíts 8–10 mondatos ok-okozati elemzést: döntés → következmény → lelki reakció → társadalmi reakció → tanulság.",
+                "Írj 220–260 szavas érvelést: a szereplő felelőssége csökken-e, ha jó szándék vezette, de rossz lett a következmény? Használj 2 szöveghelyre utaló bizonyítékot és 1 ellenérvet.",
+                "Készíts „ítélőtáblát” 6 szemponttal (szándék, kényszer, tudás, következmény, megbánás, jóvátétel), és töltsd ki a választott szereplőre példákkal."
+              ]
+            },
+            {
+              "key": "igazsagossag_es_szolidaritas",
+              "name": "Igazságosság és szolidaritás",
+              "short_description": "A tanuló megkülönbözteti a törvény, erkölcs és együttérzés szempontjait, és értelmezi a közösségi felelősség dilemmáit.",
+              "example_tasks": [
+                "Írj 180–220 szavas elemzést: a műben az igazságosság inkább „szabály” vagy „emberség” kérdése? Támaszd alá 3 szövegmegfigyeléssel (cselekedet, beszédmód, következmény).",
+                "Vitaindító: „Megéri-e segíteni, ha kockázatos?” Készíts 3 pro és 3 kontra érvet, mindkét oldalon 1 irodalmi példával.",
+                "Kreatív: írj 12–14 soros dialógust két szereplő között (segít/ nem segít), ahol mindkettőnek van 2 erős érve és 1 engedménye; jelöld a fordulópontot."
+              ]
+            },
+            {
+              "key": "onazonossag_es_erkolcsi_integritas",
+              "name": "Önazonosság és erkölcsi integritás",
+              "short_description": "A tanuló értelmezi, hogyan ütközik az egyén önképe a társadalmi elvárásokkal, és hogyan jelenik meg a belső következetesség kérdése.",
+              "example_tasks": [
+                "Kapott részletben jelöld meg 5 olyan mondatot/képet, amely az önazonosság válságát jelzi; írd le 6–8 mondatban, mi okozza a törést.",
+                "Írj 200–240 szavas érvelést: lehet-e valaki „jó ember”, ha a környezete rosszra kényszeríti? Használj 2 szöveghelyre utaló példát és 1 ellenérvet.",
+                "Írj 150–180 szavas belső monológot egy szereplőtől, aki elárulta a saját elveit; jelöld a 3 legerősebb önvádoló/önigazoló fordulatot."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "egzisztencialis_kerdesek_es_ertelem",
+          "name": "Egzisztenciális kérdések és értelem",
+          "short_description": "Életértelmezések: szabadság, magány, halál, abszurd, remény; az irodalom mint önismereti tér.",
+          "sub_topics": [
+            {
+              "key": "abszurd_es_ertelemhiany",
+              "name": "Abszurd és értelemhiány",
+              "short_description": "A tanuló felismeri az abszurd helyzeteket és nyelvi jeleiket (ismétlés, körkörösség, logikai törés), és értelmezi a létérzésüket.",
+              "example_tasks": [
+                "Egy abszurd hangulatú részletben jelöld meg 5 olyan elemet, amely „nem logikus” vagy körkörös; írd le 6 mondatban, milyen világérzést hoz létre.",
+                "Írj 200–240 szavas elemzést: a szövegben a humor felszabadít vagy kétségbe ejt? Támaszd alá 3 szövegmegfigyeléssel (hangnem, ismétlés, váratlan fordulat).",
+                "Kreatív: írj 120–160 szavas abszurd jelenetet egy hétköznapi helyzetből (pl. ügyintézés), ahol a szabályok önmaguknak mondanak ellent; jelöld a 3 legabszurdabb pontot."
+              ]
+            },
+            {
+              "key": "szabadsag_valasztas_es_felelosseg",
+              "name": "Szabadság, választás és felelősség",
+              "short_description": "A tanuló értelmezi a szabadság kétértelműségét (lehetőség vs. teher), és összekapcsolja a döntések következményeivel.",
+              "example_tasks": [
+                "Írj 180–220 szavas értelmezést: a műben a szabadság inkább ajándék vagy teher? Hozz 3 szöveghelyre utaló bizonyítékot.",
+                "Készíts döntési fa-ábrát szövegesen egy szereplő választásairól (minimum 3 elágazás), és írd le, melyik ág miért tűnik „szabadnak” vagy „kényszernek”.",
+                "Kreatív: írj 10–12 soros verset a „választás” témájára, ahol a sor- vagy mondattörések jelzik a bizonytalanságot; jelöld a 3 döntő töréspontot."
+              ]
+            },
+            {
+              "key": "magany_kapcsolat_es_remeny",
+              "name": "Magány, kapcsolat és remény",
+              "short_description": "A tanuló megfigyeli a magány és kapcsolódás motívumait, és értelmezi, hogyan jelenik meg a remény vagy kilátástalanság poétikája.",
+              "example_tasks": [
+                "Kapott szövegben gyűjts 6 motívumot a magányhoz és 6 motívumot a kapcsolathoz; írd le 6–8 mondatban, hogyan ütköznek vagy egészítik ki egymást.",
+                "Írj 200–240 szavas elemzést: milyen nyelvi jelekből érződik a remény (fényképek, jövőidő, nyitott lezárás)? Adj 3 példát.",
+                "Kreatív: írj 150–180 szavas levélrészletet egy szereplőtől, aki reményt próbál adni valakinek; jelöld a 3 legerősebb biztató retorikai eszközt (megszólítás, párhuzam, kép)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "filozofiai_essze_es_ervelo_iras",
+          "name": "Filozófiai esszé és érvelő írás",
+          "short_description": "Az esszé műfaja: személyes gondolkodás és érvelés, fogalmak tisztázása, példák és ellenérvek kezelése, koherens szerkezet.",
+          "sub_topics": [
+            {
+              "key": "tezis_erv_ellenerv_struktura",
+              "name": "Tézis–érv–ellenérv szerkezet",
+              "short_description": "A tanuló világos tézist fogalmaz meg, 2–3 érvvel bizonyít, és kulturáltan kezeli az ellenérveket.",
+              "example_tasks": [
+                "Fogalmazz meg egy tézist a kérdésről: „Van-e értelme a szenvedésnek?” és írj hozzá 3 érvet és 2 ellenérvet vázlatban, mindegyikhez 1 példaötlettel.",
+                "Írj 250–320 szavas esszét a fenti témáról: bevezetés–tézis–3 érv–ellenérv–válasz–lezárás; legalább 2 irodalmi utalással (mű/cselekmény).",
+                "Kapott esszérészletben jelöld meg, hol csúszik el a logika (pl. hamis ok-okozat, túláltalánosítás), és írd át 6–8 mondatban koherensebbre."
+              ]
+            },
+            {
+              "key": "fogalmak_pontositasa_es_peldak",
+              "name": "Fogalmak pontosítása és példahasználat",
+              "short_description": "A tanuló tisztázza a kulcsfogalmakat (pl. szabadság, igazság), és példákkal, ellenpéldákkal árnyalja az állításait.",
+              "example_tasks": [
+                "Írj 8–10 mondatban definíciót két fogalomra: „szabadság” és „felelősség”, majd adj mindkettőre 1 irodalmi és 1 hétköznapi példát.",
+                "Készíts 200–240 szavas elemzést: miért veszélyes a homályos fogalomhasználat egy esszében? Hozz 2 példát rossz és 2 példát jó megfogalmazásra.",
+                "Válassz egy állítást (pl. „Az igazság relatív”), és írj hozzá 2 példát és 2 ellenpéldát 2–3 mondatban; majd 6 mondatban vond le a tanulságot."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "komparatisztika_es_vilagirodalmi_kapcsolatok",
+      "name": "Komparatisztika és világirodalmi kapcsolatok",
+      "short_description": "A tanulók művek, szerzők és korszakok közötti párbeszédet vizsgálnak: hatástörténet, közös motívumok, eltérő kulturális válaszok és poétikai megoldások összehasonlítása.",
+      "sub_topics": [
+        {
+          "key": "motívumok_es_toposzok_osszevetese",
+          "name": "Motívumok és toposzok összevetése",
+          "short_description": "Visszatérő témák és képek (szerelem, halál, út, hatalom, idő) eltérő kulturális és történeti értelmezése.",
+          "sub_topics": [
+            {
+              "key": "univerzalis_es_kulturafuggo_motivumok",
+              "name": "Univerzális és kultúrafüggő motívumok",
+              "short_description": "A tanuló megkülönbözteti az általános emberi tapasztalatból fakadó és a kultúrához kötött motívumokat.",
+              "example_tasks": [
+                "Válassz egy motívumot (pl. halál), és hasonlíts össze két különböző korszakból/kultúrából származó műrészletet 200–240 szóban.",
+                "Készíts táblázatos vázlatot (szöveges leírással): motívum – jelentés – hangnem – kulturális háttér (legalább 2 mű).",
+                "Kreatív: írj 120–160 szavas rövid szöveget ugyanarra a motívumra két eltérő kulturális nézőpontból, majd jelöld a különbségeket."
+              ]
+            },
+            {
+              "key": "mitosz_es_ujrairas",
+              "name": "Mítoszok és újraírások",
+              "short_description": "A tanuló felismeri a mítoszok modern átértelmezését és a jelentésmódosulás okait.",
+              "example_tasks": [
+                "Egy modern műben azonosíts 3 mitikus utalást, és írd le 6–8 mondatban, hogyan változik az eredeti jelentés.",
+                "Írj 180–220 szavas összehasonlítást: egy klasszikus mítosz és egy modern újraírás konfliktusa és tanulsága.",
+                "Kreatív: írj 10–12 soros verset vagy 150 szavas prózát egy ismert mítosz mai környezetbe helyezésével."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hatas_es_parbeszed_szerzok_kozott",
+          "name": "Hatás és párbeszéd szerzők között",
+          "short_description": "Irodalmi hatások, viták és válaszok: hagyomány folytatása vagy elutasítása.",
+          "sub_topics": [
+            {
+              "key": "irodalmi_hatas_es_recepcio",
+              "name": "Irodalmi hatás és recepció",
+              "short_description": "A tanuló megérti, hogyan hat egy szerző vagy mű a későbbi irodalomra és az olvasói értelmezésekre.",
+              "example_tasks": [
+                "Válassz egy szerzőpárt, és írj 200–240 szavas elemzést az egyik hatásáról a másikra (motívum, stílus vagy téma).",
+                "Gyűjts 5 recepciós megállapítást (tankönyvi vagy tanári forrásból), és írd le, melyikkel értesz egyet és miért.",
+                "Kreatív: írj rövid „válaszverset” vagy prózarészletet egy klasszikus mű hangjára reflektálva."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ervenyes_eletmuvek_es_kanon",
+      "name": "Érvényes életművek és irodalmi kánon",
+      "short_description": "A biztosan lezárt és értékelhető életművek rendszerező feldolgozása, a kánon kialakulása, vitái és változásai.",
+      "sub_topics": [
+        {
+          "key": "eletmu_olvasas_es_rendszerezes",
+          "name": "Életmű-olvasás és rendszerezés",
+          "short_description": "Motívumháló, poétikai fejlődés, tematikus ív és korszakváltások egy szerző munkásságában.",
+          "sub_topics": [
+            {
+              "key": "motívumhalo_eletmuben",
+              "name": "Motívumháló egy életműben",
+              "short_description": "A tanuló felismeri a visszatérő motívumokat és azok átalakulását az életmű során.",
+              "example_tasks": [
+                "Készíts motívumtérképet egy szerző életművéhez (legalább 5 motívum), és írd le a változásukat 200 szóban.",
+                "Írj 180–220 szavas elemzést: melyik korszakban a legerősebb a központi motívum, és miért?",
+                "Kreatív: válassz egy motívumot, és írj rövid szöveget két különböző korszak hangján."
+              ]
+            },
+            {
+              "key": "poetikai_fejlodes_es_korszakok",
+              "name": "Poétikai fejlődés és korszakok",
+              "short_description": "Stílusváltások és tematikus hangsúlyok értelmezése.",
+              "example_tasks": [
+                "Hasonlíts össze két korszakból származó műrészletet ugyanattól a szerzőtől 200–240 szóban.",
+                "Készíts idővonalat szövegesen: fő művek – poétikai jegyek – történeti háttér.",
+                "Írj 6–8 mondatos összegzést: mi indokolhat egy stílusváltást?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kanon_es_ertekvita",
+          "name": "Kánon és értékvita",
+          "short_description": "Miért kerülnek művek a tananyagba, és hogyan változik a kánon társadalmi hatásokra?",
+          "sub_topics": [
+            {
+              "key": "kanon_kialakulasa",
+              "name": "A kánon kialakulása",
+              "short_description": "Történeti, oktatási és kulturális szempontok szerepe a kánonban.",
+              "example_tasks": [
+                "Írj 200–240 szavas érvelést: mitől lesz egy mű „kanonikus”?",
+                "Gyűjts 5 érvet egy kevésbé ismert mű tananyagba emelése mellett.",
+                "Vitaindító: kell-e változtatni a kánonon? Készíts 3 pro és 3 kontra érvet."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "erettsegi_felkeszules_es_feladattipusok",
+      "name": "Érettségi felkészülés és irodalmi feladattípusok",
+      "short_description": "Az irodalmi érettségi műfajai és stratégiái: műértelmezés, összehasonlító elemzés, témakifejtő esszé és érvelés.",
+      "sub_topics": [
+        {
+          "key": "irodalmi_elemzes_feladatok",
+          "name": "Irodalmi elemzési feladatok",
+          "short_description": "Szövegértés, értelmezés, idézetkezelés és logikus szerkezet kialakítása.",
+          "sub_topics": [
+            {
+              "key": "muerelmezes",
+              "name": "Műértelmezés",
+              "short_description": "Egyetlen mű komplex elemzése szempontok mentén.",
+              "example_tasks": [
+                "Írj 300–350 szavas műértelmezést egy tanult versről megadott szempontok szerint.",
+                "Készíts vázlatot egy műértelmezéshez: téma – forma – beszédmód – értelmezés.",
+                "Kapott dolgozatrészletben javítsd a szerkezetet és az érvelést (6–8 mondat)."
+              ]
+            },
+            {
+              "key": "osszehasonlito_elemzes",
+              "name": "Összehasonlító elemzés",
+              "short_description": "Két mű párhuzamos értelmezése közös szempont alapján.",
+              "example_tasks": [
+                "Írj 300–350 szavas összehasonlító elemzést két azonos témájú műről.",
+                "Készíts szempontlistát (minimum 6 pont) egy összehasonlító esszéhez.",
+                "Írj 8–10 mondatos bevezetést és lezárást egy összehasonlító feladathoz."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "erveles_es_temakifejtes",
+          "name": "Érvelés és témakifejtés",
+          "short_description": "Önálló gondolatmenet felépítése irodalmi példákkal és logikus érvrendszerrel.",
+          "sub_topics": [
+            {
+              "key": "irodalmi_erveles",
+              "name": "Irodalmi érvelés",
+              "short_description": "Állítás, bizonyítás és ellenérv kezelése.",
+              "example_tasks": [
+                "Írj 300–350 szavas érvelő esszét egy irodalmi kérdésről (pl. hős és erkölcs).",
+                "Készíts érvtérképet: tézis – 3 érv – ellenérv – válasz.",
+                "Kapott esszében jelöld meg a legerősebb és leggyengébb érvet, és indokold."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

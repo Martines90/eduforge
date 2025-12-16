@@ -1,0 +1,1392 @@
+{
+  "grade_9_10": [
+    {
+      "key": "atomok_es_periodusos_rendszer",
+      "name": "Atomok felépítése és a periódusos rendszer",
+      "short_description": "A tanulók megismerik az atom szerkezetét, az izotópok és ionok fogalmát, valamint a periódusos rendszer felépítését és az alapvető periódusos összefüggéseket.",
+      "sub_topics": [
+        {
+          "key": "atom_felepitese",
+          "name": "Az atom felépítése",
+          "short_description": "Az atommag és az elektronburok szerepe, a részecskék töltése és tömege, valamint az atomszám és tömegszám értelmezése.",
+          "sub_topics": [
+            {
+              "key": "alapreszecskek_es_jelolesek",
+              "name": "Proton, neutron, elektron és jelölések",
+              "short_description": "A proton, neutron és elektron alapvető tulajdonságainak (töltés, relatív tömeg) ismerete és használata kémiai feladatokban.",
+              "example_tasks": [
+                "Sorold fel a proton, neutron és elektron töltését és relatív tömegét, majd indokold, miért közelíti az atom tömegét az atommag tömege!",
+                "Egy atom semleges és 12 elektronja van. Határozd meg az atomszámát, és nevezd meg az elemet a periódusos rendszer alapján!",
+                "Egy kation töltése +2 és 10 elektronja van. Állapítsd meg, hány protonja van, és írd fel az ion jelölését (elem + töltés)!"
+              ]
+            },
+            {
+              "key": "atomszam_es_tomegszam",
+              "name": "Atomszám és tömegszám",
+              "short_description": "Az atomszám (Z) és tömegszám (A) értelmezése, valamint a neutronok számának meghatározása egyszerű példákon.",
+              "example_tasks": [
+                "Írd fel a ^{23}_{11}Na jelölésű atom Z és A értékét, majd számold ki a neutronok számát!",
+                "Egy izotóp tömegszáma 35, atomszáma 17. Határozd meg a protonok, neutronok és elektronok számát semleges atomban!",
+                "Adott két jelölés: ^{12}_{6}C és ^{14}_{6}C. Magyarázd el, miben különböznek, és miben egyeznek!"
+              ]
+            },
+            {
+              "key": "izotopok_alkalmazasok",
+              "name": "Izotópok és alkalmazásaik",
+              "short_description": "Az izotóp fogalma és felismerése, valamint a radioizotópok néhány gyakorlati felhasználásának megértése.",
+              "example_tasks": [
+                "Magyarázd el saját szavaiddal, mi az izotóp, majd adj két példát izotóp-párokra ugyanazon elemnél!",
+                "Egy elem két stabil izotóppal rendelkezik: 75% ^{35}X és 25% ^{37}X. Számold ki az átlagos relatív atomtömeget!",
+                "Sorolj fel két területet (pl. orvostudomány, ipar), ahol radioizotópokat használnak, és írd le röviden, mire!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "elektronburok_es_elektronszerkezet",
+          "name": "Elektronburok és elektronszerkezet",
+          "short_description": "Az elektronhéjak és alhéjak fogalma, az egyszerű elektronszerkezet felírása és kapcsolata a kémiai tulajdonságokkal.",
+          "sub_topics": [
+            {
+              "key": "elektronhejak_es_vegyertekelektronok",
+              "name": "Elektronhéjak és vegyértékelektronok",
+              "short_description": "Az elektronok héjakon való elhelyezkedésének megértése és a vegyértékelektronok szerepének felismerése a kötésképzésben.",
+              "example_tasks": [
+                "Írd fel a Mg atom elektronhéjas eloszlását (2, 8, ...), majd határozd meg a vegyértékelektronok számát!",
+                "Hasonlítsd össze a Na és a Cl vegyértékelektronjainak számát, és következtesd ki, melyikük hajlamosabb elektront leadni/felvenni!",
+                "Egy ismeretlen főcsoportbeli elem vegyértékelektron-száma 6. Melyik főcsoportba tartozik, és adj rá egy példát!"
+              ]
+            },
+            {
+              "key": "nemesgazszerkezet_es_ionkepzodes",
+              "name": "Nemesgáz-szerkezet és ionképződés",
+              "short_description": "A nemesgáz-szerkezet stabilitásának értelmezése és annak bemutatása, hogyan vezet ez kationok és anionok képződéséhez.",
+              "example_tasks": [
+                "Magyarázd el, mit jelent a nemesgáz-szerkezet, és miért tekinthető stabilnak!",
+                "Írd fel, milyen iont képez tipikusan a Ca és az O, és indokold elektronokkal (lead/felvesz hányat)!",
+                "Adott az Al atom. Írd fel a legvalószínűbb ionját, és ellenőrizd, hogy az ion elektronszerkezete melyik nemesgázéval egyezik!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "periodusos_rendszer_es_periodikussag",
+          "name": "Periódusos rendszer és periodikusság",
+          "short_description": "A periódusos rendszer csoportjai és periódusai, valamint az egyszerű periódusos tendenciák (pl. fémes jelleg, atomrádiusz) értelmezése.",
+          "sub_topics": [
+            {
+              "key": "csoportok_periodusok_focsoportok",
+              "name": "Csoportok, periódusok, főcsoportok",
+              "short_description": "A periódusos rendszer szerkezeti elemeinek (csoport, periódus, főcsoport) használata az elemek jellemzésére és keresésére.",
+              "example_tasks": [
+                "Keresd meg a periódusos rendszerben a K, S és Ne elemet, és add meg csoportjukat és periódusukat!",
+                "Magyarázd el, mit jelent, hogy két elem ugyanabban a főcsoportban van, és miben hasonlóak emiatt!",
+                "Adj példát egy 3. periódusbeli fémre és egy 3. periódusbeli nemfémre, majd hasonlítsd össze várható tulajdonságaikat!"
+              ]
+            },
+            {
+              "key": "periodusos_trendek_alapszinten",
+              "name": "Periódusos trendek alapszinten",
+              "short_description": "A fémes jelleg, atomméret és elektronegativitás egyszerű tendenciáinak felismerése és alkalmazása összehasonlításban.",
+              "example_tasks": [
+                "Rendezd növekvő atomrádiusz szerint: Na, Mg, Al (indokold a periódusos helyzet alapján)!",
+                "Döntsd el, melyik elem elektronegatívabb: O vagy S, és magyarázd meg a csoporton belüli trenddel!",
+                "Válaszd ki, melyik elem a legfémesebb a következők közül: Li, Be, B, C, és indokold a periódusos rendszer alapján!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kemia_meres_es_laborbiztonsag",
+          "name": "Kémiai mérés és laborbiztonság",
+          "short_description": "Alapvető laboratóriumi eszközök, mértékegységek és biztonsági szabályok alkalmazása egyszerű kísérletek során.",
+          "sub_topics": [
+            {
+              "key": "mennyisegek_mertekegysegek_pontossag",
+              "name": "Mennyiségek, mértékegységek, pontosság",
+              "short_description": "Tömeg, térfogat és hőmérséklet mérése; a leolvasási hiba és a kerekítés szerepe a kémiai jegyzőkönyvben.",
+              "example_tasks": [
+                "Egy mérlegen 12,34 g-ot mérsz. Írd le, milyen pontosságú a mérés, és hogyan jelölnéd a bizonytalanságot a jegyzőkönyvben!",
+                "Olvass le egy 50 ml-es mérőhengerből 23,6 ml térfogatot, és írd le, mire kell figyelni a meniszkusz helyzeténél!",
+                "Adj három példát arra, mikor kell szemüveget, kesztyűt vagy köpenyt viselni kémiaórán, és indokold röviden!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "kemiai_kotes_es_reszecskekozotti_kolcsonhatasok",
+      "name": "Kémiai kötés és részecskeközötti kölcsönhatások",
+      "short_description": "A tanulók megértik, hogyan jönnek létre az ionos, kovalens és fémes kötések, valamint hogyan magyarázzák a részecskeközötti kölcsönhatások az anyagok makroszkopikus tulajdonságait.",
+      "sub_topics": [
+        {
+          "key": "ionos_kotes_es_ionvegyuletek",
+          "name": "Ionos kötés és ionvegyületek",
+          "short_description": "Elektronátadás, kationok és anionok kialakulása, valamint az ionrács és az ionvegyületek jellemző tulajdonságai.",
+          "sub_topics": [
+            {
+              "key": "ionkepzodes_es_kepzodo_ionok",
+              "name": "Ionképződés és a képződő ionok",
+              "short_description": "Egyszerű ionok képződésének leírása elektronleadással és elektronfelvétellel, főcsoportbeli példákon.",
+              "example_tasks": [
+                "Írd le elektronátmenettel (szövegesen) a Na → Na⁺ és a Cl → Cl⁻ átalakulást!",
+                "Add meg, milyen töltésű iont képez tipikusan a II. főcsoport (pl. Mg) és a VII. főcsoport (pl. Br)!",
+                "Egy vegyület képlete CaCl2. Magyarázd el, milyen ionokból áll, és miért ez az arány!"
+              ]
+            },
+            {
+              "key": "ionracsszerkezet_es_tulajdonsagok",
+              "name": "Ionrács és tulajdonságok",
+              "short_description": "Az ionrács fogalma és kapcsolatának felismerése a magas olvadásponttal, ridegséggel és vezetőképességgel.",
+              "example_tasks": [
+                "Indokold, miért magas az NaCl olvadáspontja az ionrács alapján!",
+                "Magyarázd el, miért nem vezeti a szilárd NaCl az áramot, de az olvadéka/oldat vezet!",
+                "Hasonlítsd össze az ionvegyületek és a molekuláris anyagok (pl. cukor) oldhatóságát vízben egy példával!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kovalens_kotes_es_molekulak",
+          "name": "Kovalens kötés és molekulák",
+          "short_description": "Elektronpár-megosztás, egyszeres/kettős/hármas kötés, kötő- és nemkötő elektronpár, valamint a molekulák egyszerű szerkezeti értelmezése.",
+          "sub_topics": [
+            {
+              "key": "elektronpar_megosztas_kotesszam",
+              "name": "Elektronpár-megosztás és kötésrend",
+              "short_description": "A kovalens kötés kialakulásának értelmezése, valamint a kötésrend hatása a kötés erősségére és hosszára.",
+              "example_tasks": [
+                "Magyarázd el, miért jön létre kovalens kötés két nemfém között (pl. H és Cl) az elektronpár-megosztás fogalmával!",
+                "Hasonlítsd össze az O2 és N2 molekulát: melyikben van több kötő elektronpár, és mit vársz a kötés erősségéről?",
+                "Rendezd a C–C, C=C és C≡C kötéseket növekvő kötéstávolság szerint, és indokold!"
+              ]
+            },
+            {
+              "key": "polaris_kotes_es_dipol_molekula",
+              "name": "Poláris kötés és dipólusmolekula",
+              "short_description": "Elektronegativitás-különbségből adódó polaritás, részleges töltések és a dipólus jelleg felismerése egyszerű molekulákon.",
+              "example_tasks": [
+                "Döntsd el, hogy a H–Cl kötés poláris-e, és jelöld a δ+ és δ− töltéseket!",
+                "Magyarázd el, miért poláris a víz molekula, még akkor is, ha csak kétféle atomból áll!",
+                "Válassz ki egy apoláris (pl. O2, N2, CH4) és egy poláris molekulát, és indokold a választásodat!"
+              ]
+            },
+            {
+              "key": "lewis_kepletek_es_szerkezeti_rajzok",
+              "name": "Lewis-képletek és szerkezeti rajzok",
+              "short_description": "Lewis-szerkezetek felírása egyszerű molekulákra és ionokra, a kötő- és nemkötő elektronpárok figyelembevételével.",
+              "example_tasks": [
+                "Írd fel a H2O és NH3 Lewis-képletét, és jelöld be a nemkötő elektronpárokat!",
+                "Írd fel a CO2 Lewis-képletét, és döntsd el, hány kettős kötést tartalmaz!",
+                "Készíts Lewis-képletet a ClO⁻ ionra, és magyarázd el, miért kell a töltést feltüntetni!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "femes_kotes_es_femek",
+          "name": "Fémes kötés és fémek",
+          "short_description": "A fémes kötés modellje (delokalizált elektronok), valamint a fémek jellegzetes tulajdonságainak magyarázata.",
+          "sub_topics": [
+            {
+              "key": "femes_kotes_modell_es_vezetes",
+              "name": "Fémes kötés modellje és vezetés",
+              "short_description": "A delokalizált elektronok szerepe az elektromos és hővezetésben, valamint a fémes csillogás magyarázata.",
+              "example_tasks": [
+                "Magyarázd el a fémes kötést a 'szabad elektronok' modelljével, és kösd össze a vezetőképességgel!",
+                "Miért jó hővezető az alumínium? Írj egy mindennapi példát, ahol ezt kihasználjuk!",
+                "Hasonlítsd össze a grafit és a gyémánt vezetőképességét a kötéstípusok és szerkezet alapján!"
+              ]
+            },
+            {
+              "key": "otvozetek_es_tulajdonsagvaltozas",
+              "name": "Ötvözetek és tulajdonságváltozás",
+              "short_description": "Ötvözet fogalma és a rácsszerkezet módosulása miatti tulajdonságváltozások (szilárdság, korrózióállóság) értelmezése.",
+              "example_tasks": [
+                "Mi az ötvözet? Adj példát két gyakori ötvözetre (pl. bronz, acél) és nevezd meg összetevőiket!",
+                "Magyarázd el, miért lehet keményebb az acél a tiszta vashoz képest!",
+                "Egy tárgy rozsdamentes acélból készült. Milyen tulajdonságra utal ez, és miért előnyös a mindennapokban?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "masodrendu_kolcsonhatasok",
+          "name": "Másodrendű kölcsönhatások",
+          "short_description": "A molekulák közötti vonzóerők (diszperziós kölcsönhatás, dipól–dipól, hidrogénkötés) szerepe a forráspontban, oldhatóságban és halmazállapotban.",
+          "sub_topics": [
+            {
+              "key": "diszperzios_dipol_dipol_kolcsonhatas",
+              "name": "Diszperziós és dipól–dipól kölcsönhatás",
+              "short_description": "A gyenge kölcsönhatások felismerése és hatásuk becslése egyszerű anyagok forráspontja és fizikai tulajdonságai alapján.",
+              "example_tasks": [
+                "Miért magasabb a Br2 forráspontja, mint a Cl2-é? Indokold a részecskeközötti kölcsönhatásokkal!",
+                "Hasonlítsd össze az HCl és Cl2 forráspontját: melyiknél vársz erősebb kölcsönhatást és miért?",
+                "Adj példát egy olyan anyagra, ahol a diszperziós kölcsönhatások dominálnak, és írd le egy jellemző tulajdonságát!"
+              ]
+            },
+            {
+              "key": "hidrogenkotes_es_kovetkezmenyei",
+              "name": "Hidrogénkötés és következményei",
+              "short_description": "A hidrogénkötés feltételei (H–F/O/N) és hatása a víz különleges tulajdonságaira és az oldhatóságra.",
+              "example_tasks": [
+                "Sorold fel, milyen feltételek mellett alakulhat ki hidrogénkötés, és adj rá két molekulapéldát!",
+                "Magyarázd el, miért magas a víz forráspontja a hasonló moláris tömegű molekulákhoz képest!",
+                "Döntsd el, melyik oldódik jobban vízben: etanol vagy hexán, és indokold hidrogénkötéssel/polaritással!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "anyagok_allapotai_es_fizikai_tulajdonsagok",
+      "name": "Anyagok halmazállapotai és fizikai tulajdonságai",
+      "short_description": "A tanulók a halmazállapotok részecskemodelljét használva magyarázzák a fizikai tulajdonságokat, a halmazállapot-változásokat és az egyszerű keverékek viselkedését.",
+      "sub_topics": [
+        {
+          "key": "halmazallapotok_reszecskemodellje",
+          "name": "A halmazállapotok részecskemodellje",
+          "short_description": "Szilárd, folyadék és gáz részecskeszintű jellemzése (rendezettség, mozgás, térkitöltés) és makroszkopikus következmények.",
+          "sub_topics": [
+            {
+              "key": "szilard_folyadek_gaz_osszehasonlitas",
+              "name": "Szilárd–folyadék–gáz összehasonlítása",
+              "short_description": "A három halmazállapot tulajdonságainak összevetése részecskemodell alapján (sűrűség, összenyomhatóság, alak/térfogat).",
+              "example_tasks": [
+                "Készíts rövid táblázatos (szöveges) összehasonlítást a szilárd, folyadék és gáz halmazállapotról a részecskék mozgása és rendezettsége alapján!",
+                "Miért összenyomható a gáz, de a folyadék alig? Magyarázd el részecskeközi távolsággal!",
+                "Adj mindennapi példát arra, hogy a gázok kitöltik a rendelkezésre álló teret, és írd le, hogyan figyelhető ez meg!"
+              ]
+            },
+            {
+              "key": "diffuzio_es_brown_mozgas",
+              "name": "Diffúzió és Brown-mozgás",
+              "short_description": "A részecskék állandó mozgásának felismerése diffúziós jelenségekben és egyszerű kísérleti megfigyelésekben.",
+              "example_tasks": [
+                "Írd le, mit figyelsz meg, ha kálium-permanganát kristályt dobsz vízbe, és magyarázd a diffúzió fogalmával!",
+                "Miért gyorsabb a diffúzió meleg vízben, mint hidegben? Kapcsold össze a részecskék mozgási energiájával!",
+                "Keresd meg egy mindennapi példában (pl. illat terjedése), hogyan jelenik meg a diffúzió!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "halmazallapot_valtozasok_es_energia",
+          "name": "Halmazállapot-változások és energia",
+          "short_description": "Olvadás, fagyás, párolgás, forrás, lecsapódás és szublimáció értelmezése, valamint az energiafelvétel/-leadás szerepe.",
+          "sub_topics": [
+            {
+              "key": "fazisatalakulasok_fajtai",
+              "name": "Fázisátalakulások fajtái",
+              "short_description": "A halmazállapot-változások azonosítása és a hőmérséklet-változás és hőközlés kapcsolatának leírása egyszerű példákon.",
+              "example_tasks": [
+                "Sorold fel a víz halmazállapot-változásait (olvadás, forrás stb.), és mindenhez írj egy mindennapi példát!",
+                "Mi a különbség a párolgás és a forrás között? Írd le, hogyan figyelhető meg mindkettő a konyhában!",
+                "Magyarázd el, miért hűt a párolgás (pl. izzadás), és kösd össze az energiafelvétellel!"
+              ]
+            },
+            {
+              "key": "fazisdiagram_alapok",
+              "name": "Fázisdiagram alapok (kvalitatív)",
+              "short_description": "Egyszerű fázisdiagram értelmezése (szilárd–folyadék–gáz tartományok) és a nyomás/hőmérséklet szerepének felismerése.",
+              "example_tasks": [
+                "Egy egyszerű fázisdiagramon jelöld be, hol található a szilárd, folyadék és gáz tartomány!",
+                "Magyarázd el, miért változik a víz forráspontja hegyvidéken! Kapcsold össze a nyomással!",
+                "Adj példát olyan anyagra vagy jelenségre, ahol a szublimáció megfigyelhető (pl. szárazjég), és írd le a folyamatot!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "gazok_tulajdonsagai_alapszinten",
+          "name": "Gázok tulajdonságai alapszinten",
+          "short_description": "A gázok állapotjelzői és egyszerű összefüggéseik (kvalitatívan), valamint a mindennapi gázjelenségek értelmezése.",
+          "sub_topics": [
+            {
+              "key": "allapotjelzok_p_v_t_kapcsolat",
+              "name": "Állapotjelzők: p, V, T kapcsolat",
+              "short_description": "A nyomás, térfogat és hőmérséklet közti kapcsolat felismerése egyszerű helyzetekben (pl. melegítés, összenyomás).",
+              "example_tasks": [
+                "Mi történik egy lezárt műanyag palackkal, ha meleg vízbe teszed? Magyarázd a gázok részecskemodelljével!",
+                "Miért keményedik meg egy bicikligumi a napon? Kapcsold össze a hőmérsékletet és a nyomást!",
+                "Adott egy fecskendőben levegő. Írd le, mi történik a nyomással, ha a dugattyút benyomod, és indokold!"
+              ]
+            },
+            {
+              "key": "legkor_es_gazkeverekek",
+              "name": "A légkör mint gázkeverék",
+              "short_description": "A levegő összetétele, a gázkeverék fogalma és a gázok szerepe az életben és környezeti folyamatokban.",
+              "example_tasks": [
+                "Sorold fel a levegő fő összetevőit és közelítő térfogatszázalékukat (nagyságrendileg)!",
+                "Miért fontos a CO2 kis mennyisége is a légkörben? Adj egy éghajlati vagy biológiai kapcsolódást!",
+                "Magyarázd el, mit jelent az, hogy a levegő gázkeverék, és miért nem tekintjük tiszta anyagnak!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "keverekek_es_anyagok_szetvalasztasa",
+          "name": "Keverékek és anyagok szétválasztása",
+          "short_description": "Keverékek típusai és egyszerű szétválasztási módszerek (szűrés, ülepítés, bepárlás, desztilláció) gyakorlati példákon.",
+          "sub_topics": [
+            {
+              "key": "homogen_heterogen_keverekek",
+              "name": "Homogén és heterogén keverékek",
+              "short_description": "A keverékek megkülönböztetése és a részecskeméret/szerkezet szerepének felismerése (oldat, szuszpenzió, emulzió).",
+              "example_tasks": [
+                "Döntsd el, hogy a tej, a sós víz és a homokos víz homogén vagy heterogén keverék-e, és indokold!",
+                "Adj példát emulzióra és szuszpenzióra a mindennapokból, és írd le, miben különböznek!",
+                "Miért ülepszik le a homok a vízben állás közben? Magyarázd részecskemérettel és sűrűséggel!"
+              ]
+            },
+            {
+              "key": "szetvalasztasi_modszerek_gyakorlatban",
+              "name": "Szétválasztási módszerek a gyakorlatban",
+              "short_description": "A szétválasztási eljárások kiválasztása az anyagok tulajdonságai alapján és egyszerű eljárástervezés.",
+              "example_tasks": [
+                "Válassz megfelelő szétválasztási módszert: (a) homok + víz, (b) só + víz, (c) alkohol + víz. Indokold a döntést!",
+                "Tervezd meg röviden, hogyan készítenél tiszta ivóvizet sós vízből iskolai laborban (eszközök és lépések)!",
+                "Magyarázd el, mi a desztilláció lényege, és adj egy ipari vagy mindennapi alkalmazást!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "oldatok_es_koncentracio",
+      "name": "Oldatok és koncentráció",
+      "short_description": "A tanulók megértik az oldódás folyamatát, az oldatok összetételének jellemzését és a koncentráció számításának alapjait, valamint ezek gyakorlati alkalmazásait.",
+      "sub_topics": [
+        {
+          "key": "oldodas_es_oldhatossag",
+          "name": "Oldódás és oldhatóság",
+          "short_description": "Az oldódás részecskeszintű értelmezése, az oldhatóság fogalma és a hőmérséklet hatása az oldhatóságra.",
+          "sub_topics": [
+            {
+              "key": "oldodas_reszecskemodell",
+              "name": "Az oldódás részecskemodellje",
+              "short_description": "Az oldódás leírása a részecskék kölcsönhatásai és mozgása alapján, különbséget téve oldódás és olvadás között.",
+              "example_tasks": [
+                "Magyarázd el részecskemodell segítségével, mi történik, amikor konyhasót keversz vízbe!",
+                "Mi a különbség az oldódás és az olvadás között? Mutasd be egy-egy példával!",
+                "Indokold, miért gyorsítja az oldódást a keverés és az aprítás (pl. kristálycukor vs. kockacukor)!"
+              ]
+            },
+            {
+              "key": "oldhatossag_es_telitetseg",
+              "name": "Oldhatóság, telített és telítetlen oldat",
+              "short_description": "Az oldhatóság fogalmának alkalmazása; telített, telítetlen és túltelített oldat felismerése egyszerű helyzetekben.",
+              "example_tasks": [
+                "Írd le, mit jelent az, hogy egy oldat telített, és adj rá egy konyhai példát!",
+                "Egy pohár vízben folyamatos keverés mellett már nem oldódik több só. Milyen oldatról van szó? Indokold!",
+                "Képzeld el, hogy meleg vízben sok cukrot oldasz fel, majd lehűtöd. Mi történhet, és hogyan nevezzük ezt az állapotot?"
+              ]
+            },
+            {
+              "key": "homerseklet_hatas_oldhatossagra",
+              "name": "A hőmérséklet hatása az oldhatóságra",
+              "short_description": "Az oldhatóság változásának értelmezése hőmérséklet függvényében (kvalitatívan), és következtetések oldhatósági görbék alapján.",
+              "example_tasks": [
+                "Miért lehet több cukrot feloldani meleg teában, mint hideg vízben? Magyarázd meg!",
+                "Egy oldhatósági görbén olvasd le, hogyan változik egy szilárd anyag oldhatósága 20 °C-ról 60 °C-ra melegítéskor (szövegesen írd le a trendet)!",
+                "Adj egy gyakorlati példát, ahol a hőmérséklet-változás miatt kristályosodás figyelhető meg (pl. méz cukrosodása), és kösd össze az oldhatósággal!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "koncentracio_es_higitas",
+          "name": "Koncentráció és hígítás",
+          "short_description": "A tömeg-, térfogat- és anyagmennyiség-alapú koncentrációk alapjai, valamint a hígítás elve és számításai.",
+          "sub_topics": [
+            {
+              "key": "tomegszazalek_koncentracio",
+              "name": "Tömegszázalékos összetétel",
+              "short_description": "A tömegszázalék fogalmának használata oldatok összetételének meghatározására és ellenőrzésére.",
+              "example_tasks": [
+                "Készítesz 200 g 5%-os (m/m) cukoroldatot. Hány gramm cukorra és hány gramm vízre van szükséged?",
+                "Egy 80 g-os oldat 12 g sót tartalmaz. Számold ki az oldat tömegszázalékos koncentrációját!",
+                "Van 10%-os oldatod. Hogyan ellenőriznéd mérleggel és vízzel, hogy valóban 10% lett-e? Írd le a lépéseket röviden!"
+              ]
+            },
+            {
+              "key": "molari_koncentracio_bevezetes",
+              "name": "Anyagmennyiség-koncentráció (molaritás) bevezetése",
+              "short_description": "Az anyagmennyiség-koncentráció (mol/dm³) értelmezése és egyszerű számítása a szükséges mennyiségek átváltásával.",
+              "example_tasks": [
+                "Számold ki a koncentrációját annak az oldatnak, amely 0,50 mol NaCl-t tartalmaz 2,0 dm³ oldatban!",
+                "Hány mol oldott anyag van 250 cm³ 0,20 mol/dm³ koncentrációjú oldatban?",
+                "Készíteni szeretnél 500 cm³ 0,10 mol/dm³ HCl-oldatot. Hány mol HCl szükséges hozzá? (csak anyagmennyiséget számolj)!"
+              ]
+            },
+            {
+              "key": "higitas_elv_es_szamitas",
+              "name": "Hígítás elve és számítás",
+              "short_description": "A hígítás során az oldott anyag mennyiségének megmaradása; egyszerű hígítási feladatok megoldása.",
+              "example_tasks": [
+                "Van 100 cm³ 1,0 mol/dm³ NaCl-oldatod. Mennyi lesz a koncentráció, ha 200 cm³-re hígítod?",
+                "Készíts 250 cm³ 0,40 mol/dm³ oldatot 1,0 mol/dm³ törzsoldatból. Mennyi törzsoldatot mérsz ki?",
+                "Egy fertőtlenítő oldatot 1:4 arányban hígítanak (1 rész koncentrátum + 4 rész víz). Ha 50 ml koncentrátumod van, mennyi oldat készül, és milyen hígítási tényező ez?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "oldatok_elektrolitok_es_vezetes",
+          "name": "Oldatok, elektrolitok és vezetés",
+          "short_description": "Az elektrolitok fogalma, az ionok szerepe az oldatok elektromos vezetőképességében, valamint mindennapi alkalmazások.",
+          "sub_topics": [
+            {
+              "key": "elektrolit_nonelektrolit",
+              "name": "Elektrolit és nemelektrolit oldatok",
+              "short_description": "Az elektrolitok felismerése oldatvezetés alapján, és a jelenség magyarázata ionképződéssel vagy ionos oldódással.",
+              "example_tasks": [
+                "Miért vezeti az áramot a sós víz, de a cukros víz alig? Magyarázd meg ionokkal!",
+                "Sorolj fel három anyagot, amelynek vizes oldata jó vezető (elektrolit), és kettőt, amelyé nemelektrolit!",
+                "Egy kísérletben egy izzó csak a 'B' oldatban világít. A 'B' oldatban NaCl van. Következtesd ki, mi lehet az 'A' oldat, ha az nem vezette az áramot (adj egy példát)!"
+              ]
+            },
+            {
+              "key": "ionok_mozgasa_es_aramvezetes",
+              "name": "Ionok mozgása és áramvezetés",
+              "short_description": "Az áramvezetés részecskeszintű értelmezése: töltéshordozók mozgása oldatban és olvadékban.",
+              "example_tasks": [
+                "Magyarázd el, hogyan vezet áramot egy NaCl-oldat: milyen részecskék mozognak és merre?",
+                "Miért vezet áramot egy ionvegyület olvadéka is? Hasonlítsd össze a szilárd állapottal!",
+                "Egy tanuló azt állítja: 'Az oldatban az elektronok mozognak.' Javítsd ki a kijelentést, és indokold!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "kemiai_reakciok_es_egyenletek",
+      "name": "Kémiai reakciók és egyenletek",
+      "short_description": "A tanulók felismerik a kémiai átalakulások jellemzőit, értelmezik a reakciótípusokat, és gyakorolják a kémiai egyenletek felírását és rendezését.",
+      "sub_topics": [
+        {
+          "key": "reakciok_jelensegei_es_megfigyeles",
+          "name": "A kémiai reakciók megfigyelhető jelei",
+          "short_description": "A kémiai átalakulás és fizikai változás megkülönböztetése, reakciójelek (gázfejlődés, csapadék, hőhatás) azonosítása.",
+          "sub_topics": [
+            {
+              "key": "kemiai_vs_fizikai_valtozas",
+              "name": "Kémiai és fizikai változás megkülönböztetése",
+              "short_description": "A kémiai reakció fogalmának alkalmazása hétköznapi folyamatok besorolására és indoklására.",
+              "example_tasks": [
+                "Döntsd el, hogy az alábbiak közül melyik kémiai változás: jég olvadása, vas rozsdásodása, cukor oldódása vízben, gyertya égése. Indokold!",
+                "Adj két példát fizikai és két példát kémiai változásra a háztartásból, és írd le röviden a különbséget!",
+                "Egy papírlap elszenesedik hő hatására. Miért tekintjük ezt kémiai változásnak?"
+              ]
+            },
+            {
+              "key": "reakciojelek_es_biztonsag",
+              "name": "Reakciójelek és biztonság",
+              "short_description": "Reakciók megfigyelhető jeleinek értelmezése és a biztonságos kísérletezés alapelveinek alkalmazása.",
+              "example_tasks": [
+                "Sorolj fel három reakciójelet, amely kémiai átalakulásra utal, és mindegyikhez írj egy példát!",
+                "Miért veszélyes zárt edényben olyan reakciót végezni, amely gázfejlődéssel jár? Magyarázd meg!",
+                "Egy kísérletben csapadék képződik. Mit jelent ez részecskeszinten, és mire következtetsz az oldhatóságról?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kemiai_egyenletek_irasa",
+          "name": "Kémiai egyenletek írása és rendezése",
+          "short_description": "A reagensek és termékek jelölése képletekkel, a tömegmegmaradás elvének alkalmazása és egyenletrendezés.",
+          "sub_topics": [
+            {
+              "key": "tomegmegmaradas_es_egyenletrendezes",
+              "name": "Tömegmegmaradás és egyenletrendezés",
+              "short_description": "A kémiai egyenletek rendezése atomok számlálásával és a tömegmegmaradás elvének érvényesítésével.",
+              "example_tasks": [
+                "Rendezd az egyenletet: H2 + O2 → H2O, és indokold, miért kell rendezni!",
+                "Rendezd: Fe + O2 → Fe2O3. Mutasd meg lépésenként, hogyan állítottad be az együtthatókat!",
+                "Ellenőrizd, hogy a következő egyenlet helyes-e: 2Na + Cl2 → 2NaCl. Ha igen, indokold atomok számával!"
+              ]
+            },
+            {
+              "key": "reakciotipusok_egyenletekkel",
+              "name": "Reakciótípusok (egyenletekkel)",
+              "short_description": "Egyesülés, bomlás, helyettesítés és kettős csere felismerése és leírása kémiai egyenletek alapján.",
+              "example_tasks": [
+                "Sorold be reakciótípus szerint: (a) CaCO3 → CaO + CO2, (b) 2H2 + O2 → 2H2O, (c) Zn + 2HCl → ZnCl2 + H2!",
+                "Írj egy példát kettős csere reakcióra (csapadékképződés), és rendezd az egyenletet!",
+                "Egy vegyület bomlik melegítésre és gáz keletkezik. Adj egy lehetséges egyenletet (pl. karbonát bomlása), és nevezd meg a reakciótípust!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "redox_alapok_reakciokban",
+          "name": "Redox alapok kémiai reakciókban",
+          "short_description": "Oxidáció és redukció fogalma hétköznapi példákon, oxidációszám bevezetése és egyszerű redox-folyamatok felismerése.",
+          "sub_topics": [
+            {
+              "key": "oxidacio_redukcio_fogalma",
+              "name": "Oxidáció és redukció fogalma",
+              "short_description": "Oxidáció/redukció értelmezése elektronátmenetként és egyszerű példák alapján (égés, korrózió).",
+              "example_tasks": [
+                "Magyarázd el, mi az oxidáció és mi a redukció, és írd le, miért tekinthető az égés redox-folyamatnak!",
+                "A vas rozsdásodása során a vas oxidálódik. Mit jelent ez elektronok szempontjából? Írd le szövegesen!",
+                "Döntsd el, hogy a következő folyamatban melyik anyag oxidálódik és melyik redukálódik: Zn + CuSO4 → ZnSO4 + Cu!"
+              ]
+            },
+            {
+              "key": "oxidacioszam_egyszeru_szamolas",
+              "name": "Oxidációszám egyszerű meghatározása",
+              "short_description": "Oxidációszámok meghatározása elemekben és egyszerű vegyületekben (pl. oxidok, sók) és változásuk értelmezése.",
+              "example_tasks": [
+                "Határozd meg az oxidációszámot a következőkben: O2, H2O, NaCl, MgO!",
+                "Számold ki a kén oxidációszámát SO2-ben és SO3-ban, majd hasonlítsd össze a kettőt!",
+                "Ellenőrizd, hogy a Cl oxidációszáma hogyan változik a Cl2 → NaCl átalakulás során, és következtesd ki a folyamat jellegét!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sztokhiometria_es_mennyisegi_kemia",
+      "name": "Sztöchiometria és mennyiségi kémia",
+      "short_description": "A tanulók az anyagmennyiség (mol) fogalmára építve egyszerű mennyiségi összefüggéseket alkalmaznak: képletek, moláris tömeg, tömeg–mol átváltás és alap reakciószámítások.",
+      "sub_topics": [
+        {
+          "key": "mol_fogalma_es_molaris_tomeg",
+          "name": "Mol fogalma és moláris tömeg",
+          "short_description": "Az anyagmennyiség fogalmának értelmezése és a moláris tömeg használata tömeg–mol átváltásokhoz.",
+          "sub_topics": [
+            {
+              "key": "anyagmennyiseg_mol_bevezetes",
+              "name": "Anyagmennyiség (mol) bevezetése",
+              "short_description": "A mol fogalmának alkalmazása mennyiségek összehasonlítására és a kémiai számítások alapjaként.",
+              "example_tasks": [
+                "Magyarázd el, mit jelent az, hogy 1 mol anyag, és miért hasznos ez a kémiai számításokban!",
+                "Hány mol van 18 g vízben? Használd a moláris tömeg fogalmát!",
+                "Hasonlítsd össze: melyik tartalmaz több részecskét, 2 mol CO2 vagy 1,5 mol O2? Indokold!"
+              ]
+            },
+            {
+              "key": "molaris_tomeg_meghatarozas",
+              "name": "Moláris tömeg meghatározása",
+              "short_description": "Moláris tömeg kiszámítása képlet alapján (pl. NaCl, H2SO4) és használata egyszerű átváltásokban.",
+              "example_tasks": [
+                "Számold ki a Na2CO3 moláris tömegét a periódusos rendszer adatai alapján!",
+                "Mekkora tömegű 0,25 mol CaCO3? Írd le a lépéseket!",
+                "Egy anyag moláris tömege 58,5 g/mol. Melyik gyakori sóra utal ez? Nevezd meg!"
+              ]
+            },
+            {
+              "key": "tomeg_mol_atvaltas",
+              "name": "Tömeg–mol átváltás",
+              "short_description": "Tömeg és anyagmennyiség átváltása a moláris tömeg segítségével, több lépéses (de egyszerű) feladatokban.",
+              "example_tasks": [
+                "Számold ki, hány mol van 49 g H2SO4-ban!",
+                "Mekkora tömegű 1,20 mol NH3? (moláris tömeg használatával)",
+                "Egy mintában 0,80 mol NaCl van. Mekkora tömegű a minta, és hány gramm Na-t tartalmaz?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "reakcios_aranyok_es_limitlo_reagens",
+          "name": "Reakcióarányok és limitáló reagens (alapszinten)",
+          "short_description": "A rendezett egyenletből leolvasható mólarányok használata egyszerű mennyiségi feladatokban, és a limitáló reagens gondolatának bevezetése.",
+          "sub_topics": [
+            {
+              "key": "molaranyok_egyenletbol",
+              "name": "Mólarányok a rendezett egyenletből",
+              "short_description": "A sztöchiometriai együtthatók mólarányként való értelmezése és alkalmazása mennyiségi következtetésekhez.",
+              "example_tasks": [
+                "A reakció: 2H2 + O2 → 2H2O. Ha 3,0 mol H2 reagál, hány mol víz keletkezhet (feltételezve elegendő O2-t)?",
+                "A reakció: CaCO3 → CaO + CO2. Ha 0,50 mol CaCO3 bomlik el, hány mol CO2 keletkezik?",
+                "Írd le, milyen mólarányban reagál a Mg és az O2 a 2Mg + O2 → 2MgO egyenlet alapján!"
+              ]
+            },
+            {
+              "key": "limitalo_reagens_egyszeru",
+              "name": "Limitáló reagens egyszerű esetei",
+              "short_description": "Annak felismerése, melyik reagens fogy el előbb egy adott mólarányú reakcióban, és ennek hatása a termékmennyiségre.",
+              "example_tasks": [
+                "A reakció: 2H2 + O2 → 2H2O. Van 4,0 mol H2 és 1,0 mol O2. Melyik a limitáló reagens, és hány mol víz keletkezik?",
+                "A reakció: Zn + 2HCl → ZnCl2 + H2. Van 0,30 mol Zn és 0,40 mol HCl. Döntsd el, melyik fogy el előbb!",
+                "Magyarázd el, mit jelent a limitáló reagens a konyhai 'recept' hasonlattal (adj saját példát)!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hozam_es_tisztasag_alapok",
+          "name": "Hozam és tisztaság (alapok)",
+          "short_description": "A gyakorlati termelés és kísérletezés során előforduló veszteségek megértése: százalékos hozam és egyszerű tisztasági számítások bevezetése.",
+          "sub_topics": [
+            {
+              "key": "elmeleti_es_tenyleges_hozam",
+              "name": "Elméleti és tényleges hozam",
+              "short_description": "Az elméleti hozam fogalma rendezett egyenlet alapján, és a tényleges hozam összevetése százalékos hozammal.",
+              "example_tasks": [
+                "Egy reakcióban az elméleti terméktömeg 10,0 g lenne, de csak 8,5 g terméket nyersz. Számold ki a százalékos hozamot!",
+                "Magyarázd el, miért lehet a tényleges hozam kisebb az elméletinél (soroljon fel legalább két okot)!",
+                "Egy kísérletben 75% hozamot mértél. Ha az elméleti hozam 20 g, mennyi terméket kaptál ténylegesen?"
+              ]
+            },
+            {
+              "key": "tisztasag_szazalek_szamitas",
+              "name": "Tisztaság százalék számítása",
+              "short_description": "Szennyezett minta tisztaságának meghatározása tömegszázalék alapján, egyszerű egykomponensű szennyező feltételezéssel.",
+              "example_tasks": [
+                "Egy 50 g-os technikai NaCl-minta 47 g tiszta NaCl-t tartalmaz. Számold ki a tisztaságát százalékban!",
+                "Egy 120 g-os minta 90%-os tisztaságú. Hány gramm a tiszta anyag benne, és hány gramm a szennyező?",
+                "Miért fontos a tisztaság ismerete gyógyszerek vagy élelmiszer-adalékok esetén? Adj egy gyakorlati indokot!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sav_bazis_es_vizes_kemia",
+      "name": "Sav–bázis és vizes kémia",
+      "short_description": "A tanulók megismerik a savak és bázisok alapfogalmait, a pH jelentését, a semlegesítési reakciókat és a vizes közegben zajló egyszerű kémiai folyamatokat.",
+      "sub_topics": [
+        {
+          "key": "savak_bazisok_fogalma",
+          "name": "Savak és bázisok fogalma",
+          "short_description": "A savak és bázisok felismerése vizes oldatban, tulajdonságaik és mindennapi előfordulásuk értelmezése.",
+          "sub_topics": [
+            {
+              "key": "sav_bazis_jellemzok",
+              "name": "Savak és bázisok jellemzői",
+              "short_description": "Savak és bázisok kémhatásának, ízének (elméletben), reakciókészségének és biztonságos kezelésének megismerése.",
+              "example_tasks": [
+                "Sorolj fel három savat és három bázist a mindennapokból (pl. ecet, citromsav, szappan), és írd le, mire használjuk őket!",
+                "Miért kell óvatosan bánni a tömény savakkal és lúgokkal? Adj két konkrét biztonsági szabályt!",
+                "Egy ismeretlen oldat csúszós tapintású. Milyen kémhatásra gyanakodsz, és miért?"
+              ]
+            },
+            {
+              "key": "indikatorok_es_kemhatas",
+              "name": "Indikátorok és kémhatás",
+              "short_description": "A savas, semleges és lúgos kémhatás felismerése indikátorok (pl. lakmusz, univerzális indikátor) segítségével.",
+              "example_tasks": [
+                "Írd le, milyen színt vesz fel a lakmuszpapír savas, semleges és lúgos oldatban!",
+                "Egy oldat univerzális indikátorral zöld színű. Mit mond ez a kémhatásáról?",
+                "Tervezd meg, hogyan vizsgálnád meg három ismeretlen oldat kémhatását indikátor segítségével!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ph_es_skala",
+          "name": "pH és a pH-skála",
+          "short_description": "A pH fogalmának bevezetése, a pH-skála értelmezése és egyszerű következtetések levonása mért vagy megadott pH-értékekből.",
+          "sub_topics": [
+            {
+              "key": "ph_skala_ertelmezese",
+              "name": "A pH-skála értelmezése",
+              "short_description": "A pH-skála számainak jelentése és a savas–semleges–lúgos tartományok elkülönítése.",
+              "example_tasks": [
+                "Rendezd a következő oldatokat növekvő pH szerint: citromlé (pH≈2), tiszta víz (pH=7), szappanos víz (pH≈10)!",
+                "Mit jelent az, ha egy oldat pH-ja 4? Savnak vagy bázisnak tekintjük?",
+                "Magyarázd el, miért nem tartalmaz a pH-skála negatív értékeket az iskolai gyakorlatban!"
+              ]
+            },
+            {
+              "key": "ph_valtozas_higitas_soran",
+              "name": "pH változása hígítás során",
+              "short_description": "A hígítás hatásának kvalitatív értelmezése a pH-ra savas és lúgos oldatok esetén.",
+              "example_tasks": [
+                "Mi történik egy savas oldat pH-jával, ha vízzel hígítjuk? Indokold!",
+                "Egy lúgos oldat pH-ja 12. Mit vársz, hogyan változik ez az érték hígításkor?",
+                "Adj egy gyakorlati példát, amikor a hígítás csökkenti egy oldat veszélyességét!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "semlegesites_es_sok",
+          "name": "Semlegesítés és sók",
+          "short_description": "A sav–bázis reakciók megértése semlegesítésként, valamint a sók keletkezésének és tulajdonságainak alapjai.",
+          "sub_topics": [
+            {
+              "key": "semlegesitesi_reakcio",
+              "name": "Semlegesítési reakció",
+              "short_description": "Sav és bázis reakciójának értelmezése kémiai egyenlettel és hétköznapi példákkal.",
+              "example_tasks": [
+                "Írd fel a sósav és nátrium-hidroxid semlegesítési reakciójának egyenletét!",
+                "Magyarázd el, miért csökken a savasság egy lúg hozzáadásakor!",
+                "Adj egy példát a semlegesítés gyakorlati alkalmazására (pl. gyomorsav, talajjavítás)!"
+              ]
+            },
+            {
+              "key": "sok_fogalma_es_peldak",
+              "name": "Sók fogalma és példák",
+              "short_description": "A sók keletkezésének felismerése sav–bázis reakciókból és a leggyakoribb sók megnevezése.",
+              "example_tasks": [
+                "Mi a só kémiai értelemben? Magyarázd el egy semlegesítési példával!",
+                "Nevezd meg a következő sókat képlet alapján: NaCl, KNO3, CaCO3!",
+                "Miért nem mindegyik só kémhatása semleges vizes oldatban? Adj egy gondolati magyarázatot!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "szervetlen_kemia_elemek_es_vegyuleteik",
+      "name": "Szervetlen kémia: elemek és vegyületeik",
+      "short_description": "A tanulók rendszerezik ismereteiket a legfontosabb fémekről és nemfémekről, azok vegyületeiről, reakcióiról és gyakorlati jelentőségéről.",
+      "sub_topics": [
+        {
+          "key": "nemfemek_es_vegyuleteik",
+          "name": "Nemfémek és vegyületeik",
+          "short_description": "A legfontosabb nemfémek (pl. hidrogén, oxigén, nitrogén, kén, halogének) tulajdonságai és tipikus vegyületei.",
+          "sub_topics": [
+            {
+              "key": "oxigen_es_oxidok",
+              "name": "Oxigén és oxidok",
+              "short_description": "Az oxigén szerepe az égésben és az oxidok keletkezésének és tulajdonságainak alapjai.",
+              "example_tasks": [
+                "Írd le, miért szükséges az oxigén az égéshez, és adj egy példát égési reakcióra!",
+                "Nevezd meg és sorold be: CO2, SO2, CaO – savas vagy bázikus oxid?",
+                "Miért fontos a CO2 szerepe a természetben és az iparban? Írj két példát!"
+              ]
+            },
+            {
+              "key": "hidrogen_es_viz",
+              "name": "Hidrogén és víz",
+              "short_description": "A hidrogén tulajdonságai, a víz mint különleges vegyület, és szerepe a kémiai és biológiai folyamatokban.",
+              "example_tasks": [
+                "Miért tekintjük a vizet különleges anyagnak a fizikai tulajdonságai alapján?",
+                "Írd fel a víz képződésének kémiai egyenletét hidrogénből és oxigénből!",
+                "Sorolj fel három területet, ahol a víz kémiai tulajdonságai kulcsszerepet játszanak!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "femek_es_vegyuleteik",
+          "name": "Fémek és vegyületeik",
+          "short_description": "A fontosabb fémek (alkálifémek, alkáliföldfémek, vas) tulajdonságai, reakciói és mindennapi alkalmazásai.",
+          "sub_topics": [
+            {
+              "key": "alkalifemek_tulajdonsagai",
+              "name": "Alkálifémek tulajdonságai",
+              "short_description": "Az alkálifémek (pl. Na, K) jellegzetes reakciókészsége és tipikus vegyületei.",
+              "example_tasks": [
+                "Miért reagálnak hevesen az alkálifémek vízzel? Magyarázd elektronátmenettel!",
+                "Írd fel a nátrium vízzel való reakciójának egyenletét!",
+                "Miért tárolják az alkálifémeket olaj alatt? Indokold!"
+              ]
+            },
+            {
+              "key": "vas_es_korrzio",
+              "name": "Vas és korrózió",
+              "short_description": "A vas jelentősége, rozsdásodásának folyamata és a korrózió elleni védekezés alapjai.",
+              "example_tasks": [
+                "Magyarázd el, mi a korrózió, és miért tekinthető redox-folyamatnak!",
+                "Sorolj fel két módszert a vas korrózió elleni védelmére, és írd le, hogyan működnek!",
+                "Miért gyorsabb a rozsdásodás sós víz jelenlétében? Kapcsold össze az elektrolit fogalmával!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "a_szen_egyszeru_szerves_vegyuletei",
+      "name": "A szén egyszerű szerves vegyületei",
+      "short_description": "Bevezetés a szerves kémiába: a szén kötésképzése, a legegyszerűbb szénhidrogének és néhány fontos funkciós csoport mindennapi példákon.",
+      "sub_topics": [
+        {
+          "key": "szen_koteskepzese",
+          "name": "A szén kötésképzése",
+          "short_description": "A szén négy vegyértéke, láncképzés és a szerves vegyületek nagy változatosságának magyarázata.",
+          "sub_topics": [
+            {
+              "key": "szen_lanckepzes_es_izomerias_alap",
+              "name": "Szénlánc-képzés és izoméria alapjai",
+              "short_description": "A szénláncok felépítése és annak felismerése, hogy azonos összegképlet különböző szerkezeteket eredményezhet.",
+              "example_tasks": [
+                "Magyarázd el, miért képes a szén hosszú láncokat kialakítani!",
+                "Rajzolj fel két különböző szerkezetet, amelyek összegképlete C4H10, és nevezd meg a jelenséget!",
+                "Miért fontos az izoméria a szerves anyagok tulajdonságai szempontjából?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "szenhidrogenek",
+          "name": "Szénhidrogének",
+          "short_description": "Alkánok, alkének és alkinek alapvető tulajdonságai, nevezéktana és felhasználása.",
+          "sub_topics": [
+            {
+              "key": "alkanok_es_tulajdonsagaik",
+              "name": "Alkánok és tulajdonságaik",
+              "short_description": "Az alkánok telített szénhidrogének, égésük és felhasználásuk az energiaellátásban.",
+              "example_tasks": [
+                "Nevezd meg a CH4, C2H6 és C3H8 vegyületeket, és írd le egy jellemző felhasználásukat!",
+                "Írd fel a metán égésének egyenletét, és nevezd meg a reakció típusát!",
+                "Miért tekintjük az alkánokat viszonylag reakcióképteleneknek más szénhidrogénekhez képest?"
+              ]
+            },
+            {
+              "key": "alkenek_alkinek_bevezetes",
+              "name": "Alkének és alkinek bevezetése",
+              "short_description": "Telítetlen szénhidrogének kettős és hármas kötéssel, és reakciókészségük összehasonlítása az alkánokkal.",
+              "example_tasks": [
+                "Mi a különbség az alkánok és alkének között a kötéstípus alapján?",
+                "Nevezd meg a C2H4 és C2H2 molekulákat, és mondd meg, melyik telítettebb!",
+                "Miért reakcióképesebb az etén, mint az etán? Kapcsold össze a kettős kötéssel!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sav_bazis_es_vizes_kemia",
+      "name": "Sav–bázis kémia vizes közegben",
+      "short_description": "A savak és bázisok tulajdonságainak, reakcióinak és mindennapi jelentőségének megismerése vizes oldatokban.",
+      "sub_topics": [
+        {
+          "key": "savak_bazisok_fogalma",
+          "name": "Savak és bázisok fogalma",
+          "short_description": "Savak és bázisok értelmezése egyszerű (Arrhenius-féle) megközelítésben, mindennapi példákkal.",
+          "sub_topics": [
+            {
+              "key": "savak_bazisok_jellemzoi",
+              "name": "Savak és bázisok jellemző tulajdonságai",
+              "short_description": "Savak és bázisok kémhatása, íze, reakcióképessége és veszélyessége.",
+              "example_tasks": [
+                "Sorolj fel három savat és három bázist a mindennapokból, és írd le egy-egy jellemző tulajdonságukat!",
+                "Miért veszélyesek az erős savak és lúgok a bőrre? Magyarázd meg röviden!",
+                "Döntsd el, savas vagy lúgos-e a citromlé, a szappanos víz és az ecet, és indokold!"
+              ]
+            },
+            {
+              "key": "indikatorok_hasznalata",
+              "name": "Indikátorok és kémhatás",
+              "short_description": "A kémhatás kimutatása indikátorokkal és pH-skála alapszintű értelmezése.",
+              "example_tasks": [
+                "Mit mutat a lakmuszpapír savas és lúgos oldatban? Írd le a színváltozásokat!",
+                "Helyezd el a pH-skálán: esővíz, citromlé, tiszta víz, szappanos víz!",
+                "Miért hasznos a pH-mérés a talajvizsgálatban vagy az uszodákban?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "semlegesites_es_sokfele_reakcio",
+          "name": "Semlegesítés és sóképződés",
+          "short_description": "Sav–bázis reakciók, semlegesítés és a sók keletkezésének értelmezése.",
+          "sub_topics": [
+            {
+              "key": "semlegesitesi_reakciok",
+              "name": "Semlegesítési reakciók",
+              "short_description": "Sav és bázis reakciója víz és só keletkezése közben.",
+              "example_tasks": [
+                "Írd fel és rendezd a HCl + NaOH → reakció egyenletét!",
+                "Magyarázd el, miért csökken a kémhatás sav és lúg összekeverésekor!",
+                "Adj példát arra, hogyan használják a semlegesítést a gyakorlatban (pl. gyomorsav, talajjavítás)!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "szervetlen_kemia_elemek_es_vegyuleteik",
+      "name": "Szervetlen kémia – elemek és vegyületeik",
+      "short_description": "A legfontosabb fémek és nemfémek, valamint vegyületeik tulajdonságainak és reakcióinak megismerése.",
+      "sub_topics": [
+        {
+          "key": "nemfemek_es_vegyuleteik",
+          "name": "Nemfémek és vegyületeik",
+          "short_description": "Jellegzetes nemfémek (pl. oxigén, kén, klór) tulajdonságai és reakciói.",
+          "sub_topics": [
+            {
+              "key": "oxigen_es_eges",
+              "name": "Oxigén és égés",
+              "short_description": "Az égés mint kémiai reakció és az oxigén szerepe benne.",
+              "example_tasks": [
+                "Magyarázd el, miért szükséges az oxigén az égéshez!",
+                "Írd fel a szén égésének egyenletét!",
+                "Miért veszélyes zárt térben az oxigénhiány?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "femek_es_vegyuleteik",
+          "name": "Fémek és vegyületeik",
+          "short_description": "Jellegzetes fémek tulajdonságai, reakcióik és gyakorlati felhasználásuk.",
+          "sub_topics": [
+            {
+              "key": "vas_es_korroziok",
+              "name": "Vas és korrózió",
+              "short_description": "A vas rozsdásodása mint kémiai folyamat és megelőzésének módjai.",
+              "example_tasks": [
+                "Magyarázd el, miért rozsdásodik a vas nedves levegőn!",
+                "Sorolj fel két módszert a korrózió megelőzésére!",
+                "Miért fontos a korrózióvédelem hidaknál és járműveknél?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "a_szen_egyszeru_szerves_vegyuletei",
+      "name": "A szén egyszerű szerves vegyületei",
+      "short_description": "A szerves kémia alapjai: szénhidrogének és néhány egyszerű funkciós csoport megismerése.",
+      "sub_topics": [
+        {
+          "key": "szenhidrogenek",
+          "name": "Szénhidrogének",
+          "short_description": "Alkánok, alkének és alkinek alapszintű jellemzése és felhasználása.",
+          "sub_topics": [
+            {
+              "key": "alkanok_alapjai",
+              "name": "Alkánok alapszinten",
+              "short_description": "Telített szénhidrogének szerkezete és égése.",
+              "example_tasks": [
+                "Írd fel a metán összegképletét és égésének egyenletét!",
+                "Miért fontos energiahordozó a földgáz?",
+                "Adj két példát alkánok mindennapi felhasználására!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "kemia_az_eletben_es_kornyezetben",
+      "name": "Kémia az életben, iparban és környezetben",
+      "short_description": "A kémia szerepének felismerése az élővilágban, az iparban és a környezetvédelemben.",
+      "sub_topics": [
+        {
+          "key": "kornyezeti_kemia_alapjai",
+          "name": "Környezeti kémia alapjai",
+          "short_description": "Levegő-, víz- és talajszennyezés kémiai vonatkozásai és megelőzése.",
+          "sub_topics": [
+            {
+              "key": "szennyezesek_es_kovetkezmenyek",
+              "name": "Szennyezések és következményeik",
+              "short_description": "A szennyező anyagok hatása az élővilágra és az emberi egészségre.",
+              "example_tasks": [
+                "Sorolj fel három levegőszennyező anyagot és egy-egy forrásukat!",
+                "Miért veszélyes a savas eső? Magyarázd meg röviden!",
+                "Adj példát arra, hogyan járulhat hozzá a kémia a környezetvédelemhez!"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "key": "atommodellek_es_kvantumkemia_alapjai",
+      "name": "Atommodellek és a kvantumkémia alapjai",
+      "short_description": "Az atom szerkezetének mélyebb megértése modern atommodellek alapján, valamint az elektronszerkezet és a periódusos tulajdonságok kapcsolatának értelmezése.",
+      "sub_topics": [
+        {
+          "key": "torteneti_atommodellek",
+          "name": "Történeti atommodellek",
+          "short_description": "Az atommodellek fejlődése Dalton modelljétől a kvantummechanikai szemléletig, az egyes modellek érvényességi körével.",
+          "sub_topics": [
+            {
+              "key": "dalton_thomson_rutherford",
+              "name": "Dalton-, Thomson- és Rutherford-modell",
+              "short_description": "A klasszikus atommodellek alapfeltevései és korlátai kísérleti eredmények alapján.",
+              "example_tasks": [
+                "Hasonlítsd össze Dalton és Thomson atommodelljét, és írd le, milyen kísérleti megfigyelések vezettek a különbséghez!",
+                "Magyarázd el Rutherford szórási kísérletét és azt, hogyan cáfolta a Thomson-modellt!",
+                "Miért nem tudta Rutherford modellje megmagyarázni az atom stabilitását? Fejtsd ki röviden!"
+              ]
+            },
+            {
+              "key": "bohr_modell_es_spektrumok",
+              "name": "Bohr-modell és az atomspektrumok",
+              "short_description": "A Bohr-féle atommodell alapjai és az energiaszintek szerepe az emissziós és abszorpciós spektrumokban.",
+              "example_tasks": [
+                "Írd le a Bohr-modell legfontosabb feltevéseit, és nevezd meg, mely atomokra alkalmazható jól!",
+                "Magyarázd el, hogyan keletkeznek a vonalas emissziós spektrumok hidrogénatom esetén!",
+                "Mi történik az elektron energiájával, amikor egy atom fényt bocsát ki? Kapcsold össze az energiaszintekkel!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kvantummechanikai_szemlelet",
+          "name": "Kvantummechanikai szemlélet",
+          "short_description": "Az elektron hullám-részecske kettős természete és az atompályák modern értelmezése kvalitatív szinten.",
+          "sub_topics": [
+            {
+              "key": "hullam_reszecske_kettosseg",
+              "name": "Hullám–részecske kettősség",
+              "short_description": "Az elektron kettős természete és ennek jelentősége az atom szerkezetének leírásában.",
+              "example_tasks": [
+                "Magyarázd el, mit jelent a hullám–részecske kettősség az elektron esetében!",
+                "Miért nem beszélünk pontos elektronpályákról a modern atommodellben?",
+                "Kapcsold össze a bizonytalansági elvet az elektron helyének és impulzusának meghatározásával!"
+              ]
+            },
+            {
+              "key": "atomorbitalok_alapszinten",
+              "name": "Atomorbitálok (alapszinten)",
+              "short_description": "Az s és p pályák fogalma és szerepe az elektronszerkezet leírásában kvalitatív megközelítéssel.",
+              "example_tasks": [
+                "Mi a különbség az s és p orbitálok alakja között? Írd le szövegesen!",
+                "Hány elektron fér el egy s, illetve egy p alhéjon összesen?",
+                "Magyarázd el, miért növekszik az atom mérete lefelé haladva egy főcsoportban!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "periodikussag_melyebb_magyarazata",
+          "name": "A periódusosság mélyebb magyarázata",
+          "short_description": "A periódusos rendszer trendjeinek értelmezése az elektronszerkezet és a magtöltés alapján.",
+          "sub_topics": [
+            {
+              "key": "atomradius_ionizacios_energia",
+              "name": "Atomrádiusz és ionizációs energia",
+              "short_description": "Az atomméret és az ionizációs energia változásának magyarázata perióduson és csoporton belül.",
+              "example_tasks": [
+                "Magyarázd el, miért csökken az atomrádiusz egy perióduson belül balról jobbra!",
+                "Hasonlítsd össze a Na és Mg első ionizációs energiáját, és indokold a különbséget!",
+                "Miért könnyebb elektront leadni az alkálifémeknél, mint a nemesgázoknál?"
+              ]
+            },
+            {
+              "key": "elektronegativitas_es_kemiai_viselkedes",
+              "name": "Elektronegativitás és kémiai viselkedés",
+              "short_description": "Az elektronegativitás szerepe a kötéstípusokban és az elemek reakciókészségében.",
+              "example_tasks": [
+                "Magyarázd el, hogyan változik az elektronegativitás a periódusos rendszerben!",
+                "Miért alakul ki ionos kötés nagy elektronegativitás-különbség esetén?",
+                "Rendezd növekvő elektronegativitás szerint: C, N, O, F, és indokold!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "kemiai_kotes_szerkezet_es_anyagtulajdonsagok",
+      "name": "Kémiai kötés, szerkezet és anyagtulajdonságok",
+      "short_description": "Az anyagok szerkezetének és tulajdonságainak kapcsolata molekuláris és kristályrács-szinten, a kötéstípusok mélyebb értelmezésével.",
+      "sub_topics": [
+        {
+          "key": "molekulageometria_es_polaritas",
+          "name": "Molekulageometria és polaritás",
+          "short_description": "A molekulák térszerkezete és polaritása, valamint ezek hatása a fizikai és kémiai tulajdonságokra.",
+          "sub_topics": [
+            {
+              "key": "vsepr_elv_alapjai",
+              "name": "VSEPR-elv alapjai",
+              "short_description": "A molekulaalak előrejelzése az elektronpárok taszítása alapján.",
+              "example_tasks": [
+                "Alkalmazd a VSEPR-elvet a CH4, NH3 és H2O molekulák alakjának meghatározására!",
+                "Miért torzult a vízmolekula alakja a metánhoz képest?",
+                "Hogyan befolyásolják a nemkötő elektronpárok a kötési szögeket?"
+              ]
+            },
+            {
+              "key": "molekula_polaritas_kovetkezmenyek",
+              "name": "Molekulapolaritás következményei",
+              "short_description": "A molekulaalak és kötés-polaritás együttes hatása a dipólusmomentumra és oldhatóságra.",
+              "example_tasks": [
+                "Miért poláris a NH3 molekula, de apoláris a BF3, annak ellenére, hogy mindkettőben poláris kötések vannak?",
+                "Magyarázd el, miért oldódik jól az etanol vízben, de a hexán nem!",
+                "Kapcsold össze a molekulapolaritást a forráspont különbségeivel!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kristalyracsok_es_anyagtipusok",
+          "name": "Kristályrácsok és anyagtípusok",
+          "short_description": "Az ion-, atom-, molekula- és fémrács összehasonlítása, valamint a rácsszerkezet hatása az anyag tulajdonságaira.",
+          "sub_topics": [
+            {
+              "key": "ion_atom_molekula_femracs",
+              "name": "Ion-, atom-, molekula- és fémrács",
+              "short_description": "A különböző kristályrács-típusok szerkezeti jellemzői és tipikus példái.",
+              "example_tasks": [
+                "Rendeld hozzá a következő anyagokat a megfelelő rácstípushoz: NaCl, gyémánt, jód, vas!",
+                "Magyarázd el, miért kemény a gyémánt, de puha a grafit, annak ellenére, hogy mindkettő szén!",
+                "Miért jó elektromos vezető a fémrácsos anyag?"
+              ]
+            },
+            {
+              "key": "racsenergia_es_tulajdonsagok",
+              "name": "Rácsenergia és tulajdonságok",
+              "short_description": "A rácsenergia szerepe az olvadáspont, keménység és oldhatóság alakulásában.",
+              "example_tasks": [
+                "Miért magasabb az MgO olvadáspontja, mint a NaCl-é? Indokold rácsenergiával!",
+                "Hogyan befolyásolja a rácsenergia az ionvegyületek vízben való oldhatóságát?",
+                "Adj példát arra, amikor a nagy rácsenergia gyakorlati következményekkel jár (pl. ipar, technológia)!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "redox_es_elektrokemia",
+      "name": "Redoxfolyamatok és elektrokémia",
+      "short_description": "Az oxidáció–redukció elmélyítése, az elektrokémiai cellák működésének megértése és gyakorlati alkalmazása.",
+      "sub_topics": [
+        {
+          "key": "galvanelemek_mukodese",
+          "name": "Galvánelemek működése",
+          "short_description": "Az elektromos energia kémiai energiából való előállításának megértése galvánelemekben.",
+          "sub_topics": [
+            {
+              "key": "daniel_elem",
+              "name": "Daniell-elem",
+              "short_description": "A Daniell-elem felépítése, működése és elektródreakciói.",
+              "example_tasks": [
+                "Rajzold le a Daniell-elem felépítését, nevezd meg az elektródokat és az elektrolitokat!",
+                "Írd fel a cink- és rézelektródon lejátszódó részreakciókat!",
+                "Magyarázd el, miért jön létre feszültség a Daniell-elemben!"
+              ]
+            },
+            {
+              "key": "elektronaram_iranya",
+              "name": "Elektronáramlás iránya",
+              "short_description": "Az elektronok és ionok mozgásának értelmezése az áramkörben és az elektrolitban.",
+              "example_tasks": [
+                "Határozd meg, milyen irányban áramlanak az elektronok a külső áramkörben!",
+                "Magyarázd el, miért szükséges sóhíd a galvánelem működéséhez!",
+                "Mi történne a cella működésével, ha a sóhidat eltávolítanánk?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "elektrolizis",
+          "name": "Elektrolízis",
+          "short_description": "Elektromos energia felhasználása kémiai átalakításokra olvadékokban és oldatokban.",
+          "sub_topics": [
+            {
+              "key": "elektrolizis_elmelete",
+              "name": "Az elektrolízis elmélete",
+              "short_description": "Az elektrolízis fogalma, elektródreakciók és energiamérleg.",
+              "example_tasks": [
+                "Magyarázd el, miben különbözik az elektrolízis a galvánelemtől!",
+                "Írd fel a víz elektrolízisének elektródreakcióit!",
+                "Miért szükséges külső áramforrás az elektrolízishez?"
+              ]
+            },
+            {
+              "key": "ipari_alkalmazasok",
+              "name": "Ipari alkalmazások",
+              "short_description": "Az elektrolízis szerepe az iparban (fémkinyerés, galvanizálás).",
+              "example_tasks": [
+                "Nevezd meg, mely fémeket állítanak elő elektrolízissel, és miért!",
+                "Magyarázd el a galvanizálás lényegét egy gyakorlati példán!",
+                "Miért nem alkalmas a vas előállítása vizes elektrolízissel?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "szervetlen_kemia_rendszerezo_modon",
+      "name": "Szervetlen kémia rendszerező módon",
+      "short_description": "A szervetlen vegyületek csoportosítása, jellemző reakciói és ipari jelentősége.",
+      "sub_topics": [
+        {
+          "key": "focsoportok_attekintese",
+          "name": "Főcsoportok áttekintése",
+          "short_description": "A periódusos rendszer főcsoportjainak jellemző kémiai tulajdonságai.",
+          "sub_topics": [
+            {
+              "key": "alkalifemek_es_alkalifoldfemek",
+              "name": "Alkáli- és alkáliföldfémek",
+              "short_description": "Erős redukálószerek, reakciók vízzel és oxigénnel.",
+              "example_tasks": [
+                "Hasonlítsd össze a nátrium és a kalcium vízzel való reakcióját!",
+                "Miért tárolják az alkálifémeket petróleum alatt?",
+                "Írj egy ipari felhasználást az alkáliföldfémekre!"
+              ]
+            },
+            {
+              "key": "halogenek_es_nemesgazok",
+              "name": "Halogének és nemesgázok",
+              "short_description": "Oxidáló képesség, reakciók fémekkel és hidrogénnel.",
+              "example_tasks": [
+                "Rendezd a halogéneket csökkenő oxidáló képesség szerint!",
+                "Miért tekintjük a nemesgázokat reakcióképtelennek?",
+                "Adj példát halogéntartalmú mindennapi anyagra!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "komplexvegyuletek_alapjai",
+          "name": "Komplexvegyületek alapjai",
+          "short_description": "Komplex ionok szerkezete és jelentősége.",
+          "sub_topics": [
+            {
+              "key": "komplexion_fogalma",
+              "name": "Komplexion fogalma",
+              "short_description": "Ligandumok és központi ion kapcsolata.",
+              "example_tasks": [
+                "Határozd meg a központi iont és a ligandumokat a [Cu(NH3)4]2+ ionban!",
+                "Miért nevezhetők a komplexek koordinációs vegyületeknek?",
+                "Adj egy példát komplexvegyület gyakorlati alkalmazására!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "szerves_kemia_funkcios_csoportok",
+      "name": "Szerves kémia – funkciós csoportok",
+      "short_description": "A szerves vegyületek rendszerezése funkciós csoportok szerint, reakciók és gyakorlati jelentőség.",
+      "sub_topics": [
+        {
+          "key": "oxigen_tartalmu_vegyuletek",
+          "name": "Oxigéntartalmú szerves vegyületek",
+          "short_description": "Alkoholok, aldehidek, ketonok és karbonsavak tulajdonságai.",
+          "sub_topics": [
+            {
+              "key": "alkoholok_es_kulonbsegek",
+              "name": "Alkoholok",
+              "short_description": "Az alkoholok szerkezete, tulajdonságai és reakciói.",
+              "example_tasks": [
+                "Írd fel az etanol szerkezeti képletét és nevezd meg a funkciós csoportot!",
+                "Miért oldódik jól az etanol vízben?",
+                "Adj egy példát alkohol ipari vagy mindennapi felhasználására!"
+              ]
+            },
+            {
+              "key": "karbonsavak_es_eszterek",
+              "name": "Karbonsavak és észterek",
+              "short_description": "Savasság, észteresítés és illatanyagok.",
+              "example_tasks": [
+                "Magyarázd el az észteresítés lényegét egy egyenlettel!",
+                "Miért savas a hangyasav vizes oldata?",
+                "Adj példát egy észterre, amely illatanyagként ismert!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "biokemia_es_elelmiszerkemia",
+      "name": "Biokémia és élelmiszerkémia",
+      "short_description": "A biológiai jelentőségű szerves molekulák kémiai felépítése, tulajdonságai és szerepe az élő szervezetben és a táplálkozásban.",
+      "sub_topics": [
+        {
+          "key": "biomolekulak_csoportjai",
+          "name": "Biomolekulák fő csoportjai",
+          "short_description": "A szénhidrátok, lipidek, fehérjék és nukleinsavak alapvető felépítésének és funkcióinak áttekintése.",
+          "sub_topics": [
+            {
+              "key": "szenhidratok_feladat_es_szerep",
+              "name": "Szénhidrátok felépítése és szerepe",
+              "short_description": "Mono-, di- és poliszacharidok szerkezete és élettani szerepe.",
+              "example_tasks": [
+                "Sorold fel a glükóz, szacharóz és keményítő közös és eltérő jellemzőit!",
+                "Magyarázd el, miért tekintjük a glükózt az élő szervezetek egyik legfontosabb energiaforrásának!",
+                "Döntsd el, hogy a cellulóz miért nem emészthető meg az emberi szervezetben!"
+              ]
+            },
+            {
+              "key": "lipidek_feladat_es_szerep",
+              "name": "Lipidek felépítése és szerepe",
+              "short_description": "Zsírok, olajok, foszfolipidek és szteroidok szerkezete és funkciója.",
+              "example_tasks": [
+                "Hasonlítsd össze a telített és telítetlen zsírsavakat szerkezeti és egészségügyi szempontból!",
+                "Magyarázd el, miért jó hőszigetelő anyag a zsír!",
+                "Adj példát arra, hogyan vesznek részt a lipidek a sejtmembrán felépítésében!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "enzimek_es_feherjek",
+          "name": "Fehérjék és enzimek",
+          "short_description": "A fehérjék térszerkezete, az enzimek működése és biológiai jelentősége.",
+          "sub_topics": [
+            {
+              "key": "feherjek_szerkezeti_szintek",
+              "name": "Fehérjék szerkezeti szintjei",
+              "short_description": "Elsődleges–negyedleges szerkezet és ezek stabilitása.",
+              "example_tasks": [
+                "Sorold fel a fehérjék szerkezeti szintjeit, és mindegyikhez írj egy rövid jellemzést!",
+                "Magyarázd el, miért érzékenyek a fehérjék a hőmérséklet-változásra!",
+                "Adj példát egy fehérjére, és nevezd meg annak biológiai funkcióját!"
+              ]
+            },
+            {
+              "key": "enzimmukodes_es_katalizis",
+              "name": "Enzimműködés és katalízis",
+              "short_description": "Az enzim–szubsztrát kölcsönhatás és a katalitikus hatás értelmezése.",
+              "example_tasks": [
+                "Magyarázd el az enzim–szubsztrát komplex kialakulását!",
+                "Miért gyorsítják fel az enzimek a biokémiai reakciókat anélkül, hogy elfogynának?",
+                "Adj példát egy enzimre, és írd le, milyen folyamatban vesz részt!"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "kornyezeti_es_ipari_kemia",
+      "name": "Környezeti és ipari kémia",
+      "short_description": "A kémia szerepe az ipari termelésben, a környezeti problémák megértésében és a fenntartható fejlődésben.",
+      "sub_topics": [
+        {
+          "key": "ipari_kemiai_folyamatok",
+          "name": "Ipari kémiai folyamatok",
+          "short_description": "Nagyipari kémiai eljárások alapelvei és jelentőségük.",
+          "sub_topics": [
+            {
+              "key": "ammongyartas_es_kensav",
+              "name": "Ammóniagyártás és kénsavgyártás",
+              "short_description": "A Haber–Bosch- és kontakteljárás alapjai és gazdasági jelentősége.",
+              "example_tasks": [
+                "Írd le röviden a Haber–Bosch-eljárás lényegét és jelentőségét!",
+                "Miért fontos a katalizátor használata az ipari ammóniagyártásban?",
+                "Sorolj fel két ipari felhasználást a kénsavra!"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "kornyezetszennyezes_es_vedelem",
+          "name": "Környezetszennyezés és környezetvédelem",
+          "short_description": "A kémiai eredetű környezeti problémák és a megelőzés lehetőségei.",
+          "sub_topics": [
+            {
+              "key": "levego_viz_es_talajszennyezes",
+              "name": "Levegő-, víz- és talajszennyezés",
+              "short_description": "Szennyezőanyagok forrásai, hatásai és csökkentési lehetőségei.",
+              "example_tasks": [
+                "Nevezd meg a savas esők kialakulásának kémiai okát!",
+                "Magyarázd el, hogyan vezethet a műtrágyák túlzott használata vízszennyezéshez!",
+                "Adj példát egy környezetbarát technológiára, amely csökkenti a szennyezést!"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
