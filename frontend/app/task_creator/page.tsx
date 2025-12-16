@@ -90,12 +90,17 @@ function TaskCreatorContent() {
         return;
       }
 
+      if (!user.subject) {
+        console.log('[Task Creator] Waiting for user subject...');
+        return;
+      }
+
       setIsLoadingNavigation(true);
       setNavigationError(null);
 
       try {
-        console.log('[Task Creator] Fetching navigation data for country:', user.country);
-        const data = await fetchAllGradeTrees(user.country, 'mathematics');
+        console.log('[Task Creator] Fetching navigation data for country:', user.country, 'subject:', user.subject);
+        const data = await fetchAllGradeTrees(user.country, user.subject);
         setNavigationData(data);
         console.log('[Task Creator] Navigation data loaded successfully');
       } catch (error) {
@@ -107,7 +112,7 @@ function TaskCreatorContent() {
     };
 
     loadNavigationData();
-  }, [user.country, isAuthorized, isLoading]);
+  }, [user.country, user.subject, isAuthorized, isLoading]);
 
   // Read URL params on mount
   useEffect(() => {
@@ -184,8 +189,8 @@ function TaskCreatorContent() {
       console.log('[Task Creator] Starting multi-step task generation');
 
       // Build curriculum path from selection
-      // Use "mathematics" to match the subjectMappings collection format
-      const curriculumPath = `mathematics:${gradeLevel}:${path.join(':')}`;
+      // Use user's subject to match the subjectMappings collection format
+      const curriculumPath = `${user.subject}:${gradeLevel}:${path.join(':')}`;
       setCurrentCurriculumPath(curriculumPath);
 
       // Map targetGroupSex to TargetGroup type
