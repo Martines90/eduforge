@@ -151,13 +151,24 @@ export default function TaskDetailPage() {
     if (!task) return;
 
     try {
+      console.log('[PDF] Starting PDF generation...');
+      console.log('[PDF] Task data:', {
+        id: task.id,
+        title: task.title,
+        hasDescription: !!task.content?.description,
+        hasImages: !!task.content?.images,
+        imageCount: task.content?.images?.length || 0
+      });
+
       // Dynamically import html2pdf to avoid SSR issues
       const html2pdf = (await import('html2pdf.js')).default;
 
       // Create a temporary container for PDF rendering
+      // IMPORTANT: Must be visible for html2canvas to capture content
       const pdfContainer = document.createElement('div');
-      pdfContainer.style.position = 'absolute';
-      pdfContainer.style.left = '-9999px';
+      pdfContainer.style.position = 'fixed';
+      pdfContainer.style.top = '-10000px'; // Off-screen but still rendered
+      pdfContainer.style.left = '0';
       pdfContainer.style.width = '210mm'; // A4 width
       pdfContainer.style.padding = '20mm';
       pdfContainer.style.backgroundColor = 'white';
@@ -165,9 +176,13 @@ export default function TaskDetailPage() {
       pdfContainer.style.fontSize = '14px';
       pdfContainer.style.lineHeight = '1.6';
       pdfContainer.style.color = '#333';
+      pdfContainer.style.visibility = 'visible'; // Must be visible for canvas capture
+      pdfContainer.style.opacity = '1'; // Must be fully opaque for canvas capture
+      pdfContainer.style.pointerEvents = 'none';
 
       // Process image placeholders with PDF-optimized styling
       const processImagePlaceholdersForPDF = (html: string, images: any[]): string => {
+        console.log('[PDF] Processing image placeholders:', { imagesCount: images?.length || 0 });
         if (!images || images.length === 0) return html;
 
         // Filter out invalid images
@@ -176,6 +191,7 @@ export default function TaskDetailPage() {
           return url && url.trim() !== '';
         });
 
+        console.log('[PDF] Valid images:', validImages.length);
         if (validImages.length === 0) return html;
 
         let processedHtml = html;
@@ -185,6 +201,7 @@ export default function TaskDetailPage() {
 
           // Decode HTML entities in URL (fixes &amp; in Azure Blob Storage URLs)
           imageUrl = decodeHtmlEntities(imageUrl);
+          console.log(`[PDF] Processing image ${index + 1}:`, imageUrl);
 
           // PDF-optimized: centered, full width (max 600px), no float
           const imgTag = `<img src="${imageUrl}" crossorigin="anonymous" alt="Task illustration ${index + 1}" style="display: block; width: 100%; max-width: 600px; height: auto; margin: 20px auto; border-radius: 8px;" class="task-image task-image-${index + 1}" />`;
@@ -199,12 +216,11 @@ export default function TaskDetailPage() {
         task.content.images
       );
 
+      console.log('[PDF] Description HTML length:', descriptionWithImages.length);
+      console.log('[PDF] Description HTML snippet:', descriptionWithImages.substring(0, 200));
+
       pdfContainer.innerHTML = `
         <div style="padding: 10px;">
-          <h1 style="color: #667eea; font-size: 24px; margin-bottom: 10px; font-weight: bold;">${task.title || t('Task')}</h1>
-          <p style="color: #666; font-size: 12px; margin-bottom: 20px;">
-            ${task.gradeLevel.replace('grade_', 'Grade ').replace('_', '-')} | ${task.subject} | ${t('Difficulty')}: ${task.difficultyLevel}
-          </p>
           <div style="font-size: 14px; line-height: 1.8;">
             ${processLatexInHtml(descriptionWithImages)}
           </div>
@@ -212,26 +228,32 @@ export default function TaskDetailPage() {
       `;
 
       document.body.appendChild(pdfContainer);
+      console.log('[PDF] Container added to DOM, innerHTML length:', pdfContainer.innerHTML.length);
 
       // Process all images to ensure they're loaded
       const images = pdfContainer.getElementsByTagName('img');
-      const imagePromises = Array.from(images).map((img) => {
+      console.log(`[PDF] Found ${images.length} img tags in container`);
+
+      const imagePromises = Array.from(images).map((img, idx) => {
         return new Promise((resolve) => {
+          console.log(`[PDF] Checking image ${idx + 1}:`, img.src);
           if (img.complete && img.naturalHeight !== 0) {
+            console.log(`[PDF] Image ${idx + 1} already loaded`);
             resolve(null);
           } else {
             const timeout = setTimeout(() => {
-              console.warn(`Image load timeout: ${img.src}`);
+              console.warn(`[PDF] Image ${idx + 1} load timeout: ${img.src}`);
               resolve(null);
-            }, 10000);
+            }, 15000); // Increased timeout to 15 seconds
 
             img.onload = () => {
               clearTimeout(timeout);
+              console.log(`[PDF] Image ${idx + 1} loaded successfully`);
               resolve(null);
             };
             img.onerror = (error) => {
               clearTimeout(timeout);
-              console.warn(`Failed to load image: ${img.src}`, error);
+              console.error(`[PDF] Failed to load image ${idx + 1}: ${img.src}`, error);
               resolve(null);
             };
           }
@@ -265,37 +287,131 @@ export default function TaskDetailPage() {
         });
       }
 
-      // Configure PDF options
+      // Configure PDF options - simplified for debugging
       const opt = {
-        margin: 10,
+        margin: [10, 10, 10, 10],
         filename: `task_${taskId}.pdf`,
-        image: { type: 'jpeg' as const, quality: 0.98 },
+        image: {
+          type: 'jpeg' as const,
+          quality: 0.95
+        },
         html2canvas: {
           scale: 2,
           useCORS: true,
-          logging: false,
+          allowTaint: true,
+          logging: true,
           letterRendering: true,
+          scrollY: 0,
+          scrollX: 0,
+          windowWidth: pdfContainer.scrollWidth,
+          windowHeight: pdfContainer.scrollHeight,
         },
         jsPDF: {
           unit: 'mm',
           format: 'a4',
-          orientation: 'portrait' as const
+          orientation: 'portrait' as const,
+          compress: true
+        },
+        pagebreak: {
+          mode: ['avoid-all', 'css', 'legacy']
         }
       };
 
-      // Generate and download PDF
-      await html2pdf().set(opt).from(pdfContainer).save();
+      // Give browser time to fully render everything
+      console.log('[PDF] Waiting for final rendering...');
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
-      // Remove temporary container
-      document.body.removeChild(pdfContainer);
+      console.log('[PDF] Starting PDF conversion...');
+      console.log('[PDF] Container dimensions:', {
+        width: pdfContainer.offsetWidth,
+        height: pdfContainer.offsetHeight,
+        scrollHeight: pdfContainer.scrollHeight
+      });
 
-      console.log('[PDF] PDF generated successfully!');
+      // Generate and download PDF using direct html2canvas + jsPDF approach
+      try {
+        // Import html2canvas and jsPDF directly
+        const html2canvas = (await import('html2canvas')).default;
+        const { jsPDF } = await import('jspdf');
+
+        console.log('[PDF] Capturing canvas with html2canvas...');
+
+        // Capture the container as a canvas
+        const canvas = await html2canvas(pdfContainer, {
+          scale: 2,
+          useCORS: true,
+          allowTaint: true,
+          logging: true,
+          backgroundColor: '#ffffff',
+          windowWidth: pdfContainer.scrollWidth,
+          windowHeight: pdfContainer.scrollHeight,
+        });
+
+        console.log('[PDF] Canvas captured:', {
+          width: canvas.width,
+          height: canvas.height
+        });
+
+        // Convert canvas to image
+        const imgData = canvas.toDataURL('image/jpeg', 0.95);
+        console.log('[PDF] Image data length:', imgData.length);
+
+        // Calculate PDF dimensions
+        const pdf = new jsPDF({
+          orientation: 'portrait',
+          unit: 'mm',
+          format: 'a4',
+          compress: true
+        });
+
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = pdf.internal.pageSize.getHeight();
+        const imgWidth = pdfWidth - 20; // 10mm margins on each side
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        console.log('[PDF] Adding image to PDF:', { pdfWidth, pdfHeight, imgWidth, imgHeight });
+
+        let heightLeft = imgHeight;
+        let position = 10; // top margin
+
+        // Add image to first page
+        pdf.addImage(imgData, 'JPEG', 10, position, imgWidth, imgHeight);
+        heightLeft -= pdfHeight;
+
+        // Add new pages if content is longer than one page
+        while (heightLeft > 0) {
+          position = heightLeft - imgHeight + 10;
+          pdf.addPage();
+          pdf.addImage(imgData, 'JPEG', 10, position, imgWidth, imgHeight);
+          heightLeft -= pdfHeight;
+        }
+
+        // Save the PDF
+        pdf.save(`task_${taskId}.pdf`);
+        console.log('[PDF] PDF saved successfully!');
+      } catch (pdfError) {
+        console.error('[PDF] PDF generation error:', pdfError);
+        throw pdfError;
+      }
+
+      // Remove temporary container after a short delay
+      setTimeout(() => {
+        if (document.body.contains(pdfContainer)) {
+          document.body.removeChild(pdfContainer);
+          console.log('[PDF] Container removed');
+        }
+      }, 500);
     } catch (error) {
       console.error('PDF generation error:', error);
 
       let errorMessage = t('An error occurred while generating the PDF.');
 
       if (error instanceof Error) {
+        console.error('[PDF] Error details:', {
+          message: error.message,
+          stack: error.stack
+        });
+
         if (error.message.includes('CORS') || error.message.includes('cross-origin')) {
           errorMessage = t('Image loading failed due to CORS restrictions. The images may not be accessible from this domain.');
         } else if (error.message.includes('network') || error.message.includes('fetch')) {
