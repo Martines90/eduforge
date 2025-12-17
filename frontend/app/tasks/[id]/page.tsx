@@ -150,6 +150,14 @@ export default function TaskDetailPage() {
   const handleDownloadPDF = async () => {
     if (!task) return;
 
+    // Check if PDF already exists in the task document
+    if ((task as any).pdfUrl) {
+      console.log('[PDF] Using existing PDF URL:', (task as any).pdfUrl);
+      // Direct download from Firebase Storage
+      window.open((task as any).pdfUrl, '_blank');
+      return;
+    }
+
     try {
       console.log('[PDF] Starting PDF generation...');
       console.log('[PDF] Task data:', {

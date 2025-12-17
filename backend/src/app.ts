@@ -41,9 +41,9 @@ export function createApp(): Application {
     app.use(morgan("combined"));
   }
 
-  // Body parsing middleware
-  app.use(express.json());
-  app.use(express.urlencoded({ extended: true }));
+  // Body parsing middleware - increased limit for PDF uploads (up to 10MB)
+  app.use(express.json({ limit: '10mb' }));
+  app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
   // Swagger documentation
   app.use(

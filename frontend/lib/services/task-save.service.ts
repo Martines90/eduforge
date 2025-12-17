@@ -1,6 +1,6 @@
 /**
  * Task Save Service
- * Handles saving generated tasks to the database
+ * Handles saving generated tasks to the database and generating PDFs
  *
  * IMPORTANT: Backend must store tasks using country-based structure:
  * countries/{country_code}/tasks/{task_id}
@@ -9,6 +9,7 @@
  */
 
 import { API_BASE_URL } from './api.service';
+import { generateAndUploadPDF } from '../utils/pdf-generator';
 
 export interface SaveTaskRequest {
   task_id: string;
@@ -23,6 +24,7 @@ export interface SaveTaskResponse {
   message: string;
   task_id: string;
   public_share_link: string;
+  pdf_url?: string; // PDF URL after generation completes
 }
 
 /**
@@ -60,6 +62,37 @@ export async function saveTask(
 
     const data: SaveTaskResponse = await response.json();
     console.log('[Task Save Service] Task saved successfully:', data.task_id);
+
+    // Generate and upload PDF synchronously - wait for it to complete
+    try {
+      console.log('[Task Save Service] Starting PDF generation for task:', request.task_id);
+      console.log('[Task Save Service] Task data structure:', {
+        hasTitle: !!request.task_data.title,
+        hasDescription: !!request.task_data.description,
+        imageCount: request.task_data.images?.length || 0,
+      });
+
+      const pdfTaskData = {
+        id: request.task_id,
+        title: request.task_data.title, // May be undefined - that's OK
+        description: request.task_data.description,
+        images: request.task_data.images || [],
+      };
+
+      console.log('[Task Save Service] Calling generateAndUploadPDF...');
+      const pdfUrl = await generateAndUploadPDF(pdfTaskData);
+      console.log('[Task Save Service] generateAndUploadPDF returned:', pdfUrl);
+
+      if (pdfUrl) {
+        console.log('[Task Save Service] PDF generated and uploaded successfully:', pdfUrl);
+        data.pdf_url = pdfUrl; // Add PDF URL to response
+      } else {
+        console.warn('[Task Save Service] PDF generation completed but no URL returned');
+      }
+    } catch (pdfError) {
+      console.error('[Task Save Service] PDF generation failed:', pdfError);
+      // Don't throw - still return success for task save
+    }
 
     return data;
   } catch (error) {

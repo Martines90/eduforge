@@ -24,6 +24,7 @@ export interface TaskSavedModalProps {
   onClose: () => void;
   taskId: string;
   publicShareLink: string;
+  pdfUrl?: string; // Optional PDF URL
 }
 
 /**
@@ -35,6 +36,7 @@ export const TaskSavedModal: React.FC<TaskSavedModalProps> = ({
   onClose,
   taskId,
   publicShareLink,
+  pdfUrl,
 }) => {
   const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
@@ -50,9 +52,12 @@ export const TaskSavedModal: React.FC<TaskSavedModalProps> = ({
   };
 
   const handleDownloadPDF = () => {
-    // TODO: Implement PDF download functionality
-    console.log('Download PDF for task:', taskId);
-    alert(t('PDF download will be implemented soon'));
+    if (pdfUrl) {
+      // Open PDF in new tab for direct download
+      window.open(pdfUrl, '_blank');
+    } else {
+      alert(t('PDF is not ready yet. Please try again in a moment.'));
+    }
   };
 
   return (

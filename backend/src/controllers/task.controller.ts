@@ -3,6 +3,7 @@ import { TaskGeneratorService } from "../services/task-generator.service";
 import { TaskStorageService } from "../services/task-storage.service";
 import { TaskSelectionService } from "../services/task-selection.service";
 import { ImageStorageService } from "../services/image-storage.service";
+import { uploadTaskPDF } from "../services/pdf-storage.service";
 import { TaskGeneratorRequest, TaskGeneratorResponse } from "../types";
 import { getFirestore } from "../config/firebase.config";
 import { AuthRequest } from "../middleware/auth.middleware";
@@ -483,21 +484,60 @@ export class TaskController {
         ratingCount: 0,
       };
 
-      // Save to Firestore
-      await db.collection('tasks').doc(task_id).set(taskDoc);
+      // Check if task already exists to determine if this is an update or new save
+      const existingTaskDoc = await db.collection('tasks').doc(task_id).get();
+      const isUpdate = existingTaskDoc.exists;
 
-      console.log(`✅ Task saved successfully: ${task_id}`);
+      if (isUpdate) {
+        console.log(`📝 Updating existing task: ${task_id}`);
+        // For updates, preserve certain fields and only update content
+        await db.collection('tasks').doc(task_id).update({
+          task_data,
+          curriculum_path: curriculum_path || 'unknown',
+          subject,
+          gradeLevel,
+          subjectMappingPath,
+          title: task_data.description ? this.extractTitleFromHtml(task_data.description) : 'Untitled Task',
+          description: task_data.description || '',
+          content: {
+            description: task_data.description,
+            solution: task_data.solution,
+            images: permanentImages,
+          },
+          updated_at: new Date().toISOString(),
+          difficultyLevel: task_data.metadata?.difficulty_level || 'medium',
+          estimatedDurationMinutes: task_data.metadata?.estimated_time_minutes || 30,
+          tags: task_data.metadata?.tags || [],
+        });
+        console.log(`✅ Task updated successfully: ${task_id}`);
+      } else {
+        console.log(`📝 Creating new task: ${task_id}`);
+        // For new tasks, save the full document
+        await db.collection('tasks').doc(task_id).set(taskDoc);
+        console.log(`✅ Task created successfully: ${task_id}`);
+      }
 
-      // Deduct one task credit from the teacher
+      // Deduct one task credit from the teacher (only for new tasks)
       let remainingCredits: number;
-      try {
-        remainingCredits = await deductTaskCredit(authenticatedUser.uid);
-        console.log(`✅ Task credit deducted. Remaining credits: ${remainingCredits}`);
-      } catch (creditError: any) {
-        // If credit deduction fails, we should still return success since the task is saved
-        // But log the error for monitoring
-        console.error('⚠️ Failed to deduct task credit:', creditError.message);
-        remainingCredits = 0; // Default to 0 if we couldn't deduct
+      if (!isUpdate) {
+        try {
+          remainingCredits = await deductTaskCredit(authenticatedUser.uid);
+          console.log(`✅ Task credit deducted. Remaining credits: ${remainingCredits}`);
+        } catch (creditError: any) {
+          // If credit deduction fails, we should still return success since the task is saved
+          // But log the error for monitoring
+          console.error('⚠️ Failed to deduct task credit:', creditError.message);
+          remainingCredits = 0; // Default to 0 if we couldn't deduct
+        }
+      } else {
+        // For updates, just fetch current credits without deducting
+        try {
+          const userDoc = await db.collection('teachers').doc(authenticatedUser.uid).get();
+          remainingCredits = userDoc.data()?.taskCredits || 0;
+        } catch (error: any) {
+          console.error('⚠️ Failed to fetch task credits:', error.message);
+          remainingCredits = 0;
+        }
       }
 
       // Generate public share link
@@ -513,6 +553,61 @@ export class TaskController {
       });
     } catch (error) {
       console.error('❌ Error saving task:', error);
+      next(error);
+    }
+  };
+
+  /**
+   * POST /tasks/:taskId/upload-pdf
+   * Uploads a generated PDF to Firebase Storage
+   */
+  uploadPDF = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<void> => {
+    try {
+      const { taskId } = req.params;
+
+      // Check if PDF data is provided in request body
+      if (!req.body.pdfData) {
+        res.status(400).json({
+          success: false,
+          message: "Missing PDF data in request body",
+        });
+        return;
+      }
+
+      console.log(`📥 Request to upload PDF for task: ${taskId}`);
+
+      // Convert base64 PDF data to buffer
+      // Handle both formats: "data:application/pdf;base64,..." and "data:application/pdf;filename=...;base64,..."
+      const pdfBase64 = req.body.pdfData.replace(/^data:application\/pdf;[^,]*,/, '');
+      const pdfBuffer = Buffer.from(pdfBase64, 'base64');
+
+      console.log(`📄 PDF size: ${(pdfBuffer.length / 1024).toFixed(2)} KB`);
+      console.log(`📄 Original data length: ${req.body.pdfData.length}, Base64 length: ${pdfBase64.length}`);
+
+      // Upload to Firebase Storage
+      const result = await uploadTaskPDF(taskId, pdfBuffer);
+
+      if (!result.success) {
+        res.status(500).json({
+          success: false,
+          message: result.error || "Failed to upload PDF",
+        });
+        return;
+      }
+
+      console.log(`✅ PDF uploaded successfully: ${result.pdfUrl}`);
+
+      res.status(200).json({
+        success: true,
+        message: "PDF uploaded successfully",
+        pdfUrl: result.pdfUrl,
+      });
+    } catch (error) {
+      console.error('❌ Error uploading PDF:', error);
       next(error);
     }
   };

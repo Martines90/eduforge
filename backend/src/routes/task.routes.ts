@@ -182,4 +182,10 @@ router.get("/tasks/:taskId", taskController.getTaskById);
  */
 router.post("/save-task", requireAuthenticatedTeacher, requireTaskCredits, taskController.saveTask);
 
+/**
+ * POST /tasks/:taskId/upload-pdf
+ * Uploads a generated PDF for a task to Firebase Storage
+ */
+router.post("/tasks/:taskId/upload-pdf", taskController.uploadPDF);
+
 export default router;

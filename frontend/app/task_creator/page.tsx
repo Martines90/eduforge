@@ -60,7 +60,7 @@ function TaskCreatorContent() {
   const [generationStep, setGenerationStep] = useState<TaskGenerationStep | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [showSavedModal, setShowSavedModal] = useState(false);
-  const [savedTaskInfo, setSavedTaskInfo] = useState<{ taskId: string; publicShareLink: string } | null>(null);
+  const [savedTaskInfo, setSavedTaskInfo] = useState<{ taskId: string; publicShareLink: string; pdfUrl?: string } | null>(null);
   const [currentCurriculumPath, setCurrentCurriculumPath] = useState<string>('');
   const [navigationData, setNavigationData] = useState<{ grade_9_10: NavigationTopic[]; grade_11_12: NavigationTopic[] } | null>(null);
   const [isLoadingNavigation, setIsLoadingNavigation] = useState(true);
@@ -339,6 +339,7 @@ function TaskCreatorContent() {
       setSavedTaskInfo({
         taskId: response.task_id,
         publicShareLink: response.public_share_link,
+        pdfUrl: response.pdf_url,
       });
       setShowSavedModal(true);
 
@@ -471,6 +472,7 @@ function TaskCreatorContent() {
             onClose={handleCloseSavedModal}
             taskId={savedTaskInfo.taskId}
             publicShareLink={savedTaskInfo.publicShareLink}
+            pdfUrl={savedTaskInfo.pdfUrl}
           />
         )}
       </Container>
