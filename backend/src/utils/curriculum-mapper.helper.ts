@@ -23,20 +23,45 @@ export interface CurriculumPathResult {
 }
 
 /**
- * Loads the Hungarian math curriculum JSON file
+ * Maps subject keys to curriculum filenames
+ */
+const SUBJECT_FILE_MAP: Record<string, string> = {
+  mathematics: "hu_mathematics_grade_9_12.json",
+  math: "hu_mathematics_grade_9_12.json",
+  physics: "hu_physics_grade_9_12.json",
+  chemistry: "hu_chemistry_grade_9_12.json",
+  biology: "hu_biology_grade_9_12.json",
+  history: "hu_history_grade_9_12.json",
+  literature: "hu_literature_grade_9_12.json",
+  geography: "hu_geography_grade_9_12.json",
+  informatics: "hu_informatics_grade_9_12.json",
+  information_technology: "hu_informatics_grade_9_12.json",
+};
+
+/**
+ * Loads the curriculum JSON file for a specific subject
+ * @param subject The subject key (e.g., "physics", "mathematics")
  * @returns The curriculum data or null if loading fails
  */
-function loadCurriculumData(): any | null {
+function loadCurriculumData(subject: string): any | null {
+  const filename = SUBJECT_FILE_MAP[subject.toLowerCase()];
+
+  if (!filename) {
+    console.error(`❌ Unknown subject: ${subject}. Available subjects: ${Object.keys(SUBJECT_FILE_MAP).join(", ")}`);
+    return null;
+  }
+
   const curriculumPath = path.join(
     __dirname,
-    "../data/subject_mapping/hu_math_grade_9_12.json"
+    "../data/mappings/hu",
+    filename
   );
 
   try {
     const data = fs.readFileSync(curriculumPath, "utf-8");
     return JSON.parse(data);
   } catch (error) {
-    console.error("❌ Error loading curriculum data:", error);
+    console.error(`❌ Error loading curriculum data for ${subject} (${filename}):`, error);
     return null;
   }
 }
@@ -44,21 +69,34 @@ function loadCurriculumData(): any | null {
 /**
  * Navigates the curriculum tree to find a topic by its path
  * @param curriculumPath Path like "math:grade_9_10:halmazok:halmaz_megadas:halmaz_megadas_felsorolassal"
+ *                       or "physics:grade_9_10:mechanika:mozgasi_energia"
  * @returns The topic data and parent hierarchy, or null if not found
  */
 export function getCurriculumTopicByPath(
   curriculumPath: string
 ): CurriculumPathResult | null {
-  const curriculumData = loadCurriculumData();
+  // Split the path
+  let pathSegments = curriculumPath.split(":");
+
+  if (pathSegments.length === 0) {
+    console.warn("⚠️  Empty curriculum path");
+    return null;
+  }
+
+  // First segment should be the subject (e.g., "math", "physics")
+  const subject = pathSegments[0];
+
+  // Load curriculum data for this subject
+  const curriculumData = loadCurriculumData(subject);
   if (!curriculumData) {
     return null;
   }
 
-  // Split the path and remove "math" prefix if present
-  let pathSegments = curriculumPath.split(":").filter((seg) => seg !== "math");
+  // Remove subject from path segments
+  pathSegments = pathSegments.slice(1);
 
   if (pathSegments.length === 0) {
-    console.warn("⚠️  Empty curriculum path");
+    console.warn("⚠️  Curriculum path must include grade level after subject");
     return null;
   }
 
@@ -95,11 +133,14 @@ export function getCurriculumTopicByPath(
   for (let i = 0; i < pathSegments.length; i++) {
     const segment = pathSegments[i];
 
-    // Look for the segment in current topics array
-    const foundTopic = currentTopics.find((t) => t.key === segment);
+    // Look for the segment in current topics array by key or name
+    const foundTopic = currentTopics.find((t) =>
+      t.key === segment || t.name === segment
+    );
 
     if (!foundTopic) {
       console.warn(`⚠️  Topic not found in path: ${segment} (at depth ${i + 1})`);
+      console.warn(`   Available topics at this level: ${currentTopics.map(t => `${t.key} ("${t.name}")`).join(', ')}`);
       return null;
     }
 

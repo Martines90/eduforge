@@ -31,6 +31,20 @@ export function buildSystemPrompt(
     throw new Error("Failed to load system prompt template");
   }
 
+  // Load the scenario inspiration library
+  const scenarioLibraryPath = path.join(
+    __dirname,
+    "../genai/prompts/scenario-inspiration-library.md"
+  );
+
+  let scenarioLibrary = "";
+  try {
+    scenarioLibrary = fs.readFileSync(scenarioLibraryPath, "utf-8");
+  } catch (error) {
+    console.warn("⚠️  Could not load scenario inspiration library:", error);
+    // Continue without the library - it's optional
+  }
+
   // Get language and metric system
   const language = getLanguageForCountry(request.country_code);
   const metricSystem = getMeasurementSystem(request.country_code);
@@ -40,6 +54,13 @@ export function buildSystemPrompt(
   systemPrompt = systemPrompt.replace(/\{\{METRIC_SYSTEM\}\}/g, metricSystem);
   systemPrompt = systemPrompt.replace(/\{\{TASK_CHARACTER_MIN_LENGTH\}\}/g, TASK_CHARACTER_LENGTH.min.toString());
   systemPrompt = systemPrompt.replace(/\{\{TASK_CHARACTER_MAX_LENGTH\}\}/g, TASK_CHARACTER_LENGTH.max.toString());
+
+  // Step 1.5: Append the scenario inspiration library if available
+  if (scenarioLibrary) {
+    systemPrompt += "\n\n---\n\n";
+    systemPrompt += scenarioLibrary;
+    systemPrompt += "\n\n---\n\n";
+  }
 
   // Step 2: Get curriculum topic information
   const curriculumPathResult = getCurriculumTopicByPath(
@@ -118,6 +139,7 @@ export function buildSystemPrompt(
 
   console.log("✅ Built enhanced system prompt with all context");
   console.log(`   - Template length: ${systemPrompt.length} chars`);
+  console.log(`   - Scenario library: ${scenarioLibrary ? scenarioLibrary.length + ' chars (included)' : 'not loaded'}`);
   console.log(`   - Additional context: ${additionalContext.length} chars`);
   console.log(`   - Total prompt length: ${finalPrompt.length} chars`);
   console.log(

@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import { TaskGeneratorService } from "../services/task-generator.service";
 import { TaskStorageService } from "../services/task-storage.service";
 import { TaskSelectionService } from "../services/task-selection.service";
+import { ImageStorageService } from "../services/image-storage.service";
 import { TaskGeneratorRequest, TaskGeneratorResponse } from "../types";
 import { getFirestore } from "../config/firebase.config";
 import { AuthRequest } from "../middleware/auth.middleware";
@@ -41,6 +42,33 @@ export class TaskController {
 
       // Generate the task with comprehensive configuration
       const result = await this.taskGenerator.generateTask(requestData);
+
+      // Store images permanently in Firebase Storage immediately after generation
+      if (result.generatedTask.images && result.generatedTask.images.length > 0) {
+        console.log(`📸 Storing ${result.generatedTask.images.length} image(s) permanently...`);
+
+        try {
+          const imageStorage = new ImageStorageService();
+
+          // Extract URLs from TaskImage objects
+          const temporaryUrls = result.generatedTask.images.map(img => img.url);
+
+          // Download from BFL and upload to Firebase Storage
+          const permanentUrls = await imageStorage.storeImagesPermanently(temporaryUrls, result.taskId);
+
+          // Update the task images with permanent URLs
+          result.generatedTask.images = result.generatedTask.images.map((img, index) => ({
+            ...img,
+            url: permanentUrls[index],
+          }));
+
+          console.log(`✅ Images stored permanently in Firebase Storage`);
+        } catch (imageError: any) {
+          console.error('⚠️ Failed to store images permanently:', imageError.message);
+          console.warn('⚠️ Continuing with temporary BFL URLs (may have CORS issues)');
+          // Continue with temporary URLs - user can still see the task
+        }
+      }
 
       // Return the task data in new response format
       const response: TaskGeneratorResponse = {
@@ -280,6 +308,35 @@ export class TaskController {
         task_text.metadata?.target_group || "mixed"
       );
 
+      // Store images permanently in Firebase Storage
+      if (images && images.length > 0) {
+        console.log(`📸 Storing ${images.length} image(s) permanently...`);
+
+        try {
+          const imageStorage = new ImageStorageService();
+
+          // Generate a temporary task ID for image storage
+          const tempTaskId = `temp_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
+          // Extract URLs from TaskImage objects
+          const temporaryUrls = images.map(img => img.url);
+
+          // Download from BFL and upload to Firebase Storage
+          const permanentUrls = await imageStorage.storeImagesPermanently(temporaryUrls, tempTaskId);
+
+          // Update the image URLs with permanent URLs
+          images.forEach((img, index) => {
+            img.url = permanentUrls[index];
+          });
+
+          console.log(`✅ Images stored permanently in Firebase Storage`);
+        } catch (imageError: any) {
+          console.error('⚠️ Failed to store images permanently:', imageError.message);
+          console.warn('⚠️ Continuing with temporary BFL URLs (may have CORS issues)');
+          // Continue with temporary URLs - user can still use them
+        }
+      }
+
       res.status(200).json({
         success: true,
         images,
@@ -354,6 +411,33 @@ export class TaskController {
       // Extract educational model from task_data metadata
       const educationalModel = task_data.metadata?.educational_model || 'secular';
 
+      // Store images permanently in Firebase Storage (if any exist)
+      let permanentImages: string[] = [];
+      if (task_data.images && task_data.images.length > 0) {
+        console.log(`📸 Processing ${task_data.images.length} image(s) for permanent storage...`);
+
+        try {
+          const imageStorage = new ImageStorageService();
+
+          // Extract URLs from images (handle both string and object formats)
+          const temporaryUrls = task_data.images.map((img: any) =>
+            typeof img === 'string' ? img : img.url || img
+          );
+
+          // Download from BFL and upload to Firebase Storage
+          permanentImages = await imageStorage.storeImagesPermanently(temporaryUrls, task_id);
+
+          console.log(`✅ Images stored permanently in Firebase Storage`);
+        } catch (imageError: any) {
+          console.error('⚠️ Failed to store images permanently:', imageError.message);
+          console.warn('⚠️ Falling back to temporary BFL URLs');
+          // Fallback to original URLs if storage fails
+          permanentImages = task_data.images.map((img: any) =>
+            typeof img === 'string' ? img : img.url || img
+          );
+        }
+      }
+
       // Create the task document with proper schema for getTasks query
       const taskDoc = {
         // Original fields from save request
@@ -372,7 +456,7 @@ export class TaskController {
         content: {
           description: task_data.description,
           solution: task_data.solution,
-          images: task_data.images || [],
+          images: permanentImages, // Use permanently stored Firebase Storage URLs
         },
 
         // User and location info

@@ -285,10 +285,10 @@ export class TaskGeneratorService {
   }
 
   /**
-   * Creates a concise, complete image prompt from story without truncation
+   * Creates a clean comic book style image prompt without text or formulas
    */
   private createImagePromptFromStory(storyText: string, title: string): string {
-    // Extract first 2 sentences or up to 250 characters, whichever comes first
+    // Extract key visual elements from the story without including dialogue or math
     const sentences = storyText.match(/[^.!?]+[.!?]+/g) || [];
     let context = sentences.slice(0, 2).join(" ");
 
@@ -301,7 +301,13 @@ export class TaskGeneratorService {
       }
     }
 
-    return `Scene: "${title}". ${context}`;
+    // Remove any text in quotes to avoid triggering text generation
+    context = context.replace(/"[^"]*"/g, '');
+
+    // Strip HTML tags
+    context = context.replace(/<[^>]+>/g, '');
+
+    return `Comic book style illustration showing: ${context}. NO TEXT, NO WORDS, NO NUMBERS, NO FORMULAS - visual scene only.`;
   }
 
   /**
@@ -386,14 +392,14 @@ export class TaskGeneratorService {
         taskData.story_text,
         taskData.title
       );
-      const imagePromptBase = `Educational illustration for a math problem, ${request.display_template} style, appropriate for ${request.target_group} students. ${storyPreview}`;
+      const imagePromptBase = `${storyPreview} Clean, vibrant ${request.display_template} illustration style suitable for ${request.target_group}. Focus on the scene and characters, NOT educational diagrams.`;
 
       for (let i = 0; i < numImages; i++) {
         console.log(`   🎨 Generating image ${i + 1}/${numImages}...`);
 
         const imagePrompt =
           numImages > 1
-            ? `${imagePromptBase} (Perspective ${i + 1} of ${numImages})`
+            ? `${imagePromptBase} Angle ${i + 1}: different perspective of the same scene.`
             : imagePromptBase;
 
         const imageResult = await this.imageGenerator.generate(imagePrompt, {
@@ -495,12 +501,20 @@ export class TaskGeneratorService {
     let enhancedSystemPrompt = systemPrompt;
     if (request.variation_index) {
       const variationStrategy =
-        request.variation_index === 1 ? "Common everyday scenario (shopping, travel, cooking, daily activities)" :
-        request.variation_index === 2 ? "Sports/games context (sports statistics, game scores, competitions, athletics)" :
-        "Technology/science context (data usage, physics problems, measurements, scientific applications)";
+        request.variation_index === 1 ?
+          `**WARFARE & STRATEGY** or **ENGINEERING & CONSTRUCTION** context from the scenario library. Choose from: ancient battles, medieval sieges, bridge/dam construction, military logistics, fortification design, siege weapons, naval engineering. Draw from historical conflicts or monumental construction projects where mathematics determined victory or prevented catastrophic failure.` :
+        request.variation_index === 2 ?
+          `**DISCOVERY & EXPLORATION** or **CATASTROPHE & DISASTER** context from the scenario library. Choose from: space exploration, deep sea missions, polar expeditions, natural disasters, industrial accidents, nuclear incidents, transportation disasters. Focus on moments where scientific calculation meant survival or understanding catastrophe.` :
+          `**INVENTION & INNOVATION** or **CRIME & JUSTICE** context from the scenario library. Choose from: breakthrough inventions, scientific revolutions, famous heists, forensic analysis, accident reconstruction, security system design, technological breakthroughs. Focus on moments where mathematical precision enabled innovation or solved mysteries.`;
 
-      enhancedSystemPrompt += `\n\n**VARIATION REQUIREMENT**: This is variation #${request.variation_index} of 3. Use a ${variationStrategy}. Make this variation unique and distinct from typical problems, while maintaining the same curriculum requirements and difficulty level.`;
+      enhancedSystemPrompt += `\n\n**CRITICAL VARIATION REQUIREMENT FOR VARIATION #${request.variation_index}**:\n\n${variationStrategy}\n\n**SCENARIO SELECTION CRITERIA**:\n\nYou are an immortal teacher drawing from thousands of years of experience. Select ONE specific moment from your life that fits this variation's context. The scenario MUST meet ALL of these criteria:\n\n✅ **Historical/Global Significance**: A moment that shaped history, advanced civilization, or had consequences beyond individual lives\n✅ **Real Stakes**: Lives depended on the calculation, OR massive resources/infrastructure was at risk, OR a breakthrough discovery hinged on understanding the math\n✅ **Professional/Expert Context**: You were acting as an engineer, scientist, military strategist, detective, explorer, inventor, or expert - NOT as a civilian in daily life\n✅ **Memorable Event**: Something worthy of being recorded in history books, technical journals, or disaster reports\n\n**Scale & Scope Requirements**:\n- If construction: Major infrastructure (bridges, dams, skyscrapers, monuments)\n- If warfare: Battles/sieges that shaped nations, not personal combat\n- If disaster: Events with regional/global impact (tsunamis, nuclear incidents, major accidents)\n- If crime: Famous heists, major investigations, breakthrough forensics\n- If invention: Technologies that changed industries or saved lives\n- If exploration: Missions to unexplored territories (space, poles, deep sea, uncharted lands)\n\n**Remember**: You're telling your students about a time when YOU personally applied mathematics in a way that mattered to human civilization. This isn't about solving convenient problems - it's about understanding forces that built and destroyed empires, saved and cost lives, advanced and threatened humanity.`;
     }
+
+    // Log the prompts being sent to AI
+    console.log(`\n📤 [AI Prompt] System Prompt (${enhancedSystemPrompt.length} chars):`);
+    console.log(`${enhancedSystemPrompt}...`);
+    console.log(`\n📤 [AI Prompt] User Message (${userMessage.length} chars):`);
+    console.log(`${userMessage}\n`);
 
     const taskResult = await this.textGenerator.generateWithSystemPrompt(
       enhancedSystemPrompt,
@@ -603,14 +617,14 @@ export class TaskGeneratorService {
       taskText.story_text,
       taskText.title
     );
-    const imagePromptBase = `Educational illustration for a math problem, ${displayTemplate} style, appropriate for ${targetGroup} students. ${storyPreview}`;
+    const imagePromptBase = `${storyPreview} Clean, vibrant ${displayTemplate} illustration style suitable for ${targetGroup}. Focus on the scene and characters, NOT educational diagrams.`;
 
     for (let i = 0; i < numImages; i++) {
       console.log(`   🎨 Generating image ${i + 1}/${numImages}...`);
 
       const imagePrompt =
         numImages > 1
-          ? `${imagePromptBase} (Perspective ${i + 1} of ${numImages})`
+          ? `${imagePromptBase} Angle ${i + 1}: different perspective of the same scene.`
           : imagePromptBase;
 
       const imageResult = await this.imageGenerator.generate(imagePrompt, {

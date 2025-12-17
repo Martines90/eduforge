@@ -148,8 +148,165 @@ export default function TaskDetailPage() {
   };
 
   const handleDownloadPDF = async () => {
-    // TODO: Implement PDF generation
-    alert('PDF download functionality will be implemented soon!');
+    if (!task) return;
+
+    try {
+      // Dynamically import html2pdf to avoid SSR issues
+      const html2pdf = (await import('html2pdf.js')).default;
+
+      // Create a temporary container for PDF rendering
+      const pdfContainer = document.createElement('div');
+      pdfContainer.style.position = 'absolute';
+      pdfContainer.style.left = '-9999px';
+      pdfContainer.style.width = '210mm'; // A4 width
+      pdfContainer.style.padding = '20mm';
+      pdfContainer.style.backgroundColor = 'white';
+      pdfContainer.style.fontFamily = 'Arial, sans-serif';
+      pdfContainer.style.fontSize = '14px';
+      pdfContainer.style.lineHeight = '1.6';
+      pdfContainer.style.color = '#333';
+
+      // Process image placeholders with PDF-optimized styling
+      const processImagePlaceholdersForPDF = (html: string, images: any[]): string => {
+        if (!images || images.length === 0) return html;
+
+        // Filter out invalid images
+        const validImages = images.filter((img: any) => {
+          const url = typeof img === 'string' ? img : img?.url;
+          return url && url.trim() !== '';
+        });
+
+        if (validImages.length === 0) return html;
+
+        let processedHtml = html;
+        validImages.forEach((image: any, index: number) => {
+          const placeholder = `[IMAGE_${index + 1}]`;
+          let imageUrl = typeof image === 'string' ? image : image.url;
+
+          // Decode HTML entities in URL (fixes &amp; in Azure Blob Storage URLs)
+          imageUrl = decodeHtmlEntities(imageUrl);
+
+          // PDF-optimized: centered, full width (max 600px), no float
+          const imgTag = `<img src="${imageUrl}" crossorigin="anonymous" alt="Task illustration ${index + 1}" style="display: block; width: 100%; max-width: 600px; height: auto; margin: 20px auto; border-radius: 8px;" class="task-image task-image-${index + 1}" />`;
+          processedHtml = processedHtml.replace(placeholder, imgTag);
+        });
+        return processedHtml;
+      };
+
+      // Build the PDF content with task description
+      const descriptionWithImages = processImagePlaceholdersForPDF(
+        task.content.description || task.description,
+        task.content.images
+      );
+
+      pdfContainer.innerHTML = `
+        <div style="padding: 10px;">
+          <h1 style="color: #667eea; font-size: 24px; margin-bottom: 10px; font-weight: bold;">${task.title || t('Task')}</h1>
+          <p style="color: #666; font-size: 12px; margin-bottom: 20px;">
+            ${task.gradeLevel.replace('grade_', 'Grade ').replace('_', '-')} | ${task.subject} | ${t('Difficulty')}: ${task.difficultyLevel}
+          </p>
+          <div style="font-size: 14px; line-height: 1.8;">
+            ${processLatexInHtml(descriptionWithImages)}
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(pdfContainer);
+
+      // Process all images to ensure they're loaded
+      const images = pdfContainer.getElementsByTagName('img');
+      const imagePromises = Array.from(images).map((img) => {
+        return new Promise((resolve) => {
+          if (img.complete && img.naturalHeight !== 0) {
+            resolve(null);
+          } else {
+            const timeout = setTimeout(() => {
+              console.warn(`Image load timeout: ${img.src}`);
+              resolve(null);
+            }, 10000);
+
+            img.onload = () => {
+              clearTimeout(timeout);
+              resolve(null);
+            };
+            img.onerror = (error) => {
+              clearTimeout(timeout);
+              console.warn(`Failed to load image: ${img.src}`, error);
+              resolve(null);
+            };
+          }
+        });
+      });
+
+      // Wait for all images to load (or timeout)
+      console.log(`[PDF] Waiting for ${images.length} image(s) to load...`);
+      await Promise.all(imagePromises);
+      console.log(`[PDF] All images processed`);
+
+      // Render LaTeX if available with better waiting mechanism
+      if (typeof window !== 'undefined' && (window as any).S2Latex && typeof (window as any).S2Latex.processTree === 'function') {
+        console.log('[PDF] Processing LaTeX...');
+        (window as any).S2Latex.processTree(pdfContainer);
+
+        // Wait for LaTeX rendering with timeout
+        await new Promise(resolve => {
+          let checks = 0;
+          const maxChecks = 20;
+
+          const checkInterval = setInterval(() => {
+            checks++;
+            const latexElements = pdfContainer.querySelectorAll('[class*="latex"], [class*="katex"]');
+            if (latexElements.length > 0 || checks >= maxChecks) {
+              clearInterval(checkInterval);
+              console.log(`[PDF] LaTeX rendering complete (checks: ${checks})`);
+              resolve(null);
+            }
+          }, 100);
+        });
+      }
+
+      // Configure PDF options
+      const opt = {
+        margin: 10,
+        filename: `task_${taskId}.pdf`,
+        image: { type: 'jpeg' as const, quality: 0.98 },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
+          logging: false,
+          letterRendering: true,
+        },
+        jsPDF: {
+          unit: 'mm',
+          format: 'a4',
+          orientation: 'portrait' as const
+        }
+      };
+
+      // Generate and download PDF
+      await html2pdf().set(opt).from(pdfContainer).save();
+
+      // Remove temporary container
+      document.body.removeChild(pdfContainer);
+
+      console.log('[PDF] PDF generated successfully!');
+    } catch (error) {
+      console.error('PDF generation error:', error);
+
+      let errorMessage = t('An error occurred while generating the PDF.');
+
+      if (error instanceof Error) {
+        if (error.message.includes('CORS') || error.message.includes('cross-origin')) {
+          errorMessage = t('Image loading failed due to CORS restrictions. The images may not be accessible from this domain.');
+        } else if (error.message.includes('network') || error.message.includes('fetch')) {
+          errorMessage = t('Network error while loading images. Please check your internet connection.');
+        } else if (error.message.includes('timeout')) {
+          errorMessage = t('Image loading timed out. Please try again or check image URLs.');
+        }
+      }
+
+      alert(`${errorMessage}\n\n${t('Please try again or contact support if the problem persists.')}`);
+    }
   };
 
   const handleBack = () => {
@@ -173,15 +330,34 @@ export default function TaskDetailPage() {
     );
   }
 
+  // Helper to decode HTML entities in URLs (fixes &amp; issue with Azure Blob Storage)
+  const decodeHtmlEntities = (text: string): string => {
+    const textarea = document.createElement('textarea');
+    textarea.innerHTML = text;
+    return textarea.value;
+  };
+
   // Process image placeholders to inject actual image tags
   const processImagePlaceholders = (html: string, images: any[]): string => {
     if (!images || images.length === 0) return html;
 
+    // Filter out invalid images
+    const validImages = images.filter((img: any) => {
+      const url = typeof img === 'string' ? img : img?.url;
+      return url && url.trim() !== '';
+    });
+
+    if (validImages.length === 0) return html;
+
     let processedHtml = html;
-    images.forEach((image, index) => {
+    validImages.forEach((image: any, index: number) => {
       const placeholder = `[IMAGE_${index + 1}]`;
-      const imageUrl = typeof image === 'string' ? image : image.url;
-      const imgTag = `<img src="${imageUrl}" alt="Task illustration ${index + 1}" style="width: 100%; max-width: 50%; height: auto; margin: 10px 0 10px 20px; border-radius: 8px; float: right; clear: right;" class="task-image task-image-${index + 1}" />`;
+      let imageUrl = typeof image === 'string' ? image : image.url;
+
+      // Decode HTML entities in URL (fixes &amp; in Azure Blob Storage URLs)
+      imageUrl = decodeHtmlEntities(imageUrl);
+
+      const imgTag = `<img src="${imageUrl}" crossorigin="anonymous" alt="Task illustration ${index + 1}" style="width: 100%; max-width: 50%; height: auto; margin: 10px 0 10px 20px; border-radius: 8px; float: right; clear: right;" class="task-image task-image-${index + 1}" />`;
       processedHtml = processedHtml.replace(placeholder, imgTag);
     });
     return processedHtml;

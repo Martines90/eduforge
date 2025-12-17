@@ -62,13 +62,22 @@ export const TaskResult: React.FC<TaskResultProps> = ({
   const [latexReady, setLatexReady] = useState(false);
   const [descriptionValidation, setDescriptionValidation] = useState(validateCharacterLength(''));
 
+  // Helper to decode HTML entities in URLs (fixes &amp; issue with Azure Blob Storage)
+  const decodeHtmlEntities = (text: string): string => {
+    if (typeof document === 'undefined') return text; // SSR safety
+    const textarea = document.createElement('textarea');
+    textarea.innerHTML = text;
+    return textarea.value;
+  };
+
   // Process HTML to inject image URLs in place of [IMAGE_X] placeholders
-  const processImagePlaceholders = (html: string, images: { id: string; url: string }[]): string => {
+  const processImagePlaceholders = (html: string, images: { id: string; url: string }[], forPdf = false): string => {
     console.log('[TaskResult] Processing image placeholders:', {
       imagesCount: images?.length || 0,
       images,
       htmlLength: html?.length || 0,
-      htmlSnippet: html?.substring(0, 200)
+      htmlSnippet: html?.substring(0, 200),
+      forPdf
     });
 
     if (!images || images.length === 0) {
@@ -76,12 +85,27 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       return html;
     }
 
+    // Filter out invalid images
+    const validImages = images.filter(img => img && img.url && img.url.trim() !== '');
+    if (validImages.length === 0) {
+      console.warn('[TaskResult] No valid image URLs found');
+      return html;
+    }
+
     let processedHtml = html;
-    images.forEach((image, index) => {
+    validImages.forEach((image, index) => {
       const placeholder = `[IMAGE_${index + 1}]`;
-      // Responsive image: 50% width on desktop (float right), 100% on mobile
-      const imgTag = `<img src="${image.url}" alt="Task illustration ${index + 1}" style="width: 100%; max-width: 50%; height: auto; margin: 10px 0 10px 20px; border-radius: 8px; float: right; clear: right;" class="task-image task-image-${index + 1}" />`;
-      console.log(`[TaskResult] Replacing "${placeholder}" with img tag, URL: ${image.url}`);
+
+      // Decode HTML entities in URL (fixes &amp; in Azure Blob Storage URLs)
+      let imageUrl = decodeHtmlEntities(image.url);
+
+      // Different styles for PDF vs screen display
+      const imgStyle = forPdf
+        ? 'display: block; width: 100%; max-width: 600px; height: auto; margin: 20px auto; border-radius: 8px;'
+        : 'width: 100%; max-width: 50%; height: auto; margin: 10px 0 10px 20px; border-radius: 8px; float: right; clear: right;';
+
+      const imgTag = `<img src="${imageUrl}" crossorigin="anonymous" alt="Task illustration ${index + 1}" style="${imgStyle}" class="task-image task-image-${index + 1}" />`;
+      console.log(`[TaskResult] Replacing "${placeholder}" with img tag, URL: ${imageUrl}`);
       // Replace only the FIRST occurrence (not global) to avoid duplicates
       processedHtml = processedHtml.replace(placeholder, imgTag);
     });
@@ -105,9 +129,9 @@ export const TaskResult: React.FC<TaskResultProps> = ({
   }, [task]);
 
   // Get the display version of description (with images injected)
-  const getDisplayDescription = (): string => {
+  const getDisplayDescription = (forPdf = false): string => {
     if (!task) return '';
-    return processImagePlaceholders(editedDescription || task.description, task.images);
+    return processImagePlaceholders(editedDescription || task.description, task.images, forPdf);
   };
 
   // Validate description length whenever it changes
@@ -233,8 +257,8 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       pdfContainer.style.lineHeight = '1.6';
       pdfContainer.style.color = '#333';
 
-      // Build the PDF content (task description only, with images)
-      const displayDescription = processImagePlaceholders(editedDescription || task.description, task.images);
+      // Build the PDF content (task description only, with images) - use PDF-optimized styling
+      const displayDescription = getDisplayDescription(true);
 
       pdfContainer.innerHTML = `
         <div style="padding: 10px;">
@@ -250,27 +274,54 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       // Process all images to ensure they're loaded
       const images = pdfContainer.getElementsByTagName('img');
       const imagePromises = Array.from(images).map((img) => {
-        return new Promise((resolve) => {
-          if (img.complete) {
+        return new Promise((resolve, reject) => {
+          if (img.complete && img.naturalHeight !== 0) {
             resolve(null);
           } else {
-            img.onload = () => resolve(null);
-            img.onerror = () => {
-              console.warn(`Failed to load image: ${img.src}`);
+            const timeout = setTimeout(() => {
+              console.warn(`Image load timeout: ${img.src}`);
+              resolve(null); // Resolve anyway to not block PDF generation
+            }, 10000); // 10 second timeout per image
+
+            img.onload = () => {
+              clearTimeout(timeout);
               resolve(null);
+            };
+            img.onerror = (error) => {
+              clearTimeout(timeout);
+              console.warn(`Failed to load image: ${img.src}`, error);
+              resolve(null); // Resolve anyway to continue with other images
             };
           }
         });
       });
 
-      // Wait for all images to load
+      // Wait for all images to load (or timeout)
+      console.log(`[PDF] Waiting for ${images.length} image(s) to load...`);
       await Promise.all(imagePromises);
+      console.log(`[PDF] All images processed`);
 
-      // Render LaTeX if available
+      // Render LaTeX if available with better waiting mechanism
       if (window.S2Latex && typeof window.S2Latex.processTree === 'function') {
+        console.log('[PDF] Processing LaTeX...');
         window.S2Latex.processTree(pdfContainer);
-        // Wait a bit for LaTeX to render
-        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // Wait for LaTeX rendering with timeout
+        await new Promise(resolve => {
+          let checks = 0;
+          const maxChecks = 20; // 2 seconds max (20 * 100ms)
+
+          const checkInterval = setInterval(() => {
+            checks++;
+            // Check if LaTeX has been rendered or timeout
+            const latexElements = pdfContainer.querySelectorAll('[class*="latex"], [class*="katex"]');
+            if (latexElements.length > 0 || checks >= maxChecks) {
+              clearInterval(checkInterval);
+              console.log(`[PDF] LaTeX rendering complete (checks: ${checks})`);
+              resolve(null);
+            }
+          }, 100);
+        });
       }
 
       // Configure PDF options
@@ -296,9 +347,25 @@ export const TaskResult: React.FC<TaskResultProps> = ({
 
       // Remove temporary container
       document.body.removeChild(pdfContainer);
+
+      console.log('[PDF] PDF generated successfully!');
     } catch (error) {
       console.error('PDF generation error:', error);
-      alert(t('An error occurred while generating the PDF. Please try again.'));
+
+      // Better error messaging
+      let errorMessage = t('An error occurred while generating the PDF.');
+
+      if (error instanceof Error) {
+        if (error.message.includes('CORS') || error.message.includes('cross-origin')) {
+          errorMessage = t('Image loading failed due to CORS restrictions. The images may not be accessible from this domain.');
+        } else if (error.message.includes('network') || error.message.includes('fetch')) {
+          errorMessage = t('Network error while loading images. Please check your internet connection.');
+        } else if (error.message.includes('timeout')) {
+          errorMessage = t('Image loading timed out. Please try again or check image URLs.');
+        }
+      }
+
+      alert(`${errorMessage}\n\n${t('Please try again or contact support if the problem persists.')}`);
     }
   };
 

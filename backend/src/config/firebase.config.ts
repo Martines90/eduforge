@@ -39,6 +39,7 @@ export function initializeFirebase(): void {
       // Fallback: initialize with project ID only (limited functionality)
       firebaseApp = admin.initializeApp({
         projectId: process.env.FIREBASE_PROJECT_ID || 'eduforge-d29d9',
+        storageBucket: process.env.FIREBASE_STORAGE_BUCKET || 'eduforge-d29d9.firebasestorage.app',
       });
     } else {
       // Initialize with service account
@@ -46,6 +47,7 @@ export function initializeFirebase(): void {
 
       firebaseApp = admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
+        storageBucket: process.env.FIREBASE_STORAGE_BUCKET || 'eduforge-d29d9.firebasestorage.app',
       });
 
       console.log(`✅ Firebase Admin SDK initialized successfully (using ${serviceAccountPath})`);

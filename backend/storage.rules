@@ -1,0 +1,19 @@
+rules_version = '2';
+
+// Firebase Storage Security Rules
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // Task images - publicly readable
+    match /task-images/{taskId}/{imageFile} {
+      allow read: if true; // Public read access for all task images
+      allow write: if request.auth != null; // Only authenticated users can upload
+    }
+
+    // Default: deny all access to other paths
+    match /{allPaths=**} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+    }
+  }
+}
