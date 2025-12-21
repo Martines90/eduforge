@@ -255,6 +255,18 @@ export const en: Translations = {
     "Task description is too long! Maximum {{max}} characters allowed. Current: {{count}} characters.",
   "An error occurred while generating the PDF. Please try again.":
     "An error occurred while generating the PDF. Please try again.",
+  "An error occurred while generating the PDF.":
+    "An error occurred while generating the PDF.",
+  "Image loading failed due to CORS restrictions. The images may not be accessible from this domain.":
+    "Image loading failed due to CORS restrictions. The images may not be accessible from this domain.",
+  "Network error while loading images. Please check your internet connection.":
+    "Network error while loading images. Please check your internet connection.",
+  "Image loading timed out. Please try again or check image URLs.":
+    "Image loading timed out. Please try again or check image URLs.",
+  "Please try again or contact support if the problem persists.":
+    "Please try again or contact support if the problem persists.",
+  "PDF is not ready yet. Please try again in a moment.":
+    "PDF is not ready yet. Please try again in a moment.",
   "An error occurred": "An error occurred",
   "Save Task": "Save Task",
   "Saving...": "Saving...",

@@ -237,6 +237,12 @@ export interface Translations {
   "Task description is too short! At least {{min}} characters required. Current: {{count}} characters.": string;
   "Task description is too long! Maximum {{max}} characters allowed. Current: {{count}} characters.": string;
   "An error occurred while generating the PDF. Please try again.": string;
+  "An error occurred while generating the PDF.": string;
+  "Image loading failed due to CORS restrictions. The images may not be accessible from this domain.": string;
+  "Network error while loading images. Please check your internet connection.": string;
+  "Image loading timed out. Please try again or check image URLs.": string;
+  "Please try again or contact support if the problem persists.": string;
+  "PDF is not ready yet. Please try again in a moment.": string;
   "An error occurred": string;
   "Save Task": string;
   "Saving...": string;

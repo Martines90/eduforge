@@ -1,0 +1,1798 @@
+{
+  "grade_9_10": [
+    {
+      "key": "pensamiento_historico_y_metodo",
+      "name": "Pensamiento histórico y método",
+      "short_description": "Desarrolla las herramientas básicas para pensar históricamente: ubicar procesos en tiempo y espacio, formular preguntas y explicar cambios y permanencias con base en evidencia.",
+      "sub_topics": [
+        {
+          "key": "preguntas_historicas_y_problematizacion",
+          "name": "Preguntas históricas y problematización",
+          "short_description": "Aprende a convertir temas del pasado en problemas investigables mediante preguntas, hipótesis y delimitación temporal y espacial.",
+          "sub_topics": [
+            {
+              "key": "formular_preguntas_investigables",
+              "name": "Formulación de preguntas investigables",
+              "short_description": "Plantea preguntas históricas claras, pertinentes y verificables a partir de un tema amplio.",
+              "example_tasks": [
+                "A partir del tema “La vida en la Nueva España”, redacta 3 preguntas históricas investigables y explica por qué cada una puede responderse con fuentes.",
+                "Convierte el enunciado “La Conquista fue inevitable” en 2 preguntas históricas alternativas (una social y una económica) y justifica tu elección.",
+                "Elige un problema de tu comunidad (por ejemplo, origen del nombre de una colonia) y redacta una pregunta histórica con delimitación de tiempo, lugar y actores."
+              ]
+            },
+            {
+              "key": "delimitacion_tiempo_espacio_actores",
+              "name": "Delimitación: tiempo, espacio y actores",
+              "short_description": "Define periodización, escala espacial y actores históricos para acotar el análisis.",
+              "example_tasks": [
+                "Delimita el tema “Independencia de México” en tres escalas (local, regional y nacional) e indica qué actores cambian en cada escala.",
+                "Elabora una ficha de delimitación para el tema “Mesoamérica”: periodo, región, actores principales y dos conceptos clave.",
+                "Recibe una pregunta amplia (“¿Por qué cambió México en el siglo XIX?”) y reescríbela con un periodo concreto, un espacio y un grupo social específico."
+              ]
+            },
+            {
+              "key": "hipotesis_y_ruta_de_indagacion",
+              "name": "Hipótesis y ruta de indagación",
+              "short_description": "Propone hipótesis iniciales y una ruta de búsqueda de evidencias para contrastarlas.",
+              "example_tasks": [
+                "Plantea una hipótesis sobre una causa de la caída de Tenochtitlan y escribe qué evidencias buscarías para confirmarla o refutarla.",
+                "Dado un tema (migración interna en el siglo XX), escribe una hipótesis y una lista de 5 tipos de fuentes posibles (documentales, orales, estadísticas, etc.).",
+                "A partir de dos interpretaciones opuestas sobre un hecho histórico, redacta una hipótesis propia y diseña una ruta de indagación de 4 pasos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "tiempo_historico_y_periodizacion",
+          "name": "Tiempo histórico y periodización",
+          "short_description": "Comprende duración, simultaneidad, ritmos de cambio y formas de periodizar para interpretar procesos.",
+          "sub_topics": [
+            {
+              "key": "cambios_permanencias_y_ritmos",
+              "name": "Cambios, permanencias y ritmos de transformación",
+              "short_description": "Distingue qué cambia y qué permanece, y reconoce ritmos distintos (corto, mediano y largo plazo).",
+              "example_tasks": [
+                "En una tabla de doble entrada (cambio/permanencia), clasifica 10 elementos de la vida cotidiana en Mesoamérica antes y después de 1521 y justifica 3 casos dudosos.",
+                "Elige un proceso (evangelización, minería, comercio) y explica un cambio de corto plazo y otro de largo plazo, con un ejemplo de evidencia para cada uno.",
+                "Con base en un texto breve sobre el Porfiriato, identifica 2 permanencias y 2 cambios y explica por qué no todos ocurren al mismo ritmo."
+              ]
+            },
+            {
+              "key": "lineas_del_tiempo_y_sucesion",
+              "name": "Líneas del tiempo, sucesión y simultaneidad",
+              "short_description": "Representa procesos en líneas del tiempo y reconoce hechos simultáneos en regiones distintas.",
+              "example_tasks": [
+                "Construye una línea del tiempo (1500–1821) con 12 eventos y marca con símbolos cuáles son políticos, sociales y económicos.",
+                "Elabora una línea del tiempo comparada: en una columna eventos de Europa (Ilustración) y en otra eventos de Nueva España, y escribe 3 relaciones posibles.",
+                "Dado un conjunto de eventos desordenados, ordénalos cronológicamente, identifica 2 simultaneidades y explica su posible conexión."
+              ]
+            },
+            {
+              "key": "criterios_de_periodizacion",
+              "name": "Criterios de periodización y debate",
+              "short_description": "Evalúa criterios para dividir el pasado en periodos y reconoce que periodizar implica interpretaciones.",
+              "example_tasks": [
+                "Propón dos periodizaciones diferentes del México del siglo XIX: una política y otra económica, y explica qué cambia en cada forma de dividir.",
+                "Lee dos periodizaciones de Mesoamérica (por horizontes y por regiones) y escribe 5 diferencias y 2 ventajas de cada una.",
+                "Defiende en un texto corto si 1810 o 1821 es un mejor “inicio” para el periodo independentista, usando criterios explícitos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "espacio_historico_y_contexto",
+          "name": "Espacio histórico y contexto",
+          "short_description": "Relaciona procesos históricos con el territorio, el ambiente y las redes de intercambio para explicar continuidades y transformaciones.",
+          "sub_topics": [
+            {
+              "key": "mapas_historicos_y_cambios_territoriales",
+              "name": "Mapas históricos y cambios territoriales",
+              "short_description": "Interpreta mapas históricos para comprender fronteras, rutas, regiones y transformaciones del territorio.",
+              "example_tasks": [
+                "Analiza dos mapas (Mesoamérica y Virreinato) y describe 5 cambios espaciales: rutas, centros, fronteras o regiones, explicando una posible causa.",
+                "Ubica en un mapa mudo 8 señoríos/ciudades prehispánicas y escribe por qué su localización favorecía el intercambio o el control político.",
+                "Elabora un mapa esquemático con rutas comerciales prehispánicas y añade una nota explicando cómo el espacio influyó en el poder."
+              ]
+            },
+            {
+              "key": "escalas_espaciales_y_redes",
+              "name": "Escalas espaciales y redes",
+              "short_description": "Distingue escalas (local, regional, global) y analiza redes de intercambio y circulación.",
+              "example_tasks": [
+                "Explica un mismo fenómeno (tributo mexica) en tres escalas: local, regional y mesoamericana, mostrando qué cambia en tu explicación.",
+                "Dibuja una red simple de intercambio (obsidiana, cacao, plumas) y argumenta cuál nodo es más estratégico y por qué.",
+                "Relaciona una ruta comercial con un conflicto político: plantea una explicación en 8–10 líneas usando el concepto de ‘control del territorio’."
+              ]
+            },
+            {
+              "key": "ambiente_recursos_y_poblamiento",
+              "name": "Ambiente, recursos y poblamiento",
+              "short_description": "Explica cómo clima, relieve y recursos influyen en poblamiento, producción y organización social.",
+              "example_tasks": [
+                "Selecciona dos regiones mesoamericanas distintas y compara cómo el ambiente influyó en su agricultura, organización y relaciones de intercambio.",
+                "A partir de una descripción del Valle de México, explica por qué se desarrollaron chinampas y cómo eso impactó la densidad poblacional.",
+                "Elabora un mini-ensayo: ‘¿Hasta qué punto el ambiente explica el desarrollo de una civilización?’ usando un ejemplo prehispánico."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "causalidad_multicausalidad_y_consecuencias",
+          "name": "Causalidad, multicausalidad y consecuencias",
+          "short_description": "Analiza causas y consecuencias evitando explicaciones únicas; distingue factores estructurales y coyunturales.",
+          "sub_topics": [
+            {
+              "key": "factores_estructurales_y_coyunturales",
+              "name": "Factores estructurales y coyunturales",
+              "short_description": "Distingue causas de larga duración (estructuras) y detonantes inmediatos (coyunturas).",
+              "example_tasks": [
+                "Explica la Independencia identificando 3 factores estructurales y 2 coyunturales; para cada uno, sugiere una evidencia posible.",
+                "Dado un texto sobre crisis del orden colonial, subraya causas y clasifícalas en estructurales/coyunturales justificando 4 clasificaciones.",
+                "Construye un diagrama de causa-efecto con al menos 7 nodos para la caída de Tenochtitlan, distinguiendo estructura y coyuntura."
+              ]
+            },
+            {
+              "key": "causas_multiples_y_perspectivas",
+              "name": "Causas múltiples y perspectivas",
+              "short_description": "Reconoce que diferentes grupos explican un mismo hecho de formas distintas según sus intereses y experiencias.",
+              "example_tasks": [
+                "Escribe dos explicaciones de 10 líneas sobre la Conquista: una desde la perspectiva mexica y otra desde la española, señalando 3 diferencias.",
+                "Analiza un fragmento de crónica y un texto escolar: identifica 4 causas mencionadas en cada uno y discute cuáles faltan y por qué.",
+                "Elabora un ‘ranking’ de 5 causas de un proceso histórico y defiende tu orden con argumentos basados en evidencia."
+              ]
+            },
+            {
+              "key": "consecuencias_intencionadas_y_no_intencionadas",
+              "name": "Consecuencias intencionadas y no intencionadas",
+              "short_description": "Distingue efectos buscados por los actores y efectos inesperados en distintos plazos.",
+              "example_tasks": [
+                "Selecciona una política colonial (tributo, encomienda, evangelización) e identifica 2 consecuencias intencionadas y 2 no intencionadas.",
+                "Relaciona un evento (alianzas indígenas en 1521) con una consecuencia no prevista a mediano plazo; explica el vínculo en 8–10 líneas.",
+                "En una línea del tiempo, marca consecuencias inmediatas y de largo plazo de un proceso (Independencia) e indica cuál fue inesperada y por qué."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fuentes_historicas_y_analisis_critico",
+      "name": "Fuentes históricas y análisis crítico",
+      "short_description": "Fortalece la lectura, clasificación e interpretación de fuentes para construir explicaciones históricas sustentadas, reconociendo perspectiva, contexto y sesgos.",
+      "sub_topics": [
+        {
+          "key": "tipos_de_fuentes_y_clasificacion",
+          "name": "Tipos de fuentes y clasificación",
+          "short_description": "Distingue fuentes primarias y secundarias y reconoce soportes diversos (texto, imagen, objeto, oralidad, datos).",
+          "sub_topics": [
+            {
+              "key": "primarias_secundarias_y_terciarias",
+              "name": "Fuentes primarias, secundarias y terciarias",
+              "short_description": "Clasifica fuentes según su relación temporal y su función en la investigación histórica.",
+              "example_tasks": [
+                "Clasifica 12 materiales (código, crónica, museo, libro de texto, artículo académico, entrevista) como primarios/secundarios/terciarios y justifica 6 casos.",
+                "Explica por qué una fotografía de 1910 puede ser fuente primaria para un tema y secundaria para otro; ejemplifica con dos preguntas distintas.",
+                "Elabora un cuadro: ‘¿Qué aporta cada tipo de fuente?’ con al menos 2 ventajas y 2 límites por categoría."
+              ]
+            },
+            {
+              "key": "fuentes_materiales_iconograficas_y_orales",
+              "name": "Fuentes materiales, iconográficas y orales",
+              "short_description": "Interpreta objetos, imágenes y testimonios considerando autoría, intención y contexto de producción.",
+              "example_tasks": [
+                "Analiza una imagen de un códice (o su reproducción): describe 6 elementos, infiere 2 significados y escribe 2 preguntas para investigar.",
+                "Realiza una entrevista a un familiar sobre un cambio en tu comunidad y redacta una ficha de fuente oral: fecha, contexto, sesgos posibles y 3 citas clave.",
+                "Compara un objeto patrimonial (monumento, edificio) con un texto: identifica qué información aporta cada uno y qué no puede decir."
+              ]
+            },
+            {
+              "key": "seleccion_de_fuentes_segun_pregunta",
+              "name": "Selección de fuentes según la pregunta",
+              "short_description": "Elige fuentes pertinentes y variadas para responder una pregunta histórica específica.",
+              "example_tasks": [
+                "Para la pregunta ‘¿Cómo se organizaba el tributo mexica?’, propone 5 fuentes distintas y explica qué dato buscarías en cada una.",
+                "Dada una pregunta sobre vida cotidiana en el virreinato, selecciona 4 fuentes y justifica por qué son más útiles que otras 4 opciones.",
+                "Diseña un ‘paquete de fuentes’ mínimo (3 fuentes) para responder una pregunta local; incluye criterios de selección."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "critica_de_fuentes_y_confiabilidad",
+          "name": "Crítica de fuentes y confiabilidad",
+          "short_description": "Evalúa autenticidad, propósito, audiencia, contexto y limitaciones de las fuentes para evitar lecturas ingenuas.",
+          "sub_topics": [
+            {
+              "key": "autor_intencion_y_audiencia",
+              "name": "Autor, intención y audiencia",
+              "short_description": "Identifica quién produce la fuente, para quién y con qué propósito, y cómo eso afecta su contenido.",
+              "example_tasks": [
+                "Lee un fragmento de crónica y responde: ¿quién habla?, ¿a quién se dirige?, ¿qué intenta lograr? Sustenta con 3 evidencias del texto.",
+                "Compara un decreto y una carta personal del mismo periodo: identifica diferencias de intención y cómo eso cambia lo que se puede concluir.",
+                "Redacta dos interpretaciones de un mismo párrafo: una literal y otra contextual; explica por qué la contextual es más sólida."
+              ]
+            },
+            {
+              "key": "sesgo_silencios_y_punto_de_vista",
+              "name": "Sesgo, silencios y punto de vista",
+              "short_description": "Reconoce omisiones, estereotipos y puntos de vista dominantes; busca voces subrepresentadas.",
+              "example_tasks": [
+                "Subraya en un texto 5 expresiones valorativas o estereotipos y reescribe el párrafo en lenguaje más neutral sin perder información.",
+                "Identifica qué grupo social no aparece en una fuente sobre conquista/virreinato y propone 3 fuentes alternativas para incluir esa perspectiva.",
+                "A partir de dos fuentes sobre el mismo hecho, detecta 4 contradicciones y plantea una explicación de por qué difieren."
+              ]
+            },
+            {
+              "key": "corroboracion_y_triangulacion",
+              "name": "Corroboración y triangulación",
+              "short_description": "Contrasta varias fuentes para corroborar información y construir explicaciones más confiables.",
+              "example_tasks": [
+                "Elige un dato histórico y verifica su confiabilidad usando 3 fuentes distintas; explica qué coincide y qué discrepa.",
+                "Con dos textos y un mapa, elabora una conclusión sobre un proceso y señala qué evidencia proviene de cada fuente (triangulación).",
+                "Dado un rumor histórico común, diseña un plan para comprobarlo con 4 tipos de fuentes y criterios claros."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "interpretacion_y_argumentacion_historica",
+          "name": "Interpretación y argumentación histórica",
+          "short_description": "Construye explicaciones y argumentos con evidencia, diferenciando descripción, interpretación y juicio de valor.",
+          "sub_topics": [
+            {
+              "key": "afirmaciones_evidencia_y_razonamiento",
+              "name": "Afirmaciones, evidencia y razonamiento",
+              "short_description": "Sustenta afirmaciones con evidencia y explica la relación lógica entre datos y conclusiones.",
+              "example_tasks": [
+                "Redacta un párrafo argumentativo sobre una causa de la Independencia con la estructura: afirmación–evidencia–razonamiento (AER).",
+                "Te dan 6 datos sobre Mesoamérica; selecciona 3 para sostener una conclusión y explica por qué los otros 3 no son pertinentes.",
+                "Evalúa dos conclusiones posibles sobre un hecho y decide cuál es más sólida según la evidencia disponible."
+              ]
+            },
+            {
+              "key": "comparacion_y_contraste_de_procesos",
+              "name": "Comparación y contraste de procesos",
+              "short_description": "Compara procesos históricos considerando contexto, actores, causas y consecuencias para identificar similitudes y diferencias significativas.",
+              "example_tasks": [
+                "Compara dos civilizaciones mesoamericanas en organización política y economía; escribe 3 similitudes y 3 diferencias con evidencia.",
+                "Elabora un texto breve comparando la Conquista en dos regiones (por ejemplo, Valle de México y área maya) y explica por qué no fue igual.",
+                "Construye una matriz de comparación (causas/actores/consecuencias) entre dos momentos históricos y redacta una conclusión interpretativa."
+              ]
+            },
+            {
+              "key": "explicacion_causa_efecto_y_contexto",
+              "name": "Explicación: causa-efecto y contexto",
+              "short_description": "Elabora explicaciones multicausales integrando contexto y mostrando relaciones entre hechos y procesos.",
+              "example_tasks": [
+                "Explica la caída de una ciudad-Estado usando al menos 4 causas conectadas; incluye un factor externo y uno interno.",
+                "Escribe una explicación de 12–15 líneas sobre cómo el contexto internacional influyó en un proceso en México (elige un ejemplo) y sustenta con evidencias.",
+                "Convierte una narración descriptiva en una explicación: agrega conectores causales y evidencia para justificar 5 relaciones causa-efecto."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "lectura_de_datos_mapas_y_graficas_historicas",
+          "name": "Lectura de datos, mapas y gráficas históricas",
+          "short_description": "Interpreta representaciones cuantitativas y espaciales (mapas, tablas, gráficas) para apoyar análisis históricos.",
+          "sub_topics": [
+            {
+              "key": "tablas_y_series_temporales",
+              "name": "Tablas y series temporales",
+              "short_description": "Analiza tendencias y cambios en datos históricos (población, producción, comercio) y los conecta con contextos.",
+              "example_tasks": [
+                "Interpreta una tabla de población por décadas y escribe 3 conclusiones y 2 preguntas históricas que surgen de los datos.",
+                "A partir de una serie temporal de producción minera, identifica un punto de quiebre y propone 2 explicaciones históricas posibles.",
+                "Compara dos regiones con datos económicos históricos y explica qué factor contextual podría explicar la diferencia observada."
+              ]
+            },
+            {
+              "key": "mapas_tematicos_y_cartografia_historica",
+              "name": "Mapas temáticos y cartografía histórica",
+              "short_description": "Lee mapas temáticos para comprender distribución, rutas, fronteras y relaciones espaciales en el tiempo.",
+              "example_tasks": [
+                "Analiza un mapa de rutas comerciales y explica cómo la geografía favoreció ciertos centros; sustenta con 3 observaciones del mapa.",
+                "Con un mapa de expansión política, identifica 4 cambios territoriales y redacta una hipótesis sobre su causa.",
+                "Elabora una nota interpretativa: ‘Lo que el mapa muestra’ vs ‘lo que el mapa no muestra’ para evitar conclusiones apresuradas."
+              ]
+            },
+            {
+              "key": "graficas_y_evidencia_visual",
+              "name": "Gráficas y evidencia visual",
+              "short_description": "Interpreta gráficas y visualizaciones y las integra como evidencia en una explicación histórica.",
+              "example_tasks": [
+                "Observa una gráfica de comercio y escribe un párrafo argumentativo usando 2 datos numéricos como evidencia explícita.",
+                "Compara dos gráficas de periodos distintos y explica 3 cambios relevantes y una posible causa histórica.",
+                "Detecta una lectura errónea común de una gráfica (por ejemplo, confundir correlación con causalidad) y corrígela con un ejemplo."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mesoamerica_y_mundo_prehispanico",
+      "name": "Mesoamérica y mundo prehispánico",
+      "short_description": "Analiza el desarrollo de Mesoamérica: diversidad cultural, organización política y social, economía, ciencia, arte y cosmovisiones, reconociendo continuidades en el México actual.",
+      "sub_topics": [
+        {
+          "key": "diversidad_cultural_y_regiones_de_mesoamerica",
+          "name": "Diversidad cultural y regiones de Mesoamérica",
+          "short_description": "Reconoce la pluralidad de pueblos y regiones mesoamericanas y sus interacciones a lo largo del tiempo.",
+          "sub_topics": [
+            {
+              "key": "regiones_culturales_y_ecosistemas",
+              "name": "Regiones culturales y ecosistemas",
+              "short_description": "Relaciona regiones culturales con ambientes y recursos, explicando adaptaciones y formas de vida.",
+              "example_tasks": [
+                "Ubica en un mapa al menos 6 regiones mesoamericanas y describe un rasgo ambiental y uno cultural característico de cada una.",
+                "Elige dos ecosistemas (selva y altiplano) y explica cómo condicionaron la alimentación, el poblamiento y el intercambio.",
+                "A partir de un mapa físico, plantea una hipótesis sobre por qué ciertas rutas de comunicación se concentraban en determinados corredores."
+              ]
+            },
+            {
+              "key": "pueblos_lenguas_y_movilidad",
+              "name": "Pueblos, lenguas y movilidad",
+              "short_description": "Identifica familias lingüísticas, migraciones y contactos culturales que explican la diversidad mesoamericana.",
+              "example_tasks": [
+                "Investiga una lengua originaria presente hoy en México y relaciona su distribución actual con procesos históricos (migración, conquista, resistencia).",
+                "Elabora un esquema de movilidad (migraciones, comercio, alianzas) y explica cómo pudo difundir tecnologías o cultos.",
+                "Compara dos pueblos mesoamericanos en organización social y lengua; explica 2 semejanzas y 2 diferencias sin caer en estereotipos."
+              ]
+            },
+            {
+              "key": "intercambio_conflicto_y_alineamientos",
+              "name": "Intercambio, conflicto y alineamientos políticos",
+              "short_description": "Analiza relaciones entre señoríos: comercio, tributación, alianzas y conflictos por recursos y poder.",
+              "example_tasks": [
+                "Dibuja un mapa de alianzas hipotéticas entre tres señoríos y explica qué recurso o ruta motivaría cada alianza.",
+                "Explica con un diagrama cómo el tributo puede sostener un centro político; incluye al menos 5 productos y su origen regional.",
+                "Compara dos casos de conflicto por control territorial y argumenta cuál factor (económico, político o religioso) fue más determinante."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "organizacion_politica_social_y_economica",
+          "name": "Organización política, social y económica",
+          "short_description": "Estudia estructuras de gobierno, estratificación social, sistemas productivos y redes de intercambio en distintas culturas mesoamericanas.",
+          "sub_topics": [
+            {
+              "key": "formas_de_gobierno_y_poder",
+              "name": "Formas de gobierno y ejercicio del poder",
+              "short_description": "Describe modelos de organización (ciudad-Estado, confederaciones, imperios) y su legitimación.",
+              "example_tasks": [
+                "Elige una cultura (maya, mexica, zapoteca) y explica su forma de gobierno; incluye roles, mecanismos de control y legitimación.",
+                "Compara ciudad-Estado vs imperio tributario con 3 diferencias y un ejemplo histórico por cada modelo.",
+                "Redacta un texto: ‘¿Cómo se legitima el poder?’ usando evidencia de rituales, guerra, linaje o religión."
+              ]
+            },
+            {
+              "key": "estratificacion_y_vida_cotidiana",
+              "name": "Estratificación social y vida cotidiana",
+              "short_description": "Analiza grupos sociales, trabajo, género y vida cotidiana, reconociendo desigualdades y roles.",
+              "example_tasks": [
+                "Crea un ‘día en la vida’ de dos personas de distinto grupo social (campesino y noble, por ejemplo) y marca 6 diferencias justificadas.",
+                "A partir de una imagen arqueológica o mural, identifica 5 indicios de roles sociales y explica qué inferencias son seguras y cuáles son hipótesis.",
+                "Escribe un párrafo sobre cómo el trabajo y el estatus se reflejan en vivienda, alimentación y vestimenta, usando 3 evidencias."
+              ]
+            },
+            {
+              "key": "produccion_agricola_y_especializacion",
+              "name": "Producción agrícola y especialización",
+              "short_description": "Explica sistemas agrícolas (milpa, chinampas) y su relación con excedentes, comercio y urbanización.",
+              "example_tasks": [
+                "Describe el sistema de milpa y explica 3 ventajas ecológicas y 2 limitaciones; vincula con seguridad alimentaria.",
+                "Explica cómo las chinampas podían sostener altas densidades poblacionales y qué implicaciones tuvo para el poder político.",
+                "Construye un diagrama: excedente agrícola → especialización → comercio → crecimiento urbano, y ejemplifica con un caso mesoamericano."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "religion_cosmovision_y_cultura",
+          "name": "Religión, cosmovisión y cultura",
+          "short_description": "Comprende creencias, calendarios, rituales, arte y arquitectura como expresiones culturales vinculadas a poder, identidad y organización social.",
+          "sub_topics": [
+            {
+              "key": "cosmovision_calendarios_y_ritualidad",
+              "name": "Cosmovisión, calendarios y ritualidad",
+              "short_description": "Explica nociones del tiempo sagrado, ciclos calendáricos y rituales en la vida social y política.",
+              "example_tasks": [
+                "Explica en un texto breve por qué los calendarios eran herramientas políticas además de religiosas; menciona 3 funciones concretas.",
+                "A partir de un caso (festividad o ceremonia), identifica qué valores o jerarquías refuerza y qué evidencia usarías para sostenerlo.",
+                "Relaciona un ciclo agrícola con una práctica ritual y argumenta cómo pudo organizar el trabajo comunitario."
+              ]
+            },
+            {
+              "key": "arte_arquitectura_y_simbolismo",
+              "name": "Arte, arquitectura y simbolismo",
+              "short_description": "Interpreta arte y arquitectura como lenguaje simbólico que comunica ideas de poder, identidad y relación con lo sagrado.",
+              "example_tasks": [
+                "Analiza un conjunto arquitectónico (plaza, templo, juego de pelota) y explica 3 posibles funciones sociales con evidencia.",
+                "Elige un símbolo mesoamericano (serpiente, jaguar, etc.) y propone 2 interpretaciones argumentadas y 1 interpretación que considerarías riesgosa (por falta de evidencia).",
+                "Compara dos estilos artísticos de regiones distintas y explica qué podría indicar sobre intercambio cultural o diferenciación política."
+              ]
+            },
+            {
+              "key": "educacion_conocimiento_y_tecnologia",
+              "name": "Educación, conocimiento y tecnología",
+              "short_description": "Reconoce saberes (astronomía, medicina, ingeniería) y prácticas educativas como parte del desarrollo cultural.",
+              "example_tasks": [
+                "Elabora una ficha de ‘innovación’ (chinampas, ingeniería hidráulica, observación astronómica) explicando problema, solución y efectos sociales.",
+                "Redacta una explicación de cómo el conocimiento astronómico se conectaba con decisiones políticas (fechas, rituales, legitimidad).",
+                "Investiga una técnica o saber mesoamericano vigente hoy (medicina tradicional, agricultura) y explica una continuidad y una transformación."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ciudades_centros_regionales_y_redes",
+          "name": "Ciudades, centros regionales y redes",
+          "short_description": "Analiza el surgimiento de centros urbanos y su papel en redes políticas, económicas y culturales.",
+          "sub_topics": [
+            {
+              "key": "urbanismo_y_planeacion",
+              "name": "Urbanismo y planeación",
+              "short_description": "Explica elementos urbanos (plazas, calzadas, mercados) y su función en control y convivencia.",
+              "example_tasks": [
+                "Describe 5 elementos urbanos de una ciudad mesoamericana y explica qué función social o política cumple cada uno.",
+                "Compara el diseño urbano de dos centros (por ejemplo, Teotihuacan y Tenochtitlan) y plantea una hipótesis sobre lo que revela del poder.",
+                "Dibuja un plano esquemático de una ciudad con 6 componentes y escribe una explicación de cómo facilita el control del espacio."
+              ]
+            },
+            {
+              "key": "mercados_tributo_y_circulacion",
+              "name": "Mercados, tributo y circulación",
+              "short_description": "Analiza mercados y sistemas de tributo como mecanismos de integración regional y desigualdad.",
+              "example_tasks": [
+                "Elabora una lista de 10 productos de intercambio/tributo y clasifícalos por región de origen; explica qué revela eso de la red comercial.",
+                "Explica cómo el mercado y el tributo pueden coexistir en una misma sociedad; incluye un ejemplo de tensión o conflicto.",
+                "A partir de un mapa de rutas, argumenta cuál ruta sería más vulnerable a interrupciones y qué consecuencias tendría."
+              ]
+            },
+            {
+              "key": "expansion_politica_y_alianzas",
+              "name": "Expansión política y alianzas",
+              "short_description": "Explica estrategias de expansión: guerra, alianzas, control de rutas y legitimación simbólica.",
+              "example_tasks": [
+                "Redacta una explicación multicausal sobre por qué un poder regional se expandió; incluye factores militares, económicos y simbólicos.",
+                "Simula una negociación de alianza entre dos señoríos: escribe condiciones, beneficios y riesgos, usando conceptos de tributo y rutas.",
+                "Analiza un caso de expansión y discute 2 límites del modelo ‘conquista total’ (resistencias, autonomía local, negociación)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "legados_y_presencia_indigena_actual",
+          "name": "Legados y presencia indígena actual",
+          "short_description": "Reconoce continuidades y transformaciones del mundo prehispánico en lenguas, prácticas culturales, territorio y debates contemporáneos.",
+          "sub_topics": [
+            {
+              "key": "patrimonio_memoria_e_identidad",
+              "name": "Patrimonio, memoria e identidad",
+              "short_description": "Analiza cómo se construye la memoria pública sobre el pasado prehispánico y su papel en identidades actuales.",
+              "example_tasks": [
+                "Elige un sitio arqueológico o museo y escribe una reseña crítica: ¿qué narrativa del pasado presenta y qué voces quedan fuera?",
+                "Realiza un mini-proyecto: recopila 5 ejemplos de presencia prehispánica en tu entorno (topónimos, alimentos, fiestas) y explica su origen probable.",
+                "Escribe un argumento sobre por qué el patrimonio debe protegerse, incorporando al menos 2 contraargumentos y tu respuesta."
+              ]
+            },
+            {
+              "key": "lenguas_practicas_y_continuidades",
+              "name": "Lenguas, prácticas y continuidades",
+              "short_description": "Identifica continuidades culturales (lengua, alimentación, medicina, organización comunitaria) y cambios históricos.",
+              "example_tasks": [
+                "Investiga 10 palabras de origen indígena usadas en tu región y explica qué revelan sobre intercambios culturales y permanencias.",
+                "Compara una práctica agrícola tradicional con su versión actual (si existe) e identifica 2 continuidades y 2 cambios con posibles causas.",
+                "Entrevista a una persona sobre una tradición local y analiza qué elementos podrían vincularse a raíces prehispánicas (con cautela y evidencia)."
+              ]
+            },
+            {
+              "key": "debates_contemporaneos_y_representacion",
+              "name": "Debates contemporáneos y representación",
+              "short_description": "Discute representaciones del pasado indígena en medios, escuela y política, reconociendo estereotipos y pluralidad.",
+              "example_tasks": [
+                "Analiza una representación mediática de lo ‘prehispánico’ e identifica 4 estereotipos o simplificaciones; propón una alternativa más precisa.",
+                "Redacta un texto breve: ‘¿Quién cuenta la historia?’ aplicando el concepto de perspectiva a un debate actual sobre pueblos originarios.",
+                "Organiza un debate en clase sobre restitución/protección de piezas y escribe una conclusión sustentada con criterios éticos e históricos."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "conquista_y_orden_colonial",
+      "name": "La Conquista y el establecimiento del orden colonial",
+      "short_description": "Analiza el proceso de conquista de México como un fenómeno multicausal que dio origen a un nuevo orden político, social, económico y cultural.",
+      "sub_topics": [
+        {
+          "key": "encuentro_de_mundos_y_conquista",
+          "name": "El encuentro de dos mundos",
+          "short_description": "Examina el contacto entre pueblos indígenas y europeos desde múltiples perspectivas históricas.",
+          "sub_topics": [
+            {
+              "key": "expediciones_y_alianzas_indigenas",
+              "name": "Expediciones, alianzas y estrategias militares",
+              "short_description": "Analiza el papel de las alianzas indígenas, la guerra y la estrategia en la caída de Tenochtitlan.",
+              "example_tasks": [
+                "Explica por qué las alianzas indígenas fueron decisivas en la conquista de Tenochtitlan, mencionando al menos tres pueblos participantes.",
+                "Elabora un mapa conceptual que relacione estrategia militar, alianzas políticas y geografía en la Conquista.",
+                "Redacta un texto argumentativo donde evalúes si la Conquista puede explicarse solo por la superioridad militar europea."
+              ]
+            },
+            {
+              "key": "choque_cultural_y_percepciones_mutuas",
+              "name": "Choque cultural y percepciones mutuas",
+              "short_description": "Reconoce las distintas interpretaciones y percepciones que indígenas y europeos tuvieron entre sí.",
+              "example_tasks": [
+                "Analiza un fragmento de una crónica española e identifica cómo describe a los pueblos indígenas.",
+                "Compara dos fuentes (una indígena y una europea) sobre un mismo hecho y explica sus diferencias.",
+                "Escribe un breve ensayo sobre cómo el desconocimiento cultural influyó en el conflicto inicial."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fundacion_del_virreinato",
+          "name": "Fundación del Virreinato de la Nueva España",
+          "short_description": "Estudia la organización política y administrativa impuesta por la monarquía española.",
+          "sub_topics": [
+            {
+              "key": "instituciones_coloniales",
+              "name": "Instituciones coloniales y control político",
+              "short_description": "Identifica las principales instituciones coloniales y su función en el gobierno del territorio.",
+              "example_tasks": [
+                "Elabora un esquema jerárquico del gobierno virreinal indicando funciones del virrey, audiencias y cabildos.",
+                "Explica cómo las instituciones coloniales buscaban asegurar el control de la Corona sobre la Nueva España.",
+                "Analiza una situación hipotética y explica qué institución colonial intervendría y por qué."
+              ]
+            },
+            {
+              "key": "encomienda_y_repartimiento",
+              "name": "Encomienda y repartimiento",
+              "short_description": "Analiza los sistemas de trabajo y tributación impuestos a la población indígena.",
+              "example_tasks": [
+                "Define encomienda y repartimiento y explica una diferencia clave entre ambos sistemas.",
+                "Redacta un texto donde analices los efectos sociales y demográficos de la encomienda.",
+                "Elabora una tabla comparativa con ventajas para los colonizadores y consecuencias para los pueblos indígenas."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "evangelizacion_y_transformacion_cultural",
+          "name": "Evangelización y transformación cultural",
+          "short_description": "Examina el papel de la Iglesia en la conquista espiritual y la reorganización cultural.",
+          "sub_topics": [
+            {
+              "key": "ordenes_religiosas_y_educacion",
+              "name": "Órdenes religiosas y educación",
+              "short_description": "Analiza el papel de las órdenes religiosas en la evangelización y la enseñanza.",
+              "example_tasks": [
+                "Investiga una orden religiosa y explica su estrategia de evangelización.",
+                "Explica cómo la educación fue utilizada como herramienta de control cultural.",
+                "Analiza un ejemplo de sincretismo religioso y explica su origen histórico."
+              ]
+            },
+            {
+              "key": "sincretismo_y_resistencias",
+              "name": "Sincretismo religioso y resistencias indígenas",
+              "short_description": "Reconoce la adaptación, resistencia y resignificación cultural indígena.",
+              "example_tasks": [
+                "Describe un ejemplo de sincretismo religioso presente en México actual.",
+                "Explica dos formas de resistencia cultural indígena durante el periodo colonial temprano.",
+                "Redacta un texto reflexivo sobre por qué el sincretismo fue una estrategia de supervivencia cultural."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "virreinato_sociedad_economia_cultura",
+      "name": "La sociedad, economía y cultura del Virreinato",
+      "short_description": "Analiza la organización social, económica y cultural de la Nueva España y sus impactos a largo plazo.",
+      "sub_topics": [
+        {
+          "key": "estructura_social_y_castas",
+          "name": "Estructura social y sistema de castas",
+          "short_description": "Examina la jerarquización social colonial y sus efectos en la desigualdad.",
+          "sub_topics": [
+            {
+              "key": "jerarquias_sociales",
+              "name": "Jerarquías sociales y privilegios",
+              "short_description": "Identifica los principales grupos sociales y sus derechos diferenciados.",
+              "example_tasks": [
+                "Elabora una pirámide social del Virreinato indicando funciones y privilegios.",
+                "Explica cómo el origen étnico influía en el acceso a cargos y recursos.",
+                "Analiza una pintura de castas y explica qué mensaje social transmite."
+              ]
+            },
+            {
+              "key": "movilidad_social_limitada",
+              "name": "Movilidad social limitada",
+              "short_description": "Analiza las posibilidades y límites de ascenso social en el orden colonial.",
+              "example_tasks": [
+                "Explica qué factores podían permitir cierto ascenso social en la Nueva España.",
+                "Redacta un caso ficticio de una persona que intenta mejorar su posición social y analiza sus obstáculos.",
+                "Argumenta si el sistema de castas favorecía la estabilidad o el conflicto social."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "economia_colonial",
+          "name": "Economía colonial",
+          "short_description": "Estudia las actividades económicas fundamentales del Virreinato y su integración al sistema imperial.",
+          "sub_topics": [
+            {
+              "key": "mineria_y_comercio",
+              "name": "Minería, comercio y haciendas",
+              "short_description": "Analiza el papel de la minería y el comercio en la economía colonial.",
+              "example_tasks": [
+                "Explica por qué la minería fue la base de la economía virreinal.",
+                "Relaciona el desarrollo de haciendas con el mercado interno colonial.",
+                "Elabora un mapa señalando las principales zonas mineras y rutas comerciales."
+              ]
+            },
+            {
+              "key": "trabajo_y_explotacion",
+              "name": "Trabajo y explotación",
+              "short_description": "Examina las condiciones laborales de indígenas, africanos y mestizos.",
+              "example_tasks": [
+                "Compara las condiciones de trabajo indígena y africano en la Nueva España.",
+                "Redacta un texto donde expliques cómo la economía colonial dependía de la explotación laboral.",
+                "Analiza una fuente histórica sobre trabajo forzado e identifica su perspectiva."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "vida_cotidiana_y_cultura",
+          "name": "Vida cotidiana y cultura virreinal",
+          "short_description": "Reconoce manifestaciones culturales, educativas y artísticas del periodo colonial.",
+          "sub_topics": [
+            {
+              "key": "educacion_arte_y_ciencia",
+              "name": "Educación, arte y ciencia",
+              "short_description": "Analiza el desarrollo cultural y educativo en el Virreinato.",
+              "example_tasks": [
+                "Investiga una institución educativa colonial y explica su función.",
+                "Analiza una obra artística colonial y describe sus elementos europeos e indígenas.",
+                "Explica cómo la ciencia y la religión coexistieron en la Nueva España."
+              ]
+            },
+            {
+              "key": "fiestas_costumbres_y_control_social",
+              "name": "Fiestas, costumbres y control social",
+              "short_description": "Examina el papel de fiestas y tradiciones como mecanismos de cohesión y control.",
+              "example_tasks": [
+                "Describe una fiesta colonial y explica su función social.",
+                "Analiza cómo las celebraciones reforzaban jerarquías sociales.",
+                "Redacta un texto donde expliques por qué la cultura también puede ser una forma de control."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "crisis_del_orden_colonial_e_independencia",
+      "name": "Crisis del orden colonial e Independencia",
+      "short_description": "Explica la crisis del sistema colonial y el proceso independentista como una transformación política, social y cultural con múltiples causas y actores, y valora sus consecuencias en la formación del Estado mexicano.",
+      "sub_topics": [
+        {
+          "key": "reformas_borbonicas_y_tensiones_sociales",
+          "name": "Reformas borbónicas y tensiones sociales",
+          "short_description": "Analiza cómo las reformas administrativas y fiscales modificaron el poder local, la economía y las relaciones sociales, generando conflictos.",
+          "sub_topics": [
+            {
+              "key": "centralizacion_fiscal_y_reordenamiento_admin",
+              "name": "Centralización fiscal y reordenamiento administrativo",
+              "short_description": "Explica cómo el aumento del control y la recaudación impactó corporaciones, regiones y grupos sociales.",
+              "example_tasks": [
+                "Elabora un diagrama de causa-efecto: reformas fiscales → cambios en el poder local → conflictos; incluye al menos 6 relaciones.",
+                "Lee un texto sobre intendencias y responde: ¿qué cambió en la administración territorial y por qué pudo generar resistencias?",
+                "Redacta un párrafo argumentativo sobre quiénes ganaron y quiénes perdieron con las reformas borbónicas, usando evidencia."
+              ]
+            },
+            {
+              "key": "conflictos_corporativos_y_regionales",
+              "name": "Conflictos corporativos y regionales",
+              "short_description": "Identifica tensiones entre corporaciones (Iglesia, ayuntamientos, gremios) y regiones por recursos, autonomía y privilegios.",
+              "example_tasks": [
+                "Construye una matriz con tres corporaciones y describe un interés, un privilegio y un motivo de tensión para cada una.",
+                "Explica un conflicto regional hipotético por impuestos y propone qué evidencias buscarías para documentarlo.",
+                "Compara dos regiones de Nueva España y plantea una hipótesis sobre por qué reaccionaron de forma distinta ante las reformas."
+              ]
+            },
+            {
+              "key": "estratificacion_social_y_desigualdad",
+              "name": "Estratificación social y desigualdad en el cambio tardocolonial",
+              "short_description": "Relaciona desigualdad, movilidad social limitada y disputas por estatus con el aumento de tensiones en el periodo final del virreinato.",
+              "example_tasks": [
+                "A partir de una pintura de castas o descripción social, identifica 5 señales de jerarquía y explica su función.",
+                "Escribe un caso breve de conflicto por estatus (por ejemplo, acceso a cargos) y analiza causas estructurales y coyunturales.",
+                "Redacta una conclusión: ¿cómo se conectan desigualdad y conflicto político? Sustenta con 2 ejemplos del periodo."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "influencias_intelectuales_y_crisis_imperial",
+          "name": "Influencias intelectuales y crisis del imperio",
+          "short_description": "Relaciona la circulación de ideas políticas con la crisis de la monarquía española y los cambios en la legitimidad del poder.",
+          "sub_topics": [
+            {
+              "key": "ilustracion_soberania_y_representacion",
+              "name": "Ilustración, soberanía y representación",
+              "short_description": "Reconoce conceptos como soberanía, derechos, representación y su uso en debates del mundo hispánico.",
+              "example_tasks": [
+                "Define soberanía y representación en tus palabras y explica cómo pueden cuestionar un régimen monárquico.",
+                "Relaciona dos ideas ilustradas con un problema concreto de Nueva España (impuestos, privilegios, gobierno) y explica el vínculo.",
+                "Elabora un glosario de 8 términos políticos del periodo (constitución, ciudadanía, etc.) con ejemplo histórico de uso."
+              ]
+            },
+            {
+              "key": "invasion_napoleonica_y_juntas",
+              "name": "Invasión napoleónica, juntas y legitimidad",
+              "short_description": "Explica cómo la crisis de 1808 abrió disputas por la autoridad y aceleró procesos políticos en Nueva España.",
+              "example_tasks": [
+                "Construye una línea del tiempo 1808–1812 con 10 eventos y marca cuáles afectan legitimidad política.",
+                "Escribe un texto corto: ¿por qué una crisis en España impactó a Nueva España? Incluye al menos 3 mecanismos concretos.",
+                "Analiza dos posturas (fidelidad al rey vs autonomía) y explica qué argumentos y miedos puede tener cada una."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "etapas_del_movimiento_independentista",
+          "name": "Etapas del movimiento independentista",
+          "short_description": "Identifica fases, líderes, estrategias y cambios en el movimiento, reconociendo diversidad regional y social.",
+          "sub_topics": [
+            {
+              "key": "inicio_1810_y_mov_masivo",
+              "name": "Inicio de 1810 y movilización popular",
+              "short_description": "Analiza el arranque del movimiento, la movilización social y las reacciones del poder virreinal.",
+              "example_tasks": [
+                "Explica dos causas de corto plazo y dos de largo plazo del inicio de 1810, señalando evidencia para cada una.",
+                "Construye un mapa de actores del inicio (insurgentes, autoridades, élites, pueblos) y describe intereses de cada grupo.",
+                "Redacta un texto: ¿por qué algunos grupos apoyaron y otros temieron la movilización popular? Usa ejemplos."
+              ]
+            },
+            {
+              "key": "organizacion_insurgente_y_proyectos",
+              "name": "Organización insurgente y proyectos políticos",
+              "short_description": "Reconoce propuestas políticas insurgentes y su evolución: organización, legitimidad y objetivos.",
+              "example_tasks": [
+                "Elabora una comparación entre dos momentos del movimiento: objetivos, organización y base social; incluye 6 diferencias.",
+                "Analiza un fragmento de un documento insurgente (o resumen) e identifica 3 propuestas y a quién benefician.",
+                "Escribe una hipótesis: ¿qué factores explican la continuidad del movimiento pese a derrotas? Sustenta con 3 razones."
+              ]
+            },
+            {
+              "key": "consumacion_1821_y_pactos",
+              "name": "Consumación de 1821 y pactos políticos",
+              "short_description": "Explica la consumación como resultado de cambios políticos, pactos y reacomodos de intereses.",
+              "example_tasks": [
+                "Construye un diagrama multicausal de la consumación: cambios internacionales, crisis interna, élites, fuerzas armadas, etc.",
+                "Redacta un argumento: ¿la consumación fue ruptura o continuidad? Sustenta con 3 evidencias.",
+                "Compara dos interpretaciones sobre 1821 (pacto de élites vs triunfo insurgente) y decide cuál es más convincente y por qué."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "consecuencias_de_la_independencia",
+          "name": "Consecuencias de la Independencia",
+          "short_description": "Valora efectos políticos, económicos y sociales en la formación del nuevo Estado y en la vida cotidiana.",
+          "sub_topics": [
+            {
+              "key": "crisis_economica_y_reordenamiento_fiscal",
+              "name": "Crisis económica y reordenamiento fiscal",
+              "short_description": "Relaciona guerra, caída productiva y dificultades fiscales con la inestabilidad posterior.",
+              "example_tasks": [
+                "Explica tres efectos económicos inmediatos de la guerra y dos a mediano plazo; incluye una evidencia posible para cada uno.",
+                "Interpreta una gráfica hipotética de ingresos fiscales 1800–1830 y redacta 3 conclusiones con relación histórica.",
+                "Redacta una propuesta: si fueras gobierno en 1822, ¿qué medidas fiscales priorizarías y por qué?"
+              ]
+            },
+            {
+              "key": "legitimidad_politica_y_conflictos",
+              "name": "Legitimidad política y conflictos",
+              "short_description": "Explica por qué la disputa por la forma de gobierno y la representación generó conflictos e inestabilidad.",
+              "example_tasks": [
+                "Elabora una lista de 5 dilemas del nuevo Estado (monarquía/república, federalismo/centralismo, etc.) y explica por qué generan conflicto.",
+                "Escribe un texto: ¿qué hace legítimo a un gobierno? Aplica tu criterio a la situación de México tras 1821.",
+                "Organiza un debate con posturas (centralista vs federalista) y redacta una conclusión sustentada en evidencia histórica."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mexico_siglo_xix_estado_y_conflictos",
+      "name": "México en el siglo XIX: construcción del Estado y conflictos",
+      "short_description": "Analiza la formación del Estado mexicano durante el siglo XIX mediante proyectos políticos, guerras, intervenciones y transformaciones sociales y territoriales.",
+      "sub_topics": [
+        {
+          "key": "primeros_proyectos_de_nacion",
+          "name": "Primeros proyectos de nación",
+          "short_description": "Examina las disputas iniciales por la forma de gobierno, la representación y la organización territorial del país.",
+          "sub_topics": [
+            {
+              "key": "monarquia_y_republica_debates_iniciales",
+              "name": "Monarquía y república: debates iniciales",
+              "short_description": "Explica argumentos y temores que sustentaron opciones de gobierno en los primeros años de vida independiente.",
+              "example_tasks": [
+                "Redacta dos discursos breves (8–10 líneas): uno monárquico y uno republicano; incluye 3 argumentos en cada uno.",
+                "Construye una tabla comparativa de ventajas/riesgos percibidos de monarquía y república en 1821–1824.",
+                "Analiza una fuente secundaria: identifica qué factores destaca para explicar la opción republicana y evalúa su evidencia."
+              ]
+            },
+            {
+              "key": "federalismo_y_centralismo",
+              "name": "Federalismo y centralismo",
+              "short_description": "Reconoce cómo la disputa por autonomía regional y control central influyó en la inestabilidad política.",
+              "example_tasks": [
+                "Ubica en un mapa 6 regiones y escribe una hipótesis sobre por qué algunas apoyarían el federalismo.",
+                "Explica con un diagrama cómo el centralismo puede aumentar el control, pero también generar resistencias regionales.",
+                "Escribe un texto argumentativo: ¿qué modelo favorece la unidad sin ignorar diversidad regional? Sustenta con ejemplos."
+              ]
+            },
+            {
+              "key": "constituciones_y_ciudadania",
+              "name": "Constituciones y ciudadanía en el siglo XIX",
+              "short_description": "Analiza el papel de las constituciones en definir ciudadanía, derechos y límites del poder.",
+              "example_tasks": [
+                "Elabora un glosario de 10 conceptos constitucionales (derechos, garantías, división de poderes) con ejemplos históricos.",
+                "Compara dos momentos constitucionales y señala 4 cambios en ciudadanía o poder; explica posibles causas.",
+                "Redacta una conclusión: ¿por qué escribir una constitución no garantiza estabilidad? Sustenta con evidencia."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "conflictos_internos_y_guerra",
+          "name": "Conflictos internos y guerra",
+          "short_description": "Explica cómo pronunciamientos, guerras civiles y disputas regionales reflejaron tensiones estructurales del nuevo país.",
+          "sub_topics": [
+            {
+              "key": "caudillismo_pronunciamientos_y_ejercito",
+              "name": "Caudillismo, pronunciamientos y papel del ejército",
+              "short_description": "Analiza el protagonismo militar en política y su relación con instituciones débiles.",
+              "example_tasks": [
+                "Explica qué es un pronunciamiento y por qué fue frecuente; incluye 3 causas estructurales.",
+                "Construye un mapa de actores: ejército, élites, regiones, prensa; describe 2 intereses de cada actor.",
+                "Redacta un texto: ¿el caudillismo fue causa o consecuencia de la debilidad institucional? Argumenta con evidencia."
+              ]
+            },
+            {
+              "key": "reformas_liberales_y_conflicto_ideologico",
+              "name": "Reformas liberales y conflicto ideológico",
+              "short_description": "Relaciona proyectos liberales/conservadores con disputas por Iglesia, propiedad, educación y poder político.",
+              "example_tasks": [
+                "Elabora una matriz liberal vs conservador con 5 temas (Iglesia, propiedad, educación, etc.) y explica diferencias.",
+                "Analiza una caricatura política del siglo XIX (o su descripción) e identifica 4 mensajes ideológicos.",
+                "Escribe una explicación multicausal de por qué las reformas generan conflicto, incluyendo factores sociales y económicos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "intervenciones_extranjeras_y_territorio",
+          "name": "Intervenciones extranjeras y transformación territorial",
+          "short_description": "Examina conflictos internacionales, pérdida/definición de territorios y su impacto en identidad nacional y economía.",
+          "sub_topics": [
+            {
+              "key": "relaciones_con_potencias_y_diplomacia",
+              "name": "Relaciones con potencias y diplomacia",
+              "short_description": "Analiza intereses externos, deuda, comercio y reconocimiento internacional como factores de presión.",
+              "example_tasks": [
+                "Construye un diagrama: deuda externa → presión diplomática → conflicto; incluye 5 conexiones con explicación.",
+                "Redacta una nota informativa: ¿por qué el reconocimiento internacional era clave para México en el siglo XIX?",
+                "Analiza un caso hipotético de negociación y decide qué concesiones serían inaceptables y por qué."
+              ]
+            },
+            {
+              "key": "cambios_fronterizos_y_construccion_nacional",
+              "name": "Cambios fronterizos y construcción nacional",
+              "short_description": "Interpreta mapas históricos para comprender modificaciones territoriales y su efecto en población y economía.",
+              "example_tasks": [
+                "Analiza dos mapas de México (antes y después de un cambio territorial) y escribe 5 consecuencias posibles.",
+                "Elabora una línea del tiempo de 8 eventos relacionados con fronteras y explica un vínculo causa-efecto clave.",
+                "Redacta un texto: ¿cómo influye el territorio en la identidad nacional? Usa un ejemplo del siglo XIX."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "economia_sociedad_y_modernizacion",
+          "name": "Economía, sociedad y modernización en el siglo XIX",
+          "short_description": "Relaciona cambios económicos (propiedad, comercio, infraestructura) con transformaciones sociales y desigualdad.",
+          "sub_topics": [
+            {
+              "key": "propiedad_tierra_y_comunidades",
+              "name": "Propiedad de la tierra y comunidades",
+              "short_description": "Analiza cambios en regímenes de propiedad y su impacto en comunidades, trabajo y conflicto social.",
+              "example_tasks": [
+                "Explica dos efectos de cambios en la propiedad sobre comunidades rurales; incluye un ejemplo y una evidencia posible.",
+                "Construye un caso de estudio ficticio de una comunidad y analiza consecuencias de una reforma de propiedad.",
+                "Redacta un argumento: ¿la modernización económica benefició por igual a todos los grupos? Sustenta con razones."
+              ]
+            },
+            {
+              "key": "infraestructura_mercados_y_desigualdad",
+              "name": "Infraestructura, mercados y desigualdad",
+              "short_description": "Relaciona transporte, integración de mercados y cambios productivos con nuevas desigualdades regionales.",
+              "example_tasks": [
+                "Interpreta una gráfica hipotética de comercio regional antes/después de una obra de infraestructura y explica 3 cambios.",
+                "Dibuja un mapa de rutas (ferrocarril/caminos) y argumenta qué regiones se integran y cuáles quedan marginadas.",
+                "Escribe una explicación: ¿por qué la integración de mercados puede aumentar desigualdad? Usa un ejemplo del siglo XIX."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ciudadania_derechos_y_nacion",
+      "name": "Ciudadanía, derechos y nación",
+      "short_description": "Analiza la construcción histórica de la ciudadanía, los derechos y la idea de nación en México, reconociendo exclusiones, conflictos y ampliaciones progresivas.",
+      "sub_topics": [
+        {
+          "key": "origen_historico_de_la_ciudadania",
+          "name": "Origen histórico de la ciudadanía",
+          "short_description": "Examina cómo surgieron las nociones de ciudadanía y derechos en contextos coloniales y posindependientes.",
+          "sub_topics": [
+            {
+              "key": "sujetos_del_reino_y_ciudadanos",
+              "name": "De súbditos del rey a ciudadanos",
+              "short_description": "Comprende el tránsito conceptual de súbdito a ciudadano y sus implicaciones políticas.",
+              "example_tasks": [
+                "Explica con tus palabras la diferencia entre súbdito y ciudadano e ilustra con un ejemplo histórico.",
+                "Analiza un texto constitucional temprano e identifica qué grupos eran considerados ciudadanos y cuáles no.",
+                "Redacta un breve texto: ¿por qué convertirse en ciudadano no significó igualdad inmediata?"
+              ]
+            },
+            {
+              "key": "derechos_obligaciones_y_participacion",
+              "name": "Derechos, obligaciones y participación",
+              "short_description": "Relaciona derechos civiles y políticos con obligaciones y formas de participación.",
+              "example_tasks": [
+                "Elabora una lista de 5 derechos y 5 obligaciones del ciudadano en el siglo XIX y compárala con la actual.",
+                "Explica por qué el derecho al voto fue limitado y qué consecuencias tuvo.",
+                "Analiza un caso hipotético de participación política temprana y evalúa sus límites."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "exclusion_desigualdad_y_conflicto",
+          "name": "Exclusión, desigualdad y conflicto",
+          "short_description": "Reconoce procesos de exclusión social y política en la construcción de la nación.",
+          "sub_topics": [
+            {
+              "key": "grupos_excluidos_y_resistencias",
+              "name": "Grupos excluidos y resistencias",
+              "short_description": "Identifica a grupos marginados del proyecto nacional y sus formas de resistencia.",
+              "example_tasks": [
+                "Enumera tres grupos excluidos de la ciudadanía plena y explica una causa histórica para cada caso.",
+                "Redacta un texto corto sobre una forma de resistencia social o política del siglo XIX.",
+                "Relaciona exclusión política con conflicto armado mediante un ejemplo."
+              ]
+            },
+            {
+              "key": "nacion_identidad_y_simbolos",
+              "name": "Nación, identidad y símbolos",
+              "short_description": "Analiza símbolos, relatos y rituales usados para construir identidad nacional.",
+              "example_tasks": [
+                "Explica el origen histórico de un símbolo nacional y su función política.",
+                "Analiza un discurso o ceremonia cívica y detecta tres mensajes sobre identidad nacional.",
+                "Escribe un texto crítico: ¿la identidad nacional integra o excluye? Argumenta."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "historia_local_y_patrimonio",
+      "name": "Historia local y patrimonio",
+      "short_description": "Investiga procesos históricos locales y el patrimonio cultural como fuentes para comprender el pasado y fortalecer la identidad comunitaria.",
+      "sub_topics": [
+        {
+          "key": "historia_local_como_fuente",
+          "name": "La historia local como fuente histórica",
+          "short_description": "Valora la historia local como vía para conectar procesos nacionales con experiencias comunitarias.",
+          "sub_topics": [
+            {
+              "key": "fuentes_locales_y_memoria",
+              "name": "Fuentes locales y memoria",
+              "short_description": "Identifica y analiza fuentes locales escritas, orales y materiales.",
+              "example_tasks": [
+                "Elabora un inventario de 6 fuentes locales posibles para estudiar tu comunidad.",
+                "Realiza una breve entrevista y redacta una ficha crítica de la fuente oral.",
+                "Explica cómo la memoria puede complementar, pero también distorsionar, la historia."
+              ]
+            },
+            {
+              "key": "conexion_local_nacional",
+              "name": "Conexión entre lo local y lo nacional",
+              "short_description": "Relaciona hechos locales con procesos históricos nacionales.",
+              "example_tasks": [
+                "Explica cómo un evento nacional impactó a tu localidad (o una hipotética).",
+                "Elabora una línea del tiempo local y señala 3 conexiones con procesos nacionales.",
+                "Redacta un texto: ¿por qué la historia nacional no se entiende sin lo local?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "patrimonio_cultural_y_proteccion",
+          "name": "Patrimonio cultural y su protección",
+          "short_description": "Analiza el valor del patrimonio cultural y los retos para su conservación.",
+          "sub_topics": [
+            {
+              "key": "patrimonio_material_e_inmaterial",
+              "name": "Patrimonio material e inmaterial",
+              "short_description": "Distingue tipos de patrimonio y su importancia social y cultural.",
+              "example_tasks": [
+                "Clasifica 10 ejemplos de tu entorno como patrimonio material o inmaterial.",
+                "Explica por qué una tradición puede considerarse patrimonio cultural.",
+                "Redacta una propuesta para proteger un elemento patrimonial local."
+              ]
+            },
+            {
+              "key": "debates_sobre_conservacion",
+              "name": "Debates sobre conservación y uso",
+              "short_description": "Evalúa tensiones entre conservación, turismo y desarrollo.",
+              "example_tasks": [
+                "Analiza un conflicto hipotético entre turismo y conservación patrimonial.",
+                "Redacta un argumento a favor y uno en contra del uso turístico del patrimonio.",
+                "Propón criterios para equilibrar desarrollo y conservación cultural."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "habilidades_de_representacion_historica",
+      "name": "Habilidades de representación histórica",
+      "short_description": "Desarrolla habilidades para comunicar explicaciones históricas mediante textos, mapas, líneas del tiempo y exposiciones orales.",
+      "sub_topics": [
+        {
+          "key": "representaciones_graficas_del_pasado",
+          "name": "Representaciones gráficas del pasado",
+          "short_description": "Utiliza herramientas visuales para organizar y explicar procesos históricos.",
+          "sub_topics": [
+            {
+              "key": "lineas_del_tiempo_analiticas",
+              "name": "Líneas del tiempo analíticas",
+              "short_description": "Construye líneas del tiempo que expliquen procesos y no solo enumeren hechos.",
+              "example_tasks": [
+                "Elabora una línea del tiempo con 12 eventos y agrega notas explicativas de causa-efecto.",
+                "Transforma una cronología simple en una analítica incorporando actores y consecuencias.",
+                "Evalúa una línea del tiempo dada e identifica dos mejoras posibles."
+              ]
+            },
+            {
+              "key": "mapas_conceptuales_y_esquemas",
+              "name": "Mapas conceptuales y esquemas",
+              "short_description": "Organiza información histórica mediante esquemas lógicos.",
+              "example_tasks": [
+                "Construye un mapa conceptual sobre la Independencia con al menos 15 conceptos.",
+                "Explica por qué un esquema ayuda a comprender procesos complejos.",
+                "Revisa un esquema dado y detecta dos relaciones incorrectas o incompletas."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "comunicacion_escrita_y_oral",
+          "name": "Comunicación escrita y oral",
+          "short_description": "Comunica explicaciones históricas con claridad, coherencia y uso de evidencia.",
+          "sub_topics": [
+            {
+              "key": "texto_argumentativo_historico",
+              "name": "Texto argumentativo histórico",
+              "short_description": "Redacta textos con tesis, argumentos y evidencias históricas.",
+              "example_tasks": [
+                "Escribe un ensayo corto con tesis clara y tres argumentos sustentados.",
+                "Identifica tesis y evidencias en un texto histórico proporcionado.",
+                "Reescribe un párrafo descriptivo convirtiéndolo en argumentativo."
+              ]
+            },
+            {
+              "key": "exposicion_oral_y_debate",
+              "name": "Exposición oral y debate",
+              "short_description": "Presenta y defiende ideas históricas de forma oral.",
+              "example_tasks": [
+                "Prepara una exposición de 5 minutos con apoyo visual sobre un proceso histórico.",
+                "Participa en un debate defendiendo una interpretación histórica asignada.",
+                "Evalúa una exposición oral con criterios de claridad, evidencia y coherencia."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "key": "reforma_porfiriato_y_modernizacion",
+      "name": "La Reforma, el Porfiriato y la modernización",
+      "short_description": "Analiza los proyectos liberales del siglo XIX, la consolidación del Estado y el proceso de modernización durante el Porfiriato, considerando sus contradicciones sociales.",
+      "sub_topics": [
+        {
+          "key": "reforma_liberal_y_estado_laico",
+          "name": "La Reforma liberal y el Estado laico",
+          "short_description": "Examina los principios del liberalismo, la separación Iglesia-Estado y sus efectos políticos y sociales.",
+          "sub_topics": [
+            {
+              "key": "leyes_de_reforma_y_cambio_institucional",
+              "name": "Leyes de Reforma y cambio institucional",
+              "short_description": "Analiza el impacto de las Leyes de Reforma en la organización política, económica y social.",
+              "example_tasks": [
+                "Elabora una tabla donde relaciones cada Ley de Reforma con un cambio concreto en la vida social o política.",
+                "Explica por qué la separación Iglesia-Estado fue clave para el proyecto liberal.",
+                "Redacta un texto argumentativo sobre si las Leyes de Reforma fortalecieron o debilitaron la cohesión social."
+              ]
+            },
+            {
+              "key": "guerra_de_reforma_y_resistencias",
+              "name": "Guerra de Reforma y resistencias conservadoras",
+              "short_description": "Reconoce el conflicto armado como expresión de disputas ideológicas y de poder.",
+              "example_tasks": [
+                "Construye un esquema de causas y consecuencias de la Guerra de Reforma.",
+                "Compara los proyectos liberal y conservador en tres aspectos clave.",
+                "Explica por qué el conflicto armado fue una vía recurrente para resolver disputas políticas en el siglo XIX."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "porfiriato_orden_y_progreso",
+          "name": "El Porfiriato: orden y progreso",
+          "short_description": "Analiza el régimen porfirista como un proyecto de estabilidad, crecimiento económico y control político.",
+          "sub_topics": [
+            {
+              "key": "centralizacion_politica_y_paz_forzada",
+              "name": "Centralización política y paz forzada",
+              "short_description": "Explica cómo el régimen logró estabilidad mediante control político y represión.",
+              "example_tasks": [
+                "Explica el significado de la consigna 'orden y progreso' en el contexto porfirista.",
+                "Redacta un texto donde analices el papel del ejército y la policía rural.",
+                "Evalúa si la estabilidad política justificó la falta de libertades políticas."
+              ]
+            },
+            {
+              "key": "crecimiento_economico_e_inversion",
+              "name": "Crecimiento económico e inversión extranjera",
+              "short_description": "Relaciona desarrollo económico, inversión extranjera y desigualdad social.",
+              "example_tasks": [
+                "Elabora una gráfica hipotética de crecimiento ferroviario y explica su impacto económico.",
+                "Analiza ventajas y desventajas de la inversión extranjera durante el Porfiriato.",
+                "Redacta un texto explicando por qué el crecimiento económico no benefició a todos por igual."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "tensiones_sociales_y_oposicion",
+          "name": "Tensiones sociales y oposición al régimen",
+          "short_description": "Examina las contradicciones del modelo porfirista y el surgimiento de resistencias.",
+          "sub_topics": [
+            {
+              "key": "condiciones_laborales_y_conflictos",
+              "name": "Condiciones laborales y conflictos sociales",
+              "short_description": "Analiza las condiciones de trabajadores y campesinos y el surgimiento de protestas.",
+              "example_tasks": [
+                "Explica dos causas de los conflictos laborales durante el Porfiriato.",
+                "Analiza un caso de huelga y relaciona demandas con condiciones de trabajo.",
+                "Redacta una conclusión sobre el vínculo entre desigualdad y conflicto social."
+              ]
+            },
+            {
+              "key": "oposicion_politica_y_prensa",
+              "name": "Oposición política y papel de la prensa",
+              "short_description": "Reconoce la función de la prensa y los movimientos opositores en la crítica al régimen.",
+              "example_tasks": [
+                "Analiza un fragmento de prensa crítica al Porfiriato e identifica su mensaje principal.",
+                "Explica cómo la censura afectó la participación política.",
+                "Redacta un texto: ¿por qué la prensa fue clave para articular la oposición?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "revolucion_mexicana_y_reconstruccion",
+      "name": "La Revolución Mexicana y la reconstrucción nacional",
+      "short_description": "Explica la Revolución Mexicana como un proceso social, político y armado que transformó las estructuras del Estado y la sociedad.",
+      "sub_topics": [
+        {
+          "key": "causas_estructurales_y_detonantes",
+          "name": "Causas estructurales y detonantes de la Revolución",
+          "short_description": "Relaciona desigualdad, autoritarismo y crisis política con el estallido revolucionario.",
+          "sub_topics": [
+            {
+              "key": "desigualdad_tierra_y_trabajo",
+              "name": "Desigualdad, tierra y trabajo",
+              "short_description": "Analiza la concentración de la tierra y las condiciones laborales como causas profundas.",
+              "example_tasks": [
+                "Explica por qué el problema agrario fue central en la Revolución Mexicana.",
+                "Relaciona una demanda campesina con una causa estructural del conflicto.",
+                "Elabora un esquema de causas de largo plazo del estallido revolucionario."
+              ]
+            },
+            {
+              "key": "crisis_politica_y_sucesion",
+              "name": "Crisis política y sucesión presidencial",
+              "short_description": "Examina el problema de la reelección y la falta de canales democráticos.",
+              "example_tasks": [
+                "Explica el lema 'Sufragio efectivo, no reelección' y su significado político.",
+                "Analiza cómo la crisis de sucesión debilitó al régimen porfirista.",
+                "Redacta un texto argumentativo sobre si la vía armada fue inevitable."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "etapas_y_actores_de_la_revolucion",
+          "name": "Etapas y actores de la Revolución Mexicana",
+          "short_description": "Identifica fases del conflicto, liderazgos y proyectos políticos diversos.",
+          "sub_topics": [
+            {
+              "key": "lideres_y_proyectos_revolucionarios",
+              "name": "Líderes y proyectos revolucionarios",
+              "short_description": "Reconoce propuestas políticas y sociales de distintos liderazgos.",
+              "example_tasks": [
+                "Compara los proyectos de dos líderes revolucionarios en objetivos y base social.",
+                "Elabora un mapa de actores con intereses y alianzas cambiantes.",
+                "Redacta una conclusión sobre por qué la Revolución no fue un movimiento homogéneo."
+              ]
+            },
+            {
+              "key": "violencia_guerra_y_sociedad",
+              "name": "Violencia, guerra y sociedad",
+              "short_description": "Analiza el impacto del conflicto armado en la población civil.",
+              "example_tasks": [
+                "Explica dos efectos sociales de la guerra revolucionaria.",
+                "Analiza un testimonio o fuente secundaria sobre vida cotidiana en guerra.",
+                "Redacta un texto reflexivo sobre los costos humanos del conflicto."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "constitucion_1917_y_reconstruccion",
+          "name": "Constitución de 1917 y reconstrucción del país",
+          "short_description": "Examina la Constitución como base del nuevo Estado y las políticas de reconstrucción.",
+          "sub_topics": [
+            {
+              "key": "derechos_sociales_y_estado",
+              "name": "Derechos sociales y nuevo papel del Estado",
+              "short_description": "Analiza los derechos sociales y el fortalecimiento del Estado.",
+              "example_tasks": [
+                "Identifica tres derechos sociales de la Constitución de 1917 y explica su importancia.",
+                "Relaciona un artículo constitucional con una demanda revolucionaria.",
+                "Redacta un texto sobre por qué la Constitución de 1917 fue innovadora."
+              ]
+            },
+            {
+              "key": "reconstruccion_politica_y_economica",
+              "name": "Reconstrucción política y económica",
+              "short_description": "Explica los esfuerzos por estabilizar el país tras el conflicto armado.",
+              "example_tasks": [
+                "Describe dos retos principales de la reconstrucción nacional.",
+                "Analiza una política de reconstrucción y sus posibles efectos sociales.",
+                "Evalúa si la Revolución logró cumplir sus principales objetivos."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "construccion_del_estado_posrevolucionario",
+      "name": "Construcción del Estado posrevolucionario",
+      "short_description": "Analiza la consolidación del Estado mexicano tras la Revolución, sus instituciones, políticas sociales y mecanismos de control político a lo largo del siglo XX.",
+      "sub_topics": [
+        {
+          "key": "institucionalizacion_del_poder",
+          "name": "Institucionalización del poder político",
+          "short_description": "Examina la creación de instituciones políticas para garantizar estabilidad y gobernabilidad.",
+          "sub_topics": [
+            {
+              "key": "partidos_politicos_y_sistema_hegemonico",
+              "name": "Partidos políticos y sistema hegemónico",
+              "short_description": "Analiza el surgimiento de un sistema político dominado por un partido y sus implicaciones.",
+              "example_tasks": [
+                "Explica por qué la creación de un partido dominante contribuyó a la estabilidad política.",
+                "Redacta un texto donde analices ventajas y desventajas del sistema hegemónico.",
+                "Relaciona control político con reducción de conflictos armados en el México posrevolucionario."
+              ]
+            },
+            {
+              "key": "presidencialismo_y_centralizacion",
+              "name": "Presidencialismo y centralización del poder",
+              "short_description": "Reconoce el fortalecimiento del Poder Ejecutivo como eje del sistema político.",
+              "example_tasks": [
+                "Elabora un esquema del presidencialismo mexicano y sus principales facultades.",
+                "Explica cómo la centralización del poder favoreció la gobernabilidad.",
+                "Analiza un ejemplo histórico donde el presidencialismo influyó en una decisión clave."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "politicas_sociales_y_estado_benefactor",
+          "name": "Políticas sociales y Estado benefactor",
+          "short_description": "Analiza el papel del Estado en educación, salud, trabajo y bienestar social.",
+          "sub_topics": [
+            {
+              "key": "educacion_publica_y_nacionalismo",
+              "name": "Educación pública y nacionalismo",
+              "short_description": "Examina la educación como herramienta de integración nacional y legitimación del Estado.",
+              "example_tasks": [
+                "Explica el papel de la educación pública en la construcción de identidad nacional.",
+                "Analiza un libro de texto (o su descripción) y detecta mensajes nacionalistas.",
+                "Redacta un texto crítico: ¿la educación puede ser un instrumento político?"
+              ]
+            },
+            {
+              "key": "derechos_laborales_y_organizacion_sindical",
+              "name": "Derechos laborales y organización sindical",
+              "short_description": "Relaciona derechos laborales con corporativismo y control político.",
+              "example_tasks": [
+                "Describe dos derechos laborales garantizados por el Estado posrevolucionario.",
+                "Explica cómo los sindicatos fueron integrados al sistema político.",
+                "Evalúa si la protección laboral limitó o fortaleció la autonomía sindical."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "economia_nacional_y_desarrollo",
+          "name": "Economía nacional y desarrollo",
+          "short_description": "Examina estrategias de desarrollo económico y su impacto social.",
+          "sub_topics": [
+            {
+              "key": "industrializacion_y_modelo_sustitucion",
+              "name": "Industrialización y sustitución de importaciones",
+              "short_description": "Analiza el modelo de industrialización orientado al mercado interno.",
+              "example_tasks": [
+                "Explica por qué el Estado impulsó la industrialización tras la Revolución.",
+                "Relaciona sustitución de importaciones con crecimiento urbano.",
+                "Redacta un texto evaluando límites y logros del modelo."
+              ]
+            },
+            {
+              "key": "intervencion_estatal_y_empresas_publicas",
+              "name": "Intervención estatal y empresas públicas",
+              "short_description": "Examina el papel del Estado en sectores estratégicos.",
+              "example_tasks": [
+                "Explica por qué el Estado intervino en sectores estratégicos.",
+                "Analiza ventajas y riesgos de la propiedad estatal de empresas.",
+                "Relaciona política económica con soberanía nacional."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mexico_contemporaneo_globalizacion_y_desafios",
+      "name": "México contemporáneo: globalización y desafíos",
+      "short_description": "Analiza transformaciones políticas, económicas y sociales recientes en el contexto de la globalización.",
+      "sub_topics": [
+        {
+          "key": "transicion_politica_y_pluralismo",
+          "name": "Transición política y pluralismo",
+          "short_description": "Examina el fin del sistema hegemónico y la apertura democrática.",
+          "sub_topics": [
+            {
+              "key": "alternancia_y_reformas_electorales",
+              "name": "Alternancia política y reformas electorales",
+              "short_description": "Analiza reformas que fortalecieron la competencia política.",
+              "example_tasks": [
+                "Explica qué es la alternancia política y por qué es relevante.",
+                "Relaciona una reforma electoral con mayor participación ciudadana.",
+                "Evalúa si las reformas garantizaron elecciones plenamente democráticas."
+              ]
+            },
+            {
+              "key": "ciudadania_y_participacion_actual",
+              "name": "Ciudadanía y participación política actual",
+              "short_description": "Analiza nuevas formas de participación y sus límites.",
+              "example_tasks": [
+                "Describe dos formas contemporáneas de participación ciudadana.",
+                "Analiza el impacto de redes sociales en la política.",
+                "Redacta un texto sobre retos actuales de la democracia mexicana."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "economia_global_y_reformas",
+          "name": "Economía global y reformas estructurales",
+          "short_description": "Relaciona apertura económica, tratados comerciales y cambios productivos.",
+          "sub_topics": [
+            {
+              "key": "apertura_comercial_y_tratados",
+              "name": "Apertura comercial y tratados internacionales",
+              "short_description": "Examina efectos económicos y sociales de la integración comercial.",
+              "example_tasks": [
+                "Explica objetivos de un tratado comercial y sus posibles efectos.",
+                "Relaciona apertura comercial con cambios en empleo y producción.",
+                "Redacta un argumento a favor o en contra de la integración económica."
+              ]
+            },
+            {
+              "key": "desigualdad_migracion_y_empleo",
+              "name": "Desigualdad, migración y empleo",
+              "short_description": "Analiza desigualdad social y migración como efectos de transformaciones económicas.",
+              "example_tasks": [
+                "Explica dos causas de la migración contemporánea mexicana.",
+                "Relaciona desigualdad regional con migración interna o externa.",
+                "Elabora una propuesta para enfrentar un reto social actual."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "retos_sociales_y_derechos_humanos",
+          "name": "Retos sociales y derechos humanos",
+          "short_description": "Examina problemas actuales vinculándolos con procesos históricos.",
+          "sub_topics": [
+            {
+              "key": "violencia_seguridad_y_estado",
+              "name": "Violencia, seguridad y Estado",
+              "short_description": "Analiza la violencia contemporánea desde una perspectiva histórica.",
+              "example_tasks": [
+                "Relaciona un problema de seguridad actual con causas históricas.",
+                "Analiza un testimonio o nota periodística desde enfoque histórico.",
+                "Redacta un texto reflexivo sobre seguridad y derechos humanos."
+              ]
+            },
+            {
+              "key": "derechos_humanos_memoria_y_justicia",
+              "name": "Derechos humanos, memoria y justicia",
+              "short_description": "Reconoce la importancia de la memoria histórica y la justicia social.",
+              "example_tasks": [
+                "Explica qué es memoria histórica y por qué es importante.",
+                "Analiza un caso de violaciones a derechos humanos desde perspectiva histórica.",
+                "Redacta una conclusión sobre el papel del Estado en la garantía de derechos."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "historia_universal_contemporanea_modernidad",
+      "name": "Historia universal contemporánea y modernidad",
+      "short_description": "Analiza los procesos de modernización global desde el siglo XVIII, considerando industrialización, cambios sociales y nuevas formas de poder.",
+      "sub_topics": [
+        {
+          "key": "revolucion_industrial_y_capitalismo",
+          "name": "Revolución Industrial y capitalismo",
+          "short_description": "Examina la industrialización como proceso económico y social que transformó el trabajo, la producción y la vida urbana.",
+          "sub_topics": [
+            {
+              "key": "cambios_tecnologicos_y_productivos",
+              "name": "Cambios tecnológicos y productivos",
+              "short_description": "Identifica innovaciones técnicas y su impacto en la organización del trabajo y la producción.",
+              "example_tasks": [
+                "Explica cómo una innovación tecnológica cambió la forma de producir y trabajar.",
+                "Relaciona industrialización con crecimiento urbano y problemas sociales.",
+                "Elabora un esquema causa-efecto entre tecnología, producción y relaciones laborales."
+              ]
+            },
+            {
+              "key": "clases_sociales_y_movimientos_obreros",
+              "name": "Clases sociales y movimientos obreros",
+              "short_description": "Analiza la formación de nuevas clases sociales y las respuestas colectivas a la explotación.",
+              "example_tasks": [
+                "Describe diferencias entre burguesía y proletariado durante la industrialización.",
+                "Analiza una demanda obrera y explica su origen histórico.",
+                "Redacta un texto sobre la importancia de los movimientos obreros en la ampliación de derechos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "imperialismo_y_expansion_global",
+          "name": "Imperialismo y expansión global",
+          "short_description": "Examina la expansión imperial como fenómeno económico, político y cultural.",
+          "sub_topics": [
+            {
+              "key": "colonialismo_y_explotacion",
+              "name": "Colonialismo y explotación",
+              "short_description": "Analiza la dominación colonial y sus efectos en sociedades colonizadas.",
+              "example_tasks": [
+                "Explica dos motivos del imperialismo europeo del siglo XIX.",
+                "Relaciona colonialismo con desigualdad económica global.",
+                "Analiza una fuente visual sobre imperialismo e identifica su mensaje."
+              ]
+            },
+            {
+              "key": "resistencias_y_cambios_culturales",
+              "name": "Resistencias y cambios culturales",
+              "short_description": "Reconoce resistencias locales y transformaciones culturales derivadas del dominio imperial.",
+              "example_tasks": [
+                "Describe una forma de resistencia anticolonial.",
+                "Explica un cambio cultural impuesto por el colonialismo.",
+                "Redacta una conclusión sobre consecuencias a largo plazo del imperialismo."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "guerras_mundiales_y_orden_internacional",
+      "name": "Guerras mundiales y nuevo orden internacional",
+      "short_description": "Analiza las guerras mundiales del siglo XX y la reconfiguración del sistema internacional.",
+      "sub_topics": [
+        {
+          "key": "primera_guerra_mundial",
+          "name": "Primera Guerra Mundial",
+          "short_description": "Examina causas, desarrollo y consecuencias de la Primera Guerra Mundial.",
+          "sub_topics": [
+            {
+              "key": "causas_multicausales_y_alianzas",
+              "name": "Causas multicausales y sistema de alianzas",
+              "short_description": "Identifica factores políticos, económicos y nacionalistas del conflicto.",
+              "example_tasks": [
+                "Elabora un esquema con causas estructurales y detonantes de la guerra.",
+                "Explica el papel de las alianzas militares en la expansión del conflicto.",
+                "Relaciona nacionalismo con estallido bélico."
+              ]
+            },
+            {
+              "key": "consecuencias_politicas_y_sociales",
+              "name": "Consecuencias políticas y sociales",
+              "short_description": "Analiza los cambios territoriales, sociales y políticos tras la guerra.",
+              "example_tasks": [
+                "Describe dos consecuencias políticas de la Primera Guerra Mundial.",
+                "Relaciona el conflicto con el surgimiento de nuevos Estados.",
+                "Explica por qué el tratado de paz generó tensiones futuras."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "segunda_guerra_mundial",
+          "name": "Segunda Guerra Mundial",
+          "short_description": "Examina causas, desarrollo y consecuencias del conflicto global más devastador del siglo XX.",
+          "sub_topics": [
+            {
+              "key": "totalitarismos_y_guerra_total",
+              "name": "Totalitarismos y guerra total",
+              "short_description": "Analiza regímenes totalitarios y la movilización total de recursos y población.",
+              "example_tasks": [
+                "Explica qué caracteriza a un régimen totalitario.",
+                "Relaciona propaganda y control social con guerra total.",
+                "Analiza una fuente visual de propaganda y su objetivo."
+              ]
+            },
+            {
+              "key": "nuevo_orden_internacional",
+              "name": "Nuevo orden internacional y organismos",
+              "short_description": "Reconoce la creación de organismos internacionales y nuevos equilibrios de poder.",
+              "example_tasks": [
+                "Explica por qué surgieron organismos internacionales tras la guerra.",
+                "Relaciona el nuevo orden internacional con la búsqueda de paz.",
+                "Redacta un texto sobre límites y logros del sistema internacional."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "guerra_fria_descolonizacion_y_nuevos_actores",
+      "name": "Guerra Fría, descolonización y nuevos actores",
+      "short_description": "Analiza el mundo bipolar, los procesos de descolonización y la aparición de nuevos actores políticos y sociales en la segunda mitad del siglo XX.",
+      "sub_topics": [
+        {
+          "key": "mundo_bipolar_y_conflictos_regionales",
+          "name": "Mundo bipolar y conflictos regionales",
+          "short_description": "Examina la rivalidad entre bloques y su expresión en conflictos indirectos.",
+          "sub_topics": [
+            {
+              "key": "bloques_ideologicos_y_geopolitica",
+              "name": "Bloques ideológicos y geopolítica",
+              "short_description": "Analiza intereses, alianzas y estrategias de las superpotencias.",
+              "example_tasks": [
+                "Explica las diferencias ideológicas entre los dos bloques de la Guerra Fría.",
+                "Relaciona un conflicto regional con la lógica de la Guerra Fría.",
+                "Elabora un mapa conceptual sobre geopolítica bipolar."
+              ]
+            },
+            {
+              "key": "carreras_armamentista_y_tecnologica",
+              "name": "Carrera armamentista y tecnológica",
+              "short_description": "Examina la competencia militar y científica y sus efectos globales.",
+              "example_tasks": [
+                "Explica por qué la carrera armamentista generó tensiones permanentes.",
+                "Relaciona desarrollo tecnológico con propaganda política.",
+                "Redacta un texto sobre riesgos y límites de la disuasión nuclear."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "descolonizacion_y_movimientos_nacionales",
+          "name": "Descolonización y movimientos nacionales",
+          "short_description": "Analiza la independencia de colonias y la formación de nuevos Estados.",
+          "sub_topics": [
+            {
+              "key": "procesos_independentistas_postcoloniales",
+              "name": "Procesos independentistas postcoloniales",
+              "short_description": "Examina causas, liderazgos y desafíos de los nuevos países.",
+              "example_tasks": [
+                "Describe dos causas de la descolonización en África o Asia.",
+                "Relaciona independencia con retos económicos y políticos.",
+                "Compara dos procesos de descolonización."
+              ]
+            },
+            {
+              "key": "nuevos_actores_y_movimientos_sociales",
+              "name": "Nuevos actores y movimientos sociales",
+              "short_description": "Reconoce la emergencia de movimientos civiles, juveniles y de derechos.",
+              "example_tasks": [
+                "Explica el papel de un movimiento social del siglo XX.",
+                "Relaciona movimientos sociales con ampliación de derechos.",
+                "Redacta un texto sobre la importancia de la participación social."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "democracia_derechos_humanos_y_memoria",
+      "name": "Democracia, derechos humanos y memoria histórica",
+      "short_description": "Analiza la expansión de la democracia, los derechos humanos y los debates sobre memoria histórica.",
+      "sub_topics": [
+        {
+          "key": "democratizacion_y_participacion",
+          "name": "Democratización y participación ciudadana",
+          "short_description": "Examina procesos de transición democrática y participación social.",
+          "sub_topics": [
+            {
+              "key": "transiciones_politicas_y_reformas",
+              "name": "Transiciones políticas y reformas democráticas",
+              "short_description": "Analiza reformas políticas orientadas a ampliar libertades.",
+              "example_tasks": [
+                "Explica qué caracteriza una transición democrática.",
+                "Relaciona reformas políticas con mayor participación.",
+                "Evalúa límites de la democracia representativa."
+              ]
+            },
+            {
+              "key": "ciudadania_activa_y_sociedad_civil",
+              "name": "Ciudadanía activa y sociedad civil",
+              "short_description": "Reconoce la importancia de la organización ciudadana.",
+              "example_tasks": [
+                "Describe dos formas de participación ciudadana.",
+                "Analiza el papel de organizaciones civiles.",
+                "Redacta un texto sobre ciudadanía y responsabilidad social."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "derechos_humanos_y_memoria",
+          "name": "Derechos humanos y memoria histórica",
+          "short_description": "Relaciona memoria, justicia y derechos humanos en contextos recientes.",
+          "sub_topics": [
+            {
+              "key": "violaciones_derechos_y_justicia_transicional",
+              "name": "Violaciones a derechos humanos y justicia transicional",
+              "short_description": "Analiza mecanismos de justicia frente a violaciones del pasado.",
+              "example_tasks": [
+                "Explica qué es la justicia transicional.",
+                "Analiza un caso histórico de violaciones a derechos humanos.",
+                "Redacta una conclusión sobre memoria y reparación."
+              ]
+            },
+            {
+              "key": "memoria_colectiva_y_debate_publico",
+              "name": "Memoria colectiva y debate público",
+              "short_description": "Examina disputas sobre el pasado en el espacio público.",
+              "example_tasks": [
+                "Analiza un monumento o conmemoración desde la memoria histórica.",
+                "Explica por qué el pasado puede ser objeto de debate.",
+                "Redacta un texto sobre memoria e identidad."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "historiografia_interpretaciones_y_debate",
+      "name": "Historiografía, interpretaciones y debate histórico",
+      "short_description": "Analiza corrientes historiográficas y el carácter interpretativo del conocimiento histórico.",
+      "sub_topics": [
+        {
+          "key": "corrientes_historiograficas",
+          "name": "Corrientes historiográficas",
+          "short_description": "Reconoce distintas formas de interpretar el pasado.",
+          "sub_topics": [
+            {
+              "key": "historia_tradicional_social_y_cultural",
+              "name": "Historia tradicional, social y cultural",
+              "short_description": "Compara enfoques y preguntas centrales de cada corriente.",
+              "example_tasks": [
+                "Explica diferencias entre historia tradicional y social.",
+                "Relaciona preguntas históricas con enfoques distintos.",
+                "Evalúa ventajas de una perspectiva cultural."
+              ]
+            },
+            {
+              "key": "cambio_de_interpretaciones",
+              "name": "Cambio de interpretaciones históricas",
+              "short_description": "Analiza cómo nuevas fuentes y contextos modifican interpretaciones.",
+              "example_tasks": [
+                "Explica por qué una interpretación puede cambiar con el tiempo.",
+                "Analiza un ejemplo de reinterpretación histórica.",
+                "Redacta una reflexión sobre objetividad en historia."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "proyectos_de_investigacion_historica",
+      "name": "Proyectos de investigación histórica",
+      "short_description": "Desarrolla investigaciones históricas integrando preguntas, fuentes, análisis y comunicación de resultados.",
+      "sub_topics": [
+        {
+          "key": "diseno_de_proyecto",
+          "name": "Diseño del proyecto de investigación",
+          "short_description": "Formula preguntas, hipótesis y planes de trabajo.",
+          "sub_topics": [
+            {
+              "key": "pregunta_hipotesis_y_metodo",
+              "name": "Pregunta, hipótesis y método",
+              "short_description": "Define el enfoque metodológico del proyecto.",
+              "example_tasks": [
+                "Redacta una pregunta histórica y una hipótesis.",
+                "Diseña un plan de trabajo con etapas.",
+                "Justifica la selección de fuentes."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "presentacion_y_evaluacion",
+          "name": "Presentación y evaluación del proyecto",
+          "short_description": "Comunica resultados de manera clara y evaluable.",
+          "sub_topics": [
+            {
+              "key": "informe_exposicion_y_criterios",
+              "name": "Informe, exposición y criterios de evaluación",
+              "short_description": "Presenta conclusiones con evidencias y reflexiona sobre el proceso.",
+              "example_tasks": [
+                "Elabora un informe final con conclusiones argumentadas.",
+                "Presenta oralmente el proyecto usando apoyos visuales.",
+                "Autoevalúa el proyecto según criterios establecidos."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

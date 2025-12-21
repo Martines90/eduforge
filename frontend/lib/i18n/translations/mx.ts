@@ -259,6 +259,18 @@ export const mx: Translations = {
     "¡La descripción de la tarea es demasiado larga! Máximo {{max}} caracteres permitidos. Actual: {{count}} caracteres.",
   "An error occurred while generating the PDF. Please try again.":
     "Ocurrió un error al generar el PDF. Por favor intenta de nuevo.",
+  "An error occurred while generating the PDF.":
+    "Ocurrió un error al generar el PDF.",
+  "Image loading failed due to CORS restrictions. The images may not be accessible from this domain.":
+    "La carga de imágenes falló debido a restricciones CORS. Las imágenes pueden no ser accesibles desde este dominio.",
+  "Network error while loading images. Please check your internet connection.":
+    "Error de red al cargar las imágenes. Por favor verifica tu conexión a internet.",
+  "Image loading timed out. Please try again or check image URLs.":
+    "La carga de imágenes expiró. Por favor intenta de nuevo o verifica las URLs de las imágenes.",
+  "Please try again or contact support if the problem persists.":
+    "Por favor intenta de nuevo o contacta a soporte si el problema persiste.",
+  "PDF is not ready yet. Please try again in a moment.":
+    "El PDF aún no está listo. Por favor intenta de nuevo en un momento.",
   "An error occurred": "Ocurrió un error",
   "Save Task": "Guardar Tarea",
   "Saving...": "Guardando...",

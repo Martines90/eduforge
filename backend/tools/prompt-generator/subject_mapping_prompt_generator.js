@@ -598,6 +598,37 @@ function parseArgs() {
 }
 
 /**
+ * Generate prompt for a single subject
+ */
+function generateSingleSubject(countryCode, subjectKey) {
+  console.log(`\n📝 Generating prompt for: ${SUBJECTS[subjectKey]?.name || subjectKey} (${COUNTRIES[countryCode]?.name || countryCode})`);
+
+  // Generate the prompt
+  const prompt = generatePrompt(countryCode, subjectKey);
+
+  // Create output filename with country subdirectory
+  const baseOutputDir = path.join(__dirname, 'prompts');
+  const countryDir = path.join(baseOutputDir, countryCode.toLowerCase());
+  const outputFilename = `${subjectKey}_grade_9_12.txt`;
+  const outputPath = path.join(countryDir, outputFilename);
+
+  // Ensure output directory exists
+  if (!fs.existsSync(countryDir)) {
+    fs.mkdirSync(countryDir, { recursive: true });
+  }
+
+  // Write prompt to file
+  fs.writeFileSync(outputPath, prompt, 'utf8');
+
+  return {
+    subject: SUBJECTS[subjectKey].name,
+    filename: `${countryCode.toLowerCase()}/${outputFilename}`,
+    path: outputPath,
+    size: prompt.length
+  };
+}
+
+/**
  * Main execution
  */
 function main() {
@@ -605,18 +636,21 @@ function main() {
   const countryCode = (args['country-code'] || args['country'] || '').toUpperCase();
   const subjectKey = (args['subject'] || '').toLowerCase();
 
-  // Validate inputs
-  if (!countryCode || !subjectKey) {
+  // Validate country code
+  if (!countryCode) {
     console.error(`
-❌ Error: Missing required arguments
+❌ Error: Missing required country code
 
 Usage:
-  node subject_mapping_prompt_generator.js --country-code=COUNTRY --subject=SUBJECT
+  node subject_mapping_prompt_generator.js --country-code=COUNTRY [--subject=SUBJECT]
 
 Examples:
+  # Generate for all subjects in Mexico
+  node subject_mapping_prompt_generator.js --country-code=MX
+
+  # Generate for a specific subject
   node subject_mapping_prompt_generator.js --country-code=HU --subject=mathematics
   node subject_mapping_prompt_generator.js --country-code=MX --subject=biology
-  node subject_mapping_prompt_generator.js --country-code=US --subject=history
 
 Available Countries:
   ${Object.keys(COUNTRIES).join(', ')}
@@ -627,37 +661,67 @@ Available Subjects:
     process.exit(1);
   }
 
+  // Check if country exists
+  if (!COUNTRIES[countryCode]) {
+    console.error(`\n❌ Error: Unknown country code: ${countryCode}\n`);
+    console.error(`Available countries: ${Object.keys(COUNTRIES).join(', ')}\n`);
+    process.exit(1);
+  }
+
   try {
-    console.log(`\n📝 Generating prompt for: ${SUBJECTS[subjectKey]?.name || subjectKey} (${COUNTRIES[countryCode]?.name || countryCode})\n`);
+    // If no subject specified, generate for all subjects
+    if (!subjectKey) {
+      console.log(`\n🌍 Generating prompts for ALL subjects in ${COUNTRIES[countryCode].name}...\n`);
 
-    // Generate the prompt
-    const prompt = generatePrompt(countryCode, subjectKey);
+      const results = [];
+      const subjectKeys = Object.keys(SUBJECTS);
 
-    // Create output filename with country subdirectory
-    const baseOutputDir = path.join(__dirname, 'prompts');
-    const countryDir = path.join(baseOutputDir, countryCode.toLowerCase());
-    const outputFilename = `${subjectKey}_grade_9_12.txt`;
-    const outputPath = path.join(countryDir, outputFilename);
+      for (const key of subjectKeys) {
+        const result = generateSingleSubject(countryCode, key);
+        results.push(result);
+      }
 
-    // Ensure output directory exists
-    if (!fs.existsSync(countryDir)) {
-      fs.mkdirSync(countryDir, { recursive: true });
+      // Output summary
+      console.log(`\n✅ All prompts generated successfully!\n`);
+      console.log(`📊 Summary:`);
+      console.log(`   Country: ${COUNTRIES[countryCode].name} (${countryCode})`);
+      console.log(`   Total subjects: ${results.length}`);
+      console.log(`   Total size: ${results.reduce((sum, r) => sum + r.size, 0).toLocaleString()} characters\n`);
+
+      console.log(`📄 Generated files:`);
+      results.forEach((result, index) => {
+        console.log(`   ${index + 1}. ${result.subject.padEnd(15)} → ${result.filename}`);
+      });
+
+      console.log(`\n💡 Next steps:`);
+      console.log(`   1. Navigate to: tools/prompt-generator/prompts/${countryCode.toLowerCase()}/`);
+      console.log(`   2. Open each .txt file and copy the prompt`);
+      console.log(`   3. Paste into ChatGPT (GPT-4 recommended)`);
+      console.log(`   4. Follow the instructions to receive curriculum data in chunks`);
+      console.log(`\n`);
+
+    } else {
+      // Generate for a single subject
+      if (!SUBJECTS[subjectKey]) {
+        console.error(`\n❌ Error: Unknown subject: ${subjectKey}\n`);
+        console.error(`Available subjects: ${Object.keys(SUBJECTS).join(', ')}\n`);
+        process.exit(1);
+      }
+
+      const result = generateSingleSubject(countryCode, subjectKey);
+
+      // Output success message
+      console.log(`\n✅ Prompt generated successfully!\n`);
+      console.log(`📄 File: ${result.filename}`);
+      console.log(`📁 Location: ${result.path}`);
+      console.log(`📊 Size: ${result.size.toLocaleString()} characters`);
+      console.log(`\n💡 Next steps:`);
+      console.log(`   1. Open the generated file: ${result.path}`);
+      console.log(`   2. Copy the entire prompt`);
+      console.log(`   3. Paste it into ChatGPT (GPT-4 recommended)`);
+      console.log(`   4. Follow the instructions to receive the curriculum data in chunks`);
+      console.log(`\n`);
     }
-
-    // Write prompt to file
-    fs.writeFileSync(outputPath, prompt, 'utf8');
-
-    // Output success message
-    console.log(`✅ Prompt generated successfully!\n`);
-    console.log(`📄 File: ${countryCode.toLowerCase()}/${outputFilename}`);
-    console.log(`📁 Location: ${outputPath}`);
-    console.log(`📊 Size: ${prompt.length.toLocaleString()} characters`);
-    console.log(`\n💡 Next steps:`);
-    console.log(`   1. Open the generated file: ${outputPath}`);
-    console.log(`   2. Copy the entire prompt`);
-    console.log(`   3. Paste it into ChatGPT (GPT-4 recommended)`);
-    console.log(`   4. Follow the instructions to receive the curriculum data in chunks`);
-    console.log(`\n`);
 
   } catch (error) {
     console.error(`\n❌ Error: ${error.message}\n`);

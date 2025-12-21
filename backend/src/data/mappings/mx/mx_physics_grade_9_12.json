@@ -1,0 +1,1406 @@
+{
+  "grade_9_10": [
+    {
+      "key": "alfabetizacion_cientifica_y_metodo",
+      "name": "Alfabetización científica y método de indagación",
+      "short_description": "Desarrolla la comprensión de cómo se construye el conocimiento científico mediante preguntas, evidencias y argumentación, integrando ética, seguridad y enfoque CTS (ciencia, tecnología y sociedad).",
+      "sub_topics": [
+        {
+          "key": "naturaleza_de_la_ciencia",
+          "name": "Naturaleza de la ciencia y pensamiento crítico",
+          "short_description": "Distingue ciencia, pseudociencia y opinión, y fortalece criterios para evaluar explicaciones y fuentes.",
+          "sub_topics": [
+            {
+              "key": "modelos_cientificos",
+              "name": "Modelos científicos y sus límites",
+              "short_description": "Reconocer que los modelos simplifican la realidad y se ajustan con evidencia.",
+              "example_tasks": [
+                "Explica qué es un modelo científico y da un ejemplo (mapa del Metro, modelo de átomo, modelo de clima) indicando qué representa y qué no.",
+                "Compara dos explicaciones sobre por qué se empaña un espejo (condensación vs. 'el vidrio suda') e indica cuál se apoya mejor en observaciones sencillas.",
+                "Elige un fenómeno cercano (rebote de una pelota, sombras, enfriamiento de una bebida) y propone un modelo simple para predecir qué ocurre si cambias una variable."
+              ]
+            },
+            {
+              "key": "evaluacion_de_fuentes",
+              "name": "Evidencia, fuentes y sesgos",
+              "short_description": "Diferenciar evidencia medible de opinión y reconocer sesgos o conflictos de interés.",
+              "example_tasks": [
+                "Lee un anuncio de 'pulsera magnética' y marca cuáles afirmaciones son verificables con medición y cuáles son promesas sin evidencia.",
+                "Busca tres fuentes sobre el mismo tema (por ejemplo, hornos de microondas) y ordénalas por confiabilidad explicando tus criterios (autor, fecha, referencias).",
+                "Plantea qué datos mínimos exigirías para aceptar o rechazar la afirmación: 'a mayor masa, siempre cae más rápido'."
+              ]
+            },
+            {
+              "key": "argumentacion_con_datos",
+              "name": "Argumentación basada en datos",
+              "short_description": "Sostener conclusiones con datos, supuestos explícitos y razonamiento lógico.",
+              "example_tasks": [
+                "Con una tabla de temperaturas tomadas cada minuto, redacta una conclusión sobre si el calentamiento fue constante y cita dos datos como evidencia.",
+                "En un debate sobre 'usar focos LED reduce el gasto', escribe un argumento con un cálculo simple (W, h, costo) y una limitación del análisis.",
+                "Recibe dos gráficas aparentemente contradictorias y explica cómo podrían ser ambas correctas si cambian condiciones o escalas."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "preguntas_hipotesis_y_variables",
+          "name": "Preguntas, hipótesis y variables",
+          "short_description": "Formula preguntas investigables, propone hipótesis y define variables independientes, dependientes y de control.",
+          "sub_topics": [
+            {
+              "key": "preguntas_investigables",
+              "name": "Formulación de preguntas investigables",
+              "short_description": "Convertir curiosidades en preguntas medibles y delimitadas.",
+              "example_tasks": [
+                "Convierte la pregunta '¿por qué se cae todo?' en una pregunta investigable que puedas responder con un experimento escolar y di qué medirías.",
+                "Propón tres preguntas investigables sobre el enfriamiento de una bebida (vaso de vidrio vs. plástico, con tapa vs. sin tapa, con hielo vs. sin hielo).",
+                "Elige una pregunta y justifica por qué sí puede responderse con mediciones y qué recursos mínimos se requieren."
+              ]
+            },
+            {
+              "key": "hipotesis_y_predicciones",
+              "name": "Hipótesis y predicciones",
+              "short_description": "Redactar hipótesis tipo 'si…, entonces…' y derivar predicciones observables.",
+              "example_tasks": [
+                "Para una caída de papel, redacta una hipótesis sobre el efecto de arrugar la hoja y una predicción cuantitativa (tiempo relativo).",
+                "Distingue hipótesis y predicción con el caso 'más masa cae más rápido' y plantea cómo lo pondrías a prueba.",
+                "Si tus datos no coinciden con la predicción, escribe dos explicaciones posibles (variable no controlada, error de medición, modelo insuficiente)."
+              ]
+            },
+            {
+              "key": "control_de_variables",
+              "name": "Variables y control experimental",
+              "short_description": "Identificar variables y controlar condiciones para reducir sesgos.",
+              "example_tasks": [
+                "En un experimento de fricción (distintas superficies), identifica variable independiente, dependiente y tres variables de control.",
+                "Diseña una tabla de registro para medir temperatura vs. tiempo, indicando unidades y frecuencia de medición.",
+                "Explica por qué repetir mediciones mejora la confiabilidad y propone un plan de 3 repeticiones para medir un tiempo de caída."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "diseno_experimental_y_seguridad",
+          "name": "Diseño experimental, bitácora y seguridad",
+          "short_description": "Planifica prácticas con procedimientos reproducibles, uso responsable de materiales y evaluación de riesgos.",
+          "sub_topics": [
+            {
+              "key": "procedimiento_y_bitacora",
+              "name": "Procedimiento y bitácora de laboratorio",
+              "short_description": "Elaborar pasos claros y registrar condiciones, datos y observaciones.",
+              "example_tasks": [
+                "Escribe un procedimiento de 8–10 pasos para medir la rapidez promedio de una canica en una rampa, incluyendo cómo registrar datos.",
+                "Reescribe un procedimiento incompleto (sin unidades ni condiciones) para que otra persona lo repita sin preguntarte nada.",
+                "Propón un formato de bitácora (objetivo, materiales, datos, análisis, conclusión) y úsalo para una práctica sencilla en casa."
+              ]
+            },
+            {
+              "key": "seguridad_y_riesgos",
+              "name": "Seguridad, riesgos y normas básicas",
+              "short_description": "Identificar riesgos (eléctricos, térmicos, vidrio) y aplicar medidas preventivas.",
+              "example_tasks": [
+                "Enumera cinco riesgos al calentar agua y propone una medida preventiva para cada uno (manejo de vapor, distancia, guantes, etc.).",
+                "Clasifica el riesgo (bajo/medio/alto) de tres prácticas: circuito con pila, agua caliente, vidrio; justifica.",
+                "Redacta un protocolo de 6 reglas de seguridad para un laboratorio de Física e indica qué hacer ante una quemadura leve."
+              ]
+            },
+            {
+              "key": "manejo_de_instrumentos",
+              "name": "Manejo básico de instrumentos",
+              "short_description": "Usar regla, cronómetro y termómetro correctamente y reconocer límites de medición.",
+              "example_tasks": [
+                "Explica cómo verificarías si el 'cero' de una regla está correcto y qué harías si está desgastado.",
+                "Mide el periodo de un péndulo contando 20 oscilaciones y calcula el periodo promedio; describe cómo reducir el error de reacción.",
+                "Describe cómo leer un termómetro evitando paralaje y cómo reportarías la medición con incertidumbre."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "medicion_magnitudes_y_unidades",
+      "name": "Medición, magnitudes y unidades",
+      "short_description": "Consolida el uso del Sistema Internacional, conversiones, notación científica y tratamiento básico de incertidumbre para comunicar resultados con precisión.",
+      "sub_topics": [
+        {
+          "key": "si_prefijos_y_conversiones",
+          "name": "Sistema Internacional, prefijos y conversiones",
+          "short_description": "Reconoce magnitudes y unidades del SI, usa prefijos y realiza conversiones consistentes.",
+          "sub_topics": [
+            {
+              "key": "unidades_fundamentales",
+              "name": "Unidades fundamentales del SI",
+              "short_description": "Usar m, kg, s, A, K y su escritura correcta en mediciones reales.",
+              "example_tasks": [
+                "Enumera 6 mediciones cotidianas (masa de mochila, tiempo de traslado, temperatura ambiente) e indica la unidad del SI adecuada para cada una.",
+                "Convierte 3.6 km a m y luego a cm mostrando el uso de prefijos.",
+                "Corrige tres ejemplos de notación incorrecta de unidades (por ejemplo, 'Kg', 'mts', 'K°') y explica el error."
+              ]
+            },
+            {
+              "key": "unidades_derivadas",
+              "name": "Unidades derivadas y sentido físico",
+              "short_description": "Interpretar N, J y W a partir de unidades básicas.",
+              "example_tasks": [
+                "Escribe 1 W como J/s y explica qué significa físicamente en una situación doméstica (foco, cargador).",
+                "Verifica con unidades que E = 1/2 m v^2 produce joules y explica qué representa.",
+                "Un elevador requiere 800 N para levantar una carga: explica qué información adicional necesitas para estimar el trabajo realizado."
+              ]
+            },
+            {
+              "key": "conversiones_compuestas",
+              "name": "Conversiones en unidades compuestas",
+              "short_description": "Convertir magnitudes como km/h a m/s y áreas/volúmenes con potencias.",
+              "example_tasks": [
+                "Convierte 72 km/h a m/s mostrando cada paso y comenta si es una velocidad razonable para una bicicleta.",
+                "Convierte 2500 cm² a m² y explica por qué no se puede convertir 'igual que' longitudes.",
+                "Convierte 1.5 L a m³ y justifica la equivalencia entre L y cm³."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "notacion_cientifica_y_orden_de_magnitud",
+          "name": "Notación científica y orden de magnitud",
+          "short_description": "Expresar cantidades muy grandes o pequeñas y compararlas mediante órdenes de magnitud.",
+          "sub_topics": [
+            {
+              "key": "escritura_en_notacion_cientifica",
+              "name": "Escritura y lectura en notación científica",
+              "short_description": "Convertir entre forma decimal y a×10^n, conservando significado físico.",
+              "example_tasks": [
+                "Escribe en notación científica: 0.00047 m, 5 200 000 J y 0.0032 s; indica también el orden de magnitud de cada una.",
+                "Convierte 3.6×10^-3 s a forma decimal y describe un contexto donde aparezcan milisegundos.",
+                "Explica con un ejemplo por qué mover el punto decimal cambia el exponente y no el valor real."
+              ]
+            },
+            {
+              "key": "comparacion_de_ordenes",
+              "name": "Comparación de órdenes de magnitud",
+              "short_description": "Comparar escalas (micro, mili, kilo) en problemas físicos simples.",
+              "example_tasks": [
+                "Compara 1×10^-6 m (bacteria) con 7×10^-5 m (cabello) y calcula cuántas veces es mayor el grosor del cabello.",
+                "Ordena estas longitudes de menor a mayor: 2 mm, 3×10^-4 m, 5×10^-2 m, 1 cm; justifica con conversiones.",
+                "Elige un objeto (grano de arroz, moneda, cancha) y estima su orden de magnitud en metros explicando tu razonamiento."
+              ]
+            },
+            {
+              "key": "cifras_significativas_en_contexto",
+              "name": "Cifras significativas en contexto",
+              "short_description": "Relacionar precisión de medición con cantidad de cifras reportadas.",
+              "example_tasks": [
+                "Indica cuántas cifras significativas tienen: 0.0200, 1500, 1.050 y 3.1416; justifica cada caso.",
+                "Resuelve 12.3×0.45 y reporta el resultado con cifras significativas correctas, explicando la regla usada.",
+                "Explica por qué al sumar 2.3 + 2.34 no se deben conservar dos decimales automáticamente; realiza la suma correctamente."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "incertidumbre_y_validacion",
+          "name": "Incertidumbre, error y validación con unidades",
+          "short_description": "Distinguir errores sistemáticos y aleatorios, estimar incertidumbre y validar resultados con unidades y sentido físico.",
+          "sub_topics": [
+            {
+              "key": "precision_exactitud",
+              "name": "Resolución, precisión y exactitud",
+              "short_description": "Relacionar resolución instrumental con incertidumbre y comparar exactitud frente a un valor aceptado.",
+              "example_tasks": [
+                "Un termómetro marca cada 1 °C: estima la incertidumbre instrumental al medir 23 °C y reporta el resultado correctamente.",
+                "Compara dos cronómetros (0.1 s vs 0.01 s) para medir una carrera de 10 m; explica cuál conviene y por qué.",
+                "Describe un ejemplo de alta precisión pero baja exactitud en una medición escolar y cómo lo detectarías."
+              ]
+            },
+            {
+              "key": "errores_sistematicos_y_aleatorios",
+              "name": "Errores sistemáticos y aleatorios",
+              "short_description": "Identificar fuentes típicas de error y su efecto en los resultados.",
+              "example_tasks": [
+                "Explica cómo un 'cero gastado' en una regla produce error sistemático y cómo corregirlo en tus mediciones.",
+                "Con 5 tiempos de caída, calcula el promedio y comenta si la dispersión sugiere error aleatorio; propone una mejora.",
+                "Da dos ejemplos de variables no controladas que pueden sesgar un experimento y cómo minimizar su efecto."
+              ]
+            },
+            {
+              "key": "validacion_por_unidades",
+              "name": "Validación por unidades y razonabilidad",
+              "short_description": "Usar análisis dimensional y comparación con referencias para detectar resultados imposibles.",
+              "example_tasks": [
+                "Detecta el error en: 3 m + 20 cm = 23 m; corrige y explica con unidades.",
+                "Evalúa si una rapidez de 300 m/s para una bicicleta es razonable y justifica con comparación y contexto.",
+                "Revisa un resultado de potencia donde alguien obtuvo 'W²' y explica por qué es imposible; corrige el planteamiento."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "representacion_y_analisis_de_datos",
+      "name": "Representación y análisis de datos",
+      "short_description": "Organiza, representa e interpreta datos experimentales con tablas y gráficas, identificando patrones y construyendo conclusiones basadas en evidencia.",
+      "sub_topics": [
+        {
+          "key": "tablas_y_resumen_de_datos",
+          "name": "Tablas de registro y resumen de datos",
+          "short_description": "Registrar mediciones con unidades y coherencia, y resumir con promedios y variabilidad simple.",
+          "sub_topics": [
+            {
+              "key": "tablas_con_unidades",
+              "name": "Tablas con encabezados, unidades y formato",
+              "short_description": "Construir tablas claras con unidades, decimales consistentes y notas de condiciones.",
+              "example_tasks": [
+                "Crea una tabla para registrar distancia y tiempo de un carrito cada 0.5 m; incluye encabezados con unidades y un espacio para observaciones.",
+                "Corrige una tabla sin unidades agregando unidades, número de decimales coherente y una nota sobre condiciones del experimento.",
+                "Propón cómo registrarías un 'dato perdido' sin alterar el resto del registro ni inventar mediciones."
+              ]
+            },
+            {
+              "key": "promedios_y_rango",
+              "name": "Promedios, rango y lectura de dispersión",
+              "short_description": "Calcular promedio y rango e interpretar variabilidad en mediciones repetidas.",
+              "example_tasks": [
+                "Con 5 mediciones de tiempo (s), calcula promedio y rango; interpreta si la variabilidad es grande o pequeña.",
+                "Compara dos conjuntos de datos del mismo experimento: uno con poca dispersión y otro con mucha; decide cuál es más confiable y por qué.",
+                "Explica qué harías si un valor es muy distinto a los demás (repetir, revisar procedimiento, no eliminar sin justificar)."
+              ]
+            },
+            {
+              "key": "datos_atipicos_y_tabilidad",
+              "name": "Datos atípicos y trazabilidad",
+              "short_description": "Detectar posibles atípicos y mantener registro del dato original y su justificación.",
+              "example_tasks": [
+                "En 8 mediciones, identifica un posible dato atípico y explica un criterio simple para decidir si se repite la medición.",
+                "Repara una tabla que mezcla cm y m en la misma columna: unifica unidades y recalcula correctamente.",
+                "Diseña un método para evitar errores de captura en equipo (doble registro, revisión cruzada) y aplícalo a una práctica."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "graficas_e_interpretacion",
+          "name": "Gráficas cartesianas e interpretación",
+          "short_description": "Elegir escalas, rotular e interpretar tendencias, pendientes y áreas en contextos sencillos.",
+          "sub_topics": [
+            {
+              "key": "escala_ejes_y_rotulos",
+              "name": "Escala, ejes, unidades y títulos",
+              "short_description": "Representar datos sin distorsión, usando escalas adecuadas y rotulación completa.",
+              "example_tasks": [
+                "Grafica distancia vs. tiempo de un movimiento uniforme y elige una escala que use la mayor parte del papel sin exagerar cambios.",
+                "Se te da una gráfica con ejes sin unidades: añade unidades correctas y explica qué variable corresponde a cada eje.",
+                "Rehaz una gráfica donde el eje vertical empieza en 50 en lugar de 0 y explica cómo cambia la percepción del cambio."
+              ]
+            },
+            {
+              "key": "pendiente_tasa_de_cambio",
+              "name": "Pendiente como tasa de cambio (introductorio)",
+              "short_description": "Interpretar la pendiente como rapidez o razón de cambio en distintos intervalos.",
+              "example_tasks": [
+                "En una gráfica x–t, calcula la pendiente entre dos puntos y explica qué significa físicamente (rapidez promedio).",
+                "Compara dos rectas en una gráfica v–t y decide cuál representa mayor aceleración promedio; justifica con pendientes.",
+                "Con datos de temperatura–tiempo, estima la tasa de enfriamiento en °C/min en dos intervalos y compárala."
+              ]
+            },
+            {
+              "key": "area_bajo_curva_intuitivo",
+              "name": "Área bajo la curva (nivel intuitivo)",
+              "short_description": "Reconocer el área como cantidad acumulada, por ejemplo distancia desde una gráfica v–t.",
+              "example_tasks": [
+                "Se da una gráfica velocidad–tiempo por tramos: estima la distancia aproximando el área con rectángulos y triángulos.",
+                "Explica por qué, si la velocidad es cero durante un intervalo, el área bajo la curva en ese intervalo también es cero y qué significa.",
+                "Compara dos perfiles v–t de la misma duración y decide cuál recorre mayor distancia estimando áreas."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "modelos_y_relaciones",
+          "name": "Relaciones y modelos simples",
+          "short_description": "Identificar proporcionalidad y ajustar modelos lineales básicos para describir y predecir comportamientos.",
+          "sub_topics": [
+            {
+              "key": "proporcionalidad_directa_e_inversa",
+              "name": "Proporcionalidad directa e inversa",
+              "short_description": "Reconocer patrones proporcionales en tablas/gráficas y expresarlos con ecuaciones simples.",
+              "example_tasks": [
+                "Con una tabla de distancia y tiempo a rapidez constante, verifica si hay proporcionalidad directa y escribe la ecuación.",
+                "Analiza datos de tiempo de viaje vs. velocidad para la misma distancia y explica por qué es una relación inversa.",
+                "Elige un ejemplo cotidiano (costo por kg, consumo de datos) y decide si es proporcionalidad directa, inversa o ninguna; justifica."
+              ]
+            },
+            {
+              "key": "ajuste_lineal_basico",
+              "name": "Ajuste lineal básico e interpolación",
+              "short_description": "Trazar una línea de tendencia, estimar parámetros y usarla para interpolar dentro del rango medido.",
+              "example_tasks": [
+                "Dibuja a mano una recta de tendencia para datos casi alineados y estima su pendiente con dos puntos representativos.",
+                "Usa la recta para estimar el valor de la variable dependiente en un x intermedio (interpolación) e indica la incertidumbre cualitativa.",
+                "Explica por qué extrapolar fuera del rango medido puede fallar y da un ejemplo donde el modelo lineal no aplique."
+              ]
+            },
+            {
+              "key": "validacion_del_modelo",
+              "name": "Validación del modelo (residuos simples)",
+              "short_description": "Evaluar si un modelo describe bien los datos observando diferencias entre valores medidos y predichos.",
+              "example_tasks": [
+                "Calcula la diferencia (medido − predicho) para 5 puntos y describe si los errores parecen aleatorios o muestran patrón.",
+                "Si tus datos forman una curva pero ajustaste una recta, explica qué evidencia indica que el modelo lineal no es adecuado.",
+                "Propón una mejora al experimento para reducir error y lograr un ajuste más consistente (más puntos, mejor instrumento, control de variable)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "introduccion_al_movimiento",
+      "name": "Introducción al movimiento",
+      "short_description": "Describe y analiza el movimiento de los objetos mediante conceptos de posición, desplazamiento, rapidez, velocidad y aceleración en situaciones cotidianas.",
+      "sub_topics": [
+        {
+          "key": "posicion_desplazamiento_y_trayectoria",
+          "name": "Posición, desplazamiento y trayectoria",
+          "short_description": "Distingue entre posición inicial y final, desplazamiento vectorial y trayectoria recorrida.",
+          "sub_topics": [
+            {
+              "key": "sistema_de_referencia",
+              "name": "Sistema de referencia",
+              "short_description": "Elegir un origen y ejes adecuados para describir el movimiento.",
+              "example_tasks": [
+                "Define un sistema de referencia para describir el movimiento de un autobús en una avenida y explica tu elección.",
+                "Cambia el origen del sistema de referencia en un mismo movimiento y describe qué magnitudes cambian y cuáles no.",
+                "Describe el movimiento de una persona en un parque usando dos sistemas de referencia distintos."
+              ]
+            },
+            {
+              "key": "desplazamiento_vs_distancia",
+              "name": "Diferencia entre desplazamiento y distancia",
+              "short_description": "Reconocer que el desplazamiento depende solo de posiciones inicial y final.",
+              "example_tasks": [
+                "Un estudiante camina 3 m al este y 3 m al oeste: calcula distancia recorrida y desplazamiento.",
+                "Dibuja dos trayectorias distintas con el mismo desplazamiento final y compara las distancias.",
+                "Explica por qué el desplazamiento puede ser cero aunque haya movimiento."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "rapidez_y_velocidad",
+          "name": "Rapidez y velocidad",
+          "short_description": "Analiza el cambio de posición en el tiempo usando rapidez y velocidad promedio.",
+          "sub_topics": [
+            {
+              "key": "rapidez_promedio",
+              "name": "Rapidez promedio",
+              "short_description": "Relacionar distancia total y tiempo total.",
+              "example_tasks": [
+                "Calcula la rapidez promedio de un ciclista que recorre 12 km en 40 minutos.",
+                "Compara la rapidez promedio de dos trayectos con diferentes paradas intermedias.",
+                "Explica por qué la rapidez promedio no describe cambios instantáneos en el movimiento."
+              ]
+            },
+            {
+              "key": "velocidad_promedio_vectorial",
+              "name": "Velocidad promedio como vector",
+              "short_description": "Incluir dirección y sentido en la descripción del movimiento.",
+              "example_tasks": [
+                "Determina la velocidad promedio de un corredor que termina en el mismo punto donde inició.",
+                "Representa gráficamente el vector velocidad promedio en un desplazamiento rectilíneo.",
+                "Compara rapidez promedio y velocidad promedio en un recorrido circular."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "aceleracion_basica",
+          "name": "Aceleración básica",
+          "short_description": "Comprende la aceleración como cambio de velocidad en el tiempo.",
+          "sub_topics": [
+            {
+              "key": "cambio_de_velocidad",
+              "name": "Cambio de velocidad",
+              "short_description": "Identificar aceleración en aumentos, disminuciones o cambios de dirección.",
+              "example_tasks": [
+                "Explica si un automóvil que gira a velocidad constante está acelerando y por qué.",
+                "Calcula la aceleración promedio de un objeto que pasa de 2 m/s a 6 m/s en 4 s.",
+                "Da un ejemplo cotidiano donde haya aceleración sin aumento de rapidez."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fuerzas_interacciones_y_equilibrio",
+      "name": "Fuerzas, interacciones y equilibrio",
+      "short_description": "Analiza las fuerzas que actúan sobre los objetos y sus efectos en el movimiento y el equilibrio.",
+      "sub_topics": [
+        {
+          "key": "concepto_de_fuerza",
+          "name": "Concepto de fuerza",
+          "short_description": "Comprender la fuerza como interacción capaz de cambiar el movimiento o deformar un cuerpo.",
+          "sub_topics": [
+            {
+              "key": "tipos_de_fuerzas",
+              "name": "Tipos de fuerzas",
+              "short_description": "Identificar fuerzas de contacto y a distancia.",
+              "example_tasks": [
+                "Clasifica las fuerzas presentes cuando empujas una mesa sobre el piso.",
+                "Da ejemplos cotidianos de fuerzas de contacto y de fuerzas a distancia.",
+                "Explica por qué la gravedad actúa aunque no haya contacto."
+              ]
+            },
+            {
+              "key": "representacion_vectorial",
+              "name": "Representación vectorial de fuerzas",
+              "short_description": "Representar fuerzas con flechas indicando magnitud, dirección y sentido.",
+              "example_tasks": [
+                "Dibuja el diagrama de fuerzas de un libro en reposo sobre una mesa.",
+                "Representa dos fuerzas opuestas de distinta magnitud y explica el resultado.",
+                "Explica cómo cambia el vector fuerza si se duplica su magnitud."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "equilibrio_y_resultante",
+          "name": "Equilibrio y fuerza resultante",
+          "short_description": "Relacionar la fuerza neta con el estado de movimiento.",
+          "sub_topics": [
+            {
+              "key": "fuerza_neta_cero",
+              "name": "Fuerza neta igual a cero",
+              "short_description": "Reconocer condiciones de equilibrio traslacional.",
+              "example_tasks": [
+                "Explica por qué un objeto en reposo sobre una mesa tiene fuerza neta cero.",
+                "Analiza un juego de 'tira y afloja' donde no hay movimiento.",
+                "Determina si hay equilibrio cuando dos fuerzas iguales actúan en sentidos opuestos."
+              ]
+            },
+            {
+              "key": "friccion_basica",
+              "name": "Fricción básica",
+              "short_description": "Identificar la fricción como fuerza que se opone al movimiento.",
+              "example_tasks": [
+                "Describe cómo cambia la fricción al mover un objeto sobre distintas superficies.",
+                "Explica por qué es más difícil empujar una caja pesada que una ligera.",
+                "Da dos ejemplos donde la fricción sea útil y uno donde sea perjudicial."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "energia_trabajo_y_potencia_basicos",
+      "name": "Energía, trabajo y potencia (nivel básico)",
+      "short_description": "Introduce el concepto de energía y su transformación, relacionándolo con el trabajo mecánico y la potencia en situaciones cotidianas.",
+      "sub_topics": [
+        {
+          "key": "concepto_de_energia",
+          "name": "Concepto de energía",
+          "short_description": "Reconocer la energía como la capacidad de producir cambios o realizar trabajo.",
+          "sub_topics": [
+            {
+              "key": "formas_de_energia",
+              "name": "Formas de energía",
+              "short_description": "Identificar energía cinética, potencial, térmica y eléctrica en ejemplos cercanos.",
+              "example_tasks": [
+                "Identifica las formas de energía presentes en un columpio en movimiento.",
+                "Da tres ejemplos cotidianos donde la energía cambie de una forma a otra.",
+                "Explica por qué una batería almacenada puede considerarse energía potencial."
+              ]
+            },
+            {
+              "key": "transformaciones_energeticas",
+              "name": "Transformaciones de energía",
+              "short_description": "Analizar cambios de energía sin perderla, solo transformándola.",
+              "example_tasks": [
+                "Describe la transformación de energía en una licuadora desde que se conecta hasta que gira.",
+                "Explica qué ocurre con la energía cuando un objeto se detiene por fricción.",
+                "Relaciona la caída de una pelota con cambios entre energía potencial y cinética."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "trabajo_mecanico",
+          "name": "Trabajo mecánico",
+          "short_description": "Relacionar fuerza y desplazamiento para definir el trabajo.",
+          "sub_topics": [
+            {
+              "key": "definicion_de_trabajo",
+              "name": "Definición de trabajo",
+              "short_description": "Comprender cuándo una fuerza realiza trabajo y cuándo no.",
+              "example_tasks": [
+                "Explica si se realiza trabajo al empujar una pared que no se mueve.",
+                "Calcula el trabajo realizado al empujar una caja con una fuerza constante en línea recta.",
+                "Da un ejemplo donde hay fuerza pero no trabajo mecánico."
+              ]
+            },
+            {
+              "key": "trabajo_y_direccion",
+              "name": "Trabajo y dirección de la fuerza",
+              "short_description": "Reconocer la importancia del ángulo entre fuerza y desplazamiento.",
+              "example_tasks": [
+                "Explica por qué levantar una mochila realiza trabajo pero sostenerla en reposo no.",
+                "Compara el trabajo al jalar un trineo con cuerda horizontal y con cuerda inclinada.",
+                "Describe una situación donde el trabajo sea negativo."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "potencia",
+          "name": "Potencia",
+          "short_description": "Relacionar trabajo y tiempo para comparar rapidez de realización de tareas.",
+          "sub_topics": [
+            {
+              "key": "potencia_media",
+              "name": "Potencia media",
+              "short_description": "Calcular potencia como razón entre trabajo y tiempo.",
+              "example_tasks": [
+                "Calcula la potencia de una persona que sube escaleras realizando 600 J en 10 s.",
+                "Compara dos focos de distinta potencia y explica qué significa en consumo de energía.",
+                "Explica por qué dos personas pueden realizar el mismo trabajo con potencias diferentes."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "calor_temperatura_y_cambios_de_estado_intro",
+      "name": "Calor, temperatura y cambios de estado (introducción)",
+      "short_description": "Diferencia calor y temperatura, analiza la transferencia térmica y describe cambios de estado en la materia.",
+      "sub_topics": [
+        {
+          "key": "temperatura_y_calor",
+          "name": "Temperatura y calor",
+          "short_description": "Distinguir temperatura como medida térmica y calor como energía en tránsito.",
+          "sub_topics": [
+            {
+              "key": "medicion_de_temperatura",
+              "name": "Medición de la temperatura",
+              "short_description": "Usar termómetros y escalas comunes.",
+              "example_tasks": [
+                "Mide la temperatura del agua antes y después de calentarla y registra los datos.",
+                "Explica la diferencia entre grados Celsius y Kelvin en situaciones cotidianas.",
+                "Da un ejemplo donde dos objetos tengan la misma temperatura pero distinta cantidad de calor."
+              ]
+            },
+            {
+              "key": "calor_como_transferencia",
+              "name": "Calor como transferencia de energía",
+              "short_description": "Reconocer que el calor fluye de mayor a menor temperatura.",
+              "example_tasks": [
+                "Describe qué ocurre cuando una cuchara metálica se deja en una taza de café caliente.",
+                "Explica por qué no se dice que un objeto 'tiene calor' sino que intercambia calor.",
+                "Da un ejemplo doméstico donde se observe transferencia de calor."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "mecanismos_de_transferencia",
+          "name": "Mecanismos de transferencia de calor",
+          "short_description": "Identificar conducción, convección y radiación.",
+          "sub_topics": [
+            {
+              "key": "conduccion_conveccion_radiacion",
+              "name": "Conducción, convección y radiación",
+              "short_description": "Comparar los tres mecanismos térmicos.",
+              "example_tasks": [
+                "Clasifica ejemplos cotidianos según el mecanismo de transferencia de calor.",
+                "Explica por qué el mango de una sartén se calienta más lento que la base.",
+                "Describe cómo se transfiere el calor del Sol a la Tierra."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "cambios_de_estado",
+          "name": "Cambios de estado",
+          "short_description": "Describir fusión, solidificación, evaporación y condensación.",
+          "sub_topics": [
+            {
+              "key": "procesos_de_cambio",
+              "name": "Procesos de cambio de estado",
+              "short_description": "Reconocer que durante el cambio de estado la temperatura permanece constante.",
+              "example_tasks": [
+                "Describe qué ocurre con la temperatura del hielo mientras se derrite.",
+                "Explica por qué el sudor ayuda a enfriar el cuerpo.",
+                "Relaciona la condensación con la formación de gotas en un vaso frío."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ondas_sonido_y_luz_intro",
+      "name": "Ondas, sonido y luz (introducción)",
+      "short_description": "Introduce la idea de onda y sus propiedades básicas, aplicándolas al sonido y a la luz en fenómenos observables del entorno.",
+      "sub_topics": [
+        {
+          "key": "concepto_general_de_onda",
+          "name": "Concepto general de onda",
+          "short_description": "Comprender la onda como una perturbación que se propaga transportando energía sin trasladar materia.",
+          "sub_topics": [
+            {
+              "key": "partes_y_parametros_de_una_onda",
+              "name": "Partes y parámetros de una onda",
+              "short_description": "Identificar cresta, valle, amplitud, longitud de onda y periodo.",
+              "example_tasks": [
+                "Dibuja una onda y señala cresta, valle, amplitud y longitud de onda.",
+                "Explica cómo cambia la energía transportada si aumenta la amplitud de una onda.",
+                "Relaciona el periodo con la frecuencia en un ejemplo cotidiano."
+              ]
+            },
+            {
+              "key": "tipos_de_ondas",
+              "name": "Tipos de ondas",
+              "short_description": "Diferenciar ondas mecánicas y electromagnéticas.",
+              "example_tasks": [
+                "Clasifica ejemplos cotidianos (olas del mar, sonido, luz) como ondas mecánicas o electromagnéticas.",
+                "Explica por qué el sonido no se propaga en el vacío pero la luz sí.",
+                "Da un ejemplo de onda transversal y uno de onda longitudinal."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "sonido_basico",
+          "name": "Sonido",
+          "short_description": "Analizar el sonido como una onda mecánica longitudinal.",
+          "sub_topics": [
+            {
+              "key": "propiedades_del_sonido",
+              "name": "Propiedades del sonido",
+              "short_description": "Relacionar frecuencia, amplitud y forma de onda con tono, intensidad y timbre.",
+              "example_tasks": [
+                "Explica por qué un silbato suena más agudo que un tambor.",
+                "Relaciona la intensidad del sonido con la amplitud de la onda.",
+                "Da un ejemplo donde el timbre permita distinguir dos instrumentos."
+              ]
+            },
+            {
+              "key": "propagacion_del_sonido",
+              "name": "Propagación del sonido",
+              "short_description": "Reconocer la necesidad de un medio material para la propagación del sonido.",
+              "example_tasks": [
+                "Explica por qué se escucha mejor el sonido bajo el agua que en el aire en ciertas condiciones.",
+                "Describe cómo influye la temperatura del aire en la propagación del sonido.",
+                "Da un ejemplo donde el sonido se atenúe por el medio."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "luz_basica",
+          "name": "Luz",
+          "short_description": "Introducir la luz como onda electromagnética.",
+          "sub_topics": [
+            {
+              "key": "reflexion_y_refraccion_intro",
+              "name": "Reflexión y refracción (introducción)",
+              "short_description": "Reconocer cambios en la trayectoria de la luz al interactuar con superficies y medios.",
+              "example_tasks": [
+                "Explica por qué te ves reflejado en un espejo plano.",
+                "Describe qué ocurre cuando un lápiz se introduce en un vaso con agua.",
+                "Da un ejemplo cotidiano donde observes refracción de la luz."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "electricidad_basica_y_seguridad",
+      "name": "Electricidad básica y seguridad",
+      "short_description": "Introduce conceptos elementales de electricidad y circuitos, enfatizando el uso seguro de la energía eléctrica.",
+      "sub_topics": [
+        {
+          "key": "carga_y_corriente",
+          "name": "Carga eléctrica y corriente",
+          "short_description": "Reconocer la carga eléctrica y la corriente como movimiento de cargas.",
+          "sub_topics": [
+            {
+              "key": "cargas_positivas_y_negativas",
+              "name": "Cargas positivas y negativas",
+              "short_description": "Distinguir tipos de carga y su interacción.",
+              "example_tasks": [
+                "Explica qué ocurre al frotar un globo con el cabello.",
+                "Describe un ejemplo donde se observe atracción eléctrica.",
+                "Relaciona la electricidad estática con la carga eléctrica."
+              ]
+            },
+            {
+              "key": "corriente_electrica",
+              "name": "Corriente eléctrica",
+              "short_description": "Comprender la corriente como flujo de carga en un circuito.",
+              "example_tasks": [
+                "Explica por qué una pila puede hacer encender un foco.",
+                "Describe el recorrido de la corriente en un circuito simple.",
+                "Da un ejemplo doméstico donde circule corriente eléctrica."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "circuitos_simples",
+          "name": "Circuitos eléctricos simples",
+          "short_description": "Identificar componentes básicos de un circuito.",
+          "sub_topics": [
+            {
+              "key": "componentes_del_circuito",
+              "name": "Componentes del circuito",
+              "short_description": "Reconocer pila, conductor, interruptor y receptor.",
+              "example_tasks": [
+                "Dibuja un circuito simple que encienda un foco con una pila.",
+                "Identifica los componentes de un circuito en un diagrama dado.",
+                "Explica qué sucede si se abre el interruptor."
+              ]
+            },
+            {
+              "key": "seguridad_electrica",
+              "name": "Seguridad eléctrica",
+              "short_description": "Aplicar normas básicas de seguridad al usar electricidad.",
+              "example_tasks": [
+                "Enumera tres reglas básicas de seguridad eléctrica en casa.",
+                "Explica por qué no se deben manipular aparatos eléctricos con las manos mojadas.",
+                "Describe qué hacer ante un corto circuito doméstico."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "key": "practica_experimental_y_seguridad_en_laboratorio",
+      "name": "Práctica experimental y seguridad en el laboratorio",
+      "short_description": "Fortalece el trabajo experimental en Física mediante el diseño de prácticas, el análisis de datos y la aplicación estricta de normas de seguridad.",
+      "sub_topics": [
+        {
+          "key": "diseno_experimental_avanzado",
+          "name": "Diseño experimental",
+          "short_description": "Planificar experimentos controlando variables y asegurando reproducibilidad.",
+          "sub_topics": [
+            {
+              "key": "control_y_repetibilidad",
+              "name": "Control de variables y repetibilidad",
+              "short_description": "Garantizar resultados confiables mediante control y repetición.",
+              "example_tasks": [
+                "Diseña un experimento para medir la aceleración de la gravedad usando un péndulo, indicando variables controladas.",
+                "Explica por qué repetir mediciones mejora la confiabilidad de los resultados.",
+                "Identifica una posible fuente de error sistemático en el experimento del péndulo y cómo corregirla."
+              ]
+            },
+            {
+              "key": "registro_y_trazabilidad",
+              "name": "Registro y trazabilidad de datos",
+              "short_description": "Mantener registros completos que permitan reproducir el experimento.",
+              "example_tasks": [
+                "Elabora una bitácora de laboratorio para una práctica de movimiento rectilíneo.",
+                "Explica qué información mínima debe contener un registro experimental.",
+                "Analiza un registro incompleto e indica qué datos faltan para repetir la práctica."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "seguridad_y_etica",
+          "name": "Seguridad y ética experimental",
+          "short_description": "Aplicar normas de seguridad y principios éticos en el trabajo científico.",
+          "sub_topics": [
+            {
+              "key": "riesgos_en_laboratorio",
+              "name": "Identificación de riesgos",
+              "short_description": "Reconocer riesgos eléctricos, mecánicos y térmicos.",
+              "example_tasks": [
+                "Identifica riesgos potenciales en un experimento con resistencias eléctricas.",
+                "Propón medidas preventivas para evitar quemaduras en prácticas térmicas.",
+                "Clasifica riesgos en bajo, medio o alto justificando tu decisión."
+              ]
+            },
+            {
+              "key": "etica_cientifica",
+              "name": "Ética científica",
+              "short_description": "Valorar la honestidad y responsabilidad en la investigación.",
+              "example_tasks": [
+                "Explica por qué no se deben modificar datos experimentales para que coincidan con la teoría.",
+                "Describe una situación escolar donde se aplique la ética científica.",
+                "Reflexiona sobre el impacto social de resultados científicos mal interpretados."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "movimiento_ondulatorio_y_parametros_de_onda",
+      "name": "Movimiento ondulatorio y parámetros de onda",
+      "short_description": "Analiza el movimiento ondulatorio mediante modelos matemáticos y experimentales.",
+      "sub_topics": [
+        {
+          "key": "caracteristicas_de_las_ondas",
+          "name": "Características de las ondas",
+          "short_description": "Describir parámetros fundamentales del movimiento ondulatorio.",
+          "sub_topics": [
+            {
+              "key": "frecuencia_periodo_y_longitud",
+              "name": "Frecuencia, periodo y longitud de onda",
+              "short_description": "Relacionar los parámetros temporales y espaciales de una onda.",
+              "example_tasks": [
+                "Calcula la longitud de onda de una señal sonora con frecuencia conocida.",
+                "Explica la relación entre frecuencia y periodo con un ejemplo numérico.",
+                "Analiza cómo cambia la longitud de onda al variar la velocidad de propagación."
+              ]
+            },
+            {
+              "key": "velocidad_de_propagacion",
+              "name": "Velocidad de propagación",
+              "short_description": "Relacionar velocidad de onda con frecuencia y longitud de onda.",
+              "example_tasks": [
+                "Usa v = λ·f para calcular la velocidad de una onda en una cuerda.",
+                "Compara la velocidad del sonido en aire y en agua con base en datos.",
+                "Explica por qué la velocidad de la onda depende del medio."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fenomenos_ondulatorios",
+          "name": "Fenómenos ondulatorios",
+          "short_description": "Analizar reflexión, interferencia y difracción.",
+          "sub_topics": [
+            {
+              "key": "interferencia_y_superposicion",
+              "name": "Interferencia y superposición",
+              "short_description": "Aplicar el principio de superposición para explicar patrones.",
+              "example_tasks": [
+                "Explica la interferencia constructiva y destructiva con diagramas.",
+                "Describe un experimento simple para observar interferencia de ondas.",
+                "Relaciona la superposición con el fenómeno de batidos."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "practica_experimental_y_seguridad_en_laboratorio",
+      "name": "Práctica experimental y seguridad en el laboratorio",
+      "short_description": "Fortalece el trabajo experimental en Física mediante el diseño de prácticas, el análisis de datos y la aplicación estricta de normas de seguridad.",
+      "sub_topics": [
+        {
+          "key": "diseno_experimental_avanzado",
+          "name": "Diseño experimental",
+          "short_description": "Planificar experimentos controlando variables y asegurando reproducibilidad.",
+          "sub_topics": [
+            {
+              "key": "control_y_repetibilidad",
+              "name": "Control de variables y repetibilidad",
+              "short_description": "Garantizar resultados confiables mediante control y repetición.",
+              "example_tasks": [
+                "Diseña un experimento para medir la aceleración de la gravedad usando un péndulo, indicando variables controladas.",
+                "Explica por qué repetir mediciones mejora la confiabilidad de los resultados.",
+                "Identifica una posible fuente de error sistemático en el experimento del péndulo y cómo corregirla."
+              ]
+            },
+            {
+              "key": "registro_y_trazabilidad",
+              "name": "Registro y trazabilidad de datos",
+              "short_description": "Mantener registros completos que permitan reproducir el experimento.",
+              "example_tasks": [
+                "Elabora una bitácora de laboratorio para una práctica de movimiento rectilíneo.",
+                "Explica qué información mínima debe contener un registro experimental.",
+                "Analiza un registro incompleto e indica qué datos faltan para repetir la práctica."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "seguridad_y_etica",
+          "name": "Seguridad y ética experimental",
+          "short_description": "Aplicar normas de seguridad y principios éticos en el trabajo científico.",
+          "sub_topics": [
+            {
+              "key": "riesgos_en_laboratorio",
+              "name": "Identificación de riesgos",
+              "short_description": "Reconocer riesgos eléctricos, mecánicos y térmicos.",
+              "example_tasks": [
+                "Identifica riesgos potenciales en un experimento con resistencias eléctricas.",
+                "Propón medidas preventivas para evitar quemaduras en prácticas térmicas.",
+                "Clasifica riesgos en bajo, medio o alto justificando tu decisión."
+              ]
+            },
+            {
+              "key": "etica_cientifica",
+              "name": "Ética científica",
+              "short_description": "Valorar la honestidad y responsabilidad en la investigación.",
+              "example_tasks": [
+                "Explica por qué no se deben modificar datos experimentales para que coincidan con la teoría.",
+                "Describe una situación escolar donde se aplique la ética científica.",
+                "Reflexiona sobre el impacto social de resultados científicos mal interpretados."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "movimiento_ondulatorio_y_parametros_de_onda",
+      "name": "Movimiento ondulatorio y parámetros de onda",
+      "short_description": "Analiza el movimiento ondulatorio mediante modelos matemáticos y experimentales.",
+      "sub_topics": [
+        {
+          "key": "caracteristicas_de_las_ondas",
+          "name": "Características de las ondas",
+          "short_description": "Describir parámetros fundamentales del movimiento ondulatorio.",
+          "sub_topics": [
+            {
+              "key": "frecuencia_periodo_y_longitud",
+              "name": "Frecuencia, periodo y longitud de onda",
+              "short_description": "Relacionar los parámetros temporales y espaciales de una onda.",
+              "example_tasks": [
+                "Calcula la longitud de onda de una señal sonora con frecuencia conocida.",
+                "Explica la relación entre frecuencia y periodo con un ejemplo numérico.",
+                "Analiza cómo cambia la longitud de onda al variar la velocidad de propagación."
+              ]
+            },
+            {
+              "key": "velocidad_de_propagacion",
+              "name": "Velocidad de propagación",
+              "short_description": "Relacionar velocidad de onda con frecuencia y longitud de onda.",
+              "example_tasks": [
+                "Usa v = λ·f para calcular la velocidad de una onda en una cuerda.",
+                "Compara la velocidad del sonido en aire y en agua con base en datos.",
+                "Explica por qué la velocidad de la onda depende del medio."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fenomenos_ondulatorios",
+          "name": "Fenómenos ondulatorios",
+          "short_description": "Analizar reflexión, interferencia y difracción.",
+          "sub_topics": [
+            {
+              "key": "interferencia_y_superposicion",
+              "name": "Interferencia y superposición",
+              "short_description": "Aplicar el principio de superposición para explicar patrones.",
+              "example_tasks": [
+                "Explica la interferencia constructiva y destructiva con diagramas.",
+                "Describe un experimento simple para observar interferencia de ondas.",
+                "Relaciona la superposición con el fenómeno de batidos."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sonido_y_acustica",
+      "name": "Sonido y acústica",
+      "short_description": "Profundiza en el estudio del sonido como onda mecánica, sus propiedades físicas y aplicaciones tecnológicas y sociales.",
+      "sub_topics": [
+        {
+          "key": "propiedades_fisicas_del_sonido",
+          "name": "Propiedades físicas del sonido",
+          "short_description": "Relacionar parámetros ondulatorios con la percepción auditiva.",
+          "sub_topics": [
+            {
+              "key": "tono_intensidad_y_timbre",
+              "name": "Tono, intensidad y timbre",
+              "short_description": "Vincular frecuencia, amplitud y forma de onda con sensaciones auditivas.",
+              "example_tasks": [
+                "Explica por qué un sonido grave tiene menor frecuencia que uno agudo.",
+                "Relaciona la intensidad del sonido con la amplitud de la onda y el nivel en decibeles.",
+                "Compara el timbre de una guitarra y un piano tocando la misma nota."
+              ]
+            },
+            {
+              "key": "escala_de_decibeles",
+              "name": "Escala de decibeles",
+              "short_description": "Interpretar la escala logarítmica de intensidad sonora.",
+              "example_tasks": [
+                "Ubica sonidos cotidianos (susurro, tráfico, concierto) en la escala de decibeles.",
+                "Explica por qué un aumento de 10 dB no implica el doble de intensidad percibida.",
+                "Analiza riesgos para la salud auditiva a distintos niveles de decibeles."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "acustica_y_aplicaciones",
+          "name": "Acústica y aplicaciones",
+          "short_description": "Aplicar principios del sonido en contextos reales.",
+          "sub_topics": [
+            {
+              "key": "eco_y_reverberacion",
+              "name": "Eco y reverberación",
+              "short_description": "Explicar reflexión múltiple del sonido en espacios cerrados y abiertos.",
+              "example_tasks": [
+                "Describe por qué se produce eco en un cañón o túnel.",
+                "Explica cómo la reverberación afecta la calidad del sonido en un auditorio.",
+                "Propón materiales para mejorar la acústica de un salón escolar."
+              ]
+            },
+            {
+              "key": "aplicaciones_tecnologicas_del_sonido",
+              "name": "Aplicaciones tecnológicas del sonido",
+              "short_description": "Reconocer usos del sonido en medicina, industria y comunicación.",
+              "example_tasks": [
+                "Explica el funcionamiento básico del ultrasonido médico.",
+                "Describe cómo se usa el sonido para detectar fallas en materiales.",
+                "Investiga una aplicación del sonido en telecomunicaciones y preséntala."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "optica_y_espectro_electromagnetico",
+      "name": "Óptica y espectro electromagnético",
+      "short_description": "Analiza el comportamiento de la luz y su relación con el espectro electromagnético.",
+      "sub_topics": [
+        {
+          "key": "optica_geometrica",
+          "name": "Óptica geométrica",
+          "short_description": "Estudiar la trayectoria de la luz mediante rayos.",
+          "sub_topics": [
+            {
+              "key": "leyes_de_la_reflexion",
+              "name": "Leyes de la reflexión",
+              "short_description": "Aplicar las leyes de la reflexión en espejos.",
+              "example_tasks": [
+                "Traza rayos para explicar la imagen formada en un espejo plano.",
+                "Explica por qué el ángulo de incidencia es igual al de reflexión.",
+                "Relaciona la reflexión con el funcionamiento de periscopios."
+              ]
+            },
+            {
+              "key": "refraccion_y_ley_de_snell",
+              "name": "Refracción y ley de Snell",
+              "short_description": "Analizar el cambio de dirección de la luz al pasar entre medios.",
+              "example_tasks": [
+                "Explica por qué un objeto se ve desplazado dentro del agua.",
+                "Usa la ley de Snell de forma cualitativa para comparar aire y vidrio.",
+                "Relaciona la refracción con el funcionamiento de lentes."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "espectro_electromagnetico",
+          "name": "Espectro electromagnético",
+          "short_description": "Reconocer las distintas regiones del espectro y sus usos.",
+          "sub_topics": [
+            {
+              "key": "regiones_del_espectro",
+              "name": "Regiones del espectro electromagnético",
+              "short_description": "Identificar radio, microondas, infrarrojo, visible, ultravioleta, rayos X y gamma.",
+              "example_tasks": [
+                "Ordena las regiones del espectro según su frecuencia.",
+                "Relaciona cada región con una aplicación tecnológica.",
+                "Explica por qué algunas radiaciones son más peligrosas que otras."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "carga_corriente_circuitos_y_energia_electrica",
+      "name": "Carga, corriente, circuitos y energía eléctrica",
+      "short_description": "Analiza cuantitativamente la electricidad mediante el estudio de la carga, la corriente, los circuitos eléctricos y el consumo de energía.",
+      "sub_topics": [
+        {
+          "key": "ley_de_ohm_y_resistencia",
+          "name": "Ley de Ohm y resistencia",
+          "short_description": "Relacionar voltaje, corriente y resistencia en circuitos simples.",
+          "sub_topics": [
+            {
+              "key": "relacion_v_i_r",
+              "name": "Relación voltaje–corriente–resistencia",
+              "short_description": "Aplicar V = I·R en situaciones experimentales y cotidianas.",
+              "example_tasks": [
+                "Calcula la corriente que circula por una resistencia de 10 Ω conectada a 9 V.",
+                "Explica qué ocurre con la corriente si se duplica la resistencia manteniendo el voltaje.",
+                "Mide voltaje y corriente en un circuito real y verifica la ley de Ohm."
+              ]
+            },
+            {
+              "key": "resistencias_en_serie_y_paralelo",
+              "name": "Resistencias en serie y en paralelo",
+              "short_description": "Analizar cómo cambia la resistencia equivalente según la conexión.",
+              "example_tasks": [
+                "Calcula la resistencia equivalente de dos resistencias en serie.",
+                "Compara la corriente total en un circuito con resistencias en paralelo.",
+                "Explica por qué en las casas se usan conexiones en paralelo."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "potencia_y_consumo_electrico",
+          "name": "Potencia y consumo eléctrico",
+          "short_description": "Relacionar potencia, energía eléctrica y costo del consumo.",
+          "sub_topics": [
+            {
+              "key": "potencia_electrica",
+              "name": "Potencia eléctrica",
+              "short_description": "Calcular potencia como P = V·I y su significado práctico.",
+              "example_tasks": [
+                "Calcula la potencia de un aparato que funciona con 120 V y 2 A.",
+                "Compara el consumo energético de un foco incandescente y uno LED.",
+                "Explica por qué los aparatos de mayor potencia consumen más energía."
+              ]
+            },
+            {
+              "key": "energia_y_facturacion",
+              "name": "Energía eléctrica y facturación",
+              "short_description": "Interpretar el recibo de electricidad y el consumo en kWh.",
+              "example_tasks": [
+                "Calcula el consumo mensual de un refrigerador usando su potencia y tiempo de uso.",
+                "Relaciona kWh con joules y explica la diferencia.",
+                "Analiza un recibo doméstico e identifica los conceptos principales."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "campos_y_flujos_de_carga",
+      "name": "Campos eléctricos y flujo de carga",
+      "short_description": "Introduce el concepto de campo eléctrico como modelo para explicar interacciones eléctricas.",
+      "sub_topics": [
+        {
+          "key": "campo_electrico",
+          "name": "Campo eléctrico",
+          "short_description": "Describir el campo eléctrico generado por cargas.",
+          "sub_topics": [
+            {
+              "key": "lineas_de_campo",
+              "name": "Líneas de campo eléctrico",
+              "short_description": "Interpretar líneas de campo como representación del campo eléctrico.",
+              "example_tasks": [
+                "Dibuja las líneas de campo alrededor de una carga positiva y una negativa.",
+                "Explica qué indica la densidad de líneas de campo.",
+                "Relaciona líneas de campo con la fuerza eléctrica."
+              ]
+            },
+            {
+              "key": "fuerza_electrica_cualitativa",
+              "name": "Fuerza eléctrica (enfoque cualitativo)",
+              "short_description": "Analizar la interacción entre cargas mediante el campo.",
+              "example_tasks": [
+                "Explica por qué dos cargas iguales se repelen.",
+                "Describe cómo cambia la fuerza eléctrica al aumentar la distancia entre cargas.",
+                "Relaciona el campo eléctrico con el movimiento de cargas libres."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "potencial_electrico",
+          "name": "Potencial eléctrico",
+          "short_description": "Introducir el potencial eléctrico como energía por unidad de carga.",
+          "sub_topics": [
+            {
+              "key": "diferencia_de_potencial",
+              "name": "Diferencia de potencial",
+              "short_description": "Relacionar voltaje con trabajo eléctrico.",
+              "example_tasks": [
+                "Explica qué significa que una pila tenga 9 V.",
+                "Relaciona el voltaje con el movimiento de cargas en un circuito.",
+                "Da un ejemplo donde una diferencia de potencial realice trabajo."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "magnetismo_y_fuerzas_magneticas",
+      "name": "Magnetismo y fuerzas magnéticas",
+      "short_description": "Estudia los fenómenos magnéticos y su relación con cargas en movimiento y aplicaciones tecnológicas.",
+      "sub_topics": [
+        {
+          "key": "imanes_y_campo_magnetico",
+          "name": "Imanes y campo magnético",
+          "short_description": "Analizar el campo magnético generado por imanes y corrientes.",
+          "sub_topics": [
+            {
+              "key": "lineas_de_campo_magnetico",
+              "name": "Líneas de campo magnético",
+              "short_description": "Representar el campo magnético y su dirección.",
+              "example_tasks": [
+                "Dibuja las líneas de campo alrededor de un imán de barra.",
+                "Explica por qué las líneas de campo nunca se cruzan.",
+                "Relaciona la densidad de líneas con la intensidad del campo magnético."
+              ]
+            },
+            {
+              "key": "interaccion_entre_imanes",
+              "name": "Interacción entre imanes",
+              "short_description": "Describir atracción y repulsión entre polos magnéticos.",
+              "example_tasks": [
+                "Explica por qué polos iguales se repelen y polos opuestos se atraen.",
+                "Describe un experimento sencillo para identificar los polos de un imán.",
+                "Relaciona el magnetismo terrestre con el uso de la brújula."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fuerzas_sobre_cargas_en_movimiento",
+          "name": "Fuerzas sobre cargas en movimiento",
+          "short_description": "Analizar el efecto del campo magnético sobre cargas y corrientes.",
+          "sub_topics": [
+            {
+              "key": "fuerza_magnetica",
+              "name": "Fuerza magnética",
+              "short_description": "Reconocer la fuerza magnética como perpendicular al movimiento.",
+              "example_tasks": [
+                "Explica por qué una carga en reposo no experimenta fuerza magnética.",
+                "Describe qué ocurre con un conductor con corriente dentro de un campo magnético.",
+                "Relaciona la fuerza magnética con el funcionamiento de un motor eléctrico."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "induccion_electromagnetica_y_transformacion_de_energia",
+      "name": "Inducción electromagnética y transformación de energía",
+      "short_description": "Explica cómo la variación de campos magnéticos produce corriente eléctrica y permite transformar energía.",
+      "sub_topics": [
+        {
+          "key": "induccion_electromagnetica",
+          "name": "Inducción electromagnética",
+          "short_description": "Comprender la generación de corriente inducida.",
+          "sub_topics": [
+            {
+              "key": "corriente_inducida",
+              "name": "Corriente inducida",
+              "short_description": "Relacionar movimiento relativo y variación del flujo magnético.",
+              "example_tasks": [
+                "Explica por qué se induce corriente al mover un imán cerca de una bobina.",
+                "Describe un experimento escolar para observar inducción electromagnética.",
+                "Relaciona la rapidez del movimiento con la magnitud de la corriente inducida."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "aplicaciones_de_la_induccion",
+          "name": "Aplicaciones de la inducción",
+          "short_description": "Reconocer dispositivos basados en inducción electromagnética.",
+          "sub_topics": [
+            {
+              "key": "generadores_y_transformadores",
+              "name": "Generadores y transformadores",
+              "short_description": "Explicar su funcionamiento básico.",
+              "example_tasks": [
+                "Describe cómo un generador eléctrico transforma energía mecánica en eléctrica.",
+                "Explica la función de un transformador en el suministro eléctrico.",
+                "Relaciona la inducción electromagnética con la producción de energía eléctrica."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mecanica_energia_y_momento_en_contexto",
+      "name": "Mecánica: energía y cantidad de movimiento",
+      "short_description": "Integra conceptos de movimiento, energía y momento en situaciones físicas reales.",
+      "sub_topics": [
+        {
+          "key": "conservacion_de_la_energia",
+          "name": "Conservación de la energía",
+          "short_description": "Aplicar el principio de conservación de la energía mecánica.",
+          "sub_topics": [
+            {
+              "key": "energia_cinetica_y_potencial",
+              "name": "Energía cinética y potencial",
+              "short_description": "Relacionar altura y velocidad con energía mecánica.",
+              "example_tasks": [
+                "Calcula la velocidad de un objeto que cae desde cierta altura usando conservación de la energía.",
+                "Explica por qué la energía mecánica se conserva en ausencia de fricción.",
+                "Relaciona la montaña rusa con transformaciones de energía."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "cantidad_de_movimiento",
+          "name": "Cantidad de movimiento",
+          "short_description": "Introducir el concepto de momento lineal y su conservación.",
+          "sub_topics": [
+            {
+              "key": "choques_y_conservacion",
+              "name": "Choques y conservación del momento",
+              "short_description": "Analizar colisiones en una dimensión.",
+              "example_tasks": [
+                "Explica por qué los airbags reducen lesiones usando cantidad de movimiento.",
+                "Analiza un choque entre dos carritos sobre una pista.",
+                "Relaciona conservación del momento con el retroceso de un arma."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "introduccion_a_fisica_moderna_y_nuclear_panorama",
+      "name": "Introducción a la física moderna y nuclear",
+      "short_description": "Presenta una visión general de la física moderna y los fenómenos nucleares y sus aplicaciones.",
+      "sub_topics": [
+        {
+          "key": "estructura_atomica",
+          "name": "Estructura atómica",
+          "short_description": "Reconocer la composición básica del átomo.",
+          "sub_topics": [
+            {
+              "key": "particulas_subatomicas",
+              "name": "Partículas subatómicas",
+              "short_description": "Identificar protones, neutrones y electrones.",
+              "example_tasks": [
+                "Describe la estructura básica de un átomo.",
+                "Relaciona el número atómico con los protones.",
+                "Explica por qué los átomos son eléctricamente neutros."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "radioactividad_y_aplicaciones",
+          "name": "Radioactividad y aplicaciones",
+          "short_description": "Analizar la radioactividad natural y artificial y sus usos.",
+          "sub_topics": [
+            {
+              "key": "radiacion_y_uso_social",
+              "name": "Radiación y uso social",
+              "short_description": "Reconocer aplicaciones médicas e industriales de la radiación.",
+              "example_tasks": [
+                "Da ejemplos de aplicaciones médicas de la radiación.",
+                "Explica riesgos y beneficios del uso de energía nuclear.",
+                "Relaciona la radiación con métodos de diagnóstico y tratamiento."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -31,6 +31,7 @@ const subjectLabels: Record<Subject, string> = {
   'physics': 'Physics',
   'chemistry': 'Chemistry',
   'biology': 'Biology',
+  'information_technology': 'Informatics',
   'history': 'History',
   'geography': 'Geography',
   'literature': 'Literature',

@@ -1,0 +1,1338 @@
+{
+  "grade_9_10": [
+    {
+      "key": "biologia_como_ciencia_y_metodo",
+      "name": "Biología como ciencia y método",
+      "short_description": "Introduce la biología como ciencia natural, su objeto de estudio y el uso del método científico para explicar fenómenos de la vida mediante evidencias.",
+      "sub_topics": [
+        {
+          "key": "naturaleza_de_la_ciencia_biologica",
+          "name": "Naturaleza de la ciencia biológica",
+          "short_description": "Reconoce qué hace científica a la biología: preguntas investigables, evidencias, teorías y modelos.",
+          "sub_topics": [
+            {
+              "key": "preguntas_cientificas_y_variables",
+              "name": "Preguntas científicas, variables y control",
+              "short_description": "Formula preguntas investigables e identifica variables independientes, dependientes y de control.",
+              "example_tasks": [
+                "A partir del problema «¿la cantidad de luz afecta el crecimiento de una planta de frijol?», redacta una pregunta investigable y define variable independiente, dependiente y al menos dos variables de control.",
+                "Lee tres enunciados sobre un fenómeno (p. ej., moho en pan) y clasifícalos como pregunta científica, opinión o afirmación no verificable; justifica tu respuesta.",
+                "Diseña un cuadro de variables para un experimento escolar sobre germinación (frijol o lenteja) indicando cómo medirás cada variable y con qué instrumento."
+              ]
+            },
+            {
+              "key": "hipotesis_prediccion_y_demostracion",
+              "name": "Hipótesis, predicciones y evidencia",
+              "short_description": "Distingue hipótesis, predicción y evidencia; evalúa si los datos apoyan o no una hipótesis.",
+              "example_tasks": [
+                "Escribe una hipótesis y dos predicciones medibles sobre la descomposición de residuos orgánicos en dos condiciones (con y sin humedad).",
+                "Se te entrega una tabla de resultados de un experimento de levaduras con diferentes concentraciones de azúcar; indica si los datos apoyan la hipótesis dada y explica por qué.",
+                "Propón qué tipo de evidencia (observacional o experimental) sería más adecuada para estudiar la migración de una especie local; argumenta tu elección."
+              ]
+            },
+            {
+              "key": "teorias_modelos_y_limitaciones",
+              "name": "Teorías, modelos y sus limitaciones",
+              "short_description": "Explica la diferencia entre modelo, ley y teoría científica y reconoce sus alcances y límites.",
+              "example_tasks": [
+                "Explica con tus palabras la diferencia entre «modelo» y «teoría» usando un ejemplo biológico (p. ej., modelo de membrana o teoría celular).",
+                "Observa un esquema simplificado de una célula y señala dos aspectos que el modelo representa bien y dos que no muestra; justifica.",
+                "A partir de un caso de estudio (p. ej., cambios en una población de insectos), describe cómo un modelo podría predecir tendencias y qué datos necesitaría para mejorar."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "diseno_experimental_y_muestreo",
+          "name": "Diseño experimental y muestreo",
+          "short_description": "Planifica investigaciones sencillas: selección de muestras, réplicas, materiales y criterios de validez.",
+          "sub_topics": [
+            {
+              "key": "muestra_poblacion_y_replicas",
+              "name": "Población, muestra y réplicas",
+              "short_description": "Diferencia población y muestra; justifica tamaño muestral y necesidad de réplicas.",
+              "example_tasks": [
+                "Quieres estimar la altura promedio de plantas en el patio escolar: define población y propone un método de muestreo (aleatorio o sistemático) con al menos 20 mediciones.",
+                "Explica por qué es importante hacer réplicas en un experimento de crecimiento bacteriano simulado (o de germinación) y plantea cuántas réplicas usarías.",
+                "Se presentan dos diseños: uno con 1 planta por tratamiento y otro con 5; elige el más confiable y argumenta con base en variabilidad."
+              ]
+            },
+            {
+              "key": "sesgos_y_control_de_calidad",
+              "name": "Sesgos y control de calidad",
+              "short_description": "Identifica fuentes de sesgo y propone estrategias para reducir errores y aumentar confiabilidad.",
+              "example_tasks": [
+                "Detecta al menos tres posibles sesgos en un conteo de aves realizado solo a mediodía y propone cómo corregirlos (horarios, rutas, observadores).",
+                "En un experimento sobre temperatura y fermentación, señala dos errores de medición posibles y sugiere cómo estandarizar instrumentos y procedimientos.",
+                "Revisa un registro de datos con valores atípicos; decide cuáles repetirías, cuáles conservarías y qué criterios usarías."
+              ]
+            },
+            {
+              "key": "bioseguridad_y_etica_en_laboratorio",
+              "name": "Bioseguridad y ética en laboratorio",
+              "short_description": "Aplica normas básicas de seguridad e identifica consideraciones éticas en prácticas con seres vivos y muestras.",
+              "example_tasks": [
+                "Elabora una lista de 8 reglas de bioseguridad para una práctica con microscopio y muestras vegetales, indicando el propósito de cada regla.",
+                "Analiza un caso: un estudiante quiere capturar y mantener insectos para observarlos; plantea medidas de bienestar y criterios para liberación responsable.",
+                "Clasifica residuos de laboratorio (papel, vidrio, guantes, material biológico simulado) en contenedores adecuados y explica por qué."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "manejo_de_informacion_y_comunicacion",
+          "name": "Manejo de información y comunicación científica",
+          "short_description": "Busca, evalúa y comunica información científica con lenguaje claro, tablas, gráficas y referencias.",
+          "sub_topics": [
+            {
+              "key": "fuentes_confiables_y_citas",
+              "name": "Fuentes confiables y citación",
+              "short_description": "Evalúa calidad de fuentes (libros, artículos, sitios oficiales) y cita de forma básica.",
+              "example_tasks": [
+                "Compara dos fuentes sobre vacunas (un artículo académico y una publicación sin autor); identifica tres criterios de confiabilidad y decide cuál usarías.",
+                "Redacta un párrafo sobre fotosíntesis e incluye una referencia bibliográfica básica (autor/institución, año, título).",
+                "Dada una lista de 6 enlaces, selecciona los 3 más confiables y justifica tu decisión (institución, fecha, evidencia, revisión)."
+              ]
+            },
+            {
+              "key": "tablas_graficas_y_tendencias",
+              "name": "Tablas, gráficas e interpretación",
+              "short_description": "Organiza datos en tablas y gráficas e interpreta tendencias, variación y posibles relaciones.",
+              "example_tasks": [
+                "Convierte una tabla de temperatura vs. tasa de germinación en una gráfica; describe la tendencia y el rango con mayor germinación.",
+                "Interpreta una gráfica de barras sobre consumo de agua por actividad diaria y plantea dos conclusiones y una pregunta nueva.",
+                "Detecta si hay relación aparente entre dos variables en un diagrama de dispersión (p. ej., luz y altura) y explica si implica causalidad."
+              ]
+            },
+            {
+              "key": "estructura_de_un_reporte_cientifico",
+              "name": "Estructura de un reporte científico escolar",
+              "short_description": "Redacta reportes con introducción, método, resultados, discusión y conclusiones basadas en evidencia.",
+              "example_tasks": [
+                "Organiza en el orden correcto secciones de un reporte y escribe 2 oraciones para cada sección sobre un experimento de germinación.",
+                "A partir de resultados dados, redacta una discusión que incluya: interpretación, limitaciones y propuesta de mejora.",
+                "Evalúa un reporte breve y marca tres fortalezas y tres aspectos a corregir (claridad de variables, control, conclusiones)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "instrumentos_y_tecnicas_basicas",
+          "name": "Instrumentos y técnicas básicas",
+          "short_description": "Reconoce y utiliza instrumentos comunes (microscopio, balanza, probeta) y técnicas básicas de observación y medición.",
+          "sub_topics": [
+            {
+              "key": "uso_de_microscopio_y_preparaciones",
+              "name": "Uso del microscopio y preparaciones simples",
+              "short_description": "Maneja el microscopio óptico y prepara montajes temporales para observar células y tejidos.",
+              "example_tasks": [
+                "Identifica partes del microscopio en un diagrama y describe la función de ocular, objetivos, diafragma y tornillos de enfoque.",
+                "Realiza un montaje temporal de epidermis de cebolla (o muestra vegetal) y dibuja lo observado señalando núcleo y pared celular cuando sea visible.",
+                "Calcula el aumento total con diferentes combinaciones de ocular y objetivo y decide cuál usarías para observar detalles de una muestra."
+              ]
+            },
+            {
+              "key": "medicion_unidades_y_error",
+              "name": "Medición, unidades y error experimental",
+              "short_description": "Usa unidades del SI y estima error, precisión y exactitud en mediciones biológicas básicas.",
+              "example_tasks": [
+                "Mide el volumen de agua en una probeta a partir de tres lecturas y reporta el valor con una estimación de error (±).",
+                "Convierte medidas entre mm, cm y m en el contexto de tamaños celulares y de organismos pequeños; explica por qué conviene usar ciertas unidades.",
+                "Distingue precisión y exactitud con un ejemplo de masa medida en balanza; propone cómo mejorar cada una."
+              ]
+            },
+            {
+              "key": "observacion_registro_y_bitacora",
+              "name": "Observación, registro y bitácora",
+              "short_description": "Registra observaciones con dibujos, descripciones y criterios; usa bitácora para seguimiento temporal.",
+              "example_tasks": [
+                "Describe y dibuja durante 5 días el desarrollo de una semilla germinada; incluye fecha, condiciones y cambios observables.",
+                "A partir de dos descripciones de la misma muestra, identifica cuál es más objetiva y explica qué la hace científica.",
+                "Elabora una tabla de registro para un monitoreo de hormigas en el patio escolar incluyendo hora, clima, número y comportamiento observado."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "caracteristicas_de_los_seres_vivos_y_niveles_de_organizacion",
+      "name": "Características de los seres vivos y niveles de organización",
+      "short_description": "Analiza propiedades comunes de la vida y relaciona niveles de organización desde moléculas hasta biosfera, reconociendo la unidad y diversidad biológica.",
+      "sub_topics": [
+        {
+          "key": "propiedades_de_la_vida",
+          "name": "Propiedades de la vida",
+          "short_description": "Explica características como organización, metabolismo, homeostasis, crecimiento, reproducción, respuesta a estímulos y evolución.",
+          "sub_topics": [
+            {
+              "key": "homeostasis_y_equilibrio_interno",
+              "name": "Homeostasis y equilibrio interno",
+              "short_description": "Relaciona homeostasis con regulación de condiciones internas en células y organismos.",
+              "example_tasks": [
+                "Explica con un ejemplo cotidiano (p. ej., sudoración) cómo un organismo regula su temperatura y qué pasaría si fallara ese control.",
+                "Clasifica 8 situaciones (p. ej., apertura de estomas, aumento de respiración) como mecanismos de regulación interna o respuesta externa; justifica.",
+                "Diseña un diagrama de retroalimentación (entrada–sensor–control–respuesta) para el control de glucosa o temperatura."
+              ]
+            },
+            {
+              "key": "metabolismo_y_intercambio_de_materia",
+              "name": "Metabolismo e intercambio de materia",
+              "short_description": "Reconoce que los seres vivos transforman materia y energía para mantener funciones vitales.",
+              "example_tasks": [
+                "En una tabla, relaciona alimentos comunes de México (tortilla, frijol, aguacate) con biomoléculas predominantes y la función energética/estructural.",
+                "Explica por qué la respiración celular ocurre incluso en reposo y cómo se relaciona con la obtención de energía.",
+                "Interpreta un esquema de flujo de materia en un organismo (ingesta–digestión–absorción–excreción) y señala dónde se transforma la materia."
+              ]
+            },
+            {
+              "key": "reproduccion_y_continuidad",
+              "name": "Reproducción y continuidad de la vida",
+              "short_description": "Distingue reproducción sexual y asexual y su relación con continuidad y variabilidad.",
+              "example_tasks": [
+                "Compara reproducción sexual vs. asexual en dos columnas incluyendo: número de progenitores, variabilidad genética y ejemplos de organismos.",
+                "Analiza un caso: una población de bacterias expuesta a antibiótico; explica qué tipo de reproducción tiene y cómo puede surgir resistencia.",
+                "Elabora una explicación breve sobre por qué la reproducción sexual favorece diversidad y cómo eso puede ayudar ante cambios ambientales."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "niveles_de_organizacion_biologica",
+          "name": "Niveles de organización biológica",
+          "short_description": "Relaciona estructuras y funciones desde nivel molecular hasta ecosistemas, destacando propiedades emergentes.",
+          "sub_topics": [
+            {
+              "key": "de_moleculas_a_celulas",
+              "name": "De moléculas a células",
+              "short_description": "Explica cómo biomoléculas y organelos permiten funciones celulares.",
+              "example_tasks": [
+                "Asocia biomoléculas (proteínas, lípidos, carbohidratos, ADN) con una función celular concreta y un ejemplo.",
+                "Interpreta un esquema de membrana plasmática y explica cómo su estructura permite transporte selectivo.",
+                "Describe una propiedad emergente al pasar de moléculas a una célula (p. ej., metabolismo) con un ejemplo."
+              ]
+            },
+            {
+              "key": "de_tejidos_a_sistemas",
+              "name": "De tejidos a sistemas",
+              "short_description": "Reconoce organización en tejidos, órganos y sistemas y su coordinación.",
+              "example_tasks": [
+                "Clasifica 10 ejemplos (p. ej., epitelio, corazón, sistema respiratorio) en tejido, órgano o sistema; justifica cada uno.",
+                "Elabora un mapa conceptual que conecte células–tejidos–órganos–sistemas usando como ejemplo el sistema digestivo.",
+                "Explica cómo dos sistemas (respiratorio y circulatorio) cooperan para transportar oxígeno; incluye el nivel de organización involucrado."
+              ]
+            },
+            {
+              "key": "organismos_poblaciones_y_biosfera",
+              "name": "Organismos, poblaciones y biosfera",
+              "short_description": "Diferencia niveles ecológicos y reconoce interacciones y patrones a gran escala.",
+              "example_tasks": [
+                "Define organismo, población, comunidad, ecosistema y biosfera con un ejemplo local (p. ej., bosque de pino-encino, Xochimilco).",
+                "Construye una cadena trófica de un ecosistema mexicano (p. ej., selva, desierto) e identifica productores y consumidores.",
+                "Explica una propiedad emergente al pasar de organismo a población (p. ej., densidad) y cómo se mediría."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "diversidad_y_clasificacion",
+          "name": "Diversidad y clasificación",
+          "short_description": "Introduce criterios de clasificación biológica y la idea de parentesco evolutivo a nivel introductorio.",
+          "sub_topics": [
+            {
+              "key": "criterios_de_clasificacion",
+              "name": "Criterios de clasificación biológica",
+              "short_description": "Usa características observables y evidencias para agrupar organismos y justificar criterios.",
+              "example_tasks": [
+                "Clasifica 12 organismos (incluye plantas, hongos, animales y bacterias) en grupos usando 2 criterios distintos y explica tus decisiones.",
+                "A partir de imágenes, identifica al menos 5 características para diferenciar vertebrados de invertebrados y aplica la clasificación.",
+                "Propón un criterio para clasificar plantas locales (p. ej., por tipo de hoja, reproducción) y explica ventajas y limitaciones."
+              ]
+            },
+            {
+              "key": "dominios_y_reinos_introduccion",
+              "name": "Dominios y reinos (introducción)",
+              "short_description": "Reconoce grandes grupos (bacterias, arqueas, eucariotas) y reinos básicos, sin detalle especializado.",
+              "example_tasks": [
+                "Completa un esquema de dominios y reinos con ejemplos: bacteria, hongo, planta, animal y protista.",
+                "Explica por qué un hongo no es planta usando dos criterios (nutrición, pared celular, etc.).",
+                "Dado un organismo (p. ej., amiba, levadura), identifica su reino y justifica con características clave."
+              ]
+            },
+            {
+              "key": "claves_dicotomicas_basicas",
+              "name": "Claves dicotómicas básicas",
+              "short_description": "Utiliza una clave simple para identificar organismos a partir de rasgos observables.",
+              "example_tasks": [
+                "Usa una clave dicotómica sencilla para identificar 6 hojas distintas y registra el camino de decisiones.",
+                "Crea una mini-clave dicotómica para identificar 4 insectos comunes basándote en 3 rasgos (alas, antenas, patas).",
+                "Evalúa una clave dada y detecta un paso ambiguo; reescríbelo para que sea más claro y funcional."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "adaptaciones_y_respuesta_al_ambiente",
+          "name": "Adaptaciones y respuesta al ambiente",
+          "short_description": "Relaciona rasgos estructurales y conductuales con supervivencia en ambientes diversos y cambios ambientales.",
+          "sub_topics": [
+            {
+              "key": "adaptaciones_estructurales",
+              "name": "Adaptaciones estructurales",
+              "short_description": "Explica cómo estructuras favorecen supervivencia (p. ej., espinas, pelaje, pico) en un ambiente.",
+              "example_tasks": [
+                "Elige un organismo de un ecosistema mexicano (p. ej., nopal, ajolote) y describe 3 adaptaciones estructurales y su función.",
+                "Relaciona estructura–función en 8 ejemplos (p. ej., raíces profundas, cutícula) e indica el ambiente donde serían ventajosas.",
+                "Analiza un cambio ambiental (sequía) y predice qué rasgos estructurales aumentarían la supervivencia; justifica."
+              ]
+            },
+            {
+              "key": "respuesta_a_estimulos_y_comportamiento",
+              "name": "Respuesta a estímulos y comportamiento",
+              "short_description": "Reconoce respuestas fisiológicas y conductuales ante estímulos (luz, temperatura, depredadores).",
+              "example_tasks": [
+                "Diseña una observación sobre fototropismo en plántulas: variables, procedimiento y qué registrarías.",
+                "Describe un ejemplo de comportamiento de defensa en un animal y explica qué estímulo lo desencadena y qué ventaja aporta.",
+                "Interpreta un registro de actividad (horas vs. avistamientos) y propone una explicación conductual para el patrón observado."
+              ]
+            },
+            {
+              "key": "adaptacion_vs_aclimatacion",
+              "name": "Adaptación vs. aclimatación",
+              "short_description": "Distingue cambios evolutivos poblacionales de ajustes fisiológicos individuales a corto plazo.",
+              "example_tasks": [
+                "Clasifica 10 enunciados como adaptación o aclimatación (p. ej., bronceado, resistencia bacteriana) y explica tu criterio.",
+                "Redacta un ejemplo de aclimatación en humanos al subir a una zona alta y describe el cambio fisiológico.",
+                "Explica por qué la resistencia a antibióticos se considera adaptación poblacional y no un cambio intencional individual."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "bioquimica_de_la_vida",
+      "name": "Bioquímica de la vida",
+      "short_description": "Estudia la composición química de los seres vivos, el papel del agua y las biomoléculas, y cómo su estructura determina su función en procesos biológicos.",
+      "sub_topics": [
+        {
+          "key": "agua_ph_y_propiedades",
+          "name": "Agua, pH y propiedades fisicoquímicas",
+          "short_description": "Relaciona propiedades del agua y del pH con estabilidad de sistemas biológicos y actividad enzimática.",
+          "sub_topics": [
+            {
+              "key": "puentes_de_hidrogeno_y_capilaridad",
+              "name": "Puentes de hidrógeno, cohesión y capilaridad",
+              "short_description": "Explica cómo la polaridad del agua genera cohesión, adhesión y capilaridad relevantes en organismos.",
+              "example_tasks": [
+                "Explica por qué el agua sube por un tallo (xilema) usando los conceptos de cohesión y adhesión; incluye un esquema.",
+                "Realiza una práctica casera con papel absorbente y agua coloreada; registra altura vs. tiempo y explica el fenómeno.",
+                "Relaciona tres propiedades del agua con funciones biológicas: transporte en plantas, termorregulación y disolución de solutos."
+              ]
+            },
+            {
+              "key": "ph_buffers_y_homeostasis",
+              "name": "pH, tampones y homeostasis",
+              "short_description": "Interpreta pH y función de soluciones amortiguadoras en el mantenimiento de condiciones internas.",
+              "example_tasks": [
+                "Ordena sustancias comunes (limón, jabón, agua) de más ácida a más básica usando valores de pH proporcionados; interpreta.",
+                "Explica qué es una solución amortiguadora y por qué la sangre necesita mantener pH estable; usa un ejemplo sencillo.",
+                "Analiza una tabla de actividad enzimática a distintos pH y concluye cuál es el pH óptimo y qué ocurre fuera de ese rango."
+              ]
+            },
+            {
+              "key": "sales_minerales_osmosis_y_difusion",
+              "name": "Sales minerales, ósmosis y difusión",
+              "short_description": "Relaciona concentración de solutos con movimientos de agua y transporte pasivo en sistemas biológicos.",
+              "example_tasks": [
+                "Predice qué ocurrirá con una papa en agua salada y en agua pura; explica usando ósmosis.",
+                "Interpreta un diagrama de difusión a través de membrana y señala dirección del movimiento según gradiente de concentración.",
+                "Diseña un experimento escolar para observar ósmosis con huevo descalcificado o vegetales; describe variables y mediciones."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "carbohidratos_lipidos_proteinas",
+          "name": "Carbohidratos, lípidos y proteínas",
+          "short_description": "Identifica monómeros y polímeros, y relaciona estructura con función energética, estructural y reguladora.",
+          "sub_topics": [
+            {
+              "key": "carbohidratos_monomeros_y_funciones",
+              "name": "Carbohidratos: monómeros y funciones",
+              "short_description": "Distingue monosacáridos, disacáridos y polisacáridos y sus funciones en organismos.",
+              "example_tasks": [
+                "Clasifica ejemplos (glucosa, sacarosa, almidón, celulosa) y describe una función biológica de cada uno.",
+                "Explica por qué la celulosa es estructural en plantas y el almidón es de reserva; relaciona con su organización.",
+                "Analiza etiquetas nutricionales de dos alimentos y estima cuál aporta más carbohidratos por porción; interpreta su posible uso energético."
+              ]
+            },
+            {
+              "key": "lipidos_tipos_y_membranas",
+              "name": "Lípidos: tipos y membranas",
+              "short_description": "Reconoce lípidos (triglicéridos, fosfolípidos, esteroides) y su papel en membranas y energía.",
+              "example_tasks": [
+                "Explica por qué los fosfolípidos forman bicapas y cómo esto se relaciona con la membrana celular.",
+                "Clasifica grasas saturadas e insaturadas a partir de esquemas y predice su efecto en fluidez de membrana.",
+                "Relaciona esteroides (p. ej., hormonas) con su función reguladora y menciona un ejemplo en el cuerpo humano."
+              ]
+            },
+            {
+              "key": "proteinas_estructura_y_enzimas",
+              "name": "Proteínas: estructura y enzimas",
+              "short_description": "Relaciona niveles de estructura proteica con función; introduce enzimas como catalizadores biológicos.",
+              "example_tasks": [
+                "Asocia niveles de estructura (primaria–cuaternaria) con ejemplos de función (hemoglobina, colágeno) en un cuadro.",
+                "Explica con un modelo de «llave-cerradura» o «ajuste inducido» cómo una enzima reconoce su sustrato.",
+                "Interpreta una gráfica de velocidad enzimática vs. concentración de sustrato y describe qué ocurre cuando se satura."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "acidos_nucleicos_y_informacion_genetica",
+          "name": "Ácidos nucleicos e información genética",
+          "short_description": "Describe ADN y ARN, nucleótidos y cómo se almacena y transmite información genética de forma básica.",
+          "sub_topics": [
+            {
+              "key": "estructura_de_nucleotidos_y_pareamiento",
+              "name": "Estructura de nucleótidos y apareamiento de bases",
+              "short_description": "Identifica componentes del nucleótido y reglas de apareamiento de bases en ADN.",
+              "example_tasks": [
+                "En un diagrama del nucleótido, etiqueta fosfato, azúcar y base nitrogenada; explica la diferencia entre ADN y ARN.",
+                "Completa una secuencia complementaria de ADN (10–12 bases) aplicando reglas A-T y C-G.",
+                "Explica por qué el apareamiento específico es importante para la replicación y la herencia."
+              ]
+            },
+            {
+              "key": "adn_arn_y_funciones",
+              "name": "ADN, ARN y funciones",
+              "short_description": "Distingue funciones del ADN (almacenamiento) y del ARN (expresión) con ejemplos sencillos.",
+              "example_tasks": [
+                "Relaciona ADN, ARNm, ARNt y ARNr con su función en una tabla y da un ejemplo de participación en síntesis de proteínas.",
+                "Interpreta un esquema simple de «ADN → ARN → proteína» e identifica dónde ocurre cada paso en una célula eucariota.",
+                "Analiza un caso: una mutación cambia una base; predice un posible efecto en una proteína y explica tu razonamiento."
+              ]
+            },
+            {
+              "key": "replicacion_adn_introduccion",
+              "name": "Replicación del ADN (introducción)",
+              "short_description": "Explica de forma general el proceso de replicación y su importancia antes de la división celular.",
+              "example_tasks": [
+                "Ordena tarjetas con pasos básicos de replicación (separación de hebras, complementariedad, unión) y explica cada paso.",
+                "En un dibujo, marca dirección general de síntesis de nueva hebra y por qué se necesita una plantilla.",
+                "Relaciona replicación con mitosis: ¿por qué debe replicarse el ADN antes de que una célula se divida?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "metabolismo_basico_y_atp",
+          "name": "Metabolismo básico y ATP",
+          "short_description": "Introduce el papel del ATP y rutas metabólicas generales; conecta nutrición, respiración y fotosíntesis a nivel conceptual.",
+          "sub_topics": [
+            {
+              "key": "atp_y_transferencia_de_energia",
+              "name": "ATP y transferencia de energía",
+              "short_description": "Explica ATP como molécula de energía y su relación con reacciones endergónicas y exergónicas.",
+              "example_tasks": [
+                "Explica con un ejemplo (contracción muscular) cómo el ATP participa en un proceso celular que requiere energía.",
+                "Clasifica 8 reacciones como endergónicas o exergónicas a partir de descripciones simples y relaciona con uso/producción de ATP.",
+                "Interpreta un esquema de ciclo ATP/ADP y describe qué ocurre cuando se rompe un enlace fosfato."
+              ]
+            },
+            {
+              "key": "enzimas_y_factores_que_afectan",
+              "name": "Enzimas y factores que afectan su actividad",
+              "short_description": "Analiza cómo temperatura, pH y concentración influyen en la velocidad de reacciones enzimáticas.",
+              "example_tasks": [
+                "Explica por qué una enzima puede desnaturalizarse con alta temperatura y cómo afecta la actividad.",
+                "A partir de una tabla (temperatura vs. reacción), grafica e identifica el rango óptimo; propone una explicación.",
+                "Diseña un experimento escolar con catalasa (papa) para probar efecto de pH o temperatura; incluye controles."
+              ]
+            },
+            {
+              "key": "respiracion_y_fotosintesis_conceptual",
+              "name": "Respiración y fotosíntesis (nivel conceptual)",
+              "short_description": "Relaciona fotosíntesis y respiración como procesos complementarios de transformación de energía en ecosistemas.",
+              "example_tasks": [
+                "Completa un diagrama comparativo de entradas y salidas de fotosíntesis y respiración; explica la relación.",
+                "Explica por qué las plantas también respiran y en qué momento del día ocurre; evita ideas erróneas comunes.",
+                "Interpreta un caso de acuario con plantas y peces: predice cambios en oxígeno y CO₂ durante día y noche."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "biologia_celular_estructura_y_funcion",
+      "name": "Biología celular: estructura y función",
+      "short_description": "Analiza la célula como unidad básica de la vida, sus tipos, organelos y mecanismos de transporte que permiten la homeostasis.",
+      "sub_topics": [
+        {
+          "key": "teoria_celular_y_tipos_de_celulas",
+          "name": "Teoría celular y tipos de células",
+          "short_description": "Comprende los postulados de la teoría celular y distingue células procariotas y eucariotas.",
+          "sub_topics": [
+            {
+              "key": "postulados_de_la_teoria_celular",
+              "name": "Postulados de la teoría celular",
+              "short_description": "Explica los principios que establecen a la célula como unidad estructural, funcional y de origen.",
+              "example_tasks": [
+                "Redacta los tres postulados clásicos de la teoría celular y explica uno con un ejemplo cotidiano.",
+                "Relaciona un descubrimiento histórico (microscopio) con el desarrollo de la teoría celular en una línea del tiempo breve.",
+                "Evalúa un enunciado erróneo sobre células y corrígelo justificando con un postulado."
+              ]
+            },
+            {
+              "key": "procariotas_vs_eucariotas",
+              "name": "Células procariotas vs. eucariotas",
+              "short_description": "Diferencia estructura y complejidad entre procariotas y eucariotas.",
+              "example_tasks": [
+                "Completa una tabla comparativa (núcleo, organelos, tamaño) entre bacterias y células animales/vegetales.",
+                "Identifica en micrografías esquemáticas qué tipo de célula se observa y justifica con dos rasgos.",
+                "Explica por qué las bacterias pueden adaptarse rápidamente a cambios ambientales considerando su organización celular."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "organelos_y_funciones",
+          "name": "Organelos y funciones",
+          "short_description": "Relaciona organelos con funciones específicas y cooperación celular.",
+          "sub_topics": [
+            {
+              "key": "nucleo_mitocondria_y_cloroplasto",
+              "name": "Núcleo, mitocondria y cloroplasto",
+              "short_description": "Explica funciones clave de control genético y obtención de energía.",
+              "example_tasks": [
+                "Etiqueta un esquema celular señalando núcleo, mitocondria y cloroplasto; describe una función de cada uno.",
+                "Explica por qué las mitocondrias se asocian con tejidos de alta demanda energética.",
+                "Relaciona cloroplastos con fotosíntesis y predice qué ocurriría si una planta careciera de ellos."
+              ]
+            },
+            {
+              "key": "reticulo_golgi_y_lisosomas",
+              "name": "Retículo endoplásmico, aparato de Golgi y lisosomas",
+              "short_description": "Describe la síntesis, modificación y transporte de biomoléculas.",
+              "example_tasks": [
+                "Ordena el recorrido de una proteína desde su síntesis hasta su secreción celular.",
+                "Asocia cada organelo con una función (síntesis, empaquetamiento, digestión) en un diagrama.",
+                "Analiza un defecto lisosomal hipotético y predice consecuencias celulares."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "membrana_y_transporte",
+          "name": "Membrana plasmática y transporte",
+          "short_description": "Explica la estructura de la membrana y mecanismos de transporte celular.",
+          "sub_topics": [
+            {
+              "key": "modelo_mosaico_fluido",
+              "name": "Modelo de mosaico fluido",
+              "short_description": "Describe la bicapa lipídica y proteínas asociadas.",
+              "example_tasks": [
+                "Dibuja el modelo de mosaico fluido e identifica fosfolípidos, proteínas y colesterol.",
+                "Explica cómo la fluidez de la membrana cambia con la temperatura.",
+                "Relaciona receptores de membrana con comunicación celular."
+              ]
+            },
+            {
+              "key": "transporte_pasivo_y_activo",
+              "name": "Transporte pasivo y activo",
+              "short_description": "Distingue difusión, ósmosis y transporte activo con gasto de energía.",
+              "example_tasks": [
+                "Clasifica 6 ejemplos como difusión simple, facilitada u ósmosis.",
+                "Explica por qué el transporte activo requiere ATP usando un ejemplo.",
+                "Interpreta un esquema de bomba sodio-potasio a nivel conceptual."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ciclo_celular_mitosis_y_meiosis",
+      "name": "Ciclo celular, mitosis y meiosis",
+      "short_description": "Comprende las fases del ciclo celular y la división celular como base de crecimiento, reparación y reproducción.",
+      "sub_topics": [
+        {
+          "key": "ciclo_celular",
+          "name": "Ciclo celular",
+          "short_description": "Identifica fases G1, S, G2 y M y su regulación básica.",
+          "sub_topics": [
+            {
+              "key": "interfase_y_puntos_de_control",
+              "name": "Interfase y puntos de control",
+              "short_description": "Relaciona replicación del ADN y control del ciclo celular.",
+              "example_tasks": [
+                "Ordena las fases del ciclo celular y explica qué ocurre en cada una.",
+                "Explica por qué los puntos de control son importantes para evitar errores.",
+                "Analiza un caso simple de división acelerada y relaciónalo con fallas de control."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "mitosis",
+          "name": "Mitosis",
+          "short_description": "Describe las fases de la mitosis y su función en organismos multicelulares.",
+          "sub_topics": [
+            {
+              "key": "fases_de_la_mitosis",
+              "name": "Fases de la mitosis",
+              "short_description": "Identifica profase, metafase, anafase y telofase.",
+              "example_tasks": [
+                "Ordena imágenes de las fases mitóticas y justifica el orden.",
+                "Relaciona mitosis con crecimiento y reparación de tejidos.",
+                "Dibuja una fase específica indicando cromosomas y huso mitótico."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "meiosis",
+          "name": "Meiosis",
+          "short_description": "Explica la reducción cromosómica y la variabilidad genética.",
+          "sub_topics": [
+            {
+              "key": "meiosis_i_y_ii",
+              "name": "Meiosis I y II",
+              "short_description": "Distingue las dos divisiones meióticas y su resultado.",
+              "example_tasks": [
+                "Compara resultados de mitosis y meiosis en número de células y cromosomas.",
+                "Explica cómo el entrecruzamiento genera variabilidad genética.",
+                "Relaciona meiosis con reproducción sexual en un ejemplo humano o vegetal."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "genetica_clasica_y_molecular",
+      "name": "Genética clásica y molecular",
+      "short_description": "Analiza los principios de la herencia, la estructura del ADN y la expresión génica como base de la variabilidad biológica.",
+      "sub_topics": [
+        {
+          "key": "genetica_mendeliana",
+          "name": "Genética mendeliana",
+          "short_description": "Comprende las leyes de Mendel y su aplicación en cruces simples.",
+          "sub_topics": [
+            {
+              "key": "conceptos_basicos_de_herencia",
+              "name": "Conceptos básicos de herencia",
+              "short_description": "Define gen, alelo, genotipo, fenotipo, dominante y recesivo.",
+              "example_tasks": [
+                "Define genotipo y fenotipo usando como ejemplo el color de semillas en plantas de chícharo.",
+                "Clasifica 8 enunciados como genotipo o fenotipo y justifica cada decisión.",
+                "Explica con un ejemplo cotidiano por qué un alelo recesivo puede no manifestarse."
+              ]
+            },
+            {
+              "key": "leyes_de_mendel",
+              "name": "Leyes de Mendel",
+              "short_description": "Aplica las leyes de segregación e independencia de caracteres.",
+              "example_tasks": [
+                "Resuelve un cruce monohíbrido con cuadro de Punnett e interpreta proporciones genotípicas y fenotípicas.",
+                "Explica con un esquema la ley de la segregación durante la formación de gametos.",
+                "Analiza un cruce dihíbrido sencillo e identifica si se cumple la ley de independencia."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "estructura_y_funcion_del_adn",
+          "name": "Estructura y función del ADN",
+          "short_description": "Describe la organización molecular del ADN y su papel como portador de información genética.",
+          "sub_topics": [
+            {
+              "key": "doble_helice_y_codigo_genetico",
+              "name": "Doble hélice y código genético",
+              "short_description": "Reconoce la estructura del ADN y la relación entre secuencia y función.",
+              "example_tasks": [
+                "Etiqueta un esquema de la doble hélice indicando bases, azúcares y enlaces.",
+                "Explica por qué la secuencia de bases determina la información genética.",
+                "Relaciona un cambio en la secuencia con una posible variación fenotípica."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "expresion_genica",
+          "name": "Expresión génica",
+          "short_description": "Introduce transcripción y traducción como procesos de síntesis de proteínas.",
+          "sub_topics": [
+            {
+              "key": "transcripcion_y_traduccion",
+              "name": "Transcripción y traducción",
+              "short_description": "Describe cómo la información del ADN se convierte en proteína.",
+              "example_tasks": [
+                "Ordena los pasos de transcripción y traducción en un esquema simplificado.",
+                "Identifica dónde ocurren estos procesos en una célula eucariota.",
+                "Explica qué podría ocurrir si se altera un codón durante la traducción."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "reproduccion_y_desarrollo",
+      "name": "Reproducción y desarrollo",
+      "short_description": "Explica los tipos de reproducción y las etapas iniciales del desarrollo en organismos.",
+      "sub_topics": [
+        {
+          "key": "reproduccion_asexual_y_sexual",
+          "name": "Reproducción asexual y sexual",
+          "short_description": "Compara mecanismos reproductivos y su impacto en la variabilidad genética.",
+          "sub_topics": [
+            {
+              "key": "tipos_de_reproduccion_asexual",
+              "name": "Tipos de reproducción asexual",
+              "short_description": "Identifica gemación, fragmentación y reproducción vegetativa.",
+              "example_tasks": [
+                "Relaciona organismos (bacterias, plantas, hongos) con su tipo de reproducción asexual.",
+                "Explica una ventaja y una desventaja de la reproducción asexual en ambientes estables.",
+                "Ilustra con un esquema la reproducción vegetativa en una planta común."
+              ]
+            },
+            {
+              "key": "reproduccion_sexual_y_gametos",
+              "name": "Reproducción sexual y gametos",
+              "short_description": "Describe la formación de gametos y la fecundación.",
+              "example_tasks": [
+                "Explica el papel de la meiosis en la formación de gametos.",
+                "Dibuja un esquema sencillo de fecundación indicando gametos masculino y femenino.",
+                "Relaciona reproducción sexual con aumento de variabilidad genética."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "desarrollo_embrionario_basico",
+          "name": "Desarrollo embrionario básico",
+          "short_description": "Reconoce etapas iniciales del desarrollo desde el cigoto.",
+          "sub_topics": [
+            {
+              "key": "segmentacion_y_diferenciacion",
+              "name": "Segmentación y diferenciación",
+              "short_description": "Describe las primeras divisiones celulares y especialización.",
+              "example_tasks": [
+                "Ordena las etapas iniciales del desarrollo (cigoto, mórula, blástula).",
+                "Explica por qué la diferenciación celular es clave para formar tejidos.",
+                "Relaciona fallas tempranas del desarrollo con consecuencias posteriores."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "biologia_humana_integracion_y_salud",
+      "name": "Biología humana: integración y salud",
+      "short_description": "Analiza la organización del cuerpo humano, la integración de sistemas y la relación entre hábitos, ambiente y salud.",
+      "sub_topics": [
+        {
+          "key": "sistemas_de_regulacion",
+          "name": "Sistemas de regulación",
+          "short_description": "Comprende cómo los sistemas nervioso y endocrino coordinan funciones corporales.",
+          "sub_topics": [
+            {
+              "key": "sistema_nervioso_basico",
+              "name": "Sistema nervioso (introducción)",
+              "short_description": "Identifica neuronas, tipos de respuesta y funciones básicas del sistema nervioso.",
+              "example_tasks": [
+                "Dibuja una neurona y señala dendritas, axón y sinapsis; describe su función.",
+                "Clasifica respuestas como voluntarias o involuntarias y relaciona con el sistema nervioso.",
+                "Explica un ejemplo de arco reflejo y su importancia para la supervivencia."
+              ]
+            },
+            {
+              "key": "sistema_endocrino_basico",
+              "name": "Sistema endocrino (introducción)",
+              "short_description": "Reconoce hormonas y su papel en la regulación a largo plazo.",
+              "example_tasks": [
+                "Relaciona glándulas (páncreas, tiroides) con una hormona y su efecto principal.",
+                "Explica la diferencia entre regulación nerviosa y endocrina con un ejemplo.",
+                "Analiza un caso simple de desbalance hormonal y predice efectos generales."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nutricion_y_salud",
+          "name": "Nutrición y salud",
+          "short_description": "Relaciona alimentación, metabolismo y prevención de enfermedades.",
+          "sub_topics": [
+            {
+              "key": "nutrientes_y_dieta_equilibrada",
+              "name": "Nutrientes y dieta equilibrada",
+              "short_description": "Identifica macronutrientes y micronutrientes y su función en el cuerpo.",
+              "example_tasks": [
+                "Analiza el Plato del Bien Comer y diseña un menú diario equilibrado.",
+                "Relaciona deficiencias nutricionales con posibles efectos en la salud.",
+                "Compara dos dietas hipotéticas y evalúa cuál es más equilibrada y por qué."
+              ]
+            },
+            {
+              "key": "prevencion_de_enfermedades",
+              "name": "Prevención de enfermedades",
+              "short_description": "Reconoce factores de riesgo y hábitos saludables.",
+              "example_tasks": [
+                "Clasifica hábitos como protectores o de riesgo para la salud.",
+                "Explica cómo la vacunación contribuye a la prevención de enfermedades.",
+                "Analiza un caso de enfermedad prevenible y propone acciones de prevención."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "biodiversidad_y_conservacion",
+      "name": "Biodiversidad y conservación",
+      "short_description": "Valora la biodiversidad de México, sus niveles y la importancia de su conservación.",
+      "sub_topics": [
+        {
+          "key": "niveles_de_biodiversidad",
+          "name": "Niveles de biodiversidad",
+          "short_description": "Distingue biodiversidad genética, de especies y de ecosistemas.",
+          "sub_topics": [
+            {
+              "key": "biodiversidad_genetica_y_de_especies",
+              "name": "Biodiversidad genética y de especies",
+              "short_description": "Reconoce variación genética y riqueza de especies como base de resiliencia.",
+              "example_tasks": [
+                "Explica con un ejemplo por qué la diversidad genética es importante para la adaptación.",
+                "Identifica especies endémicas de México y explica su relevancia.",
+                "Relaciona pérdida de diversidad genética con vulnerabilidad poblacional."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "amenazas_y_conservacion",
+          "name": "Amenazas y conservación",
+          "short_description": "Analiza causas de pérdida de biodiversidad y estrategias de conservación.",
+          "sub_topics": [
+            {
+              "key": "impacto_humano_y_conservacion",
+              "name": "Impacto humano y conservación",
+              "short_description": "Evalúa actividades humanas y acciones para conservar ecosistemas.",
+              "example_tasks": [
+                "Analiza un caso local de deforestación o contaminación y sus efectos biológicos.",
+                "Propón tres acciones comunitarias para conservar un ecosistema cercano.",
+                "Relaciona áreas naturales protegidas con conservación de especies."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "key": "evolucion_y_sintesis_moderna",
+      "name": "Evolución y síntesis moderna",
+      "short_description": "Explica la evolución como un proceso histórico sustentado en evidencias, integrando selección natural, genética de poblaciones y especiación.",
+      "sub_topics": [
+        {
+          "key": "evidencias_de_la_evolucion",
+          "name": "Evidencias de la evolución",
+          "short_description": "Analiza pruebas paleontológicas, anatómicas, embriológicas y moleculares de la evolución.",
+          "sub_topics": [
+            {
+              "key": "registro_fosil_y_datacion",
+              "name": "Registro fósil y datación",
+              "short_description": "Interpreta el registro fósil y métodos básicos de datación relativa y absoluta.",
+              "example_tasks": [
+                "Ordena una secuencia de fósiles según estratos y explica el criterio usado.",
+                "Explica cómo el registro fósil evidencia cambios graduales y extinciones.",
+                "Relaciona datación radiométrica con la estimación de la edad de un fósil."
+              ]
+            },
+            {
+              "key": "homologias_y_analogias",
+              "name": "Homologías y analogías",
+              "short_description": "Distingue estructuras homólogas y análogas y su significado evolutivo.",
+              "example_tasks": [
+                "Clasifica ejemplos (ala de murciélago, aleta de delfín, ala de insecto) como homólogos o análogos y justifica.",
+                "Explica cómo las homologías apoyan la idea de ancestro común.",
+                "Analiza un esquema comparativo de extremidades y extrae conclusiones evolutivas."
+              ]
+            },
+            {
+              "key": "evidencia_molecular",
+              "name": "Evidencia molecular",
+              "short_description": "Relaciona similitud de secuencias de ADN/proteínas con parentesco evolutivo.",
+              "example_tasks": [
+                "Interpreta una tabla de similitud de secuencias entre especies y ordena su parentesco.",
+                "Explica por qué genes conservados son útiles para estudios evolutivos.",
+                "Relaciona mutaciones acumuladas con tiempo evolutivo de divergencia."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "mecanismos_evolutivos",
+          "name": "Mecanismos evolutivos",
+          "short_description": "Describe procesos que cambian las frecuencias génicas en poblaciones.",
+          "sub_topics": [
+            {
+              "key": "seleccion_natural_y_adaptacion",
+              "name": "Selección natural y adaptación",
+              "short_description": "Analiza cómo variación heredable y ambiente producen adaptación.",
+              "example_tasks": [
+                "Explica un caso de selección natural (p. ej., resistencia a antibióticos) indicando variación, presión y resultado.",
+                "Interpreta una gráfica de aptitud vs. rasgo y clasifica el tipo de selección.",
+                "Predice cambios en una población ante una nueva presión ambiental."
+              ]
+            },
+            {
+              "key": "deriva_flujo_y_mutacion",
+              "name": "Deriva genética, flujo génico y mutación",
+              "short_description": "Diferencia procesos aleatorios y no aleatorios que afectan poblaciones.",
+              "example_tasks": [
+                "Describe un efecto fundador con un ejemplo y su impacto genético.",
+                "Explica cómo el flujo génico puede aumentar o disminuir la variación.",
+                "Relaciona tasa de mutación con aparición de nuevos alelos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "especiacion_y_macroevolucion",
+          "name": "Especiación y macroevolución",
+          "short_description": "Explica el origen de nuevas especies y patrones evolutivos a gran escala.",
+          "sub_topics": [
+            {
+              "key": "aislamiento_reproductivo",
+              "name": "Aislamiento reproductivo",
+              "short_description": "Distingue barreras pre y postcigóticas en la formación de especies.",
+              "example_tasks": [
+                "Clasifica ejemplos de aislamiento (temporal, mecánico, geográfico) y explica.",
+                "Relaciona aislamiento geográfico con especiación alopátrica.",
+                "Analiza un caso de hibridación y predice consecuencias evolutivas."
+              ]
+            },
+            {
+              "key": "ritmos_evolutivos",
+              "name": "Ritmos evolutivos",
+              "short_description": "Compara gradualismo y equilibrio puntuado.",
+              "example_tasks": [
+                "Explica diferencias entre gradualismo y equilibrio puntuado con esquemas.",
+                "Relaciona patrones del registro fósil con cada modelo.",
+                "Argumenta cuál modelo explica mejor un caso presentado."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ecologia_de_poblaciones_y_comunidades",
+      "name": "Ecología de poblaciones y comunidades",
+      "short_description": "Analiza interacciones entre organismos, dinámica poblacional y estructura de comunidades.",
+      "sub_topics": [
+        {
+          "key": "dinamica_de_poblaciones",
+          "name": "Dinámica de poblaciones",
+          "short_description": "Estudia crecimiento poblacional y factores reguladores.",
+          "sub_topics": [
+            {
+              "key": "crecimiento_exponencial_y_logistico",
+              "name": "Crecimiento exponencial y logístico",
+              "short_description": "Interpreta modelos matemáticos de crecimiento poblacional.",
+              "example_tasks": [
+                "Compara gráficas de crecimiento exponencial y logístico e identifica diferencias.",
+                "Explica el concepto de capacidad de carga con un ejemplo local.",
+                "Predice cómo cambiaría una población si se reduce el recurso principal."
+              ]
+            },
+            {
+              "key": "factores_dependientes_e_independientes",
+              "name": "Factores dependientes e independientes de la densidad",
+              "short_description": "Relaciona competencia, depredación y clima con regulación poblacional.",
+              "example_tasks": [
+                "Clasifica factores como dependientes o independientes de la densidad.",
+                "Analiza un caso de brote poblacional y explica los factores involucrados.",
+                "Propón medidas de manejo poblacional para una especie local."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "interacciones_y_estructura_comunitaria",
+          "name": "Interacciones y estructura comunitaria",
+          "short_description": "Describe relaciones ecológicas y su efecto en la comunidad.",
+          "sub_topics": [
+            {
+              "key": "competencia_depredacion_y_simbiosis",
+              "name": "Competencia, depredación y simbiosis",
+              "short_description": "Analiza tipos de interacciones biológicas.",
+              "example_tasks": [
+                "Identifica interacciones (mutualismo, parasitismo, comensalismo) en ejemplos dados.",
+                "Explica cómo la depredación regula poblaciones con un caso real.",
+                "Relaciona competencia interespecífica con exclusión competitiva."
+              ]
+            },
+            {
+              "key": "sucesion_ecologica",
+              "name": "Sucesión ecológica",
+              "short_description": "Explica cambios temporales en comunidades.",
+              "example_tasks": [
+                "Ordena etapas de sucesión primaria y secundaria con ejemplos.",
+                "Analiza un caso de disturbio (incendio) y predice la sucesión.",
+                "Relaciona especies pioneras con condiciones iniciales del ambiente."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ecosistemas_servicios_ambientales_y_cambio_global",
+      "name": "Ecosistemas, servicios ambientales y cambio global",
+      "short_description": "Analiza el funcionamiento de los ecosistemas, el flujo de energía, los ciclos de la materia y el impacto del cambio global en los sistemas naturales.",
+      "sub_topics": [
+        {
+          "key": "flujo_de_energia_y_cadenas_troficas",
+          "name": "Flujo de energía y cadenas tróficas",
+          "short_description": "Explica cómo la energía se transfiere entre niveles tróficos y limita la estructura de los ecosistemas.",
+          "sub_topics": [
+            {
+              "key": "niveles_troficos_y_piramides_ecologicas",
+              "name": "Niveles tróficos y pirámides ecológicas",
+              "short_description": "Interpreta pirámides de energía, biomasa y número de organismos.",
+              "example_tasks": [
+                "Construye una cadena y una red trófica de un ecosistema mexicano (p. ej., selva o desierto).",
+                "Interpreta una pirámide de energía e identifica por qué disminuye la energía en niveles superiores.",
+                "Compara pirámides de biomasa en ecosistemas terrestres y acuáticos y explica las diferencias."
+              ]
+            },
+            {
+              "key": "eficiencia_ecologica",
+              "name": "Eficiencia ecológica",
+              "short_description": "Analiza la pérdida de energía entre niveles tróficos.",
+              "example_tasks": [
+                "Calcula la energía disponible en un nivel trófico superior a partir de datos dados.",
+                "Explica la regla aproximada del 10% con un ejemplo.",
+                "Relaciona eficiencia ecológica con longitud de cadenas tróficas."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ciclos_biogeoquimicos",
+          "name": "Ciclos biogeoquímicos",
+          "short_description": "Describe el reciclaje de materia en la biosfera y su relación con procesos biológicos.",
+          "sub_topics": [
+            {
+              "key": "ciclo_del_carbono_nitrogeno_y_agua",
+              "name": "Ciclos del carbono, nitrógeno y agua",
+              "short_description": "Interpreta rutas y reservorios principales de cada ciclo.",
+              "example_tasks": [
+                "Dibuja y explica el ciclo del carbono incluyendo fotosíntesis y respiración.",
+                "Relaciona actividades humanas con alteraciones del ciclo del nitrógeno.",
+                "Analiza un esquema del ciclo del agua y señala procesos físicos y biológicos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "servicios_ambientales",
+          "name": "Servicios ambientales",
+          "short_description": "Valora beneficios que los ecosistemas aportan a la sociedad.",
+          "sub_topics": [
+            {
+              "key": "tipos_de_servicios_ecosistemicos",
+              "name": "Tipos de servicios ecosistémicos",
+              "short_description": "Clasifica servicios de provisión, regulación, soporte y culturales.",
+              "example_tasks": [
+                "Relaciona un ecosistema local con al menos cuatro servicios ecosistémicos.",
+                "Explica cómo la pérdida de un servicio afecta a una comunidad humana.",
+                "Analiza un caso de restauración ecológica y sus beneficios."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "cambio_global",
+          "name": "Cambio global",
+          "short_description": "Analiza causas y consecuencias del cambio climático y otros cambios globales.",
+          "sub_topics": [
+            {
+              "key": "cambio_climatico_y_biodiversidad",
+              "name": "Cambio climático y biodiversidad",
+              "short_description": "Relaciona aumento de temperatura con cambios en distribución de especies.",
+              "example_tasks": [
+                "Interpreta una gráfica de aumento de temperatura y discute impactos biológicos.",
+                "Explica cómo el cambio climático puede provocar extinciones locales.",
+                "Propón acciones de mitigación y adaptación a nivel comunitario."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "microbiologia_y_salud_publica",
+      "name": "Microbiología y salud pública",
+      "short_description": "Estudia microorganismos, su papel ecológico y su impacto en la salud humana y ambiental.",
+      "sub_topics": [
+        {
+          "key": "diversidad_microbiana",
+          "name": "Diversidad microbiana",
+          "short_description": "Reconoce bacterias, virus, hongos y protistas y sus características generales.",
+          "sub_topics": [
+            {
+              "key": "bacterias_y_virus",
+              "name": "Bacterias y virus",
+              "short_description": "Distingue estructura, reproducción y efectos en la salud.",
+              "example_tasks": [
+                "Compara bacterias y virus en estructura y modo de reproducción.",
+                "Clasifica enfermedades como bacterianas o virales con ejemplos.",
+                "Explica por qué los antibióticos no funcionan contra virus."
+              ]
+            },
+            {
+              "key": "hongos_y_protistas",
+              "name": "Hongos y protistas",
+              "short_description": "Analiza su papel ecológico y relación con humanos.",
+              "example_tasks": [
+                "Relaciona hongos con descomposición y reciclaje de nutrientes.",
+                "Identifica protistas fotosintéticos y su importancia ecológica.",
+                "Analiza un caso de micosis o enfermedad protista y su prevención."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "microorganismos_y_salud",
+          "name": "Microorganismos y salud",
+          "short_description": "Relaciona patógenos, prevención y respuesta sanitaria.",
+          "sub_topics": [
+            {
+              "key": "prevencion_vacunacion_y_higiene",
+              "name": "Prevención, vacunación e higiene",
+              "short_description": "Explica estrategias de salud pública para controlar enfermedades.",
+              "example_tasks": [
+                "Explica cómo funciona una vacuna a nivel biológico.",
+                "Analiza medidas de higiene y su efecto en la transmisión de enfermedades.",
+                "Evalúa un brote hipotético y propone acciones de control."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "genetica_avanzada_y_biotecnologia",
+      "name": "Genética avanzada y biotecnología",
+      "short_description": "Profundiza en la regulación de la expresión génica, técnicas biotecnológicas y sus implicaciones éticas y sociales.",
+      "sub_topics": [
+        {
+          "key": "regulacion_de_la_expresion_genica",
+          "name": "Regulación de la expresión génica",
+          "short_description": "Analiza cómo se controla la activación y desactivación de genes en distintos contextos.",
+          "sub_topics": [
+            {
+              "key": "operones_y_regulacion_eucariota",
+              "name": "Operones y regulación eucariota",
+              "short_description": "Compara regulación génica en procariotas y eucariotas.",
+              "example_tasks": [
+                "Explica el funcionamiento básico del operón lac con un esquema.",
+                "Relaciona factores de transcripción con activación génica en eucariotas.",
+                "Analiza un caso donde una mutación regulatoria altera la expresión de un gen."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "tecnicas_biotecnologicas",
+          "name": "Técnicas biotecnológicas",
+          "short_description": "Reconoce herramientas modernas y sus aplicaciones.",
+          "sub_topics": [
+            {
+              "key": "ingenieria_genetica_y_edicion",
+              "name": "Ingeniería genética y edición génica",
+              "short_description": "Describe clonación, ADN recombinante y edición génica.",
+              "example_tasks": [
+                "Ordena los pasos generales para obtener un organismo transgénico.",
+                "Explica a nivel conceptual cómo funciona CRISPR-Cas9.",
+                "Relaciona una aplicación biotecnológica con beneficios y riesgos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bioetica",
+          "name": "Bioética",
+          "short_description": "Reflexiona sobre dilemas éticos asociados a la biotecnología.",
+          "sub_topics": [
+            {
+              "key": "implicaciones_eticas_y_sociales",
+              "name": "Implicaciones éticas y sociales",
+              "short_description": "Evalúa impactos sociales, ambientales y de salud.",
+              "example_tasks": [
+                "Debate ventajas y riesgos del uso de organismos genéticamente modificados.",
+                "Analiza un caso de edición genética en humanos y plantea argumentos éticos.",
+                "Propón criterios para una toma de decisiones responsable en biotecnología."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fisiologia_humana_avanzada_y_homeostasis",
+      "name": "Fisiología humana avanzada y homeostasis",
+      "short_description": "Integra el funcionamiento de sistemas corporales y mecanismos homeostáticos.",
+      "sub_topics": [
+        {
+          "key": "integracion_de_sistemas",
+          "name": "Integración de sistemas",
+          "short_description": "Analiza la interacción entre sistemas para mantener el equilibrio interno.",
+          "sub_topics": [
+            {
+              "key": "control_neuroendocrino",
+              "name": "Control neuroendocrino",
+              "short_description": "Explica la coordinación nerviosa y hormonal.",
+              "example_tasks": [
+                "Describe cómo el sistema nervioso y endocrino regulan la glucosa.",
+                "Relaciona estrés con respuestas fisiológicas integradas.",
+                "Interpreta un esquema de retroalimentación negativa."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "salud_y_estilo_de_vida",
+          "name": "Salud y estilo de vida",
+          "short_description": "Relaciona hábitos, ambiente y prevención de enfermedades crónicas.",
+          "sub_topics": [
+            {
+              "key": "riesgo_y_prevencion",
+              "name": "Riesgo y prevención",
+              "short_description": "Evalúa factores de riesgo y medidas preventivas.",
+              "example_tasks": [
+                "Analiza un caso de enfermedad crónica y propone cambios de hábitos.",
+                "Relaciona actividad física con beneficios fisiológicos.",
+                "Diseña una campaña escolar de promoción de la salud."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "botanica_y_fisiologia_vegetal",
+      "name": "Botánica y fisiología vegetal",
+      "short_description": "Analiza la estructura, función y adaptación de las plantas, así como su importancia ecológica y económica.",
+      "sub_topics": [
+        {
+          "key": "estructura_y_organos_vegetales",
+          "name": "Estructura y órganos vegetales",
+          "short_description": "Reconoce raíces, tallos, hojas y su relación con funciones vitales.",
+          "sub_topics": [
+            {
+              "key": "raiz_tallo_hoja",
+              "name": "Raíz, tallo y hoja",
+              "short_description": "Relaciona la estructura de los órganos vegetales con su función.",
+              "example_tasks": [
+                "Identifica en un esquema vegetal las partes principales y describe su función.",
+                "Explica cómo la forma de la hoja se relaciona con la fotosíntesis en distintos ambientes.",
+                "Relaciona tipos de raíces con adaptación a diferentes suelos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "procesos_fisiologicos_vegetales",
+          "name": "Procesos fisiológicos vegetales",
+          "short_description": "Analiza fotosíntesis, transporte y transpiración.",
+          "sub_topics": [
+            {
+              "key": "fotosintesis_y_transporte",
+              "name": "Fotosíntesis y transporte",
+              "short_description": "Relaciona procesos energéticos con estructura vascular.",
+              "example_tasks": [
+                "Explica la fotosíntesis relacionando cloroplastos, luz y CO₂.",
+                "Interpreta un esquema de xilema y floema y su función.",
+                "Analiza cómo la disponibilidad de agua afecta la fotosíntesis."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "etologia_y_biologia_del_comportamiento",
+      "name": "Etología y biología del comportamiento",
+      "short_description": "Estudia el comportamiento animal como resultado de procesos biológicos y evolutivos.",
+      "sub_topics": [
+        {
+          "key": "bases_biologicas_del_comportamiento",
+          "name": "Bases biológicas del comportamiento",
+          "short_description": "Relaciona comportamiento con sistema nervioso y evolución.",
+          "sub_topics": [
+            {
+              "key": "conducta_innata_y_aprendida",
+              "name": "Conducta innata y aprendida",
+              "short_description": "Distingue comportamientos heredados y adquiridos.",
+              "example_tasks": [
+                "Clasifica ejemplos de conducta como innata o aprendida y justifica.",
+                "Analiza un caso de aprendizaje por condicionamiento.",
+                "Relaciona comportamiento con adaptación al ambiente."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tecnicas_de_laboratorio_y_trabajo_de_campo",
+      "name": "Técnicas de laboratorio y trabajo de campo",
+      "short_description": "Desarrolla habilidades prácticas para la investigación biológica escolar.",
+      "sub_topics": [
+        {
+          "key": "metodologia_experimental_avanzada",
+          "name": "Metodología experimental avanzada",
+          "short_description": "Aplica procedimientos experimentales con análisis de datos.",
+          "sub_topics": [
+            {
+              "key": "analisis_de_datos_y_reportes",
+              "name": "Análisis de datos y reportes científicos",
+              "short_description": "Interpreta resultados y comunica conclusiones con rigor.",
+              "example_tasks": [
+                "Analiza datos experimentales y elabora conclusiones sustentadas.",
+                "Redacta un reporte científico completo a partir de una práctica.",
+                "Evalúa la validez de resultados considerando errores y limitaciones."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "trabajo_de_campo",
+          "name": "Trabajo de campo",
+          "short_description": "Aplica técnicas de observación y muestreo en ambientes naturales.",
+          "sub_topics": [
+            {
+              "key": "muestreo_y_registro_ecologico",
+              "name": "Muestreo y registro ecológico",
+              "short_description": "Diseña y ejecuta muestreos biológicos básicos.",
+              "example_tasks": [
+                "Diseña un muestreo de biodiversidad en un área cercana a la escuela.",
+                "Registra observaciones de campo usando bitácora y tablas.",
+                "Propón mejoras metodológicas tras analizar resultados de campo."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

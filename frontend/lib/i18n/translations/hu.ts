@@ -258,6 +258,18 @@ export const hu: Translations = {
     "A feladat leírása túl hosszú! Maximum {{max}} karakter megengedett. Jelenleg: {{count}} karakter.",
   "An error occurred while generating the PDF. Please try again.":
     "Hiba történt a PDF generálása során. Kérjük, próbálja újra.",
+  "An error occurred while generating the PDF.":
+    "Hiba történt a PDF generálása során.",
+  "Image loading failed due to CORS restrictions. The images may not be accessible from this domain.":
+    "A képbetöltés CORS korlátozások miatt sikertelen. A képek lehet, hogy nem elérhetők erről a domainről.",
+  "Network error while loading images. Please check your internet connection.":
+    "Hálózati hiba történt a képek betöltése közben. Kérjük, ellenőrizze az internetkapcsolatát.",
+  "Image loading timed out. Please try again or check image URLs.":
+    "A képbetöltés időtúllépés miatt megszakadt. Kérjük, próbálja újra vagy ellenőrizze a kép URL-eket.",
+  "Please try again or contact support if the problem persists.":
+    "Kérjük, próbálja újra, vagy vegye fel a kapcsolatot az ügyfélszolgálattal, ha a probléma továbbra is fennáll.",
+  "PDF is not ready yet. Please try again in a moment.":
+    "A PDF még nem áll készen. Kérjük, próbálja újra egy pillanat múlva.",
   "An error occurred": "Hiba történt",
   "Save Task": "Feladat Mentése",
   "Saving...": "Mentés...",

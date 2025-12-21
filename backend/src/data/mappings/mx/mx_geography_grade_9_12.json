@@ -1,0 +1,1747 @@
+{
+  "grade_9_10": [
+    {
+      "key": "fundamentos_del_espacio_geografico",
+      "name": "Fundamentos del espacio geográfico",
+      "short_description": "Introducción al pensamiento espacial: conceptos clave (espacio, lugar, región, paisaje y territorio), escalas de análisis y relaciones sociedad-naturaleza para describir y explicar fenómenos geográficos.",
+      "sub_topics": [
+        {
+          "key": "conceptos_basicos_de_geografia",
+          "name": "Conceptos básicos de Geografía",
+          "short_description": "Comprende los conceptos centrales para interpretar el espacio geográfico y diferenciar enfoques de la geografía física y humana.",
+          "sub_topics": [
+            {
+              "key": "espacio_lugar_y_region",
+              "name": "Espacio, lugar y región",
+              "short_description": "Distingue espacio, lugar y región y los aplica para describir patrones y diferencias territoriales.",
+              "example_tasks": [
+                "Define con tus palabras espacio, lugar y región y escribe un ejemplo de cada uno usando tu colonia o municipio.",
+                "A partir de una noticia sobre un fenómeno (sequía, migración, contaminación), explica si se analiza mejor como 'lugar' o como 'región' y por qué.",
+                "Elabora una breve explicación (8-10 líneas) de cómo cambia la interpretación de un problema local (basura, transporte, agua) si lo miras como lugar y si lo miras como región."
+              ]
+            },
+            {
+              "key": "paisaje_natural_y_humanizado",
+              "name": "Paisaje natural y paisaje humanizado",
+              "short_description": "Reconoce componentes del paisaje y explica cómo las actividades humanas transforman el medio.",
+              "example_tasks": [
+                "Observa 2 fotografías (una de un bosque y otra de una zona urbana) e identifica al menos 5 elementos del paisaje en cada una.",
+                "Describe dos transformaciones humanas del paisaje en tu localidad (por ejemplo, fraccionamientos, carreteras, canales) e indica una consecuencia positiva y una negativa.",
+                "Propón una medida concreta para reducir un impacto en un paisaje humanizado de tu comunidad y justifica con evidencia (observación o datos)."
+              ]
+            },
+            {
+              "key": "territorio_y_territorialidad",
+              "name": "Territorio y territorialidad",
+              "short_description": "Explica el territorio como construcción social, con relaciones de poder, normas y apropiación del espacio.",
+              "example_tasks": [
+                "Explica la diferencia entre 'territorio' y 'espacio' con un ejemplo relacionado con una escuela, parque o mercado.",
+                "Identifica un conflicto territorial cercano (uso del suelo, ruido, comercio ambulante, seguridad) y describe los actores involucrados y sus intereses.",
+                "Redacta una propuesta de acuerdos para resolver el conflicto territorial identificado, incluyendo al menos 3 reglas y cómo se harían cumplir."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "escalas_y_representacion_del_espacio",
+          "name": "Escalas y representación del espacio",
+          "short_description": "Analiza fenómenos geográficos en distintas escalas (local, regional, nacional, global) y reconoce cómo la escala cambia las explicaciones.",
+          "sub_topics": [
+            {
+              "key": "escala_local_regional_global",
+              "name": "Escala local, regional y global",
+              "short_description": "Selecciona la escala adecuada para estudiar un fenómeno y justifica su elección.",
+              "example_tasks": [
+                "Elige un fenómeno (desempleo, sequía, turismo, inseguridad) y escribe qué información buscarías en escala local, regional y global.",
+                "Explica por qué un problema como la contaminación del aire requiere análisis regional y no solo local.",
+                "Construye un diagrama de 'causas y efectos' del cambio climático en tu estado, conectando al menos 2 causas globales con 3 efectos locales."
+              ]
+            },
+            {
+              "key": "generalizacion_y_detalle",
+              "name": "Generalización y detalle",
+              "short_description": "Comprende que al cambiar la escala se pierde o gana detalle y se modifican patrones observables.",
+              "example_tasks": [
+                "Compara un mapa de México y un mapa de tu ciudad: anota 3 cosas que se ven en el mapa local pero no en el nacional y explica por qué.",
+                "Con un conjunto de datos (población por estado y por municipio), explica qué conclusiones son válidas a nivel estatal pero no municipal.",
+                "Describe un ejemplo real en el que una mala elección de escala llevó a una conclusión equivocada (puede ser de noticias o de un caso local)."
+              ]
+            },
+            {
+              "key": "region_geografica_y_criterios",
+              "name": "Región geográfica y criterios de regionalización",
+              "short_description": "Define regiones usando criterios físicos, económicos, culturales o políticos y compara diferentes regionalizaciones.",
+              "example_tasks": [
+                "Propón una regionalización de tu estado en 3-5 regiones usando un criterio físico (relieve o clima) y explica tu decisión.",
+                "Propón otra regionalización usando un criterio económico (agricultura, industria, turismo) y compara diferencias con la anterior.",
+                "Elabora un texto argumentativo: ¿qué regionalización sería más útil para planear servicios de salud y por qué?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "interaccion_sociedad_naturaleza",
+          "name": "Interacción sociedad-naturaleza",
+          "short_description": "Explica cómo las sociedades usan, modifican y gestionan la naturaleza, y cómo los procesos naturales condicionan actividades humanas.",
+          "sub_topics": [
+            {
+              "key": "recursos_naturales_y_servicios_ecosistemicos",
+              "name": "Recursos naturales y servicios ecosistémicos",
+              "short_description": "Identifica recursos y servicios ecosistémicos y valora su importancia para el bienestar.",
+              "example_tasks": [
+                "Elabora una lista de 8 recursos naturales usados en tu hogar y clasifícalos en renovables y no renovables.",
+                "Elige un ecosistema mexicano (manglar, bosque templado, selva, desierto) y escribe 4 servicios ecosistémicos que ofrece.",
+                "Diseña una campaña escolar (eslogan + 5 acciones) para proteger un servicio ecosistémico importante en tu comunidad."
+              ]
+            },
+            {
+              "key": "huella_ecologica_y_consumo",
+              "name": "Huella ecológica y patrones de consumo",
+              "short_description": "Relaciona hábitos de consumo con impactos ambientales medibles y propone cambios responsables.",
+              "example_tasks": [
+                "Registra durante 2 días tu consumo de agua y energía (estimado) y anota 3 acciones para reducirlo.",
+                "Compara dos productos similares (por ejemplo, botella desechable vs. termo) e identifica impactos ambientales en su ciclo de vida de manera cualitativa.",
+                "Elabora un plan de reducción de residuos para tu salón con metas (porcentajes) y un método para medir avances durante 4 semanas."
+              ]
+            },
+            {
+              "key": "riesgo_vulnerabilidad_y_adaptacion",
+              "name": "Riesgo, vulnerabilidad y adaptación",
+              "short_description": "Distingue peligro, vulnerabilidad y riesgo y propone medidas de prevención y adaptación ante amenazas locales.",
+              "example_tasks": [
+                "Explica con un ejemplo de tu región la diferencia entre 'peligro' (amenaza) y 'riesgo'.",
+                "Elabora un mapa simple del entorno de tu escuela (croquis) marcando 5 puntos de riesgo (inundación, tráfico, cableado, etc.).",
+                "Diseña un protocolo de acción ante un fenómeno frecuente en tu zona (sismo, inundación, tormenta) con roles y tiempos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "metodos_de_investigacion_geografica",
+          "name": "Métodos de investigación geográfica",
+          "short_description": "Desarrolla habilidades para formular preguntas geográficas, recolectar información y comunicar resultados con rigor.",
+          "sub_topics": [
+            {
+              "key": "preguntas_geograficas_y_hipotesis",
+              "name": "Preguntas geográficas e hipótesis",
+              "short_description": "Formula preguntas espaciales (¿dónde?, ¿por qué ahí?, ¿qué cambia si...?) y plantea hipótesis verificables.",
+              "example_tasks": [
+                "Redacta 3 preguntas geográficas sobre tu comunidad usando las frases: '¿dónde se concentra...?', '¿por qué ocurre ahí...?' y '¿cómo ha cambiado...?'",
+                "Elige una pregunta y escribe una hipótesis y dos variables que necesitarías observar o medir.",
+                "Plantea un plan breve (5 pasos) para verificar tu hipótesis usando observación, entrevistas o datos públicos."
+              ]
+            },
+            {
+              "key": "fuentes_de_informacion_geografica",
+              "name": "Fuentes de información geográfica",
+              "short_description": "Evalúa fuentes (mapas, censos, imágenes satelitales, noticias) y reconoce sesgos y limitaciones.",
+              "example_tasks": [
+                "Encuentra 3 fuentes sobre población de tu municipio (por ejemplo, INEGI, sitio estatal, nota periodística) y compara diferencias.",
+                "Explica qué información aporta una imagen satelital que no aporta un texto y viceversa, con un ejemplo.",
+                "Elabora una ficha de evaluación de fuentes (autoría, fecha, propósito, confiabilidad) y aplícala a una noticia sobre un problema ambiental."
+              ]
+            },
+            {
+              "key": "comunicacion_geografica",
+              "name": "Comunicación geográfica",
+              "short_description": "Organiza resultados en mapas simples, gráficos, tablas y textos argumentativos claros.",
+              "example_tasks": [
+                "Convierte una tabla de datos (población por colonia) en una gráfica adecuada y explica por qué elegiste ese tipo.",
+                "Redacta un párrafo que interprete un mapa temático (densidad de población) sin solo describir colores: incluye una explicación.",
+                "Crea una infografía de una página sobre un problema local (agua, movilidad, basura) con al menos 1 mapa/croquis, 1 gráfica y 3 propuestas."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cartografia_y_representacion",
+      "name": "Cartografía y representación del espacio",
+      "short_description": "Desarrolla alfabetización cartográfica: orientación, coordenadas, escalas, proyecciones y lectura crítica de mapas para interpretar información geográfica y tomar decisiones.",
+      "sub_topics": [
+        {
+          "key": "elementos_del_mapa",
+          "name": "Elementos del mapa",
+          "short_description": "Identifica y usa título, simbología, escala, orientación, proyección y fuentes para leer mapas con precisión.",
+          "sub_topics": [
+            {
+              "key": "titulo_leyenda_y_simbologia",
+              "name": "Título, leyenda y simbología",
+              "short_description": "Interpreta símbolos convencionales y construye leyendas claras para comunicar información.",
+              "example_tasks": [
+                "Observa un mapa temático y explica qué información aporta el título, la leyenda y los símbolos principales.",
+                "Diseña una simbología (mínimo 8 símbolos) para un mapa escolar de servicios (biblioteca, clínica, paradas, etc.).",
+                "Crea un mapa de tu colonia en una hoja con tu simbología y escribe 5 conclusiones que se puedan leer en tu mapa."
+              ]
+            },
+            {
+              "key": "orientacion_y_referencias",
+              "name": "Orientación y referencias",
+              "short_description": "Utiliza puntos cardinales y referencias locales para ubicar rutas y objetos en el espacio.",
+              "example_tasks": [
+                "Traza la ruta de tu casa a la escuela y describe direcciones usando puntos cardinales (N, S, E, O).",
+                "Con una brújula del celular (o un plano), determina la orientación de dos calles principales cerca de tu escuela.",
+                "Diseña una instrucción de ruta para un visitante (10 pasos) y luego verifica si alguien podría seguirla sin preguntarte."
+              ]
+            },
+            {
+              "key": "fuente_fecha_y_proposito",
+              "name": "Fuente, fecha y propósito del mapa",
+              "short_description": "Evalúa la confiabilidad de un mapa considerando su origen, actualización y finalidad.",
+              "example_tasks": [
+                "Compara dos mapas de la misma zona (uno antiguo y otro reciente) e identifica 5 cambios y posibles causas.",
+                "Explica por qué un mapa turístico y un mapa de riesgos pueden representar de forma distinta el mismo lugar.",
+                "Elabora criterios para decidir si un mapa en internet es confiable y aplícalos a un ejemplo (captura o enlace)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "coordenadas_y_sistemas_de_referencia",
+          "name": "Coordenadas y sistemas de referencia",
+          "short_description": "Ubica puntos con latitud/longitud y comprende cómo se construyen sistemas de referencia para localizar con exactitud.",
+          "sub_topics": [
+            {
+              "key": "latitud_longitud_y_grados",
+              "name": "Latitud, longitud y grados",
+              "short_description": "Lee coordenadas geográficas en grados y determina ubicaciones relativas (hemisferios, paralelos y meridianos).",
+              "example_tasks": [
+                "Indica en qué hemisferio se encuentra México y explica cómo lo sabes usando paralelos y meridianos.",
+                "Ubica (en un atlas o mapa digital) tres ciudades mexicanas y escribe sus coordenadas aproximadas.",
+                "Explica por qué dos lugares con la misma latitud pueden tener climas distintos, usando al menos dos factores."
+              ]
+            },
+            {
+              "key": "coordenadas_en_mapas_digitales",
+              "name": "Coordenadas en mapas digitales",
+              "short_description": "Obtiene coordenadas en mapas digitales y las usa para describir puntos de interés y rutas.",
+              "example_tasks": [
+                "Usa un mapa digital para obtener las coordenadas de tu escuela y de un parque cercano; registra ambos pares.",
+                "Calcula la distancia aproximada entre esos puntos (herramienta del mapa o estimación por escala) y escribe el procedimiento.",
+                "Propón una ruta segura para llegar del punto A al punto B y justifica usando al menos 2 criterios (iluminación, cruces, zonas de riesgo)."
+              ]
+            },
+            {
+              "key": "altitud_y_modelos_del_terreno",
+              "name": "Altitud y modelos del terreno",
+              "short_description": "Relaciona altitud con relieve y reconoce representaciones del terreno (curvas de nivel, sombreado, perfiles).",
+              "example_tasks": [
+                "Explica la diferencia entre altitud y latitud y da un ejemplo de cada una en México.",
+                "Interpreta un mapa con curvas de nivel: identifica la zona más alta y la más baja y explica cómo lo deduces.",
+                "Elabora un perfil topográfico sencillo (a partir de un mapa o app) entre dos puntos y describe cambios del relieve."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "escala_distancia_y_proyecciones",
+          "name": "Escala, distancia y proyecciones",
+          "short_description": "Calcula distancias con escala y comprende que las proyecciones cartográficas distorsionan formas, áreas o distancias.",
+          "sub_topics": [
+            {
+              "key": "tipos_de_escala_y_conversion",
+              "name": "Tipos de escala y conversión",
+              "short_description": "Usa escala numérica y gráfica para estimar distancias y realizar conversiones básicas.",
+              "example_tasks": [
+                "En un mapa con escala 1:100 000, calcula la distancia real de una línea que mide 6 cm.",
+                "Explica cuándo es más útil una escala gráfica que una numérica (da 2 ejemplos).",
+                "Diseña un plano simple del salón y asigna una escala; calcula la distancia real entre dos mesas."
+              ]
+            },
+            {
+              "key": "medicion_de_distancias_y_rutas",
+              "name": "Medición de distancias y rutas",
+              "short_description": "Estima distancias lineales y por ruta y compara tiempos de traslado con diferentes medios.",
+              "example_tasks": [
+                "Compara la distancia en línea recta y la distancia por ruta entre tu casa y la escuela; explica por qué cambian.",
+                "Registra (estimado) el tiempo en transporte público y caminando para un trayecto y analiza qué factores influyen.",
+                "Propón una mejora de movilidad para tu zona (cruce peatonal, ciclovía, ruta) y sustenta con evidencia de distancias/tiempos."
+              ]
+            },
+            {
+              "key": "proyecciones_y_distorsiones",
+              "name": "Proyecciones y distorsiones",
+              "short_description": "Reconoce que todo mapa distorsiona y compara proyecciones según su propósito (navegación, áreas, formas).",
+              "example_tasks": [
+                "Observa dos mapas mundiales con proyecciones distintas e identifica 3 diferencias visibles (tamaño, forma, distancias).",
+                "Explica por qué una proyección puede ser adecuada para rutas aéreas pero no para comparar tamaños de países.",
+                "Elabora una breve recomendación: ¿qué proyección elegirías para un mapa de distribución de biomas y por qué?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "mapas_tematicos_y_lectura_critica",
+          "name": "Mapas temáticos y lectura crítica",
+          "short_description": "Interpreta mapas de población, clima, economía o riesgo y detecta sesgos en clasificación, colores, escala y selección de datos.",
+          "sub_topics": [
+            {
+              "key": "clasificacion_y_coropletas",
+              "name": "Clasificación de datos y mapas coropléticos",
+              "short_description": "Comprende cómo los rangos y clases cambian la lectura de un mapa y evita interpretaciones engañosas.",
+              "example_tasks": [
+                "Observa un mapa coroplético de densidad de población y escribe 5 conclusiones (2 deben relacionar regiones).",
+                "Reclasifica los datos en más/menos clases (por ejemplo 3 vs. 6) y explica cómo cambian las conclusiones.",
+                "Redacta una crítica breve de un mapa de redes sociales: identifica al menos 2 decisiones de diseño que puedan sesgar la interpretación."
+              ]
+            },
+            {
+              "key": "mapas_de_flujos",
+              "name": "Mapas de flujos",
+              "short_description": "Interpreta flujos (migración, comercio, transporte) y explica direcciones, magnitudes y conexiones.",
+              "example_tasks": [
+                "Con un mapa de migración interna, identifica 3 estados emisores y 3 receptores y sugiere causas posibles.",
+                "Elabora un mapa de flujos simple de tu escuela (entradas/salidas en hora pico) y propone una medida de orden.",
+                "Analiza un corredor logístico (puerto-carretera-ciudad) y explica ventajas y riesgos territoriales en 10-12 líneas."
+              ]
+            },
+            {
+              "key": "mapas_de_riesgo",
+              "name": "Mapas de riesgo",
+              "short_description": "Relaciona amenaza, exposición y vulnerabilidad y propone acciones basadas en evidencia espacial.",
+              "example_tasks": [
+                "Interpreta un mapa de riesgo de inundación: identifica 2 zonas críticas y 2 zonas seguras y explica por qué.",
+                "Propón 4 acciones para reducir el riesgo en una zona crítica (dos estructurales y dos no estructurales).",
+                "Diseña un 'mapa de evacuación' escolar con rutas y puntos de reunión, justificando con criterios de seguridad."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "herramientas_geoespaciales_y_datos",
+      "name": "Herramientas geoespaciales y datos (introducción a SIG)",
+      "short_description": "Integra herramientas digitales (mapas en línea, datos abiertos, capas) para analizar problemas del entorno, elaborar productos cartográficos simples y argumentar con evidencia.",
+      "sub_topics": [
+        {
+          "key": "cartografia_digital_y_capas",
+          "name": "Cartografía digital y capas",
+          "short_description": "Comprende la lógica de capas (capas base y temáticas) y crea mapas sencillos combinando información.",
+          "sub_topics": [
+            {
+              "key": "capas_base_y_tematicas",
+              "name": "Capas base y capas temáticas",
+              "short_description": "Distingue capas base (calles, relieve) de capas temáticas (población, riesgo) y las combina para interpretar el territorio.",
+              "example_tasks": [
+                "En un mapa digital, activa/desactiva 3 capas (tráfico, relieve, transporte) y describe qué cambia en tu interpretación.",
+                "Crea un mapa con 2 capas temáticas (por ejemplo, escuelas y zonas inundables) y escribe 5 conclusiones.",
+                "Propón una ubicación para un nuevo servicio (punto de reciclaje o biblioteca) justificando con al menos 2 capas."
+              ]
+            },
+            {
+              "key": "marcadores_poligonos_y_rutas",
+              "name": "Marcadores, polígonos y rutas",
+              "short_description": "Representa puntos, áreas y rutas para describir distribución, límites y accesibilidad.",
+              "example_tasks": [
+                "Marca 10 puntos de interés de tu colonia (salud, educación, parques) y clasifícalos por tipo.",
+                "Dibuja un polígono aproximado del 'área de influencia' de tu escuela (por ejemplo, 15 minutos caminando) y explica el criterio.",
+                "Compara dos rutas (a pie y en transporte) hacia el mismo destino y justifica cuál conviene según tiempo, seguridad y costo."
+              ]
+            },
+            {
+              "key": "mapas_colaborativos",
+              "name": "Mapas colaborativos",
+              "short_description": "Organiza información de manera colectiva y define categorías y criterios comunes para mapear un problema local.",
+              "example_tasks": [
+                "En equipo, acuerden 6 categorías para mapear 'problemas del barrio' (baches, basura, alumbrado, etc.) y definan criterios claros.",
+                "Recolecten 20 registros (observación o reporte) y elaboren un mapa con símbolos consistentes; incluyan fecha y fuente.",
+                "Presenten el mapa y propongan 3 acciones prioritarias, justificando con el patrón espacial observado."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "datos_abiertos_y_estadistica_espacial_basica",
+          "name": "Datos abiertos y estadística espacial básica",
+          "short_description": "Usa datos públicos (por ejemplo, censos y registros) para construir indicadores simples y representarlos espacialmente.",
+          "sub_topics": [
+            {
+              "key": "busqueda_descarga_y_metadatos",
+              "name": "Búsqueda, descarga y metadatos",
+              "short_description": "Localiza conjuntos de datos, reconoce metadatos (año, cobertura, unidad) y evita usos incorrectos.",
+              "example_tasks": [
+                "Encuentra un conjunto de datos de población por municipio y registra: año, fuente, unidad y cobertura.",
+                "Explica por qué no es válido comparar datos de distintos años sin ajustar o contextualizar (da un ejemplo).",
+                "Elabora una ficha de metadatos para un conjunto de datos y compártela con tu equipo para acordar su uso."
+              ]
+            },
+            {
+              "key": "indicadores_y_tasas",
+              "name": "Indicadores y tasas",
+              "short_description": "Calcula e interpreta indicadores básicos (densidad, tasas, porcentajes) y los vincula con el espacio.",
+              "example_tasks": [
+                "Calcula la densidad de población de 3 municipios (población/área) y ordénalos de mayor a menor.",
+                "Interpreta un porcentaje de acceso a agua entubada por municipio y sugiere 2 posibles causas territoriales.",
+                "Elabora un ranking de 5 municipios según un indicador (marginación, escolaridad o servicios) y propone una hipótesis explicativa."
+              ]
+            },
+            {
+              "key": "graficas_y_tablas_para_geografia",
+              "name": "Gráficas y tablas para Geografía",
+              "short_description": "Selecciona gráficos apropiados (barras, líneas, pastel) y describe tendencias y comparaciones con precisión.",
+              "example_tasks": [
+                "Convierte una tabla de población por edad en una gráfica y escribe 4 conclusiones (incluye una tendencia).",
+                "Compara dos series temporales (lluvia anual vs. producción agrícola) y describe una posible relación sin confundir correlación con causalidad.",
+                "Elabora una tabla resumen con 6 municipios y 3 indicadores; escribe un párrafo interpretando patrones territoriales."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "teledeteccion_y_imagenes_satelitales",
+          "name": "Teledetección e imágenes satelitales",
+          "short_description": "Interpreta imágenes satelitales para reconocer cobertura del suelo, cambios territoriales y evidencias de procesos naturales y sociales.",
+          "sub_topics": [
+            {
+              "key": "lectura_de_imagen_satelital",
+              "name": "Lectura básica de una imagen satelital",
+              "short_description": "Identifica elementos (agua, vegetación, zonas urbanas) por tono, textura y forma.",
+              "example_tasks": [
+                "Observa una imagen satelital de tu ciudad y marca 5 rasgos: zona urbana, áreas verdes, cuerpos de agua, vías principales y zona industrial.",
+                "Compara dos imágenes (estación seca vs. lluvias o años distintos) y describe 4 cambios visibles.",
+                "Explica qué evidencia en la imagen podría indicar expansión urbana y qué información adicional necesitarías para confirmarlo."
+              ]
+            },
+            {
+              "key": "cambio_de_uso_de_suelo",
+              "name": "Cambio de uso de suelo",
+              "short_description": "Reconoce transformaciones (deforestación, urbanización, agricultura) y discute impactos ambientales y sociales.",
+              "example_tasks": [
+                "Elige una zona (bosque, periferia urbana, costa) y describe un cambio de uso de suelo probable en la última década con base en imágenes.",
+                "Relaciona el cambio de uso de suelo con 3 impactos (agua, temperatura, biodiversidad, movilidad) y explica el mecanismo.",
+                "Propón una medida de mitigación o regulación del uso del suelo y cómo evaluarías su efectividad con evidencia espacial."
+              ]
+            },
+            {
+              "key": "indices_simples_y_observacion",
+              "name": "Índices simples y observación",
+              "short_description": "Comprende de forma introductoria que algunos indicadores (vegetación, temperatura superficial) pueden estimarse con información remota.",
+              "example_tasks": [
+                "Explica qué podría significar que una zona tenga 'más vegetación' en términos de temperatura y calidad de vida urbana.",
+                "Identifica 3 áreas potenciales de 'isla de calor' en tu ciudad (por observación o imagen) y justifica tus criterios.",
+                "Diseña una actividad de verificación en campo (observación) para contrastar lo que ves en una imagen satelital con la realidad."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "proyecto_integrador_local",
+          "name": "Proyecto integrador local con evidencia espacial",
+          "short_description": "Aplica herramientas geoespaciales y datos para investigar un problema local y proponer soluciones viables.",
+          "sub_topics": [
+            {
+              "key": "diagnostico_territorial",
+              "name": "Diagnóstico territorial",
+              "short_description": "Delimita el área de estudio, selecciona variables y construye un diagnóstico con mapas, datos y observación.",
+              "example_tasks": [
+                "Define un problema local (basura, movilidad, agua) y delimita un polígono de estudio; justifica los límites.",
+                "Selecciona 3 variables (por ejemplo, puntos de acumulación, rutas, horarios) y describe cómo las medirás o registrarás.",
+                "Elabora un diagnóstico de una página con: 1 croquis/mapa, 1 tabla y 3 conclusiones basadas en evidencia."
+              ]
+            },
+            {
+              "key": "propuesta_y_evaluacion",
+              "name": "Propuesta y evaluación de alternativas",
+              "short_description": "Diseña alternativas, define criterios y evalúa impactos esperados (sociales, ambientales y económicos).",
+              "example_tasks": [
+                "Propón 2 alternativas de solución y define 4 criterios de evaluación (costo, aceptación social, impacto ambiental, tiempo).",
+                "Asigna puntajes (1-5) a cada alternativa según los criterios y justifica con argumentos y evidencia.",
+                "Escribe un plan de implementación en 6 pasos e incluye cómo medirías el éxito (indicadores) en un mes."
+              ]
+            },
+            {
+              "key": "presentacion_y_eticidad_de_datos",
+              "name": "Presentación y ética de datos",
+              "short_description": "Comunica resultados de forma clara y respeta privacidad, consentimiento y uso responsable de información.",
+              "example_tasks": [
+                "Diseña una presentación de 5 diapositivas con mapa, datos y propuesta; escribe el guion de 1 minuto para exponer.",
+                "Identifica 3 riesgos éticos al recolectar datos en tu comunidad (fotos, ubicación, entrevistas) y cómo evitarlos.",
+                "Elabora un aviso breve de consentimiento para entrevistas (3-4 líneas) y explica por qué es importante."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tierra_y_sistemas_fisicos",
+      "name": "La Tierra y los sistemas físicos",
+      "short_description": "Analiza la estructura interna de la Tierra, los procesos geológicos y geomorfológicos, y su relación con el relieve y los paisajes de México y del mundo.",
+      "sub_topics": [
+        {
+          "key": "estructura_interna_y_tectonica",
+          "name": "Estructura interna y tectónica de placas",
+          "short_description": "Comprende la estructura de la Tierra y explica el movimiento de placas tectónicas y sus consecuencias.",
+          "sub_topics": [
+            {
+              "key": "capas_de_la_tierra",
+              "name": "Capas internas de la Tierra",
+              "short_description": "Identifica corteza, manto y núcleo y explica sus características básicas.",
+              "example_tasks": [
+                "Dibuja un esquema de la Tierra e identifica sus capas con una breve descripción de cada una.",
+                "Explica por qué la temperatura aumenta hacia el interior del planeta y cómo se relaciona con el manto.",
+                "Relaciona la estructura interna de la Tierra con la existencia de volcanes y sismos en México."
+              ]
+            },
+            {
+              "key": "placas_tectonicas_principales",
+              "name": "Placas tectónicas principales",
+              "short_description": "Reconoce las principales placas tectónicas y su ubicación geográfica.",
+              "example_tasks": [
+                "Ubica en un mapa las placas tectónicas que influyen en México y nómbralas.",
+                "Explica por qué México es un país con alta actividad sísmica usando el concepto de placas.",
+                "Describe un evento sísmico reciente en México y relaciónalo con el movimiento de placas."
+              ]
+            },
+            {
+              "key": "limites_entre_placas",
+              "name": "Límites entre placas y sus efectos",
+              "short_description": "Distingue límites convergentes, divergentes y transformantes y sus consecuencias.",
+              "example_tasks": [
+                "Clasifica tres ejemplos reales de límites de placas (uno de cada tipo).",
+                "Explica qué tipo de límite predomina en la costa del Pacífico mexicano y qué riesgos implica.",
+                "Elabora una tabla comparativa de los tres tipos de límites con ejemplos y efectos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "procesos_geomorfologicos",
+          "name": "Procesos geomorfológicos",
+          "short_description": "Analiza los procesos que modelan el relieve terrestre a lo largo del tiempo.",
+          "sub_topics": [
+            {
+              "key": "orogenesis_y_volcanismo",
+              "name": "Orogénesis y volcanismo",
+              "short_description": "Explica la formación de montañas y la actividad volcánica.",
+              "example_tasks": [
+                "Describe cómo se formó una sierra o sistema montañoso de México.",
+                "Investiga un volcán mexicano activo o inactivo y resume su historia.",
+                "Relaciona volcanismo con fertilidad del suelo en ciertas regiones."
+              ]
+            },
+            {
+              "key": "erosion_transporte_y_sedimentacion",
+              "name": "Erosión, transporte y sedimentación",
+              "short_description": "Comprende cómo el agua, el viento y el hielo transforman el relieve.",
+              "example_tasks": [
+                "Explica con un dibujo cómo actúa la erosión fluvial en un río.",
+                "Identifica una zona erosionada cercana y describe posibles causas humanas.",
+                "Propón una acción local para reducir la erosión del suelo."
+              ]
+            },
+            {
+              "key": "relieve_mexicano",
+              "name": "Principales formas del relieve mexicano",
+              "short_description": "Reconoce mesetas, sierras, llanuras y depresiones de México.",
+              "example_tasks": [
+                "Ubica en un mapa la Sierra Madre Occidental, Oriental y del Sur.",
+                "Explica cómo el relieve influye en el clima de distintas regiones de México.",
+                "Relaciona relieve y actividades económicas en dos regiones contrastantes."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "tiempo_geologico",
+          "name": "Tiempo geológico",
+          "short_description": "Comprende la escala del tiempo geológico y los grandes cambios de la Tierra.",
+          "sub_topics": [
+            {
+              "key": "eras_y_periodos",
+              "name": "Eras y períodos geológicos",
+              "short_description": "Identifica las principales eras y períodos de la historia terrestre.",
+              "example_tasks": [
+                "Elabora una línea del tiempo con las eras geológicas principales.",
+                "Relaciona una era geológica con un evento importante (extinción, glaciación).",
+                "Explica por qué el tiempo geológico no se mide en años comunes."
+              ]
+            },
+            {
+              "key": "cambios_ambientales_a_largo_plazo",
+              "name": "Cambios ambientales a largo plazo",
+              "short_description": "Analiza transformaciones del clima y la vida a lo largo del tiempo geológico.",
+              "example_tasks": [
+                "Describe cómo han cambiado los climas del planeta a lo largo del tiempo.",
+                "Relaciona cambios geológicos con la evolución de los seres vivos.",
+                "Reflexiona sobre qué tan recientes son las actividades humanas en la historia de la Tierra."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "clima_agua_y_atmosfera",
+      "name": "Clima, agua y atmósfera",
+      "short_description": "Estudia los elementos del clima, la dinámica atmosférica y la importancia del agua como recurso natural.",
+      "sub_topics": [
+        {
+          "key": "elementos_y_factores_del_clima",
+          "name": "Elementos y factores del clima",
+          "short_description": "Identifica los elementos del clima y los factores que los modifican.",
+          "sub_topics": [
+            {
+              "key": "temperatura_precipitacion_y_viento",
+              "name": "Temperatura, precipitación y viento",
+              "short_description": "Analiza cómo se miden y distribuyen los principales elementos climáticos.",
+              "example_tasks": [
+                "Interpreta un climograma de una ciudad mexicana.",
+                "Compara temperatura y precipitación entre dos regiones del país.",
+                "Explica cómo el viento influye en la sensación térmica."
+              ]
+            },
+            {
+              "key": "latitud_altitud_y_corrientes",
+              "name": "Latitud, altitud y corrientes",
+              "short_description": "Explica cómo la ubicación y las corrientes influyen en el clima.",
+              "example_tasks": [
+                "Relaciona latitud y clima con ejemplos de México.",
+                "Explica por qué las zonas altas suelen ser más frías.",
+                "Describe la influencia de las corrientes marinas en el clima costero."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "tipos_de_clima",
+          "name": "Tipos de clima",
+          "short_description": "Reconoce la clasificación climática y su distribución espacial.",
+          "sub_topics": [
+            {
+              "key": "climas_de_mexico",
+              "name": "Climas de México",
+              "short_description": "Identifica los principales climas presentes en el territorio mexicano.",
+              "example_tasks": [
+                "Ubica los climas de México en un mapa y nómbralos.",
+                "Relaciona clima con vegetación en dos regiones mexicanas.",
+                "Explica por qué México tiene gran diversidad climática."
+              ]
+            },
+            {
+              "key": "climas_del_mundo",
+              "name": "Climas del mundo",
+              "short_description": "Compara climas del mundo y su distribución global.",
+              "example_tasks": [
+                "Identifica climas del mundo en un mapamundi.",
+                "Compara un clima tropical con uno polar en una tabla.",
+                "Relaciona tipo de clima con formas de vida humana."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "agua_y_cuencas",
+          "name": "Agua, ríos y cuencas",
+          "short_description": "Analiza el ciclo del agua, las cuencas hidrográficas y la disponibilidad del recurso.",
+          "sub_topics": [
+            {
+              "key": "ciclo_hidrologico",
+              "name": "Ciclo hidrológico",
+              "short_description": "Describe las etapas del ciclo del agua y su importancia.",
+              "example_tasks": [
+                "Dibuja y explica el ciclo del agua.",
+                "Relaciona el ciclo del agua con el clima local.",
+                "Explica cómo las actividades humanas alteran el ciclo hidrológico."
+              ]
+            },
+            {
+              "key": "cuencas_y_disponibilidad",
+              "name": "Cuencas y disponibilidad de agua",
+              "short_description": "Reconoce cuencas principales y problemas de disponibilidad hídrica.",
+              "example_tasks": [
+                "Ubica las principales cuencas de México en un mapa.",
+                "Explica por qué hay escasez de agua en algunas regiones.",
+                "Propón acciones para el uso sustentable del agua en tu comunidad."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ecosistemas_y_biodiversidad",
+      "name": "Ecosistemas y biodiversidad",
+      "short_description": "Reconoce la diversidad de ecosistemas y biomas, explica su funcionamiento y valora la biodiversidad de México, considerando servicios ecosistémicos y presiones socioambientales.",
+      "sub_topics": [
+        {
+          "key": "biomas_y_ecosistemas",
+          "name": "Biomas y ecosistemas",
+          "short_description": "Identifica biomas y tipos de ecosistemas, y relaciona clima, relieve y vegetación con su distribución.",
+          "sub_topics": [
+            {
+              "key": "biomas_del_mundo_y_de_mexico",
+              "name": "Biomas del mundo y de México",
+              "short_description": "Distingue biomas principales y ubica los ecosistemas dominantes de México en mapas temáticos.",
+              "example_tasks": [
+                "Ubica en un mapamundi 5 biomas (selva, desierto, tundra, bosque templado, sabana) y describe un rasgo climático de cada uno.",
+                "Elabora un mapa esquemático de México señalando al menos 4 ecosistemas (selva, bosque templado, matorral/desierto, manglar) y menciona en qué estados predominan.",
+                "Explica por qué un mismo bioma puede presentarse en distintos continentes y qué variables determinan su presencia."
+              ]
+            },
+            {
+              "key": "componentes_bioticos_y_abioticos",
+              "name": "Componentes bióticos y abióticos",
+              "short_description": "Explica cómo interactúan componentes bióticos y abióticos y cómo condicionan la productividad y la vida en un ecosistema.",
+              "example_tasks": [
+                "Elige un ecosistema local (parque, cerro, río) e identifica 5 factores abióticos y 5 bióticos observables.",
+                "Describe una cadena alimentaria de 4 niveles tróficos para un ecosistema mexicano (por ejemplo, manglar o selva) y justifica cada relación.",
+                "Plantea cómo cambiaría la biodiversidad si se modifica un factor abiótico (temperatura, agua o suelo) y explica el mecanismo."
+              ]
+            },
+            {
+              "key": "zonas_de_transicion_ecotonos",
+              "name": "Zonas de transición (ecotonos)",
+              "short_description": "Reconoce ecotonos y explica por qué suelen presentar alta diversidad biológica.",
+              "example_tasks": [
+                "Define 'ecotono' y describe un ejemplo posible en tu estado (montaña-llanura, bosque-matorral, costa-manglar).",
+                "Explica por qué en los ecotonos pueden coexistir especies de dos ecosistemas distintos.",
+                "Diseña una pequeña investigación escolar para identificar un ecotono cercano: qué observarías, qué registrarías y cómo lo mapearías."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "biodiversidad_de_mexico",
+          "name": "Biodiversidad de México",
+          "short_description": "Analiza la riqueza biológica del país, el endemismo y los factores geográficos que explican su diversidad.",
+          "sub_topics": [
+            {
+              "key": "endemismo_y_regiones_prioritarias",
+              "name": "Endemismo y regiones prioritarias",
+              "short_description": "Explica el endemismo y ubica regiones con alta diversidad y especies endémicas.",
+              "example_tasks": [
+                "Define 'especie endémica' y menciona dos ejemplos de México (pueden ser animales o plantas).",
+                "Selecciona una región (por ejemplo, Oaxaca, Chiapas, Baja California, Península de Yucatán) y explica dos razones geográficas de su diversidad.",
+                "Elabora un argumento de 10 líneas: ¿por qué proteger especies endémicas es una prioridad nacional?"
+              ]
+            },
+            {
+              "key": "corredores_biologicos_y_conectividad",
+              "name": "Corredores biológicos y conectividad",
+              "short_description": "Comprende la conectividad ecológica y su importancia para el movimiento de especies y la resiliencia.",
+              "example_tasks": [
+                "Explica qué es un corredor biológico y por qué es diferente a un área protegida aislada.",
+                "En un mapa (digital o impreso), traza una posible conexión entre dos áreas verdes de tu ciudad y propone 2 acciones para mejorarla.",
+                "Analiza un caso hipotético: una carretera fragmenta un bosque; propone 3 medidas para reducir el impacto y justifica."
+              ]
+            },
+            {
+              "key": "biodiversidad_y_cultura",
+              "name": "Biodiversidad y cultura",
+              "short_description": "Relaciona biodiversidad con prácticas culturales, alimentación y conocimientos locales, incluyendo usos de especies nativas.",
+              "example_tasks": [
+                "Menciona 5 alimentos de origen vegetal comunes en México y explica de qué ecosistemas provienen o se cultivan.",
+                "Describe un ejemplo de uso tradicional de una especie (medicinal, alimentario o artesanal) y discute un riesgo de sobreexplotación.",
+                "Crea una ficha de divulgación (media página) que promueva el uso responsable de una especie nativa, con recomendaciones claras."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "servicios_ecosistemicos_y_bienestar",
+          "name": "Servicios ecosistémicos y bienestar",
+          "short_description": "Valora servicios de provisión, regulación, soporte y culturales, y los conecta con calidad de vida y riesgos socioambientales.",
+          "sub_topics": [
+            {
+              "key": "tipos_de_servicios_ecosistemicos",
+              "name": "Tipos de servicios ecosistémicos",
+              "short_description": "Clasifica servicios ecosistémicos y reconoce ejemplos concretos en México.",
+              "example_tasks": [
+                "Clasifica 10 ejemplos (agua potable, polinización, turismo, captura de carbono, suelo fértil) en los cuatro tipos de servicios ecosistémicos.",
+                "Elige un ecosistema (manglar, bosque, arrecife) y explica 3 servicios de regulación que ofrece y a quién benefician.",
+                "Escribe un caso breve: ¿qué pasaría con una comunidad costera si se pierde el manglar? Incluye 3 consecuencias."
+              ]
+            },
+            {
+              "key": "valoracion_y_toma_de_decisiones",
+              "name": "Valoración y toma de decisiones",
+              "short_description": "Discute cómo valorar servicios ecosistémicos (económica y socialmente) para decidir sobre proyectos y usos del suelo.",
+              "example_tasks": [
+                "Compara dos opciones para un terreno: conservar bosque o construir; escribe 3 beneficios y 3 costos (sociales/ambientales) de cada opción.",
+                "Propón 4 criterios para evaluar un proyecto que afecte un ecosistema y explica por qué cada criterio importa.",
+                "Elabora una recomendación final (8-10 líneas) justificando tu decisión con al menos 2 evidencias o datos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "presiones_y_conservacion",
+          "name": "Presiones humanas y conservación",
+          "short_description": "Analiza amenazas a los ecosistemas y propone estrategias de conservación y uso sustentable en contextos locales y nacionales.",
+          "sub_topics": [
+            {
+              "key": "deforestacion_y_cambio_de_uso_de_suelo",
+              "name": "Deforestación y cambio de uso de suelo",
+              "short_description": "Explica causas y consecuencias de la deforestación y del cambio de uso de suelo en la biodiversidad y el agua.",
+              "example_tasks": [
+                "Enumera 4 causas de deforestación y explica cuáles podrían estar presentes en tu estado.",
+                "Relaciona deforestación con dos impactos hidrológicos (inundaciones, recarga de acuíferos, erosión) y explica cómo ocurre.",
+                "Diseña una propuesta de prevención (comunitaria o escolar) con 3 acciones y una forma de medir resultados."
+              ]
+            },
+            {
+              "key": "contaminacion_y_especies_invasoras",
+              "name": "Contaminación y especies invasoras",
+              "short_description": "Reconoce fuentes de contaminación y efectos, e identifica riesgos asociados a especies invasoras.",
+              "example_tasks": [
+                "Elabora un listado de 6 contaminantes comunes (aire, agua, suelo) y vincula cada uno con una fuente probable.",
+                "Describe un ejemplo de contaminación del agua (real o hipotético) y propone 3 medidas de prevención.",
+                "Explica qué es una especie invasora y plantea un escenario de impacto en un ecosistema (competencia, depredación o enfermedad)."
+              ]
+            },
+            {
+              "key": "areas_naturales_protegidas_y_manejo",
+              "name": "Áreas naturales protegidas y manejo",
+              "short_description": "Comprende el propósito de las áreas protegidas y discute retos de manejo, participación social y vigilancia.",
+              "example_tasks": [
+                "Investiga un área natural protegida cercana o famosa en México y resume: ubicación, ecosistemas y objetivo de conservación.",
+                "Explica dos conflictos posibles en áreas protegidas (turismo, extracción, asentamientos) y cómo se podrían negociar soluciones.",
+                "Propón un reglamento escolar de visita responsable a un área natural (5 reglas) y explica su justificación."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "riesgos_naturales_y_prevencion",
+      "name": "Riesgos naturales y prevención",
+      "short_description": "Comprende amenazas naturales y socio-naturales, evalúa vulnerabilidad y exposición, e integra acciones de prevención y gestión del riesgo en el contexto mexicano.",
+      "sub_topics": [
+        {
+          "key": "amenazas_geologicas",
+          "name": "Amenazas geológicas",
+          "short_description": "Analiza sismos, volcanismo y tsunamis, y reconoce su distribución territorial en México.",
+          "sub_topics": [
+            {
+              "key": "sismos_en_mexico_y_zonas_sismicas",
+              "name": "Sismos en México y zonas sísmicas",
+              "short_description": "Explica por qué México es sísmico y ubica regiones de mayor amenaza.",
+              "example_tasks": [
+                "Ubica en un mapa de México tres estados con alta sismicidad y explica qué relación tienen con la subducción.",
+                "Describe 5 medidas de prevención sísmica en casa o escuela y explica por qué cada una reduce el riesgo.",
+                "Analiza un reporte de sismo (magnitud, profundidad, epicentro) y explica por qué la intensidad puede variar por región."
+              ]
+            },
+            {
+              "key": "volcanes_riesgos_y_monitoreo",
+              "name": "Volcanes: riesgos y monitoreo",
+              "short_description": "Distingue peligros volcánicos (ceniza, lahares, flujos) y la importancia del monitoreo.",
+              "example_tasks": [
+                "Elige un volcán mexicano (Popocatépetl u otro) y enumera 3 riesgos principales asociados.",
+                "Explica la diferencia entre 'peligro volcánico' y 'riesgo volcánico' usando un ejemplo de población cercana.",
+                "Diseña un cartel informativo para tu comunidad sobre qué hacer ante caída de ceniza, con instrucciones claras."
+              ]
+            },
+            {
+              "key": "deslizamientos_y_sus_causas",
+              "name": "Deslizamientos de ladera y sus causas",
+              "short_description": "Relaciona pendiente, lluvias, suelos y actividades humanas con deslizamientos.",
+              "example_tasks": [
+                "Explica 4 causas de un deslizamiento (2 naturales y 2 humanas) con ejemplos.",
+                "Con un croquis de una ladera, marca zonas de mayor riesgo y sugiere 3 medidas de mitigación.",
+                "Analiza un caso hipotético: lluvias intensas + deforestación; describe la secuencia de eventos que incrementa el riesgo."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "amenazas_hidrometeorologicas",
+          "name": "Amenazas hidrometeorológicas",
+          "short_description": "Comprende huracanes, tormentas, inundaciones, sequías y olas de calor, y sus impactos diferenciados.",
+          "sub_topics": [
+            {
+              "key": "huracanes_y_tormentas",
+              "name": "Huracanes y tormentas",
+              "short_description": "Interpreta trayectorias, categorías e impactos y propone medidas de preparación comunitaria.",
+              "example_tasks": [
+                "Explica qué significa una categoría de huracán y qué información aporta (vientos, daños esperados).",
+                "Interpreta un mapa de trayectoria de un huracán histórico en México y describe qué regiones fueron más vulnerables y por qué.",
+                "Crea una lista de verificación familiar (10 ítems) para preparación ante tormentas intensas en tu localidad."
+              ]
+            },
+            {
+              "key": "inundaciones_y_gestion_de_cuencas",
+              "name": "Inundaciones y gestión de cuencas",
+              "short_description": "Relaciona precipitación, drenaje, uso del suelo y cuencas con inundaciones urbanas y rurales.",
+              "example_tasks": [
+                "Explica 3 causas de inundaciones urbanas (drenaje, basura, impermeabilización) y cómo se conectan.",
+                "Elabora un mapa simple de tu colonia marcando zonas bajas y puntos donde se acumula agua; propone 3 acciones.",
+                "Analiza un caso: construcción en zona de inundación; plantea 2 alternativas de ordenamiento y sus ventajas."
+              ]
+            },
+            {
+              "key": "sequia_y_estres_hidrico",
+              "name": "Sequía y estrés hídrico",
+              "short_description": "Comprende tipos de sequía y evalúa efectos en agricultura, ciudades y ecosistemas.",
+              "example_tasks": [
+                "Define sequía meteorológica y sequía hidrológica y da un ejemplo de cada una en México.",
+                "Relaciona sequía con 3 impactos (precio de alimentos, disponibilidad urbana, incendios) y explica el vínculo.",
+                "Propón un plan de ahorro de agua para tu escuela con metas cuantificables y una forma de monitoreo semanal."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "vulnerabilidad_exposicion_y_capacidades",
+          "name": "Vulnerabilidad, exposición y capacidades",
+          "short_description": "Identifica factores sociales y territoriales que incrementan la vulnerabilidad y fortalece capacidades de prevención.",
+          "sub_topics": [
+            {
+              "key": "vulnerabilidad_social_y_desigualdad",
+              "name": "Vulnerabilidad social y desigualdad",
+              "short_description": "Explica cómo la desigualdad y el acceso a servicios influyen en el impacto de desastres.",
+              "example_tasks": [
+                "Escribe 5 factores que aumentan vulnerabilidad (materiales de vivienda, ubicación, ingreso, salud, información) y explica uno.",
+                "Compara dos colonias hipotéticas (una con drenaje y otra sin) y predice qué daños habría ante una inundación y por qué.",
+                "Propón 3 acciones de política pública local para reducir vulnerabilidad y explica a quién beneficiarían."
+              ]
+            },
+            {
+              "key": "exposicion_y_uso_del_suelo",
+              "name": "Exposición y uso del suelo",
+              "short_description": "Analiza cómo el uso del suelo y la localización de infraestructura incrementan o reducen exposición.",
+              "example_tasks": [
+                "Ubica en un croquis escolar zonas expuestas (cables, muros, salidas) y sugiere mejoras de seguridad.",
+                "Explica por qué construir en laderas o cauces aumenta exposición y qué alternativas de localización existen.",
+                "Diseña un criterio de zonificación simple (apta/no apta) para vivienda con base en pendiente e inundación."
+              ]
+            },
+            {
+              "key": "capacidades_y_cultura_de_prevencion",
+              "name": "Capacidades y cultura de prevención",
+              "short_description": "Desarrolla planes de emergencia, comunicación y simulacros, y evalúa su eficacia.",
+              "example_tasks": [
+                "Elabora un plan de comunicación para emergencias en tu salón (responsables, mensajes, rutas) en una hoja.",
+                "Organiza un simulacro (sismo o inundación) y registra tiempos; escribe 3 mejoras basadas en resultados.",
+                "Crea un tríptico con recomendaciones de prevención adaptadas a tu región y sustenta con una fuente confiable."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "gestion_integral_del_riesgo",
+          "name": "Gestión integral del riesgo",
+          "short_description": "Integra prevención, mitigación, respuesta y recuperación con enfoque territorial y participación comunitaria.",
+          "sub_topics": [
+            {
+              "key": "prevencion_mitigacion_y_adaptacion",
+              "name": "Prevención, mitigación y adaptación",
+              "short_description": "Distingue acciones antes, durante y después del evento y prioriza medidas costo-efectivas.",
+              "example_tasks": [
+                "Clasifica 12 acciones (alerta temprana, evacuación, reforestación, seguros, obras) en prevención, mitigación o adaptación.",
+                "Elige una amenaza local y diseña un paquete de 5 acciones (2 estructurales y 3 no estructurales) con justificación.",
+                "Redacta una recomendación para tu municipio explicando por qué invertir en prevención reduce pérdidas a largo plazo."
+              ]
+            },
+            {
+              "key": "sistemas_de_alerta_y_mapas_de_riesgo",
+              "name": "Sistemas de alerta y mapas de riesgo",
+              "short_description": "Interpreta alertas, semáforos y mapas, y toma decisiones informadas ante avisos oficiales.",
+              "example_tasks": [
+                "Explica cómo funciona un sistema de alerta (por ejemplo, lluvia intensa o actividad volcánica) y qué significa cada nivel.",
+                "Analiza un mapa de riesgo (real o dado por el docente) y prioriza 3 zonas para intervención con argumentos.",
+                "Diseña un protocolo de acción familiar según niveles de alerta (verde/amarillo/rojo) con acciones concretas."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "poblacion_y_dinamica_demografica",
+      "name": "Población y dinámica demográfica",
+      "short_description": "Analiza la distribución y estructura de la población, sus cambios (natalidad, mortalidad, migración) y sus efectos territoriales en México y el mundo.",
+      "sub_topics": [
+        {
+          "key": "distribucion_y_densidad",
+          "name": "Distribución y densidad de población",
+          "short_description": "Explica patrones de concentración y dispersión y calcula e interpreta densidad poblacional.",
+          "sub_topics": [
+            {
+              "key": "patrones_de_concentracion_y_factores",
+              "name": "Patrones de concentración y factores",
+              "short_description": "Relaciona relieve, clima, economía e infraestructura con la distribución de población.",
+              "example_tasks": [
+                "Explica por qué la población se concentra en ciertas regiones de México (Valle de México, bajío, costas) usando 3 factores.",
+                "Observa un mapa de densidad y escribe 5 conclusiones, incluyendo al menos una comparación norte-sur o costa-interior.",
+                "Plantea una hipótesis: ¿cómo cambiaría la distribución si se construye una nueva autopista o tren? Justifica."
+              ]
+            },
+            {
+              "key": "calculo_de_densidad",
+              "name": "Cálculo e interpretación de densidad",
+              "short_description": "Calcula densidad (hab/km²) y discute sus límites para describir realidades urbanas y rurales.",
+              "example_tasks": [
+                "Calcula la densidad de 3 municipios (datos dados) y ordénalos; explica qué implica cada valor.",
+                "Explica por qué dos municipios con igual densidad pueden ser muy diferentes (dispersión, uso del suelo, relieve).",
+                "Propón un indicador adicional (por ejemplo, densidad urbana, acceso a servicios) para complementar la densidad y justifica."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "estructura_por_edad_y_genero",
+          "name": "Estructura por edad y género",
+          "short_description": "Interpreta pirámides de población y relaciona estructura demográfica con necesidades sociales y económicas.",
+          "sub_topics": [
+            {
+              "key": "piramides_poblacionales",
+              "name": "Pirámides poblacionales",
+              "short_description": "Lee pirámides y reconoce etapas demográficas (joven, en transición, envejecida).",
+              "example_tasks": [
+                "Interpreta una pirámide de México y escribe 4 conclusiones sobre edades predominantes y tendencias.",
+                "Compara pirámides de dos países (uno envejecido y uno joven) y explica 3 diferencias y sus implicaciones.",
+                "Predice necesidades de servicios (escuelas, salud, empleo) para un estado con pirámide joven y justifica."
+              ]
+            },
+            {
+              "key": "bono_demografico",
+              "name": "Bono demográfico",
+              "short_description": "Explica el bono demográfico y condiciones para aprovecharlo (educación, empleo, salud).",
+              "example_tasks": [
+                "Define bono demográfico y explica en qué situación está México de manera general.",
+                "Elabora una lista de 5 políticas o acciones para aprovechar el bono demográfico y explica su efecto esperado.",
+                "Escribe un argumento: ¿qué riesgos hay si no se generan empleos suficientes durante el bono demográfico?"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "transicion_demografica",
+          "name": "Transición demográfica",
+          "short_description": "Analiza cambios en natalidad, mortalidad y esperanza de vida y su relación con desarrollo, urbanización y servicios.",
+          "sub_topics": [
+            {
+              "key": "tasas_de_natalidad_y_mortalidad",
+              "name": "Tasas de natalidad y mortalidad",
+              "short_description": "Interpreta tasas y explica factores que las modifican (salud, educación, economía).",
+              "example_tasks": [
+                "Con datos dados, calcula y compara tasas de natalidad de 3 regiones y escribe 2 explicaciones posibles.",
+                "Explica cómo mejora del acceso a salud puede reducir mortalidad infantil y cómo eso cambia la estructura poblacional.",
+                "Analiza una serie temporal (1990-2020) de natalidad y propone una explicación social para la tendencia."
+              ]
+            },
+            {
+              "key": "esperanza_de_vida_y_calidad_de_vida",
+              "name": "Esperanza de vida y calidad de vida",
+              "short_description": "Relaciona esperanza de vida con condiciones de vida y desigualdades territoriales.",
+              "example_tasks": [
+                "Explica qué mide la esperanza de vida y por qué varía entre estados o países.",
+                "Propón 3 factores territoriales que podrían explicar diferencias de esperanza de vida dentro de México.",
+                "Diseña un mapa conceptual que conecte educación, ingreso, salud y esperanza de vida con flechas causales."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "migracion_y_movilidad",
+          "name": "Migración y movilidad",
+          "short_description": "Explica tipos de migración (interna e internacional), causas, rutas y efectos en territorios de origen y destino.",
+          "sub_topics": [
+            {
+              "key": "migracion_interna_urbano_rural",
+              "name": "Migración interna (urbano-rural)",
+              "short_description": "Analiza causas y efectos de migración interna y su relación con urbanización y empleo.",
+              "example_tasks": [
+                "Describe 3 causas de migración del campo a la ciudad y 3 efectos en la ciudad receptora.",
+                "Interpreta un mapa de flujos internos y propone una explicación para dos corredores migratorios.",
+                "Plantea una propuesta para reducir expulsión en una región rural (educación, empleo, servicios) y justifica."
+              ]
+            },
+            {
+              "key": "migracion_internacional_y_remesas",
+              "name": "Migración internacional y remesas",
+              "short_description": "Explica causas de migración internacional y el papel de remesas y redes migrantes.",
+              "example_tasks": [
+                "Explica la diferencia entre migración voluntaria y forzada y da un ejemplo para México.",
+                "Analiza un caso hipotético: una comunidad depende de remesas; describe 2 beneficios y 2 riesgos económicos.",
+                "Elabora un mapa de actores (familias, gobiernos, empresas) relacionados con migración y escribe cómo interactúan."
+              ]
+            },
+            {
+              "key": "migracion_y_derechos_humanos",
+              "name": "Migración y derechos humanos",
+              "short_description": "Reconoce retos de seguridad, discriminación y acceso a servicios para población migrante.",
+              "example_tasks": [
+                "Elabora una lista de 6 derechos básicos de personas migrantes y explica por qué son importantes.",
+                "Analiza una nota periodística sobre migración e identifica: hechos, opiniones y posibles sesgos.",
+                "Diseña una propuesta escolar de sensibilización (cartel o microcampaña) contra la xenofobia con 3 mensajes clave."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "urbanizacion_y_territorio",
+      "name": "Urbanización y territorio",
+      "short_description": "Analiza el proceso de urbanización, la expansión metropolitana y sus impactos socioespaciales, ambientales y de movilidad en México.",
+      "sub_topics": [
+        {
+          "key": "crecimiento_urbano_y_metropolizacion",
+          "name": "Crecimiento urbano y metropolización",
+          "short_description": "Explica las causas del crecimiento urbano y la formación de áreas metropolitanas.",
+          "sub_topics": [
+            {
+              "key": "expansion_urbana_y_periferias",
+              "name": "Expansión urbana y periferias",
+              "short_description": "Identifica patrones de expansión urbana y problemáticas en zonas periféricas.",
+              "example_tasks": [
+                "Describe dos causas del crecimiento de las periferias urbanas en México.",
+                "Analiza una imagen satelital de tu ciudad y localiza zonas de expansión reciente.",
+                "Propón dos medidas para evitar la expansión urbana desordenada y justifica."
+              ]
+            },
+            {
+              "key": "areas_metropolitanas_de_mexico",
+              "name": "Áreas metropolitanas de México",
+              "short_description": "Reconoce las principales áreas metropolitanas y su dinámica territorial.",
+              "example_tasks": [
+                "Ubica en un mapa tres áreas metropolitanas de México y menciona un reto común.",
+                "Explica por qué la coordinación entre municipios es clave en zonas metropolitanas.",
+                "Elabora un esquema de actores que intervienen en la gestión metropolitana."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "movilidad_y_servicios_urbanos",
+          "name": "Movilidad y servicios urbanos",
+          "short_description": "Analiza transporte, accesibilidad y provisión de servicios en ciudades.",
+          "sub_topics": [
+            {
+              "key": "transporte_publico_y_movilidad_activa",
+              "name": "Transporte público y movilidad activa",
+              "short_description": "Evalúa opciones de transporte y su impacto en tiempo, costo y ambiente.",
+              "example_tasks": [
+                "Compara dos medios de transporte para un trayecto diario y justifica el más conveniente.",
+                "Identifica barreras para la movilidad peatonal o ciclista en tu colonia.",
+                "Propón una mejora concreta de movilidad y explica su beneficio ambiental."
+              ]
+            },
+            {
+              "key": "acceso_a_servicios",
+              "name": "Acceso a servicios urbanos",
+              "short_description": "Relaciona acceso a agua, salud, educación y áreas verdes con calidad de vida.",
+              "example_tasks": [
+                "Mapa-croquis: marca servicios cercanos a tu escuela y detecta carencias.",
+                "Explica cómo la falta de servicios incrementa desigualdad urbana.",
+                "Diseña un indicador simple para medir acceso a áreas verdes."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ambiente_sustentabilidad_y_problemas_locales",
+      "name": "Ambiente, sustentabilidad y problemas locales",
+      "short_description": "Examina problemas socioambientales locales y promueve acciones de sustentabilidad con participación comunitaria.",
+      "sub_topics": [
+        {
+          "key": "problemas_socioambientales",
+          "name": "Problemas socioambientales",
+          "short_description": "Identifica contaminación, residuos y degradación ambiental a escala local.",
+          "sub_topics": [
+            {
+              "key": "contaminacion_aire_agua_suelo",
+              "name": "Contaminación del aire, agua y suelo",
+              "short_description": "Reconoce fuentes, efectos y medidas de mitigación.",
+              "example_tasks": [
+                "Lista 5 fuentes locales de contaminación y vincula cada una con un efecto.",
+                "Analiza un caso local de contaminación y propone 3 acciones preventivas.",
+                "Diseña un afiche informativo con recomendaciones para la comunidad."
+              ]
+            },
+            {
+              "key": "residuos_y_economia_circular",
+              "name": "Residuos y economía circular",
+              "short_description": "Relaciona manejo de residuos con reducción, reutilización y reciclaje.",
+              "example_tasks": [
+                "Audita los residuos de un día en tu salón y clasifícalos.",
+                "Propón un plan de separación con metas semanales.",
+                "Explica cómo la economía circular reduce impactos ambientales."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "acciones_para_la_sustentabilidad",
+          "name": "Acciones para la sustentabilidad",
+          "short_description": "Diseña y evalúa acciones sustentables en contextos escolares y comunitarios.",
+          "sub_topics": [
+            {
+              "key": "participacion_comunitaria",
+              "name": "Participación comunitaria",
+              "short_description": "Promueve organización social para resolver problemas ambientales.",
+              "example_tasks": [
+                "Organiza una campaña escolar (objetivo, acciones, responsables).",
+                "Define indicadores para evaluar el impacto de la campaña.",
+                "Reflexiona sobre la importancia de la participación ciudadana."
+              ]
+            },
+            {
+              "key": "educacion_ambiental",
+              "name": "Educación ambiental",
+              "short_description": "Comunica prácticas responsables y construye hábitos sustentables.",
+              "example_tasks": [
+                "Crea un tríptico educativo sobre ahorro de agua o energía.",
+                "Diseña una actividad lúdica para enseñar sustentabilidad a primaria.",
+                "Evalúa cambios de hábito tras una semana de acciones propuestas."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "key": "analisis_espacial_y_multiescala",
+      "name": "Análisis espacial y enfoque multiescalar",
+      "short_description": "Aplica el análisis espacial para explicar fenómenos geográficos integrando escalas local, regional, nacional y global, con base en evidencia cartográfica y estadística.",
+      "sub_topics": [
+        {
+          "key": "relaciones_espaciales_y_patrones",
+          "name": "Relaciones espaciales y patrones",
+          "short_description": "Identifica patrones espaciales y relaciones de proximidad, concentración y dispersión.",
+          "sub_topics": [
+            {
+              "key": "patrones_de_concentracion_y_dispersion",
+              "name": "Patrones de concentración y dispersión",
+              "short_description": "Analiza cómo y por qué se concentran o dispersan actividades humanas y fenómenos físicos.",
+              "example_tasks": [
+                "Interpreta un mapa de concentración industrial en México y explica dos factores que influyen en su localización.",
+                "Compara un patrón de dispersión rural con uno urbano y explica sus diferencias territoriales.",
+                "Elabora una hipótesis que explique la concentración de servicios en una zona específica de tu ciudad."
+              ]
+            },
+            {
+              "key": "proximidad_accesibilidad_y_conectividad",
+              "name": "Proximidad, accesibilidad y conectividad",
+              "short_description": "Evalúa cómo la distancia y la conectividad influyen en oportunidades y desigualdades territoriales.",
+              "example_tasks": [
+                "Analiza un mapa de transporte y explica cómo la accesibilidad condiciona el acceso al empleo.",
+                "Compara dos localidades con distinta conectividad y predice impactos económicos.",
+                "Propón una mejora de conectividad y argumenta su efecto territorial."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "enfoque_multiescalar",
+          "name": "Enfoque multiescalar",
+          "short_description": "Explica un mismo fenómeno desde distintas escalas y reconoce límites y alcances de cada una.",
+          "sub_topics": [
+            {
+              "key": "fenomenos_locales_regionales_globales",
+              "name": "Fenómenos locales, regionales y globales",
+              "short_description": "Relaciona causas y efectos de un fenómeno entre escalas.",
+              "example_tasks": [
+                "Analiza el cambio climático conectando causas globales con impactos locales en tu estado.",
+                "Explica cómo una decisión nacional afecta dinámicas locales (ejemplo: infraestructura).",
+                "Construye un esquema causal multiescalar para un problema socioambiental."
+              ]
+            },
+            {
+              "key": "articulacion_de_escalas",
+              "name": "Articulación de escalas en la toma de decisiones",
+              "short_description": "Evalúa políticas y acciones considerando su impacto en distintas escalas.",
+              "example_tasks": [
+                "Evalúa una política pública ambiental indicando efectos locales y regionales.",
+                "Explica por qué una solución local puede fallar si no considera la escala regional.",
+                "Redacta una recomendación de política considerando al menos dos escalas."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sig_y_teledeteccion_aplicada",
+      "name": "SIG y teledetección aplicada",
+      "short_description": "Utiliza herramientas de Sistemas de Información Geográfica y teledetección para analizar cambios territoriales y apoyar la toma de decisiones.",
+      "sub_topics": [
+        {
+          "key": "analisis_espacial_con_sig",
+          "name": "Análisis espacial con SIG",
+          "short_description": "Aplica operaciones básicas de SIG para resolver problemas territoriales.",
+          "sub_topics": [
+            {
+              "key": "superposicion_y_consulta_espacial",
+              "name": "Superposición y consulta espacial",
+              "short_description": "Combina capas para identificar zonas de conflicto u oportunidad.",
+              "example_tasks": [
+                "Superpone capas de uso de suelo y riesgo para identificar zonas no aptas para vivienda.",
+                "Realiza una consulta espacial para localizar servicios dentro de un radio determinado.",
+                "Explica cómo la superposición ayuda a priorizar intervenciones territoriales."
+              ]
+            },
+            {
+              "key": "analisis_de_cambios_espaciales",
+              "name": "Análisis de cambios espaciales",
+              "short_description": "Detecta cambios territoriales comparando información de distintos momentos.",
+              "example_tasks": [
+                "Compara dos mapas de cobertura del suelo de distintos años e identifica cambios.",
+                "Relaciona un cambio detectado con una actividad humana específica.",
+                "Propón medidas para gestionar el cambio territorial observado."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "teledeteccion_y_toma_de_decisiones",
+          "name": "Teledetección y toma de decisiones",
+          "short_description": "Interpreta imágenes satelitales para apoyar decisiones ambientales y urbanas.",
+          "sub_topics": [
+            {
+              "key": "clasificacion_de_imagenes",
+              "name": "Clasificación básica de imágenes",
+              "short_description": "Diferencia coberturas del suelo a partir de imágenes satelitales.",
+              "example_tasks": [
+                "Identifica zonas urbanas, vegetación y cuerpos de agua en una imagen satelital.",
+                "Explica qué información adicional se requiere para validar la clasificación.",
+                "Discute una decisión urbana que podría apoyarse en esta información."
+              ]
+            },
+            {
+              "key": "aplicaciones_practicas",
+              "name": "Aplicaciones prácticas de la teledetección",
+              "short_description": "Analiza casos de uso en gestión ambiental, agricultura y ciudades.",
+              "example_tasks": [
+                "Describe cómo la teledetección apoya la detección temprana de incendios.",
+                "Explica una aplicación agrícola del monitoreo satelital.",
+                "Evalúa ventajas y límites de usar imágenes satelitales en políticas públicas."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "geografia_economica_y_recursos",
+      "name": "Geografía económica y recursos",
+      "short_description": "Analiza la distribución territorial de recursos naturales, actividades productivas y cadenas de valor, y evalúa sus impactos económicos, sociales y ambientales.",
+      "sub_topics": [
+        {
+          "key": "recursos_naturales_y_aprovechamiento",
+          "name": "Recursos naturales y su aprovechamiento",
+          "short_description": "Relaciona la disponibilidad de recursos con actividades económicas y conflictos territoriales.",
+          "sub_topics": [
+            {
+              "key": "recursos_renovables_y_no_renovables",
+              "name": "Recursos renovables y no renovables",
+              "short_description": "Distingue tipos de recursos y analiza su distribución espacial en México.",
+              "example_tasks": [
+                "Elabora un mapa conceptual que clasifique recursos de México en renovables y no renovables.",
+                "Ubica en un mapa zonas con recursos energéticos (petróleo, gas, eólico, solar) y explica su localización.",
+                "Analiza un conflicto territorial relacionado con un recurso (minería, agua, energía) y describe a los actores."
+              ]
+            },
+            {
+              "key": "impactos_del_extractivismo",
+              "name": "Impactos del extractivismo",
+              "short_description": "Evalúa efectos ambientales y sociales de la explotación intensiva de recursos.",
+              "example_tasks": [
+                "Describe tres impactos ambientales del extractivismo y sus consecuencias territoriales.",
+                "Compara beneficios económicos de una actividad extractiva con sus costos sociales.",
+                "Propón criterios para una evaluación ambiental responsable de proyectos extractivos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "actividades_productivas",
+          "name": "Actividades productivas y territorio",
+          "short_description": "Explica la localización de sectores primario, secundario y terciario y su relación con el espacio.",
+          "sub_topics": [
+            {
+              "key": "sector_primario_agropecuario",
+              "name": "Sector primario: agricultura, ganadería y pesca",
+              "short_description": "Relaciona condiciones naturales y tecnológicas con la producción primaria.",
+              "example_tasks": [
+                "Ubica regiones agrícolas clave de México y asocia cultivos dominantes.",
+                "Explica cómo el clima y el relieve influyen en la productividad agrícola.",
+                "Analiza un caso de pesca intensiva y discute su sustentabilidad."
+              ]
+            },
+            {
+              "key": "industria_y_localizacion",
+              "name": "Industria y localización",
+              "short_description": "Analiza factores de localización industrial y su impacto territorial.",
+              "example_tasks": [
+                "Identifica factores que explican la concentración industrial en una región.",
+                "Compara dos corredores industriales mexicanos y sus ventajas competitivas.",
+                "Evalúa impactos ambientales de un parque industrial y propone mitigaciones."
+              ]
+            },
+            {
+              "key": "servicios_y_economia_urbana",
+              "name": "Servicios y economía urbana",
+              "short_description": "Examina la concentración de servicios y su papel en la economía urbana.",
+              "example_tasks": [
+                "Analiza la distribución de servicios especializados en una ciudad.",
+                "Explica cómo el turismo transforma el espacio urbano.",
+                "Propón estrategias para diversificar la economía de una ciudad media."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "cadenas_de_valor_y_logistica",
+          "name": "Cadenas de valor y logística",
+          "short_description": "Comprende la organización espacial de producción, transporte y consumo.",
+          "sub_topics": [
+            {
+              "key": "cadenas_productivas",
+              "name": "Cadenas productivas",
+              "short_description": "Identifica eslabones de producción y su distribución territorial.",
+              "example_tasks": [
+                "Describe la cadena productiva de un bien (maíz, automóvil) y ubica cada etapa.",
+                "Analiza cómo un problema logístico afecta a productores y consumidores.",
+                "Propón una mejora logística que reduzca costos y emisiones."
+              ]
+            },
+            {
+              "key": "infraestructura_y_corredores",
+              "name": "Infraestructura y corredores",
+              "short_description": "Evalúa el papel de puertos, carreteras y corredores logísticos.",
+              "example_tasks": [
+                "Ubica principales puertos mexicanos y explica su función económica.",
+                "Analiza un corredor logístico y sus impactos regionales.",
+                "Discute riesgos ambientales asociados a grandes obras de infraestructura."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "globalizacion_redes_y_comercio",
+      "name": "Globalización, redes y comercio",
+      "short_description": "Examina flujos globales de mercancías, capital, personas e información y sus efectos territoriales desiguales.",
+      "sub_topics": [
+        {
+          "key": "flujos_globales",
+          "name": "Flujos globales",
+          "short_description": "Analiza redes de intercambio y nodos estratégicos en la economía mundial.",
+          "sub_topics": [
+            {
+              "key": "comercio_internacional",
+              "name": "Comercio internacional",
+              "short_description": "Relaciona acuerdos comerciales con patrones territoriales de producción.",
+              "example_tasks": [
+                "Explica cómo un tratado comercial influye en una región productiva mexicana.",
+                "Analiza un mapa de exportaciones e identifica productos clave.",
+                "Evalúa ventajas y riesgos de la integración comercial para productores locales."
+              ]
+            },
+            {
+              "key": "redes_de_transporte_y_comunicacion",
+              "name": "Redes de transporte y comunicación",
+              "short_description": "Explica la importancia de redes físicas y digitales en la globalización.",
+              "example_tasks": [
+                "Ubica nodos de transporte clave (puertos, aeropuertos) y su función.",
+                "Analiza cómo la conectividad digital modifica oportunidades económicas.",
+                "Propón acciones para mejorar la conectividad de una región rezagada."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "impactos_territoriales_de_la_globalizacion",
+          "name": "Impactos territoriales de la globalización",
+          "short_description": "Evalúa efectos diferenciados de la globalización en regiones y grupos sociales.",
+          "sub_topics": [
+            {
+              "key": "ganadores_y_perdedores",
+              "name": "Ganadores y perdedores territoriales",
+              "short_description": "Identifica regiones beneficiadas y afectadas por procesos globales.",
+              "example_tasks": [
+                "Compara dos regiones mexicanas frente a la globalización y explica diferencias.",
+                "Analiza un caso de deslocalización industrial y sus efectos locales.",
+                "Propón políticas para reducir desigualdades territoriales."
+              ]
+            },
+            {
+              "key": "cultura_identidad_y_consumo",
+              "name": "Cultura, identidad y consumo",
+              "short_description": "Relaciona globalización con cambios culturales y patrones de consumo.",
+              "example_tasks": [
+                "Describe un cambio cultural asociado a la globalización en tu comunidad.",
+                "Analiza la difusión de una marca global y su impacto local.",
+                "Reflexiona sobre cómo equilibrar identidad local y consumo global."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "desigualdad_socioespacial_y_desarrollo",
+      "name": "Desigualdad socioespacial y desarrollo",
+      "short_description": "Analiza las desigualdades territoriales en acceso a servicios, oportunidades y bienestar, y evalúa estrategias de desarrollo con enfoque regional y social.",
+      "sub_topics": [
+        {
+          "key": "indicadores_de_desarrollo",
+          "name": "Indicadores de desarrollo",
+          "short_description": "Interpreta indicadores socioeconómicos para comparar niveles de desarrollo territorial.",
+          "sub_topics": [
+            {
+              "key": "ingreso_educacion_y_salud",
+              "name": "Ingreso, educación y salud",
+              "short_description": "Relaciona ingreso, escolaridad y salud con calidad de vida y oportunidades.",
+              "example_tasks": [
+                "Interpreta un mapa de rezago social por municipio e identifica patrones regionales.",
+                "Compara dos estados con distintos niveles de escolaridad y explica efectos territoriales.",
+                "Elabora un breve diagnóstico territorial usando tres indicadores (ingreso, educación, salud)."
+              ]
+            },
+            {
+              "key": "indices_compuestos",
+              "name": "Índices compuestos de desarrollo",
+              "short_description": "Comprende la construcción y límites de índices como el IDH y el índice de marginación.",
+              "example_tasks": [
+                "Explica qué variables integran el IDH y qué aspecto del bienestar mide cada una.",
+                "Compara el IDH de dos países o estados y discute límites del indicador.",
+                "Propón una variable adicional que mejore la medición del desarrollo territorial."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "segregacion_y_exclusion",
+          "name": "Segregación y exclusión socioespacial",
+          "short_description": "Examina cómo la segregación urbana y regional reproduce desigualdades.",
+          "sub_topics": [
+            {
+              "key": "segregacion_residencial",
+              "name": "Segregación residencial",
+              "short_description": "Analiza la separación espacial de grupos sociales y sus consecuencias.",
+              "example_tasks": [
+                "Identifica zonas segregadas en una ciudad y explica dos causas posibles.",
+                "Relaciona segregación residencial con acceso desigual a servicios.",
+                "Propón una medida de política urbana para reducir segregación."
+              ]
+            },
+            {
+              "key": "exclusion_y_vulnerabilidad",
+              "name": "Exclusión y vulnerabilidad",
+              "short_description": "Relaciona pobreza, discriminación y vulnerabilidad territorial.",
+              "example_tasks": [
+                "Analiza un caso de exclusión territorial y sus impactos sociales.",
+                "Explica cómo la falta de infraestructura incrementa vulnerabilidad.",
+                "Diseña una intervención comunitaria para mejorar inclusión social."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ordenamiento_territorial_y_planeacion",
+      "name": "Ordenamiento territorial y planeación",
+      "short_description": "Comprende principios del ordenamiento territorial y la planeación para un uso sostenible y equitativo del espacio.",
+      "sub_topics": [
+        {
+          "key": "principios_del_ordenamiento",
+          "name": "Principios del ordenamiento territorial",
+          "short_description": "Analiza criterios ecológicos, sociales y económicos en la planeación del territorio.",
+          "sub_topics": [
+            {
+              "key": "zonificacion_y_uso_del_suelo",
+              "name": "Zonificación y uso del suelo",
+              "short_description": "Interpreta zonificaciones y evalúa compatibilidades de uso del suelo.",
+              "example_tasks": [
+                "Analiza un plano de zonificación y detecta conflictos de uso del suelo.",
+                "Explica por qué ciertas actividades no deben ubicarse en zonas habitacionales.",
+                "Propón una modificación de zonificación para resolver un conflicto local."
+              ]
+            },
+            {
+              "key": "ordenamiento_ecologico",
+              "name": "Ordenamiento ecológico",
+              "short_description": "Comprende el ordenamiento ecológico como instrumento de política ambiental.",
+              "example_tasks": [
+                "Explica objetivos del ordenamiento ecológico del territorio.",
+                "Analiza un caso donde el ordenamiento previene riesgos ambientales.",
+                "Propón criterios ecológicos para planear una nueva zona urbana."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "planeacion_participativa",
+          "name": "Planeación participativa",
+          "short_description": "Valora la participación social en la toma de decisiones territoriales.",
+          "sub_topics": [
+            {
+              "key": "actores_y_gobernanza",
+              "name": "Actores y gobernanza territorial",
+              "short_description": "Identifica actores públicos, privados y sociales y sus roles.",
+              "example_tasks": [
+                "Elabora un mapa de actores de un proyecto urbano o ambiental.",
+                "Explica por qué la coordinación entre actores mejora resultados.",
+                "Diseña un mecanismo de participación ciudadana para un proyecto local."
+              ]
+            },
+            {
+              "key": "evaluacion_de_proyectos",
+              "name": "Evaluación de proyectos territoriales",
+              "short_description": "Evalúa impactos sociales y ambientales de proyectos de desarrollo.",
+              "example_tasks": [
+                "Analiza un proyecto (real o hipotético) y enumera impactos positivos y negativos.",
+                "Propón indicadores para evaluar el éxito del proyecto a corto y largo plazo.",
+                "Redacta una recomendación final basada en criterios territoriales."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "geopolitica_fronteras_y_soberania",
+      "name": "Geopolítica, fronteras y soberanía",
+      "short_description": "Analiza la organización política del espacio, las fronteras, la soberanía y las tensiones geopolíticas contemporáneas desde una perspectiva territorial.",
+      "sub_topics": [
+        {
+          "key": "fronteras_y_territorialidad",
+          "name": "Fronteras y territorialidad",
+          "short_description": "Comprende el significado de las fronteras y su papel en la organización del territorio.",
+          "sub_topics": [
+            {
+              "key": "tipos_de_fronteras",
+              "name": "Tipos de fronteras",
+              "short_description": "Distingue fronteras naturales, políticas y culturales.",
+              "example_tasks": [
+                "Clasifica fronteras de distintos países según su tipo.",
+                "Explica cómo una frontera natural influye en actividades económicas.",
+                "Analiza un conflicto fronterizo y sus causas territoriales."
+              ]
+            },
+            {
+              "key": "frontera_mexico_estados_unidos",
+              "name": "La frontera México–Estados Unidos",
+              "short_description": "Analiza dinámicas sociales, económicas y políticas de la frontera norte.",
+              "example_tasks": [
+                "Describe dos flujos principales en la frontera México–EE. UU. y sus efectos.",
+                "Analiza un mapa de cruces fronterizos y explica su localización.",
+                "Evalúa impactos sociales de políticas fronterizas recientes."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "geopolitica_global",
+          "name": "Geopolítica global",
+          "short_description": "Examina relaciones de poder, regiones estratégicas y recursos clave.",
+          "sub_topics": [
+            {
+              "key": "regiones_estrategicas",
+              "name": "Regiones estratégicas del mundo",
+              "short_description": "Identifica regiones clave por recursos, rutas o influencia política.",
+              "example_tasks": [
+                "Ubica dos regiones estratégicas y explica su importancia.",
+                "Relaciona recursos energéticos con tensiones geopolíticas.",
+                "Analiza un conflicto actual desde el enfoque territorial."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cambio_climatico_y_adaptacion",
+      "name": "Cambio climático y adaptación",
+      "short_description": "Analiza evidencias del cambio climático, sus impactos territoriales y estrategias de mitigación y adaptación.",
+      "sub_topics": [
+        {
+          "key": "evidencias_y_impactos",
+          "name": "Evidencias e impactos del cambio climático",
+          "short_description": "Interpreta datos climáticos y reconoce impactos diferenciados por región.",
+          "sub_topics": [
+            {
+              "key": "impactos_en_mexico",
+              "name": "Impactos del cambio climático en México",
+              "short_description": "Analiza efectos en agua, agricultura, costas y ciudades.",
+              "example_tasks": [
+                "Relaciona aumento de temperatura con sequías en regiones mexicanas.",
+                "Analiza un evento extremo reciente y explica su vínculo climático.",
+                "Propón dos medidas locales de adaptación al clima."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "mitigacion_y_adaptacion",
+          "name": "Mitigación y adaptación",
+          "short_description": "Evalúa acciones para reducir emisiones y adaptarse a impactos.",
+          "sub_topics": [
+            {
+              "key": "politicas_y_acciones_climaticas",
+              "name": "Políticas y acciones climáticas",
+              "short_description": "Examina políticas climáticas y acciones comunitarias.",
+              "example_tasks": [
+                "Explica una política climática mexicana y su objetivo.",
+                "Diseña un plan escolar de reducción de emisiones.",
+                "Evalúa costos y beneficios de una medida de adaptación."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "conservacion_y_gestion_socioambiental",
+      "name": "Conservación y gestión socioambiental",
+      "short_description": "Integra conservación, manejo de recursos y participación social con enfoque de justicia ambiental.",
+      "sub_topics": [
+        {
+          "key": "areas_naturales_y_manejo",
+          "name": "Áreas naturales y manejo",
+          "short_description": "Analiza estrategias de conservación y retos de gestión.",
+          "sub_topics": [
+            {
+              "key": "manejo_participativo",
+              "name": "Manejo participativo",
+              "short_description": "Valora la participación comunitaria en la conservación.",
+              "example_tasks": [
+                "Describe un caso de manejo comunitario exitoso.",
+                "Identifica conflictos entre conservación y uso económico.",
+                "Propón acuerdos para mejorar la gestión de un área protegida."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "investigacion_geografica_y_trabajo_de_campo",
+      "name": "Investigación geográfica y trabajo de campo",
+      "short_description": "Desarrolla proyectos integradores aplicando métodos geográficos, trabajo de campo y comunicación de resultados.",
+      "sub_topics": [
+        {
+          "key": "metodologia_y_trabajo_de_campo",
+          "name": "Metodología y trabajo de campo",
+          "short_description": "Aplica observación, registro y análisis territorial.",
+          "sub_topics": [
+            {
+              "key": "diseño_de_proyectos",
+              "name": "Diseño de proyectos geográficos",
+              "short_description": "Formula preguntas, métodos y productos finales.",
+              "example_tasks": [
+                "Plantea una pregunta geográfica investigable en tu comunidad.",
+                "Define métodos y fuentes para responderla.",
+                "Presenta resultados en un mapa, gráfica y texto argumentativo."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

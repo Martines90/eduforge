@@ -1,0 +1,1651 @@
+{
+  "grade_9_10": [
+    {
+      "key": "cultura_digital_y_ciudadania",
+      "name": "Cultura digital y ciudadanía",
+      "short_description": "Desarrolla habilidades para participar de forma segura, ética y responsable en entornos digitales, comprendiendo identidad, huella digital, derechos, responsabilidades y convivencia en línea.",
+      "sub_topics": [
+        {
+          "key": "identidad_huella_y_reputacion_digital",
+          "name": "Identidad, huella y reputación digital",
+          "short_description": "Reconoce cómo se construye la identidad digital, cómo se genera la huella digital y cómo gestionar la reputación en redes y servicios en línea.",
+          "sub_topics": [
+            {
+              "key": "componentes_de_la_identidad_digital",
+              "name": "Componentes de la identidad digital",
+              "short_description": "Distingue entre datos personales, perfil público, preferencias y comportamiento en línea, y explica cómo conforman la identidad digital.",
+              "example_tasks": [
+                "Elabora un mapa conceptual con ejemplos de datos personales, datos sensibles y datos públicos, e indica cuáles no deberías compartir en una red social escolar.",
+                "Analiza dos perfiles ficticios (uno responsable y otro riesgoso) e identifica 6 elementos de identidad digital que podrían afectar su reputación.",
+                "Redacta un plan de mejora de identidad digital para un estudiante que desea postularse a una beca, indicando qué publicaciones conservar, ajustar o eliminar y por qué."
+              ]
+            },
+            {
+              "key": "huella_digital_activa_y_pasiva",
+              "name": "Huella digital activa y pasiva",
+              "short_description": "Explica la diferencia entre huella activa y pasiva y relaciona acciones cotidianas (publicar, comentar, aceptar cookies) con rastros digitales.",
+              "example_tasks": [
+                "Clasifica 10 acciones en línea (dar like, buscar en Google, usar Wi-Fi público, aceptar cookies, etc.) como huella activa o pasiva y justifica cada caso.",
+                "Describe un escenario de compra en línea e identifica qué rastros pasivos se generan; propone 3 medidas para reducirlos sin dejar de usar el servicio.",
+                "Realiza una auditoría de tu navegador (cookies, historial, permisos) y escribe un reporte breve con hallazgos y acciones concretas de mejora."
+              ]
+            },
+            {
+              "key": "gestion_de_reputacion_y_privacidad_en_redes",
+              "name": "Gestión de reputación y privacidad en redes",
+              "short_description": "Configura privacidad y seguridad básica en redes sociales y evalúa el impacto de publicaciones y etiquetas sobre la reputación.",
+              "example_tasks": [
+                "Configura (en una cuenta de prueba o simulador) privacidad de publicaciones, revisión de etiquetas y control de seguidores; documenta con capturas o checklist.",
+                "Evalúa 5 publicaciones ficticias y decide si conviene publicarlas, editarlas o no publicarlas; explica el impacto en reputación e imagen pública.",
+                "Diseña una guía de ‘buenas prácticas’ para un grupo escolar que usará redes para un proyecto, incluyendo reglas de etiqueta, permisos y manejo de conflictos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "etica_derechos_y_responsabilidades",
+          "name": "Ética, derechos y responsabilidades en entornos digitales",
+          "short_description": "Comprende normas de convivencia digital, propiedad intelectual, licencias y consecuencias de prácticas como plagio, desinformación y ciberacoso.",
+          "sub_topics": [
+            {
+              "key": "netiqueta_y_convicencia_digital",
+              "name": "Netiqueta y convivencia digital",
+              "short_description": "Aplica reglas de comunicación respetuosa y colaboración en línea en foros, chats y plataformas escolares.",
+              "example_tasks": [
+                "Reescribe 6 mensajes problemáticos (sarcasmo, mayúsculas, ataques) transformándolos en mensajes respetuosos manteniendo el contenido esencial.",
+                "Simula un debate en un foro escolar: define 5 reglas de netiqueta y evalúa (con rúbrica) el cumplimiento de tu equipo.",
+                "Crea un ‘protocolo de convivencia digital’ para un proyecto colaborativo (acuerdos, mediación, reportes) y preséntalo al grupo."
+              ]
+            },
+            {
+              "key": "propiedad_intelectual_y_licencias",
+              "name": "Propiedad intelectual y licencias de uso",
+              "short_description": "Diferencia derechos de autor, dominio público y licencias abiertas (p. ej., Creative Commons) para uso ético de contenidos.",
+              "example_tasks": [
+                "Busca 3 imágenes y 2 audios con licencia abierta para un proyecto; registra la licencia, la atribución correcta y el enlace de origen en una bibliografía.",
+                "Compara ‘copyright’, ‘copyleft’ y ‘Creative Commons’ con ejemplos y decide qué licencia conviene para publicar un folleto escolar digital.",
+                "Detecta y corrige un caso de plagio en un texto breve: reescribe con paráfrasis, citas y referencias, siguiendo un formato de citación acordado."
+              ]
+            },
+            {
+              "key": "desinformacion_y_pensamiento_critico",
+              "name": "Desinformación y pensamiento crítico",
+              "short_description": "Evalúa la credibilidad de información digital, identifica sesgos y verifica datos con fuentes confiables.",
+              "example_tasks": [
+                "Analiza una noticia viral (ficticia o real) y aplica una lista de verificación: autoría, fecha, evidencia, fuente primaria y propósito; concluye si es confiable.",
+                "Crea un cuadro de verificación para una publicación de salud pública (por ejemplo, vacunas o nutrición) y usa al menos 3 fuentes institucionales para contrastar.",
+                "Diseña una mini-campaña escolar contra la desinformación: mensajes clave, ejemplos de señales de alerta y un procedimiento de verificación."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bienestar_digital_y_uso_equilibrado",
+          "name": "Bienestar digital y uso equilibrado de la tecnología",
+          "short_description": "Promueve hábitos saludables en el uso de pantallas, organización del tiempo y prevención de riesgos psicosociales asociados a la vida digital.",
+          "sub_topics": [
+            {
+              "key": "gestion_del_tiempo_y_atencion",
+              "name": "Gestión del tiempo y la atención",
+              "short_description": "Implementa estrategias para administrar notificaciones, tiempos de uso y concentración en tareas académicas.",
+              "example_tasks": [
+                "Registra durante 3 días tu tiempo de pantalla por categorías (estudio, ocio, redes) y redacta conclusiones con 2 metas realistas de mejora.",
+                "Configura un plan de notificaciones (prioridades, horarios, modo enfoque) para estudiar y describe cómo medirás su efectividad.",
+                "Diseña un horario semanal de estudio con descansos (técnica Pomodoro u otra) y evalúa con evidencia (bitácora) si mejoró tu rendimiento."
+              ]
+            },
+            {
+              "key": "riesgos_psicosociales_y_prevencion",
+              "name": "Riesgos psicosociales y prevención",
+              "short_description": "Identifica señales de ciberacoso, grooming o presión social en línea y propone acciones de prevención y reporte.",
+              "example_tasks": [
+                "Lee 3 casos de chat (simulados) y detecta señales de grooming o manipulación; indica qué harías y a quién reportarías en la escuela y en casa.",
+                "Crea un diagrama de decisiones para responder ante ciberacoso (guardar evidencia, bloquear, reportar, apoyo), incluyendo contactos de ayuda.",
+                "Elabora un cartel digital para tu plantel sobre bienestar digital con recomendaciones claras, lenguaje respetuoso y recursos de orientación."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "participacion_y_colaboracion_en_linea",
+          "name": "Participación y colaboración en línea",
+          "short_description": "Utiliza herramientas digitales para colaborar, comunicarse y construir productos compartidos respetando roles, acuerdos y seguridad.",
+          "sub_topics": [
+            {
+              "key": "roles_y_acuerdos_de_trabajo",
+              "name": "Roles y acuerdos de trabajo colaborativo",
+              "short_description": "Define roles (coordinación, redacción, edición) y reglas de colaboración en documentos compartidos con control de cambios.",
+              "example_tasks": [
+                "Organiza un equipo para elaborar un documento compartido: asigna roles, crea reglas de edición y registra el historial de cambios como evidencia.",
+                "Resuelve un conflicto simulado (ediciones contradictorias) aplicando acuerdos y proponiendo un método de revisión por pares.",
+                "Entrega una bitácora de colaboración (tareas, responsables, fechas) y reflexiona sobre qué práctica mejoró la calidad del producto final."
+              ]
+            },
+            {
+              "key": "herramientas_colaborativas_en_la_nube",
+              "name": "Herramientas colaborativas en la nube",
+              "short_description": "Emplea almacenamiento en la nube, calendarios y tableros de tareas para planear y entregar productos escolares.",
+              "example_tasks": [
+                "Crea una estructura de carpetas en la nube para un proyecto escolar y define permisos (lectura/edición) por integrante; justifica tu elección.",
+                "Construye un tablero simple de tareas (pendiente/en proceso/hecho) y úsalo para organizar un proyecto de 2 semanas; presenta evidencia de seguimiento.",
+                "Realiza una presentación colaborativa donde cada integrante aporte una sección; integra comentarios y registra el proceso de revisión."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "alfabetizacion_informacional_y_busqueda",
+      "name": "Alfabetización informacional y búsqueda",
+      "short_description": "Fortalece la capacidad de localizar, evaluar, organizar y comunicar información digital de manera crítica y ética para el aprendizaje y la toma de decisiones.",
+      "sub_topics": [
+        {
+          "key": "estrategias_de_busqueda_avanzada",
+          "name": "Estrategias de búsqueda avanzada",
+          "short_description": "Aplica operadores, filtros y estrategias para encontrar información precisa y relevante en motores de búsqueda, bibliotecas digitales y repositorios.",
+          "sub_topics": [
+            {
+              "key": "operadores_y_filtros_de_busqueda",
+              "name": "Operadores y filtros de búsqueda",
+              "short_description": "Utiliza comillas, AND/OR, sitio:, tipo de archivo y rangos de fecha para refinar resultados y documenta el proceso.",
+              "example_tasks": [
+                "Plantea una pregunta de investigación y genera 5 consultas con operadores distintos; explica cómo cambian los resultados y cuál conviene.",
+                "Encuentra una fuente oficial mexicana sobre un tema (p. ej., salud, medio ambiente) usando filtros de fecha y dominio; guarda evidencia de la búsqueda.",
+                "Diseña una guía corta para tu grupo con 8 operadores o filtros útiles, incluyendo ejemplos de consultas para tareas escolares."
+              ]
+            },
+            {
+              "key": "busqueda_en_fuentes_academicas",
+              "name": "Búsqueda en fuentes académicas",
+              "short_description": "Diferencia fuentes académicas, institucionales y divulgativas; localiza artículos, libros y estadísticas confiables.",
+              "example_tasks": [
+                "Localiza 2 artículos de divulgación y 2 fuentes académicas sobre el mismo tema; compara profundidad, evidencia y público objetivo.",
+                "Construye una bibliografía con al menos 6 fuentes (institucionales/académicas) y clasifícalas por tipo, relevancia y confiabilidad.",
+                "Explica cómo verificarías un dato estadístico (por ejemplo, población o inflación) rastreándolo hasta una fuente primaria."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "evaluacion_de_fuentes_y_calidad",
+          "name": "Evaluación de fuentes y calidad de la información",
+          "short_description": "Valora la confiabilidad, actualidad, autoría, evidencia y sesgos de la información digital antes de usarla en trabajos académicos.",
+          "sub_topics": [
+            {
+              "key": "criterios_de_confiabilidad",
+              "name": "Criterios de confiabilidad",
+              "short_description": "Aplica criterios como autoría, propósito, evidencia, fecha, citas y transparencia del sitio o documento.",
+              "example_tasks": [
+                "Evalúa 3 sitios web sobre un tema usando una rúbrica (autor, fecha, evidencia, referencias, sesgos) y asigna una calificación argumentada.",
+                "Identifica 5 señales de alerta de contenido poco confiable (clickbait, falta de autor, ‘curas milagro’) y crea ejemplos breves para cada una.",
+                "Toma un párrafo con afirmaciones dudosas y localiza fuentes que las confirmen o refuten; redacta una conclusión con evidencias."
+              ]
+            },
+            {
+              "key": "sesgos_y_perspectivas",
+              "name": "Sesgos y perspectivas",
+              "short_description": "Reconoce sesgos de confirmación, publicidad encubierta y perspectivas parciales; contrasta información con múltiples fuentes.",
+              "example_tasks": [
+                "Elige un tema polémico y reúne 4 fuentes con perspectivas distintas; identifica el tipo de sesgo probable y resume diferencias.",
+                "Analiza una publicación patrocinada y señala elementos de persuasión; reescribe el texto en formato informativo neutral.",
+                "Elabora un breve ensayo donde expliques cómo tus propias creencias pueden afectar la selección de fuentes y cómo mitigarlo."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "organizacion_y_gestion_de_informacion",
+          "name": "Organización y gestión de información",
+          "short_description": "Organiza información y recursos digitales con criterios claros, usando carpetas, etiquetas, marcadores y notas para estudiar y producir evidencias.",
+          "sub_topics": [
+            {
+              "key": "estrategias_de_organizacion_digital",
+              "name": "Estrategias de organización digital",
+              "short_description": "Diseña estructuras de carpetas, nombres de archivo y etiquetas para localizar materiales con rapidez y evitar duplicidades.",
+              "example_tasks": [
+                "Crea una convención de nombres para archivos (materia_tema_fecha_version) y aplícala a 15 archivos; explica por qué mejora la organización.",
+                "Organiza un conjunto de recursos (PDF, imágenes, notas) en carpetas y etiquetas; entrega un diagrama de tu estructura y su justificación.",
+                "Resuelve un caso de ‘caos digital’ simulado: elimina duplicados, unifica versiones y documenta decisiones de organización."
+              ]
+            },
+            {
+              "key": "gestion_de_referencias_y_citas",
+              "name": "Gestión de referencias y citas",
+              "short_description": "Registra fuentes y genera citas y referencias de manera consistente para evitar plagio y dar crédito al trabajo ajeno.",
+              "example_tasks": [
+                "Elabora una lista de referencias de 8 fuentes con formato consistente (autor, título, fecha, enlace) y revisa que todas sean recuperables.",
+                "Integra 3 citas textuales y 3 paráfrasis en un texto breve, incluyendo referencias; identifica claramente qué partes son de cada fuente.",
+                "Crea una plantilla de ficha bibliográfica para tu portafolio digital y úsala en una investigación escolar."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "comunicacion_de_resultados",
+          "name": "Comunicación de resultados",
+          "short_description": "Sintetiza información y la comunica con claridad en formatos digitales (infografía, reporte, presentación), cuidando estructura, audiencia y evidencias.",
+          "sub_topics": [
+            {
+              "key": "sintesis_y_argumentacion",
+              "name": "Síntesis y argumentación",
+              "short_description": "Resume, compara y argumenta con base en evidencia, diferenciando hechos, opiniones y conclusiones.",
+              "example_tasks": [
+                "Redacta un resumen de 200–250 palabras de un artículo y agrega 3 conclusiones sustentadas con evidencias del texto.",
+                "Crea una tabla de comparación entre dos fuentes con posturas distintas, separando hechos, argumentos y evidencias.",
+                "Escribe un texto argumentativo corto sobre un problema local (p. ej., residuos) usando al menos 4 fuentes y citas correctamente."
+              ]
+            },
+            {
+              "key": "formatos_digitales_de_divulgacion",
+              "name": "Formatos digitales de divulgación",
+              "short_description": "Elabora productos digitales (infografía, cápsula, presentación) adecuados para una audiencia específica y con referencias visibles.",
+              "example_tasks": [
+                "Diseña una infografía con datos verificados (mínimo 5) sobre un tema escolar y agrega referencias al final.",
+                "Construye una presentación de 6–8 diapositivas con una narrativa clara (problema–evidencia–solución) y notas del orador.",
+                "Graba una cápsula de 60–90 segundos explicando un hallazgo de investigación; incluye guion, fuentes y criterios de claridad."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "productividad_digital_ofimatica",
+      "name": "Productividad digital (ofimática)",
+      "short_description": "Utiliza herramientas de productividad para crear, organizar y presentar información, automatizar tareas sencillas y apoyar proyectos académicos con estándares de calidad.",
+      "sub_topics": [
+        {
+          "key": "documentos_de_texto_y_formato",
+          "name": "Documentos de texto y formato profesional",
+          "short_description": "Elabora documentos con estructura, estilos, tablas e inserción de elementos visuales, cuidando coherencia y presentación.",
+          "sub_topics": [
+            {
+              "key": "estructura_estilos_y_plantillas",
+              "name": "Estructura, estilos y plantillas",
+              "short_description": "Aplica estilos, encabezados y plantillas para organizar un reporte, generando índice automático y consistencia visual.",
+              "example_tasks": [
+                "Crea un reporte de 2–3 páginas con portada, estilos de títulos, índice automático y numeración; entrega el archivo y una captura del índice.",
+                "Convierte un documento desordenado en uno estructurado usando estilos (títulos, subtítulos, cuerpo) y explica 3 mejoras realizadas.",
+                "Diseña una plantilla para trabajos de tu grupo (márgenes, tipografía, encabezados) y úsala en un reporte breve."
+              ]
+            },
+            {
+              "key": "tablas_imagenes_y_referencias",
+              "name": "Tablas, imágenes y referencias",
+              "short_description": "Inserta tablas, figuras y pies de imagen; integra referencias y citas para respaldar información.",
+              "example_tasks": [
+                "Inserta una tabla con datos y una figura con pie de imagen; incluye una referencia cruzada en el texto (como ‘ver Figura 1’).",
+                "Elabora un documento con 3 imágenes con atribución correcta (licencia y fuente) y una sección final de referencias.",
+                "Crea un instructivo paso a paso con capturas, listas numeradas y notas de seguridad digital (p. ej., no compartir datos personales)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hojas_de_calculo_y_analisis_basico",
+          "name": "Hojas de cálculo y análisis básico",
+          "short_description": "Organiza datos, usa fórmulas y funciones básicas, crea gráficos y realiza análisis sencillo para apoyar decisiones.",
+          "sub_topics": [
+            {
+              "key": "formulas_funciones_y_referencias",
+              "name": "Fórmulas, funciones y referencias",
+              "short_description": "Usa operaciones, funciones (SUMA, PROMEDIO, SI) y referencias relativas/absolutas para resolver problemas.",
+              "example_tasks": [
+                "Construye una hoja para calcular el costo total de un evento escolar con descuentos; usa al menos 3 funciones diferentes.",
+                "Aplica referencias absolutas para una tabla de impuestos o tipo de cambio y demuestra que funciona al copiar fórmulas.",
+                "Detecta y corrige 5 errores comunes en una hoja (celdas mal referenciadas, fórmulas rotas) y explica cada corrección."
+              ]
+            },
+            {
+              "key": "graficas_y_visualizacion",
+              "name": "Gráficas y visualización",
+              "short_description": "Selecciona el tipo de gráfico apropiado, etiqueta correctamente y explica lo que muestran los datos.",
+              "example_tasks": [
+                "A partir de datos de asistencia escolar, crea 2 gráficos distintos (barra y línea) y escribe 3 conclusiones basadas en ellos.",
+                "Revisa una gráfica engañosa (ejes truncados o etiquetas confusas) y corrígela para comunicar la información con honestidad.",
+                "Diseña un tablero simple con métricas (promedio, máximo, mínimo) y un gráfico para monitorear un proyecto de clase."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "presentaciones_y_comunicacion_visual",
+          "name": "Presentaciones y comunicación visual",
+          "short_description": "Diseña presentaciones claras y persuasivas, aplicando principios de diseño, narrativa y uso ético de imágenes y datos.",
+          "sub_topics": [
+            {
+              "key": "diseno_y_narrativa",
+              "name": "Diseño y narrativa",
+              "short_description": "Organiza una historia (inicio–desarrollo–cierre), jerarquía visual y consistencia tipográfica para comunicar ideas.",
+              "example_tasks": [
+                "Crea una presentación de 7 diapositivas sobre un tema local con estructura narrativa; incluye una diapositiva de conclusión y llamada a la acción.",
+                "Mejora una presentación saturada: reduce texto, usa jerarquía visual y agrega 3 apoyos visuales; documenta antes y después.",
+                "Elabora un guion de 2 minutos para exponer tu presentación, incluyendo pausas y énfasis; ensaya y autoevalúa con una rúbrica."
+              ]
+            },
+            {
+              "key": "uso_etico_de_recursos_visuales",
+              "name": "Uso ético de recursos visuales",
+              "short_description": "Integra imágenes, íconos y datos respetando licencias, atribución y claridad para evitar manipulación o plagio.",
+              "example_tasks": [
+                "Integra 5 recursos visuales con licencia adecuada (imágenes/íconos) y agrega una diapositiva final con atribuciones completas.",
+                "Selecciona una estadística y represéntala en una diapositiva con un gráfico correcto; explica por qué ese formato evita interpretaciones erróneas.",
+                "Crea una lista de verificación para presentaciones responsables (fuentes, licencias, ejes, contraste, accesibilidad) y úsala para revisar tu trabajo."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "gestion_de_archivos_y_colaboracion_ofimatica",
+          "name": "Gestión de archivos y colaboración ofimática",
+          "short_description": "Administra versiones, permisos, copias de seguridad y coedición para producir entregables escolares de forma eficiente y segura.",
+          "sub_topics": [
+            {
+              "key": "versionado_y_control_de_cambios",
+              "name": "Versionado y control de cambios",
+              "short_description": "Implementa prácticas sencillas de versiones (v1, v2, final) y usa comentarios y control de cambios en coedición.",
+              "example_tasks": [
+                "Organiza versiones de un documento (borrador, revisión, final) y explica criterios para nombrar archivos y evitar confusiones.",
+                "Coedita un documento con 3 compañeros usando comentarios; resuelve observaciones y entrega un registro de cambios.",
+                "Simula un error de ‘archivo equivocado’: recupera una versión anterior o historial y documenta el procedimiento."
+              ]
+            },
+            {
+              "key": "permisos_y_respaldo",
+              "name": "Permisos y respaldo",
+              "short_description": "Configura permisos adecuados (lectura/edición) y establece estrategias de respaldo local/nube para evitar pérdida de información.",
+              "example_tasks": [
+                "Configura permisos de una carpeta compartida para un proyecto (roles: editor, lector) y justifica por qué es seguro.",
+                "Diseña un plan de respaldo semanal para tus trabajos (nube + dispositivo) e indica cómo verificar que el respaldo funciona.",
+                "Resuelve un caso de pérdida de archivo: recupera desde papelera/historial y redacta una guía de prevención para tu grupo."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fundamentos_de_sistemas_de_computo",
+      "name": "Fundamentos de sistemas de cómputo",
+      "short_description": "Comprende la arquitectura básica de un sistema de cómputo, la función del hardware y software, y prácticas elementales de mantenimiento y uso responsable.",
+      "sub_topics": [
+        {
+          "key": "hardware_componentes_y_funcionamiento",
+          "name": "Hardware: componentes y funcionamiento",
+          "short_description": "Identifica los componentes físicos de una computadora y explica su función en el procesamiento de información.",
+          "sub_topics": [
+            {
+              "key": "componentes_internos_principales",
+              "name": "Componentes internos principales",
+              "short_description": "Reconoce CPU, memoria RAM, almacenamiento, tarjeta madre y su interacción básica.",
+              "example_tasks": [
+                "Etiqueta un diagrama de una computadora indicando la función de cada componente interno.",
+                "Relaciona especificaciones (GHz, GB, tipo de almacenamiento) con usos cotidianos como ofimática o edición básica.",
+                "Explica con un esquema cómo fluye la información desde la entrada hasta el almacenamiento."
+              ]
+            },
+            {
+              "key": "perifericos_de_entrada_y_salida",
+              "name": "Periféricos de entrada y salida",
+              "short_description": "Distingue periféricos de entrada, salida y mixtos, y su utilidad en contextos escolares.",
+              "example_tasks": [
+                "Clasifica 12 dispositivos como entrada, salida o mixtos y justifica cada caso.",
+                "Propón un conjunto de periféricos adecuados para un laboratorio escolar con presupuesto limitado.",
+                "Analiza un caso donde un periférico falla y describe pasos básicos de diagnóstico."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "software_tipos_y_licencias",
+          "name": "Software: tipos y licencias",
+          "short_description": "Diferencia software de sistema, aplicación y utilidades, considerando licencias y uso ético.",
+          "sub_topics": [
+            {
+              "key": "software_de_sistema_y_aplicacion",
+              "name": "Software de sistema y de aplicación",
+              "short_description": "Explica el papel del sistema operativo y de las aplicaciones en el uso cotidiano.",
+              "example_tasks": [
+                "Elabora una tabla comparativa entre software de sistema y aplicaciones con ejemplos reales.",
+                "Describe qué ocurre al encender una computadora desde el arranque hasta abrir una aplicación.",
+                "Identifica aplicaciones adecuadas para tareas escolares específicas (texto, cálculo, diseño)."
+              ]
+            },
+            {
+              "key": "licencias_y_uso_responsable",
+              "name": "Licencias y uso responsable del software",
+              "short_description": "Reconoce licencias propietarias y libres y promueve el uso legal del software.",
+              "example_tasks": [
+                "Investiga la licencia de 5 programas comunes y clasifícalos como libres o propietarios.",
+                "Propón alternativas de software libre para un aula escolar.",
+                "Redacta un compromiso de uso legal y responsable del software para tu grupo."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "mantenimiento_y_cuidado_del_equipo",
+          "name": "Mantenimiento y cuidado del equipo",
+          "short_description": "Aplica prácticas básicas de limpieza, actualización y cuidado para prolongar la vida útil del equipo.",
+          "sub_topics": [
+            {
+              "key": "mantenimiento_preventivo",
+              "name": "Mantenimiento preventivo",
+              "short_description": "Describe acciones preventivas para evitar fallas comunes del equipo.",
+              "example_tasks": [
+                "Elabora una lista de verificación de mantenimiento mensual para computadoras del aula.",
+                "Explica por qué el polvo y el calor afectan el rendimiento del equipo.",
+                "Diseña un cartel digital con recomendaciones de cuidado del equipo escolar."
+              ]
+            },
+            {
+              "key": "seguridad_fisica_y_ergonomia",
+              "name": "Seguridad física y ergonomía",
+              "short_description": "Adopta posturas y hábitos seguros al usar computadoras y dispositivos.",
+              "example_tasks": [
+                "Evalúa tu espacio de trabajo y propone 3 mejoras ergonómicas.",
+                "Identifica riesgos físicos en un laboratorio escolar y sugiere soluciones.",
+                "Crea una infografía sobre ergonomía y pausas activas para estudiantes."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "internet_redes_y_comunicacion_digital",
+      "name": "Internet, redes y comunicación digital",
+      "short_description": "Comprende cómo funciona Internet, los conceptos básicos de redes y el uso adecuado de herramientas de comunicación digital.",
+      "sub_topics": [
+        {
+          "key": "funcionamiento_de_internet",
+          "name": "Funcionamiento de Internet",
+          "short_description": "Explica conceptos básicos como servidores, clientes, direcciones IP y servicios web.",
+          "sub_topics": [
+            {
+              "key": "clientes_servidores_y_servicios",
+              "name": "Clientes, servidores y servicios",
+              "short_description": "Describe la relación cliente-servidor y ejemplos de servicios en línea.",
+              "example_tasks": [
+                "Dibuja un esquema cliente-servidor para un sitio web educativo.",
+                "Identifica servicios comunes (correo, web, nube) y su función.",
+                "Explica qué ocurre cuando escribes una URL en el navegador."
+              ]
+            },
+            {
+              "key": "protocolos_basicos",
+              "name": "Protocolos básicos de Internet",
+              "short_description": "Reconoce protocolos como HTTP, HTTPS y su importancia para la comunicación segura.",
+              "example_tasks": [
+                "Compara HTTP y HTTPS y explica por qué uno es más seguro.",
+                "Busca ejemplos de sitios seguros y no seguros y analiza diferencias.",
+                "Redacta recomendaciones para navegar de forma segura en Internet."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "redes_locales_y_conectividad",
+          "name": "Redes locales y conectividad",
+          "short_description": "Identifica tipos de redes y formas básicas de conexión en el entorno escolar y doméstico.",
+          "sub_topics": [
+            {
+              "key": "tipos_de_redes",
+              "name": "Tipos de redes",
+              "short_description": "Distingue redes LAN, WLAN y su uso cotidiano.",
+              "example_tasks": [
+                "Clasifica ejemplos de redes como LAN o WLAN y explica su alcance.",
+                "Describe la red de tu escuela y sus componentes principales.",
+                "Propón mejoras básicas para la conectividad de un aula."
+              ]
+            },
+            {
+              "key": "dispositivos_de_red",
+              "name": "Dispositivos de red",
+              "short_description": "Reconoce módem, router y punto de acceso y su función.",
+              "example_tasks": [
+                "Relaciona cada dispositivo de red con su función principal.",
+                "Explica cómo se conectan varios dispositivos a Internet en casa.",
+                "Analiza un problema de conexión común y propone una solución básica."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "comunicacion_digital_responsable",
+          "name": "Comunicación digital responsable",
+          "short_description": "Utiliza herramientas de comunicación digital con respeto, claridad y seguridad.",
+          "sub_topics": [
+            {
+              "key": "correo_y_mensajeria",
+              "name": "Correo electrónico y mensajería",
+              "short_description": "Redacta mensajes claros y seguros en entornos académicos.",
+              "example_tasks": [
+                "Redacta un correo formal para solicitar información académica.",
+                "Identifica errores comunes en correos informales y corrígelos.",
+                "Configura filtros y carpetas para organizar tu bandeja de entrada."
+              ]
+            },
+            {
+              "key": "videoconferencias_y_etiqueta",
+              "name": "Videoconferencias y etiqueta",
+              "short_description": "Aplica normas de etiqueta y seguridad en clases y reuniones virtuales.",
+              "example_tasks": [
+                "Elabora una lista de reglas de participación en videoclases.",
+                "Simula una reunión virtual y evalúa el cumplimiento de la etiqueta.",
+                "Diseña una guía rápida para estudiantes que toman clases en línea."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ciberseguridad_basica_y_privacidad",
+      "name": "Ciberseguridad básica y privacidad",
+      "short_description": "Reconoce riesgos digitales comunes y aplica medidas preventivas para proteger dispositivos, información personal y cuentas en línea.",
+      "sub_topics": [
+        {
+          "key": "amenazas_digitales_comunes",
+          "name": "Amenazas digitales comunes",
+          "short_description": "Identifica tipos de amenazas frecuentes en entornos escolares y personales.",
+          "sub_topics": [
+            {
+              "key": "malware_y_software_malicioso",
+              "name": "Malware y software malicioso",
+              "short_description": "Reconoce virus, spyware y ransomware y explica cómo se propagan.",
+              "example_tasks": [
+                "Clasifica ejemplos de amenazas (virus, troyano, ransomware) según su impacto.",
+                "Analiza un caso ficticio de infección por malware y describe cómo prevenirlo.",
+                "Elabora una lista de buenas prácticas para evitar descargas peligrosas."
+              ]
+            },
+            {
+              "key": "phishing_y_suplantacion",
+              "name": "Phishing y suplantación de identidad",
+              "short_description": "Detecta intentos de engaño mediante correos, mensajes o sitios falsos.",
+              "example_tasks": [
+                "Revisa 5 correos simulados y determina cuáles son phishing justificando tu decisión.",
+                "Diseña un cartel digital con señales de alerta ante mensajes sospechosos.",
+                "Explica qué hacer si un compañero comparte accidentalmente sus datos en un sitio falso."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "proteccion_de_datos_personales",
+          "name": "Protección de datos personales",
+          "short_description": "Aplica medidas básicas para resguardar información personal y sensible.",
+          "sub_topics": [
+            {
+              "key": "contrasenas_y_autenticacion",
+              "name": "Contraseñas y autenticación",
+              "short_description": "Crea contraseñas seguras y comprende la autenticación de dos factores.",
+              "example_tasks": [
+                "Evalúa la fortaleza de 6 contraseñas y propón mejoras.",
+                "Crea una guía de contraseñas seguras para estudiantes.",
+                "Explica con un esquema cómo funciona la autenticación de dos factores."
+              ]
+            },
+            {
+              "key": "configuracion_de_privacidad",
+              "name": "Configuración de privacidad",
+              "short_description": "Ajusta opciones de privacidad en dispositivos y aplicaciones.",
+              "example_tasks": [
+                "Revisa permisos de una app común y decide cuáles son necesarios.",
+                "Documenta los pasos para configurar privacidad en una red social.",
+                "Elabora recomendaciones para compartir información de forma segura."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "uso_seguro_de_dispositivos_y_redes",
+          "name": "Uso seguro de dispositivos y redes",
+          "short_description": "Adopta hábitos seguros al usar equipos compartidos y redes públicas.",
+          "sub_topics": [
+            {
+              "key": "actualizaciones_y_respaldo",
+              "name": "Actualizaciones y respaldo",
+              "short_description": "Comprende la importancia de actualizar sistemas y realizar copias de seguridad.",
+              "example_tasks": [
+                "Explica por qué las actualizaciones corrigen vulnerabilidades.",
+                "Diseña un plan básico de respaldo para tareas escolares.",
+                "Analiza un caso de pérdida de información y cómo evitarlo."
+              ]
+            },
+            {
+              "key": "redes_publicas_y_seguridad",
+              "name": "Redes públicas y seguridad",
+              "short_description": "Reconoce riesgos al usar Wi-Fi público y medidas de precaución.",
+              "example_tasks": [
+                "Enumera riesgos de conectarse a redes abiertas en espacios públicos.",
+                "Propón acciones seguras para usar Internet en una biblioteca o café.",
+                "Crea una infografía con consejos de seguridad en redes públicas."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pensamiento_computacional_y_algoritmos",
+      "name": "Pensamiento computacional y algoritmos",
+      "short_description": "Desarrolla habilidades de resolución de problemas mediante descomposición, reconocimiento de patrones, abstracción y diseño de algoritmos.",
+      "sub_topics": [
+        {
+          "key": "resolucion_de_problemas",
+          "name": "Resolución de problemas",
+          "short_description": "Aplica estrategias sistemáticas para analizar y resolver problemas.",
+          "sub_topics": [
+            {
+              "key": "descomposicion_y_patrones",
+              "name": "Descomposición y reconocimiento de patrones",
+              "short_description": "Divide problemas complejos en partes más simples e identifica patrones.",
+              "example_tasks": [
+                "Descompone una tarea cotidiana (organizar un evento) en pasos simples.",
+                "Identifica patrones en una secuencia de instrucciones repetidas.",
+                "Explica cómo la descomposición facilita encontrar soluciones."
+              ]
+            },
+            {
+              "key": "abstraccion",
+              "name": "Abstracción",
+              "short_description": "Selecciona información relevante e ignora detalles innecesarios.",
+              "example_tasks": [
+                "Resume un proceso largo destacando solo los pasos esenciales.",
+                "Representa un problema real con un esquema simple.",
+                "Explica por qué la abstracción es clave en la programación."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "algoritmos_y_representacion",
+          "name": "Algoritmos y representación",
+          "short_description": "Diseña y representa algoritmos mediante lenguaje natural, diagramas y pseudocódigo.",
+          "sub_topics": [
+            {
+              "key": "diagramas_de_flujo",
+              "name": "Diagramas de flujo",
+              "short_description": "Utiliza símbolos estándar para representar procesos paso a paso.",
+              "example_tasks": [
+                "Crea un diagrama de flujo para resolver una operación matemática sencilla.",
+                "Corrige un diagrama con errores de secuencia.",
+                "Explica un algoritmo usando únicamente un diagrama de flujo."
+              ]
+            },
+            {
+              "key": "pseudocodigo",
+              "name": "Pseudocódigo",
+              "short_description": "Redacta algoritmos claros usando pseudocódigo estructurado.",
+              "example_tasks": [
+                "Escribe pseudocódigo para decidir si un número es par o impar.",
+                "Traduce un diagrama de flujo a pseudocódigo.",
+                "Evalúa el pseudocódigo de un compañero y sugiere mejoras."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "evaluacion_y_mejora_de_algoritmos",
+          "name": "Evaluación y mejora de algoritmos",
+          "short_description": "Analiza la eficiencia y corrección de algoritmos sencillos.",
+          "sub_topics": [
+            {
+              "key": "pruebas_y_depurar",
+              "name": "Pruebas y depuración",
+              "short_description": "Detecta errores lógicos y mejora la claridad de algoritmos.",
+              "example_tasks": [
+                "Identifica errores en un algoritmo dado y corrígelos.",
+                "Prueba un algoritmo con distintos datos de entrada.",
+                "Explica cómo verificar que un algoritmo funciona correctamente."
+              ]
+            },
+            {
+              "key": "optimizacion_basica",
+              "name": "Optimización básica",
+              "short_description": "Simplifica algoritmos reduciendo pasos innecesarios.",
+              "example_tasks": [
+                "Compara dos algoritmos que resuelven el mismo problema y elige el más eficiente.",
+                "Reduce el número de pasos de un algoritmo cotidiano.",
+                "Explica por qué una solución optimizada ahorra tiempo o recursos."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "programacion_inicial",
+      "name": "Programación inicial",
+      "short_description": "Introduce la programación mediante lenguajes de alto nivel, desarrollando la lógica básica, el uso de variables, estructuras de control y resolución de problemas sencillos.",
+      "sub_topics": [
+        {
+          "key": "conceptos_basicos_de_programacion",
+          "name": "Conceptos básicos de programación",
+          "short_description": "Comprende los elementos fundamentales de un programa y su ejecución.",
+          "sub_topics": [
+            {
+              "key": "variables_y_tipos_de_datos",
+              "name": "Variables y tipos de datos",
+              "short_description": "Utiliza variables y tipos de datos básicos para almacenar y manipular información.",
+              "example_tasks": [
+                "Define variables para almacenar edad, nombre y promedio escolar y muestra sus valores.",
+                "Identifica el tipo de dato adecuado para diferentes situaciones cotidianas.",
+                "Corrige un programa simple donde se usan tipos de datos incorrectos."
+              ]
+            },
+            {
+              "key": "entrada_y_salida_de_datos",
+              "name": "Entrada y salida de datos",
+              "short_description": "Recibe datos del usuario y muestra resultados de forma clara.",
+              "example_tasks": [
+                "Crea un programa que solicite el nombre del usuario y muestre un saludo personalizado.",
+                "Diseña un programa que pida dos números y muestre su suma.",
+                "Explica con comentarios cómo funciona la entrada y salida en el programa."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "estructuras_de_control",
+          "name": "Estructuras de control",
+          "short_description": "Aplica decisiones y repeticiones para controlar el flujo de ejecución.",
+          "sub_topics": [
+            {
+              "key": "condicionales",
+              "name": "Estructuras condicionales",
+              "short_description": "Utiliza condiciones para ejecutar diferentes acciones según el caso.",
+              "example_tasks": [
+                "Programa una condición que indique si un número es mayor o menor que otro.",
+                "Diseña un programa que evalúe si un estudiante aprobó o no una materia.",
+                "Analiza un código con errores en condicionales y corrígelo."
+              ]
+            },
+            {
+              "key": "ciclos",
+              "name": "Ciclos o bucles",
+              "short_description": "Emplea ciclos para repetir instrucciones de manera eficiente.",
+              "example_tasks": [
+                "Crea un ciclo que imprima los números del 1 al 10.",
+                "Diseña un programa que repita una pregunta hasta obtener una respuesta válida.",
+                "Explica la diferencia entre un ciclo controlado por contador y uno por condición."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "buenas_practicas_y_estilo",
+          "name": "Buenas prácticas y estilo de programación",
+          "short_description": "Promueve la escritura de código claro, ordenado y comprensible.",
+          "sub_topics": [
+            {
+              "key": "comentarios_y_nombres_significativos",
+              "name": "Comentarios y nombres significativos",
+              "short_description": "Usa comentarios y nombres claros para mejorar la legibilidad del código.",
+              "example_tasks": [
+                "Renombra variables confusas en un programa para que sean significativas.",
+                "Agrega comentarios explicativos a un código dado.",
+                "Evalúa el código de un compañero según criterios de claridad."
+              ]
+            },
+            {
+              "key": "pruebas_basicas",
+              "name": "Pruebas básicas",
+              "short_description": "Verifica el funcionamiento correcto de programas sencillos.",
+              "example_tasks": [
+                "Prueba un programa con distintos valores de entrada.",
+                "Registra resultados esperados y obtenidos en una tabla simple.",
+                "Explica por qué probar un programa es importante antes de entregarlo."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "datos_y_representacion",
+      "name": "Datos y representación",
+      "short_description": "Introduce el manejo básico de datos, su organización, representación y análisis elemental para interpretar información.",
+      "sub_topics": [
+        {
+          "key": "organizacion_de_datos",
+          "name": "Organización de datos",
+          "short_description": "Ordena y clasifica datos en tablas y listas.",
+          "sub_topics": [
+            {
+              "key": "tablas_y_listas",
+              "name": "Tablas y listas de datos",
+              "short_description": "Representa información en tablas y listas para facilitar su comprensión.",
+              "example_tasks": [
+                "Organiza datos de asistencia en una tabla.",
+                "Convierte una lista desordenada de datos en una tabla clara.",
+                "Explica qué ventaja tiene usar tablas para analizar información."
+              ]
+            },
+            {
+              "key": "clasificacion_y_ordenamiento",
+              "name": "Clasificación y ordenamiento",
+              "short_description": "Clasifica y ordena datos según distintos criterios.",
+              "example_tasks": [
+                "Ordena calificaciones de menor a mayor.",
+                "Clasifica datos por categorías (edad, grupo, género).",
+                "Describe cómo el ordenamiento facilita el análisis."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "visualizacion_de_datos",
+          "name": "Visualización de datos",
+          "short_description": "Representa datos mediante gráficos sencillos.",
+          "sub_topics": [
+            {
+              "key": "graficos_basicos",
+              "name": "Gráficos básicos",
+              "short_description": "Elige y construye gráficos adecuados para distintos tipos de datos.",
+              "example_tasks": [
+                "Crea un gráfico de barras con datos escolares.",
+                "Elabora un gráfico circular y explica sus secciones.",
+                "Compara dos gráficos y decide cuál comunica mejor la información."
+              ]
+            },
+            {
+              "key": "interpretacion_de_graficos",
+              "name": "Interpretación de gráficos",
+              "short_description": "Analiza gráficos para obtener conclusiones simples.",
+              "example_tasks": [
+                "Responde preguntas basadas en un gráfico dado.",
+                "Identifica tendencias en un gráfico de líneas.",
+                "Explica qué información no se puede obtener de un gráfico específico."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "proyectos_digitales_y_portafolio_i",
+      "name": "Proyectos digitales y portafolio I",
+      "short_description": "Integra aprendizajes de informática en proyectos sencillos y documenta evidencias en un portafolio digital.",
+      "sub_topics": [
+        {
+          "key": "diseno_de_proyectos_sencillos",
+          "name": "Diseño de proyectos sencillos",
+          "short_description": "Planifica proyectos digitales con objetivos claros y pasos definidos.",
+          "sub_topics": [
+            {
+              "key": "definicion_de_objetivos",
+              "name": "Definición de objetivos",
+              "short_description": "Establece objetivos claros y alcanzables para un proyecto digital.",
+              "example_tasks": [
+                "Define el objetivo de un proyecto digital escolar.",
+                "Identifica recursos necesarios para llevarlo a cabo.",
+                "Explica cómo medirás el logro del objetivo."
+              ]
+            },
+            {
+              "key": "planificacion_de_tareas",
+              "name": "Planificación de tareas",
+              "short_description": "Organiza actividades y tiempos para completar un proyecto.",
+              "example_tasks": [
+                "Elabora un cronograma simple de un proyecto.",
+                "Asigna responsabilidades dentro de un equipo.",
+                "Ajusta el plan ante un cambio imprevisto."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "portafolio_digital",
+          "name": "Portafolio digital",
+          "short_description": "Recopila y reflexiona sobre trabajos y aprendizajes realizados.",
+          "sub_topics": [
+            {
+              "key": "seleccion_de_evidencias",
+              "name": "Selección de evidencias",
+              "short_description": "Elige trabajos representativos del aprendizaje logrado.",
+              "example_tasks": [
+                "Selecciona 5 trabajos que muestren tu progreso.",
+                "Explica por qué cada evidencia es importante.",
+                "Organiza las evidencias en orden cronológico."
+              ]
+            },
+            {
+              "key": "reflexion_y_mejora",
+              "name": "Reflexión y mejora",
+              "short_description": "Analiza fortalezas y áreas de mejora a partir del portafolio.",
+              "example_tasks": [
+                "Redacta una reflexión sobre lo aprendido en informática.",
+                "Identifica dos habilidades que deseas mejorar.",
+                "Propón acciones concretas para seguir aprendiendo."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "grade_11_12": [
+    {
+      "key": "programacion_intermedia_y_estructuras",
+      "name": "Programación intermedia y estructuras de datos",
+      "short_description": "Profundiza en la programación mediante funciones, estructuras de datos y manejo de archivos, promoviendo soluciones modulares y reutilizables.",
+      "sub_topics": [
+        {
+          "key": "funciones_y_modularidad",
+          "name": "Funciones y modularidad",
+          "short_description": "Diseña programas modulares usando funciones para organizar y reutilizar código.",
+          "sub_topics": [
+            {
+              "key": "definicion_y_uso_de_funciones",
+              "name": "Definición y uso de funciones",
+              "short_description": "Crea funciones con parámetros y valores de retorno para resolver subtareas.",
+              "example_tasks": [
+                "Escribe una función que calcule el promedio de una lista de calificaciones.",
+                "Modifica un programa largo separándolo en funciones con responsabilidades claras.",
+                "Explica con comentarios cómo una función mejora la legibilidad del código."
+              ]
+            },
+            {
+              "key": "alcance_y_reutilizacion",
+              "name": "Alcance y reutilización de código",
+              "short_description": "Comprende el alcance de variables y la reutilización de funciones en distintos programas.",
+              "example_tasks": [
+                "Identifica variables locales y globales en un código dado.",
+                "Reutiliza una función creada previamente en un nuevo programa.",
+                "Analiza un error causado por el uso incorrecto del alcance de variables."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "estructuras_de_datos",
+          "name": "Estructuras de datos",
+          "short_description": "Utiliza estructuras de datos para organizar y procesar información de forma eficiente.",
+          "sub_topics": [
+            {
+              "key": "listas_arreglos_y_diccionarios",
+              "name": "Listas, arreglos y diccionarios",
+              "short_description": "Maneja colecciones de datos y accede a sus elementos.",
+              "example_tasks": [
+                "Crea una lista de estudiantes y recorre sus elementos para mostrar información.",
+                "Utiliza un diccionario para almacenar pares clave-valor (nombre–calificación).",
+                "Resuelve un problema escolar eligiendo la estructura de datos más adecuada."
+              ]
+            },
+            {
+              "key": "operaciones_basicas_con_datos",
+              "name": "Operaciones básicas con datos",
+              "short_description": "Aplica búsqueda, inserción y eliminación en estructuras de datos.",
+              "example_tasks": [
+                "Busca un elemento específico dentro de una lista.",
+                "Agrega y elimina datos en una estructura existente.",
+                "Explica el impacto de estas operaciones en el rendimiento del programa."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "manejo_de_archivos",
+          "name": "Manejo de archivos",
+          "short_description": "Lee y escribe archivos de texto para almacenar información de forma persistente.",
+          "sub_topics": [
+            {
+              "key": "lectura_y_escritura_de_archivos",
+              "name": "Lectura y escritura de archivos",
+              "short_description": "Implementa programas que guarden y recuperen datos desde archivos.",
+              "example_tasks": [
+                "Crea un programa que guarde datos de usuarios en un archivo de texto.",
+                "Lee información desde un archivo y muéstrala en pantalla.",
+                "Explica la diferencia entre datos temporales y persistentes."
+              ]
+            },
+            {
+              "key": "validacion_y_seguridad_basica",
+              "name": "Validación y seguridad básica",
+              "short_description": "Valida datos antes de almacenarlos y maneja errores comunes.",
+              "example_tasks": [
+                "Agrega validaciones para evitar datos incorrectos en un archivo.",
+                "Maneja errores al intentar abrir un archivo inexistente.",
+                "Describe riesgos de almacenar información sensible sin protección."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "desarrollo_web_frontend",
+      "name": "Desarrollo web frontend",
+      "short_description": "Desarrolla interfaces web usando HTML, CSS y JavaScript, aplicando principios de diseño, accesibilidad y experiencia de usuario.",
+      "sub_topics": [
+        {
+          "key": "estructura_html",
+          "name": "Estructura HTML",
+          "short_description": "Construye páginas web semánticas con etiquetas HTML.",
+          "sub_topics": [
+            {
+              "key": "etiquetas_basicas_y_semantica",
+              "name": "Etiquetas básicas y semántica",
+              "short_description": "Utiliza etiquetas semánticas para organizar el contenido.",
+              "example_tasks": [
+                "Crea una página HTML con encabezado, sección principal y pie de página.",
+                "Reemplaza divs genéricos por etiquetas semánticas adecuadas.",
+                "Explica por qué la semántica mejora la accesibilidad y el SEO."
+              ]
+            },
+            {
+              "key": "formularios_y_entrada_de_datos",
+              "name": "Formularios y entrada de datos",
+              "short_description": "Diseña formularios para capturar información del usuario.",
+              "example_tasks": [
+                "Construye un formulario de registro con distintos tipos de entrada.",
+                "Agrega etiquetas y validaciones básicas a un formulario.",
+                "Analiza cómo los formularios facilitan la interacción con el usuario."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "diseno_css_y_responsivo",
+          "name": "Diseño con CSS y web responsiva",
+          "short_description": "Aplica estilos y diseño adaptable para distintos dispositivos.",
+          "sub_topics": [
+            {
+              "key": "selectores_y_estilos",
+              "name": "Selectores y estilos",
+              "short_description": "Utiliza selectores CSS para definir estilos visuales.",
+              "example_tasks": [
+                "Aplica estilos a encabezados, párrafos y enlaces.",
+                "Diferencia selectores de clase e identificador en un ejemplo.",
+                "Mejora la legibilidad de una página ajustando colores y tipografía."
+              ]
+            },
+            {
+              "key": "diseno_responsivo",
+              "name": "Diseño responsivo",
+              "short_description": "Implementa diseño adaptable con media queries.",
+              "example_tasks": [
+                "Crea una página que se adapte a móvil y escritorio.",
+                "Utiliza media queries para cambiar el diseño según el tamaño de pantalla.",
+                "Evalúa la experiencia de usuario en distintos dispositivos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "interactividad_con_javascript",
+          "name": "Interactividad con JavaScript",
+          "short_description": "Agrega interactividad básica a páginas web mediante JavaScript.",
+          "sub_topics": [
+            {
+              "key": "eventos_y_dom",
+              "name": "Eventos y manipulación del DOM",
+              "short_description": "Responde a eventos del usuario y modifica el contenido de la página.",
+              "example_tasks": [
+                "Programa un botón que muestre un mensaje al hacer clic.",
+                "Cambia dinámicamente el contenido de una página usando JavaScript.",
+                "Explica cómo el DOM permite interactuar con HTML."
+              ]
+            },
+            {
+              "key": "validacion_de_formularios",
+              "name": "Validación de formularios",
+              "short_description": "Valida datos de formularios para mejorar la experiencia y seguridad.",
+              "example_tasks": [
+                "Agrega validación para campos obligatorios en un formulario.",
+                "Muestra mensajes de error claros al usuario.",
+                "Analiza por qué la validación mejora la calidad de los datos."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "desarrollo_backend_y_servicios",
+      "name": "Desarrollo backend y servicios",
+      "short_description": "Comprende el funcionamiento del lado del servidor, la creación de servicios web y la comunicación entre aplicaciones mediante APIs.",
+      "sub_topics": [
+        {
+          "key": "conceptos_de_backend",
+          "name": "Conceptos de backend",
+          "short_description": "Introduce la lógica del servidor y su papel en aplicaciones web.",
+          "sub_topics": [
+            {
+              "key": "servidor_y_aplicaciones_backend",
+              "name": "Servidor y aplicaciones backend",
+              "short_description": "Explica cómo un servidor procesa solicitudes y genera respuestas.",
+              "example_tasks": [
+                "Describe el recorrido de una solicitud desde el navegador hasta el servidor.",
+                "Identifica diferencias entre frontend y backend en una aplicación web.",
+                "Analiza un ejemplo sencillo de aplicación cliente-servidor."
+              ]
+            },
+            {
+              "key": "lenguajes_y_entornos_backend",
+              "name": "Lenguajes y entornos backend",
+              "short_description": "Reconoce lenguajes y entornos comunes usados en el desarrollo del servidor.",
+              "example_tasks": [
+                "Investiga dos lenguajes usados en backend y compara sus características.",
+                "Explica el rol de un entorno de ejecución en aplicaciones web.",
+                "Relaciona tipos de aplicaciones con el lenguaje backend más adecuado."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "apis_y_comunicacion",
+          "name": "APIs y comunicación",
+          "short_description": "Utiliza APIs para intercambiar datos entre aplicaciones.",
+          "sub_topics": [
+            {
+              "key": "apis_rest",
+              "name": "APIs REST",
+              "short_description": "Comprende el modelo REST y el uso de métodos HTTP.",
+              "example_tasks": [
+                "Identifica métodos HTTP (GET, POST, PUT, DELETE) en ejemplos reales.",
+                "Diseña una API simple para gestionar usuarios.",
+                "Explica cómo una API permite la comunicación entre aplicaciones."
+              ]
+            },
+            {
+              "key": "consumo_de_apis",
+              "name": "Consumo de APIs",
+              "short_description": "Consume datos de una API desde una aplicación o script.",
+              "example_tasks": [
+                "Consume una API pública y muestra datos relevantes.",
+                "Interpreta la respuesta JSON de una API.",
+                "Explica cómo manejar errores al consumir una API."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "autenticacion_y_seguridad_basica",
+          "name": "Autenticación y seguridad básica",
+          "short_description": "Introduce mecanismos simples de autenticación y protección de servicios.",
+          "sub_topics": [
+            {
+              "key": "autenticacion_basica",
+              "name": "Autenticación básica",
+              "short_description": "Reconoce métodos básicos de autenticación de usuarios.",
+              "example_tasks": [
+                "Describe el proceso de inicio de sesión de un usuario.",
+                "Compara autenticación básica y autenticación con tokens.",
+                "Analiza riesgos de una autenticación mal implementada."
+              ]
+            },
+            {
+              "key": "buenas_practicas_de_seguridad",
+              "name": "Buenas prácticas de seguridad",
+              "short_description": "Aplica principios básicos para proteger servicios backend.",
+              "example_tasks": [
+                "Enumera buenas prácticas para proteger credenciales.",
+                "Identifica vulnerabilidades comunes en aplicaciones web.",
+                "Propone medidas de seguridad para una API escolar."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "bases_de_datos_y_sql",
+      "name": "Bases de datos y SQL",
+      "short_description": "Diseña y gestiona bases de datos relacionales utilizando modelos de datos y consultas SQL.",
+      "sub_topics": [
+        {
+          "key": "modelado_de_datos",
+          "name": "Modelado de datos",
+          "short_description": "Diseña estructuras de datos coherentes para almacenar información.",
+          "sub_topics": [
+            {
+              "key": "modelo_entidad_relacion",
+              "name": "Modelo entidad-relación",
+              "short_description": "Representa entidades, atributos y relaciones de un sistema.",
+              "example_tasks": [
+                "Diseña un diagrama entidad-relación para una biblioteca escolar.",
+                "Identifica entidades y relaciones en un caso práctico.",
+                "Explica por qué el modelado previo evita errores en la base de datos."
+              ]
+            },
+            {
+              "key": "normalizacion_basica",
+              "name": "Normalización básica",
+              "short_description": "Aplica reglas simples para reducir redundancia de datos.",
+              "example_tasks": [
+                "Detecta redundancias en una tabla mal diseñada.",
+                "Aplica una forma normal básica a un conjunto de datos.",
+                "Explica beneficios de la normalización en un sistema real."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "consultas_sql",
+          "name": "Consultas SQL",
+          "short_description": "Utiliza SQL para consultar y manipular datos.",
+          "sub_topics": [
+            {
+              "key": "consultas_select",
+              "name": "Consultas SELECT",
+              "short_description": "Obtiene información específica de una base de datos.",
+              "example_tasks": [
+                "Escribe consultas SELECT para filtrar datos.",
+                "Ordena resultados usando ORDER BY.",
+                "Analiza resultados obtenidos de una consulta."
+              ]
+            },
+            {
+              "key": "insercion_y_actualizacion",
+              "name": "Inserción y actualización",
+              "short_description": "Agrega y modifica registros en tablas.",
+              "example_tasks": [
+                "Inserta nuevos registros en una tabla.",
+                "Actualiza información existente con UPDATE.",
+                "Explica el impacto de una actualización incorrecta."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "integridad_y_seguridad_de_datos",
+          "name": "Integridad y seguridad de datos",
+          "short_description": "Asegura la consistencia y protección de la información almacenada.",
+          "sub_topics": [
+            {
+              "key": "llaves_y_restricciones",
+              "name": "Llaves y restricciones",
+              "short_description": "Aplica llaves primarias y foráneas para mantener integridad.",
+              "example_tasks": [
+                "Define llaves primarias y foráneas en un esquema.",
+                "Explica qué sucede al violar una restricción de integridad.",
+                "Corrige un esquema con relaciones mal definidas."
+              ]
+            },
+            {
+              "key": "respaldos_y_control_de_acceso",
+              "name": "Respaldos y control de acceso",
+              "short_description": "Implementa respaldos y permisos básicos de acceso.",
+              "example_tasks": [
+                "Diseña un plan de respaldo para una base de datos escolar.",
+                "Define roles de usuario con distintos permisos.",
+                "Analiza riesgos de no realizar respaldos periódicos."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "redes_y_administracion_basica",
+      "name": "Redes y administración básica",
+      "short_description": "Comprende principios de redes, configuración elemental y diagnóstico de fallas en entornos escolares y domésticos.",
+      "sub_topics": [
+        {
+          "key": "conceptos_fundamentales_de_redes",
+          "name": "Conceptos fundamentales de redes",
+          "short_description": "Reconoce topologías, direccionamiento y flujo básico de datos.",
+          "sub_topics": [
+            {
+              "key": "topologias_y_componentes",
+              "name": "Topologías y componentes de red",
+              "short_description": "Identifica topologías comunes y componentes esenciales de una red.",
+              "example_tasks": [
+                "Dibuja y explica tres topologías de red comunes.",
+                "Relaciona cada componente (switch, router) con su función.",
+                "Analiza qué topología conviene para un laboratorio escolar."
+              ]
+            },
+            {
+              "key": "direccionamiento_ip_basico",
+              "name": "Direccionamiento IP básico",
+              "short_description": "Comprende el uso básico de direcciones IP en una red local.",
+              "example_tasks": [
+                "Explica la diferencia entre IP pública y privada.",
+                "Identifica la IP de un dispositivo en la red escolar.",
+                "Describe qué ocurre cuando dos equipos tienen la misma IP."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "configuracion_y_diagnostico",
+          "name": "Configuración y diagnóstico",
+          "short_description": "Aplica configuraciones simples y detecta fallas comunes.",
+          "sub_topics": [
+            {
+              "key": "configuracion_basica_de_red",
+              "name": "Configuración básica de red",
+              "short_description": "Configura parámetros básicos de conexión.",
+              "example_tasks": [
+                "Configura una conexión Wi-Fi en un dispositivo.",
+                "Describe los pasos para conectar una impresora en red.",
+                "Documenta una configuración exitosa con capturas o notas."
+              ]
+            },
+            {
+              "key": "diagnostico_de_fallas",
+              "name": "Diagnóstico de fallas",
+              "short_description": "Identifica y soluciona problemas de conectividad sencillos.",
+              "example_tasks": [
+                "Analiza un caso de falta de conexión y propone soluciones.",
+                "Utiliza comandos básicos (ping) para verificar conectividad.",
+                "Explica cómo escalar un problema que no puedes resolver."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "sistemas_operativos_y_virtualizacion",
+      "name": "Sistemas operativos y virtualización",
+      "short_description": "Analiza el funcionamiento de los sistemas operativos y el uso conceptual de la virtualización.",
+      "sub_topics": [
+        {
+          "key": "funciones_del_sistema_operativo",
+          "name": "Funciones del sistema operativo",
+          "short_description": "Comprende la gestión de recursos y procesos.",
+          "sub_topics": [
+            {
+              "key": "procesos_y_memoria",
+              "name": "Procesos y memoria",
+              "short_description": "Explica cómo el sistema operativo administra procesos y memoria.",
+              "example_tasks": [
+                "Identifica procesos activos en un sistema operativo.",
+                "Explica la diferencia entre programa y proceso.",
+                "Analiza cómo la memoria influye en el rendimiento."
+              ]
+            },
+            {
+              "key": "usuarios_y_permisos",
+              "name": "Usuarios y permisos",
+              "short_description": "Gestiona usuarios y permisos básicos.",
+              "example_tasks": [
+                "Crea perfiles de usuario con distintos permisos.",
+                "Analiza riesgos de usar cuentas sin protección.",
+                "Explica la importancia de los permisos de acceso."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "virtualizacion_y_contenedores",
+          "name": "Virtualización y contenedores",
+          "short_description": "Introduce el concepto de máquinas virtuales y contenedores.",
+          "sub_topics": [
+            {
+              "key": "maquinas_virtuales",
+              "name": "Máquinas virtuales",
+              "short_description": "Comprende el uso de máquinas virtuales para pruebas y aprendizaje.",
+              "example_tasks": [
+                "Explica para qué sirve una máquina virtual.",
+                "Compara sistema anfitrión y sistema invitado.",
+                "Propone usos educativos de la virtualización."
+              ]
+            },
+            {
+              "key": "contenedores_concepto",
+              "name": "Concepto de contenedores",
+              "short_description": "Reconoce diferencias básicas entre contenedores y máquinas virtuales.",
+              "example_tasks": [
+                "Elabora una tabla comparativa entre contenedores y máquinas virtuales.",
+                "Explica por qué los contenedores son ligeros.",
+                "Relaciona contenedores con despliegue de aplicaciones."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ingenieria_de_software_y_control_versiones",
+      "name": "Ingeniería de software y control de versiones",
+      "short_description": "Aplica principios básicos de ingeniería de software y trabajo colaborativo con control de versiones.",
+      "sub_topics": [
+        {
+          "key": "ciclo_de_vida_del_software",
+          "name": "Ciclo de vida del software",
+          "short_description": "Reconoce etapas desde análisis hasta mantenimiento.",
+          "sub_topics": [
+            {
+              "key": "requisitos_y_diseno",
+              "name": "Requisitos y diseño",
+              "short_description": "Define requisitos y propone diseños simples.",
+              "example_tasks": [
+                "Redacta requisitos funcionales de una app escolar.",
+                "Dibuja un esquema simple de la solución propuesta.",
+                "Explica por qué los requisitos claros evitan retrabajo."
+              ]
+            },
+            {
+              "key": "pruebas_y_mantenimiento",
+              "name": "Pruebas y mantenimiento",
+              "short_description": "Aplica pruebas básicas y mantenimiento correctivo.",
+              "example_tasks": [
+                "Diseña casos de prueba para un programa sencillo.",
+                "Detecta errores y documenta correcciones.",
+                "Explica la importancia del mantenimiento."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "control_de_versiones",
+          "name": "Control de versiones",
+          "short_description": "Utiliza sistemas de control de versiones para trabajo colaborativo.",
+          "sub_topics": [
+            {
+              "key": "git_y_repositorios",
+              "name": "Git y repositorios",
+              "short_description": "Gestiona versiones de código con repositorios.",
+              "example_tasks": [
+                "Crea un repositorio y realiza un primer commit.",
+                "Describe el flujo básico de trabajo con Git.",
+                "Explica cómo el control de versiones ayuda al equipo."
+              ]
+            },
+            {
+              "key": "trabajo_colaborativo",
+              "name": "Trabajo colaborativo",
+              "short_description": "Coordina cambios y resuelve conflictos básicos.",
+              "example_tasks": [
+                "Simula un conflicto de cambios y resuélvelo.",
+                "Asigna roles en un equipo de desarrollo.",
+                "Reflexiona sobre ventajas del trabajo colaborativo."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ciencia_de_datos_basica",
+      "name": "Ciencia de datos básica",
+      "short_description": "Introduce el análisis de datos mediante estadística descriptiva, visualización e interpretación crítica para apoyar la toma de decisiones.",
+      "sub_topics": [
+        {
+          "key": "estadistica_descriptiva",
+          "name": "Estadística descriptiva",
+          "short_description": "Aplica medidas estadísticas básicas para resumir conjuntos de datos.",
+          "sub_topics": [
+            {
+              "key": "medidas_de_tendencia_central",
+              "name": "Medidas de tendencia central",
+              "short_description": "Calcula media, mediana y moda y explica su significado.",
+              "example_tasks": [
+                "Calcula media, mediana y moda de un conjunto de calificaciones reales.",
+                "Compara qué medida representa mejor los datos en distintos casos.",
+                "Explica con un ejemplo cuándo la media puede ser engañosa."
+              ]
+            },
+            {
+              "key": "dispersion_y_variabilidad",
+              "name": "Dispersión y variabilidad",
+              "short_description": "Analiza rango y variabilidad de los datos.",
+              "example_tasks": [
+                "Calcula el rango de un conjunto de datos.",
+                "Compara dos grupos usando medidas de dispersión simples.",
+                "Explica por qué la variabilidad es importante para interpretar resultados."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "visualizacion_y_comunicacion_de_datos",
+          "name": "Visualización y comunicación de datos",
+          "short_description": "Representa datos de forma clara y ética para comunicar hallazgos.",
+          "sub_topics": [
+            {
+              "key": "graficos_avanzados",
+              "name": "Gráficos avanzados",
+              "short_description": "Utiliza gráficos adecuados para distintos tipos de análisis.",
+              "example_tasks": [
+                "Crea un gráfico comparativo con dos variables.",
+                "Evalúa si un gráfico comunica correctamente la información.",
+                "Corrige un gráfico que induce a interpretaciones erróneas."
+              ]
+            },
+            {
+              "key": "interpretacion_critica",
+              "name": "Interpretación crítica de datos",
+              "short_description": "Extrae conclusiones fundamentadas y reconoce limitaciones.",
+              "example_tasks": [
+                "Redacta conclusiones basadas en datos reales.",
+                "Identifica posibles sesgos en un conjunto de datos.",
+                "Propone mejoras en la recolección de datos."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ia_y_tecnologias_emergentes",
+      "name": "Inteligencia artificial y tecnologías emergentes",
+      "short_description": "Explora fundamentos de IA y tecnologías actuales, analizando su impacto social, ético y productivo.",
+      "sub_topics": [
+        {
+          "key": "fundamentos_de_inteligencia_artificial",
+          "name": "Fundamentos de inteligencia artificial",
+          "short_description": "Reconoce conceptos básicos de IA y aprendizaje automático.",
+          "sub_topics": [
+            {
+              "key": "conceptos_basicos_de_ia",
+              "name": "Conceptos básicos de IA",
+              "short_description": "Distingue entre IA, aprendizaje automático y automatización.",
+              "example_tasks": [
+                "Clasifica ejemplos cotidianos como IA o automatización.",
+                "Explica con tus palabras qué es el aprendizaje automático.",
+                "Analiza un caso simple de recomendación digital."
+              ]
+            },
+            {
+              "key": "aplicaciones_de_ia",
+              "name": "Aplicaciones de la IA",
+              "short_description": "Identifica aplicaciones actuales de la IA en distintos sectores.",
+              "example_tasks": [
+                "Investiga una aplicación de IA en educación o salud.",
+                "Describe beneficios y riesgos de esa aplicación.",
+                "Presenta un breve informe sobre su impacto social."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "impacto_etico_y_social",
+          "name": "Impacto ético y social",
+          "short_description": "Reflexiona sobre implicaciones éticas del uso de tecnologías emergentes.",
+          "sub_topics": [
+            {
+              "key": "etica_y_responsabilidad",
+              "name": "Ética y responsabilidad",
+              "short_description": "Analiza dilemas éticos relacionados con la tecnología.",
+              "example_tasks": [
+                "Debate un dilema ético relacionado con IA.",
+                "Redacta una postura personal fundamentada.",
+                "Propone principios para un uso responsable de la tecnología."
+              ]
+            },
+            {
+              "key": "futuro_del_trabajo_y_tecnologia",
+              "name": "Futuro del trabajo y la tecnología",
+              "short_description": "Examina cómo la tecnología transforma profesiones y habilidades.",
+              "example_tasks": [
+                "Investiga una profesión impactada por la automatización.",
+                "Identifica habilidades digitales necesarias a futuro.",
+                "Elabora un plan personal de desarrollo tecnológico."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "proyectos_integradores_y_portafolio_ii",
+      "name": "Proyectos integradores y portafolio II",
+      "short_description": "Integra conocimientos avanzados en un proyecto final y consolida un portafolio digital reflexivo.",
+      "sub_topics": [
+        {
+          "key": "desarrollo_de_proyecto_final",
+          "name": "Desarrollo de proyecto final",
+          "short_description": "Planifica, desarrolla y presenta un proyecto tecnológico integral.",
+          "sub_topics": [
+            {
+              "key": "planeacion_y_ejecucion",
+              "name": "Planeación y ejecución",
+              "short_description": "Define objetivos, etapas y recursos del proyecto.",
+              "example_tasks": [
+                "Redacta el plan de un proyecto tecnológico final.",
+                "Asigna tareas y tiempos al equipo.",
+                "Ejecuta el proyecto siguiendo el plan establecido."
+              ]
+            },
+            {
+              "key": "presentacion_y_documentacion",
+              "name": "Presentación y documentación",
+              "short_description": "Comunica resultados y documenta el proceso.",
+              "example_tasks": [
+                "Prepara una presentación final del proyecto.",
+                "Elabora documentación técnica básica.",
+                "Explica decisiones tomadas durante el desarrollo."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "portafolio_digital_avanzado",
+          "name": "Portafolio digital avanzado",
+          "short_description": "Consolida evidencias y reflexiones finales de aprendizaje.",
+          "sub_topics": [
+            {
+              "key": "evaluacion_del_aprendizaje",
+              "name": "Evaluación del aprendizaje",
+              "short_description": "Analiza logros y áreas de mejora a partir del portafolio.",
+              "example_tasks": [
+                "Selecciona evidencias clave del proyecto final.",
+                "Redacta una autoevaluación crítica.",
+                "Relaciona aprendizajes con metas futuras."
+              ]
+            },
+            {
+              "key": "proyeccion_academica_y_laboral",
+              "name": "Proyección académica y laboral",
+              "short_description": "Vincula competencias adquiridas con estudios y carreras futuras.",
+              "example_tasks": [
+                "Identifica carreras relacionadas con informática.",
+                "Relaciona habilidades aprendidas con perfiles profesionales.",
+                "Elabora un plan personal de continuidad académica."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
