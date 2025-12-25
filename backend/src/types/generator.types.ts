@@ -24,3 +24,12 @@ export interface ImageResult {
   filename: string;
   cost: number;
 }
+
+/**
+ * Weight configuration for weighted random selection
+ * Maps item IDs to their weights (higher = more likely to be selected)
+ * Special key "_other" is used for items without specific weights
+ */
+export interface WeightCategory {
+  [key: string]: number;
+}
