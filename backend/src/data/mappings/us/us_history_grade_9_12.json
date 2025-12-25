@@ -3749,6 +3749,1897 @@
           ]
         }
       ]
+    },
+    {
+      "key": "roaring_twenties_great_depression",
+      "name": "The Roaring Twenties and Great Depression",
+      "short_description": "Study of cultural change, economic boom and collapse, the New Deal's transformation of government, and social upheaval from 1920-1939.",
+      "sub_topics": [
+        {
+          "key": "1920s_prosperity",
+          "name": "Economic Prosperity of the 1920s",
+          "short_description": "Examination of mass production, consumerism, new industries, and uneven distribution of wealth.",
+          "sub_topics": [
+            {
+              "key": "mass_production_consumption",
+              "name": "Mass Production and Consumer Culture",
+              "short_description": "Study of assembly lines, automobiles, advertising, and installment buying creating consumer economy.",
+              "example_tasks": [
+                "Analyze Henry Ford's assembly line production of the Model T making automobiles affordable for middle-class Americans.",
+                "Evaluate the growth of consumer culture including advertising, installment buying ('buy now, pay later'), and new industries like radio and appliances.",
+                "Assess how mass production and consumption transformed American life including mobility, suburbs, and leisure time."
+              ]
+            },
+            {
+              "key": "economic_weaknesses",
+              "name": "Underlying Economic Weaknesses",
+              "short_description": "Examination of unequal wealth distribution, agricultural depression, and speculation.",
+              "example_tasks": [
+                "Analyze income inequality in the 1920s where the wealthiest Americans enjoyed huge gains while farmers and workers struggled.",
+                "Evaluate the agricultural depression of the 1920s where overproduction and falling prices left farmers in debt.",
+                "Assess stock market speculation including buying on margin that created an unsustainable bubble."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "1920s_culture",
+          "name": "Cultural Conflicts of the 1920s",
+          "short_description": "Study of tensions between traditional and modern values, immigration restriction, and the rise of mass culture.",
+          "sub_topics": [
+            {
+              "key": "prohibition",
+              "name": "Prohibition",
+              "short_description": "Examination of the 18th Amendment banning alcohol, bootlegging, organized crime, and eventual repeal.",
+              "example_tasks": [
+                "Analyze the 18th Amendment (1919) and Volstead Act prohibiting manufacture and sale of alcoholic beverages.",
+                "Evaluate Prohibition's unintended consequences including bootlegging, speakeasies, organized crime (Al Capone), and corruption.",
+                "Assess why Prohibition failed and was repealed by the 21st Amendment (1933), the only constitutional amendment ever repealed."
+              ]
+            },
+            {
+              "key": "immigration_restriction_1920s",
+              "name": "Immigration Restriction",
+              "short_description": "Study of quota laws limiting immigration based on national origins.",
+              "example_tasks": [
+                "Analyze the Immigration Act of 1924 establishing national origins quotas severely restricting immigration from Southern and Eastern Europe and banning Asian immigration.",
+                "Evaluate nativist fears of immigrants, often based on racist pseudoscience and eugenics.",
+                "Assess the impact of restriction on immigration patterns and American demographics."
+              ]
+            },
+            {
+              "key": "scopes_trial",
+              "name": "Scopes Trial and Fundamentalism",
+              "short_description": "Examination of the conflict over teaching evolution and traditional versus modern values.",
+              "example_tasks": [
+                "Analyze the Scopes Trial (1925) testing a Tennessee law prohibiting teaching evolution in public schools.",
+                "Evaluate the trial as a symbol of conflict between fundamentalist Christianity and modern science.",
+                "Assess the broader culture war between rural/traditional values and urban/modern culture in the 1920s."
+              ]
+            },
+            {
+              "key": "harlem_renaissance",
+              "name": "Harlem Renaissance",
+              "short_description": "Study of the flowering of African American literature, art, music, and culture in the 1920s.",
+              "example_tasks": [
+                "Analyze the Harlem Renaissance as a celebration of African American culture through writers like Langston Hughes, Zora Neale Hurston, and Claude McKay.",
+                "Evaluate the influence of jazz music and musicians like Louis Armstrong and Duke Ellington on American culture.",
+                "Assess debates within the movement about whether to emphasize racial pride and distinctiveness or seek integration into mainstream culture."
+              ]
+            },
+            {
+              "key": "women_1920s",
+              "name": "Women in the 1920s",
+              "short_description": "Examination of changing roles, flappers, and the limits of liberation.",
+              "example_tasks": [
+                "Analyze the 'New Woman' or 'flapper' challenging Victorian standards through shorter skirts, bobbed hair, smoking, and greater independence.",
+                "Evaluate the expansion of opportunities for women in the workforce, education, and public life after gaining the vote.",
+                "Assess the limits of women's liberation in the 1920s including continued wage discrimination, limited career options, and persistence of traditional expectations."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "great_depression_causes_impact",
+          "name": "The Great Depression",
+          "short_description": "Study of the economic collapse, its causes, and devastating impact on American society.",
+          "sub_topics": [
+            {
+              "key": "stock_market_crash",
+              "name": "Stock Market Crash of 1929",
+              "short_description": "Examination of the October 1929 crash and the onset of economic depression.",
+              "example_tasks": [
+                "Analyze the stock market crash of October 1929 including 'Black Tuesday' when the market collapsed.",
+                "Evaluate causes of the crash including speculation, buying on margin, and lack of regulation.",
+                "Assess how the crash triggered broader economic collapse through bank failures, loss of confidence, and reduced spending."
+              ]
+            },
+            {
+              "key": "causes_great_depression",
+              "name": "Multiple Causes of the Depression",
+              "short_description": "Study of the complex factors that caused and deepened the economic catastrophe.",
+              "example_tasks": [
+                "Analyze multiple causes including income inequality, overproduction, bank failures, international debt problems, and the gold standard.",
+                "Evaluate the Hawley-Smoot Tariff (1930) that raised tariffs, prompting retaliation and reducing international trade.",
+                "Compare different interpretations of the Depression's causes including Keynesian emphasis on insufficient demand versus monetarist focus on money supply."
+              ]
+            },
+            {
+              "key": "depression_impact",
+              "name": "Human Impact of the Depression",
+              "short_description": "Examination of unemployment, poverty, homelessness, and psychological devastation.",
+              "example_tasks": [
+                "Analyze statistics showing 25% unemployment at the Depression's worst, with higher rates among African Americans and other minorities.",
+                "Evaluate the human suffering including homelessness (Hoovervilles), hunger, loss of farms and homes, and psychological trauma.",
+                "Assess photographs by Dorothea Lange and other Depression-era documentation showing the scale of poverty and desperation."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "hoover_response",
+          "name": "Hoover's Response to the Depression",
+          "short_description": "Study of President Hoover's limited interventions and why they failed to stop the Depression.",
+          "sub_topics": [
+            {
+              "key": "hoover_policies",
+              "name": "Hoover's Philosophy and Policies",
+              "short_description": "Examination of voluntary cooperation, limited government intervention, and trickle-down approach.",
+              "example_tasks": [
+                "Analyze Hoover's belief in 'rugged individualism' and voluntary cooperation rather than direct government relief.",
+                "Evaluate Hoover's policies including the Reconstruction Finance Corporation lending to banks and businesses.",
+                "Assess why Hoover's approach failed to stop the Depression's downward spiral or provide adequate relief."
+              ]
+            },
+            {
+              "key": "bonus_army",
+              "name": "Bonus Army",
+              "short_description": "Study of World War I veterans marching on Washington and their violent dispersal.",
+              "example_tasks": [
+                "Analyze the Bonus Army march (1932) where WWI veterans demanded early payment of promised bonuses.",
+                "Evaluate Hoover's decision to use Army troops under MacArthur to forcibly remove the protesters.",
+                "Assess how Hoover's handling of the Bonus Army symbolized his perceived callousness toward suffering Americans."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "new_deal",
+          "name": "Franklin D. Roosevelt and the New Deal",
+          "short_description": "Examination of FDR's unprecedented expansion of federal power to combat the Depression and provide relief, recovery, and reform.",
+          "sub_topics": [
+            {
+              "key": "fdr_election_first_hundred_days",
+              "name": "Election of 1932 and First Hundred Days",
+              "short_description": "Study of Roosevelt's landslide victory and immediate actions to restore confidence.",
+              "example_tasks": [
+                "Analyze FDR's 1932 campaign promising a 'New Deal' for the American people and his overwhelming victory over Hoover.",
+                "Evaluate FDR's First Hundred Days (March-June 1933) when he pushed unprecedented legislation through Congress.",
+                "Assess FDR's fireside chats using radio to communicate directly with Americans and restore confidence in government."
+              ]
+            },
+            {
+              "key": "banking_reform",
+              "name": "Banking and Financial Reforms",
+              "short_description": "Examination of measures to stabilize the banking system and regulate financial markets.",
+              "example_tasks": [
+                "Analyze the Emergency Banking Act and bank holiday that stabilized the banking system and restored public confidence.",
+                "Evaluate the Glass-Steagall Act separating commercial and investment banking and creating FDIC insurance for deposits.",
+                "Assess Securities and Exchange Commission (SEC) regulating the stock market to prevent another crash."
+              ]
+            },
+            {
+              "key": "relief_programs",
+              "name": "Relief Programs",
+              "short_description": "Study of programs providing immediate help to the unemployed and destitute.",
+              "example_tasks": [
+                "Analyze emergency relief programs including FERA (Federal Emergency Relief Administration) providing direct aid to states.",
+                "Evaluate work relief programs like CCC (Civilian Conservation Corps) and WPA (Works Progress Administration) providing jobs for millions.",
+                "Assess the significance of the federal government directly employing Americans and providing relief, breaking with laissez-faire tradition."
+              ]
+            },
+            {
+              "key": "recovery_programs",
+              "name": "Recovery Programs",
+              "short_description": "Examination of efforts to stimulate economic recovery in agriculture and industry.",
+              "example_tasks": [
+                "Analyze the Agricultural Adjustment Act (AAA) paying farmers to reduce production and raise prices.",
+                "Evaluate the National Industrial Recovery Act (NIRA) attempting to coordinate production and wages through industry codes.",
+                "Assess why the Supreme Court struck down NRA and first AAA as unconstitutional, forcing FDR to modify approaches."
+              ]
+            },
+            {
+              "key": "social_security",
+              "name": "Social Security and Labor Reforms",
+              "short_description": "Study of the establishment of the social safety net and protection for workers.",
+              "example_tasks": [
+                "Analyze the Social Security Act (1935) creating old-age pensions, unemployment insurance, and aid to dependent children.",
+                "Evaluate the significance of Social Security as a permanent safety net and federal commitment to citizens' welfare.",
+                "Assess the National Labor Relations Act (Wagner Act) protecting workers' right to organize unions and bargain collectively."
+              ]
+            },
+            {
+              "key": "tva_public_power",
+              "name": "Tennessee Valley Authority and Public Power",
+              "short_description": "Examination of government-built dams, electrification, and regional development.",
+              "example_tasks": [
+                "Analyze the Tennessee Valley Authority (TVA) as government ownership of dams providing electricity, flood control, and economic development.",
+                "Evaluate the Rural Electrification Administration bringing electricity to farms and rural areas private companies wouldn't serve.",
+                "Assess debates over government competition with private utilities and public versus private power."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "opposition_new_deal",
+          "name": "Opposition to the New Deal",
+          "short_description": "Study of conservative and radical critics of Roosevelt's policies from both left and right.",
+          "sub_topics": [
+            {
+              "key": "conservative_opposition",
+              "name": "Conservative Opposition",
+              "short_description": "Examination of business leaders and conservatives who viewed the New Deal as socialism.",
+              "example_tasks": [
+                "Analyze conservative critics who viewed the New Deal as unconstitutional expansion of federal power and threat to capitalism.",
+                "Evaluate the Supreme Court's striking down of early New Deal legislation as exceeding federal authority.",
+                "Assess FDR's court-packing plan (1937) attempting to add justices, which failed but prompted the Court to uphold later New Deal laws."
+              ]
+            },
+            {
+              "key": "radical_critics",
+              "name": "Radical Critics",
+              "short_description": "Study of those who thought the New Deal didn't go far enough in redistributing wealth.",
+              "example_tasks": [
+                "Analyze Huey Long's 'Share Our Wealth' program proposing to redistribute wealth through heavy taxes on the rich.",
+                "Evaluate Father Coughlin's radio broadcasts and Francis Townsend's old-age pension plan attracting millions of followers.",
+                "Assess how radical critics pushed FDR toward more aggressive reforms in the 'Second New Deal' of 1935."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "new_deal_impact_limits",
+          "name": "Impact and Limits of the New Deal",
+          "short_description": "Examination of the New Deal's achievements, failures, and transformation of American government.",
+          "sub_topics": [
+            {
+              "key": "new_deal_achievements",
+              "name": "New Deal Achievements",
+              "short_description": "Study of relief provided, reforms enacted, and expanded role of federal government.",
+              "example_tasks": [
+                "Analyze the New Deal's achievements including providing relief to millions, reforming banking and finance, and creating a social safety net.",
+                "Evaluate how the New Deal fundamentally transformed American government, establishing federal responsibility for citizens' welfare.",
+                "Assess the New Deal coalition of labor unions, minorities, urban voters, and Southerners that dominated politics for decades."
+              ]
+            },
+            {
+              "key": "new_deal_limitations",
+              "name": "New Deal Limitations and Failures",
+              "short_description": "Examination of incomplete recovery, exclusions, and persistence of inequality.",
+              "example_tasks": [
+                "Analyze the New Deal's failure to end the Depression, with unemployment still high in 1939 until World War II mobilization.",
+                "Evaluate how many New Deal programs excluded agricultural and domestic workers, disproportionately affecting African Americans and Latinos.",
+                "Assess the 1937-38 recession when FDR cut spending, demonstrating the Depression wasn't fully solved."
+              ]
+            },
+            {
+              "key": "african_americans_new_deal",
+              "name": "African Americans and the New Deal",
+              "short_description": "Study of mixed record on racial equality despite Black support for FDR.",
+              "example_tasks": [
+                "Analyze how African Americans benefited from relief programs while many New Deal laws excluded or discriminated against them.",
+                "Evaluate Eleanor Roosevelt's advocacy for civil rights and symbolic gestures like FDR's 'Black Cabinet' of advisors.",
+                "Assess why African Americans shifted from the Republican to Democratic Party despite the New Deal's limited commitment to racial equality."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "world_war_two_americas_role",
+      "name": "World War II and America's Global Role",
+      "short_description": "Analysis of U.S. involvement in WWII, home front mobilization, emergence as a superpower, and the beginning of the Cold War.",
+      "sub_topics": [
+        {
+          "key": "road_to_war",
+          "name": "The Road to American Entry",
+          "short_description": "Study of isolationism, neutrality laws, and gradual movement toward supporting the Allies.",
+          "sub_topics": [
+            {
+              "key": "isolationism_1930s",
+              "name": "American Isolationism",
+              "short_description": "Examination of widespread opposition to involvement in foreign conflicts after WWI.",
+              "example_tasks": [
+                "Analyze American isolationist sentiment in the 1930s rooted in disillusionment with WWI and desire to avoid European conflicts.",
+                "Evaluate Neutrality Acts (1935-1937) prohibiting arms sales and loans to warring nations.",
+                "Assess the America First Committee and other groups advocating neutrality even as war spread in Europe and Asia."
+              ]
+            },
+            {
+              "key": "shift_toward_intervention",
+              "name": "Shift Toward Intervention",
+              "short_description": "Study of FDR's gradual moves to support Britain and prepare for possible war.",
+              "example_tasks": [
+                "Analyze FDR's 'Quarantine Speech' (1937) suggesting democracies should isolate aggressor nations.",
+                "Evaluate the cash-and-carry policy allowing Britain and France to purchase American weapons if they paid cash and transported them.",
+                "Assess Lend-Lease (1941) providing military aid to Britain and later Soviet Union, making America the 'arsenal of democracy.'"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "pearl_harbor_entry",
+          "name": "Pearl Harbor and American Entry",
+          "short_description": "Examination of the Japanese attack, U.S. declaration of war, and mobilization.",
+          "sub_topics": [
+            {
+              "key": "pearl_harbor_attack",
+              "name": "Attack on Pearl Harbor",
+              "short_description": "Study of the December 7, 1941 surprise attack bringing America into the war.",
+              "example_tasks": [
+                "Analyze the Japanese surprise attack on Pearl Harbor killing over 2,400 Americans and destroying much of the Pacific Fleet.",
+                "Evaluate FDR's speech calling December 7 'a date which will live in infamy' and Congress's declaration of war.",
+                "Assess how Pearl Harbor united American public opinion behind the war effort, ending isolationist opposition."
+              ]
+            },
+            {
+              "key": "europe_first_strategy",
+              "name": "Military Strategy: Europe First",
+              "short_description": "Examination of the Allied decision to prioritize defeating Germany before Japan.",
+              "example_tasks": [
+                "Analyze the 'Europe First' strategy agreed by FDR and Churchill to defeat Nazi Germany as the greatest threat.",
+                "Evaluate the logic of prioritizing Europe while maintaining defensive operations in the Pacific.",
+                "Compare the challenges of coordinating the Allied coalition including Britain, Soviet Union, and later France."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "us_military_campaigns",
+          "name": "U.S. Military Campaigns",
+          "short_description": "Study of American participation in major campaigns in Europe, North Africa, and the Pacific.",
+          "sub_topics": [
+            {
+              "key": "north_africa_italy",
+              "name": "North Africa and Italy",
+              "short_description": "Examination of early American campaigns in the Mediterranean theater.",
+              "example_tasks": [
+                "Analyze Operation Torch (November 1942), the first major American offensive in North Africa.",
+                "Evaluate the Sicily invasion (July 1943) and the difficult Italian campaign up the peninsula.",
+                "Assess the decision to invade Italy as 'the soft underbelly of Europe' and whether it was worth the casualties."
+              ]
+            },
+            {
+              "key": "dday_western_europe",
+              "name": "D-Day and Liberation of Western Europe",
+              "short_description": "Study of the Normandy invasion and campaign across France into Germany.",
+              "example_tasks": [
+                "Analyze the D-Day invasion (June 6, 1944) as the largest amphibious assault in history under Eisenhower's command.",
+                "Evaluate the challenges of the Normandy landing, breakout, and race across France to liberate Paris.",
+                "Assess the Battle of the Bulge (December 1944) as Germany's last major offensive and costly American victory."
+              ]
+            },
+            {
+              "key": "pacific_island_hopping",
+              "name": "Pacific Island-Hopping Campaign",
+              "short_description": "Examination of the strategy of seizing key islands while bypassing others to reach Japan.",
+              "example_tasks": [
+                "Analyze the island-hopping strategy under MacArthur and Nimitz capturing strategic islands while bypassing Japanese strongholds.",
+                "Evaluate major battles including Guadalcanal, Tarawa, Saipan, Iwo Jima, and Okinawa with increasingly heavy casualties.",
+                "Assess the fanatical Japanese resistance including kamikaze attacks that influenced the decision to use atomic bombs."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "home_front_wwii",
+          "name": "The Home Front",
+          "short_description": "Study of American mobilization, women and minorities in wartime, and social changes.",
+          "sub_topics": [
+            {
+              "key": "economic_mobilization",
+              "name": "Economic Mobilization",
+              "short_description": "Examination of conversion to war production, government controls, and full employment.",
+              "example_tasks": [
+                "Analyze the massive mobilization converting factories from consumer goods to war production (tanks, planes, ships).",
+                "Evaluate government agencies coordinating production, rationing scarce goods, and controlling prices and wages.",
+                "Assess how the war finally ended the Depression through full employment and massive government spending."
+              ]
+            },
+            {
+              "key": "women_in_workforce",
+              "name": "Women in the Workforce",
+              "short_description": "Study of women entering factories and military service in unprecedented numbers.",
+              "example_tasks": [
+                "Analyze the symbol of 'Rosie the Riveter' representing millions of women working in defense industries.",
+                "Evaluate how women took jobs previously reserved for men, gaining skills and economic independence.",
+                "Assess the contradiction between wartime celebration of working women and postwar pressure to return to domestic roles."
+              ]
+            },
+            {
+              "key": "african_americans_wwii",
+              "name": "African Americans and the Double V Campaign",
+              "short_description": "Examination of Black Americans fighting for victory abroad and equality at home.",
+              "example_tasks": [
+                "Analyze the 'Double V' campaign seeking victory over fascism abroad and racism at home.",
+                "Evaluate segregation in the military including separate units like the Tuskegee Airmen who proved Black pilots' ability.",
+                "Assess the growth of civil rights activism during the war including A. Philip Randolph's threatened March on Washington securing FDR's Fair Employment Practices order."
+              ]
+            },
+            {
+              "key": "japanese_american_internment",
+              "name": "Japanese American Internment",
+              "short_description": "Study of the forced relocation and incarceration of 120,000 Japanese Americans.",
+              "example_tasks": [
+                "Analyze Executive Order 9066 (February 1942) authorizing forced removal of Japanese Americans from the West Coast to internment camps.",
+                "Evaluate the violation of civil liberties and constitutional rights involved in imprisoning citizens without due process based solely on ethnicity.",
+                "Assess the eventual government apology (1988), reparations, and the Supreme Court's Korematsu decision upholding internment."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "end_of_war",
+          "name": "End of the War",
+          "short_description": "Examination of the atomic bombs, Japanese surrender, and emergence of the United States as a superpower.",
+          "sub_topics": [
+            {
+              "key": "atomic_bomb_decision",
+              "name": "Decision to Use Atomic Bombs",
+              "short_description": "Study of Truman's decision to drop atomic bombs on Hiroshima and Nagasaki.",
+              "example_tasks": [
+                "Analyze Truman's decision to use atomic bombs on Hiroshima (August 6) and Nagasaki (August 9, 1945).",
+                "Evaluate arguments that the bombs saved lives by avoiding an invasion of Japan versus moral objections to targeting civilians.",
+                "Assess alternative interpretations including whether Japan was already defeated and whether the bombs were meant to intimidate the Soviet Union."
+              ]
+            },
+            {
+              "key": "japanese_surrender",
+              "name": "Japanese Surrender",
+              "short_description": "Examination of Japan's surrender and the formal end of World War II.",
+              "example_tasks": [
+                "Analyze Japan's surrender (August 15, 1945) following the atomic bombs and Soviet entry into the war.",
+                "Evaluate the formal surrender ceremony on USS Missouri (September 2) officially ending the war.",
+                "Assess the decision to allow Emperor Hirohito to remain as symbolic ruler rather than prosecuting him as a war criminal."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "postwar_planning",
+          "name": "Postwar Planning and the United Nations",
+          "short_description": "Study of planning for postwar world order, creation of UN, and early Cold War tensions.",
+          "sub_topics": [
+            {
+              "key": "wartime_conferences",
+              "name": "Wartime Conferences",
+              "short_description": "Examination of Tehran, Yalta, and Potsdam conferences planning postwar settlements.",
+              "example_tasks": [
+                "Analyze the Yalta Conference (February 1945) where FDR, Churchill, and Stalin discussed postwar Europe and Soviet entry into the Pacific War.",
+                "Evaluate agreements on dividing Germany, Soviet sphere of influence in Eastern Europe, and formation of the United Nations.",
+                "Assess later controversies over whether FDR 'sold out' Eastern Europe to Stalin or made the best deal possible."
+              ]
+            },
+            {
+              "key": "united_nations_formation",
+              "name": "Formation of the United Nations",
+              "short_description": "Study of the creation of the UN to maintain international peace and security.",
+              "example_tasks": [
+                "Analyze the structure of the United Nations including the Security Council with five permanent members having veto power.",
+                "Evaluate the UN's purposes including maintaining peace, promoting human rights, and fostering international cooperation.",
+                "Compare the UN with the failed League of Nations, identifying improvements designed to make it more effective."
+              ]
+            },
+            {
+              "key": "origins_cold_war",
+              "name": "Origins of the Cold War",
+              "short_description": "Examination of growing tensions between the United States and Soviet Union.",
+              "example_tasks": [
+                "Analyze emerging tensions between the U.S. and USSR over Soviet control of Eastern Europe and conflicting ideologies.",
+                "Evaluate Truman's confrontational approach replacing FDR's attempted cooperation with Stalin.",
+                "Assess Churchill's 'Iron Curtain' speech (March 1946) describing Soviet domination of Eastern Europe and the division of Europe."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cold_war_domestic_transformation",
+      "name": "Cold War Era and Domestic Transformation",
+      "short_description": "Examination of U.S.-Soviet tensions, containment policy, nuclear arms race, and domestic social changes from 1945-1991.",
+      "sub_topics": [
+        {
+          "key": "containment_policy",
+          "name": "Containment Policy",
+          "short_description": "Study of the strategy to prevent spread of communism without direct war with Soviet Union.",
+          "sub_topics": [
+            {
+              "key": "truman_doctrine_marshall_plan",
+              "name": "Truman Doctrine and Marshall Plan",
+              "short_description": "Examination of commitments to support nations resisting communism and rebuilding Europe.",
+              "example_tasks": [
+                "Analyze the Truman Doctrine (1947) pledging U.S. support for nations threatened by communist takeover, initially Greece and Turkey.",
+                "Evaluate the Marshall Plan providing massive economic aid to rebuild Western Europe and prevent communist influence.",
+                "Assess how these policies represented a revolutionary shift from isolationism to global engagement and containment."
+              ]
+            },
+            {
+              "key": "berlin_blockade_nato",
+              "name": "Berlin Blockade and NATO",
+              "short_description": "Study of the first major Cold War crisis and formation of Western military alliance.",
+              "example_tasks": [
+                "Analyze the Berlin Blockade (1948-49) where Soviets cut off land access to West Berlin and the U.S. responded with an airlift.",
+                "Evaluate the formation of NATO (1949) as a defensive alliance committing the U.S. to defend Western Europe.",
+                "Assess how the Berlin crisis demonstrated Cold War would be fought through crises and proxy conflicts rather than direct war."
+              ]
+            },
+            {
+              "key": "korean_war",
+              "name": "Korean War",
+              "short_description": "Examination of the first hot war of the Cold War and the principle of limited war.",
+              "example_tasks": [
+                "Analyze the North Korean invasion of South Korea (June 1950) and Truman's decision to intervene under UN auspices.",
+                "Evaluate MacArthur's Inchon landing, advance to the Chinese border, Chinese intervention, and stalemate at the 38th parallel.",
+                "Assess Truman's firing of MacArthur (April 1951) for insubordination, establishing civilian control and the policy of limited war."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "arms_race_brinkmanship",
+          "name": "Nuclear Arms Race and Brinkmanship",
+          "short_description": "Study of nuclear weapons development, MAD doctrine, and crises threatening nuclear war.",
+          "sub_topics": [
+            {
+              "key": "nuclear_weapons_development",
+              "name": "Nuclear Arms Race",
+              "short_description": "Examination of the development of increasingly powerful nuclear arsenals.",
+              "example_tasks": [
+                "Analyze the Soviet development of atomic weapons (1949) ending American monopoly and spurring accelerated arms race.",
+                "Evaluate the development of hydrogen bombs (1950s) with vastly greater destructive power than atomic bombs.",
+                "Assess the concept of Mutually Assured Destruction (MAD) where both sides' ability to destroy each other prevented nuclear war."
+              ]
+            },
+            {
+              "key": "eisenhower_foreign_policy",
+              "name": "Eisenhower and Massive Retaliation",
+              "short_description": "Study of 'New Look' defense policy relying on nuclear weapons rather than conventional forces.",
+              "example_tasks": [
+                "Analyze Eisenhower's 'New Look' policy emphasizing nuclear weapons and 'massive retaliation' as a cheaper alternative to large conventional forces.",
+                "Evaluate the policy of 'brinkmanship' - pushing crises to the edge of war to force Soviet backing down.",
+                "Assess Eisenhower's warning in his Farewell Address (1961) about the dangers of the 'military-industrial complex.'"
+              ]
+            },
+            {
+              "key": "cuban_missile_crisis",
+              "name": "Cuban Missile Crisis",
+              "short_description": "Examination of the October 1962 crisis bringing the world closest to nuclear war.",
+              "example_tasks": [
+                "Analyze the discovery of Soviet nuclear missiles in Cuba and Kennedy's decision to impose a naval blockade.",
+                "Evaluate the tense standoff where any miscalculation could have led to nuclear war.",
+                "Assess the resolution where Soviets removed missiles in exchange for U.S. pledge not to invade Cuba and secret removal of U.S. missiles from Turkey."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "cold_war_third_world",
+          "name": "Cold War in the Third World",
+          "short_description": "Study of superpower competition in developing nations through proxies, covert operations, and interventions.",
+          "sub_topics": [
+            {
+              "key": "cia_covert_operations",
+              "name": "CIA Covert Operations",
+              "short_description": "Examination of secret interventions to overthrow governments or support anti-communist forces.",
+              "example_tasks": [
+                "Analyze CIA covert operations including the 1953 overthrow of Iran's Mossadegh and 1954 coup in Guatemala.",
+                "Evaluate the Bay of Pigs invasion (1961) as a failed attempt to overthrow Castro's communist government in Cuba.",
+                "Assess the moral and practical problems with covert interventions that often contradicted American democratic values."
+              ]
+            },
+            {
+              "key": "vietnam_origins",
+              "name": "Origins of Vietnam Involvement",
+              "short_description": "Study of growing American commitment to prevent communist takeover of South Vietnam.",
+              "example_tasks": [
+                "Analyze Eisenhower's support for French colonialism in Vietnam and later support for South Vietnamese government.",
+                "Evaluate Kennedy's increased advisors and counterinsurgency programs attempting to defeat Viet Cong insurgents.",
+                "Assess the domino theory arguing that if Vietnam fell to communism, other Southeast Asian nations would follow."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "1950s_domestic_politics",
+          "name": "1950s Domestic Politics and Society",
+          "short_description": "Examination of postwar prosperity, conformity, suburbanization, and anti-communist hysteria.",
+          "sub_topics": [
+            {
+              "key": "postwar_prosperity",
+              "name": "Economic Prosperity and Consumerism",
+              "short_description": "Study of economic boom, rising living standards, and growth of consumer culture.",
+              "example_tasks": [
+                "Analyze postwar economic growth fueled by pent-up consumer demand, GI Bill benefits, and defense spending.",
+                "Evaluate the growth of suburbs enabled by automobiles, highways, and federal housing programs (FHA, VA loans).",
+                "Assess the rise of consumer culture including television, household appliances, and emphasis on material prosperity."
+              ]
+            },
+            {
+              "key": "conformity_1950s",
+              "name": "Culture of Conformity",
+              "short_description": "Examination of social pressure toward conformity, traditional gender roles, and critique of mass society.",
+              "example_tasks": [
+                "Analyze 1950s emphasis on conformity including corporate culture, suburban sameness, and pressure to fit in.",
+                "Evaluate traditional gender roles idealized in media with male breadwinners and female homemakers.",
+                "Assess critiques of conformity by social critics and the emergence of youth rebellion (rock and roll, juvenile delinquency concerns)."
+              ]
+            },
+            {
+              "key": "mccarthyism",
+              "name": "McCarthyism and the Red Scare",
+              "short_description": "Study of anti-communist hysteria, loyalty investigations, and suppression of dissent.",
+              "example_tasks": [
+                "Analyze Senator Joseph McCarthy's accusations of communist infiltration of government, making baseless charges and destroying reputations.",
+                "Evaluate the House Un-American Activities Committee (HUAC) investigating suspected communists in Hollywood, government, and elsewhere.",
+                "Assess the climate of fear where people lost jobs for past associations, and dissent was equated with disloyalty."
+              ]
+            },
+            {
+              "key": "eisenhower_presidency",
+              "name": "Eisenhower's Modern Republicanism",
+              "short_description": "Examination of Ike's moderate conservatism accepting New Deal while limiting new programs.",
+              "example_tasks": [
+                "Analyze Eisenhower's 'Modern Republicanism' accepting core New Deal programs while resisting expansion of federal power.",
+                "Evaluate Eisenhower's achievements including Interstate Highway System and ending the Korean War.",
+                "Assess Eisenhower's reluctance to challenge McCarthy until his attacks became too extreme, and limited support for civil rights."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "civil_rights_social_movements",
+      "name": "Civil Rights and Social Movements",
+      "short_description": "Study of African American civil rights, women's rights, Chicano movement, and other social justice campaigns from the 1950s-1970s.",
+      "sub_topics": [
+        {
+          "key": "early_civil_rights",
+          "name": "Early Civil Rights Movement",
+          "short_description": "Examination of legal challenges to segregation and the beginning of mass protests.",
+          "sub_topics": [
+            {
+              "key": "brown_v_board",
+              "name": "Brown v. Board of Education",
+              "short_description": "Study of the landmark 1954 Supreme Court decision declaring school segregation unconstitutional.",
+              "example_tasks": [
+                "Analyze the Brown v. Board decision (1954) overturning Plessy v. Ferguson and declaring 'separate educational facilities are inherently unequal.'",
+                "Evaluate Thurgood Marshall's legal strategy for the NAACP using social science evidence about segregation's psychological harm.",
+                "Assess Southern resistance to Brown including 'massive resistance' campaigns and slow pace of actual school integration."
+              ]
+            },
+            {
+              "key": "montgomery_bus_boycott",
+              "name": "Montgomery Bus Boycott",
+              "short_description": "Examination of the 1955-56 boycott and emergence of Martin Luther King Jr.",
+              "example_tasks": [
+                "Analyze Rosa Parks' arrest for refusing to give up her bus seat and the Montgomery Black community's year-long boycott.",
+                "Evaluate Dr. King's leadership and philosophy of nonviolent resistance influenced by Gandhi.",
+                "Assess the boycott's success in desegregating Montgomery buses and launching the modern civil rights movement."
+              ]
+            },
+            {
+              "key": "little_rock_crisis",
+              "name": "Little Rock Crisis",
+              "short_description": "Study of federal intervention to enforce school desegregation in Arkansas.",
+              "example_tasks": [
+                "Analyze the Little Rock Nine's attempt to integrate Central High School and Governor Faubus's use of National Guard to block them.",
+                "Evaluate Eisenhower's reluctant decision to send federal troops to enforce court-ordered integration.",
+                "Assess the symbolic importance of federal government enforcing civil rights against state resistance."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "civil_rights_peak",
+          "name": "Peak of the Civil Rights Movement",
+          "short_description": "Study of mass protests, federal legislation, and major victories from 1960-1965.",
+          "sub_topics": [
+            {
+              "key": "sit_ins_freedom_rides",
+              "name": "Sit-ins and Freedom Rides",
+              "short_description": "Examination of student-led protests challenging segregation in public accommodations.",
+              "example_tasks": [
+                "Analyze the Greensboro sit-ins (1960) where students sat at segregated lunch counters, inspiring similar protests across the South.",
+                "Evaluate Freedom Rides (1961) testing Supreme Court rulings against segregated interstate travel, facing violent resistance.",
+                "Assess the role of SNCC (Student Nonviolent Coordinating Committee) in organizing youth activism and grassroots organizing."
+              ]
+            },
+            {
+              "key": "birmingham_campaign",
+              "name": "Birmingham Campaign",
+              "short_description": "Study of the 1963 campaign and violent response that shocked the nation.",
+              "example_tasks": [
+                "Analyze the Birmingham campaign's strategy of filling jails with protesters to create crisis forcing change.",
+                "Evaluate the shocking images of police using fire hoses and attack dogs on peaceful protesters, including children.",
+                "Assess King's 'Letter from Birmingham Jail' defending nonviolent direct action and criticizing white moderates."
+              ]
+            },
+            {
+              "key": "march_on_washington",
+              "name": "March on Washington",
+              "short_description": "Examination of the 1963 march and King's 'I Have a Dream' speech.",
+              "example_tasks": [
+                "Analyze the August 1963 March on Washington for Jobs and Freedom bringing 250,000 people to the nation's capital.",
+                "Evaluate King's 'I Have a Dream' speech as perhaps the most famous oration in American history.",
+                "Assess the march's success in building support for civil rights legislation and demonstrating movement's broad coalition."
+              ]
+            },
+            {
+              "key": "civil_rights_legislation",
+              "name": "Civil Rights Act and Voting Rights Act",
+              "short_description": "Study of landmark federal legislation outlawing discrimination and protecting voting rights.",
+              "example_tasks": [
+                "Analyze the Civil Rights Act of 1964 outlawing discrimination based on race, color, religion, sex, or national origin in employment and public accommodations.",
+                "Evaluate the Voting Rights Act of 1965 banning literacy tests and authorizing federal oversight of elections in areas with history of discrimination.",
+                "Assess LBJ's crucial role in pushing civil rights legislation through Congress despite Southern opposition."
+              ]
+            },
+            {
+              "key": "selma_voting_rights",
+              "name": "Selma and Voting Rights",
+              "short_description": "Examination of the 1965 Selma campaign and 'Bloody Sunday' attack on marchers.",
+              "example_tasks": [
+                "Analyze the Selma to Montgomery marches (1965) demanding voting rights and facing brutal police violence on 'Bloody Sunday.'",
+                "Evaluate how televised images of police attacking peaceful marchers shocked the nation and built support for voting rights legislation.",
+                "Assess the effectiveness of nonviolent protest in creating crises that forced federal intervention and legislative change."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "black_power_urban_unrest",
+          "name": "Black Power and Urban Unrest",
+          "short_description": "Study of more militant approaches, urban riots, and debates over strategy in the late 1960s.",
+          "sub_topics": [
+            {
+              "key": "malcolm_x",
+              "name": "Malcolm X and Black Nationalism",
+              "short_description": "Examination of Malcolm X's critique of nonviolence and advocacy for Black pride and self-defense.",
+              "example_tasks": [
+                "Analyze Malcolm X's critique of integration and nonviolence, advocating Black nationalism and self-defense.",
+                "Evaluate Malcolm's evolution from Nation of Islam to broader human rights perspective before his 1965 assassination.",
+                "Compare Malcolm X's message with King's integrationist approach, assessing their different appeals."
+              ]
+            },
+            {
+              "key": "black_power_movement",
+              "name": "Black Power Movement",
+              "short_description": "Study of the shift toward Black pride, cultural nationalism, and more militant tactics.",
+              "example_tasks": [
+                "Analyze Stokely Carmichael's 1966 call for 'Black Power' emphasizing racial pride, self-determination, and political power.",
+                "Evaluate the Black Panther Party's program combining militant self-defense with community programs like free breakfast for children.",
+                "Assess how Black Power alienated some white supporters while energizing many African Americans, especially youth."
+              ]
+            },
+            {
+              "key": "urban_riots",
+              "name": "Urban Riots",
+              "short_description": "Examination of riots in Watts, Detroit, Newark and other cities expressing frustration over poverty and discrimination.",
+              "example_tasks": [
+                "Analyze the Watts riot (1965) and other urban uprisings as expressions of frustration over poverty, unemployment, and police brutality.",
+                "Evaluate the Kerner Commission report (1968) concluding America was 'moving toward two societies, one black, one white—separate and unequal.'",
+                "Assess white backlash against riots and Black Power that contributed to declining support for civil rights and rise of 'law and order' politics."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "womens_movement",
+          "name": "Women's Rights Movement",
+          "short_description": "Study of second-wave feminism challenging discrimination and traditional gender roles.",
+          "sub_topics": [
+            {
+              "key": "origins_feminism",
+              "name": "Origins of Second-Wave Feminism",
+              "short_description": "Examination of growing consciousness of gender inequality in the 1960s.",
+              "example_tasks": [
+                "Analyze Betty Friedan's 'The Feminine Mystique' (1963) articulating suburban women's dissatisfaction with limiting domestic roles.",
+                "Evaluate the formation of NOW (National Organization for Women) in 1966 to fight discrimination and achieve equality.",
+                "Assess how women's participation in civil rights and anti-war movements raised their consciousness about their own oppression."
+              ]
+            },
+            {
+              "key": "feminist_demands",
+              "name": "Feminist Goals and Achievements",
+              "short_description": "Study of campaigns for equal pay, reproductive rights, and ending discrimination.",
+              "example_tasks": [
+                "Analyze feminist demands including equal pay, equal education and employment opportunities, and reproductive rights.",
+                "Evaluate achievements including Title VII (sex discrimination in employment), Title IX (equality in education), and Roe v. Wade (1973).",
+                "Assess the ERA (Equal Rights Amendment), which passed Congress but failed to be ratified by enough states."
+              ]
+            },
+            {
+              "key": "divisions_backlash",
+              "name": "Divisions and Backlash",
+              "short_description": "Examination of debates within feminism and conservative opposition.",
+              "example_tasks": [
+                "Analyze divisions within feminism including debates over priorities, disagreements between liberal and radical feminists, and critiques from women of color.",
+                "Evaluate conservative backlash led by Phyllis Schlafly and others opposing ERA and feminism as threatening family and traditional values.",
+                "Assess how feminist movement achieved major changes in women's opportunities while also sparking ongoing cultural conflict."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "other_social_movements",
+          "name": "Other Rights Movements",
+          "short_description": "Study of Chicano, Native American, gay rights, and environmental movements.",
+          "sub_topics": [
+            {
+              "key": "chicano_movement",
+              "name": "Chicano Movement",
+              "short_description": "Examination of Mexican American activism for civil rights, education, and labor rights.",
+              "example_tasks": [
+                "Analyze César Chávez and the United Farm Workers union organizing migrant workers and grape boycott.",
+                "Evaluate the Chicano student movement demanding bilingual education, Mexican American studies, and end to discrimination.",
+                "Assess the movement's achievements in raising consciousness and winning some reforms while facing resistance and internal divisions."
+              ]
+            },
+            {
+              "key": "native_american_activism",
+              "name": "Native American Activism",
+              "short_description": "Study of Red Power movement demanding tribal sovereignty and treaty rights.",
+              "example_tasks": [
+                "Analyze the American Indian Movement (AIM) and protests including occupation of Alcatraz Island and Wounded Knee.",
+                "Evaluate demands for tribal sovereignty, treaty rights, and preservation of Native cultures.",
+                "Assess limited achievements including increased federal funding and some recognition of tribal rights."
+              ]
+            },
+            {
+              "key": "gay_rights_movement",
+              "name": "Gay Rights Movement",
+              "short_description": "Examination of the struggle against discrimination and for LGBTQ equality.",
+              "example_tasks": [
+                "Analyze the Stonewall riots (1969) as a turning point when gays fought back against police harassment.",
+                "Evaluate the gay liberation movement's demands to end discrimination and challenge societal homophobia.",
+                "Assess slow progress including repeal of some sodomy laws and anti-discrimination ordinances amid strong opposition."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "late_20th_century_america",
+      "name": "Late 20th Century America",
+      "short_description": "Analysis of the Vietnam War, Watergate, conservative resurgence, cultural transformations, and end of the Cold War from 1960-2000.",
+      "sub_topics": [
+        {
+          "key": "vietnam_war",
+          "name": "The Vietnam War",
+          "short_description": "Study of America's longest war, antiwar movement, and lasting impact on American society and foreign policy.",
+          "sub_topics": [
+            {
+              "key": "escalation_vietnam",
+              "name": "Escalation Under Johnson",
+              "short_description": "Examination of the Gulf of Tonkin incident and massive expansion of American involvement.",
+              "example_tasks": [
+                "Analyze the Gulf of Tonkin incident (1964) and Resolution giving Johnson broad war powers without formal declaration of war.",
+                "Evaluate Johnson's escalation from 16,000 advisors in 1963 to over 500,000 troops by 1968.",
+                "Assess the strategy of attrition aimed at inflicting casualties until North Vietnam gave up, and why it failed."
+              ]
+            },
+            {
+              "key": "war_experience",
+              "name": "The War Experience",
+              "short_description": "Study of guerrilla warfare, challenges facing American forces, and the human cost.",
+              "example_tasks": [
+                "Analyze the challenges of fighting a guerrilla war where enemies blended with civilians and controlled the countryside.",
+                "Evaluate the difficulties distinguishing Viet Cong from civilians, leading to tragedies like the My Lai Massacre (1968).",
+                "Assess the impact on soldiers including high casualties, drug use, and psychological trauma from fighting an ambiguous war."
+              ]
+            },
+            {
+              "key": "antiwar_movement",
+              "name": "Antiwar Movement",
+              "short_description": "Examination of growing opposition to the war on college campuses and in American society.",
+              "example_tasks": [
+                "Analyze the growth of antiwar protests on college campuses and in major cities, particularly after the Tet Offensive (1968).",
+                "Evaluate the diverse antiwar coalition including students, religious groups, civil rights leaders, and eventually mainstream Democrats.",
+                "Assess confrontations between protesters and police including the 1968 Democratic Convention in Chicago and Kent State shootings (1970)."
+              ]
+            },
+            {
+              "key": "tet_offensive",
+              "name": "Tet Offensive and Turning Point",
+              "short_description": "Study of the January 1968 offensive that shocked Americans and turned public opinion against the war.",
+              "example_tasks": [
+                "Analyze the Tet Offensive where Viet Cong attacked cities throughout South Vietnam, even reaching the U.S. Embassy in Saigon.",
+                "Evaluate the offensive as a military defeat for the communists but a psychological victory that shattered claims of progress.",
+                "Assess Walter Cronkite's conclusion that the war was unwinnable and Johnson's decision not to seek reelection."
+              ]
+            },
+            {
+              "key": "nixon_vietnamization",
+              "name": "Nixon and Vietnamization",
+              "short_description": "Examination of Nixon's strategy to withdraw American troops while expanding the war.",
+              "example_tasks": [
+                "Analyze Nixon's policy of 'Vietnamization' training South Vietnamese forces to take over fighting while withdrawing U.S. troops.",
+                "Evaluate Nixon's expansion of the war into Cambodia and Laos, provoking renewed protests.",
+                "Assess the prolonged negotiations and Christmas bombing of Hanoi (1972) before the Paris Peace Accords (1973)."
+              ]
+            },
+            {
+              "key": "fall_of_saigon",
+              "name": "Fall of Saigon and War's Legacy",
+              "short_description": "Study of South Vietnam's collapse and the war's lasting impact on America.",
+              "example_tasks": [
+                "Analyze the Fall of Saigon (1975) two years after American withdrawal, with North Vietnamese tanks entering the city.",
+                "Evaluate the war's costs including 58,000 American and over 2 million Vietnamese deaths, and psychological trauma.",
+                "Assess the war's legacy including 'Vietnam Syndrome' making Americans reluctant to intervene abroad, and divisions over the war's meaning."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "nixon_watergate",
+          "name": "Nixon Presidency and Watergate",
+          "short_description": "Study of Nixon's foreign policy achievements, domestic policies, and the scandal that forced his resignation.",
+          "sub_topics": [
+            {
+              "key": "nixon_foreign_policy",
+              "name": "Nixon's Foreign Policy",
+              "short_description": "Examination of détente with Soviet Union, opening to China, and realpolitik approach.",
+              "example_tasks": [
+                "Analyze Nixon and Kissinger's policy of détente (relaxation of tensions) with the Soviet Union including SALT I arms control treaty.",
+                "Evaluate Nixon's historic 1972 visit to China, opening relations and playing China off against the Soviet Union.",
+                "Assess the shift from ideological Cold War crusade to pragmatic balance-of-power politics."
+              ]
+            },
+            {
+              "key": "nixon_domestic_policy",
+              "name": "Nixon's Domestic Policies",
+              "short_description": "Study of 'New Federalism,' environmental laws, and the 'Southern Strategy.'",
+              "example_tasks": [
+                "Analyze Nixon's 'New Federalism' attempting to shift power from federal government to states through revenue sharing.",
+                "Evaluate environmental legislation including EPA creation and Clean Air and Water Acts, despite Nixon's lack of personal commitment.",
+                "Assess Nixon's 'Southern Strategy' appealing to white Southerners through opposition to busing and coded racial appeals."
+              ]
+            },
+            {
+              "key": "watergate_scandal",
+              "name": "Watergate Scandal",
+              "short_description": "Examination of the break-in, cover-up, investigation, and Nixon's resignation.",
+              "example_tasks": [
+                "Analyze the June 1972 break-in at Democratic National Committee headquarters in the Watergate complex.",
+                "Evaluate the cover-up including Nixon's participation, White House tapes, and the 'Saturday Night Massacre' firing of special prosecutor.",
+                "Assess the investigation by the Senate Watergate Committee, reporters Woodward and Bernstein, and the Supreme Court's order to release tapes."
+              ]
+            },
+            {
+              "key": "nixon_resignation",
+              "name": "Nixon's Resignation and Impact",
+              "short_description": "Study of the first presidential resignation and its impact on American politics.",
+              "example_tasks": [
+                "Analyze the House Judiciary Committee's impeachment articles and Nixon's resignation (August 1974) to avoid certain removal.",
+                "Evaluate Ford's controversial pardon of Nixon and whether it helped or harmed national healing.",
+                "Assess Watergate's legacy including increased cynicism about government, limits on presidential power, and campaign finance reforms."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "1970s_crisis",
+          "name": "1970s Crises and Malaise",
+          "short_description": "Examination of economic problems, energy crisis, and loss of confidence in American institutions.",
+          "sub_topics": [
+            {
+              "key": "economic_stagflation",
+              "name": "Stagflation and Economic Troubles",
+              "short_description": "Study of the puzzling combination of high inflation and high unemployment.",
+              "example_tasks": [
+                "Analyze 'stagflation' - the simultaneous occurrence of inflation and unemployment that defied Keynesian economic theory.",
+                "Evaluate causes including end of postwar boom, increased global competition, and rising oil prices.",
+                "Assess failed attempts to address stagflation including Nixon's wage and price controls and Ford's 'Whip Inflation Now' campaign."
+              ]
+            },
+            {
+              "key": "energy_crisis",
+              "name": "Energy Crisis",
+              "short_description": "Examination of OPEC oil embargo, gas shortages, and recognition of energy dependence.",
+              "example_tasks": [
+                "Analyze the 1973 OPEC oil embargo in response to U.S. support for Israel in the Yom Kippur War.",
+                "Evaluate the impact of quadrupled oil prices including gas lines, rationing, and economic disruption.",
+                "Assess growing awareness of American dependence on foreign oil and debates over energy policy."
+              ]
+            },
+            {
+              "key": "carter_presidency",
+              "name": "Carter Presidency",
+              "short_description": "Study of Carter's moralism, energy policy, and foreign policy challenges.",
+              "example_tasks": [
+                "Analyze Carter's emphasis on human rights in foreign policy and his role in the Camp David Accords (Egypt-Israel peace).",
+                "Evaluate Carter's energy policies including conservation efforts and warning about America's 'crisis of confidence.'",
+                "Assess Carter's failures including continuing stagflation, Iran hostage crisis, and perception of weak leadership."
+              ]
+            },
+            {
+              "key": "iran_hostage_crisis",
+              "name": "Iran Hostage Crisis",
+              "short_description": "Examination of the 444-day crisis that symbolized American weakness.",
+              "example_tasks": [
+                "Analyze the Iranian Revolution (1979) overthrowing the U.S.-backed Shah and establishment of Islamic Republic under Ayatollah Khomeini.",
+                "Evaluate the seizure of the U.S. Embassy and 52 American hostages, held for 444 days.",
+                "Assess the failed rescue attempt and how the crisis dominated Carter's final year, contributing to his defeat in 1980."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "conservative_resurgence",
+          "name": "Conservative Resurgence",
+          "short_description": "Study of the rise of conservatism, Reagan Revolution, and Republican dominance in the 1980s.",
+          "sub_topics": [
+            {
+              "key": "rise_of_conservatism",
+              "name": "Growth of Conservative Movement",
+              "short_description": "Examination of factors contributing to conservative political strength.",
+              "example_tasks": [
+                "Analyze the fusion of different conservative strands including anti-communism, free-market economics, and social/religious conservatism.",
+                "Evaluate the role of the Religious Right including evangelical Christians mobilized by issues like abortion, school prayer, and traditional values.",
+                "Assess the 'Sunbelt' shift of population and political power to conservative Southern and Western states."
+              ]
+            },
+            {
+              "key": "reagan_election",
+              "name": "Reagan's 1980 Election",
+              "short_description": "Study of Reagan's landslide victory promising to restore American strength and prosperity.",
+              "example_tasks": [
+                "Analyze Reagan's campaign emphasizing lower taxes, smaller government, strong defense, and traditional values.",
+                "Evaluate Reagan's coalition of economic conservatives, social conservatives, and former Democrats ('Reagan Democrats').",
+                "Assess Reagan's landslide victory as a repudiation of Carter and liberal policies."
+              ]
+            },
+            {
+              "key": "reaganomics",
+              "name": "Reaganomics",
+              "short_description": "Examination of supply-side economics, tax cuts, and deregulation.",
+              "example_tasks": [
+                "Analyze Reagan's economic program including major tax cuts, reduced domestic spending (except defense), and deregulation.",
+                "Evaluate supply-side theory that tax cuts would stimulate growth and revenue, and whether 'trickle-down economics' worked.",
+                "Assess results including eventual economic recovery but also massive budget deficits and growing income inequality."
+              ]
+            },
+            {
+              "key": "reagan_cold_war",
+              "name": "Reagan and the Cold War",
+              "short_description": "Study of military buildup, 'evil empire' rhetoric, and paradoxically, arms control.",
+              "example_tasks": [
+                "Analyze Reagan's massive defense buildup including Strategic Defense Initiative ('Star Wars') missile defense system.",
+                "Evaluate Reagan's harsh anti-Soviet rhetoric calling USSR the 'evil empire' while secretly negotiating.",
+                "Assess Reagan's relationship with Gorbachev and his role in ending the Cold War through arms control treaties."
+              ]
+            },
+            {
+              "key": "reagan_legacy",
+              "name": "Reagan's Legacy",
+              "short_description": "Examination of Reagan's impact on American politics and society.",
+              "example_tasks": [
+                "Analyze Reagan's success in shifting American politics rightward, making conservatism the dominant ideology.",
+                "Evaluate criticisms including widening inequality, neglect of AIDS crisis, Iran-Contra scandal, and deficit spending.",
+                "Assess debates over Reagan's role in ending the Cold War versus giving credit to Soviet reforms and internal collapse."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "end_cold_war",
+          "name": "End of the Cold War",
+          "short_description": "Study of Soviet collapse, fall of communist regimes in Eastern Europe, and American triumphalism.",
+          "sub_topics": [
+            {
+              "key": "gorbachev_reforms",
+              "name": "Gorbachev's Reforms",
+              "short_description": "Examination of glasnost, perestroika, and the unraveling of Soviet control.",
+              "example_tasks": [
+                "Analyze Gorbachev's policies of glasnost (openness) and perestroika (restructuring) attempting to reform communism.",
+                "Evaluate how reforms unleashed forces Gorbachev couldn't control, including demands for independence from Soviet republics.",
+                "Assess Gorbachev's decision not to use force to maintain Soviet empire, allowing Eastern European revolutions."
+              ]
+            },
+            {
+              "key": "fall_berlin_wall",
+              "name": "Fall of the Berlin Wall",
+              "short_description": "Study of the 1989 breaching of the wall and collapse of communist regimes in Eastern Europe.",
+              "example_tasks": [
+                "Analyze the fall of the Berlin Wall (November 1989) as the symbolic end of the Cold War and division of Europe.",
+                "Evaluate the rapid collapse of communist governments across Eastern Europe including Poland, Hungary, Czechoslovakia, and Romania.",
+                "Assess German reunification (1990) and the end of the post-WWII division of Europe."
+              ]
+            },
+            {
+              "key": "soviet_collapse",
+              "name": "Collapse of the Soviet Union",
+              "short_description": "Examination of the USSR's disintegration and emergence of independent republics.",
+              "example_tasks": [
+                "Analyze the failed August 1991 coup attempt by hardliners and Yeltsin's resistance strengthening independence movements.",
+                "Evaluate the formal dissolution of the Soviet Union (December 1991) and emergence of 15 independent republics.",
+                "Assess debates over what caused Soviet collapse including Reagan's pressure, internal contradictions, and Gorbachev's reforms."
+              ]
+            },
+            {
+              "key": "bush_new_world_order",
+              "name": "Bush and the 'New World Order'",
+              "short_description": "Study of Bush Sr.'s foreign policy including Gulf War and vision of post-Cold War world.",
+              "example_tasks": [
+                "Analyze Bush's concept of a 'New World Order' with American leadership and UN cooperation replacing Cold War confrontation.",
+                "Evaluate the Gulf War (1991) responding to Iraq's invasion of Kuwait with UN coalition and overwhelming force.",
+                "Assess the limits of the new order as ethnic conflicts erupted in Yugoslavia, Rwanda, and elsewhere."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "culture_wars",
+          "name": "Culture Wars",
+          "short_description": "Examination of conflicts over values, multiculturalism, and identity from the 1980s-1990s.",
+          "sub_topics": [
+            {
+              "key": "culture_war_issues",
+              "name": "Culture War Battlegrounds",
+              "short_description": "Study of conflicts over abortion, school prayer, homosexuality, and traditional values.",
+              "example_tasks": [
+                "Analyze conflicts over abortion following Roe v. Wade (1973) including pro-life and pro-choice activism.",
+                "Evaluate debates over school prayer, evolution/creationism, sex education, and censorship of media.",
+                "Assess the AIDS crisis and conflicts over government response, gay rights, and traditional morality."
+              ]
+            },
+            {
+              "key": "multiculturalism_debates",
+              "name": "Multiculturalism and Identity Politics",
+              "short_description": "Examination of debates over diversity, political correctness, and American identity.",
+              "example_tasks": [
+                "Analyze debates over multiculturalism in education including Western canon versus diverse perspectives.",
+                "Evaluate conflicts over 'political correctness,' affirmative action, and immigration.",
+                "Assess how identity politics organized around race, gender, and sexuality transformed American politics and culture."
+              ]
+            },
+            {
+              "key": "technology_culture",
+              "name": "Technology and Cultural Change",
+              "short_description": "Study of personal computers, cable TV, and early internet transforming communication and culture.",
+              "example_tasks": [
+                "Analyze the impact of personal computers and video games on work, entertainment, and daily life.",
+                "Evaluate how cable TV and 24-hour news networks (CNN, Fox News) fragmented the media landscape.",
+                "Assess the emergence of the internet and World Wide Web in the 1990s and their revolutionary potential."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "contemporary_america_global_challenges",
+      "name": "Contemporary America and Global Challenges",
+      "short_description": "Examination of 21st-century issues including terrorism, globalization, technology, economic crises, and constitutional debates from 2000-present.",
+      "sub_topics": [
+        {
+          "key": "2000_election_bush_presidency",
+          "name": "2000 Election and Bush Presidency",
+          "short_description": "Study of the controversial election and Bush's domestic and foreign policies before 9/11.",
+          "sub_topics": [
+            {
+              "key": "2000_election_controversy",
+              "name": "2000 Election Controversy",
+              "short_description": "Examination of the disputed Florida vote count and Bush v. Gore Supreme Court decision.",
+              "example_tasks": [
+                "Analyze the 2000 election deadlock over Florida's decisive electoral votes and controversies over ballot design and vote counting.",
+                "Evaluate the Supreme Court's Bush v. Gore decision stopping the recount and effectively deciding the election.",
+                "Assess the legitimacy questions raised by Bush losing the popular vote and the 5-4 Supreme Court decision along partisan lines."
+              ]
+            },
+            {
+              "key": "early_bush_policies",
+              "name": "Early Bush Administration",
+              "short_description": "Study of 'compassionate conservatism,' tax cuts, and education reform.",
+              "example_tasks": [
+                "Analyze Bush's 'compassionate conservative' domestic agenda including tax cuts and No Child Left Behind education reform.",
+                "Evaluate the 2001 tax cuts reducing rates and eliminating estate tax, with debates over fairness and fiscal impact.",
+                "Assess Bush's early foreign policy including withdrawal from international agreements and unilateralist approach."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "september_11_war_on_terror",
+          "name": "September 11 and the War on Terror",
+          "short_description": "Examination of the terrorist attacks, U.S. response, and transformation of American foreign policy and domestic security.",
+          "sub_topics": [
+            {
+              "key": "september_11_attacks",
+              "name": "September 11, 2001 Attacks",
+              "short_description": "Study of the terrorist attacks on the World Trade Center and Pentagon.",
+              "example_tasks": [
+                "Analyze the September 11 attacks by al-Qaeda terrorists killing nearly 3,000 people.",
+                "Evaluate the immediate response including grounding all flights, rescue efforts, and national unity.",
+                "Assess the attacks' impact on American psyche including trauma, fear, and determination to respond."
+              ]
+            },
+            {
+              "key": "afghanistan_war",
+              "name": "War in Afghanistan",
+              "short_description": "Examination of the U.S. invasion to destroy al-Qaeda and remove the Taliban.",
+              "example_tasks": [
+                "Analyze the October 2001 invasion of Afghanistan to destroy al-Qaeda bases and overthrow the Taliban government harboring them.",
+                "Evaluate initial military success toppling the Taliban but failure to capture Osama bin Laden at Tora Bora.",
+                "Assess the prolonged nation-building effort, resurgent Taliban, and America's longest war."
+              ]
+            },
+            {
+              "key": "patriot_act_security",
+              "name": "PATRIOT Act and Domestic Security",
+              "short_description": "Study of expanded surveillance powers and debates over security versus civil liberties.",
+              "example_tasks": [
+                "Analyze the USA PATRIOT Act (2001) expanding government surveillance and law enforcement powers.",
+                "Evaluate the creation of the Department of Homeland Security consolidating security agencies.",
+                "Assess tensions between security measures and civil liberties including warrantless surveillance and detentions."
+              ]
+            },
+            {
+              "key": "iraq_war",
+              "name": "Iraq War",
+              "short_description": "Examination of the controversial 2003 invasion based on claims of WMDs and links to terrorism.",
+              "example_tasks": [
+                "Analyze Bush administration's case for invading Iraq including claims of weapons of mass destruction and ties to terrorism.",
+                "Evaluate the March 2003 invasion, quick military victory, and Bush's premature 'Mission Accomplished' declaration.",
+                "Assess the prolonged insurgency, sectarian violence, failure to find WMDs, and questions about the war's justification."
+              ]
+            },
+            {
+              "key": "war_on_terror_controversies",
+              "name": "War on Terror Controversies",
+              "short_description": "Study of torture, Guantanamo, rendition, and debates over executive power.",
+              "example_tasks": [
+                "Analyze controversies over 'enhanced interrogation techniques' (torture), secret CIA prisons, and extraordinary rendition.",
+                "Evaluate the detention facility at Guantanamo Bay and legal battles over detainee rights.",
+                "Assess debates over executive power in wartime, surveillance without warrants, and signing statements."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "economic_crisis_2008",
+          "name": "Great Recession and Economic Crisis",
+          "short_description": "Study of the 2008 financial crisis, its causes, government response, and lasting impact.",
+          "sub_topics": [
+            {
+              "key": "financial_crisis_causes",
+              "name": "Causes of the Financial Crisis",
+              "short_description": "Examination of housing bubble, subprime mortgages, and risky financial practices.",
+              "example_tasks": [
+                "Analyze the housing bubble fueled by easy credit, subprime mortgages given to unqualified borrowers, and speculation.",
+                "Evaluate the role of financial deregulation and complex financial instruments (mortgage-backed securities, derivatives).",
+                "Assess the collapse of major financial institutions including Lehman Brothers and the freezing of credit markets."
+              ]
+            },
+            {
+              "key": "government_response",
+              "name": "Government Response: TARP and Stimulus",
+              "short_description": "Study of emergency measures including bank bailouts and stimulus spending.",
+              "example_tasks": [
+                "Analyze the $700 billion TARP (Troubled Asset Relief Program) bailout of banks and auto industry.",
+                "Evaluate the 2009 American Recovery and Reinvestment Act (stimulus) spending to prevent depression.",
+                "Assess debates over whether bailouts rewarded irresponsible behavior and whether stimulus was effective."
+              ]
+            },
+            {
+              "key": "recession_impact",
+              "name": "Impact of the Great Recession",
+              "short_description": "Examination of unemployment, foreclosures, and lasting economic and political effects.",
+              "example_tasks": [
+                "Analyze the recession's impact including 10% unemployment, millions of foreclosures, and massive wealth destruction.",
+                "Evaluate the slow recovery and debates over whether government did too much or too little.",
+                "Assess political consequences including anger at Wall Street and government, contributing to Tea Party and Occupy movements."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "obama_presidency",
+          "name": "Obama Presidency",
+          "short_description": "Study of the first African American president, healthcare reform, and political polarization.",
+          "sub_topics": [
+            {
+              "key": "obama_election",
+              "name": "2008 Election and Historic Victory",
+              "short_description": "Examination of Obama's campaign and election as the first Black president.",
+              "example_tasks": [
+                "Analyze Obama's 2008 campaign emphasizing hope, change, and post-racial unity amid financial crisis.",
+                "Evaluate the historic significance of electing the first African American president.",
+                "Assess Obama's coalition of young voters, minorities, and college-educated voters creating a new Democratic majority."
+              ]
+            },
+            {
+              "key": "affordable_care_act",
+              "name": "Affordable Care Act",
+              "short_description": "Study of Obama's signature healthcare reform and intense opposition.",
+              "example_tasks": [
+                "Analyze the Affordable Care Act (Obamacare) expanding health insurance coverage through mandates, subsidies, and Medicaid expansion.",
+                "Evaluate fierce Republican opposition claiming it was government takeover of healthcare and socialism.",
+                "Assess the law's mixed results including millions gaining coverage but also implementation problems and continued high costs."
+              ]
+            },
+            {
+              "key": "tea_party_polarization",
+              "name": "Tea Party and Increasing Polarization",
+              "short_description": "Examination of conservative backlash and deepening partisan divisions.",
+              "example_tasks": [
+                "Analyze the Tea Party movement as conservative grassroots reaction against Obama, stimulus spending, and healthcare reform.",
+                "Evaluate the 2010 Republican midterm landslide and increased legislative gridlock.",
+                "Assess deepening polarization with little cooperation between parties and government shutdowns over budget disputes."
+              ]
+            },
+            {
+              "key": "obama_foreign_policy",
+              "name": "Obama's Foreign Policy",
+              "short_description": "Study of ending Iraq War, bin Laden raid, Arab Spring, and pivot to Asia.",
+              "example_tasks": [
+                "Analyze Obama's withdrawal from Iraq, surge in Afghanistan, and killing of Osama bin Laden (2011).",
+                "Evaluate Obama's response to Arab Spring uprisings including Libya intervention and Syrian civil war.",
+                "Assess the 'pivot to Asia' strategy refocusing on Asia-Pacific amid China's rise and criticism of 'leading from behind.'"
+              ]
+            }
+          ]
+        },
+        {
+          "key": "recent_social_movements",
+          "name": "Recent Social and Political Movements",
+          "short_description": "Study of Black Lives Matter, marriage equality, immigration debates, and renewed activism.",
+          "sub_topics": [
+            {
+              "key": "marriage_equality",
+              "name": "Marriage Equality Movement",
+              "short_description": "Examination of the rapid shift in public opinion and Supreme Court decision legalizing same-sex marriage.",
+              "example_tasks": [
+                "Analyze the dramatic shift in public opinion on same-sex marriage from strong opposition to majority support.",
+                "Evaluate state-by-state battles over marriage equality through legislation and referenda.",
+                "Assess the Obergefell v. Hodges (2015) Supreme Court decision establishing a constitutional right to same-sex marriage."
+              ]
+            },
+            {
+              "key": "black_lives_matter",
+              "name": "Black Lives Matter Movement",
+              "short_description": "Study of protests against police violence and systemic racism.",
+              "example_tasks": [
+                "Analyze the emergence of Black Lives Matter after high-profile killings of unarmed Black people by police.",
+                "Evaluate protests in Ferguson, Baltimore, and nationwide following deaths of Michael Brown, Freddie Gray, and others.",
+                "Assess debates over policing, criminal justice reform, and whether progress has been made on racial equality."
+              ]
+            },
+            {
+              "key": "immigration_debates",
+              "name": "Immigration Debates",
+              "short_description": "Examination of conflicts over undocumented immigration, border security, and DREAM Act.",
+              "example_tasks": [
+                "Analyze debates over comprehensive immigration reform including path to citizenship versus enforcement-first approaches.",
+                "Evaluate DACA (Deferred Action for Childhood Arrivals) protecting 'Dreamers' brought to U.S. as children.",
+                "Assess controversies over border wall, family separations, and sanctuary cities."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "trump_era",
+          "name": "Trump Presidency and Political Upheaval",
+          "short_description": "Study of Trump's unconventional presidency, populism, and deepening national divisions.",
+          "sub_topics": [
+            {
+              "key": "2016_election",
+              "name": "2016 Election",
+              "short_description": "Examination of Trump's unexpected victory and Clinton's defeat.",
+              "example_tasks": [
+                "Analyze Trump's populist campaign attacking elites, political correctness, and promising to 'Make America Great Again.'",
+                "Evaluate Trump's Electoral College victory despite losing popular vote by 3 million votes.",
+                "Assess factors in Trump's win including white working-class support, economic anxiety, and opposition to Clinton."
+              ]
+            },
+            {
+              "key": "trump_policies",
+              "name": "Trump Administration Policies",
+              "short_description": "Study of tax cuts, deregulation, immigration restrictions, and 'America First' approach.",
+              "example_tasks": [
+                "Analyze Trump's 2017 tax cut primarily benefiting corporations and wealthy individuals.",
+                "Evaluate immigration policies including travel ban on Muslim-majority countries, family separations, and reduced refugee admissions.",
+                "Assess 'America First' foreign policy including withdrawal from Paris climate accord, Iran nuclear deal, and trade wars."
+              ]
+            },
+            {
+              "key": "trump_controversies",
+              "name": "Controversies and Impeachments",
+              "short_description": "Examination of Russia investigation, two impeachments, and attacks on democratic norms.",
+              "example_tasks": [
+                "Analyze Mueller investigation into Russian interference in 2016 election and possible Trump campaign collusion.",
+                "Evaluate Trump's first impeachment (2019) for pressuring Ukraine to investigate Biden, and second impeachment (2021) for inciting January 6 insurrection.",
+                "Assess Trump's attacks on media ('fake news'), courts, intelligence agencies, and democratic norms."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "contemporary_challenges",
+          "name": "Contemporary Challenges",
+          "short_description": "Examination of recent crises, technological change, and ongoing debates shaping America's future.",
+          "sub_topics": [
+            {
+              "key": "covid_19_pandemic",
+              "name": "COVID-19 Pandemic",
+              "short_description": "Study of the pandemic's health, economic, and social impacts.",
+              "example_tasks": [
+                "Analyze the COVID-19 pandemic beginning in early 2020, causing over 1 million U.S. deaths and massive disruption.",
+                "Evaluate government responses including lockdowns, economic relief, and vaccine development (Operation Warp Speed).",
+                "Assess the pandemic's unequal impact on minorities and essential workers, and politicization of public health measures."
+              ]
+            },
+            {
+              "key": "january_6_insurrection",
+              "name": "January 6, 2021 Insurrection",
+              "short_description": "Examination of the attack on the Capitol and threats to democratic institutions.",
+              "example_tasks": [
+                "Analyze the January 6, 2021 attack on the U.S. Capitol by Trump supporters attempting to prevent Biden's certification.",
+                "Evaluate Trump's role in inciting the insurrection through false claims of election fraud and pressure on Pence.",
+                "Assess the threat to American democracy and debates over accountability and preventing future attacks."
+              ]
+            },
+            {
+              "key": "climate_change_debate",
+              "name": "Climate Change and Environmental Policy",
+              "short_description": "Study of growing concerns about climate change and political conflicts over policy responses.",
+              "example_tasks": [
+                "Analyze scientific consensus on human-caused climate change and evidence of rising temperatures, extreme weather.",
+                "Evaluate policy debates over carbon taxes, renewable energy, and the Green New Deal proposal.",
+                "Assess political polarization with most Democrats supporting aggressive action and many Republicans questioning the science or opposing major interventions."
+              ]
+            },
+            {
+              "key": "technology_society",
+              "name": "Technology and Social Media Impact",
+              "short_description": "Examination of how smartphones, social media, and AI are transforming society.",
+              "example_tasks": [
+                "Analyze the impact of social media on politics, democracy, and mental health including misinformation and polarization.",
+                "Evaluate concerns about tech company power, data privacy, and algorithmic manipulation.",
+                "Assess debates over regulating social media, protecting privacy, and managing AI development."
+              ]
+            },
+            {
+              "key": "political_polarization",
+              "name": "Political Polarization and Democratic Challenges",
+              "short_description": "Study of deepening partisan divisions and threats to democratic norms.",
+              "example_tasks": [
+                "Analyze increasing political polarization with Americans sorting into ideologically homogeneous communities and media bubbles.",
+                "Evaluate threats to democracy including election denial, voter suppression, gerrymandering, and attacks on election officials.",
+                "Assess debates over democratic reforms including voting rights, campaign finance, Electoral College, and Supreme Court."
+              ]
+            },
+            {
+              "key": "economic_inequality",
+              "name": "Economic Inequality and Opportunity",
+              "short_description": "Examination of growing wealth gap and debates over economic justice.",
+              "example_tasks": [
+                "Analyze growing income and wealth inequality with gains concentrated at the top while middle-class stagnates.",
+                "Evaluate debates over minimum wage increases, universal basic income, wealth taxes, and student debt forgiveness.",
+                "Assess concerns about declining economic mobility and whether the American Dream is still achievable."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "us_government_civic_participation",
+      "name": "U.S. Government and Civic Participation",
+      "short_description": "Study of constitutional principles, branches of government, federalism, citizen rights and responsibilities, and contemporary debates over governance.",
+      "sub_topics": [
+        {
+          "key": "constitutional_foundations",
+          "name": "Constitutional Foundations",
+          "short_description": "Examination of the Constitution's structure, principles, and interpretation.",
+          "sub_topics": [
+            {
+              "key": "constitutional_principles",
+              "name": "Key Constitutional Principles",
+              "short_description": "Study of popular sovereignty, limited government, separation of powers, checks and balances, and federalism.",
+              "example_tasks": [
+                "Analyze how the Constitution embodies popular sovereignty while limiting direct democracy through representative institutions.",
+                "Evaluate the system of checks and balances designed to prevent any branch from becoming too powerful.",
+                "Assess how federalism divides power between national and state governments, creating tensions and flexibility."
+              ]
+            },
+            {
+              "key": "constitutional_interpretation",
+              "name": "Constitutional Interpretation",
+              "short_description": "Examination of strict construction versus loose construction and judicial review.",
+              "example_tasks": [
+                "Compare strict constructionist approach (Constitution means what framers intended) with living Constitution interpretation (adapting to changing times).",
+                "Analyze judicial review established in Marbury v. Madison, giving courts power to declare laws unconstitutional.",
+                "Evaluate debates over originalism versus pragmatism in constitutional interpretation."
+              ]
+            },
+            {
+              "key": "amending_constitution",
+              "name": "Amending the Constitution",
+              "short_description": "Study of the formal amendment process and informal constitutional change.",
+              "example_tasks": [
+                "Analyze the difficult formal amendment process requiring two-thirds of Congress and three-fourths of states, explaining why only 27 amendments have been ratified.",
+                "Evaluate informal constitutional change through judicial interpretation, executive actions, and changing customs.",
+                "Assess debates over whether the Constitution should be easier to amend or whether difficulty preserves stability."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "legislative_branch",
+          "name": "The Legislative Branch",
+          "short_description": "Study of Congress's structure, powers, and functions in the American system.",
+          "sub_topics": [
+            {
+              "key": "structure_congress",
+              "name": "Structure and Organization of Congress",
+              "short_description": "Examination of bicameralism, representation, leadership, and committee system.",
+              "example_tasks": [
+                "Analyze the bicameral structure with House based on population and Senate giving equal representation to states.",
+                "Evaluate the role of party leadership including Speaker of the House, majority/minority leaders, and whips.",
+                "Assess the committee system where most legislative work occurs, including standing, select, joint, and conference committees."
+              ]
+            },
+            {
+              "key": "legislative_process",
+              "name": "The Legislative Process",
+              "short_description": "Study of how bills become laws through committee, floor action, and presidential signature.",
+              "example_tasks": [
+                "Analyze the complex process of a bill becoming law including introduction, committee review, floor debate, conference, and presidential action.",
+                "Evaluate obstacles to legislation including committee gatekeepers, filibusters in Senate, and presidential veto.",
+                "Assess why most bills fail and only a small percentage become law."
+              ]
+            },
+            {
+              "key": "congressional_powers",
+              "name": "Powers of Congress",
+              "short_description": "Examination of enumerated powers, implied powers, and oversight functions.",
+              "example_tasks": [
+                "Analyze Congress's enumerated powers in Article I including taxation, regulation of commerce, declaring war, and raising armies.",
+                "Evaluate implied powers derived from Necessary and Proper Clause and how they've expanded federal authority.",
+                "Assess Congress's oversight powers including investigations, hearings, and impeachment."
+              ]
+            },
+            {
+              "key": "representation_congress",
+              "name": "Representation and Elections",
+              "short_description": "Study of how representatives balance constituent interests, party loyalty, and personal judgment.",
+              "example_tasks": [
+                "Analyze competing theories of representation: delegate (following constituents) versus trustee (using own judgment).",
+                "Evaluate the impact of gerrymandering on partisan competition and representation.",
+                "Assess advantages of incumbency including name recognition, campaign funding, and constituency services."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "executive_branch",
+          "name": "The Executive Branch",
+          "short_description": "Study of presidential powers, executive agencies, and the expanding modern presidency.",
+          "sub_topics": [
+            {
+              "key": "presidential_powers",
+              "name": "Powers and Roles of the President",
+              "short_description": "Examination of constitutional powers and various presidential roles.",
+              "example_tasks": [
+                "Analyze the president's formal powers including commander-in-chief, chief diplomat, chief executive, and legislative leader.",
+                "Evaluate informal powers including executive orders, executive agreements, and use of the bully pulpit.",
+                "Assess the president's multiple roles as head of state, party leader, and crisis manager."
+              ]
+            },
+            {
+              "key": "presidential_limits",
+              "name": "Limits on Presidential Power",
+              "short_description": "Study of checks on executive authority from Congress, courts, and public opinion.",
+              "example_tasks": [
+                "Analyze congressional checks including power of the purse, Senate confirmation, treaty ratification, and impeachment.",
+                "Evaluate judicial review of executive actions and Supreme Court decisions limiting presidential power.",
+                "Assess how public opinion, media scrutiny, and political opposition constrain presidential actions."
+              ]
+            },
+            {
+              "key": "executive_bureaucracy",
+              "name": "The Federal Bureaucracy",
+              "short_description": "Examination of executive departments, agencies, and the administrative state.",
+              "example_tasks": [
+                "Analyze the structure of the federal bureaucracy including Cabinet departments, independent agencies, and regulatory commissions.",
+                "Evaluate the bureaucracy's role in implementing laws through rulemaking and enforcement.",
+                "Assess criticisms of bureaucracy including lack of accountability, inefficiency, and 'red tape' versus defenses of expertise and neutral competence."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "judicial_branch",
+          "name": "The Judicial Branch",
+          "short_description": "Study of the federal court system, judicial review, and the Supreme Court's role.",
+          "sub_topics": [
+            {
+              "key": "judicial_system_structure",
+              "name": "Structure of the Federal Courts",
+              "short_description": "Examination of district courts, appeals courts, and the Supreme Court.",
+              "example_tasks": [
+                "Analyze the three-tier federal court system with 94 district courts, 13 courts of appeals, and the Supreme Court.",
+                "Evaluate the appointment process for federal judges including presidential nomination, Senate confirmation, and lifetime tenure.",
+                "Assess the principle of judicial independence through lifetime appointments protecting judges from political pressure."
+              ]
+            },
+            {
+              "key": "supreme_court_power",
+              "name": "The Supreme Court's Power",
+              "short_description": "Study of judicial review, case selection, and the Court's policy-making role.",
+              "example_tasks": [
+                "Analyze the power of judicial review to declare laws unconstitutional and its evolution since Marbury v. Madison.",
+                "Evaluate the Court's case selection process through writs of certiorari and the rule of four.",
+                "Assess debates over judicial activism (courts making policy) versus judicial restraint (deferring to elected branches)."
+              ]
+            },
+            {
+              "key": "supreme_court_politics",
+              "name": "Politics and the Supreme Court",
+              "short_description": "Examination of how ideology, precedent, and public opinion influence judicial decisions.",
+              "example_tasks": [
+                "Analyze how justices' political ideologies influence their interpretation of the Constitution.",
+                "Evaluate the role of precedent (stare decisis) in providing stability versus willingness to overturn past decisions.",
+                "Assess debates over Court packing, term limits, and other proposed reforms to the Supreme Court."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "civil_liberties_rights",
+          "name": "Civil Liberties and Civil Rights",
+          "short_description": "Study of constitutional protections for individual freedoms and equality.",
+          "sub_topics": [
+            {
+              "key": "first_amendment",
+              "name": "First Amendment Freedoms",
+              "short_description": "Examination of freedom of religion, speech, press, assembly, and petition.",
+              "example_tasks": [
+                "Analyze the Establishment Clause prohibiting government establishment of religion and Free Exercise Clause protecting religious practice.",
+                "Evaluate limits on free speech including obscenity, fighting words, and the clear and present danger test.",
+                "Assess freedom of the press including prior restraint, libel laws, and shield laws protecting journalists."
+              ]
+            },
+            {
+              "key": "criminal_procedure_rights",
+              "name": "Rights of the Accused",
+              "short_description": "Study of Fourth, Fifth, Sixth, and Eighth Amendment protections in criminal justice.",
+              "example_tasks": [
+                "Analyze Fourth Amendment protections against unreasonable searches and seizures and the exclusionary rule.",
+                "Evaluate Fifth Amendment rights including protection against self-incrimination (Miranda rights) and double jeopardy.",
+                "Assess Sixth Amendment rights to counsel, speedy and public trial, and Eighth Amendment prohibitions on cruel and unusual punishment."
+              ]
+            },
+            {
+              "key": "equal_protection",
+              "name": "Equal Protection and Civil Rights",
+              "short_description": "Examination of Fourteenth Amendment and laws prohibiting discrimination.",
+              "example_tasks": [
+                "Analyze the Equal Protection Clause of the 14th Amendment and different levels of judicial scrutiny (strict, intermediate, rational basis).",
+                "Evaluate major civil rights legislation including the Civil Rights Act of 1964 and Voting Rights Act of 1965.",
+                "Assess ongoing debates over affirmative action, voting rights, and LGBTQ equality."
+              ]
+            },
+            {
+              "key": "privacy_rights",
+              "name": "Right to Privacy",
+              "short_description": "Study of the implied right to privacy and reproductive rights.",
+              "example_tasks": [
+                "Analyze the development of an implied right to privacy from various constitutional amendments in Griswold v. Connecticut.",
+                "Evaluate Roe v. Wade (1973) establishing abortion rights and its 2022 reversal in Dobbs v. Jackson.",
+                "Assess contemporary privacy issues including government surveillance, data privacy, and technology."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "political_participation",
+          "name": "Political Participation and Elections",
+          "short_description": "Study of voting, campaigns, parties, and citizen engagement in democracy.",
+          "sub_topics": [
+            {
+              "key": "voting_participation",
+              "name": "Voting and Political Participation",
+              "short_description": "Examination of who votes, why many don't, and efforts to expand or restrict voting.",
+              "example_tasks": [
+                "Analyze factors affecting voter turnout including age, education, income, and electoral competitiveness.",
+                "Evaluate barriers to voting including registration requirements, voter ID laws, and poll access.",
+                "Assess the expansion of voting rights through constitutional amendments (15th, 19th, 24th, 26th) and legislation."
+              ]
+            },
+            {
+              "key": "campaigns_elections",
+              "name": "Campaigns and Elections",
+              "short_description": "Study of how candidates run for office and how campaigns influence voters.",
+              "example_tasks": [
+                "Analyze the role of money in campaigns including Citizens United decision allowing unlimited independent expenditures.",
+                "Evaluate campaign strategies including targeting swing voters, negative advertising, and ground game versus air war.",
+                "Assess the Electoral College system and debates over whether it should be replaced with a national popular vote."
+              ]
+            },
+            {
+              "key": "political_parties",
+              "name": "Political Parties",
+              "short_description": "Examination of party functions, organization, and the two-party system.",
+              "example_tasks": [
+                "Analyze functions of political parties including recruiting candidates, mobilizing voters, and organizing government.",
+                "Evaluate why the U.S. has a two-party system while many democracies have multiparty systems.",
+                "Assess increasing partisan polarization and its effects on governance and compromise."
+              ]
+            },
+            {
+              "key": "interest_groups_media",
+              "name": "Interest Groups and Media",
+              "short_description": "Study of lobbying, PACs, and media's role in shaping politics.",
+              "example_tasks": [
+                "Analyze how interest groups influence policy through lobbying, campaign contributions, and grassroots mobilization.",
+                "Evaluate the role of media in setting the agenda, framing issues, and serving as watchdog versus contributing to polarization.",
+                "Assess the impact of social media on political participation, mobilization, and misinformation."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "advanced_historical_methods_research",
+      "name": "Advanced Historical Methods and Research",
+      "short_description": "Development of advanced analytical skills, historical argumentation, research methodologies, and historiographical understanding.",
+      "sub_topics": [
+        {
+          "key": "advanced_source_analysis",
+          "name": "Advanced Source Analysis",
+          "short_description": "Study of complex source evaluation, understanding bias and perspective, and synthesizing multiple sources.",
+          "sub_topics": [
+            {
+              "key": "evaluating_credibility",
+              "name": "Evaluating Source Credibility and Reliability",
+              "short_description": "Examination of techniques for assessing trustworthiness and limitations of historical sources.",
+              "example_tasks": [
+                "Analyze how to evaluate source credibility by examining author expertise, publication venue, use of evidence, and peer review.",
+                "Evaluate the reliability of different source types including government documents, newspapers, memoirs, and statistical data.",
+                "Assess how time distance from events, political agenda, and intended audience affect source reliability."
+              ]
+            },
+            {
+              "key": "bias_perspective_analysis",
+              "name": "Understanding Bias and Multiple Perspectives",
+              "short_description": "Study of identifying implicit bias, understanding different viewpoints, and constructing balanced interpretations.",
+              "example_tasks": [
+                "Analyze how to identify subtle bias in sources including word choice, framing, omissions, and selective use of evidence.",
+                "Evaluate how considering multiple perspectives on controversial events leads to more nuanced understanding.",
+                "Construct interpretations that acknowledge complexity and avoid simply accepting one perspective as truth."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "historiography",
+          "name": "Understanding Historiography",
+          "short_description": "Examination of how historical interpretations change over time and why historians disagree.",
+          "sub_topics": [
+            {
+              "key": "schools_historical_thought",
+              "name": "Schools of Historical Interpretation",
+              "short_description": "Study of different approaches including social history, cultural history, and revisionist interpretations.",
+              "example_tasks": [
+                "Analyze how different historical schools (e.g., progressive, consensus, New Left) interpret the same events differently.",
+                "Evaluate how social history shifted focus from political elites to ordinary people's experiences.",
+                "Compare traditional 'great man' history with approaches emphasizing structural forces and ordinary people's agency."
+              ]
+            },
+            {
+              "key": "changing_interpretations",
+              "name": "How and Why Historical Interpretations Change",
+              "short_description": "Examination of factors causing reinterpretation including new evidence, changing questions, and present concerns.",
+              "example_tasks": [
+                "Analyze how newly discovered sources or archives lead historians to revise previous interpretations.",
+                "Evaluate how contemporary concerns influence which questions historians ask and how they interpret the past.",
+                "Assess debates over presentism (judging past by present standards) versus historical empathy (understanding past in its own context)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "research_skills",
+          "name": "Historical Research Skills",
+          "short_description": "Development of skills in formulating questions, finding sources, and conducting independent research.",
+          "sub_topics": [
+            {
+              "key": "research_questions",
+              "name": "Formulating Research Questions",
+              "short_description": "Study of developing focused, answerable, significant historical questions.",
+              "example_tasks": [
+                "Analyze what makes a good historical research question including focus, answerability with available sources, and significance.",
+                "Evaluate how to narrow broad topics into specific, manageable research questions.",
+                "Construct research questions that go beyond description to ask about causation, significance, or comparison."
+              ]
+            },
+            {
+              "key": "finding_evaluating_sources",
+              "name": "Finding and Evaluating Sources",
+              "short_description": "Examination of research strategies, database use, and building a diverse source base.",
+              "example_tasks": [
+                "Analyze strategies for finding relevant sources including library databases, archives, digital collections, and bibliographies.",
+                "Evaluate how to build a balanced source base including primary and secondary sources, different perspectives, and various types.",
+                "Assess when you have sufficient sources versus when more research is needed to answer your question."
+              ]
+            },
+            {
+              "key": "note_taking_organization",
+              "name": "Note-Taking and Research Organization",
+              "short_description": "Study of effective methods for recording, organizing, and synthesizing research findings.",
+              "example_tasks": [
+                "Analyze effective note-taking techniques including annotated bibliographies and organizing notes by theme or argument.",
+                "Evaluate methods for tracking sources to avoid plagiarism and enable proper citation.",
+                "Construct organizational systems that help synthesize information from multiple sources into coherent arguments."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "historical_writing",
+          "name": "Historical Writing and Argumentation",
+          "short_description": "Development of skills in constructing sophisticated historical arguments with evidence.",
+          "sub_topics": [
+            {
+              "key": "thesis_development_advanced",
+              "name": "Developing Complex Thesis Statements",
+              "short_description": "Study of crafting nuanced, arguable claims that go beyond simple assertions.",
+              "example_tasks": [
+                "Analyze sophisticated thesis statements that make complex arguments accounting for multiple factors and acknowledging nuance.",
+                "Evaluate the difference between weak theses (descriptive, obvious) and strong theses (analytical, arguable, complex).",
+                "Construct thesis statements that take a clear position while acknowledging complexity and alternative viewpoints."
+              ]
+            },
+            {
+              "key": "evidence_analysis_writing",
+              "name": "Using Evidence in Historical Writing",
+              "short_description": "Examination of selecting relevant evidence, explaining its significance, and avoiding common errors.",
+              "example_tasks": [
+                "Analyze how to select the most relevant and persuasive evidence to support specific claims.",
+                "Evaluate the difference between simply citing evidence and actually analyzing what it means and how it supports the argument.",
+                "Assess common problems including cherry-picking evidence, misinterpreting sources, or making claims unsupported by evidence."
+              ]
+            },
+            {
+              "key": "organization_coherence",
+              "name": "Organization and Coherence",
+              "short_description": "Study of structuring historical essays with clear logic and effective transitions.",
+              "example_tasks": [
+                "Analyze effective essay organization including introduction, body paragraphs developing sub-arguments, and conclusion.",
+                "Evaluate how to write topic sentences that clearly state the paragraph's main point and connect to the thesis.",
+                "Construct transitions that show logical relationships between ideas and guide readers through the argument."
+              ]
+            },
+            {
+              "key": "revision_peer_review",
+              "name": "Revision and Peer Review",
+              "short_description": "Examination of the revision process and giving/receiving constructive feedback.",
+              "example_tasks": [
+                "Analyze strategies for revising writing including focusing first on argument and organization before polishing prose.",
+                "Evaluate how to give constructive peer feedback that helps writers improve their arguments and use of evidence.",
+                "Assess your own writing critically, identifying weaknesses in argument, evidence, or organization and making improvements."
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

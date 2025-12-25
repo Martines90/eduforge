@@ -223,10 +223,88 @@
 >
 > ---
 >
+> ## REALISM VERIFICATION: THE 80% RULE
+>
+> **CRITICAL**: Your scenario must be **at least 80% realistic** - meaning it should feel like something that could have actually happened or could realistically happen in that profession, era, and situation.
+>
+> ### **Ask yourself these questions BEFORE submitting:**
+>
+> #### 1. **Would this ACTUALLY happen in this profession?**
+> - ✅ GOOD: A gondolier needs to stop quickly to avoid attracting attention - this is plausible daily work
+> - ✅ GOOD: A medieval siege engineer calculates catapult trajectory - this was their actual job
+> - ✅ GOOD: A NASA engineer calculates re-entry angles - this is exactly what they do
+> - ❌ BAD: A baker calculating orbital mechanics - bakers don't do this
+> - ❌ BAD: A medieval peasant optimizing supply chain logistics - too modern/abstract for the era
+> - ❌ BAD: A gondolier calculating escape velocity - completely outside their work scope
+>
+> #### 2. **Does the MATH APPLICATION make practical sense?**
+> - ✅ GOOD: Calculating stopping force to prevent a passenger from falling - direct, immediate application
+> - ✅ GOOD: Calculating bridge load capacity before construction - prevents collapse
+> - ✅ GOOD: Computing artillery trajectory to hit a target - direct military need
+> - ❌ BAD: Calculating kinetic energy "just to understand" without any action to take
+> - ❌ BAD: Computing forces that no one in that era could measure or use
+> - ❌ BAD: Math problems that feel like homework inserted into a story
+>
+> #### 3. **Would someone in this situation REALISTICALLY do this calculation?**
+> - ✅ GOOD: A 1650s gondolier estimating how hard to brake - practical intuition they'd develop
+> - ✅ GOOD: A ship captain calculating provisions for a voyage - essential for survival
+> - ✅ GOOD: An engineer checking structural integrity before building - standard practice
+> - ❌ BAD: A hunter-gatherer in 8000 BCE using calculus - anachronistic
+> - ❌ BAD: Anyone stopping mid-crisis to calculate to 4 decimal places - unrealistic urgency
+> - ❌ BAD: Characters solving math for no practical reason during action
+>
+> #### 4. **Are the NUMBERS and SCALE realistic?**
+> - ✅ GOOD: A gondola with passenger weighing 180 kg total - realistic
+> - ✅ GOOD: Gondola moving at 2.8 m/s - realistic rowing speed
+> - ✅ GOOD: Stopping in 0.15 seconds - physically possible and relevant
+> - ❌ BAD: A gondola weighing 5000 kg - way too heavy
+> - ❌ BAD: A gondola moving at 20 m/s - impossibly fast for rowing
+> - ❌ BAD: Numbers that seem randomly chosen without connection to reality
+>
+> #### 5. **Does the SITUATION fit the PROFESSION and ERA naturally?**
+> - ✅ GOOD: A 1650s gondolier dealing with discretion/reputation - fits Venetian culture
+> - ✅ GOOD: A 1940s codebreaker analyzing encrypted messages - fits their role
+> - ✅ GOOD: A Roman engineer designing aqueduct water flow - fits their expertise
+> - ❌ BAD: A gondolier suddenly involved in military strategy - wrong domain
+> - ❌ BAD: A medieval monk doing industrial optimization - wrong era
+> - ❌ BAD: Profession + era + situation feel randomly combined
+>
+> ### **Red Flags That Indicate LOW REALISM:**
+>
+> 🚩 **The math feels "inserted" rather than naturally emerging from the situation**
+> 🚩 **The profession wouldn't realistically encounter this type of problem**
+> 🚩 **The era doesn't have the technology/knowledge to measure these variables**
+> 🚩 **The situation doesn't naturally lead to this calculation**
+> 🚩 **The numbers seem arbitrary rather than researched/realistic**
+> 🚩 **The consequences of getting the math wrong don't make practical sense**
+> 🚩 **It feels like a textbook problem wearing a costume**
+>
+> ### **Green Flags That Indicate HIGH REALISM:**
+>
+> ✅ **The profession naturally encounters this type of physical situation**
+> ✅ **The math directly helps solve an immediate practical problem**
+> ✅ **The era and technology level match the problem complexity**
+> ✅ **The numbers are scaled appropriately for the real-world context**
+> ✅ **Someone in this job would actually think about this problem this way**
+> ✅ **The situation flows naturally from the profession + era + circumstance**
+> ✅ **It feels like you're learning about the real work, not just doing math**
+>
+> ### **The "Smell Test":**
+>
+> Read your scenario out loud and ask:
+> - "Would a professional in this field nod and say 'Yes, this is how it works'?"
+> - "Could this scenario appear in a documentary about this profession/era?"
+> - "Does the math feel like a tool for solving the problem, or does the story feel like an excuse for the math?"
+>
+> **If you can't honestly answer "YES" to these questions, REDESIGN THE SCENARIO.**
+>
+> ---
+>
 > ## FINAL VERIFICATION CHECKLIST
 >
 > Before submitting, verify:
 >
+> ✅ **Realism**: Passes the 80% realism test - profession + situation + math application all make practical sense
 > ✅ **Formula**: Story provides EXACT variables needed for the formula
 > ✅ **Context**: Scenario represents real-world application or historical event
 > ✅ **Significance**: The problem matters beyond individual convenience

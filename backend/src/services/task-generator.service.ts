@@ -62,6 +62,52 @@ export class TaskGeneratorService {
   }
 
   /**
+   * Builds a prompt with variation-specific hint logic
+   * - Variation 1: Uses 50 random hints from inspirational-hints.json
+   * - Variations 2 & 3: Use 10 profession hints + 3 era hints + 3 situation hints
+   */
+  private buildTaskPromptWithVariation(
+    request: TaskGeneratorRequest & { variation_index?: number }
+  ): { systemPrompt: string; userMessage: string } {
+    // Import the helper functions dynamically
+    const {
+      generateInspirationHintsVariation1,
+      generateProfessionEraAndSituationHints,
+      buildInspirationPromptVariation1,
+      buildProfessionEraAndSituationPrompt,
+    } = require("../utils/story-inspiration.helper");
+
+    // Build base system prompt
+    let systemPrompt = buildSystemPrompt(request);
+
+    // Build the user message (JSON input)
+    const userMessage = buildUserMessage(request);
+
+    // Add variation-specific hints
+    if (request.variation_index === 1) {
+      // Variation 1: Use 50 random hints from inspirational-hints.json
+      const hints = generateInspirationHintsVariation1();
+      const hintsPrompt = buildInspirationPromptVariation1(hints);
+
+      systemPrompt += "\n\n" + hintsPrompt;
+
+      console.log(`   ✅ Added ${hints.length} inspirational hints for variation 1`);
+    } else if (request.variation_index === 2 || request.variation_index === 3) {
+      // Variations 2 & 3: Use 10 profession hints + 3 era hints + 3 situation hints
+      const { professions, eras, situations } = generateProfessionEraAndSituationHints();
+      const hintsPrompt = buildProfessionEraAndSituationPrompt(professions, eras, situations);
+
+      systemPrompt += "\n\n" + hintsPrompt;
+
+      console.log(
+        `   ✅ Added ${professions.length} profession hints + ${eras.length} era hints + ${situations.length} situation hints for variation ${request.variation_index}`
+      );
+    }
+
+    return { systemPrompt, userMessage };
+  }
+
+  /**
    * Builds a prompt for solution generation based on the task
    */
   private buildSolutionPrompt(
@@ -492,32 +538,30 @@ export class TaskGeneratorService {
     questions: string[];
     metadata: any;
   }> {
-    console.log(`📝 Generating task text variation ${request.variation_index || 1}...`);
+    console.log(`\n${'='.repeat(100)}`);
+    console.log(`📝 GENERATING TASK TEXT VARIATION ${request.variation_index || 1}`);
+    console.log(`${'='.repeat(100)}\n`);
 
     // Build task prompt with variation context
-    const { systemPrompt, userMessage } = this.buildTaskPrompt(request);
+    const { systemPrompt, userMessage } = this.buildTaskPromptWithVariation(request);
 
-    // Add variation instruction to system prompt if variation_index is provided
-    let enhancedSystemPrompt = systemPrompt;
-    if (request.variation_index) {
-      const variationStrategy =
-        request.variation_index === 1 ?
-          `**WARFARE & STRATEGY** or **ENGINEERING & CONSTRUCTION** context from the scenario library. Choose from: ancient battles, medieval sieges, bridge/dam construction, military logistics, fortification design, siege weapons, naval engineering. Draw from historical conflicts or monumental construction projects where mathematics determined victory or prevented catastrophic failure.` :
-        request.variation_index === 2 ?
-          `**DISCOVERY & EXPLORATION** or **CATASTROPHE & DISASTER** context from the scenario library. Choose from: space exploration, deep sea missions, polar expeditions, natural disasters, industrial accidents, nuclear incidents, transportation disasters. Focus on moments where scientific calculation meant survival or understanding catastrophe.` :
-          `**INVENTION & INNOVATION** or **CRIME & JUSTICE** context from the scenario library. Choose from: breakthrough inventions, scientific revolutions, famous heists, forensic analysis, accident reconstruction, security system design, technological breakthroughs. Focus on moments where mathematical precision enabled innovation or solved mysteries.`;
+    // Log the FULL prompts being sent to AI
+    console.log(`\n${'─'.repeat(100)}`);
+    console.log(`📤 [VARIATION ${request.variation_index}] FULL SYSTEM PROMPT (${systemPrompt.length} chars):`);
+    console.log(`${'─'.repeat(100)}`);
+    console.log(systemPrompt);
+    console.log(`${'─'.repeat(100)}\n`);
 
-      enhancedSystemPrompt += `\n\n**CRITICAL VARIATION REQUIREMENT FOR VARIATION #${request.variation_index}**:\n\n${variationStrategy}\n\n**SCENARIO SELECTION CRITERIA**:\n\nYou are an immortal teacher drawing from thousands of years of experience. Select ONE specific moment from your life that fits this variation's context. The scenario MUST meet ALL of these criteria:\n\n✅ **Historical/Global Significance**: A moment that shaped history, advanced civilization, or had consequences beyond individual lives\n✅ **Real Stakes**: Lives depended on the calculation, OR massive resources/infrastructure was at risk, OR a breakthrough discovery hinged on understanding the math\n✅ **Professional/Expert Context**: You were acting as an engineer, scientist, military strategist, detective, explorer, inventor, or expert - NOT as a civilian in daily life\n✅ **Memorable Event**: Something worthy of being recorded in history books, technical journals, or disaster reports\n\n**Scale & Scope Requirements**:\n- If construction: Major infrastructure (bridges, dams, skyscrapers, monuments)\n- If warfare: Battles/sieges that shaped nations, not personal combat\n- If disaster: Events with regional/global impact (tsunamis, nuclear incidents, major accidents)\n- If crime: Famous heists, major investigations, breakthrough forensics\n- If invention: Technologies that changed industries or saved lives\n- If exploration: Missions to unexplored territories (space, poles, deep sea, uncharted lands)\n\n**Remember**: You're telling your students about a time when YOU personally applied mathematics in a way that mattered to human civilization. This isn't about solving convenient problems - it's about understanding forces that built and destroyed empires, saved and cost lives, advanced and threatened humanity.`;
-    }
+    console.log(`${'─'.repeat(100)}`);
+    console.log(`📤 [VARIATION ${request.variation_index}] FULL USER MESSAGE (${userMessage.length} chars):`);
+    console.log(`${'─'.repeat(100)}`);
+    console.log(userMessage);
+    console.log(`${'─'.repeat(100)}\n`);
 
-    // Log the prompts being sent to AI
-    console.log(`\n📤 [AI Prompt] System Prompt (${enhancedSystemPrompt.length} chars):`);
-    console.log(`${enhancedSystemPrompt}...`);
-    console.log(`\n📤 [AI Prompt] User Message (${userMessage.length} chars):`);
-    console.log(`${userMessage}\n`);
+    console.log(`🤖 Sending request to AI...\n`);
 
     const taskResult = await this.textGenerator.generateWithSystemPrompt(
-      enhancedSystemPrompt,
+      systemPrompt,
       userMessage,
       {
         temperature: 0.85, // Slightly higher for more variation
@@ -527,7 +571,10 @@ export class TaskGeneratorService {
 
     // Parse the task JSON response
     const taskData = this.parseTaskResponse(taskResult.text);
-    console.log(`✅ Generated task text variation: "${taskData.title}"`);
+
+    console.log(`\n${'─'.repeat(100)}`);
+    console.log(`✅ [VARIATION ${request.variation_index}] Generated task text: "${taskData.title}"`);
+    console.log(`${'─'.repeat(100)}\n`);
 
     // Calculate estimated time
     const estimatedTime = this.calculateEstimatedTime(

@@ -43,6 +43,30 @@
         "mathematics": {
           "name": "Mathematics",
           "file": "us_mathematics_grade_9_12.json"
+        },
+        "physics": {
+          "name": "Physics",
+          "file": "us_physics_grade_9_12.json"
+        },
+        "chemistry": {
+          "name": "Chemistry",
+          "file": "us_chemistry_grade_9_12.json"
+        },
+        "biology": {
+          "name": "Biology",
+          "file": "us_biology_grade_9_12.json"
+        },
+        "history": {
+          "name": "History",
+          "file": "us_history_grade_9_12.json"
+        },
+        "geography": {
+          "name": "Geography",
+          "file": "us_geography_grade_9_12.json"
+        },
+        "informatics": {
+          "name": "Informatics",
+          "file": "us_informatics_grade_9_12.json"
         }
       }
     },
