@@ -580,6 +580,9 @@ export class TaskController {
 
       console.log(`📥 Request to upload PDF for task: ${taskId}`);
 
+      // Extract task title from request body (optional)
+      const taskTitle = req.body.taskTitle || req.body.title;
+
       // Convert base64 PDF data to buffer
       // Handle both formats: "data:application/pdf;base64,..." and "data:application/pdf;filename=...;base64,..."
       const pdfBase64 = req.body.pdfData.replace(/^data:application\/pdf;[^,]*,/, '');
@@ -587,9 +590,12 @@ export class TaskController {
 
       console.log(`📄 PDF size: ${(pdfBuffer.length / 1024).toFixed(2)} KB`);
       console.log(`📄 Original data length: ${req.body.pdfData.length}, Base64 length: ${pdfBase64.length}`);
+      if (taskTitle) {
+        console.log(`📄 Task title: ${taskTitle}`);
+      }
 
-      // Upload to Firebase Storage
-      const result = await uploadTaskPDF(taskId, pdfBuffer);
+      // Upload to Firebase Storage with optional task title
+      const result = await uploadTaskPDF(taskId, pdfBuffer, taskTitle);
 
       if (!result.success) {
         res.status(500).json({

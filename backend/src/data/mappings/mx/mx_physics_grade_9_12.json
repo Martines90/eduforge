@@ -3033,6 +3033,1447 @@
           ]
         }
       ]
+    },
+    {
+      "key": "trabajo_energia_potencia",
+      "name": "Trabajo, Energía y Potencia",
+      "short_description": "Conceptos de trabajo mecánico, energía cinética y potencial, conservación de energía, potencia y eficiencia.",
+      "sub_topics": [
+        {
+          "key": "trabajo_mecanico",
+          "name": "Trabajo Mecánico",
+          "short_description": "Trabajo como transferencia de energía mediante fuerza; W = F·d·cos θ; trabajo positivo, negativo y nulo.",
+          "sub_topics": [
+            {
+              "key": "definicion_trabajo",
+              "name": "Definición de Trabajo",
+              "short_description": "Trabajo realizado por fuerza constante: W = F·d·cos θ; unidad: Joule (J = N·m).",
+              "example_tasks": [
+                "Calcula el trabajo realizado al empujar caja con 50 N una distancia de 10 m horizontalmente (W = Fd = 500 J).",
+                "Determina el trabajo si fuerza de 100 N forma ángulo de 30° con desplazamiento de 5 m (W = Fd cos 30°).",
+                "Explica por qué no se realiza trabajo al sostener un objeto pesado sin moverlo (d = 0, entonces W = 0)."
+              ]
+            },
+            {
+              "key": "trabajo_positivo_negativo",
+              "name": "Trabajo Positivo, Negativo y Nulo",
+              "short_description": "W > 0 si fuerza ayuda al movimiento; W < 0 si se opone; W = 0 si es perpendicular.",
+              "example_tasks": [
+                "Clasifica el trabajo realizado por: gravedad sobre objeto cayendo (positivo), fricción sobre auto frenando (negativo), fuerza normal (nulo).",
+                "Calcula el trabajo de fricción (20 N) sobre objeto que se desliza 8 m (W = -Fd = -160 J).",
+                "Explica por qué el trabajo de la fuerza centrípeta en MCU es cero (F perpendicular a desplazamiento)."
+              ]
+            },
+            {
+              "key": "trabajo_fuerzas_variables",
+              "name": "Trabajo de Fuerzas Variables",
+              "short_description": "Trabajo como área bajo curva F-d; aplicación a resortes (W = ½kx²).",
+              "example_tasks": [
+                "Calcula el trabajo para estirar resorte (k = 200 N/m) desde x = 0 hasta x = 0.5 m (W = ½kx² = 25 J).",
+                "Determina el trabajo a partir de gráfica F-d calculando el área bajo la curva.",
+                "Compara trabajo para estirar resorte de 0 a 10 cm vs de 10 cm a 20 cm (segundo requiere más trabajo)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "energia_cinetica",
+          "name": "Energía Cinética",
+          "short_description": "Energía asociada al movimiento; Eₖ = ½mv²; teorema trabajo-energía.",
+          "sub_topics": [
+            {
+              "key": "definicion_energia_cinetica",
+              "name": "Definición de Energía Cinética",
+              "short_description": "Energía que posee cuerpo por estar en movimiento; Eₖ = ½mv²; unidad: Joule.",
+              "example_tasks": [
+                "Calcula la energía cinética de auto de 1000 kg viajando a 20 m/s (Eₖ = ½mv² = 200,000 J).",
+                "Determina qué objeto tiene mayor Eₖ: camión de 2000 kg a 10 m/s o auto de 1000 kg a 20 m/s.",
+                "Explica por qué duplicar velocidad cuadruplica energía cinética (v² en la fórmula)."
+              ]
+            },
+            {
+              "key": "teorema_trabajo_energia",
+              "name": "Teorema Trabajo-Energía",
+              "short_description": "Trabajo neto sobre objeto igual a cambio en energía cinética: W_neto = ΔEₖ = ½mv²_f - ½mv²_i.",
+              "example_tasks": [
+                "Calcula el trabajo neto sobre auto de 800 kg que acelera de 10 m/s a 25 m/s (W = ΔEₖ).",
+                "Determina la distancia de frenado de auto a 30 m/s si fricción es 5000 N y masa 1000 kg (usa W = ΔEₖ).",
+                "Explica por qué auto necesita más distancia para frenar a alta velocidad (Eₖ es proporcional a v²)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "energia_potencial",
+          "name": "Energía Potencial",
+          "short_description": "Energía almacenada por posición o configuración; gravitacional y elástica.",
+          "sub_topics": [
+            {
+              "key": "energia_potencial_gravitacional",
+              "name": "Energía Potencial Gravitacional",
+              "short_description": "Energía por posición en campo gravitacional; Eₚ = mgh (cerca de superficie terrestre).",
+              "example_tasks": [
+                "Calcula Eₚ de objeto de 5 kg a 10 m de altura (Eₚ = mgh = 5 × 9.8 × 10 = 490 J).",
+                "Determina a qué altura debe estar objeto de 2 kg para tener Eₚ = 100 J.",
+                "Explica por qué Eₚ depende del nivel de referencia elegido (solo cambios en Eₚ son físicamente significativos)."
+              ]
+            },
+            {
+              "key": "energia_potencial_elastica",
+              "name": "Energía Potencial Elástica",
+              "short_description": "Energía almacenada en resorte deformado; Eₚ_elástica = ½kx².",
+              "example_tasks": [
+                "Calcula energía almacenada en resorte (k = 500 N/m) comprimido 0.2 m (Eₚ = ½kx² = 10 J).",
+                "Determina la constante k de resorte que almacena 50 J al estirarse 0.5 m.",
+                "Compara energía para comprimir resorte 2 cm vs 4 cm (cuatro veces más energía en segundo caso)."
+              ]
+            },
+            {
+              "key": "trabajo_fuerzas_conservativas",
+              "name": "Fuerzas Conservativas y No Conservativas",
+              "short_description": "Conservativas: trabajo independiente de trayectoria (gravedad, elástica); no conservativas: depende de trayectoria (fricción).",
+              "example_tasks": [
+                "Clasifica como conservativa o no conservativa: gravedad, fricción, fuerza elástica, resistencia del aire.",
+                "Explica por qué trabajo de gravedad al subir y bajar montaña es cero (fuerza conservativa).",
+                "Calcula energía disipada por fricción (fuerza no conservativa) en deslizamiento de 10 m con fᶠ = 15 N."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "conservacion_energia",
+          "name": "Conservación de la Energía Mecánica",
+          "short_description": "En ausencia de fuerzas no conservativas, energía mecánica total se conserva; E_mecánica = Eₖ + Eₚ = constante.",
+          "sub_topics": [
+            {
+              "key": "principio_conservacion_energia",
+              "name": "Principio de Conservación de Energía",
+              "short_description": "Energía no se crea ni destruye, solo se transforma; E_inicial = E_final.",
+              "example_tasks": [
+                "Calcula velocidad de objeto al caer desde 20 m usando conservación de energía (mgh = ½mv²).",
+                "Determina altura máxima de pelota lanzada hacia arriba con v₀ = 15 m/s (½mv₀² = mgh).",
+                "Explica transformaciones de energía en péndulo: Eₚ máxima en extremos, Eₖ máxima en punto más bajo."
+              ]
+            },
+            {
+              "key": "problemas_conservacion_energia",
+              "name": "Problemas de Conservación de Energía",
+              "short_description": "Aplicaciones en caída libre, montañas rusas, péndulos, resortes.",
+              "example_tasks": [
+                "En montaña rusa, auto parte desde reposo a 30 m de altura. ¿Qué velocidad tiene a 10 m? (usa mgh₁ = mgh₂ + ½mv²).",
+                "Bloque comprime resorte (k = 400 N/m) 0.3 m. Al soltarse, ¿qué velocidad alcanza si m = 2 kg? (½kx² = ½mv²).",
+                "Péndulo se suelta desde ángulo de 60°. Calcula velocidad en punto más bajo (conservación de energía)."
+              ]
+            },
+            {
+              "key": "energia_fuerzas_no_conservativas",
+              "name": "Energía con Fuerzas No Conservativas",
+              "short_description": "Con fricción: E_inicial = E_final + E_disipada; trabajo de fricción se convierte en calor.",
+              "example_tasks": [
+                "Objeto desliza por rampa de 5 m con fricción. Si parte con v = 10 m/s y llega con v = 6 m/s, calcula energía disipada.",
+                "Calcula velocidad final de bloque que desciende plano inclinado 10 m, 30° con μₖ = 0.2 (considera fricción).",
+                "Explica por qué autos necesitan gasolina continuamente (fricción y resistencia del aire disipan energía mecánica)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "potencia",
+          "name": "Potencia Mecánica",
+          "short_description": "Rapidez con que se realiza trabajo o se transfiere energía; P = W/t = F·v; unidad: Watt.",
+          "sub_topics": [
+            {
+              "key": "definicion_potencia",
+              "name": "Definición y Cálculo de Potencia",
+              "short_description": "Potencia media: P = W/t; potencia instantánea: P = F·v; unidad: Watt (W = J/s).",
+              "example_tasks": [
+                "Calcula potencia de motor que realiza 5000 J de trabajo en 10 s (P = W/t = 500 W).",
+                "Determina potencia necesaria para elevar ascensor de 1000 kg a velocidad constante de 2 m/s (P = Fv = mgv).",
+                "Convierte unidades: 2 kW a watts, 5 hp a watts (1 hp ≈ 746 W), 1 MW a kW."
+              ]
+            },
+            {
+              "key": "potencia_velocidad",
+              "name": "Relación entre Potencia y Velocidad",
+              "short_description": "P = F·v; para potencia constante, mayor velocidad requiere menor fuerza.",
+              "example_tasks": [
+                "Auto con motor de 100 kW viaja a 25 m/s. ¿Qué fuerza desarrolla? (F = P/v = 4000 N).",
+                "Explica por qué los autos cambian a velocidades más bajas en subidas empinadas (necesitan más fuerza, P = Fv constante).",
+                "Calcula velocidad máxima de ciclista que genera 300 W contra resistencia de 20 N."
+              ]
+            },
+            {
+              "key": "eficiencia_energetica",
+              "name": "Eficiencia y Rendimiento",
+              "short_description": "Eficiencia: η = (energía útil/energía total) × 100%; pérdidas por fricción y calor.",
+              "example_tasks": [
+                "Calcula eficiencia de motor que consume 1000 J y produce 700 J de trabajo útil (η = 70%).",
+                "Determina energía desperdiciada en máquina con eficiencia 60% que consume 5000 J.",
+                "Explica por qué ninguna máquina tiene eficiencia del 100% (segunda ley de termodinámica, fricción inevitable)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "cantidad_movimiento_choques",
+      "name": "Cantidad de Movimiento y Choques",
+      "short_description": "Momento lineal, impulso, conservación de momento, colisiones elásticas e inelásticas.",
+      "sub_topics": [
+        {
+          "key": "cantidad_movimiento",
+          "name": "Cantidad de Movimiento (Momento Lineal)",
+          "short_description": "Definición: p = mv; magnitud vectorial; conservación en sistemas aislados.",
+          "sub_topics": [
+            {
+              "key": "definicion_momento",
+              "name": "Definición de Cantidad de Movimiento",
+              "short_description": "Momento lineal: p = mv; unidad: kg·m/s; vector en dirección de velocidad.",
+              "example_tasks": [
+                "Calcula momento de auto de 1200 kg viajando a 25 m/s (p = mv = 30,000 kg·m/s).",
+                "Compara momento de: camión de 5000 kg a 10 m/s vs auto de 1000 kg a 30 m/s.",
+                "Explica por qué es más difícil detener camión que bicicleta a misma velocidad (mayor masa, mayor momento)."
+              ]
+            },
+            {
+              "key": "conservacion_momento",
+              "name": "Conservación de la Cantidad de Movimiento",
+              "short_description": "En sistema aislado (sin fuerzas externas), momento total se conserva: p_inicial = p_final.",
+              "example_tasks": [
+                "Dos patinadores (50 kg y 70 kg) se empujan. Si uno sale a 2 m/s, ¿cuál es velocidad del otro? (conservación de p).",
+                "Explica retroceso de rifle al disparar usando conservación de momento (p_rifle + p_bala = 0).",
+                "Verifica conservación de momento en explosión: objeto en reposo se divide en dos fragmentos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "impulso",
+          "name": "Impulso y Teorema Impulso-Momento",
+          "short_description": "Impulso: I = F·Δt = Δp; cambio de momento igual a impulso aplicado.",
+          "sub_topics": [
+            {
+              "key": "definicion_impulso",
+              "name": "Definición de Impulso",
+              "short_description": "Impulso: I = F·Δt; producto de fuerza por tiempo de aplicación; unidad: N·s.",
+              "example_tasks": [
+                "Calcula impulso de fuerza de 500 N aplicada durante 0.02 s (I = F·Δt = 10 N·s).",
+                "Determina fuerza promedio si impulso es 100 N·s durante 0.5 s.",
+                "Explica por qué airbags reducen lesiones (aumentan Δt, reducen F para mismo impulso)."
+              ]
+            },
+            {
+              "key": "teorema_impulso_momento",
+              "name": "Teorema Impulso-Momento",
+              "short_description": "Impulso igual a cambio de momento: F·Δt = Δp = m(v_f - v_i).",
+              "example_tasks": [
+                "Pelota de 0.5 kg cambia velocidad de 20 m/s a -15 m/s al rebotar. Calcula impulso recibido.",
+                "Determina fuerza promedio sobre auto de 1000 kg que frena de 30 m/s a 0 en 5 s.",
+                "Explica por qué caer sobre superficie suave duele menos que sobre concreto (mayor Δt en superficie suave)."
+              ]
+            },
+            {
+              "key": "aplicaciones_impulso",
+              "name": "Aplicaciones del Impulso",
+              "short_description": "Seguridad vehicular, deportes, empaques, caídas.",
+              "example_tasks": [
+                "Analiza diseño de cinturón de seguridad: ¿cómo aumenta Δt para reducir F?",
+                "Explica por qué jugadores de baseball usan guantes gruesos (aumentan tiempo de contacto).",
+                "Compara impulso al atrapar pelota con manos rígidas vs flexionando brazos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "colisiones",
+          "name": "Colisiones y Choques",
+          "short_description": "Clasificación de colisiones: elásticas (conservan Eₖ) e inelásticas (no conservan Eₖ); conservación de momento.",
+          "sub_topics": [
+            {
+              "key": "tipos_colisiones",
+              "name": "Tipos de Colisiones",
+              "short_description": "Elásticas: conservan p y Eₖ; inelásticas: conservan p pero no Eₖ; perfectamente inelásticas: objetos quedan unidos.",
+              "example_tasks": [
+                "Clasifica colisiones: bolas de billar (casi elástica), plastilina chocando (perfectamente inelástica), autos en choque (inelástica).",
+                "Explica por qué todas las colisiones macroscópicas son al menos parcialmente inelásticas (fricción, deformación, sonido).",
+                "Identifica qué se conserva en cada tipo: elástica (p y Eₖ), inelástica (solo p)."
+              ]
+            },
+            {
+              "key": "colisiones_elasticas",
+              "name": "Colisiones Elásticas",
+              "short_description": "Se conservan momento y energía cinética; ecuaciones: m₁v₁ᵢ + m₂v₂ᵢ = m₁v₁f + m₂v₂f y ½m₁v₁ᵢ² + ½m₂v₂ᵢ² = ½m₁v₁f² + ½m₂v₂f².",
+              "example_tasks": [
+                "Esfera de 2 kg a 5 m/s choca elásticamente con esfera de 3 kg en reposo. Calcula velocidades finales.",
+                "Demuestra que en colisión elástica frontal con masas iguales, las velocidades se intercambian.",
+                "Verifica que se conservan p y Eₖ en problema de colisión elástica dado."
+              ]
+            },
+            {
+              "key": "colisiones_inelasticas",
+              "name": "Colisiones Inelásticas",
+              "short_description": "Se conserva momento pero no Eₖ; energía se disipa en deformación, calor, sonido.",
+              "example_tasks": [
+                "Auto de 1000 kg a 20 m/s choca con auto de 1500 kg en reposo y quedan unidos. Calcula velocidad final.",
+                "Determina energía perdida en colisión perfectamente inelástica del problema anterior.",
+                "Explica adónde va la energía cinética perdida en colisiones inelásticas (deformación, calor, sonido)."
+              ]
+            },
+            {
+              "key": "coeficiente_restitucion",
+              "name": "Coeficiente de Restitución",
+              "short_description": "e = |v_separación|/|v_aproximación|; e = 1 (elástica), e = 0 (perfectamente inelástica), 0 < e < 1 (inelástica).",
+              "example_tasks": [
+                "Calcula coeficiente de restitución de pelota que cae desde 2 m y rebota a 1.5 m (e = √(h_rebote/h_inicial)).",
+                "Determina altura de segundo rebote de pelota con e = 0.8 soltada desde 10 m.",
+                "Explica por qué pelotas de basketball tienen mayor e que pelotas de plastilina."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "centro_masa",
+          "name": "Centro de Masa y Sistemas de Partículas",
+          "short_description": "Punto donde se concentra toda la masa del sistema; movimiento del centro de masa.",
+          "sub_topics": [
+            {
+              "key": "definicion_centro_masa",
+              "name": "Definición y Cálculo del Centro de Masa",
+              "short_description": "Posición promedio ponderada por masa: x_cm = Σ(mᵢxᵢ)/Σmᵢ; similar para y y z.",
+              "example_tasks": [
+                "Calcula centro de masa de sistema: masa de 2 kg en x = 0 y masa de 3 kg en x = 5 m.",
+                "Determina centro de masa de tres masas en vértices de triángulo.",
+                "Explica por qué centro de masa de objeto simétrico homogéneo está en su centro geométrico."
+              ]
+            },
+            {
+              "key": "movimiento_centro_masa",
+              "name": "Movimiento del Centro de Masa",
+              "short_description": "Centro de masa se mueve como si toda la masa estuviera concentrada en él y fuerzas externas actuaran sobre él.",
+              "example_tasks": [
+                "Calcula velocidad del centro de masa de dos patinadores (50 kg a 3 m/s, 70 kg a 2 m/s en misma dirección).",
+                "Explica por qué centro de masa de sistema aislado se mueve con velocidad constante (conservación de momento).",
+                "Analiza movimiento del centro de masa en explosión de cohete (trayectoria parabólica continúa)."
+              ]
+            },
+            {
+              "key": "aplicaciones_centro_masa",
+              "name": "Aplicaciones del Centro de Masa",
+              "short_description": "Estabilidad de objetos, equilibrio, deportes, astronáutica.",
+              "example_tasks": [
+                "Explica por qué objetos con centro de masa bajo son más estables (menor torque al inclinar).",
+                "Analiza salto de altura Fosbury Flop: atleta pasa sobre barra mientras su centro de masa pasa por debajo.",
+                "Describe cómo astronautas en espacio usan conservación de momento para moverse sin fuerzas externas."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gravitacion_universal",
+      "name": "Gravitación Universal",
+      "short_description": "Ley de gravitación universal, campo gravitacional, movimiento de planetas y satélites, leyes de Kepler.",
+      "sub_topics": [
+        {
+          "key": "ley_gravitacion_universal",
+          "name": "Ley de Gravitación Universal de Newton",
+          "short_description": "Fuerza gravitacional entre masas: F = Gm₁m₂/r²; constante G = 6.67 × 10⁻¹¹ N·m²/kg².",
+          "sub_topics": [
+            {
+              "key": "enunciado_ley_gravitacion",
+              "name": "Enunciado de la Ley de Gravitación",
+              "short_description": "Toda masa atrae a otra con fuerza proporcional al producto de masas e inversamente proporcional al cuadrado de distancia.",
+              "example_tasks": [
+                "Calcula fuerza gravitacional entre dos masas de 50 kg separadas 2 m (usa F = Gm₁m₂/r²).",
+                "Determina a qué distancia debe separar dos masas de 10 kg para que F = 1 × 10⁻⁸ N.",
+                "Explica por qué no sentimos atracción gravitacional entre objetos cotidianos (F es extremadamente pequeña por G pequeña)."
+              ]
+            },
+            {
+              "key": "peso_gravedad",
+              "name": "Peso y Aceleración Gravitacional",
+              "short_description": "Peso: W = mg donde g = GM/R²; variación de g con altitud y latitud.",
+              "example_tasks": [
+                "Calcula g en superficie de Marte (M = 6.4 × 10²³ kg, R = 3.4 × 10⁶ m) usando g = GM/R².",
+                "Determina peso de persona de 70 kg en: Tierra (g = 9.8 m/s²), Luna (g = 1.6 m/s²), Júpiter (g = 24.8 m/s²).",
+                "Explica por qué g disminuye con altitud (r² en denominador, mayor distancia al centro de Tierra)."
+              ]
+            },
+            {
+              "key": "campo_gravitacional",
+              "name": "Campo Gravitacional",
+              "short_description": "Región del espacio donde masa experimenta fuerza; intensidad: g = GM/r²; líneas de campo.",
+              "example_tasks": [
+                "Calcula intensidad del campo gravitacional terrestre a altura de órbita de ISS (400 km sobre superficie).",
+                "Dibuja líneas de campo gravitacional alrededor de la Tierra (radiales hacia el centro).",
+                "Determina energía potencial gravitacional: U = -GMm/r (negativa, cero en infinito)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "movimiento_planetario",
+          "name": "Movimiento de Planetas y Satélites",
+          "short_description": "Órbitas circulares y elípticas, velocidad orbital, energía en órbitas.",
+          "sub_topics": [
+            {
+              "key": "orbitas_circulares",
+              "name": "Órbitas Circulares",
+              "short_description": "Fuerza gravitacional proporciona aceleración centrípeta; v = √(GM/r).",
+              "example_tasks": [
+                "Calcula velocidad orbital de satélite a 400 km sobre la Tierra (v = √(GM/r), r = R_T + h).",
+                "Determina periodo orbital de satélite en órbita circular a cierta altura (T = 2πr/v).",
+                "Explica por qué satélites en órbitas más altas se mueven más lento (v proporcional a 1/√r)."
+              ]
+            },
+            {
+              "key": "velocidad_escape",
+              "name": "Velocidad de Escape",
+              "short_description": "Velocidad mínima para escapar de campo gravitacional: v_esc = √(2GM/R).",
+              "example_tasks": [
+                "Calcula velocidad de escape de la Tierra (v_esc = √(2GM_T/R_T) ≈ 11.2 km/s).",
+                "Determina velocidad de escape de la Luna y compara con la de Tierra (menor masa y radio).",
+                "Explica por qué la Luna no tiene atmósfera (velocidad térmica de gases > v_esc lunar)."
+              ]
+            },
+            {
+              "key": "energia_orbital",
+              "name": "Energía Mecánica en Órbitas",
+              "short_description": "E_total = Eₖ + Eₚ = -GMm/(2r); órbitas ligadas tienen E < 0.",
+              "example_tasks": [
+                "Calcula energía total de satélite de 1000 kg en órbita circular a 500 km sobre Tierra.",
+                "Determina energía necesaria para llevar satélite desde superficie terrestre a órbita.",
+                "Explica por qué E_total negativa significa órbita cerrada (ligada gravitacionalmente)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "leyes_kepler",
+          "name": "Leyes de Kepler del Movimiento Planetario",
+          "short_description": "Tres leyes que describen órbitas planetarias; derivadas de ley de gravitación universal.",
+          "sub_topics": [
+            {
+              "key": "primera_ley_kepler",
+              "name": "Primera Ley de Kepler (Ley de las Órbitas)",
+              "short_description": "Planetas describen órbitas elípticas con el Sol en uno de los focos.",
+              "example_tasks": [
+                "Define elementos de elipse: focos, semieje mayor (a), semieje menor (b), excentricidad (e).",
+                "Explica que órbitas circulares son casos especiales de elipses (e = 0).",
+                "Identifica afelio (punto más alejado del Sol) y perihelio (punto más cercano) en órbita elíptica."
+              ]
+            },
+            {
+              "key": "segunda_ley_kepler",
+              "name": "Segunda Ley de Kepler (Ley de las Áreas)",
+              "short_description": "Radio vector barre áreas iguales en tiempos iguales; conservación de momento angular.",
+              "example_tasks": [
+                "Explica por qué planeta se mueve más rápido en perihelio que en afelio (conservación de L).",
+                "Relaciona segunda ley con conservación de momento angular (L = mvr = constante).",
+                "Calcula razón de velocidades en perihelio y afelio si r_per/r_afe = 0.98/1.02."
+              ]
+            },
+            {
+              "key": "tercera_ley_kepler",
+              "name": "Tercera Ley de Kepler (Ley de los Periodos)",
+              "short_description": "Cuadrado del periodo es proporcional al cubo del semieje mayor: T² = (4π²/GM)a³.",
+              "example_tasks": [
+                "Calcula periodo orbital de planeta cuyo semieje mayor es el doble que el de Tierra (T² ∝ a³).",
+                "Determina semieje mayor de satélite con periodo de 24 horas (órbita geoestacionaria).",
+                "Usa tercera ley para estimar masa del Sol conociendo periodo y radio orbital de Tierra."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "aplicaciones_gravitacion",
+          "name": "Aplicaciones de la Gravitación",
+          "short_description": "Satélites artificiales, GPS, mareas, agujeros negros.",
+          "sub_topics": [
+            {
+              "key": "satelites_artificiales",
+              "name": "Satélites Artificiales y Comunicaciones",
+              "short_description": "Tipos de órbitas: LEO, MEO, GEO; aplicaciones en comunicaciones, navegación, observación.",
+              "example_tasks": [
+                "Compara órbitas: LEO (baja, 200-2000 km), MEO (media, GPS ~20,000 km), GEO (geosíncrona, ~36,000 km).",
+                "Explica ventajas de órbita geoestacionaria (permanece sobre mismo punto terrestre, ideal para comunicaciones).",
+                "Investiga satélites mexicanos: Morelos, Solidaridad, Mexsat; sus aplicaciones."
+              ]
+            },
+            {
+              "key": "mareas",
+              "name": "Mareas",
+              "short_description": "Efecto diferencial de gravedad lunar y solar; mareas altas y bajas.",
+              "example_tasks": [
+                "Explica causa de mareas: diferencia en fuerza gravitacional lunar en lados cercano y lejano de Tierra.",
+                "Describe por qué hay dos mareas altas por día (abultamiento en lado hacia Luna y lado opuesto).",
+                "Compara influencia de Luna y Sol en mareas (Luna tiene mayor efecto por estar más cerca)."
+              ]
+            },
+            {
+              "key": "agujeros_negros",
+              "name": "Introducción a Agujeros Negros",
+              "short_description": "Objetos con gravedad tan intensa que ni la luz escapa; radio de Schwarzschild.",
+              "example_tasks": [
+                "Define horizonte de eventos: frontera donde v_esc = c (velocidad de la luz).",
+                "Calcula radio de Schwarzschild: Rₛ = 2GM/c² para objeto de masa del Sol.",
+                "Explica efectos observables de agujeros negros: acreción de materia, lentes gravitacionales, ondas gravitacionales."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "mecanica_fluidos",
+      "name": "Mecánica de Fluidos",
+      "short_description": "Propiedades de fluidos, presión, principios de Pascal y Arquímedes, fluidos en movimiento.",
+      "sub_topics": [
+        {
+          "key": "propiedades_fluidos",
+          "name": "Propiedades de los Fluidos",
+          "short_description": "Densidad, presión, viscosidad; diferencia entre líquidos y gases.",
+          "sub_topics": [
+            {
+              "key": "densidad",
+              "name": "Densidad",
+              "short_description": "Masa por unidad de volumen: ρ = m/V; unidad: kg/m³.",
+              "example_tasks": [
+                "Calcula densidad de objeto de 500 g que ocupa 250 cm³ (ρ = m/V = 2 g/cm³ = 2000 kg/m³).",
+                "Compara densidades: agua (1000 kg/m³), mercurio (13,600 kg/m³), aire (1.2 kg/m³).",
+                "Explica por qué hielo flota en agua (ρ_hielo < ρ_agua)."
+              ]
+            },
+            {
+              "key": "presion_fluidos",
+              "name": "Presión en Fluidos",
+              "short_description": "Presión: P = F/A; unidades: Pascal (Pa), atm, mmHg, bar.",
+              "example_tasks": [
+                "Calcula presión ejercida por fuerza de 500 N sobre área de 0.1 m² (P = F/A = 5000 Pa).",
+                "Convierte: 1 atm a Pa (101,325 Pa), 760 mmHg a atm (1 atm), 2 bar a Pa.",
+                "Explica por qué presión se transmite uniformemente en fluido confinado (las moléculas están en contacto)."
+              ]
+            },
+            {
+              "key": "presion_hidrostatica",
+              "name": "Presión Hidrostática",
+              "short_description": "Presión debido a peso del fluido: P = P₀ + ρgh; aumenta con profundidad.",
+              "example_tasks": [
+                "Calcula presión a 10 m de profundidad en agua (P = P_atm + ρgh = 101,325 + 1000×9.8×10 Pa).",
+                "Determina profundidad en océano donde presión es el doble de la atmosférica.",
+                "Explica por qué las presas tienen paredes más gruesas en el fondo (mayor presión a mayor profundidad)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "principio_pascal",
+          "name": "Principio de Pascal",
+          "short_description": "Cambio de presión en fluido confinado se transmite sin disminución a todos los puntos; aplicación en prensas hidráulicas.",
+          "sub_topics": [
+            {
+              "key": "enunciado_pascal",
+              "name": "Enunciado del Principio de Pascal",
+              "short_description": "Presión aplicada a fluido confinado se transmite íntegramente en todas direcciones.",
+              "example_tasks": [
+                "Explica el principio de Pascal y por qué los fluidos son incompresibles (volumen constante).",
+                "Da ejemplos de aplicaciones: frenos hidráulicos, gatos hidráulicos, prensas, elevadores.",
+                "Describe cómo sistema hidráulico multiplica fuerza (presión igual en ambos lados, diferente área)."
+              ]
+            },
+            {
+              "key": "prensa_hidraulica",
+              "name": "Prensa Hidráulica",
+              "short_description": "Multiplicación de fuerza: F₁/A₁ = F₂/A₂; ventaja mecánica.",
+              "example_tasks": [
+                "Calcula fuerza de salida si pistón pequeño (A₁ = 10 cm²) recibe F₁ = 100 N y pistón grande tiene A₂ = 200 cm².",
+                "Determina ventaja mecánica de prensa hidráulica con razón de áreas 1:50.",
+                "Explica por qué no se viola conservación de energía (trabajo es el mismo: F₁d₁ = F₂d₂)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "principio_arquimedes",
+          "name": "Principio de Arquímedes",
+          "short_description": "Fuerza de empuje sobre objeto sumergido igual al peso del fluido desplazado; flotación.",
+          "sub_topics": [
+            {
+              "key": "enunciado_arquimedes",
+              "name": "Enunciado del Principio de Arquímedes",
+              "short_description": "Empuje (flotación): E = ρ_fluido × V_sumergido × g; dirección: hacia arriba.",
+              "example_tasks": [
+                "Calcula empuje sobre objeto de 500 cm³ totalmente sumergido en agua (E = ρ_agua × V × g).",
+                "Determina volumen de objeto que flota si tiene densidad 0.8 g/cm³ en agua (ρ_obj × V_total × g = ρ_agua × V_sumergido × g).",
+                "Explica por qué sientes más ligero objeto pesado bajo el agua (empuje reduce peso aparente)."
+              ]
+            },
+            {
+              "key": "flotacion",
+              "name": "Condiciones de Flotación",
+              "short_description": "Flota si ρ_objeto < ρ_fluido; se hunde si ρ_objeto > ρ_fluido; suspendido si ρ_objeto = ρ_fluido.",
+              "example_tasks": [
+                "Explica por qué barco de acero flota (densidad promedio < densidad agua por espacio vacío interior).",
+                "Calcula qué fracción de iceberg está sumergida (ρ_hielo/ρ_agua ≈ 0.92, entonces 92% bajo agua).",
+                "Determina densidad de objeto que flota con 3/4 de su volumen sumergido en agua."
+              ]
+            },
+            {
+              "key": "aplicaciones_arquimedes",
+              "name": "Aplicaciones del Principio de Arquímedes",
+              "short_description": "Submarinos, globos aerostáticos, hidrómetros, diseño naval.",
+              "example_tasks": [
+                "Explica cómo submarino controla flotación (tanques de lastre con agua/aire).",
+                "Describe funcionamiento de globo aerostático (aire caliente menos denso que aire frío).",
+                "Investiga cómo hidrómetro mide densidad de líquidos (profundidad de hundimiento indica densidad)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fluidos_movimiento",
+          "name": "Fluidos en Movimiento",
+          "short_description": "Ecuación de continuidad, ecuación de Bernoulli, aplicaciones en tuberías y aerodinámica.",
+          "sub_topics": [
+            {
+              "key": "flujo_fluidos",
+              "name": "Tipos de Flujo",
+              "short_description": "Flujo laminar (ordenado) vs turbulento (caótico); flujo estacionario vs no estacionario.",
+              "example_tasks": [
+                "Diferencia flujo laminar (suave, capas paralelas) de turbulento (remolinos, irregular).",
+                "Identifica ejemplos: agua de grifo (laminar a baja velocidad), rápidos de río (turbulento).",
+                "Explica que flujo ideal es: incompresible, no viscoso, estacionario, irrotacional."
+              ]
+            },
+            {
+              "key": "ecuacion_continuidad",
+              "name": "Ecuación de Continuidad",
+              "short_description": "Conservación de masa en flujo: A₁v₁ = A₂v₂; velocidad mayor donde área es menor.",
+              "example_tasks": [
+                "Calcula velocidad en tubería de 5 cm² si v₁ = 2 m/s en sección de 10 cm² (A₁v₁ = A₂v₂).",
+                "Explica por qué agua sale más rápido cuando tapas parcialmente manguera (menor área, mayor velocidad).",
+                "Determina razón de áreas si velocidad se cuadruplica en sección angosta de tubería."
+              ]
+            },
+            {
+              "key": "ecuacion_bernoulli",
+              "name": "Ecuación de Bernoulli",
+              "short_description": "Conservación de energía en flujo: P + ½ρv² + ρgh = constante.",
+              "example_tasks": [
+                "Aplica ecuación de Bernoulli para calcular velocidad de salida de agua de tanque con orificio a profundidad h.",
+                "Explica efecto Venturi: presión disminuye donde velocidad aumenta (P + ½ρv² = constante).",
+                "Describe sustentación de alas de avión: aire se mueve más rápido sobre ala (menor presión arriba, fuerza neta hacia arriba)."
+              ]
+            },
+            {
+              "key": "aplicaciones_fluidos_movimiento",
+              "name": "Aplicaciones de Fluidos en Movimiento",
+              "short_description": "Medidor Venturi, tubo Pitot, atomizadores, sistemas circulatorios.",
+              "example_tasks": [
+                "Explica funcionamiento de carburador (efecto Venturi aspira combustible).",
+                "Describe cómo tubo de Pitot mide velocidad de avión (mide presión estática y dinámica).",
+                "Investiga aplicación de ecuación de Bernoulli en medicina: aneurismas, estenosis arterial."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "termodinamica_calor",
+      "name": "Termodinámica y Calor",
+      "short_description": "Temperatura, calor, cambios de estado, leyes de la termodinámica, máquinas térmicas.",
+      "sub_topics": [
+        {
+          "key": "temperatura_escalas",
+          "name": "Temperatura y Escalas Termométricas",
+          "short_description": "Concepto de temperatura, equilibrio térmico, escalas Celsius, Fahrenheit y Kelvin.",
+          "sub_topics": [
+            {
+              "key": "concepto_temperatura",
+              "name": "Concepto de Temperatura",
+              "short_description": "Medida de energía cinética promedio de partículas; equilibrio térmico; ley cero de termodinámica.",
+              "example_tasks": [
+                "Explica temperatura en términos de energía cinética molecular (mayor temperatura, mayor movimiento molecular).",
+                "Define equilibrio térmico: dos cuerpos en contacto alcanzan la misma temperatura sin transferir calor neto.",
+                "Enuncia ley cero de termodinámica: si A está en equilibrio con C y B está en equilibrio con C, entonces A y B están en equilibrio."
+              ]
+            },
+            {
+              "key": "escalas_termometricas",
+              "name": "Escalas Termométricas",
+              "short_description": "Celsius (°C), Fahrenheit (°F), Kelvin (K); conversiones entre escalas.",
+              "example_tasks": [
+                "Convierte 25°C a Kelvin (K = °C + 273.15 = 298.15 K) y a Fahrenheit (°F = 9/5 × °C + 32 = 77°F).",
+                "Determina temperatura en °C si termómetro marca 68°F (°C = 5/9 × (°F - 32)).",
+                "Explica por qué Kelvin es escala absoluta (cero Kelvin es cero absoluto, no hay temperaturas negativas)."
+              ]
+            },
+            {
+              "key": "dilatacion_termica",
+              "name": "Dilatación Térmica",
+              "short_description": "Expansión de materiales al calentarse: lineal (ΔL = αL₀ΔT), superficial, volumétrica (ΔV = βV₀ΔT).",
+              "example_tasks": [
+                "Calcula dilatación de riel de acero de 10 m cuando temperatura aumenta 30°C (α_acero = 12×10⁻⁶ /°C).",
+                "Explica por qué se dejan espacios entre rieles de tren (permiten expansión térmica).",
+                "Determina cambio de volumen de 1 L de gasolina al calentarse 20°C (β_gasolina ≈ 950×10⁻⁶ /°C)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "calor_transferencia",
+          "name": "Calor y Transferencia de Energía",
+          "short_description": "Calor como energía en tránsito, calor específico, capacidad calorífica, mecanismos de transferencia.",
+          "sub_topics": [
+            {
+              "key": "calor_calor_especifico",
+              "name": "Calor y Calor Específico",
+              "short_description": "Q = mcΔT; calor específico (c) como energía para elevar 1 kg de sustancia 1°C; unidad: J/(kg·°C).",
+              "example_tasks": [
+                "Calcula calor necesario para elevar temperatura de 2 kg de agua de 20°C a 80°C (c_agua = 4186 J/(kg·°C)).",
+                "Determina calor específico de metal si 500 g requieren 1500 J para aumentar temperatura 10°C.",
+                "Explica por qué agua es buen regulador térmico (alto calor específico, requiere mucha energía para cambiar temperatura)."
+              ]
+            },
+            {
+              "key": "cambios_estado",
+              "name": "Cambios de Estado y Calor Latente",
+              "short_description": "Fusión, vaporización, sublimación; calor latente: Q = mL; temperatura constante durante cambio de fase.",
+              "example_tasks": [
+                "Calcula energía para fundir 100 g de hielo a 0°C (L_fusión = 334,000 J/kg).",
+                "Determina energía total para convertir 1 kg de hielo a -10°C en vapor a 110°C (incluye calentamiento + cambios de fase).",
+                "Explica por qué temperatura permanece constante durante fusión o ebullición (energía rompe enlaces, no aumenta Eₖ)."
+              ]
+            },
+            {
+              "key": "mecanismos_transferencia",
+              "name": "Mecanismos de Transferencia de Calor",
+              "short_description": "Conducción (contacto), convección (fluidos), radiación (ondas electromagnéticas).",
+              "example_tasks": [
+                "Identifica mecanismo: calor de estufa a mano (conducción + radiación), agua hirviendo (convección), Sol a Tierra (radiación).",
+                "Explica por qué metales conducen calor mejor que plásticos (electrones libres transportan energía).",
+                "Describe convección en atmósfera: aire caliente asciende, aire frío desciende (corrientes convectivas)."
+              ]
+            },
+            {
+              "key": "ley_enfriamiento_newton",
+              "name": "Ley de Enfriamiento de Newton",
+              "short_description": "Razón de enfriamiento proporcional a diferencia de temperatura: dQ/dt ∝ (T - T_ambiente).",
+              "example_tasks": [
+                "Explica por qué café caliente se enfría más rápido al inicio (mayor ΔT con ambiente).",
+                "Describe aplicaciones: forense (tiempo de muerte), cocina (enfriamiento de alimentos).",
+                "Investiga factores que afectan enfriamiento: área superficial, ventilación, propiedades del material."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "termodinamica_leyes",
+          "name": "Leyes de la Termodinámica",
+          "short_description": "Primera ley (conservación de energía), segunda ley (entropía), procesos termodinámicos.",
+          "sub_topics": [
+            {
+              "key": "primera_ley_termodinamica",
+              "name": "Primera Ley de la Termodinámica",
+              "short_description": "ΔU = Q - W; cambio en energía interna igual a calor absorbido menos trabajo realizado.",
+              "example_tasks": [
+                "Calcula ΔU si gas absorbe 500 J de calor y realiza 200 J de trabajo (ΔU = Q - W = 300 J).",
+                "Determina trabajo realizado por gas si absorbe 1000 J y su energía interna aumenta 400 J.",
+                "Explica conservación de energía: energía no se crea ni destruye, solo se transforma."
+              ]
+            },
+            {
+              "key": "procesos_termodinamicos",
+              "name": "Procesos Termodinámicos",
+              "short_description": "Isotérmico (T constante), isocórico (V constante), isobárico (P constante), adiabático (Q = 0).",
+              "example_tasks": [
+                "Identifica el proceso: gas se expande a presión constante (isobárico), gas comprimido sin intercambio de calor (adiabático).",
+                "Para proceso isotérmico ideal: W = nRT ln(V₂/V₁), ΔU = 0, Q = W.",
+                "Describe ciclo de Carnot: dos isotérmicas y dos adiabáticas; máxima eficiencia teórica."
+              ]
+            },
+            {
+              "key": "segunda_ley_entropia",
+              "name": "Segunda Ley y Entropía",
+              "short_description": "Entropía del universo tiende a aumentar; procesos naturales son irreversibles; no hay máquina 100% eficiente.",
+              "example_tasks": [
+                "Explica segunda ley: imposible convertir completamente calor en trabajo (siempre hay pérdidas).",
+                "Define entropía como medida de desorden: ΔS = Q/T; sistemas aislados tienden a mayor entropía.",
+                "Da ejemplos de procesos irreversibles: mezcla de gases, conducción de calor, fricción."
+              ]
+            },
+            {
+              "key": "eficiencia_termica",
+              "name": "Eficiencia Térmica",
+              "short_description": "η = W/Q_entrada = (Q_cal - Q_frío)/Q_cal; eficiencia de Carnot: η = 1 - T_fría/T_caliente.",
+              "example_tasks": [
+                "Calcula eficiencia de máquina que absorbe 1000 J y produce 300 J de trabajo útil (η = W/Q = 30%).",
+                "Determina eficiencia máxima teórica (Carnot) entre reservorios a 500 K y 300 K.",
+                "Explica por qué ninguna máquina real alcanza eficiencia de Carnot (fricción, pérdidas, procesos no reversibles)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "maquinas_termicas",
+          "name": "Máquinas Térmicas y Refrigeradores",
+          "short_description": "Motores de combustión, refrigeradores, bombas de calor, ciclos termodinámicos.",
+          "sub_topics": [
+            {
+              "key": "motores_combustion",
+              "name": "Motores de Combustión Interna",
+              "short_description": "Ciclo Otto (gasolina), ciclo Diesel; cuatro tiempos: admisión, compresión, explosión, escape.",
+              "example_tasks": [
+                "Describe las cuatro etapas del ciclo Otto en motor de gasolina.",
+                "Compara motor de gasolina (ignición por chispa) con motor diesel (ignición por compresión).",
+                "Explica por qué motores tienen eficiencia limitada (~25-30% en autos) por segunda ley de termodinámica."
+              ]
+            },
+            {
+              "key": "refrigeradores_ac",
+              "name": "Refrigeradores y Aires Acondicionados",
+              "short_description": "Máquinas que transfieren calor de zona fría a caliente; requieren trabajo; COP = Q_frío/W.",
+              "example_tasks": [
+                "Explica funcionamiento de refrigerador: compresor, condensador, válvula de expansión, evaporador.",
+                "Calcula coeficiente de rendimiento (COP) de refrigerador que extrae 3000 J con trabajo de 1000 J.",
+                "Describe ciclo de refrigeración: compresión (aumenta P y T), condensación (libera calor), expansión, evaporación (absorbe calor)."
+              ]
+            },
+            {
+              "key": "bombas_calor",
+              "name": "Bombas de Calor",
+              "short_description": "Similar a refrigerador pero para calentar; COP_calefacción = Q_caliente/W.",
+              "example_tasks": [
+                "Explica diferencia entre refrigerador (enfría interior) y bomba de calor (calienta interior).",
+                "Compara eficiencia: bomba de calor puede tener COP > 1 (transfiere más energía de la que consume).",
+                "Investiga aplicaciones en México: sistemas de calefacción geotérmica, aire acondicionado reversible."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "gases_ideales",
+          "name": "Teoría Cinética y Gases Ideales",
+          "short_description": "Modelo cinético molecular, ley de gases ideales, energía interna de gases.",
+          "sub_topics": [
+            {
+              "key": "teoria_cinetica",
+              "name": "Teoría Cinética Molecular",
+              "short_description": "Gases formados por partículas en movimiento aleatorio; presión por colisiones; temperatura relacionada con Eₖ promedio.",
+              "example_tasks": [
+                "Enumera postulados de teoría cinética: partículas en movimiento, colisiones elásticas, volumen de partículas despreciable.",
+                "Relaciona temperatura con energía cinética promedio: Ēₖ = (3/2)kT donde k es constante de Boltzmann.",
+                "Explica presión de gas: resultado de colisiones de moléculas contra paredes del recipiente."
+              ]
+            },
+            {
+              "key": "ley_gases_ideales",
+              "name": "Ley de Gases Ideales",
+              "short_description": "PV = nRT; relación entre presión, volumen, temperatura y cantidad de gas.",
+              "example_tasks": [
+                "Calcula presión de 2 moles de gas a 300 K en volumen de 0.05 m³ (usa PV = nRT, R = 8.314 J/(mol·K)).",
+                "Determina temperatura de gas si P = 200 kPa, V = 0.1 m³, n = 3 moles.",
+                "Aplica ley de gases ideales a problemas: globo aerostático, neumáticos de auto, tanques de buceo."
+              ]
+            },
+            {
+              "key": "leyes_gases",
+              "name": "Leyes de los Gases",
+              "short_description": "Ley de Boyle (P₁V₁ = P₂V₂), Ley de Charles (V₁/T₁ = V₂/T₂), Ley de Gay-Lussac (P₁/T₁ = P₂/T₂).",
+              "example_tasks": [
+                "Usa ley de Boyle: gas a 100 kPa y 2 L se comprime a 0.5 L. Calcula nueva presión (T constante).",
+                "Aplica ley de Charles: gas a 20°C ocupa 5 L. ¿Qué volumen a 80°C? (P constante).",
+                "Usa ley de Gay-Lussac: presión de neumático a 25°C es 200 kPa. ¿Qué presión a 50°C? (V constante)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ondas_sonido",
+      "name": "Ondas y Sonido",
+      "short_description": "Movimiento ondulatorio, características de ondas, sonido, efecto Doppler, interferencia y resonancia.",
+      "sub_topics": [
+        {
+          "key": "movimiento_ondulatorio",
+          "name": "Movimiento Ondulatorio",
+          "short_description": "Definición de onda, clasificación, características: amplitud, longitud de onda, frecuencia, periodo.",
+          "sub_topics": [
+            {
+              "key": "concepto_onda",
+              "name": "Concepto de Onda",
+              "short_description": "Perturbación que transfiere energía sin transporte neto de materia; ondas mecánicas y electromagnéticas.",
+              "example_tasks": [
+                "Define onda y explica que transporta energía sin transportar materia (partículas oscilan en su lugar).",
+                "Clasifica ondas: mecánicas (requieren medio: sonido, agua) y electromagnéticas (no requieren medio: luz, radio).",
+                "Da ejemplos de ondas en la vida cotidiana: ondas en agua, sonido, ondas sísmicas, ondas de radio."
+              ]
+            },
+            {
+              "key": "tipos_ondas",
+              "name": "Tipos de Ondas",
+              "short_description": "Transversales (vibración perpendicular a propagación) y longitudinales (vibración paralela a propagación).",
+              "example_tasks": [
+                "Diferencia ondas transversales (luz, onda en cuerda) de longitudinales (sonido, resorte comprimido).",
+                "Dibuja representación de onda transversal mostrando dirección de vibración y propagación perpendiculares.",
+                "Identifica tipo de onda: ondas sísmicas P (longitudinales), ondas S (transversales), ondas en agua (mezcla)."
+              ]
+            },
+            {
+              "key": "caracteristicas_ondas",
+              "name": "Características de las Ondas",
+              "short_description": "Amplitud (A), longitud de onda (λ), frecuencia (f), periodo (T), velocidad (v = fλ).",
+              "example_tasks": [
+                "Calcula velocidad de onda con frecuencia 50 Hz y longitud de onda 4 m (v = fλ = 200 m/s).",
+                "Determina longitud de onda de sonido de 440 Hz si v_sonido = 343 m/s (λ = v/f).",
+                "Relaciona periodo y frecuencia: f = 1/T. Si T = 0.02 s, calcula f (50 Hz)."
+              ]
+            },
+            {
+              "key": "ecuacion_onda",
+              "name": "Ecuación de Onda",
+              "short_description": "Descripción matemática: y(x,t) = A sen(kx - ωt); número de onda k = 2π/λ, frecuencia angular ω = 2πf.",
+              "example_tasks": [
+                "Identifica amplitud, λ y f en ecuación: y = 0.1 sen(5x - 20t) metros (A = 0.1 m, k = 5 rad/m, ω = 20 rad/s).",
+                "Calcula velocidad de onda usando v = ω/k del ejemplo anterior.",
+                "Explica significado físico de términos en ecuación: A (amplitud máxima), kx (variación espacial), ωt (variación temporal)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fenomenos_ondulatorios",
+          "name": "Fenómenos Ondulatorios",
+          "short_description": "Reflexión, refracción, difracción, interferencia, ondas estacionarias.",
+          "sub_topics": [
+            {
+              "key": "reflexion_ondas",
+              "name": "Reflexión de Ondas",
+              "short_description": "Onda rebota al encontrar obstáculo; ley de reflexión: ángulo incidente = ángulo reflejado.",
+              "example_tasks": [
+                "Describe reflexión de ondas en cuerda: extremo fijo (inversión de fase), extremo libre (sin inversión).",
+                "Explica eco como reflexión de sonido en superficies distantes.",
+                "Aplica ley de reflexión: si onda incide a 30° respecto a la normal, ¿a qué ángulo se refleja?"
+              ]
+            },
+            {
+              "key": "refraccion_ondas",
+              "name": "Refracción de Ondas",
+              "short_description": "Cambio de dirección al pasar de un medio a otro; velocidad cambia pero frecuencia permanece constante.",
+              "example_tasks": [
+                "Explica por qué onda cambia dirección al refractarse (cambia velocidad, λ cambia, f constante).",
+                "Describe refracción de ondas de agua al pasar de zona profunda a zona poco profunda.",
+                "Relaciona con ley de Snell (se estudiará en óptica): n₁ sen θ₁ = n₂ sen θ₂."
+              ]
+            },
+            {
+              "key": "difraccion",
+              "name": "Difracción de Ondas",
+              "short_description": "Ondas se desvían al pasar por obstáculos o aberturas; más evidente cuando abertura ≈ λ.",
+              "example_tasks": [
+                "Explica por qué puedes escuchar sonido detrás de esquina pero no ver alrededor (λ_sonido > λ_luz).",
+                "Describe difracción de ondas de agua al pasar por abertura estrecha (ondas circulares).",
+                "Investiga aplicaciones: difracción de rayos X en cristales, redes de difracción en espectroscopía."
+              ]
+            },
+            {
+              "key": "interferencia",
+              "name": "Interferencia de Ondas",
+              "short_description": "Superposición de ondas: constructiva (en fase, amplitudes se suman) y destructiva (fuera de fase, se cancelan).",
+              "example_tasks": [
+                "Dibuja interferencia constructiva (cresta + cresta) y destructiva (cresta + valle).",
+                "Explica patrones de interferencia en ondas de agua de dos fuentes puntuales.",
+                "Describe condiciones para interferencia: constructiva (diferencia de camino = nλ), destructiva (diferencia = (n+½)λ)."
+              ]
+            },
+            {
+              "key": "ondas_estacionarias",
+              "name": "Ondas Estacionarias",
+              "short_description": "Patrón de interferencia fijo; nodos (amplitud cero) y antinodos (amplitud máxima); resonancia en cuerdas y tubos.",
+              "example_tasks": [
+                "Describe formación de onda estacionaria en cuerda fija en extremos (reflexión + interferencia).",
+                "Calcula frecuencias de resonancia en cuerda de longitud L: f_n = nv/(2L), n = 1, 2, 3...",
+                "Identifica nodos y antinodos en diagrama de onda estacionaria; cuenta número de armónicos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "sonido",
+          "name": "Sonido",
+          "short_description": "Naturaleza del sonido, velocidad, intensidad, nivel sonoro, cualidades del sonido.",
+          "sub_topics": [
+            {
+              "key": "naturaleza_sonido",
+              "name": "Naturaleza del Sonido",
+              "short_description": "Onda longitudinal mecánica; requiere medio; producida por vibración; rango audible 20 Hz - 20 kHz.",
+              "example_tasks": [
+                "Explica por qué sonido no se propaga en vacío (requiere medio material para transmitir vibraciones).",
+                "Define infrasonido (<20 Hz), sonido audible (20 Hz - 20 kHz), ultrasonido (>20 kHz).",
+                "Describe cómo se produce sonido: vibración de objeto genera compresiones y rarefacciones en medio."
+              ]
+            },
+            {
+              "key": "velocidad_sonido",
+              "name": "Velocidad del Sonido",
+              "short_description": "Depende de medio y temperatura; v_aire ≈ 343 m/s a 20°C; mayor en sólidos que líquidos que gases.",
+              "example_tasks": [
+                "Compara velocidad del sonido: aire (343 m/s), agua (1480 m/s), acero (5960 m/s).",
+                "Calcula distancia a tormenta si trueno se escucha 5 s después del rayo (d = vt = 343 × 5 ≈ 1715 m).",
+                "Explica por qué sonido viaja más rápido en días calurosos (v aumenta con temperatura)."
+              ]
+            },
+            {
+              "key": "intensidad_sonido",
+              "name": "Intensidad y Nivel Sonoro",
+              "short_description": "Intensidad: I = P/A (W/m²); nivel sonoro: β = 10 log(I/I₀) decibeles (dB); I₀ = 10⁻¹² W/m².",
+              "example_tasks": [
+                "Calcula nivel sonoro de intensidad I = 10⁻⁶ W/m² (β = 10 log(10⁻⁶/10⁻¹²) = 60 dB).",
+                "Compara niveles: susurro (20 dB), conversación (60 dB), tráfico (80 dB), concierto rock (110 dB).",
+                "Explica por qué escala de dB es logarítmica (el oído responde logarítmicamente a intensidad)."
+              ]
+            },
+            {
+              "key": "cualidades_sonido",
+              "name": "Cualidades del Sonido",
+              "short_description": "Altura (frecuencia), intensidad (amplitud), timbre (forma de onda, armónicos).",
+              "example_tasks": [
+                "Diferencia tono alto (alta frecuencia) de tono bajo (baja frecuencia); ejemplo: soprano vs bajo.",
+                "Explica por qué reconoces instrumento por timbre (cada instrumento tiene patrón único de armónicos).",
+                "Relaciona intensidad con amplitud: mayor amplitud, mayor energía, sonido más fuerte."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "efecto_doppler_aplicaciones",
+          "name": "Efecto Doppler y Aplicaciones del Sonido",
+          "short_description": "Cambio de frecuencia por movimiento relativo, aplicaciones médicas y tecnológicas del sonido.",
+          "sub_topics": [
+            {
+              "key": "efecto_doppler",
+              "name": "Efecto Doppler",
+              "short_description": "Frecuencia aparente cambia cuando fuente u observador se mueven; f' = f(v ± v_obs)/(v ∓ v_fuente).",
+              "example_tasks": [
+                "Explica por qué sirena de ambulancia suena más aguda al acercarse y más grave al alejarse.",
+                "Calcula frecuencia percibida si auto con bocina de 500 Hz se acerca a 30 m/s (v_sonido = 343 m/s).",
+                "Describe aplicaciones: radar de velocidad, astronomía (corrimiento al rojo/azul), ecocardiografía Doppler."
+              ]
+            },
+            {
+              "key": "ultrasonido_aplicaciones",
+              "name": "Ultrasonido y sus Aplicaciones",
+              "short_description": "Frecuencias >20 kHz; aplicaciones médicas (ecografía), industriales (limpieza, soldadura), sonar.",
+              "example_tasks": [
+                "Explica principio de ecografía: ultrasonido se refleja en tejidos, tiempo de retorno indica profundidad.",
+                "Describe funcionamiento de sonar: emite pulsos de ultrasonido, detecta ecos para localizar objetos submarinos.",
+                "Investiga aplicaciones en México: ecografías prenatales, limpieza ultrasónica de piezas, ensayos no destructivos."
+              ]
+            },
+            {
+              "key": "resonancia_acustica",
+              "name": "Resonancia Acústica",
+              "short_description": "Amplificación de sonido a frecuencias naturales; columnas de aire, cajas de resonancia en instrumentos.",
+              "example_tasks": [
+                "Explica resonancia en tubo abierto: f_n = nv/(2L), n = 1, 2, 3... (todos los armónicos).",
+                "Describe resonancia en tubo cerrado: f_n = nv/(4L), n = 1, 3, 5... (solo armónicos impares).",
+                "Analiza instrumentos musicales: guitarra (cuerda + caja resonante), flauta (columna de aire), tambor (membrana)."
+              ]
+            },
+            {
+              "key": "contaminacion_acustica",
+              "name": "Contaminación Acústica",
+              "short_description": "Efectos del ruido excesivo en salud; niveles seguros; medidas de control.",
+              "example_tasks": [
+                "Identifica fuentes de contaminación acústica en ciudades: tráfico, construcción, industria, entretenimiento.",
+                "Describe efectos en salud: pérdida auditiva, estrés, insomnio, problemas cardiovasculares.",
+                "Propón medidas de control: barreras acústicas, zonificación, límites de ruido, protección personal (tapones)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "optica",
+      "name": "Óptica",
+      "short_description": "Naturaleza de la luz, reflexión, refracción, espejos, lentes, instrumentos ópticos, fenómenos luminosos.",
+      "sub_topics": [
+        {
+          "key": "naturaleza_luz",
+          "name": "Naturaleza de la Luz",
+          "short_description": "Dualidad onda-partícula, espectro electromagnético, velocidad de la luz.",
+          "sub_topics": [
+            {
+              "key": "luz_onda_particula",
+              "name": "Dualidad Onda-Partícula de la Luz",
+              "short_description": "Luz se comporta como onda (interferencia, difracción) y como partícula (fotones, efecto fotoeléctrico).",
+              "example_tasks": [
+                "Describe experimentos que muestran naturaleza ondulatoria: interferencia de Young, difracción.",
+                "Explica evidencia de naturaleza corpuscular: efecto fotoeléctrico (Einstein), cuantización de energía.",
+                "Define fotón: cuanto de energía electromagnética, E = hf donde h es constante de Planck."
+              ]
+            },
+            {
+              "key": "espectro_electromagnetico",
+              "name": "Espectro Electromagnético",
+              "short_description": "Rango de radiación EM: ondas radio, microondas, infrarrojo, visible, UV, rayos X, rayos gamma.",
+              "example_tasks": [
+                "Ordena por longitud de onda decreciente: radio, microondas, IR, visible, UV, rayos X, rayos γ.",
+                "Identifica rango visible: λ ≈ 400 nm (violeta) a 700 nm (rojo); relaciona con frecuencias.",
+                "Describe aplicaciones: radio (comunicación), microondas (radar, cocina), IR (visión nocturna), UV (esterilización), rayos X (medicina)."
+              ]
+            },
+            {
+              "key": "velocidad_luz",
+              "name": "Velocidad de la Luz",
+              "short_description": "c = 3 × 10⁸ m/s en vacío; máxima velocidad en universo; menor en medios materiales.",
+              "example_tasks": [
+                "Calcula tiempo que tarda luz en llegar del Sol a Tierra (distancia ≈ 1.5 × 10¹¹ m, t = d/c ≈ 500 s).",
+                "Determina índice de refracción n = c/v; si luz viaja a 2 × 10⁸ m/s en medio, n = 1.5.",
+                "Explica por qué luz viaja más lento en vidrio que en aire (interacciones con átomos del medio)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "reflexion_luz",
+          "name": "Reflexión de la Luz",
+          "short_description": "Leyes de reflexión, espejos planos y curvos, formación de imágenes.",
+          "sub_topics": [
+            {
+              "key": "leyes_reflexion",
+              "name": "Leyes de la Reflexión",
+              "short_description": "1) Rayo incidente, reflejado y normal coplanares; 2) Ángulo incidente = ángulo reflejado.",
+              "example_tasks": [
+                "Aplica ley de reflexión: si rayo incide a 40° respecto a normal, ¿a qué ángulo se refleja? (40°).",
+                "Explica reflexión especular (superficie lisa, rayos paralelos) vs difusa (superficie rugosa, rayos dispersos).",
+                "Describe por qué vemos objetos: luz reflejada llega a nuestros ojos."
+              ]
+            },
+            {
+              "key": "espejos_planos",
+              "name": "Espejos Planos",
+              "short_description": "Imagen virtual, derecha, mismo tamaño, simétrica respecto al espejo.",
+              "example_tasks": [
+                "Determina posición de imagen en espejo plano: misma distancia detrás del espejo que objeto delante.",
+                "Explica por qué imagen es virtual (rayos no convergen realmente, parecen venir de detrás del espejo).",
+                "Describe aplicaciones: espejos de baño, periscópios, caleidoscópios."
+              ]
+            },
+            {
+              "key": "espejos_curvos",
+              "name": "Espejos Esféricos (Cóncavos y Convexos)",
+              "short_description": "Ecuación del espejo: 1/f = 1/do + 1/di; amplificación: m = -di/do; cóncavo converge, convexo diverge.",
+              "example_tasks": [
+                "Calcula posición de imagen en espejo cóncavo (f = 20 cm) si objeto está a 30 cm (usa 1/f = 1/do + 1/di).",
+                "Determina amplificación y tipo de imagen (real/virtual, derecha/invertida) usando m = -di/do.",
+                "Compara espejos cóncavos (producen imágenes reales/aumentadas) con convexos (siempre virtuales/reducidas)."
+              ]
+            },
+            {
+              "key": "aplicaciones_espejos",
+              "name": "Aplicaciones de Espejos",
+              "short_description": "Telescopios reflectores, espejos retrovisores, espejos de dentista, concentradores solares.",
+              "example_tasks": [
+                "Explica uso de espejo cóncavo en telescopio (concentra luz de objeto distante en foco).",
+                "Describe ventaja de espejo convexo en retrovisor de auto (amplía campo visual).",
+                "Investiga concentradores solares parabólicos en plantas termosolares en México."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "refraccion_luz",
+          "name": "Refracción de la Luz",
+          "short_description": "Cambio de dirección al pasar entre medios; ley de Snell, reflexión interna total, dispersión.",
+          "sub_topics": [
+            {
+              "key": "ley_snell",
+              "name": "Ley de Snell",
+              "short_description": "n₁ sen θ₁ = n₂ sen θ₂; índice de refracción n = c/v.",
+              "example_tasks": [
+                "Calcula ángulo de refracción si luz pasa de aire (n=1.0) a vidrio (n=1.5) con θ₁ = 30°.",
+                "Determina índice de refracción de líquido si luz incide a 40° y refracta a 25°.",
+                "Explica por qué lápiz en vaso de agua parece quebrado (refracción en interfaz agua-aire)."
+              ]
+            },
+            {
+              "key": "reflexion_interna_total",
+              "name": "Reflexión Interna Total",
+              "short_description": "Ocurre cuando luz va de medio denso a menos denso con ángulo > ángulo crítico: sen θc = n₂/n₁.",
+              "example_tasks": [
+                "Calcula ángulo crítico para interfaz vidrio-aire (n_vidrio = 1.5, n_aire = 1.0).",
+                "Explica principio de fibra óptica: luz atrapada por reflexiones internas totales sucesivas.",
+                "Describe por qué diamantes brillan intensamente (ángulo crítico pequeño, muchas reflexiones internas)."
+              ]
+            },
+            {
+              "key": "dispersion_prisma",
+              "name": "Dispersión de la Luz",
+              "short_description": "Separación de luz blanca en colores; índice de refracción varía con λ; prismas, arcoíris.",
+              "example_tasks": [
+                "Explica por qué prisma separa luz blanca en colores (n diferente para cada λ, rojo se desvía menos que violeta).",
+                "Describe formación de arcoíris: refracción + reflexión interna + refracción en gotas de agua.",
+                "Investiga espectroscopía: análisis de composición química mediante dispersión de luz emitida o absorbida."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "lentes",
+          "name": "Lentes",
+          "short_description": "Lentes convergentes y divergentes, ecuación de lentes delgadas, formación de imágenes, defectos visuales.",
+          "sub_topics": [
+            {
+              "key": "tipos_lentes",
+              "name": "Tipos de Lentes",
+              "short_description": "Convergentes (convexas, f > 0) enfocan luz; divergentes (cóncavas, f < 0) dispersan luz.",
+              "example_tasks": [
+                "Identifica lentes convergentes (biconvexa, planoconvexa, menisco convergente) y divergentes (bicóncava, planocóncava, menisco divergente).",
+                "Describe trayectoria de rayos paralelos: convergen en foco (lente convergente) o parecen divergir de foco (lente divergente).",
+                "Explica por qué lentes convergentes son más gruesas al centro y divergentes más delgadas al centro."
+              ]
+            },
+            {
+              "key": "ecuacion_lentes",
+              "name": "Ecuación de Lentes Delgadas",
+              "short_description": "1/f = 1/do + 1/di; amplificación m = -di/do; convenciones de signos.",
+              "example_tasks": [
+                "Calcula posición de imagen formada por lente convergente (f = 15 cm) si objeto está a 30 cm.",
+                "Determina si imagen es real/virtual, derecha/invertida, aumentada/reducida usando ecuación y amplificación.",
+                "Resuelve: lente divergente (f = -20 cm) con objeto a 40 cm; encuentra di y m."
+              ]
+            },
+            {
+              "key": "formacion_imagenes_lentes",
+              "name": "Formación de Imágenes en Lentes",
+              "short_description": "Trazado de rayos principales; imágenes reales (lente convergente, do > f) y virtuales.",
+              "example_tasks": [
+                "Traza diagrama de rayos para objeto más allá de 2f en lente convergente (imagen real, invertida, reducida).",
+                "Describe imágenes en diferentes posiciones del objeto respecto a lente convergente: do > 2f, do = 2f, f < do < 2f, do < f.",
+                "Explica por qué lentes divergentes siempre producen imágenes virtuales, derechas y reducidas."
+              ]
+            },
+            {
+              "key": "defectos_vision",
+              "name": "Defectos de la Visión y su Corrección",
+              "short_description": "Miopía (imagen antes de retina, lente divergente), hipermetropía (imagen detrás, lente convergente), astigmatismo.",
+              "example_tasks": [
+                "Explica miopía: ojo enfoca objetos lejanos antes de retina; se corrige con lente divergente.",
+                "Describe hipermetropía: ojo no puede enfocar objetos cercanos; se corrige con lente convergente.",
+                "Investiga otros defectos: astigmatismo (córnea irregular, lente cilíndrica), presbicia (pérdida de elasticidad del cristalino)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "instrumentos_opticos",
+          "name": "Instrumentos Ópticos",
+          "short_description": "Microscopio, telescopio, cámara fotográfica, ojo humano, funcionamiento y aplicaciones.",
+          "sub_topics": [
+            {
+              "key": "ojo_humano",
+              "name": "El Ojo Humano",
+              "short_description": "Córnea, cristalino (lente), retina (sensor); acomodación; punto próximo y lejano.",
+              "example_tasks": [
+                "Describe partes del ojo: córnea (refracción principal), iris (controla luz), cristalino (enfoca), retina (detectores).",
+                "Explica acomodación: cristalino cambia forma para enfocar objetos a diferentes distancias.",
+                "Define punto próximo (distancia mínima de visión clara, ~25 cm) y punto lejano (infinito en ojo normal)."
+              ]
+            },
+            {
+              "key": "lupa_microscopio",
+              "name": "Lupa y Microscopio",
+              "short_description": "Lupa: lente convergente simple; microscopio: objetivo + ocular para gran amplificación.",
+              "example_tasks": [
+                "Calcula amplificación de lupa: M = 25 cm/f (distancia normal de visión clara es 25 cm).",
+                "Describe microscopio compuesto: objetivo forma imagen real aumentada, ocular actúa como lupa.",
+                "Calcula amplificación total de microscopio: M_total = M_objetivo × M_ocular."
+              ]
+            },
+            {
+              "key": "telescopios",
+              "name": "Telescopios",
+              "short_description": "Telescopio refractor (lentes) y reflector (espejos); aumentan ángulo visual de objetos distantes.",
+              "example_tasks": [
+                "Compara telescopio refractor (objetivo: lente convergente) con reflector (objetivo: espejo cóncavo).",
+                "Calcula amplificación angular: M = f_objetivo/f_ocular.",
+                "Investiga grandes telescopios en México: Observatorio Astronómico Nacional en Sierra San Pedro Mártir."
+              ]
+            },
+            {
+              "key": "camara_fotografia",
+              "name": "Cámara Fotográfica",
+              "short_description": "Sistema de lentes, diafragma (apertura), obturador (tiempo de exposición), sensor/película.",
+              "example_tasks": [
+                "Explica función de diafragma: controla cantidad de luz (número f: f/2.8, f/5.6, etc.).",
+                "Describe cómo obturador controla tiempo de exposición: rápido (acción), lento (poca luz, trípode).",
+                "Relaciona profundidad de campo con apertura: apertura pequeña (f/16) mayor profundidad, apertura grande (f/2.8) menor profundidad."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "electricidad",
+      "name": "Electricidad",
+      "short_description": "Carga eléctrica, fuerza eléctrica, campo eléctrico, potencial eléctrico, ley de Coulomb.",
+      "sub_topics": [
+        {
+          "key": "carga_electrica",
+          "name": "Carga Eléctrica",
+          "short_description": "Propiedad fundamental de materia; cuantización; conservación; tipos (positiva y negativa).",
+          "sub_topics": [
+            {
+              "key": "naturaleza_carga",
+              "name": "Naturaleza de la Carga Eléctrica",
+              "short_description": "Protones (+), electrones (-); cuanto elemental e = 1.6 × 10⁻¹⁹ C; átomo neutro tiene cargas iguales.",
+              "example_tasks": [
+                "Explica que carga está cuantizada: q = ne donde n es entero y e es carga elemental.",
+                "Calcula número de electrones en carga de -3.2 × 10⁻¹⁸ C (n = q/e = 20 electrones).",
+                "Describe estructura del átomo: núcleo (+) con protones y neutrones, electrones (-) en órbitas."
+              ]
+            },
+            {
+              "key": "metodos_electrizacion",
+              "name": "Métodos de Electrización",
+              "short_description": "Frotamiento, contacto, inducción; transferencia de electrones, no de protones.",
+              "example_tasks": [
+                "Explica electrización por frotamiento: barra de vidrio frotada con seda (vidrio + queda +, seda queda -).",
+                "Describe electrización por contacto: objeto cargado toca objeto neutro, comparten carga.",
+                "Demuestra inducción: objeto cargado cerca de conductor neutro redistribuye cargas sin contacto."
+              ]
+            },
+            {
+              "key": "conservacion_carga",
+              "name": "Conservación de la Carga",
+              "short_description": "Carga total en sistema aislado permanece constante; no se crea ni destruye, solo se transfiere.",
+              "example_tasks": [
+                "Verifica conservación: esfera A (+6 μC) toca esfera B (-2 μC) idénticas; cada queda con +2 μC (total = +4 μC).",
+                "Explica que al frotar objetos, carga total no cambia (electrones se transfieren de uno a otro).",
+                "Describe aniquilación electrón-positrón: cargas opuestas se cancelan, masa se convierte en energía (conservación de carga se mantiene)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ley_coulomb",
+          "name": "Ley de Coulomb y Fuerza Eléctrica",
+          "short_description": "Fuerza entre cargas puntuales: F = k|q₁q₂|/r²; k = 9 × 10⁹ N·m²/C²; atracción o repulsión.",
+          "sub_topics": [
+            {
+              "key": "enunciado_coulomb",
+              "name": "Enunciado de la Ley de Coulomb",
+              "short_description": "Fuerza directamente proporcional a producto de cargas e inversamente proporcional al cuadrado de distancia.",
+              "example_tasks": [
+                "Calcula fuerza entre dos cargas de +2 μC y -3 μC separadas 0.1 m (F = kq₁q₂/r²).",
+                "Determina a qué distancia deben estar dos cargas de 1 μC para que F = 9 N.",
+                "Explica similitudes con ley de gravitación: ambas siguen ley de inverso del cuadrado, pero eléctrica puede ser atractiva o repulsiva."
+              ]
+            },
+            {
+              "key": "principio_superposicion",
+              "name": "Principio de Superposición",
+              "short_description": "Fuerza neta sobre carga es suma vectorial de fuerzas individuales de todas las demás cargas.",
+              "example_tasks": [
+                "Calcula fuerza neta sobre carga q₃ debido a q₁ y q₂ en vértices de triángulo.",
+                "Determina fuerza resultante sobre carga central rodeada por cuatro cargas en cuadrado.",
+                "Resuelve sistema con múltiples cargas usando superposición: suma vectorialmente cada contribución."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "campo_electrico",
+          "name": "Campo Eléctrico",
+          "short_description": "Región del espacio donde carga experimenta fuerza; E = F/q; líneas de campo.",
+          "sub_topics": [
+            {
+              "key": "definicion_campo_electrico",
+              "name": "Definición de Campo Eléctrico",
+              "short_description": "E = F/q₀ donde q₀ es carga de prueba positiva; unidad: N/C o V/m; campo de carga puntual E = kq/r².",
+              "example_tasks": [
+                "Calcula campo eléctrico a 0.5 m de carga de +5 μC (E = kq/r²).",
+                "Determina fuerza sobre carga de -2 μC en campo E = 1000 N/C (F = qE).",
+                "Explica que campo existe independientemente de carga de prueba (propiedad del espacio)."
+              ]
+            },
+            {
+              "key": "lineas_campo",
+              "name": "Líneas de Campo Eléctrico",
+              "short_description": "Representación visual; salen de cargas + y entran a cargas -; densidad indica intensidad; nunca se cruzan.",
+              "example_tasks": [
+                "Dibuja líneas de campo para: carga puntual positiva (radiales hacia afuera), carga negativa (radiales hacia adentro).",
+                "Representa campo de dipolo eléctrico (carga + y - separadas).",
+                "Explica por qué líneas de campo son perpendiculares a conductores en equilibrio."
+              ]
+            },
+            {
+              "key": "campo_dipolo",
+              "name": "Campo de Configuraciones de Cargas",
+              "short_description": "Campo uniforme (placas paralelas), dipolo, distribuciones lineales, superficiales.",
+              "example_tasks": [
+                "Describe campo uniforme entre placas paralelas: E constante, líneas paralelas.",
+                "Calcula campo en punto medio entre dos cargas iguales y opuestas separadas distancia d.",
+                "Explica aplicación de campo uniforme: aceleración de partículas, tubos de rayos catódicos."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "potencial_electrico",
+          "name": "Potencial Eléctrico",
+          "short_description": "Energía potencial por unidad de carga; V = kq/r; diferencia de potencial (voltaje).",
+          "sub_topics": [
+            {
+              "key": "energia_potencial_electrica",
+              "name": "Energía Potencial Eléctrica",
+              "short_description": "U = kq₁q₂/r; trabajo para mover carga en campo eléctrico; conservación de energía.",
+              "example_tasks": [
+                "Calcula energía potencial eléctrica de dos protones separados 1 nm (U = kq²/r).",
+                "Determina trabajo realizado por campo al mover carga de +3 μC desde punto A (V = 100 V) a punto B (V = 50 V): W = q(VA - VB).",
+                "Explica que campo eléctrico es conservativo (trabajo independiente de trayectoria)."
+              ]
+            },
+            {
+              "key": "potencial_electrico_definicion",
+              "name": "Potencial Eléctrico",
+              "short_description": "V = U/q = kq/r; energía potencial por unidad de carga; unidad: Volt (V = J/C).",
+              "example_tasks": [
+                "Calcula potencial a 2 m de carga de +10 μC (V = kq/r).",
+                "Determina potencial en punto equidistante de dos cargas iguales (superposición: V_total = V₁ + V₂).",
+                "Explica diferencia entre potencial (escalar, J/C) y campo (vector, N/C)."
+              ]
+            },
+            {
+              "key": "diferencia_potencial",
+              "name": "Diferencia de Potencial (Voltaje)",
+              "short_description": "ΔV = V_B - V_A; trabajo por unidad de carga para mover entre puntos; relación con campo: E = -ΔV/Δd.",
+              "example_tasks": [
+                "Calcula voltaje entre placas separadas 5 cm si campo entre ellas es 2000 N/C (V = Ed).",
+                "Determina energía ganada por electrón acelerado por diferencia de potencial de 100 V (ΔU = qΔV).",
+                "Explica concepto de volt: 1 V = 1 J/C (energía por unidad de carga)."
+              ]
+            },
+            {
+              "key": "superficies_equipotenciales",
+              "name": "Superficies Equipotenciales",
+              "short_description": "Lugares con mismo potencial; perpendiculares a líneas de campo; no se realiza trabajo al mover carga sobre ellas.",
+              "example_tasks": [
+                "Dibuja superficies equipotenciales para carga puntual (esferas concéntricas) y campo uniforme (planos paralelos).",
+                "Explica por qué líneas de campo son perpendiculares a equipotenciales (máximo cambio de V en dirección de E).",
+                "Describe equipotenciales alrededor de conductor en equilibrio (superficie es equipotencial)."
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -13,20 +13,48 @@ export interface UploadPDFResult {
 }
 
 /**
+ * Helper function to create a URL-safe filename from task title
+ * @param title - The task title
+ * @returns URL-safe filename string
+ */
+function createSafeFilename(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
+    .replace(/\s+/g, '_') // Replace spaces with underscores
+    .replace(/_+/g, '_') // Replace multiple underscores with single
+    .replace(/^_|_$/g, '') // Remove leading/trailing underscores
+    .substring(0, 50); // Limit length
+}
+
+/**
  * Upload a PDF buffer to Firebase Storage
  * @param taskId - The task ID
  * @param pdfBuffer - The PDF file as a Buffer
+ * @param taskTitle - Optional task title to include in filename
  * @returns Upload result with PDF URL
  */
 export async function uploadTaskPDF(
   taskId: string,
-  pdfBuffer: Buffer
+  pdfBuffer: Buffer,
+  taskTitle?: string
 ): Promise<UploadPDFResult> {
   try {
     console.log('[PDF Storage] Uploading PDF for task:', taskId);
 
     const bucket = getStorage().bucket();
-    const fileName = `task-pdfs/${taskId}.pdf`;
+
+    // Create filename with task title if provided
+    let fileName: string;
+    if (taskTitle) {
+      const safeTitle = createSafeFilename(taskTitle);
+      fileName = `task-pdfs/task_${safeTitle}_${taskId}.pdf`;
+      console.log('[PDF Storage] Filename with title:', fileName);
+    } else {
+      fileName = `task-pdfs/${taskId}.pdf`;
+      console.log('[PDF Storage] Filename without title:', fileName);
+    }
+
     const file = bucket.file(fileName);
 
     // Upload the PDF
