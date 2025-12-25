@@ -146,7 +146,11 @@ export async function getCurrentUser(token: string): Promise<ApiResponse<{ user:
   const result = await response.json();
 
   if (!response.ok) {
-    throw new Error(result.error || result.message || 'Failed to get user info');
+    // Don't log 401 errors as they're expected for invalid/expired tokens
+    if (response.status !== 401) {
+      console.error('[API Service] Get current user failed:', result);
+    }
+    throw new Error(result.error || result.message || 'Invalid token');
   }
 
   return result;

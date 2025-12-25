@@ -228,8 +228,28 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
                   taskCredits: userTaskCredits,
                 }));
               } else {
-                // Fallback to cookies if API call fails
-                console.warn('[UserContext] Failed to fetch fresh user data, using cookies');
+                // Clear invalid session
+                console.warn('[UserContext] Invalid token response, clearing session');
+                clearAuthCookies();
+                if (typeof window !== 'undefined') {
+                  localStorage.removeItem('authToken');
+                  window.dispatchEvent(new Event('authTokenChanged'));
+                }
+              }
+            } catch (error: any) {
+              // Check if error is due to invalid token (401)
+              const errorMessage = error?.message || '';
+              if (errorMessage.includes('Invalid token') || errorMessage.includes('Unauthorized')) {
+                console.log('[UserContext] Token is invalid or expired, clearing session');
+                // Clear invalid session data
+                clearAuthCookies();
+                if (typeof window !== 'undefined') {
+                  localStorage.removeItem('authToken');
+                  window.dispatchEvent(new Event('authTokenChanged'));
+                }
+              } else {
+                console.error('[UserContext] Error fetching fresh user data:', error);
+                // For other errors, fallback to cookies to allow offline access
                 setUser((prev) => ({
                   ...prev,
                   isRegistered: true,
@@ -242,23 +262,15 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
                   isFirstVisit: false,
                 }));
               }
-            } catch (error) {
-              console.error('[UserContext] Error fetching fresh user data:', error);
-              // Fallback to cookies if API call fails
-              setUser((prev) => ({
-                ...prev,
-                isRegistered: true,
-                profile: { ...profile, token: authToken },
-                role: 'registered',
-                identity: identity || null,
-                subject: subject || null,
-                country: savedCountry,
-                hasCompletedOnboarding: true,
-                isFirstVisit: false,
-              }));
             }
           } catch (error) {
             console.error('[UserContext] Error parsing stored user data:', error);
+            // Clear corrupted session data
+            clearAuthCookies();
+            if (typeof window !== 'undefined') {
+              localStorage.removeItem('authToken');
+              window.dispatchEvent(new Event('authTokenChanged'));
+            }
           }
         } else {
           console.log('[UserContext] No stored session found');
@@ -357,9 +369,11 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
 
       const { user: userData, token } = response.data;
 
-      // Store auth token
+      // Store auth token and notify listeners
       if (typeof window !== 'undefined') {
         localStorage.setItem('authToken', token);
+        // Dispatch custom event to notify useFirebaseToken hook
+        window.dispatchEvent(new Event('authTokenChanged'));
       }
 
       // Build profile from backend response (no need to fetch from Firestore again)
@@ -456,9 +470,11 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     // Clear all auth cookies (keeps country preference)
     clearAuthCookies();
 
-    // Clear localStorage authToken
+    // Clear localStorage authToken and notify listeners
     if (typeof window !== 'undefined') {
       localStorage.removeItem('authToken');
+      // Dispatch custom event to notify useFirebaseToken hook
+      window.dispatchEvent(new Event('authTokenChanged'));
     }
 
     console.log('[UserContext] Logout complete, all auth data cleared');

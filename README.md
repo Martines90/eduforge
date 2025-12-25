@@ -2,6 +2,8 @@
 
 An educational task management platform for teachers and students, featuring AI-powered task generation, curriculum-based organization, and comprehensive task browsing capabilities.
 
+**Live at**: [https://eduforger.com](https://eduforger.com)
+
 ## 🎯 Project Overview
 
 EduForge is a full-stack application that enables:
@@ -18,6 +20,8 @@ EduForge is a full-stack application that enables:
 - **Styling**: SCSS Modules
 - **State Management**: React Hooks
 - **Authentication**: Firebase Auth
+- **Hosting**: Firebase Hosting
+- **Domain**: eduforger.com
 - **Language**: TypeScript
 
 ### Backend (Express.js + TypeScript)
@@ -26,6 +30,7 @@ EduForge is a full-stack application that enables:
 - **Database**: Firebase Firestore
 - **Authentication**: Firebase Admin SDK + JWT
 - **AI Services**: OpenAI (GPT-4o, DALL-E-3)
+- **Hosting**: Firebase Cloud Functions
 - **Language**: TypeScript
 
 ## 📁 Project Structure
@@ -285,23 +290,57 @@ NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
 
 ## 🌐 Deployment
 
-### Backend (Railway/Render/Cloud Run)
-1. Build: `npm run build`
-2. Set environment variables
-3. Start: `npm start`
-4. Ensure Firestore indexes are deployed
+### Production Deployment (Firebase)
 
-### Frontend (Vercel/Netlify)
-1. Build: `npm run build`
-2. Set environment variables
-3. Deploy `.next` directory
-4. Configure rewrites for API routes
+**Live URL**: https://eduforger.com (and https://www.eduforger.com)
+**Firebase Project**: eduforge-d29d9
 
-### Firebase Resources
+#### Deploy Full Application
 ```bash
 cd backend
-firebase deploy --only firestore
+firebase deploy
 ```
+
+This deploys:
+- Frontend (Next.js) → Firebase Hosting
+- Backend (Express) → Firebase Cloud Functions
+- Firestore rules and indexes
+
+#### Deploy Specific Components
+```bash
+# Frontend only
+firebase deploy --only hosting
+
+# Backend functions only
+firebase deploy --only functions
+
+# Firestore rules and indexes
+firebase deploy --only firestore
+
+# Cloud Functions
+firebase deploy --only functions:api
+```
+
+### Custom Domain Configuration
+
+Domain: **eduforger.com** (registered via Squarespace Domains)
+
+**DNS Records** (configured in Squarespace):
+```
+Type: A
+Host: @
+Data: 199.36.158.100
+
+Type: TXT
+Host: @
+Data: hosting-site=eduforge-d29d9
+
+Type: CNAME
+Host: www
+Data: eduforge-d29d9.web.app
+```
+
+**SSL Certificate**: Automatically provisioned by Firebase (Let's Encrypt)
 
 ## 🤝 Contributing
 
@@ -327,4 +366,6 @@ For issues and questions:
 
 **Built with**: Next.js, Express.js, Firebase, OpenAI, TypeScript, Material-UI
 
-**Last Updated**: 2025-01-27
+**Production URL**: https://eduforger.com
+
+**Last Updated**: 2025-12-24

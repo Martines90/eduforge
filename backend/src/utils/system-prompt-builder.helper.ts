@@ -8,6 +8,7 @@ import {
 } from "./curriculum-mapper.helper";
 import { getLanguageForCountry, getMeasurementSystem } from "./measurement-system.helper";
 import { TASK_CHARACTER_LENGTH } from "../config/task-generation.config";
+import { generateStoryInspiration } from "./story-inspiration.helper";
 
 /**
  * Builds a complete system prompt by interpolating the template with all required data
@@ -124,6 +125,16 @@ export function buildSystemPrompt(
     additionalContext += formatCurriculumTopicForPrompt(curriculumPathResult);
   }
 
+  // Add inspirational scenario hints
+  const inspiration = generateStoryInspiration(
+    request.difficulty_level,
+    request.target_group,
+    request.custom_keywords
+  );
+  if (inspiration.promptAdditions) {
+    additionalContext += inspiration.promptAdditions;
+  }
+
   // Add reminder about the input format
   additionalContext += "\n## EXPECTED USER MESSAGE FORMAT\n\n";
   additionalContext +=
@@ -140,6 +151,7 @@ export function buildSystemPrompt(
   console.log("✅ Built enhanced system prompt with all context");
   console.log(`   - Template length: ${systemPrompt.length} chars`);
   console.log(`   - Scenario library: ${scenarioLibrary ? scenarioLibrary.length + ' chars (included)' : 'not loaded'}`);
+  console.log(`   - Inspirational hints: ${inspiration.hints.length} scenarios included`);
   console.log(`   - Additional context: ${additionalContext.length} chars`);
   console.log(`   - Total prompt length: ${finalPrompt.length} chars`);
   console.log(

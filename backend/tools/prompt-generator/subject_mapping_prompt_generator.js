@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 /**
  * Subject Mapping Prompt Generator
@@ -17,68 +17,79 @@ const path = require('path');
 // Country configurations
 const COUNTRIES = {
   HU: {
-    name: 'Hungary',
-    officialCurriculum: 'Nemzeti Alaptanterv (NAT)',
-    primaryLanguage: 'Hungarian',
-    educationAuthority: 'Ministry of Education and Culture (Oktatási és Kulturális Minisztérium)',
+    name: "Hungary",
+    officialCurriculum: "Nemzeti Alaptanterv (NAT)",
+    primaryLanguage: "Hungarian",
+    educationAuthority:
+      "Ministry of Education and Culture (Oktatási és Kulturális Minisztérium)",
     gradeLevels: {
-      '9-10': 'Középiskola 9-10. évfolyam',
-      '11-12': 'Középiskola 11-12. évfolyam'
-    }
+      "9-10": "Középiskola 9-10. évfolyam",
+      "11-12": "Középiskola 11-12. évfolyam",
+    },
   },
   MX: {
-    name: 'Mexico',
-    officialCurriculum: 'Secretaría de Educación Pública (SEP) Curriculum',
-    primaryLanguage: 'Spanish',
-    educationAuthority: 'Secretaría de Educación Pública (SEP)',
+    name: "Mexico",
+    officialCurriculum: "Secretaría de Educación Pública (SEP) Curriculum",
+    primaryLanguage: "Spanish",
+    educationAuthority: "Secretaría de Educación Pública (SEP)",
     gradeLevels: {
-      '9-10': 'Educación Media Superior - Primero y Segundo Semestre',
-      '11-12': 'Educación Media Superior - Tercero y Cuarto Semestre'
-    }
+      "9-10": "Educación Media Superior - Primero y Segundo Semestre",
+      "11-12": "Educación Media Superior - Tercero y Cuarto Semestre",
+    },
   },
   US: {
-    name: 'United States',
-    officialCurriculum: 'Common Core State Standards / Next Generation Science Standards (NGSS)',
-    primaryLanguage: 'English',
-    educationAuthority: 'State Boards of Education (following Common Core / NGSS)',
+    name: "United States",
+    officialCurriculum:
+      "Common Core State Standards / Next Generation Science Standards (NGSS)",
+    primaryLanguage: "English",
+    educationAuthority:
+      "State Boards of Education (following Common Core / NGSS)",
     gradeLevels: {
-      '9-10': 'High School - Grades 9-10 (Freshman & Sophomore)',
-      '11-12': 'High School - Grades 11-12 (Junior & Senior)'
-    }
+      "9-10": "High School - Grades 9-10 (Freshman & Sophomore)",
+      "11-12": "High School - Grades 11-12 (Junior & Senior)",
+    },
   },
   UK: {
-    name: 'United Kingdom',
-    officialCurriculum: 'National Curriculum for England / GCSE and A-Level Standards',
-    primaryLanguage: 'English',
-    educationAuthority: 'Department for Education (DfE)',
+    name: "United Kingdom",
+    officialCurriculum:
+      "National Curriculum for England / GCSE and A-Level Standards",
+    primaryLanguage: "English",
+    educationAuthority: "Department for Education (DfE)",
     gradeLevels: {
-      '9-10': 'Key Stage 4 - Years 10-11 (GCSE)',
-      '11-12': 'Key Stage 5 - Years 12-13 (A-Level)'
-    }
+      "9-10": "Key Stage 4 - Years 10-11 (GCSE)",
+      "11-12": "Key Stage 5 - Years 12-13 (A-Level)",
+    },
   },
   DE: {
-    name: 'Germany',
-    officialCurriculum: 'Bildungsstandards und Lehrpläne der Kultusministerkonferenz',
-    primaryLanguage: 'German',
-    educationAuthority: 'Kultusministerkonferenz (KMK)',
+    name: "Germany",
+    officialCurriculum:
+      "Bildungsstandards und Lehrpläne der Kultusministerkonferenz",
+    primaryLanguage: "German",
+    educationAuthority: "Kultusministerkonferenz (KMK)",
     gradeLevels: {
-      '9-10': 'Sekundarstufe I - Klassen 9-10',
-      '11-12': 'Sekundarstufe II - Klassen 11-12 (Oberstufe)'
-    }
-  }
+      "9-10": "Sekundarstufe I - Klassen 9-10",
+      "11-12": "Sekundarstufe II - Klassen 11-12 (Oberstufe)",
+    },
+  },
 };
 
 // Subject configurations with specific guidance
 const SUBJECTS = {
   mathematics: {
-    name: 'Mathematics',
-    labels: { HU: 'Matematika', MX: 'Matemáticas', US: 'Mathematics', UK: 'Mathematics', DE: 'Mathematik' },
-    emoji: '🔢',
-    category: 'stem',
+    name: "Mathematics",
+    labels: {
+      HU: "Matematika",
+      MX: "Matemáticas",
+      US: "Mathematics",
+      UK: "Mathematics",
+      DE: "Mathematik",
+    },
+    emoji: "🔢",
+    category: "stem",
     specificGuidance: `
 ### Subject-Specific Requirements for Mathematics:
 
-**Core Topics to Include:**
+Core Topics to Include:
 - Algebra (equations, inequalities, functions, polynomials)
 - Geometry (plane geometry, solid geometry, coordinate geometry, transformations)
 - Trigonometry (angles, functions, identities, applications)
@@ -88,30 +99,36 @@ const SUBJECTS = {
 - Sequences and Series
 - Mathematical Logic and Proof Techniques
 
-**Pedagogical Considerations:**
+Pedagogical Considerations:
 - Progress from concrete to abstract reasoning
 - Include both pure mathematics and real-world applications
 - Ensure example tasks cover: calculation, proof, problem-solving, and modeling
 - Balance procedural fluency with conceptual understanding
 - Include visual/geometric representations where applicable
 
-**Example Task Types:**
+Example Task Types:
 - Computation and calculation problems
 - Proof and reasoning tasks
 - Applied word problems from real-world contexts
 - Multi-step problem-solving
 - Pattern recognition and generalization
-`
+`,
   },
   physics: {
-    name: 'Physics',
-    labels: { HU: 'Fizika', MX: 'Física', US: 'Physics', UK: 'Physics', DE: 'Physik' },
-    emoji: '⚛️',
-    category: 'stem',
+    name: "Physics",
+    labels: {
+      HU: "Fizika",
+      MX: "Física",
+      US: "Physics",
+      UK: "Physics",
+      DE: "Physik",
+    },
+    emoji: "⚛️",
+    category: "stem",
     specificGuidance: `
 ### Subject-Specific Requirements for Physics:
 
-**Core Topics to Include:**
+Core Topics to Include:
 - Mechanics (kinematics, dynamics, energy, momentum)
 - Thermodynamics (heat, temperature, laws of thermodynamics)
 - Waves and Optics (wave properties, sound, light, reflection, refraction)
@@ -119,30 +136,36 @@ const SUBJECTS = {
 - Modern Physics (atomic structure, quantum mechanics, relativity) [for grades 11-12]
 - Nuclear Physics (radioactivity, nuclear reactions)
 
-**Pedagogical Considerations:**
+Pedagogical Considerations:
 - Connect theoretical concepts with experimental methods
 - Include both qualitative reasoning and quantitative problem-solving
 - Reference laboratory experiments common in the country's curriculum
 - Emphasize the relationship between mathematics and physics
 - Include safety considerations for practical work
 
-**Example Task Types:**
+Example Task Types:
 - Quantitative problem-solving with formulas
 - Conceptual explanation questions
 - Experiment design and analysis
 - Graph interpretation and analysis
 - Real-world applications (technology, engineering, nature)
-`
+`,
   },
   chemistry: {
-    name: 'Chemistry',
-    labels: { HU: 'Kémia', MX: 'Química', US: 'Chemistry', UK: 'Chemistry', DE: 'Chemie' },
-    emoji: '🧪',
-    category: 'stem',
+    name: "Chemistry",
+    labels: {
+      HU: "Kémia",
+      MX: "Química",
+      US: "Chemistry",
+      UK: "Chemistry",
+      DE: "Chemie",
+    },
+    emoji: "🧪",
+    category: "stem",
     specificGuidance: `
 ### Subject-Specific Requirements for Chemistry:
 
-**Core Topics to Include:**
+Core Topics to Include:
 - Atomic Structure and Periodic Table
 - Chemical Bonding (ionic, covalent, metallic)
 - Chemical Reactions (types, equations, stoichiometry)
@@ -154,30 +177,36 @@ const SUBJECTS = {
 - Organic Chemistry (hydrocarbons, functional groups) [for grades 11-12]
 - Chemical Equilibrium and Kinetics
 
-**Pedagogical Considerations:**
+Pedagogical Considerations:
 - Balance macro-level observations with molecular-level explanations
 - Include laboratory techniques and safety protocols
 - Connect chemistry to everyday life and industry
 - Include both theoretical concepts and practical applications
 - Reference standard nomenclature and notation
 
-**Example Task Types:**
+Example Task Types:
 - Balancing chemical equations
 - Stoichiometric calculations
 - Laboratory procedure design
 - Conceptual explanations of chemical phenomena
 - Problem-solving involving concentrations, yields, and equilibrium
-`
+`,
   },
   biology: {
-    name: 'Biology',
-    labels: { HU: 'Biológia', MX: 'Biología', US: 'Biology', UK: 'Biology', DE: 'Biologie' },
-    emoji: '🧬',
-    category: 'stem',
+    name: "Biology",
+    labels: {
+      HU: "Biológia",
+      MX: "Biología",
+      US: "Biology",
+      UK: "Biology",
+      DE: "Biologie",
+    },
+    emoji: "🧬",
+    category: "stem",
     specificGuidance: `
 ### Subject-Specific Requirements for Biology:
 
-**Core Topics to Include:**
+Core Topics to Include:
 - Cell Biology (structure, function, organelles, cell division)
 - Genetics (Mendelian genetics, DNA, molecular genetics)
 - Evolution and Natural Selection
@@ -187,31 +216,37 @@ const SUBJECTS = {
 - Microbiology (bacteria, viruses, fungi)
 - Biochemistry (proteins, enzymes, metabolism)
 
-**Pedagogical Considerations:**
+Pedagogical Considerations:
 - Connect different levels of biological organization (molecular → organism → ecosystem)
 - Include taxonomy and classification systems
 - Reference local ecosystems and species where appropriate
 - Include microscopy and laboratory investigation skills
 - Address ethical considerations in biology (especially genetics and ecology)
 
-**Example Task Types:**
+Example Task Types:
 - Diagram labeling and interpretation
 - Experimental design and hypothesis testing
 - Classification and identification tasks
 - Process explanations (photosynthesis, respiration, mitosis, etc.)
 - Data analysis from experiments or field studies
 - Application to health, medicine, and environmental issues
-`
+`,
   },
   history: {
-    name: 'History',
-    labels: { HU: 'Történelem', MX: 'Historia', US: 'History', UK: 'History', DE: 'Geschichte' },
-    emoji: '📜',
-    category: 'humanities',
+    name: "History",
+    labels: {
+      HU: "Történelem",
+      MX: "Historia",
+      US: "History",
+      UK: "History",
+      DE: "Geschichte",
+    },
+    emoji: "📜",
+    category: "humanities",
     specificGuidance: `
 ### Subject-Specific Requirements for History:
 
-**Core Topics to Include:**
+Core Topics to Include:
 - National History (country's own historical development, key events, figures)
 - World History (major civilizations, empires, revolutions)
 - Political History (forms of government, major conflicts, diplomacy)
@@ -220,31 +255,37 @@ const SUBJECTS = {
 - Modern History (20th-21st century major events, globalization)
 - Historical Methods (source analysis, historiography, interpretation)
 
-**Pedagogical Considerations:**
+Pedagogical Considerations:
 - Balance national history with world history according to curriculum emphasis
 - Include primary and secondary source analysis
 - Develop chronological understanding and cause-effect relationships
 - Address multiple perspectives and interpretations
 - Connect past events to contemporary issues
 
-**Example Task Types:**
+Example Task Types:
 - Source analysis (primary documents, images, artifacts)
 - Chronological ordering and timeline construction
 - Cause-and-effect analysis
 - Comparison of historical periods or events
 - Essay questions requiring argumentation and evidence
 - Interpretation of historical maps, graphs, and statistical data
-`
+`,
   },
   geography: {
-    name: 'Geography',
-    labels: { HU: 'Földrajz', MX: 'Geografía', US: 'Geography', UK: 'Geography', DE: 'Geographie' },
-    emoji: '🌍',
-    category: 'humanities',
+    name: "Geography",
+    labels: {
+      HU: "Földrajz",
+      MX: "Geografía",
+      US: "Geography",
+      UK: "Geography",
+      DE: "Geographie",
+    },
+    emoji: "🌍",
+    category: "humanities",
     specificGuidance: `
 ### Subject-Specific Requirements for Geography:
 
-**Core Topics to Include:**
+Core Topics to Include:
 - Physical Geography (landforms, climate, ecosystems, natural disasters)
 - Human Geography (population, urbanization, migration, culture)
 - Economic Geography (resources, industries, trade, development)
@@ -253,31 +294,37 @@ const SUBJECTS = {
 - Cartography and GIS (map reading, spatial analysis)
 - Regional Geography (continents, countries, with emphasis on home country/region)
 
-**Pedagogical Considerations:**
+Pedagogical Considerations:
 - Integrate physical and human geography
 - Use maps, satellite imagery, and geographic data
 - Connect local, regional, and global scales
 - Address contemporary issues (climate change, urbanization, globalization)
 - Develop spatial thinking and map literacy
 
-**Example Task Types:**
+Example Task Types:
 - Map interpretation and analysis
 - Climate graph and data analysis
 - Case study analysis of regions or countries
 - Fieldwork and observation tasks
 - Problem-solving related to environmental or development issues
 - Comparison of geographic regions or phenomena
-`
+`,
   },
   literature: {
-    name: 'Literature',
-    labels: { HU: 'Irodalom', MX: 'Literatura', US: 'Literature', UK: 'Literature', DE: 'Literatur' },
-    emoji: '📚',
-    category: 'humanities',
+    name: "Literature",
+    labels: {
+      HU: "Irodalom",
+      MX: "Literatura",
+      US: "Literature",
+      UK: "Literature",
+      DE: "Literatur",
+    },
+    emoji: "📚",
+    category: "humanities",
     specificGuidance: `
 ### Subject-Specific Requirements for Literature:
 
-**Core Topics to Include:**
+Core Topics to Include:
 - Literary Periods and Movements (national and world literature)
 - Literary Genres (poetry, prose, drama, essay)
 - Literary Analysis (themes, symbols, narrative techniques, style)
@@ -287,7 +334,7 @@ const SUBJECTS = {
 - Language and Style Analysis
 - Creative Writing and Expression
 
-**Pedagogical Considerations:**
+Pedagogical Considerations:
 - Emphasize canonical works from the country's national literature
 - Include representative works from world literature
 - Develop close reading and analytical writing skills
@@ -295,7 +342,7 @@ const SUBJECTS = {
 - Include both classical and contemporary literature
 - Use texts in the original language (primary language of instruction)
 
-**Example Task Types:**
+Example Task Types:
 - Close reading and textual analysis
 - Essay writing (interpretation, comparison, argumentation)
 - Poetry analysis (form, meter, literary devices)
@@ -303,17 +350,23 @@ const SUBJECTS = {
 - Identification of literary devices and techniques
 - Contextual questions (historical, biographical, cultural)
 - Creative response to literature
-`
+`,
   },
   informatics: {
-    name: 'Informatics',
-    labels: { HU: 'Informatika', MX: 'Informática', US: 'Computer Science', UK: 'Computing', DE: 'Informatik' },
-    emoji: '💻',
-    category: 'stem',
+    name: "Informatics",
+    labels: {
+      HU: "Informatika",
+      MX: "Informática",
+      US: "Computer Science",
+      UK: "Computing",
+      DE: "Informatik",
+    },
+    emoji: "💻",
+    category: "stem",
     specificGuidance: `
 ### Subject-Specific Requirements for Informatics:
 
-**Core Topics to Include:**
+Core Topics to Include:
 - Programming Fundamentals (Python, JavaScript, control structures, data structures)
 - Web Development (HTML, CSS, JavaScript, frontend and backend development)
 - Computer Systems (hardware, operating systems, networks, software)
@@ -323,7 +376,7 @@ const SUBJECTS = {
 - Emerging Technologies (cloud computing, AI/ML basics, mobile development)
 - Data Science Basics (data analysis, visualization, statistics)
 
-**Pedagogical Considerations:**
+Pedagogical Considerations:
 - Balance theoretical concepts with hands-on practical projects
 - Include real-world applications and industry-relevant skills
 - Progress from visual/block-based programming to text-based coding
@@ -332,7 +385,7 @@ const SUBJECTS = {
 - Connect to careers and pathways in technology
 - Use project-based learning and portfolio development
 
-**Example Task Types:**
+Example Task Types:
 - Coding exercises and programming challenges
 - Web development projects (building websites and applications)
 - System configuration and troubleshooting tasks
@@ -342,8 +395,8 @@ const SUBJECTS = {
 - Technical documentation and presentation
 - Debugging and code review exercises
 - Research and analysis of emerging technologies
-`
-  }
+`,
+  },
 };
 
 /**
@@ -354,11 +407,15 @@ function generatePrompt(countryCode, subjectKey) {
   const subject = SUBJECTS[subjectKey];
 
   if (!country) {
-    throw new Error(`Unknown country code: ${countryCode}. Available: ${Object.keys(COUNTRIES).join(', ')}`);
+    throw new Error(
+      `Unknown country code: ${countryCode}. Available: ${Object.keys(COUNTRIES).join(", ")}`
+    );
   }
 
   if (!subject) {
-    throw new Error(`Unknown subject: ${subjectKey}. Available: ${Object.keys(SUBJECTS).join(', ')}`);
+    throw new Error(
+      `Unknown subject: ${subjectKey}. Available: ${Object.keys(SUBJECTS).join(", ")}`
+    );
   }
 
   const subjectName = subject.labels[countryCode] || subject.name;
@@ -368,27 +425,27 @@ function generatePrompt(countryCode, subjectKey) {
 
 You are an expert curriculum analyst specializing in ${country.name}'s official national education standards for ${subject.name}.
 
-Your task is to create a comprehensive, hierarchical JSON structure that maps the complete ${subject.name} curriculum for grades 9-12 according to ${country.name}'s official government education standards: **${country.officialCurriculum}**.
+Your task is to create a comprehensive, hierarchical JSON structure that maps the complete ${subject.name} curriculum for grades 9-12 according to ${country.name}'s official government education standards: ${country.officialCurriculum}.
 
 ---
 
 ## 1. Research and Accuracy Requirements
 
-**Authoritative Sources:**
+Authoritative Sources:
 - Base your structure on the official ${country.educationAuthority} curriculum documents
-- Follow the **${country.officialCurriculum}** standards and framework
+- Follow the ${country.officialCurriculum} standards and framework
 - Ensure accuracy to ${country.name}'s actual teaching practices and pedagogical approaches
 - Use terminology and concepts standard in ${country.name}'s education system
 
-**Grade Level Context:**
-- Grade 9-10: ${country.gradeLevels['9-10']}
-- Grade 11-12: ${country.gradeLevels['11-12']}
+Grade Level Context:
+- Grade 9-10: ${country.gradeLevels["9-10"]}
+- Grade 11-12: ${country.gradeLevels["11-12"]}
 
 ---
 
 ## 2. JSON Structure Format
 
-Follow this **exact** hierarchical structure:
+Follow this exact hierarchical structure:
 
 \`\`\`json
 {
@@ -428,20 +485,22 @@ Follow this **exact** hierarchical structure:
 
 ## 3. Depth and Coverage Requirements
 
-**Breadth (Horizontal Coverage):**
-- **Grade 9-10**: Include 8-12 main topics that cover the full curriculum for these grades
-- **Grade 11-12**: Include 8-12 main topics that cover the full curriculum for these grades
+Breadth (Horizontal Coverage):
+- Grade 9-10: Include 12-14 main topics that cover the full curriculum for these grades
+- Grade 11-12: Include 12-14 main topics that cover the full curriculum for these grades
 - Total main topics across both grade levels: 16-24
 
-**Depth (Vertical Hierarchy):**
-- **Level 1 (Main Topics)**: 8-12 per grade level
-- **Level 2 (Sub Topics)**: 3-6 per main topic
-- **Level 3 (Detailed Sub Topics)**: 2-5 per sub topic
-- **Level 4 (Example Tasks)**: 3-5 tasks per detailed sub topic
+Depth (Vertical Hierarchy):
+- Level 1 (Main Topics): 12-14 per grade level
+- Level 2 (Sub Topics): 3-6 per main topic
+- Level 3 (Sub Topics with example Tasks): 3 tasks (only if really needed 4-5 tasks) per detailed sub topic
 
-**Total Size Target:**
-- **3,000-3,500 lines** of JSON
-- **150,000-160,000 characters** in total
+Note: at level to if it make sense you can already add example tasks (in case if no sub topics can be added vertically there)
+
+Total Size Target:
+- Minimum 2,400-2,500 lines of JSON
+- Minimum 300-400 lines / chunk (in total 2400)
+- Minimum 140,000-180,000 characters in total
 - This ensures comprehensive coverage of the entire 4-year secondary curriculum
 
 ---
@@ -449,7 +508,7 @@ Follow this **exact** hierarchical structure:
 ## 4. Content Quality Standards
 
 ### Language and Terminology:
-- **All names and descriptions MUST be in ${localLanguage}**
+- All names and descriptions MUST be in ${localLanguage}
 - Use official terminology from ${country.name}'s education system
 - Keys should be in lowercase_with_underscores (English or transliterated)
 - Be consistent with naming conventions throughout
@@ -462,13 +521,13 @@ Follow this **exact** hierarchical structure:
 
 ### Example Tasks:
 Each example task must be:
-- **Authentic**: Reflect the types of assessments and exercises used in ${country.name}
-- **Age-appropriate**: Suitable for the cognitive level of the grade
-- **Progressive**: Show increasing complexity across the 3-5 examples
-- **Curriculum-aligned**: Match the learning objectives of the official curriculum
-- **Practical**: Where possible, connect to real-world contexts relevant to ${country.name}
-- **Diverse**: Cover different cognitive levels (recall, application, analysis, synthesis)
-- **Clear**: Fully specified so a student or teacher understands what is being asked
+- Authentic: Reflect the types of assessments and exercises used in ${country.name}
+- Age-appropriate: Suitable for the cognitive level of the grade
+- Progressive: Show increasing complexity across the 3-5 examples
+- Curriculum-aligned: Match the learning objectives of the official curriculum
+- Practical: Where possible, connect to real-world contexts relevant to ${country.name}
+- Diverse: Cover different cognitive levels (recall, application, analysis, synthesis)
+- Clear: Fully specified so a student or teacher understands what is being asked
 
 ### Progression:
 - Ensure logical progression from Grade 9-10 to Grade 11-12
@@ -500,34 +559,34 @@ Before and during your work, ensure:
 Since this is a large dataset (~3000-3500 lines), deliver it in manageable chunks.
 
 ### Step 1: Overview
-First, provide a **complete overview** listing:
+First, provide a complete overview listing:
 1. All main topics for grade_9_10 (with brief 1-sentence descriptions)
 2. All main topics for grade_11_12 (with brief 1-sentence descriptions)
 3. Confirmation that this structure aligns with ${country.officialCurriculum}
 4. Estimated line count and character count for the full output
 
-**Wait for approval before proceeding to chunks.**
+Wait for approval before proceeding to chunks.
 
 ### Step 2: Deliver Chunks
 After approval, deliver the full JSON data in chunks as follows:
 
-**Chunk 1**: \`grade_9_10\` array - First 2-3 main topics (complete with all sub_topics, sub_sub_topics, and example_tasks)
+Chunk 1: \`grade_9_10\` array - First 3-4 main topics (complete with all sub_topics, sub_sub_topics, and example_tasks)
 
-**Chunk 2**: \`grade_9_10\` array - Next 2-3 main topics
+Chunk 2: \`grade_9_10\` array - Next 3-4 main topics
 
-**Chunk 3**: \`grade_9_10\` array - Next 2-3 main topics
+Chunk 3: \`grade_9_10\` array - Next 3-4 main topics
 
-**Chunk 4**: \`grade_9_10\` array - Remaining main topics
+Chunk 4: \`grade_9_10\` array - Remaining main topics
 
-**Chunk 5**: \`grade_11_12\` array - First 2-3 main topics
+Chunk 5: \`grade_11_12\` array - First 3-4 main topics
 
-**Chunk 6**: \`grade_11_12\` array - Next 2-3 main topics
+Chunk 6: \`grade_11_12\` array - Next 3-4 main topics
 
-**Chunk 7**: \`grade_11_12\` array - Next 2-3 main topics
+Chunk 7: \`grade_11_12\` array - Next 3-4 main topics
 
-**Chunk 8**: \`grade_11_12\` array - Remaining main topics
+Chunk 8: \`grade_11_12\` array - Remaining main topics
 
-**IMPORTANT**: The \`grade_9_10\` and \`grade_11_12\` keys should contain **arrays** directly, NOT objects with a "topics" key. The structure should be:
+IMPORTANT: The \`grade_9_10\` and \`grade_11_12\` keys should contain arrays directly, NOT objects with a "topics" key. The structure should be:
 \`\`\`json
 {
   "grade_9_10": [ /* array of topics */ ],
@@ -541,7 +600,7 @@ After each chunk, state:
 \`\`\`
 ✅ Chunk [X] of [TOTAL] complete.
 📊 Character count for this chunk: [XXXXX]
-📈 Cumulative character count: [XXXXXX] / ~160,000
+📈 Cumulative character count: [XXXXXX] / ~160,000-190,000
 🔄 Ready for next chunk? Reply 'continue' to proceed to Chunk [X+1].
 \`\`\`
 
@@ -550,19 +609,19 @@ After each chunk, state:
 ## 7. Final Validation
 
 After delivering all chunks, provide:
-1. **Total line count**
-2. **Total character count**
-3. **Confirmation** that all main topics from the overview are included
-4. **Self-check** that content aligns with ${country.officialCurriculum}
+1. Total line count
+2. Total character count
+3. Confirmation that all main topics from the overview are included
+4. Self-check that content aligns with ${country.officialCurriculum}
 
 ---
 
 ## 8. Important Notes
 
-- **DO NOT hallucinate or invent curriculum content.** If you are unsure about specific topics in ${country.name}'s curriculum, indicate this and use general best practices for the subject.
-- **Prioritize accuracy over creativity.** This data will be used for educational purposes.
-- **Be consistent** with JSON formatting, key naming, and structure throughout all chunks.
-- **All content must be in ${localLanguage}** except for keys.
+- DO NOT hallucinate or invent curriculum content. If you are unsure about specific topics in ${country.name}'s curriculum, indicate this and use general best practices for the subject.
+- Prioritize accuracy over creativity. This data will be used for educational purposes.
+- Be consistent with JSON formatting, key naming, and structure throughout all chunks.
+- All content must be in ${localLanguage} except for keys.
 
 ---
 
@@ -574,7 +633,12 @@ Please confirm:
 3. You are ready to provide content in ${localLanguage}
 4. You will deliver an overview first, then await approval before providing chunks
 
-**Please start with the overview (Step 1).**
+Please start with the overview (Step 1).
+
+At chunk 1 also include "grade_9_10" key
+At chunk 5 also include "grade_11_12" key
+
+The other chunks should only presented {},{}, ... so i can copy paste them easily into the actual "grade_":[...] array.
 `;
 
   return prompt;
@@ -587,9 +651,9 @@ function parseArgs() {
   const args = process.argv.slice(2);
   const params = {};
 
-  args.forEach(arg => {
-    if (arg.startsWith('--')) {
-      const [key, value] = arg.slice(2).split('=');
+  args.forEach((arg) => {
+    if (arg.startsWith("--")) {
+      const [key, value] = arg.slice(2).split("=");
       params[key] = value;
     }
   });
@@ -601,13 +665,15 @@ function parseArgs() {
  * Generate prompt for a single subject
  */
 function generateSingleSubject(countryCode, subjectKey) {
-  console.log(`\n📝 Generating prompt for: ${SUBJECTS[subjectKey]?.name || subjectKey} (${COUNTRIES[countryCode]?.name || countryCode})`);
+  console.log(
+    `\n📝 Generating prompt for: ${SUBJECTS[subjectKey]?.name || subjectKey} (${COUNTRIES[countryCode]?.name || countryCode})`
+  );
 
   // Generate the prompt
   const prompt = generatePrompt(countryCode, subjectKey);
 
   // Create output filename with country subdirectory
-  const baseOutputDir = path.join(__dirname, 'prompts');
+  const baseOutputDir = path.join(__dirname, "prompts");
   const countryDir = path.join(baseOutputDir, countryCode.toLowerCase());
   const outputFilename = `${subjectKey}_grade_9_12.txt`;
   const outputPath = path.join(countryDir, outputFilename);
@@ -618,13 +684,13 @@ function generateSingleSubject(countryCode, subjectKey) {
   }
 
   // Write prompt to file
-  fs.writeFileSync(outputPath, prompt, 'utf8');
+  fs.writeFileSync(outputPath, prompt, "utf8");
 
   return {
     subject: SUBJECTS[subjectKey].name,
     filename: `${countryCode.toLowerCase()}/${outputFilename}`,
     path: outputPath,
-    size: prompt.length
+    size: prompt.length,
   };
 }
 
@@ -633,8 +699,12 @@ function generateSingleSubject(countryCode, subjectKey) {
  */
 function main() {
   const args = parseArgs();
-  const countryCode = (args['country-code'] || args['country'] || '').toUpperCase();
-  const subjectKey = (args['subject'] || '').toLowerCase();
+  const countryCode = (
+    args["country-code"] ||
+    args["country"] ||
+    ""
+  ).toUpperCase();
+  const subjectKey = (args["subject"] || "").toLowerCase();
 
   // Validate country code
   if (!countryCode) {
@@ -653,10 +723,10 @@ Examples:
   node subject_mapping_prompt_generator.js --country-code=MX --subject=biology
 
 Available Countries:
-  ${Object.keys(COUNTRIES).join(', ')}
+  ${Object.keys(COUNTRIES).join(", ")}
 
 Available Subjects:
-  ${Object.keys(SUBJECTS).join(', ')}
+  ${Object.keys(SUBJECTS).join(", ")}
 `);
     process.exit(1);
   }
@@ -664,14 +734,18 @@ Available Subjects:
   // Check if country exists
   if (!COUNTRIES[countryCode]) {
     console.error(`\n❌ Error: Unknown country code: ${countryCode}\n`);
-    console.error(`Available countries: ${Object.keys(COUNTRIES).join(', ')}\n`);
+    console.error(
+      `Available countries: ${Object.keys(COUNTRIES).join(", ")}\n`
+    );
     process.exit(1);
   }
 
   try {
     // If no subject specified, generate for all subjects
     if (!subjectKey) {
-      console.log(`\n🌍 Generating prompts for ALL subjects in ${COUNTRIES[countryCode].name}...\n`);
+      console.log(
+        `\n🌍 Generating prompts for ALL subjects in ${COUNTRIES[countryCode].name}...\n`
+      );
 
       const results = [];
       const subjectKeys = Object.keys(SUBJECTS);
@@ -684,27 +758,38 @@ Available Subjects:
       // Output summary
       console.log(`\n✅ All prompts generated successfully!\n`);
       console.log(`📊 Summary:`);
-      console.log(`   Country: ${COUNTRIES[countryCode].name} (${countryCode})`);
+      console.log(
+        `   Country: ${COUNTRIES[countryCode].name} (${countryCode})`
+      );
       console.log(`   Total subjects: ${results.length}`);
-      console.log(`   Total size: ${results.reduce((sum, r) => sum + r.size, 0).toLocaleString()} characters\n`);
+      console.log(
+        `   Total size: ${results.reduce((sum, r) => sum + r.size, 0).toLocaleString()} characters\n`
+      );
 
       console.log(`📄 Generated files:`);
       results.forEach((result, index) => {
-        console.log(`   ${index + 1}. ${result.subject.padEnd(15)} → ${result.filename}`);
+        console.log(
+          `   ${index + 1}. ${result.subject.padEnd(15)} → ${result.filename}`
+        );
       });
 
       console.log(`\n💡 Next steps:`);
-      console.log(`   1. Navigate to: tools/prompt-generator/prompts/${countryCode.toLowerCase()}/`);
+      console.log(
+        `   1. Navigate to: tools/prompt-generator/prompts/${countryCode.toLowerCase()}/`
+      );
       console.log(`   2. Open each .txt file and copy the prompt`);
       console.log(`   3. Paste into ChatGPT (GPT-4 recommended)`);
-      console.log(`   4. Follow the instructions to receive curriculum data in chunks`);
+      console.log(
+        `   4. Follow the instructions to receive curriculum data in chunks`
+      );
       console.log(`\n`);
-
     } else {
       // Generate for a single subject
       if (!SUBJECTS[subjectKey]) {
         console.error(`\n❌ Error: Unknown subject: ${subjectKey}\n`);
-        console.error(`Available subjects: ${Object.keys(SUBJECTS).join(', ')}\n`);
+        console.error(
+          `Available subjects: ${Object.keys(SUBJECTS).join(", ")}\n`
+        );
         process.exit(1);
       }
 
@@ -719,10 +804,11 @@ Available Subjects:
       console.log(`   1. Open the generated file: ${result.path}`);
       console.log(`   2. Copy the entire prompt`);
       console.log(`   3. Paste it into ChatGPT (GPT-4 recommended)`);
-      console.log(`   4. Follow the instructions to receive the curriculum data in chunks`);
+      console.log(
+        `   4. Follow the instructions to receive the curriculum data in chunks`
+      );
       console.log(`\n`);
     }
-
   } catch (error) {
     console.error(`\n❌ Error: ${error.message}\n`);
     process.exit(1);

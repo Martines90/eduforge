@@ -1,157 +1,121 @@
 /**
  * Unit tests for Story Inspiration Helper
- * Testing weighted random selection and prompt enhancement generation
+ * Testing random hint selection and prompt generation
  */
 
 import {
-  generateInspiration,
-  buildPromptEnhancement,
+  generateInspirationHints,
+  buildInspirationPrompt,
   generateStoryInspiration,
 } from "../story-inspiration.helper";
 import { DifficultyLevel, TargetGroup } from "../../types";
 
 describe("Story Inspiration Helper", () => {
-  describe("generateInspiration", () => {
-    it("should generate inspiration with all required fields for easy difficulty", () => {
-      const result = generateInspiration("easy", "mixed", []);
+  describe("generateInspirationHints", () => {
+    it("should generate 10 random hints", () => {
+      const hints = generateInspirationHints();
 
-      // Should have at least some inspiration elements
-      expect(result).toBeDefined();
-      expect(typeof result).toBe("object");
-
-      // Check that at least some fields are populated (not all may be present)
-      const hasAnyField =
-        result.era ||
-        result.location ||
-        result.personality ||
-        result.situation ||
-        result.theme ||
-        result.vibe ||
-        result.genre;
-
-      expect(hasAnyField).toBeTruthy();
+      expect(hints).toBeDefined();
+      expect(Array.isArray(hints)).toBe(true);
+      expect(hints.length).toBe(10);
     });
 
-    test.each([
-      { difficulty: "medium" as DifficultyLevel, targetGroup: "boys" as TargetGroup },
-      { difficulty: "hard" as DifficultyLevel, targetGroup: "girls" as TargetGroup },
-    ])("should generate inspiration for $difficulty difficulty", ({ difficulty, targetGroup }) => {
-      const result = generateInspiration(difficulty, targetGroup, []);
+    it("should return strings as hints", () => {
+      const hints = generateInspirationHints();
 
-      expect(result).toBeDefined();
-      expect(typeof result).toBe("object");
-    });
-
-    it("should handle different target groups", () => {
-      const targetGroups: TargetGroup[] = ["mixed", "boys", "girls"];
-
-      targetGroups.forEach((group) => {
-        const result = generateInspiration("medium", group, []);
-        expect(result).toBeDefined();
-        // Age should be appropriate for the group if selected
-        if (result.age) {
-          expect(result.age.id).toBeTruthy();
-          expect(result.age.age_range).toBeTruthy();
-        }
+      hints.forEach((hint) => {
+        expect(typeof hint).toBe("string");
+        expect(hint.length).toBeGreaterThan(0);
       });
     });
 
-    it("should accept custom keywords without errors", () => {
-      const keywords = ["science", "technology", "innovation"];
-      const result = generateInspiration("medium", "mixed", keywords);
+    it("should generate different hints on multiple calls (randomness)", () => {
+      const hints1 = generateInspirationHints();
+      const hints2 = generateInspirationHints();
 
-      expect(result).toBeDefined();
-      expect(typeof result).toBe("object");
+      // At least one hint should be different due to random selection
+      const hasAnyDifference = hints1.some((hint, index) => hint !== hints2[index]);
+      expect(hasAnyDifference).toBe(true);
     });
 
-    it("should generate different results on multiple calls (randomness)", () => {
-      const result1 = generateInspiration("medium", "mixed", []);
-      const result2 = generateInspiration("medium", "mixed", []);
+    it("should accept optional parameters without errors", () => {
+      const hints = generateInspirationHints("medium", "mixed", ["science"]);
 
-      // At least one field should be different (due to randomness)
-      const isDifferent =
-        result1.era?.id !== result2.era?.id ||
-        result1.location?.id !== result2.location?.id ||
-        result1.vibe?.id !== result2.vibe?.id ||
-        result1.situation?.id !== result2.situation?.id;
+      expect(hints).toBeDefined();
+      expect(hints.length).toBe(10);
+    });
 
-      // This might occasionally fail due to random chance, but very unlikely
-      expect(isDifferent).toBeTruthy();
+    it("should work with different difficulty levels", () => {
+      const difficulties: DifficultyLevel[] = ["easy", "medium", "hard"];
+
+      difficulties.forEach((difficulty) => {
+        const hints = generateInspirationHints(difficulty, "mixed", []);
+        expect(hints).toBeDefined();
+        expect(hints.length).toBe(10);
+      });
     });
   });
 
-  describe("buildPromptEnhancement", () => {
-    it("should build a valid prompt enhancement from inspiration", () => {
-      const inspiration = generateInspiration("medium", "mixed", []);
-      const enhancement = buildPromptEnhancement(inspiration);
+  describe("buildInspirationPrompt", () => {
+    it("should build a valid prompt from hints array", () => {
+      const hints = generateInspirationHints();
+      const prompt = buildInspirationPrompt(hints);
 
-      expect(enhancement).toBeDefined();
-      expect(typeof enhancement).toBe("string");
-      expect(enhancement.length).toBeGreaterThan(0);
-      expect(enhancement).toContain("STORY INSPIRATION ELEMENTS");
-      expect(enhancement).toContain("Important:");
+      expect(prompt).toBeDefined();
+      expect(typeof prompt).toBe("string");
+      expect(prompt.length).toBeGreaterThan(0);
     });
 
-    it("should include era information when present", () => {
-      const inspiration = generateInspiration("medium", "mixed", []);
-      const enhancement = buildPromptEnhancement(inspiration);
+    it("should include header and instructions", () => {
+      const hints = generateInspirationHints();
+      const prompt = buildInspirationPrompt(hints);
 
-      if (inspiration.era) {
-        expect(enhancement).toContain("Era/Time Period");
-        expect(enhancement).toContain(inspiration.era.name);
-      }
+      expect(prompt).toContain("INSPIRATIONAL SCENARIO HINTS");
+      expect(prompt).toContain("CRITICAL INSTRUCTION");
+      expect(prompt).toContain("You MUST select ONE of these scenarios");
     });
 
-    it("should include location information when present", () => {
-      const inspiration = generateInspiration("medium", "mixed", []);
-      const enhancement = buildPromptEnhancement(inspiration);
+    it("should list all hints with numbers", () => {
+      const hints = generateInspirationHints();
+      const prompt = buildInspirationPrompt(hints);
 
-      if (inspiration.location) {
-        expect(enhancement).toContain("Location/Setting");
-        expect(enhancement).toContain(inspiration.location.name);
-      }
+      hints.forEach((hint, index) => {
+        expect(prompt).toContain(`${index + 1}. ${hint}`);
+      });
     });
 
-    it("should include character information when present", () => {
-      const inspiration = generateInspiration("medium", "mixed", []);
-      const enhancement = buildPromptEnhancement(inspiration);
+    it("should handle empty hints array gracefully", () => {
+      const prompt = buildInspirationPrompt([]);
 
-      if (inspiration.role && inspiration.personality) {
-        expect(enhancement).toContain("Protagonist Character");
-        expect(enhancement).toContain(inspiration.role.name);
-        expect(enhancement).toContain(inspiration.personality.name);
-      }
+      expect(prompt).toBeDefined();
+      expect(prompt).toBe("");
     });
 
-    it("should include theme when present", () => {
-      const inspiration = generateInspiration("medium", "mixed", []);
-      const enhancement = buildPromptEnhancement(inspiration);
+    it("should format prompt with markdown", () => {
+      const hints = ["NASA rocket launch", "Space station operation"];
+      const prompt = buildInspirationPrompt(hints);
 
-      if (inspiration.theme) {
-        expect(enhancement).toContain("Underlying Theme");
-        expect(enhancement).toContain(inspiration.theme.name);
-      }
-    });
-
-    it("should handle empty inspiration object gracefully", () => {
-      const emptyInspiration = {};
-      const enhancement = buildPromptEnhancement(emptyInspiration);
-
-      expect(enhancement).toBeDefined();
-      expect(enhancement).toContain("STORY INSPIRATION ELEMENTS");
-      expect(enhancement).toContain("Important:");
+      expect(prompt).toMatch(/\*\*/); // Bold markers
+      expect(prompt).toMatch(/\n/); // Line breaks
+      expect(prompt).toContain("##"); // Markdown headers
     });
   });
 
   describe("generateStoryInspiration", () => {
-    it("should return both selected inspiration and prompt additions", () => {
+    it("should return hints and prompt additions", () => {
       const result = generateStoryInspiration("medium", "mixed", []);
 
       expect(result).toBeDefined();
-      expect(result.selected).toBeDefined();
+      expect(result.hints).toBeDefined();
       expect(result.promptAdditions).toBeDefined();
-      expect(typeof result.selected).toBe("object");
+      expect(Array.isArray(result.hints)).toBe(true);
       expect(typeof result.promptAdditions).toBe("string");
+    });
+
+    it("should generate 10 hints", () => {
+      const result = generateStoryInspiration("medium", "mixed", []);
+
+      expect(result.hints.length).toBe(10);
     });
 
     it("should generate consistent output structure for all difficulty levels", () => {
@@ -160,27 +124,36 @@ describe("Story Inspiration Helper", () => {
       difficulties.forEach((difficulty) => {
         const result = generateStoryInspiration(difficulty, "mixed", []);
 
-        expect(result).toHaveProperty("selected");
+        expect(result).toHaveProperty("hints");
         expect(result).toHaveProperty("promptAdditions");
+        expect(result.hints.length).toBe(10);
         expect(result.promptAdditions.length).toBeGreaterThan(0);
       });
     });
 
-    it("should include custom keywords in the process", () => {
+    it("should work with different target groups", () => {
+      const targetGroups: TargetGroup[] = ["mixed", "boys", "girls"];
+
+      targetGroups.forEach((group) => {
+        const result = generateStoryInspiration("medium", group, []);
+        expect(result).toBeDefined();
+        expect(result.hints.length).toBe(10);
+      });
+    });
+
+    it("should accept custom keywords", () => {
       const keywords = ["adventure", "mystery", "discovery"];
       const result = generateStoryInspiration("medium", "mixed", keywords);
 
       expect(result).toBeDefined();
-      expect(result.selected).toBeDefined();
-      expect(result.promptAdditions).toBeDefined();
+      expect(result.hints.length).toBe(10);
     });
 
     it("should generate valid prompt additions with proper formatting", () => {
       const result = generateStoryInspiration("hard", "boys", ["technology"]);
 
-      expect(result.promptAdditions).toContain("## STORY INSPIRATION ELEMENTS");
-      expect(result.promptAdditions).toContain("Important:");
-      // Should have markdown formatting
+      expect(result.promptAdditions).toContain("## INSPIRATIONAL SCENARIO HINTS");
+      expect(result.promptAdditions).toContain("CRITICAL INSTRUCTION");
       expect(result.promptAdditions).toMatch(/\*\*/); // Bold markers
       expect(result.promptAdditions).toMatch(/\n/); // Line breaks
     });
@@ -189,8 +162,19 @@ describe("Story Inspiration Helper", () => {
       const result1 = generateStoryInspiration("medium", "mixed", []);
       const result2 = generateStoryInspiration("medium", "mixed", []);
 
-      // Prompt additions should be different due to random selection
-      expect(result1.promptAdditions).not.toBe(result2.promptAdditions);
+      // Hints should be different due to random selection
+      const hasAnyDifference = result1.hints.some(
+        (hint, index) => hint !== result2.hints[index]
+      );
+      expect(hasAnyDifference).toBe(true);
+    });
+
+    it("should work without parameters (optional)", () => {
+      const result = generateStoryInspiration();
+
+      expect(result).toBeDefined();
+      expect(result.hints.length).toBe(10);
+      expect(result.promptAdditions.length).toBeGreaterThan(0);
     });
   });
 
@@ -208,30 +192,37 @@ describe("Story Inspiration Helper", () => {
       );
 
       // Verify the complete output is usable
-      expect(inspiration.selected).toBeDefined();
+      expect(inspiration.hints).toBeDefined();
       expect(inspiration.promptAdditions).toBeDefined();
+      expect(inspiration.hints.length).toBe(10);
       expect(inspiration.promptAdditions.length).toBeGreaterThan(100);
 
       // Verify it has guidance text
       expect(inspiration.promptAdditions).toContain(
-        "Use these elements to enrich your story"
+        "scenario ideas to inspire your task design"
       );
       expect(inspiration.promptAdditions).toContain(
-        "Adapt them naturally to fit the mathematical content"
+        "Choose ONE scenario from the list"
       );
     });
 
-    it("should generate appropriate complexity for different difficulty levels", () => {
+    it("should generate appropriate output for different difficulty levels", () => {
       const easyResult = generateStoryInspiration("easy", "mixed", []);
       const hardResult = generateStoryInspiration("hard", "mixed", []);
 
-      // Both should work
-      expect(easyResult.selected).toBeDefined();
-      expect(hardResult.selected).toBeDefined();
-
-      // Both should have prompt additions
+      // Both should work with same structure
+      expect(easyResult.hints.length).toBe(10);
+      expect(hardResult.hints.length).toBe(10);
       expect(easyResult.promptAdditions.length).toBeGreaterThan(0);
       expect(hardResult.promptAdditions.length).toBeGreaterThan(0);
+    });
+
+    it("should include all hints in the prompt additions", () => {
+      const result = generateStoryInspiration("medium", "mixed", []);
+
+      result.hints.forEach((hint) => {
+        expect(result.promptAdditions).toContain(hint);
+      });
     });
   });
 });
