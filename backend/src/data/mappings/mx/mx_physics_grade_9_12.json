@@ -4474,6 +4474,632 @@
           ]
         }
       ]
+    },
+    {
+      "key": "circuitos_electricos",
+      "name": "Circuitos Eléctricos",
+      "short_description": "Corriente eléctrica, resistencia, ley de Ohm, circuitos en serie y paralelo, potencia eléctrica.",
+      "sub_topics": [
+        {
+          "key": "corriente_electrica",
+          "name": "Corriente Eléctrica",
+          "short_description": "Flujo de carga; I = Q/t; unidad: Ampere (A = C/s); corriente directa (DC) y alterna (AC).",
+          "sub_topics": [
+            {
+              "key": "definicion_corriente",
+              "name": "Definición de Corriente Eléctrica",
+              "short_description": "Razón de flujo de carga; dirección convencional (+ a -); portadores de carga en conductores (electrones).",
+              "example_tasks": [
+                "Calcula corriente si 10 C de carga pasan por sección de alambre en 2 s (I = Q/t = 5 A).",
+                "Determina carga total que pasa si corriente de 3 A fluye durante 5 minutos (Q = It).",
+                "Explica diferencia entre dirección convencional (+ a -) y dirección real de electrones (- a +)."
+              ]
+            },
+            {
+              "key": "modelo_microscopico",
+              "name": "Modelo Microscópico de Conducción",
+              "short_description": "Electrones de conducción en metales; velocidad de deriva; densidad de corriente.",
+              "example_tasks": [
+                "Explica por qué metales conducen electricidad (electrones libres pueden moverse).",
+                "Describe velocidad de deriva: movimiento lento promedio de electrones (mm/s) vs propagación de señal (cercana a c).",
+                "Diferencia conductores (muchos electrones libres), semiconductores (pocos) y aislantes (casi ninguno)."
+              ]
+            },
+            {
+              "key": "corriente_dc_ac",
+              "name": "Corriente Directa (DC) y Corriente Alterna (AC)",
+              "short_description": "DC: dirección constante (baterías); AC: dirección alterna periódicamente (red eléctrica, f = 60 Hz en México).",
+              "example_tasks": [
+                "Identifica fuentes DC (baterías, celdas solares) y AC (generadores, red eléctrica doméstica).",
+                "Explica por qué red eléctrica usa AC: facilita transformación de voltaje, transmisión eficiente a larga distancia.",
+                "Describe valores en AC: voltaje pico (Vₘₐₓ) vs voltaje RMS (Vᵣₘₛ = Vₘₐₓ/√2); en México 127 V RMS."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "resistencia_ley_ohm",
+          "name": "Resistencia y Ley de Ohm",
+          "short_description": "Oposición al flujo de corriente; R = V/I; dependencia de material, geometría y temperatura.",
+          "sub_topics": [
+            {
+              "key": "ley_ohm",
+              "name": "Ley de Ohm",
+              "short_description": "V = IR; voltaje proporcional a corriente en materiales óhmicos; R = constante.",
+              "example_tasks": [
+                "Calcula voltaje necesario para que corriente de 2 A circule por resistencia de 10 Ω (V = IR = 20 V).",
+                "Determina resistencia de alambre si voltaje de 12 V produce corriente de 0.5 A (R = V/I).",
+                "Explica que no todos los materiales son óhmicos (diodos, termistores tienen R variable con V o I)."
+              ]
+            },
+            {
+              "key": "resistividad",
+              "name": "Resistividad y Factores que Afectan Resistencia",
+              "short_description": "R = ρL/A; resistividad (ρ) propiedad del material; dependencia de temperatura.",
+              "example_tasks": [
+                "Calcula resistencia de alambre de cobre (ρ = 1.7×10⁻⁸ Ω·m) de 10 m de largo y 1 mm² de área (R = ρL/A).",
+                "Explica cómo afecta: aumentar longitud (↑R), aumentar área (↓R), cambiar material (diferente ρ).",
+                "Describe efecto de temperatura: R aumenta con T en metales (mayor vibración atómica), disminuye en semiconductores."
+              ]
+            },
+            {
+              "key": "codigo_colores_resistencias",
+              "name": "Código de Colores de Resistencias",
+              "short_description": "Sistema de bandas de colores para identificar valor de resistencia y tolerancia.",
+              "example_tasks": [
+                "Lee resistencia con bandas: marrón-negro-rojo-dorado (10 × 10² Ω = 1 kΩ, ±5%).",
+                "Determina código de colores para resistencia de 4.7 kΩ con tolerancia ±10%.",
+                "Investiga otros tipos: resistencias de montaje superficial (SMD), potenciómetros (resistencia variable)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "circuitos_serie_paralelo",
+          "name": "Circuitos en Serie y en Paralelo",
+          "short_description": "Combinaciones de resistencias; voltaje, corriente y resistencia equivalente.",
+          "sub_topics": [
+            {
+              "key": "circuitos_serie",
+              "name": "Circuitos en Serie",
+              "short_description": "Elementos conectados uno tras otro; misma corriente; voltajes se suman; Rₑq = R₁ + R₂ + R₃ + ...",
+              "example_tasks": [
+                "Calcula resistencia equivalente de tres resistencias en serie: 10 Ω, 20 Ω, 30 Ω (Rₑq = 60 Ω).",
+                "Determina corriente y voltaje en cada resistencia si batería de 60 V conecta circuito anterior.",
+                "Explica desventaja de luces navideñas en serie: si una falla, todas se apagan (corriente única)."
+              ]
+            },
+            {
+              "key": "circuitos_paralelo",
+              "name": "Circuitos en Paralelo",
+              "short_description": "Elementos conectados a mismos puntos; mismo voltaje; corrientes se suman; 1/Rₑq = 1/R₁ + 1/R₂ + 1/R₃ + ...",
+              "example_tasks": [
+                "Calcula resistencia equivalente de dos resistencias en paralelo: 6 Ω y 3 Ω (1/Rₑq = 1/6 + 1/3, Rₑq = 2 Ω).",
+                "Determina corriente en cada rama si voltaje de fuente es 12 V.",
+                "Explica ventaja de instalación eléctrica doméstica en paralelo: cada aparato funciona independientemente, mismo voltaje."
+              ]
+            },
+            {
+              "key": "circuitos_mixtos",
+              "name": "Circuitos Mixtos (Serie-Paralelo)",
+              "short_description": "Combinaciones de conexiones serie y paralelo; simplificación paso a paso.",
+              "example_tasks": [
+                "Resuelve circuito: R₁ en serie con combinación paralela de R₂ y R₃; calcula Rₑq total.",
+                "Determina corriente y voltaje en cada resistencia de circuito mixto dado.",
+                "Aplica estrategia: simplifica primero paralelos, luego series, hasta obtener Rₑq única."
+              ]
+            },
+            {
+              "key": "leyes_kirchhoff",
+              "name": "Leyes de Kirchhoff",
+              "short_description": "Ley de nodos (corrientes): ΣI_entran = ΣI_salen; Ley de mallas (voltajes): ΣV = 0 en circuito cerrado.",
+              "example_tasks": [
+                "Aplica ley de nodos en punto donde entran 3 A y 2 A, y salen I₁ y 4 A; calcula I₁.",
+                "Usa ley de mallas para resolver circuito con dos fuentes de voltaje y tres resistencias.",
+                "Explica base física: ley de nodos (conservación de carga), ley de mallas (conservación de energía)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "potencia_energia_electrica",
+          "name": "Potencia y Energía Eléctrica",
+          "short_description": "Potencia P = VI = I²R = V²/R; energía consumida; costo de electricidad; seguridad eléctrica.",
+          "sub_topics": [
+            {
+              "key": "potencia_electrica",
+              "name": "Potencia Eléctrica",
+              "short_description": "Razón de transferencia de energía; P = VI; unidad: Watt (W = J/s).",
+              "example_tasks": [
+                "Calcula potencia de foco que consume 0.5 A a 120 V (P = VI = 60 W).",
+                "Determina corriente que consume plancha de 1500 W a 127 V (I = P/V).",
+                "Usa diferentes formas: P = VI, P = I²R, P = V²/R según datos disponibles."
+              ]
+            },
+            {
+              "key": "energia_costo",
+              "name": "Energía Eléctrica y Costo",
+              "short_description": "E = Pt; unidad comercial: kWh; cálculo de consumo y costo en recibo de luz.",
+              "example_tasks": [
+                "Calcula energía consumida por TV de 100 W durante 5 horas (E = Pt = 0.5 kWh).",
+                "Determina costo mensual de refrigerador de 200 W que opera 24 h/día si kWh cuesta $1.50.",
+                "Analiza recibo de luz en México: identificar consumo en kWh, tarifa, subsidio, total a pagar."
+              ]
+            },
+            {
+              "key": "efecto_joule",
+              "name": "Efecto Joule (Calentamiento)",
+              "short_description": "Energía eléctrica se convierte en calor: Q = I²Rt; aplicaciones en calefacción, fusibles.",
+              "example_tasks": [
+                "Calcula calor generado por resistencia de 10 Ω con corriente de 5 A durante 2 minutos (Q = I²Rt).",
+                "Explica funcionamiento de calentador eléctrico, tostador, secador de pelo (efecto Joule).",
+                "Describe fusibles: se funden por exceso de corriente (protegen contra sobrecalentamiento e incendios)."
+              ]
+            },
+            {
+              "key": "seguridad_electrica",
+              "name": "Seguridad Eléctrica",
+              "short_description": "Riesgos: choque eléctrico, cortocircuitos, sobrecarga; protecciones: fusibles, interruptores, conexión a tierra.",
+              "example_tasks": [
+                "Explica peligro de choque eléctrico: corriente a través del cuerpo (>10 mA peligrosa, >100 mA letal).",
+                "Describe función de interruptor diferencial (detecta fuga de corriente, desconecta circuito).",
+                "Investiga normas de instalación eléctrica en México (NOM-001-SEDE): calibre de cables, conexión a tierra, protecciones."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "dispositivos_electricos",
+          "name": "Dispositivos Eléctricos",
+          "short_description": "Baterías, capacitores, transformadores, medidores eléctricos.",
+          "sub_topics": [
+            {
+              "key": "baterias_fem",
+              "name": "Baterías y Fuerza Electromotriz (FEM)",
+              "short_description": "Fuentes de voltaje; FEM (ε); resistencia interna; V_terminal = ε - Ir.",
+              "example_tasks": [
+                "Calcula voltaje terminal de batería (ε = 12 V, r = 0.5 Ω) cuando entrega I = 2 A (V = ε - Ir).",
+                "Explica por qué voltaje de batería disminuye bajo carga (caída en resistencia interna).",
+                "Compara tipos de baterías: alcalinas (no recargables), Ni-Cd, Ni-MH, Li-ion (recargables)."
+              ]
+            },
+            {
+              "key": "capacitores",
+              "name": "Capacitores",
+              "short_description": "Almacenan carga/energía; C = Q/V; unidad: Farad (F); energía U = ½CV².",
+              "example_tasks": [
+                "Calcula carga en capacitor de 100 μF conectado a 12 V (Q = CV = 1.2 × 10⁻³ C).",
+                "Determina energía almacenada en capacitor de 50 μF a 100 V (U = ½CV²).",
+                "Explica aplicaciones: flash de cámara, filtros en fuentes de poder, memorias, desfibriladores."
+              ]
+            },
+            {
+              "key": "medidores_electricos",
+              "name": "Medidores Eléctricos",
+              "short_description": "Amperímetro (mide corriente, en serie), voltímetro (mide voltaje, en paralelo), óhmetro, multímetro.",
+              "example_tasks": [
+                "Explica cómo conectar amperímetro (en serie con elemento) y voltímetro (en paralelo con elemento).",
+                "Describe características ideales: amperímetro (resistencia cero), voltímetro (resistencia infinita).",
+                "Investiga uso de multímetro digital: medir V, I, R; continuidad; prueba de diodos."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "magnetismo_electromagnetismo",
+      "name": "Magnetismo y Electromagnetismo",
+      "short_description": "Campo magnético, fuerza magnética, inducción electromagnética, aplicaciones electromagnéticas.",
+      "sub_topics": [
+        {
+          "key": "magnetismo",
+          "name": "Magnetismo",
+          "short_description": "Imanes, polos magnéticos, campo magnético, materiales magnéticos.",
+          "sub_topics": [
+            {
+              "key": "imanes_polos",
+              "name": "Imanes y Polos Magnéticos",
+              "short_description": "Polos norte y sur; polos iguales se repelen, opuestos se atraen; no existen monopolos.",
+              "example_tasks": [
+                "Explica por qué al cortar imán en dos se obtienen dos imanes completos (no se pueden separar polos).",
+                "Describe interacción: N-N se repele, N-S se atrae, igual que electricidad pero no hay cargas magnéticas aisladas.",
+                "Investiga magnetismo terrestre: Tierra como imán gigante, polo norte magnético cerca de polo sur geográfico."
+              ]
+            },
+            {
+              "key": "campo_magnetico",
+              "name": "Campo Magnético",
+              "short_description": "Región donde actúa fuerza magnética; representado por vector B; líneas de campo (N a S externos al imán).",
+              "example_tasks": [
+                "Dibuja líneas de campo magnético de imán de barra (salen de N, entran a S).",
+                "Usa brújula para trazar campo magnético (aguja se alinea con líneas de campo).",
+                "Compara líneas de campo eléctrico (comienzan/terminan en cargas) con magnético (forman bucles cerrados)."
+              ]
+            },
+            {
+              "key": "materiales_magneticos",
+              "name": "Materiales Magnéticos",
+              "short_description": "Ferromagnéticos (Fe, Ni, Co), paramagnéticos, diamagnéticos; dominios magnéticos.",
+              "example_tasks": [
+                "Clasifica materiales: hierro (ferromagnético, muy atraído), aluminio (paramagnético, débilmente atraído), cobre (diamagnético, débilmente repelido).",
+                "Explica ferromagnetismo usando dominios magnéticos: regiones con momentos alineados.",
+                "Describe magnetización/desmagnetización: alinear/desalinear dominios; punto de Curie (temperatura donde se pierde ferromagnetismo)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fuerza_magnetica",
+          "name": "Fuerza Magnética",
+          "short_description": "Fuerza sobre cargas móviles y corrientes; F = qvB sen θ; F = BIL sen θ; regla de la mano derecha.",
+          "sub_topics": [
+            {
+              "key": "fuerza_carga_movil",
+              "name": "Fuerza sobre Carga en Movimiento",
+              "short_description": "F = qvB sen θ; perpendicular a v y B; regla de mano derecha; aplicación en espectrómetro de masas.",
+              "example_tasks": [
+                "Calcula fuerza sobre electrón (q = -1.6×10⁻¹⁹ C) moviéndose a 10⁶ m/s perpendicular a B = 0.5 T.",
+                "Determina dirección de fuerza usando regla de mano derecha (dedos: v, curvar hacia B, pulgar: F para carga +).",
+                "Explica movimiento circular: F perpendicular a v actúa como centrípeta, r = mv/(qB)."
+              ]
+            },
+            {
+              "key": "fuerza_corriente",
+              "name": "Fuerza sobre Conductor con Corriente",
+              "short_description": "F = BIL sen θ; aplicación en motores eléctricos, galvanómetros.",
+              "example_tasks": [
+                "Calcula fuerza sobre alambre de 0.5 m con corriente de 10 A perpendicular a campo de 0.2 T (F = BIL).",
+                "Determina dirección de fuerza sobre conductor usando regla de mano derecha (dedos: I, curvar: B, pulgar: F).",
+                "Explica principio del motor eléctrico: espira con corriente en campo magnético experimenta torque, rota."
+              ]
+            },
+            {
+              "key": "aplicaciones_fuerza_magnetica",
+              "name": "Aplicaciones de Fuerza Magnética",
+              "short_description": "Selector de velocidad, espectrómetro de masas, acelerador de partículas, efecto Hall.",
+              "example_tasks": [
+                "Describe selector de velocidad: campos E y B perpendiculares, solo partículas con v = E/B pasan sin desviarse.",
+                "Explica espectrómetro de masas: separa iones por masa usando movimiento circular en B.",
+                "Investiga efecto Hall: voltaje transversal en conductor con corriente en campo B (usado en sensores)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fuentes_campo_magnetico",
+          "name": "Fuentes de Campo Magnético",
+          "short_description": "Campo de corrientes: alambre recto, espira circular, solenoide; ley de Ampère.",
+          "sub_topics": [
+            {
+              "key": "campo_alambre",
+              "name": "Campo Magnético de Alambre Recto",
+              "short_description": "B = μ₀I/(2πr); líneas circulares alrededor del alambre; regla de mano derecha (pulgar: I, dedos: B).",
+              "example_tasks": [
+                "Calcula campo a 5 cm de alambre con corriente de 10 A (B = μ₀I/(2πr), μ₀ = 4π×10⁻⁷ T·m/A).",
+                "Determina dirección de B usando regla de mano derecha del pulgar.",
+                "Explica por qué alambres paralelos con corrientes en misma dirección se atraen (campos producen fuerzas)."
+              ]
+            },
+            {
+              "key": "campo_espira_solenoide",
+              "name": "Campo de Espira y Solenoide",
+              "short_description": "Espira circular: B en centro; solenoide: B = μ₀nI (n = vueltas/longitud); campo uniforme dentro.",
+              "example_tasks": [
+                "Calcula campo en centro de espira de radio 10 cm con corriente de 5 A.",
+                "Determina campo dentro de solenoide de 500 vueltas/metro con corriente de 2 A (B = μ₀nI).",
+                "Compara solenoide (campo uniforme interno, similar a imán de barra) con espira (campo no uniforme)."
+              ]
+            },
+            {
+              "key": "ley_ampere",
+              "name": "Ley de Ampère",
+              "short_description": "∮B·dl = μ₀I_encerrada; circulación de B alrededor de trayectoria cerrada proporcional a corriente encerrada.",
+              "example_tasks": [
+                "Aplica ley de Ampère para derivar B de alambre recto infinito.",
+                "Usa ley de Ampère para encontrar B dentro y fuera de cable cilíndrico con corriente.",
+                "Compara con ley de Gauss en electrostática (ambas relacionan campo con fuente usando simetría)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "induccion_electromagnetica",
+          "name": "Inducción Electromagnética",
+          "short_description": "FEM inducida por cambio de flujo magnético; ley de Faraday; ley de Lenz; generadores.",
+          "sub_topics": [
+            {
+              "key": "flujo_magnetico",
+              "name": "Flujo Magnético",
+              "short_description": "Φ = B·A = BA cos θ; número de líneas de campo a través de superficie; unidad: Weber (Wb = T·m²).",
+              "example_tasks": [
+                "Calcula flujo a través de espira de 0.1 m² perpendicular a campo de 0.5 T (Φ = BA).",
+                "Determina flujo si espira forma ángulo de 30° con campo magnético.",
+                "Explica que flujo es máximo cuando área perpendicular a B, cero cuando paralela."
+              ]
+            },
+            {
+              "key": "ley_faraday",
+              "name": "Ley de Faraday",
+              "short_description": "FEM inducida: ε = -dΦ/dt; proporcional a razón de cambio de flujo; signo negativo (ley de Lenz).",
+              "example_tasks": [
+                "Calcula FEM inducida si flujo cambia de 0.2 Wb a 0.5 Wb en 0.1 s (ε = -ΔΦ/Δt).",
+                "Determina FEM en espira de 100 vueltas si flujo cambia 0.01 Wb/s (ε = -N dΦ/dt).",
+                "Explica tres formas de cambiar flujo: cambiar B, cambiar A, cambiar ángulo entre B y A."
+              ]
+            },
+            {
+              "key": "ley_lenz",
+              "name": "Ley de Lenz",
+              "short_description": "Corriente inducida se opone al cambio que la produce; conservación de energía.",
+              "example_tasks": [
+                "Determina dirección de corriente inducida cuando imán se acerca a espira (crea campo que repele imán).",
+                "Explica por qué ley de Lenz es consecuencia de conservación de energía (si no se opusiera, violaría conservación).",
+                "Aplica regla: si Φ aumenta, corriente inducida crea campo opuesto; si Φ disminuye, crea campo en misma dirección."
+              ]
+            },
+            {
+              "key": "aplicaciones_induccion",
+              "name": "Aplicaciones de Inducción Electromagnética",
+              "short_description": "Generadores eléctricos, transformadores, frenos magnéticos, cocinas de inducción, tarjetas magnéticas.",
+              "example_tasks": [
+                "Explica generador eléctrico: espira rota en campo magnético, flujo cambia, induce FEM alterna.",
+                "Describe transformador: cambio de voltaje por inducción mutua entre bobinas (V₂/V₁ = N₂/N₁).",
+                "Investiga aplicaciones en México: generación de electricidad (hidroeléctricas, termoeléctricas), distribución (transformadores)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ondas_electromagneticas",
+          "name": "Ondas Electromagnéticas",
+          "short_description": "Generación, propagación, espectro electromagnético, aplicaciones en comunicaciones.",
+          "sub_topics": [
+            {
+              "key": "generacion_propagacion",
+              "name": "Generación y Propagación de Ondas EM",
+              "short_description": "Cargas aceleradas producen ondas EM; campos E y B perpendiculares entre sí y a dirección de propagación.",
+              "example_tasks": [
+                "Explica cómo antena genera ondas EM: corriente alterna acelera cargas, produce campos cambiantes.",
+                "Describe propagación: campo E cambiante induce campo B cambiante y viceversa (ecuaciones de Maxwell).",
+                "Relaciona frecuencia y longitud de onda: c = fλ donde c = 3×10⁸ m/s."
+              ]
+            },
+            {
+              "key": "espectro_em_aplicaciones",
+              "name": "Espectro Electromagnético y Aplicaciones",
+              "short_description": "Radio, microondas, infrarrojo, visible, UV, rayos X, rayos gamma; usos en tecnología y medicina.",
+              "example_tasks": [
+                "Clasifica por frecuencia creciente: radio < microondas < IR < visible < UV < X < γ.",
+                "Identifica aplicaciones: radio/TV (comunicación), microondas (radar, celular), IR (control remoto), UV (esterilización), rayos X (medicina).",
+                "Calcula longitud de onda de señal FM de 100 MHz (λ = c/f = 3 m)."
+              ]
+            },
+            {
+              "key": "comunicaciones_electromagnetics",
+              "name": "Comunicaciones Electromagnéticas",
+              "short_description": "Radio, TV, telefonía celular, Wi-Fi, satélites; modulación AM y FM.",
+              "example_tasks": [
+                "Explica modulación: AM (amplitud modulada, varía amplitud), FM (frecuencia modulada, varía frecuencia).",
+                "Describe bandas de frecuencia: AM (535-1605 kHz), FM (88-108 MHz), TV, celular (850, 1900 MHz), Wi-Fi (2.4, 5 GHz).",
+                "Investiga infraestructura de telecomunicaciones en México: torres celulares, satélites Mexsat, fibra óptica."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fisica_moderna_introduccion",
+      "name": "Física Moderna (Introducción)",
+      "short_description": "Estructura atómica, radiactividad, física cuántica básica, relatividad, física nuclear.",
+      "sub_topics": [
+        {
+          "key": "estructura_atomica_moderna",
+          "name": "Estructura Atómica Moderna",
+          "short_description": "Modelo atómico de Bohr, niveles de energía, espectros atómicos, números cuánticos.",
+          "sub_topics": [
+            {
+              "key": "modelo_bohr",
+              "name": "Modelo Atómico de Bohr",
+              "short_description": "Electrones en órbitas cuantizadas; saltos entre niveles emiten/absorben fotones; E_n = -13.6/n² eV para H.",
+              "example_tasks": [
+                "Calcula energía de electrón en nivel n=2 del hidrógeno (E₂ = -13.6/4 = -3.4 eV).",
+                "Determina energía de fotón emitido en transición de n=3 a n=2 (ΔE = E₃ - E₂ = hf).",
+                "Explica por qué modelo de Bohr solo funciona bien para hidrógeno (un solo electrón, interacciones simples)."
+              ]
+            },
+            {
+              "key": "espectros_atomicos",
+              "name": "Espectros Atómicos",
+              "short_description": "Espectro de emisión (líneas brillantes) y absorción (líneas oscuras); cada elemento tiene espectro único.",
+              "example_tasks": [
+                "Explica cómo se produce espectro de emisión: electrones saltan a niveles inferiores, emiten fotones de energías específicas.",
+                "Describe espectro de absorción: luz blanca pasa por gas, fotones de ciertas energías se absorben (electrones saltan a niveles superiores).",
+                "Investiga aplicación en espectroscopía: identificar composición química de estrellas, nebulosas."
+              ]
+            },
+            {
+              "key": "dualidad_onda_particula",
+              "name": "Dualidad Onda-Partícula",
+              "short_description": "Luz como fotones (E = hf); materia como ondas (λ = h/p de De Broglie); principio de incertidumbre.",
+              "example_tasks": [
+                "Calcula energía de fotón de luz verde (λ = 500 nm) usando E = hf = hc/λ.",
+                "Determina longitud de onda de De Broglie de electrón moviéndose a 10⁶ m/s (λ = h/mv).",
+                "Enuncia principio de incertidumbre de Heisenberg: Δx·Δp ≥ h/(4π); imposible conocer exactamente posición y momento simultáneamente."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "radiactividad",
+          "name": "Radiactividad",
+          "short_description": "Tipos de radiación, decaimiento radiactivo, vida media, aplicaciones y riesgos.",
+          "sub_topics": [
+            {
+              "key": "tipos_radiacion",
+              "name": "Tipos de Radiación",
+              "short_description": "Alfa (núcleos He, poca penetración), beta (electrones/positrones, penetración media), gamma (fotones, alta penetración).",
+              "example_tasks": [
+                "Compara penetración: α detenida por papel, β por aluminio, γ requiere plomo grueso o concreto.",
+                "Escribe ecuación de decaimiento α: ²³⁸U → ²³⁴Th + ⁴He (núcleo pierde 2 p⁺ y 2 n⁰).",
+                "Describe decaimiento β⁻: neutrón → protón + electrón + antineutrino (ejemplo: ¹⁴C → ¹⁴N + e⁻)."
+              ]
+            },
+            {
+              "key": "vida_media",
+              "name": "Vida Media y Decaimiento Exponencial",
+              "short_description": "T₁/₂: tiempo para que se desintegre la mitad; N(t) = N₀(½)^(t/T₁/₂); constante de decaimiento λ.",
+              "example_tasks": [
+                "Calcula cantidad restante de muestra de 100 g después de 3 vidas medias (N = 100 × (½)³ = 12.5 g).",
+                "Determina vida media si actividad de muestra disminuye a 25% en 10 años (2 vidas medias, T₁/₂ = 5 años).",
+                "Explica datación por carbono-14: T₁/₂ = 5730 años, comparar ¹⁴C en muestra con atmosférico determina edad."
+              ]
+            },
+            {
+              "key": "aplicaciones_radiactividad",
+              "name": "Aplicaciones y Riesgos de Radiactividad",
+              "short_description": "Medicina (rayos X, radioterapia), agricultura (irradiación), industria; protección radiológica.",
+              "example_tasks": [
+                "Describe uso en medicina: rayos X (diagnóstico), radioterapia (tratamiento cáncer), trazadores radiactivos (PET, SPECT).",
+                "Explica irradiación de alimentos: mata bacterias sin hacer alimento radiactivo, extiende vida útil.",
+                "Investiga protección: tiempo (minimizar exposición), distancia (ley de inverso del cuadrado), blindaje (material absorbente)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fisica_nuclear",
+          "name": "Física Nuclear",
+          "short_description": "Núcleo atómico, energía de enlace, fisión, fusión, aplicaciones de energía nuclear.",
+          "sub_topics": [
+            {
+              "key": "nucleo_atomico",
+              "name": "El Núcleo Atómico",
+              "short_description": "Protones y neutrones (nucleones); fuerzas nucleares; isótopos; defecto de masa y energía de enlace.",
+              "example_tasks": [
+                "Calcula número de protones, neutrones y electrones en ²³⁵U y ²³⁸U (isótopos de uranio).",
+                "Explica fuerza nuclear fuerte: atractiva a cortas distancias, mantiene núcleo unido a pesar de repulsión eléctrica.",
+                "Define energía de enlace: energía para separar núcleo en nucleones individuales; relacionada con defecto de masa por E = mc²."
+              ]
+            },
+            {
+              "key": "fision_nuclear",
+              "name": "Fisión Nuclear",
+              "short_description": "División de núcleo pesado en fragmentos; libera energía; reacción en cadena; reactores nucleares.",
+              "example_tasks": [
+                "Describe fisión de ²³⁵U: absorbe neutrón, se divide en fragmentos + 2-3 neutrones + energía (~200 MeV).",
+                "Explica reacción en cadena: neutrones liberados causan más fisiones; controlada en reactor, descontrolada en bomba.",
+                "Investiga reactor nuclear de Laguna Verde en México: generación de electricidad, medidas de seguridad."
+              ]
+            },
+            {
+              "key": "fusion_nuclear",
+              "name": "Fusión Nuclear",
+              "short_description": "Unión de núcleos ligeros; libera más energía que fisión; fuente de energía del Sol; fusión controlada (desafío).",
+              "example_tasks": [
+                "Describe fusión en el Sol: 4 ¹H → ⁴He + energía (ciclo protón-protón).",
+                "Compara fisión (núcleos pesados se dividen) con fusión (núcleos ligeros se unen); ambas liberan energía.",
+                "Investiga proyectos de fusión: ITER (reactor experimental), desafíos (confinar plasma a millones de grados)."
+              ]
+            },
+            {
+              "key": "aplicaciones_energia_nuclear",
+              "name": "Aplicaciones y Controversias de Energía Nuclear",
+              "short_description": "Generación eléctrica, medicina nuclear, investigación; residuos radiactivos, accidentes, proliferación.",
+              "example_tasks": [
+                "Enumera ventajas de energía nuclear: alta densidad energética, no emite CO₂, operación continua.",
+                "Describe desventajas: residuos radiactivos (miles de años), riesgo de accidentes (Chernobyl, Fukushima), proliferación nuclear.",
+                "Debate: ¿Es la energía nuclear una buena opción para México? Considera seguridad, residuos, alternativas renovables."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "relatividad_introduccion",
+          "name": "Introducción a la Relatividad",
+          "short_description": "Relatividad especial: dilatación del tiempo, contracción de longitud, E = mc².",
+          "sub_topics": [
+            {
+              "key": "postulados_relatividad",
+              "name": "Postulados de la Relatividad Especial",
+              "short_description": "1) Leyes físicas iguales en todos los marcos inerciales; 2) Velocidad de luz constante en todos los marcos.",
+              "example_tasks": [
+                "Explica segundo postulado: c = 3×10⁸ m/s es la misma para todos los observadores, independiente de su movimiento.",
+                "Describe consecuencias: simultaneidad relativa, dilatación temporal, contracción de longitud.",
+                "Relaciona con límite de velocidad: ningún objeto con masa puede alcanzar o superar c."
+              ]
+            },
+            {
+              "key": "dilatacion_tiempo",
+              "name": "Dilatación del Tiempo",
+              "short_description": "Tiempo transcurre más lento en marco en movimiento: Δt = γΔt₀ donde γ = 1/√(1 - v²/c²).",
+              "example_tasks": [
+                "Calcula factor de Lorentz γ para v = 0.8c (γ = 1/√(1 - 0.64) ≈ 1.67).",
+                "Determina tiempo que transcurre en nave espacial si 10 años pasan en Tierra y nave viaja a 0.8c.",
+                "Explica paradoja de los gemelos: gemelo que viaja envejece menos (confirmado experimentalmente con relojes atómicos)."
+              ]
+            },
+            {
+              "key": "equivalencia_masa_energia",
+              "name": "Equivalencia Masa-Energía",
+              "short_description": "E = mc²; masa y energía son formas intercambiables; aplicación en reacciones nucleares.",
+              "example_tasks": [
+                "Calcula energía equivalente de 1 kg de materia (E = mc² = 9×10¹⁶ J).",
+                "Explica defecto de masa en núcleos: masa del núcleo < suma de masas de nucleones; diferencia se convirtió en energía de enlace.",
+                "Describe aniquilación materia-antimateria: masa total se convierte en energía (2 fotones gamma)."
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fronteras_fisica",
+          "name": "Fronteras de la Física",
+          "short_description": "Partículas elementales, cosmología, materia oscura, energía oscura, teorías unificadas.",
+          "sub_topics": [
+            {
+              "key": "particulas_elementales",
+              "name": "Partículas Elementales y Modelo Estándar",
+              "short_description": "Quarks, leptones, bosones; cuatro fuerzas fundamentales; aceleradores de partículas.",
+              "example_tasks": [
+                "Identifica partículas: quarks (up, down, forman protones/neutrones), leptones (electrón, neutrino), bosones (fotón, gluón, bosón de Higgs).",
+                "Enumera fuerzas fundamentales: gravitacional, electromagnética, nuclear fuerte, nuclear débil.",
+                "Investiga aceleradores: LHC (CERN), descubrimiento del bosón de Higgs (2012)."
+              ]
+            },
+            {
+              "key": "cosmologia_universo",
+              "name": "Cosmología: Origen y Evolución del Universo",
+              "short_description": "Big Bang, expansión del universo, radiación cósmica de fondo, formación de galaxias.",
+              "example_tasks": [
+                "Describe teoría del Big Bang: universo comenzó hace ~13.8 mil millones de años de estado extremadamente denso y caliente.",
+                "Explica evidencias: expansión (corrimiento al rojo de galaxias), radiación cósmica de fondo (3 K), abundancia de elementos ligeros.",
+                "Investiga cronología: era de Planck, nucleosíntesis, recombinación, formación de estrellas y galaxias."
+              ]
+            },
+            {
+              "key": "materia_energia_oscura",
+              "name": "Materia Oscura y Energía Oscura",
+              "short_description": "~95% del universo: materia oscura (~27%) y energía oscura (~68%); naturaleza desconocida.",
+              "example_tasks": [
+                "Explica evidencia de materia oscura: curvas de rotación de galaxias, lentes gravitacionales.",
+                "Describe energía oscura: causa aceleración de expansión del universo (observada en supernovas distantes).",
+                "Investiga candidatos para materia oscura: WIMPs, axiones, neutrinos masivos."
+              ]
+            },
+            {
+              "key": "desafios_futuros",
+              "name": "Desafíos y Preguntas Abiertas",
+              "short_description": "Unificación de fuerzas, gravedad cuántica, teoría de cuerdas, multiverso.",
+              "example_tasks": [
+                "Describe problema de gravedad cuántica: incompatibilidad entre relatividad general y mecánica cuántica.",
+                "Investiga teoría de cuerdas: partículas como vibraciones de cuerdas unidimensionales en 10-11 dimensiones.",
+                "Enumera preguntas abiertas: ¿Qué es materia oscura? ¿Qué es energía oscura? ¿Existen otros universos? ¿Por qué existe más materia que antimateria?"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
