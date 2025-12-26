@@ -23,6 +23,7 @@ export interface RegisterData {
   name: string;
   role: 'teacher' | 'general_user';
   country: string;
+  recaptchaToken?: string;
 }
 
 export interface LoginData {

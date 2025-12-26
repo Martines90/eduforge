@@ -191,6 +191,8 @@ export interface Translations {
   "Failed to register user. Please try again.": string;
   "Failed to verify code. Please try again.": string;
   "Registration successful! Welcome to EduForge.": string;
+  "Please complete the reCAPTCHA verification": string;
+  "reCAPTCHA verification failed. Please try again.": string;
 
   // Action Selection Modal
   "What would you like to do?": string;

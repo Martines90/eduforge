@@ -206,6 +206,10 @@ export const hu: Translations = {
     "Nem sikerült ellenőrizni a kódot. Kérjük, próbálja újra.",
   "Registration successful! Welcome to EduForge.":
     "Sikeres regisztráció! Üdvözöljük az EduForge-ban.",
+  "Please complete the reCAPTCHA verification":
+    "Kérjük, töltse ki a reCAPTCHA ellenőrzést",
+  "reCAPTCHA verification failed. Please try again.":
+    "A reCAPTCHA ellenőrzés sikertelen. Kérjük, próbálja újra.",
 
   // Action Selection Modal
   "What would you like to do?": "Mit szeretne tenni?",

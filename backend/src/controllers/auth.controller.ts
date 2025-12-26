@@ -7,6 +7,7 @@ import {
   VerifyEmailRequest,
   AuthResponse,
 } from '../types/auth.types';
+import { verifyRecaptcha } from '../utils/recaptcha.util';
 
 /**
  * POST /api/auth/register
@@ -43,6 +44,30 @@ export async function register(req: Request, res: Response): Promise<void> {
         message: 'Password must be at least 6 characters',
       } as AuthResponse);
       return;
+    }
+
+    // Verify reCAPTCHA token
+    if (data.recaptchaToken) {
+      const isRecaptchaValid = await verifyRecaptcha(data.recaptchaToken);
+      if (!isRecaptchaValid) {
+        res.status(400).json({
+          success: false,
+          message: 'reCAPTCHA verification failed. Please try again.',
+          error: 'Invalid reCAPTCHA token',
+        } as AuthResponse);
+        return;
+      }
+    } else {
+      // If no reCAPTCHA token provided and we're in production, reject the request
+      if (process.env.NODE_ENV === 'production') {
+        res.status(400).json({
+          success: false,
+          message: 'reCAPTCHA verification is required',
+          error: 'Missing reCAPTCHA token',
+        } as AuthResponse);
+        return;
+      }
+      console.warn('[Auth] No reCAPTCHA token provided (development mode)');
     }
 
     // Initiate registration - store verification code only

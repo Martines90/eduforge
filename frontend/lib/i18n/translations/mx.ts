@@ -206,6 +206,10 @@ export const mx: Translations = {
     "Error al verificar código. Por favor intenta de nuevo.",
   "Registration successful! Welcome to EduForge.":
     "¡Registro exitoso! Bienvenido a EduForge.",
+  "Please complete the reCAPTCHA verification":
+    "Por favor completa la verificación reCAPTCHA",
+  "reCAPTCHA verification failed. Please try again.":
+    "La verificación reCAPTCHA falló. Por favor intenta de nuevo.",
 
   // Action Selection Modal
   "What would you like to do?": "¿Qué te gustaría hacer?",

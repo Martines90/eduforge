@@ -28,7 +28,7 @@ type OnboardingStep = 'login' | 'register' | 'country' | 'role' | 'subject' | 'c
  * - Task detail pages (/tasks/[id]) are publicly accessible and do not require login
  */
 export const OnboardingHandler: React.FC = () => {
-  const { user, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser, completeOnboarding } = useUser();
+  const { user, authInitialized, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser, completeOnboarding } = useUser();
   const router = useRouter();
   const pathname = usePathname();
   const [step, setStep] = useState<OnboardingStep>('login');
@@ -45,6 +45,11 @@ export const OnboardingHandler: React.FC = () => {
       return;
     }
 
+    // Wait for auth to initialize before determining step
+    if (!authInitialized) {
+      return;
+    }
+
     // Determine starting step based on user state
     if (!user.isRegistered) {
       // Not logged in - show login
@@ -53,7 +58,7 @@ export const OnboardingHandler: React.FC = () => {
       // Logged in but hasn't completed onboarding
       setStep('country');
     }
-  }, [user.isRegistered, user.isFirstVisit, user.hasCompletedOnboarding, isPublicPage, pathname]);
+  }, [authInitialized, user.isRegistered, user.isFirstVisit, user.hasCompletedOnboarding, isPublicPage, pathname]);
 
   // ===== LOGIN FLOW =====
 
@@ -149,8 +154,11 @@ export const OnboardingHandler: React.FC = () => {
   };
 
 
-  // Don't render anything if onboarding is complete or on public pages
-  if (user.hasCompletedOnboarding || step === 'complete' || isPublicPage) {
+  // Don't render anything if:
+  // - Auth is still initializing (prevents flash of login modal)
+  // - Onboarding is complete
+  // - On public pages
+  if (!authInitialized || user.hasCompletedOnboarding || step === 'complete' || isPublicPage) {
     return null;
   }
 

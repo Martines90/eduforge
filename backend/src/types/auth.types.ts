@@ -6,6 +6,7 @@ export interface RegisterRequest {
   country: string;
   subject?: string; // For teachers only
   educationalModel?: string; // For teachers only
+  recaptchaToken?: string; // reCAPTCHA verification token
 }
 
 export interface LoginRequest {

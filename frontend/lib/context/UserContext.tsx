@@ -55,6 +55,7 @@ export interface UserState {
  */
 interface UserContextType {
   user: UserState;
+  authInitialized: boolean;
   setCountry: (country: CountryCode) => void;
   setIdentity: (identity: UserIdentity) => void;
   setSubject: (subject: Subject) => void;
@@ -506,7 +507,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <UserContext.Provider value={{ user, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser, logoutUser, completeOnboarding, resetUser }}>
+    <UserContext.Provider value={{ user, authInitialized, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser, logoutUser, completeOnboarding, resetUser }}>
       {children}
     </UserContext.Provider>
   );

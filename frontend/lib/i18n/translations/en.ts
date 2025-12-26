@@ -203,6 +203,10 @@ export const en: Translations = {
     "Failed to verify code. Please try again.",
   "Registration successful! Welcome to EduForge.":
     "Registration successful! Welcome to EduForge.",
+  "Please complete the reCAPTCHA verification":
+    "Please complete the reCAPTCHA verification",
+  "reCAPTCHA verification failed. Please try again.":
+    "reCAPTCHA verification failed. Please try again.",
 
   // Action Selection Modal
   "What would you like to do?": "What would you like to do?",

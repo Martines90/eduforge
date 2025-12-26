@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   Dialog,
   DialogTitle,
@@ -31,6 +31,7 @@ import SchoolIcon from "@mui/icons-material/School";
 import PeopleIcon from "@mui/icons-material/People";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+import ReCAPTCHA from "react-google-recaptcha";
 import { CountryCode, UserIdentity, Subject, UserProfile } from "@/types/i18n";
 import {
   ProgressStepper,
@@ -152,6 +153,10 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
   const [error, setError] = useState<string>("");
   const [showSuccessToast, setShowSuccessToast] = useState<boolean>(false);
 
+  // reCAPTCHA state
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
   // Define steps with translations
   const teacherSteps: StepConfig[] = [
     { label: t("Country & Subject"), description: t("Location and expertise") },
@@ -205,6 +210,12 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
     if (!selectedCountry) return;
     if (isTeacher && !selectedSubject) return;
 
+    // Verify reCAPTCHA was completed
+    if (!recaptchaToken) {
+      setError(t("Please complete the reCAPTCHA verification"));
+      return;
+    }
+
     setLoading(true);
     setError("");
 
@@ -227,6 +238,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         password: userData.password,
         role,
         country: selectedCountry,
+        recaptchaToken,
         ...(isTeacher && selectedSubject ? { subject: selectedSubject } : {}),
         ...(isTeacher && selectedEducationalModel
           ? { educationalModel: selectedEducationalModel as string }
@@ -239,6 +251,11 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
     } catch (err: any) {
       console.error("Error registering user:", err);
       setError(err.message || t("Failed to register user. Please try again."));
+      // Reset reCAPTCHA on error
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+      setRecaptchaToken(null);
     } finally {
       setLoading(false);
     }
@@ -336,6 +353,11 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
       setVerificationError("");
       setLoading(false);
       setError("");
+      // Reset reCAPTCHA
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+      setRecaptchaToken(null);
       // Don't reset showSuccessToast here - let it display
     }
   }, [open]);
@@ -546,6 +568,36 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                           />
                         )}
                       </Field>
+
+                      {/* reCAPTCHA */}
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                          mt: 3,
+                          mb: 2,
+                        }}
+                      >
+                        <ReCAPTCHA
+                          ref={recaptchaRef}
+                          sitekey={
+                            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""
+                          }
+                          onChange={(token) => {
+                            setRecaptchaToken(token);
+                            setError("");
+                          }}
+                          onExpired={() => setRecaptchaToken(null)}
+                          onErrored={() => {
+                            setRecaptchaToken(null);
+                            setError(
+                              t(
+                                "reCAPTCHA verification failed. Please try again.",
+                              ),
+                            );
+                          }}
+                        />
+                      </Box>
                     </Box>
 
                     <DialogActions className={styles.actions}>
@@ -569,6 +621,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                           !values.name ||
                           !values.email ||
                           !values.password ||
+                          !recaptchaToken ||
                           loading
                         }
                         startIcon={
