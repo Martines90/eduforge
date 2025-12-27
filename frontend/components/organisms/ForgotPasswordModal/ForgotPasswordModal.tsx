@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import {
   Dialog,
   DialogContent,
@@ -16,6 +16,7 @@ import {
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import LockResetIcon from '@mui/icons-material/LockReset';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { Button } from '@/components/atoms/Button';
 
 interface ForgotPasswordModalProps {
@@ -41,6 +42,10 @@ export function ForgotPasswordModal({ open, onClose }: ForgotPasswordModalProps)
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  // reCAPTCHA state
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
   const handleClose = () => {
     // Reset state when closing
     setCurrentStep('email');
@@ -50,6 +55,11 @@ export function ForgotPasswordModal({ open, onClose }: ForgotPasswordModalProps)
     setConfirmPassword('');
     setError('');
     setIsLoading(false);
+    // Reset reCAPTCHA
+    if (recaptchaRef.current) {
+      recaptchaRef.current.reset();
+    }
+    setRecaptchaToken(null);
     onClose();
   };
 
@@ -71,11 +81,17 @@ export function ForgotPasswordModal({ open, onClose }: ForgotPasswordModalProps)
       return;
     }
 
+    // Verify reCAPTCHA was completed
+    if (!recaptchaToken) {
+      setError('Please complete the reCAPTCHA verification');
+      return;
+    }
+
     setIsLoading(true);
 
     try {
       // TODO: Implement backend API call
-      // await apiService.sendPasswordResetCode(email);
+      // await apiService.sendPasswordResetCode(email, recaptchaToken);
 
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -84,6 +100,11 @@ export function ForgotPasswordModal({ open, onClose }: ForgotPasswordModalProps)
       alert('Password reset functionality will be implemented with backend API. For now, use code: 123456');
     } catch (error) {
       setError('Failed to send verification code. Please try again.');
+      // Reset reCAPTCHA on error
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+      setRecaptchaToken(null);
     } finally {
       setIsLoading(false);
     }
@@ -217,15 +238,38 @@ export function ForgotPasswordModal({ open, onClose }: ForgotPasswordModalProps)
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={isLoading}
-              sx={{ mb: 3 }}
+              sx={{ mb: 2 }}
               autoFocus
             />
+
+            {/* reCAPTCHA */}
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                mb: 3,
+              }}
+            >
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+                onChange={(token) => {
+                  setRecaptchaToken(token);
+                  setError('');
+                }}
+                onExpired={() => setRecaptchaToken(null)}
+                onErrored={() => {
+                  setRecaptchaToken(null);
+                  setError('reCAPTCHA verification failed. Please try again.');
+                }}
+              />
+            </Box>
 
             <Box sx={{ display: 'flex', gap: 2, justifyContent: 'flex-end' }}>
               <Button variant="secondary" onClick={handleClose} disabled={isLoading}>
                 Cancel
               </Button>
-              <Button variant="primary" onClick={handleSendCode} disabled={isLoading}>
+              <Button variant="primary" onClick={handleSendCode} disabled={isLoading || !recaptchaToken}>
                 {isLoading ? 'Sending...' : 'Send Code'}
               </Button>
             </Box>
