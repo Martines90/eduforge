@@ -1,18 +1,24 @@
 'use client';
 
-import { Container, Typography, Box, Paper, Grid, Chip, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Container, Typography, Box, Paper, Grid, Chip, List, ListItem, ListItemIcon, ListItemText, Card, CardContent, CardActions, Alert, CircularProgress, Button as MuiButton } from '@mui/material';
 import { AuthenticatedPage } from '@/components/templates/AuthenticatedPage';
 import { useUser } from '@/lib/context';
 import { useTranslation } from '@/lib/i18n';
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Button } from '@/components/atoms/Button';
+import * as subscriptionService from '@/lib/services/subscription.service';
+import type { SubscriptionPlan } from '@/types/subscription';
 
 export default function MySubscriptionPage() {
   const { t } = useTranslation();
   const { user } = useUser();
   const router = useRouter();
+  const [plans, setPlans] = useState<SubscriptionPlan[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [checkoutLoading, setCheckoutLoading] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   // Redirect non-teachers to home
   useEffect(() => {
@@ -20,6 +26,25 @@ export default function MySubscriptionPage() {
       router.push('/');
     }
   }, [user.isRegistered, user.identity, router]);
+
+  // Fetch subscription plans
+  useEffect(() => {
+    const fetchPlans = async () => {
+      try {
+        const response = await subscriptionService.getSubscriptionPlans();
+        if (response.success) {
+          setPlans(response.data.plans);
+        }
+      } catch (err: any) {
+        console.error('Failed to fetch plans:', err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPlans();
+  }, []);
 
   if (!user.isRegistered || user.identity !== 'teacher') {
     return null;
@@ -38,20 +63,24 @@ export default function MySubscriptionPage() {
   // Get plan display name
   const getPlanName = () => {
     if (!subscription) return t('No Active Plan');
-    switch (subscription.plan) {
+    switch (subscription.tier) {
       case 'trial':
         return t('Trial Plan');
-      case 'annual':
-        return t('Annual Plan');
+      case 'basic':
+        return t('Basic Plan');
+      case 'normal':
+        return t('Normal Plan');
+      case 'pro':
+        return t('Pro Plan');
       default:
         return t('No Active Plan');
     }
   };
 
-  // Get status display
+  // Get status chip
   const getStatusChip = () => {
     if (!subscription) return null;
-    let color: 'success' | 'error' | 'default' = 'default';
+    let color: 'success' | 'error' | 'warning' | 'default' = 'default';
     let label = '';
 
     switch (subscription.status) {
@@ -64,12 +93,57 @@ export default function MySubscriptionPage() {
         label = t('Expired');
         break;
       case 'cancelled':
-        color = 'default';
+        color = 'warning';
         label = t('Cancelled');
+        break;
+      case 'past_due':
+        color = 'warning';
+        label = t('Past Due');
         break;
     }
 
     return <Chip label={label} color={color} size="small" />;
+  };
+
+  // Handle upgrade click
+  const handleUpgrade = async (tier: string) => {
+    if (!user.profile?.token) {
+      setError('Please log in to upgrade');
+      return;
+    }
+
+    setCheckoutLoading(tier);
+    setError(null);
+
+    try {
+      const response = await subscriptionService.createCheckoutSession(
+        tier as any,
+        user.profile.token
+      );
+
+      if (response.success) {
+        // Redirect to checkout
+        window.location.href = response.data.url;
+      }
+    } catch (err: any) {
+      console.error('Checkout error:', err);
+      setError(err.message);
+      setCheckoutLoading(null);
+    }
+  };
+
+  // Get tier badge color
+  const getTierColor = (tier: string) => {
+    switch (tier) {
+      case 'basic':
+        return '#4CAF50';
+      case 'normal':
+        return '#2196F3';
+      case 'pro':
+        return '#9C27B0';
+      default:
+        return '#757575';
+    }
   };
 
   return (
@@ -83,6 +157,12 @@ export default function MySubscriptionPage() {
             {t('View and manage your subscription plan and credits')}
           </Typography>
         </Box>
+
+        {error && (
+          <Alert severity="error" sx={{ mb: 3 }} onClose={() => setError(null)}>
+            {error}
+          </Alert>
+        )}
 
         <Grid container spacing={3}>
           {/* Current Plan Card */}
@@ -101,30 +181,22 @@ export default function MySubscriptionPage() {
                   </Typography>
                   {getStatusChip()}
                 </Box>
-                {subscription?.plan === 'trial' && (
-                  <Box sx={{ mt: 2 }}>
-                    <Typography variant="body2" color="text.secondary" gutterBottom>
-                      {t('Trial Period')}
-                    </Typography>
-                    <Typography variant="body2">
-                      <strong>{t('Started')}:</strong> {formatDate(subscription.trialStartDate)}
-                    </Typography>
-                    <Typography variant="body2">
-                      <strong>{t('Expires')}:</strong> {formatDate(subscription.trialEndDate)}
-                    </Typography>
-                  </Box>
-                )}
-                {subscription?.plan === 'annual' && (
+                {subscription && (
                   <Box sx={{ mt: 2 }}>
                     <Typography variant="body2" color="text.secondary" gutterBottom>
                       {t('Subscription Period')}
                     </Typography>
                     <Typography variant="body2">
-                      <strong>{t('Started')}:</strong> {formatDate(subscription.annualStartDate)}
+                      <strong>{t('Started')}:</strong> {formatDate(subscription.startDate)}
                     </Typography>
                     <Typography variant="body2">
-                      <strong>{t('Expires')}:</strong> {formatDate(subscription.annualEndDate)}
+                      <strong>{t('Expires')}:</strong> {formatDate(subscription.endDate)}
                     </Typography>
+                    {subscription.cancelAtPeriodEnd && (
+                      <Alert severity="warning" sx={{ mt: 2 }}>
+                        {t('Subscription will be cancelled at the end of the current period')}
+                      </Alert>
+                    )}
                   </Box>
                 )}
               </Box>
@@ -144,81 +216,210 @@ export default function MySubscriptionPage() {
                 <Typography variant="body2" color="text.secondary">
                   {t('You have {{count}} task generation credits remaining.').replace('{{count}}', credits.toString())}
                 </Typography>
+                {credits < 100 && (
+                  <Alert severity="info" sx={{ mt: 2 }}>
+                    {t('Running low on credits? Upgrade your plan to get more!')}
+                  </Alert>
+                )}
               </Box>
             </Paper>
           </Grid>
 
-          {/* Annual Subscription Upgrade Card */}
-          {subscription?.plan === 'trial' && (
+          {/* Subscription Plans */}
+          {subscription?.tier === 'trial' && (
             <Grid item xs={12}>
-              <Paper
-                elevation={3}
-                sx={{
-                  p: 4,
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                  color: 'white'
-                }}
-              >
-                <Grid container spacing={3} alignItems="center">
-                  <Grid item xs={12} md={8}>
-                    <Typography variant="h5" gutterBottom>
-                      {t('Annual Subscription')}
-                    </Typography>
-                    <Typography variant="body1" paragraph>
-                      {t('Subscribe to our annual plan for unlimited access to all features.')}
-                    </Typography>
-                    <List dense>
-                      <ListItem sx={{ py: 0.5 }}>
-                        <ListItemIcon sx={{ minWidth: 36 }}>
-                          <CheckCircleIcon sx={{ color: 'white' }} />
-                        </ListItemIcon>
-                        <ListItemText
-                          primary={t('Unlimited task generation')}
-                          primaryTypographyProps={{ color: 'inherit' }}
-                        />
-                      </ListItem>
-                      <ListItem sx={{ py: 0.5 }}>
-                        <ListItemIcon sx={{ minWidth: 36 }}>
-                          <CheckCircleIcon sx={{ color: 'white' }} />
-                        </ListItemIcon>
-                        <ListItemText
-                          primary={t('Priority support')}
-                          primaryTypographyProps={{ color: 'inherit' }}
-                        />
-                      </ListItem>
-                      <ListItem sx={{ py: 0.5 }}>
-                        <ListItemIcon sx={{ minWidth: 36 }}>
-                          <CheckCircleIcon sx={{ color: 'white' }} />
-                        </ListItemIcon>
-                        <ListItemText
-                          primary={t('Early access to new features')}
-                          primaryTypographyProps={{ color: 'inherit' }}
-                        />
-                      </ListItem>
-                    </List>
-                  </Grid>
-                  <Grid item xs={12} md={4} sx={{ textAlign: { md: 'right' } }}>
-                    <Button
-                      variant="primary"
-                      size="large"
-                      disabled
-                      fullWidth
-                      sx={{
-                        backgroundColor: 'white',
-                        color: '#667eea',
-                        '&:hover': {
-                          backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                        }
-                      }}
-                    >
-                      {t('Coming Soon')}
-                    </Button>
-                    <Typography variant="caption" display="block" sx={{ mt: 1, opacity: 0.9 }}>
-                      {t('Annual subscription will be available soon. Stay tuned!')}
-                    </Typography>
-                  </Grid>
+              <Typography variant="h5" sx={{ mb: 3, mt: 2 }}>
+                {t('Upgrade Your Plan')}
+              </Typography>
+
+              {loading ? (
+                <Box sx={{ display: 'flex', justifyContent: 'center', py: 4 }}>
+                  <CircularProgress />
+                </Box>
+              ) : (
+                <Grid container spacing={3}>
+                  {plans.map((plan) => (
+                    <Grid item xs={12} md={4} key={plan.id}>
+                      <Card
+                        elevation={3}
+                        sx={{
+                          height: '100%',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          position: 'relative',
+                          border: plan.id === 'normal' ? `2px solid ${getTierColor('normal')}` : 'none',
+                        }}
+                      >
+                        {plan.id === 'normal' && (
+                          <Chip
+                            label={t('Most Popular')}
+                            color="primary"
+                            size="small"
+                            sx={{
+                              position: 'absolute',
+                              top: 16,
+                              right: 16,
+                            }}
+                          />
+                        )}
+                        <CardContent sx={{ flexGrow: 1, pt: 4 }}>
+                          <Typography variant="h5" component="div" gutterBottom sx={{ color: getTierColor(plan.id) }}>
+                            {plan.name}
+                          </Typography>
+                          <Typography variant="h3" component="div" sx={{ my: 2 }}>
+                            €{plan.price}
+                            <Typography variant="body2" component="span" color="text.secondary">
+                              /{t('year')}
+                            </Typography>
+                          </Typography>
+
+                          <List dense>
+                            {plan.features.viewDownloadTasks && (
+                              <ListItem sx={{ px: 0 }}>
+                                <ListItemIcon sx={{ minWidth: 36 }}>
+                                  <CheckCircleIcon color="success" fontSize="small" />
+                                </ListItemIcon>
+                                <ListItemText
+                                  primary={t('View/download task library')}
+                                  primaryTypographyProps={{ variant: 'body2' }}
+                                />
+                              </ListItem>
+                            )}
+
+                            <ListItem sx={{ px: 0 }}>
+                              <ListItemIcon sx={{ minWidth: 36 }}>
+                                <CheckCircleIcon color="success" fontSize="small" />
+                              </ListItemIcon>
+                              <ListItemText
+                                primary={t('{{count}} custom task collections', {
+                                  count: plan.features.customTaskCollections === 'unlimited'
+                                    ? t('Unlimited')
+                                    : plan.features.customTaskCollections.toString(),
+                                })}
+                                primaryTypographyProps={{ variant: 'body2' }}
+                              />
+                            </ListItem>
+
+                            {plan.features.taskCreationCredits > 0 && (
+                              <ListItem sx={{ px: 0 }}>
+                                <ListItemIcon sx={{ minWidth: 36 }}>
+                                  <CheckCircleIcon color="success" fontSize="small" />
+                                </ListItemIcon>
+                                <ListItemText
+                                  primary={t('{{count}} task generation credits', {
+                                    count: plan.features.taskCreationCredits.toLocaleString(),
+                                  })}
+                                  primaryTypographyProps={{ variant: 'body2', fontWeight: 'bold' }}
+                                />
+                              </ListItem>
+                            )}
+
+                            {plan.features.emailSupport && (
+                              <ListItem sx={{ px: 0 }}>
+                                <ListItemIcon sx={{ minWidth: 36 }}>
+                                  <CheckCircleIcon color="success" fontSize="small" />
+                                </ListItemIcon>
+                                <ListItemText
+                                  primary={t('{{time}} email support', {
+                                    time: plan.features.supportResponseTime,
+                                  })}
+                                  primaryTypographyProps={{ variant: 'body2' }}
+                                />
+                              </ListItem>
+                            )}
+
+                            {plan.features.creatorContests && (
+                              <ListItem sx={{ px: 0 }}>
+                                <ListItemIcon sx={{ minWidth: 36 }}>
+                                  <CheckCircleIcon color="success" fontSize="small" />
+                                </ListItemIcon>
+                                <ListItemText
+                                  primary={t('Creator contests access')}
+                                  primaryTypographyProps={{ variant: 'body2' }}
+                                />
+                              </ListItem>
+                            )}
+
+                            {plan.features.discordAccess && (
+                              <ListItem sx={{ px: 0 }}>
+                                <ListItemIcon sx={{ minWidth: 36 }}>
+                                  <CheckCircleIcon color="success" fontSize="small" />
+                                </ListItemIcon>
+                                <ListItemText
+                                  primary={t('Private Discord channel')}
+                                  primaryTypographyProps={{ variant: 'body2' }}
+                                />
+                              </ListItem>
+                            )}
+
+                            {plan.features.webstoreDiscount > 0 && (
+                              <ListItem sx={{ px: 0 }}>
+                                <ListItemIcon sx={{ minWidth: 36 }}>
+                                  <CheckCircleIcon color="success" fontSize="small" />
+                                </ListItemIcon>
+                                <ListItemText
+                                  primary={t('{{discount}}% webstore discount', {
+                                    discount: plan.features.webstoreDiscount,
+                                  })}
+                                  primaryTypographyProps={{ variant: 'body2' }}
+                                />
+                              </ListItem>
+                            )}
+
+                            {plan.features.schoolLicense && (
+                              <ListItem sx={{ px: 0 }}>
+                                <ListItemIcon sx={{ minWidth: 36 }}>
+                                  <CheckCircleIcon color="success" fontSize="small" />
+                                </ListItemIcon>
+                                <ListItemText
+                                  primary={t('Add up to {{count}} teachers', {
+                                    count: plan.features.additionalTeachers,
+                                  })}
+                                  primaryTypographyProps={{ variant: 'body2', fontWeight: 'bold' }}
+                                />
+                              </ListItem>
+                            )}
+
+                            {plan.features.schoolContest && (
+                              <ListItem sx={{ px: 0 }}>
+                                <ListItemIcon sx={{ minWidth: 36 }}>
+                                  <CheckCircleIcon color="success" fontSize="small" />
+                                </ListItemIcon>
+                                <ListItemText
+                                  primary={t('Best School of the Year contest')}
+                                  primaryTypographyProps={{ variant: 'body2', fontWeight: 'bold' }}
+                                />
+                              </ListItem>
+                            )}
+                          </List>
+                        </CardContent>
+                        <CardActions sx={{ p: 2, pt: 0 }}>
+                          <Button
+                            variant="primary"
+                            size="large"
+                            fullWidth
+                            disabled={checkoutLoading !== null}
+                            onClick={() => handleUpgrade(plan.id)}
+                            sx={{
+                              backgroundColor: getTierColor(plan.id),
+                              '&:hover': {
+                                backgroundColor: getTierColor(plan.id),
+                                opacity: 0.9,
+                              },
+                            }}
+                          >
+                            {checkoutLoading === plan.id ? (
+                              <CircularProgress size={24} color="inherit" />
+                            ) : (
+                              t('Upgrade to {{name}}', { name: plan.name })
+                            )}
+                          </Button>
+                        </CardActions>
+                      </Card>
+                    </Grid>
+                  ))}
                 </Grid>
-              </Paper>
+              )}
             </Grid>
           )}
         </Grid>

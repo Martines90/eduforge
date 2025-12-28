@@ -2,19 +2,19 @@
 
 You are an expert curriculum analyst specializing in Hungary's official national education standards for Biology.
 
-Your task is to create a comprehensive, hierarchical JSON structure that maps the complete Biology curriculum for grades 9-12 according to Hungary's official government education standards: **Nemzeti Alaptanterv (NAT)**.
+Your task is to create a comprehensive, hierarchical JSON structure that maps the complete Biology curriculum for grades 9-12 according to Hungary's official government education standards: Nemzeti Alaptanterv (NAT).
 
 ---
 
 ## 1. Research and Accuracy Requirements
 
-**Authoritative Sources:**
+Authoritative Sources:
 - Base your structure on the official Ministry of Education and Culture (Oktatási és Kulturális Minisztérium) curriculum documents
-- Follow the **Nemzeti Alaptanterv (NAT)** standards and framework
+- Follow the Nemzeti Alaptanterv (NAT) standards and framework
 - Ensure accuracy to Hungary's actual teaching practices and pedagogical approaches
 - Use terminology and concepts standard in Hungary's education system
 
-**Grade Level Context:**
+Grade Level Context:
 - Grade 9-10: Középiskola 9-10. évfolyam
 - Grade 11-12: Középiskola 11-12. évfolyam
 
@@ -22,7 +22,7 @@ Your task is to create a comprehensive, hierarchical JSON structure that maps th
 
 ## 2. JSON Structure Format
 
-Follow this **exact** hierarchical structure:
+Follow this exact hierarchical structure:
 
 ```json
 {
@@ -62,20 +62,22 @@ Follow this **exact** hierarchical structure:
 
 ## 3. Depth and Coverage Requirements
 
-**Breadth (Horizontal Coverage):**
-- **Grade 9-10**: Include 8-12 main topics that cover the full curriculum for these grades
-- **Grade 11-12**: Include 8-12 main topics that cover the full curriculum for these grades
+Breadth (Horizontal Coverage):
+- Grade 9-10: Include 12-14 main topics that cover the full curriculum for these grades
+- Grade 11-12: Include 12-14 main topics that cover the full curriculum for these grades
 - Total main topics across both grade levels: 16-24
 
-**Depth (Vertical Hierarchy):**
-- **Level 1 (Main Topics)**: 8-12 per grade level
-- **Level 2 (Sub Topics)**: 3-6 per main topic
-- **Level 3 (Detailed Sub Topics)**: 2-5 per sub topic
-- **Level 4 (Example Tasks)**: 3-5 tasks per detailed sub topic
+Depth (Vertical Hierarchy):
+- Level 1 (Main Topics): 12-14 per grade level
+- Level 2 (Sub Topics): 3-6 per main topic
+- Level 3 (Sub Topics with example Tasks): 3 tasks (only if really needed 4-5 tasks) per detailed sub topic
 
-**Total Size Target:**
-- **3,000-3,500 lines** of JSON
-- **150,000-160,000 characters** in total
+Note: at level to if it make sense you can already add example tasks (in case if no sub topics can be added vertically there)
+
+Total Size Target:
+- Minimum 2,400-2,500 lines of JSON
+- Minimum 300-400 lines / chunk (in total 2400)
+- Minimum 140,000-180,000 characters in total
 - This ensures comprehensive coverage of the entire 4-year secondary curriculum
 
 ---
@@ -83,7 +85,7 @@ Follow this **exact** hierarchical structure:
 ## 4. Content Quality Standards
 
 ### Language and Terminology:
-- **All names and descriptions MUST be in Hungarian**
+- All names and descriptions MUST be in Hungarian
 - Use official terminology from Hungary's education system
 - Keys should be in lowercase_with_underscores (English or transliterated)
 - Be consistent with naming conventions throughout
@@ -96,13 +98,13 @@ Follow this **exact** hierarchical structure:
 
 ### Example Tasks:
 Each example task must be:
-- **Authentic**: Reflect the types of assessments and exercises used in Hungary
-- **Age-appropriate**: Suitable for the cognitive level of the grade
-- **Progressive**: Show increasing complexity across the 3-5 examples
-- **Curriculum-aligned**: Match the learning objectives of the official curriculum
-- **Practical**: Where possible, connect to real-world contexts relevant to Hungary
-- **Diverse**: Cover different cognitive levels (recall, application, analysis, synthesis)
-- **Clear**: Fully specified so a student or teacher understands what is being asked
+- Authentic: Reflect the types of assessments and exercises used in Hungary
+- Age-appropriate: Suitable for the cognitive level of the grade
+- Progressive: Show increasing complexity across the 3-5 examples
+- Curriculum-aligned: Match the learning objectives of the official curriculum
+- Practical: Where possible, connect to real-world contexts relevant to Hungary
+- Diverse: Cover different cognitive levels (recall, application, analysis, synthesis)
+- Clear: Fully specified so a student or teacher understands what is being asked
 
 ### Progression:
 - Ensure logical progression from Grade 9-10 to Grade 11-12
@@ -115,7 +117,7 @@ Each example task must be:
 
 ### Subject-Specific Requirements for Biology:
 
-**Core Topics to Include:**
+Core Topics to Include:
 - Cell Biology (structure, function, organelles, cell division)
 - Genetics (Mendelian genetics, DNA, molecular genetics)
 - Evolution and Natural Selection
@@ -125,14 +127,14 @@ Each example task must be:
 - Microbiology (bacteria, viruses, fungi)
 - Biochemistry (proteins, enzymes, metabolism)
 
-**Pedagogical Considerations:**
+Pedagogical Considerations:
 - Connect different levels of biological organization (molecular → organism → ecosystem)
 - Include taxonomy and classification systems
 - Reference local ecosystems and species where appropriate
 - Include microscopy and laboratory investigation skills
 - Address ethical considerations in biology (especially genetics and ecology)
 
-**Example Task Types:**
+Example Task Types:
 - Diagram labeling and interpretation
 - Experimental design and hypothesis testing
 - Classification and identification tasks
@@ -161,34 +163,34 @@ Before and during your work, ensure:
 Since this is a large dataset (~3000-3500 lines), deliver it in manageable chunks.
 
 ### Step 1: Overview
-First, provide a **complete overview** listing:
+First, provide a complete overview listing:
 1. All main topics for grade_9_10 (with brief 1-sentence descriptions)
 2. All main topics for grade_11_12 (with brief 1-sentence descriptions)
 3. Confirmation that this structure aligns with Nemzeti Alaptanterv (NAT)
 4. Estimated line count and character count for the full output
 
-**Wait for approval before proceeding to chunks.**
+Wait for approval before proceeding to chunks.
 
 ### Step 2: Deliver Chunks
 After approval, deliver the full JSON data in chunks as follows:
 
-**Chunk 1**: `grade_9_10` array - First 2-3 main topics (complete with all sub_topics, sub_sub_topics, and example_tasks)
+Chunk 1: `grade_9_10` array - First 3-4 main topics (complete with all sub_topics, sub_sub_topics, and example_tasks)
 
-**Chunk 2**: `grade_9_10` array - Next 2-3 main topics
+Chunk 2: `grade_9_10` array - Next 3-4 main topics
 
-**Chunk 3**: `grade_9_10` array - Next 2-3 main topics
+Chunk 3: `grade_9_10` array - Next 3-4 main topics
 
-**Chunk 4**: `grade_9_10` array - Remaining main topics
+Chunk 4: `grade_9_10` array - Remaining main topics
 
-**Chunk 5**: `grade_11_12` array - First 2-3 main topics
+Chunk 5: `grade_11_12` array - First 3-4 main topics
 
-**Chunk 6**: `grade_11_12` array - Next 2-3 main topics
+Chunk 6: `grade_11_12` array - Next 3-4 main topics
 
-**Chunk 7**: `grade_11_12` array - Next 2-3 main topics
+Chunk 7: `grade_11_12` array - Next 3-4 main topics
 
-**Chunk 8**: `grade_11_12` array - Remaining main topics
+Chunk 8: `grade_11_12` array - Remaining main topics
 
-**IMPORTANT**: The `grade_9_10` and `grade_11_12` keys should contain **arrays** directly, NOT objects with a "topics" key. The structure should be:
+IMPORTANT: The `grade_9_10` and `grade_11_12` keys should contain arrays directly, NOT objects with a "topics" key. The structure should be:
 ```json
 {
   "grade_9_10": [ /* array of topics */ ],
@@ -202,7 +204,7 @@ After each chunk, state:
 ```
 ✅ Chunk [X] of [TOTAL] complete.
 📊 Character count for this chunk: [XXXXX]
-📈 Cumulative character count: [XXXXXX] / ~160,000
+📈 Cumulative character count: [XXXXXX] / ~160,000-190,000
 🔄 Ready for next chunk? Reply 'continue' to proceed to Chunk [X+1].
 ```
 
@@ -211,19 +213,19 @@ After each chunk, state:
 ## 7. Final Validation
 
 After delivering all chunks, provide:
-1. **Total line count**
-2. **Total character count**
-3. **Confirmation** that all main topics from the overview are included
-4. **Self-check** that content aligns with Nemzeti Alaptanterv (NAT)
+1. Total line count
+2. Total character count
+3. Confirmation that all main topics from the overview are included
+4. Self-check that content aligns with Nemzeti Alaptanterv (NAT)
 
 ---
 
 ## 8. Important Notes
 
-- **DO NOT hallucinate or invent curriculum content.** If you are unsure about specific topics in Hungary's curriculum, indicate this and use general best practices for the subject.
-- **Prioritize accuracy over creativity.** This data will be used for educational purposes.
-- **Be consistent** with JSON formatting, key naming, and structure throughout all chunks.
-- **All content must be in Hungarian** except for keys.
+- DO NOT hallucinate or invent curriculum content. If you are unsure about specific topics in Hungary's curriculum, indicate this and use general best practices for the subject.
+- Prioritize accuracy over creativity. This data will be used for educational purposes.
+- Be consistent with JSON formatting, key naming, and structure throughout all chunks.
+- All content must be in Hungarian except for keys.
 
 ---
 
@@ -235,4 +237,9 @@ Please confirm:
 3. You are ready to provide content in Hungarian
 4. You will deliver an overview first, then await approval before providing chunks
 
-**Please start with the overview (Step 1).**
+Please start with the overview (Step 1).
+
+At chunk 1 also include "grade_9_10" key
+At chunk 5 also include "grade_11_12" key
+
+The other chunks should only presented {},{}, ... so i can copy paste them easily into the actual "grade_":[...] array.

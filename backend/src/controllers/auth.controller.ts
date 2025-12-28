@@ -6,8 +6,30 @@ import {
   VerificationCodeRequest,
   VerifyEmailRequest,
   AuthResponse,
+  UserDocument,
 } from '../types/auth.types';
 import { verifyRecaptcha } from '../utils/recaptcha.util';
+
+/**
+ * Helper function to serialize subscription for JSON response
+ */
+function serializeSubscription(subscription: UserDocument['subscription']) {
+  if (!subscription) return undefined;
+
+  return {
+    tier: subscription.tier,
+    status: subscription.status,
+    startDate: subscription.startDate?.toDate?.()?.toISOString() || subscription.startDate,
+    endDate: subscription.endDate?.toDate?.()?.toISOString() || subscription.endDate,
+    stripeCustomerId: subscription.stripeCustomerId,
+    stripeSubscriptionId: subscription.stripeSubscriptionId,
+    stripePriceId: subscription.stripePriceId,
+    cancelAtPeriodEnd: subscription.cancelAtPeriodEnd,
+    schoolId: subscription.schoolId,
+    schoolName: subscription.schoolName,
+    associatedTeachers: subscription.associatedTeachers,
+  };
+}
 
 /**
  * POST /api/auth/register
@@ -153,14 +175,7 @@ export async function verifyEmail(req: Request, res: Response): Promise<void> {
     const user = await authService.getUserById(uid);
 
     // Serialize subscription timestamps to ISO strings for JSON response
-    const serializedSubscription = user?.subscription ? {
-      plan: user.subscription.plan,
-      status: user.subscription.status,
-      trialStartDate: user.subscription.trialStartDate?.toDate?.()?.toISOString() || user.subscription.trialStartDate,
-      trialEndDate: user.subscription.trialEndDate?.toDate?.()?.toISOString() || user.subscription.trialEndDate,
-      annualStartDate: user.subscription.annualStartDate?.toDate?.()?.toISOString() || user.subscription.annualStartDate,
-      annualEndDate: user.subscription.annualEndDate?.toDate?.()?.toISOString() || user.subscription.annualEndDate,
-    } : undefined;
+    const serializedSubscription = serializeSubscription(user?.subscription);
 
     res.status(201).json({
       success: true,
@@ -213,14 +228,7 @@ export async function login(req: Request, res: Response): Promise<void> {
     const { user, token } = await authService.loginUser(data);
 
     // Serialize subscription timestamps to ISO strings for JSON response
-    const serializedSubscription = user.subscription ? {
-      plan: user.subscription.plan,
-      status: user.subscription.status,
-      trialStartDate: user.subscription.trialStartDate?.toDate?.()?.toISOString() || user.subscription.trialStartDate,
-      trialEndDate: user.subscription.trialEndDate?.toDate?.()?.toISOString() || user.subscription.trialEndDate,
-      annualStartDate: user.subscription.annualStartDate?.toDate?.()?.toISOString() || user.subscription.annualStartDate,
-      annualEndDate: user.subscription.annualEndDate?.toDate?.()?.toISOString() || user.subscription.annualEndDate,
-    } : undefined;
+    const serializedSubscription = serializeSubscription(user.subscription);
 
     res.status(200).json({
       success: true,
@@ -298,14 +306,7 @@ export async function getCurrentUser(req: Request, res: Response): Promise<void>
     }
 
     // Serialize subscription timestamps to ISO strings for JSON response
-    const serializedSubscription = user.subscription ? {
-      plan: user.subscription.plan,
-      status: user.subscription.status,
-      trialStartDate: user.subscription.trialStartDate?.toDate?.()?.toISOString() || user.subscription.trialStartDate,
-      trialEndDate: user.subscription.trialEndDate?.toDate?.()?.toISOString() || user.subscription.trialEndDate,
-      annualStartDate: user.subscription.annualStartDate?.toDate?.()?.toISOString() || user.subscription.annualStartDate,
-      annualEndDate: user.subscription.annualEndDate?.toDate?.()?.toISOString() || user.subscription.annualEndDate,
-    } : undefined;
+    const serializedSubscription = serializeSubscription(user.subscription);
 
     res.status(200).json({
       success: true,

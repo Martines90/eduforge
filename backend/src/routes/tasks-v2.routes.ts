@@ -7,6 +7,7 @@ import { Router, Request, Response } from 'express';
 import * as taskService from '../services/task.service';
 import { CreateTaskRequest, UpdateTaskRequest, GetTasksQuery, SubmitRatingRequest } from '../types/task.types';
 import { verifyToken } from '../services/auth.service';
+import { requireBasicPlan } from '../middleware/role.middleware';
 
 const router = Router();
 
@@ -83,8 +84,9 @@ router.post('/api/v2/tasks', authenticateUser, requireTeacher, async (req: Reque
 /**
  * GET /api/v2/tasks
  * Get tasks with filtering and pagination
+ * Requires at least Basic plan subscription
  */
-router.get('/api/v2/tasks', async (req: Request, res: Response) => {
+router.get('/api/v2/tasks', authenticateUser, requireBasicPlan, async (req: Request, res: Response) => {
   try {
     const query: GetTasksQuery = {
       curriculum_path: req.query.curriculum_path as string,
@@ -119,8 +121,9 @@ router.get('/api/v2/tasks', async (req: Request, res: Response) => {
 /**
  * GET /api/v2/tasks/search
  * Search tasks by text
+ * Requires at least Basic plan subscription
  */
-router.get('/api/v2/tasks/search', async (req: Request, res: Response) => {
+router.get('/api/v2/tasks/search', authenticateUser, requireBasicPlan, async (req: Request, res: Response) => {
   try {
     const searchText = req.query.q as string;
 
@@ -186,8 +189,9 @@ router.get('/api/v2/tasks/my', authenticateUser, requireTeacher, async (req: Req
 /**
  * GET /api/v2/tasks/:id
  * Get a specific task by ID
+ * Requires at least Basic plan subscription for published tasks
  */
-router.get('/api/v2/tasks/:id', async (req: Request, res: Response) => {
+router.get('/api/v2/tasks/:id', authenticateUser, requireBasicPlan, async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const incrementViews = req.query.view === 'true';

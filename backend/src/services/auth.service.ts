@@ -172,10 +172,10 @@ export async function verifyCodeAndCreateUser(email: string, code: string): Prom
     trialEndDate.setMonth(trialEndDate.getMonth() + 3); // 3 months from now
 
     userDoc.subscription = {
-      plan: 'trial',
+      tier: 'trial',
       status: 'active',
-      trialStartDate: trialStartDate as any,
-      trialEndDate: trialEndDate as any,
+      startDate: trialStartDate as any,
+      endDate: trialEndDate as any,
     };
     userDoc.taskCredits = 100; // Initial 100 task generation credits
   }

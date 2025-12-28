@@ -22,12 +22,17 @@ export type EducationalModel =
   | 'waldorf';
 
 export interface SubscriptionInfo {
-  plan: 'trial' | 'annual' | 'none';
-  status: 'active' | 'expired' | 'cancelled';
-  trialStartDate?: string;
-  trialEndDate?: string;
-  annualStartDate?: string;
-  annualEndDate?: string;
+  tier: 'trial' | 'basic' | 'normal' | 'pro';
+  status: 'active' | 'expired' | 'cancelled' | 'past_due';
+  startDate?: string;
+  endDate?: string;
+  stripeCustomerId?: string;
+  stripeSubscriptionId?: string;
+  stripePriceId?: string;
+  cancelAtPeriodEnd?: boolean;
+  schoolId?: string;
+  schoolName?: string;
+  associatedTeachers?: string[];
 }
 
 /**
@@ -131,12 +136,17 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
           let subscription: SubscriptionInfo | undefined;
           if (userData.subscription) {
             subscription = {
-              plan: userData.subscription.plan,
+              tier: userData.subscription.tier || 'trial',
               status: userData.subscription.status,
-              trialStartDate: userData.subscription.trialStartDate?.toDate?.()?.toISOString(),
-              trialEndDate: userData.subscription.trialEndDate?.toDate?.()?.toISOString(),
-              annualStartDate: userData.subscription.annualStartDate?.toDate?.()?.toISOString(),
-              annualEndDate: userData.subscription.annualEndDate?.toDate?.()?.toISOString(),
+              startDate: userData.subscription.startDate?.toDate?.()?.toISOString(),
+              endDate: userData.subscription.endDate?.toDate?.()?.toISOString(),
+              stripeCustomerId: userData.subscription.stripeCustomerId,
+              stripeSubscriptionId: userData.subscription.stripeSubscriptionId,
+              stripePriceId: userData.subscription.stripePriceId,
+              cancelAtPeriodEnd: userData.subscription.cancelAtPeriodEnd,
+              schoolId: userData.subscription.schoolId,
+              schoolName: userData.subscription.schoolName,
+              associatedTeachers: userData.subscription.associatedTeachers,
             };
           }
 
@@ -205,12 +215,17 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
                 let subscription: SubscriptionInfo | undefined;
                 if (userSubscription) {
                   subscription = {
-                    plan: userSubscription.plan,
+                    tier: userSubscription.tier || 'trial',
                     status: userSubscription.status,
-                    trialStartDate: userSubscription.trialStartDate,
-                    trialEndDate: userSubscription.trialEndDate,
-                    annualStartDate: userSubscription.annualStartDate,
-                    annualEndDate: userSubscription.annualEndDate,
+                    startDate: userSubscription.startDate,
+                    endDate: userSubscription.endDate,
+                    stripeCustomerId: userSubscription.stripeCustomerId,
+                    stripeSubscriptionId: userSubscription.stripeSubscriptionId,
+                    stripePriceId: userSubscription.stripePriceId,
+                    cancelAtPeriodEnd: userSubscription.cancelAtPeriodEnd,
+                    schoolId: userSubscription.schoolId,
+                    schoolName: userSubscription.schoolName,
+                    associatedTeachers: userSubscription.associatedTeachers,
                   };
                 }
 
@@ -398,13 +413,18 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       let subscription: SubscriptionInfo | undefined;
       if (userSubscription) {
         subscription = {
-          plan: userSubscription.plan,
+          tier: userSubscription.tier || 'trial',
           status: userSubscription.status,
           // Backend returns ISO strings, not Firestore Timestamps
-          trialStartDate: userSubscription.trialStartDate,
-          trialEndDate: userSubscription.trialEndDate,
-          annualStartDate: userSubscription.annualStartDate,
-          annualEndDate: userSubscription.annualEndDate,
+          startDate: userSubscription.startDate,
+          endDate: userSubscription.endDate,
+          stripeCustomerId: userSubscription.stripeCustomerId,
+          stripeSubscriptionId: userSubscription.stripeSubscriptionId,
+          stripePriceId: userSubscription.stripePriceId,
+          cancelAtPeriodEnd: userSubscription.cancelAtPeriodEnd,
+          schoolId: userSubscription.schoolId,
+          schoolName: userSubscription.schoolName,
+          associatedTeachers: userSubscription.associatedTeachers,
         };
       }
 

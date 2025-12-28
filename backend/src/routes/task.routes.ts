@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { TaskController } from "../controllers/task.controller";
 import { requireAuthenticatedTeacher } from "../middleware/auth.middleware";
-import { requireTeacher, requireTaskCredits } from "../middleware/role.middleware";
+import { requireTeacher, requireTaskCredits, requireActiveSubscription } from "../middleware/role.middleware";
 
 const router = Router();
 const taskController = new TaskController();
@@ -15,6 +15,7 @@ const taskController = new TaskController();
  *       Generates a comprehensive educational math task with AI-powered description (using GPT-4o)
  *       and optional educational images (using DALL-E-3). The task is configured based on curriculum
  *       path, target audience, difficulty level, educational model, and precision settings.
+ *       Requires active subscription and available task credits.
  *     tags: [Tasks]
  *     security:
  *       - bearerAuth: []
@@ -104,7 +105,7 @@ const taskController = new TaskController();
  *                 message:
  *                   type: string
  *       403:
- *         description: Forbidden - Teacher role required
+ *         description: Forbidden - Teacher role, active subscription, or credits required
  *         content:
  *           application/json:
  *             schema:
@@ -119,31 +120,35 @@ const taskController = new TaskController();
  *       500:
  *         $ref: '#/components/responses/InternalServerError'
  */
-router.post("/generate-task", requireAuthenticatedTeacher, taskController.generateTask);
+router.post("/generate-task", requireAuthenticatedTeacher, requireActiveSubscription, requireTaskCredits, taskController.generateTask);
 
 /**
  * V2 API: Generate task text only (no solution, no images) with variation support
  * POST /generate-task-text
+ * Requires active subscription and available task credits
  */
-router.post("/generate-task-text", requireAuthenticatedTeacher, taskController.generateTaskText);
+router.post("/generate-task-text", requireAuthenticatedTeacher, requireActiveSubscription, requireTaskCredits, taskController.generateTaskText);
 
 /**
  * V2 API: AI selects the best task from 3 variations
  * POST /select-best-task
+ * Requires active subscription (no credits needed for selection)
  */
-router.post("/select-best-task", requireAuthenticatedTeacher, taskController.selectBestTask);
+router.post("/select-best-task", requireAuthenticatedTeacher, requireActiveSubscription, taskController.selectBestTask);
 
 /**
  * V2 API: Generate solution only for given task text
  * POST /generate-task-solution
+ * Requires active subscription and available task credits
  */
-router.post("/generate-task-solution", requireAuthenticatedTeacher, taskController.generateTaskSolution);
+router.post("/generate-task-solution", requireAuthenticatedTeacher, requireActiveSubscription, requireTaskCredits, taskController.generateTaskSolution);
 
 /**
  * V2 API: Generate images only for given task text
  * POST /generate-task-images
+ * Requires active subscription and available task credits
  */
-router.post("/generate-task-images", requireAuthenticatedTeacher, taskController.generateTaskImages);
+router.post("/generate-task-images", requireAuthenticatedTeacher, requireActiveSubscription, requireTaskCredits, taskController.generateTaskImages);
 
 /**
  * @swagger
@@ -178,9 +183,9 @@ router.get("/tasks/:taskId", taskController.getTaskById);
 /**
  * POST /save-task
  * Saves a generated task to Firestore database
- * Requires authentication, teacher role, and available task credits
+ * Requires authentication, teacher role, active subscription, and available task credits
  */
-router.post("/save-task", requireAuthenticatedTeacher, requireTaskCredits, taskController.saveTask);
+router.post("/save-task", requireAuthenticatedTeacher, requireActiveSubscription, requireTaskCredits, taskController.saveTask);
 
 /**
  * POST /tasks/:taskId/upload-pdf
