@@ -62,18 +62,18 @@ export default function MySubscriptionPage() {
 
   // Get plan display name
   const getPlanName = () => {
-    if (!subscription) return t('No Active Plan');
+    if (!subscription) return 'No Active Plan';
     switch (subscription.tier) {
       case 'trial':
-        return t('Trial Plan');
+        return 'Trial Plan';
       case 'basic':
-        return t('Basic Plan');
+        return 'Basic Plan';
       case 'normal':
-        return t('Normal Plan');
+        return 'Normal Plan';
       case 'pro':
-        return t('Pro Plan');
+        return 'Pro Plan';
       default:
-        return t('No Active Plan');
+        return 'No Active Plan';
     }
   };
 
@@ -86,19 +86,19 @@ export default function MySubscriptionPage() {
     switch (subscription.status) {
       case 'active':
         color = 'success';
-        label = t('Active');
+        label = 'Active';
         break;
       case 'expired':
         color = 'error';
-        label = t('Expired');
+        label = 'Expired';
         break;
       case 'cancelled':
         color = 'warning';
-        label = t('Cancelled');
+        label = 'Cancelled';
         break;
       case 'past_due':
         color = 'warning';
-        label = t('Past Due');
+        label = 'Past Due';
         break;
     }
 
