@@ -1,6 +1,7 @@
 import { Router } from "express";
 import taskRoutes from "./task.routes";
 import authRoutes from "./auth.routes";
+import guestAuthRoutes from "./guest-auth.routes";
 import subscriptionRoutes from "./subscription.routes";
 import subjectMappingRoutes from "./subject-mapping.routes";
 import tasksV2Routes from "./tasks-v2.routes";
@@ -10,6 +11,7 @@ const router = Router();
 
 // Mount auth routes
 router.use("/api/auth", authRoutes);
+router.use("/api/auth", guestAuthRoutes);
 
 // Mount subscription routes
 router.use("/api/subscription", subscriptionRoutes);

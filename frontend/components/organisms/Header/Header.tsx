@@ -8,6 +8,7 @@ import { NavLink } from '@/components/atoms/NavLink';
 import { MobileMenu } from '@/components/molecules/MobileMenu';
 import { UserMenu } from '@/components/molecules/UserMenu';
 import { useTranslation } from '@/lib/i18n';
+import { useUser } from '@/lib/context/UserContext';
 import styles from './Header.module.scss';
 
 export interface HeaderProps {
@@ -17,16 +18,32 @@ export interface HeaderProps {
 /**
  * Header Organism Component
  * Main navigation header with hamburger menu for mobile
+ * Shows different navigation items for guests vs registered users
  */
 export const Header: React.FC<HeaderProps> = ({ className }) => {
   const { t } = useTranslation();
+  const { user } = useUser();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navigationItems = [
+  const isGuest = !user.isRegistered;
+  const isTeacher = user.identity === 'teacher';
+
+  // Guest navigation items
+  const guestNavigationItems = [
     { href: '/', label: t('Home') },
-    { href: '/tasks', label: t('Tasks') },
-    { href: '/task_creator', label: t('Task Creator') },
+    { href: '/task_generator', label: t('Try Free') },
+    { href: '/tasks', label: t('Browse Tasks') },
   ];
+
+  // Registered user navigation items
+  const registeredNavigationItems = [
+    { href: '/', label: t('Home') },
+    { href: '/task_generator', label: t('Generate Tasks') },
+    ...(isTeacher ? [{ href: '/task_creator', label: t('Create Task') }] : []),
+    { href: '/tasks', label: t('Browse Tasks') },
+  ];
+
+  const navigationItems = isGuest ? guestNavigationItems : registeredNavigationItems;
 
   const handleMenuToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen);

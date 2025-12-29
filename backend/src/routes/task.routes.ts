@@ -2,6 +2,7 @@ import { Router } from "express";
 import { TaskController } from "../controllers/task.controller";
 import { requireAuthenticatedTeacher } from "../middleware/auth.middleware";
 import { requireTeacher, requireTaskCredits, requireActiveSubscription } from "../middleware/role.middleware";
+import { authenticateOrGuest } from "../middleware/guest-auth.middleware";
 
 const router = Router();
 const taskController = new TaskController();
@@ -179,6 +180,14 @@ router.post("/generate-task-images", requireAuthenticatedTeacher, requireActiveS
  *         $ref: '#/components/responses/InternalServerError'
  */
 router.get("/tasks/:taskId", taskController.getTaskById);
+
+/**
+ * POST /generate-task-guest
+ * Generates a task for guest users (freemium model - 3 free generations)
+ * Supports both authenticated users and guest sessions
+ * Does NOT require subscription or credits
+ */
+router.post("/generate-task-guest", authenticateOrGuest, taskController.generateTaskGuest);
 
 /**
  * POST /save-task

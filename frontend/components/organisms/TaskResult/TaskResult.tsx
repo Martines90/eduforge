@@ -37,6 +37,14 @@ export interface TaskResultProps {
   onSave?: (editedTask: GeneratedTask) => void;
   onSaveToDatabase?: () => void;
   isSaving?: boolean;
+  /**
+   * Guest mode - if true, Save/Download buttons will trigger registration prompt
+   */
+  isGuestMode?: boolean;
+  /**
+   * Callback when guest tries to save/download and needs to register
+   */
+  onGuestPrompt?: (action: 'save' | 'download') => void;
 }
 
 /**
@@ -53,6 +61,8 @@ export const TaskResult: React.FC<TaskResultProps> = ({
   onSave,
   onSaveToDatabase,
   isSaving = false,
+  isGuestMode = false,
+  onGuestPrompt,
 }) => {
   const { t } = useTranslation();
   const [isEditingDescription, setIsEditingDescription] = useState(false);
@@ -240,6 +250,12 @@ export const TaskResult: React.FC<TaskResultProps> = ({
 
   const handleDownloadPDF = async () => {
     if (!task) return;
+
+    // If guest mode, trigger prompt instead of downloading
+    if (isGuestMode && onGuestPrompt) {
+      onGuestPrompt('download');
+      return;
+    }
 
     try {
       console.log('[PDF] Starting PDF generation...');
@@ -714,13 +730,21 @@ export const TaskResult: React.FC<TaskResultProps> = ({
             variant="secondary"
             onClick={handleDownloadPDF}
             startIcon={<PictureAsPdfIcon />}
+            disabled={false} // Always enabled, even for guests
           >
             {t('Download PDF')}
           </Button>
           {onSaveToDatabase && (
             <Button
               variant="primary"
-              onClick={onSaveToDatabase}
+              onClick={() => {
+                // If guest mode, trigger prompt instead of saving
+                if (isGuestMode && onGuestPrompt) {
+                  onGuestPrompt('save');
+                } else {
+                  onSaveToDatabase();
+                }
+              }}
               disabled={isSaving}
               startIcon={<SaveIcon />}
             >

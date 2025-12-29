@@ -7,7 +7,9 @@ import { uploadTaskPDF } from "../services/pdf-storage.service";
 import { TaskGeneratorRequest, TaskGeneratorResponse } from "../types";
 import { getFirestore } from "../config/firebase.config";
 import { AuthRequest } from "../middleware/auth.middleware";
+import { GuestAuthRequest } from "../middleware/guest-auth.middleware";
 import { deductTaskCredit } from "../services/auth.service";
+import { incrementGuestGeneration, getRemainingGenerations } from "../services/guest-auth.service";
 
 export class TaskController {
   private taskGenerator: TaskGeneratorService;
@@ -370,7 +372,18 @@ export class TaskController {
 
       // Get authenticated user from request (added by auth middleware)
       const authReq = req as AuthRequest;
+      const guestReq = req as GuestAuthRequest;
       const authenticatedUser = authReq.user;
+
+      // EXPLICITLY BLOCK GUEST USERS FROM SAVING TASKS
+      if (guestReq.isGuest) {
+        res.status(403).json({
+          success: false,
+          error: 'Forbidden',
+          message: "Guest users cannot save tasks. Please register to save your tasks and get 100 free task generation credits!",
+        });
+        return;
+      }
 
       if (!authenticatedUser) {
         res.status(401).json({
@@ -614,6 +627,106 @@ export class TaskController {
       });
     } catch (error) {
       console.error('❌ Error uploading PDF:', error);
+      next(error);
+    }
+  };
+
+  /**
+   * POST /generate-task-guest
+   * Generates a task for guest users (supports both authenticated and guest sessions)
+   * Guest users are limited to 3 free generations
+   * Does NOT save to database - tasks are temporary
+   */
+  generateTaskGuest = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<void> => {
+    try {
+      const requestData: TaskGeneratorRequest = req.body;
+      const authReq = req as GuestAuthRequest;
+
+      console.log("📥 Guest request to generate task");
+      console.log(`   Curriculum: ${requestData.curriculum_path}`);
+      console.log(`   Is Guest: ${authReq.isGuest}`);
+
+      // Generate the task first to get the task ID
+      const result = await this.taskGenerator.generateTask(requestData);
+
+      // If this is a guest session, check and increment generation count AFTER generation
+      if (authReq.isGuest && authReq.guest) {
+        try {
+          const session = await incrementGuestGeneration(authReq.guest.sessionId, result.taskId);
+          const remaining = await getRemainingGenerations(authReq.guest.sessionId);
+
+          console.log(`   Guest generations: ${session.generationsUsed}/${session.maxGenerations}`);
+          console.log(`   Remaining: ${remaining}`);
+        } catch (limitError: any) {
+          // Guest has reached their limit
+          res.status(403).json({
+            success: false,
+            error: 'Generation limit reached',
+            message: limitError.message,
+            data: {
+              generationsUsed: authReq.guest.generationsUsed,
+              maxGenerations: authReq.guest.maxGenerations,
+              limitReached: true,
+            },
+          });
+          return;
+        }
+      }
+
+      // Store images permanently in Firebase Storage
+      if (result.generatedTask.images && result.generatedTask.images.length > 0) {
+        console.log(`📸 Storing ${result.generatedTask.images.length} image(s) for guest...`);
+
+        try {
+          const imageStorage = new ImageStorageService();
+          const temporaryUrls = result.generatedTask.images.map(img => img.url);
+          const permanentUrls = await imageStorage.storeImagesPermanently(temporaryUrls, result.taskId);
+
+          result.generatedTask.images = result.generatedTask.images.map((img, index) => ({
+            ...img,
+            url: permanentUrls[index],
+          }));
+
+          console.log(`✅ Guest images stored permanently`);
+        } catch (imageError: any) {
+          console.error('⚠️ Failed to store guest images:', imageError.message);
+        }
+      }
+
+      // Calculate remaining generations for response
+      let generationsRemaining = null;
+      if (authReq.isGuest && authReq.guest) {
+        generationsRemaining = getRemainingGenerations(authReq.guest.sessionId);
+      }
+
+      // Return task data with guest metadata
+      const response: TaskGeneratorResponse & {
+        guest_metadata?: {
+          generationsUsed: number;
+          maxGenerations: number;
+          generationsRemaining: number;
+        };
+      } = {
+        task_id: result.taskId,
+        status: "generated",
+        task_data: result.generatedTask,
+      };
+
+      if (authReq.isGuest && authReq.guest && generationsRemaining !== null) {
+        response.guest_metadata = {
+          generationsUsed: authReq.guest.generationsUsed + 1,
+          maxGenerations: authReq.guest.maxGenerations,
+          generationsRemaining,
+        };
+      }
+
+      res.status(201).json(response);
+    } catch (error) {
+      console.error('❌ Error in guest task generation:', error);
       next(error);
     }
   };
