@@ -290,6 +290,12 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
           }
         } else {
           console.log('[UserContext] No stored session found');
+          // For guest users, mark as ready (not first visit anymore)
+          setUser((prev) => ({
+            ...prev,
+            isFirstVisit: false,
+            hasCompletedOnboarding: true,
+          }));
         }
       }
 

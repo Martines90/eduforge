@@ -126,30 +126,30 @@ router.post("/generate-task", requireAuthenticatedTeacher, requireActiveSubscrip
 /**
  * V2 API: Generate task text only (no solution, no images) with variation support
  * POST /generate-task-text
- * Requires active subscription and available task credits
+ * Supports both authenticated users and guest sessions
  */
-router.post("/generate-task-text", requireAuthenticatedTeacher, requireActiveSubscription, requireTaskCredits, taskController.generateTaskText);
+router.post("/generate-task-text", authenticateOrGuest, taskController.generateTaskText);
 
 /**
  * V2 API: AI selects the best task from 3 variations
  * POST /select-best-task
- * Requires active subscription (no credits needed for selection)
+ * Supports both authenticated users and guest sessions
  */
-router.post("/select-best-task", requireAuthenticatedTeacher, requireActiveSubscription, taskController.selectBestTask);
+router.post("/select-best-task", authenticateOrGuest, taskController.selectBestTask);
 
 /**
  * V2 API: Generate solution only for given task text
  * POST /generate-task-solution
- * Requires active subscription and available task credits
+ * Supports both authenticated users and guest sessions
  */
-router.post("/generate-task-solution", requireAuthenticatedTeacher, requireActiveSubscription, requireTaskCredits, taskController.generateTaskSolution);
+router.post("/generate-task-solution", authenticateOrGuest, taskController.generateTaskSolution);
 
 /**
  * V2 API: Generate images only for given task text
  * POST /generate-task-images
- * Requires active subscription and available task credits
+ * Supports both authenticated users and guest sessions
  */
-router.post("/generate-task-images", requireAuthenticatedTeacher, requireActiveSubscription, requireTaskCredits, taskController.generateTaskImages);
+router.post("/generate-task-images", authenticateOrGuest, taskController.generateTaskImages);
 
 /**
  * @swagger

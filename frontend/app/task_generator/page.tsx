@@ -2,12 +2,13 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { Container, Typography, Box, Paper, Alert, Tabs, Tab } from '@mui/material';
+import { Container, Typography, Box, Paper, Alert, Select, MenuItem, FormControl, InputLabel, Grid } from '@mui/material';
 import { CascadingSelect, TaskConfiguration } from '@/components/organisms/CascadingSelect';
 import { TaskResult } from '@/components/organisms/TaskResult';
 import { LoadingSpinner } from '@/components/atoms/LoadingSpinner/LoadingSpinner';
 import { NavigationTopic, GradeLevel } from '@/types/navigation';
 import { GeneratedTask, TaskGeneratorRequest } from '@/types/task';
+import { Subject } from '@/types/i18n';
 import { useTranslation } from '@/lib/i18n';
 import { useUser } from '@/lib/context/UserContext';
 import { useGuestSession } from '@/lib/hooks/useGuestSession';
@@ -21,24 +22,23 @@ import { useSnackbar } from 'notistack';
 import { API_BASE_URL } from '@/lib/services/api.service';
 import styles from '../task_creator/page.module.scss';
 
-interface TabPanelProps {
-  children?: React.ReactNode;
-  index: number;
-  value: number;
-}
+// Subject options for the dropdown
+const SUBJECT_OPTIONS: { value: Subject; label: string }[] = [
+  { value: 'mathematics', label: 'Mathematics' },
+  { value: 'physics', label: 'Physics' },
+  { value: 'chemistry', label: 'Chemistry' },
+  { value: 'biology', label: 'Biology' },
+  { value: 'information_technology', label: 'Informatics' },
+  { value: 'history', label: 'History' },
+  { value: 'geography', label: 'Geography' },
+  { value: 'literature', label: 'Literature' },
+];
 
-function TabPanel({ children, value, index }: TabPanelProps) {
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`grade-tabpanel-${index}`}
-      aria-labelledby={`grade-tab-${index}`}
-    >
-      {value === index && <Box sx={{ pt: 3 }}>{children}</Box>}
-    </div>
-  );
-}
+// Grade level options for the dropdown
+const GRADE_OPTIONS: { value: GradeLevel; label: string }[] = [
+  { value: 'grade_9_10', label: 'Grade 9-10' },
+  { value: 'grade_11_12', label: 'Grade 11-12' },
+];
 
 function TaskGeneratorContent() {
   const { t } = useTranslation();
@@ -54,7 +54,10 @@ function TaskGeneratorContent() {
   // Last unpublished task management (for all users)
   const lastUnpublishedTask = useLastUnpublishedTask();
 
-  const [selectedGrade, setSelectedGrade] = useState<number>(0);
+  // Subject and Grade state
+  const [selectedSubject, setSelectedSubject] = useState<string>(user.subject || 'mathematics');
+  const [selectedGrade, setSelectedGrade] = useState<GradeLevel>('grade_9_10');
+
   const [selectedTopic, setSelectedTopic] = useState<NavigationTopic | null>(null);
   const [selectionPath, setSelectionPath] = useState<string[]>([]);
   const [taskConfig, setTaskConfig] = useState<TaskConfiguration | null>(null);
@@ -92,23 +95,21 @@ function TaskGeneratorContent() {
     }
   }, [lastUnpublishedTask.lastTask]);
 
-  // Fetch navigation data from API based on user's country and subject
+  // Fetch navigation data from API based on selected subject
   useEffect(() => {
     const loadNavigationData = async () => {
-      console.log('[Task Generator] User object:', user);
+      console.log('[Task Generator] Loading navigation data');
+      console.log('[Task Generator] Selected subject:', selectedSubject);
       console.log('[Task Generator] User country:', user.country);
-      console.log('[Task Generator] isGuest:', isGuest);
 
-      // For guests, use default country and subject
       const country = user.country || 'HU';
-      const subject = user.subject || 'physics';
 
       setIsLoadingNavigation(true);
       setNavigationError(null);
 
       try {
-        console.log('[Task Generator] Fetching navigation data for country:', country, 'subject:', subject);
-        const data = await fetchAllGradeTrees(country, subject);
+        console.log('[Task Generator] Fetching navigation data for country:', country, 'subject:', selectedSubject);
+        const data = await fetchAllGradeTrees(country, selectedSubject);
         setNavigationData(data);
         console.log('[Task Generator] Navigation data loaded successfully');
       } catch (error) {
@@ -119,29 +120,36 @@ function TaskGeneratorContent() {
       }
     };
 
-    loadNavigationData();
-  }, [user.country, user.subject, isGuest]);
+    if (selectedSubject) {
+      loadNavigationData();
+    }
+  }, [selectedSubject, user.country]);
 
-  // Read URL params on mount
+  // Read URL params on mount and sync with state
   useEffect(() => {
+    if (urlParamsApplied) return;
+
     const subjectParam = searchParams.get('subject');
-    const gradeParam = searchParams.get('grade_lvl');
+    const gradeParam = searchParams.get('grade_level');
     const pathParams: string[] = [];
 
-    // Collect lvl_1, lvl_2, lvl_3, etc.
+    // Collect level_1, level_2, level_3, etc.
     let i = 1;
-    while (searchParams.get(`lvl_${i}`)) {
-      pathParams.push(searchParams.get(`lvl_${i}`)!);
+    while (searchParams.get(`level_${i}`)) {
+      pathParams.push(searchParams.get(`level_${i}`)!);
       i++;
     }
 
+    console.log('[Task Generator] URL params:', { subjectParam, gradeParam, pathParams });
+
+    // Apply subject
+    if (subjectParam) {
+      setSelectedSubject(subjectParam);
+    }
+
     // Apply grade level
-    if (gradeParam) {
-      if (gradeParam === 'grade_11_12') {
-        setSelectedGrade(1);
-      } else {
-        setSelectedGrade(0);
-      }
+    if (gradeParam && (gradeParam === 'grade_9_10' || gradeParam === 'grade_11_12')) {
+      setSelectedGrade(gradeParam);
     }
 
     // Apply initial path if we have path params
@@ -151,16 +159,78 @@ function TaskGeneratorContent() {
     }
 
     // Mark that we've applied the URL params
-    if ((subjectParam || gradeParam || pathParams.length > 0) && !urlParamsApplied) {
+    if (subjectParam || gradeParam || pathParams.length > 0) {
       setUrlParamsApplied(true);
     }
   }, [searchParams, urlParamsApplied]);
 
-  const handleGradeChange = (_event: React.SyntheticEvent, newValue: number) => {
-    setSelectedGrade(newValue);
+  // Set initial URL params on first load (after navigation data is loaded)
+  useEffect(() => {
+    // Only set initial URL if:
+    // 1. Navigation data has loaded
+    // 2. URL doesn't already have subject/grade params
+    // 3. We haven't already set initial params
+    if (!isLoadingNavigation && navigationData && !searchParams.get('subject') && !searchParams.get('grade_level')) {
+      console.log('[Task Generator] Setting initial URL params:', { subject: selectedSubject, grade: selectedGrade });
+      updateUrlParams({ subject: selectedSubject, grade_level: selectedGrade });
+    }
+  }, [isLoadingNavigation, navigationData, selectedSubject, selectedGrade]);
+
+  // Update URL params helper
+  const updateUrlParams = (params: Record<string, string>) => {
+    const newParams = new URLSearchParams(searchParams.toString());
+
+    // Clear existing level params
+    let i = 1;
+    while (newParams.has(`level_${i}`)) {
+      newParams.delete(`level_${i}`);
+      i++;
+    }
+
+    // Set new params
+    Object.entries(params).forEach(([key, value]) => {
+      if (value) {
+        newParams.set(key, value);
+      } else {
+        newParams.delete(key);
+      }
+    });
+
+    router.push(`?${newParams.toString()}`, { scroll: false });
+  };
+
+  const handleSubjectChange = (subject: string) => {
+    setSelectedSubject(subject);
     setSelectedTopic(null);
     setSelectionPath([]);
     setInitialPath(undefined);
+    updateUrlParams({ subject, grade_level: selectedGrade });
+  };
+
+  const handleGradeChange = (grade: GradeLevel) => {
+    setSelectedGrade(grade);
+    setSelectedTopic(null);
+    setSelectionPath([]);
+    setInitialPath(undefined);
+    updateUrlParams({ subject: selectedSubject, grade_level: grade });
+  };
+
+  // Handle intermediate selection changes (updates URL as user selects each level)
+  const handleSelectionChange = (path: string[]) => {
+    console.log('[Task Generator] Selection changed:', path);
+
+    // Update URL with current selection path
+    const urlParams: Record<string, string> = {
+      subject: selectedSubject,
+      grade_level: selectedGrade,
+    };
+
+    // Add level parameters
+    path.forEach((level, index) => {
+      urlParams[`level_${index + 1}`] = level;
+    });
+
+    updateUrlParams(urlParams);
   };
 
   const handleSelectionComplete = async (topic: NavigationTopic, path: string[], config: TaskConfiguration) => {
@@ -181,6 +251,19 @@ function TaskGeneratorContent() {
     setGenerationError(null);
     console.log('[Task Generator] Selection complete:', { topic, path, config });
 
+    // Update URL with complete selection including levels
+    const urlParams: Record<string, string> = {
+      subject: selectedSubject,
+      grade_level: selectedGrade,
+    };
+
+    // Add level parameters
+    path.forEach((level, index) => {
+      urlParams[`level_${index + 1}`] = level;
+    });
+
+    updateUrlParams(urlParams);
+
     // Automatically generate task
     await handleGenerateTask(topic, path, config);
   };
@@ -194,9 +277,18 @@ function TaskGeneratorContent() {
     setGenerationStep(null);
 
     try {
+      console.log('[Task Generator] handleGenerateTask called');
+      console.log('[Task Generator] isGuest:', isGuest);
+      console.log('[Task Generator] guestSession.guestToken:', guestSession.guestToken);
+      console.log('[Task Generator] guestSession.isLoading:', guestSession.isLoading);
+      console.log('[Task Generator] user.profile?.token:', user.profile?.token);
+
       const token = isGuest ? guestSession.guestToken : user.profile?.token;
 
       if (!token) {
+        console.error('[Task Generator] No token available!');
+        console.error('[Task Generator] isGuest:', isGuest);
+        console.error('[Task Generator] guestSession:', guestSession);
         setGenerationError('Authentication required. Please refresh the page and try again.');
         setIsGenerating(false);
         return;
@@ -206,9 +298,9 @@ function TaskGeneratorContent() {
       console.log('[Task Generator] isGuest:', isGuest);
       console.log('[Task Generator] Token:', token?.substring(0, 20) + '...');
 
-      const gradeLevel: GradeLevel = selectedGrade === 0 ? 'grade_9_10' : 'grade_11_12';
+      const gradeLevel: GradeLevel = selectedGrade;
       const country = user.country || 'HU';
-      const subject = user.subject || 'physics';
+      const subject = selectedSubject;
 
       // Build curriculum path
       const curriculumPath = `${subject}:${gradeLevel}:${path.join(':')}`;
@@ -461,7 +553,7 @@ function TaskGeneratorContent() {
     }, 1000);
   };
 
-  const gradeLevel: GradeLevel = selectedGrade === 0 ? 'grade_9_10' : 'grade_11_12';
+  const gradeLevel: GradeLevel = selectedGrade;
   const currentData = navigationData ? navigationData[gradeLevel] : [];
 
   // Show loading state while fetching navigation data
@@ -519,53 +611,56 @@ function TaskGeneratorContent() {
           </Alert>
         )}
 
-        {/* Guest Generation Counter Banner */}
-        {isGuest && guestSession.guestSession && (
-          <Alert
-            severity={guestSession.generationsRemaining > 0 ? 'info' : 'warning'}
-            sx={{ mb: 3 }}
-          >
-            <Typography variant="body1" component="div">
-              <strong>Free Generations Remaining: {guestSession.generationsRemaining}/3</strong>
-            </Typography>
-            {guestSession.generationsRemaining === 0 && (
-              <Typography variant="body2" sx={{ mt: 1 }}>
-                Register (FREE) to get 100 more task generation credits!
-              </Typography>
-            )}
-          </Alert>
-        )}
-
-        <Paper elevation={2} className={styles.gradeSelector}>
-          <Tabs
-            value={selectedGrade}
-            onChange={handleGradeChange}
-            aria-label="Select grade level"
-            variant="fullWidth"
-            className={styles.tabs}
-          >
-            <Tab label={t('Grade 9-10')} id="grade-tab-0" aria-controls="grade-tabpanel-0" />
-            <Tab label={t('Grade 11-12')} id="grade-tab-1" aria-controls="grade-tabpanel-1" />
-          </Tabs>
+        {/* Subject and Grade Selectors */}
+        <Paper elevation={2} sx={{ p: 3, mb: 3 }}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6}>
+              <FormControl fullWidth>
+                <InputLabel id="subject-select-label">{t('Subject')}</InputLabel>
+                <Select
+                  labelId="subject-select-label"
+                  id="subject-select"
+                  value={selectedSubject}
+                  label={t('Subject')}
+                  onChange={(e) => handleSubjectChange(e.target.value)}
+                >
+                  {SUBJECT_OPTIONS.map((option) => (
+                    <MenuItem key={option.value} value={option.value}>
+                      {t(option.label as any)}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <FormControl fullWidth>
+                <InputLabel id="grade-select-label">{t('Grade Level')}</InputLabel>
+                <Select
+                  labelId="grade-select-label"
+                  id="grade-select"
+                  value={selectedGrade}
+                  label={t('Grade Level')}
+                  onChange={(e) => handleGradeChange(e.target.value as GradeLevel)}
+                >
+                  {GRADE_OPTIONS.map((option) => (
+                    <MenuItem key={option.value} value={option.value}>
+                      {t(option.label as any)}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            </Grid>
+          </Grid>
         </Paper>
 
-        <TabPanel value={selectedGrade} index={0}>
-          <CascadingSelect
-            data={currentData}
-            title={`${t('Select Topic')} (${t('Grade 9-10')})`}
-            onSelectionComplete={handleSelectionComplete}
-            initialPath={selectedGrade === 0 ? initialPath : undefined}
-          />
-        </TabPanel>
-
-        <TabPanel value={selectedGrade} index={1}>
-          <CascadingSelect
-            data={currentData}
-            title={`${t('Select Topic')} (${t('Grade 11-12')})`}
-            onSelectionComplete={handleSelectionComplete}
-            initialPath={selectedGrade === 1 ? initialPath : undefined}
-          />
-        </TabPanel>
+        {/* Cascading Topic Selector */}
+        <CascadingSelect
+          data={currentData}
+          title={t('Select Topic')}
+          onSelectionComplete={handleSelectionComplete}
+          onSelectionChange={handleSelectionChange}
+          initialPath={initialPath}
+        />
 
         {/* Task Generation Result */}
         {(isGenerating || generatedTask || generationError) && (

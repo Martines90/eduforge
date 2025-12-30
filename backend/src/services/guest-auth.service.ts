@@ -1,7 +1,9 @@
 import jwt from 'jsonwebtoken';
 import { v4 as uuidv4 } from 'uuid';
-import { getFirestore, FieldValue } from '../config/firebase.config';
+import { getFirestore, admin } from '../config/firebase.config';
 import crypto from 'crypto';
+
+const FieldValue = admin.firestore.FieldValue;
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
 const GUEST_TOKEN_EXPIRY = '24h'; // Guest tokens expire after 24 hours

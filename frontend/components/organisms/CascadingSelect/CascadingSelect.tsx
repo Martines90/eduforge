@@ -37,6 +37,7 @@ export interface CascadingSelectProps {
   data: NavigationTopic[];
   title?: string;
   onSelectionComplete?: (topic: NavigationTopic, path: string[], config: TaskConfiguration) => void;
+  onSelectionChange?: (path: string[]) => void; // Callback for intermediate selections
   className?: string;
   initialPath?: string[]; // Array of topic keys to pre-select
 }
@@ -50,6 +51,7 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
   data,
   title = 'Select Topic',
   onSelectionComplete,
+  onSelectionChange,
   className,
   initialPath,
 }) => {
@@ -71,6 +73,14 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
   );
   const [numberOfImages, setNumberOfImages] = useState<ImageNumber>(1);
   const [targetGroupSex, setTargetGroupSex] = useState<TargetGroupSex>('mixed');
+
+  // Notify parent of selection changes for URL updates
+  React.useEffect(() => {
+    if (onSelectionChange && selectionPath.length > 0) {
+      const path = selectionPath.map((item) => item.displayName);
+      onSelectionChange(path);
+    }
+  }, [selectionPath, onSelectionChange]);
 
   const handleSelectionComplete = () => {
     if (finalSelection && onSelectionComplete) {
