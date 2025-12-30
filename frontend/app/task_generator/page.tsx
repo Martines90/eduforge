@@ -236,7 +236,7 @@ function TaskGeneratorContent() {
   const handleSelectionComplete = async (topic: NavigationTopic, path: string[], config: TaskConfiguration) => {
     // Check guest limit BEFORE starting generation
     if (isGuest && !guestSession.canGenerate) {
-      setModalMessage("You've used all 3 free generations! Register (FREE) to get 100 more credits.");
+      setModalMessage("You ran out of free task generation credits, register to get 100 free credits!");
       setShowGuestModal(true);
       enqueueSnackbar('Register to continue generating tasks!', {
         variant: 'warning',
@@ -450,7 +450,7 @@ function TaskGeneratorContent() {
 
     // For guests, show modal instead of saving
     if (isGuest) {
-      setModalMessage('Register (FREE) to save this task and get 100 free generation credits!');
+      setModalMessage('To save generated tasks you have to register first! Get 100 free generation credits when you sign up.');
       setShowGuestModal(true);
       enqueueSnackbar('Register to save your task!', {
         variant: 'info',
@@ -510,9 +510,9 @@ function TaskGeneratorContent() {
 
   const handleGuestPrompt = (action: 'save' | 'download') => {
     if (action === 'save') {
-      setModalMessage('Register (FREE) to save this task and get 100 free generation credits!');
+      setModalMessage('To save generated tasks you have to register first! Get 100 free generation credits when you sign up.');
     } else {
-      setModalMessage('Register (FREE) to download this task and get 100 free generation credits!');
+      setModalMessage('You have to register first to download tasks in PDF format! Get 100 free generation credits when you sign up.');
     }
     setShowGuestModal(true);
     enqueueSnackbar(`Register to ${action} your task!`, {
@@ -696,7 +696,7 @@ function TaskGeneratorContent() {
           onClose={() => setShowGuestModal(false)}
           promptMessage={modalMessage}
           onRegistrationComplete={handleRegistrationComplete}
-          initialMode="register"
+          initialMode="login"
         />
       </Container>
     </div>
