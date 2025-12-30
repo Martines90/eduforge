@@ -13,9 +13,11 @@ import {
   Alert,
   Divider,
   Link as MuiLink,
+  IconButton,
 } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import CloseIcon from '@mui/icons-material/Close';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { ForgotPasswordModal } from '../ForgotPasswordModal';
@@ -25,6 +27,7 @@ export interface LoginModalProps {
   open: boolean;
   onLogin: (email: string, password: string) => Promise<void>;
   onCreateAccount: (isTeacher: boolean) => void;
+  onClose?: () => void;
 }
 
 const loginSchema = Yup.object().shape({
@@ -45,6 +48,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
   open,
   onLogin,
   onCreateAccount,
+  onClose,
 }) => {
   const [loginError, setLoginError] = useState<string | null>(null);
   const [forgotPasswordOpen, setForgotPasswordOpen] = useState(false);
@@ -67,15 +71,29 @@ export const LoginModal: React.FC<LoginModalProps> = ({
     <>
       <Dialog
         open={open}
+        onClose={onClose}
         maxWidth="sm"
         fullWidth
-        disableEscapeKeyDown
         className={styles.dialog}
         PaperProps={{
           className: styles.paper,
         }}
       >
       <DialogTitle className={styles.title}>
+        {onClose && (
+          <IconButton
+            aria-label="close"
+            onClick={onClose}
+            sx={{
+              position: 'absolute',
+              right: 8,
+              top: 8,
+              color: (theme) => theme.palette.grey[500],
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+        )}
         <Box className={styles.iconContainer}>
           <LoginIcon sx={{ fontSize: 48 }} />
         </Box>

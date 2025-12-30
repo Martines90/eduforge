@@ -310,6 +310,126 @@ export interface Translations {
 
   // Registration Success Message
   "Registration successful, your 3-month free trial subscription just started!": string;
+
+  // Home Page - Guest Users
+  "Welcome to EduForge": string;
+  "EduForge is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.": string;
+  "As a teacher you can generate any curriculum-specific EduForge task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!": string;
+  "Try It as a Teacher": string;
+  "Generate engaging, curriculum-aligned tasks in seconds!": string;
+  "Start Generating": string;
+  "Discover Our Task Library": string;
+  "Browse tasks that fit your curriculum section and pick what you like!": string;
+  "Browse Task Library": string;
+
+  // My Plan Page
+  "My Plan": string;
+  "Manage your subscription and credits": string;
+  "Subscription will be cancelled at the end of the current period": string;
+  "You started with 100 free task generation credits.": string;
+  "Running low on credits? Subscribe to Basic plan for unlimited browsing!": string;
+  "Upgrade to Basic Plan": string;
+  Recommended: string;
+  year: string;
+  "Unlimited task browsing": string;
+  "Download tasks as PDF": string;
+  "Access to all subjects": string;
+  "All difficulty levels": string;
+  "Email support": string;
+  Note: string;
+  "This plan is for browsing and downloading tasks only. Task generation credits are not included.": string;
+  "Subscribe to Basic Plan": string;
+  "Basic plan is currently unavailable. Please try again later.": string;
+
+  // My Subscription Page
+  "Running low on credits? Upgrade your plan to get more!": string;
+  "Upgrade Your Plan": string;
+  "Most Popular": string;
+  "View/download task library": string;
+  Unlimited: string;
+  "Creator contests access": string;
+  "Private Discord channel": string;
+  "Best School of the Year contest": string;
+
+  // School Teachers Page
+  "School Teachers Management": string;
+  "Manage teachers from your school (Pro Plan)": string;
+  Teachers: string;
+  "Invite Teacher": string;
+  "School Name": string;
+  "No teachers added yet": string;
+  "Click \"Invite Teacher\" to add teachers from your school": string;
+  "Pro Plan Benefits": string;
+  "10,000 Task Generation Credits": string;
+  "Shared across all teachers in your school": string;
+  "Add Up to 10 Teachers": string;
+  "Each teacher gets their own account": string;
+  "School Contest Participation": string;
+  "Compete for \"Best School of the Year\"": string;
+
+  // Task Detail Page - Guest View Limit
+  "Registration Required": string;
+  "To have access to the tasks you need to register!": string;
+  "Try our FREE 3-month trial mode and unlock unlimited access to thousands of educational tasks.": string;
+  "You've used your 3 free task views.": string;
+  "Register now to get:": string;
+  "Unlimited task viewing": string;
+  "100 free task generation credits": string;
+  "3 months free trial subscription": string;
+  "Login / Register": string;
+
+  // School Teachers Page - Additional
+  "Priority 24-hour Support": string;
+  "Fast response times for your school": string;
+  "Back to Subscription": string;
+
+  // Subscription Cancel Page
+  "Payment Cancelled": string;
+  "Payment Failed": string;
+  "You cancelled the payment process": string;
+  "There was a problem processing your payment": string;
+  "Error Details": string;
+  "What happened?": string;
+  "What went wrong?": string;
+  "You chose to cancel the subscription checkout process. No charges were made to your account.": string;
+  "The payment could not be completed. This might be due to:": string;
+  "Insufficient funds in your account": string;
+  "Card details were entered incorrectly": string;
+  "Your bank declined the transaction": string;
+  "Technical issue with the payment provider": string;
+  "Try Again": string;
+  "Go to Home": string;
+  "Need help? Contact our support team at": string;
+
+  // Subscription Success Page
+  "Explore EduForge": string;
+  "Browse and download tasks from our extensive library": string;
+  "Get Started": string;
+  "Use your 1,000 credits to start generating custom tasks": string;
+  "Add Teachers to Your School": string;
+  "Invite up to 10 teachers from your school to join": string;
+  "Add Teachers": string;
+  "Explore EduForge features": string;
+  "Go to Dashboard": string;
+  "Processing Your Subscription...": string;
+  "Please wait while we activate your subscription": string;
+  "Welcome to EduForge!": string;
+  "Subscription Activated Successfully": string;
+  Basic: string;
+  Normal: string;
+  Pro: string;
+  "Your Credits": string;
+  "Task Generation Credits Available": string;
+  "View Subscription": string;
+  "Thank you for choosing EduForge. We sent a confirmation email to your inbox.": string;
+
+  // Task Generator Page
+  "Task Generator": string;
+  "Try 3 FREE task generations - No account required!": string;
+
+  // Header
+  "Try Free": string;
+  "Generate Tasks": string;
 }
 
 export type TranslationKey = keyof Translations;

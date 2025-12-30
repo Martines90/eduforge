@@ -1,14 +1,17 @@
 'use client';
 
 import React, { useState } from 'react';
-import { IconButton, Menu, MenuItem, Avatar, Divider, ListItemIcon, ListItemText } from '@mui/material';
+import { IconButton, Menu, MenuItem, Avatar, Divider, ListItemIcon, ListItemText, Button } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import LogoutIcon from '@mui/icons-material/Logout';
+import LoginIcon from '@mui/icons-material/Login';
 import { useUser } from '@/lib/context';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from '@/lib/i18n';
+import { LoginModal } from '@/components/organisms/LoginModal';
+import { RegistrationModal } from '@/components/organisms/RegistrationModal';
 import styles from './UserMenu.module.scss';
 
 export interface UserMenuProps {
@@ -18,13 +21,19 @@ export interface UserMenuProps {
 /**
  * UserMenu Component
  * Displays user avatar and dropdown menu with profile and logout options
+ * For guests, shows Login/Register button
  */
 export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
-  const { user, logoutUser } = useUser();
+  const { user, logoutUser, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser } = useUser();
   const router = useRouter();
   const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+
+  // Guest modal states
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const [isTeacher, setIsTeacher] = useState(false);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -49,6 +58,11 @@ export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
     router.push('/my-subscription');
   };
 
+  const handleMyPlan = () => {
+    handleClose();
+    router.push('/my-plan');
+  };
+
   const handleLogout = async () => {
     handleClose();
     console.log('[UserMenu] Logging out...');
@@ -57,9 +71,100 @@ export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
     router.push('/');
   };
 
-  // Don't render if user is not registered
+  const handleLogin = async (email: string, password: string) => {
+    try {
+      await loginUser(email, password);
+      setShowLoginModal(false);
+      // User is now logged in, component will re-render
+    } catch (error) {
+      // Error handling is done in loginUser
+      throw error;
+    }
+  };
+
+  const handleRegister = async (profile: any) => {
+    try {
+      // Registration is handled in RegistrationModal
+      const userProfile = {
+        name: profile.name,
+        email: profile.email,
+        registeredAt: new Date().toISOString(),
+        token: localStorage.getItem('authToken') || '',
+      };
+
+      registerUser(userProfile);
+      setCountry(profile.country);
+      setIdentity(profile.identity);
+
+      if (profile.subject) {
+        setSubject(profile.subject);
+      }
+
+      if (profile.educationalModel) {
+        setEducationalModel(profile.educationalModel);
+      }
+
+      setShowRegisterModal(false);
+
+      // Always redirect to home page
+      router.push('/');
+    } catch (error) {
+      console.error('Error during registration:', error);
+      throw error;
+    }
+  };
+
+  const handleCreateAccountClick = (isTeacherAccount: boolean) => {
+    setIsTeacher(isTeacherAccount);
+    setShowLoginModal(false);
+    setShowRegisterModal(true);
+  };
+
+  const handleBackToLogin = () => {
+    setShowRegisterModal(false);
+    setShowLoginModal(true);
+  };
+
+  // For guests, show Login/Register button
   if (!user.isRegistered || !user.profile) {
-    return null;
+    return (
+      <>
+        <div className={`${styles.userMenu} ${className || ''}`}>
+          <Button
+            variant="contained"
+            color="primary"
+            startIcon={<LoginIcon />}
+            onClick={() => setShowLoginModal(true)}
+            sx={{
+              textTransform: 'none',
+              fontWeight: 500,
+              px: 2.5,
+              py: 1,
+            }}
+          >
+            {t('Login / Register')}
+          </Button>
+        </div>
+
+        {/* Login Modal */}
+        <LoginModal
+          open={showLoginModal}
+          onLogin={handleLogin}
+          onCreateAccount={handleCreateAccountClick}
+          onClose={() => setShowLoginModal(false)}
+        />
+
+        {/* Registration Modal */}
+        <RegistrationModal
+          open={showRegisterModal}
+          onRegister={handleRegister}
+          onBack={handleBackToLogin}
+          onClose={() => setShowRegisterModal(false)}
+          detectedCountry={user.country}
+          isTeacher={isTeacher}
+        />
+      </>
+    );
   }
 
   // Get user initials for avatar
@@ -126,6 +231,14 @@ export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
               <SubscriptionsIcon fontSize="small" />
             </ListItemIcon>
             <ListItemText>{t('My Subscription')}</ListItemText>
+          </MenuItem>
+        )}
+        {user.identity === 'non-teacher' && (
+          <MenuItem onClick={handleMyPlan}>
+            <ListItemIcon>
+              <SubscriptionsIcon fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>{t('My Plan')}</ListItemText>
           </MenuItem>
         )}
         <Divider />

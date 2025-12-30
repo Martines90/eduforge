@@ -190,41 +190,9 @@ export default function Home() {
                 </Grid>
               )}
 
-              {/* Generate Task Card - For all registered users */}
-              <Grid item xs={12} md={isTeacher ? 6 : 12}>
-                <Paper
-                  elevation={3}
-                  sx={{
-                    p: 4,
-                    textAlign: 'center',
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <Box>
-                    <AutoAwesomeIcon sx={{ fontSize: 60, color: 'primary.main', mb: 2 }} />
-                    <Typography variant="h5" component="h2" gutterBottom>
-                      {t('Generate Tasks')}
-                    </Typography>
-                    <Typography variant="body1" color="text.secondary" paragraph>
-                      {t('AI-powered task generation with your 100 free credits')}
-                    </Typography>
-                  </Box>
-                  <Box sx={{ mt: 3 }}>
-                    <Link href="/task_generator" passHref legacyBehavior>
-                      <Button variant="primary" size="large" fullWidth>
-                        {t('Generate Tasks')}
-                      </Button>
-                    </Link>
-                  </Box>
-                </Paper>
-              </Grid>
-
               {/* Search Tasks Card - For both teachers and non-teachers */}
               {(isTeacher || isNonTeacher) && (
-                <Grid item xs={12} md={12}>
+                <Grid item xs={12} md={isTeacher ? 6 : 12}>
                   <Paper
                     elevation={3}
                     sx={{

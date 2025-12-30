@@ -11,6 +11,7 @@ import { GeneratedTask, TaskGeneratorRequest } from '@/types/task';
 import { useTranslation } from '@/lib/i18n';
 import { useUser } from '@/lib/context/UserContext';
 import { useGuestSession } from '@/lib/hooks/useGuestSession';
+import { useLastUnpublishedTask } from '@/lib/hooks/useLastUnpublishedTask';
 import { GuestPromptModal } from '@/components/organisms/GuestPromptModal';
 import { generateTaskComplete, TaskGenerationStep } from '@/lib/services/task-generator.service';
 import { saveTask, SaveTaskRequest } from '@/lib/services/task-save.service';
@@ -50,6 +51,9 @@ function TaskGeneratorContent() {
   const guestSession = useGuestSession();
   const isGuest = !user.isRegistered;
 
+  // Last unpublished task management (for all users)
+  const lastUnpublishedTask = useLastUnpublishedTask();
+
   const [selectedGrade, setSelectedGrade] = useState<number>(0);
   const [selectedTopic, setSelectedTopic] = useState<NavigationTopic | null>(null);
   const [selectionPath, setSelectionPath] = useState<string[]>([]);
@@ -79,6 +83,14 @@ function TaskGeneratorContent() {
       guestSession.createGuestSession();
     }
   }, [isGuest, guestSession.guestToken, guestSession.isLoading]);
+
+  // Load last unpublished task on mount (for all users)
+  useEffect(() => {
+    if (!generatedTask && lastUnpublishedTask.lastTask) {
+      console.log('[Task Generator] Loading last unpublished task');
+      setGeneratedTask(lastUnpublishedTask.lastTask);
+    }
+  }, [lastUnpublishedTask.lastTask]);
 
   // Fetch navigation data from API based on user's country and subject
   useEffect(() => {
@@ -247,7 +259,10 @@ function TaskGeneratorContent() {
       console.log('[Task Generator] Task generated successfully');
       setGeneratedTask(generatedTask);
 
-      // Increment guest generation counter AFTER successful generation
+      // Save task to localStorage (for all users - persists until published)
+      lastUnpublishedTask.saveTask(generatedTask);
+
+      // Increment guest generation counter
       if (isGuest) {
         guestSession.incrementGeneration();
         console.log('[Task Generator] Guest generation count incremented');
@@ -326,6 +341,8 @@ function TaskGeneratorContent() {
   const handleSaveTask = (editedTask: GeneratedTask) => {
     console.log('[Task Generator] Saving edited task:', editedTask);
     setGeneratedTask(editedTask);
+    // Save edited task to localStorage (persists until published)
+    lastUnpublishedTask.saveTask(editedTask);
   };
 
   const handleCloseResult = () => {
@@ -371,17 +388,29 @@ function TaskGeneratorContent() {
 
       const response = await saveTask(saveRequest, token);
 
-      setSavedTaskInfo({
-        taskId: response.task_id,
-        publicShareLink: response.public_share_link,
-        pdfUrl: response.pdf_url,
-      });
-      setShowSavedModal(true);
+      // Clear the unpublished task from localStorage
+      lastUnpublishedTask.clearTask();
+
+      // Clear the generated task from view
+      setGeneratedTask(null);
+
+      // Show success message instead of modal
+      enqueueSnackbar(
+        `Task "${generatedTask.id}" successfully saved and published! You can find it under "My Tasks".`,
+        {
+          variant: 'success',
+          autoHideDuration: 7000,
+        }
+      );
 
       console.log('[Task Generator] Task saved successfully:', response);
     } catch (error) {
       console.error('[Task Generator] Failed to save task:', error);
       setGenerationError(error instanceof Error ? error.message : 'Failed to save task');
+      enqueueSnackbar('Failed to save task. Please try again.', {
+        variant: 'error',
+        autoHideDuration: 5000,
+      });
     } finally {
       setIsSaving(false);
     }
@@ -406,16 +435,30 @@ function TaskGeneratorContent() {
 
   const handleRegistrationComplete = () => {
     console.log('[Task Generator] Registration completed, clearing guest session');
+
+    // Check if there's a task to restore
+    const hasTaskToRestore = guestSession.getLastTask() !== null;
+
     guestSession.clearGuestSession();
 
-    // Refresh the page to reload with authenticated user
-    enqueueSnackbar('Welcome! You now have 100 free task generation credits.', {
-      variant: 'success',
-      autoHideDuration: 5000,
-    });
+    // Show appropriate message
+    if (hasTaskToRestore) {
+      enqueueSnackbar('Registration successful! Your task is ready to save. Refreshing...', {
+        variant: 'success',
+        autoHideDuration: 3000,
+      });
+    } else {
+      enqueueSnackbar('Welcome! You now have 100 free task generation credits.', {
+        variant: 'success',
+        autoHideDuration: 5000,
+      });
+    }
 
-    // Stay on the same page - task should still be visible
-    router.refresh();
+    // Refresh the page to reload with authenticated user
+    // The task will be automatically restored by the useEffect
+    setTimeout(() => {
+      router.refresh();
+    }, 1000);
   };
 
   const gradeLevel: GradeLevel = selectedGrade === 0 ? 'grade_9_10' : 'grade_11_12';
@@ -460,11 +503,21 @@ function TaskGeneratorContent() {
             {t('Task Generator')}
           </Typography>
           <Typography variant="body1" color="text.secondary" className={styles.subtitle}>
-            {isGuest
-              ? t('Try 3 FREE task generations - No account required!')
-              : t('Select a curriculum topic to create an educational task')}
+            {t('Select a curriculum topic to create an educational task')}
           </Typography>
         </Box>
+
+        {/* Ongoing Task Banner - for registered users with unpublished task */}
+        {!isGuest && lastUnpublishedTask.hasTask && generatedTask && (
+          <Alert severity="info" sx={{ mb: 3 }}>
+            <Typography variant="body1" component="div">
+              <strong>📋 You have an ongoing task</strong>
+            </Typography>
+            <Typography variant="body2" sx={{ mt: 0.5 }}>
+              Your last generated task is loaded below. You can continue editing or save it to your library.
+            </Typography>
+          </Alert>
+        )}
 
         {/* Guest Generation Counter Banner */}
         {isGuest && guestSession.guestSession && (

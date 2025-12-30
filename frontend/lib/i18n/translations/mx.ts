@@ -347,4 +347,145 @@ export const mx: Translations = {
   // Registration Success Message
   "Registration successful, your 3-month free trial subscription just started!":
     "¡Registro exitoso, tu suscripción de prueba gratuita de 3 meses acaba de comenzar!",
+
+  // Home Page - Guest Users
+  "Welcome to EduForge": "Bienvenido a EduForge",
+  "EduForge is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.":
+    "EduForge es una plataforma de generación de tareas y biblioteca de tareas específica por materia y currículo, inspirada en el mundo real, impulsada por historias/escenarios atractivos para maestros (creadores), escuelas y padres/estudiantes.",
+  "As a teacher you can generate any curriculum-specific EduForge task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!":
+    "Como maestro puedes generar cualquier tarea específica del currículo de EduForge en 10-20 segundos. ¡Las tareas se basarán en situaciones divertidas/emocionantes/aventureras/de alto riesgo que tu clase seguramente amará!",
+  "Try It as a Teacher": "Pruébalo como Maestro",
+  "Generate engaging, curriculum-aligned tasks in seconds!":
+    "¡Genera tareas atractivas y alineadas al currículo en segundos!",
+  "Start Generating": "Comenzar a Generar",
+  "Discover Our Task Library": "Descubre Nuestra Biblioteca de Tareas",
+  "Browse tasks that fit your curriculum section and pick what you like!":
+    "¡Explora tareas que se ajusten a tu sección curricular y elige lo que te guste!",
+  "Browse Task Library": "Explorar Biblioteca de Tareas",
+
+  // My Plan Page
+  "My Plan": "Mi Plan",
+  "Manage your subscription and credits": "Gestionar tu suscripción y créditos",
+  "Subscription will be cancelled at the end of the current period":
+    "La suscripción se cancelará al final del período actual",
+  "You started with 100 free task generation credits.":
+    "Comenzaste con 100 créditos gratuitos de generación de tareas.",
+  "Running low on credits? Subscribe to Basic plan for unlimited browsing!":
+    "¿Te quedan pocos créditos? ¡Suscríbete al plan Básico para navegación ilimitada!",
+  "Upgrade to Basic Plan": "Actualizar al Plan Básico",
+  Recommended: "Recomendado",
+  year: "año",
+  "Unlimited task browsing": "Navegación ilimitada de tareas",
+  "Download tasks as PDF": "Descargar tareas como PDF",
+  "Access to all subjects": "Acceso a todas las materias",
+  "All difficulty levels": "Todos los niveles de dificultad",
+  "Email support": "Soporte por correo electrónico",
+  Note: "Nota",
+  "This plan is for browsing and downloading tasks only. Task generation credits are not included.":
+    "Este plan es solo para explorar y descargar tareas. Los créditos de generación de tareas no están incluidos.",
+  "Subscribe to Basic Plan": "Suscribirse al Plan Básico",
+  "Basic plan is currently unavailable. Please try again later.":
+    "El plan Básico no está disponible actualmente. Por favor intenta más tarde.",
+
+  // My Subscription Page
+  "Running low on credits? Upgrade your plan to get more!":
+    "¿Te quedan pocos créditos? ¡Actualiza tu plan para obtener más!",
+  "Upgrade Your Plan": "Actualizar Tu Plan",
+  "Most Popular": "Más Popular",
+  "View/download task library": "Ver/descargar biblioteca de tareas",
+  Unlimited: "Ilimitado",
+  "Creator contests access": "Acceso a concursos para creadores",
+  "Private Discord channel": "Canal privado de Discord",
+  "Best School of the Year contest": "Concurso Mejor Escuela del Año",
+
+  // School Teachers Page
+  "School Teachers Management": "Gestión de Maestros de la Escuela",
+  "Manage teachers from your school (Pro Plan)":
+    "Gestiona maestros de tu escuela (Plan Pro)",
+  Teachers: "Maestros",
+  "Invite Teacher": "Invitar Maestro",
+  "School Name": "Nombre de la Escuela",
+  "No teachers added yet": "No se han agregado maestros aún",
+  "Click \"Invite Teacher\" to add teachers from your school":
+    "Haz clic en \"Invitar Maestro\" para agregar maestros de tu escuela",
+  "Pro Plan Benefits": "Beneficios del Plan Pro",
+  "10,000 Task Generation Credits": "10,000 Créditos de Generación de Tareas",
+  "Shared across all teachers in your school":
+    "Compartidos entre todos los maestros de tu escuela",
+  "Add Up to 10 Teachers": "Agregar Hasta 10 Maestros",
+  "Each teacher gets their own account": "Cada maestro obtiene su propia cuenta",
+  "School Contest Participation": "Participación en Concurso Escolar",
+  "Compete for \"Best School of the Year\"": "Compite por \"Mejor Escuela del Año\"",
+  "Priority 24-hour Support": "Soporte Prioritario 24 horas",
+  "Fast response times for your school": "Tiempos de respuesta rápidos para tu escuela",
+  "Back to Subscription": "Volver a Suscripción",
+
+  // Task Detail Page - Guest View Limit
+  "Registration Required": "Registro Requerido",
+  "To have access to the tasks you need to register!":
+    "¡Para tener acceso a las tareas necesitas registrarte!",
+  "Try our FREE 3-month trial mode and unlock unlimited access to thousands of educational tasks.":
+    "Prueba nuestro modo de prueba GRATUITO de 3 meses y desbloquea acceso ilimitado a miles de tareas educativas.",
+  "You've used your 3 free task views.": "Has usado tus 3 vistas gratuitas de tareas.",
+  "Register now to get:": "Regístrate ahora para obtener:",
+  "Unlimited task viewing": "Visualización ilimitada de tareas",
+  "100 free task generation credits": "100 créditos gratuitos de generación de tareas",
+  "3 months free trial subscription": "3 meses de suscripción de prueba gratuita",
+  "Login / Register": "Iniciar Sesión / Registrarse",
+
+  // Subscription Cancel Page
+  "Payment Cancelled": "Pago Cancelado",
+  "Payment Failed": "Pago Fallido",
+  "You cancelled the payment process": "Cancelaste el proceso de pago",
+  "There was a problem processing your payment": "Hubo un problema al procesar tu pago",
+  "Error Details": "Detalles del Error",
+  "What happened?": "¿Qué sucedió?",
+  "What went wrong?": "¿Qué salió mal?",
+  "You chose to cancel the subscription checkout process. No charges were made to your account.":
+    "Elegiste cancelar el proceso de pago de la suscripción. No se realizaron cargos a tu cuenta.",
+  "The payment could not be completed. This might be due to:":
+    "El pago no pudo completarse. Esto podría deberse a:",
+  "Insufficient funds in your account": "Fondos insuficientes en tu cuenta",
+  "Card details were entered incorrectly": "Los detalles de la tarjeta se ingresaron incorrectamente",
+  "Your bank declined the transaction": "Tu banco rechazó la transacción",
+  "Technical issue with the payment provider": "Problema técnico con el proveedor de pagos",
+  "Try Again": "Intentar de Nuevo",
+  "Go to Home": "Ir al Inicio",
+  "Need help? Contact our support team at": "¿Necesitas ayuda? Contacta a nuestro equipo de soporte en",
+
+  // Subscription Success Page
+  "Explore EduForge": "Explorar EduForge",
+  "Browse and download tasks from our extensive library":
+    "Explora y descarga tareas de nuestra extensa biblioteca",
+  "Get Started": "Comenzar",
+  "Use your 1,000 credits to start generating custom tasks":
+    "Usa tus 1,000 créditos para comenzar a generar tareas personalizadas",
+  "Add Teachers to Your School": "Agregar Maestros a Tu Escuela",
+  "Invite up to 10 teachers from your school to join":
+    "Invita hasta 10 maestros de tu escuela a unirse",
+  "Add Teachers": "Agregar Maestros",
+  "Explore EduForge features": "Explorar las funciones de EduForge",
+  "Go to Dashboard": "Ir al Panel",
+  "Processing Your Subscription...": "Procesando Tu Suscripción...",
+  "Please wait while we activate your subscription":
+    "Por favor espera mientras activamos tu suscripción",
+  "Welcome to EduForge!": "¡Bienvenido a EduForge!",
+  "Subscription Activated Successfully": "Suscripción Activada Exitosamente",
+  Basic: "Básico",
+  Normal: "Normal",
+  Pro: "Pro",
+  "Your Credits": "Tus Créditos",
+  "Task Generation Credits Available": "Créditos de Generación de Tareas Disponibles",
+  "View Subscription": "Ver Suscripción",
+  "Thank you for choosing EduForge. We sent a confirmation email to your inbox.":
+    "Gracias por elegir EduForge. Enviamos un correo de confirmación a tu bandeja de entrada.",
+
+  // Task Generator Page
+  "Task Generator": "Generador de Tareas",
+  "Try 3 FREE task generations - No account required!":
+    "¡Prueba 3 generaciones de tareas GRATIS - No se requiere cuenta!",
+
+  // Header
+  "Try Free": "Probar Gratis",
+  "Generate Tasks": "Generar Tareas",
 };

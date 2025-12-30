@@ -3,6 +3,10 @@ import { useUser } from '@/lib/context/UserContext';
 
 const GUEST_TOKEN_KEY = 'eduforge_guest_token';
 const GUEST_SESSION_KEY = 'eduforge_guest_session';
+const GUEST_LAST_TASK_KEY = 'eduforge_guest_last_task';
+
+// Universal key for last unpublished task (works for both guests and registered users)
+export const LAST_UNPUBLISHED_TASK_KEY = 'eduforge_last_unpublished_task';
 
 export interface GuestSessionData {
   token: string;
@@ -22,6 +26,9 @@ export interface UseGuestSessionReturn {
   createGuestSession: () => Promise<void>;
   incrementGeneration: () => void;
   clearGuestSession: () => void;
+  saveLastTask: (task: any) => void;
+  getLastTask: () => any | null;
+  clearLastTask: () => void;
   isLoading: boolean;
   error: string | null;
 }
@@ -155,8 +162,53 @@ export function useGuestSession(): UseGuestSessionReturn {
   }, [guestSession]);
 
   /**
+   * Save last generated task to localStorage
+   * Called after successful task generation
+   */
+  const saveLastTask = useCallback((task: any) => {
+    if (typeof window === 'undefined') return;
+
+    try {
+      localStorage.setItem(GUEST_LAST_TASK_KEY, JSON.stringify(task));
+      console.log('💾 Guest last task saved');
+    } catch (err) {
+      console.error('Failed to save last task:', err);
+    }
+  }, []);
+
+  /**
+   * Get last generated task from localStorage
+   * Returns null if no task exists
+   */
+  const getLastTask = useCallback((): any | null => {
+    if (typeof window === 'undefined') return null;
+
+    try {
+      const taskJson = localStorage.getItem(GUEST_LAST_TASK_KEY);
+      if (taskJson) {
+        return JSON.parse(taskJson);
+      }
+    } catch (err) {
+      console.error('Failed to retrieve last task:', err);
+    }
+    return null;
+  }, []);
+
+  /**
+   * Clear last task from localStorage
+   * Called after one-time restoration
+   */
+  const clearLastTask = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    localStorage.removeItem(GUEST_LAST_TASK_KEY);
+    console.log('🧹 Guest last task cleared');
+  }, []);
+
+  /**
    * Clear guest session from memory and localStorage
    * Called after user registers
+   * NOTE: Does NOT clear last task - that's preserved for post-registration restoration
    */
   const clearGuestSession = useCallback(() => {
     setGuestToken(null);
@@ -166,9 +218,10 @@ export function useGuestSession(): UseGuestSessionReturn {
     if (typeof window !== 'undefined') {
       localStorage.removeItem(GUEST_TOKEN_KEY);
       localStorage.removeItem(GUEST_SESSION_KEY);
+      // Note: We intentionally keep GUEST_LAST_TASK_KEY for restoration
     }
 
-    console.log('🧹 Guest session cleared');
+    console.log('🧹 Guest session cleared (last task preserved)');
   }, []);
 
   return {
@@ -180,6 +233,9 @@ export function useGuestSession(): UseGuestSessionReturn {
     createGuestSession,
     incrementGeneration,
     clearGuestSession,
+    saveLastTask,
+    getLastTask,
+    clearLastTask,
     isLoading,
     error,
   };

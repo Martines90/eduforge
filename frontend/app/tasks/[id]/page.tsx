@@ -32,6 +32,11 @@ import { LoadingSpinner } from '@/components/atoms/LoadingSpinner';
 import { processLatexInHtml } from '@/lib/utils/latex-converter';
 import { useTranslation } from '@/lib/i18n';
 import { fetchTaskById } from '@/lib/services/api.service';
+import { useUser } from '@/lib/context/UserContext';
+import { useSnackbar } from 'notistack';
+import { LoginModal } from '@/components/organisms/LoginModal';
+import { RegistrationModal } from '@/components/organisms/RegistrationModal';
+import { useGuestTaskViewLimit } from '@/lib/hooks/useGuestTaskViewLimit';
 
 interface TaskData {
   id: string;
@@ -58,6 +63,8 @@ export default function TaskDetailPage() {
   const params = useParams();
   const router = useRouter();
   const { t } = useTranslation();
+  const { user, registerUser, loginUser, setCountry, setIdentity, setSubject, setEducationalModel } = useUser();
+  const { enqueueSnackbar } = useSnackbar();
   const taskId = params.id as string;
 
   const [task, setTask] = useState<TaskData | null>(null);
@@ -66,15 +73,49 @@ export default function TaskDetailPage() {
   const [showCopySuccess, setShowCopySuccess] = useState(false);
   const [latexReady, setLatexReady] = useState(false);
 
+  // Registration modal state
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const [isTeacher, setIsTeacher] = useState(false);
+
+  const isGuest = !user.isRegistered;
+
+  // Guest task view limit
+  const guestViewLimit = useGuestTaskViewLimit();
+
   const descriptionRef = useRef<HTMLDivElement>(null);
   const solutionRef = useRef<HTMLDivElement>(null);
   const retryCountRef = useRef(0);
   const maxRetries = 10;
 
+  // Track guest task views on mount
+  useEffect(() => {
+    if (isGuest && taskId) {
+      console.log('[Task Detail] Guest task view detected for task:', taskId);
+      guestViewLimit.incrementView();
+      console.log('[Task Detail] Total views:', guestViewLimit.totalViews + 1, 'Remaining:', guestViewLimit.viewsRemaining - 1);
+    }
+  }, []); // Only run once on mount
+
+  // Clear guest views when user registers
+  useEffect(() => {
+    if (!isGuest) {
+      guestViewLimit.clearViews();
+    }
+  }, [isGuest, guestViewLimit]);
+
   useEffect(() => {
     const loadTask = async () => {
       setIsLoading(true);
       setError(null);
+
+      // Check guest view limit BEFORE fetching task
+      if (isGuest && !guestViewLimit.canViewTasks) {
+        console.log('[Task Detail] Guest has reached view limit, blocking task fetch');
+        setIsLoading(false);
+        setError('VIEW_LIMIT_REACHED');
+        return;
+      }
 
       try {
         // NOTE: Backend must extract country from task ID or query string
@@ -98,7 +139,7 @@ export default function TaskDetailPage() {
     if (taskId) {
       loadTask();
     }
-  }, [taskId]);
+  }, [taskId, isGuest, guestViewLimit.canViewTasks]);
 
   // Process LaTeX after content loads and latex.js is loaded
   useEffect(() => {
@@ -149,6 +190,16 @@ export default function TaskDetailPage() {
 
   const handleDownloadPDF = async () => {
     if (!task) return;
+
+    // Block PDF download for guests
+    if (isGuest) {
+      enqueueSnackbar('Task download is only available for registered users!', {
+        variant: 'warning',
+        autoHideDuration: 5000,
+      });
+      setShowLoginModal(true);
+      return;
+    }
 
     // Check if PDF already exists in the task document
     if ((task as any).pdfUrl) {
@@ -437,8 +488,156 @@ export default function TaskDetailPage() {
     router.push('/tasks');
   };
 
+  // Handle login
+  const handleLogin = async (email: string, password: string) => {
+    try {
+      await loginUser(email, password);
+      setShowLoginModal(false);
+      enqueueSnackbar('Login successful!', { variant: 'success' });
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  // Handle registration
+  const handleRegister = async (profile: any) => {
+    try {
+      const userProfile = {
+        name: profile.name,
+        email: profile.email,
+        registeredAt: new Date().toISOString(),
+        token: localStorage.getItem('authToken') || '',
+      };
+
+      registerUser(userProfile);
+      setCountry(profile.country);
+      setIdentity(profile.identity);
+
+      if (profile.subject) {
+        setSubject(profile.subject);
+      }
+
+      if (profile.educationalModel) {
+        setEducationalModel(profile.educationalModel);
+      }
+
+      setShowRegisterModal(false);
+
+      // Show success message
+      enqueueSnackbar('Registration successful! Enjoy your free 3-month trial!', {
+        variant: 'success',
+        autoHideDuration: 5000,
+      });
+
+      // Stay on current page
+    } catch (error) {
+      console.error('Error during registration:', error);
+      throw error;
+    }
+  };
+
+  const handleCreateAccountClick = (isTeacherAccount: boolean) => {
+    setIsTeacher(isTeacherAccount);
+    setShowLoginModal(false);
+    setShowRegisterModal(true);
+  };
+
+  const handleBackToLogin = () => {
+    setShowRegisterModal(false);
+    setShowLoginModal(true);
+  };
+
   if (isLoading) {
     return <LoadingSpinner message="Loading task..." fullScreen />;
+  }
+
+  // Show registration prompt if guest has reached view limit
+  if (error === 'VIEW_LIMIT_REACHED') {
+    return (
+      <>
+        <Container maxWidth="lg" sx={{ py: 4 }}>
+          <Box sx={{ mb: 4 }}>
+            <Button variant="secondary" startIcon={<ArrowBackIcon />} onClick={handleBack}>
+              {t('Back to Tasks')}
+            </Button>
+          </Box>
+
+          <Paper
+            elevation={3}
+            sx={{
+              p: 6,
+              textAlign: 'center',
+              backgroundColor: 'background.paper',
+              maxWidth: 700,
+              mx: 'auto',
+            }}
+          >
+            <AssignmentIcon
+              sx={{
+                fontSize: 100,
+                color: 'primary.main',
+                mb: 3,
+              }}
+            />
+            <Typography variant="h4" component="h2" gutterBottom>
+              {t('Registration Required')}
+            </Typography>
+            <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem', mb: 3 }}>
+              {t('To have access to the tasks you need to register!')}
+            </Typography>
+            <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem', mb: 4 }}>
+              {t('Try our FREE 3-month trial mode and unlock unlimited access to thousands of educational tasks.')}
+            </Typography>
+            <Alert severity="info" sx={{ mb: 4, textAlign: 'left' }}>
+              <Typography variant="body2">
+                <strong>{t('You\'ve used your 3 free task views.')}</strong>
+              </Typography>
+              <Typography variant="body2" sx={{ mt: 1 }}>
+                {t('Register now to get:')}
+              </Typography>
+              <ul style={{ marginTop: '8px', paddingLeft: '20px' }}>
+                <li>{t('Unlimited task viewing')}</li>
+                <li>{t('100 free task generation credits')}</li>
+                <li>{t('3 months free trial subscription')}</li>
+                <li>{t('Download tasks as PDF')}</li>
+              </ul>
+            </Alert>
+            <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center' }}>
+              <Button
+                variant="primary"
+                size="large"
+                onClick={() => setShowLoginModal(true)}
+              >
+                {t('Login / Register')}
+              </Button>
+              <Button
+                variant="secondary"
+                size="large"
+                onClick={() => router.push('/')}
+              >
+                {t('Back to Home')}
+              </Button>
+            </Box>
+          </Paper>
+        </Container>
+
+        {/* Login Modal */}
+        <LoginModal
+          open={showLoginModal}
+          onLogin={handleLogin}
+          onCreateAccount={handleCreateAccountClick}
+        />
+
+        {/* Registration Modal */}
+        <RegistrationModal
+          open={showRegisterModal}
+          onRegister={handleRegister}
+          onBack={handleBackToLogin}
+          detectedCountry={user.country}
+          isTeacher={isTeacher}
+        />
+      </>
+    );
   }
 
   if (error || !task) {
@@ -508,6 +707,18 @@ export default function TaskDetailPage() {
           {t('Back to Tasks')}
         </Button>
       </Box>
+
+      {/* Guest Task View Limit Banner */}
+      {isGuest && guestViewLimit.canViewTasks && (
+        <Alert severity="info" sx={{ mb: 3 }}>
+          <Typography variant="body1" component="div">
+            <strong>👁️ Free Task Views: {guestViewLimit.viewsRemaining} view{guestViewLimit.viewsRemaining !== 1 ? 's' : ''} remaining</strong>
+          </Typography>
+          <Typography variant="body2" sx={{ mt: 0.5 }}>
+            Register for unlimited task viewing and 100 free task generation credits!
+          </Typography>
+        </Alert>
+      )}
 
       {/* Task Header */}
       <Paper elevation={3} sx={{ p: 4, mb: 3 }}>
@@ -672,6 +883,24 @@ export default function TaskDetailPage() {
         autoHideDuration={3000}
         onClose={() => setShowCopySuccess(false)}
         message={t('Share link copied to clipboard!')}
+      />
+
+      {/* Login Modal */}
+      <LoginModal
+        open={showLoginModal}
+        onLogin={handleLogin}
+        onCreateAccount={handleCreateAccountClick}
+        onClose={() => setShowLoginModal(false)}
+      />
+
+      {/* Registration Modal */}
+      <RegistrationModal
+        open={showRegisterModal}
+        onRegister={handleRegister}
+        onBack={handleBackToLogin}
+        onClose={() => setShowRegisterModal(false)}
+        detectedCountry={user.country}
+        isTeacher={isTeacher}
       />
     </Container>
     </>

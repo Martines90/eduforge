@@ -174,6 +174,7 @@ export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
         open={mode === 'login'}
         onLogin={handleLogin}
         onCreateAccount={handleCreateAccountClick}
+        onClose={onClose}
       />
 
       {/* Registration Modal */}
@@ -181,6 +182,7 @@ export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
         open={mode === 'register'}
         onRegister={handleRegister}
         onBack={handleBackToLogin}
+        onClose={onClose}
         detectedCountry={user.country}
         isTeacher={isTeacher}
       />

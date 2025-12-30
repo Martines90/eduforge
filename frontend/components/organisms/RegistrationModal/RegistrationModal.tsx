@@ -22,6 +22,7 @@ import {
   CircularProgress,
   Alert,
   Snackbar,
+  IconButton,
 } from "@mui/material";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -29,6 +30,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import SchoolIcon from "@mui/icons-material/School";
 import PeopleIcon from "@mui/icons-material/People";
+import CloseIcon from "@mui/icons-material/Close";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -57,6 +59,7 @@ export interface RegistrationModalProps {
     },
   ) => void;
   onBack?: () => void;
+  onClose?: () => void;
   detectedCountry?: CountryCode;
   isTeacher: boolean;
 }
@@ -121,6 +124,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
   open,
   onRegister,
   onBack,
+  onClose,
   detectedCountry,
   isTeacher,
 }) => {
@@ -370,10 +374,10 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
     <>
       <Dialog
         open={open}
+        onClose={onClose}
         maxWidth="md"
         fullWidth
         fullScreen={isMobile}
-        disableEscapeKeyDown
         disableRestoreFocus={false}
         className={styles.dialog}
         PaperProps={{
@@ -381,6 +385,20 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         }}
       >
         <DialogTitle className={styles.title}>
+          {onClose && (
+            <IconButton
+              aria-label="close"
+              onClick={onClose}
+              sx={{
+                position: 'absolute',
+                right: 8,
+                top: 8,
+                color: (theme) => theme.palette.grey[500],
+              }}
+            >
+              <CloseIcon />
+            </IconButton>
+          )}
           <Box className={styles.iconContainer}>
             <PersonAddIcon sx={{ fontSize: 48 }} />
           </Box>

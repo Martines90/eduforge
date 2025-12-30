@@ -51,12 +51,13 @@ export const OnboardingHandler: React.FC = () => {
     }
 
     // Determine starting step based on user state
-    if (!user.isRegistered) {
-      // Not logged in - show login
-      setStep('login');
-    } else if (user.isFirstVisit && !user.hasCompletedOnboarding) {
+    // Note: We no longer force login modal for guests - they can browse freely
+    if (user.isRegistered && user.isFirstVisit && !user.hasCompletedOnboarding) {
       // Logged in but hasn't completed onboarding
       setStep('country');
+    } else {
+      // Mark as complete to not show any modals
+      setStep('complete');
     }
   }, [authInitialized, user.isRegistered, user.isFirstVisit, user.hasCompletedOnboarding, isPublicPage, pathname]);
 
@@ -169,6 +170,7 @@ export const OnboardingHandler: React.FC = () => {
         open={step === 'login' && !user.isRegistered}
         onLogin={handleLogin}
         onCreateAccount={handleCreateAccountClick}
+        onClose={() => setStep('complete')}
       />
 
       {/* Step 2: Registration (includes country, subject for teachers, personal info) */}
@@ -176,6 +178,7 @@ export const OnboardingHandler: React.FC = () => {
         open={step === 'register'}
         onRegister={handleRegister}
         onBack={handleBackToLogin}
+        onClose={() => setStep('complete')}
         detectedCountry={user.country}
         isTeacher={isTeacherAccount}
       />

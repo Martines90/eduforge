@@ -346,4 +346,145 @@ export const hu: Translations = {
   // Registration Success Message
   "Registration successful, your 3-month free trial subscription just started!":
     "Sikeres regisztráció, 3 hónapos ingyenes próba előfizetése most kezdődött!",
+
+  // Home Page - Guest Users
+  "Welcome to EduForge": "Üdvözöljük az EduForge-ban",
+  "EduForge is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.":
+    "Az EduForge egy tantárgy- és tanterv-specifikus, valós életből ihletett, lebilincselő történet/forgatókönyv-alapú feladatgeneráló és feladatkönyvtár platform tanárok (alkotók), iskolák, valamint szülők/diákok számára.",
+  "As a teacher you can generate any curriculum-specific EduForge task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!":
+    "Tanárként bármilyen tanterv-specifikus EduForge feladatot 10-20 másodperc alatt létrehozhat. A feladatok szórakoztató/izgalmas/kalandos/nagy téttel bíró helyzeteken alapulnak, amelyeket osztálya biztosan imádni fog!",
+  "Try It as a Teacher": "Próbálja ki Tanárként",
+  "Generate engaging, curriculum-aligned tasks in seconds!":
+    "Hozzon létre lebilincselő, tantervhez igazított feladatokat másodpercek alatt!",
+  "Start Generating": "Kezdje a Generálást",
+  "Discover Our Task Library": "Fedezze Fel Feladatkönyvtárunkat",
+  "Browse tasks that fit your curriculum section and pick what you like!":
+    "Böngésszen a tantervi részéhez illő feladatok között és válassza ki, ami tetszik!",
+  "Browse Task Library": "Feladatkönyvtár Böngészése",
+
+  // My Plan Page
+  "My Plan": "Előfizetésem",
+  "Manage your subscription and credits": "Előfizetés és kreditek kezelése",
+  "Subscription will be cancelled at the end of the current period":
+    "Az előfizetés a jelenlegi időszak végén törlésre kerül",
+  "You started with 100 free task generation credits.":
+    "100 ingyenes feladatgenerálási kredittel kezdett.",
+  "Running low on credits? Subscribe to Basic plan for unlimited browsing!":
+    "Fogytán a kreditje? Iratkozzon fel az Alap csomagra korlátlan böngészésért!",
+  "Upgrade to Basic Plan": "Váltson Alap Csomagra",
+  Recommended: "Ajánlott",
+  year: "év",
+  "Unlimited task browsing": "Korlátlan feladatböngészés",
+  "Download tasks as PDF": "Feladatok letöltése PDF-ként",
+  "Access to all subjects": "Hozzáférés minden tantárgyhoz",
+  "All difficulty levels": "Minden nehézségi szint",
+  "Email support": "E-mail támogatás",
+  Note: "Megjegyzés",
+  "This plan is for browsing and downloading tasks only. Task generation credits are not included.":
+    "Ez a csomag csak feladatok böngészésére és letöltésére szolgál. A feladatgenerálási kreditek nem tartoznak bele.",
+  "Subscribe to Basic Plan": "Előfizetés az Alap Csomagra",
+  "Basic plan is currently unavailable. Please try again later.":
+    "Az Alap csomag jelenleg nem elérhető. Kérjük, próbálja újra később.",
+
+  // My Subscription Page
+  "Running low on credits? Upgrade your plan to get more!":
+    "Fogytán a kreditje? Frissítse csomagját több kreditért!",
+  "Upgrade Your Plan": "Csomag Frissítése",
+  "Most Popular": "Legnépszerűbb",
+  "View/download task library": "Feladatkönyvtár megtekintése/letöltése",
+  Unlimited: "Korlátlan",
+  "Creator contests access": "Alkotói versenyek hozzáférés",
+  "Private Discord channel": "Privát Discord csatorna",
+  "Best School of the Year contest": "Az Év Legjobb Iskolája verseny",
+
+  // School Teachers Page
+  "School Teachers Management": "Iskolai Tanárok Kezelése",
+  "Manage teachers from your school (Pro Plan)":
+    "Iskolai tanárok kezelése (Pro Csomag)",
+  Teachers: "Tanárok",
+  "Invite Teacher": "Tanár Meghívása",
+  "School Name": "Iskola Neve",
+  "No teachers added yet": "Még nincsenek hozzáadott tanárok",
+  "Click \"Invite Teacher\" to add teachers from your school":
+    "Kattintson a \"Tanár Meghívása\" gombra az iskolai tanárok hozzáadásához",
+  "Pro Plan Benefits": "Pro Csomag Előnyei",
+  "10,000 Task Generation Credits": "10 000 Feladatgenerálási Kredit",
+  "Shared across all teachers in your school":
+    "Megosztva az iskola összes tanára között",
+  "Add Up to 10 Teachers": "Maximum 10 Tanár Hozzáadása",
+  "Each teacher gets their own account": "Minden tanár saját fiókot kap",
+  "School Contest Participation": "Iskolai Verseny Részvétel",
+  "Compete for \"Best School of the Year\"": "Versenyezzen az \"Év Legjobb Iskolája\" címért",
+  "Priority 24-hour Support": "Elsőbbségi 24 órás Támogatás",
+  "Fast response times for your school": "Gyors válaszidő az iskolája számára",
+  "Back to Subscription": "Vissza az Előfizetéshez",
+
+  // Task Detail Page - Guest View Limit
+  "Registration Required": "Regisztráció Szükséges",
+  "To have access to the tasks you need to register!":
+    "A feladatokhoz való hozzáféréshez regisztrálnia kell!",
+  "Try our FREE 3-month trial mode and unlock unlimited access to thousands of educational tasks.":
+    "Próbálja ki INGYENES 3 hónapos próbaidőszakát és nyissa meg a korlátlan hozzáférést több ezer oktatási feladathoz.",
+  "You've used your 3 free task views.": "Felhasználta 3 ingyenes feladatmegtekintését.",
+  "Register now to get:": "Regisztráljon most és kapja meg:",
+  "Unlimited task viewing": "Korlátlan feladatmegtekintés",
+  "100 free task generation credits": "100 ingyenes feladatgenerálási kredit",
+  "3 months free trial subscription": "3 hónapos ingyenes próba előfizetés",
+  "Login / Register": "Bejelentkezés / Regisztráció",
+
+  // Subscription Cancel Page
+  "Payment Cancelled": "Fizetés Törölve",
+  "Payment Failed": "Fizetés Sikertelen",
+  "You cancelled the payment process": "Törölte a fizetési folyamatot",
+  "There was a problem processing your payment": "Probléma merült fel a fizetés feldolgozása során",
+  "Error Details": "Hiba Részletei",
+  "What happened?": "Mi történt?",
+  "What went wrong?": "Mi ment rosszul?",
+  "You chose to cancel the subscription checkout process. No charges were made to your account.":
+    "Úgy döntött, hogy törli az előfizetés fizetési folyamatát. Nem történt terhelés a fiókján.",
+  "The payment could not be completed. This might be due to:":
+    "A fizetés nem fejeződött be. Ez a következő okok miatt lehet:",
+  "Insufficient funds in your account": "Nincs elegendő fedezet a fiókján",
+  "Card details were entered incorrectly": "A bankkártya adatai helytelenül lettek megadva",
+  "Your bank declined the transaction": "A bankja elutasította a tranzakciót",
+  "Technical issue with the payment provider": "Technikai probléma a fizetési szolgáltatónál",
+  "Try Again": "Próbálja Újra",
+  "Go to Home": "Kezdőlapra",
+  "Need help? Contact our support team at": "Segítségre van szüksége? Vegye fel a kapcsolatot ügyfélszolgálatunkkal:",
+
+  // Subscription Success Page
+  "Explore EduForge": "Fedezze Fel az EduForge-t",
+  "Browse and download tasks from our extensive library":
+    "Böngésszen és töltsön le feladatokat kiterjedt könyvtárunkból",
+  "Get Started": "Kezdjen Hozzá",
+  "Use your 1,000 credits to start generating custom tasks":
+    "Használja fel 1000 kreditjét egyedi feladatok generálásához",
+  "Add Teachers to Your School": "Tanárok Hozzáadása Iskolájához",
+  "Invite up to 10 teachers from your school to join":
+    "Hívjon meg maximum 10 tanárt iskolájából a csatlakozáshoz",
+  "Add Teachers": "Tanárok Hozzáadása",
+  "Explore EduForge features": "Fedezze fel az EduForge funkcióit",
+  "Go to Dashboard": "Irányítópultra",
+  "Processing Your Subscription...": "Előfizetés Feldolgozása...",
+  "Please wait while we activate your subscription":
+    "Kérjük, várjon, amíg aktiváljuk előfizetését",
+  "Welcome to EduForge!": "Üdvözöljük az EduForge-ban!",
+  "Subscription Activated Successfully": "Előfizetés Sikeresen Aktiválva",
+  Basic: "Alap",
+  Normal: "Normál",
+  Pro: "Pro",
+  "Your Credits": "Kreditjei",
+  "Task Generation Credits Available": "Elérhető Feladatgenerálási Kreditek",
+  "View Subscription": "Előfizetés Megtekintése",
+  "Thank you for choosing EduForge. We sent a confirmation email to your inbox.":
+    "Köszönjük, hogy az EduForge-t választotta. Megerősítő e-mailt küldtünk postafiókjába.",
+
+  // Task Generator Page
+  "Task Generator": "Feladatgenerátor",
+  "Try 3 FREE task generations - No account required!":
+    "Próbáljon ki 3 INGYENES feladatgenerálást - Nincs szükség fiókra!",
+
+  // Header
+  "Try Free": "Ingyenes Próba",
+  "Generate Tasks": "Feladatok Generálása",
 };

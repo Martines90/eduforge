@@ -343,3 +343,65 @@ export async function getCurrentUser(req: Request, res: Response): Promise<void>
     }
   }
 }
+
+/**
+ * POST /api/auth/guest-task-view
+ * Track guest task view using browser fingerprinting
+ * Guests can view up to 3 individual tasks before registration is required
+ */
+export async function trackGuestTaskView(req: Request, res: Response): Promise<void> {
+  try {
+    const MAX_GUEST_TASK_VIEWS = 3;
+
+    // Extract browser fingerprint from headers
+    const userAgent = req.headers['user-agent'] || '';
+    const ipAddress = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() ||
+                      req.socket.remoteAddress ||
+                      '';
+
+    // Create fingerprint (same approach as guest tokens)
+    const fingerprint = `${userAgent}_${ipAddress}`;
+
+    console.log('[Guest Task View] Tracking view for fingerprint:', fingerprint.substring(0, 50) + '...');
+
+    // Track view in Firestore (or you could use a dedicated collection)
+    const viewCount = await authService.trackGuestTaskView(fingerprint);
+
+    const viewsRemaining = Math.max(0, MAX_GUEST_TASK_VIEWS - viewCount);
+    const canViewTasks = viewCount < MAX_GUEST_TASK_VIEWS;
+
+    if (!canViewTasks) {
+      console.log('[Guest Task View] Limit reached for fingerprint');
+      res.status(403).json({
+        success: false,
+        message: 'Task viewing limit reached. Please register to continue.',
+        data: {
+          totalViews: viewCount,
+          viewsRemaining: 0,
+          canViewTasks: false,
+          limitReached: true,
+        },
+      });
+      return;
+    }
+
+    console.log('[Guest Task View] View tracked:', { viewCount, viewsRemaining });
+
+    res.status(200).json({
+      success: true,
+      message: 'View tracked successfully',
+      data: {
+        totalViews: viewCount,
+        viewsRemaining,
+        canViewTasks,
+      },
+    });
+  } catch (error: any) {
+    console.error('[Guest Task View] Error:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Failed to track view',
+      error: error.message,
+    });
+  }
+}

@@ -1,6 +1,7 @@
 import { test as base } from '@playwright/test';
 import { RegistrationPage } from '../pages/registration.page';
 import { TaskCreatorPage } from '../pages/task-creator.page';
+import { TaskGeneratorPage } from '../pages/task-generator.page';
 import { TasksPage } from '../pages/tasks.page';
 import { TaskDetailPage } from '../pages/task-detail.page';
 import { ApiMocks } from './api-mocks';
@@ -11,6 +12,7 @@ import { ApiMocks } from './api-mocks';
 type TestFixtures = {
   registrationPage: RegistrationPage;
   taskCreatorPage: TaskCreatorPage;
+  taskGeneratorPage: TaskGeneratorPage;
   tasksPage: TasksPage;
   taskDetailPage: TaskDetailPage;
   apiMocks: ApiMocks;
@@ -28,6 +30,11 @@ export const test = base.extend<TestFixtures>({
   taskCreatorPage: async ({ page }, use) => {
     const taskCreatorPage = new TaskCreatorPage(page);
     await use(taskCreatorPage);
+  },
+
+  taskGeneratorPage: async ({ page }, use) => {
+    const taskGeneratorPage = new TaskGeneratorPage(page);
+    await use(taskGeneratorPage);
   },
 
   tasksPage: async ({ page }, use) => {

@@ -140,4 +140,35 @@ router.post('/login', authController.login);
  */
 router.get('/me', authController.getCurrentUser);
 
+/**
+ * @swagger
+ * /api/auth/guest-task-view:
+ *   post:
+ *     summary: Track guest task view (with browser fingerprinting)
+ *     description: Increments guest task view count using browser fingerprinting. Guests can view up to 3 individual tasks before registration is required.
+ *     tags: [Auth]
+ *     responses:
+ *       200:
+ *         description: View tracked successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     totalViews:
+ *                       type: number
+ *                     viewsRemaining:
+ *                       type: number
+ *                     canViewTasks:
+ *                       type: boolean
+ *       403:
+ *         description: Viewing limit reached
+ */
+router.post('/guest-task-view', authController.trackGuestTaskView);
+
 export default router;

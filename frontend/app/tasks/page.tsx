@@ -14,6 +14,7 @@ import {
   MenuItem,
   FormControl,
   InputLabel,
+  Alert,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import FilterListIcon from '@mui/icons-material/FilterList';
@@ -22,19 +23,21 @@ import { Button } from '@/components/atoms/Button';
 import { TaskTreeView } from '@/components/organisms/TaskTreeView';
 import { TreeNode, TaskItem } from '@/types/task-tree';
 import { useTranslation } from '@/lib/i18n';
-import { AuthenticatedPage } from '@/components/templates/AuthenticatedPage';
 import { fetchTreeMap } from '@/lib/services/api.service';
 import { useUser } from '@/lib/context/UserContext';
+import { useSnackbar } from 'notistack';
 
 /**
  * Tasks Page
  * Browse and search available educational tasks
- * Requires authentication - content is only visible to logged-in users
+ * Freely accessible to all users (guests and registered)
+ * Individual task views are limited for guests (see /tasks/[id])
  */
 export default function TasksPage() {
   const router = useRouter();
   const { t } = useTranslation();
   const { user } = useUser();
+  const { enqueueSnackbar } = useSnackbar();
   const [searchQuery, setSearchQuery] = useState('');
   const [filterSubject, setFilterSubject] = useState('mathematics');
   const [filterGrade, setFilterGrade] = useState('grade_9_10');
@@ -73,7 +76,6 @@ export default function TasksPage() {
   const dataToDisplay = treeData.length > 0 ? treeData : [];
 
   return (
-    <AuthenticatedPage>
     <Container maxWidth="lg" sx={{ py: 4 }}>
       {/* Header */}
       <Box sx={{ mb: 4, textAlign: 'center' }}>
@@ -200,6 +202,5 @@ export default function TasksPage() {
         />
       )}
     </Container>
-    </AuthenticatedPage>
   );
 }

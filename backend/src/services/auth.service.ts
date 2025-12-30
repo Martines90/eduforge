@@ -378,3 +378,37 @@ export async function deductTaskCredit(uid: string): Promise<number> {
 
   return newCredits;
 }
+
+/**
+ * Track guest task view using browser fingerprinting
+ * Stores view count in Firestore to prevent easy bypass
+ * @param fingerprint - Browser fingerprint (User-Agent + IP)
+ * @returns Total view count for this fingerprint
+ */
+export async function trackGuestTaskView(fingerprint: string): Promise<number> {
+  const db = getFirestore();
+
+  const guestViewDoc = db.collection('guestTaskViews').doc(fingerprint);
+  const doc = await guestViewDoc.get();
+
+  if (!doc.exists) {
+    // First view
+    await guestViewDoc.set({
+      fingerprint,
+      viewCount: 1,
+      lastViewedAt: new Date(),
+      createdAt: new Date(),
+    });
+    return 1;
+  }
+
+  const data = doc.data();
+  const newViewCount = (data?.viewCount || 0) + 1;
+
+  await guestViewDoc.update({
+    viewCount: newViewCount,
+    lastViewedAt: new Date(),
+  });
+
+  return newViewCount;
+}

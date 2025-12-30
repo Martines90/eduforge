@@ -343,4 +343,147 @@ export const en: Translations = {
   // Registration Success Message
   "Registration successful, your 3-month free trial subscription just started!":
     "Registration successful, your 3-month free trial subscription just started!",
+
+  // Home Page - Guest Users
+  "Welcome to EduForge": "Welcome to EduForge",
+  "EduForge is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.":
+    "EduForge is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.",
+  "As a teacher you can generate any curriculum-specific EduForge task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!":
+    "As a teacher you can generate any curriculum-specific EduForge task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!",
+  "Try It as a Teacher": "Try It as a Teacher",
+  "Generate engaging, curriculum-aligned tasks in seconds!":
+    "Generate engaging, curriculum-aligned tasks in seconds!",
+  "Start Generating": "Start Generating",
+  "Discover Our Task Library": "Discover Our Task Library",
+  "Browse tasks that fit your curriculum section and pick what you like!":
+    "Browse tasks that fit your curriculum section and pick what you like!",
+  "Browse Task Library": "Browse Task Library",
+
+  // My Plan Page
+  "My Plan": "My Plan",
+  "Manage your subscription and credits": "Manage your subscription and credits",
+  "Subscription will be cancelled at the end of the current period":
+    "Subscription will be cancelled at the end of the current period",
+  "You started with 100 free task generation credits.":
+    "You started with 100 free task generation credits.",
+  "Running low on credits? Subscribe to Basic plan for unlimited browsing!":
+    "Running low on credits? Subscribe to Basic plan for unlimited browsing!",
+  "Upgrade to Basic Plan": "Upgrade to Basic Plan",
+  Recommended: "Recommended",
+  year: "year",
+  "Unlimited task browsing": "Unlimited task browsing",
+  "Download tasks as PDF": "Download tasks as PDF",
+  "Access to all subjects": "Access to all subjects",
+  "All difficulty levels": "All difficulty levels",
+  "Email support": "Email support",
+  Note: "Note",
+  "This plan is for browsing and downloading tasks only. Task generation credits are not included.":
+    "This plan is for browsing and downloading tasks only. Task generation credits are not included.",
+  "Subscribe to Basic Plan": "Subscribe to Basic Plan",
+  "Basic plan is currently unavailable. Please try again later.":
+    "Basic plan is currently unavailable. Please try again later.",
+
+  // My Subscription Page
+  "Running low on credits? Upgrade your plan to get more!":
+    "Running low on credits? Upgrade your plan to get more!",
+  "Upgrade Your Plan": "Upgrade Your Plan",
+  "Most Popular": "Most Popular",
+  "View/download task library": "View/download task library",
+  Unlimited: "Unlimited",
+  "Creator contests access": "Creator contests access",
+  "Private Discord channel": "Private Discord channel",
+  "Best School of the Year contest": "Best School of the Year contest",
+
+  // School Teachers Page
+  "School Teachers Management": "School Teachers Management",
+  "Manage teachers from your school (Pro Plan)":
+    "Manage teachers from your school (Pro Plan)",
+  Teachers: "Teachers",
+  "Invite Teacher": "Invite Teacher",
+  "School Name": "School Name",
+  "No teachers added yet": "No teachers added yet",
+  "Click \"Invite Teacher\" to add teachers from your school":
+    "Click \"Invite Teacher\" to add teachers from your school",
+  "Pro Plan Benefits": "Pro Plan Benefits",
+  "10,000 Task Generation Credits": "10,000 Task Generation Credits",
+  "Shared across all teachers in your school":
+    "Shared across all teachers in your school",
+  "Add Up to 10 Teachers": "Add Up to 10 Teachers",
+  "Each teacher gets their own account": "Each teacher gets their own account",
+  "School Contest Participation": "School Contest Participation",
+  "Compete for \"Best School of the Year\"": "Compete for \"Best School of the Year\"",
+
+  // Task Detail Page - Guest View Limit
+  "Registration Required": "Registration Required",
+  "To have access to the tasks you need to register!":
+    "To have access to the tasks you need to register!",
+  "Try our FREE 3-month trial mode and unlock unlimited access to thousands of educational tasks.":
+    "Try our FREE 3-month trial mode and unlock unlimited access to thousands of educational tasks.",
+  "You've used your 3 free task views.": "You've used your 3 free task views.",
+  "Register now to get:": "Register now to get:",
+  "Unlimited task viewing": "Unlimited task viewing",
+  "100 free task generation credits": "100 free task generation credits",
+  "3 months free trial subscription": "3 months free trial subscription",
+  "Login / Register": "Login / Register",
+
+  // School Teachers Page - Additional
+  "Priority 24-hour Support": "Priority 24-hour Support",
+  "Fast response times for your school": "Fast response times for your school",
+  "Back to Subscription": "Back to Subscription",
+
+  // Subscription Cancel Page
+  "Payment Cancelled": "Payment Cancelled",
+  "Payment Failed": "Payment Failed",
+  "You cancelled the payment process": "You cancelled the payment process",
+  "There was a problem processing your payment": "There was a problem processing your payment",
+  "Error Details": "Error Details",
+  "What happened?": "What happened?",
+  "What went wrong?": "What went wrong?",
+  "You chose to cancel the subscription checkout process. No charges were made to your account.":
+    "You chose to cancel the subscription checkout process. No charges were made to your account.",
+  "The payment could not be completed. This might be due to:":
+    "The payment could not be completed. This might be due to:",
+  "Insufficient funds in your account": "Insufficient funds in your account",
+  "Card details were entered incorrectly": "Card details were entered incorrectly",
+  "Your bank declined the transaction": "Your bank declined the transaction",
+  "Technical issue with the payment provider": "Technical issue with the payment provider",
+  "Try Again": "Try Again",
+  "Go to Home": "Go to Home",
+  "Need help? Contact our support team at": "Need help? Contact our support team at",
+
+  // Subscription Success Page
+  "Explore EduForge": "Explore EduForge",
+  "Browse and download tasks from our extensive library":
+    "Browse and download tasks from our extensive library",
+  "Get Started": "Get Started",
+  "Use your 1,000 credits to start generating custom tasks":
+    "Use your 1,000 credits to start generating custom tasks",
+  "Add Teachers to Your School": "Add Teachers to Your School",
+  "Invite up to 10 teachers from your school to join":
+    "Invite up to 10 teachers from your school to join",
+  "Add Teachers": "Add Teachers",
+  "Explore EduForge features": "Explore EduForge features",
+  "Go to Dashboard": "Go to Dashboard",
+  "Processing Your Subscription...": "Processing Your Subscription...",
+  "Please wait while we activate your subscription":
+    "Please wait while we activate your subscription",
+  "Welcome to EduForge!": "Welcome to EduForge!",
+  "Subscription Activated Successfully": "Subscription Activated Successfully",
+  Basic: "Basic",
+  Normal: "Normal",
+  Pro: "Pro",
+  "Your Credits": "Your Credits",
+  "Task Generation Credits Available": "Task Generation Credits Available",
+  "View Subscription": "View Subscription",
+  "Thank you for choosing EduForge. We sent a confirmation email to your inbox.":
+    "Thank you for choosing EduForge. We sent a confirmation email to your inbox.",
+
+  // Task Generator Page
+  "Task Generator": "Task Generator",
+  "Try 3 FREE task generations - No account required!":
+    "Try 3 FREE task generations - No account required!",
+
+  // Header
+  "Try Free": "Try Free",
+  "Generate Tasks": "Generate Tasks",
 };
