@@ -1,4 +1,4 @@
-import { Timestamp } from 'firebase-admin/firestore';
+import { Timestamp } from "firebase-admin/firestore";
 
 // Legacy types - kept for backward compatibility with storage service
 export interface LegacyTaskImage {
@@ -58,7 +58,7 @@ export interface SubjectMappingDocument {
  */
 export interface QuestionBlock {
   id?: string;
-  type: 'multiple_choice' | 'true_false' | 'open_ended' | 'fill_in_blank';
+  type: "multiple_choice" | "true_false" | "open_ended" | "fill_in_blank";
   text: string;
   imageUrl?: string;
   options?: string[]; // For multiple choice
@@ -80,14 +80,14 @@ export interface SolutionBlock {
  * Task Content Structure
  */
 export interface TaskContent {
-  type: 'multiple_choice' | 'open_ended' | 'problem_solving' | 'mixed';
+  type: "multiple_choice" | "open_ended" | "problem_solving" | "mixed";
   questions: QuestionBlock[];
   solutions?: SolutionBlock[];
   hints?: string[];
   resources?: {
     title: string;
     url: string;
-    type: 'video' | 'article' | 'pdf';
+    type: "video" | "article" | "pdf";
   }[];
 }
 
@@ -110,7 +110,7 @@ export interface TaskDocument {
 
   // Metadata
   educationalModel: string;
-  difficultyLevel?: 'easy' | 'medium' | 'hard';
+  difficultyLevel?: "easy" | "medium" | "hard";
   estimatedDurationMinutes?: number;
   tags?: string[];
 
@@ -165,7 +165,7 @@ export interface CreateTaskRequest {
   subject?: string; // Subject key (e.g., 'mathematics', 'physics')
   country_code?: string; // ISO country code (e.g., 'HU', 'US', 'MX')
   educationalModel?: string;
-  difficultyLevel?: 'easy' | 'medium' | 'hard';
+  difficultyLevel?: "easy" | "medium" | "hard";
   estimatedDurationMinutes?: number;
   tags?: string[];
   isPublished?: boolean;
@@ -176,7 +176,7 @@ export interface UpdateTaskRequest {
   description?: string;
   content?: TaskContent;
   educationalModel?: string;
-  difficultyLevel?: 'easy' | 'medium' | 'hard';
+  difficultyLevel?: "easy" | "medium" | "hard";
   estimatedDurationMinutes?: number;
   tags?: string[];
   isPublished?: boolean;
@@ -188,9 +188,9 @@ export interface GetTasksQuery {
   subjectMappingId?: string;
   curriculum_path?: string; // Full path like "math:grade_9_10:Halmazok:..."
   search?: string;
-  difficultyLevel?: 'easy' | 'medium' | 'hard';
+  difficultyLevel?: "easy" | "medium" | "hard";
   tags?: string[];
-  sort?: 'rating' | 'views' | 'recent' | 'popular';
+  sort?: "rating" | "views" | "recent" | "popular";
   limit?: number;
   offset?: number;
   createdBy?: string;

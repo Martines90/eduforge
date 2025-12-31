@@ -1,6 +1,6 @@
 'use client';
 
-import { Container, Typography, Box, Paper, Grid, Chip, List, ListItem, ListItemIcon, ListItemText, Card, CardContent, CardActions, Alert, CircularProgress, Button as MuiButton } from '@mui/material';
+import { Container, Typography, Box, Paper, Grid, Chip, List, ListItem, ListItemIcon, ListItemText, Card, CardContent, CardActions, Alert, CircularProgress } from '@mui/material';
 import { AuthenticatedPage } from '@/components/templates/AuthenticatedPage';
 import { useUser } from '@/lib/context';
 import { useTranslation } from '@/lib/i18n';

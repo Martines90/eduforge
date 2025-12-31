@@ -19,7 +19,12 @@ interface FluxGenerateResponse {
 
 interface FluxResultResponse {
   id: string;
-  status: "Ready" | "Pending" | "Error" | "Request Moderated" | "Content Moderated";
+  status:
+    | "Ready"
+    | "Pending"
+    | "Error"
+    | "Request Moderated"
+    | "Content Moderated";
   result?: {
     sample: string; // Image URL
   };
@@ -61,19 +66,25 @@ export class FluxProvider implements IAIProvider {
     console.log(`   Endpoint: ${this.endpoint}`);
   }
 
-  async generateCompletion(request: AICompletionRequest): Promise<AICompletionResponse> {
+  async generateCompletion(
+    request: AICompletionRequest
+  ): Promise<AICompletionResponse> {
     throw new Error(
       "FLUX provider does not support text completion. Use for image generation only."
     );
   }
 
-  async generateImage(request: ImageGenerationRequest): Promise<ImageGenerationResponse> {
+  async generateImage(
+    request: ImageGenerationRequest
+  ): Promise<ImageGenerationResponse> {
     try {
       console.log(`🎨 [FLUX] Generating image with ${this.defaultModel}`);
       console.log(`   Prompt: ${request.prompt.substring(0, 100)}...`);
 
       // Convert size to aspect ratio
-      const aspectRatio = this.convertSizeToAspectRatio(request.size || "1024x1024");
+      const aspectRatio = this.convertSizeToAspectRatio(
+        request.size || "1024x1024"
+      );
 
       // Step 1: Submit generation request
       const generateResponse = await this.client.post<FluxGenerateResponse>(
@@ -110,7 +121,9 @@ export class FluxProvider implements IAIProvider {
         const data = error.response.data;
 
         if (status === 429) {
-          throw new Error("FLUX API rate limit exceeded (24 active tasks max). Please try again later.");
+          throw new Error(
+            "FLUX API rate limit exceeded (24 active tasks max). Please try again later."
+          );
         }
 
         throw new Error(
@@ -122,7 +135,10 @@ export class FluxProvider implements IAIProvider {
     }
   }
 
-  private async pollForResult(requestId: string, pollingUrl?: string): Promise<string> {
+  private async pollForResult(
+    requestId: string,
+    pollingUrl?: string
+  ): Promise<string> {
     const url = pollingUrl || `/get_result?id=${requestId}`;
 
     for (let attempt = 1; attempt <= this.maxPollingAttempts; attempt++) {
@@ -130,14 +146,18 @@ export class FluxProvider implements IAIProvider {
         const response = await this.client.get<FluxResultResponse>(url);
         const { status, result, error } = response.data;
 
-        console.log(`   Polling attempt ${attempt}/${this.maxPollingAttempts}: ${status}`);
+        console.log(
+          `   Polling attempt ${attempt}/${this.maxPollingAttempts}: ${status}`
+        );
 
         if (status === "Ready" && result?.sample) {
           return result.sample;
         }
 
         if (status === "Error") {
-          throw new Error(`FLUX generation failed: ${error || "Unknown error"}`);
+          throw new Error(
+            `FLUX generation failed: ${error || "Unknown error"}`
+          );
         }
 
         if (status === "Request Moderated" || status === "Content Moderated") {

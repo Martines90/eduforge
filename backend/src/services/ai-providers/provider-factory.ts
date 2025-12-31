@@ -29,7 +29,7 @@ const MODEL_PROVIDER_MAP: Record<string, "openai" | "anthropic" | "flux"> = {
   "gpt-4.1-mini": "openai",
   "gpt-4o": "openai",
   "gpt-4o-mini": "openai",
-  "o1": "openai",
+  o1: "openai",
   "o1-mini": "openai",
   "o3-mini": "openai",
   "o3-mini-high": "openai",
@@ -74,7 +74,12 @@ function detectProvider(modelName: string): "openai" | "anthropic" | "flux" {
   }
 
   // Check if model name starts with known prefixes
-  if (modelName.startsWith("gpt-") || modelName.startsWith("o1") || modelName.startsWith("o3") || modelName.startsWith("dall-e")) {
+  if (
+    modelName.startsWith("gpt-") ||
+    modelName.startsWith("o1") ||
+    modelName.startsWith("o3") ||
+    modelName.startsWith("dall-e")
+  ) {
     return "openai";
   }
 
@@ -87,7 +92,9 @@ function detectProvider(modelName: string): "openai" | "anthropic" | "flux" {
   }
 
   // Default to OpenAI for unknown models
-  console.warn(`⚠️  Unknown model "${modelName}", defaulting to OpenAI provider`);
+  console.warn(
+    `⚠️  Unknown model "${modelName}", defaulting to OpenAI provider`
+  );
   return "openai";
 }
 
@@ -116,7 +123,9 @@ export class AIProviderFactory {
    */
   static getTextProvider(): IAIProvider {
     if (!this.config) {
-      throw new Error("AIProviderFactory not initialized. Call initialize() first.");
+      throw new Error(
+        "AIProviderFactory not initialized. Call initialize() first."
+      );
     }
 
     return this.getProvider(this.config.textModel);
@@ -127,7 +136,9 @@ export class AIProviderFactory {
    */
   static getImageProvider(): IAIProvider {
     if (!this.config) {
-      throw new Error("AIProviderFactory not initialized. Call initialize() first.");
+      throw new Error(
+        "AIProviderFactory not initialized. Call initialize() first."
+      );
     }
 
     if (!this.config.imageModel) {
@@ -164,7 +175,9 @@ export class AIProviderFactory {
 
     if (providerType === "openai") {
       if (!this.config!.openaiApiKey) {
-        throw new Error("OPENAI_API_KEY not configured but required for model: " + modelName);
+        throw new Error(
+          "OPENAI_API_KEY not configured but required for model: " + modelName
+        );
       }
       provider = new OpenAIProvider(
         this.config!.openaiApiKey,
@@ -173,12 +186,17 @@ export class AIProviderFactory {
       );
     } else if (providerType === "anthropic") {
       if (!this.config!.anthropicApiKey) {
-        throw new Error("ANTHROPIC_API_KEY not configured but required for model: " + modelName);
+        throw new Error(
+          "ANTHROPIC_API_KEY not configured but required for model: " +
+            modelName
+        );
       }
       provider = new AnthropicProvider(this.config!.anthropicApiKey, modelName);
     } else if (providerType === "flux") {
       if (!this.config!.fluxApiKey) {
-        throw new Error("FLUX_API_KEY not configured but required for model: " + modelName);
+        throw new Error(
+          "FLUX_API_KEY not configured but required for model: " + modelName
+        );
       }
       provider = new FluxProvider(this.config!.fluxApiKey, modelName);
     } else {
@@ -196,7 +214,9 @@ export class AIProviderFactory {
    */
   static getProviderForModel(modelName: string): IAIProvider {
     if (!this.config) {
-      throw new Error("AIProviderFactory not initialized. Call initialize() first.");
+      throw new Error(
+        "AIProviderFactory not initialized. Call initialize() first."
+      );
     }
 
     return this.getProvider(modelName);

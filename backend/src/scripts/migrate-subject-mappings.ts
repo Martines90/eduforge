@@ -15,18 +15,18 @@
  *   ts-node src/scripts/migrate-subject-mappings.ts --country HU --subject mathematics
  */
 
-import * as fs from 'fs';
-import * as path from 'path';
-import { initializeFirebase, getFirestore } from '../config/firebase.config';
-import { SubjectMappingDocument } from '../types/task.types';
-import { Timestamp } from 'firebase-admin/firestore';
+import * as fs from "fs";
+import * as path from "path";
+import { initializeFirebase, getFirestore } from "../config/firebase.config";
+import { SubjectMappingDocument } from "../types/task.types";
+import { Timestamp } from "firebase-admin/firestore";
 
 interface JSONNode {
   key: string;
   name: string;
   short_description?: string;
   sub_topics?: JSONNode[];
-  'example_tasks (COMPLETED)'?: any[];
+  "example_tasks (COMPLETED)"?: any[];
 }
 
 interface JSONData {
@@ -52,13 +52,16 @@ interface MappingConfig {
  * Load configuration from JSON file
  */
 function loadConfig(): MappingConfig {
-  const configPath = path.join(__dirname, '../config/subject-mappings.config.json');
+  const configPath = path.join(
+    __dirname,
+    "../config/subject-mappings.config.json"
+  );
 
   if (!fs.existsSync(configPath)) {
     throw new Error(`Configuration file not found: ${configPath}`);
   }
 
-  const configContent = fs.readFileSync(configPath, 'utf-8');
+  const configContent = fs.readFileSync(configPath, "utf-8");
   return JSON.parse(configContent) as MappingConfig;
 }
 
@@ -68,7 +71,7 @@ function loadConfig(): MappingConfig {
  */
 function generateDocId(...pathParts: string[]): string {
   const parts = pathParts.filter(Boolean);
-  return parts.join('_').replace(/[^a-zA-Z0-9_]/g, '_');
+  return parts.join("_").replace(/[^a-zA-Z0-9_]/g, "_");
 }
 
 /**
@@ -84,10 +87,13 @@ function collectNodes(
   parentPath: string,
   level: number,
   orderIndex: number,
-  documents: Map<string, { ref: FirebaseFirestore.DocumentReference; data: SubjectMappingDocument }>
+  documents: Map<
+    string,
+    { ref: FirebaseFirestore.DocumentReference; data: SubjectMappingDocument }
+  >
 ): string {
   const currentPath = parentPath ? `${parentPath}/${node.key}` : node.key;
-  const docId = generateDocId(gradeLevel, ...currentPath.split('/'));
+  const docId = generateDocId(gradeLevel, ...currentPath.split("/"));
 
   // Check if node has children
   const hasSubTopics = node.sub_topics && node.sub_topics.length > 0;
@@ -109,12 +115,18 @@ function collectNodes(
     updatedAt: Timestamp.now(),
   };
 
-  console.log(`  ${'  '.repeat(level)}[${level}] ${node.name} (${currentPath})`);
+  console.log(
+    `  ${"  ".repeat(level)}[${level}] ${node.name} (${currentPath})`
+  );
 
   // Collect document reference and data
-  const docRef = db.collection('countries').doc(country)
-    .collection('subjectMappings').doc(subject)
-    .collection(gradeLevel).doc(docId);
+  const docRef = db
+    .collection("countries")
+    .doc(country)
+    .collection("subjectMappings")
+    .doc(subject)
+    .collection(gradeLevel)
+    .doc(docId);
 
   documents.set(docId, { ref: docRef, data: mappingDoc });
 
@@ -144,7 +156,10 @@ function collectNodes(
  */
 async function writeBatches(
   db: FirebaseFirestore.Firestore,
-  documents: Map<string, { ref: FirebaseFirestore.DocumentReference; data: SubjectMappingDocument }>
+  documents: Map<
+    string,
+    { ref: FirebaseFirestore.DocumentReference; data: SubjectMappingDocument }
+  >
 ): Promise<void> {
   const allDocs = Array.from(documents.values());
   const batches: FirebaseFirestore.WriteBatch[] = [];
@@ -172,7 +187,9 @@ async function writeBatches(
   // Commit all batches
   for (let i = 0; i < batches.length; i++) {
     await batches[i].commit();
-    console.log(`   ✓ Batch ${i + 1}/${batches.length} committed (${Math.min((i + 1) * 500, allDocs.length)}/${allDocs.length} documents)`);
+    console.log(
+      `   ✓ Batch ${i + 1}/${batches.length} committed (${Math.min((i + 1) * 500, allDocs.length)}/${allDocs.length} documents)`
+    );
   }
 
   console.log(`   ✅ Successfully wrote ${allDocs.length} documents`);
@@ -188,12 +205,15 @@ async function importSubject(
   subjectName: string,
   jsonData: JSONData
 ): Promise<void> {
-  console.log(`\n${'='.repeat(60)}`);
+  console.log(`\n${"=".repeat(60)}`);
   console.log(`Importing ${subjectName} (${subjectKey}) for ${country}`);
-  console.log('='.repeat(60));
+  console.log("=".repeat(60));
 
-  const grades = ['grade_9_10', 'grade_11_12'] as const;
-  const allDocuments = new Map<string, { ref: FirebaseFirestore.DocumentReference; data: SubjectMappingDocument }>();
+  const grades = ["grade_9_10", "grade_11_12"] as const;
+  const allDocuments = new Map<
+    string,
+    { ref: FirebaseFirestore.DocumentReference; data: SubjectMappingDocument }
+  >();
 
   for (const gradeLevel of grades) {
     const gradeData = jsonData[gradeLevel];
@@ -202,11 +222,14 @@ async function importSubject(
       continue;
     }
 
-    console.log(`\n📚 Processing ${gradeLevel.replace('_', '-')} (${gradeData.length} main topics)`);
+    console.log(
+      `\n📚 Processing ${gradeLevel.replace("_", "-")} (${gradeData.length} main topics)`
+    );
 
     // Create root node for this grade
-    const gradeDocId = generateDocId(gradeLevel, 'root');
-    const gradeDisplayName = gradeLevel === 'grade_9_10' ? 'Grade 9-10' : 'Grade 11-12';
+    const gradeDocId = generateDocId(gradeLevel, "root");
+    const gradeDisplayName =
+      gradeLevel === "grade_9_10" ? "Grade 9-10" : "Grade 11-12";
 
     const gradeDoc: SubjectMappingDocument = {
       key: gradeLevel,
@@ -225,9 +248,13 @@ async function importSubject(
     };
 
     // Add grade doc to collection
-    const gradeDocRef = db.collection('countries').doc(country)
-      .collection('subjectMappings').doc(subjectKey)
-      .collection(gradeLevel).doc(gradeDocId);
+    const gradeDocRef = db
+      .collection("countries")
+      .doc(country)
+      .collection("subjectMappings")
+      .doc(subjectKey)
+      .collection(gradeLevel)
+      .doc(gradeDocId);
 
     allDocuments.set(gradeDocId, { ref: gradeDocRef, data: gradeDoc });
     console.log(`  [1] ${gradeDisplayName}`);
@@ -265,17 +292,22 @@ async function clearExistingMappings(
 ): Promise<void> {
   console.log(`\n🗑️  Clearing existing subject mappings for ${country}...`);
 
-  const subjectMappingsRef = db.collection('countries').doc(country)
-    .collection('subjectMappings');
+  const subjectMappingsRef = db
+    .collection("countries")
+    .doc(country)
+    .collection("subjectMappings");
 
   if (subject) {
     // Delete specific subject's grade collections
     console.log(`   Clearing subject: ${subject}`);
-    const grades = ['grade_9_10', 'grade_11_12'];
+    const grades = ["grade_9_10", "grade_11_12"];
     let totalDeleted = 0;
 
     for (const grade of grades) {
-      const gradeSnapshot = await subjectMappingsRef.doc(subject).collection(grade).get();
+      const gradeSnapshot = await subjectMappingsRef
+        .doc(subject)
+        .collection(grade)
+        .get();
 
       if (gradeSnapshot.size > 0) {
         const batches: FirebaseFirestore.WriteBatch[] = [];
@@ -305,7 +337,9 @@ async function clearExistingMappings(
       }
     }
 
-    console.log(`   ✅ Total deleted: ${totalDeleted} documents for ${subject}`);
+    console.log(
+      `   ✅ Total deleted: ${totalDeleted} documents for ${subject}`
+    );
   } else {
     // Delete all subjects
     const subjectsSnapshot = await subjectMappingsRef.get();
@@ -315,10 +349,13 @@ async function clearExistingMappings(
       const subjectKey = subjectDoc.id;
       console.log(`   Clearing subject: ${subjectKey}`);
 
-      const grades = ['grade_9_10', 'grade_11_12'];
+      const grades = ["grade_9_10", "grade_11_12"];
 
       for (const grade of grades) {
-        const gradeSnapshot = await subjectMappingsRef.doc(subjectKey).collection(grade).get();
+        const gradeSnapshot = await subjectMappingsRef
+          .doc(subjectKey)
+          .collection(grade)
+          .get();
 
         if (gradeSnapshot.size > 0) {
           const batches: FirebaseFirestore.WriteBatch[] = [];
@@ -343,7 +380,9 @@ async function clearExistingMappings(
             await batches[i].commit();
           }
 
-          console.log(`   Deleted ${count} documents from ${subjectKey}/${grade}`);
+          console.log(
+            `   Deleted ${count} documents from ${subjectKey}/${grade}`
+          );
         }
       }
     }
@@ -355,15 +394,24 @@ async function clearExistingMappings(
 /**
  * Get file path for a specific country and subject
  */
-function getDataFilePath(country: string, subject: string, fileName: string): string {
+function getDataFilePath(
+  country: string,
+  subject: string,
+  fileName: string
+): string {
   // Try new structure first: src/data/mappings/{country}/{fileName}
-  const newPath = path.join(__dirname, '../data/mappings', country.toLowerCase(), fileName);
+  const newPath = path.join(
+    __dirname,
+    "../data/mappings",
+    country.toLowerCase(),
+    fileName
+  );
   if (fs.existsSync(newPath)) {
     return newPath;
   }
 
   // Fallback to old structure: src/data/subject_mapping/{fileName}
-  const oldPath = path.join(__dirname, '../data/subject_mapping', fileName);
+  const oldPath = path.join(__dirname, "../data/subject_mapping", fileName);
   if (fs.existsSync(oldPath)) {
     console.log(`⚠️  Using legacy path for ${country}/${subject}: ${oldPath}`);
     return oldPath;
@@ -375,21 +423,23 @@ function getDataFilePath(country: string, subject: string, fileName: string): st
 /**
  * Main migration function
  */
-async function migrate(options: {
-  clear?: boolean;
-  country?: string;
-  subject?: string;
-  all?: boolean;
-} = {}): Promise<void> {
+async function migrate(
+  options: {
+    clear?: boolean;
+    country?: string;
+    subject?: string;
+    all?: boolean;
+  } = {}
+): Promise<void> {
   try {
-    console.log('\n🚀 Starting Subject Mappings Migration (Country-Based)');
-    console.log('=====================================================\n');
+    console.log("\n🚀 Starting Subject Mappings Migration (Country-Based)");
+    console.log("=====================================================\n");
 
     // Load configuration
     const config = loadConfig();
 
     // Initialize Firebase
-    console.log('Initializing Firebase...');
+    console.log("Initializing Firebase...");
     initializeFirebase();
     const db = getFirestore();
 
@@ -399,25 +449,29 @@ async function migrate(options: {
     if (options.all) {
       // Migrate all countries
       countriesToMigrate = Object.keys(config.countries);
-      console.log(`\n📍 Migrating ALL countries: ${countriesToMigrate.join(', ')}`);
+      console.log(
+        `\n📍 Migrating ALL countries: ${countriesToMigrate.join(", ")}`
+      );
     } else if (options.country) {
       // Migrate specific country
       const countryCode = options.country.toUpperCase();
       if (!config.countries[countryCode]) {
-        throw new Error(`Unknown country: ${countryCode}. Available: ${Object.keys(config.countries).join(', ')}`);
+        throw new Error(
+          `Unknown country: ${countryCode}. Available: ${Object.keys(config.countries).join(", ")}`
+        );
       }
       countriesToMigrate = [countryCode];
     } else {
-      throw new Error('Please specify --country or --all');
+      throw new Error("Please specify --country or --all");
     }
 
     // Process each country
     for (const countryCode of countriesToMigrate) {
       const countryConfig = config.countries[countryCode];
 
-      console.log(`\n${'█'.repeat(60)}`);
+      console.log(`\n${"█".repeat(60)}`);
       console.log(`🌍 Processing ${countryConfig.name} (${countryCode})`);
-      console.log('█'.repeat(60));
+      console.log("█".repeat(60));
 
       // Clear existing data if requested
       if (options.clear) {
@@ -434,45 +488,58 @@ async function migrate(options: {
         const subjectConfig = countryConfig.subjects[subjectKey];
 
         if (!subjectConfig) {
-          console.warn(`⚠️  Subject '${subjectKey}' not configured for ${countryCode}`);
+          console.warn(
+            `⚠️  Subject '${subjectKey}' not configured for ${countryCode}`
+          );
           continue;
         }
 
         // Get file path
-        const jsonPath = getDataFilePath(countryCode, subjectKey, subjectConfig.file);
+        const jsonPath = getDataFilePath(
+          countryCode,
+          subjectKey,
+          subjectConfig.file
+        );
         console.log(`📁 Reading: ${jsonPath}`);
 
         // Read and parse JSON
-        const jsonContent = fs.readFileSync(jsonPath, 'utf-8');
+        const jsonContent = fs.readFileSync(jsonPath, "utf-8");
         const jsonData: JSONData = JSON.parse(jsonContent);
 
         // Import to Firestore
-        await importSubject(db, countryCode, subjectKey, subjectConfig.name, jsonData);
+        await importSubject(
+          db,
+          countryCode,
+          subjectKey,
+          subjectConfig.name,
+          jsonData
+        );
       }
     }
 
     // Final summary
-    console.log('\n' + '='.repeat(60));
-    console.log('🎉 Migration Complete!');
-    console.log('='.repeat(60));
-    console.log('\nMigrated:');
-    console.log(`  Countries: ${countriesToMigrate.join(', ')}`);
+    console.log("\n" + "=".repeat(60));
+    console.log("🎉 Migration Complete!");
+    console.log("=".repeat(60));
+    console.log("\nMigrated:");
+    console.log(`  Countries: ${countriesToMigrate.join(", ")}`);
     if (options.subject) {
       console.log(`  Subject: ${options.subject}`);
     } else {
       console.log(`  Subjects: All configured subjects`);
     }
-    console.log('\nFirestore structure:');
-    countriesToMigrate.forEach(country => {
-      console.log(`  countries/${country}/subjectMappings/{subject}/{gradeLevel}/{docId}`);
+    console.log("\nFirestore structure:");
+    countriesToMigrate.forEach((country) => {
+      console.log(
+        `  countries/${country}/subjectMappings/{subject}/{gradeLevel}/{docId}`
+      );
     });
-    console.log('\nNext steps:');
-    console.log('  1. Check Firestore console to verify data');
-    console.log('  2. Test API endpoints');
-    console.log('  3. Create some test tasks\n');
-
+    console.log("\nNext steps:");
+    console.log("  1. Check Firestore console to verify data");
+    console.log("  2. Test API endpoints");
+    console.log("  3. Create some test tasks\n");
   } catch (error) {
-    console.error('\n❌ Migration failed:', error);
+    console.error("\n❌ Migration failed:", error);
     throw error;
   }
 }
@@ -524,7 +591,7 @@ if (require.main === module) {
   const args = process.argv.slice(2);
 
   // Show help
-  if (args.includes('--help') || args.includes('-h')) {
+  if (args.includes("--help") || args.includes("-h")) {
     showHelp();
     process.exit(0);
   }
@@ -536,27 +603,27 @@ if (require.main === module) {
     all?: boolean;
   } = {};
 
-  if (args.includes('--clear')) {
+  if (args.includes("--clear")) {
     options.clear = true;
   }
 
-  if (args.includes('--all')) {
+  if (args.includes("--all")) {
     options.all = true;
   }
 
-  const countryIndex = args.indexOf('--country');
+  const countryIndex = args.indexOf("--country");
   if (countryIndex !== -1 && args[countryIndex + 1]) {
     options.country = args[countryIndex + 1];
   }
 
-  const subjectIndex = args.indexOf('--subject');
+  const subjectIndex = args.indexOf("--subject");
   if (subjectIndex !== -1 && args[subjectIndex + 1]) {
     options.subject = args[subjectIndex + 1];
   }
 
   // Validate
   if (!options.country && !options.all) {
-    console.error('\n❌ Error: Please specify --country or --all\n');
+    console.error("\n❌ Error: Please specify --country or --all\n");
     showHelp();
     process.exit(1);
   }
@@ -564,11 +631,11 @@ if (require.main === module) {
   // Run migration
   migrate(options)
     .then(() => {
-      console.log('\n✅ Script completed successfully');
+      console.log("\n✅ Script completed successfully");
       process.exit(0);
     })
     .catch((error) => {
-      console.error('\n❌ Script failed:', error);
+      console.error("\n❌ Script failed:", error);
       process.exit(1);
     });
 }

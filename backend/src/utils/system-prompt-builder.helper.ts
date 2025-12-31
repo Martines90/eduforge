@@ -6,7 +6,10 @@ import {
   formatCurriculumTopicForPrompt,
   getExampleTasks,
 } from "./curriculum-mapper.helper";
-import { getLanguageForCountry, getMeasurementSystem } from "./measurement-system.helper";
+import {
+  getLanguageForCountry,
+  getMeasurementSystem,
+} from "./measurement-system.helper";
 import { TASK_CHARACTER_LENGTH } from "../config/task-generation.config";
 
 /**
@@ -14,9 +17,7 @@ import { TASK_CHARACTER_LENGTH } from "../config/task-generation.config";
  * @param request The task generator request
  * @returns The fully interpolated system prompt ready to use
  */
-export function buildSystemPrompt(
-  request: TaskGeneratorRequest
-): string {
+export function buildSystemPrompt(request: TaskGeneratorRequest): string {
   // Load the system prompt template
   const templatePath = path.join(
     __dirname,
@@ -52,8 +53,14 @@ export function buildSystemPrompt(
   // Step 1: Replace basic placeholders in template
   systemPrompt = systemPrompt.replace(/\{\{LANGUAGE\}\}/g, language);
   systemPrompt = systemPrompt.replace(/\{\{METRIC_SYSTEM\}\}/g, metricSystem);
-  systemPrompt = systemPrompt.replace(/\{\{TASK_CHARACTER_MIN_LENGTH\}\}/g, TASK_CHARACTER_LENGTH.min.toString());
-  systemPrompt = systemPrompt.replace(/\{\{TASK_CHARACTER_MAX_LENGTH\}\}/g, TASK_CHARACTER_LENGTH.max.toString());
+  systemPrompt = systemPrompt.replace(
+    /\{\{TASK_CHARACTER_MIN_LENGTH\}\}/g,
+    TASK_CHARACTER_LENGTH.min.toString()
+  );
+  systemPrompt = systemPrompt.replace(
+    /\{\{TASK_CHARACTER_MAX_LENGTH\}\}/g,
+    TASK_CHARACTER_LENGTH.max.toString()
+  );
 
   // Step 1.5: Append the scenario inspiration library if available
   if (scenarioLibrary) {
@@ -73,10 +80,7 @@ export function buildSystemPrompt(
   }
 
   // Step 3: Build the enriched JSON input object that represents what the USER MESSAGE will contain
-  const taskInputJson = buildTaskInputJson(
-    request,
-    curriculumPathResult
-  );
+  const taskInputJson = buildTaskInputJson(request, curriculumPathResult);
 
   // Step 5: Add additional context sections to the system prompt
   // These sections enhance the template with runtime-specific information
@@ -142,7 +146,9 @@ export function buildSystemPrompt(
 
   console.log("✅ Built enhanced system prompt with all context");
   console.log(`   - Template length: ${systemPrompt.length} chars`);
-  console.log(`   - Scenario library: ${scenarioLibrary ? scenarioLibrary.length + ' chars (included)' : 'not loaded'}`);
+  console.log(
+    `   - Scenario library: ${scenarioLibrary ? scenarioLibrary.length + " chars (included)" : "not loaded"}`
+  );
   console.log(`   - Additional context: ${additionalContext.length} chars`);
   console.log(`   - Total prompt length: ${finalPrompt.length} chars`);
   console.log(
@@ -174,7 +180,8 @@ function buildTaskInputJson(
   if (curriculumPathResult) {
     const topic = curriculumPathResult.topic;
     // Get example tasks from either property name
-    const exampleTasks = topic.example_tasks || topic["example_tasks (COMPLETED)"] || [];
+    const exampleTasks =
+      topic.example_tasks || topic["example_tasks (COMPLETED)"] || [];
 
     inputJson.curriculum_topic = {
       key: topic.key,
@@ -198,9 +205,7 @@ function buildTaskInputJson(
  * @param request The task generator request
  * @returns The JSON string to send as user message
  */
-export function buildUserMessage(
-  request: TaskGeneratorRequest
-): string {
+export function buildUserMessage(request: TaskGeneratorRequest): string {
   const language = getLanguageForCountry(request.country_code);
   const metricSystem = getMeasurementSystem(request.country_code);
 
@@ -210,10 +215,7 @@ export function buildUserMessage(
   );
 
   // Build the input JSON
-  const inputJson = buildTaskInputJson(
-    request,
-    curriculumPathResult
-  );
+  const inputJson = buildTaskInputJson(request, curriculumPathResult);
 
   return JSON.stringify(inputJson, null, 2);
 }

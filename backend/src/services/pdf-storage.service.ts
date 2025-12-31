@@ -3,8 +3,8 @@
  * Handles uploading and managing task PDFs in Firebase Storage
  */
 
-import { getStorage } from 'firebase-admin/storage';
-import { getFirestore } from 'firebase-admin/firestore';
+import { getStorage } from "firebase-admin/storage";
+import { getFirestore } from "firebase-admin/firestore";
 
 export interface UploadPDFResult {
   success: boolean;
@@ -20,10 +20,10 @@ export interface UploadPDFResult {
 function createSafeFilename(title: string): string {
   return title
     .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
-    .replace(/\s+/g, '_') // Replace spaces with underscores
-    .replace(/_+/g, '_') // Replace multiple underscores with single
-    .replace(/^_|_$/g, '') // Remove leading/trailing underscores
+    .replace(/[^a-z0-9\s-]/g, "") // Remove special characters
+    .replace(/\s+/g, "_") // Replace spaces with underscores
+    .replace(/_+/g, "_") // Replace multiple underscores with single
+    .replace(/^_|_$/g, "") // Remove leading/trailing underscores
     .substring(0, 50); // Limit length
 }
 
@@ -40,7 +40,7 @@ export async function uploadTaskPDF(
   taskTitle?: string
 ): Promise<UploadPDFResult> {
   try {
-    console.log('[PDF Storage] Uploading PDF for task:', taskId);
+    console.log("[PDF Storage] Uploading PDF for task:", taskId);
 
     const bucket = getStorage().bucket();
 
@@ -49,10 +49,10 @@ export async function uploadTaskPDF(
     if (taskTitle) {
       const safeTitle = createSafeFilename(taskTitle);
       fileName = `task-pdfs/task_${safeTitle}_${taskId}.pdf`;
-      console.log('[PDF Storage] Filename with title:', fileName);
+      console.log("[PDF Storage] Filename with title:", fileName);
     } else {
       fileName = `task-pdfs/${taskId}.pdf`;
-      console.log('[PDF Storage] Filename without title:', fileName);
+      console.log("[PDF Storage] Filename without title:", fileName);
     }
 
     const file = bucket.file(fileName);
@@ -60,7 +60,7 @@ export async function uploadTaskPDF(
     // Upload the PDF
     await file.save(pdfBuffer, {
       metadata: {
-        contentType: 'application/pdf',
+        contentType: "application/pdf",
         metadata: {
           taskId,
           uploadedAt: new Date().toISOString(),
@@ -72,12 +72,12 @@ export async function uploadTaskPDF(
     // Get the public URL
     const publicUrl = `https://storage.googleapis.com/${bucket.name}/${fileName}`;
 
-    console.log('[PDF Storage] PDF uploaded successfully:', publicUrl);
+    console.log("[PDF Storage] PDF uploaded successfully:", publicUrl);
 
     // Update the task document with PDF URL and timestamp
     const db = getFirestore();
     // Use direct collection reference instead of collectionGroup to avoid index issues
-    const taskDoc = db.collection('tasks').doc(taskId);
+    const taskDoc = db.collection("tasks").doc(taskId);
     const docSnapshot = await taskDoc.get();
 
     if (docSnapshot.exists) {
@@ -85,9 +85,9 @@ export async function uploadTaskPDF(
         pdfUrl: publicUrl,
         pdfGeneratedAt: new Date().toISOString(),
       });
-      console.log('[PDF Storage] Task document updated with PDF URL');
+      console.log("[PDF Storage] Task document updated with PDF URL");
     } else {
-      console.warn('[PDF Storage] Task document not found:', taskId);
+      console.warn("[PDF Storage] Task document not found:", taskId);
     }
 
     return {
@@ -95,10 +95,10 @@ export async function uploadTaskPDF(
       pdfUrl: publicUrl,
     };
   } catch (error) {
-    console.error('[PDF Storage] Error uploading PDF:', error);
+    console.error("[PDF Storage] Error uploading PDF:", error);
     return {
       success: false,
-      error: error instanceof Error ? error.message : 'Failed to upload PDF',
+      error: error instanceof Error ? error.message : "Failed to upload PDF",
     };
   }
 }
@@ -109,7 +109,7 @@ export async function uploadTaskPDF(
  */
 export async function deleteTaskPDF(taskId: string): Promise<void> {
   try {
-    console.log('[PDF Storage] Deleting PDF for task:', taskId);
+    console.log("[PDF Storage] Deleting PDF for task:", taskId);
 
     const bucket = getStorage().bucket();
     const fileName = `task-pdfs/${taskId}.pdf`;
@@ -118,12 +118,12 @@ export async function deleteTaskPDF(taskId: string): Promise<void> {
     const [exists] = await file.exists();
     if (exists) {
       await file.delete();
-      console.log('[PDF Storage] PDF deleted successfully');
+      console.log("[PDF Storage] PDF deleted successfully");
     }
 
     // Remove PDF URL from task document
     const db = getFirestore();
-    const taskDoc = db.collection('tasks').doc(taskId);
+    const taskDoc = db.collection("tasks").doc(taskId);
     const docSnapshot = await taskDoc.get();
 
     if (docSnapshot.exists) {
@@ -131,10 +131,10 @@ export async function deleteTaskPDF(taskId: string): Promise<void> {
         pdfUrl: null,
         pdfGeneratedAt: null,
       });
-      console.log('[PDF Storage] Task document updated - PDF URL removed');
+      console.log("[PDF Storage] Task document updated - PDF URL removed");
     }
   } catch (error) {
-    console.error('[PDF Storage] Error deleting PDF:', error);
+    console.error("[PDF Storage] Error deleting PDF:", error);
     throw error;
   }
 }
@@ -153,7 +153,7 @@ export async function taskPDFExists(taskId: string): Promise<boolean> {
     const [exists] = await file.exists();
     return exists;
   } catch (error) {
-    console.error('[PDF Storage] Error checking PDF existence:', error);
+    console.error("[PDF Storage] Error checking PDF existence:", error);
     return false;
   }
 }

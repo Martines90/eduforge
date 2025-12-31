@@ -1,13 +1,17 @@
-import jwt from 'jsonwebtoken';
-import { v4 as uuidv4 } from 'uuid';
-import { getFirestore, admin } from '../config/firebase.config';
-import crypto from 'crypto';
-import { TRIAL_START_CREDITS, GUEST_GENERATION_LIMIT } from '../constants/credits';
+import jwt from "jsonwebtoken";
+import { v4 as uuidv4 } from "uuid";
+import { getFirestore, admin } from "../config/firebase.config";
+import crypto from "crypto";
+import {
+  TRIAL_START_CREDITS,
+  GUEST_GENERATION_LIMIT,
+} from "../constants/credits";
 
 const FieldValue = admin.firestore.FieldValue;
 
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
-const GUEST_TOKEN_EXPIRY = '24h'; // Guest tokens expire after 24 hours
+const JWT_SECRET =
+  process.env.JWT_SECRET || "your-secret-key-change-in-production";
+const GUEST_TOKEN_EXPIRY = "24h"; // Guest tokens expire after 24 hours
 const MAX_GUEST_GENERATIONS = GUEST_GENERATION_LIMIT; // Maximum free generations for guests
 
 export interface GuestTokenPayload {
@@ -15,7 +19,7 @@ export interface GuestTokenPayload {
   generationsUsed: number;
   maxGenerations: number;
   createdAt: Date;
-  type: 'guest';
+  type: "guest";
 }
 
 export interface GuestSession {
@@ -44,8 +48,8 @@ export interface BrowserFingerprint {
  * This helps track users across sessions even if they clear cookies/incognito
  */
 export function generateFingerprint(data: BrowserFingerprint): string {
-  const fingerprintString = `${data.userAgent}|${data.acceptLanguage || ''}|${data.acceptEncoding || ''}|${data.ipAddress}`;
-  return crypto.createHash('sha256').update(fingerprintString).digest('hex');
+  const fingerprintString = `${data.userAgent}|${data.acceptLanguage || ""}|${data.acceptEncoding || ""}|${data.ipAddress}`;
+  return crypto.createHash("sha256").update(fingerprintString).digest("hex");
 }
 
 /**
@@ -53,7 +57,7 @@ export function generateFingerprint(data: BrowserFingerprint): string {
  */
 function getGuestSessionsCollection() {
   const db = getFirestore();
-  return db.collection('guestSessions');
+  return db.collection("guestSessions");
 }
 
 /**
@@ -69,14 +73,14 @@ export async function checkFingerprintLimit(fingerprint: string): Promise<{
 
   // Query all sessions with this fingerprint
   const snapshot = await sessionsRef
-    .where('browserFingerprint', '==', fingerprint)
+    .where("browserFingerprint", "==", fingerprint)
     .get();
 
   let totalGenerations = 0;
   let mostRecentSession: string | undefined;
   let mostRecentTime = 0;
 
-  snapshot.forEach(doc => {
+  snapshot.forEach((doc) => {
     const session = doc.data() as GuestSession;
     totalGenerations += session.generationsUsed;
 
@@ -104,7 +108,12 @@ export async function checkFingerprintLimit(fingerprint: string): Promise<{
 export async function createGuestToken(
   ipAddress: string,
   fingerprint: BrowserFingerprint
-): Promise<{ token: string; sessionId: string; canGenerate: boolean; message?: string }> {
+): Promise<{
+  token: string;
+  sessionId: string;
+  canGenerate: boolean;
+  message?: string;
+}> {
   const fingerprintHash = generateFingerprint(fingerprint);
 
   // Check if this fingerprint has already used all free generations
@@ -113,8 +122,8 @@ export async function createGuestToken(
   if (!fingerprintCheck.canGenerate) {
     // Fingerprint has reached limit - return existing session with limit message
     return {
-      token: '', // No new token
-      sessionId: fingerprintCheck.existingSessionId || '',
+      token: "", // No new token
+      sessionId: fingerprintCheck.existingSessionId || "",
       canGenerate: false,
       message: `This device has already used ${MAX_GUEST_GENERATIONS} free generations. Please register to continue.`,
     };
@@ -145,14 +154,16 @@ export async function createGuestToken(
     generationsUsed: 0,
     maxGenerations: MAX_GUEST_GENERATIONS,
     createdAt: new Date(),
-    type: 'guest',
+    type: "guest",
   };
 
   const token = jwt.sign(payload, JWT_SECRET, {
     expiresIn: GUEST_TOKEN_EXPIRY,
   });
 
-  console.log(`✅ Guest token created: ${sessionId} (Fingerprint: ${fingerprintHash.substring(0, 8)}..., IP: ${ipAddress})`);
+  console.log(
+    `✅ Guest token created: ${sessionId} (Fingerprint: ${fingerprintHash.substring(0, 8)}..., IP: ${ipAddress})`
+  );
 
   return { token, sessionId, canGenerate: true };
 }
@@ -160,19 +171,23 @@ export async function createGuestToken(
 /**
  * Verify and decode a guest token
  */
-export async function verifyGuestToken(token: string): Promise<GuestTokenPayload> {
+export async function verifyGuestToken(
+  token: string
+): Promise<GuestTokenPayload> {
   try {
     const decoded = jwt.verify(token, JWT_SECRET) as GuestTokenPayload;
 
-    if (decoded.type !== 'guest') {
-      throw new Error('Invalid guest token: not a guest type');
+    if (decoded.type !== "guest") {
+      throw new Error("Invalid guest token: not a guest type");
     }
 
     // Check if session exists in Firestore
-    const sessionDoc = await getGuestSessionsCollection().doc(decoded.sessionId).get();
+    const sessionDoc = await getGuestSessionsCollection()
+      .doc(decoded.sessionId)
+      .get();
 
     if (!sessionDoc.exists) {
-      throw new Error('Guest session not found or expired');
+      throw new Error("Guest session not found or expired");
     }
 
     const session = sessionDoc.data() as GuestSession;
@@ -183,14 +198,14 @@ export async function verifyGuestToken(token: string): Promise<GuestTokenPayload
       generationsUsed: session.generationsUsed,
       maxGenerations: session.maxGenerations,
       createdAt: session.createdAt,
-      type: 'guest',
+      type: "guest",
     };
   } catch (error) {
     if (error instanceof jwt.JsonWebTokenError) {
-      throw new Error('Invalid guest token');
+      throw new Error("Invalid guest token");
     }
     if (error instanceof jwt.TokenExpiredError) {
-      throw new Error('Guest token expired');
+      throw new Error("Guest token expired");
     }
     throw error;
   }
@@ -208,19 +223,21 @@ export async function incrementGuestGeneration(
   const sessionDoc = await sessionRef.get();
 
   if (!sessionDoc.exists) {
-    throw new Error('Guest session not found');
+    throw new Error("Guest session not found");
   }
 
   const session = sessionDoc.data() as GuestSession;
 
   // Check fingerprint-based limit (global across all sessions)
   if (session.browserFingerprint) {
-    const fingerprintCheck = await checkFingerprintLimit(session.browserFingerprint);
+    const fingerprintCheck = await checkFingerprintLimit(
+      session.browserFingerprint
+    );
 
     if (!fingerprintCheck.canGenerate) {
       throw new Error(
         `Generation limit reached (${fingerprintCheck.totalGenerations}/${MAX_GUEST_GENERATIONS}). ` +
-        `Please register to get ${TRIAL_START_CREDITS} free task generation credits!`
+          `Please register to get ${TRIAL_START_CREDITS} free task generation credits!`
       );
     }
   }
@@ -229,7 +246,7 @@ export async function incrementGuestGeneration(
   if (session.generationsUsed >= session.maxGenerations) {
     throw new Error(
       `Guest generation limit reached (${session.maxGenerations}/${session.maxGenerations}). ` +
-      `Please register to continue.`
+        `Please register to continue.`
     );
   }
 
@@ -245,7 +262,9 @@ export async function incrementGuestGeneration(
     lastGenerationAt: FieldValue.serverTimestamp(),
   });
 
-  console.log(`📊 Guest generation incremented: ${sessionId} (${updatedSession.generationsUsed}/${session.maxGenerations})`);
+  console.log(
+    `📊 Guest generation incremented: ${sessionId} (${updatedSession.generationsUsed}/${session.maxGenerations})`
+  );
 
   return { ...session, ...updatedSession } as GuestSession;
 }
@@ -253,7 +272,9 @@ export async function incrementGuestGeneration(
 /**
  * Get the current state of a guest session
  */
-export async function getGuestSession(sessionId: string): Promise<GuestSession | null> {
+export async function getGuestSession(
+  sessionId: string
+): Promise<GuestSession | null> {
   const sessionDoc = await getGuestSessionsCollection().doc(sessionId).get();
 
   if (!sessionDoc.exists) {
@@ -277,7 +298,9 @@ export async function canGuestGenerate(sessionId: string): Promise<boolean> {
 
   // Check fingerprint-based global limit
   if (session.browserFingerprint) {
-    const fingerprintCheck = await checkFingerprintLimit(session.browserFingerprint);
+    const fingerprintCheck = await checkFingerprintLimit(
+      session.browserFingerprint
+    );
     return fingerprintCheck.canGenerate;
   }
 
@@ -287,13 +310,17 @@ export async function canGuestGenerate(sessionId: string): Promise<boolean> {
 /**
  * Get remaining generations for a guest session
  */
-export async function getRemainingGenerations(sessionId: string): Promise<number> {
+export async function getRemainingGenerations(
+  sessionId: string
+): Promise<number> {
   const session = await getGuestSession(sessionId);
   if (!session) return 0;
 
   // Check fingerprint-based global limit
   if (session.browserFingerprint) {
-    const fingerprintCheck = await checkFingerprintLimit(session.browserFingerprint);
+    const fingerprintCheck = await checkFingerprintLimit(
+      session.browserFingerprint
+    );
     const remaining = MAX_GUEST_GENERATIONS - fingerprintCheck.totalGenerations;
     return Math.max(0, remaining);
   }
@@ -305,7 +332,9 @@ export async function getRemainingGenerations(sessionId: string): Promise<number
  * Get the last generated task for a guest session
  * Used to restore task after registration
  */
-export async function getGuestLastTask(sessionId: string): Promise<string | null> {
+export async function getGuestLastTask(
+  sessionId: string
+): Promise<string | null> {
   const session = await getGuestSession(sessionId);
   return session?.lastTaskId || null;
 }
@@ -314,14 +343,19 @@ export async function getGuestLastTask(sessionId: string): Promise<string | null
  * Mark a guest session as converted to registered user
  * This prevents the session from being used again
  */
-export async function markGuestConverted(sessionId: string, userId: string): Promise<void> {
+export async function markGuestConverted(
+  sessionId: string,
+  userId: string
+): Promise<void> {
   await getGuestSessionsCollection().doc(sessionId).update({
     convertedToUser: true,
     convertedUserId: userId,
     convertedAt: FieldValue.serverTimestamp(),
   });
 
-  console.log(`✅ Guest session ${sessionId} marked as converted to user ${userId}`);
+  console.log(
+    `✅ Guest session ${sessionId} marked as converted to user ${userId}`
+  );
 }
 
 /**
@@ -334,15 +368,13 @@ export async function cleanupExpiredSessions(): Promise<number> {
   const expiryDate = new Date(now.getTime() - expiryTime);
 
   const sessionsRef = getGuestSessionsCollection();
-  const snapshot = await sessionsRef
-    .where('createdAt', '<', expiryDate)
-    .get();
+  const snapshot = await sessionsRef.where("createdAt", "<", expiryDate).get();
 
   let cleanedCount = 0;
 
   // Delete expired sessions in batches
   const batch = getFirestore().batch();
-  snapshot.forEach(doc => {
+  snapshot.forEach((doc) => {
     batch.delete(doc.ref);
     cleanedCount++;
   });
@@ -372,12 +404,12 @@ export async function checkRateLimit(
 
   // Query sessions with matching fingerprint OR IP within time window
   const snapshot = await sessionsRef
-    .where('lastGenerationAt', '>=', windowStart)
+    .where("lastGenerationAt", ">=", windowStart)
     .get();
 
   let generationsInWindow = 0;
 
-  snapshot.forEach(doc => {
+  snapshot.forEach((doc) => {
     const session = doc.data() as GuestSession;
     if (
       session.browserFingerprint === fingerprint ||

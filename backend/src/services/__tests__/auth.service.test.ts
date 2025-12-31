@@ -1,14 +1,14 @@
-import * as authService from '../auth.service';
-import * as bcrypt from 'bcrypt';
-import * as jwt from 'jsonwebtoken';
-import { getFirestore, getAuth } from '../../config/firebase.config';
+import * as authService from "../auth.service";
+import * as bcrypt from "bcrypt";
+import * as jwt from "jsonwebtoken";
+import { getFirestore, getAuth } from "../../config/firebase.config";
 
 // Mock dependencies
-jest.mock('../../config/firebase.config');
-jest.mock('bcrypt');
-jest.mock('jsonwebtoken');
+jest.mock("../../config/firebase.config");
+jest.mock("bcrypt");
+jest.mock("jsonwebtoken");
 
-describe('Auth Service', () => {
+describe("Auth Service", () => {
   const mockFirestore = {
     collection: jest.fn(),
   };
@@ -25,15 +25,15 @@ describe('Auth Service', () => {
     (getAuth as jest.Mock).mockReturnValue(mockAuth);
   });
 
-  describe('generateVerificationCode', () => {
-    it('should generate a 6-digit code', () => {
+  describe("generateVerificationCode", () => {
+    it("should generate a 6-digit code", () => {
       const code = authService.generateVerificationCode();
 
       expect(code).toMatch(/^\d{6}$/);
       expect(code.length).toBe(6);
     });
 
-    it('should generate unique codes', () => {
+    it("should generate unique codes", () => {
       const codes = new Set();
       for (let i = 0; i < 10; i++) {
         codes.add(authService.generateVerificationCode());
@@ -44,48 +44,48 @@ describe('Auth Service', () => {
     });
   });
 
-  describe('createVerificationCode', () => {
-    it('should create and store verification code', async () => {
+  describe("createVerificationCode", () => {
+    it("should create and store verification code", async () => {
       const mockSet = jest.fn().mockResolvedValue(undefined);
       const mockDoc = jest.fn().mockReturnValue({ set: mockSet });
       const mockCollection = jest.fn().mockReturnValue({ doc: mockDoc });
 
       mockFirestore.collection = mockCollection;
-      (bcrypt.hash as jest.Mock).mockResolvedValue('hashed-password');
+      (bcrypt.hash as jest.Mock).mockResolvedValue("hashed-password");
 
       const userData = {
-        email: 'test@example.com',
-        password: 'password123',
-        name: 'Test User',
-        role: 'teacher' as const,
-        country: 'US',
+        email: "test@example.com",
+        password: "password123",
+        name: "Test User",
+        role: "teacher" as const,
+        country: "US",
       };
 
       const code = await authService.createVerificationCode(
-        'test@example.com',
+        "test@example.com",
         userData
       );
 
       expect(code).toMatch(/^\d{6}$/);
-      expect(mockCollection).toHaveBeenCalledWith('pendingRegistrations');
-      expect(mockDoc).toHaveBeenCalledWith('test@example.com');
+      expect(mockCollection).toHaveBeenCalledWith("pendingRegistrations");
+      expect(mockDoc).toHaveBeenCalledWith("test@example.com");
       expect(mockSet).toHaveBeenCalled();
     });
   });
 
-  describe('verifyCodeAndCreateUser', () => {
-    it('should verify code and create user successfully', async () => {
+  describe("verifyCodeAndCreateUser", () => {
+    it("should verify code and create user successfully", async () => {
       const mockPendingData = {
-        code: '123456',
+        code: "123456",
         expiresAt: {
           toDate: () => new Date(Date.now() + 10000), // Not expired
         },
         attempts: 0,
         pendingUserData: {
-          name: 'Test User',
-          password: 'hashed-password',
-          role: 'teacher',
-          country: 'US',
+          name: "Test User",
+          password: "hashed-password",
+          role: "teacher",
+          country: "US",
         },
       };
 
@@ -106,24 +106,26 @@ describe('Auth Service', () => {
         }),
       });
 
-      mockAuth.getUserByEmail.mockRejectedValue({ code: 'auth/user-not-found' });
-      mockAuth.createUser.mockResolvedValue({ uid: 'user123' });
+      mockAuth.getUserByEmail.mockRejectedValue({
+        code: "auth/user-not-found",
+      });
+      mockAuth.createUser.mockResolvedValue({ uid: "user123" });
 
-      (jwt.sign as jest.Mock).mockReturnValue('jwt-token');
+      (jwt.sign as jest.Mock).mockReturnValue("jwt-token");
 
       const result = await authService.verifyCodeAndCreateUser(
-        'test@example.com',
-        '123456'
+        "test@example.com",
+        "123456"
       );
 
-      expect(result.uid).toBe('user123');
-      expect(result.token).toBe('jwt-token');
+      expect(result.uid).toBe("user123");
+      expect(result.token).toBe("jwt-token");
       expect(mockAuth.createUser).toHaveBeenCalled();
     });
 
-    it('should throw error if code is invalid', async () => {
+    it("should throw error if code is invalid", async () => {
       const mockPendingData = {
-        code: '123456',
+        code: "123456",
         expiresAt: {
           toDate: () => new Date(Date.now() + 10000),
         },
@@ -145,15 +147,15 @@ describe('Auth Service', () => {
       });
 
       await expect(
-        authService.verifyCodeAndCreateUser('test@example.com', '999999')
-      ).rejects.toThrow('Invalid verification code');
+        authService.verifyCodeAndCreateUser("test@example.com", "999999")
+      ).rejects.toThrow("Invalid verification code");
 
       expect(mockUpdate).toHaveBeenCalledWith({ attempts: 1 });
     });
 
-    it('should throw error if code is expired', async () => {
+    it("should throw error if code is expired", async () => {
       const mockPendingData = {
-        code: '123456',
+        code: "123456",
         expiresAt: {
           toDate: () => new Date(Date.now() - 10000), // Expired
         },
@@ -175,15 +177,15 @@ describe('Auth Service', () => {
       });
 
       await expect(
-        authService.verifyCodeAndCreateUser('test@example.com', '123456')
-      ).rejects.toThrow('Verification code has expired');
+        authService.verifyCodeAndCreateUser("test@example.com", "123456")
+      ).rejects.toThrow("Verification code has expired");
 
       expect(mockDelete).toHaveBeenCalled();
     });
 
-    it('should throw error if too many attempts', async () => {
+    it("should throw error if too many attempts", async () => {
       const mockPendingData = {
-        code: '123456',
+        code: "123456",
         expiresAt: {
           toDate: () => new Date(Date.now() + 10000),
         },
@@ -202,11 +204,11 @@ describe('Auth Service', () => {
       });
 
       await expect(
-        authService.verifyCodeAndCreateUser('test@example.com', '123456')
-      ).rejects.toThrow('Too many failed attempts');
+        authService.verifyCodeAndCreateUser("test@example.com", "123456")
+      ).rejects.toThrow("Too many failed attempts");
     });
 
-    it('should throw error if no pending registration found', async () => {
+    it("should throw error if no pending registration found", async () => {
       const mockGet = jest.fn().mockResolvedValue({
         exists: false,
       });
@@ -218,19 +220,19 @@ describe('Auth Service', () => {
       });
 
       await expect(
-        authService.verifyCodeAndCreateUser('test@example.com', '123456')
-      ).rejects.toThrow('No pending registration found for this email');
+        authService.verifyCodeAndCreateUser("test@example.com", "123456")
+      ).rejects.toThrow("No pending registration found for this email");
     });
   });
 
-  describe('loginUser', () => {
-    it('should login successfully with valid credentials', async () => {
+  describe("loginUser", () => {
+    it("should login successfully with valid credentials", async () => {
       const mockUserData = {
-        uid: 'user123',
-        email: 'test@example.com',
-        name: 'Test User',
-        role: 'teacher',
-        status: 'active',
+        uid: "user123",
+        email: "test@example.com",
+        name: "Test User",
+        role: "teacher",
+        status: "active",
         emailVerified: true,
       };
 
@@ -245,7 +247,7 @@ describe('Auth Service', () => {
 
       const mockCredGet = jest.fn().mockResolvedValue({
         exists: true,
-        data: () => ({ hashedPassword: 'hashed-password' }),
+        data: () => ({ hashedPassword: "hashed-password" }),
       });
 
       const mockWhere = jest.fn().mockReturnValue({
@@ -253,7 +255,7 @@ describe('Auth Service', () => {
       });
 
       mockFirestore.collection = jest.fn((name) => {
-        if (name === 'users') {
+        if (name === "users") {
           return { where: mockWhere };
         }
         return {
@@ -264,18 +266,18 @@ describe('Auth Service', () => {
       });
 
       (bcrypt.compare as jest.Mock).mockResolvedValue(true);
-      (jwt.sign as jest.Mock).mockReturnValue('jwt-token');
+      (jwt.sign as jest.Mock).mockReturnValue("jwt-token");
 
       const result = await authService.loginUser({
-        email: 'test@example.com',
-        password: 'password123',
+        email: "test@example.com",
+        password: "password123",
       });
 
-      expect(result.user.email).toBe('test@example.com');
-      expect(result.token).toBe('jwt-token');
+      expect(result.user.email).toBe("test@example.com");
+      expect(result.token).toBe("jwt-token");
     });
 
-    it('should throw error for invalid email', async () => {
+    it("should throw error for invalid email", async () => {
       const mockWhere = jest.fn().mockReturnValue({
         get: jest.fn().mockResolvedValue({ empty: true }),
       });
@@ -286,17 +288,17 @@ describe('Auth Service', () => {
 
       await expect(
         authService.loginUser({
-          email: 'wrong@example.com',
-          password: 'password123',
+          email: "wrong@example.com",
+          password: "password123",
         })
-      ).rejects.toThrow('Invalid email or password');
+      ).rejects.toThrow("Invalid email or password");
     });
 
-    it('should throw error for invalid password', async () => {
+    it("should throw error for invalid password", async () => {
       const mockUserData = {
-        uid: 'user123',
-        email: 'test@example.com',
-        status: 'active',
+        uid: "user123",
+        email: "test@example.com",
+        status: "active",
       };
 
       const mockUserSnapshot = {
@@ -306,7 +308,7 @@ describe('Auth Service', () => {
 
       const mockCredGet = jest.fn().mockResolvedValue({
         exists: true,
-        data: () => ({ hashedPassword: 'hashed-password' }),
+        data: () => ({ hashedPassword: "hashed-password" }),
       });
 
       const mockWhere = jest.fn().mockReturnValue({
@@ -314,7 +316,7 @@ describe('Auth Service', () => {
       });
 
       mockFirestore.collection = jest.fn((name) => {
-        if (name === 'users') {
+        if (name === "users") {
           return { where: mockWhere };
         }
         return {
@@ -328,17 +330,17 @@ describe('Auth Service', () => {
 
       await expect(
         authService.loginUser({
-          email: 'test@example.com',
-          password: 'wrongpassword',
+          email: "test@example.com",
+          password: "wrongpassword",
         })
-      ).rejects.toThrow('Invalid email or password');
+      ).rejects.toThrow("Invalid email or password");
     });
 
-    it('should throw error for banned account', async () => {
+    it("should throw error for banned account", async () => {
       const mockUserData = {
-        uid: 'user123',
-        email: 'test@example.com',
-        status: 'banned',
+        uid: "user123",
+        email: "test@example.com",
+        status: "banned",
       };
 
       const mockUserSnapshot = {
@@ -356,19 +358,19 @@ describe('Auth Service', () => {
 
       await expect(
         authService.loginUser({
-          email: 'test@example.com',
-          password: 'password123',
+          email: "test@example.com",
+          password: "password123",
         })
-      ).rejects.toThrow('Account has been banned');
+      ).rejects.toThrow("Account has been banned");
     });
   });
 
-  describe('getUserById', () => {
-    it('should return user data for valid UID', async () => {
+  describe("getUserById", () => {
+    it("should return user data for valid UID", async () => {
       const mockUserData = {
-        uid: 'user123',
-        email: 'test@example.com',
-        name: 'Test User',
+        uid: "user123",
+        email: "test@example.com",
+        name: "Test User",
       };
 
       const mockGet = jest.fn().mockResolvedValue({
@@ -382,12 +384,12 @@ describe('Auth Service', () => {
         }),
       });
 
-      const result = await authService.getUserById('user123');
+      const result = await authService.getUserById("user123");
 
       expect(result).toEqual(mockUserData);
     });
 
-    it('should return null for non-existent user', async () => {
+    it("should return null for non-existent user", async () => {
       const mockGet = jest.fn().mockResolvedValue({
         exists: false,
       });
@@ -398,40 +400,40 @@ describe('Auth Service', () => {
         }),
       });
 
-      const result = await authService.getUserById('nonexistent');
+      const result = await authService.getUserById("nonexistent");
 
       expect(result).toBeNull();
     });
   });
 
-  describe('verifyToken', () => {
-    it('should verify valid token', () => {
+  describe("verifyToken", () => {
+    it("should verify valid token", () => {
       const mockDecoded = {
-        uid: 'user123',
-        email: 'test@example.com',
-        role: 'teacher',
+        uid: "user123",
+        email: "test@example.com",
+        role: "teacher",
       };
 
       (jwt.verify as jest.Mock).mockReturnValue(mockDecoded);
 
-      const result = authService.verifyToken('valid-token');
+      const result = authService.verifyToken("valid-token");
 
       expect(result).toEqual(mockDecoded);
     });
 
-    it('should throw error for invalid token', () => {
+    it("should throw error for invalid token", () => {
       (jwt.verify as jest.Mock).mockImplementation(() => {
-        throw new Error('Invalid token');
+        throw new Error("Invalid token");
       });
 
-      expect(() => authService.verifyToken('invalid-token')).toThrow(
-        'Invalid token'
+      expect(() => authService.verifyToken("invalid-token")).toThrow(
+        "Invalid token"
       );
     });
   });
 
-  describe('initiateRegistration', () => {
-    it('should successfully initiate registration for new user', async () => {
+  describe("initiateRegistration", () => {
+    it("should successfully initiate registration for new user", async () => {
       const mockGet = jest.fn().mockResolvedValue({
         empty: true, // No existing user
       });
@@ -447,7 +449,7 @@ describe('Auth Service', () => {
       const mockSet = jest.fn().mockResolvedValue(undefined);
 
       mockFirestore.collection = jest.fn((collectionName) => {
-        if (collectionName === 'users') {
+        if (collectionName === "users") {
           return { where: mockWhere };
         }
         // For pendingRegistrations
@@ -459,22 +461,24 @@ describe('Auth Service', () => {
         };
       });
 
-      mockAuth.getUserByEmail.mockRejectedValue({ code: 'auth/user-not-found' });
-      (bcrypt.hash as jest.Mock).mockResolvedValue('hashed-password');
+      mockAuth.getUserByEmail.mockRejectedValue({
+        code: "auth/user-not-found",
+      });
+      (bcrypt.hash as jest.Mock).mockResolvedValue("hashed-password");
 
       const code = await authService.initiateRegistration({
-        email: 'new@example.com',
-        password: 'password123',
-        name: 'New User',
-        role: 'general_user',
-        country: 'US',
+        email: "new@example.com",
+        password: "password123",
+        name: "New User",
+        role: "general_user",
+        country: "US",
       });
 
       expect(code).toMatch(/^\d{6}$/);
       expect(mockSet).toHaveBeenCalled();
     });
 
-    it('should throw error if email already registered', async () => {
+    it("should throw error if email already registered", async () => {
       const mockGet = jest.fn().mockResolvedValue({
         empty: false, // User exists
       });
@@ -489,21 +493,21 @@ describe('Auth Service', () => {
 
       await expect(
         authService.initiateRegistration({
-          email: 'existing@example.com',
-          password: 'password123',
-          name: 'Existing User',
-          role: 'general_user',
-          country: 'US',
+          email: "existing@example.com",
+          password: "password123",
+          name: "Existing User",
+          role: "general_user",
+          country: "US",
         })
-      ).rejects.toThrow('Email already registered');
+      ).rejects.toThrow("Email already registered");
     });
   });
 
-  describe('deductTaskCredit', () => {
-    it('should successfully deduct one credit from teacher account', async () => {
+  describe("deductTaskCredit", () => {
+    it("should successfully deduct one credit from teacher account", async () => {
       const mockUserData = {
-        uid: 'teacher123',
-        role: 'teacher',
+        uid: "teacher123",
+        role: "teacher",
         taskCredits: 50,
       };
 
@@ -521,7 +525,7 @@ describe('Auth Service', () => {
         }),
       });
 
-      const result = await authService.deductTaskCredit('teacher123');
+      const result = await authService.deductTaskCredit("teacher123");
 
       expect(result).toBe(49);
       expect(mockUpdate).toHaveBeenCalledWith({
@@ -530,7 +534,7 @@ describe('Auth Service', () => {
       });
     });
 
-    it('should throw error if user not found', async () => {
+    it("should throw error if user not found", async () => {
       const mockGet = jest.fn().mockResolvedValue({
         exists: false,
       });
@@ -541,15 +545,15 @@ describe('Auth Service', () => {
         }),
       });
 
-      await expect(
-        authService.deductTaskCredit('nonexistent')
-      ).rejects.toThrow('User not found');
+      await expect(authService.deductTaskCredit("nonexistent")).rejects.toThrow(
+        "User not found"
+      );
     });
 
-    it('should throw error if user is not a teacher', async () => {
+    it("should throw error if user is not a teacher", async () => {
       const mockUserData = {
-        uid: 'user123',
-        role: 'general_user',
+        uid: "user123",
+        role: "general_user",
         taskCredits: 10,
       };
 
@@ -564,15 +568,15 @@ describe('Auth Service', () => {
         }),
       });
 
-      await expect(
-        authService.deductTaskCredit('user123')
-      ).rejects.toThrow('Only teachers can create tasks');
+      await expect(authService.deductTaskCredit("user123")).rejects.toThrow(
+        "Only teachers can create tasks"
+      );
     });
 
-    it('should throw error if no credits remaining', async () => {
+    it("should throw error if no credits remaining", async () => {
       const mockUserData = {
-        uid: 'teacher123',
-        role: 'teacher',
+        uid: "teacher123",
+        role: "teacher",
         taskCredits: 0,
       };
 
@@ -587,15 +591,15 @@ describe('Auth Service', () => {
         }),
       });
 
-      await expect(
-        authService.deductTaskCredit('teacher123')
-      ).rejects.toThrow('No task creation credits remaining');
+      await expect(authService.deductTaskCredit("teacher123")).rejects.toThrow(
+        "No task creation credits remaining"
+      );
     });
 
-    it('should handle undefined taskCredits as 0', async () => {
+    it("should handle undefined taskCredits as 0", async () => {
       const mockUserData = {
-        uid: 'teacher123',
-        role: 'teacher',
+        uid: "teacher123",
+        role: "teacher",
         // taskCredits field missing
       };
 
@@ -610,15 +614,15 @@ describe('Auth Service', () => {
         }),
       });
 
-      await expect(
-        authService.deductTaskCredit('teacher123')
-      ).rejects.toThrow('No task creation credits remaining');
+      await expect(authService.deductTaskCredit("teacher123")).rejects.toThrow(
+        "No task creation credits remaining"
+      );
     });
 
-    it('should deduct from 1 credit to 0 successfully', async () => {
+    it("should deduct from 1 credit to 0 successfully", async () => {
       const mockUserData = {
-        uid: 'teacher123',
-        role: 'teacher',
+        uid: "teacher123",
+        role: "teacher",
         taskCredits: 1,
       };
 
@@ -636,7 +640,7 @@ describe('Auth Service', () => {
         }),
       });
 
-      const result = await authService.deductTaskCredit('teacher123');
+      const result = await authService.deductTaskCredit("teacher123");
 
       expect(result).toBe(0);
       expect(mockUpdate).toHaveBeenCalledWith({

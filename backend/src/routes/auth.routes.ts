@@ -1,5 +1,5 @@
-import { Router } from 'express';
-import * as authController from '../controllers/auth.controller';
+import { Router } from "express";
+import * as authController from "../controllers/auth.controller";
 
 const router = Router();
 
@@ -41,7 +41,7 @@ const router = Router();
  *       409:
  *         description: Email already registered
  */
-router.post('/register', authController.register);
+router.post("/register", authController.register);
 
 /**
  * @swagger
@@ -66,7 +66,7 @@ router.post('/register', authController.register);
  *       400:
  *         description: Invalid input
  */
-router.post('/send-verification-code', authController.sendVerificationCode);
+router.post("/send-verification-code", authController.sendVerificationCode);
 
 /**
  * @swagger
@@ -94,7 +94,7 @@ router.post('/send-verification-code', authController.sendVerificationCode);
  *       400:
  *         description: Invalid or expired code
  */
-router.post('/verify-email', authController.verifyEmail);
+router.post("/verify-email", authController.verifyEmail);
 
 /**
  * @swagger
@@ -122,7 +122,7 @@ router.post('/verify-email', authController.verifyEmail);
  *       401:
  *         description: Invalid credentials
  */
-router.post('/login', authController.login);
+router.post("/login", authController.login);
 
 /**
  * @swagger
@@ -138,7 +138,7 @@ router.post('/login', authController.login);
  *       401:
  *         description: Unauthorized
  */
-router.get('/me', authController.getCurrentUser);
+router.get("/me", authController.getCurrentUser);
 
 /**
  * @swagger
@@ -169,6 +169,6 @@ router.get('/me', authController.getCurrentUser);
  *       403:
  *         description: Viewing limit reached
  */
-router.post('/guest-task-view', authController.trackGuestTaskView);
+router.post("/guest-task-view", authController.trackGuestTaskView);
 
 export default router;

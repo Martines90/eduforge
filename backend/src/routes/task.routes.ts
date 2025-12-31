@@ -1,7 +1,11 @@
 import { Router } from "express";
 import { TaskController } from "../controllers/task.controller";
 import { requireAuthenticatedTeacher } from "../middleware/auth.middleware";
-import { requireTeacher, requireTaskCredits, requireActiveSubscription } from "../middleware/role.middleware";
+import {
+  requireTeacher,
+  requireTaskCredits,
+  requireActiveSubscription,
+} from "../middleware/role.middleware";
 import { authenticateOrGuest } from "../middleware/guest-auth.middleware";
 
 const router = Router();
@@ -121,42 +125,68 @@ const taskController = new TaskController();
  *       500:
  *         $ref: '#/components/responses/InternalServerError'
  */
-router.post("/generate-task", requireAuthenticatedTeacher, requireActiveSubscription, requireTaskCredits, taskController.generateTask);
+router.post(
+  "/generate-task",
+  requireAuthenticatedTeacher,
+  requireActiveSubscription,
+  requireTaskCredits,
+  taskController.generateTask
+);
 
 /**
  * V2 API: Get 3 unique random locations for task variations
  * GET /get-3-random-locations
  * Supports both authenticated users and guest sessions
  */
-router.get("/get-3-random-locations", authenticateOrGuest, taskController.get3RandomLocations);
+router.get(
+  "/get-3-random-locations",
+  authenticateOrGuest,
+  taskController.get3RandomLocations
+);
 
 /**
  * V2 API: Generate task text only (no solution, no images) with variation support
  * POST /generate-task-text
  * Supports both authenticated users and guest sessions
  */
-router.post("/generate-task-text", authenticateOrGuest, taskController.generateTaskText);
+router.post(
+  "/generate-task-text",
+  authenticateOrGuest,
+  taskController.generateTaskText
+);
 
 /**
  * V2 API: AI selects the best task from 3 variations
  * POST /select-best-task
  * Supports both authenticated users and guest sessions
  */
-router.post("/select-best-task", authenticateOrGuest, taskController.selectBestTask);
+router.post(
+  "/select-best-task",
+  authenticateOrGuest,
+  taskController.selectBestTask
+);
 
 /**
  * V2 API: Generate solution only for given task text
  * POST /generate-task-solution
  * Supports both authenticated users and guest sessions
  */
-router.post("/generate-task-solution", authenticateOrGuest, taskController.generateTaskSolution);
+router.post(
+  "/generate-task-solution",
+  authenticateOrGuest,
+  taskController.generateTaskSolution
+);
 
 /**
  * V2 API: Generate images only for given task text
  * POST /generate-task-images
  * Supports both authenticated users and guest sessions
  */
-router.post("/generate-task-images", authenticateOrGuest, taskController.generateTaskImages);
+router.post(
+  "/generate-task-images",
+  authenticateOrGuest,
+  taskController.generateTaskImages
+);
 
 /**
  * @swagger
@@ -194,14 +224,24 @@ router.get("/tasks/:taskId", taskController.getTaskById);
  * Supports both authenticated users and guest sessions
  * Does NOT require subscription or credits
  */
-router.post("/generate-task-guest", authenticateOrGuest, taskController.generateTaskGuest);
+router.post(
+  "/generate-task-guest",
+  authenticateOrGuest,
+  taskController.generateTaskGuest
+);
 
 /**
  * POST /save-task
  * Saves a generated task to Firestore database
  * Requires authentication, teacher role, active subscription, and available task credits
  */
-router.post("/save-task", requireAuthenticatedTeacher, requireActiveSubscription, requireTaskCredits, taskController.saveTask);
+router.post(
+  "/save-task",
+  requireAuthenticatedTeacher,
+  requireActiveSubscription,
+  requireTaskCredits,
+  taskController.saveTask
+);
 
 /**
  * POST /tasks/:taskId/upload-pdf

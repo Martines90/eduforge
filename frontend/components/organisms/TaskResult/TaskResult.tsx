@@ -107,7 +107,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       const placeholder = `[IMAGE_${index + 1}]`;
 
       // Decode HTML entities in URL (fixes &amp; in Azure Blob Storage URLs)
-      let imageUrl = decodeHtmlEntities(image.url);
+      const imageUrl = decodeHtmlEntities(image.url);
 
       // Different styles for PDF vs screen display
       const imgStyle = forPdf

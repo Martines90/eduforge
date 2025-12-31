@@ -3,8 +3,8 @@
  * Handles CRUD operations for educational tasks
  */
 
-import { getFirestore } from '../config/firebase.config';
-import { Timestamp, FieldValue } from 'firebase-admin/firestore';
+import { getFirestore } from "../config/firebase.config";
+import { Timestamp, FieldValue } from "firebase-admin/firestore";
 import {
   TaskDocument,
   TaskRatingDocument,
@@ -13,14 +13,14 @@ import {
   GetTasksQuery,
   GetTasksResponse,
   SubmitRatingRequest,
-} from '../types/task.types';
+} from "../types/task.types";
 import {
   getSubjectMappingById,
   validateLeafMapping,
   incrementTaskCount,
   decrementTaskCount,
-} from './subject-mapping.service';
-import { getUserById } from './auth.service';
+} from "./subject-mapping.service";
+import { getUserById } from "./auth.service";
 
 /**
  * Create a new task
@@ -33,16 +33,16 @@ export async function createTask(
 
   // Validate that the creator is a teacher
   const creator = await getUserById(creatorUid);
-  if (!creator || creator.role !== 'teacher') {
-    throw new Error('Only teachers can create tasks');
+  if (!creator || creator.role !== "teacher") {
+    throw new Error("Only teachers can create tasks");
   }
 
   // TODO: Get country from request or user profile
   // For now, defaulting to 'HU' for backward compatibility
-  const country = data.country_code || 'HU';
+  const country = data.country_code || "HU";
 
   // Extract subject from CreateTaskRequest (it should be provided)
-  const subject = data.subject || 'mathematics'; // Default to mathematics for backward compatibility
+  const subject = data.subject || "mathematics"; // Default to mathematics for backward compatibility
 
   // TODO: Get gradeLevel from request
   // For now, we need to determine the gradeLevel from the subjectMappingId
@@ -50,17 +50,29 @@ export async function createTask(
   // Temporary: extract from subjectMappingId (e.g., "grade_9_10_..." starts with grade level)
   const gradeLevelMatch = data.subjectMappingId.match(/^(grade_\d+_\d+)/);
   if (!gradeLevelMatch) {
-    throw new Error('Invalid subjectMappingId format: must start with grade level (e.g., grade_9_10_...)');
+    throw new Error(
+      "Invalid subjectMappingId format: must start with grade level (e.g., grade_9_10_...)"
+    );
   }
   const gradeLevel = gradeLevelMatch[1];
 
   // Validate that the subject mapping exists and is a leaf node
-  await validateLeafMapping(country, subject, data.subjectMappingId, gradeLevel);
+  await validateLeafMapping(
+    country,
+    subject,
+    data.subjectMappingId,
+    gradeLevel
+  );
 
   // Get the subject mapping details
-  const mapping = await getSubjectMappingById(country, subject, data.subjectMappingId, gradeLevel);
+  const mapping = await getSubjectMappingById(
+    country,
+    subject,
+    data.subjectMappingId,
+    gradeLevel
+  );
   if (!mapping) {
-    throw new Error('Subject mapping not found');
+    throw new Error("Subject mapping not found");
   }
 
   // Create task document
@@ -72,7 +84,7 @@ export async function createTask(
     subjectMappingPath: mapping.path,
     subject: mapping.subject,
     gradeLevel: mapping.gradeLevel,
-    educationalModel: data.educationalModel || 'secular',
+    educationalModel: data.educationalModel || "secular",
     difficultyLevel: data.difficultyLevel,
     estimatedDurationMinutes: data.estimatedDurationMinutes,
     tags: data.tags || [],
@@ -89,11 +101,16 @@ export async function createTask(
   };
 
   // Insert into Firestore
-  const docRef = await db.collection('tasks').add(taskDoc);
+  const docRef = await db.collection("tasks").add(taskDoc);
 
   // Increment task count on the mapping if published
   if (taskDoc.isPublished) {
-    await incrementTaskCount(country, subject, data.subjectMappingId, gradeLevel);
+    await incrementTaskCount(
+      country,
+      subject,
+      data.subjectMappingId,
+      gradeLevel
+    );
   }
 
   return docRef.id;
@@ -108,24 +125,25 @@ export async function updateTask(
   data: UpdateTaskRequest
 ): Promise<void> {
   const db = getFirestore();
-  const taskRef = db.collection('tasks').doc(taskId);
+  const taskRef = db.collection("tasks").doc(taskId);
 
   // Get existing task
   const taskDoc = await taskRef.get();
   if (!taskDoc.exists) {
-    throw new Error('Task not found');
+    throw new Error("Task not found");
   }
 
   const existingTask = taskDoc.data() as TaskDocument;
 
   // Check ownership
   if (existingTask.createdBy !== creatorUid) {
-    throw new Error('You can only update your own tasks');
+    throw new Error("You can only update your own tasks");
   }
 
   // Track if publishing status changed
   const wasPublished = existingTask.isPublished;
-  const willBePublished = data.isPublished !== undefined ? data.isPublished : wasPublished;
+  const willBePublished =
+    data.isPublished !== undefined ? data.isPublished : wasPublished;
 
   // Build update object
   const updateData: Partial<TaskDocument> = {
@@ -143,14 +161,24 @@ export async function updateTask(
 
   // Update task count on mapping if publishing status changed
   // TODO: Get country from task document or request
-  const country = 'HU'; // Default for backward compatibility
-  const subject = existingTask.subject || 'mathematics'; // Get from existing task or default
+  const country = "HU"; // Default for backward compatibility
+  const subject = existingTask.subject || "mathematics"; // Get from existing task or default
   const gradeLevel = existingTask.gradeLevel; // Get from existing task
   if (wasPublished !== willBePublished && gradeLevel) {
     if (willBePublished) {
-      await incrementTaskCount(country, subject, existingTask.subjectMappingId, gradeLevel);
+      await incrementTaskCount(
+        country,
+        subject,
+        existingTask.subjectMappingId,
+        gradeLevel
+      );
     } else {
-      await decrementTaskCount(country, subject, existingTask.subjectMappingId, gradeLevel);
+      await decrementTaskCount(
+        country,
+        subject,
+        existingTask.subjectMappingId,
+        gradeLevel
+      );
     }
   }
 }
@@ -158,21 +186,24 @@ export async function updateTask(
 /**
  * Delete a task
  */
-export async function deleteTask(taskId: string, creatorUid: string): Promise<void> {
+export async function deleteTask(
+  taskId: string,
+  creatorUid: string
+): Promise<void> {
   const db = getFirestore();
-  const taskRef = db.collection('tasks').doc(taskId);
+  const taskRef = db.collection("tasks").doc(taskId);
 
   // Get existing task
   const taskDoc = await taskRef.get();
   if (!taskDoc.exists) {
-    throw new Error('Task not found');
+    throw new Error("Task not found");
   }
 
   const existingTask = taskDoc.data() as TaskDocument;
 
   // Check ownership
   if (existingTask.createdBy !== creatorUid) {
-    throw new Error('You can only delete your own tasks');
+    throw new Error("You can only delete your own tasks");
   }
 
   // Delete the task
@@ -180,11 +211,16 @@ export async function deleteTask(taskId: string, creatorUid: string): Promise<vo
 
   // Decrement task count if was published
   // TODO: Get country from task document
-  const country = 'HU'; // Default for backward compatibility
-  const subject = existingTask.subject || 'mathematics'; // Get from existing task or default
+  const country = "HU"; // Default for backward compatibility
+  const subject = existingTask.subject || "mathematics"; // Get from existing task or default
   const gradeLevel = existingTask.gradeLevel; // Get from existing task
   if (existingTask.isPublished && gradeLevel) {
-    await decrementTaskCount(country, subject, existingTask.subjectMappingId, gradeLevel);
+    await decrementTaskCount(
+      country,
+      subject,
+      existingTask.subjectMappingId,
+      gradeLevel
+    );
   }
 }
 
@@ -196,7 +232,7 @@ export async function getTaskById(
   incrementViews: boolean = false
 ): Promise<(TaskDocument & { id: string }) | null> {
   const db = getFirestore();
-  const taskDoc = await db.collection('tasks').doc(taskId).get();
+  const taskDoc = await db.collection("tasks").doc(taskId).get();
 
   if (!taskDoc.exists) {
     return null;
@@ -205,7 +241,7 @@ export async function getTaskById(
   // Increment view count if requested
   if (incrementViews) {
     await db
-      .collection('tasks')
+      .collection("tasks")
       .doc(taskId)
       .update({
         viewCount: FieldValue.increment(1),
@@ -221,18 +257,23 @@ export async function getTaskById(
 /**
  * Get tasks with filtering and pagination
  */
-export async function getTasks(query: GetTasksQuery): Promise<GetTasksResponse> {
+export async function getTasks(
+  query: GetTasksQuery
+): Promise<GetTasksResponse> {
   const db = getFirestore();
-  let firestoreQuery: any = db.collection('tasks');
+  let firestoreQuery: any = db.collection("tasks");
 
-  console.log('[getTasks] Query parameters:', JSON.stringify(query, null, 2));
+  console.log("[getTasks] Query parameters:", JSON.stringify(query, null, 2));
 
   // DEBUG: List ALL documents in the collection first
-  const allDocsSnapshot = await db.collection('tasks').limit(5).get();
-  console.log('[getTasks] Total documents in collection:', allDocsSnapshot.size);
+  const allDocsSnapshot = await db.collection("tasks").limit(5).get();
+  console.log(
+    "[getTasks] Total documents in collection:",
+    allDocsSnapshot.size
+  );
   allDocsSnapshot.docs.forEach((doc: any) => {
     const data = doc.data();
-    console.log('[getTasks] Sample doc:', {
+    console.log("[getTasks] Sample doc:", {
       id: doc.id,
       curriculum_path: data.curriculum_path,
       isPublished: data.isPublished,
@@ -244,13 +285,20 @@ export async function getTasks(query: GetTasksQuery): Promise<GetTasksResponse> 
   // to avoid index requirements until indexes are fully built
   if (query.curriculum_path) {
     // Filter by full curriculum path (preferred method)
-    console.log('[getTasks] Filtering by curriculum_path:', query.curriculum_path);
-    firestoreQuery = firestoreQuery.where('curriculum_path', '==', query.curriculum_path);
+    console.log(
+      "[getTasks] Filtering by curriculum_path:",
+      query.curriculum_path
+    );
+    firestoreQuery = firestoreQuery.where(
+      "curriculum_path",
+      "==",
+      query.curriculum_path
+    );
 
     // Get all matching documents without sorting (to avoid composite index requirement)
-    console.log('[getTasks] About to execute query (no sorting)...');
+    console.log("[getTasks] About to execute query (no sorting)...");
     const snapshot = await firestoreQuery.get();
-    console.log('[getTasks] Query returned:', snapshot.size, 'documents');
+    console.log("[getTasks] Query returned:", snapshot.size, "documents");
 
     let tasks = snapshot.docs.map((doc: any) => ({
       id: doc.id,
@@ -262,32 +310,39 @@ export async function getTasks(query: GetTasksQuery): Promise<GetTasksResponse> 
       tasks = tasks.filter((t: any) => t.isPublished === query.isPublished);
     }
     if (query.difficultyLevel) {
-      tasks = tasks.filter((t: any) => t.difficultyLevel === query.difficultyLevel);
+      tasks = tasks.filter(
+        (t: any) => t.difficultyLevel === query.difficultyLevel
+      );
     }
     if (query.createdBy) {
       tasks = tasks.filter((t: any) => t.createdBy === query.createdBy);
     }
 
     // Sort in-memory
-    const sort = query.sort || 'recent';
+    const sort = query.sort || "recent";
     switch (sort) {
-      case 'rating':
+      case "rating":
         tasks.sort((a: any, b: any) => {
-          if (b.ratingAverage !== a.ratingAverage) return b.ratingAverage - a.ratingAverage;
+          if (b.ratingAverage !== a.ratingAverage)
+            return b.ratingAverage - a.ratingAverage;
           return b.ratingCount - a.ratingCount;
         });
         break;
-      case 'views':
+      case "views":
         tasks.sort((a: any, b: any) => b.viewCount - a.viewCount);
         break;
-      case 'popular':
+      case "popular":
         tasks.sort((a: any, b: any) => b.completionCount - a.completionCount);
         break;
-      case 'recent':
+      case "recent":
       default:
         tasks.sort((a: any, b: any) => {
-          const aTime = (a.createdAt as any).toMillis ? (a.createdAt as any).toMillis() : new Date(a.createdAt as any).getTime();
-          const bTime = (b.createdAt as any).toMillis ? (b.createdAt as any).toMillis() : new Date(b.createdAt as any).getTime();
+          const aTime = (a.createdAt as any).toMillis
+            ? (a.createdAt as any).toMillis()
+            : new Date(a.createdAt as any).getTime();
+          const bTime = (b.createdAt as any).toMillis
+            ? (b.createdAt as any).toMillis()
+            : new Date(b.createdAt as any).getTime();
           return bTime - aTime;
         });
         break;
@@ -298,7 +353,13 @@ export async function getTasks(query: GetTasksQuery): Promise<GetTasksResponse> 
     const offset = query.offset || 0;
     const paginatedTasks = tasks.slice(offset, offset + limit);
 
-    console.log('[getTasks] Returning', paginatedTasks.length, 'tasks (total:', total, ')');
+    console.log(
+      "[getTasks] Returning",
+      paginatedTasks.length,
+      "tasks (total:",
+      total,
+      ")"
+    );
 
     return {
       tasks: paginatedTasks,
@@ -311,52 +372,66 @@ export async function getTasks(query: GetTasksQuery): Promise<GetTasksResponse> 
 
   // Legacy filtering (non-curriculum_path queries)
   if (query.subject) {
-    firestoreQuery = firestoreQuery.where('subject', '==', query.subject);
+    firestoreQuery = firestoreQuery.where("subject", "==", query.subject);
   }
 
   if (query.gradeLevel) {
-    firestoreQuery = firestoreQuery.where('gradeLevel', '==', query.gradeLevel);
+    firestoreQuery = firestoreQuery.where("gradeLevel", "==", query.gradeLevel);
   }
 
   if (query.subjectMappingId) {
-    firestoreQuery = firestoreQuery.where('subjectMappingId', '==', query.subjectMappingId);
+    firestoreQuery = firestoreQuery.where(
+      "subjectMappingId",
+      "==",
+      query.subjectMappingId
+    );
   }
 
   if (query.difficultyLevel) {
-    firestoreQuery = firestoreQuery.where('difficultyLevel', '==', query.difficultyLevel);
+    firestoreQuery = firestoreQuery.where(
+      "difficultyLevel",
+      "==",
+      query.difficultyLevel
+    );
   }
 
   if (query.createdBy) {
-    firestoreQuery = firestoreQuery.where('createdBy', '==', query.createdBy);
+    firestoreQuery = firestoreQuery.where("createdBy", "==", query.createdBy);
   }
 
   if (query.isPublished !== undefined) {
-    firestoreQuery = firestoreQuery.where('isPublished', '==', query.isPublished);
+    firestoreQuery = firestoreQuery.where(
+      "isPublished",
+      "==",
+      query.isPublished
+    );
   }
 
   // Apply sorting
-  const sort = query.sort || 'recent';
+  const sort = query.sort || "recent";
   switch (sort) {
-    case 'rating':
-      firestoreQuery = firestoreQuery.orderBy('ratingAverage', 'desc').orderBy('ratingCount', 'desc');
+    case "rating":
+      firestoreQuery = firestoreQuery
+        .orderBy("ratingAverage", "desc")
+        .orderBy("ratingCount", "desc");
       break;
-    case 'views':
-      firestoreQuery = firestoreQuery.orderBy('viewCount', 'desc');
+    case "views":
+      firestoreQuery = firestoreQuery.orderBy("viewCount", "desc");
       break;
-    case 'popular':
-      firestoreQuery = firestoreQuery.orderBy('completionCount', 'desc');
+    case "popular":
+      firestoreQuery = firestoreQuery.orderBy("completionCount", "desc");
       break;
-    case 'recent':
+    case "recent":
     default:
-      firestoreQuery = firestoreQuery.orderBy('createdAt', 'desc');
+      firestoreQuery = firestoreQuery.orderBy("createdAt", "desc");
       break;
   }
 
   // Get total count (before pagination)
-  console.log('[getTasks] About to execute count query...');
+  console.log("[getTasks] About to execute count query...");
   const countSnapshot = await firestoreQuery.get();
   const total = countSnapshot.size;
-  console.log('[getTasks] Count query returned:', total, 'documents');
+  console.log("[getTasks] Count query returned:", total, "documents");
 
   // Log all documents found
   if (total > 0) {
@@ -384,9 +459,12 @@ export async function getTasks(query: GetTasksQuery): Promise<GetTasksResponse> 
     ...(doc.data() as TaskDocument),
   }));
 
-  console.log('[getTasks] Found', tasks.length, 'tasks (total:', total, ')');
+  console.log("[getTasks] Found", tasks.length, "tasks (total:", total, ")");
   if (tasks.length > 0) {
-    console.log('[getTasks] First task curriculum_path:', tasks[0].curriculum_path);
+    console.log(
+      "[getTasks] First task curriculum_path:",
+      tasks[0].curriculum_path
+    );
   }
 
   return {
@@ -410,11 +488,11 @@ export async function submitRating(
 
   // Validate rating
   if (data.rating < 0 || data.rating > 5 || !Number.isInteger(data.rating)) {
-    throw new Error('Rating must be an integer between 0 and 5');
+    throw new Error("Rating must be an integer between 0 and 5");
   }
 
-  const taskRef = db.collection('tasks').doc(taskId);
-  const ratingRef = taskRef.collection('ratings').doc(userId);
+  const taskRef = db.collection("tasks").doc(taskId);
+  const ratingRef = taskRef.collection("ratings").doc(userId);
 
   // Run in transaction to ensure atomic updates
   await db.runTransaction(async (transaction) => {
@@ -422,7 +500,7 @@ export async function submitRating(
     const existingRatingDoc = await transaction.get(ratingRef);
 
     if (!taskDoc.exists) {
-      throw new Error('Task not found');
+      throw new Error("Task not found");
     }
 
     const taskData = taskDoc.data() as TaskDocument;
@@ -433,10 +511,12 @@ export async function submitRating(
       // Update existing rating
       const oldRating = existingRatingDoc.data()!.rating;
       const totalRating = taskData.ratingAverage * taskData.ratingCount;
-      newRatingAverage = (totalRating - oldRating + data.rating) / taskData.ratingCount;
+      newRatingAverage =
+        (totalRating - oldRating + data.rating) / taskData.ratingCount;
     } else {
       // New rating
-      const totalRating = taskData.ratingAverage * taskData.ratingCount + data.rating;
+      const totalRating =
+        taskData.ratingAverage * taskData.ratingCount + data.rating;
       newRatingCount = taskData.ratingCount + 1;
       newRatingAverage = totalRating / newRatingCount;
     }
@@ -479,7 +559,7 @@ export async function getTaskRatings(
 }> {
   const db = getFirestore();
 
-  const ratingsRef = db.collection('tasks').doc(taskId).collection('ratings');
+  const ratingsRef = db.collection("tasks").doc(taskId).collection("ratings");
 
   // Get total count
   const countSnapshot = await ratingsRef.get();
@@ -487,7 +567,7 @@ export async function getTaskRatings(
 
   // Get paginated ratings
   const snapshot = await ratingsRef
-    .orderBy('createdAt', 'desc')
+    .orderBy("createdAt", "desc")
     .limit(limit)
     .offset(offset)
     .get();
@@ -513,14 +593,14 @@ export async function searchTasks(
   // This is a simple implementation that gets all tasks and filters client-side
   // For production, consider using Algolia or Elasticsearch
 
-  let query: any = db.collection('tasks').where('isPublished', '==', true);
+  let query: any = db.collection("tasks").where("isPublished", "==", true);
 
   if (filters.subject) {
-    query = query.where('subject', '==', filters.subject);
+    query = query.where("subject", "==", filters.subject);
   }
 
   if (filters.gradeLevel) {
-    query = query.where('gradeLevel', '==', filters.gradeLevel);
+    query = query.where("gradeLevel", "==", filters.gradeLevel);
   }
 
   const snapshot = await query.get();
@@ -535,7 +615,9 @@ export async function searchTasks(
     .filter((task: TaskDocument & { id: string }) => {
       const titleMatch = task.title.toLowerCase().includes(searchLower);
       const descMatch = task.description?.toLowerCase().includes(searchLower);
-      const tagsMatch = task.tags?.some((tag: string) => tag.toLowerCase().includes(searchLower));
+      const tagsMatch = task.tags?.some((tag: string) =>
+        tag.toLowerCase().includes(searchLower)
+      );
 
       return titleMatch || descMatch || tagsMatch;
     });

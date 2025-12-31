@@ -49,9 +49,10 @@ export class TaskGeneratorService {
   /**
    * Builds a comprehensive prompt for task story generation using the new system prompt approach
    */
-  private buildTaskPrompt(
-    request: TaskGeneratorRequest
-  ): { systemPrompt: string; userMessage: string } {
+  private buildTaskPrompt(request: TaskGeneratorRequest): {
+    systemPrompt: string;
+    userMessage: string;
+  } {
     // Build the enhanced system prompt with all context
     const systemPrompt = buildSystemPrompt(request);
 
@@ -68,7 +69,10 @@ export class TaskGeneratorService {
    * - ALL variations: Use assigned location (MANDATORY, passed as parameter)
    */
   private buildTaskPromptWithVariation(
-    request: TaskGeneratorRequest & { variation_index?: number; assigned_location?: string }
+    request: TaskGeneratorRequest & {
+      variation_index?: number;
+      assigned_location?: string;
+    }
   ): { systemPrompt: string; userMessage: string } {
     // Import the helper functions dynamically
     const {
@@ -92,11 +96,18 @@ export class TaskGeneratorService {
 
       systemPrompt += "\n\n" + hintsPrompt;
 
-      console.log(`   ✅ Added ${hints.length} inspirational hints for variation 1`);
+      console.log(
+        `   ✅ Added ${hints.length} inspirational hints for variation 1`
+      );
     } else if (request.variation_index === 2 || request.variation_index === 3) {
       // Variations 2 & 3: Use 10 profession hints + 3 era hints + 3 situation hints
-      const { professions, eras, situations } = generateProfessionEraAndSituationHints();
-      const hintsPrompt = buildProfessionEraAndSituationPrompt(professions, eras, situations);
+      const { professions, eras, situations } =
+        generateProfessionEraAndSituationHints();
+      const hintsPrompt = buildProfessionEraAndSituationPrompt(
+        professions,
+        eras,
+        situations
+      );
 
       systemPrompt += "\n\n" + hintsPrompt;
 
@@ -260,9 +271,9 @@ export class TaskGeneratorService {
     try {
       // Remove markdown code blocks if present
       let cleanedText = taskText.trim();
-      cleanedText = cleanedText.replace(/^```json\s*/i, '');
-      cleanedText = cleanedText.replace(/^```\s*/i, '');
-      cleanedText = cleanedText.replace(/\s*```$/i, '');
+      cleanedText = cleanedText.replace(/^```json\s*/i, "");
+      cleanedText = cleanedText.replace(/^```\s*/i, "");
+      cleanedText = cleanedText.replace(/\s*```$/i, "");
       cleanedText = cleanedText.trim();
 
       // Try to extract JSON from the response
@@ -300,7 +311,11 @@ export class TaskGeneratorService {
           expected_answer_formats = [taskData.expected_answer_format];
         }
 
-        if (taskData.title && (description || story_chunks.length > 0) && questions.length > 0) {
+        if (
+          taskData.title &&
+          (description || story_chunks.length > 0) &&
+          questions.length > 0
+        ) {
           return {
             title: taskData.title,
             story_chunks,
@@ -357,10 +372,10 @@ export class TaskGeneratorService {
     }
 
     // Remove any text in quotes to avoid triggering text generation
-    context = context.replace(/"[^"]*"/g, '');
+    context = context.replace(/"[^"]*"/g, "");
 
     // Strip HTML tags
-    context = context.replace(/<[^>]+>/g, '');
+    context = context.replace(/<[^>]+>/g, "");
 
     return `Comic book style illustration showing: ${context}. NO TEXT, NO WORDS, NO NUMBERS, NO FORMULAS - visual scene only.`;
   }
@@ -377,14 +392,12 @@ export class TaskGeneratorService {
 
     // Time per step based on difficulty
     const stepTime =
-      difficultyLevel === "easy" ? 2 :
-      difficultyLevel === "medium" ? 3 :
-      5; // hard
+      difficultyLevel === "easy" ? 2 : difficultyLevel === "medium" ? 3 : 5; // hard
 
     // Additional time for images (students need time to analyze them)
     const imageTime = numberOfImages * 2;
 
-    return baseTime + (numberOfSteps * stepTime) + imageTime;
+    return baseTime + numberOfSteps * stepTime + imageTime;
   }
 
   /**
@@ -400,7 +413,9 @@ export class TaskGeneratorService {
     const taskId = generateTaskId();
 
     // Step 1: Generate task story/description using the new system prompt template approach
-    console.log("📝 Step 1: Generating task story with enhanced system prompt...");
+    console.log(
+      "📝 Step 1: Generating task story with enhanced system prompt..."
+    );
     const { systemPrompt, userMessage } = this.buildTaskPrompt(request);
     const taskResult = await this.textGenerator.generateWithSystemPrompt(
       systemPrompt,
@@ -434,11 +449,14 @@ export class TaskGeneratorService {
 
     // Step 3: Generate images based on the task description
     const images: TaskImage[] = [];
-    const disableImageGeneration = process.env.DISABLE_IMAGE_GENERATION === 'true';
+    const disableImageGeneration =
+      process.env.DISABLE_IMAGE_GENERATION === "true";
     const numImages = Math.min(request.number_of_images, 2); // Max 2 images
 
     if (disableImageGeneration) {
-      console.log(`🚫 Step 3: Image generation disabled via DISABLE_IMAGE_GENERATION env variable\n`);
+      console.log(
+        `🚫 Step 3: Image generation disabled via DISABLE_IMAGE_GENERATION env variable\n`
+      );
     } else if (numImages > 0) {
       console.log(`🎨 Step 3: Generating ${numImages} image(s)...`);
 
@@ -547,25 +565,32 @@ export class TaskGeneratorService {
     questions: string[];
     metadata: any;
   }> {
-    console.log(`\n${'='.repeat(100)}`);
-    console.log(`📝 GENERATING TASK TEXT VARIATION ${request.variation_index || 1}`);
-    console.log(`${'='.repeat(100)}\n`);
+    console.log(`\n${"=".repeat(100)}`);
+    console.log(
+      `📝 GENERATING TASK TEXT VARIATION ${request.variation_index || 1}`
+    );
+    console.log(`${"=".repeat(100)}\n`);
 
     // Build task prompt with variation context
-    const { systemPrompt, userMessage } = this.buildTaskPromptWithVariation(request);
+    const { systemPrompt, userMessage } =
+      this.buildTaskPromptWithVariation(request);
 
     // Log the FULL prompts being sent to AI
-    console.log(`\n${'─'.repeat(100)}`);
-    console.log(`📤 [VARIATION ${request.variation_index}] FULL SYSTEM PROMPT (${systemPrompt.length} chars):`);
-    console.log(`${'─'.repeat(100)}`);
+    console.log(`\n${"─".repeat(100)}`);
+    console.log(
+      `📤 [VARIATION ${request.variation_index}] FULL SYSTEM PROMPT (${systemPrompt.length} chars):`
+    );
+    console.log(`${"─".repeat(100)}`);
     console.log(systemPrompt);
-    console.log(`${'─'.repeat(100)}\n`);
+    console.log(`${"─".repeat(100)}\n`);
 
-    console.log(`${'─'.repeat(100)}`);
-    console.log(`📤 [VARIATION ${request.variation_index}] FULL USER MESSAGE (${userMessage.length} chars):`);
-    console.log(`${'─'.repeat(100)}`);
+    console.log(`${"─".repeat(100)}`);
+    console.log(
+      `📤 [VARIATION ${request.variation_index}] FULL USER MESSAGE (${userMessage.length} chars):`
+    );
+    console.log(`${"─".repeat(100)}`);
     console.log(userMessage);
-    console.log(`${'─'.repeat(100)}\n`);
+    console.log(`${"─".repeat(100)}\n`);
 
     console.log(`🤖 Sending request to AI...\n`);
 
@@ -581,9 +606,11 @@ export class TaskGeneratorService {
     // Parse the task JSON response
     const taskData = this.parseTaskResponse(taskResult.text);
 
-    console.log(`\n${'─'.repeat(100)}`);
-    console.log(`✅ [VARIATION ${request.variation_index}] Generated task text: "${taskData.title}"`);
-    console.log(`${'─'.repeat(100)}\n`);
+    console.log(`\n${"─".repeat(100)}`);
+    console.log(
+      `✅ [VARIATION ${request.variation_index}] Generated task text: "${taskData.title}"`
+    );
+    console.log(`${"─".repeat(100)}\n`);
 
     // Calculate estimated time
     const estimatedTime = this.calculateEstimatedTime(
@@ -636,7 +663,9 @@ export class TaskGeneratorService {
     });
 
     const solutionData = this.parseSolutionResponse(solutionResult.text);
-    console.log(`✅ Generated ${solutionData.solution_steps.length} solution steps`);
+    console.log(
+      `✅ Generated ${solutionData.solution_steps.length} solution steps`
+    );
 
     return solutionData;
   }
@@ -655,11 +684,14 @@ export class TaskGeneratorService {
     visualDescription?: string // AI-generated visual description (preferred over extracting from story)
   ): Promise<TaskImage[]> {
     const images: TaskImage[] = [];
-    const disableImageGeneration = process.env.DISABLE_IMAGE_GENERATION === 'true';
+    const disableImageGeneration =
+      process.env.DISABLE_IMAGE_GENERATION === "true";
     const numImages = Math.min(numberOfImages, 2);
 
     if (disableImageGeneration) {
-      console.log(`🚫 Image generation disabled via DISABLE_IMAGE_GENERATION env variable`);
+      console.log(
+        `🚫 Image generation disabled via DISABLE_IMAGE_GENERATION env variable`
+      );
       return images;
     }
 
@@ -668,15 +700,21 @@ export class TaskGeneratorService {
       return images;
     }
 
-    console.log(`🎨 Generating ${numImages} image(s) for: "${taskText.title}"...`);
+    console.log(
+      `🎨 Generating ${numImages} image(s) for: "${taskText.title}"...`
+    );
 
     // Use AI-provided visual description if available, otherwise extract from story
     let imagePromptBase: string;
     if (visualDescription) {
-      console.log(`   ✅ Using AI-provided visual description (no task text/formulas)`);
+      console.log(
+        `   ✅ Using AI-provided visual description (no task text/formulas)`
+      );
       imagePromptBase = `${visualDescription} Clean, vibrant ${displayTemplate} illustration style suitable for ${targetGroup}. Focus on the scene and characters, NOT educational diagrams. NO TEXT, NO WORDS, NO NUMBERS, NO FORMULAS - visual scene only.`;
     } else {
-      console.log(`   ⚠️  No visual description provided, extracting from story text (may include unwanted text)`);
+      console.log(
+        `   ⚠️  No visual description provided, extracting from story text (may include unwanted text)`
+      );
       const storyPreview = this.createImagePromptFromStory(
         taskText.story_text,
         taskText.title

@@ -34,7 +34,9 @@ describe("Story Inspiration Helper", () => {
       const hints2 = generateInspirationHints();
 
       // At least one hint should be different due to random selection
-      const hasAnyDifference = hints1.some((hint, index) => hint !== hints2[index]);
+      const hasAnyDifference = hints1.some(
+        (hint, index) => hint !== hints2[index]
+      );
       expect(hasAnyDifference).toBe(true);
     });
 
@@ -152,7 +154,9 @@ describe("Story Inspiration Helper", () => {
     it("should generate valid prompt additions with proper formatting", () => {
       const result = generateStoryInspiration("hard", "boys", ["technology"]);
 
-      expect(result.promptAdditions).toContain("## INSPIRATIONAL SCENARIO HINTS");
+      expect(result.promptAdditions).toContain(
+        "## INSPIRATIONAL SCENARIO HINTS"
+      );
       expect(result.promptAdditions).toContain("CRITICAL INSTRUCTION");
       expect(result.promptAdditions).toMatch(/\*\*/); // Bold markers
       expect(result.promptAdditions).toMatch(/\n/); // Line breaks

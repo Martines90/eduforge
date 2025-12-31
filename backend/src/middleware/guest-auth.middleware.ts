@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from 'express';
-import { verifyToken } from '../services/auth.service';
-import { verifyGuestToken } from '../services/guest-auth.service';
+import { Request, Response, NextFunction } from "express";
+import { verifyToken } from "../services/auth.service";
+import { verifyGuestToken } from "../services/guest-auth.service";
 
 /**
  * Extended Request interface with optional user or guest information
@@ -9,7 +9,7 @@ export interface GuestAuthRequest extends Request {
   user?: {
     uid: string;
     email: string;
-    role: 'teacher' | 'general_user';
+    role: "teacher" | "general_user";
     name: string;
   };
   guest?: {
@@ -45,7 +45,7 @@ export const authenticateOrGuest = async (
     }
 
     // Extract token (format: "Bearer <token>")
-    const token = authHeader.startsWith('Bearer ')
+    const token = authHeader.startsWith("Bearer ")
       ? authHeader.substring(7)
       : authHeader;
 
@@ -64,7 +64,7 @@ export const authenticateOrGuest = async (
       (req as GuestAuthRequest).user = {
         uid: decoded.uid,
         email: decoded.email,
-        role: decoded.role as 'teacher' | 'general_user',
+        role: decoded.role as "teacher" | "general_user",
         name: decoded.name,
       };
       (req as GuestAuthRequest).isGuest = false;
@@ -88,7 +88,7 @@ export const authenticateOrGuest = async (
       }
     }
   } catch (error) {
-    console.error('Authentication/Guest error:', error);
+    console.error("Authentication/Guest error:", error);
     // On any error, treat as guest
     (req as GuestAuthRequest).isGuest = true;
     next();
@@ -114,22 +114,23 @@ export const requireAuthOrGuest = async (
     if (!authHeader) {
       res.status(401).json({
         success: false,
-        error: 'Unauthorized',
-        message: 'Authorization header is required. Please provide a user token or guest token.',
+        error: "Unauthorized",
+        message:
+          "Authorization header is required. Please provide a user token or guest token.",
       });
       return;
     }
 
     // Extract token (format: "Bearer <token>")
-    const token = authHeader.startsWith('Bearer ')
+    const token = authHeader.startsWith("Bearer ")
       ? authHeader.substring(7)
       : authHeader;
 
     if (!token) {
       res.status(401).json({
         success: false,
-        error: 'Unauthorized',
-        message: 'Token is required',
+        error: "Unauthorized",
+        message: "Token is required",
       });
       return;
     }
@@ -142,7 +143,7 @@ export const requireAuthOrGuest = async (
       (req as GuestAuthRequest).user = {
         uid: decoded.uid,
         email: decoded.email,
-        role: decoded.role as 'teacher' | 'general_user',
+        role: decoded.role as "teacher" | "general_user",
         name: decoded.name,
       };
       (req as GuestAuthRequest).isGuest = false;
@@ -162,18 +163,18 @@ export const requireAuthOrGuest = async (
         // Neither JWT nor guest token - reject
         res.status(401).json({
           success: false,
-          error: 'Unauthorized',
-          message: 'Invalid or expired token',
+          error: "Unauthorized",
+          message: "Invalid or expired token",
         });
         return;
       }
     }
   } catch (error) {
-    console.error('Authentication error:', error);
+    console.error("Authentication error:", error);
     res.status(401).json({
       success: false,
-      error: 'Unauthorized',
-      message: 'Authentication failed',
+      error: "Unauthorized",
+      message: "Authentication failed",
     });
   }
 };

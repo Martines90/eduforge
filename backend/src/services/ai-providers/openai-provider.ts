@@ -18,7 +18,11 @@ export class OpenAIProvider implements IAIProvider {
   private client: OpenAI;
   private imageModel: string;
 
-  constructor(apiKey: string, defaultModel: string, imageModel: string = "dall-e-3") {
+  constructor(
+    apiKey: string,
+    defaultModel: string,
+    imageModel: string = "dall-e-3"
+  ) {
     if (!apiKey) {
       throw new Error("OpenAI API key is required");
     }
@@ -32,7 +36,9 @@ export class OpenAIProvider implements IAIProvider {
     console.log(`   Image model: ${this.imageModel}`);
   }
 
-  async generateCompletion(request: AICompletionRequest): Promise<AICompletionResponse> {
+  async generateCompletion(
+    request: AICompletionRequest
+  ): Promise<AICompletionResponse> {
     const model = request.model || this.defaultModel;
 
     try {
@@ -68,7 +74,9 @@ export class OpenAIProvider implements IAIProvider {
     }
   }
 
-  async generateImage(request: ImageGenerationRequest): Promise<ImageGenerationResponse> {
+  async generateImage(
+    request: ImageGenerationRequest
+  ): Promise<ImageGenerationResponse> {
     try {
       console.log(`🎨 [OpenAI] Generating image with DALL-E-3`);
       console.log(`   Prompt: ${request.prompt.substring(0, 100)}...`);

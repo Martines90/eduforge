@@ -9,7 +9,10 @@ import { getFirestore } from "../config/firebase.config";
 import { AuthRequest } from "../middleware/auth.middleware";
 import { GuestAuthRequest } from "../middleware/guest-auth.middleware";
 import { deductTaskCredit } from "../services/auth.service";
-import { incrementGuestGeneration, getRemainingGenerations } from "../services/guest-auth.service";
+import {
+  incrementGuestGeneration,
+  getRemainingGenerations,
+} from "../services/guest-auth.service";
 import { TRIAL_START_CREDITS } from "../constants/credits";
 
 export class TaskController {
@@ -48,28 +51,45 @@ export class TaskController {
       const result = await this.taskGenerator.generateTask(requestData);
 
       // Store images permanently in Firebase Storage immediately after generation
-      if (result.generatedTask.images && result.generatedTask.images.length > 0) {
-        console.log(`📸 Storing ${result.generatedTask.images.length} image(s) permanently...`);
+      if (
+        result.generatedTask.images &&
+        result.generatedTask.images.length > 0
+      ) {
+        console.log(
+          `📸 Storing ${result.generatedTask.images.length} image(s) permanently...`
+        );
 
         try {
           const imageStorage = new ImageStorageService();
 
           // Extract URLs from TaskImage objects
-          const temporaryUrls = result.generatedTask.images.map(img => img.url);
+          const temporaryUrls = result.generatedTask.images.map(
+            (img) => img.url
+          );
 
           // Download from BFL and upload to Firebase Storage
-          const permanentUrls = await imageStorage.storeImagesPermanently(temporaryUrls, result.taskId);
+          const permanentUrls = await imageStorage.storeImagesPermanently(
+            temporaryUrls,
+            result.taskId
+          );
 
           // Update the task images with permanent URLs
-          result.generatedTask.images = result.generatedTask.images.map((img, index) => ({
-            ...img,
-            url: permanentUrls[index],
-          }));
+          result.generatedTask.images = result.generatedTask.images.map(
+            (img, index) => ({
+              ...img,
+              url: permanentUrls[index],
+            })
+          );
 
           console.log(`✅ Images stored permanently in Firebase Storage`);
         } catch (imageError: any) {
-          console.error('⚠️ Failed to store images permanently:', imageError.message);
-          console.warn('⚠️ Continuing with temporary BFL URLs (may have CORS issues)');
+          console.error(
+            "⚠️ Failed to store images permanently:",
+            imageError.message
+          );
+          console.warn(
+            "⚠️ Continuing with temporary BFL URLs (may have CORS issues)"
+          );
           // Continue with temporary URLs - user can still see the task
         }
       }
@@ -123,7 +143,10 @@ export class TaskController {
       console.log(`   Curriculum: ${curriculum_path}`);
 
       // Create a minimal request object to locate the curriculum directory
-      const request: Pick<TaskGeneratorRequest, "country_code" | "curriculum_path"> = {
+      const request: Pick<
+        TaskGeneratorRequest,
+        "country_code" | "curriculum_path"
+      > = {
         country_code: country_code as string,
         curriculum_path: curriculum_path as string,
       };
@@ -165,11 +188,13 @@ export class TaskController {
     next: NextFunction
   ): Promise<void> => {
     try {
-      const { generate3UniqueLocations } = require("../utils/story-inspiration.helper");
+      const {
+        generate3UniqueLocations,
+      } = require("../utils/story-inspiration.helper");
       const locations = generate3UniqueLocations();
 
       console.log("📥 Request for 3 random locations");
-      console.log(`   🌍 Generated locations: ${locations.join(', ')}`);
+      console.log(`   🌍 Generated locations: ${locations.join(", ")}`);
 
       res.status(200).json({
         success: true,
@@ -190,16 +215,22 @@ export class TaskController {
     next: NextFunction
   ): Promise<void> => {
     try {
-      const requestData: TaskGeneratorRequest & { variation_index?: number; assigned_location?: string } = req.body;
+      const requestData: TaskGeneratorRequest & {
+        variation_index?: number;
+        assigned_location?: string;
+      } = req.body;
 
       console.log("📥 Request to generate task text");
       console.log(`   Curriculum: ${requestData.curriculum_path}`);
       console.log(`   Variation: ${requestData.variation_index || 1}`);
       if (requestData.assigned_location) {
-        console.log(`   🌍 Assigned location: ${requestData.assigned_location}`);
+        console.log(
+          `   🌍 Assigned location: ${requestData.assigned_location}`
+        );
       }
 
-      const taskData = await this.taskGenerator.generateTaskTextOnly(requestData);
+      const taskData =
+        await this.taskGenerator.generateTaskTextOnly(requestData);
 
       res.status(200).json({
         success: true,
@@ -222,10 +253,15 @@ export class TaskController {
     try {
       const { task_variations, criteria } = req.body;
 
-      if (!task_variations || !Array.isArray(task_variations) || task_variations.length !== 3) {
+      if (
+        !task_variations ||
+        !Array.isArray(task_variations) ||
+        task_variations.length !== 3
+      ) {
         res.status(400).json({
           success: false,
-          message: "Expected exactly 3 task variations in task_variations array",
+          message:
+            "Expected exactly 3 task variations in task_variations array",
         });
         return;
       }
@@ -264,19 +300,23 @@ export class TaskController {
     next: NextFunction
   ): Promise<void> => {
     try {
-      const { task_text, precision_settings, educational_model, country_code } = req.body;
+      const { task_text, precision_settings, educational_model, country_code } =
+        req.body;
 
       if (!task_text || !task_text.title || !task_text.story_text) {
         res.status(400).json({
           success: false,
-          message: "Missing required task_text object with title and story_text",
+          message:
+            "Missing required task_text object with title and story_text",
         });
         return;
       }
 
       console.log("📥 Request to generate solution");
       console.log(`   Task: ${task_text.title}`);
-      console.log(`   Country: ${country_code || task_text.metadata?.country_code || 'US'}`);
+      console.log(
+        `   Country: ${country_code || task_text.metadata?.country_code || "US"}`
+      );
 
       // Build a minimal request object for solution generation
       const request: any = {
@@ -322,7 +362,8 @@ export class TaskController {
       if (!task_text || !task_text.title || !task_text.story_text) {
         res.status(400).json({
           success: false,
-          message: "Missing required task_text object with title and story_text",
+          message:
+            "Missing required task_text object with title and story_text",
         });
         return;
       }
@@ -333,7 +374,9 @@ export class TaskController {
       console.log(`   Task: ${task_text.title}`);
       console.log(`   Images: ${numImages}`);
       if (visual_description) {
-        console.log(`   Visual description provided: ${visual_description.substring(0, 100)}...`);
+        console.log(
+          `   Visual description provided: ${visual_description.substring(0, 100)}...`
+        );
       }
 
       const images = await this.taskGenerator.generateImagesOnly(
@@ -355,10 +398,13 @@ export class TaskController {
           const tempTaskId = `temp_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 
           // Extract URLs from TaskImage objects
-          const temporaryUrls = images.map(img => img.url);
+          const temporaryUrls = images.map((img) => img.url);
 
           // Download from BFL and upload to Firebase Storage
-          const permanentUrls = await imageStorage.storeImagesPermanently(temporaryUrls, tempTaskId);
+          const permanentUrls = await imageStorage.storeImagesPermanently(
+            temporaryUrls,
+            tempTaskId
+          );
 
           // Update the image URLs with permanent URLs
           images.forEach((img, index) => {
@@ -367,8 +413,13 @@ export class TaskController {
 
           console.log(`✅ Images stored permanently in Firebase Storage`);
         } catch (imageError: any) {
-          console.error('⚠️ Failed to store images permanently:', imageError.message);
-          console.warn('⚠️ Continuing with temporary BFL URLs (may have CORS issues)');
+          console.error(
+            "⚠️ Failed to store images permanently:",
+            imageError.message
+          );
+          console.warn(
+            "⚠️ Continuing with temporary BFL URLs (may have CORS issues)"
+          );
           // Continue with temporary URLs - user can still use them
         }
       }
@@ -398,7 +449,8 @@ export class TaskController {
       if (!task_id || !task_data) {
         res.status(400).json({
           success: false,
-          message: "Missing required fields: task_id and task_data are required",
+          message:
+            "Missing required fields: task_id and task_data are required",
         });
         return;
       }
@@ -412,7 +464,7 @@ export class TaskController {
       if (guestReq.isGuest) {
         res.status(403).json({
           success: false,
-          error: 'Forbidden',
+          error: "Forbidden",
           message: `Guest users cannot save tasks. Please register to save your tasks and get ${TRIAL_START_CREDITS} free task generation credits!`,
         });
         return;
@@ -427,7 +479,8 @@ export class TaskController {
       }
 
       // Get creator name from JWT token (no database lookup needed!)
-      const creatorName = authenticatedUser.name || authenticatedUser.email || 'Unknown Teacher';
+      const creatorName =
+        authenticatedUser.name || authenticatedUser.email || "Unknown Teacher";
 
       console.log(`📥 Request to save task: ${task_id}`);
       console.log(`   Curriculum path: ${curriculum_path}`);
@@ -437,50 +490,59 @@ export class TaskController {
 
       // Parse curriculum path to extract fields for basic metadata
       // Format: "mathematics:grade_9_10:Topic1:Topic2:SubTopic"
-      let subject = 'mathematics';
-      let gradeLevel = 'grade_9_10';
-      let subjectMappingPath = '';
+      let subject = "mathematics";
+      let gradeLevel = "grade_9_10";
+      let subjectMappingPath = "";
 
       if (curriculum_path) {
-        const parts = curriculum_path.split(':');
+        const parts = curriculum_path.split(":");
         if (parts.length >= 2) {
           subject = parts[0];
           gradeLevel = parts[1];
         }
         if (parts.length >= 3) {
           // Store the topic hierarchy for display purposes
-          subjectMappingPath = parts.slice(2).join(' > ');
+          subjectMappingPath = parts.slice(2).join(" > ");
         }
       }
 
       console.log(`   Extracted - Subject: ${subject}, Grade: ${gradeLevel}`);
 
       // Extract educational model from task_data metadata
-      const educationalModel = task_data.metadata?.educational_model || 'secular';
+      const educationalModel =
+        task_data.metadata?.educational_model || "secular";
 
       // Store images permanently in Firebase Storage (if any exist)
       let permanentImages: string[] = [];
       if (task_data.images && task_data.images.length > 0) {
-        console.log(`📸 Processing ${task_data.images.length} image(s) for permanent storage...`);
+        console.log(
+          `📸 Processing ${task_data.images.length} image(s) for permanent storage...`
+        );
 
         try {
           const imageStorage = new ImageStorageService();
 
           // Extract URLs from images (handle both string and object formats)
           const temporaryUrls = task_data.images.map((img: any) =>
-            typeof img === 'string' ? img : img.url || img
+            typeof img === "string" ? img : img.url || img
           );
 
           // Download from BFL and upload to Firebase Storage
-          permanentImages = await imageStorage.storeImagesPermanently(temporaryUrls, task_id);
+          permanentImages = await imageStorage.storeImagesPermanently(
+            temporaryUrls,
+            task_id
+          );
 
           console.log(`✅ Images stored permanently in Firebase Storage`);
         } catch (imageError: any) {
-          console.error('⚠️ Failed to store images permanently:', imageError.message);
-          console.warn('⚠️ Falling back to temporary BFL URLs');
+          console.error(
+            "⚠️ Failed to store images permanently:",
+            imageError.message
+          );
+          console.warn("⚠️ Falling back to temporary BFL URLs");
           // Fallback to original URLs if storage fails
           permanentImages = task_data.images.map((img: any) =>
-            typeof img === 'string' ? img : img.url || img
+            typeof img === "string" ? img : img.url || img
           );
         }
       }
@@ -490,7 +552,7 @@ export class TaskController {
         // Original fields from save request
         task_id,
         task_data,
-        curriculum_path: curriculum_path || 'unknown',
+        curriculum_path: curriculum_path || "unknown",
 
         // Extracted fields for metadata and display
         subject,
@@ -498,8 +560,10 @@ export class TaskController {
         subjectMappingPath, // Human-readable path like "Halmazok > Halmazműveletek > Unió"
 
         // Task metadata
-        title: task_data.description ? this.extractTitleFromHtml(task_data.description) : 'Untitled Task',
-        description: task_data.description || '',
+        title: task_data.description
+          ? this.extractTitleFromHtml(task_data.description)
+          : "Untitled Task",
+        description: task_data.description || "",
         content: {
           description: task_data.description,
           solution: task_data.solution,
@@ -507,7 +571,7 @@ export class TaskController {
         },
 
         // User and location info
-        country_code: country_code || 'US',
+        country_code: country_code || "US",
         educationalModel: educationalModel,
         created_by: authenticatedUser.uid,
         creatorName: creatorName,
@@ -519,8 +583,9 @@ export class TaskController {
         updated_at: new Date().toISOString(),
 
         // Task properties (from metadata or defaults)
-        difficultyLevel: task_data.metadata?.difficulty_level || 'medium',
-        estimatedDurationMinutes: task_data.metadata?.estimated_time_minutes || 30,
+        difficultyLevel: task_data.metadata?.difficulty_level || "medium",
+        estimatedDurationMinutes:
+          task_data.metadata?.estimated_time_minutes || 30,
         tags: task_data.metadata?.tags || [],
 
         // Statistics
@@ -531,35 +596,41 @@ export class TaskController {
       };
 
       // Check if task already exists to determine if this is an update or new save
-      const existingTaskDoc = await db.collection('tasks').doc(task_id).get();
+      const existingTaskDoc = await db.collection("tasks").doc(task_id).get();
       const isUpdate = existingTaskDoc.exists;
 
       if (isUpdate) {
         console.log(`📝 Updating existing task: ${task_id}`);
         // For updates, preserve certain fields and only update content
-        await db.collection('tasks').doc(task_id).update({
-          task_data,
-          curriculum_path: curriculum_path || 'unknown',
-          subject,
-          gradeLevel,
-          subjectMappingPath,
-          title: task_data.description ? this.extractTitleFromHtml(task_data.description) : 'Untitled Task',
-          description: task_data.description || '',
-          content: {
-            description: task_data.description,
-            solution: task_data.solution,
-            images: permanentImages,
-          },
-          updated_at: new Date().toISOString(),
-          difficultyLevel: task_data.metadata?.difficulty_level || 'medium',
-          estimatedDurationMinutes: task_data.metadata?.estimated_time_minutes || 30,
-          tags: task_data.metadata?.tags || [],
-        });
+        await db
+          .collection("tasks")
+          .doc(task_id)
+          .update({
+            task_data,
+            curriculum_path: curriculum_path || "unknown",
+            subject,
+            gradeLevel,
+            subjectMappingPath,
+            title: task_data.description
+              ? this.extractTitleFromHtml(task_data.description)
+              : "Untitled Task",
+            description: task_data.description || "",
+            content: {
+              description: task_data.description,
+              solution: task_data.solution,
+              images: permanentImages,
+            },
+            updated_at: new Date().toISOString(),
+            difficultyLevel: task_data.metadata?.difficulty_level || "medium",
+            estimatedDurationMinutes:
+              task_data.metadata?.estimated_time_minutes || 30,
+            tags: task_data.metadata?.tags || [],
+          });
         console.log(`✅ Task updated successfully: ${task_id}`);
       } else {
         console.log(`📝 Creating new task: ${task_id}`);
         // For new tasks, save the full document
-        await db.collection('tasks').doc(task_id).set(taskDoc);
+        await db.collection("tasks").doc(task_id).set(taskDoc);
         console.log(`✅ Task created successfully: ${task_id}`);
       }
 
@@ -568,26 +639,34 @@ export class TaskController {
       if (!isUpdate) {
         try {
           remainingCredits = await deductTaskCredit(authenticatedUser.uid);
-          console.log(`✅ Task credit deducted. Remaining credits: ${remainingCredits}`);
+          console.log(
+            `✅ Task credit deducted. Remaining credits: ${remainingCredits}`
+          );
         } catch (creditError: any) {
           // If credit deduction fails, we should still return success since the task is saved
           // But log the error for monitoring
-          console.error('⚠️ Failed to deduct task credit:', creditError.message);
+          console.error(
+            "⚠️ Failed to deduct task credit:",
+            creditError.message
+          );
           remainingCredits = 0; // Default to 0 if we couldn't deduct
         }
       } else {
         // For updates, just fetch current credits without deducting
         try {
-          const userDoc = await db.collection('teachers').doc(authenticatedUser.uid).get();
+          const userDoc = await db
+            .collection("teachers")
+            .doc(authenticatedUser.uid)
+            .get();
           remainingCredits = userDoc.data()?.taskCredits || 0;
         } catch (error: any) {
-          console.error('⚠️ Failed to fetch task credits:', error.message);
+          console.error("⚠️ Failed to fetch task credits:", error.message);
           remainingCredits = 0;
         }
       }
 
       // Generate public share link
-      const baseUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
+      const baseUrl = process.env.FRONTEND_URL || "http://localhost:3000";
       const publicShareLink = `${baseUrl}/tasks/${task_id}`;
 
       res.status(201).json({
@@ -598,7 +677,7 @@ export class TaskController {
         remaining_credits: remainingCredits,
       });
     } catch (error) {
-      console.error('❌ Error saving task:', error);
+      console.error("❌ Error saving task:", error);
       next(error);
     }
   };
@@ -631,11 +710,16 @@ export class TaskController {
 
       // Convert base64 PDF data to buffer
       // Handle both formats: "data:application/pdf;base64,..." and "data:application/pdf;filename=...;base64,..."
-      const pdfBase64 = req.body.pdfData.replace(/^data:application\/pdf;[^,]*,/, '');
-      const pdfBuffer = Buffer.from(pdfBase64, 'base64');
+      const pdfBase64 = req.body.pdfData.replace(
+        /^data:application\/pdf;[^,]*,/,
+        ""
+      );
+      const pdfBuffer = Buffer.from(pdfBase64, "base64");
 
       console.log(`📄 PDF size: ${(pdfBuffer.length / 1024).toFixed(2)} KB`);
-      console.log(`📄 Original data length: ${req.body.pdfData.length}, Base64 length: ${pdfBase64.length}`);
+      console.log(
+        `📄 Original data length: ${req.body.pdfData.length}, Base64 length: ${pdfBase64.length}`
+      );
       if (taskTitle) {
         console.log(`📄 Task title: ${taskTitle}`);
       }
@@ -659,7 +743,7 @@ export class TaskController {
         pdfUrl: result.pdfUrl,
       });
     } catch (error) {
-      console.error('❌ Error uploading PDF:', error);
+      console.error("❌ Error uploading PDF:", error);
       next(error);
     }
   };
@@ -689,16 +773,23 @@ export class TaskController {
       // If this is a guest session, check and increment generation count AFTER generation
       if (authReq.isGuest && authReq.guest) {
         try {
-          const session = await incrementGuestGeneration(authReq.guest.sessionId, result.taskId);
-          const remaining = await getRemainingGenerations(authReq.guest.sessionId);
+          const session = await incrementGuestGeneration(
+            authReq.guest.sessionId,
+            result.taskId
+          );
+          const remaining = await getRemainingGenerations(
+            authReq.guest.sessionId
+          );
 
-          console.log(`   Guest generations: ${session.generationsUsed}/${session.maxGenerations}`);
+          console.log(
+            `   Guest generations: ${session.generationsUsed}/${session.maxGenerations}`
+          );
           console.log(`   Remaining: ${remaining}`);
         } catch (limitError: any) {
           // Guest has reached their limit
           res.status(403).json({
             success: false,
-            error: 'Generation limit reached',
+            error: "Generation limit reached",
             message: limitError.message,
             data: {
               generationsUsed: authReq.guest.generationsUsed,
@@ -711,22 +802,34 @@ export class TaskController {
       }
 
       // Store images permanently in Firebase Storage
-      if (result.generatedTask.images && result.generatedTask.images.length > 0) {
-        console.log(`📸 Storing ${result.generatedTask.images.length} image(s) for guest...`);
+      if (
+        result.generatedTask.images &&
+        result.generatedTask.images.length > 0
+      ) {
+        console.log(
+          `📸 Storing ${result.generatedTask.images.length} image(s) for guest...`
+        );
 
         try {
           const imageStorage = new ImageStorageService();
-          const temporaryUrls = result.generatedTask.images.map(img => img.url);
-          const permanentUrls = await imageStorage.storeImagesPermanently(temporaryUrls, result.taskId);
+          const temporaryUrls = result.generatedTask.images.map(
+            (img) => img.url
+          );
+          const permanentUrls = await imageStorage.storeImagesPermanently(
+            temporaryUrls,
+            result.taskId
+          );
 
-          result.generatedTask.images = result.generatedTask.images.map((img, index) => ({
-            ...img,
-            url: permanentUrls[index],
-          }));
+          result.generatedTask.images = result.generatedTask.images.map(
+            (img, index) => ({
+              ...img,
+              url: permanentUrls[index],
+            })
+          );
 
           console.log(`✅ Guest images stored permanently`);
         } catch (imageError: any) {
-          console.error('⚠️ Failed to store guest images:', imageError.message);
+          console.error("⚠️ Failed to store guest images:", imageError.message);
         }
       }
 
@@ -759,7 +862,7 @@ export class TaskController {
 
       res.status(201).json(response);
     } catch (error) {
-      console.error('❌ Error in guest task generation:', error);
+      console.error("❌ Error in guest task generation:", error);
       next(error);
     }
   };
@@ -771,11 +874,11 @@ export class TaskController {
     // Extract text from <h1> tag if present
     const h1Match = html.match(/<h1[^>]*>(.*?)<\/h1>/i);
     if (h1Match && h1Match[1]) {
-      return h1Match[1].replace(/<[^>]*>/g, '').trim();
+      return h1Match[1].replace(/<[^>]*>/g, "").trim();
     }
 
     // Otherwise extract first 50 chars
-    const textOnly = html.replace(/<[^>]*>/g, '').trim();
-    return textOnly.substring(0, 50) + (textOnly.length > 50 ? '...' : '');
+    const textOnly = html.replace(/<[^>]*>/g, "").trim();
+    return textOnly.substring(0, 50) + (textOnly.length > 50 ? "..." : "");
   }
 }

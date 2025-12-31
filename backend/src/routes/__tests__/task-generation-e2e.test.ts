@@ -101,10 +101,7 @@ describe("Task Generation E2E Flow", () => {
         key: "solving_basic",
         name: "Solving Basic Equations",
         short_description: "Introduction to solving basic linear equations",
-        example_tasks: [
-          "Solve for x: 2x + 5 = 13",
-          "Solve for x: 3x - 7 = 11",
-        ],
+        example_tasks: ["Solve for x: 2x + 5 = 13", "Solve for x: 3x - 7 = 11"],
       },
       parentTopics: [
         { key: "algebra", name: "Algebra" },
@@ -113,7 +110,9 @@ describe("Task Generation E2E Flow", () => {
       fullPath: "math:grade_9_10:algebra:linear_equations:solving_basic",
     });
 
-    (curriculumMapper.formatCurriculumTopicForPrompt as jest.Mock).mockReturnValue(
+    (
+      curriculumMapper.formatCurriculumTopicForPrompt as jest.Mock
+    ).mockReturnValue(
       "\n## CURRICULUM TOPIC INFORMATION\n**Topic:** Solving Basic Equations\n"
     );
 
@@ -139,9 +138,12 @@ describe("Task Generation E2E Flow", () => {
     });
 
     // Create mock instances
-    mockTextGenerator = new TextGeneratorService() as jest.Mocked<TextGeneratorService>;
-    mockImageGenerator = new ImageGeneratorService() as jest.Mocked<ImageGeneratorService>;
-    mockTaskStorage = new TaskStorageService() as jest.Mocked<TaskStorageService>;
+    mockTextGenerator =
+      new TextGeneratorService() as jest.Mocked<TextGeneratorService>;
+    mockImageGenerator =
+      new ImageGeneratorService() as jest.Mocked<ImageGeneratorService>;
+    mockTaskStorage =
+      new TaskStorageService() as jest.Mocked<TaskStorageService>;
 
     // Mock TextGeneratorService prototype methods
     TextGeneratorService.prototype.generateWithSystemPrompt = jest
@@ -210,13 +212,11 @@ describe("Task Generation E2E Flow", () => {
       });
 
     // Mock ImageGeneratorService prototype method
-    ImageGeneratorService.prototype.generate = jest
-      .fn()
-      .mockResolvedValue({
-        url: "https://cdn.example.com/generated-bridge-image-abc123.png",
-        revisedPrompt:
-          "Modern urban pedestrian bridge construction with engineers working on steel beams",
-      });
+    ImageGeneratorService.prototype.generate = jest.fn().mockResolvedValue({
+      url: "https://cdn.example.com/generated-bridge-image-abc123.png",
+      revisedPrompt:
+        "Modern urban pedestrian bridge construction with engineers working on steel beams",
+    });
 
     // Mock TaskStorageService prototype methods
     TaskStorageService.prototype.saveTask = jest
@@ -494,9 +494,8 @@ describe("Task Generation E2E Flow", () => {
       expect(TaskStorageService.prototype.saveTask).toHaveBeenCalledTimes(1);
 
       // Get the saved task data
-      const saveTaskCall = (
-        TaskStorageService.prototype.saveTask as jest.Mock
-      ).mock.calls[0];
+      const saveTaskCall = (TaskStorageService.prototype.saveTask as jest.Mock)
+        .mock.calls[0];
       const taskId = saveTaskCall[0];
       const taskRequest = saveTaskCall[1];
       const taskData = saveTaskCall[2];

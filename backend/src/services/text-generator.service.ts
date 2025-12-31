@@ -29,7 +29,11 @@ export class TextGeneratorService {
     const completionTokens = response.usage?.completionTokens ?? 0;
     const totalTokens = response.usage?.totalTokens ?? 0;
 
-    const cost = this.calculateCost(promptTokens, completionTokens, response.model);
+    const cost = this.calculateCost(
+      promptTokens,
+      completionTokens,
+      response.model
+    );
 
     console.log(`✅ Generated ${totalTokens} tokens ($${cost.toFixed(4)})\n`);
 
@@ -69,7 +73,11 @@ export class TextGeneratorService {
     const completionTokens = response.usage?.completionTokens ?? 0;
     const totalTokens = response.usage?.totalTokens ?? 0;
 
-    const cost = this.calculateCost(promptTokens, completionTokens, response.model);
+    const cost = this.calculateCost(
+      promptTokens,
+      completionTokens,
+      response.model
+    );
 
     console.log(`✅ Generated ${totalTokens} tokens ($${cost.toFixed(4)})\n`);
 
@@ -92,7 +100,7 @@ export class TextGeneratorService {
       "gpt-4o-mini": { input: 0.15, output: 0.6 },
       "gpt-4": { input: 30.0, output: 60.0 },
       "gpt-4-turbo": { input: 10.0, output: 30.0 },
-      "o1": { input: 15.0, output: 60.0 },
+      o1: { input: 15.0, output: 60.0 },
       "o1-mini": { input: 3.0, output: 12.0 },
       "o3-mini": { input: 1.1, output: 4.4 },
 

@@ -18,16 +18,16 @@
  * }
  */
 
-import { getFirestore } from '../config/firebase.config';
-import { initializeFirebase } from '../config/firebase.config';
+import { getFirestore } from "../config/firebase.config";
+import { initializeFirebase } from "../config/firebase.config";
 
 initializeFirebase();
 const db = getFirestore();
 
 async function migrateSubscriptionStructure() {
-  console.log('🔄 Starting subscription structure migration...\n');
+  console.log("🔄 Starting subscription structure migration...\n");
 
-  const usersRef = db.collection('users');
+  const usersRef = db.collection("users");
   const snapshot = await usersRef.get();
 
   let migratedCount = 0;
@@ -44,7 +44,7 @@ async function migrateSubscriptionStructure() {
       // Convert old structure to new structure
       const updatedSubscription: any = {
         tier: userData.subscription.plan,
-        status: userData.subscription.status || 'active',
+        status: userData.subscription.status || "active",
       };
 
       // Map date fields
@@ -62,10 +62,12 @@ async function migrateSubscriptionStructure() {
 
       // Preserve Stripe-related fields if they exist
       if (userData.subscription.stripeCustomerId) {
-        updatedSubscription.stripeCustomerId = userData.subscription.stripeCustomerId;
+        updatedSubscription.stripeCustomerId =
+          userData.subscription.stripeCustomerId;
       }
       if (userData.subscription.stripeSubscriptionId) {
-        updatedSubscription.stripeSubscriptionId = userData.subscription.stripeSubscriptionId;
+        updatedSubscription.stripeSubscriptionId =
+          userData.subscription.stripeSubscriptionId;
       }
       if (userData.subscription.stripePriceId) {
         updatedSubscription.stripePriceId = userData.subscription.stripePriceId;
@@ -73,7 +75,7 @@ async function migrateSubscriptionStructure() {
 
       // Update the document
       await doc.ref.update({
-        subscription: updatedSubscription
+        subscription: updatedSubscription,
       });
 
       console.log(`   New: tier="${updatedSubscription.tier}"`);
@@ -85,16 +87,16 @@ async function migrateSubscriptionStructure() {
     }
   }
 
-  console.log('📊 Migration Summary:');
+  console.log("📊 Migration Summary:");
   console.log(`   Migrated: ${migratedCount}`);
   console.log(`   Skipped (already correct): ${skippedCount}`);
   console.log(`   Total users: ${snapshot.docs.length}`);
-  console.log('\n✅ Migration completed!');
+  console.log("\n✅ Migration completed!");
 }
 
 migrateSubscriptionStructure()
   .then(() => process.exit(0))
-  .catch(err => {
-    console.error('❌ Migration failed:', err);
+  .catch((err) => {
+    console.error("❌ Migration failed:", err);
     process.exit(1);
   });

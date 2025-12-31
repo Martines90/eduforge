@@ -1,6 +1,10 @@
-import { getFirestore } from '../config/firebase.config';
-import { SubscriptionTier, SubscriptionData, SUBSCRIPTION_PLANS } from '../types/subscription.types';
-import { UserDocument } from '../types/auth.types';
+import { getFirestore } from "../config/firebase.config";
+import {
+  SubscriptionTier,
+  SubscriptionData,
+  SUBSCRIPTION_PLANS,
+} from "../types/subscription.types";
+import { UserDocument } from "../types/auth.types";
 
 /**
  * Mock payment service for localhost development
@@ -19,25 +23,25 @@ export async function createMockCheckoutSession(
   const db = getFirestore();
 
   // Get user
-  const userDoc = await db.collection('users').doc(userId).get();
+  const userDoc = await db.collection("users").doc(userId).get();
   if (!userDoc.exists) {
-    throw new Error('User not found');
+    throw new Error("User not found");
   }
 
   const user = userDoc.data() as UserDocument;
 
   // Trial users can't checkout for trial
-  if (tier === 'trial') {
-    throw new Error('Cannot purchase trial subscription');
+  if (tier === "trial") {
+    throw new Error("Cannot purchase trial subscription");
   }
 
   // Generate mock session ID with tier info
   const sessionId = `mock_session_${Date.now()}_${userId}_${tier}`;
 
   // In mock mode, redirect directly to success URL with session_id, mock flag, and tier
-  const mockUrl = `${successUrl}${successUrl.includes('?') ? '&' : '?'}session_id=${sessionId}&mock=true&tier=${tier}`;
+  const mockUrl = `${successUrl}${successUrl.includes("?") ? "&" : "?"}session_id=${sessionId}&mock=true&tier=${tier}`;
 
-  console.log('[Mock Payment] Created mock checkout session:', {
+  console.log("[Mock Payment] Created mock checkout session:", {
     sessionId,
     userId,
     tier,
@@ -60,16 +64,16 @@ export async function handleMockCheckoutSuccess(
 ): Promise<void> {
   const db = getFirestore();
 
-  console.log('[Mock Payment] Processing mock payment success:', {
+  console.log("[Mock Payment] Processing mock payment success:", {
     sessionId,
     userId,
     tier,
   });
 
   // Get user
-  const userDoc = await db.collection('users').doc(userId).get();
+  const userDoc = await db.collection("users").doc(userId).get();
   if (!userDoc.exists) {
-    throw new Error('User not found');
+    throw new Error("User not found");
   }
 
   const user = userDoc.data() as UserDocument;
@@ -82,7 +86,7 @@ export async function handleMockCheckoutSuccess(
   // Create mock subscription data
   const subscriptionData: SubscriptionData = {
     tier,
-    status: 'active',
+    status: "active",
     startDate: startDate as any,
     endDate: endDate as any,
     stripeCustomerId: `mock_customer_${userId}`,
@@ -95,13 +99,13 @@ export async function handleMockCheckoutSuccess(
   const plan = SUBSCRIPTION_PLANS[tier];
 
   // Update user document
-  await db.collection('users').doc(userId).update({
+  await db.collection("users").doc(userId).update({
     subscription: subscriptionData,
     taskCredits: plan.features.taskCreationCredits,
     updatedAt: new Date(),
   });
 
-  console.log('[Mock Payment] Successfully upgraded user:', {
+  console.log("[Mock Payment] Successfully upgraded user:", {
     userId,
     tier,
     credits: plan.features.taskCreationCredits,
@@ -115,50 +119,52 @@ export async function handleMockCheckoutSuccess(
 export async function cancelMockSubscription(userId: string): Promise<void> {
   const db = getFirestore();
 
-  const userDoc = await db.collection('users').doc(userId).get();
+  const userDoc = await db.collection("users").doc(userId).get();
   if (!userDoc.exists) {
-    throw new Error('User not found');
+    throw new Error("User not found");
   }
 
   const user = userDoc.data() as UserDocument;
 
   if (!user.subscription) {
-    throw new Error('No active subscription found');
+    throw new Error("No active subscription found");
   }
 
   // Mark subscription to cancel at period end
-  await db.collection('users').doc(userId).update({
-    'subscription.cancelAtPeriodEnd': true,
+  await db.collection("users").doc(userId).update({
+    "subscription.cancelAtPeriodEnd": true,
     updatedAt: new Date(),
   });
 
-  console.log('[Mock Payment] Subscription marked for cancellation:', userId);
+  console.log("[Mock Payment] Subscription marked for cancellation:", userId);
 }
 
 /**
  * Mock subscription reactivation
  */
-export async function reactivateMockSubscription(userId: string): Promise<void> {
+export async function reactivateMockSubscription(
+  userId: string
+): Promise<void> {
   const db = getFirestore();
 
-  const userDoc = await db.collection('users').doc(userId).get();
+  const userDoc = await db.collection("users").doc(userId).get();
   if (!userDoc.exists) {
-    throw new Error('User not found');
+    throw new Error("User not found");
   }
 
   const user = userDoc.data() as UserDocument;
 
   if (!user.subscription) {
-    throw new Error('No subscription found');
+    throw new Error("No subscription found");
   }
 
   // Remove cancel flag
-  await db.collection('users').doc(userId).update({
-    'subscription.cancelAtPeriodEnd': false,
+  await db.collection("users").doc(userId).update({
+    "subscription.cancelAtPeriodEnd": false,
     updatedAt: new Date(),
   });
 
-  console.log('[Mock Payment] Subscription reactivated:', userId);
+  console.log("[Mock Payment] Subscription reactivated:", userId);
 }
 
 /**
@@ -167,10 +173,10 @@ export async function reactivateMockSubscription(userId: string): Promise<void> 
  */
 export function isMockPaymentMode(): boolean {
   // Always use mock payments in development unless explicitly disabled
-  if (process.env.NODE_ENV === 'development') {
-    return process.env.USE_MOCK_PAYMENTS !== 'false';
+  if (process.env.NODE_ENV === "development") {
+    return process.env.USE_MOCK_PAYMENTS !== "false";
   }
 
   // In production, only use mock if explicitly enabled
-  return process.env.USE_MOCK_PAYMENTS === 'true';
+  return process.env.USE_MOCK_PAYMENTS === "true";
 }

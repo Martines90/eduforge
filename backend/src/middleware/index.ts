@@ -2,5 +2,5 @@
  * Middleware exports
  */
 
-export * from './auth.middleware';
-export { errorHandler } from './error-handler';
+export * from "./auth.middleware";
+export { errorHandler } from "./error-handler";

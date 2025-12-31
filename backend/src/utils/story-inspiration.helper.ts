@@ -41,7 +41,10 @@ function loadInspirationHints(): void {
   }
 
   // Load profession hints
-  const professionPath = path.join(basePath, "inspirational-profession-hints.json");
+  const professionPath = path.join(
+    basePath,
+    "inspirational-profession-hints.json"
+  );
   if (fs.existsSync(professionPath)) {
     try {
       const content = fs.readFileSync(professionPath, "utf-8");
@@ -69,7 +72,10 @@ function loadInspirationHints(): void {
   }
 
   // Load situation hints
-  const situationPath = path.join(basePath, "inspirational-situation-hints.json");
+  const situationPath = path.join(
+    basePath,
+    "inspirational-situation-hints.json"
+  );
   if (fs.existsSync(situationPath)) {
     try {
       const content = fs.readFileSync(situationPath, "utf-8");
@@ -154,7 +160,9 @@ export function generate3UniqueLocations(): string[] {
 
   // Ensure we have exactly 3 locations (fallback if not enough in the file)
   while (locations.length < 3) {
-    locations.push(locationHints[locations.length % locationHints.length] || "Europe");
+    locations.push(
+      locationHints[locations.length % locationHints.length] || "Europe"
+    );
   }
 
   return locations;
@@ -219,17 +227,23 @@ export function buildInspirationPromptVariation1(hints: string[]): string {
   }
 
   let enhancement = "\n\n## INSPIRATIONAL SCENARIO HINTS (50 OPTIONS)\n\n";
-  enhancement += "Below are 50 randomly selected scenario ideas to inspire your task design. ";
-  enhancement += "**You MUST select ONE of these scenarios that best fits the mathematical topic** as the foundation for your story. ";
-  enhancement += "Use the chosen scenario to create an engaging, memorable context for the mathematical problem:\n\n";
+  enhancement +=
+    "Below are 50 randomly selected scenario ideas to inspire your task design. ";
+  enhancement +=
+    "**You MUST select ONE of these scenarios that best fits the mathematical topic** as the foundation for your story. ";
+  enhancement +=
+    "Use the chosen scenario to create an engaging, memorable context for the mathematical problem:\n\n";
 
   hints.forEach((hint, index) => {
     enhancement += `${index + 1}. ${hint}\n`;
   });
 
-  enhancement += "\n**CRITICAL INSTRUCTION:** Choose ONE scenario from the list above that best fits ";
-  enhancement += "the mathematical topic and difficulty level. Build your entire task story around this scenario, ";
-  enhancement += "making the mathematical problem a natural and essential part of that scenario.\n";
+  enhancement +=
+    "\n**CRITICAL INSTRUCTION:** Choose ONE scenario from the list above that best fits ";
+  enhancement +=
+    "the mathematical topic and difficulty level. Build your entire task story around this scenario, ";
+  enhancement +=
+    "making the mathematical problem a natural and essential part of that scenario.\n";
 
   return enhancement;
 }
@@ -246,13 +260,19 @@ export function buildProfessionEraAndSituationPrompt(
   eras: string[],
   situations: string[]
 ): string {
-  if (professions.length === 0 && eras.length === 0 && situations.length === 0) {
+  if (
+    professions.length === 0 &&
+    eras.length === 0 &&
+    situations.length === 0
+  ) {
     return "";
   }
 
   let enhancement = "\n\n## PROFESSION, ERA & SITUATION CONTEXT HINTS\n\n";
-  enhancement += "Below are randomly selected professions, historical eras, and situations to inspire your task design. ";
-  enhancement += "**You MUST select ONE profession, ONE era, and ONE situation that best fit the mathematical topic** ";
+  enhancement +=
+    "Below are randomly selected professions, historical eras, and situations to inspire your task design. ";
+  enhancement +=
+    "**You MUST select ONE profession, ONE era, and ONE situation that best fit the mathematical topic** ";
   enhancement += "to create a unique story context:\n\n";
 
   if (professions.length > 0) {
@@ -279,9 +299,12 @@ export function buildProfessionEraAndSituationPrompt(
     enhancement += "\n";
   }
 
-  enhancement += "**CRITICAL INSTRUCTION:** Select the BEST-FIT profession, era, and situation combination from the lists above ";
-  enhancement += "that aligns with the mathematical topic and difficulty level. Build your task story as if the student ";
-  enhancement += "is working in that profession during that historical era, facing that specific situation, making the mathematical problem a natural and ";
+  enhancement +=
+    "**CRITICAL INSTRUCTION:** Select the BEST-FIT profession, era, and situation combination from the lists above ";
+  enhancement +=
+    "that aligns with the mathematical topic and difficulty level. Build your task story as if the student ";
+  enhancement +=
+    "is working in that profession during that historical era, facing that specific situation, making the mathematical problem a natural and ";
   enhancement += "essential part of solving the situation in that context.\n";
 
   return enhancement;
@@ -303,8 +326,10 @@ export function buildProfessionAndEraPrompt(
   }
 
   let enhancement = "\n\n## PROFESSION & ERA CONTEXT HINTS\n\n";
-  enhancement += "Below are randomly selected professions and historical eras to inspire your task design. ";
-  enhancement += "**You MUST select ONE profession and ONE era that best fit the mathematical topic** ";
+  enhancement +=
+    "Below are randomly selected professions and historical eras to inspire your task design. ";
+  enhancement +=
+    "**You MUST select ONE profession and ONE era that best fit the mathematical topic** ";
   enhancement += "to create a unique story context:\n\n";
 
   if (professions.length > 0) {
@@ -323,9 +348,12 @@ export function buildProfessionAndEraPrompt(
     enhancement += "\n";
   }
 
-  enhancement += "**CRITICAL INSTRUCTION:** Select the BEST-FIT profession and era combination from the lists above ";
-  enhancement += "that aligns with the mathematical topic and difficulty level. Build your task story as if the student ";
-  enhancement += "is working in that profession during that historical era, making the mathematical problem a natural and ";
+  enhancement +=
+    "**CRITICAL INSTRUCTION:** Select the BEST-FIT profession and era combination from the lists above ";
+  enhancement +=
+    "that aligns with the mathematical topic and difficulty level. Build your task story as if the student ";
+  enhancement +=
+    "is working in that profession during that historical era, making the mathematical problem a natural and ";
   enhancement += "essential part of their work in that context.\n";
 
   return enhancement;
@@ -343,17 +371,23 @@ export function buildInspirationPrompt(hints: string[]): string {
   }
 
   let enhancement = "\n\n## INSPIRATIONAL SCENARIO HINTS\n\n";
-  enhancement += "Below are 10 randomly selected scenario ideas to inspire your task design. ";
-  enhancement += "**You MUST select ONE of these scenarios** as the foundation for your story. ";
-  enhancement += "Use the chosen scenario to create an engaging, memorable context for the mathematical problem:\n\n";
+  enhancement +=
+    "Below are 10 randomly selected scenario ideas to inspire your task design. ";
+  enhancement +=
+    "**You MUST select ONE of these scenarios** as the foundation for your story. ";
+  enhancement +=
+    "Use the chosen scenario to create an engaging, memorable context for the mathematical problem:\n\n";
 
   hints.forEach((hint, index) => {
     enhancement += `${index + 1}. ${hint}\n`;
   });
 
-  enhancement += "\n**CRITICAL INSTRUCTION:** Choose ONE scenario from the list above that best fits ";
-  enhancement += "the mathematical topic and difficulty level. Build your entire task story around this scenario, ";
-  enhancement += "making the mathematical problem a natural and essential part of that scenario.\n";
+  enhancement +=
+    "\n**CRITICAL INSTRUCTION:** Choose ONE scenario from the list above that best fits ";
+  enhancement +=
+    "the mathematical topic and difficulty level. Build your entire task story around this scenario, ";
+  enhancement +=
+    "making the mathematical problem a natural and essential part of that scenario.\n";
 
   return enhancement;
 }

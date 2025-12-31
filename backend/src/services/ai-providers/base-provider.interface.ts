@@ -4,7 +4,7 @@
  */
 
 export interface AIMessage {
-  role: 'system' | 'user' | 'assistant';
+  role: "system" | "user" | "assistant";
   content: string;
 }
 
@@ -55,12 +55,16 @@ export interface IAIProvider {
   /**
    * Generate text completion
    */
-  generateCompletion(request: AICompletionRequest): Promise<AICompletionResponse>;
+  generateCompletion(
+    request: AICompletionRequest
+  ): Promise<AICompletionResponse>;
 
   /**
    * Generate image (optional - not all providers support this)
    */
-  generateImage?(request: ImageGenerationRequest): Promise<ImageGenerationResponse>;
+  generateImage?(
+    request: ImageGenerationRequest
+  ): Promise<ImageGenerationResponse>;
 
   /**
    * Check if provider supports image generation

@@ -195,20 +195,29 @@ describe("Weighted Random Utility", () => {
           c: (weight: number, adjusted: number) => adjusted < weight,
         },
       },
-    ])("$name", ({ boost, penalize, boostMultiplier, penalizeMultiplier, expectations }) => {
-      const weights = { ...baseWeights };
-      const adjusted = adjustWeightsForDifficulty(
-        weights,
+    ])(
+      "$name",
+      ({
         boost,
         penalize,
         boostMultiplier,
-        penalizeMultiplier
-      );
+        penalizeMultiplier,
+        expectations,
+      }) => {
+        const weights = { ...baseWeights };
+        const adjusted = adjustWeightsForDifficulty(
+          weights,
+          boost,
+          penalize,
+          boostMultiplier,
+          penalizeMultiplier
+        );
 
-      expect(expectations.a(weights.a, adjusted.a)).toBe(true);
-      expect(expectations.b(weights.b, adjusted.b)).toBe(true);
-      expect(expectations.c(weights.c, adjusted.c)).toBe(true);
-    });
+        expect(expectations.a(weights.a, adjusted.a)).toBe(true);
+        expect(expectations.b(weights.b, adjusted.b)).toBe(true);
+        expect(expectations.c(weights.c, adjusted.c)).toBe(true);
+      }
+    );
 
     it("should not modify original weights object", () => {
       const weights = { a: 10, b: 10, c: 10 };

@@ -33,14 +33,8 @@ function processObject(obj: any): any {
  * Main function to process the JSON file
  */
 function main() {
-  const inputFilePath = path.join(
-    __dirname,
-    "hu_math_grade_9_12.json"
-  );
-  const outputFilePath = path.join(
-    __dirname,
-    "hu_math_grade_9_12_purged.json"
-  );
+  const inputFilePath = path.join(__dirname, "hu_math_grade_9_12.json");
+  const outputFilePath = path.join(__dirname, "hu_math_grade_9_12_purged.json");
 
   console.log(`Reading file: ${inputFilePath}`);
 
@@ -64,7 +58,9 @@ function main() {
 
   console.log(`✓ Successfully created: ${outputFilePath}`);
   console.log("\nSummary:");
-  console.log('- All "example_tasks" keys renamed to "example_tasks (COMPLETED)"');
+  console.log(
+    '- All "example_tasks" keys renamed to "example_tasks (COMPLETED)"'
+  );
   console.log("- All example_tasks arrays emptied");
 }
 

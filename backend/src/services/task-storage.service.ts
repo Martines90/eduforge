@@ -171,7 +171,11 @@ export class TaskStorageService {
       ensureDirectoryExists(imagesDir);
 
       for (const image of generatedTask.images) {
-        const imagePath = getTaskImagePath(curriculumDir, taskId, image.image_id);
+        const imagePath = getTaskImagePath(
+          curriculumDir,
+          taskId,
+          image.image_id
+        );
         await downloadFile(image.url, imagePath);
         console.log(`   ✅ Saved: images/${taskId}/${image.image_id}.png`);
       }
@@ -205,10 +209,7 @@ export class TaskStorageService {
 
       // Update image URLs to local storage paths
       // Path format: /storage/{country}/{curriculum_path}/images/{taskId}/{imageId}.png
-      const relativePath = path.relative(
-        config.storageDir,
-        curriculumDir
-      );
+      const relativePath = path.relative(config.storageDir, curriculumDir);
 
       generatedTask.images = generatedTask.images.map((img) => ({
         ...img,

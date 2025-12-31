@@ -42,21 +42,45 @@ describe("Curriculum Path Helper", () => {
       );
 
       expect(result).toBe(
-        path.join("/storage", "us", "science", "grade_11_12", "physics", "mechanics", "motion")
+        path.join(
+          "/storage",
+          "us",
+          "science",
+          "grade_11_12",
+          "physics",
+          "mechanics",
+          "motion"
+        )
       );
     });
 
     it("should handle country codes case-insensitively", () => {
-      const result1 = buildCurriculumStoragePath("/storage", "HU", "math:grade_5");
-      const result2 = buildCurriculumStoragePath("/storage", "hu", "math:grade_5");
-      const result3 = buildCurriculumStoragePath("/storage", "Hu", "math:grade_5");
+      const result1 = buildCurriculumStoragePath(
+        "/storage",
+        "HU",
+        "math:grade_5"
+      );
+      const result2 = buildCurriculumStoragePath(
+        "/storage",
+        "hu",
+        "math:grade_5"
+      );
+      const result3 = buildCurriculumStoragePath(
+        "/storage",
+        "Hu",
+        "math:grade_5"
+      );
 
       expect(result1).toBe(result2);
       expect(result2).toBe(result3);
     });
 
     it("should handle simple curriculum paths", () => {
-      const result = buildCurriculumStoragePath("/storage", "GB", "math:grade_7");
+      const result = buildCurriculumStoragePath(
+        "/storage",
+        "GB",
+        "math:grade_7"
+      );
 
       expect(result).toBe(path.join("/storage", "gb", "math", "grade_7"));
     });
@@ -83,7 +107,11 @@ describe("Curriculum Path Helper", () => {
     });
 
     it("should handle empty curriculum path parts", () => {
-      const result = buildCurriculumStoragePath("/storage", "FR", "math::grade_8");
+      const result = buildCurriculumStoragePath(
+        "/storage",
+        "FR",
+        "math::grade_8"
+      );
 
       // Empty parts should be filtered out
       expect(result).toBe(path.join("/storage", "fr", "math", "grade_8"));
@@ -96,7 +124,9 @@ describe("Curriculum Path Helper", () => {
         "math:grade_6:geometry"
       );
 
-      expect(result).toBe(path.join("./storage", "es", "math", "grade_6", "geometry"));
+      expect(result).toBe(
+        path.join("./storage", "es", "math", "grade_6", "geometry")
+      );
     });
   });
 
@@ -152,7 +182,9 @@ describe("Curriculum Path Helper", () => {
       const imageId = "image_001";
       const result = getTaskImagePath(curriculumDir, taskId, imageId);
 
-      expect(result).toBe(path.join(curriculumDir, "images", taskId, "image_001.png"));
+      expect(result).toBe(
+        path.join(curriculumDir, "images", taskId, "image_001.png")
+      );
     });
 
     it("should always add .png extension", () => {
@@ -170,7 +202,12 @@ describe("Curriculum Path Helper", () => {
       const result = getTaskImagePath(curriculumDir, taskId, imageId);
 
       expect(result).toBe(
-        path.join(curriculumDir, "images", taskId, "image_main_illustration_v2.png")
+        path.join(
+          curriculumDir,
+          "images",
+          taskId,
+          "image_main_illustration_v2.png"
+        )
       );
     });
   });
@@ -187,7 +224,13 @@ describe("Curriculum Path Helper", () => {
         category: "algebra",
         topic: "linear_equations",
         subtopic: "solving_basic_equations",
-        parts: ["math", "grade_9_10", "algebra", "linear_equations", "solving_basic_equations"],
+        parts: [
+          "math",
+          "grade_9_10",
+          "algebra",
+          "linear_equations",
+          "solving_basic_equations",
+        ],
       });
     });
 
@@ -252,7 +295,9 @@ describe("Curriculum Path Helper", () => {
     });
 
     it("should handle longer paths (more than 5 parts)", () => {
-      const result = parseCurriculumPath("math:grade_10:calculus:limits:one_sided:left_limits");
+      const result = parseCurriculumPath(
+        "math:grade_10:calculus:limits:one_sided:left_limits"
+      );
 
       expect(result).toEqual({
         subject: "math",
@@ -260,14 +305,23 @@ describe("Curriculum Path Helper", () => {
         category: "calculus",
         topic: "limits",
         subtopic: "one_sided",
-        parts: ["math", "grade_10", "calculus", "limits", "one_sided", "left_limits"],
+        parts: [
+          "math",
+          "grade_10",
+          "calculus",
+          "limits",
+          "one_sided",
+          "left_limits",
+        ],
       });
       // Parts array should contain all elements
       expect(result.parts.length).toBe(6);
     });
 
     it("should preserve original casing", () => {
-      const result = parseCurriculumPath("Math:Grade_9_10:Algebra:Linear_Equations");
+      const result = parseCurriculumPath(
+        "Math:Grade_9_10:Algebra:Linear_Equations"
+      );
 
       expect(result.subject).toBe("Math");
       expect(result.grade).toBe("Grade_9_10");
@@ -278,11 +332,16 @@ describe("Curriculum Path Helper", () => {
 
   describe("Integration: Full Path Building and Parsing", () => {
     it("should build and parse paths consistently", () => {
-      const curriculumPath = "math:grade_9_10:algebra:linear_equations:solving_basic";
+      const curriculumPath =
+        "math:grade_9_10:algebra:linear_equations:solving_basic";
       const parsed = parseCurriculumPath(curriculumPath);
 
       // Build a storage path
-      const storagePath = buildCurriculumStoragePath("/storage", "HU", curriculumPath);
+      const storagePath = buildCurriculumStoragePath(
+        "/storage",
+        "HU",
+        curriculumPath
+      );
 
       // Verify the storage path contains all parts
       expect(storagePath).toContain("math");

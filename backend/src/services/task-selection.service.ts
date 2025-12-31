@@ -55,7 +55,9 @@ export class TaskSelectionService {
 
     const selection = this.parseSelectionResponse(result.text, variations);
 
-    console.log(`✅ AI selected task ${selection.selected_index + 1} with score ${selection.scores[`task_${selection.selected_index + 1}` as keyof typeof selection.scores]}`);
+    console.log(
+      `✅ AI selected task ${selection.selected_index + 1} with score ${selection.scores[`task_${selection.selected_index + 1}` as keyof typeof selection.scores]}`
+    );
     console.log(`   Reasoning: ${selection.reasoning.substring(0, 100)}...`);
 
     return selection;
@@ -68,7 +70,8 @@ export class TaskSelectionService {
     variations: TaskVariation[],
     criteria: TaskSelectionCriteria
   ): string {
-    const topicName = criteria.curriculum_path.split(":").pop() || "mathematics";
+    const topicName =
+      criteria.curriculum_path.split(":").pop() || "mathematics";
 
     return `You are an expert educational task evaluator with deep knowledge of pedagogy and curriculum design.
 

@@ -3,7 +3,7 @@
  * Generates a hierarchical JSON structure suitable for frontend tree display
  */
 
-import { initializeFirebase, getFirestore } from '../config/firebase.config';
+import { initializeFirebase, getFirestore } from "../config/firebase.config";
 
 interface FirestoreNode {
   key: string;
@@ -32,7 +32,7 @@ function buildTreeFromFlat(nodes: FirestoreNode[]): TreeNode[] {
   const nodeMap = new Map<string, TreeNode & { parentId: string | null }>();
 
   // Convert Firestore nodes to tree nodes
-  nodes.forEach(node => {
+  nodes.forEach((node) => {
     nodeMap.set(node.path, {
       key: node.key,
       name: node.name,
@@ -49,7 +49,7 @@ function buildTreeFromFlat(nodes: FirestoreNode[]): TreeNode[] {
   nodeMap.forEach((node, path) => {
     if (node.parentId) {
       // Find parent by searching for a node whose path matches the parent structure
-      const parentPath = path.substring(0, path.lastIndexOf('/'));
+      const parentPath = path.substring(0, path.lastIndexOf("/"));
       const parent = nodeMap.get(parentPath);
 
       if (parent) {
@@ -74,7 +74,7 @@ function buildTreeFromFlat(nodes: FirestoreNode[]): TreeNode[] {
       const bIndex = (nodeMap.get(b.key) as any)?.orderIndex || 0;
       return aIndex - bIndex;
     });
-    nodes.forEach(node => {
+    nodes.forEach((node) => {
       if (node.subTopics && node.subTopics.length > 0) {
         sortNodes(node.subTopics);
       }
@@ -94,13 +94,14 @@ async function exportTreeMap(subject: string, gradeLevel: string) {
 
   try {
     // Fetch all nodes for the given subject and grade level
-    const snapshot = await db.collection('subjectMappings')
-      .where('subject', '==', subject)
-      .where('gradeLevel', '==', gradeLevel)
+    const snapshot = await db
+      .collection("subjectMappings")
+      .where("subject", "==", subject)
+      .where("gradeLevel", "==", gradeLevel)
       .get();
 
     if (snapshot.empty) {
-      console.log('❌ No data found for the specified subject and grade level');
+      console.log("❌ No data found for the specified subject and grade level");
       process.exit(1);
     }
 
@@ -108,7 +109,7 @@ async function exportTreeMap(subject: string, gradeLevel: string) {
 
     // Convert to flat array
     const flatNodes: FirestoreNode[] = [];
-    snapshot.docs.forEach(doc => {
+    snapshot.docs.forEach((doc) => {
       const data = doc.data();
       flatNodes.push({
         key: data.key,
@@ -123,11 +124,11 @@ async function exportTreeMap(subject: string, gradeLevel: string) {
     });
 
     // Find the minimum level (root level)
-    const minLevel = Math.min(...flatNodes.map(n => n.level));
+    const minLevel = Math.min(...flatNodes.map((n) => n.level));
     console.log(`📌 Root level: ${minLevel}`);
 
     // Adjust levels so root starts at 0
-    flatNodes.forEach(node => {
+    flatNodes.forEach((node) => {
       node.level = node.level - minLevel;
     });
 
@@ -147,7 +148,7 @@ async function exportTreeMap(subject: string, gradeLevel: string) {
     // Calculate total nodes at each level
     const levelCounts = new Map<number, number>();
     const countLevels = (nodes: TreeNode[], depth: number = 0) => {
-      nodes.forEach(node => {
+      nodes.forEach((node) => {
         levelCounts.set(depth, (levelCounts.get(depth) || 0) + 1);
         if (node.subTopics && node.subTopics.length > 0) {
           countLevels(node.subTopics, depth + 1);
@@ -156,29 +157,29 @@ async function exportTreeMap(subject: string, gradeLevel: string) {
     };
     countLevels(finalTree);
 
-    console.log('\n📈 Nodes per level:');
+    console.log("\n📈 Nodes per level:");
     levelCounts.forEach((count, level) => {
       console.log(`   Level ${level}: ${count} nodes`);
     });
 
     // Output as JSON
-    console.log('\n📄 Generating JSON output...\n');
+    console.log("\n📄 Generating JSON output...\n");
     console.log(JSON.stringify(finalTree, null, 2));
 
-    console.log('\n✅ Export complete!');
+    console.log("\n✅ Export complete!");
     process.exit(0);
   } catch (error) {
-    console.error('❌ Error exporting tree map:', error);
+    console.error("❌ Error exporting tree map:", error);
     process.exit(1);
   }
 }
 
 // Parse command line arguments
 const args = process.argv.slice(2);
-const subjectArg = args.find(arg => arg.startsWith('--subject='));
-const gradeArg = args.find(arg => arg.startsWith('--grade='));
+const subjectArg = args.find((arg) => arg.startsWith("--subject="));
+const gradeArg = args.find((arg) => arg.startsWith("--grade="));
 
-const subject = subjectArg ? subjectArg.split('=')[1] : 'mathematics';
-const gradeLevel = gradeArg ? gradeArg.split('=')[1] : 'grade_9_10';
+const subject = subjectArg ? subjectArg.split("=")[1] : "mathematics";
+const gradeLevel = gradeArg ? gradeArg.split("=")[1] : "grade_9_10";
 
 exportTreeMap(subject, gradeLevel);

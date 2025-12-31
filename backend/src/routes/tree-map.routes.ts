@@ -2,8 +2,8 @@
  * API routes for serving subject tree maps
  */
 
-import { Router, Request, Response } from 'express';
-import { getFirestore } from '../config/firebase.config';
+import { Router, Request, Response } from "express";
+import { getFirestore } from "../config/firebase.config";
 
 const router = Router();
 
@@ -34,7 +34,7 @@ function buildTreeFromFlat(nodes: FirestoreNode[]): TreeNode[] {
   const nodeMap = new Map<string, TreeNode & { parentId: string | null }>();
 
   // Convert Firestore nodes to tree nodes
-  nodes.forEach(node => {
+  nodes.forEach((node) => {
     nodeMap.set(node.path, {
       key: node.key,
       name: node.name,
@@ -51,7 +51,7 @@ function buildTreeFromFlat(nodes: FirestoreNode[]): TreeNode[] {
   nodeMap.forEach((node, path) => {
     if (node.parentId) {
       // Find parent by searching for a node whose path matches the parent structure
-      const parentPath = path.substring(0, path.lastIndexOf('/'));
+      const parentPath = path.substring(0, path.lastIndexOf("/"));
       const parent = nodeMap.get(parentPath);
 
       if (parent) {
@@ -76,7 +76,7 @@ function buildTreeFromFlat(nodes: FirestoreNode[]): TreeNode[] {
       const bIndex = (nodeMap.get(b.key) as any)?.orderIndex || 0;
       return aIndex - bIndex;
     });
-    nodes.forEach(node => {
+    nodes.forEach((node) => {
       if (node.subTopics && node.subTopics.length > 0) {
         sortNodes(node.subTopics);
       }
@@ -93,32 +93,36 @@ function buildTreeFromFlat(nodes: FirestoreNode[]): TreeNode[] {
  * DEPRECATED: Backward-compatible route that defaults to Hungary (HU)
  * Use /:country/:subject/:gradeLevel instead
  */
-router.get('/:subject/:gradeLevel', async (req: Request, res: Response) => {
+router.get("/:subject/:gradeLevel", async (req: Request, res: Response) => {
   try {
     const { subject, gradeLevel } = req.params;
-    const country = 'HU'; // Default to Hungary for backward compatibility
+    const country = "HU"; // Default to Hungary for backward compatibility
 
-    console.warn(`⚠️  Using deprecated tree-map route without country. Defaulting to ${country}. Please update to use /:country/:subject/:gradeLevel`);
+    console.warn(
+      `⚠️  Using deprecated tree-map route without country. Defaulting to ${country}. Please update to use /:country/:subject/:gradeLevel`
+    );
 
     const db = getFirestore();
 
     // Fetch all nodes for the given country, subject and grade level
-    const snapshot = await db.collection('countries').doc(country)
-      .collection('subjectMappings')
-      .where('subject', '==', subject)
-      .where('gradeLevel', '==', gradeLevel)
+    const snapshot = await db
+      .collection("countries")
+      .doc(country)
+      .collection("subjectMappings")
+      .where("subject", "==", subject)
+      .where("gradeLevel", "==", gradeLevel)
       .get();
 
     if (snapshot.empty) {
       return res.status(404).json({
         success: false,
-        message: 'No tree map found for the specified subject and grade level',
+        message: "No tree map found for the specified subject and grade level",
       });
     }
 
     // Convert to flat array
     const flatNodes: FirestoreNode[] = [];
-    snapshot.docs.forEach(doc => {
+    snapshot.docs.forEach((doc) => {
       const data = doc.data();
       flatNodes.push({
         key: data.key,
@@ -133,10 +137,10 @@ router.get('/:subject/:gradeLevel', async (req: Request, res: Response) => {
     });
 
     // Find the minimum level (root level)
-    const minLevel = Math.min(...flatNodes.map(n => n.level));
+    const minLevel = Math.min(...flatNodes.map((n) => n.level));
 
     // Adjust levels so root starts at 0
-    flatNodes.forEach(node => {
+    flatNodes.forEach((node) => {
       node.level = node.level - minLevel;
     });
 
@@ -161,10 +165,10 @@ router.get('/:subject/:gradeLevel', async (req: Request, res: Response) => {
       },
     });
   } catch (error: any) {
-    console.error('Error fetching tree map:', error);
+    console.error("Error fetching tree map:", error);
     res.status(500).json({
       success: false,
-      message: error.message || 'Failed to fetch tree map',
+      message: error.message || "Failed to fetch tree map",
     });
   }
 });
@@ -173,77 +177,83 @@ router.get('/:subject/:gradeLevel', async (req: Request, res: Response) => {
  * GET /api/tree-map/:country/:subject/:gradeLevel
  * Get full hierarchical tree map for a subject and grade level in a specific country
  */
-router.get('/:country/:subject/:gradeLevel', async (req: Request, res: Response) => {
-  try {
-    const { country, subject, gradeLevel } = req.params;
+router.get(
+  "/:country/:subject/:gradeLevel",
+  async (req: Request, res: Response) => {
+    try {
+      const { country, subject, gradeLevel } = req.params;
 
-    const db = getFirestore();
+      const db = getFirestore();
 
-    // Fetch all nodes for the given country, subject and grade level
-    const snapshot = await db.collection('countries').doc(country)
-      .collection('subjectMappings')
-      .where('subject', '==', subject)
-      .where('gradeLevel', '==', gradeLevel)
-      .get();
+      // Fetch all nodes for the given country, subject and grade level
+      const snapshot = await db
+        .collection("countries")
+        .doc(country)
+        .collection("subjectMappings")
+        .where("subject", "==", subject)
+        .where("gradeLevel", "==", gradeLevel)
+        .get();
 
-    if (snapshot.empty) {
-      return res.status(404).json({
+      if (snapshot.empty) {
+        return res.status(404).json({
+          success: false,
+          message:
+            "No tree map found for the specified country, subject and grade level",
+        });
+      }
+
+      // Convert to flat array
+      const flatNodes: FirestoreNode[] = [];
+      snapshot.docs.forEach((doc) => {
+        const data = doc.data();
+        flatNodes.push({
+          key: data.key,
+          name: data.name,
+          level: data.level,
+          parentId: data.parentId,
+          path: data.path,
+          isLeaf: data.isLeaf,
+          short_description: data.short_description,
+          orderIndex: data.orderIndex,
+        });
+      });
+
+      // Find the minimum level (root level)
+      const minLevel = Math.min(...flatNodes.map((n) => n.level));
+
+      // Adjust levels so root starts at 0
+      flatNodes.forEach((node) => {
+        node.level = node.level - minLevel;
+      });
+
+      // Build tree
+      const tree = buildTreeFromFlat(flatNodes);
+
+      // If root is a single grade level node, extract its children
+      let finalTree = tree;
+      if (tree.length === 1 && tree[0].key === gradeLevel) {
+        finalTree = tree[0].subTopics || [];
+      }
+
+      res.json({
+        success: true,
+        data: {
+          country,
+          subject,
+          gradeLevel,
+          totalNodes: snapshot.size,
+          rootNodes: finalTree.length,
+          tree: finalTree,
+        },
+      });
+    } catch (error: any) {
+      console.error("Error fetching tree map:", error);
+      res.status(500).json({
         success: false,
-        message: 'No tree map found for the specified country, subject and grade level',
+        message: error.message || "Failed to fetch tree map",
       });
     }
-
-    // Convert to flat array
-    const flatNodes: FirestoreNode[] = [];
-    snapshot.docs.forEach(doc => {
-      const data = doc.data();
-      flatNodes.push({
-        key: data.key,
-        name: data.name,
-        level: data.level,
-        parentId: data.parentId,
-        path: data.path,
-        isLeaf: data.isLeaf,
-        short_description: data.short_description,
-        orderIndex: data.orderIndex,
-      });
-    });
-
-    // Find the minimum level (root level)
-    const minLevel = Math.min(...flatNodes.map(n => n.level));
-
-    // Adjust levels so root starts at 0
-    flatNodes.forEach(node => {
-      node.level = node.level - minLevel;
-    });
-
-    // Build tree
-    const tree = buildTreeFromFlat(flatNodes);
-
-    // If root is a single grade level node, extract its children
-    let finalTree = tree;
-    if (tree.length === 1 && tree[0].key === gradeLevel) {
-      finalTree = tree[0].subTopics || [];
-    }
-
-    res.json({
-      success: true,
-      data: {
-        country,
-        subject,
-        gradeLevel,
-        totalNodes: snapshot.size,
-        rootNodes: finalTree.length,
-        tree: finalTree,
-      },
-    });
-  } catch (error: any) {
-    console.error('Error fetching tree map:', error);
-    res.status(500).json({
-      success: false,
-      message: error.message || 'Failed to fetch tree map',
-    });
   }
-});
+);
 
 export default router;

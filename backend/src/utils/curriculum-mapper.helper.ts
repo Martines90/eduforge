@@ -47,21 +47,22 @@ function loadCurriculumData(subject: string): any | null {
   const filename = SUBJECT_FILE_MAP[subject.toLowerCase()];
 
   if (!filename) {
-    console.error(`❌ Unknown subject: ${subject}. Available subjects: ${Object.keys(SUBJECT_FILE_MAP).join(", ")}`);
+    console.error(
+      `❌ Unknown subject: ${subject}. Available subjects: ${Object.keys(SUBJECT_FILE_MAP).join(", ")}`
+    );
     return null;
   }
 
-  const curriculumPath = path.join(
-    __dirname,
-    "../data/mappings/hu",
-    filename
-  );
+  const curriculumPath = path.join(__dirname, "../data/mappings/hu", filename);
 
   try {
     const data = fs.readFileSync(curriculumPath, "utf-8");
     return JSON.parse(data);
   } catch (error) {
-    console.error(`❌ Error loading curriculum data for ${subject} (${filename}):`, error);
+    console.error(
+      `❌ Error loading curriculum data for ${subject} (${filename}):`,
+      error
+    );
     return null;
   }
 }
@@ -134,13 +135,17 @@ export function getCurriculumTopicByPath(
     const segment = pathSegments[i];
 
     // Look for the segment in current topics array by key or name
-    const foundTopic = currentTopics.find((t) =>
-      t.key === segment || t.name === segment
+    const foundTopic = currentTopics.find(
+      (t) => t.key === segment || t.name === segment
     );
 
     if (!foundTopic) {
-      console.warn(`⚠️  Topic not found in path: ${segment} (at depth ${i + 1})`);
-      console.warn(`   Available topics at this level: ${currentTopics.map(t => `${t.key} ("${t.name}")`).join(', ')}`);
+      console.warn(
+        `⚠️  Topic not found in path: ${segment} (at depth ${i + 1})`
+      );
+      console.warn(
+        `   Available topics at this level: ${currentTopics.map((t) => `${t.key} ("${t.name}")`).join(", ")}`
+      );
       return null;
     }
 
@@ -192,22 +197,27 @@ export function formatCurriculumTopicForPrompt(
   formatted += `- **Description:** ${topic.short_description}\n\n`;
 
   // Get example tasks from either property name
-  const exampleTasks = topic.example_tasks || topic["example_tasks (COMPLETED)"] || [];
+  const exampleTasks =
+    topic.example_tasks || topic["example_tasks (COMPLETED)"] || [];
 
   // Show example tasks if available
   if (exampleTasks.length > 0) {
     formatted += "**Example Tasks from Curriculum:**\n\n";
-    formatted += "These are traditional textbook-style problems from the Hungarian curriculum. ";
-    formatted += "Choose ONE of these tasks and transform it into a rich, story-driven, real-world problem.\n\n";
+    formatted +=
+      "These are traditional textbook-style problems from the Hungarian curriculum. ";
+    formatted +=
+      "Choose ONE of these tasks and transform it into a rich, story-driven, real-world problem.\n\n";
 
     exampleTasks.forEach((task, index) => {
       formatted += `${index + 1}. ${task}\n`;
     });
 
     formatted += "\n";
-    formatted += "**Pick whichever example task you think would make the most engaging story-based problem.**\n\n";
+    formatted +=
+      "**Pick whichever example task you think would make the most engaging story-based problem.**\n\n";
   } else {
-    formatted += "**Note:** No example tasks available for this topic. Create an appropriate problem based on the topic description.\n\n";
+    formatted +=
+      "**Note:** No example tasks available for this topic. Create an appropriate problem based on the topic description.\n\n";
   }
 
   return formatted;
@@ -218,14 +228,12 @@ export function formatCurriculumTopicForPrompt(
  * @param pathResult The curriculum path result
  * @returns Array of example tasks or empty array if none found
  */
-export function getExampleTasks(
-  pathResult: CurriculumPathResult
-): string[] {
+export function getExampleTasks(pathResult: CurriculumPathResult): string[] {
   const { topic } = pathResult;
 
   // Get example tasks from either property name
-  const exampleTasks = topic.example_tasks || topic["example_tasks (COMPLETED)"] || [];
+  const exampleTasks =
+    topic.example_tasks || topic["example_tasks (COMPLETED)"] || [];
 
   return exampleTasks;
 }
-

@@ -52,7 +52,10 @@ export function getTasksJsonPath(curriculumDir: string): string {
  * @param taskId The task ID
  * @returns Path to the task's images directory
  */
-export function getTaskImagesDir(curriculumDir: string, taskId: string): string {
+export function getTaskImagesDir(
+  curriculumDir: string,
+  taskId: string
+): string {
   return path.join(curriculumDir, "images", taskId);
 }
 

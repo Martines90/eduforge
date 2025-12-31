@@ -3,8 +3,11 @@
  * Handles CRUD operations for curriculum hierarchy
  */
 
-import { getFirestore } from '../config/firebase.config';
-import { SubjectMappingDocument, SubjectMappingTreeNode } from '../types/task.types';
+import { getFirestore } from "../config/firebase.config";
+import {
+  SubjectMappingDocument,
+  SubjectMappingTreeNode,
+} from "../types/task.types";
 
 /**
  * Get all subject mappings for a specific country, subject and grade
@@ -17,11 +20,13 @@ export async function getSubjectMappings(
   const db = getFirestore();
 
   const snapshot = await db
-    .collection('countries').doc(country)
-    .collection('subjectMappings').doc(subject)
+    .collection("countries")
+    .doc(country)
+    .collection("subjectMappings")
+    .doc(subject)
     .collection(gradeLevel)
-    .orderBy('level')
-    .orderBy('orderIndex')
+    .orderBy("level")
+    .orderBy("orderIndex")
     .get();
 
   return snapshot.docs.map((doc) => ({
@@ -92,11 +97,13 @@ export async function getLeafNodes(
   const db = getFirestore();
 
   const snapshot = await db
-    .collection('countries').doc(country)
-    .collection('subjectMappings').doc(subject)
+    .collection("countries")
+    .doc(country)
+    .collection("subjectMappings")
+    .doc(subject)
     .collection(gradeLevel)
-    .where('isLeaf', '==', true)
-    .orderBy('path')
+    .where("isLeaf", "==", true)
+    .orderBy("path")
     .get();
 
   return snapshot.docs.map((doc) => ({
@@ -115,9 +122,14 @@ export async function getSubjectMappingById(
   gradeLevel: string
 ): Promise<(SubjectMappingDocument & { id: string }) | null> {
   const db = getFirestore();
-  const doc = await db.collection('countries').doc(country)
-    .collection('subjectMappings').doc(subject)
-    .collection(gradeLevel).doc(id).get();
+  const doc = await db
+    .collection("countries")
+    .doc(country)
+    .collection("subjectMappings")
+    .doc(subject)
+    .collection(gradeLevel)
+    .doc(id)
+    .get();
 
   if (!doc.exists) {
     return null;
@@ -141,11 +153,13 @@ export async function getChildren(
   const db = getFirestore();
 
   const snapshot = await db
-    .collection('countries').doc(country)
-    .collection('subjectMappings').doc(subject)
+    .collection("countries")
+    .doc(country)
+    .collection("subjectMappings")
+    .doc(subject)
     .collection(gradeLevel)
-    .where('parentId', '==', parentId)
-    .orderBy('orderIndex')
+    .where("parentId", "==", parentId)
+    .orderBy("orderIndex")
     .get();
 
   return snapshot.docs.map((doc) => ({
@@ -164,9 +178,13 @@ export async function incrementTaskCount(
   gradeLevel: string
 ): Promise<void> {
   const db = getFirestore();
-  const docRef = db.collection('countries').doc(country)
-    .collection('subjectMappings').doc(subject)
-    .collection(gradeLevel).doc(mappingId);
+  const docRef = db
+    .collection("countries")
+    .doc(country)
+    .collection("subjectMappings")
+    .doc(subject)
+    .collection(gradeLevel)
+    .doc(mappingId);
 
   await docRef.update({
     taskCount: (db as any).FieldValue.increment(1),
@@ -184,9 +202,13 @@ export async function decrementTaskCount(
   gradeLevel: string
 ): Promise<void> {
   const db = getFirestore();
-  const docRef = db.collection('countries').doc(country)
-    .collection('subjectMappings').doc(subject)
-    .collection(gradeLevel).doc(mappingId);
+  const docRef = db
+    .collection("countries")
+    .doc(country)
+    .collection("subjectMappings")
+    .doc(subject)
+    .collection(gradeLevel)
+    .doc(mappingId);
 
   await docRef.update({
     taskCount: (db as any).FieldValue.increment(-1),
@@ -203,14 +225,21 @@ export async function validateLeafMapping(
   mappingId: string,
   gradeLevel: string
 ): Promise<boolean> {
-  const mapping = await getSubjectMappingById(country, subject, mappingId, gradeLevel);
+  const mapping = await getSubjectMappingById(
+    country,
+    subject,
+    mappingId,
+    gradeLevel
+  );
 
   if (!mapping) {
-    throw new Error('Subject mapping not found');
+    throw new Error("Subject mapping not found");
   }
 
   if (!mapping.isLeaf) {
-    throw new Error('Tasks can only be assigned to leaf nodes (deepest level categories)');
+    throw new Error(
+      "Tasks can only be assigned to leaf nodes (deepest level categories)"
+    );
   }
 
   return true;
@@ -232,9 +261,14 @@ export async function getBreadcrumbPath(
   let currentId: string | null = mappingId;
 
   while (currentId) {
-    const doc = await db.collection('countries').doc(country)
-      .collection('subjectMappings').doc(subject)
-      .collection(gradeLevel).doc(currentId).get();
+    const doc = await db
+      .collection("countries")
+      .doc(country)
+      .collection("subjectMappings")
+      .doc(subject)
+      .collection(gradeLevel)
+      .doc(currentId)
+      .get();
 
     if (!doc.exists) {
       break;

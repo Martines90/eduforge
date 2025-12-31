@@ -1,5 +1,5 @@
-import { Request, Response, NextFunction } from 'express';
-import { verifyToken } from '../services/auth.service';
+import { Request, Response, NextFunction } from "express";
+import { verifyToken } from "../services/auth.service";
 
 /**
  * Extended Request interface with user information
@@ -8,7 +8,7 @@ export interface AuthRequest extends Request {
   user?: {
     uid: string;
     email: string;
-    role: 'teacher' | 'general_user';
+    role: "teacher" | "general_user";
     name: string;
   };
 }
@@ -31,22 +31,22 @@ export const authenticate = async (
     if (!authHeader) {
       res.status(401).json({
         success: false,
-        error: 'Unauthorized',
-        message: 'Authorization header is required',
+        error: "Unauthorized",
+        message: "Authorization header is required",
       });
       return;
     }
 
     // Extract token (format: "Bearer <token>")
-    const token = authHeader.startsWith('Bearer ')
+    const token = authHeader.startsWith("Bearer ")
       ? authHeader.substring(7)
       : authHeader;
 
     if (!token) {
       res.status(401).json({
         success: false,
-        error: 'Unauthorized',
-        message: 'Token is required',
+        error: "Unauthorized",
+        message: "Token is required",
       });
       return;
     }
@@ -58,17 +58,17 @@ export const authenticate = async (
     (req as AuthRequest).user = {
       uid: decoded.uid,
       email: decoded.email,
-      role: decoded.role as 'teacher' | 'general_user',
+      role: decoded.role as "teacher" | "general_user",
       name: decoded.name,
     };
 
     next();
   } catch (error) {
-    console.error('Authentication error:', error);
+    console.error("Authentication error:", error);
     res.status(401).json({
       success: false,
-      error: 'Unauthorized',
-      message: 'Invalid or expired token',
+      error: "Unauthorized",
+      message: "Invalid or expired token",
     });
   }
 };
@@ -90,17 +90,17 @@ export const requireTeacher = (
   if (!authReq.user) {
     res.status(401).json({
       success: false,
-      error: 'Unauthorized',
-      message: 'Authentication required',
+      error: "Unauthorized",
+      message: "Authentication required",
     });
     return;
   }
 
-  if (authReq.user.role !== 'teacher') {
+  if (authReq.user.role !== "teacher") {
     res.status(403).json({
       success: false,
-      error: 'Forbidden',
-      message: 'This endpoint requires teacher role',
+      error: "Forbidden",
+      message: "This endpoint requires teacher role",
     });
     return;
   }

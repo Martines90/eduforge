@@ -1,10 +1,10 @@
-import { SubscriptionData } from './subscription.types';
+import { SubscriptionData } from "./subscription.types";
 
 export interface RegisterRequest {
   email: string;
   password: string;
   name: string;
-  role: 'teacher' | 'general_user';
+  role: "teacher" | "general_user";
   country: string;
   subject?: string; // For teachers only
   educationalModel?: string; // For teachers only
@@ -44,13 +44,13 @@ export interface UserDocument {
   uid: string;
   email: string;
   name: string;
-  role: 'teacher' | 'general_user';
+  role: "teacher" | "general_user";
   country: string;
   subject?: string; // For teachers only
   educationalModel?: string; // For teachers only
   emailVerificationCode?: string;
   emailVerificationCodeExp?: FirebaseFirestore.Timestamp;
-  status: 'active' | 'inactive' | 'banned';
+  status: "active" | "inactive" | "banned";
   emailVerified: boolean;
   subscription?: SubscriptionData;
   taskCredits?: number; // Remaining task generation credits (for teachers)

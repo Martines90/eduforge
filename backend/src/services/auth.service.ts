@@ -1,17 +1,17 @@
-import * as bcrypt from 'bcrypt';
-import * as jwt from 'jsonwebtoken';
-import { getFirestore, getAuth } from '../config/firebase.config';
+import * as bcrypt from "bcrypt";
+import * as jwt from "jsonwebtoken";
+import { getFirestore, getAuth } from "../config/firebase.config";
 import {
   RegisterRequest,
   LoginRequest,
   UserDocument,
   VerificationCodeDocument,
-} from '../types/auth.types';
-import { TRIAL_START_CREDITS } from '../constants/credits';
+} from "../types/auth.types";
+import { TRIAL_START_CREDITS } from "../constants/credits";
 
 const SALT_ROUNDS = 10;
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-this';
-const JWT_EXPIRES_IN = '7d';
+const JWT_SECRET = process.env.JWT_SECRET || "your-secret-key-change-this";
+const JWT_EXPIRES_IN = "7d";
 
 /**
  * Generate a random 6-digit verification code
@@ -23,7 +23,10 @@ export function generateVerificationCode(): string {
 /**
  * Create verification code and store in temporary collection (not in users yet)
  */
-export async function createVerificationCode(email: string, userData: RegisterRequest): Promise<string> {
+export async function createVerificationCode(
+  email: string,
+  userData: RegisterRequest
+): Promise<string> {
   const db = getFirestore();
   const code = generateVerificationCode();
 
@@ -40,23 +43,26 @@ export async function createVerificationCode(email: string, userData: RegisterRe
   };
 
   // Store verification code with pending registration data
-  await db.collection('pendingRegistrations').doc(email.toLowerCase()).set({
-    ...codeData,
-    pendingUserData: {
-      name: userData.name,
-      password: await bcrypt.hash(userData.password, SALT_ROUNDS),
-      role: userData.role,
-      country: userData.country,
-      subject: userData.subject,
-      educationalModel: userData.educationalModel,
-    },
-  });
+  await db
+    .collection("pendingRegistrations")
+    .doc(email.toLowerCase())
+    .set({
+      ...codeData,
+      pendingUserData: {
+        name: userData.name,
+        password: await bcrypt.hash(userData.password, SALT_ROUNDS),
+        role: userData.role,
+        country: userData.country,
+        subject: userData.subject,
+        educationalModel: userData.educationalModel,
+      },
+    });
 
   // Send verification email via Firebase Extension
-  await db.collection('mail').add({
+  await db.collection("mail").add({
     to: email.toLowerCase(),
     message: {
-      subject: 'EduForge - Email Verification Code',
+      subject: "EduForge - Email Verification Code",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <h2 style="color: #1976d2;">Welcome to EduForge!</h2>
@@ -75,11 +81,11 @@ export async function createVerificationCode(email: string, userData: RegisterRe
     },
   });
 
-  console.log('=' .repeat(50));
+  console.log("=".repeat(50));
   console.log(`VERIFICATION CODE EMAIL QUEUED FOR: ${email}`);
   console.log(`CODE: ${code}`);
-  console.log('Email will be sent by Firebase Extension');
-  console.log('='.repeat(50));
+  console.log("Email will be sent by Firebase Extension");
+  console.log("=".repeat(50));
 
   return code;
 }
@@ -87,22 +93,28 @@ export async function createVerificationCode(email: string, userData: RegisterRe
 /**
  * Verify code and create user account
  */
-export async function verifyCodeAndCreateUser(email: string, code: string): Promise<{ uid: string; token: string }> {
+export async function verifyCodeAndCreateUser(
+  email: string,
+  code: string
+): Promise<{ uid: string; token: string }> {
   const db = getFirestore();
   const auth = getAuth();
 
   // Get pending registration
-  const pendingDoc = await db.collection('pendingRegistrations').doc(email.toLowerCase()).get();
+  const pendingDoc = await db
+    .collection("pendingRegistrations")
+    .doc(email.toLowerCase())
+    .get();
 
   if (!pendingDoc.exists) {
-    throw new Error('No pending registration found for this email');
+    throw new Error("No pending registration found for this email");
   }
 
   const pendingData = pendingDoc.data();
 
   // Check if code exists
   if (!pendingData?.code || !pendingData?.expiresAt) {
-    throw new Error('Invalid verification code');
+    throw new Error("Invalid verification code");
   }
 
   // Check if expired
@@ -111,22 +123,28 @@ export async function verifyCodeAndCreateUser(email: string, code: string): Prom
 
   if (now > expiresAt) {
     // Delete expired pending registration
-    await db.collection('pendingRegistrations').doc(email.toLowerCase()).delete();
-    throw new Error('Verification code has expired');
+    await db
+      .collection("pendingRegistrations")
+      .doc(email.toLowerCase())
+      .delete();
+    throw new Error("Verification code has expired");
   }
 
   // Check max attempts
   if (pendingData.attempts >= 5) {
-    throw new Error('Too many failed attempts');
+    throw new Error("Too many failed attempts");
   }
 
   // Verify code
   if (pendingData.code !== code) {
     // Increment attempts
-    await db.collection('pendingRegistrations').doc(email.toLowerCase()).update({
-      attempts: pendingData.attempts + 1,
-    });
-    throw new Error('Invalid verification code');
+    await db
+      .collection("pendingRegistrations")
+      .doc(email.toLowerCase())
+      .update({
+        attempts: pendingData.attempts + 1,
+      });
+    throw new Error("Invalid verification code");
   }
 
   // Code is valid - create the user now
@@ -136,9 +154,11 @@ export async function verifyCodeAndCreateUser(email: string, code: string): Prom
   let userRecord;
   try {
     userRecord = await auth.getUserByEmail(email.toLowerCase());
-    console.log(`Firebase Auth user already exists for ${email}, reusing UID: ${userRecord.uid}`);
+    console.log(
+      `Firebase Auth user already exists for ${email}, reusing UID: ${userRecord.uid}`
+    );
   } catch (error: any) {
-    if (error.code === 'auth/user-not-found') {
+    if (error.code === "auth/user-not-found") {
       // Create new Firebase Auth user
       userRecord = await auth.createUser({
         email: email.toLowerCase(),
@@ -160,37 +180,37 @@ export async function verifyCodeAndCreateUser(email: string, code: string): Prom
     country: userData.country,
     subject: userData.subject,
     educationalModel: userData.educationalModel,
-    status: 'active', // User is active immediately after verification
+    status: "active", // User is active immediately after verification
     emailVerified: true,
     createdAt: new Date() as any,
     updatedAt: new Date() as any,
   };
 
   // Initialize subscription and credits for teachers
-  if (userData.role === 'teacher') {
+  if (userData.role === "teacher") {
     const trialStartDate = new Date();
     const trialEndDate = new Date();
     trialEndDate.setMonth(trialEndDate.getMonth() + 3); // 3 months from now
 
     userDoc.subscription = {
-      tier: 'trial',
-      status: 'active',
+      tier: "trial",
+      status: "active",
       startDate: trialStartDate as any,
       endDate: trialEndDate as any,
     };
     userDoc.taskCredits = TRIAL_START_CREDITS; // Initial task generation credits
   }
 
-  await db.collection('users').doc(userRecord.uid).set(userDoc);
+  await db.collection("users").doc(userRecord.uid).set(userDoc);
 
   // Store hashed password separately
-  await db.collection('userCredentials').doc(userRecord.uid).set({
+  await db.collection("userCredentials").doc(userRecord.uid).set({
     hashedPassword: userData.password, // Already hashed when stored in pending
     updatedAt: new Date(),
   });
 
   // Delete pending registration
-  await db.collection('pendingRegistrations').doc(email.toLowerCase()).delete();
+  await db.collection("pendingRegistrations").doc(email.toLowerCase()).delete();
 
   // Generate JWT token
   const token = jwt.sign(
@@ -213,15 +233,20 @@ export async function verifyCodeAndCreateUser(email: string, code: string): Prom
 /**
  * Initiate registration - store verification code only (no user created yet)
  */
-export async function initiateRegistration(data: RegisterRequest): Promise<string> {
+export async function initiateRegistration(
+  data: RegisterRequest
+): Promise<string> {
   const db = getFirestore();
   const auth = getAuth();
 
   // Check if user already exists in Firestore
-  const existingUser = await db.collection('users').where('email', '==', data.email.toLowerCase()).get();
+  const existingUser = await db
+    .collection("users")
+    .where("email", "==", data.email.toLowerCase())
+    .get();
 
   if (!existingUser.empty) {
-    throw new Error('Email already registered');
+    throw new Error("Email already registered");
   }
 
   // Check if user exists in Firebase Auth (from previous failed registration)
@@ -232,16 +257,22 @@ export async function initiateRegistration(data: RegisterRequest): Promise<strin
     console.log(`Deleted orphaned Firebase Auth user: ${data.email}`);
   } catch (error: any) {
     // User doesn't exist in Auth, which is fine
-    if (error.code !== 'auth/user-not-found') {
-      console.error('Error checking Firebase Auth user:', error);
+    if (error.code !== "auth/user-not-found") {
+      console.error("Error checking Firebase Auth user:", error);
     }
   }
 
   // Check if there's already a pending registration
-  const pendingDoc = await db.collection('pendingRegistrations').doc(data.email.toLowerCase()).get();
+  const pendingDoc = await db
+    .collection("pendingRegistrations")
+    .doc(data.email.toLowerCase())
+    .get();
   if (pendingDoc.exists) {
     // Delete old pending registration
-    await db.collection('pendingRegistrations').doc(data.email.toLowerCase()).delete();
+    await db
+      .collection("pendingRegistrations")
+      .doc(data.email.toLowerCase())
+      .delete();
   }
 
   // Create and store verification code
@@ -253,17 +284,26 @@ export async function initiateRegistration(data: RegisterRequest): Promise<strin
 /**
  * Login user
  */
-export async function loginUser(data: LoginRequest): Promise<{ user: UserDocument; token: string }> {
+export async function loginUser(
+  data: LoginRequest
+): Promise<{ user: UserDocument; token: string }> {
   const db = getFirestore();
 
-  console.log(`[Auth Service] Login attempt for email: ${data.email.toLowerCase()}`);
+  console.log(
+    `[Auth Service] Login attempt for email: ${data.email.toLowerCase()}`
+  );
 
   // Get user by email
-  const userSnapshot = await db.collection('users').where('email', '==', data.email.toLowerCase()).get();
+  const userSnapshot = await db
+    .collection("users")
+    .where("email", "==", data.email.toLowerCase())
+    .get();
 
   if (userSnapshot.empty) {
-    console.error(`[Auth Service] User not found in 'users' collection for email: ${data.email}`);
-    throw new Error('Invalid email or password');
+    console.error(
+      `[Auth Service] User not found in 'users' collection for email: ${data.email}`
+    );
+    throw new Error("Invalid email or password");
   }
 
   const userDoc = userSnapshot.docs[0];
@@ -271,17 +311,19 @@ export async function loginUser(data: LoginRequest): Promise<{ user: UserDocumen
   console.log(`[Auth Service] User found with UID: ${user.uid}`);
 
   // Check if user is banned
-  if (user.status === 'banned') {
+  if (user.status === "banned") {
     console.error(`[Auth Service] User is banned: ${user.uid}`);
-    throw new Error('Account has been banned');
+    throw new Error("Account has been banned");
   }
 
   // Get stored password hash
-  const credDoc = await db.collection('userCredentials').doc(user.uid).get();
+  const credDoc = await db.collection("userCredentials").doc(user.uid).get();
 
   if (!credDoc.exists) {
-    console.error(`[Auth Service] No credentials found in 'userCredentials' collection for UID: ${user.uid}`);
-    throw new Error('Invalid email or password');
+    console.error(
+      `[Auth Service] No credentials found in 'userCredentials' collection for UID: ${user.uid}`
+    );
+    throw new Error("Invalid email or password");
   }
 
   const { hashedPassword } = credDoc.data() as { hashedPassword: string };
@@ -293,7 +335,7 @@ export async function loginUser(data: LoginRequest): Promise<{ user: UserDocumen
 
   if (!isValidPassword) {
     console.error(`[Auth Service] Password mismatch for user: ${user.uid}`);
-    throw new Error('Invalid email or password');
+    throw new Error("Invalid email or password");
   }
 
   // Generate JWT token
@@ -316,7 +358,7 @@ export async function loginUser(data: LoginRequest): Promise<{ user: UserDocumen
  */
 export async function getUserById(uid: string): Promise<UserDocument | null> {
   const db = getFirestore();
-  const userDoc = await db.collection('users').doc(uid).get();
+  const userDoc = await db.collection("users").doc(uid).get();
 
   if (!userDoc.exists) {
     return null;
@@ -328,12 +370,22 @@ export async function getUserById(uid: string): Promise<UserDocument | null> {
 /**
  * Verify JWT token
  */
-export function verifyToken(token: string): { uid: string; email: string; role: string; name: string } {
+export function verifyToken(token: string): {
+  uid: string;
+  email: string;
+  role: string;
+  name: string;
+} {
   try {
-    const decoded = jwt.verify(token, JWT_SECRET) as { uid: string; email: string; role: string; name: string };
+    const decoded = jwt.verify(token, JWT_SECRET) as {
+      uid: string;
+      email: string;
+      role: string;
+      name: string;
+    };
     return decoded;
   } catch (error) {
-    throw new Error('Invalid token');
+    throw new Error("Invalid token");
   }
 }
 
@@ -347,35 +399,37 @@ export async function deductTaskCredit(uid: string): Promise<number> {
   const db = getFirestore();
 
   // Get user
-  const userDoc = await db.collection('users').doc(uid).get();
+  const userDoc = await db.collection("users").doc(uid).get();
 
   if (!userDoc.exists) {
-    throw new Error('User not found');
+    throw new Error("User not found");
   }
 
   const user = userDoc.data() as UserDocument;
 
   // Verify user is a teacher
-  if (user.role !== 'teacher') {
-    throw new Error('Only teachers can create tasks');
+  if (user.role !== "teacher") {
+    throw new Error("Only teachers can create tasks");
   }
 
   // Check current credits
   const currentCredits = user.taskCredits || 0;
 
   if (currentCredits <= 0) {
-    throw new Error('No task creation credits remaining');
+    throw new Error("No task creation credits remaining");
   }
 
   // Deduct one credit
   const newCredits = currentCredits - 1;
 
-  await db.collection('users').doc(uid).update({
+  await db.collection("users").doc(uid).update({
     taskCredits: newCredits,
     updatedAt: new Date(),
   });
 
-  console.log(`[Auth Service] Deducted 1 credit from user ${uid}. Remaining: ${newCredits}`);
+  console.log(
+    `[Auth Service] Deducted 1 credit from user ${uid}. Remaining: ${newCredits}`
+  );
 
   return newCredits;
 }
@@ -389,7 +443,7 @@ export async function deductTaskCredit(uid: string): Promise<number> {
 export async function trackGuestTaskView(fingerprint: string): Promise<number> {
   const db = getFirestore();
 
-  const guestViewDoc = db.collection('guestTaskViews').doc(fingerprint);
+  const guestViewDoc = db.collection("guestTaskViews").doc(fingerprint);
   const doc = await guestViewDoc.get();
 
   if (!doc.exists) {

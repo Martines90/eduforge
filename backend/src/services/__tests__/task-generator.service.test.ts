@@ -27,10 +27,12 @@ describe("TaskGeneratorService - Prompt Generation", () => {
   let mockTaskStorage: jest.Mocked<TaskStorageService>;
 
   // Helper function to get task system prompt (from generateWithSystemPrompt)
-  const getTaskSystemPrompt = () => mockTextGenerator.generateWithSystemPrompt.mock.calls[0][0];
+  const getTaskSystemPrompt = () =>
+    mockTextGenerator.generateWithSystemPrompt.mock.calls[0][0];
 
   // Helper function to get task user message (from generateWithSystemPrompt)
-  const getTaskUserMessage = () => mockTextGenerator.generateWithSystemPrompt.mock.calls[0][1];
+  const getTaskUserMessage = () =>
+    mockTextGenerator.generateWithSystemPrompt.mock.calls[0][1];
 
   // Helper function to get solution prompt (from generate)
   const getSolutionPrompt = () => mockTextGenerator.generate.mock.calls[0][0];
@@ -65,79 +67,120 @@ describe("TaskGeneratorService - Prompt Generation", () => {
     delete process.env.DISABLE_IMAGE_GENERATION;
 
     // Create fresh mocks
-    mockTextGenerator = new TextGeneratorService() as jest.Mocked<TextGeneratorService>;
-    mockImageGenerator = new ImageGeneratorService() as jest.Mocked<ImageGeneratorService>;
-    mockTaskStorage = new TaskStorageService() as jest.Mocked<TaskStorageService>;
+    mockTextGenerator =
+      new TextGeneratorService() as jest.Mocked<TextGeneratorService>;
+    mockImageGenerator =
+      new ImageGeneratorService() as jest.Mocked<ImageGeneratorService>;
+    mockTaskStorage =
+      new TaskStorageService() as jest.Mocked<TaskStorageService>;
 
     // Mock the generateStoryInspiration function
-    (inspirationHelper.generateStoryInspiration as jest.Mock) = jest.fn().mockReturnValue({
-      selected: {
-        era: { id: "modern", name: "Modern Era (2000-2024)", period: "2000-2024", keywords: ["digital", "contemporary"] },
-        location: { id: "urban_city", name: "Urban City", type: "urban", subcategories: ["downtown", "business district"] },
-        field: { id: "engineering", name: "Engineering", subcategories: ["civil", "mechanical"] },
-        stake: { id: "professional", name: "Professional Success", intensity: "medium", description: "Career achievement", examples: ["project completion"] },
-      },
-      promptAdditions: "\n\n## STORY INSPIRATION ELEMENTS\n**Era:** Modern Era\n**Field:** Engineering\n",
-    });
+    (inspirationHelper.generateStoryInspiration as jest.Mock) = jest
+      .fn()
+      .mockReturnValue({
+        selected: {
+          era: {
+            id: "modern",
+            name: "Modern Era (2000-2024)",
+            period: "2000-2024",
+            keywords: ["digital", "contemporary"],
+          },
+          location: {
+            id: "urban_city",
+            name: "Urban City",
+            type: "urban",
+            subcategories: ["downtown", "business district"],
+          },
+          field: {
+            id: "engineering",
+            name: "Engineering",
+            subcategories: ["civil", "mechanical"],
+          },
+          stake: {
+            id: "professional",
+            name: "Professional Success",
+            intensity: "medium",
+            description: "Career achievement",
+            examples: ["project completion"],
+          },
+        },
+        promptAdditions:
+          "\n\n## STORY INSPIRATION ELEMENTS\n**Era:** Modern Era\n**Field:** Engineering\n",
+      });
 
     // Mock curriculum mapper functions
-    (curriculumMapper.getCurriculumTopicByPath as jest.Mock) = jest.fn().mockReturnValue({
-      topic: {
-        key: "solving_basic",
-        name: "Solving Basic Equations",
-        short_description: "Introduction to solving basic linear equations",
-        example_tasks: [
-          "Solve for x: 2x + 5 = 13",
-          "Solve for x: 3x - 7 = 11",
-          "Solve for x: x/4 = 9"
+    (curriculumMapper.getCurriculumTopicByPath as jest.Mock) = jest
+      .fn()
+      .mockReturnValue({
+        topic: {
+          key: "solving_basic",
+          name: "Solving Basic Equations",
+          short_description: "Introduction to solving basic linear equations",
+          example_tasks: [
+            "Solve for x: 2x + 5 = 13",
+            "Solve for x: 3x - 7 = 11",
+            "Solve for x: x/4 = 9",
+          ],
+        },
+        parentTopics: [
+          { key: "algebra", name: "Algebra" },
+          { key: "linear_equations", name: "Linear Equations" },
+          { key: "solving_basic", name: "Solving Basic Equations" },
         ],
-      },
-      parentTopics: [
-        { key: "algebra", name: "Algebra" },
-        { key: "linear_equations", name: "Linear Equations" },
-        { key: "solving_basic", name: "Solving Basic Equations" },
-      ],
-      fullPath: "math:grade_9_10:algebra:linear_equations:solving_basic",
-    });
+        fullPath: "math:grade_9_10:algebra:linear_equations:solving_basic",
+      });
 
-    (curriculumMapper.formatCurriculumTopicForPrompt as jest.Mock) = jest.fn().mockReturnValue(
-      "\n## CURRICULUM TOPIC INFORMATION\n**Topic:** Solving Basic Equations\n"
-    );
+    (curriculumMapper.formatCurriculumTopicForPrompt as jest.Mock) = jest
+      .fn()
+      .mockReturnValue(
+        "\n## CURRICULUM TOPIC INFORMATION\n**Topic:** Solving Basic Equations\n"
+      );
 
-    (curriculumMapper.getExampleTasks as jest.Mock) = jest.fn().mockReturnValue([
-      "Solve for x: 2x + 5 = 13",
-      "Solve for x: 3x - 7 = 11",
-      "Solve for x: x/4 = 9"
-    ]);
+    (curriculumMapper.getExampleTasks as jest.Mock) = jest
+      .fn()
+      .mockReturnValue([
+        "Solve for x: 2x + 5 = 13",
+        "Solve for x: 3x - 7 = 11",
+        "Solve for x: x/4 = 9",
+      ]);
 
     // Mock text generator to capture the prompt
-    mockTextGenerator.generateWithSystemPrompt = jest.fn().mockImplementation(async (systemPrompt: string, userPrompt: string) => {
-      // Return mock task response for the new system prompt approach
-      return {
-        text: JSON.stringify({
-          title: "Test Task Title",
-          story_chunks: ["First paragraph.", "Second paragraph."],
-          questions: ["What is the answer?"],
-          expected_answer_formats: ["Number to 2 decimal places"],
-        }),
-        tokens: 150,
-        cost: 0.001,
-      };
-    });
+    mockTextGenerator.generateWithSystemPrompt = jest
+      .fn()
+      .mockImplementation(async (systemPrompt: string, userPrompt: string) => {
+        // Return mock task response for the new system prompt approach
+        return {
+          text: JSON.stringify({
+            title: "Test Task Title",
+            story_chunks: ["First paragraph.", "Second paragraph."],
+            questions: ["What is the answer?"],
+            expected_answer_formats: ["Number to 2 decimal places"],
+          }),
+          tokens: 150,
+          cost: 0.001,
+        };
+      });
 
-    mockTextGenerator.generate = jest.fn().mockImplementation(async (prompt: string) => {
-      // Return mock solution response
-      return {
-        text: JSON.stringify({
-          solution_steps: [
-            { step_number: 1, title: "Step 1", description: "First step", result: "10" },
-          ],
-          final_answer: "The answer is 10",
-        }),
-        tokens: 150,
-        cost: 0.001,
-      };
-    });
+    mockTextGenerator.generate = jest
+      .fn()
+      .mockImplementation(async (prompt: string) => {
+        // Return mock solution response
+        return {
+          text: JSON.stringify({
+            solution_steps: [
+              {
+                step_number: 1,
+                title: "Step 1",
+                description: "First step",
+                result: "10",
+              },
+            ],
+            final_answer: "The answer is 10",
+          }),
+          tokens: 150,
+          cost: 0.001,
+        };
+      });
 
     // Mock image generator
     mockImageGenerator.generate = jest.fn().mockResolvedValue({
@@ -148,32 +191,41 @@ describe("TaskGeneratorService - Prompt Generation", () => {
     // Mock storage
     mockTaskStorage.saveTask = jest
       .fn()
-      .mockResolvedValue("/storage/hu/math/grade_9_10/algebra/linear_equations/solving_basic_equations");
-    mockTaskStorage.getTask = jest.fn().mockImplementation(async (request, taskId) => {
-      // Return a mock task with updated image URLs
-      return {
-        title: "Test Task Title",
-        story_chunks: ["First paragraph.", "Second paragraph."],
-        story_text: "First paragraph.\n\nSecond paragraph.",
-        questions: ["What is the answer?"],
-        expected_answer_formats: ["Number to 2 decimal places"],
-        solution_steps: [
-          { step_number: 1, title: "Step 1", description: "First step", result: "10" },
-        ],
-        final_answer: "The answer is 10",
-        images: [],
-        metadata: {
-          curriculum_path: request.curriculum_path,
-          target_group: request.target_group,
-          difficulty_level: request.difficulty_level,
-          educational_model: request.educational_model,
-          country_code: request.country_code,
-          tags: [],
-        },
-        is_editable: true,
-        created_at: new Date().toISOString(),
-      };
-    });
+      .mockResolvedValue(
+        "/storage/hu/math/grade_9_10/algebra/linear_equations/solving_basic_equations"
+      );
+    mockTaskStorage.getTask = jest
+      .fn()
+      .mockImplementation(async (request, taskId) => {
+        // Return a mock task with updated image URLs
+        return {
+          title: "Test Task Title",
+          story_chunks: ["First paragraph.", "Second paragraph."],
+          story_text: "First paragraph.\n\nSecond paragraph.",
+          questions: ["What is the answer?"],
+          expected_answer_formats: ["Number to 2 decimal places"],
+          solution_steps: [
+            {
+              step_number: 1,
+              title: "Step 1",
+              description: "First step",
+              result: "10",
+            },
+          ],
+          final_answer: "The answer is 10",
+          images: [],
+          metadata: {
+            curriculum_path: request.curriculum_path,
+            target_group: request.target_group,
+            difficulty_level: request.difficulty_level,
+            educational_model: request.educational_model,
+            country_code: request.country_code,
+            tags: [],
+          },
+          is_editable: true,
+          created_at: new Date().toISOString(),
+        };
+      });
 
     // Create service instance
     service = new TaskGeneratorService();
@@ -251,7 +303,9 @@ describe("TaskGeneratorService - Prompt Generation", () => {
     it("should call generateWithSystemPrompt for task and generate for solution", async () => {
       await service.generateTask(metricRequest);
 
-      expect(mockTextGenerator.generateWithSystemPrompt).toHaveBeenCalledTimes(1);
+      expect(mockTextGenerator.generateWithSystemPrompt).toHaveBeenCalledTimes(
+        1
+      );
       expect(mockTextGenerator.generate).toHaveBeenCalledTimes(1);
     });
 
@@ -262,7 +316,10 @@ describe("TaskGeneratorService - Prompt Generation", () => {
     });
 
     it("should not call image generator when images = 0", async () => {
-      const noImageRequest: TaskGeneratorRequest = { ...metricRequest, number_of_images: 0 as 0 };
+      const noImageRequest: TaskGeneratorRequest = {
+        ...metricRequest,
+        number_of_images: 0 as const,
+      };
       await service.generateTask(noImageRequest);
 
       expect(mockImageGenerator.generate).not.toHaveBeenCalled();
@@ -292,7 +349,10 @@ describe("TaskGeneratorService - Prompt Generation", () => {
       expect(typeof taskId).toBe("string");
       expect(request).toEqual(metricRequest);
       expect(savedTask.title).toBe("Test Task Title");
-      expect(savedTask.story_chunks).toEqual(["First paragraph.", "Second paragraph."]);
+      expect(savedTask.story_chunks).toEqual([
+        "First paragraph.",
+        "Second paragraph.",
+      ]);
       expect(savedTask.questions).toEqual(["What is the answer?"]);
     });
 

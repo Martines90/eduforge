@@ -29,7 +29,9 @@ export class AnthropicProvider implements IAIProvider {
     console.log(`   Default model: ${this.defaultModel}`);
   }
 
-  async generateCompletion(request: AICompletionRequest): Promise<AICompletionResponse> {
+  async generateCompletion(
+    request: AICompletionRequest
+  ): Promise<AICompletionResponse> {
     const model = request.model || this.defaultModel;
 
     try {
@@ -54,7 +56,9 @@ export class AnthropicProvider implements IAIProvider {
       });
 
       // Extract text content from response
-      const textContent = response.content.find((block) => block.type === "text");
+      const textContent = response.content.find(
+        (block) => block.type === "text"
+      );
       if (!textContent || textContent.type !== "text") {
         throw new Error("Anthropic returned no text content");
       }
@@ -65,7 +69,8 @@ export class AnthropicProvider implements IAIProvider {
         usage: {
           promptTokens: response.usage.input_tokens,
           completionTokens: response.usage.output_tokens,
-          totalTokens: response.usage.input_tokens + response.usage.output_tokens,
+          totalTokens:
+            response.usage.input_tokens + response.usage.output_tokens,
         },
         finishReason: response.stop_reason || undefined,
       };
@@ -75,8 +80,12 @@ export class AnthropicProvider implements IAIProvider {
     }
   }
 
-  generateImage(request: ImageGenerationRequest): Promise<ImageGenerationResponse> {
-    throw new Error("Anthropic does not support image generation. Use OpenAI for images.");
+  generateImage(
+    request: ImageGenerationRequest
+  ): Promise<ImageGenerationResponse> {
+    throw new Error(
+      "Anthropic does not support image generation. Use OpenAI for images."
+    );
   }
 
   supportsImageGeneration(): boolean {

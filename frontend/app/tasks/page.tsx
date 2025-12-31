@@ -14,18 +14,15 @@ import {
   MenuItem,
   FormControl,
   InputLabel,
-  Alert,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import FilterListIcon from '@mui/icons-material/FilterList';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import { Button } from '@/components/atoms/Button';
 import { TaskTreeView } from '@/components/organisms/TaskTreeView';
-import { TreeNode, TaskItem } from '@/types/task-tree';
+import { TreeNode } from '@/types/task-tree';
 import { useTranslation } from '@/lib/i18n';
 import { fetchTreeMap } from '@/lib/services/api.service';
 import { useUser } from '@/lib/context/UserContext';
-import { useSnackbar } from 'notistack';
 
 /**
  * Tasks Page
@@ -37,7 +34,6 @@ export default function TasksPage() {
   const router = useRouter();
   const { t } = useTranslation();
   const { user } = useUser();
-  const { enqueueSnackbar } = useSnackbar();
   const [searchQuery, setSearchQuery] = useState('');
   const [filterSubject, setFilterSubject] = useState('mathematics');
   const [filterGrade, setFilterGrade] = useState('grade_9_10');

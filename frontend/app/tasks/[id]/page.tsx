@@ -15,7 +15,6 @@ import {
   Chip,
   Stack,
   Alert,
-  IconButton,
   Snackbar,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -26,7 +25,6 @@ import SchoolIcon from '@mui/icons-material/School';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import StarIcon from '@mui/icons-material/Star';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import RateReviewIcon from '@mui/icons-material/RateReview';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import { Button } from '@/components/atoms/Button';
 import { LoadingSpinner } from '@/components/atoms/LoadingSpinner';
@@ -34,7 +32,6 @@ import { processLatexInHtml } from '@/lib/utils/latex-converter';
 import { useTranslation } from '@/lib/i18n';
 import { fetchTaskById } from '@/lib/services/api.service';
 import { useUser } from '@/lib/context/UserContext';
-import { useSnackbar } from 'notistack';
 import { GuestPromptModal } from '@/components/organisms/GuestPromptModal';
 import { useGuestTaskViewLimit } from '@/lib/hooks/useGuestTaskViewLimit';
 import { TRIAL_START_CREDITS } from '@/lib/constants/credits';
@@ -65,7 +62,6 @@ export default function TaskDetailPage() {
   const router = useRouter();
   const { t } = useTranslation();
   const { user } = useUser();
-  const { enqueueSnackbar } = useSnackbar();
   const taskId = params.id as string;
 
   const [task, setTask] = useState<TaskData | null>(null);
@@ -217,7 +213,7 @@ export default function TaskDetailPage() {
       });
 
       // Dynamically import html2pdf to avoid SSR issues
-      const html2pdf = (await import('html2pdf.js')).default;
+      await import('html2pdf.js');
 
       // Create a temporary container for PDF rendering
       // IMPORTANT: Must be visible for html2canvas to capture content
@@ -342,36 +338,6 @@ export default function TaskDetailPage() {
           }, 100);
         });
       }
-
-      // Configure PDF options - simplified for debugging
-      const opt = {
-        margin: [10, 10, 10, 10],
-        filename: `task_${taskId}.pdf`,
-        image: {
-          type: 'jpeg' as const,
-          quality: 0.95
-        },
-        html2canvas: {
-          scale: 2,
-          useCORS: true,
-          allowTaint: true,
-          logging: true,
-          letterRendering: true,
-          scrollY: 0,
-          scrollX: 0,
-          windowWidth: pdfContainer.scrollWidth,
-          windowHeight: pdfContainer.scrollHeight,
-        },
-        jsPDF: {
-          unit: 'mm',
-          format: 'a4',
-          orientation: 'portrait' as const,
-          compress: true
-        },
-        pagebreak: {
-          mode: ['avoid-all', 'css', 'legacy']
-        }
-      };
 
       // Give browser time to fully render everything
       console.log('[PDF] Waiting for final rendering...');
