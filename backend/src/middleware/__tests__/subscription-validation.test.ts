@@ -237,7 +237,7 @@ describe("Subscription Validation Middleware E2E Tests", () => {
       expect(mockNext).toHaveBeenCalled();
     });
 
-    it("should reject Trial plan", async () => {
+    it("should pass with Trial plan", async () => {
       (authService.getUserById as jest.Mock).mockResolvedValue({
         uid: "test-user-123",
         subscription: {
@@ -248,20 +248,8 @@ describe("Subscription Validation Middleware E2E Tests", () => {
 
       await requireBasicPlan(mockReq as Request, mockRes as Response, mockNext);
 
-      expect(mockNext).not.toHaveBeenCalled();
-      expect(mockRes.status).toHaveBeenCalledWith(403);
-      expect(mockRes.json).toHaveBeenCalledWith(
-        expect.objectContaining({
-          success: false,
-          message:
-            "Task library access requires at least a Basic plan subscription. Go to My Subscriptions and upgrade!",
-          errorCode: "BASIC_PLAN_REQUIRED",
-          data: {
-            currentTier: "trial",
-            requiredTiers: ["basic", "normal", "pro"],
-          },
-        })
-      );
+      expect(mockNext).toHaveBeenCalled();
+      expect(mockRes.status).not.toHaveBeenCalled();
     });
 
     it("should reject no subscription", async () => {

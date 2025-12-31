@@ -326,10 +326,26 @@ export async function fetchTasksByCurriculumPath(
 
 /**
  * Fetch task by ID
+ * Includes auth token from localStorage to support both registered and guest users
  */
 export async function fetchTaskById(taskId: string, view: boolean = false): Promise<ApiResponse<any>> {
   const viewParam = view ? '?view=true' : '';
-  const response = await fetch(`${API_BASE_URL}/api/v2/tasks/${taskId}${viewParam}`);
+
+  // Get token from localStorage (works for both registered users and guests)
+  const token = typeof window !== 'undefined' ? localStorage.getItem('authToken') : null;
+
+  const headers: HeadersInit = {
+    'Content-Type': 'application/json',
+  };
+
+  // Add authorization header if token exists
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+
+  const response = await fetch(`${API_BASE_URL}/api/v2/tasks/${taskId}${viewParam}`, {
+    headers,
+  });
   const data = await response.json();
 
   if (!response.ok) {

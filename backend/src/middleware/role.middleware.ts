@@ -200,8 +200,8 @@ export async function requireBasicPlan(
       return;
     }
 
-    // Check if subscription tier is at least Basic (trial is not enough for task library)
-    const allowedTiers = ["basic", "normal", "pro"];
+    // Check if subscription tier is at least Basic (trial plan users also have access)
+    const allowedTiers = ["trial", "basic", "normal", "pro"];
     if (!allowedTiers.includes(user.subscription.tier)) {
       res.status(403).json({
         success: false,
