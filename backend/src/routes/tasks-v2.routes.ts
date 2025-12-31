@@ -63,6 +63,38 @@ const authenticateUser = async (
 };
 
 /**
+ * Middleware to optionally extract and verify JWT token
+ * Continues without error if token is missing or invalid
+ */
+const optionalAuthenticateUser = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  try {
+    const authHeader = req.headers.authorization;
+
+    if (authHeader && authHeader.startsWith("Bearer ")) {
+      const token = authHeader.split(" ")[1];
+      try {
+        const decoded = verifyToken(token);
+        (req as AuthenticatedRequest).user = decoded as {
+          uid: string;
+          email: string;
+          role: string;
+        };
+      } catch {
+        // Token invalid, but we continue without user
+      }
+    }
+    next();
+  } catch (_error: unknown) {
+    // Continue without authentication
+    next();
+  }
+};
+
+/**
  * Middleware to check if user is a teacher
  */
 const requireTeacher = (req: Request, res: Response, next: NextFunction) => {
@@ -121,13 +153,10 @@ router.post(
 /**
  * GET /api/v2/tasks
  * Get tasks with filtering and pagination
- * Requires at least Basic plan subscription
+ * Public endpoint - no authentication required for browsing published tasks
+ * Authentication is enforced when viewing individual task details
  */
-router.get(
-  "/api/v2/tasks",
-  authenticateUser,
-  requireBasicPlan,
-  async (req: Request, res: Response) => {
+router.get("/api/v2/tasks", async (req: Request, res: Response) => {
     try {
       const query: GetTasksQuery = {
         curriculum_path: req.query.curriculum_path as string,

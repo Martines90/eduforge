@@ -3,12 +3,7 @@
 
 .treeContainer {
   border-radius: 8px;
-  overflow: hidden;
-  max-height: 800px;
-
-  @include md {
-    max-height: none;
-  }
+  overflow: visible;
 }
 
 .headerRow {

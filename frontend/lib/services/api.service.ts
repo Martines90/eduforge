@@ -307,6 +307,7 @@ export async function fetchTreeMap(country: string, subject: string, gradeLevel:
 
 /**
  * Fetch tasks by curriculum path
+ * Public endpoint - no authentication required for browsing published tasks
  */
 export async function fetchTasksByCurriculumPath(
   curriculumPath: string,

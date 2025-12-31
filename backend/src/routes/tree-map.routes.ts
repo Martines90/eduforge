@@ -105,12 +105,13 @@ router.get("/:subject/:gradeLevel", async (req: Request, res: Response) => {
     const db = getFirestore();
 
     // Fetch all nodes for the given country, subject and grade level
+    // Data is stored at: countries/{country}/subjectMappings/{subject}/{gradeLevel}/
     const snapshot = await db
       .collection("countries")
       .doc(country)
       .collection("subjectMappings")
-      .where("subject", "==", subject)
-      .where("gradeLevel", "==", gradeLevel)
+      .doc(subject)
+      .collection(gradeLevel)
       .get();
 
     if (snapshot.empty) {
@@ -186,12 +187,13 @@ router.get(
       const db = getFirestore();
 
       // Fetch all nodes for the given country, subject and grade level
+      // Data is stored at: countries/{country}/subjectMappings/{subject}/{gradeLevel}/
       const snapshot = await db
         .collection("countries")
         .doc(country)
         .collection("subjectMappings")
-        .where("subject", "==", subject)
-        .where("gradeLevel", "==", gradeLevel)
+        .doc(subject)
+        .collection(gradeLevel)
         .get();
 
       if (snapshot.empty) {

@@ -75,11 +75,8 @@ export default function TasksPage() {
     <Container maxWidth="lg" sx={{ py: 4 }}>
       {/* Header */}
       <Box sx={{ mb: 4, textAlign: 'center' }}>
-        <Typography variant="h3" component="h1" gutterBottom>
+        <Typography variant="h3" component="h1">
           {t('Educational Tasks')}
-        </Typography>
-        <Typography variant="body1" color="text.secondary">
-          {t('Browse and explore educational tasks for grades 9-12')}
         </Typography>
       </Box>
 

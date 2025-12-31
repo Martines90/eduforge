@@ -13,7 +13,6 @@ import {
   IconButton,
   Collapse,
   Typography,
-  Rating,
   Chip,
   Tooltip,
   CircularProgress,
@@ -78,11 +77,15 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
       setLoadingTasks(true);
       try {
         // Fetch tasks from backend API using full curriculum path
+        console.log('[TaskTreeView] Fetching tasks for curriculum path:', curriculumPath);
+        console.log('[TaskTreeView] Path components:', { subject, gradeLevel, pathString });
         const data = await fetchTasksByCurriculumPath(curriculumPath, true);
+        console.log('[TaskTreeView] API Response:', data);
 
-        if (data.success && data.data?.tasks) {
+        if (data.success && data.tasks) {
           // Map backend task format to frontend TaskItem format
-          const mappedTasks = data.data.tasks.map((task: any) => ({
+          console.log('[TaskTreeView] Found', data.tasks.length, 'tasks');
+          const mappedTasks = data.tasks.map((task: any) => ({
             id: task.id,
             title: task.title,
             subject: task.subject,
@@ -131,7 +134,15 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
     <>
       {/* Category Row */}
       <TableRow className={`${styles.treeRow} ${getRowClass()}`}>
-        <TableCell style={{ paddingLeft: `${level * 24 + 8}px` }}>
+        <TableCell
+          sx={{
+            paddingLeft: {
+              xs: `${level * 8 + 8}px`,  // Mobile: smaller indent
+              sm: `${level * 16 + 8}px`, // Tablet: medium indent
+              md: `${level * 24 + 8}px`  // Desktop: full indent
+            }
+          }}
+        >
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             {/* Show expand button for nodes with children OR leaf nodes (which can have tasks) */}
             {(hasChildren || isLeaf) && (
@@ -183,7 +194,16 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
       {/* Loading state for tasks */}
       {isExpanded && isLeaf && loadingTasks && (
         <TableRow className={styles.emptyRow}>
-          <TableCell colSpan={3} style={{ paddingLeft: `${(level + 1) * 24 + 48}px` }}>
+          <TableCell
+            colSpan={3}
+            sx={{
+              paddingLeft: {
+                xs: `${(level + 1) * 8 + 16}px`,  // Mobile: smaller padding
+                sm: `${(level + 1) * 16 + 32}px`, // Tablet: medium padding
+                md: `${(level + 1) * 24 + 48}px`  // Desktop: full padding
+              }
+            }}
+          >
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, py: 2 }}>
               <CircularProgress size={20} />
               <Typography variant="body2" color="text.secondary">
@@ -197,7 +217,16 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
       {/* No tasks message for empty leaf nodes */}
       {isExpanded && isLeaf && !loadingTasks && !hasTasks && tasksFetched && (
         <TableRow className={styles.emptyRow}>
-          <TableCell colSpan={3} style={{ paddingLeft: `${(level + 1) * 24 + 48}px` }}>
+          <TableCell
+            colSpan={3}
+            sx={{
+              paddingLeft: {
+                xs: `${(level + 1) * 8 + 16}px`,  // Mobile: smaller padding
+                sm: `${(level + 1) * 16 + 32}px`, // Tablet: medium padding
+                md: `${(level + 1) * 24 + 48}px`  // Desktop: full padding
+              }
+            }}
+          >
             <Box sx={{ py: 3 }}>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, alignItems: 'flex-start' }}>
                 <Typography variant="body2" color="text.secondary">
@@ -234,18 +263,23 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
               onClick={() => window.open(`/tasks/${task.id}`, '_blank')}
               sx={{ cursor: 'pointer', '&:hover': { bgcolor: 'action.hover' } }}
             >
-              <TableCell style={{ paddingLeft: `${(level + 1) * 24 + 48}px` }}>
+              <TableCell
+                sx={{
+                  paddingLeft: {
+                    xs: `${(level + 1) * 8 + 16}px`,  // Mobile: smaller padding
+                    sm: `${(level + 1) * 16 + 32}px`, // Tablet: medium padding
+                    md: `${(level + 1) * 24 + 48}px`  // Desktop: full padding
+                  }
+                }}
+              >
                 <Typography variant="body2" color="primary">
                   {task.title}
                 </Typography>
               </TableCell>
               <TableCell>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                  <Rating value={task.rating} readOnly size="small" precision={0.5} />
-                  <Typography variant="caption" color="text.secondary">
-                    ({task.rating.toFixed(1)})
-                  </Typography>
-                </Box>
+                <Typography variant="body2" color="text.secondary">
+                  {task.rating > 0 ? `${task.rating.toFixed(1)}/5 ★` : 'N/A'}
+                </Typography>
               </TableCell>
               <TableCell>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
