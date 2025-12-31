@@ -10,8 +10,7 @@ import LoginIcon from '@mui/icons-material/Login';
 import { useUser } from '@/lib/context';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from '@/lib/i18n';
-import { LoginModal } from '@/components/organisms/LoginModal';
-import { RegistrationModal } from '@/components/organisms/RegistrationModal';
+import { GuestPromptModal } from '@/components/organisms/GuestPromptModal';
 import styles from './UserMenu.module.scss';
 
 export interface UserMenuProps {
@@ -24,16 +23,14 @@ export interface UserMenuProps {
  * For guests, shows Login/Register button
  */
 export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
-  const { user, logoutUser, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser } = useUser();
+  const { user, logoutUser } = useUser();
   const router = useRouter();
   const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
-  // Guest modal states
-  const [showLoginModal, setShowLoginModal] = useState(false);
-  const [showRegisterModal, setShowRegisterModal] = useState(false);
-  const [isTeacher, setIsTeacher] = useState(false);
+  // Guest modal state
+  const [showGuestModal, setShowGuestModal] = useState(false);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -71,58 +68,11 @@ export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
     router.push('/');
   };
 
-  const handleLogin = async (email: string, password: string) => {
-    try {
-      await loginUser(email, password);
-      setShowLoginModal(false);
-      // User is now logged in, component will re-render
-    } catch (error) {
-      // Error handling is done in loginUser
-      throw error;
-    }
-  };
-
-  const handleRegister = async (profile: any) => {
-    try {
-      // Registration is handled in RegistrationModal
-      const userProfile = {
-        name: profile.name,
-        email: profile.email,
-        registeredAt: new Date().toISOString(),
-        token: localStorage.getItem('authToken') || '',
-      };
-
-      registerUser(userProfile);
-      setCountry(profile.country);
-      setIdentity(profile.identity);
-
-      if (profile.subject) {
-        setSubject(profile.subject);
-      }
-
-      if (profile.educationalModel) {
-        setEducationalModel(profile.educationalModel);
-      }
-
-      setShowRegisterModal(false);
-
-      // Always redirect to home page
-      router.push('/');
-    } catch (error) {
-      console.error('Error during registration:', error);
-      throw error;
-    }
-  };
-
-  const handleCreateAccountClick = (isTeacherAccount: boolean) => {
-    setIsTeacher(isTeacherAccount);
-    setShowLoginModal(false);
-    setShowRegisterModal(true);
-  };
-
-  const handleBackToLogin = () => {
-    setShowRegisterModal(false);
-    setShowLoginModal(true);
+  // Handle registration completion
+  const handleRegistrationComplete = () => {
+    // After registration, user context is updated automatically
+    // Just close the modal and stay on current page
+    setShowGuestModal(false);
   };
 
   // For guests, show Login/Register button
@@ -134,7 +84,7 @@ export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
             variant="contained"
             color="primary"
             startIcon={<LoginIcon />}
-            onClick={() => setShowLoginModal(true)}
+            onClick={() => setShowGuestModal(true)}
             sx={{
               textTransform: 'none',
               fontWeight: 500,
@@ -146,22 +96,11 @@ export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
           </Button>
         </div>
 
-        {/* Login Modal */}
-        <LoginModal
-          open={showLoginModal}
-          onLogin={handleLogin}
-          onCreateAccount={handleCreateAccountClick}
-          onClose={() => setShowLoginModal(false)}
-        />
-
-        {/* Registration Modal */}
-        <RegistrationModal
-          open={showRegisterModal}
-          onRegister={handleRegister}
-          onBack={handleBackToLogin}
-          onClose={() => setShowRegisterModal(false)}
-          detectedCountry={user.country}
-          isTeacher={isTeacher}
+        {/* Guest Registration/Login Modal */}
+        <GuestPromptModal
+          open={showGuestModal}
+          onClose={() => setShowGuestModal(false)}
+          onRegistrationComplete={handleRegistrationComplete}
         />
       </>
     );

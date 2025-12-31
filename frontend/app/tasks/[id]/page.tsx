@@ -35,8 +35,7 @@ import { useTranslation } from '@/lib/i18n';
 import { fetchTaskById } from '@/lib/services/api.service';
 import { useUser } from '@/lib/context/UserContext';
 import { useSnackbar } from 'notistack';
-import { LoginModal } from '@/components/organisms/LoginModal';
-import { RegistrationModal } from '@/components/organisms/RegistrationModal';
+import { GuestPromptModal } from '@/components/organisms/GuestPromptModal';
 import { useGuestTaskViewLimit } from '@/lib/hooks/useGuestTaskViewLimit';
 import { TRIAL_START_CREDITS } from '@/lib/constants/credits';
 
@@ -65,7 +64,7 @@ export default function TaskDetailPage() {
   const params = useParams();
   const router = useRouter();
   const { t } = useTranslation();
-  const { user, registerUser, loginUser, setCountry, setIdentity, setSubject, setEducationalModel } = useUser();
+  const { user } = useUser();
   const { enqueueSnackbar } = useSnackbar();
   const taskId = params.id as string;
 
@@ -75,10 +74,9 @@ export default function TaskDetailPage() {
   const [showCopySuccess, setShowCopySuccess] = useState(false);
   const [latexReady, setLatexReady] = useState(false);
 
-  // Registration modal state
-  const [showLoginModal, setShowLoginModal] = useState(false);
-  const [showRegisterModal, setShowRegisterModal] = useState(false);
-  const [isTeacher, setIsTeacher] = useState(false);
+  // Guest modal state
+  const [showGuestModal, setShowGuestModal] = useState(false);
+  const [guestModalMessage, setGuestModalMessage] = useState('');
 
   const isGuest = !user.isRegistered;
 
@@ -195,7 +193,8 @@ export default function TaskDetailPage() {
 
     // Block PDF download for guests
     if (isGuest) {
-      setShowLoginModal(true);
+      setGuestModalMessage(t('Register to download tasks as PDF and get {{count}} free task generation credits!', { count: TRIAL_START_CREDITS }));
+      setShowGuestModal(true);
       return;
     }
 
@@ -486,62 +485,11 @@ export default function TaskDetailPage() {
     router.push('/tasks');
   };
 
-  // Handle login
-  const handleLogin = async (email: string, password: string) => {
-    try {
-      await loginUser(email, password);
-      setShowLoginModal(false);
-    } catch (error) {
-      throw error;
-    }
-  };
-
-  // Handle registration
-  const handleRegister = async (profile: any) => {
-    try {
-      const userProfile = {
-        name: profile.name,
-        email: profile.email,
-        registeredAt: new Date().toISOString(),
-        token: localStorage.getItem('authToken') || '',
-      };
-
-      registerUser(userProfile);
-      setCountry(profile.country);
-      setIdentity(profile.identity);
-
-      if (profile.subject) {
-        setSubject(profile.subject);
-      }
-
-      if (profile.educationalModel) {
-        setEducationalModel(profile.educationalModel);
-      }
-
-      setShowRegisterModal(false);
-
-      // Show success message
-      enqueueSnackbar(t('Registration successful! Enjoy your free 3-month trial!'), {
-        variant: 'success',
-        autoHideDuration: 5000,
-      });
-
-      // Stay on current page
-    } catch (error) {
-      console.error('Error during registration:', error);
-      throw error;
-    }
-  };
-
-  const handleCreateAccountClick = (isTeacherAccount: boolean) => {
-    setIsTeacher(isTeacherAccount);
-    setShowLoginModal(false);
-    setShowRegisterModal(true);
-  };
-
-  const handleBackToLogin = () => {
-    setShowRegisterModal(false);
-    setShowLoginModal(true);
+  // Handle registration completion
+  const handleRegistrationComplete = () => {
+    // After registration, user context is updated automatically
+    // Just close the modal and stay on current page
+    setShowGuestModal(false);
   };
 
   if (isLoading) {
@@ -603,7 +551,10 @@ export default function TaskDetailPage() {
               <Button
                 variant="primary"
                 size="large"
-                onClick={() => setShowLoginModal(true)}
+                onClick={() => {
+                  setGuestModalMessage(t('To have access to the tasks you need to register!'));
+                  setShowGuestModal(true);
+                }}
               >
                 {t('Login / Register')}
               </Button>
@@ -618,20 +569,12 @@ export default function TaskDetailPage() {
           </Paper>
         </Container>
 
-        {/* Login Modal */}
-        <LoginModal
-          open={showLoginModal}
-          onLogin={handleLogin}
-          onCreateAccount={handleCreateAccountClick}
-        />
-
-        {/* Registration Modal */}
-        <RegistrationModal
-          open={showRegisterModal}
-          onRegister={handleRegister}
-          onBack={handleBackToLogin}
-          detectedCountry={user.country}
-          isTeacher={isTeacher}
+        {/* Guest Registration/Login Modal */}
+        <GuestPromptModal
+          open={showGuestModal}
+          onClose={() => setShowGuestModal(false)}
+          promptMessage={guestModalMessage}
+          onRegistrationComplete={handleRegistrationComplete}
         />
       </>
     );
@@ -882,22 +825,12 @@ export default function TaskDetailPage() {
         message={t('Share link copied to clipboard!')}
       />
 
-      {/* Login Modal */}
-      <LoginModal
-        open={showLoginModal}
-        onLogin={handleLogin}
-        onCreateAccount={handleCreateAccountClick}
-        onClose={() => setShowLoginModal(false)}
-      />
-
-      {/* Registration Modal */}
-      <RegistrationModal
-        open={showRegisterModal}
-        onRegister={handleRegister}
-        onBack={handleBackToLogin}
-        onClose={() => setShowRegisterModal(false)}
-        detectedCountry={user.country}
-        isTeacher={isTeacher}
+      {/* Guest Registration/Login Modal */}
+      <GuestPromptModal
+        open={showGuestModal}
+        onClose={() => setShowGuestModal(false)}
+        promptMessage={guestModalMessage}
+        onRegistrationComplete={handleRegistrationComplete}
       />
     </Container>
     </>
