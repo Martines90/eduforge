@@ -442,6 +442,7 @@ export interface Translations {
   "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.": string;
   "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.": string;
   "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!": string;
+  "Register to download tasks as PDF and get {{count}} free task generation credits!": string;
 
   // Subscription Page - Interpolated Strings
   "{{count}} custom task collections": string;

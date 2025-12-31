@@ -498,6 +498,7 @@ export const en: Translations = {
   "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.": "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.",
   "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.": "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.",
   "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!": "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!",
+  "Register to download tasks as PDF and get {{count}} free task generation credits!": "Register to download tasks as PDF and get {{count}} free task generation credits!",
 
   // Subscription Page - Interpolated Strings
   "{{count}} custom task collections": "{{count}} custom task collections",

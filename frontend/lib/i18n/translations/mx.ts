@@ -500,6 +500,7 @@ export const mx: Translations = {
   "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.": "¡Para guardar tareas generadas primero debes registrarte como maestro! Obtén {{count}} créditos gratuitos de generación de tareas al registrarte.",
   "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.": "¡Primero debes registrarte como maestro para descargar tareas en formato PDF! Obtén {{count}} créditos gratuitos de generación de tareas al registrarte.",
   "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!": "¡Regístrate (GRATIS) para guardar y descargar tareas, además obtén {{count}} créditos gratuitos de generación de tareas!",
+  "Register to download tasks as PDF and get {{count}} free task generation credits!": "¡Regístrate para descargar tareas como PDF y obtén {{count}} créditos gratuitos de generación de tareas!",
 
   // Subscription Page - Interpolated Strings
   "{{count}} custom task collections": "{{count}} colecciones de tareas personalizadas",

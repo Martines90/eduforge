@@ -499,6 +499,7 @@ export const hu: Translations = {
   "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.": "A generált feladatok mentéséhez először tanárként kell regisztrálnia! Kapjon {{count}} ingyenes feladatgenerálási kreditet a regisztrációval.",
   "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.": "PDF formátumú feladatok letöltéséhez először tanárként kell regisztrálnia! Kapjon {{count}} ingyenes feladatgenerálási kreditet a regisztrációval.",
   "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!": "Regisztráljon (INGYENES) feladatok mentéséhez és letöltéséhez, plusz kapjon {{count}} ingyenes feladatgenerálási kreditet!",
+  "Register to download tasks as PDF and get {{count}} free task generation credits!": "Regisztráljon PDF formátumú feladatok letöltéséhez és kapjon {{count}} ingyenes feladatgenerálási kreditet!",
 
   // Subscription Page - Interpolated Strings
   "{{count}} custom task collections": "{{count}} egyedi feladatgyűjtemény",
