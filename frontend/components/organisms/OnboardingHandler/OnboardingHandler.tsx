@@ -3,13 +3,9 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { LoginModal } from '@/components/organisms/LoginModal';
-import { CountrySelectionModal } from '@/components/organisms/CountrySelectionModal';
 import { RegistrationModal } from '@/components/organisms/RegistrationModal';
-import { RoleSelectionModal } from '@/components/organisms/RoleSelectionModal';
-import { SubjectSelectionModal } from '@/components/organisms/SubjectSelectionModal';
 import { useUser } from '@/lib/context';
 import { CountryCode, UserIdentity, Subject, UserProfile } from '@/types/i18n';
-import * as apiService from '@/lib/services/api.service';
 
 type OnboardingStep = 'login' | 'register' | 'country' | 'role' | 'subject' | 'complete';
 
@@ -32,8 +28,6 @@ export const OnboardingHandler: React.FC = () => {
   const router = useRouter();
   const pathname = usePathname();
   const [step, setStep] = useState<OnboardingStep>('login');
-  const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
-  const [isCreatingAccount, setIsCreatingAccount] = useState(false);
   const [isTeacherAccount, setIsTeacherAccount] = useState(false);
 
   // Check if current page is a public page (doesn't require login)
@@ -70,14 +64,13 @@ export const OnboardingHandler: React.FC = () => {
   };
 
   const handleCreateAccountClick = (isTeacher: boolean) => {
-    setIsCreatingAccount(true);
     setIsTeacherAccount(isTeacher);
     setStep('register');
   };
 
   // ===== REGISTRATION FLOW =====
 
-  const handleRegister = async (profile: UserProfile & { password: string; country: CountryCode; identity: UserIdentity; subject?: Subject; educationalModel?: any }) => {
+  const handleRegister = async (profile: UserProfile & { password: string; country: CountryCode; identity: UserIdentity; subject?: Subject; educationalModel?: unknown }) => {
     try {
       // User is already registered and verified at this point (done in RegistrationModal)
       // The token was already stored in localStorage by RegistrationModal
@@ -96,14 +89,11 @@ export const OnboardingHandler: React.FC = () => {
 
       if (profile.subject) {
         setSubject(profile.subject);
-        setSelectedSubject(profile.subject);
       }
 
       if (profile.educationalModel) {
         setEducationalModel(profile.educationalModel);
       }
-
-      setIsCreatingAccount(false);
 
       // Add a small delay to allow RegistrationModal to fully close and release focus
       // before opening the next modal. This prevents focus trap conflicts.
@@ -114,7 +104,7 @@ export const OnboardingHandler: React.FC = () => {
       completeOnboarding();
       setStep('complete');
       router.push('/');
-    } catch (error: any) {
+    } catch (error) {
       console.error('Error during registration:', error);
       // Error is already handled in RegistrationModal
       // Just re-throw to prevent navigation
@@ -123,35 +113,7 @@ export const OnboardingHandler: React.FC = () => {
   };
 
   const handleBackToLogin = () => {
-    setIsCreatingAccount(false);
     setStep('login');
-  };
-
-  // ===== ONBOARDING FLOW =====
-
-  const handleCountrySelect = (country: CountryCode) => {
-    setCountry(country);
-    setStep('role');
-  };
-
-  const handleRoleSelect = (identity: UserIdentity) => {
-    setIdentity(identity);
-
-    if (identity === 'teacher') {
-      setStep('subject');
-    } else {
-      // Non-teachers complete onboarding and go to home
-      completeOnboarding();
-      setStep('complete');
-    }
-  };
-
-  const handleSubjectSelect = (subject: Subject) => {
-    setSubject(subject);
-    setSelectedSubject(subject);
-    // Teachers complete onboarding after selecting subject
-    completeOnboarding();
-    setStep('complete');
   };
 
 

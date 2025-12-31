@@ -73,7 +73,7 @@ export const authenticateOrGuest = async (
     } catch (jwtError) {
       // Not a valid JWT, try guest token
       try {
-        const guestData = verifyGuestToken(token);
+        const guestData = await verifyGuestToken(token);
 
         // Valid guest token
         (req as GuestAuthRequest).guest = guestData;
@@ -152,7 +152,7 @@ export const requireAuthOrGuest = async (
     } catch (jwtError) {
       // Not a valid JWT, try guest token
       try {
-        const guestData = verifyGuestToken(token);
+        const guestData = await verifyGuestToken(token);
 
         // Valid guest token
         (req as GuestAuthRequest).guest = guestData;

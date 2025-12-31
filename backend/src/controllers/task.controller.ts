@@ -834,9 +834,9 @@ export class TaskController {
       }
 
       // Calculate remaining generations for response
-      let generationsRemaining = null;
+      let generationsRemaining: number | null = null;
       if (authReq.isGuest && authReq.guest) {
-        generationsRemaining = getRemainingGenerations(authReq.guest.sessionId);
+        generationsRemaining = await getRemainingGenerations(authReq.guest.sessionId);
       }
 
       // Return task data with guest metadata

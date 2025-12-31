@@ -94,7 +94,7 @@ export class GuestAuthController {
       }
 
       const sessionId = authReq.guest.sessionId;
-      const session = getGuestSession(sessionId);
+      const session = await getGuestSession(sessionId);
 
       if (!session) {
         res.status(404).json({
@@ -104,7 +104,7 @@ export class GuestAuthController {
         return;
       }
 
-      const remaining = getRemainingGenerations(sessionId);
+      const remaining = await getRemainingGenerations(sessionId);
 
       res.status(200).json({
         success: true,

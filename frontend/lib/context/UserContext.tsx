@@ -135,18 +135,22 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
           // Convert subscription from Firestore to frontend format
           let subscription: SubscriptionInfo | undefined;
           if (userData.subscription) {
+            // Firestore uses 'plan' field, map it to 'tier' for frontend
+            const subscriptionData = userData.subscription as any;
+            const tier = subscriptionData.tier || subscriptionData.plan || 'trial';
+
             subscription = {
-              tier: userData.subscription.tier || 'trial',
-              status: userData.subscription.status,
-              startDate: userData.subscription.startDate?.toDate?.()?.toISOString(),
-              endDate: userData.subscription.endDate?.toDate?.()?.toISOString(),
-              stripeCustomerId: userData.subscription.stripeCustomerId,
-              stripeSubscriptionId: userData.subscription.stripeSubscriptionId,
-              stripePriceId: userData.subscription.stripePriceId,
-              cancelAtPeriodEnd: userData.subscription.cancelAtPeriodEnd,
-              schoolId: userData.subscription.schoolId,
-              schoolName: userData.subscription.schoolName,
-              associatedTeachers: userData.subscription.associatedTeachers,
+              tier: tier as 'trial' | 'basic' | 'normal' | 'pro',
+              status: subscriptionData.status,
+              startDate: subscriptionData.startDate?.toDate?.()?.toISOString() || subscriptionData.trialStartDate?.toDate?.()?.toISOString(),
+              endDate: subscriptionData.endDate?.toDate?.()?.toISOString() || subscriptionData.trialEndDate?.toDate?.()?.toISOString(),
+              stripeCustomerId: subscriptionData.stripeCustomerId,
+              stripeSubscriptionId: subscriptionData.stripeSubscriptionId,
+              stripePriceId: subscriptionData.stripePriceId,
+              cancelAtPeriodEnd: subscriptionData.cancelAtPeriodEnd,
+              schoolId: subscriptionData.schoolId,
+              schoolName: subscriptionData.schoolName,
+              associatedTeachers: subscriptionData.associatedTeachers,
             };
           }
 
