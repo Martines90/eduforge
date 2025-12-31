@@ -70,6 +70,7 @@ function TaskGeneratorContent() {
   const [isSaving, setIsSaving] = useState(false);
   const [showSavedModal, setShowSavedModal] = useState(false);
   const [savedTaskInfo, setSavedTaskInfo] = useState<{ taskId: string; publicShareLink: string; pdfUrl?: string } | null>(null);
+  const [isTaskSaved, setIsTaskSaved] = useState(false);
   const [currentCurriculumPath, setCurrentCurriculumPath] = useState<string>('');
   const [navigationData, setNavigationData] = useState<{ grade_9_10: NavigationTopic[]; grade_11_12: NavigationTopic[] } | null>(null);
   const [isLoadingNavigation, setIsLoadingNavigation] = useState(true);
@@ -350,6 +351,7 @@ function TaskGeneratorContent() {
 
       console.log('[Task Generator] Task generated successfully');
       setGeneratedTask(generatedTask);
+      setIsTaskSaved(false); // Reset saved state for new task
 
       // Save task to localStorage (for all users - persists until published)
       lastUnpublishedTask.saveTask(generatedTask);
@@ -448,6 +450,13 @@ function TaskGeneratorContent() {
       return;
     }
 
+    // Check if task is already saved
+    if (isTaskSaved && savedTaskInfo) {
+      console.log('[Task Generator] Task already saved, showing saved modal again');
+      setShowSavedModal(true);
+      return;
+    }
+
     // For guests, show modal instead of saving
     if (isGuest) {
       setModalMessage('To save generated tasks you have to register as a teacher first! Get 100 free task generation credits when you sign up.');
@@ -480,22 +489,26 @@ function TaskGeneratorContent() {
 
       const response = await saveTask(saveRequest, token);
 
+      console.log('[Task Generator] Task saved successfully:', response);
+
       // Clear the unpublished task from localStorage
       lastUnpublishedTask.clearTask();
 
-      // Clear the generated task from view
-      setGeneratedTask(null);
+      // Extract share links from response
+      const taskId = response.task_id || generatedTask.id;
+      const publicShareLink = response.public_share_link || '';
+      const pdfUrl = response.pdf_url;
 
-      // Show success message instead of modal
-      enqueueSnackbar(
-        `Task "${generatedTask.id}" successfully saved and published! You can find it under "My Tasks".`,
-        {
-          variant: 'success',
-          autoHideDuration: 7000,
-        }
-      );
+      // Set saved task info and show modal
+      setSavedTaskInfo({
+        taskId,
+        publicShareLink,
+        pdfUrl,
+      });
+      setIsTaskSaved(true); // Mark task as saved
+      setShowSavedModal(true);
 
-      console.log('[Task Generator] Task saved successfully:', response);
+      // Task remains in editor (DO NOT clear generatedTask)
     } catch (error) {
       console.error('[Task Generator] Failed to save task:', error);
       setGenerationError(error instanceof Error ? error.message : 'Failed to save task');
@@ -512,7 +525,7 @@ function TaskGeneratorContent() {
     if (action === 'save') {
       setModalMessage('To save generated tasks you have to register first as a teacher! Get 100 free task generation credits when you sign up.');
     } else {
-      setModalMessage('You have to register first to download tasks in PDF format! Get 100 free generation credits when you sign up.');
+      setModalMessage('You have to register first as a teacher to download tasks in PDF format! Get 100 free task generation credits when you sign up.');
     }
     setShowGuestModal(true);
     enqueueSnackbar(`Register to ${action} your task!`, {
