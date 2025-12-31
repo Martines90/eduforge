@@ -486,4 +486,10 @@ export const en: Translations = {
   // Header
   "Try Free": "Try Free",
   "Generate Tasks": "Generate Tasks",
+
+  // Toast Notifications (enqueueSnackbar)
+  "Registration successful! Welcome to EduForge.": "Registration successful! Welcome to EduForge.",
+  "Registration successful! Enjoy your free 3-month trial!": "Registration successful! Enjoy your free 3-month trial!",
+  "Failed to save task. Please try again.": "Failed to save task. Please try again.",
+  "Welcome! You now have 100 free task generation credits.": "Welcome! You now have 100 free task generation credits.",
 };

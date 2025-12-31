@@ -488,4 +488,10 @@ export const mx: Translations = {
   // Header
   "Try Free": "Probar Gratis",
   "Generate Tasks": "Generar Tareas",
+
+  // Toast Notifications (enqueueSnackbar)
+  "Registration successful! Welcome to EduForge.": "¡Registro exitoso! Bienvenido a EduForge.",
+  "Registration successful! Enjoy your free 3-month trial!": "¡Registro exitoso! Disfruta tu prueba gratuita de 3 meses!",
+  "Failed to save task. Please try again.": "Error al guardar la tarea. Por favor intenta de nuevo.",
+  "Welcome! You now have 100 free task generation credits.": "¡Bienvenido! Ahora tienes 100 créditos gratuitos de generación de tareas.",
 };

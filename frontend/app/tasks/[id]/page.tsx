@@ -27,6 +27,7 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import StarIcon from '@mui/icons-material/Star';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import RateReviewIcon from '@mui/icons-material/RateReview';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 import { Button } from '@/components/atoms/Button';
 import { LoadingSpinner } from '@/components/atoms/LoadingSpinner';
 import { processLatexInHtml } from '@/lib/utils/latex-converter';
@@ -193,10 +194,6 @@ export default function TaskDetailPage() {
 
     // Block PDF download for guests
     if (isGuest) {
-      enqueueSnackbar('Task download is only available for registered users!', {
-        variant: 'warning',
-        autoHideDuration: 5000,
-      });
       setShowLoginModal(true);
       return;
     }
@@ -493,7 +490,6 @@ export default function TaskDetailPage() {
     try {
       await loginUser(email, password);
       setShowLoginModal(false);
-      enqueueSnackbar('Login successful!', { variant: 'success' });
     } catch (error) {
       throw error;
     }
@@ -524,7 +520,7 @@ export default function TaskDetailPage() {
       setShowRegisterModal(false);
 
       // Show success message
-      enqueueSnackbar('Registration successful! Enjoy your free 3-month trial!', {
+      enqueueSnackbar(t('Registration successful! Enjoy your free 3-month trial!'), {
         variant: 'success',
         autoHideDuration: 5000,
       });

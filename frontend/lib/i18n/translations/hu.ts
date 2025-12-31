@@ -487,4 +487,10 @@ export const hu: Translations = {
   // Header
   "Try Free": "Ingyenes Próba",
   "Generate Tasks": "Feladatok Generálása",
+
+  // Toast Notifications (enqueueSnackbar)
+  "Registration successful! Welcome to EduForge.": "Sikeres regisztráció! Üdvözöljük az EduForge-ban.",
+  "Registration successful! Enjoy your free 3-month trial!": "Sikeres regisztráció! Élvezze 3 hónapos ingyenes próbaidőszakát!",
+  "Failed to save task. Please try again.": "A feladat mentése sikertelen. Kérjük, próbálja újra.",
+  "Welcome! You now have 100 free task generation credits.": "Üdvözöljük! Mostantól 100 ingyenes feladatgenerálási kreditje van.",
 };

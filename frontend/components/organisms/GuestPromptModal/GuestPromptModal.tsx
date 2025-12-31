@@ -6,6 +6,7 @@ import { RegistrationModal } from '@/components/organisms/RegistrationModal';
 import { useUser } from '@/lib/context';
 import { CountryCode, UserIdentity, Subject, UserProfile } from '@/types/i18n';
 import { useSnackbar } from 'notistack';
+import { useTranslation } from '@/lib/i18n';
 
 export interface GuestPromptModalProps {
   /**
@@ -67,6 +68,7 @@ export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
 }) => {
   const { user, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser } = useUser();
   const { enqueueSnackbar } = useSnackbar();
+  const { t } = useTranslation();
   const [mode, setMode] = useState<'login' | 'register'>(initialMode);
   const [isTeacher, setIsTeacher] = useState(false);
 
@@ -87,10 +89,6 @@ export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
       }
 
       onClose();
-
-      enqueueSnackbar('Welcome back! You can now save your task.', {
-        variant: 'success',
-      });
     } catch (error: any) {
       // Error is handled in loginUser
       throw error;
@@ -135,7 +133,7 @@ export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
 
       onClose();
 
-      enqueueSnackbar(`Welcome! You now have 100 free task generation credits.`, {
+      enqueueSnackbar(t('Welcome! You now have 100 free task generation credits.'), {
         variant: 'success',
         autoHideDuration: 5000,
       });

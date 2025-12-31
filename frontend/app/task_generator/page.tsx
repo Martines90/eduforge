@@ -239,10 +239,6 @@ function TaskGeneratorContent() {
     if (isGuest && !guestSession.canGenerate) {
       setModalMessage("You ran out of free task generation credits, register to get 100 free credits!");
       setShowGuestModal(true);
-      enqueueSnackbar('Register to continue generating tasks!', {
-        variant: 'warning',
-        autoHideDuration: 5000,
-      });
       return;
     }
 
@@ -368,10 +364,6 @@ function TaskGeneratorContent() {
       if (error.message?.includes('Generation limit reached') || error.message?.includes('limitReached')) {
         setModalMessage(error.message || "You've reached your free generation limit. Register (FREE) to get 100 more credits!");
         setShowGuestModal(true);
-        enqueueSnackbar('Register to continue generating tasks!', {
-          variant: 'warning',
-          autoHideDuration: 5000,
-        });
       } else {
         setGenerationError(error instanceof Error ? error.message : 'An unexpected error occurred');
       }
@@ -461,10 +453,6 @@ function TaskGeneratorContent() {
     if (isGuest) {
       setModalMessage('To save generated tasks you have to register as a teacher first! Get 100 free task generation credits when you sign up.');
       setShowGuestModal(true);
-      enqueueSnackbar('Register to save your task!', {
-        variant: 'info',
-        autoHideDuration: 5000,
-      });
       return;
     }
 
@@ -512,7 +500,7 @@ function TaskGeneratorContent() {
     } catch (error) {
       console.error('[Task Generator] Failed to save task:', error);
       setGenerationError(error instanceof Error ? error.message : 'Failed to save task');
-      enqueueSnackbar('Failed to save task. Please try again.', {
+      enqueueSnackbar(t('Failed to save task. Please try again.'), {
         variant: 'error',
         autoHideDuration: 5000,
       });
@@ -528,10 +516,6 @@ function TaskGeneratorContent() {
       setModalMessage('You have to register first as a teacher to download tasks in PDF format! Get 100 free task generation credits when you sign up.');
     }
     setShowGuestModal(true);
-    enqueueSnackbar(`Register to ${action} your task!`, {
-      variant: 'info',
-      autoHideDuration: 5000,
-    });
   };
 
   const handleCloseSavedModal = () => {
@@ -546,18 +530,7 @@ function TaskGeneratorContent() {
 
     guestSession.clearGuestSession();
 
-    // Show appropriate message
-    if (hasTaskToRestore) {
-      enqueueSnackbar('Registration successful! Your task is ready to save. Refreshing...', {
-        variant: 'success',
-        autoHideDuration: 3000,
-      });
-    } else {
-      enqueueSnackbar('Welcome! You now have 100 free task generation credits.', {
-        variant: 'success',
-        autoHideDuration: 5000,
-      });
-    }
+    // Registration successful - page will refresh to reload with authenticated user
 
     // Refresh the page to reload with authenticated user
     // The task will be automatically restored by the useEffect

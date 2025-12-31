@@ -430,6 +430,12 @@ export interface Translations {
   // Header
   "Try Free": string;
   "Generate Tasks": string;
+
+  // Toast Notifications (enqueueSnackbar)
+  "Registration successful! Welcome to EduForge.": string;
+  "Registration successful! Enjoy your free 3-month trial!": string;
+  "Failed to save task. Please try again.": string;
+  "Welcome! You now have 100 free task generation credits.": string;
 }
 
 export type TranslationKey = keyof Translations;
