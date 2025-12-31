@@ -74,17 +74,8 @@ export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
   React.useEffect(() => {
     if (open) {
       setMode(initialMode);
-      // Show toast with prompt message
-      enqueueSnackbar(promptMessage, {
-        variant: 'info',
-        autoHideDuration: 6000,
-        anchorOrigin: {
-          vertical: 'top',
-          horizontal: 'center',
-        },
-      });
     }
-  }, [open, initialMode, promptMessage, enqueueSnackbar]);
+  }, [open, initialMode]);
 
   const handleLogin = async (email: string, password: string) => {
     try {
@@ -175,6 +166,7 @@ export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
         onLogin={handleLogin}
         onCreateAccount={handleCreateAccountClick}
         onClose={onClose}
+        promptMessage={promptMessage}
       />
 
       {/* Registration Modal */}
@@ -185,6 +177,7 @@ export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
         onClose={onClose}
         detectedCountry={user.country}
         isTeacher={isTeacher}
+        promptMessage={promptMessage}
       />
     </>
   );

@@ -62,6 +62,7 @@ export interface RegistrationModalProps {
   onClose?: () => void;
   detectedCountry?: CountryCode;
   isTeacher: boolean;
+  promptMessage?: string;
 }
 
 // Common personal email domains to block for teacher accounts
@@ -127,6 +128,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
   onClose,
   detectedCountry,
   isTeacher,
+  promptMessage,
 }) => {
   const { t } = useTranslation();
   const { setCountry: updateUserCountry } = useUser();
@@ -416,6 +418,12 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         />
 
         <DialogContent className={styles.content}>
+          {promptMessage && (
+            <Alert severity="info" sx={{ mt: 2, mb: 2 }}>
+              {promptMessage}
+            </Alert>
+          )}
+
           {/* Step 1: Country Selection (+ Subject for teachers) */}
           {activeStep === 0 && (
             <Box className={styles.stepContent}>

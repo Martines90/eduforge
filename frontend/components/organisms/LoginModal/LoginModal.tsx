@@ -28,6 +28,7 @@ export interface LoginModalProps {
   onLogin: (email: string, password: string) => Promise<void>;
   onCreateAccount: (isTeacher: boolean) => void;
   onClose?: () => void;
+  promptMessage?: string;
 }
 
 const loginSchema = Yup.object().shape({
@@ -49,6 +50,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
   onLogin,
   onCreateAccount,
   onClose,
+  promptMessage,
 }) => {
   const [loginError, setLoginError] = useState<string | null>(null);
   const [forgotPasswordOpen, setForgotPasswordOpen] = useState(false);
@@ -110,6 +112,12 @@ export const LoginModal: React.FC<LoginModalProps> = ({
         >
           {({ errors, touched, isSubmitting }) => (
             <Form>
+              {promptMessage && (
+                <Alert severity="info" sx={{ mt: 2, mb: 2 }}>
+                  {promptMessage}
+                </Alert>
+              )}
+
               {loginError && (
                 <Alert severity="error" sx={{ mb: 2 }}>
                   {loginError}

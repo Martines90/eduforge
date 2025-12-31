@@ -450,7 +450,7 @@ function TaskGeneratorContent() {
 
     // For guests, show modal instead of saving
     if (isGuest) {
-      setModalMessage('To save generated tasks you have to register first! Get 100 free generation credits when you sign up.');
+      setModalMessage('To save generated tasks you have to register as a teacher first! Get 100 free task generation credits when you sign up.');
       setShowGuestModal(true);
       enqueueSnackbar('Register to save your task!', {
         variant: 'info',
@@ -510,7 +510,7 @@ function TaskGeneratorContent() {
 
   const handleGuestPrompt = (action: 'save' | 'download') => {
     if (action === 'save') {
-      setModalMessage('To save generated tasks you have to register first! Get 100 free generation credits when you sign up.');
+      setModalMessage('To save generated tasks you have to register first as a teacher! Get 100 free task generation credits when you sign up.');
     } else {
       setModalMessage('You have to register first to download tasks in PDF format! Get 100 free generation credits when you sign up.');
     }
