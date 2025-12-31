@@ -124,6 +124,13 @@ const taskController = new TaskController();
 router.post("/generate-task", requireAuthenticatedTeacher, requireActiveSubscription, requireTaskCredits, taskController.generateTask);
 
 /**
+ * V2 API: Get 3 unique random locations for task variations
+ * GET /get-3-random-locations
+ * Supports both authenticated users and guest sessions
+ */
+router.get("/get-3-random-locations", authenticateOrGuest, taskController.get3RandomLocations);
+
+/**
  * V2 API: Generate task text only (no solution, no images) with variation support
  * POST /generate-task-text
  * Supports both authenticated users and guest sessions

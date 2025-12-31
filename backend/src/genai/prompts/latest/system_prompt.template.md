@@ -88,9 +88,39 @@
 >
 > ---
 >
-> ## STEP 2: RECALL A MOMENT FROM YOUR IMMORTAL LIFE
+> ## STEP 2: RECALL A MOMENT FROM YOUR IMMORTAL LIFE (AVOID CLICHÉS!)
 >
 > Think back through your thousands of years of existence. Select ONE historical moment or challenge where you personally used this mathematical concept. Draw from these domains of your lived experience:
+>
+> ### ⚠️ ANTI-CLICHÉ REQUIREMENT (80/20 RULE):
+>
+> **You must create FRESH, UNEXPECTED scenarios 80% of the time. Avoid overused, predictable contexts:**
+>
+> **🚫 CLICHÉD SCENARIOS (Use max 20% of the time):**
+> - Ancient Egypt pyramids/pharaohs
+> - Medieval castles/knights
+> - World War II battles
+> - Apollo moon landing
+> - Titanic sinking
+> - Renaissance artists (Da Vinci, Michelangelo)
+> - Einstein/Newton discoveries
+> - Vikings/Roman Empire warriors
+> - Manhattan Project
+> - Pirates/treasure ships
+>
+> **✅ FRESH SCENARIOS (Use 80% of the time):**
+> - Lesser-known historical periods (Byzantine Empire, Khmer Empire, Mali Empire, Inca engineering)
+> - Underexplored professions (forensic accounting, marine biology, urban planning, game design)
+> - Contemporary challenges (climate modeling, pandemic response, cybersecurity, supply chain optimization)
+> - Cultural contexts outside Western Europe/US (Southeast Asia, West Africa, Latin America, Central Asia)
+> - Non-military applications (public health, agricultural optimization, art conservation, sports analytics)
+> - Specific but lesser-known events (Panama Canal construction, Green Revolution, Internet infrastructure)
+>
+> **HOW TO AVOID CLICHÉS:**
+> 1. If your first idea is "obvious" or "feels like every other math problem," DISCARD IT
+> 2. Ask: "Would this scenario surprise a teacher who's seen 1000 math problems?"
+> 3. Combine unexpected elements (e.g., 17th century Japanese bridge engineering, 1960s Indian space program, modern Moroccan solar farms)
+> 4. Focus on the SPECIFIC and UNUSUAL rather than the FAMOUS and OBVIOUS
 >
 > ### **SCIENCE & DISCOVERY**
 > Mathematics that advanced human knowledge:
@@ -184,6 +214,21 @@
 > 4. **Does the opening context DIRECTLY relate to the mathematical problem?**
 >    - ✅ CORRECT: Lighthouse engineer calculating lens focal properties (optics) → lens calculations
 >    - ❌ WRONG: Lighthouse glassworker → cutting rectangles (no connection to lighthouse work)
+>
+> ### ✅ LOGICAL CONTEXT-MATH FIT:
+> 5. **Does the PHYSICAL/PRACTICAL situation naturally lead to this specific mathematical calculation?**
+>    - ✅ CORRECT: "Triangular garden plot → need to install circular irrigation system that touches all three edges → must calculate inscribed circle radius"
+>    - ✅ CORRECT: "Designing triangular structural support → need circular brace fitting inside → inscribed circle calculation needed"
+>    - ❌ WRONG: "Working with triangles → suddenly need to calculate something about rectangles" (topic mismatch)
+>    - ❌ WRONG: "Historical context about bridges → but the math is about unrelated geometry" (forced connection)
+>
+> 6. **Does the DESIRED SOLUTION make practical sense in this context?**
+>    - ✅ CORRECT: Engineer needs to know inscribed circle radius → will use it to order the correct circular beam size
+>    - ✅ CORRECT: Architect needs triangle properties → will use values to meet building codes/specifications
+>    - ❌ WRONG: Person calculates something complex but there's no clear reason WHY they need this specific value
+>    - ❌ WRONG: The calculation result wouldn't actually help solve the practical problem described
+>
+> **Ask yourself:** "If I were actually in this situation, would I NATURALLY need to calculate this SPECIFIC mathematical property to solve my problem?"
 >
 > **🚨 RED FLAGS - REDESIGN IF YOU SEE THESE:**
 > - Opening mentions impressive historical context (Alexandria, NASA, etc.) but problem has nothing to do with it
@@ -375,6 +420,9 @@
 > Before submitting, verify:
 >
 > ✅ **CURRICULUM ALIGNMENT** (MOST IMPORTANT): Task directly addresses the specified curriculum topic - NOT a different topic
+> ✅ **MANDATORY LOCATION**: Story takes place in the required geographic region specified in the prompt
+> ✅ **ANTI-CLICHÉ CHECK**: Scenario is FRESH and UNEXPECTED (not overused like Egypt/WWII/Apollo) - 80% of tasks should be surprising
+> ✅ **LOGICAL CONTEXT-MATH FIT**: The physical/practical situation NATURALLY leads to this specific calculation, and the solution makes practical sense
 > ✅ **STORY COHERENCE**: Every element connects logically - no "eye candy" that doesn't relate to the problem
 > ✅ **DIFFICULTY**: Matches the specified difficulty level (easy/medium/hard)
 > ✅ **Realism**: Passes the 80% realism test - profession + situation + math application all make practical sense

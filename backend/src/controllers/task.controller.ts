@@ -155,6 +155,31 @@ export class TaskController {
   };
 
   /**
+   * GET /get-3-random-locations
+   * V2 API: Returns 3 unique random locations for the 3 task variations
+   */
+  get3RandomLocations = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<void> => {
+    try {
+      const { generate3UniqueLocations } = require("../utils/story-inspiration.helper");
+      const locations = generate3UniqueLocations();
+
+      console.log("📥 Request for 3 random locations");
+      console.log(`   🌍 Generated locations: ${locations.join(', ')}`);
+
+      res.status(200).json({
+        success: true,
+        locations,
+      });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  /**
    * POST /generate-task-text
    * V2 API: Generates task text only (no solution, no images) with variation support
    */
@@ -164,11 +189,14 @@ export class TaskController {
     next: NextFunction
   ): Promise<void> => {
     try {
-      const requestData: TaskGeneratorRequest & { variation_index?: number } = req.body;
+      const requestData: TaskGeneratorRequest & { variation_index?: number; assigned_location?: string } = req.body;
 
       console.log("📥 Request to generate task text");
       console.log(`   Curriculum: ${requestData.curriculum_path}`);
       console.log(`   Variation: ${requestData.variation_index || 1}`);
+      if (requestData.assigned_location) {
+        console.log(`   🌍 Assigned location: ${requestData.assigned_location}`);
+      }
 
       const taskData = await this.taskGenerator.generateTaskTextOnly(requestData);
 

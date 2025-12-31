@@ -47,6 +47,7 @@ export interface GeneratedImages {
 
 /**
  * Step 1: Generate 3 task variations in parallel
+ * Each variation gets its own unique location
  */
 export async function generateTaskVariations(
   request: TaskGeneratorRequest,
@@ -59,7 +60,22 @@ export async function generateTaskVariations(
     progress: 10,
   });
 
-  // Generate 3 variations in parallel
+  // First, get 3 unique random locations from the backend
+  const locationsResponse = await fetch(`${API_BASE_URL}/get-3-random-locations`, {
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+    },
+  });
+
+  if (!locationsResponse.ok) {
+    throw new Error('Failed to get random locations');
+  }
+
+  const { locations } = await locationsResponse.json();
+  console.log('[Task Generator] Assigned locations for 3 variations:', locations);
+
+  // Generate 3 variations in parallel, each with its own location
   const promises = Array.from({ length: 3 }, (_, index) =>
     fetch(`${API_BASE_URL}/generate-task-text`, {
       method: 'POST',
@@ -71,6 +87,7 @@ export async function generateTaskVariations(
         ...request,
         step: 'task_text_only',
         variation_index: index + 1, // Send 1, 2, 3 to backend for variation
+        assigned_location: locations[index], // Pass the specific location for this variation
       }),
     }).then(async (response) => {
       if (!response.ok) {

@@ -65,9 +65,10 @@ export class TaskGeneratorService {
    * Builds a prompt with variation-specific hint logic
    * - Variation 1: Uses 50 random hints from inspirational-hints.json
    * - Variations 2 & 3: Use 10 profession hints + 3 era hints + 3 situation hints
+   * - ALL variations: Use assigned location (MANDATORY, passed as parameter)
    */
   private buildTaskPromptWithVariation(
-    request: TaskGeneratorRequest & { variation_index?: number }
+    request: TaskGeneratorRequest & { variation_index?: number; assigned_location?: string }
   ): { systemPrompt: string; userMessage: string } {
     // Import the helper functions dynamically
     const {
@@ -103,6 +104,14 @@ export class TaskGeneratorService {
         `   ✅ Added ${professions.length} profession hints + ${eras.length} era hints + ${situations.length} situation hints for variation ${request.variation_index}`
       );
     }
+
+    // Add MANDATORY location (passed as parameter, unique per variation)
+    const location = request.assigned_location || "Europe"; // Fallback to Europe if not provided
+    systemPrompt += `\n\n## 🌍 MANDATORY LOCATION REQUIREMENT\n\n`;
+    systemPrompt += `**Your task story MUST take place in or be related to: ${location}**\n\n`;
+    systemPrompt += `This location is mandatory. The scenario, profession, historical context, and mathematical problem must all logically fit within this geographic/cultural region.\n`;
+
+    console.log(`   🌍 Assigned mandatory location: ${location}`);
 
     return { systemPrompt, userMessage };
   }

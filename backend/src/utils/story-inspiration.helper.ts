@@ -13,6 +13,7 @@ let inspirationalHints: string[] = [];
 let professionHints: string[] = [];
 let eraHints: string[] = [];
 let situationHints: string[] = [];
+let locationHints: string[] = [];
 
 /**
  * Loads all inspirational hint files (called once, then cached)
@@ -81,6 +82,20 @@ function loadInspirationHints(): void {
     console.warn(`⚠️  Situation hints file not found: ${situationPath}`);
   }
 
+  // Load location hints
+  const locationPath = path.join(basePath, "inspirational-location-hints.json");
+  if (fs.existsSync(locationPath)) {
+    try {
+      const content = fs.readFileSync(locationPath, "utf-8");
+      locationHints = JSON.parse(content) as string[];
+      console.log(`✅ Loaded ${locationHints.length} location hints`);
+    } catch (error) {
+      console.error("❌ Error loading location hints:", error);
+    }
+  } else {
+    console.warn(`⚠️  Location hints file not found: ${locationPath}`);
+  }
+
   hintsLoaded = true;
 }
 
@@ -116,6 +131,33 @@ function pickRandomHints(hintsArray: string[], count: number): string[] {
 export function generateInspirationHintsVariation1(): string[] {
   loadInspirationHints();
   return pickRandomHints(inspirationalHints, 50);
+}
+
+/**
+ * Picks ONE random location hint (mandatory for all tasks)
+ * @returns A single randomly selected location
+ */
+export function generateRandomLocation(): string {
+  loadInspirationHints();
+  const locations = pickRandomHints(locationHints, 1);
+  return locations.length > 0 ? locations[0] : "Europe";
+}
+
+/**
+ * Picks 3 unique random location hints for the 3 task variations
+ * Each variation gets its own location to ensure diversity
+ * @returns Array of 3 randomly selected locations
+ */
+export function generate3UniqueLocations(): string[] {
+  loadInspirationHints();
+  const locations = pickRandomHints(locationHints, 3);
+
+  // Ensure we have exactly 3 locations (fallback if not enough in the file)
+  while (locations.length < 3) {
+    locations.push(locationHints[locations.length % locationHints.length] || "Europe");
+  }
+
+  return locations;
 }
 
 /**
