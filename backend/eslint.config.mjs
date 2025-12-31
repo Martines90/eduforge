@@ -36,16 +36,21 @@ export default [
       ...prettierConfig.rules,
       "prettier/prettier": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
+      // Catch unused variables and imports
       "@typescript-eslint/no-unused-vars": [
         "warn",
         {
           argsIgnorePattern: "^_",
           varsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+          ignoreRestSiblings: true,
         },
       ],
       "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "no-console": "off",
+      "no-unused-vars": "off", // Disable base rule as it can report incorrect errors
     },
   },
 ];
