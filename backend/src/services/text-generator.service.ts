@@ -1,4 +1,3 @@
-import { config } from "../config";
 import { TextOptions, TextResult } from "../types";
 import { AIProviderFactory, AICompletionRequest } from "./ai-providers";
 

@@ -188,9 +188,8 @@ export class TaskController {
     next: NextFunction
   ): Promise<void> => {
     try {
-      const {
-        generate3UniqueLocations,
-      } = require("../utils/story-inspiration.helper");
+      const { generate3UniqueLocations } =
+        await import("../utils/story-inspiration.helper");
       const locations = generate3UniqueLocations();
 
       console.log("📥 Request for 3 random locations");
@@ -836,7 +835,9 @@ export class TaskController {
       // Calculate remaining generations for response
       let generationsRemaining: number | null = null;
       if (authReq.isGuest && authReq.guest) {
-        generationsRemaining = await getRemainingGenerations(authReq.guest.sessionId);
+        generationsRemaining = await getRemainingGenerations(
+          authReq.guest.sessionId
+        );
       }
 
       // Return task data with guest metadata

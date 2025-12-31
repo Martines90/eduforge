@@ -3,7 +3,7 @@
  * API endpoints for CRUD operations on educational tasks
  */
 
-import { Router, Request, Response } from "express";
+import { Router, Request, Response, NextFunction } from "express";
 import * as taskService from "../services/task.service";
 import {
   CreateTaskRequest,
@@ -17,12 +17,23 @@ import { requireBasicPlan } from "../middleware/role.middleware";
 const router = Router();
 
 /**
+ * Extended Request interface with authenticated user
+ */
+interface AuthenticatedRequest extends Request {
+  user?: {
+    uid: string;
+    email: string;
+    role: string;
+  };
+}
+
+/**
  * Middleware to extract and verify JWT token
  */
 const authenticateUser = async (
   req: Request,
   res: Response,
-  next: Function
+  next: NextFunction
 ) => {
   try {
     const authHeader = req.headers.authorization;
@@ -37,9 +48,13 @@ const authenticateUser = async (
     const token = authHeader.split(" ")[1];
     const decoded = verifyToken(token);
 
-    (req as any).user = decoded;
+    (req as AuthenticatedRequest).user = decoded as {
+      uid: string;
+      email: string;
+      role: string;
+    };
     next();
-  } catch (error: any) {
+  } catch (_error: unknown) {
     res.status(401).json({
       success: false,
       message: "Invalid or expired token",
@@ -50,8 +65,8 @@ const authenticateUser = async (
 /**
  * Middleware to check if user is a teacher
  */
-const requireTeacher = (req: Request, res: Response, next: Function) => {
-  const user = (req as any).user;
+const requireTeacher = (req: Request, res: Response, next: NextFunction) => {
+  const user = (req as AuthenticatedRequest).user;
 
   if (!user || user.role !== "teacher") {
     return res.status(403).json({
@@ -73,7 +88,14 @@ router.post(
   requireTeacher,
   async (req: Request, res: Response) => {
     try {
-      const user = (req as any).user;
+      const user = (req as AuthenticatedRequest).user;
+      if (!user) {
+        return res.status(401).json({
+          success: false,
+          message: "User not authenticated",
+        });
+      }
+
       const taskData: CreateTaskRequest = req.body;
 
       const taskId = await taskService.createTask(user.uid, taskData);
@@ -85,11 +107,12 @@ router.post(
         },
         message: "Task created successfully",
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Error creating task:", error);
       res.status(400).json({
         success: false,
-        message: error.message || "Failed to create task",
+        message:
+          error instanceof Error ? error.message : "Failed to create task",
       });
     }
   }
@@ -112,11 +135,21 @@ router.get(
         gradeLevel: req.query.gradeLevel as string,
         subjectMappingId: req.query.subjectMappingId as string,
         search: req.query.search as string,
-        difficultyLevel: req.query.difficultyLevel as any,
+        difficultyLevel: req.query.difficultyLevel as
+          | "easy"
+          | "medium"
+          | "hard"
+          | undefined,
         tags: req.query.tags
           ? (req.query.tags as string).split(",")
           : undefined,
-        sort: (req.query.sort as any) || "recent",
+        sort:
+          (req.query.sort as
+            | "rating"
+            | "views"
+            | "recent"
+            | "popular"
+            | undefined) || "recent",
         limit: req.query.limit ? parseInt(req.query.limit as string) : 20,
         offset: req.query.offset ? parseInt(req.query.offset as string) : 0,
         createdBy: req.query.createdBy as string,
@@ -129,11 +162,11 @@ router.get(
         success: true,
         ...result,
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Error getting tasks:", error);
       res.status(500).json({
         success: false,
-        message: error.message || "Failed to get tasks",
+        message: error instanceof Error ? error.message : "Failed to get tasks",
       });
     }
   }
@@ -171,11 +204,12 @@ router.get(
         data: tasks,
         count: tasks.length,
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Error searching tasks:", error);
       res.status(500).json({
         success: false,
-        message: error.message || "Failed to search tasks",
+        message:
+          error instanceof Error ? error.message : "Failed to search tasks",
       });
     }
   }
@@ -191,7 +225,13 @@ router.get(
   requireTeacher,
   async (req: Request, res: Response) => {
     try {
-      const user = (req as any).user;
+      const user = (req as AuthenticatedRequest).user;
+      if (!user) {
+        return res.status(401).json({
+          success: false,
+          message: "User not authenticated",
+        });
+      }
 
       const query: GetTasksQuery = {
         createdBy: user.uid,
@@ -201,7 +241,13 @@ router.get(
             : req.query.status === "draft"
               ? false
               : undefined,
-        sort: (req.query.sort as any) || "recent",
+        sort:
+          (req.query.sort as
+            | "rating"
+            | "views"
+            | "recent"
+            | "popular"
+            | undefined) || "recent",
         limit: req.query.limit ? parseInt(req.query.limit as string) : 20,
         offset: req.query.offset ? parseInt(req.query.offset as string) : 0,
       };
@@ -212,11 +258,12 @@ router.get(
         success: true,
         ...result,
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Error getting my tasks:", error);
       res.status(500).json({
         success: false,
-        message: error.message || "Failed to get your tasks",
+        message:
+          error instanceof Error ? error.message : "Failed to get your tasks",
       });
     }
   }
@@ -277,11 +324,11 @@ router.get(
         success: true,
         data: task,
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Error getting task:", error);
       res.status(500).json({
         success: false,
-        message: error.message || "Failed to get task",
+        message: error instanceof Error ? error.message : "Failed to get task",
       });
     }
   }
@@ -298,7 +345,14 @@ router.put(
   async (req: Request, res: Response) => {
     try {
       const { id } = req.params;
-      const user = (req as any).user;
+      const user = (req as AuthenticatedRequest).user;
+      if (!user) {
+        return res.status(401).json({
+          success: false,
+          message: "User not authenticated",
+        });
+      }
+
       const updateData: UpdateTaskRequest = req.body;
 
       await taskService.updateTask(id, user.uid, updateData);
@@ -307,11 +361,12 @@ router.put(
         success: true,
         message: "Task updated successfully",
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Error updating task:", error);
       res.status(400).json({
         success: false,
-        message: error.message || "Failed to update task",
+        message:
+          error instanceof Error ? error.message : "Failed to update task",
       });
     }
   }
@@ -328,7 +383,13 @@ router.delete(
   async (req: Request, res: Response) => {
     try {
       const { id } = req.params;
-      const user = (req as any).user;
+      const user = (req as AuthenticatedRequest).user;
+      if (!user) {
+        return res.status(401).json({
+          success: false,
+          message: "User not authenticated",
+        });
+      }
 
       await taskService.deleteTask(id, user.uid);
 
@@ -336,11 +397,12 @@ router.delete(
         success: true,
         message: "Task deleted successfully",
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Error deleting task:", error);
       res.status(400).json({
         success: false,
-        message: error.message || "Failed to delete task",
+        message:
+          error instanceof Error ? error.message : "Failed to delete task",
       });
     }
   }
@@ -356,7 +418,14 @@ router.post(
   async (req: Request, res: Response) => {
     try {
       const { id } = req.params;
-      const user = (req as any).user;
+      const user = (req as AuthenticatedRequest).user;
+      if (!user) {
+        return res.status(401).json({
+          success: false,
+          message: "User not authenticated",
+        });
+      }
+
       const ratingData: SubmitRatingRequest = req.body;
 
       await taskService.submitRating(id, user.uid, ratingData);
@@ -365,11 +434,12 @@ router.post(
         success: true,
         message: "Rating submitted successfully",
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Error submitting rating:", error);
       res.status(400).json({
         success: false,
-        message: error.message || "Failed to submit rating",
+        message:
+          error instanceof Error ? error.message : "Failed to submit rating",
       });
     }
   }
@@ -391,11 +461,11 @@ router.get("/api/v2/tasks/:id/ratings", async (req: Request, res: Response) => {
       success: true,
       ...result,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Error getting ratings:", error);
     res.status(500).json({
       success: false,
-      message: error.message || "Failed to get ratings",
+      message: error instanceof Error ? error.message : "Failed to get ratings",
     });
   }
 });

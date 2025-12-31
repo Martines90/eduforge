@@ -89,6 +89,13 @@ export class TaskDetailPage {
   }
 
   /**
+   * Get current page URL
+   */
+  url(): string {
+    return this.page.url();
+  }
+
+  /**
    * Verify page loaded successfully
    */
   async verifyPageLoaded() {

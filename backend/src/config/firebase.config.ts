@@ -45,7 +45,8 @@ export function initializeFirebase(): void {
       });
     } else {
       // Initialize with service account
-      const serviceAccount = require(serviceAccountPath);
+      const serviceAccountJson = fs.readFileSync(serviceAccountPath, "utf8");
+      const serviceAccount = JSON.parse(serviceAccountJson);
 
       firebaseApp = admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),

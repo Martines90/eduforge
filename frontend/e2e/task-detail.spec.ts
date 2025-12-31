@@ -188,7 +188,7 @@ test.describe('Task Detail Page - Navigation @integration', () => {
     });
 
     await test.step('Verify returned to tasks page', async () => {
-      expect(taskDetailPage.page.url()).toContain('/tasks');
+      expect(taskDetailPage.url()).toContain('/tasks');
     });
   });
 });

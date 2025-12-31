@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { LoginModal } from '@/components/organisms/LoginModal';
 import { RegistrationModal } from '@/components/organisms/RegistrationModal';
-import { useUser } from '@/lib/context';
+import { useUser, EducationalModel } from '@/lib/context';
 import { CountryCode, UserIdentity, Subject, UserProfile } from '@/types/i18n';
 
 type OnboardingStep = 'login' | 'register' | 'country' | 'role' | 'subject' | 'complete';
@@ -92,7 +92,7 @@ export const OnboardingHandler: React.FC = () => {
       }
 
       if (profile.educationalModel) {
-        setEducationalModel(profile.educationalModel);
+        setEducationalModel(profile.educationalModel as EducationalModel);
       }
 
       // Add a small delay to allow RegistrationModal to fully close and release focus

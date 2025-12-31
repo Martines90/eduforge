@@ -59,6 +59,13 @@ export class TasksPage {
   }
 
   /**
+   * Check if text is visible on the page
+   */
+  async isTextVisible(text: string): Promise<boolean> {
+    return await this.page.getByText(text).isVisible();
+  }
+
+  /**
    * Select subject filter
    */
   async selectSubject(subject: 'mathematics' | 'physics' | 'chemistry' | 'biology' | 'geography') {

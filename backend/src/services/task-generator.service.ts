@@ -11,7 +11,6 @@ import {
 import {
   generateTaskId,
   generateImageId,
-  generateStoryInspiration,
   getMeasurementSystem,
   getLanguageForCountry,
   buildSystemPrompt,
@@ -75,11 +74,13 @@ export class TaskGeneratorService {
     }
   ): { systemPrompt: string; userMessage: string } {
     // Import the helper functions dynamically
+    // Note: Using require() here because this needs to be synchronous
     const {
       generateInspirationHintsVariation1,
       generateProfessionEraAndSituationHints,
       buildInspirationPromptVariation1,
       buildProfessionEraAndSituationPrompt,
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
     } = require("../utils/story-inspiration.helper");
 
     // Build base system prompt
@@ -357,7 +358,10 @@ export class TaskGeneratorService {
   /**
    * Creates a clean comic book style image prompt without text or formulas
    */
-  private createImagePromptFromStory(storyText: string, title: string): string {
+  private createImagePromptFromStory(
+    storyText: string,
+    _title: string
+  ): string {
     // Extract key visual elements from the story without including dialogue or math
     const sentences = storyText.match(/[^.!?]+[.!?]+/g) || [];
     let context = sentences.slice(0, 2).join(" ");

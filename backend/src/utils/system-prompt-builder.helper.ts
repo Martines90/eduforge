@@ -4,7 +4,6 @@ import { TaskGeneratorRequest } from "../types";
 import {
   getCurriculumTopicByPath,
   formatCurriculumTopicForPrompt,
-  getExampleTasks,
 } from "./curriculum-mapper.helper";
 import {
   getLanguageForCountry,
@@ -206,9 +205,6 @@ function buildTaskInputJson(
  * @returns The JSON string to send as user message
  */
 export function buildUserMessage(request: TaskGeneratorRequest): string {
-  const language = getLanguageForCountry(request.country_code);
-  const metricSystem = getMeasurementSystem(request.country_code);
-
   // Get curriculum topic information
   const curriculumPathResult = getCurriculumTopicByPath(
     request.curriculum_path

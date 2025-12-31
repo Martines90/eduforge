@@ -52,10 +52,7 @@ American frontier landscape, educational style`;
   });
 
   // Download image
-  const imagePath = await imageGen.download(
-    imageResult.url,
-    imageResult.filename
-  );
+  await imageGen.download(imageResult.url, imageResult.filename);
 
   // Calculate total cost
   const totalCost = textResult.cost + imageResult.cost;

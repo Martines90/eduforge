@@ -161,9 +161,7 @@ test.describe('Tasks Page - Edge Cases @integration', () => {
 
     await test.step('Verify category remains expanded', async () => {
       // The category should still be visible with its children
-      const halmazmuveletekVisible = await tasksPage.page
-        .getByText('Halmazműveletek')
-        .isVisible();
+      const halmazmuveletekVisible = await tasksPage.isTextVisible('Halmazműveletek');
 
       expect(halmazmuveletekVisible).toBeTruthy();
     });
