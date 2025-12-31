@@ -288,7 +288,7 @@ export class TaskController {
     next: NextFunction
   ): Promise<void> => {
     try {
-      const { task_text, number_of_images } = req.body;
+      const { task_text, number_of_images, visual_description } = req.body;
 
       if (!task_text || !task_text.title || !task_text.story_text) {
         res.status(400).json({
@@ -303,12 +303,16 @@ export class TaskController {
       console.log("📥 Request to generate images");
       console.log(`   Task: ${task_text.title}`);
       console.log(`   Images: ${numImages}`);
+      if (visual_description) {
+        console.log(`   Visual description provided: ${visual_description.substring(0, 100)}...`);
+      }
 
       const images = await this.taskGenerator.generateImagesOnly(
         task_text,
         numImages,
         task_text.metadata?.display_template || "modern",
-        task_text.metadata?.target_group || "mixed"
+        task_text.metadata?.target_group || "mixed",
+        visual_description // Pass the AI-generated visual description
       );
 
       // Store images permanently in Firebase Storage

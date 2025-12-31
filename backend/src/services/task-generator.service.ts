@@ -642,7 +642,8 @@ export class TaskGeneratorService {
     },
     numberOfImages: number,
     displayTemplate: string,
-    targetGroup: string
+    targetGroup: string,
+    visualDescription?: string // AI-generated visual description (preferred over extracting from story)
   ): Promise<TaskImage[]> {
     const images: TaskImage[] = [];
     const disableImageGeneration = process.env.DISABLE_IMAGE_GENERATION === 'true';
@@ -660,11 +661,19 @@ export class TaskGeneratorService {
 
     console.log(`🎨 Generating ${numImages} image(s) for: "${taskText.title}"...`);
 
-    const storyPreview = this.createImagePromptFromStory(
-      taskText.story_text,
-      taskText.title
-    );
-    const imagePromptBase = `${storyPreview} Clean, vibrant ${displayTemplate} illustration style suitable for ${targetGroup}. Focus on the scene and characters, NOT educational diagrams.`;
+    // Use AI-provided visual description if available, otherwise extract from story
+    let imagePromptBase: string;
+    if (visualDescription) {
+      console.log(`   ✅ Using AI-provided visual description (no task text/formulas)`);
+      imagePromptBase = `${visualDescription} Clean, vibrant ${displayTemplate} illustration style suitable for ${targetGroup}. Focus on the scene and characters, NOT educational diagrams. NO TEXT, NO WORDS, NO NUMBERS, NO FORMULAS - visual scene only.`;
+    } else {
+      console.log(`   ⚠️  No visual description provided, extracting from story text (may include unwanted text)`);
+      const storyPreview = this.createImagePromptFromStory(
+        taskText.story_text,
+        taskText.title
+      );
+      imagePromptBase = `${storyPreview} Clean, vibrant ${displayTemplate} illustration style suitable for ${targetGroup}. Focus on the scene and characters, NOT educational diagrams.`;
+    }
 
     for (let i = 0; i < numImages; i++) {
       console.log(`   🎨 Generating image ${i + 1}/${numImages}...`);
@@ -673,6 +682,8 @@ export class TaskGeneratorService {
         numImages > 1
           ? `${imagePromptBase} Angle ${i + 1}: different perspective of the same scene.`
           : imagePromptBase;
+
+      console.log(`   📝 Image prompt: ${imagePrompt.substring(0, 150)}...`);
 
       const imageResult = await this.imageGenerator.generate(imagePrompt, {
         size: "1024x1024",

@@ -28,6 +28,7 @@ export interface TaskSelectionResult {
     task_2: number;
     task_3: number;
   };
+  image_visual_description: string; // Visual scene description for image generation
 }
 
 export interface GeneratedSolution {
@@ -147,11 +148,13 @@ export async function generateTaskImages(
   taskText: GeneratedTaskText,
   numberOfImages: number,
   token: string,
-  onProgress?: (step: TaskGenerationStep) => void
+  onProgress?: (step: TaskGenerationStep) => void,
+  visualDescription?: string // Optional visual description from AI task selector
 ): Promise<GeneratedImages> {
   console.log('[Task Generator - generateTaskImages] Called with:', {
     numberOfImages,
-    taskTitle: taskText.title
+    taskTitle: taskText.title,
+    hasVisualDescription: !!visualDescription
   });
 
   onProgress?.({
@@ -166,6 +169,9 @@ export async function generateTaskImages(
   }
 
   console.log('[Task Generator] Proceeding with image generation API call...');
+  if (visualDescription) {
+    console.log('[Task Generator] Using AI-provided visual description:', visualDescription);
+  }
 
   const response = await fetch(`${API_BASE_URL}/generate-task-images`, {
     method: 'POST',
@@ -176,6 +182,7 @@ export async function generateTaskImages(
     body: JSON.stringify({
       task_text: taskText,
       number_of_images: numberOfImages,
+      visual_description: visualDescription, // Pass the AI-generated visual description
     }),
   });
 
@@ -270,7 +277,7 @@ export async function generateTaskComplete(
   });
 
   const [images, solution] = await Promise.all([
-    generateTaskImages(selectedTask, request.number_of_images, token, onProgress),
+    generateTaskImages(selectedTask, request.number_of_images, token, onProgress, selectionResult.image_visual_description),
     generateTaskSolution(selectedTask, request, token, onProgress),
   ]);
 

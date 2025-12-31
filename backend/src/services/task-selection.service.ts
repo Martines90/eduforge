@@ -23,6 +23,7 @@ export interface TaskSelectionResult {
     task_2: number;
     task_3: number;
   };
+  image_visual_description: string; // Visual scene description for image generation (no text, no formulas, no task details)
 }
 
 export class TaskSelectionService {
@@ -120,7 +121,8 @@ OUTPUT FORMAT (JSON only, no other text):
     "task_1": <total score 0-10>,
     "task_2": <total score 0-10>,
     "task_3": <total score 0-10>
-  }
+  },
+  "image_visual_description": "Related to the selected task a 2-3 sentence description of the VISUAL SCENE to be illustrated (objects, characters, setting, action). EXCLUDE all task text, questions, formulas, numbers, and educational content. Focus ONLY on what should be visible in the illustration."
 }
 
 IMPORTANT:
@@ -128,6 +130,7 @@ IMPORTANT:
 - Small differences in scores are acceptable - select based on overall quality
 - All tasks should be reasonably good (7+ scores) - you're picking the BEST
 - Consider the target audience when evaluating engagement
+- The image_visual_description should describe ONLY the visual scene (what objects/characters/setting to draw), NOT the task, story text, or mathematical content
 - Output ONLY valid JSON, nothing else`;
   }
 
@@ -171,6 +174,9 @@ IMPORTANT:
             task_2: selectionData.scores?.task_2 || 7.5,
             task_3: selectionData.scores?.task_3 || 7.5,
           },
+          image_visual_description:
+            selectionData.image_visual_description ||
+            "A scene depicting the context and setting of the educational task.",
         };
       }
     } catch (error) {
@@ -190,6 +196,8 @@ IMPORTANT:
         task_2: 7.5,
         task_3: 7.5,
       },
+      image_visual_description:
+        "A scene depicting the context and setting of the educational task.",
     };
   }
 }
