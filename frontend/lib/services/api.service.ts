@@ -354,3 +354,49 @@ export async function fetchTaskById(taskId: string, view: boolean = false): Prom
 
   return data;
 }
+
+/**
+ * Fetch tasks created by the authenticated teacher
+ */
+export async function fetchMyTasks(params?: {
+  status?: 'published' | 'draft';
+  sort?: 'rating' | 'views' | 'recent' | 'popular';
+  limit?: number;
+  offset?: number;
+}): Promise<ApiResponse<{ tasks: any[]; total: number; page: number; limit: number; hasMore: boolean }>> {
+  const token = typeof window !== 'undefined' ? localStorage.getItem('authToken') : null;
+
+  console.log('[fetchMyTasks] Auth token present:', !!token);
+  if (!token) {
+    throw new Error('Authentication required');
+  }
+
+  const queryParams = new URLSearchParams();
+  if (params?.status) queryParams.append('status', params.status);
+  if (params?.sort) queryParams.append('sort', params.sort);
+  if (params?.limit) queryParams.append('limit', params.limit.toString());
+  if (params?.offset) queryParams.append('offset', params.offset.toString());
+
+  const queryString = queryParams.toString();
+  const url = `${API_BASE_URL}/api/v2/tasks/my${queryString ? `?${queryString}` : ''}`;
+
+  console.log('[fetchMyTasks] Fetching from URL:', url);
+
+  const response = await fetch(url, {
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const data = await response.json();
+  console.log('[fetchMyTasks] Response status:', response.status);
+  console.log('[fetchMyTasks] Response data:', data);
+
+  if (!response.ok) {
+    console.error('[fetchMyTasks] Error response:', data);
+    throw new Error(data.message || 'Failed to fetch tasks');
+  }
+
+  return data;
+}

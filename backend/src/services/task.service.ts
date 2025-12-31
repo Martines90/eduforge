@@ -275,8 +275,11 @@ export async function getTasks(
     const data = doc.data();
     console.log("[getTasks] Sample doc:", {
       id: doc.id,
-      curriculum_path: data.curriculum_path,
+      title: data.title,
+      created_by: data.created_by,
+      createdBy: data.createdBy,
       isPublished: data.isPublished,
+      curriculum_path: data.curriculum_path,
     });
   });
 
@@ -315,7 +318,11 @@ export async function getTasks(
       );
     }
     if (query.createdBy) {
-      tasks = tasks.filter((t: any) => t.createdBy === query.createdBy);
+      console.log("[getTasks] Filtering by createdBy (in-memory):", query.createdBy);
+      // Check both field names for backward compatibility
+      tasks = tasks.filter((t: any) =>
+        t.createdBy === query.createdBy || t.created_by === query.createdBy
+      );
     }
 
     // Sort in-memory
@@ -329,20 +336,45 @@ export async function getTasks(
         });
         break;
       case "views":
-        tasks.sort((a: any, b: any) => b.viewCount - a.viewCount);
+        tasks.sort((a: any, b: any) => (b.viewCount || 0) - (a.viewCount || 0));
         break;
       case "popular":
-        tasks.sort((a: any, b: any) => b.completionCount - a.completionCount);
+        tasks.sort((a: any, b: any) => (b.completionCount || 0) - (a.completionCount || 0));
         break;
       case "recent":
       default:
         tasks.sort((a: any, b: any) => {
-          const aTime = (a.createdAt as any).toMillis
-            ? (a.createdAt as any).toMillis()
-            : new Date(a.createdAt as any).getTime();
-          const bTime = (b.createdAt as any).toMillis
-            ? (b.createdAt as any).toMillis()
-            : new Date(b.createdAt as any).getTime();
+          // Handle both createdAt (Timestamp) and created_at (string) fields
+          const aCreated = a.createdAt || a.created_at;
+          const bCreated = b.createdAt || b.created_at;
+
+          if (!aCreated) return 1; // Move items without date to end
+          if (!bCreated) return -1;
+
+          // Convert to milliseconds for comparison
+          let aTime: number;
+          let bTime: number;
+
+          if (typeof aCreated === 'string') {
+            aTime = new Date(aCreated).getTime();
+          } else if (aCreated.toMillis) {
+            aTime = aCreated.toMillis();
+          } else if (aCreated._seconds) {
+            aTime = aCreated._seconds * 1000;
+          } else {
+            aTime = new Date(aCreated).getTime();
+          }
+
+          if (typeof bCreated === 'string') {
+            bTime = new Date(bCreated).getTime();
+          } else if (bCreated.toMillis) {
+            bTime = bCreated.toMillis();
+          } else if (bCreated._seconds) {
+            bTime = bCreated._seconds * 1000;
+          } else {
+            bTime = new Date(bCreated).getTime();
+          }
+
           return bTime - aTime;
         });
         break;
@@ -395,8 +427,107 @@ export async function getTasks(
     );
   }
 
+  // Special handling for createdBy queries to avoid index requirements
+  // We'll fetch all matching documents and sort in-memory
   if (query.createdBy) {
-    firestoreQuery = firestoreQuery.where("createdBy", "==", query.createdBy);
+    console.log("[getTasks] Filtering by createdBy:", query.createdBy);
+    // Get all tasks by this creator without sorting (to avoid index requirement)
+    firestoreQuery = firestoreQuery.where("created_by", "==", query.createdBy);
+
+    console.log("[getTasks] Executing query without sorting to avoid index requirement...");
+    const snapshot = await firestoreQuery.get();
+    console.log("[getTasks] Query returned:", snapshot.size, "documents");
+
+    let tasks = snapshot.docs.map((doc: any) => ({
+      id: doc.id,
+      ...(doc.data() as TaskDocument),
+    }));
+
+    // Apply isPublished filter in-memory
+    if (query.isPublished !== undefined) {
+      tasks = tasks.filter((t: any) => t.isPublished === query.isPublished);
+    }
+
+    // Apply difficultyLevel filter in-memory
+    if (query.difficultyLevel) {
+      tasks = tasks.filter((t: any) => t.difficultyLevel === query.difficultyLevel);
+    }
+
+    // Sort in-memory
+    const sort = query.sort || "recent";
+    switch (sort) {
+      case "rating":
+        tasks.sort((a: any, b: any) => {
+          if (b.ratingAverage !== a.ratingAverage)
+            return b.ratingAverage - a.ratingAverage;
+          return b.ratingCount - a.ratingCount;
+        });
+        break;
+      case "views":
+        tasks.sort((a: any, b: any) => (b.viewCount || 0) - (a.viewCount || 0));
+        break;
+      case "popular":
+        tasks.sort((a: any, b: any) => (b.completionCount || 0) - (a.completionCount || 0));
+        break;
+      case "recent":
+      default:
+        tasks.sort((a: any, b: any) => {
+          // Handle both createdAt (Timestamp) and created_at (string) fields
+          const aCreated = a.createdAt || a.created_at;
+          const bCreated = b.createdAt || b.created_at;
+
+          if (!aCreated) return 1; // Move items without date to end
+          if (!bCreated) return -1;
+
+          // Convert to milliseconds for comparison
+          let aTime: number;
+          let bTime: number;
+
+          if (typeof aCreated === 'string') {
+            aTime = new Date(aCreated).getTime();
+          } else if (aCreated.toMillis) {
+            aTime = aCreated.toMillis();
+          } else if (aCreated._seconds) {
+            aTime = aCreated._seconds * 1000;
+          } else {
+            aTime = new Date(aCreated).getTime();
+          }
+
+          if (typeof bCreated === 'string') {
+            bTime = new Date(bCreated).getTime();
+          } else if (bCreated.toMillis) {
+            bTime = bCreated.toMillis();
+          } else if (bCreated._seconds) {
+            bTime = bCreated._seconds * 1000;
+          } else {
+            bTime = new Date(bCreated).getTime();
+          }
+
+          return bTime - aTime;
+        });
+        break;
+    }
+
+    const total = tasks.length;
+    const limit = query.limit || 20;
+    const offset = query.offset || 0;
+    const paginatedTasks = tasks.slice(offset, offset + limit);
+
+    console.log(
+      "[getTasks] Returning",
+      paginatedTasks.length,
+      "tasks (total:",
+      total,
+      ")"
+    );
+
+    return {
+      tasks: paginatedTasks,
+      total,
+      page: Math.floor(offset / limit) + 1,
+      limit,
+      hasMore: offset + limit < total,
+    };
   }
 
   if (query.isPublished !== undefined) {
