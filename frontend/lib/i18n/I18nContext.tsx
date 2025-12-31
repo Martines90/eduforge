@@ -8,7 +8,7 @@ import { useUser } from '@/lib/context';
 interface I18nContextType {
   country: CountryCode;
   setCountry: (country: CountryCode) => void;
-  t: (key: TranslationKey) => string;
+  t: (key: TranslationKey, params?: Record<string, string | number>) => string;
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
@@ -16,10 +16,21 @@ const I18nContext = createContext<I18nContextType | undefined>(undefined);
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const { user, setCountry: setUserCountry } = useUser();
 
-  // Translation function
+  // Translation function with variable interpolation support
+  // Usage: t('Welcome! You now have {{count}} free credits.', { count: 100 })
   const t = useCallback(
-    (key: TranslationKey): string => {
-      return translations[user.country][key] || key;
+    (key: TranslationKey, params?: Record<string, string | number>): string => {
+      let translation = translations[user.country][key] || key;
+
+      // Replace variables in format {{variableName}}
+      if (params) {
+        Object.keys(params).forEach((paramKey) => {
+          const regex = new RegExp(`\\{\\{${paramKey}\\}\\}`, 'g');
+          translation = translation.replace(regex, String(params[paramKey]));
+        });
+      }
+
+      return translation;
     },
     [user.country]
   );

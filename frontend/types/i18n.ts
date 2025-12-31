@@ -326,7 +326,7 @@ export interface Translations {
   "My Plan": string;
   "Manage your subscription and credits": string;
   "Subscription will be cancelled at the end of the current period": string;
-  "You started with 100 free task generation credits.": string;
+  "You started with {{count}} free task generation credits.": string;
   "Running low on credits? Subscribe to Basic plan for unlimited browsing!": string;
   "Upgrade to Basic Plan": string;
   Recommended: string;
@@ -374,7 +374,7 @@ export interface Translations {
   "You've used your 3 free task views.": string;
   "Register now to get:": string;
   "Unlimited task viewing": string;
-  "100 free task generation credits": string;
+  "{{count}} free task generation credits": string;
   "3 months free trial subscription": string;
   "Login / Register": string;
 
@@ -432,10 +432,26 @@ export interface Translations {
   "Generate Tasks": string;
 
   // Toast Notifications (enqueueSnackbar)
-  "Registration successful! Welcome to EduForge.": string;
   "Registration successful! Enjoy your free 3-month trial!": string;
   "Failed to save task. Please try again.": string;
-  "Welcome! You now have 100 free task generation credits.": string;
+  "Welcome! You now have {{count}} free task generation credits.": string;
+
+  // Guest Modal Messages
+  "You ran out of free task generation credits, register to get {{count}} free credits!": string;
+  "You've reached your free generation limit. Register (FREE) to get {{count}} more credits!": string;
+  "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.": string;
+  "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.": string;
+  "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!": string;
+
+  // Subscription Page - Interpolated Strings
+  "{{count}} custom task collections": string;
+  "{{count}} task generation credits": string;
+  "{{time}} email support": string;
+  "{{discount}}% webstore discount": string;
+  "Add up to {{count}} teachers": string;
+  "Upgrade to {{name}}": string;
+  "Your {{plan}} plan is now active": string;
+  "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.": string;
 }
 
 export type TranslationKey = keyof Translations;

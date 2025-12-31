@@ -368,8 +368,8 @@ export const mx: Translations = {
   "Manage your subscription and credits": "Gestionar tu suscripción y créditos",
   "Subscription will be cancelled at the end of the current period":
     "La suscripción se cancelará al final del período actual",
-  "You started with 100 free task generation credits.":
-    "Comenzaste con 100 créditos gratuitos de generación de tareas.",
+  "You started with {{count}} free task generation credits.":
+    "Comenzaste con {{count}} créditos gratuitos de generación de tareas.",
   "Running low on credits? Subscribe to Basic plan for unlimited browsing!":
     "¿Te quedan pocos créditos? ¡Suscríbete al plan Básico para navegación ilimitada!",
   "Upgrade to Basic Plan": "Actualizar al Plan Básico",
@@ -429,7 +429,7 @@ export const mx: Translations = {
   "You've used your 3 free task views.": "Has usado tus 3 vistas gratuitas de tareas.",
   "Register now to get:": "Regístrate ahora para obtener:",
   "Unlimited task viewing": "Visualización ilimitada de tareas",
-  "100 free task generation credits": "100 créditos gratuitos de generación de tareas",
+  "{{count}} free task generation credits": "{{count}} créditos gratuitos de generación de tareas",
   "3 months free trial subscription": "3 meses de suscripción de prueba gratuita",
   "Login / Register": "Iniciar Sesión / Registrarse",
 
@@ -490,8 +490,24 @@ export const mx: Translations = {
   "Generate Tasks": "Generar Tareas",
 
   // Toast Notifications (enqueueSnackbar)
-  "Registration successful! Welcome to EduForge.": "¡Registro exitoso! Bienvenido a EduForge.",
   "Registration successful! Enjoy your free 3-month trial!": "¡Registro exitoso! Disfruta tu prueba gratuita de 3 meses!",
   "Failed to save task. Please try again.": "Error al guardar la tarea. Por favor intenta de nuevo.",
-  "Welcome! You now have 100 free task generation credits.": "¡Bienvenido! Ahora tienes 100 créditos gratuitos de generación de tareas.",
+  "Welcome! You now have {{count}} free task generation credits.": "¡Bienvenido! Ahora tienes {{count}} créditos gratuitos de generación de tareas.",
+
+  // Guest Modal Messages
+  "You ran out of free task generation credits, register to get {{count}} free credits!": "¡Te quedaste sin créditos gratuitos de generación de tareas, regístrate para obtener {{count}} créditos gratis!",
+  "You've reached your free generation limit. Register (FREE) to get {{count}} more credits!": "¡Alcanzaste tu límite de generación gratuita. Regístrate (GRATIS) para obtener {{count}} créditos más!",
+  "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.": "¡Para guardar tareas generadas primero debes registrarte como maestro! Obtén {{count}} créditos gratuitos de generación de tareas al registrarte.",
+  "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.": "¡Primero debes registrarte como maestro para descargar tareas en formato PDF! Obtén {{count}} créditos gratuitos de generación de tareas al registrarte.",
+  "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!": "¡Regístrate (GRATIS) para guardar y descargar tareas, además obtén {{count}} créditos gratuitos de generación de tareas!",
+
+  // Subscription Page - Interpolated Strings
+  "{{count}} custom task collections": "{{count}} colecciones de tareas personalizadas",
+  "{{count}} task generation credits": "{{count}} créditos de generación de tareas",
+  "{{time}} email support": "Soporte por email {{time}}",
+  "{{discount}}% webstore discount": "{{discount}}% de descuento en tienda web",
+  "Add up to {{count}} teachers": "Agregar hasta {{count}} maestros",
+  "Upgrade to {{name}}": "Actualizar a {{name}}",
+  "Your {{plan}} plan is now active": "Tu plan {{plan}} está ahora activo",
+  "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.": "¡Esta función estará disponible pronto! Podrás agregar hasta {{max}} maestros de tu escuela.",
 };

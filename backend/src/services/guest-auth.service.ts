@@ -2,12 +2,13 @@ import jwt from 'jsonwebtoken';
 import { v4 as uuidv4 } from 'uuid';
 import { getFirestore, admin } from '../config/firebase.config';
 import crypto from 'crypto';
+import { TRIAL_START_CREDITS, GUEST_GENERATION_LIMIT } from '../constants/credits';
 
 const FieldValue = admin.firestore.FieldValue;
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
 const GUEST_TOKEN_EXPIRY = '24h'; // Guest tokens expire after 24 hours
-const MAX_GUEST_GENERATIONS = 3; // Maximum free generations for guests
+const MAX_GUEST_GENERATIONS = GUEST_GENERATION_LIMIT; // Maximum free generations for guests
 
 export interface GuestTokenPayload {
   sessionId: string;
@@ -219,7 +220,7 @@ export async function incrementGuestGeneration(
     if (!fingerprintCheck.canGenerate) {
       throw new Error(
         `Generation limit reached (${fingerprintCheck.totalGenerations}/${MAX_GUEST_GENERATIONS}). ` +
-        `Please register to get 100 free task generation credits!`
+        `Please register to get ${TRIAL_START_CREDITS} free task generation credits!`
       );
     }
   }

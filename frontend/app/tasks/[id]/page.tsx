@@ -38,6 +38,7 @@ import { useSnackbar } from 'notistack';
 import { LoginModal } from '@/components/organisms/LoginModal';
 import { RegistrationModal } from '@/components/organisms/RegistrationModal';
 import { useGuestTaskViewLimit } from '@/lib/hooks/useGuestTaskViewLimit';
+import { TRIAL_START_CREDITS } from '@/lib/constants/credits';
 
 interface TaskData {
   id: string;
@@ -593,7 +594,7 @@ export default function TaskDetailPage() {
               </Typography>
               <ul style={{ marginTop: '8px', paddingLeft: '20px' }}>
                 <li>{t('Unlimited task viewing')}</li>
-                <li>{t('100 free task generation credits')}</li>
+                <li>{t('{{count}} free task generation credits', { count: TRIAL_START_CREDITS })}</li>
                 <li>{t('3 months free trial subscription')}</li>
                 <li>{t('Download tasks as PDF')}</li>
               </ul>
@@ -711,7 +712,7 @@ export default function TaskDetailPage() {
             <strong>👁️ Free Task Views: {guestViewLimit.viewsRemaining} view{guestViewLimit.viewsRemaining !== 1 ? 's' : ''} remaining</strong>
           </Typography>
           <Typography variant="body2" sx={{ mt: 0.5 }}>
-            Register for unlimited task viewing and 100 free task generation credits!
+            Register for unlimited task viewing and {TRIAL_START_CREDITS} free task generation credits!
           </Typography>
         </Alert>
       )}

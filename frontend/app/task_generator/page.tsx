@@ -20,6 +20,7 @@ import { TaskSavedModal } from '@/components/organisms/TaskSavedModal';
 import { fetchAllGradeTrees } from '@/lib/services/subject-mapping.service';
 import { useSnackbar } from 'notistack';
 import { API_BASE_URL } from '@/lib/services/api.service';
+import { TRIAL_START_CREDITS } from '@/lib/constants/credits';
 import styles from '../task_creator/page.module.scss';
 
 // Subject options for the dropdown
@@ -237,7 +238,7 @@ function TaskGeneratorContent() {
   const handleSelectionComplete = async (topic: NavigationTopic, path: string[], config: TaskConfiguration) => {
     // Check guest limit BEFORE starting generation
     if (isGuest && !guestSession.canGenerate) {
-      setModalMessage("You ran out of free task generation credits, register to get 100 free credits!");
+      setModalMessage(t('You ran out of free task generation credits, register to get {{count}} free credits!', { count: TRIAL_START_CREDITS }));
       setShowGuestModal(true);
       return;
     }
@@ -362,7 +363,7 @@ function TaskGeneratorContent() {
 
       // Check if this is a guest limit error
       if (error.message?.includes('Generation limit reached') || error.message?.includes('limitReached')) {
-        setModalMessage(error.message || "You've reached your free generation limit. Register (FREE) to get 100 more credits!");
+        setModalMessage(error.message || t('You\'ve reached your free generation limit. Register (FREE) to get {{count}} more credits!', { count: TRIAL_START_CREDITS }));
         setShowGuestModal(true);
       } else {
         setGenerationError(error instanceof Error ? error.message : 'An unexpected error occurred');
@@ -451,7 +452,7 @@ function TaskGeneratorContent() {
 
     // For guests, show modal instead of saving
     if (isGuest) {
-      setModalMessage('To save generated tasks you have to register as a teacher first! Get 100 free task generation credits when you sign up.');
+      setModalMessage(t('To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.', { count: TRIAL_START_CREDITS }));
       setShowGuestModal(true);
       return;
     }
@@ -511,9 +512,9 @@ function TaskGeneratorContent() {
 
   const handleGuestPrompt = (action: 'save' | 'download') => {
     if (action === 'save') {
-      setModalMessage('To save generated tasks you have to register first as a teacher! Get 100 free task generation credits when you sign up.');
+      setModalMessage(t('To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.', { count: TRIAL_START_CREDITS }));
     } else {
-      setModalMessage('You have to register first as a teacher to download tasks in PDF format! Get 100 free task generation credits when you sign up.');
+      setModalMessage(t('You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.', { count: TRIAL_START_CREDITS }));
     }
     setShowGuestModal(true);
   };

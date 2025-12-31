@@ -10,11 +10,12 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Button } from '@/components/atoms/Button';
 import * as subscriptionService from '@/lib/services/subscription.service';
 import type { SubscriptionPlan } from '@/types/subscription';
+import { TRIAL_START_CREDITS } from '@/lib/constants/credits';
 
 /**
  * My Plan Page - For Non-Teacher Users (Parents/Students)
  * Non-teachers can only subscribe to the BASIC plan
- * They get 100 free task generation credits
+ * They get TRIAL_START_CREDITS free task generation credits
  */
 export default function MyPlanPage() {
   const { t } = useTranslation();
@@ -58,7 +59,7 @@ export default function MyPlanPage() {
   }
 
   const subscription = user.subscription;
-  const credits = user.taskCredits ?? 100; // Non-teachers get 100 free credits
+  const credits = user.taskCredits ?? TRIAL_START_CREDITS; // Non-teachers get TRIAL_START_CREDITS free credits
 
   // Format dates
   const formatDate = (dateString?: string) => {
@@ -204,7 +205,7 @@ export default function MyPlanPage() {
                   {t('Remaining Credits')}: {credits}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {t('You started with 100 free task generation credits.')}
+                  {t('You started with {{count}} free task generation credits.', { count: TRIAL_START_CREDITS })}
                 </Typography>
                 {credits < 20 && (
                   <Alert severity="info" sx={{ mt: 2 }}>

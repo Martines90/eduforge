@@ -7,6 +7,7 @@ import {
   UserDocument,
   VerificationCodeDocument,
 } from '../types/auth.types';
+import { TRIAL_START_CREDITS } from '../constants/credits';
 
 const SALT_ROUNDS = 10;
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-this';
@@ -177,7 +178,7 @@ export async function verifyCodeAndCreateUser(email: string, code: string): Prom
       startDate: trialStartDate as any,
       endDate: trialEndDate as any,
     };
-    userDoc.taskCredits = 100; // Initial 100 task generation credits
+    userDoc.taskCredits = TRIAL_START_CREDITS; // Initial task generation credits
   }
 
   await db.collection('users').doc(userRecord.uid).set(userDoc);

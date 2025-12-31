@@ -7,6 +7,7 @@ import { useUser } from '@/lib/context';
 import { CountryCode, UserIdentity, Subject, UserProfile } from '@/types/i18n';
 import { useSnackbar } from 'notistack';
 import { useTranslation } from '@/lib/i18n';
+import { TRIAL_START_CREDITS } from '@/lib/constants/credits';
 
 export interface GuestPromptModalProps {
   /**
@@ -52,7 +53,7 @@ export interface GuestPromptModalProps {
  * <GuestPromptModal
  *   open={showModal}
  *   onClose={() => setShowModal(false)}
- *   promptMessage="Register to save this task and get 100 free credits!"
+ *   promptMessage="Register to save this task and get free credits!"
  *   onRegistrationComplete={(profile) => {
  *     // Restore guest task, enable save button, etc.
  *   }}
@@ -62,13 +63,17 @@ export interface GuestPromptModalProps {
 export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
   open,
   onClose,
-  promptMessage = 'Register (FREE) to save and download tasks, plus get 100 free task generation credits!',
+  promptMessage,
   onRegistrationComplete,
   initialMode = 'register',
 }) => {
   const { user, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser } = useUser();
   const { enqueueSnackbar } = useSnackbar();
   const { t } = useTranslation();
+
+  // Use translated default message if no custom message provided
+  const defaultPromptMessage = t('Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!', { count: TRIAL_START_CREDITS });
+  const finalPromptMessage = promptMessage || defaultPromptMessage;
   const [mode, setMode] = useState<'login' | 'register'>(initialMode);
   const [isTeacher, setIsTeacher] = useState(false);
 
@@ -133,7 +138,7 @@ export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
 
       onClose();
 
-      enqueueSnackbar(t('Welcome! You now have 100 free task generation credits.'), {
+      enqueueSnackbar(t('Welcome! You now have {{count}} free task generation credits.', { count: TRIAL_START_CREDITS }), {
         variant: 'success',
         autoHideDuration: 5000,
       });
@@ -164,7 +169,7 @@ export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
         onLogin={handleLogin}
         onCreateAccount={handleCreateAccountClick}
         onClose={onClose}
-        promptMessage={promptMessage}
+        promptMessage={finalPromptMessage}
       />
 
       {/* Registration Modal */}
@@ -175,7 +180,7 @@ export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
         onClose={onClose}
         detectedCountry={user.country}
         isTeacher={isTeacher}
-        promptMessage={promptMessage}
+        promptMessage={finalPromptMessage}
       />
     </>
   );

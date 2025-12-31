@@ -10,6 +10,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Button } from '@/components/atoms/Button';
 import * as subscriptionService from '@/lib/services/subscription.service';
 import type { SubscriptionPlan } from '@/types/subscription';
+import { TRIAL_START_CREDITS } from '@/lib/constants/credits';
 
 export default function MySubscriptionPage() {
   const { t } = useTranslation();
@@ -216,7 +217,7 @@ export default function MySubscriptionPage() {
                 <Typography variant="body2" color="text.secondary">
                   {t('You have {{count}} task generation credits remaining.').replace('{{count}}', credits.toString())}
                 </Typography>
-                {credits < 100 && (
+                {credits < TRIAL_START_CREDITS && (
                   <Alert severity="info" sx={{ mt: 2 }}>
                     {t('Running low on credits? Upgrade your plan to get more!')}
                   </Alert>

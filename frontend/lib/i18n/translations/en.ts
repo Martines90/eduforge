@@ -364,8 +364,8 @@ export const en: Translations = {
   "Manage your subscription and credits": "Manage your subscription and credits",
   "Subscription will be cancelled at the end of the current period":
     "Subscription will be cancelled at the end of the current period",
-  "You started with 100 free task generation credits.":
-    "You started with 100 free task generation credits.",
+  "You started with {{count}} free task generation credits.":
+    "You started with {{count}} free task generation credits.",
   "Running low on credits? Subscribe to Basic plan for unlimited browsing!":
     "Running low on credits? Subscribe to Basic plan for unlimited browsing!",
   "Upgrade to Basic Plan": "Upgrade to Basic Plan",
@@ -422,7 +422,7 @@ export const en: Translations = {
   "You've used your 3 free task views.": "You've used your 3 free task views.",
   "Register now to get:": "Register now to get:",
   "Unlimited task viewing": "Unlimited task viewing",
-  "100 free task generation credits": "100 free task generation credits",
+  "{{count}} free task generation credits": "{{count}} free task generation credits",
   "3 months free trial subscription": "3 months free trial subscription",
   "Login / Register": "Login / Register",
 
@@ -488,8 +488,24 @@ export const en: Translations = {
   "Generate Tasks": "Generate Tasks",
 
   // Toast Notifications (enqueueSnackbar)
-  "Registration successful! Welcome to EduForge.": "Registration successful! Welcome to EduForge.",
   "Registration successful! Enjoy your free 3-month trial!": "Registration successful! Enjoy your free 3-month trial!",
   "Failed to save task. Please try again.": "Failed to save task. Please try again.",
-  "Welcome! You now have 100 free task generation credits.": "Welcome! You now have 100 free task generation credits.",
+  "Welcome! You now have {{count}} free task generation credits.": "Welcome! You now have {{count}} free task generation credits.",
+
+  // Guest Modal Messages
+  "You ran out of free task generation credits, register to get {{count}} free credits!": "You ran out of free task generation credits, register to get {{count}} free credits!",
+  "You've reached your free generation limit. Register (FREE) to get {{count}} more credits!": "You've reached your free generation limit. Register (FREE) to get {{count}} more credits!",
+  "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.": "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.",
+  "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.": "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.",
+  "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!": "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!",
+
+  // Subscription Page - Interpolated Strings
+  "{{count}} custom task collections": "{{count}} custom task collections",
+  "{{count}} task generation credits": "{{count}} task generation credits",
+  "{{time}} email support": "{{time}} email support",
+  "{{discount}}% webstore discount": "{{discount}}% webstore discount",
+  "Add up to {{count}} teachers": "Add up to {{count}} teachers",
+  "Upgrade to {{name}}": "Upgrade to {{name}}",
+  "Your {{plan}} plan is now active": "Your {{plan}} plan is now active",
+  "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.": "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.",
 };

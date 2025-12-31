@@ -10,6 +10,7 @@ import { AuthRequest } from "../middleware/auth.middleware";
 import { GuestAuthRequest } from "../middleware/guest-auth.middleware";
 import { deductTaskCredit } from "../services/auth.service";
 import { incrementGuestGeneration, getRemainingGenerations } from "../services/guest-auth.service";
+import { TRIAL_START_CREDITS } from "../constants/credits";
 
 export class TaskController {
   private taskGenerator: TaskGeneratorService;
@@ -412,7 +413,7 @@ export class TaskController {
         res.status(403).json({
           success: false,
           error: 'Forbidden',
-          message: "Guest users cannot save tasks. Please register to save your tasks and get 100 free task generation credits!",
+          message: `Guest users cannot save tasks. Please register to save your tasks and get ${TRIAL_START_CREDITS} free task generation credits!`,
         });
         return;
       }

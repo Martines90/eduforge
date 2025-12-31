@@ -1,3 +1,5 @@
+import { SUBSCRIPTION_CREDITS } from "../constants/credits";
+
 export type SubscriptionTier = "trial" | "basic" | "normal" | "pro";
 export type SubscriptionStatus =
   | "active"
@@ -68,8 +70,8 @@ export const SUBSCRIPTION_PLANS: Record<SubscriptionTier, SubscriptionPlan> = {
     interval: "month",
     features: {
       viewDownloadTasks: true,
-      customTaskCollections: 100,
-      taskCreationCredits: 100,
+      customTaskCollections: SUBSCRIPTION_CREDITS.trial,
+      taskCreationCredits: SUBSCRIPTION_CREDITS.trial,
       emailSupport: true,
       supportResponseTime: "72 hours",
       creatorContests: false,
@@ -108,8 +110,8 @@ export const SUBSCRIPTION_PLANS: Record<SubscriptionTier, SubscriptionPlan> = {
     interval: "year",
     features: {
       viewDownloadTasks: true,
-      customTaskCollections: 1000,
-      taskCreationCredits: 1000,
+      customTaskCollections: SUBSCRIPTION_CREDITS.normal,
+      taskCreationCredits: SUBSCRIPTION_CREDITS.normal,
       emailSupport: true,
       supportResponseTime: "48 hours",
       creatorContests: true,
@@ -129,7 +131,7 @@ export const SUBSCRIPTION_PLANS: Record<SubscriptionTier, SubscriptionPlan> = {
     features: {
       viewDownloadTasks: true,
       customTaskCollections: "unlimited",
-      taskCreationCredits: 10000,
+      taskCreationCredits: SUBSCRIPTION_CREDITS.pro,
       emailSupport: true,
       supportResponseTime: "24 hours",
       creatorContests: true,

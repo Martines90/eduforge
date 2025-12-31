@@ -367,8 +367,8 @@ export const hu: Translations = {
   "Manage your subscription and credits": "Előfizetés és kreditek kezelése",
   "Subscription will be cancelled at the end of the current period":
     "Az előfizetés a jelenlegi időszak végén törlésre kerül",
-  "You started with 100 free task generation credits.":
-    "100 ingyenes feladatgenerálási kredittel kezdett.",
+  "You started with {{count}} free task generation credits.":
+    "{{count}} ingyenes feladatgenerálási kredittel kezdett.",
   "Running low on credits? Subscribe to Basic plan for unlimited browsing!":
     "Fogytán a kreditje? Iratkozzon fel az Alap csomagra korlátlan böngészésért!",
   "Upgrade to Basic Plan": "Váltson Alap Csomagra",
@@ -428,7 +428,7 @@ export const hu: Translations = {
   "You've used your 3 free task views.": "Felhasználta 3 ingyenes feladatmegtekintését.",
   "Register now to get:": "Regisztráljon most és kapja meg:",
   "Unlimited task viewing": "Korlátlan feladatmegtekintés",
-  "100 free task generation credits": "100 ingyenes feladatgenerálási kredit",
+  "{{count}} free task generation credits": "{{count}} ingyenes feladatgenerálási kredit",
   "3 months free trial subscription": "3 hónapos ingyenes próba előfizetés",
   "Login / Register": "Bejelentkezés / Regisztráció",
 
@@ -489,8 +489,24 @@ export const hu: Translations = {
   "Generate Tasks": "Feladatok Generálása",
 
   // Toast Notifications (enqueueSnackbar)
-  "Registration successful! Welcome to EduForge.": "Sikeres regisztráció! Üdvözöljük az EduForge-ban.",
   "Registration successful! Enjoy your free 3-month trial!": "Sikeres regisztráció! Élvezze 3 hónapos ingyenes próbaidőszakát!",
   "Failed to save task. Please try again.": "A feladat mentése sikertelen. Kérjük, próbálja újra.",
-  "Welcome! You now have 100 free task generation credits.": "Üdvözöljük! Mostantól 100 ingyenes feladatgenerálási kreditje van.",
+  "Welcome! You now have {{count}} free task generation credits.": "Üdvözöljük! Mostantól {{count}} ingyenes feladatgenerálási kreditje van.",
+
+  // Guest Modal Messages
+  "You ran out of free task generation credits, register to get {{count}} free credits!": "Elfogytak az ingyenes feladatgenerálási kreditjei, regisztráljon {{count}} ingyenes kreditért!",
+  "You've reached your free generation limit. Register (FREE) to get {{count}} more credits!": "Elérte az ingyenes generálási limitét. Regisztráljon (INGYENES) még {{count}} kreditért!",
+  "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.": "A generált feladatok mentéséhez először tanárként kell regisztrálnia! Kapjon {{count}} ingyenes feladatgenerálási kreditet a regisztrációval.",
+  "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.": "PDF formátumú feladatok letöltéséhez először tanárként kell regisztrálnia! Kapjon {{count}} ingyenes feladatgenerálási kreditet a regisztrációval.",
+  "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!": "Regisztráljon (INGYENES) feladatok mentéséhez és letöltéséhez, plusz kapjon {{count}} ingyenes feladatgenerálási kreditet!",
+
+  // Subscription Page - Interpolated Strings
+  "{{count}} custom task collections": "{{count}} egyedi feladatgyűjtemény",
+  "{{count}} task generation credits": "{{count}} feladatgenerálási kredit",
+  "{{time}} email support": "{{time}} email támogatás",
+  "{{discount}}% webstore discount": "{{discount}}% webáruház kedvezmény",
+  "Add up to {{count}} teachers": "Maximum {{count}} tanár hozzáadása",
+  "Upgrade to {{name}}": "Frissítés {{name}} csomagra",
+  "Your {{plan}} plan is now active": "Az Ön {{plan}} csomagja most aktív",
+  "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.": "Ez a funkció hamarosan elérhető lesz! Maximum {{max}} tanárt adhat hozzá iskolájából.",
 };
