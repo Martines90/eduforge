@@ -36,8 +36,9 @@ export default function TasksPage() {
   const { user } = useUser();
   const [searchQuery, setSearchQuery] = useState('');
   const [filterSubject, setFilterSubject] = useState('mathematics');
-  const [filterGrade, setFilterGrade] = useState('grade_9_10');
-  const [treeData, setTreeData] = useState<TreeNode[]>([]);
+  const [filterGrade, setFilterGrade] = useState('all');
+  const [treeDataGrade9_10, setTreeDataGrade9_10] = useState<TreeNode[]>([]);
+  const [treeDataGrade11_12, setTreeDataGrade11_12] = useState<TreeNode[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -51,11 +52,32 @@ export default function TasksPage() {
         // Use user's country for curriculum, fallback to HU if not set
         const country = user.isRegistered && user.country ? user.country : 'HU';
         console.log('[Tasks Page] User country:', user.country, 'isRegistered:', user.isRegistered, 'Using country:', country);
-        const data = await fetchTreeMap(country, filterSubject, filterGrade);
-        if (data.success && data.data) {
-          setTreeData(data.data.tree);
-        } else {
-          setError(data.message || 'Failed to load curriculum tree');
+
+        // Fetch both grade levels if 'all' is selected, otherwise fetch only the selected one
+        if (filterGrade === 'all') {
+          const [data9_10, data11_12] = await Promise.all([
+            fetchTreeMap(country, filterSubject, 'grade_9_10'),
+            fetchTreeMap(country, filterSubject, 'grade_11_12'),
+          ]);
+
+          if (data9_10.success && data9_10.data) {
+            setTreeDataGrade9_10(data9_10.data.tree);
+          }
+          if (data11_12.success && data11_12.data) {
+            setTreeDataGrade11_12(data11_12.data.tree);
+          }
+        } else if (filterGrade === 'grade_9_10') {
+          const data = await fetchTreeMap(country, filterSubject, 'grade_9_10');
+          if (data.success && data.data) {
+            setTreeDataGrade9_10(data.data.tree);
+            setTreeDataGrade11_12([]);
+          }
+        } else if (filterGrade === 'grade_11_12') {
+          const data = await fetchTreeMap(country, filterSubject, 'grade_11_12');
+          if (data.success && data.data) {
+            setTreeDataGrade11_12(data.data.tree);
+            setTreeDataGrade9_10([]);
+          }
         }
       } catch (err: any) {
         console.error('Error fetching tree data:', err);
@@ -68,8 +90,7 @@ export default function TasksPage() {
     fetchTreeData();
   }, [filterSubject, filterGrade, user.country, user.isRegistered]);
 
-  const hasNoTasks = !isLoading && treeData.length === 0 && !error;
-  const dataToDisplay = treeData.length > 0 ? treeData : [];
+  const hasNoTasks = !isLoading && treeDataGrade9_10.length === 0 && treeDataGrade11_12.length === 0 && !error;
 
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
@@ -80,26 +101,10 @@ export default function TasksPage() {
         </Typography>
       </Box>
 
-      {/* Search and Filters */}
+      {/* Subject Selector, Grade Filter and Search - Merged into one panel */}
       <Paper elevation={2} sx={{ p: 3, mb: 4 }}>
-        <Grid container spacing={3} alignItems="center">
-          <Grid item xs={12} md={6}>
-            <TextField
-              fullWidth
-              placeholder={t('Search tasks...')}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <SearchIcon />
-                  </InputAdornment>
-                ),
-              }}
-            />
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
+        <Grid container spacing={3} alignItems="flex-start">
+          <Grid item xs={12} sm={6} md={4}>
             <FormControl fullWidth>
               <InputLabel>{t('Subject')}</InputLabel>
               <Select
@@ -116,7 +121,7 @@ export default function TasksPage() {
             </FormControl>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} sm={6} md={4}>
             <FormControl fullWidth>
               <InputLabel>{t('Grade')}</InputLabel>
               <Select
@@ -124,10 +129,28 @@ export default function TasksPage() {
                 label={t('Grade')}
                 onChange={(e) => setFilterGrade(e.target.value)}
               >
+                <MenuItem value="all">{t('All Grades')}</MenuItem>
                 <MenuItem value="grade_9_10">{t('Grade 9-10')}</MenuItem>
                 <MenuItem value="grade_11_12">{t('Grade 11-12')}</MenuItem>
               </Select>
             </FormControl>
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <TextField
+              fullWidth
+              placeholder={t('Search in curriculum tree (min 3 characters)...')}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon />
+                  </InputAdornment>
+                ),
+              }}
+              helperText={searchQuery.length > 0 && searchQuery.length < 3 ? t('Please enter at least 3 characters') : ''}
+            />
           </Grid>
         </Grid>
       </Paper>
@@ -184,15 +207,45 @@ export default function TasksPage() {
           </Box>
         </Paper>
       ) : (
-        <TaskTreeView
-          data={dataToDisplay}
-          subject={filterSubject}
-          gradeLevel={filterGrade}
-          onTaskClick={(task) => {
-            console.log('Task clicked:', task);
-            router.push(`/tasks/${task.id}`);
-          }}
-        />
+        <>
+          {/* Grade 9-10 Block */}
+          {(filterGrade === 'all' || filterGrade === 'grade_9_10') && treeDataGrade9_10.length > 0 && (
+            <Box sx={{ mb: 4 }}>
+              <Typography variant="h5" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
+                {t('Grade 9-10')}
+              </Typography>
+              <TaskTreeView
+                data={treeDataGrade9_10}
+                subject={filterSubject}
+                gradeLevel="grade_9_10"
+                searchQuery={searchQuery}
+                onTaskClick={(task) => {
+                  console.log('Task clicked:', task);
+                  router.push(`/tasks/${task.id}`);
+                }}
+              />
+            </Box>
+          )}
+
+          {/* Grade 11-12 Block */}
+          {(filterGrade === 'all' || filterGrade === 'grade_11_12') && treeDataGrade11_12.length > 0 && (
+            <Box sx={{ mb: 4 }}>
+              <Typography variant="h5" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
+                {t('Grade 11-12')}
+              </Typography>
+              <TaskTreeView
+                data={treeDataGrade11_12}
+                subject={filterSubject}
+                gradeLevel="grade_11_12"
+                searchQuery={searchQuery}
+                onTaskClick={(task) => {
+                  console.log('Task clicked:', task);
+                  router.push(`/tasks/${task.id}`);
+                }}
+              />
+            </Box>
+          )}
+        </>
       )}
     </Container>
   );

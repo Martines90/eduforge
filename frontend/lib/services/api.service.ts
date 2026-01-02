@@ -312,7 +312,7 @@ export async function fetchTreeMap(country: string, subject: string, gradeLevel:
 export async function fetchTasksByCurriculumPath(
   curriculumPath: string,
   isPublished: boolean = true
-): Promise<ApiResponse<{ tasks: any[] }>> {
+): Promise<{ success: boolean; tasks: any[] }> {
   const response = await fetch(
     `${API_BASE_URL}/api/v2/tasks?curriculum_path=${encodeURIComponent(curriculumPath)}&isPublished=${isPublished}`
   );
@@ -364,7 +364,7 @@ export async function fetchMyTasks(params?: {
   sort?: 'rating' | 'views' | 'recent' | 'popular';
   limit?: number;
   offset?: number;
-}): Promise<ApiResponse<{ tasks: any[]; total: number; page: number; limit: number; hasMore: boolean }>> {
+}): Promise<{ success: boolean; tasks: any[]; total: number; page: number; limit: number; hasMore: boolean }> {
   const token = typeof window !== 'undefined' ? localStorage.getItem('authToken') : null;
 
   console.log('[fetchMyTasks] Auth token present:', !!token);

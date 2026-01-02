@@ -34,6 +34,7 @@ export interface TaskTreeViewProps {
   onTaskClick?: (task: TaskItem) => void;
   subject: string;
   gradeLevel: string;
+  searchQuery?: string;
 }
 
 interface RowProps {
@@ -44,22 +45,73 @@ interface RowProps {
   gradeLevel: string;
   pathFromRoot: string[];
   isTeacher: boolean;
+  searchQuery?: string;
+  shouldExpand?: boolean;
+  parentMatched?: boolean;
 }
 
 /**
  * Recursive Row Component
  * Renders a single tree node with expand/collapse functionality
  */
-const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeLevel, pathFromRoot, isTeacher }) => {
+const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeLevel, pathFromRoot, isTeacher, searchQuery, shouldExpand, parentMatched }) => {
   const { t } = useTranslation();
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(shouldExpand || false);
   const [tasks, setTasks] = useState<TaskItem[]>(node.tasks || []);
   const [loadingTasks, setLoadingTasks] = useState(false);
   const [tasksFetched, setTasksFetched] = useState(false);
 
+  // Auto-expand when shouldExpand changes
+  React.useEffect(() => {
+    if (shouldExpand !== undefined) {
+      setIsExpanded(shouldExpand);
+    }
+  }, [shouldExpand]);
+
   const hasChildren = node.subTopics && node.subTopics.length > 0;
   const isLeaf = !hasChildren; // Leaf nodes can have tasks
   const hasTasks = tasks.length > 0;
+
+  // Check if this node or any of its children match the search
+  const matchesSearch = (node: TreeNode, query: string): boolean => {
+    if (!query || query.length < 3) return true;
+    const lowerQuery = query.toLowerCase();
+
+    // Check if current node matches
+    if (node.name.toLowerCase().includes(lowerQuery)) {
+      return true;
+    }
+
+    // Check if any child matches (recursive)
+    if (node.subTopics && node.subTopics.length > 0) {
+      return node.subTopics.some(child => matchesSearch(child, query));
+    }
+
+    return false;
+  };
+
+  // Check if this node itself matches (not just children)
+  const nodeDirectlyMatches = (node: TreeNode, query: string): boolean => {
+    if (!query || query.length < 3) return false;
+    return node.name.toLowerCase().includes(query.toLowerCase());
+  };
+
+  const thisNodeMatches = nodeDirectlyMatches(node, searchQuery || '');
+
+  // Visibility rules:
+  // 1. If parent matched directly, show this child (entire subtree visible)
+  // 2. Otherwise, show only if this node or its descendants match
+  const selfOrDescendantMatches = matchesSearch(node, searchQuery || '');
+  const isVisible = parentMatched || selfOrDescendantMatches;
+
+  // Auto-expand parent nodes that have matching descendants
+  // This expands the tree to reveal matches, but doesn't auto-expand leaf nodes to load tasks
+  const shouldAutoExpand = !!(searchQuery && searchQuery.length >= 3 && hasChildren &&
+    node.subTopics?.some(child => matchesSearch(child, searchQuery)));
+
+  if (!isVisible) {
+    return null;
+  }
 
   // Build the full path for this node (using names for URL compatibility with navigation data)
   const currentPath = [...pathFromRoot, node.name];
@@ -174,7 +226,7 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
       </TableRow>
 
       {/* Expanded Children Rows */}
-      {isExpanded && hasChildren && (
+      {(isExpanded || shouldAutoExpand) && hasChildren && (
         <>
           {node.subTopics!.map((child) => (
             <TreeRow
@@ -186,6 +238,9 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
               gradeLevel={gradeLevel}
               pathFromRoot={currentPath}
               isTeacher={isTeacher}
+              searchQuery={searchQuery}
+              shouldExpand={shouldAutoExpand}
+              parentMatched={thisNodeMatches || parentMatched}
             />
           ))}
         </>
@@ -299,7 +354,7 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
  * TaskTreeView Component
  * Displays a hierarchical tree of tasks with expandable categories
  */
-export const TaskTreeView: React.FC<TaskTreeViewProps> = ({ data, onTaskClick, subject, gradeLevel }) => {
+export const TaskTreeView: React.FC<TaskTreeViewProps> = ({ data, onTaskClick, subject, gradeLevel, searchQuery }) => {
   const { t } = useTranslation();
   const { user } = useUser();
 
@@ -339,6 +394,7 @@ export const TaskTreeView: React.FC<TaskTreeViewProps> = ({ data, onTaskClick, s
               gradeLevel={gradeLevel}
               pathFromRoot={[]}
               isTeacher={isTeacher}
+              searchQuery={searchQuery}
             />
           ))}
         </TableBody>

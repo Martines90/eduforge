@@ -77,6 +77,10 @@ export const hu: Translations = {
     "Még egyik tanár sem adott hozzá feladatot.",
   "Be the first one who creates a new task":
     "Legyen Ön az első, aki új feladatot hoz létre",
+  "Search in curriculum tree (min 3 characters)...":
+    "Keresés a tantervi fában (min. 3 karakter)...",
+  "Please enter at least 3 characters":
+    "Kérjük, adjon meg legalább 3 karaktert",
 
   // Subjects
   Mathematics: "Matematika",
@@ -125,6 +129,12 @@ export const hu: Translations = {
   "Create New Task": "Új Feladat Létrehozása",
   "View Profile": "Profil Megtekintése",
   Created: "Létrehozva",
+  View: "Megtekintés",
+  Edit: "Szerkesztés",
+  Delete: "Törlés",
+  "Delete Task": "Feladat Törlése",
+  "Are you sure you want to delete this task? This action cannot be undone.":
+    "Biztosan törölni szeretné ezt a feladatot? Ez a művelet nem vonható vissza.",
 
   // User Menu
   Profile: "Profil",

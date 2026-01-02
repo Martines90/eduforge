@@ -77,6 +77,10 @@ export const mx: Translations = {
   "No teacher added any tasks yet.": "Ningún maestro ha agregado tareas aún.",
   "Be the first one who creates a new task":
     "Sé el primero en crear una nueva tarea",
+  "Search in curriculum tree (min 3 characters)...":
+    "Buscar en el árbol curricular (mín. 3 caracteres)...",
+  "Please enter at least 3 characters":
+    "Por favor ingresa al menos 3 caracteres",
 
   // Subjects
   Mathematics: "Matemáticas",
@@ -124,6 +128,12 @@ export const mx: Translations = {
   "Create New Task": "Crear Nueva Tarea",
   "View Profile": "Ver Perfil",
   Created: "Creado",
+  View: "Ver",
+  Edit: "Editar",
+  Delete: "Eliminar",
+  "Delete Task": "Eliminar Tarea",
+  "Are you sure you want to delete this task? This action cannot be undone.":
+    "¿Estás seguro de que quieres eliminar esta tarea? Esta acción no se puede deshacer.",
 
   // User Menu
   Profile: "Perfil",

@@ -82,6 +82,8 @@ export interface Translations {
   "No tasks available for this topic yet": string;
   "No teacher added any tasks yet.": string;
   "Be the first one who creates a new task": string;
+  "Search in curriculum tree (min 3 characters)...": string;
+  "Please enter at least 3 characters": string;
 
   // Subjects
   Mathematics: string;
@@ -134,6 +136,11 @@ export interface Translations {
   "Create New Task": string;
   "View Profile": string;
   Created: string;
+  View: string;
+  Edit: string;
+  Delete: string;
+  "Delete Task": string;
+  "Are you sure you want to delete this task? This action cannot be undone.": string;
 
   // User Menu
   Profile: string;

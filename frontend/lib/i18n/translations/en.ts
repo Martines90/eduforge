@@ -76,6 +76,10 @@ export const en: Translations = {
   "No teacher added any tasks yet.": "No teacher added any tasks yet.",
   "Be the first one who creates a new task":
     "Be the first one who creates a new task",
+  "Search in curriculum tree (min 3 characters)...":
+    "Search in curriculum tree (min 3 characters)...",
+  "Please enter at least 3 characters":
+    "Please enter at least 3 characters",
 
   // Subjects
   Mathematics: "Mathematics",
@@ -123,6 +127,12 @@ export const en: Translations = {
   "Create New Task": "Create New Task",
   "View Profile": "View Profile",
   Created: "Created",
+  View: "View",
+  Edit: "Edit",
+  Delete: "Delete",
+  "Delete Task": "Delete Task",
+  "Are you sure you want to delete this task? This action cannot be undone.":
+    "Are you sure you want to delete this task? This action cannot be undone.",
 
   // User Menu
   Profile: "Profile",
