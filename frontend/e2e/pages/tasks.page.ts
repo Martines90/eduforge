@@ -27,9 +27,9 @@ export class TasksPage {
   readonly createTaskButton: Locator;
 
   constructor(private page: Page) {
-    // Filters
-    this.subjectFilter = page.getByLabel(/subject/i);
-    this.gradeFilter = page.getByLabel(/grade/i);
+    // Filters - MUI Select can be found via their hidden input or by finding the combobox near the label
+    this.subjectFilter = page.locator('label:has-text("Subject") + div [role="combobox"]').first();
+    this.gradeFilter = page.locator('label:has-text("Grade") + div [role="combobox"]').first();
     this.searchInput = page.getByPlaceholder(/search/i);
 
     // Tree view

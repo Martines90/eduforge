@@ -106,6 +106,7 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
 
   // Auto-expand parent nodes that have matching descendants
   // This expands the tree to reveal matches, but doesn't auto-expand leaf nodes to load tasks
+  // IMPORTANT: Only auto-expand if this node has children (not a leaf node)
   const shouldAutoExpand = !!(searchQuery && searchQuery.length >= 3 && hasChildren &&
     node.subTopics?.some(child => matchesSearch(child, searchQuery)));
 
@@ -228,21 +229,27 @@ const TreeRow: React.FC<RowProps> = ({ node, level, onTaskClick, subject, gradeL
       {/* Expanded Children Rows */}
       {(isExpanded || shouldAutoExpand) && hasChildren && (
         <>
-          {node.subTopics!.map((child) => (
-            <TreeRow
-              key={child.key}
-              node={child}
-              level={level + 1}
-              onTaskClick={onTaskClick}
-              subject={subject}
-              gradeLevel={gradeLevel}
-              pathFromRoot={currentPath}
-              isTeacher={isTeacher}
-              searchQuery={searchQuery}
-              shouldExpand={shouldAutoExpand}
-              parentMatched={thisNodeMatches || parentMatched}
-            />
-          ))}
+          {node.subTopics!.map((child) => {
+            // Check if child is a leaf node (no subTopics)
+            const childIsLeaf = !child.subTopics || child.subTopics.length === 0;
+
+            return (
+              <TreeRow
+                key={child.key}
+                node={child}
+                level={level + 1}
+                onTaskClick={onTaskClick}
+                subject={subject}
+                gradeLevel={gradeLevel}
+                pathFromRoot={currentPath}
+                isTeacher={isTeacher}
+                searchQuery={searchQuery}
+                // Don't pass shouldExpand to leaf nodes - they should only expand on user click
+                shouldExpand={childIsLeaf ? false : shouldAutoExpand}
+                parentMatched={thisNodeMatches || parentMatched}
+              />
+            );
+          })}
         </>
       )}
 

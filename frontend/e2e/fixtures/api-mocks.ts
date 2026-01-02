@@ -270,4 +270,163 @@ export class ApiMocks {
     await this.mockTaskSave();
     await this.mockLogout();
   }
+
+  /**
+   * Mock tree-map endpoint for curriculum tree data
+   */
+  async mockTreeMap(options?: {
+    country?: string;
+    subject?: string;
+    gradeLevel?: string;
+    shouldFail?: boolean;
+    customData?: any;
+  }) {
+    const country = options?.country || 'HU';
+    const subject = options?.subject || 'mathematics';
+    const gradeLevel = options?.gradeLevel || 'grade_9_10';
+
+    await this.page.route(`**/api/tree-map/${country}/${subject}/${gradeLevel}`, async (route) => {
+      if (options?.shouldFail) {
+        await route.fulfill({
+          status: 500,
+          contentType: 'application/json',
+          body: JSON.stringify({
+            success: false,
+            message: 'Failed to load curriculum tree',
+          }),
+        });
+      } else {
+        const mockData = options?.customData || {
+          success: true,
+          data: {
+            country,
+            subject,
+            gradeLevel,
+            totalNodes: 3,
+            rootNodes: 1,
+            tree: [
+              {
+                key: 'test_category',
+                name: 'Test Category',
+                level: 1,
+                subTopics: [
+                  {
+                    key: 'test_subcategory',
+                    name: 'Test Subcategory',
+                    level: 2,
+                    subTopics: [
+                      {
+                        key: 'test_leaf',
+                        name: 'Test Leaf Node',
+                        level: 3,
+                        subTopics: [],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        };
+        await route.fulfill({
+          status: 200,
+          contentType: 'application/json',
+          body: JSON.stringify(mockData),
+        });
+      }
+    });
+  }
+
+  /**
+   * Mock tasks by curriculum path endpoint
+   */
+  async mockTasksByCurriculumPath(options?: {
+    curriculumPath?: string;
+    shouldFail?: boolean;
+    hasNoTasks?: boolean;
+    customTasks?: any[];
+  }) {
+    await this.page.route('**/api/v2/tasks?curriculum_path=*', async (route) => {
+      if (options?.shouldFail) {
+        await route.fulfill({
+          status: 500,
+          contentType: 'application/json',
+          body: JSON.stringify({
+            success: false,
+            message: 'Failed to load tasks',
+          }),
+        });
+      } else if (options?.hasNoTasks) {
+        await route.fulfill({
+          status: 200,
+          contentType: 'application/json',
+          body: JSON.stringify({
+            success: true,
+            tasks: [],
+            total: 0,
+            page: 1,
+            limit: 20,
+            hasMore: false,
+          }),
+        });
+      } else {
+        const mockTasks = options?.customTasks || [
+          {
+            id: 'task_test_123',
+            title: 'Test Task - Pitagorasz-tétel',
+            subject: 'mathematics',
+            educationalModel: 'secular',
+            ratingAverage: 4.5,
+            ratingCount: 10,
+            viewCount: 39,
+            description: '<h1>Test Task</h1><p>This is a test task description.</p>',
+            created_at: '2025-01-01T00:00:00.000Z',
+            updated_at: '2025-01-01T00:00:00.000Z',
+            gradeLevel: 'grade_9_10',
+            country_code: 'HU',
+            difficultyLevel: 'medium',
+            isPublished: true,
+            curriculum_path: 'mathematics:grade_9_10:Test Category:Test Subcategory:Test Leaf Node',
+            creatorName: 'Test Teacher',
+          },
+        ];
+        await route.fulfill({
+          status: 200,
+          contentType: 'application/json',
+          body: JSON.stringify({
+            success: true,
+            tasks: mockTasks,
+            total: mockTasks.length,
+            page: 1,
+            limit: 20,
+            hasMore: false,
+          }),
+        });
+      }
+    });
+  }
+
+  /**
+   * Setup all mocks for tasks page
+   */
+  async setupTasksPageMocks(options?: {
+    country?: string;
+    subject?: string;
+    gradeLevel?: string;
+    treeData?: any;
+    hasNoTasks?: boolean;
+    customTasks?: any[];
+  }) {
+    await this.mockFirebaseAuth();
+    await this.mockTreeMap({
+      country: options?.country,
+      subject: options?.subject,
+      gradeLevel: options?.gradeLevel,
+      customData: options?.treeData,
+    });
+    await this.mockTasksByCurriculumPath({
+      hasNoTasks: options?.hasNoTasks,
+      customTasks: options?.customTasks,
+    });
+  }
 }
