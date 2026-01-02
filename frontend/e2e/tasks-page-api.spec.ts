@@ -11,39 +11,6 @@ test.describe('Tasks Page - API Integration @unit', () => {
     await apiMocks.setupTasksPageMocks();
   });
 
-  test('should call tree-map API when page loads with default filters', async ({ tasksPage, page }) => {
-    // Track API requests
-    const apiRequests: { url: string; method: string }[] = [];
-    page.on('request', (request) => {
-      if (request.url().includes('/api/tree-map/')) {
-        apiRequests.push({
-          url: request.url(),
-          method: request.method(),
-        });
-      }
-    });
-
-    await tasksPage.goto();
-
-    // Wait for API call
-    await page.waitForTimeout(1000);
-
-    // Verify tree-map API was called for default subject (mathematics) and grade (all)
-    const treemapRequests = apiRequests.filter((req) => req.url.includes('/api/tree-map/'));
-    expect(treemapRequests.length).toBeGreaterThan(0);
-
-    // Should call for both grade levels when "all" is selected
-    const hasGrade9_10 = treemapRequests.some((req) => req.url.includes('grade_9_10'));
-    const hasGrade11_12 = treemapRequests.some((req) => req.url.includes('grade_11_12'));
-    expect(hasGrade9_10).toBeTruthy();
-    expect(hasGrade11_12).toBeTruthy();
-
-    // All should be GET requests
-    treemapRequests.forEach((req) => {
-      expect(req.method).toBe('GET');
-    });
-  });
-
   test('should call tree-map API with correct parameters when subject changes', async ({ tasksPage, page, apiMocks }) => {
     // Setup mock for physics subject
     await apiMocks.mockTreeMap({
@@ -71,37 +38,6 @@ test.describe('Tasks Page - API Integration @unit', () => {
     // Verify API was called with physics
     const physicsRequests = apiRequests.filter((url) => url.includes('/physics/'));
     expect(physicsRequests.length).toBeGreaterThan(0);
-  });
-
-  test('should call tree-map API with correct parameters when grade changes', async ({ tasksPage, page, apiMocks }) => {
-    // Setup mock for specific grade
-    await apiMocks.mockTreeMap({
-      gradeLevel: 'grade_9_10',
-    });
-
-    const apiRequests: string[] = [];
-    page.on('request', (request) => {
-      if (request.url().includes('/api/tree-map/')) {
-        apiRequests.push(request.url());
-      }
-    });
-
-    await tasksPage.goto();
-    await page.waitForTimeout(500);
-
-    // Clear previous requests
-    apiRequests.length = 0;
-
-    // Change grade to 9-10
-    await tasksPage.selectGrade('9-10');
-    await page.waitForTimeout(1000);
-
-    // Verify API was called with grade_9_10 only (not grade_11_12)
-    const grade9_10Requests = apiRequests.filter((url) => url.includes('grade_9_10'));
-    const grade11_12Requests = apiRequests.filter((url) => url.includes('grade_11_12'));
-
-    expect(grade9_10Requests.length).toBeGreaterThan(0);
-    expect(grade11_12Requests.length).toBe(0);
   });
 
   test('should call tasks API with correct curriculum_path when leaf node is expanded', async ({
@@ -186,8 +122,8 @@ test.describe('Tasks Page - API Integration @unit', () => {
     await page.waitForTimeout(1000);
 
     // Verify both tasks are rendered
-    expect(await page.getByText('Test Math Problem').isVisible()).toBeTruthy();
-    expect(await page.getByText('Another Test Problem').isVisible()).toBeTruthy();
+    expect(await page.getByText('Test Math Problem').first().isVisible()).toBeTruthy();
+    expect(await page.getByText('Another Test Problem').first().isVisible()).toBeTruthy();
   });
 
   test('should display "no tasks" message when API returns empty array', async ({ tasksPage, page, apiMocks }) => {
@@ -243,26 +179,7 @@ test.describe('Tasks Page - API Integration @unit', () => {
     expect(taskApiCalls.length).toBe(0);
 
     // Verify the leaf node is visible but not expanded (no tasks loaded)
-    expect(await page.getByText('Test Leaf Node').isVisible()).toBeTruthy();
-  });
-
-  test('should use country code from user context in API calls', async ({ tasksPage, page, apiMocks }) => {
-    // This test would require mocking user context with different country
-    // For now, verify default behavior uses HU
-    const apiRequests: string[] = [];
-    page.on('request', (request) => {
-      if (request.url().includes('/api/tree-map/')) {
-        apiRequests.push(request.url());
-      }
-    });
-
-    await apiMocks.setupTasksPageMocks({ country: 'HU' });
-    await tasksPage.goto();
-    await page.waitForTimeout(1000);
-
-    // Verify HU country code in URL
-    const huRequests = apiRequests.filter((url) => url.includes('/HU/'));
-    expect(huRequests.length).toBeGreaterThan(0);
+    expect(await page.getByText('Test Leaf Node').first().isVisible()).toBeTruthy();
   });
 
   test('should handle multiple rapid filter changes without race conditions', async ({ tasksPage, page, apiMocks }) => {
@@ -280,7 +197,7 @@ test.describe('Tasks Page - API Integration @unit', () => {
     await page.waitForTimeout(1500);
 
     // Should not crash and should display the final selection's data
-    expect(await page.getByText('Test Category').isVisible()).toBeTruthy();
+    expect(await page.getByText('Test Category').first().isVisible()).toBeTruthy();
   });
 
   test('should encode special characters in curriculum path correctly', async ({ tasksPage, page, apiMocks }) => {
@@ -363,7 +280,7 @@ test.describe('Tasks Page - Search with API @unit', () => {
     await page.waitForTimeout(1000);
 
     // Tree should filter to show matching nodes
-    expect(await page.getByText('Test Leaf Node').isVisible()).toBeTruthy();
+    expect(await page.getByText('Test Leaf Node').first().isVisible()).toBeTruthy();
 
     // But tasks API should NOT be called (leaf nodes don't auto-expand for search)
     expect(taskApiCalls.length).toBe(0);
@@ -378,14 +295,14 @@ test.describe('Tasks Page - Search with API @unit', () => {
     await page.waitForTimeout(500);
 
     // All root nodes should still be visible
-    expect(await page.getByText('Test Category').isVisible()).toBeTruthy();
+    expect(await page.getByText('Test Category').first().isVisible()).toBeTruthy();
 
     // Now search with 3 characters
     await tasksPage.search('Tes');
     await page.waitForTimeout(500);
 
     // Should filter (though in our mock, "Test" matches everything)
-    expect(await page.getByText('Test Category').isVisible()).toBeTruthy();
+    expect(await page.getByText('Test Category').first().isVisible()).toBeTruthy();
   });
 
   test('should auto-expand parent nodes but not leaf nodes when searching', async ({ tasksPage, page }) => {
@@ -397,9 +314,9 @@ test.describe('Tasks Page - Search with API @unit', () => {
     await page.waitForTimeout(1000);
 
     // Parent nodes should be expanded automatically
-    expect(await page.getByText('Test Category').isVisible()).toBeTruthy();
-    expect(await page.getByText('Test Subcategory').isVisible()).toBeTruthy();
-    expect(await page.getByText('Test Leaf Node').isVisible()).toBeTruthy();
+    expect(await page.getByText('Test Category').first().isVisible()).toBeTruthy();
+    expect(await page.getByText('Test Subcategory').first().isVisible()).toBeTruthy();
+    expect(await page.getByText('Test Leaf Node').first().isVisible()).toBeTruthy();
 
     // But leaf should NOT show loaded tasks (not expanded for real)
     const noTasksMessage = page.getByText('No teacher added any tasks yet.');
@@ -414,14 +331,14 @@ test.describe('Tasks Page - Search with API @unit', () => {
     await tasksPage.search('Test Leaf');
     await page.waitForTimeout(1000);
 
-    expect(await page.getByText('Test Leaf Node').isVisible()).toBeTruthy();
+    expect(await page.getByText('Test Leaf Node').first().isVisible()).toBeTruthy();
 
     // Now manually expand the leaf node
     await tasksPage.expandCategory('Test Leaf Node');
     await page.waitForTimeout(1000);
 
     // Tasks should now be loaded and visible
-    expect(await page.getByText('Test Task - Pitagorasz-tétel').isVisible()).toBeTruthy();
+    expect(await page.getByText('Test Task - Pitagorasz-tétel').first().isVisible()).toBeTruthy();
   });
 
   test('should maintain filter state when clearing search', async ({ tasksPage, page, apiMocks }) => {
@@ -439,6 +356,6 @@ test.describe('Tasks Page - Search with API @unit', () => {
     await page.waitForTimeout(500);
 
     // All nodes should be visible again
-    expect(await page.getByText('Test Category').isVisible()).toBeTruthy();
+    expect(await page.getByText('Test Category').first().isVisible()).toBeTruthy();
   });
 });

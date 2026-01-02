@@ -273,6 +273,7 @@ export class ApiMocks {
 
   /**
    * Mock tree-map endpoint for curriculum tree data
+   * Uses wildcard to catch all variations of country/subject/gradeLevel
    */
   async mockTreeMap(options?: {
     country?: string;
@@ -280,12 +281,26 @@ export class ApiMocks {
     gradeLevel?: string;
     shouldFail?: boolean;
     customData?: any;
+    onRequest?: (url: string, method: string) => void;
   }) {
     const country = options?.country || 'HU';
     const subject = options?.subject || 'mathematics';
     const gradeLevel = options?.gradeLevel || 'grade_9_10';
 
-    await this.page.route(`**/api/tree-map/${country}/${subject}/${gradeLevel}`, async (route) => {
+    // Use wildcard pattern to catch all tree-map requests
+    await this.page.route('**/api/tree-map/**', async (route) => {
+      const request = route.request();
+      const url = new URL(request.url());
+      const pathParts = url.pathname.split('/');
+      const reqCountry = pathParts[pathParts.length - 3];
+      const reqSubject = pathParts[pathParts.length - 2];
+      const reqGradeLevel = pathParts[pathParts.length - 1];
+
+      // Call callback to track request if provided
+      if (options?.onRequest) {
+        options.onRequest(request.url(), request.method());
+      }
+
       if (options?.shouldFail) {
         await route.fulfill({
           status: 500,
@@ -299,9 +314,9 @@ export class ApiMocks {
         const mockData = options?.customData || {
           success: true,
           data: {
-            country,
-            subject,
-            gradeLevel,
+            country: reqCountry,
+            subject: reqSubject,
+            gradeLevel: reqGradeLevel,
             totalNodes: 3,
             rootNodes: 1,
             tree: [
@@ -408,6 +423,7 @@ export class ApiMocks {
 
   /**
    * Setup all mocks for tasks page
+   * This must be called BEFORE navigating to the page
    */
   async setupTasksPageMocks(options?: {
     country?: string;
@@ -417,16 +433,24 @@ export class ApiMocks {
     hasNoTasks?: boolean;
     customTasks?: any[];
   }) {
+    // Set up all mocks before any navigation
     await this.mockFirebaseAuth();
+
+    // Important: Set up tree-map mock first
     await this.mockTreeMap({
       country: options?.country,
       subject: options?.subject,
       gradeLevel: options?.gradeLevel,
       customData: options?.treeData,
     });
+
+    // Then set up tasks mock
     await this.mockTasksByCurriculumPath({
       hasNoTasks: options?.hasNoTasks,
       customTasks: options?.customTasks,
     });
+
+    // Small delay to ensure routes are registered
+    await this.page.waitForTimeout(100);
   }
 }
