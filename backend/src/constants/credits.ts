@@ -16,16 +16,6 @@ export const TASK_GENERATION_CREDITS = {
   pro: 10000,
 } as const;
 
-/**
- * Test/Worksheet creation credits per subscription tier
- */
-export const TEST_CREATION_CREDITS = {
-  trial: 5,
-  basic: 0,
-  normal: 50,
-  pro: 500,
-} as const;
-
 // Legacy export for backward compatibility
 export const SUBSCRIPTION_CREDITS = TASK_GENERATION_CREDITS;
 

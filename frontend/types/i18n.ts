@@ -460,6 +460,272 @@ export interface Translations {
   "Upgrade to {{name}}": string;
   "Your {{plan}} plan is now active": string;
   "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.": string;
+
+  // Test Library (My Tests Page)
+  "My Tests": string;
+  "Test Library": string;
+  "Create and manage your test worksheets": string;
+  "Create New Test": string;
+  "Create Test": string;
+  "Test Name": string;
+  "Enter test name": string;
+  "Test Description": string;
+  "Test description (optional)": string;
+  "Enter test description (optional)": string;
+  "Subject and grade are optional for now": string;
+  "Test name is required": string;
+  "Creating Test...": string;
+  "No tests yet": string;
+  "You haven't created any tests yet. Create your first test worksheet!": string;
+  "No tests found": string;
+  "Create First Test": string;
+  "Updated": string;
+  "Last updated": string;
+  "Open Test": string;
+  "Are you sure you want to delete this test?": string;
+  "This will permanently delete the test and all its tasks. This action cannot be undone.": string;
+  "tasks": string;
+  "{{count}} tasks": string;
+  "points": string;
+  "{{count}} points": string;
+  "Published": string;
+  "Draft": string;
+  "Search tests...": string;
+  "Search by name...": string;
+  "Filter by subject": string;
+  "Sort by": string;
+  "Most Recent": string;
+  "Name (A-Z)": string;
+  "Task Count": string;
+  "Delete Test": string;
+  "Are you sure you want to delete this test? This action cannot be undone.": string;
+  "Deleting...": string;
+  "Test deleted successfully": string;
+  "Failed to delete test": string;
+
+  // Test Editor Page
+  "Edit Test": string;
+  "Test Editor": string;
+  "Back to Tests": string;
+  "Add Task": string;
+  "Add Custom Task": string;
+  "Save Changes": string;
+  "Publish Test": string;
+  "Generate PDF": string;
+  "Test Details": string;
+  "Total Score": string;
+  "Total Points": string;
+  "{{count}} task": string;
+  "No tasks added yet": string;
+  "No tasks yet": string;
+  "Add tasks to your test using the buttons above": string;
+  "Add tasks from the library or create custom tasks to build your test.": string;
+  "Start by adding your first task": string;
+  "Remove from test": string;
+  "Test saved successfully": string;
+  "Failed to save test": string;
+  "Search for tasks to add...": string;
+  "No results found": string;
+  "Try different search terms": string;
+
+  // Custom Task Creation
+  "Create Custom Task": string;
+  "Task Title": string;
+  "Enter task title": string;
+  "Task Text": string;
+  "Enter task description": string;
+  "Add Question": string;
+  "Question {{number}}": string;
+  "Enter question": string;
+  "Score": string;
+  "Enter score": string;
+  "Remove Question": string;
+  "Show Image": string;
+  "Hide Image": string;
+  "Title is required": string;
+  "Text is required": string;
+  "At least one question is required": string;
+  "Question text is required": string;
+  "All questions must have text": string;
+  "Enter the task description or problem": string;
+  "Enter question text": string;
+  "Task title is required": string;
+  "Task text is required": string;
+  "Custom task created successfully": string;
+  "Failed to create custom task": string;
+
+  // Search Tasks Modal
+  "Search Library Tasks": string;
+  "Search for tasks...": string;
+  "Search by title, subject, or topic": string;
+  "No tasks found matching your search": string;
+  "Try different keywords": string;
+  "Already in test": string;
+
+  // Task Customization
+  "Edit Task": string;
+  "Customize Task": string;
+  "Display the task image": string;
+  "Task Score": string;
+  "Points for this task": string;
+  "Individual scores for each question": string;
+  "Reset to Default": string;
+  "Apply Changes": string;
+  "Override Title": string;
+  "Override Text": string;
+  "Custom title for this test": string;
+  "Custom text for this test": string;
+  "Question Scores": string;
+  "Total task score": string;
+  "Updating...": string;
+  "Task updated successfully": string;
+  "Failed to update task": string;
+
+  // Task Reordering
+  "Drag to reorder": string;
+  "Move task": string;
+  "Reorder Tasks": string;
+  "Drag and drop tasks to reorder them": string;
+
+  // Publishing
+  "Publish to Public": string;
+  "Unpublish": string;
+  "Publishing...": string;
+  "Test published successfully!": string;
+  "Failed to publish test": string;
+  "Public Link": string;
+  "Copy Link": string;
+  "Link copied!": string;
+  "Share this link with students": string;
+  "View Published Test": string;
+  "This test is now publicly accessible": string;
+  "Republish": string;
+  "Update Published Version": string;
+  "Share Your Test": string;
+  "Make this test publicly accessible": string;
+  "Anyone with the link can view this test": string;
+  "Test unpublished successfully": string;
+
+  // PDF Generation
+  "Generate Test PDF": string;
+  "Generating PDF...": string;
+  "PDF generated successfully": string;
+  "Download Test PDF": string;
+  "PDF generation failed": string;
+  "Failed to generate PDF": string;
+  "Please try again": string;
+  "Include Solutions": string;
+  "Include answer key in PDF": string;
+
+  // Published Test View (Public)
+  "Published Test": string;
+  "Public Test": string;
+  "View Count": string;
+  "views": string;
+  "{{count}} views": string;
+  "Published by": string;
+  "Print": string;
+  "Print Test": string;
+  "Test Information": string;
+  "Subject:": string;
+  "Grade Level:": string;
+  "Total Tasks:": string;
+  "Total Score:": string;
+  "Number of Tasks": string;
+  "Published on": string;
+  "Test not found": string;
+  "This test does not exist or has been removed": string;
+  "This test is not published": string;
+  "Test does not exist or has been removed": string;
+
+  // Notifications/Toasts
+  "Test created successfully": string;
+  "Test updated successfully": string;
+  "Failed to create test": string;
+  "Failed to update test": string;
+  "Failed to load test": string;
+  "Task added successfully": string;
+  "Failed to add task": string;
+  "Task removed successfully": string;
+  "Failed to remove task": string;
+  "Tasks reordered successfully": string;
+  "Failed to reorder tasks": string;
+  "Test name already exists": string;
+  "Please choose a different name": string;
+
+  // Subjects (test creator context)
+  mathematics: string;
+  physics: string;
+  chemistry: string;
+  biology: string;
+  history: string;
+  geography: string;
+  literature: string;
+  informatics: string;
+
+  // Validation Messages
+  "Name must be at least 3 characters": string;
+  "Description is too long": string;
+  "Invalid score value": string;
+  "Score must be a positive number": string;
+  "Please fill in all required fields": string;
+  "Invalid test data": string;
+  "Something went wrong": string;
+  "Network error": string;
+  "Check your internet connection": string;
+
+  // Toast Notifications (for tests)
+  "Changes saved": string;
+  "Task order updated": string;
+  "Settings updated": string;
+  "Operation completed": string;
+  "Operation failed": string;
+
+  // Additional Test Creator Keys
+  "My Tests/Worksheets": string;
+  "View and manage all tests and worksheets you've created": string;
+  "No Tests Yet": string;
+  "You haven't created any tests yet. Start by creating your first test/worksheet!": string;
+  "Create Your First Test": string;
+  "Grade Level (optional)": string;
+  "Description (optional)": string;
+  "Creating...": string;
+  "Create & Edit": string;
+  "Loading test...": string;
+  "PDF is not available for this test": string;
+  "This test has no tasks": string;
+  "This is a publicly shared test. You can create your own tests at": string;
+  "Add to Test": string;
+  "Add Task to Test": string;
+  "You don't have any tests yet. Create a test first!": string;
+  "Go to My Tests": string;
+  "Select Test": string;
+  "Choose which test to add this task to": string;
+  "Adding...": string;
+  "Browse and discover published tests from the community": string;
+  "No published tests yet": string;
+  "Be the first to publish a test!": string;
+  "View Test": string;
+  "No tests match your search": string;
+  "Try adjusting your search or filters": string;
+  "Generating...": string;
+  "Back to My Tests": string;
+  "Edit Test Details": string;
+  "Description": string;
+  "Remove Task": string;
+  "Are you sure you want to remove this task from the test?": string;
+  "Remove": string;
+  "Test Published!": string;
+  "Your test is now publicly accessible at:": string;
+  "Anyone with this link can view your test. You can republish to update the public version with any changes.": string;
+  "Republish Latest Version": string;
+  "Add from Library": string;
+  "Add tasks from the library or create custom tasks": string;
+  "This test is publicly accessible": string;
+  "Share this test with a public link": string;
+  "Note:": string;
+  "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.": string;
+  "PDF": string;
 }
 
 export type TranslationKey = keyof Translations;

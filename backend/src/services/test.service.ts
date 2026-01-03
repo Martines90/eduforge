@@ -30,10 +30,7 @@ function getTestsCollectionPath(country: string): string {
 /**
  * Get collection path for test tasks
  */
-function getTestTasksCollectionPath(
-  country: string,
-  testId: string
-): string {
+function getTestTasksCollectionPath(country: string, testId: string): string {
   return `${getTestsCollectionPath(country)}/${testId}/testTasks`;
 }
 
@@ -299,9 +296,7 @@ export async function addTaskToTest(
 
   // Validate custom task vs library task
   if (!data.taskId && (!data.customTitle || !data.customText)) {
-    throw new Error(
-      "Custom tasks must have at least a title and text content"
-    );
+    throw new Error("Custom tasks must have at least a title and text content");
   }
 
   // Get current task count to set orderIndex
@@ -368,12 +363,9 @@ export async function updateTestTask(
     });
 
   // Update test's updatedAt
-  await db
-    .collection(getTestsCollectionPath(country))
-    .doc(testId)
-    .update({
-      updatedAt: new Date(),
-    });
+  await db.collection(getTestsCollectionPath(country)).doc(testId).update({
+    updatedAt: new Date(),
+  });
 }
 
 /**
@@ -401,13 +393,10 @@ export async function deleteTestTask(
     .collection(getTestTasksCollectionPath(country, testId))
     .get();
 
-  await db
-    .collection(getTestsCollectionPath(country))
-    .doc(testId)
-    .update({
-      taskCount: tasksSnapshot.size,
-      updatedAt: new Date(),
-    });
+  await db.collection(getTestsCollectionPath(country)).doc(testId).update({
+    taskCount: tasksSnapshot.size,
+    updatedAt: new Date(),
+  });
 }
 
 /**
@@ -443,7 +432,6 @@ export async function reorderTestTasks(
 
 /**
  * Publish/unpublish a test
- * When publishing for the first time, deduct a credit
  */
 export async function publishTest(
   testId: string,
@@ -454,42 +442,13 @@ export async function publishTest(
   const db = getFirestore();
 
   // Verify test ownership
-  const test = await getTestById(testId, userId, country);
-
-  // If publishing for the first time, check and deduct credits
-  if (isPublished && !test.isPublished) {
-    const user = await getUserById(userId);
-    if (!user) {
-      throw new Error("User not found");
-    }
-
-    // Check test creation credits
-    const testCredits = user.testCredits || 0;
-    if (testCredits <= 0) {
-      throw new Error("No test creation credits remaining");
-    }
-
-    // Deduct credit
-    await db.collection("users").doc(userId).update({
-      testCredits: testCredits - 1,
-      updatedAt: new Date(),
-    });
-
-    console.log(
-      `[Test Service] Deducted 1 test credit from user ${userId}. Remaining: ${
-        testCredits - 1
-      }`
-    );
-  }
+  await getTestById(testId, userId, country);
 
   // Update test publication status
-  await db
-    .collection(getTestsCollectionPath(country))
-    .doc(testId)
-    .update({
-      isPublished,
-      updatedAt: new Date(),
-    });
+  await db.collection(getTestsCollectionPath(country)).doc(testId).update({
+    isPublished,
+    updatedAt: new Date(),
+  });
 }
 
 /**
@@ -506,14 +465,11 @@ export async function updateTestPdfUrl(
   // Verify test ownership
   await getTestById(testId, userId, country);
 
-  await db
-    .collection(getTestsCollectionPath(country))
-    .doc(testId)
-    .update({
-      pdfUrl,
-      lastPdfGeneratedAt: new Date(),
-      updatedAt: new Date(),
-    });
+  await db.collection(getTestsCollectionPath(country)).doc(testId).update({
+    pdfUrl,
+    lastPdfGeneratedAt: new Date(),
+    updatedAt: new Date(),
+  });
 }
 
 /**
@@ -589,9 +545,7 @@ export async function publishTestToPublic(
           resolvedTask = {
             originalTaskId: testTask.taskId,
             title:
-              testTask.overrideTitle ||
-              libraryTask?.title ||
-              "Untitled Task",
+              testTask.overrideTitle || libraryTask?.title || "Untitled Task",
             text:
               testTask.overrideText ||
               libraryTask?.content?.description ||
@@ -615,16 +569,12 @@ export async function publishTestToPublic(
           };
         }
       } catch (error) {
-        console.error(
-          `Error fetching library task ${testTask.taskId}:`,
-          error
-        );
+        console.error(`Error fetching library task ${testTask.taskId}:`, error);
         // Fallback to overrides
         resolvedTask = {
           originalTaskId: testTask.taskId,
           title: testTask.overrideTitle || "Task Error",
-          text:
-            testTask.overrideText || "Error loading original task content",
+          text: testTask.overrideText || "Error loading original task content",
           score: testTask.score,
           orderIndex: testTask.orderIndex,
         };
@@ -678,15 +628,12 @@ export async function publishTestToPublic(
   const publicLink = `/published-tests/${publicId}`;
 
   // Update original test with public link and published ID
-  await db
-    .collection(getTestsCollectionPath(country))
-    .doc(testId)
-    .update({
-      publicLink,
-      publishedTestId: publicId,
-      lastPublishedAt: new Date(),
-      updatedAt: new Date(),
-    });
+  await db.collection(getTestsCollectionPath(country)).doc(testId).update({
+    publicLink,
+    publishedTestId: publicId,
+    lastPublishedAt: new Date(),
+    updatedAt: new Date(),
+  });
 
   console.log(
     `[Test Service] Test ${testId} published to public with ID: ${publicId}`

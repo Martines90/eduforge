@@ -377,7 +377,7 @@ router.put("/tests/:testId/tasks/reorder", testController.reorderTestTasks);
  * /api/v2/tests/{testId}/publish:
  *   post:
  *     summary: Publish or unpublish a test
- *     description: Publishes a test (deducts credit on first publish) or unpublishes it
+ *     description: Publishes or unpublishes a test
  *     tags: [Tests]
  *     security:
  *       - bearerAuth: []
@@ -401,8 +401,6 @@ router.put("/tests/:testId/tasks/reorder", testController.reorderTestTasks);
  *     responses:
  *       200:
  *         description: Test published/unpublished successfully
- *       402:
- *         description: Insufficient credits
  *       404:
  *         description: Test not found
  *       401:

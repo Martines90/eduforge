@@ -352,7 +352,7 @@ export const reorderTestTasks = async (
 
 /**
  * POST /api/v2/tests/:testId/publish
- * Publish or unpublish a test (deducts credit on first publish)
+ * Publish or unpublish a test
  */
 export const publishTest = async (
   req: Request,
@@ -376,16 +376,8 @@ export const publishTest = async (
         ? "Test published successfully"
         : "Test unpublished successfully",
     });
-  } catch (error: any) {
+  } catch (error) {
     console.error("❌ Error publishing test:", error);
-    if (error.message.includes("No test creation credits")) {
-      res.status(402).json({
-        success: false,
-        error: "Insufficient credits",
-        message: error.message,
-      });
-      return;
-    }
     next(error);
   }
 };

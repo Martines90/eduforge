@@ -328,7 +328,7 @@ export async function reorderTestTasks(testId: string, data: ReorderTasksRequest
 }
 
 /**
- * Publish or unpublish a test (deducts credit on first publish)
+ * Publish or unpublish a test
  */
 export async function publishTest(testId: string, isPublished: boolean): Promise<{
   success: boolean;
