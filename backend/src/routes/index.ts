@@ -25,11 +25,11 @@ router.use(subjectMappingRoutes);
 router.use(tasksV2Routes);
 router.use("/api/tree-map", treeMapRoutes);
 
+// Mount public test routes (no authentication) - MUST come before authenticated routes
+router.use("/api/v2", publicTestRouter);
+
 // Mount test/worksheet routes (authenticated)
 router.use("/api/v2", testRoutes);
-
-// Mount public test routes (no authentication)
-router.use("/api/v2", publicTestRouter);
 
 /**
  * @swagger
