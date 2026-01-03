@@ -13,6 +13,7 @@ import {
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Button } from '@/components/atoms/Button';
+import { useTranslation } from '@/lib/i18n';
 
 interface CustomQuestion {
   question: string;
@@ -46,6 +47,7 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
   onSave,
   initialData,
 }) => {
+  const { t } = useTranslation();
   const [title, setTitle] = useState(initialData?.customTitle || '');
   const [text, setText] = useState(initialData?.customText || '');
   const [questions, setQuestions] = useState<CustomQuestion[]>(
@@ -78,12 +80,12 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
   const handleSave = async () => {
     // Validation
     if (!title.trim()) {
-      setError('Title is required');
+      setError(t('Title is required'));
       return;
     }
 
     if (!text.trim()) {
-      setError('Task description is required');
+      setError(t('Text is required'));
       return;
     }
 
@@ -91,7 +93,7 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
     if (questions.length > 0) {
       for (let i = 0; i < questions.length; i++) {
         if (!questions[i].question.trim()) {
-          setError(`Question ${i + 1} cannot be empty`);
+          setError(t('Question {{number}}', { number: i + 1 }) + ' ' + t('Question text is required'));
           return;
         }
       }
@@ -115,7 +117,7 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
       setTotalScore(undefined);
       onClose();
     } catch (err: any) {
-      setError(err.message || 'Failed to save custom task');
+      setError(err.message || t('Failed to create custom task'));
     } finally {
       setIsSaving(false);
     }
@@ -131,7 +133,7 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
   return (
     <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
       <DialogTitle>
-        {initialData ? 'Edit Custom Task' : 'Create Custom Task'}
+        {initialData ? t('Edit Task') : t('Create Custom Task')}
       </DialogTitle>
       <DialogContent>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 1 }}>
@@ -144,27 +146,27 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
 
           {/* Title */}
           <TextField
-            label="Task Title"
+            label={t('Task Title')}
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
             fullWidth
             autoFocus
-            placeholder="e.g., Solve the equation"
-            helperText="A short descriptive title for the task"
+            placeholder={t('Enter task title')}
+            helperText={t('Task title is required')}
           />
 
           {/* Task Description */}
           <TextField
-            label="Task Description"
+            label={t('Task Text')}
             value={text}
             onChange={(e) => setText(e.target.value)}
             required
             fullWidth
             multiline
             rows={6}
-            placeholder="Enter the full task description here. You can include problem statements, instructions, or any relevant information."
-            helperText="The main content of your custom task. You can use basic HTML formatting if needed."
+            placeholder={t('Enter the task description or problem')}
+            helperText={t('Task text is required')}
           />
 
           <Divider />
@@ -173,7 +175,7 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
           <Box>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
               <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-                Questions (Optional)
+                {t('Questions (Optional)')}
               </Typography>
               <Button
                 variant="secondary"
@@ -181,13 +183,13 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
                 startIcon={<AddIcon />}
                 onClick={handleAddQuestion}
               >
-                Add Question
+                {t('Add Question')}
               </Button>
             </Box>
 
             {questions.length === 0 ? (
               <Typography variant="body2" color="text.secondary">
-                No questions added yet. Click "Add Question" to add sub-questions with individual scores.
+                {t('No questions added yet. Click "Add Question" to add sub-questions with individual scores.')}
               </Typography>
             ) : (
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -207,20 +209,20 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
                       {index + 1}.
                     </Typography>
                     <TextField
-                      label="Question"
+                      label={t('Question')}
                       value={q.question}
                       onChange={(e) => handleQuestionChange(index, 'question', e.target.value)}
                       fullWidth
-                      placeholder="e.g., Calculate the value of x"
+                      placeholder={t('e.g., Calculate the value of x')}
                       size="small"
                     />
                     <TextField
-                      label="Score"
+                      label={t('Score')}
                       type="number"
                       value={q.score || ''}
                       onChange={(e) => handleQuestionChange(index, 'score', e.target.value)}
                       sx={{ width: 100 }}
-                      placeholder="Points"
+                      placeholder={t('Points')}
                       size="small"
                       inputProps={{ min: 0, step: 0.5 }}
                     />
@@ -229,6 +231,7 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
                       color="error"
                       size="small"
                       sx={{ mt: 0.5 }}
+                      aria-label={t('Remove question')}
                     >
                       <DeleteIcon />
                     </IconButton>
@@ -242,27 +245,27 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
 
           {/* Total Score */}
           <TextField
-            label="Total Score (Optional)"
+            label={t('Total Score (Optional)')}
             type="number"
             value={totalScore || ''}
             onChange={(e) => setTotalScore(e.target.value ? Number(e.target.value) : undefined)}
             sx={{ width: 200 }}
-            placeholder="Total points"
-            helperText="Overall score for this task"
+            placeholder={t('Total points')}
+            helperText={t('Overall score for this task')}
             inputProps={{ min: 0, step: 0.5 }}
           />
         </Box>
       </DialogContent>
       <DialogActions>
         <Button variant="secondary" onClick={handleClose} disabled={isSaving}>
-          Cancel
+          {t('Cancel')}
         </Button>
         <Button
           variant="primary"
           onClick={handleSave}
           disabled={isSaving || !title.trim() || !text.trim()}
         >
-          {isSaving ? 'Saving...' : initialData ? 'Update' : 'Add to Test'}
+          {isSaving ? t('Saving...') : initialData ? t('Update') : t('Add to Test')}
         </Button>
       </DialogActions>
     </Dialog>
