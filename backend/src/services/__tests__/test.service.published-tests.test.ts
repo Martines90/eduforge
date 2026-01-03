@@ -5,6 +5,7 @@
 
 import * as testService from "../test.service";
 import type { GetPublishedTestsQuery } from "../../types/test.types";
+import * as firebaseConfig from "../../config/firebase.config";
 
 // Mock Firebase config
 jest.mock("../../config/firebase.config");
@@ -45,8 +46,7 @@ describe("Test Service - Published Tests Browsing", () => {
     });
 
     // Mock Firebase config
-    const firebaseConfig = require("../../config/firebase.config");
-    firebaseConfig.getFirestore = jest.fn().mockReturnValue({
+    (firebaseConfig.getFirestore as jest.Mock) = jest.fn().mockReturnValue({
       collection: mockCollection,
     });
   });

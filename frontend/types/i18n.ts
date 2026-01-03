@@ -494,7 +494,11 @@ export interface Translations {
   "Search by name...": string;
   "Filter by subject": string;
   "Sort by": string;
+  "Sort by:": string;
   "Most Recent": string;
+  "Recent": string;
+  "Most Viewed": string;
+  "Most Downloaded": string;
   "Name (A-Z)": string;
   "Task Count": string;
   "Delete Test": string;
@@ -692,6 +696,7 @@ export interface Translations {
   "Creating...": string;
   "Create & Edit": string;
   "Loading test...": string;
+  "Loading tests...": string;
   "PDF is not available for this test": string;
   "This test has no tasks": string;
   "This is a publicly shared test. You can create your own tests at": string;

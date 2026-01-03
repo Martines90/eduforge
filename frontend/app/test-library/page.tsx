@@ -243,7 +243,7 @@ export default function TestLibraryPage() {
           <>
             <Grid container spacing={3}>
               {tests.map((test) => (
-              <Grid item xs={12} sm={6} md={4} key={test.id}>
+              <Grid item xs={12} sm={6} md={4} key={test.publicId}>
                 <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography variant="h6" gutterBottom noWrap title={test.name}>
@@ -286,7 +286,7 @@ export default function TestLibraryPage() {
                       variant="primary"
                       fullWidth
                       startIcon={<VisibilityIcon />}
-                      onClick={() => router.push(`/published-tests/${test.id}`)}
+                      onClick={() => router.push(`/published-tests/${test.publicId}`)}
                     >
                       {t('View Test')}
                     </Button>
