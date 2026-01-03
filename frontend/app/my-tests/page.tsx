@@ -17,7 +17,7 @@ import {
   DialogActions,
   Chip,
   TextField,
-  MenuItem,
+  MenuItem, // Still used for Grade Level dropdown
 } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
@@ -27,10 +27,12 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import { Button } from '@/components/atoms/Button';
 import { LoadingSpinner } from '@/components/atoms/LoadingSpinner';
 import { Pagination } from '@/components/molecules/Pagination';
+import { SubjectSelector } from '@/components/molecules/SubjectSelector/SubjectSelector';
 import { useRouteProtection } from '@/lib/hooks/useRouteProtection';
 import { useTranslation } from '@/lib/i18n';
 import { fetchMyTests, deleteTest, createTest } from '@/lib/services/test.service';
 import { Test, CreateTestRequest } from '@/types/test.types';
+import { Subject } from '@/types/i18n';
 
 /**
  * My Tests/Worksheets Page - Teacher Only
@@ -58,7 +60,7 @@ export default function MyTestsPage() {
 
   // Form state for creating new test
   const [newTestName, setNewTestName] = useState('');
-  const [newTestSubject, setNewTestSubject] = useState('mathematics');
+  const [newTestSubject, setNewTestSubject] = useState<Subject>('mathematics');
   const [newTestGradeLevel, setNewTestGradeLevel] = useState('');
   const [newTestDescription, setNewTestDescription] = useState('');
 
@@ -446,20 +448,14 @@ export default function MyTestsPage() {
               placeholder="e.g., Algebra Quiz #1, Final Exam"
             />
 
-            <TextField
+            <SubjectSelector
               label={t('Subject')}
               value={newTestSubject}
-              onChange={(e) => setNewTestSubject(e.target.value)}
-              select
+              onChange={(subject) => setNewTestSubject(subject as Subject)}
+              type="select"
               required
               fullWidth
-            >
-              <MenuItem value="mathematics">Mathematics</MenuItem>
-              <MenuItem value="physics">Physics</MenuItem>
-              <MenuItem value="chemistry">Chemistry</MenuItem>
-              <MenuItem value="biology">Biology</MenuItem>
-              <MenuItem value="history">History</MenuItem>
-            </TextField>
+            />
 
             <TextField
               label={t('Grade Level (optional)')}
