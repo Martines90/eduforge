@@ -4,6 +4,9 @@ import { TaskCreatorPage } from '../pages/task-creator.page';
 import { TaskGeneratorPage } from '../pages/task-generator.page';
 import { TasksPage } from '../pages/tasks.page';
 import { TaskDetailPage } from '../pages/task-detail.page';
+import { TestLibraryPage } from '../pages/test-library.page';
+import { TestEditorPage } from '../pages/test-editor.page';
+import { PublishedTestPage } from '../pages/published-test.page';
 import { ApiMocks } from './api-mocks';
 
 /**
@@ -15,6 +18,9 @@ type TestFixtures = {
   taskGeneratorPage: TaskGeneratorPage;
   tasksPage: TasksPage;
   taskDetailPage: TaskDetailPage;
+  testLibraryPage: TestLibraryPage;
+  testEditorPage: TestEditorPage;
+  publishedTestPage: PublishedTestPage;
   apiMocks: ApiMocks;
 };
 
@@ -50,6 +56,21 @@ export const test = base.extend<TestFixtures>({
   apiMocks: async ({ page }, use) => {
     const apiMocks = new ApiMocks(page);
     await use(apiMocks);
+  },
+
+  testLibraryPage: async ({ page }, use) => {
+    const testLibraryPage = new TestLibraryPage(page);
+    await use(testLibraryPage);
+  },
+
+  testEditorPage: async ({ page }, use) => {
+    const testEditorPage = new TestEditorPage(page);
+    await use(testEditorPage);
+  },
+
+  publishedTestPage: async ({ page }, use) => {
+    const publishedTestPage = new PublishedTestPage(page);
+    await use(publishedTestPage);
   },
 });
 
