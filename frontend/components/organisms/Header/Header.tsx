@@ -41,6 +41,8 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
     { href: '/task_generator', label: t('Generate Tasks') },
     ...(isTeacher ? [{ href: '/task_creator', label: t('Create Task') }] : []),
     { href: '/tasks', label: t('Browse Tasks') },
+    { href: '/test-library', label: t('Test Library') },
+    ...(isTeacher ? [{ href: '/my-tests', label: t('Create Test') }] : []),
   ];
 
   const navigationItems = isGuest ? guestNavigationItems : registeredNavigationItems;
