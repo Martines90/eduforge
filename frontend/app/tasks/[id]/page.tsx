@@ -93,6 +93,9 @@ export default function TaskDetailPage() {
   const [loadingTests, setLoadingTests] = useState(false);
   const [selectedTestId, setSelectedTestId] = useState<string>('');
   const [isAddingToTest, setIsAddingToTest] = useState(false);
+  const [addToTestError, setAddToTestError] = useState<string | null>(null);
+  const [showAddToTestSuccess, setShowAddToTestSuccess] = useState(false);
+  const [addedTestName, setAddedTestName] = useState<string>('');
 
   // Guest task view limit
   const guestViewLimit = useGuestTaskViewLimit();
@@ -502,19 +505,32 @@ export default function TaskDetailPage() {
 
     try {
       setIsAddingToTest(true);
+      setAddToTestError(null);
+
+      // Find the selected test name
+      const selectedTest = myTests.find((test) => test.id === selectedTestId);
+      const testName = selectedTest?.name || 'test';
+
       await addTaskToTest(selectedTestId, {
         taskId: task.id,
-        showImage: true, // Default to showing images
+        showImage: true,
       });
+
+      // Success: close dialog and show success message
       setAddToTestDialogOpen(false);
       setSelectedTestId('');
-      setShowCopySuccess(true); // Reuse snackbar for success message
-      setTimeout(() => setShowCopySuccess(false), 3000);
-      // Optionally redirect to test editor
-      // router.push(`/tests/${selectedTestId}/edit`);
+      setAddedTestName(testName);
+      setShowAddToTestSuccess(true);
+      setTimeout(() => setShowAddToTestSuccess(false), 4000);
     } catch (err: any) {
       console.error('Error adding task to test:', err);
-      setError(err.message || 'Failed to add task to test');
+
+      // Check if it's a duplicate error (409 status)
+      if (err.response?.status === 409 || err.message?.includes('already added')) {
+        setAddToTestError(t('Task already added to this test'));
+      } else {
+        setAddToTestError(err.message || t('Failed to add task to test'));
+      }
     } finally {
       setIsAddingToTest(false);
     }
@@ -862,6 +878,22 @@ export default function TaskDetailPage() {
         message={t('Share link copied to clipboard!')}
       />
 
+      {/* Add to Test Success Snackbar */}
+      <Snackbar
+        open={showAddToTestSuccess}
+        autoHideDuration={4000}
+        onClose={() => setShowAddToTestSuccess(false)}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert
+          onClose={() => setShowAddToTestSuccess(false)}
+          severity="success"
+          sx={{ width: '100%' }}
+        >
+          {t('Task successfully added to {{testName}}', { testName: addedTestName })}
+        </Alert>
+      </Snackbar>
+
       {/* Guest Registration/Login Modal */}
       <GuestPromptModal
         open={showGuestModal}
@@ -876,6 +908,7 @@ export default function TaskDetailPage() {
         onClose={() => {
           setAddToTestDialogOpen(false);
           setSelectedTestId('');
+          setAddToTestError(null);
         }}
         maxWidth="sm"
         fullWidth
@@ -905,6 +938,11 @@ export default function TaskDetailPage() {
             </Box>
           ) : (
             <Box sx={{ mt: 1 }}>
+              {addToTestError && (
+                <Alert severity="error" sx={{ mb: 2 }}>
+                  {addToTestError}
+                </Alert>
+              )}
               <TextField
                 select
                 label={t('Select Test')}
@@ -928,6 +966,7 @@ export default function TaskDetailPage() {
             onClick={() => {
               setAddToTestDialogOpen(false);
               setSelectedTestId('');
+              setAddToTestError(null);
             }}
             disabled={isAddingToTest}
           >

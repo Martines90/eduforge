@@ -305,6 +305,18 @@ export async function addTaskToTest(
     .get();
   const orderIndex = tasksSnapshot.size;
 
+  // Check for duplicate library task (only if taskId is provided)
+  if (data.taskId) {
+    const duplicateTask = tasksSnapshot.docs.find(
+      (doc) => doc.data().taskId === data.taskId
+    );
+    if (duplicateTask) {
+      const error: any = new Error("Task already added to this test");
+      error.code = "DUPLICATE_TASK";
+      throw error;
+    }
+  }
+
   // Create test task document
   const testTask: TestTaskDocument = {
     taskId: data.taskId || null,

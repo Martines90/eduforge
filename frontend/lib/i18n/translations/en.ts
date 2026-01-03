@@ -785,4 +785,9 @@ export const en: Translations = {
   "Note:": "Note:",
   "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.": "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.",
   "PDF": "PDF",
+
+  // Task Add to Test Notifications
+  "Task successfully added to {{testName}}": "Task successfully added to {{testName}}",
+  "Task already added to this test": "Task already added to this test",
+  "Failed to add task to test": "Failed to add task to test",
 };

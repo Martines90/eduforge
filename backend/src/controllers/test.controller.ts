@@ -244,6 +244,17 @@ export const addTaskToTest = async (
     });
   } catch (error: any) {
     console.error("❌ Error adding task to test:", error);
+
+    // Handle duplicate task error
+    if (error.code === "DUPLICATE_TASK") {
+      res.status(409).json({
+        success: false,
+        error: "Duplicate task",
+        message: error.message,
+      });
+      return;
+    }
+
     if (error.message.includes("must have")) {
       res.status(400).json({
         success: false,
