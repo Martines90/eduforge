@@ -127,12 +127,18 @@ export async function getUserTests(
       break;
   }
 
-  // Get total count (for pagination)
-  const allTests = await testsQuery.get();
-  const total = allTests.size;
+  // Create two separate queries: one for count, one for paginated data
+  // This is more efficient than fetching all documents twice
+  const countQuery = testsQuery;
+  const paginatedQuery = testsQuery.limit(limit).offset(offset);
 
-  // Apply pagination
-  const paginatedTests = await testsQuery.limit(limit).offset(offset).get();
+  // Execute both queries in parallel
+  const [allTests, paginatedTests] = await Promise.all([
+    countQuery.get(),
+    paginatedQuery.get(),
+  ]);
+
+  const total = allTests.size;
 
   const tests = paginatedTests.docs.map((doc) => ({
     id: doc.id,

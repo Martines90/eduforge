@@ -26,6 +26,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import DescriptionIcon from '@mui/icons-material/Description';
 import { Button } from '@/components/atoms/Button';
 import { LoadingSpinner } from '@/components/atoms/LoadingSpinner';
+import { Pagination } from '@/components/molecules/Pagination';
 import { useRouteProtection } from '@/lib/hooks/useRouteProtection';
 import { useTranslation } from '@/lib/i18n';
 import { fetchMyTests, deleteTest, createTest } from '@/lib/services/test.service';
@@ -51,14 +52,39 @@ export default function MyTestsPage() {
   const [createDialogOpen, setCreateDialogOpen] = useState(false);
   const [isCreating, setIsCreating] = useState(false);
 
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
   // Form state for creating new test
   const [newTestName, setNewTestName] = useState('');
   const [newTestSubject, setNewTestSubject] = useState('mathematics');
   const [newTestGradeLevel, setNewTestGradeLevel] = useState('');
   const [newTestDescription, setNewTestDescription] = useState('');
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+  const formatDate = (dateValue: any) => {
+    // Handle Firestore Timestamp objects which come as { _seconds, _nanoseconds }
+    let date: Date;
+
+    if (dateValue && typeof dateValue === 'object' && '_seconds' in dateValue) {
+      // Firestore Timestamp object
+      date = new Date(dateValue._seconds * 1000);
+    } else if (typeof dateValue === 'string') {
+      // ISO string
+      date = new Date(dateValue);
+    } else if (dateValue instanceof Date) {
+      // Already a Date object
+      date = dateValue;
+    } else {
+      // Fallback
+      return 'Invalid Date';
+    }
+
+    // Check if date is valid
+    if (isNaN(date.getTime())) {
+      return 'Invalid Date';
+    }
+
     return date.toLocaleDateString();
   };
 
@@ -96,6 +122,18 @@ export default function MyTestsPage() {
 
   const hasNoTests = tests.length === 0;
 
+  // Calculate paginated tests
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedTests = tests.slice(startIndex, endIndex);
+
+  // Handle page change
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    // Scroll to top of test list
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleDeleteClick = (test: Test, e: React.MouseEvent) => {
     e.stopPropagation();
     setTestToDelete(test);
@@ -107,7 +145,17 @@ export default function MyTestsPage() {
 
     try {
       await deleteTest(testToDelete.id);
-      setTests(tests.filter(t => t.id !== testToDelete.id));
+      const updatedTests = tests.filter(t => t.id !== testToDelete.id);
+      setTests(updatedTests);
+
+      // Reset to page 1 if current page would be empty after deletion
+      const newTotalPages = Math.ceil(updatedTests.length / itemsPerPage);
+      if (currentPage > newTotalPages && newTotalPages > 0) {
+        setCurrentPage(newTotalPages);
+      } else if (updatedTests.length === 0) {
+        setCurrentPage(1);
+      }
+
       setDeleteConfirmOpen(false);
       setTestToDelete(null);
     } catch (err: any) {
@@ -225,7 +273,7 @@ export default function MyTestsPage() {
 
             {/* Test List */}
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-              {tests.map((test) => (
+              {paginatedTests.map((test) => (
                 <Card
                   key={test.id}
                   sx={{
@@ -315,7 +363,13 @@ export default function MyTestsPage() {
                         size="small"
                         onClick={(e) => handleDeleteClick(test, e)}
                         startIcon={<DeleteIcon />}
-                        sx={{ color: 'error.main' }}
+                        sx={{
+                          '&:hover': {
+                            bgcolor: 'error.light',
+                            borderColor: 'error.main',
+                            '& .MuiSvgIcon-root': { color: 'error.dark' }
+                          }
+                        }}
                       >
                         {t('Delete')}
                       </Button>
@@ -324,18 +378,17 @@ export default function MyTestsPage() {
                 </Card>
               ))}
             </Box>
+
+            {/* Pagination */}
+            <Pagination
+              currentPage={currentPage}
+              totalItems={tests.length}
+              itemsPerPage={itemsPerPage}
+              onPageChange={handlePageChange}
+            />
           </>
         )}
 
-        {/* Navigation */}
-        <Box sx={{ mt: 4, display: 'flex', gap: 2, justifyContent: 'center' }}>
-          <Button variant="secondary" onClick={() => router.push('/')}>
-            {t('Back to Home')}
-          </Button>
-          <Button variant="secondary" onClick={() => router.push('/profile')}>
-            {t('View Profile')}
-          </Button>
-        </Box>
       </Paper>
 
       {/* Delete Confirmation Dialog */}

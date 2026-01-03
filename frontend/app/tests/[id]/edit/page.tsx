@@ -188,7 +188,7 @@ function SortableTaskItem({
             <IconButton
               size="small"
               onClick={() => handleDeleteTaskClick(task)}
-              color="error"
+              sx={{ color: 'error.main', '&:hover': { bgcolor: 'error.light', color: 'error.dark' } }}
             >
               <DeleteIcon />
             </IconButton>
