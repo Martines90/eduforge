@@ -78,8 +78,7 @@ export const en: Translations = {
     "Be the first one who creates a new task",
   "Search in curriculum tree (min 3 characters)...":
     "Search in curriculum tree (min 3 characters)...",
-  "Please enter at least 3 characters":
-    "Please enter at least 3 characters",
+  "Please enter at least 3 characters": "Please enter at least 3 characters",
 
   // Subjects
   Mathematics: "Mathematics",
@@ -371,7 +370,8 @@ export const en: Translations = {
 
   // My Plan Page
   "My Plan": "My Plan",
-  "Manage your subscription and credits": "Manage your subscription and credits",
+  "Manage your subscription and credits":
+    "Manage your subscription and credits",
   "Subscription will be cancelled at the end of the current period":
     "Subscription will be cancelled at the end of the current period",
   "You started with {{count}} free task generation credits.":
@@ -412,8 +412,8 @@ export const en: Translations = {
   "Invite Teacher": "Invite Teacher",
   "School Name": "School Name",
   "No teachers added yet": "No teachers added yet",
-  "Click \"Invite Teacher\" to add teachers from your school":
-    "Click \"Invite Teacher\" to add teachers from your school",
+  'Click "Invite Teacher" to add teachers from your school':
+    'Click "Invite Teacher" to add teachers from your school',
   "Pro Plan Benefits": "Pro Plan Benefits",
   "10,000 Task Generation Credits": "10,000 Task Generation Credits",
   "Shared across all teachers in your school":
@@ -421,7 +421,8 @@ export const en: Translations = {
   "Add Up to 10 Teachers": "Add Up to 10 Teachers",
   "Each teacher gets their own account": "Each teacher gets their own account",
   "School Contest Participation": "School Contest Participation",
-  "Compete for \"Best School of the Year\"": "Compete for \"Best School of the Year\"",
+  'Compete for "Best School of the Year"':
+    'Compete for "Best School of the Year"',
 
   // Task Detail Page - Guest View Limit
   "Registration Required": "Registration Required",
@@ -432,7 +433,8 @@ export const en: Translations = {
   "You've used your 3 free task views.": "You've used your 3 free task views.",
   "Register now to get:": "Register now to get:",
   "Unlimited task viewing": "Unlimited task viewing",
-  "{{count}} free task generation credits": "{{count}} free task generation credits",
+  "{{count}} free task generation credits":
+    "{{count}} free task generation credits",
   "3 months free trial subscription": "3 months free trial subscription",
   "Login / Register": "Login / Register",
 
@@ -445,7 +447,8 @@ export const en: Translations = {
   "Payment Cancelled": "Payment Cancelled",
   "Payment Failed": "Payment Failed",
   "You cancelled the payment process": "You cancelled the payment process",
-  "There was a problem processing your payment": "There was a problem processing your payment",
+  "There was a problem processing your payment":
+    "There was a problem processing your payment",
   "Error Details": "Error Details",
   "What happened?": "What happened?",
   "What went wrong?": "What went wrong?",
@@ -454,12 +457,15 @@ export const en: Translations = {
   "The payment could not be completed. This might be due to:":
     "The payment could not be completed. This might be due to:",
   "Insufficient funds in your account": "Insufficient funds in your account",
-  "Card details were entered incorrectly": "Card details were entered incorrectly",
+  "Card details were entered incorrectly":
+    "Card details were entered incorrectly",
   "Your bank declined the transaction": "Your bank declined the transaction",
-  "Technical issue with the payment provider": "Technical issue with the payment provider",
+  "Technical issue with the payment provider":
+    "Technical issue with the payment provider",
   "Try Again": "Try Again",
   "Go to Home": "Go to Home",
-  "Need help? Contact our support team at": "Need help? Contact our support team at",
+  "Need help? Contact our support team at":
+    "Need help? Contact our support team at",
 
   // Subscription Success Page
   "Explore EduForge": "Explore EduForge",
@@ -498,17 +504,26 @@ export const en: Translations = {
   "Generate Tasks": "Generate Tasks",
 
   // Toast Notifications (enqueueSnackbar)
-  "Registration successful! Enjoy your free 3-month trial!": "Registration successful! Enjoy your free 3-month trial!",
-  "Failed to save task. Please try again.": "Failed to save task. Please try again.",
-  "Welcome! You now have {{count}} free task generation credits.": "Welcome! You now have {{count}} free task generation credits.",
+  "Registration successful! Enjoy your free 3-month trial!":
+    "Registration successful! Enjoy your free 3-month trial!",
+  "Failed to save task. Please try again.":
+    "Failed to save task. Please try again.",
+  "Welcome! You now have {{count}} free task generation credits.":
+    "Welcome! You now have {{count}} free task generation credits.",
 
   // Guest Modal Messages
-  "You ran out of free task generation credits, register to get {{count}} free credits!": "You ran out of free task generation credits, register to get {{count}} free credits!",
-  "You've reached your free generation limit. Register (FREE) to get {{count}} more credits!": "You've reached your free generation limit. Register (FREE) to get {{count}} more credits!",
-  "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.": "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.",
-  "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.": "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.",
-  "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!": "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!",
-  "Register to download tasks as PDF and get {{count}} free task generation credits!": "Register to download tasks as PDF and get {{count}} free task generation credits!",
+  "You ran out of free task generation credits, register to get {{count}} free credits!":
+    "You ran out of free task generation credits, register to get {{count}} free credits!",
+  "You've reached your free generation limit. Register (FREE) to get {{count}} more credits!":
+    "You've reached your free generation limit. Register (FREE) to get {{count}} more credits!",
+  "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.":
+    "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.",
+  "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.":
+    "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.",
+  "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!":
+    "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!",
+  "Register to download tasks as PDF and get {{count}} free task generation credits!":
+    "Register to download tasks as PDF and get {{count}} free task generation credits!",
 
   // Subscription Page - Interpolated Strings
   "{{count}} custom task collections": "{{count}} custom task collections",
@@ -518,12 +533,14 @@ export const en: Translations = {
   "Add up to {{count}} teachers": "Add up to {{count}} teachers",
   "Upgrade to {{name}}": "Upgrade to {{name}}",
   "Your {{plan}} plan is now active": "Your {{plan}} plan is now active",
-  "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.": "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.",
+  "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.":
+    "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.",
 
   // Test Library (My Tests Page)
   "My Tests": "My Tests",
   "Test Library": "Test Library",
-  "Create and manage your test worksheets": "Create and manage your test worksheets",
+  "Create and manage your test worksheets":
+    "Create and manage your test worksheets",
   "Create New Test": "Create New Test",
   "Create Test": "Create Test",
   "Test Name": "Test Name",
@@ -531,36 +548,41 @@ export const en: Translations = {
   "Test Description": "Test Description",
   "Test description (optional)": "Test description (optional)",
   "Enter test description (optional)": "Enter test description (optional)",
-  "Subject and grade are optional for now": "Subject and grade are optional for now",
+  "Subject and grade are optional for now":
+    "Subject and grade are optional for now",
   "Test name is required": "Test name is required",
   "Creating Test...": "Creating Test...",
   "No tests yet": "No tests yet",
-  "You haven't created any tests yet. Create your first test worksheet!": "You haven't created any tests yet. Create your first test worksheet!",
+  "You haven't created any tests yet. Create your first test worksheet!":
+    "You haven't created any tests yet. Create your first test worksheet!",
   "No tests found": "No tests found",
   "Create First Test": "Create First Test",
-  "Updated": "Updated",
+  Updated: "Updated",
   "Last updated": "Last updated",
-  "tasks": "tasks",
+  tasks: "tasks",
   "{{count}} tasks": "{{count}} tasks",
-  "points": "points",
+  points: "points",
   "{{count}} points": "{{count}} points",
-  "Published": "Published",
-  "Draft": "Draft",
+  Published: "Published",
+  Draft: "Draft",
   "Search tests...": "Search tests...",
   "Search by name...": "Search by name...",
   "Filter by subject": "Filter by subject",
   "Sort by": "Sort by",
   "Sort by:": "Sort by:",
   "Most Recent": "Most Recent",
-  "Recent": "Recent",
+  Recent: "Recent",
   "Most Viewed": "Most Viewed",
   "Most Downloaded": "Most Downloaded",
   "Name (A-Z)": "Name (A-Z)",
   "Task Count": "Task Count",
   "Delete Test": "Delete Test",
-  "Are you sure you want to delete this test?": "Are you sure you want to delete this test?",
-  "Are you sure you want to delete this test? This action cannot be undone.": "Are you sure you want to delete this test? This action cannot be undone.",
-  "This will permanently delete the test and all its tasks. This action cannot be undone.": "This will permanently delete the test and all its tasks. This action cannot be undone.",
+  "Are you sure you want to delete this test?":
+    "Are you sure you want to delete this test?",
+  "Are you sure you want to delete this test? This action cannot be undone.":
+    "Are you sure you want to delete this test? This action cannot be undone.",
+  "This will permanently delete the test and all its tasks. This action cannot be undone.":
+    "This will permanently delete the test and all its tasks. This action cannot be undone.",
   "Deleting...": "Deleting...",
   "Test deleted successfully": "Test deleted successfully",
   "Failed to delete test": "Failed to delete test",
@@ -581,8 +603,10 @@ export const en: Translations = {
   "{{count}} task": "{{count}} task",
   "No tasks added yet": "No tasks added yet",
   "No tasks yet": "No tasks yet",
-  "Add tasks to your test using the buttons above": "Add tasks to your test using the buttons above",
-  "Add tasks from the library or create custom tasks to build your test.": "Add tasks from the library or create custom tasks to build your test.",
+  "Add tasks to your test using the buttons above":
+    "Add tasks to your test using the buttons above",
+  "Add tasks from the library or create custom tasks to build your test.":
+    "Add tasks from the library or create custom tasks to build your test.",
   "Start by adding your first task": "Start by adding your first task",
   "Remove from test": "Remove from test",
   "Test saved successfully": "Test saved successfully",
@@ -600,7 +624,7 @@ export const en: Translations = {
   "Add Question": "Add Question",
   "Question {{number}}": "Question {{number}}",
   "Enter question": "Enter question",
-  "Score": "Score",
+  Score: "Score",
   "Enter score": "Enter score",
   "Remove Question": "Remove Question",
   "Show Image": "Show Image",
@@ -610,7 +634,8 @@ export const en: Translations = {
   "At least one question is required": "At least one question is required",
   "Question text is required": "Question text is required",
   "All questions must have text": "All questions must have text",
-  "Enter the task description or problem": "Enter the task description or problem",
+  "Enter the task description or problem":
+    "Enter the task description or problem",
   "Enter question text": "Enter question text",
   "Task title is required": "Task title is required",
   "Task text is required": "Task text is required",
@@ -644,7 +669,7 @@ export const en: Translations = {
 
   // Publishing
   "Publish to Public": "Publish to Public",
-  "Unpublish": "Unpublish",
+  Unpublish: "Unpublish",
   "Publishing...": "Publishing...",
   "Test published successfully!": "Test published successfully!",
   "Failed to publish test": "Failed to publish test",
@@ -653,12 +678,14 @@ export const en: Translations = {
   "Link copied!": "Link copied!",
   "Share this link with students": "Share this link with students",
   "View Published Test": "View Published Test",
-  "This test is now publicly accessible": "This test is now publicly accessible",
-  "Republish": "Republish",
+  "This test is now publicly accessible":
+    "This test is now publicly accessible",
+  Republish: "Republish",
   "Update Published Version": "Update Published Version",
   "Share Your Test": "Share Your Test",
   "Make this test publicly accessible": "Make this test publicly accessible",
-  "Anyone with the link can view this test": "Anyone with the link can view this test",
+  "Anyone with the link can view this test":
+    "Anyone with the link can view this test",
   "Test unpublished successfully": "Test unpublished successfully",
 
   // PDF Generation
@@ -676,10 +703,10 @@ export const en: Translations = {
   "Published Test": "Published Test",
   "Public Test": "Public Test",
   "View Count": "View Count",
-  "views": "views",
+  views: "views",
   "{{count}} views": "{{count}} views",
   "Published by": "Published by",
-  "Print": "Print",
+  Print: "Print",
   "Print Test": "Print Test",
   "Test Information": "Test Information",
   "Subject:": "Subject:",
@@ -689,9 +716,11 @@ export const en: Translations = {
   "Number of Tasks": "Number of Tasks",
   "Published on": "Published on",
   "Test not found": "Test not found",
-  "This test does not exist or has been removed": "This test does not exist or has been removed",
+  "This test does not exist or has been removed":
+    "This test does not exist or has been removed",
   "This test is not published": "This test is not published",
-  "Test does not exist or has been removed": "Test does not exist or has been removed",
+  "Test does not exist or has been removed":
+    "Test does not exist or has been removed",
 
   // Search Tasks Modal
   "Search Library Tasks": "Search Library Tasks",
@@ -746,9 +775,11 @@ export const en: Translations = {
 
   // Additional Test Creator Keys
   "My Tests/Worksheets": "My Tests/Worksheets",
-  "View and manage all tests and worksheets you've created": "View and manage all tests and worksheets you've created",
+  "View and manage all tests and worksheets you've created":
+    "View and manage all tests and worksheets you've created",
   "No Tests Yet": "No Tests Yet",
-  "You haven't created any tests yet. Start by creating your first test/worksheet!": "You haven't created any tests yet. Start by creating your first test/worksheet!",
+  "You haven't created any tests yet. Start by creating your first test/worksheet!":
+    "You haven't created any tests yet. Start by creating your first test/worksheet!",
   "Create Your First Test": "Create Your First Test",
   "Grade Level (optional)": "Grade Level (optional)",
   "Description (optional)": "Description (optional)",
@@ -758,41 +789,52 @@ export const en: Translations = {
   "Loading tests...": "Loading tests...",
   "PDF is not available for this test": "PDF is not available for this test",
   "This test has no tasks": "This test has no tasks",
-  "This is a publicly shared test. You can create your own tests at": "This is a publicly shared test. You can create your own tests at",
+  "This is a publicly shared test. You can create your own tests at":
+    "This is a publicly shared test. You can create your own tests at",
   "Add to Test": "Add to Test",
   "Add Task to Test": "Add Task to Test",
-  "You don't have any tests yet. Create a test first!": "You don't have any tests yet. Create a test first!",
+  "You don't have any tests yet. Create a test first!":
+    "You don't have any tests yet. Create a test first!",
   "Go to My Tests": "Go to My Tests",
   "Select Test": "Select Test",
-  "Choose which test to add this task to": "Choose which test to add this task to",
+  "Choose which test to add this task to":
+    "Choose which test to add this task to",
   "Adding...": "Adding...",
-  "Browse and discover published tests from the community": "Browse and discover published tests from the community",
+  "Browse and discover published tests from the teacher community":
+    "Browse and discover published tests from the teacher community",
   "No published tests yet": "No published tests yet",
   "Be the first to publish a test!": "Be the first to publish a test!",
   "View Test": "View Test",
   "No tests match your search": "No tests match your search",
-  "Try adjusting your search or filters": "Try adjusting your search or filters",
+  "Try adjusting your search or filters":
+    "Try adjusting your search or filters",
   "Generating...": "Generating...",
   "Back to My Tests": "Back to My Tests",
   "Edit Test Details": "Edit Test Details",
-  "Description": "Description",
+  Description: "Description",
   "Remove Task": "Remove Task",
-  "Are you sure you want to remove this task from the test?": "Are you sure you want to remove this task from the test?",
-  "Remove": "Remove",
+  "Are you sure you want to remove this task from the test?":
+    "Are you sure you want to remove this task from the test?",
+  Remove: "Remove",
   "Test Published!": "Test Published!",
-  "Your test is now publicly accessible at:": "Your test is now publicly accessible at:",
-  "Anyone with this link can view your test. You can republish to update the public version with any changes.": "Anyone with this link can view your test. You can republish to update the public version with any changes.",
+  "Your test is now publicly accessible at:":
+    "Your test is now publicly accessible at:",
+  "Anyone with this link can view your test. You can republish to update the public version with any changes.":
+    "Anyone with this link can view your test. You can republish to update the public version with any changes.",
   "Republish Latest Version": "Republish Latest Version",
   "Add from Library": "Add from Library",
-  "Add tasks from the library or create custom tasks": "Add tasks from the library or create custom tasks",
+  "Add tasks from the library or create custom tasks":
+    "Add tasks from the library or create custom tasks",
   "This test is publicly accessible": "This test is publicly accessible",
   "Share this test with a public link": "Share this test with a public link",
   "Note:": "Note:",
-  "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.": "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.",
-  "PDF": "PDF",
+  "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.":
+    "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.",
+  PDF: "PDF",
 
   // Task Add to Test Notifications
-  "Task successfully added to {{testName}}": "Task successfully added to {{testName}}",
+  "Task successfully added to {{testName}}":
+    "Task successfully added to {{testName}}",
   "Task already added to this test": "Task already added to this test",
   "Failed to add task to test": "Failed to add task to test",
 };

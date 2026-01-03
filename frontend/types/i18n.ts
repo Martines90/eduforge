@@ -365,14 +365,14 @@ export interface Translations {
   "Invite Teacher": string;
   "School Name": string;
   "No teachers added yet": string;
-  "Click \"Invite Teacher\" to add teachers from your school": string;
+  'Click "Invite Teacher" to add teachers from your school': string;
   "Pro Plan Benefits": string;
   "10,000 Task Generation Credits": string;
   "Shared across all teachers in your school": string;
   "Add Up to 10 Teachers": string;
   "Each teacher gets their own account": string;
   "School Contest Participation": string;
-  "Compete for \"Best School of the Year\"": string;
+  'Compete for "Best School of the Year"': string;
 
   // Task Detail Page - Guest View Limit
   "Registration Required": string;
@@ -479,24 +479,24 @@ export interface Translations {
   "You haven't created any tests yet. Create your first test worksheet!": string;
   "No tests found": string;
   "Create First Test": string;
-  "Updated": string;
+  Updated: string;
   "Last updated": string;
   "Open Test": string;
   "Are you sure you want to delete this test?": string;
   "This will permanently delete the test and all its tasks. This action cannot be undone.": string;
-  "tasks": string;
+  tasks: string;
   "{{count}} tasks": string;
-  "points": string;
+  points: string;
   "{{count}} points": string;
-  "Published": string;
-  "Draft": string;
+  Published: string;
+  Draft: string;
   "Search tests...": string;
   "Search by name...": string;
   "Filter by subject": string;
   "Sort by": string;
   "Sort by:": string;
   "Most Recent": string;
-  "Recent": string;
+  Recent: string;
   "Most Viewed": string;
   "Most Downloaded": string;
   "Name (A-Z)": string;
@@ -541,7 +541,7 @@ export interface Translations {
   "Add Question": string;
   "Question {{number}}": string;
   "Enter question": string;
-  "Score": string;
+  Score: string;
   "Enter score": string;
   "Remove Question": string;
   "Show Image": string;
@@ -593,7 +593,7 @@ export interface Translations {
 
   // Publishing
   "Publish to Public": string;
-  "Unpublish": string;
+  Unpublish: string;
   "Publishing...": string;
   "Test published successfully!": string;
   "Failed to publish test": string;
@@ -603,7 +603,7 @@ export interface Translations {
   "Share this link with students": string;
   "View Published Test": string;
   "This test is now publicly accessible": string;
-  "Republish": string;
+  Republish: string;
   "Update Published Version": string;
   "Share Your Test": string;
   "Make this test publicly accessible": string;
@@ -625,10 +625,10 @@ export interface Translations {
   "Published Test": string;
   "Public Test": string;
   "View Count": string;
-  "views": string;
+  views: string;
   "{{count}} views": string;
   "Published by": string;
-  "Print": string;
+  Print: string;
   "Print Test": string;
   "Test Information": string;
   "Subject:": string;
@@ -707,7 +707,7 @@ export interface Translations {
   "Select Test": string;
   "Choose which test to add this task to": string;
   "Adding...": string;
-  "Browse and discover published tests from the community": string;
+  "Browse and discover published tests from the teacher community": string;
   "No published tests yet": string;
   "Be the first to publish a test!": string;
   "View Test": string;
@@ -716,10 +716,10 @@ export interface Translations {
   "Generating...": string;
   "Back to My Tests": string;
   "Edit Test Details": string;
-  "Description": string;
+  Description: string;
   "Remove Task": string;
   "Are you sure you want to remove this task from the test?": string;
-  "Remove": string;
+  Remove: string;
   "Test Published!": string;
   "Your test is now publicly accessible at:": string;
   "Anyone with this link can view your test. You can republish to update the public version with any changes.": string;
@@ -730,7 +730,7 @@ export interface Translations {
   "Share this test with a public link": string;
   "Note:": string;
   "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.": string;
-  "PDF": string;
+  PDF: string;
 
   // Task Add to Test Notifications
   "Task successfully added to {{testName}}": string;

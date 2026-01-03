@@ -416,18 +416,21 @@ export const mx: Translations = {
   "Invite Teacher": "Invitar Maestro",
   "School Name": "Nombre de la Escuela",
   "No teachers added yet": "No se han agregado maestros aún",
-  "Click \"Invite Teacher\" to add teachers from your school":
-    "Haz clic en \"Invitar Maestro\" para agregar maestros de tu escuela",
+  'Click "Invite Teacher" to add teachers from your school':
+    'Haz clic en "Invitar Maestro" para agregar maestros de tu escuela',
   "Pro Plan Benefits": "Beneficios del Plan Pro",
   "10,000 Task Generation Credits": "10,000 Créditos de Generación de Tareas",
   "Shared across all teachers in your school":
     "Compartidos entre todos los maestros de tu escuela",
   "Add Up to 10 Teachers": "Agregar Hasta 10 Maestros",
-  "Each teacher gets their own account": "Cada maestro obtiene su propia cuenta",
+  "Each teacher gets their own account":
+    "Cada maestro obtiene su propia cuenta",
   "School Contest Participation": "Participación en Concurso Escolar",
-  "Compete for \"Best School of the Year\"": "Compite por \"Mejor Escuela del Año\"",
+  'Compete for "Best School of the Year"':
+    'Compite por "Mejor Escuela del Año"',
   "Priority 24-hour Support": "Soporte Prioritario 24 horas",
-  "Fast response times for your school": "Tiempos de respuesta rápidos para tu escuela",
+  "Fast response times for your school":
+    "Tiempos de respuesta rápidos para tu escuela",
   "Back to Subscription": "Volver a Suscripción",
 
   // Task Detail Page - Guest View Limit
@@ -436,18 +439,22 @@ export const mx: Translations = {
     "¡Para tener acceso a las tareas necesitas registrarte!",
   "Try our FREE 3-month trial mode and unlock unlimited access to thousands of educational tasks.":
     "Prueba nuestro modo de prueba GRATUITO de 3 meses y desbloquea acceso ilimitado a miles de tareas educativas.",
-  "You've used your 3 free task views.": "Has usado tus 3 vistas gratuitas de tareas.",
+  "You've used your 3 free task views.":
+    "Has usado tus 3 vistas gratuitas de tareas.",
   "Register now to get:": "Regístrate ahora para obtener:",
   "Unlimited task viewing": "Visualización ilimitada de tareas",
-  "{{count}} free task generation credits": "{{count}} créditos gratuitos de generación de tareas",
-  "3 months free trial subscription": "3 meses de suscripción de prueba gratuita",
+  "{{count}} free task generation credits":
+    "{{count}} créditos gratuitos de generación de tareas",
+  "3 months free trial subscription":
+    "3 meses de suscripción de prueba gratuita",
   "Login / Register": "Iniciar Sesión / Registrarse",
 
   // Subscription Cancel Page
   "Payment Cancelled": "Pago Cancelado",
   "Payment Failed": "Pago Fallido",
   "You cancelled the payment process": "Cancelaste el proceso de pago",
-  "There was a problem processing your payment": "Hubo un problema al procesar tu pago",
+  "There was a problem processing your payment":
+    "Hubo un problema al procesar tu pago",
   "Error Details": "Detalles del Error",
   "What happened?": "¿Qué sucedió?",
   "What went wrong?": "¿Qué salió mal?",
@@ -456,12 +463,15 @@ export const mx: Translations = {
   "The payment could not be completed. This might be due to:":
     "El pago no pudo completarse. Esto podría deberse a:",
   "Insufficient funds in your account": "Fondos insuficientes en tu cuenta",
-  "Card details were entered incorrectly": "Los detalles de la tarjeta se ingresaron incorrectamente",
+  "Card details were entered incorrectly":
+    "Los detalles de la tarjeta se ingresaron incorrectamente",
   "Your bank declined the transaction": "Tu banco rechazó la transacción",
-  "Technical issue with the payment provider": "Problema técnico con el proveedor de pagos",
+  "Technical issue with the payment provider":
+    "Problema técnico con el proveedor de pagos",
   "Try Again": "Intentar de Nuevo",
   "Go to Home": "Ir al Inicio",
-  "Need help? Contact our support team at": "¿Necesitas ayuda? Contacta a nuestro equipo de soporte en",
+  "Need help? Contact our support team at":
+    "¿Necesitas ayuda? Contacta a nuestro equipo de soporte en",
 
   // Subscription Success Page
   "Explore EduForge": "Explorar EduForge",
@@ -485,7 +495,8 @@ export const mx: Translations = {
   Normal: "Normal",
   Pro: "Pro",
   "Your Credits": "Tus Créditos",
-  "Task Generation Credits Available": "Créditos de Generación de Tareas Disponibles",
+  "Task Generation Credits Available":
+    "Créditos de Generación de Tareas Disponibles",
   "View Subscription": "Ver Suscripción",
   "Thank you for choosing EduForge. We sent a confirmation email to your inbox.":
     "Gracias por elegir EduForge. Enviamos un correo de confirmación a tu bandeja de entrada.",
@@ -500,32 +511,45 @@ export const mx: Translations = {
   "Generate Tasks": "Generar Tareas",
 
   // Toast Notifications (enqueueSnackbar)
-  "Registration successful! Enjoy your free 3-month trial!": "¡Registro exitoso! Disfruta tu prueba gratuita de 3 meses!",
-  "Failed to save task. Please try again.": "Error al guardar la tarea. Por favor intenta de nuevo.",
-  "Welcome! You now have {{count}} free task generation credits.": "¡Bienvenido! Ahora tienes {{count}} créditos gratuitos de generación de tareas.",
+  "Registration successful! Enjoy your free 3-month trial!":
+    "¡Registro exitoso! Disfruta tu prueba gratuita de 3 meses!",
+  "Failed to save task. Please try again.":
+    "Error al guardar la tarea. Por favor intenta de nuevo.",
+  "Welcome! You now have {{count}} free task generation credits.":
+    "¡Bienvenido! Ahora tienes {{count}} créditos gratuitos de generación de tareas.",
 
   // Guest Modal Messages
-  "You ran out of free task generation credits, register to get {{count}} free credits!": "¡Te quedaste sin créditos gratuitos de generación de tareas, regístrate para obtener {{count}} créditos gratis!",
-  "You've reached your free generation limit. Register (FREE) to get {{count}} more credits!": "¡Alcanzaste tu límite de generación gratuita. Regístrate (GRATIS) para obtener {{count}} créditos más!",
-  "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.": "¡Para guardar tareas generadas primero debes registrarte como maestro! Obtén {{count}} créditos gratuitos de generación de tareas al registrarte.",
-  "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.": "¡Primero debes registrarte como maestro para descargar tareas en formato PDF! Obtén {{count}} créditos gratuitos de generación de tareas al registrarte.",
-  "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!": "¡Regístrate (GRATIS) para guardar y descargar tareas, además obtén {{count}} créditos gratuitos de generación de tareas!",
-  "Register to download tasks as PDF and get {{count}} free task generation credits!": "¡Regístrate para descargar tareas como PDF y obtén {{count}} créditos gratuitos de generación de tareas!",
+  "You ran out of free task generation credits, register to get {{count}} free credits!":
+    "¡Te quedaste sin créditos gratuitos de generación de tareas, regístrate para obtener {{count}} créditos gratis!",
+  "You've reached your free generation limit. Register (FREE) to get {{count}} more credits!":
+    "¡Alcanzaste tu límite de generación gratuita. Regístrate (GRATIS) para obtener {{count}} créditos más!",
+  "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.":
+    "¡Para guardar tareas generadas primero debes registrarte como maestro! Obtén {{count}} créditos gratuitos de generación de tareas al registrarte.",
+  "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.":
+    "¡Primero debes registrarte como maestro para descargar tareas en formato PDF! Obtén {{count}} créditos gratuitos de generación de tareas al registrarte.",
+  "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!":
+    "¡Regístrate (GRATIS) para guardar y descargar tareas, además obtén {{count}} créditos gratuitos de generación de tareas!",
+  "Register to download tasks as PDF and get {{count}} free task generation credits!":
+    "¡Regístrate para descargar tareas como PDF y obtén {{count}} créditos gratuitos de generación de tareas!",
 
   // Subscription Page - Interpolated Strings
-  "{{count}} custom task collections": "{{count}} colecciones de tareas personalizadas",
-  "{{count}} task generation credits": "{{count}} créditos de generación de tareas",
+  "{{count}} custom task collections":
+    "{{count}} colecciones de tareas personalizadas",
+  "{{count}} task generation credits":
+    "{{count}} créditos de generación de tareas",
   "{{time}} email support": "Soporte por email {{time}}",
   "{{discount}}% webstore discount": "{{discount}}% de descuento en tienda web",
   "Add up to {{count}} teachers": "Agregar hasta {{count}} maestros",
   "Upgrade to {{name}}": "Actualizar a {{name}}",
   "Your {{plan}} plan is now active": "Tu plan {{plan}} está ahora activo",
-  "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.": "¡Esta función estará disponible pronto! Podrás agregar hasta {{max}} maestros de tu escuela.",
+  "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.":
+    "¡Esta función estará disponible pronto! Podrás agregar hasta {{max}} maestros de tu escuela.",
 
   // Test Library (My Tests Page)
   "My Tests": "Mis Exámenes",
   "Test Library": "Biblioteca de Exámenes",
-  "Create and manage your test worksheets": "Crea y gestiona tus hojas de examen",
+  "Create and manage your test worksheets":
+    "Crea y gestiona tus hojas de examen",
   "Create New Test": "Crear Nuevo Examen",
   "Create Test": "Crear Examen",
   "Test Name": "Nombre del Examen",
@@ -533,7 +557,8 @@ export const mx: Translations = {
   "Test Description": "Descripción del Examen",
   Description: "Descripción",
   "Test description (optional)": "Descripción del examen (opcional)",
-  "Subject and grade are optional for now": "La materia y el grado son opcionales por ahora",
+  "Subject and grade are optional for now":
+    "La materia y el grado son opcionales por ahora",
   "Create First Test": "Crear Primer Examen",
   "Search tests...": "Buscar exámenes...",
   "Search by name...": "Buscar por nombre...",
@@ -541,34 +566,40 @@ export const mx: Translations = {
   "Sort by": "Ordenar por",
   "Sort by:": "Ordenar por:",
   "Most Recent": "Más Reciente",
-  "Recent": "Reciente",
+  Recent: "Reciente",
   "Most Viewed": "Más Visto",
   "Most Downloaded": "Más Descargado",
   "Name (A-Z)": "Nombre (A-Z)",
   "Task Count": "Cantidad de Tareas",
   "No tests yet": "No hay exámenes aún",
-  "You haven't created any tests yet. Create your first test worksheet!": "¡No has creado ningún examen aún. Crea tu primera hoja de examen!",
+  "You haven't created any tests yet. Create your first test worksheet!":
+    "¡No has creado ningún examen aún. Crea tu primera hoja de examen!",
   "No tests found": "No se encontraron exámenes",
-  "Try adjusting your search or filters": "Intenta ajustar tu búsqueda o filtros",
+  "Try adjusting your search or filters":
+    "Intenta ajustar tu búsqueda o filtros",
   "{{count}} tasks": "{{count}} tareas",
   "{{count}} points": "{{count}} puntos",
   "Last updated": "Última actualización",
   "Open Test": "Abrir Examen",
   "Delete Test": "Eliminar Examen",
-  "Are you sure you want to delete this test?": "¿Estás seguro de que quieres eliminar este examen?",
-  "This will permanently delete the test and all its tasks. This action cannot be undone.": "Esto eliminará permanentemente el examen y todas sus tareas. Esta acción no se puede deshacer.",
-  "Are you sure you want to delete this test? This action cannot be undone.": "¿Estás seguro de que quieres eliminar este examen? Esta acción no se puede deshacer.",
+  "Are you sure you want to delete this test?":
+    "¿Estás seguro de que quieres eliminar este examen?",
+  "This will permanently delete the test and all its tasks. This action cannot be undone.":
+    "Esto eliminará permanentemente el examen y todas sus tareas. Esta acción no se puede deshacer.",
+  "Are you sure you want to delete this test? This action cannot be undone.":
+    "¿Estás seguro de que quieres eliminar este examen? Esta acción no se puede deshacer.",
   "Deleting...": "Eliminando...",
   "Test deleted successfully": "Examen eliminado exitosamente",
   "Failed to delete test": "Error al eliminar el examen",
   "Test name is required": "El nombre del examen es obligatorio",
   "Creating Test...": "Creando examen...",
-  "Enter test description (optional)": "Ingresa la descripción del examen (opcional)",
-  "Updated": "Actualizado",
-  "tasks": "tareas",
-  "points": "puntos",
-  "Published": "Publicado",
-  "Draft": "Borrador",
+  "Enter test description (optional)":
+    "Ingresa la descripción del examen (opcional)",
+  Updated: "Actualizado",
+  tasks: "tareas",
+  points: "puntos",
+  Published: "Publicado",
+  Draft: "Borrador",
 
   // Test Editor Page
   "Edit Test": "Editar Examen",
@@ -585,9 +616,11 @@ export const mx: Translations = {
   "{{count}} task": "{{count}} tarea",
   "No tasks added yet": "No hay tareas agregadas aún",
   "No tasks yet": "No hay tareas aún",
-  "Add tasks from the library or create custom tasks to build your test.": "Agrega tareas de la biblioteca o crea tareas personalizadas para construir tu examen.",
+  "Add tasks from the library or create custom tasks to build your test.":
+    "Agrega tareas de la biblioteca o crea tareas personalizadas para construir tu examen.",
   "Start by adding your first task": "Comienza agregando tu primera tarea",
-  "Add tasks to your test using the buttons above": "Agrega tareas a tu examen usando los botones de arriba",
+  "Add tasks to your test using the buttons above":
+    "Agrega tareas a tu examen usando los botones de arriba",
   "Remove from test": "Eliminar del examen",
   "Test saved successfully": "Examen guardado exitosamente",
   "Failed to save test": "Error al guardar el examen",
@@ -602,7 +635,8 @@ export const mx: Translations = {
   "Search Library Tasks": "Buscar Tareas en la Biblioteca",
   "Search for tasks...": "Buscar tareas...",
   "Search by title, subject, or topic": "Buscar por título, materia o tema",
-  "No tasks found matching your search": "No se encontraron tareas que coincidan con tu búsqueda",
+  "No tasks found matching your search":
+    "No se encontraron tareas que coincidan con tu búsqueda",
   "Try different keywords": "Intenta con palabras clave diferentes",
   "Already in test": "Ya está en el examen",
   "Add to Test": "Agregar al Examen",
@@ -628,11 +662,12 @@ export const mx: Translations = {
   "Enter task title": "Ingresa el título de la tarea",
   "Task Text": "Texto de la Tarea",
   "Enter task description": "Ingresa la descripción de la tarea",
-  "Enter the task description or problem": "Ingresa la descripción o problema de la tarea",
+  "Enter the task description or problem":
+    "Ingresa la descripción o problema de la tarea",
   "Add Question": "Agregar Pregunta",
   "Question {{number}}": "Pregunta {{number}}",
   "Enter question": "Ingresa la pregunta",
-  "Score": "Puntuación",
+  Score: "Puntuación",
   "Enter question text": "Ingresa el texto de la pregunta",
   "Enter score": "Ingresa la puntuación",
   "Remove Question": "Eliminar Pregunta",
@@ -661,7 +696,8 @@ export const mx: Translations = {
   "Points for this task": "Puntos para esta tarea",
   "Question Scores": "Puntuaciones de Preguntas",
   "Total task score": "Puntuación total de la tarea",
-  "Individual scores for each question": "Puntuaciones individuales para cada pregunta",
+  "Individual scores for each question":
+    "Puntuaciones individuales para cada pregunta",
   "Reset to Default": "Restablecer a Predeterminado",
   "Apply Changes": "Aplicar Cambios",
   "Updating...": "Actualizando...",
@@ -672,11 +708,12 @@ export const mx: Translations = {
   "Drag to reorder": "Arrastra para reordenar",
   "Move task": "Mover tarea",
   "Reorder Tasks": "Reordenar Tareas",
-  "Drag and drop tasks to reorder them": "Arrastra y suelta las tareas para reordenarlas",
+  "Drag and drop tasks to reorder them":
+    "Arrastra y suelta las tareas para reordenarlas",
 
   // Publishing
   "Publish to Public": "Publicar Públicamente",
-  "Unpublish": "Despublicar",
+  Unpublish: "Despublicar",
   "Publishing...": "Publicando...",
   "Test published successfully!": "¡Examen publicado exitosamente!",
   "Failed to publish test": "Error al publicar el examen",
@@ -685,12 +722,15 @@ export const mx: Translations = {
   "Link copied!": "¡Enlace copiado!",
   "Share this link with students": "Comparte este enlace con los estudiantes",
   "View Published Test": "Ver Examen Publicado",
-  "This test is now publicly accessible": "Este examen ahora es públicamente accesible",
-  "Republish": "Republicar",
+  "This test is now publicly accessible":
+    "Este examen ahora es públicamente accesible",
+  Republish: "Republicar",
   "Update Published Version": "Actualizar Versión Publicada",
   "Share Your Test": "Comparte Tu Examen",
-  "Make this test publicly accessible": "Haz este examen públicamente accesible",
-  "Anyone with the link can view this test": "Cualquiera con el enlace puede ver este examen",
+  "Make this test publicly accessible":
+    "Haz este examen públicamente accesible",
+  "Anyone with the link can view this test":
+    "Cualquiera con el enlace puede ver este examen",
   "Test unpublished successfully": "Examen despublicado exitosamente",
 
   // PDF Generation
@@ -721,9 +761,11 @@ export const mx: Translations = {
   "Print Test": "Imprimir Examen",
   "Back to My Tests": "Volver a Mis Exámenes",
   "This test is not published": "Este examen no está publicado",
-  "This test does not exist or has been removed": "Este examen no existe o ha sido eliminado",
-  "Test does not exist or has been removed": "El examen no existe o ha sido eliminado",
-  "views": "vistas",
+  "This test does not exist or has been removed":
+    "Este examen no existe o ha sido eliminado",
+  "Test does not exist or has been removed":
+    "El examen no existe o ha sido eliminado",
+  views: "vistas",
 
   // Subjects (test creator context)
   mathematics: "Matemáticas",
@@ -736,15 +778,18 @@ export const mx: Translations = {
   informatics: "Tecnología de la Información",
 
   // Validation & Error Messages
-  "Name must be at least 3 characters": "El nombre debe tener al menos 3 caracteres",
+  "Name must be at least 3 characters":
+    "El nombre debe tener al menos 3 caracteres",
   "Description is too long": "La descripción es demasiado larga",
   "Invalid score value": "Valor de puntuación inválido",
-  "Please fill in all required fields": "Por favor completa todos los campos obligatorios",
+  "Please fill in all required fields":
+    "Por favor completa todos los campos obligatorios",
   "Invalid test data": "Datos del examen inválidos",
   "Something went wrong": "Algo salió mal",
   "Network error": "Error de red",
   "Check your internet connection": "Verifica tu conexión a internet",
-  "Score must be a positive number": "La puntuación debe ser un número positivo",
+  "Score must be a positive number":
+    "La puntuación debe ser un número positivo",
 
   // Toast Notifications (for tests)
   "Changes saved": "Cambios guardados",
@@ -755,23 +800,30 @@ export const mx: Translations = {
 
   // Additional Test Creator Keys
   "My Tests/Worksheets": "Mis Exámenes/Hojas de Trabajo",
-  "View and manage all tests and worksheets you've created": "Ver y gestionar todos los exámenes y hojas de trabajo que has creado",
+  "View and manage all tests and worksheets you've created":
+    "Ver y gestionar todos los exámenes y hojas de trabajo que has creado",
   "No Tests Yet": "No Hay Exámenes Aún",
-  "You haven't created any tests yet. Start by creating your first test/worksheet!": "¡No has creado ningún examen aún. Comienza creando tu primera hoja de trabajo/examen!",
+  "You haven't created any tests yet. Start by creating your first test/worksheet!":
+    "¡No has creado ningún examen aún. Comienza creando tu primera hoja de trabajo/examen!",
   "Create Your First Test": "Crea Tu Primer Examen",
   "Grade Level (optional)": "Nivel de Grado (opcional)",
   "Description (optional)": "Descripción (opcional)",
   "Create & Edit": "Crear y Editar",
-  "PDF is not available for this test": "El PDF no está disponible para este examen",
+  "PDF is not available for this test":
+    "El PDF no está disponible para este examen",
   "This test has no tasks": "Este examen no tiene tareas",
-  "This is a publicly shared test. You can create your own tests at": "Este es un examen compartido públicamente. Puedes crear tus propios exámenes en",
+  "This is a publicly shared test. You can create your own tests at":
+    "Este es un examen compartido públicamente. Puedes crear tus propios exámenes en",
   "Add Task to Test": "Agregar Tarea al Examen",
-  "You don't have any tests yet. Create a test first!": "¡No tienes ningún examen aún. Crea un examen primero!",
+  "You don't have any tests yet. Create a test first!":
+    "¡No tienes ningún examen aún. Crea un examen primero!",
   "Go to My Tests": "Ir a Mis Exámenes",
   "Select Test": "Seleccionar Examen",
-  "Choose which test to add this task to": "Elige a qué examen agregar esta tarea",
+  "Choose which test to add this task to":
+    "Elige a qué examen agregar esta tarea",
   "Adding...": "Agregando...",
-  "Browse and discover published tests from the community": "Explora y descubre exámenes publicados de la comunidad",
+  "Browse and discover published tests from the teacher community":
+    "Explora y descubre pruebas publicadas por la comunidad de profesores",
   "No published tests yet": "No hay exámenes publicados aún",
   "Be the first to publish a test!": "¡Sé el primero en publicar un examen!",
   "View Test": "Ver Examen",
@@ -779,22 +831,30 @@ export const mx: Translations = {
   "Generating...": "Generando...",
   "Edit Test Details": "Editar Detalles del Examen",
   "Remove Task": "Eliminar Tarea",
-  "Are you sure you want to remove this task from the test?": "¿Estás seguro de que quieres eliminar esta tarea del examen?",
-  "Remove": "Eliminar",
+  "Are you sure you want to remove this task from the test?":
+    "¿Estás seguro de que quieres eliminar esta tarea del examen?",
+  Remove: "Eliminar",
   "Test Published!": "¡Examen Publicado!",
-  "Your test is now publicly accessible at:": "Tu examen ahora es públicamente accesible en:",
-  "Anyone with this link can view your test. You can republish to update the public version with any changes.": "Cualquiera con este enlace puede ver tu examen. Puedes republicar para actualizar la versión pública con cualquier cambio.",
+  "Your test is now publicly accessible at:":
+    "Tu examen ahora es públicamente accesible en:",
+  "Anyone with this link can view your test. You can republish to update the public version with any changes.":
+    "Cualquiera con este enlace puede ver tu examen. Puedes republicar para actualizar la versión pública con cualquier cambio.",
   "Republish Latest Version": "Republicar Última Versión",
   "Add from Library": "Agregar de la Biblioteca",
-  "Add tasks from the library or create custom tasks": "Agrega tareas de la biblioteca o crea tareas personalizadas",
+  "Add tasks from the library or create custom tasks":
+    "Agrega tareas de la biblioteca o crea tareas personalizadas",
   "This test is publicly accessible": "Este examen es públicamente accesible",
-  "Share this test with a public link": "Comparte este examen con un enlace público",
+  "Share this test with a public link":
+    "Comparte este examen con un enlace público",
   "Note:": "Nota:",
-  "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.": "La función de biblioteca de exámenes está actualmente en desarrollo. Los exámenes publicados aparecerán aquí una vez que se implemente la API del backend para navegar por los exámenes.",
-  "PDF": "PDF",
+  "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.":
+    "La función de biblioteca de exámenes está actualmente en desarrollo. Los exámenes publicados aparecerán aquí una vez que se implemente la API del backend para navegar por los exámenes.",
+  PDF: "PDF",
 
   // Task Add to Test Notifications
-  "Task successfully added to {{testName}}": "Tarea agregada exitosamente a {{testName}}",
-  "Task already added to this test": "Esta tarea ya está agregada a este examen",
+  "Task successfully added to {{testName}}":
+    "Tarea agregada exitosamente a {{testName}}",
+  "Task already added to this test":
+    "Esta tarea ya está agregada a este examen",
   "Failed to add task to test": "Error al agregar la tarea al examen",
 };

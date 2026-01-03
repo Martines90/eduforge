@@ -415,8 +415,8 @@ export const hu: Translations = {
   "Invite Teacher": "Tanár Meghívása",
   "School Name": "Iskola Neve",
   "No teachers added yet": "Még nincsenek hozzáadott tanárok",
-  "Click \"Invite Teacher\" to add teachers from your school":
-    "Kattintson a \"Tanár Meghívása\" gombra az iskolai tanárok hozzáadásához",
+  'Click "Invite Teacher" to add teachers from your school':
+    'Kattintson a "Tanár Meghívása" gombra az iskolai tanárok hozzáadásához',
   "Pro Plan Benefits": "Pro Csomag Előnyei",
   "10,000 Task Generation Credits": "10 000 Feladatgenerálási Kredit",
   "Shared across all teachers in your school":
@@ -424,7 +424,8 @@ export const hu: Translations = {
   "Add Up to 10 Teachers": "Maximum 10 Tanár Hozzáadása",
   "Each teacher gets their own account": "Minden tanár saját fiókot kap",
   "School Contest Participation": "Iskolai Verseny Részvétel",
-  "Compete for \"Best School of the Year\"": "Versenyezzen az \"Év Legjobb Iskolája\" címért",
+  'Compete for "Best School of the Year"':
+    'Versenyezzen az "Év Legjobb Iskolája" címért',
   "Priority 24-hour Support": "Elsőbbségi 24 órás Támogatás",
   "Fast response times for your school": "Gyors válaszidő az iskolája számára",
   "Back to Subscription": "Vissza az Előfizetéshez",
@@ -435,10 +436,12 @@ export const hu: Translations = {
     "A feladatokhoz való hozzáféréshez regisztrálnia kell!",
   "Try our FREE 3-month trial mode and unlock unlimited access to thousands of educational tasks.":
     "Próbálja ki INGYENES 3 hónapos próbaidőszakát és nyissa meg a korlátlan hozzáférést több ezer oktatási feladathoz.",
-  "You've used your 3 free task views.": "Felhasználta 3 ingyenes feladatmegtekintését.",
+  "You've used your 3 free task views.":
+    "Felhasználta 3 ingyenes feladatmegtekintését.",
   "Register now to get:": "Regisztráljon most és kapja meg:",
   "Unlimited task viewing": "Korlátlan feladatmegtekintés",
-  "{{count}} free task generation credits": "{{count}} ingyenes feladatgenerálási kredit",
+  "{{count}} free task generation credits":
+    "{{count}} ingyenes feladatgenerálási kredit",
   "3 months free trial subscription": "3 hónapos ingyenes próba előfizetés",
   "Login / Register": "Bejelentkezés / Regisztráció",
 
@@ -446,7 +449,8 @@ export const hu: Translations = {
   "Payment Cancelled": "Fizetés Törölve",
   "Payment Failed": "Fizetés Sikertelen",
   "You cancelled the payment process": "Törölte a fizetési folyamatot",
-  "There was a problem processing your payment": "Probléma merült fel a fizetés feldolgozása során",
+  "There was a problem processing your payment":
+    "Probléma merült fel a fizetés feldolgozása során",
   "Error Details": "Hiba Részletei",
   "What happened?": "Mi történt?",
   "What went wrong?": "Mi ment rosszul?",
@@ -455,12 +459,15 @@ export const hu: Translations = {
   "The payment could not be completed. This might be due to:":
     "A fizetés nem fejeződött be. Ez a következő okok miatt lehet:",
   "Insufficient funds in your account": "Nincs elegendő fedezet a fiókján",
-  "Card details were entered incorrectly": "A bankkártya adatai helytelenül lettek megadva",
+  "Card details were entered incorrectly":
+    "A bankkártya adatai helytelenül lettek megadva",
   "Your bank declined the transaction": "A bankja elutasította a tranzakciót",
-  "Technical issue with the payment provider": "Technikai probléma a fizetési szolgáltatónál",
+  "Technical issue with the payment provider":
+    "Technikai probléma a fizetési szolgáltatónál",
   "Try Again": "Próbálja Újra",
   "Go to Home": "Kezdőlapra",
-  "Need help? Contact our support team at": "Segítségre van szüksége? Vegye fel a kapcsolatot ügyfélszolgálatunkkal:",
+  "Need help? Contact our support team at":
+    "Segítségre van szüksége? Vegye fel a kapcsolatot ügyfélszolgálatunkkal:",
 
   // Subscription Success Page
   "Explore EduForge": "Fedezze Fel az EduForge-t",
@@ -499,17 +506,26 @@ export const hu: Translations = {
   "Generate Tasks": "Feladatok Generálása",
 
   // Toast Notifications (enqueueSnackbar)
-  "Registration successful! Enjoy your free 3-month trial!": "Sikeres regisztráció! Élvezze 3 hónapos ingyenes próbaidőszakát!",
-  "Failed to save task. Please try again.": "A feladat mentése sikertelen. Kérjük, próbálja újra.",
-  "Welcome! You now have {{count}} free task generation credits.": "Üdvözöljük! Mostantól {{count}} ingyenes feladatgenerálási kreditje van.",
+  "Registration successful! Enjoy your free 3-month trial!":
+    "Sikeres regisztráció! Élvezze 3 hónapos ingyenes próbaidőszakát!",
+  "Failed to save task. Please try again.":
+    "A feladat mentése sikertelen. Kérjük, próbálja újra.",
+  "Welcome! You now have {{count}} free task generation credits.":
+    "Üdvözöljük! Mostantól {{count}} ingyenes feladatgenerálási kreditje van.",
 
   // Guest Modal Messages
-  "You ran out of free task generation credits, register to get {{count}} free credits!": "Elfogytak az ingyenes feladatgenerálási kreditjei, regisztráljon {{count}} ingyenes kreditért!",
-  "You've reached your free generation limit. Register (FREE) to get {{count}} more credits!": "Elérte az ingyenes generálási limitét. Regisztráljon (INGYENES) még {{count}} kreditért!",
-  "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.": "A generált feladatok mentéséhez először tanárként kell regisztrálnia! Kapjon {{count}} ingyenes feladatgenerálási kreditet a regisztrációval.",
-  "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.": "PDF formátumú feladatok letöltéséhez először tanárként kell regisztrálnia! Kapjon {{count}} ingyenes feladatgenerálási kreditet a regisztrációval.",
-  "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!": "Regisztráljon (INGYENES) feladatok mentéséhez és letöltéséhez, plusz kapjon {{count}} ingyenes feladatgenerálási kreditet!",
-  "Register to download tasks as PDF and get {{count}} free task generation credits!": "Regisztráljon PDF formátumú feladatok letöltéséhez és kapjon {{count}} ingyenes feladatgenerálási kreditet!",
+  "You ran out of free task generation credits, register to get {{count}} free credits!":
+    "Elfogytak az ingyenes feladatgenerálási kreditjei, regisztráljon {{count}} ingyenes kreditért!",
+  "You've reached your free generation limit. Register (FREE) to get {{count}} more credits!":
+    "Elérte az ingyenes generálási limitét. Regisztráljon (INGYENES) még {{count}} kreditért!",
+  "To save generated tasks you have to register as a teacher first! Get {{count}} free task generation credits when you sign up.":
+    "A generált feladatok mentéséhez először tanárként kell regisztrálnia! Kapjon {{count}} ingyenes feladatgenerálási kreditet a regisztrációval.",
+  "You have to register first as a teacher to download tasks in PDF format! Get {{count}} free task generation credits when you sign up.":
+    "PDF formátumú feladatok letöltéséhez először tanárként kell regisztrálnia! Kapjon {{count}} ingyenes feladatgenerálási kreditet a regisztrációval.",
+  "Register (FREE) to save and download tasks, plus get {{count}} free task generation credits!":
+    "Regisztráljon (INGYENES) feladatok mentéséhez és letöltéséhez, plusz kapjon {{count}} ingyenes feladatgenerálási kreditet!",
+  "Register to download tasks as PDF and get {{count}} free task generation credits!":
+    "Regisztráljon PDF formátumú feladatok letöltéséhez és kapjon {{count}} ingyenes feladatgenerálási kreditet!",
 
   // Subscription Page - Interpolated Strings
   "{{count}} custom task collections": "{{count}} egyedi feladatgyűjtemény",
@@ -519,12 +535,14 @@ export const hu: Translations = {
   "Add up to {{count}} teachers": "Maximum {{count}} tanár hozzáadása",
   "Upgrade to {{name}}": "Frissítés {{name}} csomagra",
   "Your {{plan}} plan is now active": "Az Ön {{plan}} csomagja most aktív",
-  "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.": "Ez a funkció hamarosan elérhető lesz! Maximum {{max}} tanárt adhat hozzá iskolájából.",
+  "This feature is coming soon! You will be able to add up to {{max}} teachers from your school.":
+    "Ez a funkció hamarosan elérhető lesz! Maximum {{max}} tanárt adhat hozzá iskolájából.",
 
   // Test Library (My Tests Page)
   "My Tests": "Dolgozataim",
   "Test Library": "Dolgozat Könyvtár",
-  "Create and manage your test worksheets": "Hozzon létre és kezeljen dolgozatokat",
+  "Create and manage your test worksheets":
+    "Hozzon létre és kezeljen dolgozatokat",
   "Create New Test": "Új Dolgozat Létrehozása",
   "Create Test": "Dolgozat Létrehozása",
   "Test Name": "Dolgozat Neve",
@@ -532,7 +550,8 @@ export const hu: Translations = {
   "Test Description": "Dolgozat Leírása",
   Description: "Leírás",
   "Test description (optional)": "Dolgozat leírása (opcionális)",
-  "Subject and grade are optional for now": "A tantárgy és évfolyam egyelőre opcionális",
+  "Subject and grade are optional for now":
+    "A tantárgy és évfolyam egyelőre opcionális",
   "Create First Test": "Első Dolgozat Létrehozása",
   "Search tests...": "Dolgozatok keresése...",
   "Search by name...": "Keresés név szerint...",
@@ -540,34 +559,40 @@ export const hu: Translations = {
   "Sort by": "Rendezés",
   "Sort by:": "Rendezés:",
   "Most Recent": "Legutóbbi",
-  "Recent": "Legutóbbi",
+  Recent: "Legutóbbi",
   "Most Viewed": "Legtöbbet Megtekintett",
   "Most Downloaded": "Legtöbbet Letöltött",
   "Name (A-Z)": "Név (A-Z)",
   "Task Count": "Feladatok Száma",
   "No tests yet": "Még nincsenek dolgozatok",
-  "You haven't created any tests yet. Create your first test worksheet!": "Még nem hozott létre dolgozatot. Hozza létre az első dolgozatát!",
+  "You haven't created any tests yet. Create your first test worksheet!":
+    "Még nem hozott létre dolgozatot. Hozza létre az első dolgozatát!",
   "No tests found": "Nem találhatók dolgozatok",
-  "Try adjusting your search or filters": "Próbálja módosítani a keresési feltételeket vagy szűrőket",
+  "Try adjusting your search or filters":
+    "Próbálja módosítani a keresési feltételeket vagy szűrőket",
   "{{count}} tasks": "{{count}} feladat",
   "{{count}} points": "{{count}} pont",
   "Last updated": "Utoljára frissítve",
   "Open Test": "Dolgozat Megnyitása",
   "Delete Test": "Dolgozat Törlése",
-  "Are you sure you want to delete this test?": "Biztosan törölni szeretné ezt a dolgozatot?",
-  "This will permanently delete the test and all its tasks. This action cannot be undone.": "Ez véglegesen törli a dolgozatot és az összes feladatát. Ez a művelet nem vonható vissza.",
-  "Are you sure you want to delete this test? This action cannot be undone.": "Biztosan törölni szeretné ezt a dolgozatot? Ez a művelet nem vonható vissza.",
+  "Are you sure you want to delete this test?":
+    "Biztosan törölni szeretné ezt a dolgozatot?",
+  "This will permanently delete the test and all its tasks. This action cannot be undone.":
+    "Ez véglegesen törli a dolgozatot és az összes feladatát. Ez a művelet nem vonható vissza.",
+  "Are you sure you want to delete this test? This action cannot be undone.":
+    "Biztosan törölni szeretné ezt a dolgozatot? Ez a művelet nem vonható vissza.",
   "Deleting...": "Törlés...",
   "Test deleted successfully": "Dolgozat sikeresen törölve",
   "Failed to delete test": "Dolgozat törlése sikertelen",
   "Test name is required": "A dolgozat neve kötelező",
   "Creating Test...": "Dolgozat létrehozása...",
-  "Enter test description (optional)": "Adja meg a dolgozat leírását (opcionális)",
-  "Updated": "Frissítve",
-  "tasks": "feladat",
-  "points": "pont",
-  "Published": "Közzétéve",
-  "Draft": "Vázlat",
+  "Enter test description (optional)":
+    "Adja meg a dolgozat leírását (opcionális)",
+  Updated: "Frissítve",
+  tasks: "feladat",
+  points: "pont",
+  Published: "Közzétéve",
+  Draft: "Vázlat",
 
   // Test Editor Page
   "Edit Test": "Dolgozat Szerkesztése",
@@ -584,9 +609,11 @@ export const hu: Translations = {
   "{{count}} task": "{{count}} feladat",
   "No tasks added yet": "Még nincsenek hozzáadott feladatok",
   "No tasks yet": "Még nincsenek feladatok",
-  "Add tasks from the library or create custom tasks to build your test.": "Adjon hozzá feladatokat a könyvtárból vagy hozzon létre egyedi feladatokat a dolgozat összeállításához.",
+  "Add tasks from the library or create custom tasks to build your test.":
+    "Adjon hozzá feladatokat a könyvtárból vagy hozzon létre egyedi feladatokat a dolgozat összeállításához.",
   "Start by adding your first task": "Kezdje az első feladat hozzáadásával",
-  "Add tasks to your test using the buttons above": "Adjon hozzá feladatokat a dolgozathoz a fenti gombokkal",
+  "Add tasks to your test using the buttons above":
+    "Adjon hozzá feladatokat a dolgozathoz a fenti gombokkal",
   "Remove from test": "Eltávolítás a dolgozatból",
   "Test saved successfully": "Dolgozat sikeresen mentve",
   "Failed to save test": "Dolgozat mentése sikertelen",
@@ -600,8 +627,10 @@ export const hu: Translations = {
   // Search Tasks Modal
   "Search Library Tasks": "Feladatok Keresése a Könyvtárban",
   "Search for tasks...": "Feladatok keresése...",
-  "Search by title, subject, or topic": "Keresés cím, tantárgy vagy téma szerint",
-  "No tasks found matching your search": "Nem találhatók feladatok a keresési feltételnek megfelelően",
+  "Search by title, subject, or topic":
+    "Keresés cím, tantárgy vagy téma szerint",
+  "No tasks found matching your search":
+    "Nem találhatók feladatok a keresési feltételnek megfelelően",
   "Try different keywords": "Próbáljon más kulcsszavakat",
   "Already in test": "Már benne van a dolgozatban",
 
@@ -626,11 +655,12 @@ export const hu: Translations = {
   "Enter task title": "Adja meg a feladat címét",
   "Task Text": "Feladat Szövege",
   "Enter task description": "Adja meg a feladat leírását",
-  "Enter the task description or problem": "Adja meg a feladat leírását vagy problémát",
+  "Enter the task description or problem":
+    "Adja meg a feladat leírását vagy problémát",
   "Add Question": "Kérdés Hozzáadása",
   "Question {{number}}": "{{number}}. kérdés",
   "Enter question": "Adja meg a kérdést",
-  "Score": "Pontszám",
+  Score: "Pontszám",
   "Enter question text": "Adja meg a kérdés szövegét",
   "Enter score": "Adja meg a pontszámot",
   "Remove Question": "Kérdés Eltávolítása",
@@ -670,11 +700,12 @@ export const hu: Translations = {
   "Drag to reorder": "Húzza a rendezéshez",
   "Move task": "Feladat mozgatása",
   "Reorder Tasks": "Feladatok Átrendezése",
-  "Drag and drop tasks to reorder them": "Húzza és dobja a feladatokat az átrendezéshez",
+  "Drag and drop tasks to reorder them":
+    "Húzza és dobja a feladatokat az átrendezéshez",
 
   // Publishing
   "Publish to Public": "Közzététel Nyilvánosan",
-  "Unpublish": "Közzététel Visszavonása",
+  Unpublish: "Közzététel Visszavonása",
   "Publishing...": "Közzététel...",
   "Test published successfully!": "Dolgozat sikeresen közzétéve!",
   "Failed to publish test": "Dolgozat közzététele sikertelen",
@@ -683,12 +714,15 @@ export const hu: Translations = {
   "Link copied!": "Link vágólapra másolva!",
   "Share this link with students": "Ossza meg ezt a linket a diákokkal",
   "View Published Test": "Közzétett Dolgozat Megtekintése",
-  "This test is now publicly accessible": "Ez a dolgozat mostantól nyilvánosan elérhető",
-  "Republish": "Újraközzététel",
+  "This test is now publicly accessible":
+    "Ez a dolgozat mostantól nyilvánosan elérhető",
+  Republish: "Újraközzététel",
   "Update Published Version": "Közzétett Verzió Frissítése",
   "Share Your Test": "Dolgozat Megosztása",
-  "Make this test publicly accessible": "Tegye nyilvánosan elérhetővé ezt a dolgozatot",
-  "Anyone with the link can view this test": "Bárki megtekintheti ezt a dolgozatot, aki rendelkezik a linkkel",
+  "Make this test publicly accessible":
+    "Tegye nyilvánosan elérhetővé ezt a dolgozatot",
+  "Anyone with the link can view this test":
+    "Bárki megtekintheti ezt a dolgozatot, aki rendelkezik a linkkel",
   "Test unpublished successfully": "Dolgozat közzététele sikeresen visszavonva",
 
   // PDF Generation
@@ -719,9 +753,11 @@ export const hu: Translations = {
   "Print Test": "Dolgozat Nyomtatása",
   "Back to My Tests": "Vissza a Dolgozataimhoz",
   "This test is not published": "Ez a dolgozat nincs közzétéve",
-  "This test does not exist or has been removed": "Ez a dolgozat nem létezik vagy eltávolításra került",
-  "Test does not exist or has been removed": "A dolgozat nem létezik vagy eltávolításra került",
-  "views": "megtekintés",
+  "This test does not exist or has been removed":
+    "Ez a dolgozat nem létezik vagy eltávolításra került",
+  "Test does not exist or has been removed":
+    "A dolgozat nem létezik vagy eltávolításra került",
+  views: "megtekintés",
 
   // Subjects (test creator context)
   mathematics: "Matematika",
@@ -734,15 +770,18 @@ export const hu: Translations = {
   informatics: "Informatika",
 
   // Validation & Error Messages
-  "Name must be at least 3 characters": "A névnek legalább 3 karakter hosszúnak kell lennie",
+  "Name must be at least 3 characters":
+    "A névnek legalább 3 karakter hosszúnak kell lennie",
   "Description is too long": "A leírás túl hosszú",
   "Invalid score value": "Érvénytelen pontszám érték",
-  "Please fill in all required fields": "Kérjük, töltse ki az összes kötelező mezőt",
+  "Please fill in all required fields":
+    "Kérjük, töltse ki az összes kötelező mezőt",
   "Invalid test data": "Érvénytelen dolgozat adat",
   "Something went wrong": "Valami hiba történt",
   "Network error": "Hálózati hiba",
   "Check your internet connection": "Ellenőrizze az internetkapcsolatát",
-  "Score must be a positive number": "A pontszámnak pozitív számnak kell lennie",
+  "Score must be a positive number":
+    "A pontszámnak pozitív számnak kell lennie",
 
   // Toast Notifications (for tests)
   "Changes saved": "Változtatások mentve",
@@ -753,47 +792,64 @@ export const hu: Translations = {
 
   // Additional Test Creator Keys
   "My Tests/Worksheets": "Dolgozataim/Munkalapjaim",
-  "View and manage all tests and worksheets you've created": "Tekintse meg és kezelje az összes létrehozott dolgozatát és munkalapját",
+  "View and manage all tests and worksheets you've created":
+    "Tekintse meg és kezelje az összes létrehozott dolgozatát és munkalapját",
   "No Tests Yet": "Még Nincsenek Dolgozatok",
-  "You haven't created any tests yet. Start by creating your first test/worksheet!": "Még nem hozott létre dolgozatot. Kezdje az első dolgozat/munkalap létrehozásával!",
+  "You haven't created any tests yet. Start by creating your first test/worksheet!":
+    "Még nem hozott létre dolgozatot. Kezdje az első dolgozat/munkalap létrehozásával!",
   "Create Your First Test": "Első Dolgozat Létrehozása",
   "Grade Level (optional)": "Évfolyam (opcionális)",
   "Description (optional)": "Leírás (opcionális)",
   "Create & Edit": "Létrehozás és Szerkesztés",
-  "PDF is not available for this test": "A PDF nem elérhető ehhez a dolgozathoz",
+  "PDF is not available for this test":
+    "A PDF nem elérhető ehhez a dolgozathoz",
   "This test has no tasks": "Ez a dolgozat nem tartalmaz feladatokat",
-  "This is a publicly shared test. You can create your own tests at": "Ez egy nyilvánosan megosztott dolgozat. Saját dolgozatokat hozhat létre itt:",
+  "This is a publicly shared test. You can create your own tests at":
+    "Ez egy nyilvánosan megosztott dolgozat. Saját dolgozatokat hozhat létre itt:",
   "Add to Test": "Hozzáadás a Dolgozathoz",
   "Add Task to Test": "Feladat Hozzáadása a Dolgozathoz",
-  "You don't have any tests yet. Create a test first!": "Még nincsenek dolgozatai. Először hozzon létre egy dolgozatot!",
+  "You don't have any tests yet. Create a test first!":
+    "Még nincsenek dolgozatai. Először hozzon létre egy dolgozatot!",
   "Go to My Tests": "Ugrás a Dolgozataimhoz",
   "Select Test": "Dolgozat Kiválasztása",
-  "Choose which test to add this task to": "Válassza ki, melyik dolgozathoz szeretné hozzáadni ezt a feladatot",
+  "Choose which test to add this task to":
+    "Válassza ki, melyik dolgozathoz szeretné hozzáadni ezt a feladatot",
   "Adding...": "Hozzáadás...",
-  "Browse and discover published tests from the community": "Böngésszen és fedezzen fel közzétett dolgozatokat a közösségtől",
+  "Browse and discover published tests from the teacher community":
+    "Böngésszen és fedezzen fel közzétett dolgozatokat a tanári közösségtől",
   "No published tests yet": "Még nincsenek közzétett dolgozatok",
-  "Be the first to publish a test!": "Legyen az első, aki közzétesz egy dolgozatot!",
+  "Be the first to publish a test!":
+    "Legyen az első, aki közzétesz egy dolgozatot!",
   "View Test": "Dolgozat Megtekintése",
   "No tests match your search": "Nincs a keresésének megfelelő dolgozat",
   "Generating...": "Generálás...",
   "Edit Test Details": "Dolgozat Részleteinek Szerkesztése",
   "Remove Task": "Feladat Eltávolítása",
-  "Are you sure you want to remove this task from the test?": "Biztosan el szeretné távolítani ezt a feladatot a dolgozatból?",
-  "Remove": "Eltávolítás",
+  "Are you sure you want to remove this task from the test?":
+    "Biztosan el szeretné távolítani ezt a feladatot a dolgozatból?",
+  Remove: "Eltávolítás",
   "Test Published!": "Dolgozat Közzétéve!",
-  "Your test is now publicly accessible at:": "A dolgozata mostantól nyilvánosan elérhető itt:",
-  "Anyone with this link can view your test. You can republish to update the public version with any changes.": "Bárki megtekintheti ezt a dolgozatot, aki rendelkezik ezzel a linkkel. Újraközzéteheti, hogy frissítse a nyilvános verziót a módosításokkal.",
+  "Your test is now publicly accessible at:":
+    "A dolgozata mostantól nyilvánosan elérhető itt:",
+  "Anyone with this link can view your test. You can republish to update the public version with any changes.":
+    "Bárki megtekintheti ezt a dolgozatot, aki rendelkezik ezzel a linkkel. Újraközzéteheti, hogy frissítse a nyilvános verziót a módosításokkal.",
   "Republish Latest Version": "Legutóbbi Verzió Újraközzététele",
   "Add from Library": "Hozzáadás a Könyvtárból",
-  "Add tasks from the library or create custom tasks": "Adjon hozzá feladatokat a könyvtárból vagy hozzon létre egyedi feladatokat",
+  "Add tasks from the library or create custom tasks":
+    "Adjon hozzá feladatokat a könyvtárból vagy hozzon létre egyedi feladatokat",
   "This test is publicly accessible": "Ez a dolgozat nyilvánosan elérhető",
-  "Share this test with a public link": "Ossza meg ezt a dolgozatot egy nyilvános linkkel",
+  "Share this test with a public link":
+    "Ossza meg ezt a dolgozatot egy nyilvános linkkel",
   "Note:": "Megjegyzés:",
-  "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.": "A dolgozat könyvtár funkció jelenleg fejlesztés alatt áll. A közzétett dolgozatok itt jelennek meg, amint a dolgozatok böngészésére szolgáló backend API implementálásra kerül.",
-  "PDF": "PDF",
+  "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.":
+    "A dolgozat könyvtár funkció jelenleg fejlesztés alatt áll. A közzétett dolgozatok itt jelennek meg, amint a dolgozatok böngészésére szolgáló backend API implementálásra kerül.",
+  PDF: "PDF",
 
   // Task Add to Test Notifications
-  "Task successfully added to {{testName}}": "Feladat sikeresen hozzáadva: {{testName}}",
-  "Task already added to this test": "Ez a feladat már hozzá van adva ehhez a dolgozathoz",
-  "Failed to add task to test": "Nem sikerült hozzáadni a feladatot a dolgozathoz",
+  "Task successfully added to {{testName}}":
+    "Feladat sikeresen hozzáadva: {{testName}}",
+  "Task already added to this test":
+    "Ez a feladat már hozzá van adva ehhez a dolgozathoz",
+  "Failed to add task to test":
+    "Nem sikerült hozzáadni a feladatot a dolgozathoz",
 };
