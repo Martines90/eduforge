@@ -6,11 +6,27 @@
 export const TRIAL_START_CREDITS = 100;
 export const GUEST_GENERATION_LIMIT = 3;
 
-export const SUBSCRIPTION_CREDITS = {
+/**
+ * Task generation credits per subscription tier
+ */
+export const TASK_GENERATION_CREDITS = {
   trial: TRIAL_START_CREDITS,
   basic: 0,
   normal: 1000,
   pro: 10000,
 } as const;
 
-export type SubscriptionTier = keyof typeof SUBSCRIPTION_CREDITS;
+/**
+ * Test/Worksheet creation credits per subscription tier
+ */
+export const TEST_CREATION_CREDITS = {
+  trial: 5,
+  basic: 0,
+  normal: 50,
+  pro: 500,
+} as const;
+
+// Legacy export for backward compatibility
+export const SUBSCRIPTION_CREDITS = TASK_GENERATION_CREDITS;
+
+export type SubscriptionTier = keyof typeof TASK_GENERATION_CREDITS;

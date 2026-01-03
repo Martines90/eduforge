@@ -54,6 +54,7 @@ export interface UserDocument {
   emailVerified: boolean;
   subscription?: SubscriptionData;
   taskCredits?: number; // Remaining task generation credits (for teachers)
+  testCredits?: number; // Remaining test/worksheet creation credits (for teachers)
   createdAt: FirebaseFirestore.Timestamp;
   updatedAt: FirebaseFirestore.Timestamp;
 }

@@ -68,6 +68,51 @@ service cloud.firestore {
                       && userCountryMatches(country);
       }
 
+      // ===== TESTS COLLECTION (PRIVATE) =====
+      match /tests/{testId} {
+        // Teachers can read their own tests
+        allow read: if isTeacher()
+                    && isOwner(resource.data.createdBy)
+                    && userCountryMatches(country);
+
+        // Only authenticated teachers from the same country can create tests
+        allow create: if isTeacher()
+                      && userCountryMatches(country)
+                      && request.resource.data.createdBy == request.auth.uid
+                      && request.resource.data.country == country;
+
+        // Only the test creator can update their test
+        allow update: if isTeacher()
+                      && isOwner(resource.data.createdBy)
+                      && userCountryMatches(country)
+                      && request.resource.data.createdBy == resource.data.createdBy;
+
+        // Only the test creator can delete their test
+        allow delete: if isTeacher()
+                      && isOwner(resource.data.createdBy)
+                      && userCountryMatches(country);
+
+        // ===== TEST TASKS SUBCOLLECTION =====
+        match /testTasks/{testTaskId} {
+          // Inherit parent test permissions
+          // Test creator can read/write test tasks
+          allow read, write: if isTeacher()
+                              && isOwner(get(/databases/$(database)/documents/countries/$(country)/tests/$(testId)).data.createdBy)
+                              && userCountryMatches(country);
+        }
+      }
+
+      // ===== PUBLISHED TESTS COLLECTION (PUBLIC) =====
+      match /published_tests/{publicId} {
+        // Anyone can read published tests (no authentication required)
+        allow read: if true;
+
+        // Only teachers can write (publish/update/delete)
+        allow write: if isTeacher()
+                      && isOwner(resource.data.createdBy)
+                      && userCountryMatches(country);
+      }
+
       // ===== VERIFICATION CODES COLLECTION =====
       // Backend service account only - no client access
       match /verificationCodes/{email} {

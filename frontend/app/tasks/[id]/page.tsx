@@ -16,6 +16,13 @@ import {
   Stack,
   Alert,
   Snackbar,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  MenuItem,
+  TextField,
+  CircularProgress,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -26,15 +33,18 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import StarIcon from '@mui/icons-material/Star';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import { Button } from '@/components/atoms/Button';
 import { LoadingSpinner } from '@/components/atoms/LoadingSpinner';
 import { processLatexInHtml } from '@/lib/utils/latex-converter';
 import { useTranslation } from '@/lib/i18n';
 import { fetchTaskById } from '@/lib/services/api.service';
+import { fetchMyTests, addTaskToTest } from '@/lib/services/test.service';
 import { useUser } from '@/lib/context/UserContext';
 import { GuestPromptModal } from '@/components/organisms/GuestPromptModal';
 import { useGuestTaskViewLimit } from '@/lib/hooks/useGuestTaskViewLimit';
 import { TRIAL_START_CREDITS } from '@/lib/constants/credits';
+import { Test } from '@/types/test.types';
 
 interface TaskData {
   id: string;
@@ -75,6 +85,14 @@ export default function TaskDetailPage() {
   const [guestModalMessage, setGuestModalMessage] = useState('');
 
   const isGuest = !user.isRegistered;
+  const isTeacher = user.identity === 'teacher';
+
+  // Add to Test state
+  const [addToTestDialogOpen, setAddToTestDialogOpen] = useState(false);
+  const [myTests, setMyTests] = useState<Test[]>([]);
+  const [loadingTests, setLoadingTests] = useState(false);
+  const [selectedTestId, setSelectedTestId] = useState<string>('');
+  const [isAddingToTest, setIsAddingToTest] = useState(false);
 
   // Guest task view limit
   const guestViewLimit = useGuestTaskViewLimit();
@@ -458,6 +476,50 @@ export default function TaskDetailPage() {
     setShowGuestModal(false);
   };
 
+  // Handle Add to Test dialog
+  const handleAddToTestClick = async () => {
+    if (!isTeacher) {
+      setError('Only teachers can add tasks to tests');
+      return;
+    }
+
+    try {
+      setLoadingTests(true);
+      setAddToTestDialogOpen(true);
+      const response = await fetchMyTests({ sort: 'recent' });
+      setMyTests(response.tests || []);
+    } catch (err: any) {
+      console.error('Error loading tests:', err);
+      setError(err.message || 'Failed to load tests');
+      setAddToTestDialogOpen(false);
+    } finally {
+      setLoadingTests(false);
+    }
+  };
+
+  const handleAddToTest = async () => {
+    if (!selectedTestId || !task) return;
+
+    try {
+      setIsAddingToTest(true);
+      await addTaskToTest(selectedTestId, {
+        taskId: task.id,
+        showImage: true, // Default to showing images
+      });
+      setAddToTestDialogOpen(false);
+      setSelectedTestId('');
+      setShowCopySuccess(true); // Reuse snackbar for success message
+      setTimeout(() => setShowCopySuccess(false), 3000);
+      // Optionally redirect to test editor
+      // router.push(`/tests/${selectedTestId}/edit`);
+    } catch (err: any) {
+      console.error('Error adding task to test:', err);
+      setError(err.message || 'Failed to add task to test');
+    } finally {
+      setIsAddingToTest(false);
+    }
+  };
+
   if (isLoading) {
     return <LoadingSpinner message="Loading task..." fullScreen />;
   }
@@ -687,7 +749,7 @@ export default function TaskDetailPage() {
         <Divider sx={{ my: 2 }} />
 
         {/* Action Buttons */}
-        <Stack direction="row" spacing={2}>
+        <Stack direction="row" spacing={2} flexWrap="wrap">
           <Button
             variant="primary"
             startIcon={<ContentCopyIcon />}
@@ -702,6 +764,15 @@ export default function TaskDetailPage() {
           >
             {t('Download PDF')}
           </Button>
+          {isTeacher && (
+            <Button
+              variant="primary"
+              startIcon={<PlaylistAddIcon />}
+              onClick={handleAddToTestClick}
+            >
+              {t('Add to Test')}
+            </Button>
+          )}
         </Stack>
       </Paper>
 
@@ -798,6 +869,81 @@ export default function TaskDetailPage() {
         promptMessage={guestModalMessage}
         onRegistrationComplete={handleRegistrationComplete}
       />
+
+      {/* Add to Test Dialog */}
+      <Dialog
+        open={addToTestDialogOpen}
+        onClose={() => {
+          setAddToTestDialogOpen(false);
+          setSelectedTestId('');
+        }}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogTitle>{t('Add Task to Test')}</DialogTitle>
+        <DialogContent>
+          {loadingTests ? (
+            <Box sx={{ display: 'flex', justifyContent: 'center', py: 3 }}>
+              <CircularProgress />
+            </Box>
+          ) : myTests.length === 0 ? (
+            <Box sx={{ py: 2 }}>
+              <Alert severity="info">
+                {t('You don\'t have any tests yet. Create a test first!')}
+              </Alert>
+              <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}>
+                <Button
+                  variant="primary"
+                  onClick={() => {
+                    router.push('/my-tests');
+                    setAddToTestDialogOpen(false);
+                  }}
+                >
+                  {t('Go to My Tests')}
+                </Button>
+              </Box>
+            </Box>
+          ) : (
+            <Box sx={{ mt: 1 }}>
+              <TextField
+                select
+                label={t('Select Test')}
+                value={selectedTestId}
+                onChange={(e) => setSelectedTestId(e.target.value)}
+                fullWidth
+                helperText={t('Choose which test to add this task to')}
+              >
+                {myTests.map((test) => (
+                  <MenuItem key={test.id} value={test.id}>
+                    {test.name} ({test.taskCount} {test.taskCount === 1 ? 'task' : 'tasks'})
+                  </MenuItem>
+                ))}
+              </TextField>
+            </Box>
+          )}
+        </DialogContent>
+        <DialogActions>
+          <Button
+            variant="secondary"
+            onClick={() => {
+              setAddToTestDialogOpen(false);
+              setSelectedTestId('');
+            }}
+            disabled={isAddingToTest}
+          >
+            {t('Cancel')}
+          </Button>
+          {myTests.length > 0 && (
+            <Button
+              variant="primary"
+              onClick={handleAddToTest}
+              disabled={!selectedTestId || isAddingToTest}
+            >
+              {isAddingToTest ? t('Adding...') : t('Add to Test')}
+            </Button>
+          )}
+        </DialogActions>
+      </Dialog>
     </Container>
     </>
   );

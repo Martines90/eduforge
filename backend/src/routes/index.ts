@@ -6,6 +6,7 @@ import subscriptionRoutes from "./subscription.routes";
 import subjectMappingRoutes from "./subject-mapping.routes";
 import tasksV2Routes from "./tasks-v2.routes";
 import treeMapRoutes from "./tree-map.routes";
+import testRoutes, { publicTestRouter } from "./test.routes";
 
 const router = Router();
 
@@ -23,6 +24,12 @@ router.use(taskRoutes);
 router.use(subjectMappingRoutes);
 router.use(tasksV2Routes);
 router.use("/api/tree-map", treeMapRoutes);
+
+// Mount test/worksheet routes (authenticated)
+router.use("/api/v2", testRoutes);
+
+// Mount public test routes (no authentication)
+router.use("/api/v2", publicTestRouter);
 
 /**
  * @swagger

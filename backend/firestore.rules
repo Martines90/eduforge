@@ -123,6 +123,44 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // Country-specific collections (tests/worksheets)
+    match /countries/{country}/tests/{testId} {
+      // Teachers can read their own tests
+      allow read: if isTeacher() && isOwner(resource.data.createdBy);
+
+      // Only verified teachers can create tests
+      allow create: if isTeacher()
+                    && isEmailVerified()
+                    && request.resource.data.createdBy == request.auth.uid
+                    && request.resource.data.creatorName == getUserData().name;
+
+      // Only the creator can update their own tests
+      allow update: if isTeacher()
+                    && isOwner(resource.data.createdBy)
+                    && request.resource.data.createdBy == resource.data.createdBy;
+
+      // Only the creator can delete their own tests
+      allow delete: if isTeacher() && isOwner(resource.data.createdBy);
+
+      // Test tasks subcollection
+      match /test_tasks/{testTaskId} {
+        // Teachers can read tasks in their own tests
+        allow read: if isTeacher() && isOwner(get(/databases/$(database)/documents/countries/$(country)/tests/$(testId)).data.createdBy);
+
+        // Teachers can manage tasks in their own tests
+        allow write: if isTeacher() && isOwner(get(/databases/$(database)/documents/countries/$(country)/tests/$(testId)).data.createdBy);
+      }
+    }
+
+    // Published tests collection (public access)
+    match /countries/{country}/published_tests/{publicId} {
+      // Anyone can read published tests (no authentication required)
+      allow read: if true;
+
+      // Only backend can write published tests
+      allow write: if false;
+    }
+
     // Deny all other collections by default
     match /{document=**} {
       allow read, write: if false;
