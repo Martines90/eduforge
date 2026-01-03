@@ -1,4 +1,5 @@
 import { Timestamp } from "firebase-admin/firestore";
+import { Subject } from "@eduforge/shared";
 
 /**
  * ============================================================================
@@ -13,7 +14,7 @@ import { Timestamp } from "firebase-admin/firestore";
 export interface TestDocument {
   // Basic Info
   name: string; // Unique per teacher
-  subject: string; // "mathematics", "physics", etc.
+  subject: Subject; // "mathematics", "physics", etc.
 
   // Ownership
   createdBy: string; // User UID
@@ -91,7 +92,7 @@ export interface TestTaskDocument {
  */
 export interface CreateTestRequest {
   name: string;
-  subject: string;
+  subject: Subject;
   gradeLevel?: string;
   description?: string;
 }
@@ -102,7 +103,7 @@ export interface CreateTestRequest {
 export interface UpdateTestRequest {
   name?: string;
   description?: string;
-  subject?: string;
+  subject?: Subject;
   gradeLevel?: string;
 }
 
@@ -110,7 +111,7 @@ export interface UpdateTestRequest {
  * Get Tests Query
  */
 export interface GetTestsQuery {
-  subject?: string;
+  subject?: Subject;
   sort?: "recent" | "name" | "taskCount";
   limit?: number;
   offset?: number;
@@ -225,7 +226,7 @@ export interface PublishedTestDocument {
 
   // Basic Info
   name: string;
-  subject: string;
+  subject: Subject;
   gradeLevel?: string;
   description?: string;
 
@@ -287,7 +288,7 @@ export interface PublishToPublicRequest {
  * Get Published Tests Query
  */
 export interface GetPublishedTestsQuery {
-  subject?: string;
+  subject?: Subject;
   gradeLevel?: string;
   search?: string; // Search by name
   sort?: "recent" | "views" | "downloads";

@@ -10,6 +10,7 @@ import {
   UpdateTestTaskRequest,
   ReorderTasksRequest,
 } from "../types/test.types";
+import { Subject, isValidSubject } from "@eduforge/shared";
 
 /**
  * Test Controller
@@ -91,8 +92,9 @@ export const getUserTests = async (
 ): Promise<void> => {
   try {
     const { userId, country } = getUserFromRequest(req);
+    const subjectParam = req.query.subject as string | undefined;
     const query: GetTestsQuery = {
-      subject: req.query.subject as string,
+      subject: subjectParam && isValidSubject(subjectParam) ? subjectParam : undefined,
       sort: req.query.sort as "recent" | "name" | "taskCount",
       limit: req.query.limit ? parseInt(req.query.limit as string) : undefined,
       offset: req.query.offset
@@ -531,8 +533,9 @@ export const getPublishedTests = async (
     // Extract country from query or default to US
     const country = (req.query.country as string) || "US";
 
+    const subjectParam = req.query.subject as string | undefined;
     const query: import("../types/test.types").GetPublishedTestsQuery = {
-      subject: req.query.subject as string,
+      subject: subjectParam && isValidSubject(subjectParam) ? subjectParam : undefined,
       gradeLevel: req.query.gradeLevel as string,
       search: req.query.search as string,
       sort: req.query.sort as "recent" | "views" | "downloads",

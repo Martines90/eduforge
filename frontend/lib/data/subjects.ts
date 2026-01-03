@@ -1,95 +1,32 @@
 import { Subject } from "@/types/i18n";
 import { CountryCode } from "@/types/i18n";
-
-export interface SubjectOption {
-  value: Subject;
-  labelEN: string;
-  labelHU: string;
-  labelMX: string;
-  emoji: string;
-  category?: "stem" | "humanities" | "arts" | "other";
-}
+import {
+  SUBJECTS as SHARED_SUBJECTS,
+  SubjectOption as SharedSubjectOption,
+  getAllSubjectValues,
+  isValidSubject,
+  getSubjectOption
+} from "@eduforge/shared";
 
 /**
- * SINGLE SOURCE OF TRUTH FOR ALL SUBJECTS
- * These are the only subjects available in the entire application.
+ * Re-export types from shared for backward compatibility
+ */
+export type SubjectOption = SharedSubjectOption;
+
+/**
+ * SUBJECTS CONSTANT - Imported from shared library
+ * This is the single source of truth for all subjects.
  *
  * To add/remove subjects:
- * 1. Update this SUBJECTS array
- * 2. Update the Subject type in types/i18n.ts
- * 3. Update translation files (en.ts, hu.ts, mx.ts) in the "Subjects" section
+ * 1. Update shared/types/subjects.ts
+ * 2. Update translation files (en.ts, hu.ts, mx.ts) in the "Subjects" section
  */
-export const SUBJECTS: SubjectOption[] = [
-  // STEM Subjects
-  {
-    value: "mathematics",
-    labelEN: "Mathematics",
-    labelHU: "Matematika",
-    labelMX: "Matemáticas",
-    emoji: "🔢",
-    category: "stem",
-  },
-  {
-    value: "physics",
-    labelEN: "Physics",
-    labelHU: "Fizika",
-    labelMX: "Física",
-    emoji: "⚛️",
-    category: "stem",
-  },
-  {
-    value: "chemistry",
-    labelEN: "Chemistry",
-    labelHU: "Kémia",
-    labelMX: "Química",
-    emoji: "🧪",
-    category: "stem",
-  },
-  {
-    value: "biology",
-    labelEN: "Biology",
-    labelHU: "Biológia",
-    labelMX: "Biología",
-    emoji: "🧬",
-    category: "stem",
-  },
-  {
-    value: "information_technology",
-    labelEN: "Informatics",
-    labelHU: "Informatika",
-    labelMX: "Tecnología de la Información",
-    emoji: "💻",
-    category: "stem",
-  },
+export const SUBJECTS = SHARED_SUBJECTS;
 
-  // Humanities & Social Sciences
-  {
-    value: "history",
-    labelEN: "History",
-    labelHU: "Történelem",
-    labelMX: "Historia",
-    emoji: "📜",
-    category: "humanities",
-  },
-  {
-    value: "geography",
-    labelEN: "Geography",
-    labelHU: "Földrajz",
-    labelMX: "Geografía",
-    emoji: "🌍",
-    category: "humanities",
-  },
-
-  // Languages & Literature
-  {
-    value: "literature",
-    labelEN: "Literature",
-    labelHU: "Irodalom",
-    labelMX: "Literatura",
-    emoji: "📚",
-    category: "humanities",
-  },
-];
+/**
+ * Re-export utility functions from shared
+ */
+export { getAllSubjectValues, isValidSubject, getSubjectOption };
 
 /**
  * Get subject label based on country/language
@@ -122,11 +59,4 @@ export function getSubjectsForCountry(
     label: getSubjectLabel(subject.value, country),
     emoji: subject.emoji,
   }));
-}
-
-/**
- * Get all subject values (for validation, filtering, etc.)
- */
-export function getAllSubjectValues(): Subject[] {
-  return SUBJECTS.map((s) => s.value);
 }

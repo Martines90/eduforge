@@ -758,13 +758,6 @@ export interface UserProfile {
 
 /**
  * Subject types for teachers
+ * Re-export from shared types for backward compatibility
  */
-export type Subject =
-  | "mathematics"
-  | "physics"
-  | "chemistry"
-  | "biology"
-  | "information_technology"
-  | "history"
-  | "geography"
-  | "literature";
+export type { Subject } from '@eduforge/shared';
