@@ -15,7 +15,6 @@ const router = Router();
 
 // Apply teacher authentication to all routes
 router.use(requireAuthenticatedTeacher);
-router.use(requireTeacher);
 
 /**
  * @swagger

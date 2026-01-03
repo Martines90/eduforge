@@ -107,6 +107,7 @@ export const UserMenu: React.FC<UserMenuProps> = ({ className }) => {
           open={showGuestModal}
           onClose={() => setShowGuestModal(false)}
           onRegistrationComplete={handleRegistrationComplete}
+          initialMode="login"
         />
       </>
     );
