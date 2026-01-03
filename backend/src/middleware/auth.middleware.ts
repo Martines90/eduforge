@@ -10,6 +10,7 @@ export interface AuthRequest extends Request {
     email: string;
     role: "teacher" | "general_user";
     name: string;
+    country: string;
   };
 }
 
@@ -55,7 +56,7 @@ export const authenticate = async (
     console.log('[Auth Middleware] Token extracted, verifying...');
     // Verify token and extract user info
     const decoded = verifyToken(token);
-    console.log('[Auth Middleware] Token verified successfully:', { uid: decoded.uid, email: decoded.email, role: decoded.role });
+    console.log('[Auth Middleware] Token verified successfully:', { uid: decoded.uid, email: decoded.email, role: decoded.role, country: decoded.country });
 
     // Attach user to request object
     (req as AuthRequest).user = {
@@ -63,9 +64,10 @@ export const authenticate = async (
       email: decoded.email,
       role: decoded.role as "teacher" | "general_user",
       name: decoded.name,
+      country: decoded.country,
     };
 
-    console.log('[Auth Middleware] User attached to request');
+    console.log('[Auth Middleware] User attached to request with country:', decoded.country);
     next();
   } catch (error) {
     console.error("[Auth Middleware] Authentication error:", error);

@@ -726,6 +726,11 @@ export interface Translations {
   "Note:": string;
   "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.": string;
   "PDF": string;
+
+  // Task Add to Test Notifications
+  "Task successfully added to {{testName}}": string;
+  "Task already added to this test": string;
+  "Failed to add task to test": string;
 }
 
 export type TranslationKey = keyof Translations;

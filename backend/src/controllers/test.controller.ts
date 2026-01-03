@@ -28,6 +28,8 @@ function getUserFromRequest(
   }
   // Extract country from user token or default to US
   const country = (authReq.user as any).country || "US";
+  console.log('[getUserFromRequest] User country from token:', country);
+  console.log('[getUserFromRequest] Full user object:', JSON.stringify(authReq.user));
   return {
     userId: authReq.user.uid,
     country,

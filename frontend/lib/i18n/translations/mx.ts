@@ -787,4 +787,9 @@ export const mx: Translations = {
   "Note:": "Nota:",
   "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.": "La función de biblioteca de exámenes está actualmente en desarrollo. Los exámenes publicados aparecerán aquí una vez que se implemente la API del backend para navegar por los exámenes.",
   "PDF": "PDF",
+
+  // Task Add to Test Notifications
+  "Task successfully added to {{testName}}": "Tarea agregada exitosamente a {{testName}}",
+  "Task already added to this test": "Esta tarea ya está agregada a este examen",
+  "Failed to add task to test": "Error al agregar la tarea al examen",
 };

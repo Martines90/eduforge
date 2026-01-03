@@ -786,4 +786,9 @@ export const hu: Translations = {
   "Note:": "Megjegyzés:",
   "The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.": "A dolgozat könyvtár funkció jelenleg fejlesztés alatt áll. A közzétett dolgozatok itt jelennek meg, amint a dolgozatok böngészésére szolgáló backend API implementálásra kerül.",
   "PDF": "PDF",
+
+  // Task Add to Test Notifications
+  "Task successfully added to {{testName}}": "Feladat sikeresen hozzáadva: {{testName}}",
+  "Task already added to this test": "Ez a feladat már hozzá van adva ehhez a dolgozathoz",
+  "Failed to add task to test": "Nem sikerült hozzáadni a feladatot a dolgozathoz",
 };

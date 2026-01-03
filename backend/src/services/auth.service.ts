@@ -219,6 +219,7 @@ export async function verifyCodeAndCreateUser(
       email: email.toLowerCase(),
       role: userData.role,
       name: userData.name,
+      country: userData.country,
     },
     JWT_SECRET,
     { expiresIn: JWT_EXPIRES_IN }
@@ -345,6 +346,7 @@ export async function loginUser(
       email: user.email,
       role: user.role,
       name: user.name,
+      country: user.country,
     },
     JWT_SECRET,
     { expiresIn: JWT_EXPIRES_IN }
@@ -375,6 +377,7 @@ export function verifyToken(token: string): {
   email: string;
   role: string;
   name: string;
+  country: string;
 } {
   try {
     const decoded = jwt.verify(token, JWT_SECRET) as {
@@ -382,6 +385,7 @@ export function verifyToken(token: string): {
       email: string;
       role: string;
       name: string;
+      country: string;
     };
     return decoded;
   } catch (error) {
