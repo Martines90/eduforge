@@ -282,3 +282,26 @@ export interface PublishedTestTaskDocument {
 export interface PublishToPublicRequest {
   generateNewPdf?: boolean; // Whether to generate a new PDF before publishing
 }
+
+/**
+ * Get Published Tests Query
+ */
+export interface GetPublishedTestsQuery {
+  subject?: string;
+  gradeLevel?: string;
+  search?: string; // Search by name
+  sort?: "recent" | "views" | "downloads";
+  limit?: number;
+  offset?: number;
+}
+
+/**
+ * Get Published Tests Response
+ */
+export interface GetPublishedTestsResponse {
+  tests: (PublishedTestDocument & { id: string })[];
+  total: number;
+  page: number;
+  limit: number;
+  hasMore: boolean;
+}

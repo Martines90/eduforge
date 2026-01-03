@@ -454,6 +454,56 @@ export async function publishTestToPublic(testId: string): Promise<{
 }
 
 /**
+ * Browse published tests with filters and pagination (no authentication required)
+ */
+export async function fetchPublishedTests(params?: {
+  country?: string;
+  subject?: string;
+  gradeLevel?: string;
+  search?: string;
+  sort?: 'recent' | 'views' | 'downloads';
+  limit?: number;
+  offset?: number;
+}): Promise<{
+  success: boolean;
+  tests: PublishedTest[];
+  total: number;
+  page: number;
+  limit: number;
+  hasMore: boolean;
+}> {
+  const queryParams = new URLSearchParams();
+  if (params?.country) queryParams.append('country', params.country);
+  if (params?.subject) queryParams.append('subject', params.subject);
+  if (params?.gradeLevel) queryParams.append('gradeLevel', params.gradeLevel);
+  if (params?.search) queryParams.append('search', params.search);
+  if (params?.sort) queryParams.append('sort', params.sort);
+  if (params?.limit) queryParams.append('limit', params.limit.toString());
+  if (params?.offset) queryParams.append('offset', params.offset.toString());
+
+  const queryString = queryParams.toString();
+  const url = `${API_BASE_URL}/api/v2/published-tests${queryString ? `?${queryString}` : ''}`;
+
+  console.log('[fetchPublishedTests] Fetching from URL:', url);
+
+  const response = await fetch(url, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const data = await response.json();
+  console.log('[fetchPublishedTests] Response status:', response.status);
+
+  if (!response.ok) {
+    console.error('[fetchPublishedTests] Error response:', data);
+    throw new Error(data.message || data.error || 'Failed to fetch published tests');
+  }
+
+  return data;
+}
+
+/**
  * Fetch a published test by public ID (no authentication required)
  */
 export async function fetchPublishedTest(publicId: string): Promise<{

@@ -519,6 +519,42 @@ export const uploadPDFToStorage = async (
 };
 
 /**
+ * GET /api/v2/published-tests
+ * Get all published tests with pagination (no authentication required)
+ */
+export const getPublishedTests = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> => {
+  try {
+    // Extract country from query or default to US
+    const country = (req.query.country as string) || "US";
+
+    const query: import("../types/test.types").GetPublishedTestsQuery = {
+      subject: req.query.subject as string,
+      gradeLevel: req.query.gradeLevel as string,
+      search: req.query.search as string,
+      sort: req.query.sort as "recent" | "views" | "downloads",
+      limit: req.query.limit ? parseInt(req.query.limit as string) : undefined,
+      offset: req.query.offset ? parseInt(req.query.offset as string) : undefined,
+    };
+
+    console.log(`📥 Get published tests for country ${country}`, query);
+
+    const result = await testService.getPublishedTests(country, query);
+
+    res.status(200).json({
+      success: true,
+      ...result,
+    });
+  } catch (error) {
+    console.error("❌ Error getting published tests:", error);
+    next(error);
+  }
+};
+
+/**
  * GET /api/v2/published-tests/:publicId
  * Get a published test by public ID (no authentication required)
  */

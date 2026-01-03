@@ -664,6 +664,88 @@ export async function publishTestToPublic(
 }
 
 /**
+ * Get all published tests with pagination (no authentication required)
+ */
+export async function getPublishedTests(
+  country: string,
+  query: import("../types/test.types").GetPublishedTestsQuery = {}
+): Promise<import("../types/test.types").GetPublishedTestsResponse> {
+  const db = getFirestore();
+
+  const {
+    subject,
+    gradeLevel,
+    search,
+    sort = "recent",
+    limit = 12,
+    offset = 0,
+  } = query;
+
+  let testsQuery = db.collection(`countries/${country}/published_tests`);
+
+  // Filter by subject if provided
+  if (subject) {
+    testsQuery = testsQuery.where("subject", "==", subject) as any;
+  }
+
+  // Filter by grade level if provided
+  if (gradeLevel) {
+    testsQuery = testsQuery.where("gradeLevel", "==", gradeLevel) as any;
+  }
+
+  // Apply sorting
+  switch (sort) {
+    case "views":
+      testsQuery = testsQuery.orderBy("viewCount", "desc") as any;
+      break;
+    case "downloads":
+      testsQuery = testsQuery.orderBy("downloadCount", "desc") as any;
+      break;
+    case "recent":
+    default:
+      testsQuery = testsQuery.orderBy("publishedAt", "desc") as any;
+      break;
+  }
+
+  // Create two separate queries: one for count, one for paginated data
+  const countQuery = testsQuery;
+  const paginatedQuery = testsQuery.limit(limit).offset(offset);
+
+  // Execute both queries in parallel
+  const [allTests, paginatedTests] = await Promise.all([
+    countQuery.get(),
+    paginatedQuery.get(),
+  ]);
+
+  const total = allTests.size;
+
+  let tests = paginatedTests.docs.map((doc) => ({
+    id: doc.id,
+    ...doc.data(),
+  })) as (PublishedTestDocument & { id: string })[];
+
+  // Apply client-side search filtering if search query is provided
+  // (Firestore doesn't support full-text search, so we filter after fetching)
+  if (search) {
+    const searchLower = search.toLowerCase();
+    tests = tests.filter(
+      (test) =>
+        test.name.toLowerCase().includes(searchLower) ||
+        test.description?.toLowerCase().includes(searchLower) ||
+        test.creatorName.toLowerCase().includes(searchLower)
+    );
+  }
+
+  return {
+    tests,
+    total: search ? tests.length : total, // Adjust total if search filtering applied
+    page: Math.floor(offset / limit) + 1,
+    limit,
+    hasMore: offset + limit < total,
+  };
+}
+
+/**
  * Get a published test by public ID (no authentication required)
  */
 export async function getPublishedTest(

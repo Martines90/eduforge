@@ -535,6 +535,75 @@ router.post(
 
 /**
  * @swagger
+ * /api/v2/published-tests:
+ *   get:
+ *     summary: Browse published tests (public access)
+ *     description: Get a paginated list of published tests. No authentication required.
+ *     tags: [Tests]
+ *     parameters:
+ *       - in: query
+ *         name: country
+ *         schema:
+ *           type: string
+ *         description: Country code (defaults to US)
+ *       - in: query
+ *         name: subject
+ *         schema:
+ *           type: string
+ *         description: Filter by subject
+ *       - in: query
+ *         name: gradeLevel
+ *         schema:
+ *           type: string
+ *         description: Filter by grade level
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *         description: Search by name, description, or creator
+ *       - in: query
+ *         name: sort
+ *         schema:
+ *           type: string
+ *           enum: [recent, views, downloads]
+ *         description: Sort order (default: recent)
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *           default: 12
+ *         description: Number of tests per page
+ *       - in: query
+ *         name: offset
+ *         schema:
+ *           type: integer
+ *           default: 0
+ *         description: Pagination offset
+ *     responses:
+ *       200:
+ *         description: List of published tests with pagination info
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 tests:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                 total:
+ *                   type: number
+ *                 page:
+ *                   type: number
+ *                 limit:
+ *                   type: number
+ *                 hasMore:
+ *                   type: boolean
+ */
+/**
+ * @swagger
  * /api/v2/published-tests/{publicId}:
  *   get:
  *     summary: Get a published test (public access)
@@ -559,6 +628,9 @@ router.post(
  *         description: Test not found
  */
 export const publicTestRouter = Router();
+// Browse all published tests (must come before :publicId route)
+publicTestRouter.get("/published-tests", testController.getPublishedTests);
+// Get specific published test by ID
 publicTestRouter.get(
   "/published-tests/:publicId",
   testController.getPublishedTest

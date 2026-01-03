@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import {
   Container,
@@ -15,12 +15,16 @@ import {
   InputAdornment,
   Chip,
   Grid,
+  CircularProgress,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { Button } from '@/components/atoms/Button';
+import { Pagination } from '@/components/molecules/Pagination';
 import { useTranslation } from '@/lib/i18n';
+import { fetchPublishedTests } from '@/lib/services/test.service';
+import type { PublishedTest } from '@/types/test.types';
 
 /**
  * Test Library Page
@@ -31,29 +35,101 @@ export default function TestLibraryPage() {
   const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
+  const [sortBy, setSortBy] = useState<'recent' | 'views' | 'downloads'>('recent');
 
-  // Placeholder - in a real implementation, this would fetch from backend
-  const publishedTests: Array<{
-    id: string;
-    name: string;
-    subject: string;
-    gradeLevel?: string;
-    taskCount: number;
-    totalScore?: number;
-    viewCount: number;
-    publishedAt: string;
-    pdfUrl?: string;
-  }> = [];
+  // Data state
+  const [tests, setTests] = useState<PublishedTest[]>([]);
+  const [totalItems, setTotalItems] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12; // 12 items for grid layout (4 columns x 3 rows)
 
   const subjects = ['mathematics', 'physics', 'chemistry', 'biology', 'history', 'geography'];
 
-  const filteredTests = publishedTests.filter((test) => {
-    const matchesSearch = searchQuery
-      ? test.name.toLowerCase().includes(searchQuery.toLowerCase())
-      : true;
-    const matchesSubject = selectedSubject ? test.subject === selectedSubject : true;
-    return matchesSearch && matchesSubject;
-  });
+  // Get user's country from localStorage (for filtering tests by country)
+  const getUserCountry = (): string => {
+    if (typeof window === 'undefined') return 'US';
+    try {
+      const userStr = localStorage.getItem('user');
+      if (userStr) {
+        const user = JSON.parse(userStr);
+        return user.country || 'US';
+      }
+    } catch (error) {
+      console.error('Error getting user country:', error);
+    }
+    return 'US';
+  };
+
+  // Fetch tests from API
+  const loadTests = async () => {
+    setLoading(true);
+    setError(null);
+
+    try {
+      const offset = (currentPage - 1) * itemsPerPage;
+      const country = getUserCountry();
+
+      console.log('[TestLibrary] Fetching tests:', {
+        country,
+        subject: selectedSubject,
+        search: searchQuery,
+        sort: sortBy,
+        limit: itemsPerPage,
+        offset,
+      });
+
+      const response = await fetchPublishedTests({
+        country,
+        subject: selectedSubject || undefined,
+        search: searchQuery || undefined,
+        sort: sortBy,
+        limit: itemsPerPage,
+        offset,
+      });
+
+      console.log('[TestLibrary] Received tests:', response);
+
+      setTests(response.tests);
+      setTotalItems(response.total);
+    } catch (err: any) {
+      console.error('[TestLibrary] Error loading tests:', err);
+      setError(err.message || 'Failed to load tests');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Load tests when filters or page changes
+  useEffect(() => {
+    loadTests();
+  }, [currentPage, selectedSubject, searchQuery, sortBy]);
+
+  // Handle page change
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    // Scroll to top of results
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Reset to page 1 when filters change
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    setCurrentPage(1);
+  };
+
+  const handleSubjectChange = (subject: string | null) => {
+    setSelectedSubject(subject);
+    setCurrentPage(1);
+  };
+
+  const handleSortChange = (sort: 'recent' | 'views' | 'downloads') => {
+    setSortBy(sort);
+    setCurrentPage(1);
+  };
 
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
@@ -74,7 +150,7 @@ export default function TestLibraryPage() {
             fullWidth
             placeholder={t('Search tests...')}
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => handleSearchChange(e.target.value)}
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
@@ -83,44 +159,90 @@ export default function TestLibraryPage() {
               ),
             }}
             sx={{ mb: 2 }}
+            disabled={loading}
           />
 
-          <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+          <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 2 }}>
             <Chip
               label={t('All Subjects')}
-              onClick={() => setSelectedSubject(null)}
+              onClick={() => handleSubjectChange(null)}
               color={selectedSubject === null ? 'primary' : 'default'}
               variant={selectedSubject === null ? 'filled' : 'outlined'}
+              disabled={loading}
             />
             {subjects.map((subject) => (
               <Chip
                 key={subject}
                 label={subject.charAt(0).toUpperCase() + subject.slice(1)}
-                onClick={() => setSelectedSubject(subject)}
+                onClick={() => handleSubjectChange(subject)}
                 color={selectedSubject === subject ? 'primary' : 'default'}
                 variant={selectedSubject === subject ? 'filled' : 'outlined'}
+                disabled={loading}
               />
             ))}
           </Box>
+
+          <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+            <Typography variant="body2" color="text.secondary" sx={{ mr: 1, alignSelf: 'center' }}>
+              {t('Sort by:')}
+            </Typography>
+            <Chip
+              label={t('Recent')}
+              onClick={() => handleSortChange('recent')}
+              color={sortBy === 'recent' ? 'primary' : 'default'}
+              variant={sortBy === 'recent' ? 'filled' : 'outlined'}
+              size="small"
+              disabled={loading}
+            />
+            <Chip
+              label={t('Most Viewed')}
+              onClick={() => handleSortChange('views')}
+              color={sortBy === 'views' ? 'primary' : 'default'}
+              variant={sortBy === 'views' ? 'filled' : 'outlined'}
+              size="small"
+              disabled={loading}
+            />
+            <Chip
+              label={t('Most Downloaded')}
+              onClick={() => handleSortChange('downloads')}
+              color={sortBy === 'downloads' ? 'primary' : 'default'}
+              variant={sortBy === 'downloads' ? 'filled' : 'outlined'}
+              size="small"
+              disabled={loading}
+            />
+          </Box>
         </Box>
 
-        {/* Results */}
-        {filteredTests.length === 0 ? (
+        {/* Error Alert */}
+        {error && (
+          <Alert severity="error" sx={{ mb: 3 }}>
+            {error}
+          </Alert>
+        )}
+
+        {/* Loading State */}
+        {loading ? (
+          <Box sx={{ textAlign: 'center', py: 8 }}>
+            <CircularProgress />
+            <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
+              {t('Loading tests...')}
+            </Typography>
+          </Box>
+        ) : tests.length === 0 ? (
           <Box sx={{ textAlign: 'center', py: 8, bgcolor: 'grey.50', borderRadius: 1 }}>
             <Typography variant="h6" color="text.secondary" gutterBottom>
-              {publishedTests.length === 0
-                ? t('No published tests yet')
-                : t('No tests match your search')}
+              {t('No published tests yet')}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {publishedTests.length === 0
-                ? t('Be the first to publish a test!')
-                : t('Try adjusting your search or filters')}
+              {searchQuery || selectedSubject
+                ? t('Try adjusting your search or filters')
+                : t('Be the first to publish a test!')}
             </Typography>
           </Box>
         ) : (
-          <Grid container spacing={3}>
-            {filteredTests.map((test) => (
+          <>
+            <Grid container spacing={3}>
+              {tests.map((test) => (
               <Grid item xs={12} sm={6} md={4} key={test.id}>
                 <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                   <CardContent sx={{ flexGrow: 1 }}>
@@ -181,19 +303,18 @@ export default function TestLibraryPage() {
                   </CardActions>
                 </Card>
               </Grid>
-            ))}
-          </Grid>
-        )}
+              ))}
+            </Grid>
 
-        {/* Info Alert */}
-        <Alert severity="info" sx={{ mt: 4 }}>
-          <Typography variant="body2">
-            <strong>{t('Note:')}</strong>{' '}
-            {t(
-              'The test library feature is currently in development. Published tests will appear here once the backend API for browsing tests is implemented.'
-            )}
-          </Typography>
-        </Alert>
+            {/* Pagination */}
+            <Pagination
+              currentPage={currentPage}
+              totalItems={totalItems}
+              itemsPerPage={itemsPerPage}
+              onPageChange={handlePageChange}
+            />
+          </>
+        )}
 
         {/* Navigation */}
         <Box sx={{ mt: 4, display: 'flex', gap: 2, justifyContent: 'space-between' }}>
