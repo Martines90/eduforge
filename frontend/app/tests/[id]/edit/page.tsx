@@ -265,7 +265,7 @@ export default function TestEditorPage() {
         if (task.taskId) {
           try {
             const libraryTask = await fetchTaskById(task.taskId);
-            taskData[task.id] = libraryTask.task;
+            taskData[task.id] = libraryTask.data;
           } catch (err) {
             console.error('[TestEditor] Error loading library task:', task.taskId, err);
           }

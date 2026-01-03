@@ -39,10 +39,8 @@ vi.mock('@/lib/i18n', () => ({
 describe('TasksPage', () => {
   const mockTreeData = {
     success: true,
+    message: 'Success',
     data: {
-      country: 'HU',
-      subject: 'mathematics',
-      gradeLevel: 'grade_9_10',
       tree: [
         {
           key: 'test_category',
@@ -197,10 +195,8 @@ describe('TasksPage', () => {
     const mockFetchTreeMap = vi.mocked(apiService.fetchTreeMap);
     mockFetchTreeMap.mockResolvedValue({
       success: true,
+      message: 'Success',
       data: {
-        country: 'HU',
-        subject: 'mathematics',
-        gradeLevel: 'grade_9_10',
         tree: [],
       },
     });
