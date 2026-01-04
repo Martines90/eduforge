@@ -1,7 +1,14 @@
 import dotenv from "dotenv";
 import * as path from "path";
 
-dotenv.config();
+// Load .env file if it exists (local development)
+// In Cloud Run/Functions, env vars are already loaded by the platform
+try {
+  dotenv.config();
+} catch (error) {
+  // Silently ignore - env vars are already loaded in cloud environment
+  console.log("Note: .env file not loaded (using platform environment variables)");
+}
 
 export const config = {
   // Server configuration

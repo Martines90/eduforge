@@ -2,8 +2,8 @@
   "name": "@eduforger/shared",
   "version": "1.0.0",
   "description": "Shared types and utilities for EduForger",
-  "main": "types/index.ts",
-  "types": "types/index.ts",
+  "main": "types/index.js",
+  "types": "types/index.d.ts",
   "private": true,
   "scripts": {},
   "keywords": [

@@ -12,51 +12,69 @@ let auth: admin.auth.Auth;
  */
 export function initializeFirebase(): void {
   try {
-    // Try multiple paths for service account key (dev vs production)
-    const serviceAccountFilename =
-      "eduforge-d29d9-firebase-adminsdk-fbsvc-744c4f4757.json";
-    const possiblePaths = [
-      path.join(__dirname, serviceAccountFilename), // dist/config/ (production)
-      path.join(__dirname, "../../dist/config", serviceAccountFilename), // from src/config/ to dist/config/
-      path.join(process.cwd(), "src/config", serviceAccountFilename), // absolute from project root
-    ];
-
-    let serviceAccountPath: string | null = null;
-    for (const testPath of possiblePaths) {
-      if (fs.existsSync(testPath)) {
-        serviceAccountPath = testPath;
-        break;
-      }
+    // Skip initialization if already initialized
+    if (firebaseApp) {
+      console.log("✅ Firebase Admin SDK already initialized");
+      return;
     }
 
-    // Check if service account file exists
-    if (!serviceAccountPath) {
-      console.warn("⚠️  Firebase service account file not found!");
-      console.warn("📝 Tried the following paths:");
-      possiblePaths.forEach((p) => console.warn(`   - ${p}`));
-      console.warn("");
-      console.warn("For now, using project ID from environment variable...");
+    // Check if running in Cloud Run / Firebase Functions environment
+    const isCloudEnvironment = process.env.K_SERVICE || process.env.FUNCTION_TARGET;
 
-      // Fallback: initialize with project ID only (limited functionality)
+    if (isCloudEnvironment) {
+      // In Cloud Run/Functions, use Application Default Credentials (ADC)
+      // These are automatically provided by Google Cloud
       firebaseApp = admin.initializeApp({
-        projectId: process.env.PROJECT_ID || "eduforge-d29d9",
         storageBucket:
           process.env.STORAGE_BUCKET || "eduforge-d29d9.firebasestorage.app",
       });
+      console.log("✅ Firebase Admin SDK initialized (Cloud environment with ADC)");
     } else {
-      // Initialize with service account
-      const serviceAccountJson = fs.readFileSync(serviceAccountPath, "utf8");
-      const serviceAccount = JSON.parse(serviceAccountJson);
+      // Local development: try to use service account key file
+      const serviceAccountFilename =
+        "eduforge-d29d9-firebase-adminsdk-fbsvc-744c4f4757.json";
+      const possiblePaths = [
+        path.join(__dirname, serviceAccountFilename), // dist/config/ (production)
+        path.join(__dirname, "../../dist/config", serviceAccountFilename), // from src/config/ to dist/config/
+        path.join(process.cwd(), "src/config", serviceAccountFilename), // absolute from project root
+      ];
 
-      firebaseApp = admin.initializeApp({
-        credential: admin.credential.cert(serviceAccount),
-        storageBucket:
-          process.env.STORAGE_BUCKET || "eduforge-d29d9.firebasestorage.app",
-      });
+      let serviceAccountPath: string | null = null;
+      for (const testPath of possiblePaths) {
+        if (fs.existsSync(testPath)) {
+          serviceAccountPath = testPath;
+          break;
+        }
+      }
 
-      console.log(
-        `✅ Firebase Admin SDK initialized successfully (using ${serviceAccountPath})`
-      );
+      if (!serviceAccountPath) {
+        console.warn("⚠️  Firebase service account file not found!");
+        console.warn("📝 Tried the following paths:");
+        possiblePaths.forEach((p) => console.warn(`   - ${p}`));
+        console.warn("");
+        console.warn("Using ADC or default credentials...");
+
+        // Fallback: Use ADC even in local environment
+        firebaseApp = admin.initializeApp({
+          projectId: process.env.PROJECT_ID || "eduforge-d29d9",
+          storageBucket:
+            process.env.STORAGE_BUCKET || "eduforge-d29d9.firebasestorage.app",
+        });
+      } else {
+        // Initialize with service account
+        const serviceAccountJson = fs.readFileSync(serviceAccountPath, "utf8");
+        const serviceAccount = JSON.parse(serviceAccountJson);
+
+        firebaseApp = admin.initializeApp({
+          credential: admin.credential.cert(serviceAccount),
+          storageBucket:
+            process.env.STORAGE_BUCKET || "eduforge-d29d9.firebasestorage.app",
+        });
+
+        console.log(
+          `✅ Firebase Admin SDK initialized successfully (using ${serviceAccountPath})`
+        );
+      }
     }
 
     // Get Firestore and Auth instances

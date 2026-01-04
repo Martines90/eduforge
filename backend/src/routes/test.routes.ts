@@ -566,7 +566,7 @@ router.post(
  *         schema:
  *           type: string
  *           enum: [recent, views, downloads]
- *         description: Sort order (default: recent)
+ *         description: Sort order - defaults to recent
  *       - in: query
  *         name: limit
  *         schema:
