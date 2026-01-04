@@ -16,6 +16,6 @@
       "@eduforger/shared": ["../shared/types"]
     }
   },
-  "include": ["src/**/*", "../shared/types/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "../shared"]
 }

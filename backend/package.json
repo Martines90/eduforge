@@ -7,7 +7,7 @@
     "build": "tsc && npm run copy:prompts && npm run copy:mappings",
     "copy:prompts": "mkdir -p dist/genai/prompts && cp -r src/genai/prompts/* dist/genai/prompts/",
     "copy:mappings": "mkdir -p dist/data/mappings && cp -r src/data/mappings/* dist/data/mappings/",
-    "start": "node dist/index.js",
+    "start": "node -r tsconfig-paths/register dist/backend/src/index.js",
     "dev": "ts-node -r tsconfig-paths/register src/index.ts",
     "dev:watch": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only src/index.ts",
     "prod": "npm run build && npm start",

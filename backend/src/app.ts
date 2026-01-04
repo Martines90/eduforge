@@ -8,9 +8,6 @@ import routes from "./routes";
 import { errorHandler, notFoundHandler } from "./middleware/error-handler";
 import { swaggerSpec } from "./config/swagger.config";
 
-// Import cors using require due to CommonJS/ES6 interop issues
-const cors = require("cors");
-
 export function createApp(): Application {
   const app: Application = express();
 
@@ -28,13 +25,20 @@ export function createApp(): Application {
     })
   );
 
-  // CORS middleware
-  app.use(
-    cors({
-      origin: config.corsOrigin,
-      credentials: true,
-    })
-  );
+  // CORS middleware - Temporarily disabled due to module resolution issues with ts-node-dev
+  // TODO: Fix CORS import issue or use a custom middleware
+  app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", config.corsOrigin);
+    res.header("Access-Control-Allow-Credentials", "true");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+
+    if (req.method === "OPTIONS") {
+      return res.sendStatus(200);
+    }
+
+    next();
+  });
 
   // Logging middleware
   if (config.nodeEnv === "development") {

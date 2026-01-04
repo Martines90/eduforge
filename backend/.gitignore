@@ -21,6 +21,9 @@ node_modules
 # Build output
 /dist
 
+# Compiled JS files in shared types (source should only contain .ts files)
+../shared/types/*.js
+
 # Storage (generated files)
 /storage
 
