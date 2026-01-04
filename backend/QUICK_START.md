@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-Get the EduForge backend up and running in minutes!
+Get the EduForger backend up and running in minutes!
 
 ## Prerequisites
 

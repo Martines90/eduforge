@@ -1,9 +1,9 @@
 {
   "info": {
-    "name": "EduForge Task Generator API",
+    "name": "EduForger Task Generator API",
     "description": "API collection for generating educational math tasks with curriculum-based storage",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "eduforge"
+    "_exporter_id": "eduforger"
   },
   "item": [
     {

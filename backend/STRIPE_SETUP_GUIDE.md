@@ -1,4 +1,4 @@
-# Stripe Setup Guide for EduForge
+# Stripe Setup Guide for EduForger
 
 ## ✅ Step 1: Add Your Stripe API Keys (DONE)
 
@@ -24,7 +24,7 @@ You need to create **3 Products** with **Annual Prices** in your Stripe Dashboar
 2. Click **"+ Add product"** for each tier
 
 ### Product 1: Basic Plan
-- **Name:** `EduForge Basic`
+- **Name:** `EduForger Basic`
 - **Description:** `Basic subscription with task viewing and downloading`
 - **Pricing:**
   - **Price:** `€99.00 EUR`
@@ -36,7 +36,7 @@ You need to create **3 Products** with **Annual Prices** in your Stripe Dashboar
   - `collections`: `1000`
 
 ### Product 2: Normal Plan
-- **Name:** `EduForge Normal`
+- **Name:** `EduForger Normal`
 - **Description:** `Normal subscription with task generation credits`
 - **Pricing:**
   - **Price:** `€199.00 EUR`
@@ -48,7 +48,7 @@ You need to create **3 Products** with **Annual Prices** in your Stripe Dashboar
   - `collections`: `1000`
 
 ### Product 3: Pro Plan (School License)
-- **Name:** `EduForge Pro (School License)`
+- **Name:** `EduForger Pro (School License)`
 - **Description:** `Pro subscription for schools with multiple teachers`
 - **Pricing:**
   - **Price:** `€599.00 EUR`
@@ -172,7 +172,7 @@ STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret_from_step_4
 You need to set environment variables in Firebase Functions:
 
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend
+cd /Users/martonhorvath/Documents/EduForger/app/backend
 
 # Set Stripe Secret Key
 firebase functions:config:set stripe.secret_key="sk_test_YOUR_TEST_KEY_HERE"

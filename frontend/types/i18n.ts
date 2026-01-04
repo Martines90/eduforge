@@ -197,7 +197,7 @@ export interface Translations {
   Next: string;
   "Failed to register user. Please try again.": string;
   "Failed to verify code. Please try again.": string;
-  "Registration successful! Welcome to EduForge.": string;
+  "Registration successful! Welcome to EduForger.": string;
   "Please complete the reCAPTCHA verification": string;
   "reCAPTCHA verification failed. Please try again.": string;
 
@@ -319,9 +319,9 @@ export interface Translations {
   "Registration successful, your 3-month free trial subscription just started!": string;
 
   // Home Page - Guest Users
-  "Welcome to EduForge": string;
-  "EduForge is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.": string;
-  "As a teacher you can generate any curriculum-specific EduForge task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!": string;
+  "Welcome to EduForger": string;
+  "EduForger is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.": string;
+  "As a teacher you can generate any curriculum-specific EduForger task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!": string;
   "Try It as a Teacher": string;
   "Generate engaging, curriculum-aligned tasks in seconds!": string;
   "Start Generating": string;
@@ -409,18 +409,18 @@ export interface Translations {
   "Need help? Contact our support team at": string;
 
   // Subscription Success Page
-  "Explore EduForge": string;
+  "Explore EduForger": string;
   "Browse and download tasks from our extensive library": string;
   "Get Started": string;
   "Use your 1,000 credits to start generating custom tasks": string;
   "Add Teachers to Your School": string;
   "Invite up to 10 teachers from your school to join": string;
   "Add Teachers": string;
-  "Explore EduForge features": string;
+  "Explore EduForger features": string;
   "Go to Dashboard": string;
   "Processing Your Subscription...": string;
   "Please wait while we activate your subscription": string;
-  "Welcome to EduForge!": string;
+  "Welcome to EduForger!": string;
   "Subscription Activated Successfully": string;
   Basic: string;
   Normal: string;
@@ -428,7 +428,7 @@ export interface Translations {
   "Your Credits": string;
   "Task Generation Credits Available": string;
   "View Subscription": string;
-  "Thank you for choosing EduForge. We sent a confirmation email to your inbox.": string;
+  "Thank you for choosing EduForger. We sent a confirmation email to your inbox.": string;
 
   // Task Generator Page
   "Task Generator": string;
@@ -760,4 +760,4 @@ export interface UserProfile {
  * Subject types for teachers
  * Re-export from shared types for backward compatibility
  */
-export type { Subject } from '@eduforge/shared';
+export type { Subject } from '@eduforger/shared';

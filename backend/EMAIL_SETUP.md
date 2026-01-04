@@ -1,10 +1,10 @@
-# Email Setup Guide for EduForge
+# Email Setup Guide for EduForger
 
 This guide explains how to configure email sending for user verification codes.
 
 ## Overview
 
-EduForge uses the Firebase Extension "Trigger Email from Firestore" to send verification emails. When a user registers, a verification code is generated and an email is queued in Firestore, which the extension automatically sends.
+EduForger uses the Firebase Extension "Trigger Email from Firestore" to send verification emails. When a user registers, a verification code is generated and an email is queued in Firestore, which the extension automatically sends.
 
 ## Setup Steps
 

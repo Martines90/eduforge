@@ -1,6 +1,6 @@
 # reCAPTCHA Setup Guide
 
-This document explains how to set up Google reCAPTCHA v2 for the EduForge registration flow.
+This document explains how to set up Google reCAPTCHA v2 for the EduForger registration flow.
 
 ## Overview
 
@@ -20,7 +20,7 @@ reCAPTCHA protection has been added to the registration form to prevent automate
 1. Go to [Google reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin)
 2. Click "Create" or "+" to register a new site
 3. Fill in the form:
-   - **Label**: EduForge (or your app name)
+   - **Label**: EduForger (or your app name)
    - **reCAPTCHA type**: Select **reCAPTCHA v2** → **"I'm not a robot" Checkbox**
    - **Domains**: Add your domains (e.g., `localhost`, `eduforge.app`, etc.)
    - Accept the reCAPTCHA Terms of Service

@@ -18,7 +18,7 @@ AIProviderFactory.initialize({
 const app = createApp();
 
 const server = app.listen(config.port, () => {
-  console.log("🚀 EduForge Backend Server");
+  console.log("🚀 EduForger Backend Server");
   console.log(`📡 Server running on port ${config.port}`);
   console.log(`🌍 Environment: ${config.nodeEnv}`);
   console.log(`📁 Storage directory: ${config.storageDir}`);

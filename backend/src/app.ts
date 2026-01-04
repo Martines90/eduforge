@@ -51,7 +51,7 @@ export function createApp(): Application {
     swaggerUi.serve,
     swaggerUi.setup(swaggerSpec, {
       customCss: ".swagger-ui .topbar { display: none }",
-      customSiteTitle: "EduForge API Documentation",
+      customSiteTitle: "EduForger API Documentation",
       customfavIcon: "/favicon.ico",
     })
   );

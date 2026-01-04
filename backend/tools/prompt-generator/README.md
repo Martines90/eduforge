@@ -117,7 +117,7 @@ Once you have all chunks:
 3. Use the migration script to upload to Firestore:
 
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend
+cd /Users/martonhorvath/Documents/EduForger/app/backend
 npx ts-node src/scripts/migrate-subject-mappings.ts --country=HU --subject=mathematics --file=path/to/combined.json
 ```
 
@@ -205,4 +205,4 @@ SUBJECTS.economics = {
 
 ## License
 
-MIT License - Part of the EduForge project
+MIT License - Part of the EduForger project

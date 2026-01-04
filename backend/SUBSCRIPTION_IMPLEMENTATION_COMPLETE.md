@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-A complete subscription and payment system has been implemented for EduForge with three annual subscription tiers (Basic, Normal, Pro), Stripe integration, mock payment support for development, comprehensive validation middleware, and failure handling.
+A complete subscription and payment system has been implemented for EduForger with three annual subscription tiers (Basic, Normal, Pro), Stripe integration, mock payment support for development, comprehensive validation middleware, and failure handling.
 
 ## What Was Built
 
@@ -270,13 +270,13 @@ Success page: Shows confirmation
 
 1. **Start Backend:**
    ```bash
-   cd /Users/martonhorvath/Documents/EduForge/app/backend
+   cd /Users/martonhorvath/Documents/EduForger/app/backend
    npm run dev
    ```
 
 2. **Start Frontend:**
    ```bash
-   cd /Users/martonhorvath/Documents/EduForge/app/frontend
+   cd /Users/martonhorvath/Documents/EduForger/app/frontend
    npm run dev
    ```
 

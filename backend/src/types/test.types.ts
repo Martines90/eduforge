@@ -1,5 +1,5 @@
 import { Timestamp } from "firebase-admin/firestore";
-import { Subject } from "@eduforge/shared";
+import { Subject } from "@eduforger/shared";
 
 /**
  * ============================================================================

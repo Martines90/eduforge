@@ -214,8 +214,8 @@ export const mx: Translations = {
     "Error al registrar usuario. Por favor intenta de nuevo.",
   "Failed to verify code. Please try again.":
     "Error al verificar código. Por favor intenta de nuevo.",
-  "Registration successful! Welcome to EduForge.":
-    "¡Registro exitoso! Bienvenido a EduForge.",
+  "Registration successful! Welcome to EduForger.":
+    "¡Registro exitoso! Bienvenido a EduForger.",
   "Please complete the reCAPTCHA verification":
     "Por favor completa la verificación reCAPTCHA",
   "reCAPTCHA verification failed. Please try again.":
@@ -359,11 +359,11 @@ export const mx: Translations = {
     "¡Registro exitoso, tu suscripción de prueba gratuita de 3 meses acaba de comenzar!",
 
   // Home Page - Guest Users
-  "Welcome to EduForge": "Bienvenido a EduForge",
-  "EduForge is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.":
-    "EduForge es una plataforma de generación de tareas y biblioteca de tareas específica por materia y currículo, inspirada en el mundo real, impulsada por historias/escenarios atractivos para maestros (creadores), escuelas y padres/estudiantes.",
-  "As a teacher you can generate any curriculum-specific EduForge task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!":
-    "Como maestro puedes generar cualquier tarea específica del currículo de EduForge en 10-20 segundos. ¡Las tareas se basarán en situaciones divertidas/emocionantes/aventureras/de alto riesgo que tu clase seguramente amará!",
+  "Welcome to EduForger": "Bienvenido a EduForger",
+  "EduForger is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.":
+    "EduForger es una plataforma de generación de tareas y biblioteca de tareas específica por materia y currículo, inspirada en el mundo real, impulsada por historias/escenarios atractivos para maestros (creadores), escuelas y padres/estudiantes.",
+  "As a teacher you can generate any curriculum-specific EduForger task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!":
+    "Como maestro puedes generar cualquier tarea específica del currículo de EduForger en 10-20 segundos. ¡Las tareas se basarán en situaciones divertidas/emocionantes/aventureras/de alto riesgo que tu clase seguramente amará!",
   "Try It as a Teacher": "Pruébalo como Maestro",
   "Generate engaging, curriculum-aligned tasks in seconds!":
     "¡Genera tareas atractivas y alineadas al currículo en segundos!",
@@ -474,7 +474,7 @@ export const mx: Translations = {
     "¿Necesitas ayuda? Contacta a nuestro equipo de soporte en",
 
   // Subscription Success Page
-  "Explore EduForge": "Explorar EduForge",
+  "Explore EduForger": "Explorar EduForger",
   "Browse and download tasks from our extensive library":
     "Explora y descarga tareas de nuestra extensa biblioteca",
   "Get Started": "Comenzar",
@@ -484,12 +484,12 @@ export const mx: Translations = {
   "Invite up to 10 teachers from your school to join":
     "Invita hasta 10 maestros de tu escuela a unirse",
   "Add Teachers": "Agregar Maestros",
-  "Explore EduForge features": "Explorar las funciones de EduForge",
+  "Explore EduForger features": "Explorar las funciones de EduForger",
   "Go to Dashboard": "Ir al Panel",
   "Processing Your Subscription...": "Procesando Tu Suscripción...",
   "Please wait while we activate your subscription":
     "Por favor espera mientras activamos tu suscripción",
-  "Welcome to EduForge!": "¡Bienvenido a EduForge!",
+  "Welcome to EduForger!": "¡Bienvenido a EduForger!",
   "Subscription Activated Successfully": "Suscripción Activada Exitosamente",
   Basic: "Básico",
   Normal: "Normal",
@@ -498,8 +498,8 @@ export const mx: Translations = {
   "Task Generation Credits Available":
     "Créditos de Generación de Tareas Disponibles",
   "View Subscription": "Ver Suscripción",
-  "Thank you for choosing EduForge. We sent a confirmation email to your inbox.":
-    "Gracias por elegir EduForge. Enviamos un correo de confirmación a tu bandeja de entrada.",
+  "Thank you for choosing EduForger. We sent a confirmation email to your inbox.":
+    "Gracias por elegir EduForger. Enviamos un correo de confirmación a tu bandeja de entrada.",
 
   // Task Generator Page
   "Task Generator": "Generador de Tareas",

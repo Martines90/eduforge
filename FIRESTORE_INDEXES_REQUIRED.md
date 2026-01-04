@@ -1,4 +1,4 @@
-# Required Firestore Composite Indexes for EduForge
+# Required Firestore Composite Indexes for EduForger
 
 This document lists all composite indexes required for the tasks collection queries.
 

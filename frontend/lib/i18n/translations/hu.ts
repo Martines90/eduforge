@@ -214,8 +214,8 @@ export const hu: Translations = {
     "Nem sikerült regisztrálni. Kérjük, próbálja újra.",
   "Failed to verify code. Please try again.":
     "Nem sikerült ellenőrizni a kódot. Kérjük, próbálja újra.",
-  "Registration successful! Welcome to EduForge.":
-    "Sikeres regisztráció! Üdvözöljük az EduForge-ban.",
+  "Registration successful! Welcome to EduForger.":
+    "Sikeres regisztráció! Üdvözöljük az EduForger-ban.",
   "Please complete the reCAPTCHA verification":
     "Kérjük, töltse ki a reCAPTCHA ellenőrzést",
   "reCAPTCHA verification failed. Please try again.":
@@ -358,11 +358,11 @@ export const hu: Translations = {
     "Sikeres regisztráció, 3 hónapos ingyenes próba előfizetése most kezdődött!",
 
   // Home Page - Guest Users
-  "Welcome to EduForge": "Üdvözöljük az EduForge-ban",
-  "EduForge is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.":
-    "Az EduForge egy tantárgy- és tanterv-specifikus, valós életből ihletett, lebilincselő történet/forgatókönyv-alapú feladatgeneráló és feladatkönyvtár platform tanárok (alkotók), iskolák, valamint szülők/diákok számára.",
-  "As a teacher you can generate any curriculum-specific EduForge task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!":
-    "Tanárként bármilyen tanterv-specifikus EduForge feladatot 10-20 másodperc alatt létrehozhat. A feladatok szórakoztató/izgalmas/kalandos/nagy téttel bíró helyzeteken alapulnak, amelyeket osztálya biztosan imádni fog!",
+  "Welcome to EduForger": "Üdvözöljük az EduForger-ban",
+  "EduForger is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.":
+    "Az EduForger egy tantárgy- és tanterv-specifikus, valós életből ihletett, lebilincselő történet/forgatókönyv-alapú feladatgeneráló és feladatkönyvtár platform tanárok (alkotók), iskolák, valamint szülők/diákok számára.",
+  "As a teacher you can generate any curriculum-specific EduForger task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!":
+    "Tanárként bármilyen tanterv-specifikus EduForger feladatot 10-20 másodperc alatt létrehozhat. A feladatok szórakoztató/izgalmas/kalandos/nagy téttel bíró helyzeteken alapulnak, amelyeket osztálya biztosan imádni fog!",
   "Try It as a Teacher": "Próbálja ki Tanárként",
   "Generate engaging, curriculum-aligned tasks in seconds!":
     "Hozzon létre lebilincselő, tantervhez igazított feladatokat másodpercek alatt!",
@@ -470,7 +470,7 @@ export const hu: Translations = {
     "Segítségre van szüksége? Vegye fel a kapcsolatot ügyfélszolgálatunkkal:",
 
   // Subscription Success Page
-  "Explore EduForge": "Fedezze Fel az EduForge-t",
+  "Explore EduForger": "Fedezze Fel az EduForger-t",
   "Browse and download tasks from our extensive library":
     "Böngésszen és töltsön le feladatokat kiterjedt könyvtárunkból",
   "Get Started": "Kezdjen Hozzá",
@@ -480,12 +480,12 @@ export const hu: Translations = {
   "Invite up to 10 teachers from your school to join":
     "Hívjon meg maximum 10 tanárt iskolájából a csatlakozáshoz",
   "Add Teachers": "Tanárok Hozzáadása",
-  "Explore EduForge features": "Fedezze fel az EduForge funkcióit",
+  "Explore EduForger features": "Fedezze fel az EduForger funkcióit",
   "Go to Dashboard": "Irányítópultra",
   "Processing Your Subscription...": "Előfizetés Feldolgozása...",
   "Please wait while we activate your subscription":
     "Kérjük, várjon, amíg aktiváljuk előfizetését",
-  "Welcome to EduForge!": "Üdvözöljük az EduForge-ban!",
+  "Welcome to EduForger!": "Üdvözöljük az EduForger-ban!",
   "Subscription Activated Successfully": "Előfizetés Sikeresen Aktiválva",
   Basic: "Alap",
   Normal: "Normál",
@@ -493,8 +493,8 @@ export const hu: Translations = {
   "Your Credits": "Kreditjei",
   "Task Generation Credits Available": "Elérhető Feladatgenerálási Kreditek",
   "View Subscription": "Előfizetés Megtekintése",
-  "Thank you for choosing EduForge. We sent a confirmation email to your inbox.":
-    "Köszönjük, hogy az EduForge-t választotta. Megerősítő e-mailt küldtünk postafiókjába.",
+  "Thank you for choosing EduForger. We sent a confirmation email to your inbox.":
+    "Köszönjük, hogy az EduForger-t választotta. Megerősítő e-mailt küldtünk postafiókjába.",
 
   // Task Generator Page
   "Task Generator": "Feladatgenerátor",

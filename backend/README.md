@@ -1,4 +1,4 @@
-# EduForge Backend
+# EduForger Backend
 
 A TypeScript-based Express.js backend for generating educational math tasks with AI-powered text and image generation.
 

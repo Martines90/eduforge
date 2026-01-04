@@ -10,7 +10,7 @@ import {
   UpdateTestTaskRequest,
   ReorderTasksRequest,
 } from "../types/test.types";
-import { Subject, isValidSubject } from "@eduforge/shared";
+import { Subject, isValidSubject } from "@eduforger/shared";
 
 /**
  * Test Controller

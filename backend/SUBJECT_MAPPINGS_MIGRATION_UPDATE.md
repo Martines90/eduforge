@@ -213,7 +213,7 @@ if (require.main === module) {
 
 ### Migrate for Hungary (HU):
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend
+cd /Users/martonhorvath/Documents/EduForger/app/backend
 npm run migrate:subjects -- --country HU --clear
 ```
 

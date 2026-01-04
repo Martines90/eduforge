@@ -355,7 +355,7 @@ const loginUser = async (email: string, password: string) => {
 ```
 ┌──────────────────────────────────────────────────────────┐
 │  Create Your Account                                     │
-│  Join EduForge to create and manage educational tasks   │
+│  Join EduForger to create and manage educational tasks   │
 ├──────────────────────────────────────────────────────────┤
 │  Progress: [●━━━━━━━━━━━━━━━━━━━━━━━━] Step 1 of 2      │
 ├──────────────────────────────────────────────────────────┤
@@ -380,7 +380,7 @@ const loginUser = async (email: string, password: string) => {
 ```
 ┌──────────────────────────────────────────────────────────┐
 │  Create Your Account                                     │
-│  Join EduForge to create and manage educational tasks   │
+│  Join EduForger to create and manage educational tasks   │
 ├──────────────────────────────────────────────────────────┤
 │  Progress: [████████████████━━━━━━━━] Step 2 of 2        │
 ├──────────────────────────────────────────────────────────┤

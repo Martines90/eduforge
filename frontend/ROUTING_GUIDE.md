@@ -1,6 +1,6 @@
 # Route Protection & Redirection Guide
 
-This guide explains how authentication, authorization, and 404 handling work in the EduForge frontend application.
+This guide explains how authentication, authorization, and 404 handling work in the EduForger frontend application.
 
 ## Overview
 

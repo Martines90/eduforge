@@ -505,9 +505,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     if (typeof window !== 'undefined') {
       localStorage.removeItem('authToken');
       // Clear last unpublished task on logout
-      localStorage.removeItem('eduforge_last_unpublished_task');
+      localStorage.removeItem('eduforger_last_unpublished_task');
       // Clear guest task views on logout
-      localStorage.removeItem('eduforge_guest_task_views');
+      localStorage.removeItem('eduforger_guest_task_views');
       // Dispatch custom event to notify useFirebaseToken hook
       window.dispatchEvent(new Event('authTokenChanged'));
     }

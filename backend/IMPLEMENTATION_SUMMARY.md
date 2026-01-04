@@ -2,7 +2,7 @@
 
 ## Overview
 
-Successfully implemented authentication and authorization middleware for the EduForge backend API, specifically protecting the task generation endpoint to require both authentication and teacher role.
+Successfully implemented authentication and authorization middleware for the EduForger backend API, specifically protecting the task generation endpoint to require both authentication and teacher role.
 
 ## What Was Implemented
 

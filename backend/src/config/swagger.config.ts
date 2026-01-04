@@ -4,12 +4,12 @@ import { config } from "../config";
 const swaggerDefinition = {
   openapi: "3.0.0",
   info: {
-    title: "EduForge API",
+    title: "EduForger API",
     version: "1.0.0",
     description:
       "RESTful API for generating educational math tasks with AI-powered text and image generation using OpenAI's GPT-4o and DALL-E-3.",
     contact: {
-      name: "EduForge Team",
+      name: "EduForger Team",
     },
     license: {
       name: "MIT",

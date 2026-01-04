@@ -9,7 +9,7 @@ No installation required! Just Node.js is needed (already part of your project).
 ### Step 1: Run the Generator
 
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend/tools/prompt-generator
+cd /Users/martonhorvath/Documents/EduForger/app/backend/tools/prompt-generator
 
 # Example: Hungarian Mathematics
 node subject_mapping_prompt_generator.js --country-code=HU --subject=mathematics
@@ -118,7 +118,7 @@ node -e "console.log(JSON.parse(require('fs').readFileSync('hu_mathematics_curri
 ### 4. Upload to Firestore (using your existing migration script)
 
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend
+cd /Users/martonhorvath/Documents/EduForger/app/backend
 
 # Upload to Firestore
 npx ts-node src/scripts/migrate-subject-mappings.ts \

@@ -1,4 +1,4 @@
-# Authentication Patterns in EduForge
+# Authentication Patterns in EduForger
 
 This document describes the authentication and authorization patterns used throughout the application.
 

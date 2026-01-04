@@ -246,7 +246,7 @@ curl http://localhost:3000/api/subject-mappings?country=HU
 
 ### Example 1: Fresh Migration for Hungary
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend
+cd /Users/martonhorvath/Documents/EduForger/app/backend
 npm run migrate:subjects -- --country HU --subject mathematics --clear
 ```
 

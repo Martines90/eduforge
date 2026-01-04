@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useUser } from '@/lib/context/UserContext';
 
-const GUEST_TOKEN_KEY = 'eduforge_guest_token';
-const GUEST_SESSION_KEY = 'eduforge_guest_session';
-const GUEST_LAST_TASK_KEY = 'eduforge_guest_last_task';
+const GUEST_TOKEN_KEY = 'eduforger_guest_token';
+const GUEST_SESSION_KEY = 'eduforger_guest_session';
+const GUEST_LAST_TASK_KEY = 'eduforger_guest_last_task';
 
 // Universal key for last unpublished task (works for both guests and registered users)
-export const LAST_UNPUBLISHED_TASK_KEY = 'eduforge_last_unpublished_task';
+export const LAST_UNPUBLISHED_TASK_KEY = 'eduforger_last_unpublished_task';
 
 export interface GuestSessionData {
   token: string;

@@ -1,12 +1,12 @@
-# EduForge Task Generator API - Postman Collection
+# EduForger Task Generator API - Postman Collection
 
-This directory contains Postman collections and environments for testing the EduForge Task Generator API.
+This directory contains Postman collections and environments for testing the EduForger Task Generator API.
 
 ## Files
 
-- **EduForge-Task-Generator.postman_collection.json** - Main API collection with example requests
-- **EduForge-Local.postman_environment.json** - Local development environment
-- **EduForge-Production.postman_environment.json** - Production environment
+- **EduForger-Task-Generator.postman_collection.json** - Main API collection with example requests
+- **EduForger-Local.postman_environment.json** - Local development environment
+- **EduForger-Production.postman_environment.json** - Production environment
 
 ## Quick Start
 
@@ -19,8 +19,8 @@ This directory contains Postman collections and environments for testing the Edu
 
 ### 2. Select Environment
 
-- For local development: Select **EduForge - Local Development** from the environment dropdown (top right)
-- For production: Select **EduForge - Production** and update the `api_key` variable
+- For local development: Select **EduForger - Local Development** from the environment dropdown (top right)
+- For production: Select **EduForger - Production** and update the `api_key` variable
 
 ### 3. Start Your Server
 

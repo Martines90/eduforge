@@ -1,7 +1,7 @@
 {
-  "name": "@eduforge/shared",
+  "name": "@eduforger/shared",
   "version": "1.0.0",
-  "description": "Shared types and utilities for EduForge",
+  "description": "Shared types and utilities for EduForger",
   "main": "types/index.ts",
   "types": "types/index.ts",
   "private": true,

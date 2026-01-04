@@ -96,7 +96,7 @@
 │                   Modal 2: Registration (NEW)                   │
 │  ┌───────────────────────────────────────────────────┐         │
 │  │  👤 Create Your Account                           │         │
-│  │  Join EduForge to create and manage educational   │         │
+│  │  Join EduForger to create and manage educational   │         │
 │  │  tasks                                             │         │
 │  │                                                    │         │
 │  │  ℹ️ This is a simplified registration. In         │         │
@@ -128,7 +128,7 @@
 ```
 STEP 1: COUNTRY
 ┌─────────────────────────────────────────┐
-│  Welcome to EduForge! 🎓                │
+│  Welcome to EduForger! 🎓                │
 │  Please select your country...          │
 │                                         │
 │  ┌────────┐  ┌────────┐                │
@@ -142,7 +142,7 @@ STEP 1: COUNTRY
 STEP 2: REGISTRATION (NEW)
 ┌─────────────────────────────────────────┐
 │  👤 Create Your Account                 │
-│  Join EduForge to create and manage... │
+│  Join EduForger to create and manage... │
 │                                         │
 │  ℹ️ Simplified registration note        │
 │                                         │
@@ -475,7 +475,7 @@ Submit Form
 ```
 Modal Opens
 → "Dialog: Create Your Account"
-→ "Join EduForge to create and manage educational tasks"
+→ "Join EduForger to create and manage educational tasks"
 
 Name Field Focus
 → "Full Name, text input, required"

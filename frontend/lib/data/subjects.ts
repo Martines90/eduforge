@@ -6,7 +6,7 @@ import {
   getAllSubjectValues,
   isValidSubject,
   getSubjectOption
-} from "@eduforge/shared";
+} from "@eduforger/shared";
 
 /**
  * Re-export types from shared for backward compatibility

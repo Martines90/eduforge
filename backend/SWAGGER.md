@@ -126,7 +126,7 @@ The Swagger documentation is configured in `src/config/swagger.config.ts`:
 {
   openapi: "3.0.0",
   info: {
-    title: "EduForge API",
+    title: "EduForger API",
     version: "1.0.0",
     description: "...",
   },

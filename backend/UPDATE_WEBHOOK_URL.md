@@ -22,7 +22,7 @@ Your Stripe webhook is currently pointing to the **wrong URL** and needs to be u
 Go to: **https://dashboard.stripe.com/webhooks**
 
 ### Step 2: Find Your Webhook
-- Look for webhook named: **"EduForge Subscriptions"**
+- Look for webhook named: **"EduForger Subscriptions"**
 - Destination ID: `we_1SjjVS2NF3WxtUjyaTIIjBaX`
 - Click on it to open details
 
@@ -60,7 +60,7 @@ In the Stripe Dashboard webhook page:
 
 ### Test 2: Check Firebase Logs
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend
+cd /Users/martonhorvath/Documents/EduForger/app/backend
 firebase functions:log --limit 20
 ```
 
@@ -78,7 +78,7 @@ Once webhook URL is updated, test the full flow:
 
 ### 1. Start Local Frontend
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/frontend
+cd /Users/martonhorvath/Documents/EduForger/app/frontend
 npm run dev
 ```
 
@@ -133,7 +133,7 @@ After you update the webhook URL:
 ## 🎯 Quick Checklist
 
 - [ ] Open Stripe Dashboard webhooks page
-- [ ] Find "EduForge Subscriptions" webhook
+- [ ] Find "EduForger Subscriptions" webhook
 - [ ] Update endpoint URL to: `https://api-dvzsjor7ja-uc.a.run.app/api/subscription/webhook`
 - [ ] Send test webhook event
 - [ ] Verify 200 OK response

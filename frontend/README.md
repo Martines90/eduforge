@@ -1,4 +1,4 @@
-# EduForge Frontend
+# EduForger Frontend
 
 Modern, scalable Next.js 14 frontend application for educational task creation.
 

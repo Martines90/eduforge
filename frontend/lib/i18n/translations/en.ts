@@ -210,8 +210,8 @@ export const en: Translations = {
     "Failed to register user. Please try again.",
   "Failed to verify code. Please try again.":
     "Failed to verify code. Please try again.",
-  "Registration successful! Welcome to EduForge.":
-    "Registration successful! Welcome to EduForge.",
+  "Registration successful! Welcome to EduForger.":
+    "Registration successful! Welcome to EduForger.",
   "Please complete the reCAPTCHA verification":
     "Please complete the reCAPTCHA verification",
   "reCAPTCHA verification failed. Please try again.":
@@ -354,11 +354,11 @@ export const en: Translations = {
     "Registration successful, your 3-month free trial subscription just started!",
 
   // Home Page - Guest Users
-  "Welcome to EduForge": "Welcome to EduForge",
-  "EduForge is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.":
-    "EduForge is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.",
-  "As a teacher you can generate any curriculum-specific EduForge task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!":
-    "As a teacher you can generate any curriculum-specific EduForge task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!",
+  "Welcome to EduForger": "Welcome to EduForger",
+  "EduForger is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.":
+    "EduForger is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.",
+  "As a teacher you can generate any curriculum-specific EduForger task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!":
+    "As a teacher you can generate any curriculum-specific EduForger task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!",
   "Try It as a Teacher": "Try It as a Teacher",
   "Generate engaging, curriculum-aligned tasks in seconds!":
     "Generate engaging, curriculum-aligned tasks in seconds!",
@@ -468,7 +468,7 @@ export const en: Translations = {
     "Need help? Contact our support team at",
 
   // Subscription Success Page
-  "Explore EduForge": "Explore EduForge",
+  "Explore EduForger": "Explore EduForger",
   "Browse and download tasks from our extensive library":
     "Browse and download tasks from our extensive library",
   "Get Started": "Get Started",
@@ -478,12 +478,12 @@ export const en: Translations = {
   "Invite up to 10 teachers from your school to join":
     "Invite up to 10 teachers from your school to join",
   "Add Teachers": "Add Teachers",
-  "Explore EduForge features": "Explore EduForge features",
+  "Explore EduForger features": "Explore EduForger features",
   "Go to Dashboard": "Go to Dashboard",
   "Processing Your Subscription...": "Processing Your Subscription...",
   "Please wait while we activate your subscription":
     "Please wait while we activate your subscription",
-  "Welcome to EduForge!": "Welcome to EduForge!",
+  "Welcome to EduForger!": "Welcome to EduForger!",
   "Subscription Activated Successfully": "Subscription Activated Successfully",
   Basic: "Basic",
   Normal: "Normal",
@@ -491,8 +491,8 @@ export const en: Translations = {
   "Your Credits": "Your Credits",
   "Task Generation Credits Available": "Task Generation Credits Available",
   "View Subscription": "View Subscription",
-  "Thank you for choosing EduForge. We sent a confirmation email to your inbox.":
-    "Thank you for choosing EduForge. We sent a confirmation email to your inbox.",
+  "Thank you for choosing EduForger. We sent a confirmation email to your inbox.":
+    "Thank you for choosing EduForger. We sent a confirmation email to your inbox.",
 
   // Task Generator Page
   "Task Generator": "Task Generator",

@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { GeneratedTask } from '@/types/task';
 
-const LAST_UNPUBLISHED_TASK_KEY = 'eduforge_last_unpublished_task';
+const LAST_UNPUBLISHED_TASK_KEY = 'eduforger_last_unpublished_task';
 
 export interface UseLastUnpublishedTaskReturn {
   lastTask: GeneratedTask | null;

@@ -1,6 +1,6 @@
 # Authentication & Authorization Middleware Guide
 
-This guide explains how to use authentication and authorization middleware in the EduForge backend API.
+This guide explains how to use authentication and authorization middleware in the EduForger backend API.
 
 ## Overview
 

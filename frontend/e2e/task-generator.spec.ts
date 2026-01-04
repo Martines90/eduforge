@@ -184,9 +184,9 @@ test.describe('Registered User - Task Persistence', () => {
     // Set up authenticated session
     await taskGeneratorPage.page.evaluate(() => {
       localStorage.setItem('authToken', 'mock-auth-token-123');
-      document.cookie = 'eduforge_is_registered=true';
-      document.cookie = 'eduforge_user_profile={"name":"Test Teacher","email":"test@school.edu"}';
-      document.cookie = 'eduforge_identity=teacher';
+      document.cookie = 'eduforger_is_registered=true';
+      document.cookie = 'eduforger_user_profile={"name":"Test Teacher","email":"test@school.edu"}';
+      document.cookie = 'eduforger_identity=teacher';
     });
   });
 
@@ -350,9 +350,9 @@ test.describe('Logout Behavior', () => {
     // Set up authenticated session
     await taskGeneratorPage.page.evaluate(() => {
       localStorage.setItem('authToken', 'mock-auth-token-123');
-      document.cookie = 'eduforge_is_registered=true';
-      document.cookie = 'eduforge_user_profile={"name":"Test Teacher","email":"test@school.edu"}';
-      document.cookie = 'eduforge_identity=teacher';
+      document.cookie = 'eduforger_is_registered=true';
+      document.cookie = 'eduforger_user_profile={"name":"Test Teacher","email":"test@school.edu"}';
+      document.cookie = 'eduforger_identity=teacher';
     });
   });
 

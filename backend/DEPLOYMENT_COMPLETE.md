@@ -28,7 +28,7 @@ Your Stripe webhook is currently pointing to the wrong URL. You need to update i
 
 ### Go to Stripe Dashboard:
 1. **Open:** https://dashboard.stripe.com/webhooks
-2. **Click on:** "EduForge Subscriptions" webhook
+2. **Click on:** "EduForger Subscriptions" webhook
 3. **Click:** "..."menu → "Update details"
 4. **Change Endpoint URL from:**
    ```
@@ -97,7 +97,7 @@ Since hosting wasn't deployed, use your local frontend for now:
 
 ```bash
 # Terminal 1 - Frontend (local)
-cd /Users/martonhorvath/Documents/EduForge/app/frontend
+cd /Users/martonhorvath/Documents/EduForger/app/frontend
 npm run dev
 
 # Terminal 2 - You can close local backend, production is live
@@ -170,7 +170,7 @@ Add keys to your translations file for all strings used in the page.
 ### 2. Deploy Hosting:
 
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend
+cd /Users/martonhorvath/Documents/EduForger/app/backend
 firebase deploy --only hosting
 ```
 

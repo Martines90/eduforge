@@ -16,11 +16,11 @@ Before deploying to Firebase, test the subscription flow locally:
 ### 1. Start your servers:
 ```bash
 # Terminal 1 - Backend
-cd /Users/martonhorvath/Documents/EduForge/app/backend
+cd /Users/martonhorvath/Documents/EduForger/app/backend
 npm run dev
 
 # Terminal 2 - Frontend
-cd /Users/martonhorvath/Documents/EduForge/app/frontend
+cd /Users/martonhorvath/Documents/EduForger/app/frontend
 npm run dev
 ```
 
@@ -56,7 +56,7 @@ Then:
 Run these commands from your backend directory:
 
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend
+cd /Users/martonhorvath/Documents/EduForger/app/backend
 
 # Set LIVE Stripe API Keys
 firebase functions:config:set stripe.secret_key="sk_live_YOUR_LIVE_KEY_HERE"
@@ -155,7 +155,7 @@ console.log("[Stripe Config] Initialized:", {
 
 ```bash
 # From backend directory
-cd /Users/martonhorvath/Documents/EduForge/app/backend
+cd /Users/martonhorvath/Documents/EduForger/app/backend
 
 # Build your backend
 npm run build

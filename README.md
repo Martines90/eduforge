@@ -1,4 +1,4 @@
-# EduForge
+# EduForger
 
 An educational task management platform for teachers and students, featuring AI-powered task generation, curriculum-based organization, and comprehensive task browsing capabilities.
 
@@ -6,7 +6,7 @@ An educational task management platform for teachers and students, featuring AI-
 
 ## 🎯 Project Overview
 
-EduForge is a full-stack application that enables:
+EduForger is a full-stack application that enables:
 - **Teachers**: Create, manage, and publish educational tasks aligned with curriculum standards
 - **Students**: Browse, search, and complete educational tasks organized by subject and grade level
 - **Administrators**: Manage curriculum mappings and user accounts

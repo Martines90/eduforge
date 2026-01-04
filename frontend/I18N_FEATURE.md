@@ -278,7 +278,7 @@ The `I18nProvider` wraps the entire application in `app/layout.tsx`:
 - Topic names from JSON data
 - User-generated content
 - Dynamic data from backend
-- Brand name ("EduForge")
+- Brand name ("EduForger")
 
 ## Best Practices
 
@@ -301,8 +301,8 @@ Use full phrases as keys:
 
 Don't split sentences:
 ```typescript
-✅ t('Welcome to EduForge')
-❌ t('Welcome to') + ' EduForge'
+✅ t('Welcome to EduForger')
+❌ t('Welcome to') + ' EduForger'
 ```
 
 ### 4. Handle Plurals

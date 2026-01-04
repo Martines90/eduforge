@@ -1,4 +1,4 @@
-# EduForge Task System - Implementation Guide
+# EduForger Task System - Implementation Guide
 
 ## Overview
 
@@ -47,7 +47,7 @@ If missing, place it there from the Firebase Console (Project Settings → Servi
 Ensure all dependencies are installed:
 
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend
+cd /Users/martonhorvath/Documents/EduForger/app/backend
 npm install
 ```
 
@@ -479,4 +479,4 @@ If you encounter issues:
 
 **Created:** 2024-11-27
 **Version:** 1.0
-**Project:** EduForge
+**Project:** EduForger

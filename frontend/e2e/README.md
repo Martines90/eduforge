@@ -1,6 +1,6 @@
-# EduForge E2E Tests
+# EduForger E2E Tests
 
-End-to-end tests for EduForge using Playwright.
+End-to-end tests for EduForger using Playwright.
 
 ## Structure
 

@@ -480,7 +480,7 @@ When integrating with a real authentication system:
 - Purple gradient background (#667eea → #764ba2)
 - PersonAddIcon (48px)
 - "Create Your Account" title
-- Subtitle: "Join EduForge to create and manage educational tasks"
+- Subtitle: "Join EduForger to create and manage educational tasks"
 
 **Content:**
 - Info alert explaining simplified registration

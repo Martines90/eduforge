@@ -2,7 +2,7 @@
 
 ## Overview
 
-The EduForge database uses **country code as the first level** of organization. This approach provides:
+The EduForger database uses **country code as the first level** of organization. This approach provides:
 
 - ✅ Clear data segmentation by region
 - ✅ Simple country-specific queries

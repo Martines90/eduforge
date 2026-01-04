@@ -1,6 +1,6 @@
 # Subscription Validation and Access Control
 
-This document describes the subscription validation middleware and access control implemented for EduForge.
+This document describes the subscription validation middleware and access control implemented for EduForger.
 
 ## Overview
 

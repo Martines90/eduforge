@@ -1,7 +1,7 @@
-# EduForge Freemium Implementation
+# EduForger Freemium Implementation
 
 ## Overview
-This document tracks the implementation of the freemium model for EduForge, allowing guest users to generate 3 free tasks before requiring registration.
+This document tracks the implementation of the freemium model for EduForger, allowing guest users to generate 3 free tasks before requiring registration.
 
 ## Completed ✅
 

@@ -1,4 +1,4 @@
-# Firestore Database Schema for EduForge
+# Firestore Database Schema for EduForger
 
 ## Overview
 

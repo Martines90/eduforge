@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-const GUEST_TASK_VIEW_KEY = 'eduforge_guest_task_views';
+const GUEST_TASK_VIEW_KEY = 'eduforger_guest_task_views';
 const MAX_GUEST_VIEWS = 3;
 
 export interface UseGuestTaskViewLimitReturn {

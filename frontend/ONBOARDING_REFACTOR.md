@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes the enhanced multi-step onboarding flow for first-time visitors to EduForge. The new system guides users through country selection, role identification, and (for teachers) subject expertise and action selection.
+This document describes the enhanced multi-step onboarding flow for first-time visitors to EduForger. The new system guides users through country selection, role identification, and (for teachers) subject expertise and action selection.
 
 ## User Flow
 
@@ -64,11 +64,11 @@ All user state is persisted in cookies with 1-year expiration:
 
 ```typescript
 COOKIE_NAMES = {
-  COUNTRY: 'eduforge_country',     // Country code
-  FIRST_VISIT: 'eduforge_first_visit',
-  IDENTITY: 'eduforge_identity',   // 'teacher' | 'non-teacher'
-  ROLE: 'eduforge_role',           // 'guest' | 'registered' | 'admin'
-  SUBJECT: 'eduforge_subject',     // Selected subject
+  COUNTRY: 'eduforger_country',     // Country code
+  FIRST_VISIT: 'eduforger_first_visit',
+  IDENTITY: 'eduforger_identity',   // 'teacher' | 'non-teacher'
+  ROLE: 'eduforger_role',           // 'guest' | 'registered' | 'admin'
+  SUBJECT: 'eduforger_subject',     // Selected subject
 }
 ```
 
@@ -203,8 +203,8 @@ interface UserContextType {
 ```
 
 ### Cookie Integration
-- `setIdentity()` - saves to `eduforge_identity` cookie
-- `setSubject()` - saves to `eduforge_subject` cookie
+- `setIdentity()` - saves to `eduforger_identity` cookie
+- `setSubject()` - saves to `eduforger_subject` cookie
 - All values loaded from cookies on app initialization
 - Returning users automatically restore their preferences
 
@@ -271,11 +271,11 @@ interface UserContextType {
 6. **Verify persistence:**
    - Refresh page - no modals should appear
    - Check DevTools → Application → Cookies
-   - Should see: eduforge_country, eduforge_identity, eduforge_subject
+   - Should see: eduforger_country, eduforger_identity, eduforger_subject
 
 ### Cookie Inspection
 ```javascript
-// View all EduForge cookies
+// View all EduForger cookies
 document.cookie.split(';').filter(c => c.includes('eduforge'))
 ```
 
@@ -382,6 +382,6 @@ The enhanced onboarding flow successfully:
 **Status:** ✅ Complete and Production Ready
 
 **Role for Non-Teachers:** Set to `'guest'` by default
-**Identity Storage:** Saved in `eduforge_identity` cookie
-**Subject Storage:** Saved in `eduforge_subject` cookie (teachers only)
+**Identity Storage:** Saved in `eduforger_identity` cookie
+**Subject Storage:** Saved in `eduforger_subject` cookie (teachers only)
 **Navigation:** Automatic based on user selections

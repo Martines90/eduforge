@@ -31,7 +31,7 @@ All static UI text translates automatically:
 
 ### What's NOT Translated
 - Topic names from `navigation_mapping.json` (stays as-is)
-- Brand name "EduForge"
+- Brand name "EduForger"
 - User-generated content
 
 ## Usage Example

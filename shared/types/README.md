@@ -1,6 +1,6 @@
 # Shared Types
 
-This directory contains the **single source of truth** for all database schemas and shared types used across the EduForge application.
+This directory contains the **single source of truth** for all database schemas and shared types used across the EduForger application.
 
 ## 📁 Structure
 

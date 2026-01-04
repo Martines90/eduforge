@@ -41,7 +41,7 @@
       "@/data/*": [
         "./data/*"
       ],
-      "@eduforge/shared": [
+      "@eduforger/shared": [
         "../shared/types"
       ]
     }

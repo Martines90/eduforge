@@ -10,7 +10,7 @@ import theme from '@/lib/theme';
 import '@/styles/globals.scss';
 
 export const metadata: Metadata = {
-  title: 'EduForge - Task Creator',
+  title: 'EduForger - Task Creator',
   description: 'Create educational tasks based on curriculum topics',
 };
 

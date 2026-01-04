@@ -17,7 +17,7 @@ export const Logo: React.FC<LogoProps> = ({ className }) => {
   return (
     <Link href="/" className={`${styles.logo} ${className || ''}`}>
       <Typography variant="h6" component="span" className={styles.text}>
-        EduForge
+        EduForger
       </Typography>
     </Link>
   );

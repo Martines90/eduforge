@@ -9,13 +9,13 @@ test.describe('Home Page - Teacher View', () => {
     // Mock teacher user state with proper cookies
     await page.context().addCookies([
       {
-        name: 'eduforge_is_registered',
+        name: 'eduforger_is_registered',
         value: 'true',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_user_profile',
+        name: 'eduforger_user_profile',
         value: JSON.stringify({
           name: 'Test Teacher',
           email: 'test.teacher@school.edu',
@@ -26,25 +26,25 @@ test.describe('Home Page - Teacher View', () => {
         path: '/',
       },
       {
-        name: 'eduforge_role',
+        name: 'eduforger_role',
         value: 'registered',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_identity',
+        name: 'eduforger_identity',
         value: 'teacher',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_subject',
+        name: 'eduforger_subject',
         value: 'mathematics',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_country',
+        name: 'eduforger_country',
         value: 'US',
         domain: 'localhost',
         path: '/',
@@ -63,7 +63,7 @@ test.describe('Home Page - Teacher View', () => {
 
   test('should display both Create Task and Search Tasks cards for teachers', async ({ page }) => {
     // Verify page title
-    const pageTitle = page.getByRole('heading', { name: /EduForge/i, level: 1 });
+    const pageTitle = page.getByRole('heading', { name: /EduForger/i, level: 1 });
     await expect(pageTitle).toBeVisible();
 
     // Verify subtitle (rendered as Typography, not heading)
@@ -135,13 +135,13 @@ test.describe('Home Page - Non-Teacher View', () => {
     // Mock non-teacher user state with proper cookies
     await page.context().addCookies([
       {
-        name: 'eduforge_is_registered',
+        name: 'eduforger_is_registered',
         value: 'true',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_user_profile',
+        name: 'eduforger_user_profile',
         value: JSON.stringify({
           name: 'Test User',
           email: 'test.user@example.com',
@@ -152,19 +152,19 @@ test.describe('Home Page - Non-Teacher View', () => {
         path: '/',
       },
       {
-        name: 'eduforge_role',
+        name: 'eduforger_role',
         value: 'registered',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_identity',
+        name: 'eduforger_identity',
         value: 'non-teacher',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_country',
+        name: 'eduforger_country',
         value: 'US',
         domain: 'localhost',
         path: '/',
@@ -183,7 +183,7 @@ test.describe('Home Page - Non-Teacher View', () => {
 
   test('should display only Search Tasks card for non-teachers', async ({ page }) => {
     // Verify page title
-    const pageTitle = page.getByRole('heading', { name: /EduForge/i, level: 1 });
+    const pageTitle = page.getByRole('heading', { name: /EduForger/i, level: 1 });
     await expect(pageTitle).toBeVisible();
 
     // Verify subtitle (rendered as Typography, not heading)
@@ -239,13 +239,13 @@ test.describe('Home Page - Mobile View', () => {
     // Mock teacher user state with proper cookies
     await page.context().addCookies([
       {
-        name: 'eduforge_is_registered',
+        name: 'eduforger_is_registered',
         value: 'true',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_user_profile',
+        name: 'eduforger_user_profile',
         value: JSON.stringify({
           name: 'Mobile Teacher',
           email: 'mobile@school.edu',
@@ -256,25 +256,25 @@ test.describe('Home Page - Mobile View', () => {
         path: '/',
       },
       {
-        name: 'eduforge_role',
+        name: 'eduforger_role',
         value: 'registered',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_identity',
+        name: 'eduforger_identity',
         value: 'teacher',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_subject',
+        name: 'eduforger_subject',
         value: 'mathematics',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_country',
+        name: 'eduforger_country',
         value: 'US',
         domain: 'localhost',
         path: '/',
@@ -314,13 +314,13 @@ test.describe('Home Page - Mobile View', () => {
     // Mock non-teacher user state with proper cookies
     await page.context().addCookies([
       {
-        name: 'eduforge_is_registered',
+        name: 'eduforger_is_registered',
         value: 'true',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_user_profile',
+        name: 'eduforger_user_profile',
         value: JSON.stringify({
           name: 'Mobile User',
           email: 'mobile.user@example.com',
@@ -331,19 +331,19 @@ test.describe('Home Page - Mobile View', () => {
         path: '/',
       },
       {
-        name: 'eduforge_role',
+        name: 'eduforger_role',
         value: 'registered',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_identity',
+        name: 'eduforger_identity',
         value: 'non-teacher',
         domain: 'localhost',
         path: '/',
       },
       {
-        name: 'eduforge_country',
+        name: 'eduforger_country',
         value: 'US',
         domain: 'localhost',
         path: '/',

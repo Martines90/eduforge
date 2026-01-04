@@ -1,8 +1,8 @@
-# EduForge Subscription System
+# EduForger Subscription System
 
 ## Overview
 
-This document describes the subscription system implementation for EduForge, including payment processing via Stripe, subscription tiers, and the mock payment system for localhost testing.
+This document describes the subscription system implementation for EduForger, including payment processing via Stripe, subscription tiers, and the mock payment system for localhost testing.
 
 ## Subscription Tiers
 
@@ -28,19 +28,19 @@ This document describes the subscription system implementation for EduForge, inc
 - **Features**:
   - Everything in Basic
   - **1,000 task creation credits**
-  - Access to EduForge creator contests
+  - Access to EduForger creator contests
   - Access to private Discord channel
-  - 10% discount on EduForge webstore
+  - 10% discount on EduForger webstore
 
 ### 4. Pro - School License (€599/year)
 - **Price**: €599/year
 - **Features**:
   - **10,000 task creation credits**
   - Add up to 10 teachers from your school
-  - Can attend "Best School of the Year" EduForge contest/ranking
+  - Can attend "Best School of the Year" EduForger contest/ranking
   - Priority 24-hour email support
   - Unlimited custom task collections
-  - 15% discount on EduForge webstore
+  - 15% discount on EduForger webstore
 
 ## Backend Implementation
 
@@ -174,13 +174,13 @@ POST /api/subscription/checkout-success
 
 2. **Create Products & Prices**
    ```
-   - Product: EduForge Basic Annual
+   - Product: EduForger Basic Annual
      Price: €99/year (Recurring)
 
-   - Product: EduForge Normal Annual
+   - Product: EduForger Normal Annual
      Price: €199/year (Recurring)
 
-   - Product: EduForge Pro Annual
+   - Product: EduForger Pro Annual
      Price: €599/year (Recurring)
    ```
 

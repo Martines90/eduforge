@@ -44,7 +44,7 @@ export default function Home() {
         }}
       >
         <Typography variant="h1" component="h1" gutterBottom textAlign="center">
-          EduForge
+          EduForger
         </Typography>
         <Typography variant="h5" component="div" color="text.secondary" paragraph textAlign="center" mb={4}>
           {t('Educational Task Platform')}
@@ -69,13 +69,13 @@ export default function Home() {
             {/* Introduction Section */}
             <Paper elevation={2} sx={{ p: 5, mb: 4, background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%)' }}>
               <Typography variant="h4" component="h2" gutterBottom textAlign="center" sx={{ mb: 3, fontWeight: 600 }}>
-                {t('Welcome to EduForge')}
+                {t('Welcome to EduForger')}
               </Typography>
               <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center', mb: 3 }}>
-                {t('EduForge is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.')}
+                {t('EduForger is a subject and curriculum-specific real-world inspired engaging story/scenario-driven task generator and task library platform for teachers (creators), schools, and for parents/students.')}
               </Typography>
               <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center', mb: 3 }}>
-                {t('As a teacher you can generate any curriculum-specific EduForge task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!')}
+                {t('As a teacher you can generate any curriculum-specific EduForger task within 10-20 seconds. The tasks will be based on fun/exciting/adventurous/high-stake situations that your class will love for sure!')}
               </Typography>
             </Paper>
 

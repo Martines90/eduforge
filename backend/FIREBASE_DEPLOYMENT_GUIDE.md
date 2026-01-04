@@ -1,6 +1,6 @@
 # Firebase Deployment Guide
 
-Complete guide for deploying Firestore indexes and security rules for EduForge.
+Complete guide for deploying Firestore indexes and security rules for EduForger.
 
 ## 📋 Prerequisites
 

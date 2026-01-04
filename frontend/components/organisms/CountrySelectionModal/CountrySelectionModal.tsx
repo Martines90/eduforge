@@ -61,7 +61,7 @@ export const CountrySelectionModal: React.FC<CountrySelectionModalProps> = ({
     >
       <DialogTitle className={styles.title}>
         <Typography variant="h4" component="div" className={styles.titleText}>
-          Welcome to EduForge! 🎓
+          Welcome to EduForger! 🎓
         </Typography>
         <Typography variant="body1" color="text.secondary" className={styles.subtitle}>
           Please select your country and language to continue

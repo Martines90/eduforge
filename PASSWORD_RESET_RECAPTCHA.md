@@ -90,7 +90,7 @@ export async function sendPasswordResetCode(req: Request, res: Response): Promis
     await db.collection('mail').add({
       to: email.toLowerCase(),
       message: {
-        subject: 'EduForge - Password Reset Code',
+        subject: 'EduForger - Password Reset Code',
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
             <h2 style="color: #1976d2;">Password Reset Request</h2>

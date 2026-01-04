@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/frontend
+cd /Users/martonhorvath/Documents/EduForger/app/frontend
 npm install
 ```
 

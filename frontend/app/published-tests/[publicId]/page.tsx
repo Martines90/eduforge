@@ -257,7 +257,7 @@ export default function PublishedTestPage() {
         <Typography variant="body2" color="text.secondary">
           {t('This is a publicly shared test. You can create your own tests at')}{' '}
           <a href="/" style={{ color: 'inherit' }}>
-            EduForge
+            EduForger
           </a>
         </Typography>
       </Box>

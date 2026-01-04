@@ -68,7 +68,7 @@ prompts/
 ### Complete Hungarian (All Subjects)
 
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend/tools/prompt-generator
+cd /Users/martonhorvath/Documents/EduForger/app/backend/tools/prompt-generator
 
 # Already generated:
 # ✅ node subject_mapping_prompt_generator.js --country-code=HU --subject=mathematics
@@ -85,7 +85,7 @@ node subject_mapping_prompt_generator.js --country-code=HU --subject=literature
 ### Complete Mexican (All Subjects)
 
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend/tools/prompt-generator
+cd /Users/martonhorvath/Documents/EduForger/app/backend/tools/prompt-generator
 
 # Already generated:
 # ✅ node subject_mapping_prompt_generator.js --country-code=MX --subject=biology
@@ -124,7 +124,7 @@ node subject_mapping_prompt_generator.js --country-code=MX --subject=literature
 
 6. **Upload to Firestore**:
    ```bash
-   cd /Users/martonhorvath/Documents/EduForge/app/backend
+   cd /Users/martonhorvath/Documents/EduForger/app/backend
    npx ts-node src/scripts/migrate-subject-mappings.ts \
      --country=HU \
      --subject=biology \
@@ -196,6 +196,6 @@ Each generated prompt will produce approximately:
 To update this inventory:
 
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend/tools/prompt-generator
+cd /Users/martonhorvath/Documents/EduForger/app/backend/tools/prompt-generator
 ls -lh prompts/*/*.txt
 ```

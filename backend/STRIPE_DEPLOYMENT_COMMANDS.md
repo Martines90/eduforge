@@ -34,7 +34,7 @@
 Copy and paste these commands (run from `/backend` directory):
 
 ```bash
-cd /Users/martonhorvath/Documents/EduForge/app/backend
+cd /Users/martonhorvath/Documents/EduForger/app/backend
 
 # Set LIVE Stripe Secret Key
 firebase functions:config:set stripe.secret_key="sk_live_YOUR_LIVE_KEY_HERE"
@@ -148,7 +148,7 @@ Check that:
 
 Check webhook delivery in Stripe Dashboard:
 1. Go to: https://dashboard.stripe.com/webhooks
-2. Click on "EduForge Subscriptions" webhook
+2. Click on "EduForger Subscriptions" webhook
 3. Check "Recent deliveries" tab
 4. Should see `checkout.session.completed` event with ✅ status
 
@@ -235,7 +235,7 @@ Before accepting real payments:
 
 ```bash
 # 1. Navigate to backend
-cd /Users/martonhorvath/Documents/EduForge/app/backend
+cd /Users/martonhorvath/Documents/EduForger/app/backend
 
 # 2. Set all Firebase config in one command
 firebase functions:config:set \

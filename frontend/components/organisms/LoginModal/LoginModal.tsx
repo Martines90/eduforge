@@ -100,7 +100,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
           <LoginIcon sx={{ fontSize: 48 }} />
         </Box>
         <Typography variant="h4" component="div" className={styles.titleText}>
-          Welcome to EduForge
+          Welcome to EduForger
         </Typography>
       </DialogTitle>
 

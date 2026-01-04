@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Mock payments in EduForge are automatically enabled in development mode.** This means when you test on localhost, you **will NOT see the Stripe checkout page**. Instead, you'll be immediately redirected to the success page with a simulated payment.
+**Mock payments in EduForger are automatically enabled in development mode.** This means when you test on localhost, you **will NOT see the Stripe checkout page**. Instead, you'll be immediately redirected to the success page with a simulated payment.
 
 ## How Mock Payments Work
 

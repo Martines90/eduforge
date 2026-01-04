@@ -92,7 +92,7 @@ function SuccessPageContent() {
     switch (currentTier) {
       case 'basic':
         return {
-          title: t('Explore EduForge'),
+          title: t('Explore EduForger'),
           description: t('Browse and download tasks from our extensive library'),
           buttonText: t('Get Started'),
           route: '/', // TODO: Change to '/tasks' when task library page is created
@@ -114,7 +114,7 @@ function SuccessPageContent() {
       default:
         return {
           title: t('Get Started'),
-          description: t('Explore EduForge features'),
+          description: t('Explore EduForger features'),
           buttonText: t('Go to Dashboard'),
           route: '/',
         };
@@ -178,7 +178,7 @@ function SuccessPageContent() {
           </Box>
 
           <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold' }}>
-            {t('Welcome to EduForge!')}
+            {t('Welcome to EduForger!')}
           </Typography>
 
           <Typography variant="h5" sx={{ mb: 1, opacity: 0.9 }}>
@@ -261,7 +261,7 @@ function SuccessPageContent() {
 
         <Box sx={{ mt: 4, textAlign: 'center' }}>
           <Typography variant="body2" color="text.secondary">
-            {t('Thank you for choosing EduForge. We sent a confirmation email to your inbox.')}
+            {t('Thank you for choosing EduForger. We sent a confirmation email to your inbox.')}
           </Typography>
         </Box>
       </Container>

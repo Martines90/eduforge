@@ -849,7 +849,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
           severity="success"
           sx={{ width: "100%" }}
         >
-          {t("Registration successful! Welcome to EduForge.")}
+          {t("Registration successful! Welcome to EduForger.")}
         </Alert>
       </Snackbar>
     </>
