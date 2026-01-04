@@ -1,5 +1,4 @@
 import express, { Application } from "express";
-import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import swaggerUi from "swagger-ui-express";
@@ -8,6 +7,9 @@ import { config } from "./config";
 import routes from "./routes";
 import { errorHandler, notFoundHandler } from "./middleware/error-handler";
 import { swaggerSpec } from "./config/swagger.config";
+
+// Import cors using require due to CommonJS/ES6 interop issues
+const cors = require("cors");
 
 export function createApp(): Application {
   const app: Application = express();
