@@ -4,10 +4,10 @@ import React, { createContext, useContext, useState, useEffect, useCallback } fr
 import { CountryCode, UserIdentity, UserRole, Subject, UserProfile } from '@/types/i18n';
 import { DEFAULT_COUNTRY } from '@/lib/i18n/countries';
 import { getCookie, setCookie, COOKIE_NAMES, isFirstVisit, clearAuthCookies } from '@/lib/utils/cookies';
-import { detectBrowserCountry } from '@/lib/utils/language-detection';
 import { logoutUser as firebaseLogout, onAuthChange } from '@/lib/firebase/auth';
 import { getUserById } from '@/lib/firebase/users';
 import * as apiService from '@/lib/services/api.service';
+import { CountrySelectionModal } from '@/components/organisms/CountrySelectionModal/CountrySelectionModal';
 
 export type EducationalModel =
   | 'secular'
@@ -93,6 +93,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
 
   const [mounted, setMounted] = useState(false);
   const [authInitialized, setAuthInitialized] = useState(false);
+  const [showCountryModal, setShowCountryModal] = useState(false);
 
   // Listen to Firebase Auth state changes to restore session on reload
   useEffect(() => {
@@ -320,20 +321,23 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
 
     const savedCountry = getCookie(COOKIE_NAMES.COUNTRY) as CountryCode | undefined;
 
-    if (savedCountry) {
-      // Restore country preference only (auth state is managed by Firebase listener)
+    if (savedCountry && savedCountry !== 'UNSUPPORTED') {
+      // Restore valid country preference (auth state is managed by Firebase listener)
       setUser((prev) => ({
         ...prev,
         country: savedCountry,
       }));
-    } else {
-      // Detect country from browser
-      const detected = detectBrowserCountry();
-      setUser((prev) => ({
-        ...prev,
-        country: detected,
-      }));
+    } else if (!savedCountry) {
+      // No country cookie detected - middleware didn't detect IP
+      // This means we're on localhost OR IP detection failed
+      // Show country selection modal for user to choose
+      console.log('[UserContext] No country cookie, showing country selection modal');
+      setShowCountryModal(true);
+
+      // Keep default country until user selects
+      // No browser language detection - user must choose explicitly
     }
+    // If savedCountry === 'UNSUPPORTED', user is already on /country-not-supported page
   }, []);
 
   // Set country and save to cookie
@@ -540,9 +544,23 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     });
   }, []);
 
+  // Handle country selection from modal
+  const handleCountrySelect = useCallback((selectedCountry: CountryCode) => {
+    console.log('[UserContext] User selected country:', selectedCountry);
+    setCountry(selectedCountry);
+    setShowCountryModal(false);
+  }, [setCountry]);
+
   return (
     <UserContext.Provider value={{ user, authInitialized, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser, logoutUser, completeOnboarding, resetUser }}>
       {children}
+
+      {/* Show country selection modal when IP detection fails */}
+      <CountrySelectionModal
+        open={showCountryModal}
+        onSelect={handleCountrySelect}
+        detectedCountry={user.country}
+      />
     </UserContext.Provider>
   );
 }

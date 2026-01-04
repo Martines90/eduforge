@@ -16,7 +16,6 @@ import {
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { CountryCode } from '@/types/i18n';
 import { countries } from '@/lib/i18n/countries';
-import { getSuggestedCountry } from '@/lib/utils/language-detection';
 import styles from './CountrySelectionModal.module.scss';
 
 export interface CountrySelectionModalProps {
@@ -27,20 +26,18 @@ export interface CountrySelectionModalProps {
 
 /**
  * CountrySelectionModal Organism Component
- * First-visit modal for country/language selection
- * Shows detected country as suggestion
+ * First-visit modal for country selection when IP detection fails
+ * User must manually select their country
  */
 export const CountrySelectionModal: React.FC<CountrySelectionModalProps> = ({
   open,
   onSelect,
   detectedCountry,
 }) => {
+  // Pre-select detectedCountry if provided (usually the default HU)
   const [selectedCountry, setSelectedCountry] = useState<CountryCode | null>(
     detectedCountry || null
   );
-
-  const suggestion = getSuggestedCountry();
-  const showSuggestion = suggestion.confidence !== 'low';
 
   const handleConfirm = () => {
     if (selectedCountry) {
@@ -64,22 +61,11 @@ export const CountrySelectionModal: React.FC<CountrySelectionModalProps> = ({
           Welcome to EduForger! 🎓
         </Typography>
         <Typography variant="body1" color="text.secondary" className={styles.subtitle}>
-          Please select your country and language to continue
+          Please select your country to continue
         </Typography>
       </DialogTitle>
 
       <DialogContent className={styles.content}>
-        {showSuggestion && (
-          <Box className={styles.suggestion}>
-            <Typography variant="body2" className={styles.suggestionText}>
-              💡 We detected your language as{' '}
-              <strong>
-                {countries.find((c) => c.code === suggestion.country)?.language}
-              </strong>
-            </Typography>
-          </Box>
-        )}
-
         <Box className={styles.countryGrid}>
           {countries.map((country) => (
             <Card
@@ -106,11 +92,6 @@ export const CountrySelectionModal: React.FC<CountrySelectionModalProps> = ({
                   <Typography variant="body2" color="text.secondary">
                     {country.language}
                   </Typography>
-                  {suggestion.country === country.code && showSuggestion && (
-                    <Box className={styles.recommendedBadge}>
-                      <Typography variant="caption">Recommended</Typography>
-                    </Box>
-                  )}
                 </CardContent>
               </CardActionArea>
             </Card>

@@ -45,11 +45,6 @@ vi.mock('@/lib/utils/cookies', () => ({
   },
 }));
 
-// Mock language detection
-vi.mock('@/lib/utils/language-detection', () => ({
-  detectBrowserCountry: vi.fn(() => 'US'),
-}));
-
 describe('RegistrationModal - Basic Functionality', () => {
   const mockOnRegister = vi.fn();
   const mockOnBack = vi.fn();
