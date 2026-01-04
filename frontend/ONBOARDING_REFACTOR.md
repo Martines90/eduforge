@@ -276,7 +276,7 @@ interface UserContextType {
 ### Cookie Inspection
 ```javascript
 // View all EduForger cookies
-document.cookie.split(';').filter(c => c.includes('eduforge'))
+document.cookie.split(';').filter(c => c.includes('eduforger'))
 ```
 
 ## Design Consistency

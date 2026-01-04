@@ -520,7 +520,7 @@ Content-Type: application/json
 For questions or issues:
 - Check documentation files in `/backend/`
 - Review Swagger API docs: http://localhost:3000/api-docs
-- Contact: support@eduforge.com
+- Contact: support@eduforger.com
 
 ---
 

@@ -185,7 +185,7 @@ python -m pytest tests/
 firebase deploy --only functions:api --project staging
 
 # Verify staging works
-curl https://staging-api.eduforge.com/api/v2/tasks/test
+curl https://staging-api.eduforger.com/api/v2/tasks/test
 
 # Deploy to production
 firebase deploy --only functions:api --project production

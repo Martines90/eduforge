@@ -97,7 +97,6 @@ interface UserDocument {
 
   // Credits
   taskCreationCredits: number;  // Existing
-  testCreationCredits: number;  // NEW - from subscription
 
   // Usage tracking
   testsCreatedCount: number;  // NEW

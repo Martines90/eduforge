@@ -21,7 +21,7 @@ describe('LoginModal', () => {
         />
       );
 
-      expect(screen.getByText('Welcome to EduForge')).toBeInTheDocument();
+      expect(screen.getByText('Welcome to EduForger')).toBeInTheDocument();
       expect(screen.getByLabelText('Email Address')).toBeInTheDocument();
       expect(screen.getByLabelText('Password')).toBeInTheDocument();
       expect(screen.getByRole('button', { name: /sign in/i })).toBeInTheDocument();

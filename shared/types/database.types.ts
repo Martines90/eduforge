@@ -1,6 +1,6 @@
 /**
  * Complete Firestore Database Schema
- * Single Source of Truth for EduForge Database Structure
+ * Single Source of Truth for EduForger Database Structure
  *
  * This file documents the entire Firestore database structure.
  * Can be imported by both frontend and backend for type safety.
@@ -43,7 +43,6 @@ export interface User {
 
   // Credits system
   taskGenerationCredits?: number;
-  testCreationCredits?: number;
 
   // School affiliation (optional)
   schoolId?: string;

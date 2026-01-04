@@ -133,8 +133,8 @@ function CancelPageContent() {
           <Box sx={{ mt: 4 }}>
             <Typography variant="body2" color="text.secondary">
               {t('Need help? Contact our support team at')}{' '}
-              <a href="mailto:support@eduforge.com" style={{ color: '#667eea', textDecoration: 'none' }}>
-                support@eduforge.com
+              <a href="mailto:support@eduforger.com" style={{ color: '#667eea', textDecoration: 'none' }}>
+                support@eduforger.com
               </a>
             </Typography>
           </Box>

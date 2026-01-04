@@ -404,7 +404,7 @@ describe("TaskController", () => {
     });
 
     it("should generate correct public share link", async () => {
-      process.env.FRONTEND_URL = "https://eduforge.app";
+      process.env.FRONTEND_URL = "https://eduforger.app";
 
       (deductTaskCredit as jest.Mock).mockResolvedValue(99);
 
@@ -416,7 +416,7 @@ describe("TaskController", () => {
 
       expect(mockResponse.json).toHaveBeenCalledWith(
         expect.objectContaining({
-          public_share_link: "https://eduforge.app/tasks/task_abc123",
+          public_share_link: "https://eduforger.app/tasks/task_abc123",
         })
       );
     });

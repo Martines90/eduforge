@@ -75,7 +75,7 @@ smtps://postmaster@your-domain.mailgun.org:your-password@smtp.mailgun.org:465
    SMTP_CONNECTION_URI=smtps://your-email@gmail.com:your-app-password@smtp.gmail.com:465
 
    # Set your "From" email address
-   DEFAULT_FROM=noreply@eduforge.com
+   DEFAULT_FROM=noreply@eduforger.com
 
    # Collection name (leave as is)
    MAIL_COLLECTION=mail
@@ -178,7 +178,7 @@ The Firebase Extension is free, but you pay for:
 
 For production use:
 1. ✅ Use SendGrid or Mailgun (not Gmail)
-2. ✅ Set up a custom domain email (e.g., noreply@eduforge.com)
+2. ✅ Set up a custom domain email (e.g., noreply@eduforger.com)
 3. ✅ Configure SPF, DKIM, and DMARC records
 4. ✅ Monitor bounce rates and spam complaints
 5. ✅ Implement rate limiting on registration endpoint
