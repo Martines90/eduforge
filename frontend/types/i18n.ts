@@ -736,6 +736,22 @@ export interface Translations {
   "Task successfully added to {{testName}}": string;
   "Task already added to this test": string;
   "Failed to add task to test": string;
+
+  // Login Modal
+  "Sign In": string;
+  "Signing in...": string;
+  "Forgot password?": string;
+  "Enter your password": string;
+  "OR": string;
+  "Create Teacher Account": string;
+  "Login failed. Please try again.": string;
+  "Invalid email or password": string;
+  "Please enter a valid email address": string;
+  "Email is required": string;
+  "Password must be at least 6 characters": string;
+  "Password is required": string;
+  "By continuing, you agree to our Terms of Service and Privacy Policy": string;
+  "To view more tasks you need to register! Get {{count}} free task generation credits when you sign up.": string;
 }
 
 export type TranslationKey = keyof Translations;
