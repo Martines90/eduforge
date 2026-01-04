@@ -33,6 +33,7 @@ export default defineConfig({
       '@/styles': path.resolve(__dirname, './styles'),
       '@/types': path.resolve(__dirname, './types'),
       '@/data': path.resolve(__dirname, './data'),
+      '@eduforger/shared': path.resolve(__dirname, '../shared/types'),
     },
   },
 });

@@ -1,10 +1,11 @@
 import React from 'react';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Pagination } from './Pagination';
 
 describe('Pagination Component', () => {
-  const mockOnPageChange = jest.fn();
+  const mockOnPageChange = vi.fn();
 
   beforeEach(() => {
     mockOnPageChange.mockClear();

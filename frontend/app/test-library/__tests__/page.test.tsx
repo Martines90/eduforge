@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import TestLibraryPage from '../page';
@@ -11,14 +12,14 @@ import { fetchPublishedTests } from '@/lib/services/test.service';
 import type { PublishedTest } from '@/types/test.types';
 
 // Mock dependencies
-jest.mock('next/navigation', () => ({
+vi.mock('next/navigation', () => ({
   useRouter: () => ({
-    push: jest.fn(),
-    back: jest.fn(),
+    push: vi.fn(),
+    back: vi.fn(),
   }),
 }));
 
-jest.mock('@/lib/i18n', () => ({
+vi.mock('@/lib/i18n', () => ({
   useTranslation: () => ({
     t: (key: string, params?: any) => {
       if (params && key.includes('{{count}}')) {
@@ -29,34 +30,34 @@ jest.mock('@/lib/i18n', () => ({
   }),
 }));
 
-jest.mock('@/lib/services/test.service', () => ({
-  fetchPublishedTests: jest.fn(),
+vi.mock('@/lib/services/test.service', () => ({
+  fetchPublishedTests: vi.fn(),
 }));
 
-const mockFetchPublishedTests = fetchPublishedTests as jest.MockedFunction<typeof fetchPublishedTests>;
+const mockFetchPublishedTests = fetchPublishedTests as vi.MockedFunction<typeof fetchPublishedTests>;
 
 describe('TestLibraryPage', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
 
     // Mock localStorage
     Object.defineProperty(window, 'localStorage', {
       value: {
-        getItem: jest.fn((key) => {
+        getItem: vi.fn((key) => {
           if (key === 'user') {
             return JSON.stringify({ country: 'HU' });
           }
           return null;
         }),
-        setItem: jest.fn(),
-        removeItem: jest.fn(),
-        clear: jest.fn(),
+        setItem: vi.fn(),
+        removeItem: vi.fn(),
+        clear: vi.fn(),
       },
       writable: true,
     });
 
     // Mock window.scrollTo
-    window.scrollTo = jest.fn();
+    window.scrollTo = vi.fn();
   });
 
   const createMockTests = (count: number): PublishedTest[] => {
@@ -792,7 +793,7 @@ describe('TestLibraryPage', () => {
     });
 
     it('should default to US when no user in localStorage', async () => {
-      (window.localStorage.getItem as jest.Mock).mockReturnValue(null);
+      (window.localStorage.getItem as unknown as vi.Mock).mockReturnValue(null);
 
       const mockTests = createMockTests(5);
       mockFetchPublishedTests.mockResolvedValue({
