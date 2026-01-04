@@ -43,7 +43,7 @@ import { fetchMyTests, addTaskToTest } from '@/lib/services/test.service';
 import { useUser } from '@/lib/context/UserContext';
 import { GuestPromptModal } from '@/components/organisms/GuestPromptModal';
 import { useGuestTaskViewLimit } from '@/lib/hooks/useGuestTaskViewLimit';
-import { TRIAL_START_CREDITS } from '@/lib/constants/credits';
+import { TRIAL_START_CREDITS, GUEST_TASK_VIEW_KEY } from '@/lib/constants/credits';
 import { Test } from '@/types/test.types';
 
 interface TaskData {
@@ -108,9 +108,14 @@ export default function TaskDetailPage() {
   // Track guest task views on mount
   useEffect(() => {
     if (isGuest && taskId) {
-      console.log('[Task Detail] Guest task view detected for task:', taskId);
-      guestViewLimit.incrementView();
-      console.log('[Task Detail] Total views:', guestViewLimit.totalViews + 1, 'Remaining:', guestViewLimit.viewsRemaining - 1);
+      // Check if guest can view tasks BEFORE incrementing
+      if (guestViewLimit.canViewTasks) {
+        console.log('[Task Detail] Guest task view detected for task:', taskId);
+        guestViewLimit.incrementView();
+        console.log('[Task Detail] Total views:', guestViewLimit.totalViews + 1, 'Remaining:', guestViewLimit.viewsRemaining - 1);
+      } else {
+        console.log('[Task Detail] Guest has no views remaining, skipping increment');
+      }
     }
   }, []); // Only run once on mount
 
@@ -126,12 +131,30 @@ export default function TaskDetailPage() {
       setIsLoading(true);
       setError(null);
 
-      // Check guest view limit BEFORE fetching task
-      if (isGuest && !guestViewLimit.canViewTasks) {
-        console.log('[Task Detail] Guest has reached view limit, blocking task fetch');
-        setIsLoading(false);
-        setError('VIEW_LIMIT_REACHED');
-        return;
+      // Check localStorage FIRST for guest view limit (faster than hook state)
+      if (isGuest) {
+        try {
+          const viewsJson = localStorage.getItem(GUEST_TASK_VIEW_KEY);
+          if (viewsJson) {
+            const cachedData = JSON.parse(viewsJson);
+            if (cachedData.canViewTasks === false || cachedData.viewsRemaining === 0) {
+              console.log('[Task Detail] Guest has no views remaining (localStorage), blocking task fetch');
+              setIsLoading(false);
+              setError('VIEW_LIMIT_REACHED');
+              return;
+            }
+          }
+        } catch (err) {
+          console.error('[Task Detail] Failed to check localStorage:', err);
+        }
+
+        // Also check hook state
+        if (!guestViewLimit.canViewTasks) {
+          console.log('[Task Detail] Guest has reached view limit (hook state), blocking task fetch');
+          setIsLoading(false);
+          setError('VIEW_LIMIT_REACHED');
+          return;
+        }
       }
 
       try {
@@ -147,6 +170,18 @@ export default function TaskDetailPage() {
         }
       } catch (err: any) {
         console.error('Error fetching task:', err);
+
+        // Handle authorization errors for guests - show modal instead of error page
+        if (err.message?.includes('Authorization') || err.message?.includes('401') || err.message?.includes('403')) {
+          if (isGuest) {
+            // Show guest modal prompting registration
+            setGuestModalMessage(t('To view more tasks you need to register! Get {{count}} free task generation credits when you sign up.', { count: TRIAL_START_CREDITS }));
+            setShowGuestModal(true);
+            setIsLoading(false);
+            return;
+          }
+        }
+
         setError(err.message || 'Failed to load task');
       } finally {
         setIsLoading(false);
@@ -541,86 +576,19 @@ export default function TaskDetailPage() {
   }
 
   // Show registration prompt if guest has reached view limit
+  // Don't show any page content - just the modal to force registration
   if (error === 'VIEW_LIMIT_REACHED') {
     return (
-      <>
-        <Container maxWidth="lg" sx={{ py: 4 }}>
-          <Box sx={{ mb: 4 }}>
-            <Button variant="secondary" startIcon={<ArrowBackIcon />} onClick={handleBack}>
-              {t('Back to Tasks')}
-            </Button>
-          </Box>
-
-          <Paper
-            elevation={3}
-            sx={{
-              p: 6,
-              textAlign: 'center',
-              backgroundColor: 'background.paper',
-              maxWidth: 700,
-              mx: 'auto',
-            }}
-          >
-            <AssignmentIcon
-              sx={{
-                fontSize: 100,
-                color: 'primary.main',
-                mb: 3,
-              }}
-            />
-            <Typography variant="h4" component="h2" gutterBottom>
-              {t('Registration Required')}
-            </Typography>
-            <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem', mb: 3 }}>
-              {t('To have access to the tasks you need to register!')}
-            </Typography>
-            <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem', mb: 4 }}>
-              {t('Try our FREE 3-month trial mode and unlock unlimited access to thousands of educational tasks.')}
-            </Typography>
-            <Alert severity="info" sx={{ mb: 4, textAlign: 'left' }}>
-              <Typography variant="body2">
-                <strong>{t('You\'ve used your 3 free task views.')}</strong>
-              </Typography>
-              <Typography variant="body2" sx={{ mt: 1 }}>
-                {t('Register now to get:')}
-              </Typography>
-              <ul style={{ marginTop: '8px', paddingLeft: '20px' }}>
-                <li>{t('Unlimited task viewing')}</li>
-                <li>{t('{{count}} free task generation credits', { count: TRIAL_START_CREDITS })}</li>
-                <li>{t('3 months free trial subscription')}</li>
-                <li>{t('Download tasks as PDF')}</li>
-              </ul>
-            </Alert>
-            <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center' }}>
-              <Button
-                variant="primary"
-                size="large"
-                onClick={() => {
-                  setGuestModalMessage(t('To have access to the tasks you need to register!'));
-                  setShowGuestModal(true);
-                }}
-              >
-                {t('Login / Register')}
-              </Button>
-              <Button
-                variant="secondary"
-                size="large"
-                onClick={() => router.push('/')}
-              >
-                {t('Back to Home')}
-              </Button>
-            </Box>
-          </Paper>
-        </Container>
-
-        {/* Guest Registration/Login Modal */}
-        <GuestPromptModal
-          open={showGuestModal}
-          onClose={() => setShowGuestModal(false)}
-          promptMessage={guestModalMessage}
-          onRegistrationComplete={handleRegistrationComplete}
-        />
-      </>
+      <GuestPromptModal
+        open={true}
+        onClose={() => {
+          // Don't redirect - just close modal and stay on page
+          // User will see the page after logging in
+        }}
+        promptMessage={t('To view more tasks you need to register! Get {{count}} free task generation credits when you sign up.', { count: TRIAL_START_CREDITS })}
+        onRegistrationComplete={handleRegistrationComplete}
+        initialMode="login"
+      />
     );
   }
 
@@ -900,6 +868,7 @@ export default function TaskDetailPage() {
         onClose={() => setShowGuestModal(false)}
         promptMessage={guestModalMessage}
         onRegistrationComplete={handleRegistrationComplete}
+        initialMode="login"
       />
 
       {/* Add to Test Dialog */}

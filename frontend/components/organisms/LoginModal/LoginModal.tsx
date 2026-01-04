@@ -21,6 +21,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { ForgotPasswordModal } from '../ForgotPasswordModal';
+import { useTranslation } from '@/lib/i18n';
 import styles from './LoginModal.module.scss';
 
 export interface LoginModalProps {
@@ -31,13 +32,14 @@ export interface LoginModalProps {
   promptMessage?: string;
 }
 
-const loginSchema = Yup.object().shape({
+// Schema will be created inside the component to access t() function
+const createLoginSchema = (t: (key: string) => string) => Yup.object().shape({
   email: Yup.string()
-    .email('Please enter a valid email address')
-    .required('Email is required'),
+    .email(t('Please enter a valid email address'))
+    .required(t('Email is required')),
   password: Yup.string()
-    .min(6, 'Password must be at least 6 characters')
-    .required('Password is required'),
+    .min(6, t('Password must be at least 6 characters'))
+    .required(t('Password is required')),
 });
 
 /**
@@ -52,8 +54,12 @@ export const LoginModal: React.FC<LoginModalProps> = ({
   onClose,
   promptMessage,
 }) => {
+  const { t } = useTranslation();
   const [loginError, setLoginError] = useState<string | null>(null);
   const [forgotPasswordOpen, setForgotPasswordOpen] = useState(false);
+
+  // Create schema with translations
+  const loginSchema = createLoginSchema(t);
 
   const handleSubmit = async (
     values: { email: string; password: string },
@@ -63,7 +69,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
       setLoginError(null);
       await onLogin(values.email, values.password);
     } catch (error: any) {
-      setLoginError(error.message || 'Login failed. Please try again.');
+      setLoginError(error.message || t('Login failed. Please try again.'));
     } finally {
       setSubmitting(false);
     }
@@ -100,7 +106,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
           <LoginIcon sx={{ fontSize: 48 }} />
         </Box>
         <Typography variant="h4" component="div" className={styles.titleText}>
-          Welcome to EduForger
+          {t('Welcome to EduForger')}
         </Typography>
       </DialogTitle>
 
@@ -130,7 +136,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
                     <TextField
                       {...field}
                       fullWidth
-                      label="Email Address"
+                      label={t('Email Address')}
                       variant="outlined"
                       type="email"
                       error={touched.email && Boolean(errors.email)}
@@ -147,12 +153,12 @@ export const LoginModal: React.FC<LoginModalProps> = ({
                     <TextField
                       {...field}
                       fullWidth
-                      label="Password"
+                      label={t('Password')}
                       variant="outlined"
                       type="password"
                       error={touched.password && Boolean(errors.password)}
                       helperText={touched.password && errors.password}
-                      placeholder="Enter your password"
+                      placeholder={t('Enter your password')}
                       className={styles.textField}
                     />
                   )}
@@ -170,7 +176,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
                     setForgotPasswordOpen(true);
                   }}
                 >
-                  Forgot password?
+                  {t('Forgot password?')}
                 </MuiLink>
               </Box>
 
@@ -183,7 +189,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
                 disabled={isSubmitting}
                 startIcon={<LoginIcon />}
               >
-                {isSubmitting ? 'Signing in...' : 'Sign In'}
+                {isSubmitting ? t('Signing in...') : t('Sign In')}
               </Button>
             </Form>
           )}
@@ -191,7 +197,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
 
         <Divider sx={{ my: 3 }}>
           <Typography variant="body2" color="text.secondary">
-            OR
+            {t('OR')}
           </Typography>
         </Divider>
 
@@ -204,7 +210,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
             onClick={() => onCreateAccount(true)}
             startIcon={<PersonAddIcon />}
           >
-            Create Teacher Account
+            {t('Create Teacher Account')}
           </Button>
 
           <Button
@@ -215,7 +221,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
             onClick={() => onCreateAccount(false)}
             startIcon={<PersonAddIcon />}
           >
-            Create Account
+            {t('Create Account')}
           </Button>
         </Box>
 
@@ -224,7 +230,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
           color="text.secondary"
           className={styles.helpText}
         >
-          By continuing, you agree to our Terms of Service and Privacy Policy
+          {t('By continuing, you agree to our Terms of Service and Privacy Policy')}
         </Typography>
       </DialogContent>
     </Dialog>

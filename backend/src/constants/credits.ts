@@ -5,6 +5,7 @@
 
 export const TRIAL_START_CREDITS = 100;
 export const GUEST_GENERATION_LIMIT = 3;
+export const GUEST_TASK_VIEW_LIMIT = 3;
 
 /**
  * Task generation credits per subscription tier

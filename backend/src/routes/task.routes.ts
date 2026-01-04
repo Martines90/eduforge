@@ -193,7 +193,9 @@ router.post(
  * /tasks/{taskId}:
  *   get:
  *     summary: Get a task by ID
- *     description: Retrieves a previously generated task by its unique identifier. Returns the task description and image URLs.
+ *     description: |
+ *       Retrieves a previously generated task by its unique identifier. Returns the task description and image URLs.
+ *       Supports both authenticated users and guest sessions (guest users have limited views).
  *     tags: [Tasks]
  *     parameters:
  *       - in: path
@@ -204,6 +206,11 @@ router.post(
  *           pattern: '^task_[a-f0-9]{32}$'
  *         description: The unique task identifier (format task_[32_hex_chars])
  *         example: task_a1b2c3d4e5f6789012345678901234ab
+ *       - in: query
+ *         name: view
+ *         schema:
+ *           type: boolean
+ *         description: If true, increments guest task view counter
  *     responses:
  *       200:
  *         description: Task found and returned successfully
@@ -211,12 +218,14 @@ router.post(
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/TaskGeneratorResponse'
+ *       403:
+ *         description: Guest has exceeded task view limit (GUEST_NO_MORE_TASK_VIEW)
  *       404:
  *         $ref: '#/components/responses/NotFound'
  *       500:
  *         $ref: '#/components/responses/InternalServerError'
  */
-router.get("/tasks/:taskId", taskController.getTaskById);
+router.get("/tasks/:taskId", authenticateOrGuest, taskController.getTaskById);
 
 /**
  * POST /generate-task-guest

@@ -26,11 +26,19 @@
 }
 
 .content {
-  padding: var(--spacing-xl) var(--spacing-lg);
+  padding: var(--spacing-xl) var(--spacing-lg) !important;
 
   @include md {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-xl) !important;
   }
+}
+
+.selectContainer {
+  background: white;
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: var(--spacing-md);
 }
 
 .suggestion {
@@ -127,6 +135,7 @@
   display: block;
   text-align: center;
   font-style: italic;
+  margin-top: var(--spacing-lg);
 }
 
 .actions {

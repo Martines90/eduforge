@@ -837,4 +837,22 @@ export const en: Translations = {
     "Task successfully added to {{testName}}",
   "Task already added to this test": "Task already added to this test",
   "Failed to add task to test": "Failed to add task to test",
+
+  // Login Modal
+  "Sign In": "Sign In",
+  "Signing in...": "Signing in...",
+  "Forgot password?": "Forgot password?",
+  "Enter your password": "Enter your password",
+  "OR": "OR",
+  "Create Teacher Account": "Create Teacher Account",
+  "Login failed. Please try again.": "Login failed. Please try again.",
+  "Invalid email or password": "Invalid email or password",
+  "Please enter a valid email address": "Please enter a valid email address",
+  "Email is required": "Email is required",
+  "Password must be at least 6 characters": "Password must be at least 6 characters",
+  "Password is required": "Password is required",
+  "By continuing, you agree to our Terms of Service and Privacy Policy":
+    "By continuing, you agree to our Terms of Service and Privacy Policy",
+  "To view more tasks you need to register! Get {{count}} free task generation credits when you sign up.":
+    "To view more tasks you need to register! Get {{count}} free task generation credits when you sign up.",
 };

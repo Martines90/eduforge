@@ -79,8 +79,11 @@ const UserContext = createContext<UserContextType | undefined>(undefined);
  * Handles country selection, cookies, and onboarding flow
  */
 export function UserProvider({ children }: { children: React.ReactNode }) {
+  // Initialize country from cookie IMMEDIATELY (synchronous) to ensure translations work from the start
+  const initialCountry = (typeof window !== 'undefined' ? getCookie(COOKIE_NAMES.COUNTRY) as CountryCode : undefined) || DEFAULT_COUNTRY;
+
   const [user, setUser] = useState<UserState>({
-    country: DEFAULT_COUNTRY,
+    country: initialCountry,
     isFirstVisit: true,
     hasCompletedOnboarding: false,
     isRegistered: false,
@@ -126,8 +129,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
             token: '',
           };
 
-          // Use country from Firestore (it should match the cookie)
-          const savedCountry = userData.country;
+          // IMPORTANT: Use country from Firestore user profile (logged-in user's preference takes precedence over IP detection)
+          const userCountry = userData.country;
 
           // Normalize backend role to frontend UserIdentity (backend uses 'general_user', frontend uses 'non-teacher')
           const backendRole = userData.role as string;
@@ -155,7 +158,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
             };
           }
 
-          // Update context state
+          // Update context state - use user's saved country preference (NOT cookie)
           setUser((prev) => ({
             ...prev,
             isRegistered: true,
@@ -163,19 +166,21 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
             role: 'registered',
             identity: normalizedIdentity,
             subject: userData.subject || null,
-            country: savedCountry || prev.country,
+            country: userCountry || cookieCountry, // Fallback to cookie only if user has no country saved
             hasCompletedOnboarding: true, // If they're in Firestore, they've completed onboarding
             isFirstVisit: false,
             subscription,
             taskCredits: userData.taskCredits,
           }));
 
-          // Update cookies
+          // Update cookies to match user's preference
           setCookie(COOKIE_NAMES.IS_REGISTERED, 'true');
           setCookie(COOKIE_NAMES.USER_PROFILE, JSON.stringify(profile));
           setCookie(COOKIE_NAMES.ROLE, 'registered');
-          if (savedCountry) {
-            setCookie(COOKIE_NAMES.COUNTRY, savedCountry);
+          // IMPORTANT: Always set country cookie to user's preference (overrides IP-detected country)
+          if (userCountry) {
+            console.log('[UserContext] Setting country from user profile:', userCountry);
+            setCookie(COOKIE_NAMES.COUNTRY, userCountry);
           }
           if (normalizedIdentity) {
             setCookie(COOKIE_NAMES.IDENTITY, normalizedIdentity);
@@ -215,6 +220,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
                 const userIdentity: UserIdentity | undefined = backendRole === 'general_user' ? 'non-teacher' : backendRole as UserIdentity | undefined;
                 const userSubscription = (userData as any).subscription as any;
                 const userTaskCredits = (userData as any).taskCredits as number | undefined;
+                // IMPORTANT: Get country from user profile (logged-in user's preference takes precedence)
+                const userCountry = (userData as any).country as CountryCode | undefined;
 
                 // Convert subscription to frontend format
                 let subscription: SubscriptionInfo | undefined;
@@ -235,6 +242,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
                 }
 
                 // Restore user state with fresh subscription data
+                // IMPORTANT: Use user's country preference (NOT cookie) - logged-in user's preference dominates
+                const finalCountry = userCountry || savedCountry;
                 setUser((prev) => ({
                   ...prev,
                   isRegistered: true,
@@ -242,12 +251,18 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
                   role: 'registered',
                   identity: userIdentity || identity || null,
                   subject: subject || null,
-                  country: savedCountry,
+                  country: finalCountry,
                   hasCompletedOnboarding: true,
                   isFirstVisit: false,
                   subscription,
                   taskCredits: userTaskCredits,
                 }));
+
+                // IMPORTANT: Update country cookie to match user's preference (overrides IP-detected country)
+                if (userCountry) {
+                  console.log('[UserContext] Setting country from user profile (JWT login):', userCountry);
+                  setCookie(COOKIE_NAMES.COUNTRY, userCountry);
+                }
               } else {
                 // Clear invalid session
                 console.warn('[UserContext] Invalid token response, clearing session');
@@ -339,6 +354,19 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     }
     // If savedCountry === 'UNSUPPORTED', user is already on /country-not-supported page
   }, []);
+
+  // Check if we should show country modal on every render (handles refresh case)
+  useEffect(() => {
+    if (!mounted) return;
+
+    const savedCountry = getCookie(COOKIE_NAMES.COUNTRY) as CountryCode | undefined;
+
+    // If there's no country cookie and modal is not already showing, show it
+    if (!savedCountry && !showCountryModal) {
+      console.log('[UserContext] No country cookie detected on check, showing modal');
+      setShowCountryModal(true);
+    }
+  }, [mounted, showCountryModal]);
 
   // Set country and save to cookie
   const setCountry = useCallback((newCountry: CountryCode) => {
@@ -442,8 +470,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
         };
       }
 
-      // Use country from backend, fallback to cookie, then default
-      const savedCountry = userCountry || (getCookie(COOKIE_NAMES.COUNTRY) as CountryCode) || DEFAULT_COUNTRY;
+      // IMPORTANT: Use country from user profile (logged-in user's preference takes precedence over IP-detected country)
+      // Fallback to cookie only if user has no country saved, then to default
+      const finalCountry = userCountry || (getCookie(COOKIE_NAMES.COUNTRY) as CountryCode) || DEFAULT_COUNTRY;
 
       // Update local context state
       setUser((prev) => ({
@@ -453,7 +482,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
         role: 'registered',
         identity: userRole || prev.identity,
         subject: userSubject || prev.subject,
-        country: savedCountry,
+        country: finalCountry,
         hasCompletedOnboarding: true,
         isFirstVisit: false,
         subscription,
@@ -464,7 +493,11 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       setCookie(COOKIE_NAMES.IS_REGISTERED, 'true');
       setCookie(COOKIE_NAMES.USER_PROFILE, JSON.stringify(profile));
       setCookie(COOKIE_NAMES.ROLE, 'registered');
-      setCookie(COOKIE_NAMES.COUNTRY, savedCountry);
+      // IMPORTANT: Always set country cookie to user's preference (overrides IP-detected country)
+      if (userCountry) {
+        console.log('[UserContext] Setting country from user profile (loginUser):', userCountry);
+      }
+      setCookie(COOKIE_NAMES.COUNTRY, finalCountry);
       if (userRole) {
         setCookie(COOKIE_NAMES.IDENTITY, userRole);
       }
@@ -551,9 +584,14 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     setShowCountryModal(false);
   }, [setCountry]);
 
+  // Check if country is selected (either from cookie or user selection)
+  const hasCountry = Boolean(getCookie(COOKIE_NAMES.COUNTRY));
+  const isCountryReady = hasCountry || !mounted;
+
   return (
     <UserContext.Provider value={{ user, authInitialized, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser, logoutUser, completeOnboarding, resetUser }}>
-      {children}
+      {/* Only render children when country is selected - prevents API calls and content rendering */}
+      {isCountryReady ? children : null}
 
       {/* Show country selection modal when IP detection fails */}
       <CountrySelectionModal

@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
+import { GUEST_TASK_VIEW_KEY, GUEST_VIEW_LIMIT } from '@/lib/constants/credits';
 
-const GUEST_TASK_VIEW_KEY = 'eduforger_guest_task_views';
-const MAX_GUEST_VIEWS = 3;
+const MAX_GUEST_VIEWS = GUEST_VIEW_LIMIT;
 
 export interface UseGuestTaskViewLimitReturn {
   viewsRemaining: number;
@@ -52,6 +52,23 @@ export function useGuestTaskViewLimit(): UseGuestTaskViewLimitReturn {
    */
   const incrementView = useCallback(async () => {
     if (typeof window === 'undefined') return;
+
+    // Check localStorage FIRST to avoid unnecessary API calls
+    try {
+      const viewsJson = localStorage.getItem(GUEST_TASK_VIEW_KEY);
+      if (viewsJson) {
+        const cachedData = JSON.parse(viewsJson);
+        if (cachedData.canViewTasks === false || cachedData.viewsRemaining === 0) {
+          console.log('🚫 Guest has no views remaining (cached), skipping API call');
+          setCanViewTasks(false);
+          setViewsRemaining(0);
+          setTotalViews(cachedData.totalViews || MAX_GUEST_VIEWS);
+          return; // Early return - don't make API call
+        }
+      }
+    } catch (err) {
+      console.error('Failed to check cached guest task views:', err);
+    }
 
     setIsLoading(true);
     setError(null);

@@ -19,6 +19,11 @@ export const GUEST_GENERATION_LIMIT = 3;
 export const GUEST_VIEW_LIMIT = 3;
 
 /**
+ * localStorage key for guest task view tracking
+ */
+export const GUEST_TASK_VIEW_KEY = 'eduforger_guest_task_views';
+
+/**
  * Credits granted per subscription tier (monthly)
  */
 export const SUBSCRIPTION_CREDITS = {

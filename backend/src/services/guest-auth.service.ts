@@ -5,6 +5,7 @@ import crypto from "crypto";
 import {
   TRIAL_START_CREDITS,
   GUEST_GENERATION_LIMIT,
+  GUEST_TASK_VIEW_LIMIT,
 } from "../constants/credits";
 
 const FieldValue = admin.firestore.FieldValue;
@@ -13,11 +14,14 @@ const JWT_SECRET =
   process.env.JWT_SECRET || "your-secret-key-change-in-production";
 const GUEST_TOKEN_EXPIRY = "24h"; // Guest tokens expire after 24 hours
 const MAX_GUEST_GENERATIONS = GUEST_GENERATION_LIMIT; // Maximum free generations for guests
+const MAX_GUEST_TASK_VIEWS = GUEST_TASK_VIEW_LIMIT; // Maximum free task views for guests
 
 export interface GuestTokenPayload {
   sessionId: string;
   generationsUsed: number;
   maxGenerations: number;
+  taskViewsUsed: number;
+  maxTaskViews: number;
   createdAt: Date;
   type: "guest";
 }
@@ -26,8 +30,11 @@ export interface GuestSession {
   sessionId: string;
   generationsUsed: number;
   maxGenerations: number;
+  taskViewsUsed: number;
+  maxTaskViews: number;
   createdAt: Date;
   lastGenerationAt?: Date;
+  lastTaskViewAt?: Date;
   ipAddress?: string;
   browserFingerprint?: string;
   userAgent?: string;
@@ -135,6 +142,8 @@ export async function createGuestToken(
     sessionId,
     generationsUsed: 0,
     maxGenerations: MAX_GUEST_GENERATIONS,
+    taskViewsUsed: 0,
+    maxTaskViews: MAX_GUEST_TASK_VIEWS,
     createdAt: new Date(),
     ipAddress,
     browserFingerprint: fingerprintHash,
@@ -153,6 +162,8 @@ export async function createGuestToken(
     sessionId,
     generationsUsed: 0,
     maxGenerations: MAX_GUEST_GENERATIONS,
+    taskViewsUsed: 0,
+    maxTaskViews: MAX_GUEST_TASK_VIEWS,
     createdAt: new Date(),
     type: "guest",
   };
@@ -197,6 +208,8 @@ export async function verifyGuestToken(
       sessionId: session.sessionId,
       generationsUsed: session.generationsUsed,
       maxGenerations: session.maxGenerations,
+      taskViewsUsed: session.taskViewsUsed || 0,
+      maxTaskViews: session.maxTaskViews || MAX_GUEST_TASK_VIEWS,
       createdAt: session.createdAt,
       type: "guest",
     };
@@ -235,19 +248,13 @@ export async function incrementGuestGeneration(
     );
 
     if (!fingerprintCheck.canGenerate) {
-      throw new Error(
-        `Generation limit reached (${fingerprintCheck.totalGenerations}/${MAX_GUEST_GENERATIONS}). ` +
-          `Please register to get ${TRIAL_START_CREDITS} free task generation credits!`
-      );
+      throw new Error("GUEST_NO_MORE_TASK_GENERATION");
     }
   }
 
   // Check individual session limit
   if (session.generationsUsed >= session.maxGenerations) {
-    throw new Error(
-      `Guest generation limit reached (${session.maxGenerations}/${session.maxGenerations}). ` +
-        `Please register to continue.`
-    );
+    throw new Error("GUEST_NO_MORE_TASK_GENERATION");
   }
 
   // Increment counter and store last task ID
@@ -386,6 +393,68 @@ export async function cleanupExpiredSessions(): Promise<number> {
   }
 
   return cleanedCount;
+}
+
+/**
+ * Increment the task view count for a guest session
+ */
+export async function incrementGuestTaskView(
+  sessionId: string,
+  taskId: string
+): Promise<GuestSession> {
+  const sessionRef = getGuestSessionsCollection().doc(sessionId);
+  const sessionDoc = await sessionRef.get();
+
+  if (!sessionDoc.exists) {
+    throw new Error("Guest session not found");
+  }
+
+  const session = sessionDoc.data() as GuestSession;
+
+  // Check if guest has reached view limit
+  if (session.taskViewsUsed >= (session.maxTaskViews || MAX_GUEST_TASK_VIEWS)) {
+    throw new Error("GUEST_NO_MORE_TASK_VIEW");
+  }
+
+  // Increment counter
+  const updatedSession: Partial<GuestSession> = {
+    taskViewsUsed: session.taskViewsUsed + 1,
+    lastTaskViewAt: new Date(),
+  };
+
+  await sessionRef.update({
+    ...updatedSession,
+    lastTaskViewAt: FieldValue.serverTimestamp(),
+  });
+
+  console.log(
+    `👁️ Guest task view incremented: ${sessionId} (${updatedSession.taskViewsUsed}/${session.maxTaskViews || MAX_GUEST_TASK_VIEWS})`
+  );
+
+  return { ...session, ...updatedSession } as GuestSession;
+}
+
+/**
+ * Check if a guest session can view more tasks
+ */
+export async function canGuestViewTasks(sessionId: string): Promise<boolean> {
+  const session = await getGuestSession(sessionId);
+  if (!session) return false;
+
+  return session.taskViewsUsed < (session.maxTaskViews || MAX_GUEST_TASK_VIEWS);
+}
+
+/**
+ * Get remaining task views for a guest session
+ */
+export async function getRemainingTaskViews(sessionId: string): Promise<number> {
+  const session = await getGuestSession(sessionId);
+  if (!session) return 0;
+
+  return Math.max(
+    0,
+    (session.maxTaskViews || MAX_GUEST_TASK_VIEWS) - session.taskViewsUsed
+  );
 }
 
 /**

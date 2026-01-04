@@ -857,4 +857,22 @@ export const mx: Translations = {
   "Task already added to this test":
     "Esta tarea ya está agregada a este examen",
   "Failed to add task to test": "Error al agregar la tarea al examen",
+
+  // Login Modal
+  "Sign In": "Iniciar Sesión",
+  "Signing in...": "Iniciando sesión...",
+  "Forgot password?": "¿Olvidaste tu contraseña?",
+  "Enter your password": "Ingresa tu contraseña",
+  "OR": "O",
+  "Create Teacher Account": "Crear Cuenta de Profesor",
+  "Login failed. Please try again.": "Inicio de sesión fallido. Por favor, intenta de nuevo.",
+  "Invalid email or password": "Correo electrónico o contraseña inválidos",
+  "Please enter a valid email address": "Por favor, ingresa un correo electrónico válido",
+  "Email is required": "El correo electrónico es obligatorio",
+  "Password must be at least 6 characters": "La contraseña debe tener al menos 6 caracteres",
+  "Password is required": "La contraseña es obligatoria",
+  "By continuing, you agree to our Terms of Service and Privacy Policy":
+    "Al continuar, aceptas nuestros Términos de Servicio y Política de Privacidad",
+  "To view more tasks you need to register! Get {{count}} free task generation credits when you sign up.":
+    "¡Para ver más tareas necesitas registrarte! Obtén {{count}} créditos gratuitos de generación de tareas al registrarte.",
 };

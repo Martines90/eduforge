@@ -36,10 +36,17 @@ vi.mock('@/components/organisms/CountrySelectionModal/CountrySelectionModal', ()
     return (
       <div data-testid="country-selection-modal">
         <h2>Select Country</h2>
-        <p>Detected: {detectedCountry}</p>
-        <button onClick={() => onSelect('US')}>United States</button>
-        <button onClick={() => onSelect('HU')}>Hungary</button>
-        <button onClick={() => onSelect('MX')}>Mexico</button>
+        <p data-testid="detected-country">Detected: {detectedCountry}</p>
+        <select
+          data-testid="country-select-modal-dropdown"
+          defaultValue={detectedCountry || ''}
+          onChange={(e) => onSelect(e.target.value)}
+        >
+          <option value="">Select a country</option>
+          <option value="US">United States</option>
+          <option value="HU">Hungary</option>
+          <option value="MX">Mexico</option>
+        </select>
       </div>
     );
   },
@@ -85,16 +92,22 @@ describe('UserContext Country Detection', () => {
         expect(screen.getByTestId('country-selection-modal')).toBeInTheDocument();
       });
 
-      // Should keep default country (HU) until user selects - no browser language detection
-      expect(screen.getByTestId('country')).toHaveTextContent('HU');
+      // TestComponent should NOT be rendered (blocked until country selected)
+      expect(screen.queryByTestId('country')).not.toBeInTheDocument();
     });
 
     it('should set country and close modal when user selects', async () => {
-      const setCookieSpy = vi.spyOn(cookiesModule, 'setCookie');
+      let countryCookie: string | undefined = undefined;
+
+      const setCookieSpy = vi.spyOn(cookiesModule, 'setCookie').mockImplementation((name, value) => {
+        if (name === cookiesModule.COOKIE_NAMES.COUNTRY) {
+          countryCookie = value;
+        }
+      });
 
       vi.spyOn(cookiesModule, 'getCookie').mockImplementation((name) => {
         if (name === cookiesModule.COOKIE_NAMES.COUNTRY) {
-          return undefined;
+          return countryCookie;
         }
         return undefined;
       });
@@ -110,9 +123,14 @@ describe('UserContext Country Detection', () => {
         expect(screen.getByTestId('country-selection-modal')).toBeInTheDocument();
       });
 
-      // User clicks Hungary
-      const hungaryButton = screen.getByText('Hungary');
-      hungaryButton.click();
+      // TestComponent should NOT be rendered yet
+      expect(screen.queryByTestId('country')).not.toBeInTheDocument();
+
+      // User selects Hungary from dropdown
+      const select = screen.getByTestId('country-select-modal-dropdown');
+      select.dispatchEvent(new Event('change', { bubbles: true }));
+      Object.defineProperty(select, 'value', { value: 'HU', writable: true });
+      select.dispatchEvent(new Event('change', { bubbles: true }));
 
       // Cookie should be set
       await waitFor(() => {
@@ -122,8 +140,17 @@ describe('UserContext Country Detection', () => {
         );
       });
 
-      // Country should update
-      expect(screen.getByTestId('country')).toHaveTextContent('HU');
+      // Re-render to pick up the cookie change
+      rerender(
+        <UserProvider>
+          <TestComponent />
+        </UserProvider>
+      );
+
+      // Now TestComponent should be rendered and country should be set
+      await waitFor(() => {
+        expect(screen.getByTestId('country')).toHaveTextContent('HU');
+      });
     });
   });
 
@@ -288,7 +315,7 @@ describe('UserContext Country Detection', () => {
       // Note: Browser language is NOT used for automatic country setting
       // It's only used internally by CountrySelectionModal for suggesting defaults
       await waitFor(() => {
-        expect(screen.getByText('Detected: HU')).toBeInTheDocument();
+        expect(screen.getByTestId('detected-country')).toHaveTextContent('Detected: HU');
       });
     });
   });

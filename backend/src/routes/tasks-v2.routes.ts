@@ -13,6 +13,8 @@ import {
 } from "../types/task.types";
 import { verifyToken } from "../services/auth.service";
 import { requireBasicPlan } from "../middleware/role.middleware";
+import { authenticateOrGuest } from "../middleware/guest-auth.middleware";
+import * as guestAuthService from "../services/guest-auth.service";
 
 const router = Router();
 
@@ -301,16 +303,41 @@ router.get(
 /**
  * GET /api/v2/tasks/:id
  * Get a specific task by ID
- * Requires at least Basic plan subscription for published tasks
+ * Supports both authenticated users and guest sessions
+ * Guest users have limited task views (GUEST_TASK_VIEW_LIMIT)
  */
 router.get(
   "/api/v2/tasks/:id",
-  authenticateUser,
-  requireBasicPlan,
+  authenticateOrGuest,
   async (req: Request, res: Response) => {
     try {
       const { id } = req.params;
       const incrementViews = req.query.view === "true";
+      const authReq = req as any;
+      const isGuest = authReq.guestSessionId !== undefined;
+
+      // Handle guest task view limit
+      if (isGuest && incrementViews) {
+        try {
+          await guestAuthService.incrementGuestTaskView(
+            authReq.guestSessionId,
+            id
+          );
+        } catch (error: unknown) {
+          if (
+            error instanceof Error &&
+            error.message === "GUEST_NO_MORE_TASK_VIEW"
+          ) {
+            return res.status(403).json({
+              success: false,
+              error: "GUEST_NO_MORE_TASK_VIEW",
+              message:
+                "You've reached your free task view limit. Please register to view more tasks!",
+            });
+          }
+          throw error;
+        }
+      }
 
       const task = await taskService.getTaskById(id, incrementViews);
 
@@ -349,6 +376,8 @@ router.get(
         }
       }
 
+      // For registered users with Basic plan or higher, allow viewing
+      // For guests, allow viewing (they've already been checked for view limit)
       res.status(200).json({
         success: true,
         data: task,

@@ -852,4 +852,22 @@ export const hu: Translations = {
     "Ez a feladat már hozzá van adva ehhez a dolgozathoz",
   "Failed to add task to test":
     "Nem sikerült hozzáadni a feladatot a dolgozathoz",
+
+  // Login Modal
+  "Sign In": "Bejelentkezés",
+  "Signing in...": "Bejelentkezés...",
+  "Forgot password?": "Elfelejtette jelszavát?",
+  "Enter your password": "Adja meg jelszavát",
+  "OR": "VAGY",
+  "Create Teacher Account": "Tanári Fiók Létrehozása",
+  "Login failed. Please try again.": "Bejelentkezés sikertelen. Kérjük, próbálja újra.",
+  "Invalid email or password": "Érvénytelen e-mail cím vagy jelszó",
+  "Please enter a valid email address": "Kérjük, adjon meg egy érvényes e-mail címet",
+  "Email is required": "Az e-mail cím kötelező",
+  "Password must be at least 6 characters": "A jelszónak legalább 6 karakter hosszúnak kell lennie",
+  "Password is required": "A jelszó kötelező",
+  "By continuing, you agree to our Terms of Service and Privacy Policy":
+    "A folytatással elfogadja Felhasználási Feltételeinket és Adatvédelmi Irányelveinket",
+  "To view more tasks you need to register! Get {{count}} free task generation credits when you sign up.":
+    "További feladatok megtekintéséhez regisztrálnia kell! Kapjon {{count}} ingyenes feladatgenerálási kreditet a regisztrációval.",
 };
