@@ -35,13 +35,13 @@ import type { Subject } from "@/types/i18n";
  */
 export default function TestLibraryPage() {
   const router = useRouter();
-  const { t, country } = useTranslation();
+  const { t } = useTranslation();
 
   // Get translated subject label
   const getSubjectLabel = (subject: Subject): string => {
     const subjectOption = SUBJECTS.find((s) => s.value === subject);
     if (!subjectOption) return subject;
-    return t(subjectOption.labelEN);
+    return subjectOption.labelEN;
   };
 
   // Get user's subject from localStorage (for teachers)
@@ -339,21 +339,11 @@ export default function TestLibraryPage() {
                         fullWidth
                         startIcon={<VisibilityIcon />}
                         onClick={() =>
-                          router.push(`/published-tests/${test.publicId}`)
+                          router.push(`/tests/${test.publicId}`)
                         }
                       >
                         {t("View Test")}
                       </Button>
-                      {test.pdfUrl && (
-                        <Button
-                          variant="secondary"
-                          fullWidth
-                          startIcon={<PictureAsPdfIcon />}
-                          onClick={() => window.open(test.pdfUrl, "_blank")}
-                        >
-                          {t("PDF")}
-                        </Button>
-                      )}
                     </CardActions>
                   </Card>
                 </Grid>

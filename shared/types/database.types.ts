@@ -258,6 +258,7 @@ export interface PublishedTest {
   // Creator info (from original)
   createdBy: string;
   creatorName: string;
+  country: string;                // Country code
 
   // Resolved tasks (complete snapshot - no references)
   tasks: Array<PublishedTestTask>;
@@ -277,20 +278,17 @@ export interface PublishedTest {
 }
 
 export interface PublishedTestTask {
+  // Original reference (for tracking)
+  originalTaskId?: string | null;
+
   // Resolved task data (no references, complete copy)
   title: string;
   text: string;                   // HTML content
-  images?: Array<{
-    id: string;
-    url: string;
-  }>;
+  imageUrl?: string;              // Single image URL if showImage was true
   questions?: Array<{
     question: string;
     score?: number;
   }>;
-
-  // Display settings
-  showImage: boolean;
 
   // Scoring
   score?: number;

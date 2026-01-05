@@ -24,15 +24,25 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ShareIcon from '@mui/icons-material/Share';
 import DescriptionIcon from '@mui/icons-material/Description';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import QrCodeIcon from '@mui/icons-material/QrCode';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import Switch from '@mui/material/Switch';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
 import { Button } from '@/components/atoms/Button';
 import { LoadingSpinner } from '@/components/atoms/LoadingSpinner';
 import { Pagination } from '@/components/molecules/Pagination';
 import { SubjectSelector } from '@/components/molecules/SubjectSelector/SubjectSelector';
 import { useRouteProtection } from '@/lib/hooks/useRouteProtection';
 import { useTranslation } from '@/lib/i18n';
-import { fetchMyTests, deleteTest, createTest } from '@/lib/services/test.service';
+import { fetchMyTests, deleteTest, createTest, fetchTestById, uploadTestPDF } from '@/lib/services/test.service';
+import { fetchTaskById } from '@/lib/services/api.service';
 import { Test, CreateTestRequest } from '@/types/test.types';
 import { Subject } from '@/types/i18n';
+import { generateTestPDF, TestPDFData } from '@/lib/utils/pdf-generator';
+import QRCode from 'qrcode';
 
 /**
  * My Tests/Worksheets Page - Teacher Only
@@ -53,6 +63,17 @@ export default function MyTestsPage() {
   const [testToDelete, setTestToDelete] = useState<Test | null>(null);
   const [createDialogOpen, setCreateDialogOpen] = useState(false);
   const [isCreating, setIsCreating] = useState(false);
+
+  // PDF generation state
+  const [pdfDialogOpen, setPdfDialogOpen] = useState(false);
+  const [testForPdf, setTestForPdf] = useState<Test | null>(null);
+  const [includeImages, setIncludeImages] = useState(true);
+  const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
+
+  // Share dialog state
+  const [shareDialogOpen, setShareDialogOpen] = useState(false);
+  const [testToShare, setTestToShare] = useState<Test | null>(null);
+  const [qrCodeDataUrl, setQrCodeDataUrl] = useState<string | null>(null);
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
@@ -217,6 +238,153 @@ export default function MyTestsPage() {
     }
   };
 
+  const handlePdfClick = (test: Test, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setTestForPdf(test);
+    setIncludeImages(true);
+    setPdfDialogOpen(true);
+  };
+
+  const handleGeneratePDF = async () => {
+    if (!testForPdf) return;
+
+    try {
+      setIsGeneratingPDF(true);
+      setError(null);
+
+      // Fetch test with tasks
+      const testData = await fetchTestById(testForPdf.id);
+
+      if (testData.tasks.length === 0) {
+        setError('Cannot generate PDF - test has no tasks');
+        setIsGeneratingPDF(false);
+        return;
+      }
+
+      console.log('[MyTests] Starting PDF generation...');
+
+      // Resolve task data for library tasks
+      const resolvedTaskData: { [key: string]: any } = {};
+      for (const task of testData.tasks) {
+        if (task.taskId) {
+          try {
+            const libraryTask = await fetchTaskById(task.taskId);
+            resolvedTaskData[task.id] = libraryTask.data;
+          } catch (err) {
+            console.error('[MyTests] Error loading library task:', task.taskId, err);
+          }
+        }
+      }
+
+      // Helper functions
+      const getTaskTitle = (task: any): string => {
+        if (task.overrideTitle) return task.overrideTitle;
+        if (task.customTitle) return task.customTitle;
+        if (task.taskId && resolvedTaskData[task.id]) {
+          return resolvedTaskData[task.id].title || 'Untitled Task';
+        }
+        return 'Untitled Task';
+      };
+
+      const getTaskDescription = (task: any): string => {
+        if (task.overrideText) return task.overrideText;
+        if (task.customText) return task.customText;
+        if (task.taskId && resolvedTaskData[task.id]) {
+          return resolvedTaskData[task.id].content?.description || '';
+        }
+        return '';
+      };
+
+      // Prepare test data for PDF generation
+      const pdfData: TestPDFData = {
+        id: testForPdf.id,
+        name: testForPdf.name,
+        subject: testForPdf.subject,
+        gradeLevel: testForPdf.gradeLevel,
+        description: testForPdf.description,
+        tasks: testData.tasks.map((task: any) => {
+          const title = getTaskTitle(task);
+          const description = getTaskDescription(task);
+          const libraryTask = task.taskId ? resolvedTaskData[task.id] : null;
+
+          return {
+            title,
+            description,
+            images: includeImages && task.showImage && libraryTask?.content?.images ? libraryTask.content.images : [],
+            questions: task.customQuestions,
+            score: task.score,
+            showImage: includeImages && task.showImage,
+          };
+        }),
+      };
+
+      console.log('[MyTests] Generating PDF with data:', pdfData);
+
+      // Generate PDF
+      const pdfDataUri = await generateTestPDF(pdfData);
+
+      // Create download link
+      const link = document.createElement('a');
+      link.href = pdfDataUri;
+      link.download = `${testForPdf.name.replace(/[^a-z0-9]/gi, '_')}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      setPdfDialogOpen(false);
+      setTestForPdf(null);
+    } catch (err: any) {
+      console.error('[MyTests] Error generating PDF:', err);
+      setError(err.message || 'Failed to generate PDF');
+    } finally {
+      setIsGeneratingPDF(false);
+    }
+  };
+
+  const handleShareClick = async (test: Test, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setTestToShare(test);
+
+    try {
+      // Generate QR code for the test link
+      // Note: This generates a unique link based on test ID, not the public link
+      const shareUrl = test.publicLink
+        ? `${window.location.origin}${test.publicLink}`
+        : `${window.location.origin}/tests/${test.id}/view`;
+
+      const qrDataUrl = await QRCode.toDataURL(shareUrl, {
+        width: 300,
+        margin: 2,
+        color: {
+          dark: '#000000',
+          light: '#ffffff',
+        },
+      });
+      setQrCodeDataUrl(qrDataUrl);
+      setShareDialogOpen(true);
+    } catch (err) {
+      console.error('[MyTests] Error generating QR code:', err);
+      setError('Failed to generate QR code');
+    }
+  };
+
+  const handleCopyShareLink = () => {
+    if (!testToShare) return;
+
+    const shareUrl = testToShare.publicLink
+      ? `${window.location.origin}${testToShare.publicLink}`
+      : `${window.location.origin}/tests/${testToShare.id}/view`;
+
+    navigator.clipboard.writeText(shareUrl);
+    setError(null);
+    // Show success feedback
+    const successDiv = document.createElement('div');
+    successDiv.textContent = 'Link copied to clipboard!';
+    successDiv.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #4caf50; color: white; padding: 12px 24px; border-radius: 4px; z-index: 9999;';
+    document.body.appendChild(successDiv);
+    setTimeout(() => document.body.removeChild(successDiv), 2000);
+  };
+
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
       <Paper elevation={3} sx={{ p: 4 }}>
@@ -348,7 +516,7 @@ export default function MyTestsPage() {
                     </Box>
 
                     {/* Actions */}
-                    <CardActions sx={{ gap: 1 }}>
+                    <CardActions sx={{ gap: 1, flexDirection: 'column', alignItems: 'stretch' }}>
                       <Button
                         variant="primary"
                         size="small"
@@ -359,6 +527,22 @@ export default function MyTestsPage() {
                         startIcon={<EditIcon />}
                       >
                         {t('Edit')}
+                      </Button>
+                      <Button
+                        variant="secondary"
+                        size="small"
+                        onClick={(e) => handlePdfClick(test, e)}
+                        startIcon={<PictureAsPdfIcon />}
+                      >
+                        {t('PDF')}
+                      </Button>
+                      <Button
+                        variant="secondary"
+                        size="small"
+                        onClick={(e) => handleShareClick(test, e)}
+                        startIcon={<ShareIcon />}
+                      >
+                        Share
                       </Button>
                       <Button
                         variant="secondary"
@@ -492,6 +676,140 @@ export default function MyTestsPage() {
             disabled={isCreating || !newTestName.trim()}
           >
             {isCreating ? t('Creating...') : t('Create & Edit')}
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* PDF Generation Dialog */}
+      <Dialog
+        open={pdfDialogOpen}
+        onClose={() => setPdfDialogOpen(false)}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogTitle>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <PictureAsPdfIcon color="primary" />
+            {t('Download PDF')}
+          </Box>
+        </DialogTitle>
+        <DialogContent>
+          <Typography sx={{ mb: 2 }}>
+            Configure PDF settings for: <strong>{testForPdf?.name}</strong>
+          </Typography>
+          <FormControlLabel
+            control={
+              <Switch
+                checked={includeImages}
+                onChange={(e) => setIncludeImages(e.target.checked)}
+                disabled={isGeneratingPDF}
+              />
+            }
+            label="Include images in PDF"
+          />
+          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+            {includeImages
+              ? 'Images will be included in the PDF'
+              : 'PDF will be generated without images'}
+          </Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button variant="secondary" onClick={() => setPdfDialogOpen(false)} disabled={isGeneratingPDF}>
+            {t('Cancel')}
+          </Button>
+          <Button
+            variant="primary"
+            onClick={handleGeneratePDF}
+            disabled={isGeneratingPDF}
+            startIcon={<PictureAsPdfIcon />}
+          >
+            {isGeneratingPDF ? t('Generating...') : t('Download PDF')}
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Share Dialog with QR Code */}
+      <Dialog
+        open={shareDialogOpen}
+        onClose={() => setShareDialogOpen(false)}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogTitle>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <ShareIcon color="primary" />
+            Share Test
+          </Box>
+        </DialogTitle>
+        <DialogContent>
+          <Typography sx={{ mb: 2 }}>
+            {testToShare?.publicLink
+              ? 'This test has been published. Share the public link:'
+              : 'Share a unique link to this test (teacher access only):'}
+          </Typography>
+
+          {/* Share Link */}
+          <Box sx={{ mb: 3 }}>
+            <Typography variant="subtitle2" sx={{ mb: 1 }}>
+              {testToShare?.publicLink ? t('Public Link') : 'Unique Link'}
+            </Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <TextField
+                value={
+                  testToShare?.publicLink
+                    ? `${window.location.origin}${testToShare.publicLink}`
+                    : testToShare
+                    ? `${window.location.origin}/tests/${testToShare.id}/view`
+                    : ''
+                }
+                fullWidth
+                InputProps={{
+                  readOnly: true,
+                  sx: { fontSize: '0.9rem' },
+                }}
+              />
+              <Tooltip title="Copy link">
+                <IconButton onClick={handleCopyShareLink}>
+                  <ContentCopyIcon />
+                </IconButton>
+              </Tooltip>
+            </Box>
+          </Box>
+
+          {/* QR Code */}
+          <Box sx={{ textAlign: 'center' }}>
+            <Typography variant="subtitle2" sx={{ mb: 2 }}>
+              QR Code
+            </Typography>
+            {qrCodeDataUrl && (
+              <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+                <img
+                  src={qrCodeDataUrl}
+                  alt="QR Code"
+                  style={{
+                    maxWidth: '100%',
+                    height: 'auto',
+                    border: '1px solid #e0e0e0',
+                    borderRadius: '8px',
+                    padding: '16px',
+                  }}
+                />
+              </Box>
+            )}
+            <Typography variant="body2" color="text.secondary">
+              Scan this QR code to access the test
+            </Typography>
+          </Box>
+
+          {!testToShare?.publicLink && (
+            <Alert severity="info" sx={{ mt: 2 }}>
+              This is a private link. To create a public link, edit the test and use the &quot;Publish to Public&quot; button.
+            </Alert>
+          )}
+        </DialogContent>
+        <DialogActions>
+          <Button variant="secondary" onClick={() => setShareDialogOpen(false)}>
+            {t('Close')}
           </Button>
         </DialogActions>
       </Dialog>

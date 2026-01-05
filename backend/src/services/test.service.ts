@@ -560,6 +560,13 @@ export async function publishTestToPublic(
         if (libraryTaskDoc.exists) {
           const libraryTask = libraryTaskDoc.data();
 
+          const firstImage = libraryTask?.content?.images?.[0];
+          const imageUrl = firstImage
+            ? typeof firstImage === 'string'
+              ? firstImage
+              : firstImage.url
+            : undefined;
+
           resolvedTask = {
             originalTaskId: testTask.taskId,
             title:
@@ -569,10 +576,7 @@ export async function publishTestToPublic(
               libraryTask?.content?.description ||
               libraryTask?.description ||
               "",
-            imageUrl:
-              testTask.showImage && libraryTask?.content?.images?.[0]
-                ? libraryTask.content.images[0]
-                : undefined,
+            imageUrl: testTask.showImage ? imageUrl : undefined,
             score: testTask.score,
             orderIndex: testTask.orderIndex,
           };
