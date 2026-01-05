@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import { Subject } from '@/types/i18n';
 import { useUser } from '@/lib/context/UserContext';
-import { SubjectSelect } from '@/components/molecules/SubjectSelect';
+import { SubjectSelector } from '@/components/molecules/SubjectSelector';
 import styles from './SubjectSelectionModal.module.scss';
 
 export interface SubjectSelectionModalProps {
@@ -62,11 +62,12 @@ export const SubjectSelectionModal: React.FC<SubjectSelectionModalProps> = ({
       </DialogTitle>
 
       <DialogContent className={styles.content}>
-        <SubjectSelect
+        <SubjectSelector
           value={selectedSubject}
           onChange={handleChange}
           country={user.country}
           label="Select a subject"
+          required
           className={styles.select}
         />
 

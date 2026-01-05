@@ -42,7 +42,7 @@ import {
 import { useTranslation } from "@/lib/i18n";
 import { useUser, EducationalModel } from "@/lib/context/UserContext";
 import { CountrySelect } from "@/components/molecules/CountrySelect";
-import { SubjectSelect } from "@/components/molecules/SubjectSelect";
+import { SubjectSelector } from "@/components/molecules/SubjectSelector";
 import { EducationalModelSelect } from "@/components/molecules/EducationalModelSelect";
 import * as apiService from "@/lib/services/api.service";
 import styles from "./RegistrationModal.module.scss";
@@ -447,11 +447,12 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
 
               {isTeacher && selectedCountry && (
                 <>
-                  <SubjectSelect
+                  <SubjectSelector
                     value={selectedSubject || ""}
                     onChange={handleSubjectSelect}
                     country={selectedCountry}
                     label={t("Subject")}
+                    required
                     className={styles.formControl}
                     data-testid="subject-select"
                     sx={{ mt: 3 }}

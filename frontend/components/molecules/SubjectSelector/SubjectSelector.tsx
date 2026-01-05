@@ -10,12 +10,12 @@ import {
   Box,
   Chip,
 } from '@mui/material';
-import { Subject } from '@/types/i18n';
-import { SUBJECTS } from '@/lib/data/subjects';
+import { Subject, CountryCode } from '@/types/i18n';
+import { SUBJECTS, getSubjectsForCountry } from '@/lib/data/subjects';
 import { useTranslation } from '@/lib/i18n';
 
 export interface SubjectSelectorProps {
-  value: Subject | Subject[] | null;
+  value: Subject | Subject[] | null | '';
   onChange: (subject: Subject | Subject[] | null) => void;
   type?: 'select' | 'chip';
   isMultiSelect?: boolean;
@@ -26,12 +26,14 @@ export interface SubjectSelectorProps {
   className?: string;
   'data-testid'?: string;
   sx?: object;
+  country?: CountryCode; // Optional: if provided, uses country-specific labels
 }
 
 /**
  * SubjectSelector Component
  * Reusable subject selector with two modes: select dropdown or chip selector
  * Supports both single and multi-select
+ * Can use country-specific labels or translation context
  */
 export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
   value,
@@ -45,15 +47,27 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
   className,
   'data-testid': dataTestId,
   sx,
+  country: countryProp,
 }) => {
-  const { t, country } = useTranslation();
+  const { t, country: contextCountry } = useTranslation();
+  const effectiveCountry = countryProp || contextCountry;
+
+  // Get subjects list (country-specific if country prop provided)
+  const subjectsList = countryProp
+    ? getSubjectsForCountry(countryProp)
+    : SUBJECTS;
 
   // Get translated subject label
   const getSubjectLabel = (subject: Subject): string => {
+    if (countryProp) {
+      // Use country-specific label directly
+      const subjectOption = subjectsList.find((s) => s.value === subject);
+      return subjectOption?.label || subject;
+    }
+
+    // Use translation system
     const subjectOption = SUBJECTS.find((s) => s.value === subject);
     if (!subjectOption) return subject;
-
-    // Use translation system with the subject name as key
     return t(subjectOption.labelEN);
   };
 
@@ -84,7 +98,7 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
   if (type === 'chip') {
     return (
       <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', ...sx }} className={className}>
-        {SUBJECTS.map((subject) => {
+        {subjectsList.map((subject) => {
           const isSelected = isMultiSelect
             ? (value as Subject[])?.includes(subject.value)
             : value === subject.value;
@@ -121,7 +135,7 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
             <em>{t('All Subjects')}</em>
           </MenuItem>
         )}
-        {SUBJECTS.map((subject) => (
+        {subjectsList.map((subject) => (
           <MenuItem key={subject.value} value={subject.value}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
               <span style={{ fontSize: '1.5rem' }}>{subject.emoji}</span>

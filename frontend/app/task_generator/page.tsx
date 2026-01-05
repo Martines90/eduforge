@@ -21,19 +21,14 @@ import { fetchAllGradeTrees } from '@/lib/services/subject-mapping.service';
 import { useSnackbar } from 'notistack';
 import { API_BASE_URL } from '@/lib/services/api.service';
 import { TRIAL_START_CREDITS } from '@/lib/constants/credits';
+import { SUBJECTS } from '@/lib/data/subjects';
 import styles from '../task_creator/page.module.scss';
 
-// Subject options for the dropdown
-const SUBJECT_OPTIONS: { value: Subject; label: string }[] = [
-  { value: 'mathematics', label: 'Mathematics' },
-  { value: 'physics', label: 'Physics' },
-  { value: 'chemistry', label: 'Chemistry' },
-  { value: 'biology', label: 'Biology' },
-  { value: 'information_technology', label: 'Informatics' },
-  { value: 'history', label: 'History' },
-  { value: 'geography', label: 'Geography' },
-  { value: 'literature', label: 'Literature' },
-];
+// Map SUBJECTS from shared to dropdown options
+const SUBJECT_OPTIONS: { value: Subject; label: string }[] = SUBJECTS.map((subject) => ({
+  value: subject.value,
+  label: subject.labelEN,
+}));
 
 // Grade level options for the dropdown
 const GRADE_OPTIONS: { value: GradeLevel; label: string }[] = [

@@ -19,7 +19,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import { Button } from '@/components/atoms/Button';
 import { TaskTreeView } from '@/components/organisms/TaskTreeView';
+import { SubjectSelector } from '@/components/molecules/SubjectSelector';
 import { TreeNode } from '@/types/task-tree';
+import { Subject } from '@/types/i18n';
 import { useTranslation } from '@/lib/i18n';
 import { fetchTreeMap } from '@/lib/services/api.service';
 import { useUser } from '@/lib/context/UserContext';
@@ -35,7 +37,7 @@ export default function TasksPage() {
   const { t } = useTranslation();
   const { user } = useUser();
   const [searchQuery, setSearchQuery] = useState('');
-  const [filterSubject, setFilterSubject] = useState('mathematics');
+  const [filterSubject, setFilterSubject] = useState<Subject>('mathematics');
   const [filterGrade, setFilterGrade] = useState('all');
   const [treeDataGrade9_10, setTreeDataGrade9_10] = useState<TreeNode[]>([]);
   const [treeDataGrade11_12, setTreeDataGrade11_12] = useState<TreeNode[]>([]);
@@ -105,20 +107,12 @@ export default function TasksPage() {
       <Paper elevation={2} sx={{ p: 3, mb: 4 }}>
         <Grid container spacing={3} alignItems="flex-start">
           <Grid item xs={12} sm={6} md={4}>
-            <FormControl fullWidth>
-              <InputLabel>{t('Subject')}</InputLabel>
-              <Select
-                value={filterSubject}
-                label={t('Subject')}
-                onChange={(e) => setFilterSubject(e.target.value)}
-              >
-                <MenuItem value="mathematics">{t('Mathematics')}</MenuItem>
-                <MenuItem value="physics">{t('Physics')}</MenuItem>
-                <MenuItem value="chemistry">{t('Chemistry')}</MenuItem>
-                <MenuItem value="biology">{t('Biology')}</MenuItem>
-                <MenuItem value="geography">{t('Geography')}</MenuItem>
-              </Select>
-            </FormControl>
+            <SubjectSelector
+              value={filterSubject}
+              onChange={(subject) => setFilterSubject(subject as Subject)}
+              label={t('Subject')}
+              required
+            />
           </Grid>
 
           <Grid item xs={12} sm={6} md={4}>

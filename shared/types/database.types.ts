@@ -8,6 +8,8 @@
  * Last Updated: 2026-01-02
  */
 
+import { Subject } from './subjects';
+
 // ============================================
 // ROOT DATABASE STRUCTURE
 // ============================================
@@ -150,7 +152,7 @@ export interface Country {
 export interface SubjectMapping {
   id: string;                     // Complex document ID with prefix
   name: string;                   // Display name (e.g., "Algebrai kifejezések, azonosságok")
-  subject: 'mathematics' | 'physics' | 'chemistry' | 'biology' | 'history' | 'geography';
+  subject: Subject;               // Use Subject type from single source of truth
   gradeLevel: 'grade_9_10' | 'grade_11_12';
   level: number;                  // Depth in tree (0 = root)
   orderIndex: number;             // Order among siblings
