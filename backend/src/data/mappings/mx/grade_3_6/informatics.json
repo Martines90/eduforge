@@ -4834,5 +4834,1163 @@
         ]
       }
     ]
+  },
+  {
+    "key": "seguridad_privacidad",
+    "name": "Seguridad y Privacidad en Línea",
+    "short_description": "Protección de información personal, creación de contraseñas seguras, reconocimiento de amenazas y prácticas de seguridad digital.",
+    "sub_topics": [
+      {
+        "key": "contraseñas_seguras",
+        "name": "Contraseñas Seguras",
+        "short_description": "Crear y gestionar contraseñas fuertes para proteger cuentas.",
+        "sub_topics": [
+          {
+            "key": "crear_contraseña_fuerte",
+            "name": "Crear Contraseña Fuerte",
+            "short_description": "Diseñar contraseñas que sean difíciles de adivinar pero fáciles de recordar.",
+            "example_tasks": [
+              "Usar combinación de letras mayúsculas, minúsculas, números y símbolos",
+              "Crear contraseñas de al menos 8-12 caracteres de longitud",
+              "Evitar información personal obvia: nombre, fecha de nacimiento, mascota",
+              "Usar frases secretas convirtiendo frase en contraseña: 'Me gusta jugar fútbol' = 'Mgjf2024!'",
+              "Probar fortaleza de contraseña usando verificador en línea seguro"
+            ]
+          },
+          {
+            "key": "que_evitar",
+            "name": "Qué Evitar en Contraseñas",
+            "short_description": "Reconocer prácticas inseguras al crear contraseñas.",
+            "example_tasks": [
+              "No usar contraseñas simples como '123456' o 'password'",
+              "Evitar usar misma contraseña para múltiples cuentas",
+              "No compartir contraseñas con amigos o compañeros",
+              "No escribir contraseñas en lugares visibles o fáciles de encontrar",
+              "No usar solo palabras del diccionario que son fáciles de adivinar"
+            ]
+          },
+          {
+            "key": "gestionar_contraseñas",
+            "name": "Gestionar Contraseñas",
+            "short_description": "Organizar y recordar múltiples contraseñas de forma segura.",
+            "example_tasks": [
+              "Mantener lista escrita de contraseñas en lugar seguro en casa",
+              "Usar administrador de contraseñas si escuela o padres lo proporcionan",
+              "Cambiar contraseñas periódicamente, especialmente si sospechan compromiso",
+              "Recordar contraseñas más importantes memorizándolas",
+              "Pedir ayuda a adulto para recuperar contraseñas olvidadas"
+            ]
+          },
+          {
+            "key": "autenticacion_dos_factores",
+            "name": "Autenticación de Dos Factores",
+            "short_description": "Comprender capa adicional de seguridad más allá de contraseña.",
+            "example_tasks": [
+              "Entender autenticación de dos factores como verificación adicional",
+              "Identificar métodos: código por SMS, app autenticadora, correo",
+              "Activar cuando está disponible en cuentas importantes",
+              "Comprender que hace cuentas mucho más difíciles de hackear",
+              "Guardar códigos de respaldo en lugar seguro"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "proteccion_informacion",
+        "name": "Protección de Información Personal",
+        "short_description": "Identificar información privada y saber cuándo y cómo protegerla.",
+        "sub_topics": [
+          {
+            "key": "identificar_info_personal",
+            "name": "Identificar Información Personal",
+            "short_description": "Reconocer qué información es privada y debe protegerse.",
+            "example_tasks": [
+              "Crear lista de información personal: nombre completo, dirección, teléfono, escuela",
+              "Incluir información financiera: números de cuenta, tarjetas",
+              "Reconocer información sensible: fotos personales, ubicación actual",
+              "Comprender que contraseñas y PINs son privados",
+              "Identificar información de identidad: CURP, número de seguro social"
+            ]
+          },
+          {
+            "key": "cuando_compartir",
+            "name": "Cuándo Compartir Información",
+            "short_description": "Determinar situaciones apropiadas para compartir datos personales.",
+            "example_tasks": [
+              "Compartir solo con adultos de confianza cuando es absolutamente necesario",
+              "Pedir permiso a padres antes de dar información personal en línea",
+              "Proporcionar solo información mínima necesaria para cada situación",
+              "Verificar que sitio es legítimo antes de ingresar datos",
+              "Comprender cuándo es apropiado decir 'no' a solicitudes de información"
+            ]
+          },
+          {
+            "key": "redes_sociales",
+            "name": "Privacidad en Redes Sociales",
+            "short_description": "Proteger información en plataformas sociales apropiadas para edad.",
+            "example_tasks": [
+              "Configurar perfiles como privados en plataformas permitidas",
+              "No compartir ubicación actual o planes futuros públicamente",
+              "Ser selectivo con solicitudes de amistad aceptando solo conocidos reales",
+              "Pensar antes de publicar fotos considerando quién podría verlas",
+              "Reportar a adulto si alguien pide información inapropiada"
+            ]
+          },
+          {
+            "key": "fotos_videos",
+            "name": "Cuidado con Fotos y Videos",
+            "short_description": "Ser consciente de privacidad al compartir contenido visual.",
+            "example_tasks": [
+              "Pedir permiso antes de tomar o compartir fotos de otros",
+              "No compartir fotos que revelen información personal: uniforme escolar, placas de auto",
+              "Considerar fondo de fotos que podría revelar ubicación",
+              "Comprender que imágenes en línea pueden ser descargadas y compartidas",
+              "Reportar a adulto si encuentran fotos inapropiadas de sí mismos en línea"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "amenazas_digitales",
+        "name": "Reconocer Amenazas Digitales",
+        "short_description": "Identificar intentos de fraude, phishing y otras amenazas en línea.",
+        "sub_topics": [
+          {
+            "key": "phishing",
+            "name": "Reconocer Phishing",
+            "short_description": "Identificar intentos fraudulentos de obtener información personal.",
+            "example_tasks": [
+              "Reconocer correos sospechosos que piden información personal o contraseñas",
+              "Identificar señales: errores ortográficos, sentido de urgencia, remitente desconocido",
+              "No hacer clic en enlaces de correos no solicitados",
+              "Verificar dirección de correo del remitente cuidadosamente",
+              "Reportar correos de phishing a adulto en lugar de solo eliminar"
+            ]
+          },
+          {
+            "key": "estafas_premios",
+            "name": "Estafas de Premios Falsos",
+            "short_description": "Reconocer ofertas fraudulentas de premios o dinero.",
+            "example_tasks": [
+              "Desconfiar de mensajes diciendo 'ganaste premio' de concursos no ingresados",
+              "Reconocer que premios reales no piden dinero o información personal primero",
+              "Identificar promesas poco realistas: 'gana millones fácilmente'",
+              "No hacer clic en pop-ups de 'felicidades, ganaste'",
+              "Consultar con adulto antes de responder a oferta que parece demasiado buena"
+            ]
+          },
+          {
+            "key": "malware_virus",
+            "name": "Protección contra Malware",
+            "short_description": "Comprender software malicioso y cómo evitarlo.",
+            "example_tasks": [
+              "Entender que virus y malware son programas dañinos",
+              "No descargar software de sitios no confiables",
+              "Evitar hacer clic en anuncios pop-up engañosos",
+              "Reconocer advertencias de antivirus y reportar a adulto",
+              "Comprender importancia de mantener antivirus actualizado"
+            ]
+          },
+          {
+            "key": "ingenieria_social",
+            "name": "Ingeniería Social",
+            "short_description": "Reconocer intentos de manipulación para obtener información.",
+            "example_tasks": [
+              "Identificar cuando alguien intenta crear urgencia o miedo para obtener datos",
+              "Desconfiar de solicitudes inusuales incluso de contactos conocidos",
+              "Verificar identidad de persona solicitando información por método alternativo",
+              "No sentir presión de responder inmediatamente a solicitudes sospechosas",
+              "Comprender que atacantes pueden hacerse pasar por personas de confianza"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "navegacion_segura",
+        "name": "Navegación Segura",
+        "short_description": "Prácticas para mantenerse seguro mientras navega en Internet.",
+        "sub_topics": [
+          {
+            "key": "sitios_seguros",
+            "name": "Verificar Sitios Seguros",
+            "short_description": "Identificar indicadores de sitios web confiables.",
+            "example_tasks": [
+              "Buscar candado en barra de direcciones indicando conexión segura (HTTPS)",
+              "Verificar URL cuidadosamente buscando errores ortográficos",
+              "Desconfiar de sitios con muchos anuncios o errores",
+              "Usar solo sitios conocidos y recomendados para compras o información importante",
+              "Salir inmediatamente de sitios que se ven sospechosos"
+            ]
+          },
+          {
+            "key": "descargas_seguras",
+            "name": "Descargas Seguras",
+            "short_description": "Protegerse al descargar archivos o aplicaciones.",
+            "example_tasks": [
+              "Pedir permiso a adulto antes de descargar cualquier cosa",
+              "Descargar solo de fuentes oficiales: tiendas de aplicaciones verificadas",
+              "Leer reseñas y calificaciones antes de descargar aplicaciones",
+              "Evitar sitios que ofrecen software 'gratis' normalmente de pago",
+              "Escanear archivos descargados con antivirus antes de abrir"
+            ]
+          },
+          {
+            "key": "wifi_publico",
+            "name": "Precaución en WiFi Público",
+            "short_description": "Comprender riesgos de redes públicas y cómo protegerse.",
+            "example_tasks": [
+              "Evitar ingresar información sensible en WiFi público",
+              "No realizar compras o transacciones en redes no seguras",
+              "Comprender que otros podrían interceptar datos en WiFi público",
+              "Olvidar red pública después de usar para no reconectar automáticamente",
+              "Usar datos móviles en lugar de WiFi público para actividades importantes"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "privacidad_configuraciones",
+        "name": "Configuraciones de Privacidad",
+        "short_description": "Ajustar configuraciones en dispositivos y aplicaciones para proteger privacidad.",
+        "sub_topics": [
+          {
+            "key": "configurar_navegador",
+            "name": "Configuración del Navegador",
+            "short_description": "Ajustar privacidad y seguridad en navegador web.",
+            "example_tasks": [
+              "Configurar navegador para no guardar historial en computadoras compartidas",
+              "Habilitar bloqueo de ventanas emergentes (pop-ups)",
+              "Configurar navegador para advertir sobre sitios peligrosos",
+              "Borrar cookies y caché periódicamente con supervisión",
+              "Revisar extensiones instaladas y eliminar desconocidas"
+            ]
+          },
+          {
+            "key": "permisos_aplicaciones",
+            "name": "Permisos de Aplicaciones",
+            "short_description": "Controlar qué información pueden acceder aplicaciones.",
+            "example_tasks": [
+              "Revisar permisos que aplicación solicita antes de instalar",
+              "Cuestionar por qué aplicación necesita ciertos permisos",
+              "Denegar permisos innecesarios: juego no necesita acceso a contactos",
+              "Revisar y ajustar permisos de aplicaciones ya instaladas",
+              "Desinstalar aplicaciones que solicitan permisos excesivos"
+            ]
+          },
+          {
+            "key": "ubicacion",
+            "name": "Servicios de Ubicación",
+            "short_description": "Controlar cuándo compartir ubicación geográfica.",
+            "example_tasks": [
+              "Desactivar ubicación cuando no es necesaria",
+              "Permitir ubicación solo para aplicaciones que realmente lo necesitan",
+              "No compartir ubicación en redes sociales públicamente",
+              "Comprender que metadatos de fotos pueden contener ubicación",
+              "Desactivar historial de ubicaciones si está disponible"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "reportar_problemas",
+        "name": "Reportar Problemas de Seguridad",
+        "short_description": "Saber cuándo y cómo reportar situaciones sospechosas o peligrosas.",
+        "sub_topics": [
+          {
+            "key": "cuando_reportar",
+            "name": "Cuándo Reportar",
+            "short_description": "Identificar situaciones que requieren intervención de adulto.",
+            "example_tasks": [
+              "Reportar si alguien pide información personal o fotos inapropiadas",
+              "Informar cuando encuentran contenido perturbador o inapropiado",
+              "Reportar acoso, amenazas o comportamiento intimidante",
+              "Comunicar si reciben mensajes de extraños",
+              "Informar si accidentalmente dan información personal importante"
+            ]
+          },
+          {
+            "key": "como_reportar",
+            "name": "Cómo Reportar",
+            "short_description": "Proceso apropiado para comunicar problemas de seguridad.",
+            "example_tasks": [
+              "Hablar inmediatamente con adulto de confianza: padre, maestro",
+              "No eliminar evidencia: guardar mensajes, tomar capturas de pantalla",
+              "Explicar claramente qué sucedió sin exagerar ni minimizar",
+              "Usar herramientas de reporte en plataformas cuando estén disponibles",
+              "Seguir instrucciones de adulto sobre pasos siguientes"
+            ]
+          },
+          {
+            "key": "no_culpa",
+            "name": "No es Tu Culpa",
+            "short_description": "Comprender que víctimas no son responsables de amenazas digitales.",
+            "example_tasks": [
+              "Entender que no es su culpa si son víctimas de fraude o acoso",
+              "No temer reportar por creer que se meterán en problemas",
+              "Comprender que adultos están para ayudar, no para castigar",
+              "Aprender de experiencia sin sentirse avergonzados",
+              "Ayudar a otros reconociendo que todos pueden ser víctimas"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "redes_sociales_huella",
+    "name": "Redes Sociales y Huella Digital",
+    "short_description": "Uso responsable de redes sociales apropiadas para la edad, construcción de reputación digital positiva y comprensión del impacto a largo plazo.",
+    "sub_topics": [
+      {
+        "key": "redes_apropiadas",
+        "name": "Redes Sociales Apropiadas para la Edad",
+        "short_description": "Comprender restricciones de edad y elegir plataformas seguras.",
+        "sub_topics": [
+          {
+            "key": "restricciones_edad",
+            "name": "Restricciones de Edad",
+            "short_description": "Respetar límites de edad mínima en plataformas sociales.",
+            "example_tasks": [
+              "Comprender que muchas redes requieren mínimo 13 años",
+              "Reconocer por qué existen estas restricciones: protección de menores",
+              "No mentir sobre edad para acceder a plataformas",
+              "Usar plataformas diseñadas específicamente para su grupo de edad",
+              "Esperar hasta edad apropiada en lugar de crear cuentas falsas"
+            ]
+          },
+          {
+            "key": "plataformas_seguras",
+            "name": "Plataformas Seguras para Niños",
+            "short_description": "Identificar redes sociales y comunidades diseñadas para niños.",
+            "example_tasks": [
+              "Explorar plataformas educativas con características sociales seguras",
+              "Usar comunidades moderadas diseñadas para estudiantes",
+              "Participar en foros escolares supervisados por maestros",
+              "Reconocer características de seguridad: moderación, reportes, filtros",
+              "Discutir con padres qué plataformas son apropiadas para usar"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "contenido_apropiado",
+        "name": "Publicar Contenido Apropiado",
+        "short_description": "Crear y compartir contenido positivo y apropiado para edad.",
+        "sub_topics": [
+          {
+            "key": "pensar_antes_publicar",
+            "name": "Pensar Antes de Publicar",
+            "short_description": "Reflexionar sobre impacto de publicaciones antes de compartir.",
+            "example_tasks": [
+              "Hacer pausa antes de publicar preguntándose: '¿Esto refleja bien en mí?'",
+              "Considerar: '¿Me sentiría cómodo si mis padres/maestros vieran esto?'",
+              "Pensar en consecuencias a largo plazo de publicación",
+              "Evitar publicar cuando están enojados o molestos",
+              "Releer y revisar antes de hacer clic en publicar"
+            ]
+          },
+          {
+            "key": "contenido_positivo",
+            "name": "Crear Contenido Positivo",
+            "short_description": "Compartir cosas que inspiran, educan o entretienen apropiadamente.",
+            "example_tasks": [
+              "Publicar sobre logros, proyectos creativos, pasatiempos",
+              "Compartir conocimientos o ayudar a otros con información útil",
+              "Celebrar éxitos de otros con comentarios positivos",
+              "Usar redes para construir comunidad y conexiones positivas",
+              "Ser fuente de positividad en lugar de negatividad"
+            ]
+          },
+          {
+            "key": "que_evitar",
+            "name": "Qué Evitar Publicar",
+            "short_description": "Reconocer contenido inapropiado o riesgoso para compartir.",
+            "example_tasks": [
+              "No publicar información personal: dirección, teléfono, ubicación actual",
+              "Evitar compartir fotos inapropiadas o vergonzosas de sí mismos o otros",
+              "No publicar cuando están enojados para evitar decir cosas de las que se arrepentirán",
+              "Evitar quejas o negatividad constante que afecta reputación",
+              "No compartir información académica confidencial como calificaciones de otros"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "interacciones_sociales",
+        "name": "Interacciones Sociales en Línea",
+        "short_description": "Comunicarse respetuosamente y construir relaciones positivas digitalmente.",
+        "sub_topics": [
+          {
+            "key": "comentarios_respetuosos",
+            "name": "Comentarios Respetuosos",
+            "short_description": "Interactuar con otros de manera amable y constructiva.",
+            "example_tasks": [
+              "Dejar comentarios positivos y alentadores en publicaciones de amigos",
+              "Expresar desacuerdos respetuosamente sin atacar personalmente",
+              "No participar en discusiones o debates hostiles",
+              "Usar lenguaje apropiado sin palabras ofensivas",
+              "Considerar cómo sus palabras afectan a otros emocionalmente"
+            ]
+          },
+          {
+            "key": "amistades_online",
+            "name": "Amistades en Línea",
+            "short_description": "Construir conexiones auténticas manteniendo precauciones de seguridad.",
+            "example_tasks": [
+              "Conectar principalmente con personas que conocen en vida real",
+              "Ser cautelosos con solicitudes de amistad de desconocidos",
+              "No compartir información muy personal incluso con amigos en línea",
+              "Reportar a adulto si 'amigo' en línea hace solicitudes inapropiadas",
+              "Comprender diferencia entre conocidos en línea y amigos reales"
+            ]
+          },
+          {
+            "key": "manejo_conflictos",
+            "name": "Manejo de Conflictos",
+            "short_description": "Resolver desacuerdos de manera madura sin escalar problemas.",
+            "example_tasks": [
+              "Tomar descanso antes de responder a comentario que los molesta",
+              "Considerar conversación privada en lugar de discusión pública",
+              "Pedir ayuda de adulto si conflicto está escalando",
+              "Bloquear o silenciar personas que son constantemente negativas",
+              "Reconocer cuándo es mejor desconectarse de situación"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "huella_digital_concepto",
+        "name": "Concepto de Huella Digital",
+        "short_description": "Comprender que actividad en línea deja rastro permanente.",
+        "sub_topics": [
+          {
+            "key": "que_es_huella",
+            "name": "¿Qué es la Huella Digital?",
+            "short_description": "Entender huella digital como registro de presencia y actividad en línea.",
+            "example_tasks": [
+              "Explicar huella digital como rastro dejado por actividades en Internet",
+              "Comprender que incluye publicaciones, comentarios, likes, búsquedas",
+              "Reconocer que otros pueden buscar y encontrar esta información",
+              "Entender diferencia entre huella activa (lo que publican) y pasiva (datos recopilados)",
+              "Buscar su propio nombre para ver qué aparece sobre ellos"
+            ]
+          },
+          {
+            "key": "permanencia",
+            "name": "Permanencia de Contenido Digital",
+            "short_description": "Comprender que contenido en línea puede permanecer indefinidamente.",
+            "example_tasks": [
+              "Reconocer que 'eliminar' no siempre borra contenido permanentemente",
+              "Comprender que otros pueden hacer capturas o copias antes de eliminar",
+              "Saber que contenido puede reaparecer incluso después de eliminarlo",
+              "Considerar permanencia antes de publicar: '¿Quiero esto en línea para siempre?'",
+              "Aprender de errores pasados siendo más cuidadosos en futuro"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "gestionar_reputacion",
+        "name": "Gestionar Reputación Digital",
+        "short_description": "Construir y mantener imagen en línea positiva y profesional.",
+        "sub_topics": [
+          {
+            "key": "construir_positiva",
+            "name": "Construir Reputación Positiva",
+            "short_description": "Acciones que contribuyen a huella digital favorable.",
+            "example_tasks": [
+              "Compartir proyectos creativos y logros académicos",
+              "Participar en comunidades en línea de manera constructiva",
+              "Demostrar habilidades e intereses a través de contenido",
+              "Ser consistentemente amable y respetuoso en interacciones",
+              "Crear portafolio digital de trabajos con supervisión apropiada"
+            ]
+          },
+          {
+            "key": "limpiar_huella",
+            "name": "Limpiar Huella Digital",
+            "short_description": "Revisar y mejorar presencia en línea existente.",
+            "example_tasks": [
+              "Buscar su nombre periódicamente para ver qué aparece",
+              "Eliminar publicaciones antiguas inapropiadas o vergonzosas",
+              "Pedir ayuda para eliminar contenido negativo sobre ellos",
+              "Ajustar configuraciones de privacidad en perfiles",
+              "Crear más contenido positivo para desplazar contenido menos favorable"
+            ]
+          },
+          {
+            "key": "impacto_futuro",
+            "name": "Impacto en el Futuro",
+            "short_description": "Comprender cómo huella digital afecta oportunidades futuras.",
+            "example_tasks": [
+              "Reconocer que universidades y empleadores pueden buscar en línea",
+              "Comprender que reputación digital puede afectar oportunidades",
+              "Considerar cómo querrán ser percibidos cuando sean mayores",
+              "Discutir ejemplos de cómo huella digital ha afectado a otros",
+              "Desarrollar hábitos ahora que servirán bien en futuro"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "privacidad_redes",
+        "name": "Privacidad en Redes Sociales",
+        "short_description": "Configurar y mantener privacidad apropiada en plataformas sociales.",
+        "sub_topics": [
+          {
+            "key": "perfil_privado",
+            "name": "Perfil Privado vs. Público",
+            "short_description": "Comprender diferencia y elegir configuración apropiada.",
+            "example_tasks": [
+              "Configurar perfiles como privados en lugar de públicos",
+              "Comprender que perfil público significa cualquiera puede ver contenido",
+              "Revisar configuraciones de privacidad regularmente",
+              "Ser selectivo sobre quién puede ver diferentes tipos de información",
+              "Pedir ayuda a adulto para configurar privacidad apropiadamente"
+            ]
+          },
+          {
+            "key": "control_audiencia",
+            "name": "Controlar Audiencia",
+            "short_description": "Gestionar quién puede ver publicaciones y información.",
+            "example_tasks": [
+              "Revisar quién está en lista de amigos o seguidores",
+              "Eliminar conexiones con personas que no conocen bien",
+              "Usar listas o grupos para compartir con audiencias específicas",
+              "Configurar quién puede ver publicaciones antiguas",
+              "Limitar quién puede etiquetar en fotos o publicaciones"
+            ]
+          },
+          {
+            "key": "informacion_perfil",
+            "name": "Información en Perfil",
+            "short_description": "Decidir qué información personal incluir en perfiles.",
+            "example_tasks": [
+              "Minimizar información personal visible públicamente",
+              "No incluir dirección, número de teléfono, o nombre de escuela",
+              "Usar apodo o nombre parcial en lugar de nombre completo",
+              "Evitar compartir fecha de nacimiento completa públicamente",
+              "Revisar qué información es visible para no amigos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "balance_digital",
+        "name": "Balance Digital Saludable",
+        "short_description": "Mantener relación equilibrada y saludable con redes sociales.",
+        "sub_topics": [
+          {
+            "key": "tiempo_pantalla_social",
+            "name": "Tiempo en Redes Sociales",
+            "short_description": "Limitar tiempo dedicado a plataformas sociales.",
+            "example_tasks": [
+              "Establecer límites de tiempo diario para redes sociales",
+              "Usar temporizadores o recordatorios para evitar uso excesivo",
+              "Tomar descansos regulares de redes sociales",
+              "No revisar constantemente actualizaciones o notificaciones",
+              "Priorizar interacciones cara a cara sobre digitales"
+            ]
+          },
+          {
+            "key": "comparacion_social",
+            "name": "Evitar Comparación Negativa",
+            "short_description": "Reconocer que redes sociales no muestran realidad completa.",
+            "example_tasks": [
+              "Comprender que personas comparten principalmente aspectos positivos",
+              "No comparar su vida con vidas aparentemente 'perfectas' de otros",
+              "Reconocer cuando redes sociales los hacen sentir mal sobre sí mismos",
+              "Tomar descanso si uso de redes afecta autoestima negativamente",
+              "Enfocarse en sus propios logros sin comparación constante"
+            ]
+          },
+          {
+            "key": "desconexion",
+            "name": "Desconectarse Intencionalmente",
+            "short_description": "Tomar descansos planeados de redes sociales.",
+            "example_tasks": [
+              "Designar tiempos libres de redes: durante comidas, antes de dormir",
+              "Participar en actividades que no involucran pantallas",
+              "Tomar 'vacaciones digitales' ocasionales de redes sociales",
+              "Notar cómo se sienten durante y después de descansos de redes",
+              "Desarrollar pasatiempos e intereses fuera del mundo digital"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "tecnologias_emergentes",
+    "name": "Introducción a Tecnologías Emergentes",
+    "short_description": "Conceptos básicos de inteligencia artificial, Internet de las Cosas, realidad virtual y otras tecnologías del futuro apropiados para la edad.",
+    "sub_topics": [
+      {
+        "key": "inteligencia_artificial",
+        "name": "Inteligencia Artificial Básica",
+        "short_description": "Comprender qué es IA y cómo se usa en vida cotidiana.",
+        "sub_topics": [
+          {
+            "key": "que_es_ia",
+            "name": "¿Qué es la Inteligencia Artificial?",
+            "short_description": "Definición simple de IA apropiada para niños.",
+            "example_tasks": [
+              "Explicar IA como computadoras que 'aprenden' a hacer tareas",
+              "Comprender que IA no piensa como humanos pero puede imitar comportamientos",
+              "Distinguir entre IA real y IA de películas de ciencia ficción",
+              "Reconocer que IA es herramienta creada y controlada por humanos",
+              "Discutir ejemplos simples: asistentes de voz, recomendaciones de videos"
+            ]
+          },
+          {
+            "key": "ia_cotidiana",
+            "name": "IA en Vida Cotidiana",
+            "short_description": "Identificar usos de IA que encuentran regularmente.",
+            "example_tasks": [
+              "Reconocer asistentes virtuales como Siri o Alexa como ejemplos de IA",
+              "Identificar recomendaciones en plataformas de video o música",
+              "Comprender filtros de spam en correo como aplicación de IA",
+              "Reconocer reconocimiento facial en fotos como tecnología de IA",
+              "Crear lista de lugares donde interactúan con IA sin darse cuenta"
+            ]
+          },
+          {
+            "key": "ia_aprende",
+            "name": "Cómo la IA Aprende",
+            "short_description": "Concepto simplificado de aprendizaje automático.",
+            "example_tasks": [
+              "Comprender que IA aprende de ejemplos, no de programación directa",
+              "Usar analogía: IA aprende como niño aprende a reconocer animales viendo muchos",
+              "Reconocer que más datos generalmente significa mejor IA",
+              "Comprender que IA puede cometer errores como humanos",
+              "Experimentar con herramienta simple de IA observando cómo mejora con práctica"
+            ]
+          },
+          {
+            "key": "etica_ia",
+            "name": "Consideraciones Éticas de IA",
+            "short_description": "Pensar críticamente sobre impacto de IA en sociedad.",
+            "example_tasks": [
+              "Discutir si es justo que IA tome ciertas decisiones",
+              "Considerar sesgos: IA refleja sesgos en datos con que fue entrenada",
+              "Pensar sobre privacidad: IA necesita datos para funcionar",
+              "Debatir trabajos que IA podría reemplazar vs. crear",
+              "Desarrollar opiniones informadas sobre uso apropiado de IA"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "internet_cosas",
+        "name": "Internet de las Cosas (IoT)",
+        "short_description": "Comprender dispositivos conectados y hogares/ciudades inteligentes.",
+        "sub_topics": [
+          {
+            "key": "que_es_iot",
+            "name": "¿Qué es IoT?",
+            "short_description": "Concepto de objetos cotidianos conectados a Internet.",
+            "example_tasks": [
+              "Explicar IoT como objetos ordinarios conectados a Internet",
+              "Identificar ejemplos: termostatos inteligentes, relojes fitness, bombillas WiFi",
+              "Comprender que dispositivos IoT pueden comunicarse entre sí",
+              "Reconocer diferencia entre dispositivos tradicionales e inteligentes",
+              "Discutir cómo IoT hace vida más conveniente"
+            ]
+          },
+          {
+            "key": "hogar_inteligente",
+            "name": "Hogar Inteligente",
+            "short_description": "Explorar automatización y control de dispositivos del hogar.",
+            "example_tasks": [
+              "Identificar dispositivos de hogar inteligente: luces, cerraduras, cámaras",
+              "Comprender control por voz o aplicación móvil",
+              "Discutir beneficios: ahorro de energía, seguridad, comodidad",
+              "Considerar preocupaciones de privacidad con dispositivos conectados",
+              "Imaginar y diseñar su hogar inteligente ideal"
+            ]
+          },
+          {
+            "key": "wearables",
+            "name": "Tecnología Ponible",
+            "short_description": "Dispositivos que se usan en el cuerpo para rastrear datos.",
+            "example_tasks": [
+              "Identificar ejemplos: relojes inteligentes, rastreadores de actividad, lentes inteligentes",
+              "Comprender datos que rastrean: pasos, ritmo cardíaco, sueño",
+              "Discutir cómo datos ayudan a mantenerse saludables",
+              "Considerar privacidad de datos de salud recopilados",
+              "Imaginar tecnología ponible del futuro"
+            ]
+          },
+          {
+            "key": "ciudades_inteligentes",
+            "name": "Ciudades Inteligentes",
+            "short_description": "Cómo IoT mejora infraestructura urbana y servicios.",
+            "example_tasks": [
+              "Comprender semáforos inteligentes que optimizan tráfico",
+              "Discutir sistemas de transporte público conectados",
+              "Explorar gestión inteligente de energía y residuos",
+              "Considerar sensores que monitorean calidad del aire",
+              "Imaginar cómo tecnología puede hacer su ciudad mejor"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "realidad_virtual_aumentada",
+        "name": "Realidad Virtual y Aumentada",
+        "short_description": "Introducción a VR y AR y sus aplicaciones.",
+        "sub_topics": [
+          {
+            "key": "vr_conceptos",
+            "name": "Realidad Virtual (VR)",
+            "short_description": "Experiencias inmersivas completamente digitales.",
+            "example_tasks": [
+              "Comprender VR como mundo completamente digital experimentado con visor",
+              "Identificar usos: juegos, entrenamiento, educación, turismo virtual",
+              "Experimentar VR si hay equipos disponibles en escuela",
+              "Discutir sensación de estar 'dentro' del mundo virtual",
+              "Considerar aplicaciones futuras de VR en educación"
+            ]
+          },
+          {
+            "key": "ar_conceptos",
+            "name": "Realidad Aumentada (AR)",
+            "short_description": "Superposición de información digital sobre mundo real.",
+            "example_tasks": [
+              "Comprender AR como agregar elementos digitales a vista del mundo real",
+              "Identificar ejemplos: filtros de redes sociales, juegos como Pokémon GO",
+              "Experimentar con aplicaciones AR simples si están disponibles",
+              "Discutir cómo AR mezcla digital y real",
+              "Imaginar usos educativos de AR: anatomía, historia, geografía"
+            ]
+          },
+          {
+            "key": "diferencias_vr_ar",
+            "name": "Diferencias entre VR y AR",
+            "short_description": "Distinguir entre tecnologías inmersivas.",
+            "example_tasks": [
+              "Comparar VR (reemplaza realidad) vs AR (aumenta realidad)",
+              "Identificar cuándo usar cada tecnología según propósito",
+              "Crear tabla comparativa de características",
+              "Dar ejemplos específicos de cada tecnología",
+              "Predecir cómo ambas tecnologías evolucionarán"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "computacion_nube_edge",
+        "name": "Computación en la Nube y el Borde",
+        "short_description": "Conceptos de dónde y cómo se procesan datos.",
+        "sub_topics": [
+          {
+            "key": "cloud_computing",
+            "name": "Computación en la Nube",
+            "short_description": "Procesamiento y almacenamiento en servidores remotos.",
+            "example_tasks": [
+              "Comprender que 'nube' son computadoras poderosas en centros de datos",
+              "Identificar servicios que usan nube: correo, almacenamiento, juegos streaming",
+              "Reconocer ventajas: acceso desde cualquier lugar, no ocupa espacio local",
+              "Considerar necesidad de Internet para servicios de nube",
+              "Discutir dependencia de servicios de nube en vida diaria"
+            ]
+          },
+          {
+            "key": "edge_computing",
+            "name": "Computación en el Borde",
+            "short_description": "Procesamiento local en dispositivos para respuesta rápida.",
+            "example_tasks": [
+              "Comprender procesamiento en dispositivo vs. enviar a nube",
+              "Reconocer ejemplos: asistentes de voz procesando localmente",
+              "Entender beneficios: velocidad, privacidad, funciona sin Internet",
+              "Comparar cuándo usar nube vs. procesamiento local",
+              "Discutir balance entre potencia de nube y privacidad de edge"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "impresion_3d",
+        "name": "Impresión 3D",
+        "short_description": "Creación de objetos físicos a partir de diseños digitales.",
+        "sub_topics": [
+          {
+            "key": "como_funciona_3d",
+            "name": "Cómo Funciona Impresión 3D",
+            "short_description": "Proceso básico de construcción capa por capa.",
+            "example_tasks": [
+              "Comprender que impresora 3D construye objeto capa por capa",
+              "Ver videos de impresión 3D en proceso",
+              "Identificar materiales: plástico, metal, resina",
+              "Reconocer diferencia entre imprimir en 2D vs 3D",
+              "Observar impresora 3D en acción si escuela tiene una"
+            ]
+          },
+          {
+            "key": "aplicaciones_3d",
+            "name": "Aplicaciones de Impresión 3D",
+            "short_description": "Usos en medicina, manufactura, educación y arte.",
+            "example_tasks": [
+              "Investigar prótesis y órganos impresos en 3D",
+              "Explorar uso en prototipado rápido de productos",
+              "Discutir impresión de piezas de repuesto",
+              "Ver ejemplos de arte y esculturas en 3D",
+              "Imaginar qué les gustaría imprimir en 3D"
+            ]
+          },
+          {
+            "key": "diseño_simple_3d",
+            "name": "Diseño 3D Básico",
+            "short_description": "Introducción a creación de modelos digitales para impresión.",
+            "example_tasks": [
+              "Explorar software simple de diseño 3D para niños",
+              "Crear forma básica: cubo, esfera, cilindro",
+              "Modificar objetos existentes de biblioteca",
+              "Combinar formas simples para crear objeto más complejo",
+              "Exportar diseño para impresión si es posible"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "blockchain_criptomonedas",
+        "name": "Blockchain y Criptomonedas (Conceptos Básicos)",
+        "short_description": "Introducción muy simplificada a tecnología blockchain.",
+        "sub_topics": [
+          {
+            "key": "que_es_blockchain",
+            "name": "¿Qué es Blockchain?",
+            "short_description": "Concepto de libro de registros distribuido y permanente.",
+            "example_tasks": [
+              "Explicar blockchain como libro de cuentas que muchos guardan copia",
+              "Usar analogía de cuaderno compartido que nadie puede borrar",
+              "Comprender que registros son permanentes y transparentes",
+              "Reconocer aplicaciones más allá de dinero digital",
+              "Discutir por qué es difícil hacer trampa en blockchain"
+            ]
+          },
+          {
+            "key": "criptomonedas_basico",
+            "name": "Concepto de Criptomonedas",
+            "short_description": "Dinero digital descentralizado (nivel muy básico).",
+            "example_tasks": [
+              "Comprender criptomoneda como dinero que existe solo digitalmente",
+              "Reconocer Bitcoin como ejemplo más conocido",
+              "Entender diferencia con dinero tradicional en banco",
+              "Discutir ventajas y riesgos de manera apropiada para edad",
+              "Comprender que es tema complejo que aprenderán más cuando sean mayores"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "futuro_tecnologia",
+        "name": "El Futuro de la Tecnología",
+        "short_description": "Pensar críticamente sobre desarrollo tecnológico futuro.",
+        "sub_topics": [
+          {
+            "key": "tendencias_futuras",
+            "name": "Tendencias Tecnológicas Futuras",
+            "short_description": "Explorar tecnologías en desarrollo.",
+            "example_tasks": [
+              "Investigar vehículos autónomos y transporte del futuro",
+              "Discutir exploración espacial y turismo espacial",
+              "Imaginar computadoras cuánticas y su potencial",
+              "Explorar robots más avanzados y humanoides",
+              "Crear presentación sobre tecnología futura que les emociona"
+            ]
+          },
+          {
+            "key": "impacto_sociedad",
+            "name": "Impacto en la Sociedad",
+            "short_description": "Considerar cómo tecnología cambia forma de vivir.",
+            "example_tasks": [
+              "Discutir cómo tecnología ha cambiado comunicación",
+              "Considerar impacto en empleos y tipos de trabajo",
+              "Debatir efectos en medio ambiente: positivos y negativos",
+              "Pensar en acceso desigual a tecnología (brecha digital)",
+              "Reflexionar sobre responsabilidad al desarrollar tecnología"
+            ]
+          },
+          {
+            "key": "innovadores_futuro",
+            "name": "Ser Innovadores del Futuro",
+            "short_description": "Inspirar a estudiantes a crear tecnología del mañana.",
+            "example_tasks": [
+              "Imaginar problema que les gustaría resolver con tecnología",
+              "Diseñar invento tecnológico del futuro",
+              "Investigar carreras en tecnología e innovación",
+              "Aprender sobre inventores e innovadores jóvenes",
+              "Desarrollar mentalidad de 'puedo crear el futuro'"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "proyectos_integradores",
+    "name": "Proyectos Integradores de Informática",
+    "short_description": "Proyectos finales que combinan múltiples habilidades: investigación, programación, multimedia, presentación y trabajo en equipo.",
+    "sub_topics": [
+      {
+        "key": "proyecto_investigacion",
+        "name": "Proyecto de Investigación Digital",
+        "short_description": "Investigación completa sobre tema tecnológico presentada digitalmente.",
+        "sub_topics": [
+          {
+            "key": "elegir_tema_investigacion",
+            "name": "Selección de Tema",
+            "short_description": "Elegir tema tecnológico relevante e interesante.",
+            "example_tasks": [
+              "Hacer lluvia de ideas sobre temas tecnológicos de interés",
+              "Delimitar tema para que sea manejable en tiempo disponible",
+              "Verificar que hay suficientes fuentes de información disponibles",
+              "Obtener aprobación de maestro para tema seleccionado",
+              "Formular preguntas de investigación específicas"
+            ]
+          },
+          {
+            "key": "investigar_documentar",
+            "name": "Investigación y Documentación",
+            "short_description": "Buscar información confiable y mantener registro organizado.",
+            "example_tasks": [
+              "Usar múltiples fuentes confiables para investigar tema",
+              "Tomar notas organizadas con paráfrasis apropiada",
+              "Documentar todas las fuentes consultadas para bibliografía",
+              "Organizar información en categorías o subtemas lógicos",
+              "Verificar hechos usando múltiples fuentes"
+            ]
+          },
+          {
+            "key": "presentacion_digital",
+            "name": "Crear Presentación Digital",
+            "short_description": "Presentar hallazgos usando herramientas digitales.",
+            "example_tasks": [
+              "Crear presentación de PowerPoint o Google Slides",
+              "Incluir texto, imágenes, gráficas y posiblemente video",
+              "Diseñar diapositivas visualmente atractivas y claras",
+              "Agregar bibliografía completa al final",
+              "Practicar presentación oral acompañando diapositivas"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "proyecto_multimedia",
+        "name": "Proyecto Multimedia Integrado",
+        "short_description": "Creación de contenido que combina texto, imágenes, audio y video.",
+        "sub_topics": [
+          {
+            "key": "planear_multimedia",
+            "name": "Planificación de Proyecto",
+            "short_description": "Diseñar proyecto antes de comenzar producción.",
+            "example_tasks": [
+              "Decidir tema y mensaje del proyecto multimedia",
+              "Crear storyboard o plan visual del proyecto",
+              "Listar todos los elementos necesarios: imágenes, audio, video, texto",
+              "Asignar roles si trabajan en equipo",
+              "Establecer cronograma con hitos para completar proyecto"
+            ]
+          },
+          {
+            "key": "produccion_contenido",
+            "name": "Producción de Contenido",
+            "short_description": "Crear todos los elementos multimedia del proyecto.",
+            "example_tasks": [
+              "Grabar audio narración o música original",
+              "Capturar o crear imágenes y gráficos necesarios",
+              "Grabar clips de video si son parte del proyecto",
+              "Escribir textos claros y concisos",
+              "Reunir todos los elementos en ubicación organizada"
+            ]
+          },
+          {
+            "key": "edicion_integracion",
+            "name": "Edición e Integración",
+            "short_description": "Combinar elementos en producto multimedia cohesivo.",
+            "example_tasks": [
+              "Usar software apropiado para combinar elementos",
+              "Sincronizar audio con visual cuando sea necesario",
+              "Aplicar transiciones y efectos con propósito",
+              "Revisar producto completo múltiples veces",
+              "Obtener retroalimentación y hacer ajustes finales"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "proyecto_programacion",
+        "name": "Proyecto de Programación Completo",
+        "short_description": "Desarrollo de programa o juego que demuestra habilidades de programación.",
+        "sub_topics": [
+          {
+            "key": "diseño_programa",
+            "name": "Diseño del Programa",
+            "short_description": "Planear funcionalidad y estructura antes de codificar.",
+            "example_tasks": [
+              "Definir claramente qué hará el programa o juego",
+              "Crear lista de características y funcionalidades",
+              "Dibujar diagrama de flujo o pseudocódigo de lógica principal",
+              "Planear interfaz de usuario o diseño visual",
+              "Identificar variables, listas y estructuras de control necesarias"
+            ]
+          },
+          {
+            "key": "desarrollo_programa",
+            "name": "Desarrollo Iterativo",
+            "short_description": "Construir programa en etapas probando regularmente.",
+            "example_tasks": [
+              "Comenzar con versión básica funcional del programa",
+              "Agregar características una a la vez",
+              "Probar después de cada adición para detectar problemas temprano",
+              "Mantener código organizado con comentarios explicativos",
+              "Guardar versiones de respaldo antes de cambios grandes"
+            ]
+          },
+          {
+            "key": "refinamiento_programa",
+            "name": "Refinamiento y Pulido",
+            "short_description": "Mejorar programa basándose en pruebas y retroalimentación.",
+            "example_tasks": [
+              "Depurar errores encontrados durante pruebas",
+              "Mejorar interfaz para que sea más intuitiva",
+              "Optimizar código eliminando redundancia",
+              "Agregar instrucciones claras para usuarios",
+              "Crear documentación explicando cómo funciona el programa"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "proyecto_colaborativo",
+        "name": "Proyecto Colaborativo en Equipo",
+        "short_description": "Trabajo grupal que requiere coordinación y división de tareas.",
+        "sub_topics": [
+          {
+            "key": "formacion_equipo",
+            "name": "Formación y Organización del Equipo",
+            "short_description": "Establecer roles y responsabilidades claras.",
+            "example_tasks": [
+              "Formar equipo balanceado con habilidades complementarias",
+              "Asignar roles según fortalezas: líder, diseñador, programador, investigador",
+              "Establecer reglas de trabajo en equipo y comunicación",
+              "Crear cronograma compartido con responsabilidades individuales",
+              "Establecer método de comunicación: reuniones, chat, correo"
+            ]
+          },
+          {
+            "key": "coordinacion_trabajo",
+            "name": "Coordinación del Trabajo",
+            "short_description": "Mantener equipo sincronizado y productivo.",
+            "example_tasks": [
+              "Realizar reuniones regulares para reportar avances",
+              "Usar herramientas colaborativas para compartir archivos",
+              "Dividir proyecto en tareas manejables asignadas a individuos",
+              "Ayudar a miembros del equipo cuando tienen dificultades",
+              "Resolver conflictos de manera constructiva y respetuosa"
+            ]
+          },
+          {
+            "key": "integracion_trabajo",
+            "name": "Integración del Trabajo",
+            "short_description": "Combinar contribuciones individuales en proyecto cohesivo.",
+            "example_tasks": [
+              "Reunir todas las partes del proyecto en producto unificado",
+              "Asegurar consistencia de estilo y formato entre secciones",
+              "Revisar trabajo de otros miembros constructivamente",
+              "Hacer ajustes finales como equipo",
+              "Preparar presentación grupal del proyecto"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "presentacion_proyectos",
+        "name": "Presentación de Proyectos",
+        "short_description": "Compartir trabajo con audiencia de manera profesional.",
+        "sub_topics": [
+          {
+            "key": "preparar_presentacion",
+            "name": "Preparar Presentación",
+            "short_description": "Planear qué y cómo presentar proyecto.",
+            "example_tasks": [
+              "Decidir puntos clave a comunicar sobre proyecto",
+              "Preparar demostración en vivo del proyecto funcionando",
+              "Crear materiales de apoyo: diapositivas, folletos, pósters",
+              "Practicar presentación individual o grupal múltiples veces",
+              "Anticipar preguntas que audiencia podría hacer"
+            ]
+          },
+          {
+            "key": "presentar_audiencia",
+            "name": "Presentar ante Audiencia",
+            "short_description": "Comunicar efectivamente sobre proyecto completado.",
+            "example_tasks": [
+              "Explicar problema que proyecto resuelve o propósito",
+              "Demostrar funcionalidad clave del proyecto",
+              "Discutir desafíos enfrentados y cómo los resolvieron",
+              "Compartir qué aprendieron durante el proceso",
+              "Responder preguntas de audiencia con confianza"
+            ]
+          },
+          {
+            "key": "recibir_retroalimentacion",
+            "name": "Recibir y Aplicar Retroalimentación",
+            "short_description": "Escuchar comentarios constructivamente y mejorar.",
+            "example_tasks": [
+              "Escuchar atentamente comentarios sin ponerse defensivos",
+              "Tomar notas de sugerencias y críticas constructivas",
+              "Agradecer a quienes proporcionan retroalimentación",
+              "Identificar mejoras realistas para implementar",
+              "Reflexionar sobre proceso completo del proyecto"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "portafolio_final",
+        "name": "Portafolio Digital Final",
+        "short_description": "Compilación de mejores trabajos del año en portafolio presentable.",
+        "sub_topics": [
+          {
+            "key": "seleccionar_trabajos",
+            "name": "Seleccionar Mejores Trabajos",
+            "short_description": "Elegir proyectos que demuestran aprendizaje y habilidades.",
+            "example_tasks": [
+              "Revisar todos los proyectos completados durante el año",
+              "Seleccionar 5-10 trabajos más representativos",
+              "Incluir variedad: programación, multimedia, investigación, diseño",
+              "Elegir proyectos de los que están orgullosos",
+              "Considerar qué trabajos muestran mejor sus habilidades"
+            ]
+          },
+          {
+            "key": "organizar_portafolio",
+            "name": "Organizar Portafolio",
+            "short_description": "Estructurar portafolio de manera lógica y atractiva.",
+            "example_tasks": [
+              "Crear índice o menú navegable de portafolio",
+              "Organizar trabajos cronológicamente o por categoría",
+              "Incluir página de presentación personal",
+              "Escribir descripción breve para cada proyecto",
+              "Diseñar portafolio con apariencia profesional y consistente"
+            ]
+          },
+          {
+            "key": "reflexion_aprendizaje",
+            "name": "Reflexión sobre Aprendizaje",
+            "short_description": "Documentar crecimiento y aprendizajes del año.",
+            "example_tasks": [
+              "Escribir reflexión sobre qué aprendieron en informática",
+              "Identificar habilidades desarrolladas durante el año",
+              "Reconocer áreas donde mejoraron significativamente",
+              "Establecer metas para continuar aprendiendo",
+              "Agradecer a quienes ayudaron en su aprendizaje"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

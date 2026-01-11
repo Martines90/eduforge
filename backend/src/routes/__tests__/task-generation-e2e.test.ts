@@ -96,7 +96,7 @@ describe("Task Generation E2E Flow", () => {
         tier: "normal",
         status: "active",
         startDate: new Date("2025-01-01"),
-        endDate: new Date("2026-01-01"),
+        endDate: new Date("2030-01-01"), // Far future date to avoid expiration issues
       },
       taskCredits: 1000,
     });
@@ -312,6 +312,7 @@ describe("Task Generation E2E Flow", () => {
         };
       });
   });
+
 
   describe("POST /api/task/generate-task - Complete E2E Flow", () => {
     it("should call AI text API with properly formatted prompts", async () => {

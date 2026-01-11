@@ -65,11 +65,20 @@ describe("TaskController", () => {
     // Mock next function
     mockNext = jest.fn();
 
-    // Mock Firestore
-    mockFirestore = {
-      collection: jest.fn().mockReturnThis(),
-      doc: jest.fn().mockReturnThis(),
+    // Mock Firestore with proper chaining
+    const mockDoc = {
       set: jest.fn().mockResolvedValue(undefined),
+      get: jest.fn().mockResolvedValue({ exists: false }),
+    };
+
+    const mockCollection = {
+      doc: jest.fn().mockReturnValue(mockDoc),
+    };
+
+    mockFirestore = {
+      collection: jest.fn().mockReturnValue(mockCollection),
+      doc: mockDoc,
+      set: mockDoc.set,
     };
 
     (getFirestore as jest.Mock).mockReturnValue(mockFirestore);
@@ -120,10 +129,13 @@ describe("TaskController", () => {
         mockNext
       );
 
-      // Verify Firestore set was called with correct data
+      // Verify Firestore was called correctly
+      const mockCollection = mockFirestore.collection();
       expect(mockFirestore.collection).toHaveBeenCalledWith("tasks");
-      expect(mockFirestore.doc).toHaveBeenCalledWith(mockTaskId);
-      expect(mockFirestore.set).toHaveBeenCalledWith(
+      expect(mockCollection.doc).toHaveBeenCalledWith(mockTaskId);
+
+      const mockDoc = mockCollection.doc();
+      expect(mockDoc.set).toHaveBeenCalledWith(
         expect.objectContaining({
           task_id: mockTaskId,
           task_data: mockTaskData,

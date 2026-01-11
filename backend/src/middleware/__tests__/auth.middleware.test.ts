@@ -440,7 +440,7 @@ describe("Auth Middleware", () => {
       );
 
       expect(consoleErrorSpy).toHaveBeenCalledWith(
-        "Authentication error:",
+        "[Auth Middleware] Authentication error:",
         expect.any(Error)
       );
 

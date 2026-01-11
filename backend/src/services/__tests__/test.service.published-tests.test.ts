@@ -575,19 +575,20 @@ describe("Test Service - Published Tests Browsing", () => {
     });
 
     it("should combine all filters with sorting and pagination", async () => {
-      const mockTests = Array.from({ length: 10 }, (_, i) => ({
-        id: `test${i}`,
-        name: `Math Test ${i}`,
+      // Create 5 mock tests for the paginated result
+      const mockTests = Array.from({ length: 5 }, (_, i) => ({
+        id: `test${i + 10}`, // IDs 10-14
+        name: `Math Test ${i + 10}`,
         subject: "mathematics",
         gradeLevel: "grade_9_10",
-        viewCount: i * 10,
+        viewCount: (i + 10) * 10,
       }));
 
-      // First call for count query - return total 20
-      mockGet.mockResolvedValueOnce({ size: 20, docs: [] });
-      // Second call for paginated query - return 10 docs
+      // First call for count query - return total 15
+      mockGet.mockResolvedValueOnce({ size: 15, docs: [] });
+      // Second call for paginated query - return 5 docs
       mockGet.mockResolvedValueOnce({
-        size: 20,
+        size: 5,
         docs: mockTests.map((test) => ({
           id: test.id,
           data: () => test,
@@ -605,11 +606,11 @@ describe("Test Service - Published Tests Browsing", () => {
       const result = await testService.getPublishedTests("HU", query);
 
       // Verify result structure
-      expect(result.tests.length).toBe(10);
+      expect(result.tests.length).toBe(5);
       expect(result.page).toBe(2);
       expect(result.limit).toBe(10);
-      expect(result.hasMore).toBe(false); // 10 + 10 = 20, no more items
-      expect(result.total).toBe(20);
+      expect(result.hasMore).toBe(false); // 10 + 10 = 20 is not < 15
+      expect(result.total).toBe(15);
     });
   });
 

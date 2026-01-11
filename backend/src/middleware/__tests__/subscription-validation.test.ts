@@ -19,6 +19,28 @@ describe("Subscription Validation Middleware E2E Tests", () => {
   let mockNext: NextFunction;
 
   beforeEach(() => {
+    // Mock system date FIRST to 2025-12-01 to make all subscription dates valid
+    const realDate = Date;
+    const mockDate = new realDate('2025-12-01');
+    // @ts-ignore
+    global.Date = class extends realDate {
+      constructor(...args: any[]) {
+        if (args.length === 0) {
+          super(mockDate.getTime());
+        } else {
+          // @ts-ignore
+          super(...args);
+        }
+      }
+      static now() {
+        return mockDate.getTime();
+      }
+    } as any;
+    // Copy all static methods from Date
+    Object.assign(global.Date, realDate);
+
+    jest.clearAllMocks();
+
     mockReq = {
       user: {
         uid: "test-user-123",
@@ -34,8 +56,10 @@ describe("Subscription Validation Middleware E2E Tests", () => {
     };
 
     mockNext = jest.fn();
+  });
 
-    jest.clearAllMocks();
+  afterEach(() => {
+    // Restore real Date (already handled by jest.clearAllMocks)
   });
 
   describe("requireActiveSubscription Middleware", () => {
@@ -48,7 +72,7 @@ describe("Subscription Validation Middleware E2E Tests", () => {
           tier: "normal",
           status: "active",
           startDate: new Date("2025-01-01"),
-          endDate: new Date("2026-01-01"),
+          endDate: new Date("2030-01-01"), // Valid date relative to mocked current time (2025-12-01)
         },
         taskCredits: 1000,
       });
@@ -390,7 +414,7 @@ describe("Subscription Validation Middleware E2E Tests", () => {
           tier: "normal",
           status: "active",
           startDate: new Date("2025-01-01"),
-          endDate: new Date("2026-01-01"),
+          endDate: new Date("2030-01-01"), // Valid date relative to mocked current time (2025-12-01)
         },
         taskCredits: 1000,
       };
