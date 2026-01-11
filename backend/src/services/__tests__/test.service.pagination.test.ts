@@ -3,13 +3,13 @@
  * Tests pagination functionality for getUserTests
  */
 
-import * as testService from '../test.service';
-import { getFirestore } from '../../config/firebase.config';
+import * as testService from "../test.service";
+import { getFirestore } from "../../config/firebase.config";
 
 // Mock Firestore
-jest.mock('../../config/firebase.config');
+jest.mock("../../config/firebase.config");
 
-describe('Test Service - Pagination', () => {
+describe("Test Service - Pagination", () => {
   let mockFirestore: any;
   let mockCollection: any;
   let mockQuery: any;
@@ -25,9 +25,9 @@ describe('Test Service - Pagination', () => {
         id: `test-${i}`,
         data: () => ({
           name: `Test ${i}`,
-          subject: 'mathematics',
-          createdBy: 'user-123',
-          country: 'HU',
+          subject: "mathematics",
+          createdBy: "user-123",
+          country: "HU",
           taskCount: 5,
           isPublished: false,
           createdAt: new Date(),
@@ -59,28 +59,28 @@ describe('Test Service - Pagination', () => {
     (getFirestore as jest.Mock).mockReturnValue(mockFirestore);
   });
 
-  describe('getUserTests with pagination', () => {
-    it('should apply default limit of 50', async () => {
-      await testService.getUserTests('user-123', 'HU', {});
+  describe("getUserTests with pagination", () => {
+    it("should apply default limit of 50", async () => {
+      await testService.getUserTests("user-123", "HU", {});
 
       expect(mockQuery.limit).toHaveBeenCalledWith(50);
       expect(mockQuery.offset).toHaveBeenCalledWith(0);
     });
 
-    it('should apply custom limit', async () => {
-      await testService.getUserTests('user-123', 'HU', { limit: 10 });
+    it("should apply custom limit", async () => {
+      await testService.getUserTests("user-123", "HU", { limit: 10 });
 
       expect(mockQuery.limit).toHaveBeenCalledWith(10);
     });
 
-    it('should apply custom offset', async () => {
-      await testService.getUserTests('user-123', 'HU', { offset: 20 });
+    it("should apply custom offset", async () => {
+      await testService.getUserTests("user-123", "HU", { offset: 20 });
 
       expect(mockQuery.offset).toHaveBeenCalledWith(20);
     });
 
-    it('should apply both limit and offset', async () => {
-      await testService.getUserTests('user-123', 'HU', {
+    it("should apply both limit and offset", async () => {
+      await testService.getUserTests("user-123", "HU", {
         limit: 10,
         offset: 30,
       });
@@ -89,8 +89,8 @@ describe('Test Service - Pagination', () => {
       expect(mockQuery.offset).toHaveBeenCalledWith(30);
     });
 
-    it('should return correct pagination metadata', async () => {
-      const result = await testService.getUserTests('user-123', 'HU', {
+    it("should return correct pagination metadata", async () => {
+      const result = await testService.getUserTests("user-123", "HU", {
         limit: 10,
         offset: 0,
       });
@@ -103,30 +103,30 @@ describe('Test Service - Pagination', () => {
       });
     });
 
-    it('should calculate correct page number from offset', async () => {
-      const result1 = await testService.getUserTests('user-123', 'HU', {
+    it("should calculate correct page number from offset", async () => {
+      const result1 = await testService.getUserTests("user-123", "HU", {
         limit: 10,
         offset: 0,
       });
       expect(result1.page).toBe(1);
 
-      const result2 = await testService.getUserTests('user-123', 'HU', {
+      const result2 = await testService.getUserTests("user-123", "HU", {
         limit: 10,
         offset: 10,
       });
       expect(result2.page).toBe(2);
 
-      const result3 = await testService.getUserTests('user-123', 'HU', {
+      const result3 = await testService.getUserTests("user-123", "HU", {
         limit: 10,
         offset: 20,
       });
       expect(result3.page).toBe(3);
     });
 
-    it('should indicate hasMore correctly when on last page', async () => {
+    it("should indicate hasMore correctly when on last page", async () => {
       mockQuerySnapshot.size = 25;
 
-      const resultLastPage = await testService.getUserTests('user-123', 'HU', {
+      const resultLastPage = await testService.getUserTests("user-123", "HU", {
         limit: 10,
         offset: 20, // page 3 of 3
       });
@@ -134,10 +134,10 @@ describe('Test Service - Pagination', () => {
       expect(resultLastPage.hasMore).toBe(false);
     });
 
-    it('should indicate hasMore correctly when not on last page', async () => {
+    it("should indicate hasMore correctly when not on last page", async () => {
       mockQuerySnapshot.size = 25;
 
-      const resultFirstPage = await testService.getUserTests('user-123', 'HU', {
+      const resultFirstPage = await testService.getUserTests("user-123", "HU", {
         limit: 10,
         offset: 0, // page 1 of 3
       });
@@ -145,82 +145,84 @@ describe('Test Service - Pagination', () => {
       expect(resultFirstPage.hasMore).toBe(true);
     });
 
-    it('should filter by user ID', async () => {
-      await testService.getUserTests('user-123', 'HU', {});
+    it("should filter by user ID", async () => {
+      await testService.getUserTests("user-123", "HU", {});
 
       expect(mockCollection.where).toHaveBeenCalledWith(
-        'createdBy',
-        '==',
-        'user-123'
+        "createdBy",
+        "==",
+        "user-123"
       );
     });
 
-    it('should filter by subject if provided', async () => {
-      await testService.getUserTests('user-123', 'HU', {
-        subject: 'physics',
+    it("should filter by subject if provided", async () => {
+      await testService.getUserTests("user-123", "HU", {
+        subject: "physics",
       });
 
-      expect(mockQuery.where).toHaveBeenCalledWith('subject', '==', 'physics');
+      expect(mockQuery.where).toHaveBeenCalledWith("subject", "==", "physics");
     });
 
-    it('should apply sorting by recent (default)', async () => {
-      await testService.getUserTests('user-123', 'HU', {});
+    it("should apply sorting by recent (default)", async () => {
+      await testService.getUserTests("user-123", "HU", {});
 
-      expect(mockQuery.orderBy).toHaveBeenCalledWith('updatedAt', 'desc');
+      expect(mockQuery.orderBy).toHaveBeenCalledWith("updatedAt", "desc");
     });
 
-    it('should apply sorting by name', async () => {
-      await testService.getUserTests('user-123', 'HU', { sort: 'name' });
+    it("should apply sorting by name", async () => {
+      await testService.getUserTests("user-123", "HU", { sort: "name" });
 
-      expect(mockQuery.orderBy).toHaveBeenCalledWith('name', 'asc');
+      expect(mockQuery.orderBy).toHaveBeenCalledWith("name", "asc");
     });
 
-    it('should apply sorting by taskCount', async () => {
-      await testService.getUserTests('user-123', 'HU', { sort: 'taskCount' });
+    it("should apply sorting by taskCount", async () => {
+      await testService.getUserTests("user-123", "HU", { sort: "taskCount" });
 
-      expect(mockQuery.orderBy).toHaveBeenCalledWith('taskCount', 'desc');
+      expect(mockQuery.orderBy).toHaveBeenCalledWith("taskCount", "desc");
     });
 
-    it('should use correct collection path for country', async () => {
-      await testService.getUserTests('user-123', 'HU', {});
+    it("should use correct collection path for country", async () => {
+      await testService.getUserTests("user-123", "HU", {});
 
-      expect(mockFirestore.collection).toHaveBeenCalledWith('countries/HU/tests');
+      expect(mockFirestore.collection).toHaveBeenCalledWith(
+        "countries/HU/tests"
+      );
     });
 
-    it('should return array of tests', async () => {
-      const result = await testService.getUserTests('user-123', 'HU', {});
+    it("should return array of tests", async () => {
+      const result = await testService.getUserTests("user-123", "HU", {});
 
       expect(Array.isArray(result.tests)).toBe(true);
       expect(result.tests.length).toBe(10);
     });
 
-    it('should return tests with IDs', async () => {
-      const result = await testService.getUserTests('user-123', 'HU', {});
+    it("should return tests with IDs", async () => {
+      const result = await testService.getUserTests("user-123", "HU", {});
 
       result.tests.forEach((test) => {
-        expect(test).toHaveProperty('id');
+        expect(test).toHaveProperty("id");
         expect(test.id).toMatch(/^test-\d+$/);
       });
     });
   });
 
-  describe('Edge cases', () => {
-    it('should handle empty results', async () => {
+  describe("Edge cases", () => {
+    it("should handle empty results", async () => {
       mockQuerySnapshot.size = 0;
       mockQuerySnapshot.docs = [];
       mockQuerySnapshot.empty = true;
 
-      const result = await testService.getUserTests('user-123', 'HU', {});
+      const result = await testService.getUserTests("user-123", "HU", {});
 
       expect(result.tests).toEqual([]);
       expect(result.total).toBe(0);
       expect(result.hasMore).toBe(false);
     });
 
-    it('should handle exactly one page of results', async () => {
+    it("should handle exactly one page of results", async () => {
       mockQuerySnapshot.size = 10;
 
-      const result = await testService.getUserTests('user-123', 'HU', {
+      const result = await testService.getUserTests("user-123", "HU", {
         limit: 10,
         offset: 0,
       });
@@ -229,11 +231,11 @@ describe('Test Service - Pagination', () => {
       expect(result.total).toBe(10);
     });
 
-    it('should handle offset beyond total items', async () => {
+    it("should handle offset beyond total items", async () => {
       mockQuerySnapshot.size = 25;
       mockQuerySnapshot.docs = [];
 
-      const result = await testService.getUserTests('user-123', 'HU', {
+      const result = await testService.getUserTests("user-123", "HU", {
         limit: 10,
         offset: 100,
       });
@@ -242,14 +244,14 @@ describe('Test Service - Pagination', () => {
       expect(result.hasMore).toBe(false);
     });
 
-    it('should handle very large limits', async () => {
-      await testService.getUserTests('user-123', 'HU', { limit: 1000 });
+    it("should handle very large limits", async () => {
+      await testService.getUserTests("user-123", "HU", { limit: 1000 });
 
       expect(mockQuery.limit).toHaveBeenCalledWith(1000);
     });
 
-    it('should handle limit of 1', async () => {
-      const result = await testService.getUserTests('user-123', 'HU', {
+    it("should handle limit of 1", async () => {
+      const result = await testService.getUserTests("user-123", "HU", {
         limit: 1,
         offset: 0,
       });
@@ -259,12 +261,12 @@ describe('Test Service - Pagination', () => {
     });
   });
 
-  describe('Integration scenarios', () => {
-    it('should support pagination through all pages', async () => {
+  describe("Integration scenarios", () => {
+    it("should support pagination through all pages", async () => {
       mockQuerySnapshot.size = 25;
 
       // Page 1
-      const page1 = await testService.getUserTests('user-123', 'HU', {
+      const page1 = await testService.getUserTests("user-123", "HU", {
         limit: 10,
         offset: 0,
       });
@@ -272,7 +274,7 @@ describe('Test Service - Pagination', () => {
       expect(page1.hasMore).toBe(true);
 
       // Page 2
-      const page2 = await testService.getUserTests('user-123', 'HU', {
+      const page2 = await testService.getUserTests("user-123", "HU", {
         limit: 10,
         offset: 10,
       });
@@ -280,7 +282,7 @@ describe('Test Service - Pagination', () => {
       expect(page2.hasMore).toBe(true);
 
       // Page 3 (last page)
-      const page3 = await testService.getUserTests('user-123', 'HU', {
+      const page3 = await testService.getUserTests("user-123", "HU", {
         limit: 10,
         offset: 20,
       });
@@ -288,26 +290,26 @@ describe('Test Service - Pagination', () => {
       expect(page3.hasMore).toBe(false);
     });
 
-    it('should work with filtering and pagination', async () => {
-      await testService.getUserTests('user-123', 'HU', {
-        subject: 'physics',
+    it("should work with filtering and pagination", async () => {
+      await testService.getUserTests("user-123", "HU", {
+        subject: "physics",
         limit: 10,
         offset: 5,
       });
 
-      expect(mockQuery.where).toHaveBeenCalledWith('subject', '==', 'physics');
+      expect(mockQuery.where).toHaveBeenCalledWith("subject", "==", "physics");
       expect(mockQuery.limit).toHaveBeenCalledWith(10);
       expect(mockQuery.offset).toHaveBeenCalledWith(5);
     });
 
-    it('should work with sorting and pagination', async () => {
-      await testService.getUserTests('user-123', 'HU', {
-        sort: 'name',
+    it("should work with sorting and pagination", async () => {
+      await testService.getUserTests("user-123", "HU", {
+        sort: "name",
         limit: 20,
         offset: 40,
       });
 
-      expect(mockQuery.orderBy).toHaveBeenCalledWith('name', 'asc');
+      expect(mockQuery.orderBy).toHaveBeenCalledWith("name", "asc");
       expect(mockQuery.limit).toHaveBeenCalledWith(20);
       expect(mockQuery.offset).toHaveBeenCalledWith(40);
     });

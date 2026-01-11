@@ -20,17 +20,18 @@ import { Subject, isValidSubject } from "@eduforger/shared";
 /**
  * Helper to get user info from authenticated request
  */
-function getUserFromRequest(
-  req: Request
-): { userId: string; country: string } {
+function getUserFromRequest(req: Request): { userId: string; country: string } {
   const authReq = req as AuthRequest;
   if (!authReq.user) {
     throw new Error("User not authenticated");
   }
   // Extract country from user token or default to US
   const country = (authReq.user as any).country || "US";
-  console.log('[getUserFromRequest] User country from token:', country);
-  console.log('[getUserFromRequest] Full user object:', JSON.stringify(authReq.user));
+  console.log("[getUserFromRequest] User country from token:", country);
+  console.log(
+    "[getUserFromRequest] Full user object:",
+    JSON.stringify(authReq.user)
+  );
   return {
     userId: authReq.user.uid,
     country,
@@ -94,7 +95,8 @@ export const getUserTests = async (
     const { userId, country } = getUserFromRequest(req);
     const subjectParam = req.query.subject as string | undefined;
     const query: GetTestsQuery = {
-      subject: subjectParam && isValidSubject(subjectParam) ? subjectParam : undefined,
+      subject:
+        subjectParam && isValidSubject(subjectParam) ? subjectParam : undefined,
       sort: req.query.sort as "recent" | "name" | "taskCount",
       limit: req.query.limit ? parseInt(req.query.limit as string) : undefined,
       offset: req.query.offset
@@ -236,7 +238,12 @@ export const addTaskToTest = async (
       `   Task ID: ${data.taskId || "Custom task (no library reference)"}`
     );
 
-    const result = await testService.addTaskToTest(testId, userId, country, data);
+    const result = await testService.addTaskToTest(
+      testId,
+      userId,
+      country,
+      data
+    );
 
     res.status(201).json({
       success: true,
@@ -289,13 +296,7 @@ export const updateTestTask = async (
       `📥 Update test task ${testTaskId} in test ${testId} from user ${userId}`
     );
 
-    await testService.updateTestTask(
-      testId,
-      testTaskId,
-      userId,
-      country,
-      data
-    );
+    await testService.updateTestTask(testId, testTaskId, userId, country, data);
 
     res.status(200).json({
       success: true,
@@ -449,7 +450,11 @@ export const publishTestToPublic = async (
 
     console.log(`📥 Publish test ${testId} to public by user ${userId}`);
 
-    const result = await testService.publishTestToPublic(testId, userId, country);
+    const result = await testService.publishTestToPublic(
+      testId,
+      userId,
+      country
+    );
 
     res.status(200).json({
       success: true,
@@ -535,12 +540,15 @@ export const getPublishedTests = async (
 
     const subjectParam = req.query.subject as string | undefined;
     const query: import("../types/test.types").GetPublishedTestsQuery = {
-      subject: subjectParam && isValidSubject(subjectParam) ? subjectParam : undefined,
+      subject:
+        subjectParam && isValidSubject(subjectParam) ? subjectParam : undefined,
       gradeLevel: req.query.gradeLevel as string,
       search: req.query.search as string,
       sort: req.query.sort as "recent" | "views" | "downloads",
       limit: req.query.limit ? parseInt(req.query.limit as string) : undefined,
-      offset: req.query.offset ? parseInt(req.query.offset as string) : undefined,
+      offset: req.query.offset
+        ? parseInt(req.query.offset as string)
+        : undefined,
     };
 
     console.log(`📥 Get published tests for country ${country}`, query);

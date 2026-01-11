@@ -42,11 +42,15 @@ export const stripeConfig = {
 // Stripe Price IDs - read from Firebase Functions config first, fallback to .env
 export const STRIPE_PRICE_IDS = {
   basic_annual:
-    (getFirebaseConfig("stripe")?.price_id_basic_annual as string | undefined) ||
+    (getFirebaseConfig("stripe")?.price_id_basic_annual as
+      | string
+      | undefined) ||
     process.env.STRIPE_PRICE_ID_BASIC_ANNUAL ||
     "price_basic_annual",
   normal_annual:
-    (getFirebaseConfig("stripe")?.price_id_normal_annual as string | undefined) ||
+    (getFirebaseConfig("stripe")?.price_id_normal_annual as
+      | string
+      | undefined) ||
     process.env.STRIPE_PRICE_ID_NORMAL_ANNUAL ||
     "price_normal_annual",
   pro_annual:

@@ -30,17 +30,11 @@ const SUBJECT_OPTIONS: { value: Subject; label: string }[] = SUBJECTS.map((subje
   label: subject.labelEN,
 }));
 
-// Grade level options for the dropdown
-const GRADE_OPTIONS: { value: GradeLevel; label: string }[] = [
-  { value: 'grade_9_10', label: 'Grade 9-10' },
-  { value: 'grade_11_12', label: 'Grade 11-12' },
-];
-
 function TaskGeneratorContent() {
   const { t } = useTranslation();
   const searchParams = useSearchParams();
   const router = useRouter();
-  const { user } = useUser();
+  const { user, gradeSystem } = useUser();
   const { enqueueSnackbar } = useSnackbar();
 
   // Guest session management
@@ -52,7 +46,10 @@ function TaskGeneratorContent() {
 
   // Subject and Grade state
   const [selectedSubject, setSelectedSubject] = useState<string>(user.subject || 'mathematics');
-  const [selectedGrade, setSelectedGrade] = useState<GradeLevel>('grade_9_10');
+  // Initialize with first available grade for the user's country
+  const [selectedGrade, setSelectedGrade] = useState<GradeLevel>(
+    gradeSystem.availableGrades[0]?.value || 'grade_9_10'
+  );
 
   const [selectedTopic, setSelectedTopic] = useState<NavigationTopic | null>(null);
   const [selectionPath, setSelectionPath] = useState<string[]>([]);
@@ -68,7 +65,7 @@ function TaskGeneratorContent() {
   const [savedTaskInfo, setSavedTaskInfo] = useState<{ taskId: string; publicShareLink: string; pdfUrl?: string } | null>(null);
   const [isTaskSaved, setIsTaskSaved] = useState(false);
   const [currentCurriculumPath, setCurrentCurriculumPath] = useState<string>('');
-  const [navigationData, setNavigationData] = useState<{ grade_9_10: NavigationTopic[]; grade_11_12: NavigationTopic[] } | null>(null);
+  const [navigationData, setNavigationData] = useState<Record<string, NavigationTopic[]> | null>(null);
   const [isLoadingNavigation, setIsLoadingNavigation] = useState(true);
   const [navigationError, setNavigationError] = useState<string | null>(null);
 
@@ -624,9 +621,9 @@ function TaskGeneratorContent() {
                   label={t('Grade Level')}
                   onChange={(e) => handleGradeChange(e.target.value as GradeLevel)}
                 >
-                  {GRADE_OPTIONS.map((option) => (
-                    <MenuItem key={option.value} value={option.value}>
-                      {t(option.label as any)}
+                  {gradeSystem.availableGrades.map((grade) => (
+                    <MenuItem key={grade.value} value={grade.value}>
+                      {grade.labelLocal}
                     </MenuItem>
                   ))}
                 </Select>

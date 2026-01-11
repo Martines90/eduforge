@@ -5,9 +5,11 @@ import * as path from "path";
 // In Cloud Run/Functions, env vars are already loaded by the platform
 try {
   dotenv.config();
-} catch (error) {
+} catch (_error) {
   // Silently ignore - env vars are already loaded in cloud environment
-  console.log("Note: .env file not loaded (using platform environment variables)");
+  console.log(
+    "Note: .env file not loaded (using platform environment variables)"
+  );
 }
 
 export const config = {

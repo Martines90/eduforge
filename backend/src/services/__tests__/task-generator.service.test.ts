@@ -38,8 +38,9 @@ describe("TaskGeneratorService - Prompt Generation", () => {
   const getSolutionPrompt = () => mockTextGenerator.generate.mock.calls[0][0];
 
   // Sample request for Hungary (Metric, Hungarian)
+  // New path format: country:subject:grade:topic_keys...
   const metricRequest: TaskGeneratorRequest = {
-    curriculum_path: "math:grade_9_10:algebra:linear_equations:solving_basic",
+    curriculum_path: "HU:mathematics:grade_9_12:algebra:linear_equations:solving_basic",
     country_code: "HU",
     target_group: "mixed",
     difficulty_level: "medium",

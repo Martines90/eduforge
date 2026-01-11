@@ -159,49 +159,46 @@ router.post(
  * Authentication is enforced when viewing individual task details
  */
 router.get("/api/v2/tasks", async (req: Request, res: Response) => {
-    try {
-      const query: GetTasksQuery = {
-        curriculum_path: req.query.curriculum_path as string,
-        subject: req.query.subject as string,
-        gradeLevel: req.query.gradeLevel as string,
-        subjectMappingId: req.query.subjectMappingId as string,
-        search: req.query.search as string,
-        difficultyLevel: req.query.difficultyLevel as
-          | "easy"
-          | "medium"
-          | "hard"
-          | undefined,
-        tags: req.query.tags
-          ? (req.query.tags as string).split(",")
-          : undefined,
-        sort:
-          (req.query.sort as
-            | "rating"
-            | "views"
-            | "recent"
-            | "popular"
-            | undefined) || "recent",
-        limit: req.query.limit ? parseInt(req.query.limit as string) : 20,
-        offset: req.query.offset ? parseInt(req.query.offset as string) : 0,
-        createdBy: req.query.createdBy as string,
-        isPublished: req.query.isPublished === "true",
-      };
+  try {
+    const query: GetTasksQuery = {
+      curriculum_path: req.query.curriculum_path as string,
+      subject: req.query.subject as string,
+      gradeLevel: req.query.gradeLevel as string,
+      subjectMappingId: req.query.subjectMappingId as string,
+      search: req.query.search as string,
+      difficultyLevel: req.query.difficultyLevel as
+        | "easy"
+        | "medium"
+        | "hard"
+        | undefined,
+      tags: req.query.tags ? (req.query.tags as string).split(",") : undefined,
+      sort:
+        (req.query.sort as
+          | "rating"
+          | "views"
+          | "recent"
+          | "popular"
+          | undefined) || "recent",
+      limit: req.query.limit ? parseInt(req.query.limit as string) : 20,
+      offset: req.query.offset ? parseInt(req.query.offset as string) : 0,
+      createdBy: req.query.createdBy as string,
+      isPublished: req.query.isPublished === "true",
+    };
 
-      const result = await taskService.getTasks(query);
+    const result = await taskService.getTasks(query);
 
-      res.status(200).json({
-        success: true,
-        ...result,
-      });
-    } catch (error: unknown) {
-      console.error("Error getting tasks:", error);
-      res.status(500).json({
-        success: false,
-        message: error instanceof Error ? error.message : "Failed to get tasks",
-      });
-    }
+    res.status(200).json({
+      success: true,
+      ...result,
+    });
+  } catch (error: unknown) {
+    console.error("Error getting tasks:", error);
+    res.status(500).json({
+      success: false,
+      message: error instanceof Error ? error.message : "Failed to get tasks",
+    });
   }
-);
+});
 
 /**
  * GET /api/v2/tasks/search

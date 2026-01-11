@@ -562,7 +562,7 @@ export async function publishTestToPublic(
 
           const firstImage = libraryTask?.content?.images?.[0];
           const imageUrl = firstImage
-            ? typeof firstImage === 'string'
+            ? typeof firstImage === "string"
               ? firstImage
               : firstImage.url
             : undefined;

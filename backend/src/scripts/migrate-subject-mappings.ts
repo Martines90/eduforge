@@ -2,17 +2,22 @@
  * Migration Script: Import Subject Mappings to Firestore (Country-Based)
  *
  * This script reads curriculum JSON files and imports them into Firestore
- * using a country-based hierarchical structure.
+ * using a country-based hierarchical structure with dynamic grade levels.
  *
- * Structure: countries/{country}/subjectMappings/{docId}
+ * Structure: countries/{country}/subjectMappings/{subject}/{gradeLevel}/{docId}
  *
- * Usage:
- *   npm run migrate:subjects -- --country HU --subject mathematics
- *   npm run migrate:subjects -- --country US --subject mathematics --clear
- *   npm run migrate:subjects -- --all  # Migrate all countries and subjects
+ * Usage (ALL arguments are REQUIRED):
+ *   npm run migrate:subjects -- --country HU --subject mathematics --grade grade_9_12
+ *   npm run migrate:subjects -- --country MX --subject all --grade grade_10_12 --clear
+ *   npm run migrate:subjects -- --all --subject mathematics --grade grade_9_12
  *
  * Or directly:
- *   ts-node src/scripts/migrate-subject-mappings.ts --country HU --subject mathematics
+ *   ts-node src/scripts/migrate-subject-mappings.ts --country HU --subject mathematics --grade grade_9_12
+ *
+ * Required Arguments:
+ *   --country <code> OR --all   : Specific country code (HU, MX, US) or all countries
+ *   --subject <name>            : Subject name or "all" for all subjects
+ *   --grade <level>             : Specific grade level (e.g., grade_9_12, grade_3_6)
  */
 
 import * as fs from "fs";
@@ -20,54 +25,42 @@ import * as path from "path";
 import { initializeFirebase, getFirestore } from "../config/firebase.config";
 import { SubjectMappingDocument } from "../types/task.types";
 import { Timestamp } from "firebase-admin/firestore";
+import {
+  getGradesForCountry,
+  GradeLevel,
+  GradeConfig,
+} from "../../../shared/types/grades";
+import {
+  CountryCode,
+  getAllCountryCodes,
+} from "../../../shared/types/countries";
 
 interface JSONNode {
   key: string;
   name: string;
   short_description?: string;
   sub_topics?: JSONNode[];
-  "example_tasks (COMPLETED)"?: any[];
-}
-
-interface JSONData {
-  grade_9_10?: JSONNode[];
-  grade_11_12?: JSONNode[];
-}
-
-interface SubjectConfig {
-  name: string;
-  file: string;
-}
-
-interface CountryConfig {
-  name: string;
-  subjects: Record<string, SubjectConfig>;
-}
-
-interface MappingConfig {
-  countries: Record<string, CountryConfig>;
+  example_tasks?: string[];
 }
 
 /**
- * Load configuration from JSON file
+ * Subject keys available in the system
  */
-function loadConfig(): MappingConfig {
-  const configPath = path.join(
-    __dirname,
-    "../config/subject-mappings.config.json"
-  );
+const SUBJECTS = {
+  mathematics: "Mathematics",
+  physics: "Physics",
+  chemistry: "Chemistry",
+  biology: "Biology",
+  history: "History",
+  geography: "Geography",
+  literature: "Literature",
+  informatics: "Informatics",
+} as const;
 
-  if (!fs.existsSync(configPath)) {
-    throw new Error(`Configuration file not found: ${configPath}`);
-  }
-
-  const configContent = fs.readFileSync(configPath, "utf-8");
-  return JSON.parse(configContent) as MappingConfig;
-}
+type SubjectKey = keyof typeof SUBJECTS;
 
 /**
  * Generate document ID from path components
- * Note: subject is now implicit in the collection structure, so we don't include it in the docId
  */
 function generateDocId(...pathParts: string[]): string {
   const parts = pathParts.filter(Boolean);
@@ -80,9 +73,9 @@ function generateDocId(...pathParts: string[]): string {
 function collectNodes(
   db: FirebaseFirestore.Firestore,
   node: JSONNode,
-  country: string,
-  subject: string,
-  gradeLevel: string,
+  country: CountryCode,
+  subject: SubjectKey,
+  gradeLevel: GradeLevel,
   parentId: string | null,
   parentPath: string,
   level: number,
@@ -196,99 +189,98 @@ async function writeBatches(
 }
 
 /**
- * Import a single subject's data for a specific country
+ * Import a single subject's data for a specific country and grade
  */
-async function importSubject(
+async function importSubjectGrade(
   db: FirebaseFirestore.Firestore,
-  country: string,
-  subjectKey: string,
-  subjectName: string,
-  jsonData: JSONData
+  country: CountryCode,
+  subjectKey: SubjectKey,
+  gradeConfig: GradeConfig,
+  jsonData: JSONNode[]
 ): Promise<void> {
   console.log(`\n${"=".repeat(60)}`);
-  console.log(`Importing ${subjectName} (${subjectKey}) for ${country}`);
+  console.log(
+    `Importing ${SUBJECTS[subjectKey]} (${subjectKey}) for ${country} - ${gradeConfig.labelEN}`
+  );
   console.log("=".repeat(60));
 
-  const grades = ["grade_9_10", "grade_11_12"] as const;
+  if (!jsonData || jsonData.length === 0) {
+    console.log(`\n⚠️  No data found for ${gradeConfig.value}`);
+    return;
+  }
+
   const allDocuments = new Map<
     string,
     { ref: FirebaseFirestore.DocumentReference; data: SubjectMappingDocument }
   >();
 
-  for (const gradeLevel of grades) {
-    const gradeData = jsonData[gradeLevel];
-    if (!gradeData || gradeData.length === 0) {
-      console.log(`\n⚠️  No data found for ${gradeLevel}`);
-      continue;
-    }
+  console.log(
+    `\n📚 Processing ${gradeConfig.labelEN} (${jsonData.length} main topics)`
+  );
 
-    console.log(
-      `\n📚 Processing ${gradeLevel.replace("_", "-")} (${gradeData.length} main topics)`
+  // Create root node for this grade
+  const gradeDocId = generateDocId(gradeConfig.value, "root");
+
+  const gradeDoc: SubjectMappingDocument = {
+    key: gradeConfig.value,
+    name: gradeConfig.labelEN,
+    shortDescription: `${SUBJECTS[subjectKey]} curriculum for ${gradeConfig.labelEN}`,
+    level: 1,
+    parentId: null,
+    path: `${subjectKey}/${gradeConfig.value}`,
+    subject: subjectKey,
+    gradeLevel: gradeConfig.value,
+    orderIndex: 0,
+    isLeaf: false,
+    taskCount: 0,
+    createdAt: Timestamp.now(),
+    updatedAt: Timestamp.now(),
+  };
+
+  // Add grade doc to collection
+  const gradeDocRef = db
+    .collection("countries")
+    .doc(country)
+    .collection("subjectMappings")
+    .doc(subjectKey)
+    .collection(gradeConfig.value)
+    .doc(gradeDocId);
+
+  allDocuments.set(gradeDocId, { ref: gradeDocRef, data: gradeDoc });
+  console.log(`  [1] ${gradeConfig.labelEN}`);
+
+  // Collect all main topics and their children
+  for (let i = 0; i < jsonData.length; i++) {
+    collectNodes(
+      db,
+      jsonData[i],
+      country,
+      subjectKey,
+      gradeConfig.value,
+      gradeDocId,
+      `${subjectKey}/${gradeConfig.value}`,
+      2,
+      i,
+      allDocuments
     );
-
-    // Create root node for this grade
-    const gradeDocId = generateDocId(gradeLevel, "root");
-    const gradeDisplayName =
-      gradeLevel === "grade_9_10" ? "Grade 9-10" : "Grade 11-12";
-
-    const gradeDoc: SubjectMappingDocument = {
-      key: gradeLevel,
-      name: gradeDisplayName,
-      shortDescription: `${subjectName} curriculum for ${gradeDisplayName}`,
-      level: 1,
-      parentId: null,
-      path: `${subjectKey}/${gradeLevel}`,
-      subject: subjectKey,
-      gradeLevel,
-      orderIndex: 0,
-      isLeaf: false,
-      taskCount: 0,
-      createdAt: Timestamp.now(),
-      updatedAt: Timestamp.now(),
-    };
-
-    // Add grade doc to collection
-    const gradeDocRef = db
-      .collection("countries")
-      .doc(country)
-      .collection("subjectMappings")
-      .doc(subjectKey)
-      .collection(gradeLevel)
-      .doc(gradeDocId);
-
-    allDocuments.set(gradeDocId, { ref: gradeDocRef, data: gradeDoc });
-    console.log(`  [1] ${gradeDisplayName}`);
-
-    // Collect all main topics and their children
-    for (let i = 0; i < gradeData.length; i++) {
-      collectNodes(
-        db,
-        gradeData[i],
-        country,
-        subjectKey,
-        gradeLevel,
-        gradeDocId,
-        `${subjectKey}/${gradeLevel}`,
-        2,
-        i,
-        allDocuments
-      );
-    }
   }
 
   // Write all collected documents in batches
   await writeBatches(db, allDocuments);
 
-  console.log(`\n✅ ${subjectName} import complete for ${country}!`);
+  console.log(
+    `\n✅ ${SUBJECTS[subjectKey]} import complete for ${country} - ${gradeConfig.labelEN}!`
+  );
 }
 
 /**
- * Clear existing subject mappings for a specific country (optional)
+ * Clear existing subject mappings for a specific country
  */
 async function clearExistingMappings(
   db: FirebaseFirestore.Firestore,
-  country: string,
-  subject?: string
+  country: CountryCode,
+  subject?: SubjectKey,
+  gradeLevel?: GradeLevel
 ): Promise<void> {
   console.log(`\n🗑️  Clearing existing subject mappings for ${country}...`);
 
@@ -298,9 +290,12 @@ async function clearExistingMappings(
     .collection("subjectMappings");
 
   if (subject) {
-    // Delete specific subject's grade collections
+    // Get grade levels for this country
+    const grades = gradeLevel
+      ? [gradeLevel]
+      : getGradesForCountry(country).map((g) => g.value);
+
     console.log(`   Clearing subject: ${subject}`);
-    const grades = ["grade_9_10", "grade_11_12"];
     let totalDeleted = 0;
 
     for (const grade of grades) {
@@ -349,7 +344,7 @@ async function clearExistingMappings(
       const subjectKey = subjectDoc.id;
       console.log(`   Clearing subject: ${subjectKey}`);
 
-      const grades = ["grade_9_10", "grade_11_12"];
+      const grades = getGradesForCountry(country).map((g) => g.value);
 
       for (const grade of grades) {
         const gradeSnapshot = await subjectMappingsRef
@@ -392,32 +387,60 @@ async function clearExistingMappings(
 }
 
 /**
- * Get file path for a specific country and subject
+ * Get file path for a specific country, subject, and grade
+ * New structure: src/data/mappings/{country}/grade_{grade}/{subject}.json
+ * Old structure: src/data/mappings/{country}/{country}_{subject}_grade_{grade}.json
  */
 function getDataFilePath(
-  country: string,
-  subject: string,
-  fileName: string
+  country: CountryCode,
+  subject: SubjectKey,
+  gradeLevel: GradeLevel
 ): string {
-  // Try new structure first: src/data/mappings/{country}/{fileName}
+  const countryLower = country.toLowerCase();
+
+  // Try new structure first: mappings/{country}/grade_{grade}/{subject}.json
   const newPath = path.join(
     __dirname,
     "../data/mappings",
-    country.toLowerCase(),
-    fileName
+    countryLower,
+    gradeLevel,
+    `${subject}.json`
   );
   if (fs.existsSync(newPath)) {
+    console.log(`✓ Found new structure: ${newPath}`);
     return newPath;
   }
 
-  // Fallback to old structure: src/data/subject_mapping/{fileName}
-  const oldPath = path.join(__dirname, "../data/subject_mapping", fileName);
+  // Try old structure: mappings/{country}/{country}_{subject}_grade_{grade}.json
+  const oldFileName = `${countryLower}_${subject}_${gradeLevel}.json`;
+  const oldPath = path.join(
+    __dirname,
+    "../data/mappings",
+    countryLower,
+    oldFileName
+  );
   if (fs.existsSync(oldPath)) {
-    console.log(`⚠️  Using legacy path for ${country}/${subject}: ${oldPath}`);
+    console.log(`⚠️  Using legacy structure: ${oldPath}`);
     return oldPath;
   }
 
-  throw new Error(`Data file not found: ${newPath} or ${oldPath}`);
+  // Try even older structure: subject_mapping/{filename}
+  const legacyPath = path.join(
+    __dirname,
+    "../data/subject_mapping",
+    oldFileName
+  );
+  if (fs.existsSync(legacyPath)) {
+    console.log(`⚠️  Using legacy path: ${legacyPath}`);
+    return legacyPath;
+  }
+
+  throw new Error(
+    `Data file not found for ${country}/${subject}/${gradeLevel}. Tried:\n` +
+      `  - ${newPath}\n` +
+      `  - ${oldPath}\n` +
+      `  - ${legacyPath}`
+  );
 }
 
 /**
@@ -428,6 +451,7 @@ async function migrate(
     clear?: boolean;
     country?: string;
     subject?: string;
+    grade?: string;
     all?: boolean;
   } = {}
 ): Promise<void> {
@@ -435,29 +459,28 @@ async function migrate(
     console.log("\n🚀 Starting Subject Mappings Migration (Country-Based)");
     console.log("=====================================================\n");
 
-    // Load configuration
-    const config = loadConfig();
-
     // Initialize Firebase
     console.log("Initializing Firebase...");
     initializeFirebase();
     const db = getFirestore();
 
     // Determine what to migrate
-    let countriesToMigrate: string[];
+    let countriesToMigrate: CountryCode[];
+
+    const allCountryCodes = getAllCountryCodes();
 
     if (options.all) {
       // Migrate all countries
-      countriesToMigrate = Object.keys(config.countries);
+      countriesToMigrate = allCountryCodes;
       console.log(
         `\n📍 Migrating ALL countries: ${countriesToMigrate.join(", ")}`
       );
     } else if (options.country) {
       // Migrate specific country
-      const countryCode = options.country.toUpperCase();
-      if (!config.countries[countryCode]) {
+      const countryCode = options.country.toUpperCase() as CountryCode;
+      if (!allCountryCodes.includes(countryCode)) {
         throw new Error(
-          `Unknown country: ${countryCode}. Available: ${Object.keys(config.countries).join(", ")}`
+          `Unknown country: ${countryCode}. Available: ${allCountryCodes.join(", ")}`
         );
       }
       countriesToMigrate = [countryCode];
@@ -467,53 +490,104 @@ async function migrate(
 
     // Process each country
     for (const countryCode of countriesToMigrate) {
-      const countryConfig = config.countries[countryCode];
-
       console.log(`\n${"█".repeat(60)}`);
-      console.log(`🌍 Processing ${countryConfig.name} (${countryCode})`);
+      console.log(`🌍 Processing ${countryCode}`);
       console.log("█".repeat(60));
+
+      // Get grades for this country
+      if (!options.grade) {
+        throw new Error(
+          `Please specify --grade for ${countryCode}. Available: ${getGradesForCountry(
+            countryCode
+          )
+            .map((g) => g.value)
+            .join(", ")}`
+        );
+      }
+
+      const grades = getGradesForCountry(countryCode).filter(
+        (g) => g.value === options.grade
+      );
+
+      if (grades.length === 0) {
+        throw new Error(
+          `Invalid grade ${options.grade} for ${countryCode}. Available: ${getGradesForCountry(
+            countryCode
+          )
+            .map((g) => g.value)
+            .join(", ")}`
+        );
+      }
 
       // Clear existing data if requested
       if (options.clear) {
-        await clearExistingMappings(db, countryCode, options.subject);
+        await clearExistingMappings(
+          db,
+          countryCode,
+          options.subject as SubjectKey | undefined,
+          options.grade as GradeLevel | undefined
+        );
       }
 
       // Determine which subjects to import
-      const subjectsToImport = options.subject
-        ? [options.subject]
-        : Object.keys(countryConfig.subjects);
+      let subjectsToImport: SubjectKey[];
 
-      // Import each subject
-      for (const subjectKey of subjectsToImport) {
-        const subjectConfig = countryConfig.subjects[subjectKey];
+      if (!options.subject) {
+        throw new Error(
+          "Please specify --subject (or use 'all' to import all subjects)"
+        );
+      }
 
-        if (!subjectConfig) {
-          console.warn(
-            `⚠️  Subject '${subjectKey}' not configured for ${countryCode}`
+      if (options.subject.toLowerCase() === "all") {
+        subjectsToImport = Object.keys(SUBJECTS) as SubjectKey[];
+      } else {
+        if (!SUBJECTS[options.subject as SubjectKey]) {
+          throw new Error(
+            `Unknown subject: ${options.subject}. Available: ${Object.keys(SUBJECTS).join(", ")}, all`
           );
-          continue;
         }
+        subjectsToImport = [options.subject as SubjectKey];
+      }
 
-        // Get file path
-        const jsonPath = getDataFilePath(
-          countryCode,
-          subjectKey,
-          subjectConfig.file
-        );
-        console.log(`📁 Reading: ${jsonPath}`);
+      // Import each subject for each grade
+      for (const gradeConfig of grades) {
+        for (const subjectKey of subjectsToImport) {
+          if (!SUBJECTS[subjectKey]) {
+            console.warn(`⚠️  Unknown subject: ${subjectKey}`);
+            continue;
+          }
 
-        // Read and parse JSON
-        const jsonContent = fs.readFileSync(jsonPath, "utf-8");
-        const jsonData: JSONData = JSON.parse(jsonContent);
+          try {
+            // Get file path
+            const jsonPath = getDataFilePath(
+              countryCode,
+              subjectKey,
+              gradeConfig.value
+            );
+            console.log(`📁 Reading: ${jsonPath}`);
 
-        // Import to Firestore
-        await importSubject(
-          db,
-          countryCode,
-          subjectKey,
-          subjectConfig.name,
-          jsonData
-        );
+            // Read and parse JSON
+            const jsonContent = fs.readFileSync(jsonPath, "utf-8");
+            const jsonData: JSONNode[] = JSON.parse(jsonContent);
+
+            // Import to Firestore
+            await importSubjectGrade(
+              db,
+              countryCode,
+              subjectKey,
+              gradeConfig,
+              jsonData
+            );
+          } catch (error) {
+            if (error instanceof Error && error.message.includes("not found")) {
+              console.warn(
+                `⚠️  Skipping ${countryCode}/${subjectKey}/${gradeConfig.value}: ${error.message}`
+              );
+            } else {
+              throw error;
+            }
+          }
+        }
       }
     }
 
@@ -523,16 +597,17 @@ async function migrate(
     console.log("=".repeat(60));
     console.log("\nMigrated:");
     console.log(`  Countries: ${countriesToMigrate.join(", ")}`);
-    if (options.subject) {
-      console.log(`  Subject: ${options.subject}`);
-    } else {
-      console.log(`  Subjects: All configured subjects`);
-    }
+    console.log(
+      `  Subject: ${options.subject === "all" ? "All subjects" : options.subject}`
+    );
+    console.log(`  Grade: ${options.grade}`);
     console.log("\nFirestore structure:");
     countriesToMigrate.forEach((country) => {
-      console.log(
-        `  countries/${country}/subjectMappings/{subject}/{gradeLevel}/{docId}`
-      );
+      const grades = getGradesForCountry(country);
+      console.log(`  countries/${country}/subjectMappings/{subject}/`);
+      grades.forEach((g) => {
+        console.log(`    - ${g.value}/ (${g.labelEN})`);
+      });
     });
     console.log("\nNext steps:");
     console.log("  1. Check Firestore console to verify data");
@@ -548,38 +623,51 @@ async function migrate(
  * Show usage help
  */
 function showHelp(): void {
+  const allCountryCodes = getAllCountryCodes();
   console.log(`
-📚 Subject Mappings Migration Script
+📚 Subject Mappings Migration Script (Dynamic Grade System)
 
 Usage:
   npm run migrate:subjects -- [options]
 
 Options:
-  --country <code>    Country code (HU, US, MX, etc.)
-  --subject <name>    Subject name (mathematics, physics, etc.)
+  --country <code>    Country code (${allCountryCodes.join(", ")}) - REQUIRED (or use --all)
+  --subject <name>    Subject name (${Object.keys(SUBJECTS).join(", ")}, all) - REQUIRED
+  --grade <level>     Specific grade level (e.g., grade_9_12, grade_3_6) - REQUIRED
   --clear             Clear existing mappings before import
-  --all               Migrate all countries and subjects
+  --all               Migrate all countries (still requires --subject and --grade)
   --help              Show this help message
 
 Examples:
-  # Migrate mathematics for Hungary
-  npm run migrate:subjects -- --country HU --subject mathematics
+  # Migrate mathematics for Hungary, grade 9-12
+  npm run migrate:subjects -- --country HU --subject mathematics --grade grade_9_12
 
-  # Migrate all subjects for US, clearing existing data
-  npm run migrate:subjects -- --country US --clear
+  # Migrate specific grade for Mexico
+  npm run migrate:subjects -- --country MX --subject mathematics --grade grade_10_12
 
-  # Migrate all countries and subjects
-  npm run migrate:subjects -- --all
+  # Migrate all subjects for US grade 9-12, clearing existing data
+  npm run migrate:subjects -- --country US --subject all --grade grade_9_12 --clear
 
-  # Migrate specific subject for all countries
-  npm run migrate:subjects -- --all --subject mathematics
+  # Migrate mathematics grade 9-12 for all countries
+  npm run migrate:subjects -- --all --subject mathematics --grade grade_9_12
 
-Configuration:
-  Edit src/config/subject-mappings.config.json to add countries/subjects
+  # Migrate all subjects for Mexico grade 10-12
+  npm run migrate:subjects -- --country MX --subject all --grade grade_10_12
+
+Grade Systems (from shared/types/grades.ts):
+${allCountryCodes
+  .map((country: CountryCode) => {
+    const grades = getGradesForCountry(country);
+    return `  ${country}: ${grades.map((g) => g.value).join(", ")}`;
+  })
+  .join("\n")}
 
 Data Files:
-  Place JSON files in: src/data/mappings/{country}/{filename}
-  Example: src/data/mappings/hu/hu_mathematics_grade_9_12.json
+  New structure: src/data/mappings/{country}/grade_{level}/{subject}.json
+  Example: src/data/mappings/mx/grade_10_12/mathematics.json
+
+  Legacy structure (still supported):
+  src/data/mappings/{country}/{country}_{subject}_grade_{level}.json
 `);
 }
 
@@ -600,6 +688,7 @@ if (require.main === module) {
     clear?: boolean;
     country?: string;
     subject?: string;
+    grade?: string;
     all?: boolean;
   } = {};
 
@@ -621,9 +710,28 @@ if (require.main === module) {
     options.subject = args[subjectIndex + 1];
   }
 
-  // Validate
+  const gradeIndex = args.indexOf("--grade");
+  if (gradeIndex !== -1 && args[gradeIndex + 1]) {
+    options.grade = args[gradeIndex + 1];
+  }
+
+  // Validate required arguments
   if (!options.country && !options.all) {
     console.error("\n❌ Error: Please specify --country or --all\n");
+    showHelp();
+    process.exit(1);
+  }
+
+  if (!options.subject) {
+    console.error(
+      "\n❌ Error: --subject is required (use 'all' to migrate all subjects)\n"
+    );
+    showHelp();
+    process.exit(1);
+  }
+
+  if (!options.grade) {
+    console.error("\n❌ Error: --grade is required\n");
     showHelp();
     process.exit(1);
   }

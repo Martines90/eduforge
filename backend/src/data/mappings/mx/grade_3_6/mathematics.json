@@ -1,0 +1,4117 @@
+[
+  {
+    "key": "numeros_naturales",
+    "name": "Números naturales",
+    "short_description": "Comprensión del sistema de numeración decimal, lectura, escritura, ordenamiento y comparación de números naturales hasta millones.",
+    "sub_topics": [
+      {
+        "key": "valor_posicional",
+        "name": "Valor posicional",
+        "short_description": "Identificación del valor de cada dígito según su posición en el número.",
+        "sub_topics": [
+          {
+            "key": "unidades_decenas_centenas",
+            "name": "Unidades, decenas y centenas",
+            "short_description": "Reconocer y trabajar con el valor de las posiciones hasta las centenas.",
+            "example_tasks": [
+              "Descomponer el número 347 en centenas, decenas y unidades: 3 centenas + 4 decenas + 7 unidades",
+              "¿Cuántas decenas hay en el número 580?",
+              "Formar el número mayor posible con los dígitos 2, 9 y 5 sin repetirlos"
+            ]
+          },
+          {
+            "key": "unidades_de_millar",
+            "name": "Unidades de millar",
+            "short_description": "Comprender números de cuatro cifras y el valor de la posición de los millares.",
+            "example_tasks": [
+              "Escribir con número y letra: cinco mil trescientos cuarenta y dos",
+              "Descomponer 6,789 según el valor posicional de cada dígito",
+              "¿Qué número se forma con 4 millares, 0 centenas, 5 decenas y 8 unidades?"
+            ]
+          },
+          {
+            "key": "decenas_centenas_millares",
+            "name": "Decenas de millar y centenas de millar",
+            "short_description": "Trabajar con números de cinco y seis cifras comprendiendo el valor posicional.",
+            "example_tasks": [
+              "Escribir el número que es 10,000 más que 45,678",
+              "Comparar y ordenar de menor a mayor: 234,567; 243,567; 234,657",
+              "Una ciudad tiene doscientos treinta y cuatro mil quinientos habitantes. Escribir este número en cifras"
+            ]
+          },
+          {
+            "key": "millones",
+            "name": "Millones",
+            "short_description": "Leer, escribir y comprender números hasta millones.",
+            "example_tasks": [
+              "Escribir con letra: 3,456,789",
+              "¿Cuántos millares hay en 5 millones?",
+              "La población de México es de aproximadamente 128,000,000 habitantes. Escribir este número con letra"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "lectura_escritura_numeros",
+        "name": "Lectura y escritura de números",
+        "short_description": "Desarrollar habilidades para leer y escribir correctamente números en cifras y letras.",
+        "sub_topics": [
+          {
+            "key": "numeros_tres_cifras",
+            "name": "Números de tres cifras",
+            "short_description": "Leer y escribir números del 100 al 999 en cifras y letras.",
+            "example_tasks": [
+              "Escribir con letra: 456",
+              "Escribir en cifras: quinientos ochenta y tres",
+              "Dictar y escribir cinco números diferentes entre 200 y 600"
+            ]
+          },
+          {
+            "key": "numeros_cuatro_cinco_cifras",
+            "name": "Números de cuatro y cinco cifras",
+            "short_description": "Leer y escribir números de miles y decenas de millar correctamente.",
+            "example_tasks": [
+              "Escribir con letra: 23,456",
+              "Escribir en cifras: cuarenta y cinco mil setecientos",
+              "Completar la serie escribiendo los números con letra: 10,000; 20,000; _____; 40,000"
+            ]
+          },
+          {
+            "key": "numeros_seis_cifras_mas",
+            "name": "Números de seis cifras o más",
+            "short_description": "Dominar la lectura y escritura de números de centenas de millar y millones.",
+            "example_tasks": [
+              "Escribir con letra: 789,456",
+              "Escribir en cifras: dos millones trescientos mil",
+              "La distancia de la Tierra a la Luna es de 384,400 kilómetros. Escribir esta cantidad con letra"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "comparacion_ordenamiento",
+        "name": "Comparación y ordenamiento",
+        "short_description": "Comparar y ordenar números naturales usando los símbolos > < = y criterios de ordenamiento.",
+        "sub_topics": [
+          {
+            "key": "comparacion_numeros",
+            "name": "Comparación de números",
+            "short_description": "Usar los símbolos mayor que, menor que e igual para comparar números.",
+            "example_tasks": [
+              "Colocar el símbolo correcto (>, < o =): 567 ___ 576",
+              "¿Cuál es mayor: 3,456 o 3,465? Explicar por qué",
+              "Ordenar de mayor a menor: 12,345; 12,543; 12,354; 12,435"
+            ]
+          },
+          {
+            "key": "orden_ascendente_descendente",
+            "name": "Orden ascendente y descendente",
+            "short_description": "Ordenar series de números de menor a mayor y viceversa.",
+            "example_tasks": [
+              "Ordenar de menor a mayor: 789, 987, 879, 798, 897",
+              "Escribir cinco números entre 50,000 y 60,000 en orden descendente",
+              "Completar la serie en orden ascendente: 1,500; 2,000; _____; 3,000; _____"
+            ]
+          },
+          {
+            "key": "antecesor_sucesor",
+            "name": "Antecesor y sucesor",
+            "short_description": "Identificar el número que va antes y después de un número dado.",
+            "example_tasks": [
+              "Escribir el antecesor y sucesor de 4,999",
+              "¿Qué número va inmediatamente después de 99,999?",
+              "Completar: _____, 50,000, _____"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "recta_numerica",
+        "name": "Recta numérica",
+        "short_description": "Representar y ubicar números en la recta numérica para comprender el orden y las relaciones entre números.",
+        "sub_topics": [
+          {
+            "key": "ubicacion_recta",
+            "name": "Ubicación de números en la recta",
+            "short_description": "Colocar números en su posición correcta en una recta numérica.",
+            "example_tasks": [
+              "Ubicar los números 250, 500 y 750 en una recta numérica del 0 al 1,000",
+              "En una recta del 0 al 100, ¿entre qué números se encuentra el 67?",
+              "Dibujar una recta numérica y ubicar: 1,200; 1,500; 1,800; 2,100"
+            ]
+          },
+          {
+            "key": "comparacion_recta",
+            "name": "Comparación usando la recta numérica",
+            "short_description": "Usar la recta numérica como herramienta para comparar números.",
+            "example_tasks": [
+              "Usando una recta numérica, explicar por qué 340 es menor que 430",
+              "Identificar cuál de estos números está más cerca de 500: 465 o 535",
+              "En una recta del 0 al 10,000, ubicar 2,500 y 7,500 y calcular la distancia entre ellos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "aproximacion_redondeo",
+        "name": "Aproximación y redondeo",
+        "short_description": "Redondear números a la decena, centena o millar más cercano según el contexto.",
+        "sub_topics": [
+          {
+            "key": "redondeo_decenas_centenas",
+            "name": "Redondeo a decenas y centenas",
+            "short_description": "Aproximar números a la decena o centena más cercana.",
+            "example_tasks": [
+              "Redondear 347 a la decena más cercana",
+              "Redondear 782 a la centena más cercana",
+              "En una tienda hay 238 productos. Aproximadamente, ¿cuántos productos hay si redondeamos a la centena?"
+            ]
+          },
+          {
+            "key": "redondeo_millares",
+            "name": "Redondeo a millares",
+            "short_description": "Aproximar números de cuatro o más cifras al millar más cercano.",
+            "example_tasks": [
+              "Redondear 5,678 al millar más cercano",
+              "Una escuela tiene 3,456 estudiantes. ¿Aproximadamente cuántos estudiantes hay si redondeamos al millar?",
+              "Redondear a millares: 12,500; 8,300; 15,750"
+            ]
+          },
+          {
+            "key": "estimacion_resultados",
+            "name": "Estimación de resultados",
+            "short_description": "Usar el redondeo para estimar resultados de operaciones.",
+            "example_tasks": [
+              "Estimar el resultado de 487 + 523 redondeando primero cada número a la centena",
+              "¿Aproximadamente cuánto es 6,789 - 2,134? Redondear a millares antes de calcular",
+              "Un libro cuesta $345 y otro $289. Estimar el costo total redondeando a la centena"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "suma_resta",
+    "name": "Suma y resta",
+    "short_description": "Desarrollo de algoritmos y estrategias de cálculo mental para resolver sumas y restas con números naturales, incluyendo problemas de aplicación.",
+    "sub_topics": [
+      {
+        "key": "suma_sin_reagrupacion",
+        "name": "Suma sin reagrupación",
+        "short_description": "Realizar sumas de números de varias cifras cuando no es necesario reagrupar.",
+        "sub_topics": [
+          {
+            "key": "suma_dos_tres_cifras",
+            "name": "Suma de números de dos y tres cifras",
+            "short_description": "Sumar números hasta de tres cifras sin llevar.",
+            "example_tasks": [
+              "Resolver: 234 + 125",
+              "Juan tiene 341 canicas y María tiene 523. ¿Cuántas canicas tienen en total?",
+              "Calcular: 412 + 307 + 120"
+            ]
+          },
+          {
+            "key": "suma_cuatro_cifras_mas",
+            "name": "Suma de números de cuatro cifras o más",
+            "short_description": "Sumar números de millares sin reagrupación.",
+            "example_tasks": [
+              "Resolver: 5,234 + 3,125",
+              "Una ciudad tiene 23,456 habitantes y otra 45,321. ¿Cuántos habitantes hay en total?",
+              "Calcular: 12,300 + 24,100 + 31,400"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "suma_con_reagrupacion",
+        "name": "Suma con reagrupación",
+        "short_description": "Realizar sumas llevando cuando la suma de un valor posicional es mayor o igual a 10.",
+        "sub_topics": [
+          {
+            "key": "suma_llevando_unidades",
+            "name": "Suma llevando en unidades",
+            "short_description": "Sumar números donde las unidades suman 10 o más.",
+            "example_tasks": [
+              "Resolver: 347 + 128",
+              "María compró 189 estampas y luego 256 más. ¿Cuántas estampas tiene en total?",
+              "Calcular: 567 + 489"
+            ]
+          },
+          {
+            "key": "suma_llevando_varias_posiciones",
+            "name": "Suma llevando en varias posiciones",
+            "short_description": "Sumar números reagrupando en decenas, centenas y millares.",
+            "example_tasks": [
+              "Resolver: 6,789 + 5,876",
+              "Una librería vendió 8,567 libros en enero y 9,845 en febrero. ¿Cuántos vendió en total?",
+              "Calcular: 45,678 + 37,894 + 28,765"
+            ]
+          },
+          {
+            "key": "suma_numeros_grandes",
+            "name": "Suma de números grandes",
+            "short_description": "Sumar números de cinco o seis cifras con reagrupación.",
+            "example_tasks": [
+              "Resolver: 234,567 + 178,945",
+              "La población de dos estados es 1,456,789 y 2,345,678 respectivamente. ¿Cuál es la población total?",
+              "Calcular: 987,654 + 876,543 + 765,432"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "resta_sin_reagrupacion",
+        "name": "Resta sin reagrupación",
+        "short_description": "Realizar restas de números de varias cifras cuando no es necesario pedir prestado.",
+        "sub_topics": [
+          {
+            "key": "resta_dos_tres_cifras",
+            "name": "Resta de números de dos y tres cifras",
+            "short_description": "Restar números hasta de tres cifras sin prestar.",
+            "example_tasks": [
+              "Resolver: 789 - 234",
+              "Pedro tenía 567 pesos y gastó 243. ¿Cuánto le queda?",
+              "Calcular: 896 - 452"
+            ]
+          },
+          {
+            "key": "resta_cuatro_cifras_mas",
+            "name": "Resta de números de cuatro cifras o más",
+            "short_description": "Restar números de millares sin reagrupación.",
+            "example_tasks": [
+              "Resolver: 8,789 - 3,456",
+              "Una escuela tenía 9,876 libros y donó 2,543. ¿Cuántos libros le quedan?",
+              "Calcular: 67,899 - 34,567"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "resta_con_reagrupacion",
+        "name": "Resta con reagrupación",
+        "short_description": "Realizar restas prestando cuando el dígito del minuendo es menor que el del sustraendo.",
+        "sub_topics": [
+          {
+            "key": "resta_prestando_unidades",
+            "name": "Resta prestando en unidades",
+            "short_description": "Restar números pidiendo prestado de las decenas.",
+            "example_tasks": [
+              "Resolver: 523 - 187",
+              "Luis tenía 432 cromos y regaló 178. ¿Cuántos cromos le quedan?",
+              "Calcular: 641 - 295"
+            ]
+          },
+          {
+            "key": "resta_prestando_varias_posiciones",
+            "name": "Resta prestando en varias posiciones",
+            "short_description": "Restar números reagrupando en decenas, centenas y millares.",
+            "example_tasks": [
+              "Resolver: 5,000 - 2,347",
+              "Una tienda tenía 8,000 productos y vendió 3,678. ¿Cuántos productos quedan?",
+              "Calcular: 10,000 - 4,567"
+            ]
+          },
+          {
+            "key": "resta_con_ceros",
+            "name": "Resta con ceros en el minuendo",
+            "short_description": "Restar números cuando hay ceros consecutivos en el minuendo.",
+            "example_tasks": [
+              "Resolver: 3,002 - 1,456",
+              "De 50,000 habitantes, 23,456 son niños. ¿Cuántos no son niños?",
+              "Calcular: 100,000 - 67,894"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "calculo_mental_suma_resta",
+        "name": "Cálculo mental en suma y resta",
+        "short_description": "Desarrollar estrategias de cálculo mental para sumar y restar rápidamente.",
+        "sub_topics": [
+          {
+            "key": "sumas_que_terminan_en_cero",
+            "name": "Sumas que terminan en cero",
+            "short_description": "Identificar y usar parejas de números que suman 10, 100 o 1,000.",
+            "example_tasks": [
+              "Calcular mentalmente: 47 + 53",
+              "¿Qué número debo sumar a 650 para obtener 1,000?",
+              "Resolver rápidamente: 125 + 875"
+            ]
+          },
+          {
+            "key": "descomposicion_aditiva",
+            "name": "Descomposición aditiva",
+            "short_description": "Descomponer números para facilitar el cálculo mental.",
+            "example_tasks": [
+              "Calcular 56 + 38 pensando en 56 + 40 - 2",
+              "Sumar mentalmente 234 + 199 usando descomposición",
+              "Resolver: 88 + 45 descomponiendo 45 en 40 + 5"
+            ]
+          },
+          {
+            "key": "restas_contando_hacia_adelante",
+            "name": "Restas contando hacia adelante",
+            "short_description": "Resolver restas contando desde el sustraendo hasta el minuendo.",
+            "example_tasks": [
+              "Calcular 100 - 73 contando desde 73 hasta 100",
+              "¿Cuánto es 500 - 387? Usa la estrategia de contar hacia adelante",
+              "Resolver: 1,000 - 654 contando desde 654"
+            ]
+          },
+          {
+            "key": "estrategias_multiplos_diez",
+            "name": "Estrategias con múltiplos de 10",
+            "short_description": "Usar múltiplos de 10, 100 o 1,000 como puente en cálculos mentales.",
+            "example_tasks": [
+              "Calcular 67 + 28 pasando primero por 70: (67 + 3) + 25",
+              "Resolver: 456 + 98 pensando en 456 + 100 - 2",
+              "Sumar mentalmente: 3,456 + 997"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "problemas_suma_resta",
+        "name": "Problemas de suma y resta",
+        "short_description": "Resolver problemas contextualizados que requieren suma, resta o ambas operaciones.",
+        "sub_topics": [
+          {
+            "key": "problemas_una_operacion",
+            "name": "Problemas de una operación",
+            "short_description": "Identificar y resolver problemas que requieren una suma o una resta.",
+            "example_tasks": [
+              "En una granja hay 345 gallinas y 287 pollos. ¿Cuántas aves hay en total?",
+              "María tenía 560 pesos y gastó 278 en la tienda. ¿Cuánto dinero le queda?",
+              "Un autobús llevaba 67 pasajeros. En una parada se bajaron 29. ¿Cuántos pasajeros quedan?"
+            ]
+          },
+          {
+            "key": "problemas_dos_operaciones",
+            "name": "Problemas de dos operaciones",
+            "short_description": "Resolver problemas que combinan suma y resta.",
+            "example_tasks": [
+              "Carlos tenía 450 pesos, ganó 320 más y gastó 280. ¿Cuánto dinero tiene ahora?",
+              "En una biblioteca había 2,340 libros. Llegaron 456 nuevos y se prestaron 789. ¿Cuántos libros hay ahora?",
+              "Una tienda vendió 567 productos el lunes, 432 el martes y 345 el miércoles. Si tenía 2,000 productos, ¿cuántos le quedan?"
+            ]
+          },
+          {
+            "key": "problemas_comparacion",
+            "name": "Problemas de comparación",
+            "short_description": "Resolver problemas que requieren calcular diferencias entre cantidades.",
+            "example_tasks": [
+              "Juan tiene 456 estampas y Pedro tiene 289. ¿Cuántas estampas más tiene Juan?",
+              "La escuela A tiene 1,234 alumnos y la escuela B tiene 987. ¿Cuál es la diferencia de alumnos?",
+              "En una competencia, el primer lugar obtuvo 4,567 puntos y el segundo 3,892. ¿Por cuántos puntos ganó el primero?"
+            ]
+          },
+          {
+            "key": "problemas_igualacion",
+            "name": "Problemas de igualación",
+            "short_description": "Resolver problemas donde se busca igualar cantidades.",
+            "example_tasks": [
+              "Ana tiene 234 cromos y Luis tiene 567. ¿Cuántos cromos necesita Ana para tener los mismos que Luis?",
+              "Una caja tiene 456 lápices y otra tiene 789. ¿Cuántos lápices hay que pasar de una caja a otra para que tengan igual cantidad?",
+              "Pedro ahorró 2,300 pesos y quiere comprar una bicicleta de 3,500 pesos. ¿Cuánto dinero le falta?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "multiplicacion",
+    "name": "Multiplicación",
+    "short_description": "Comprensión del concepto de multiplicación, memorización de tablas, desarrollo de algoritmos y aplicación en problemas de la vida cotidiana.",
+    "sub_topics": [
+      {
+        "key": "concepto_multiplicacion",
+        "name": "Concepto de multiplicación",
+        "short_description": "Comprender la multiplicación como suma repetida y arreglos rectangulares.",
+        "sub_topics": [
+          {
+            "key": "multiplicacion_suma_repetida",
+            "name": "Multiplicación como suma repetida",
+            "short_description": "Entender que multiplicar es sumar el mismo número varias veces.",
+            "example_tasks": [
+              "Escribir como suma repetida y resolver: 4 × 6",
+              "Si hay 5 cajas con 8 lápices cada una, ¿cuántos lápices hay en total? Escribir la suma y la multiplicación",
+              "Representar con dibujos y multiplicación: 7 grupos de 3 manzanas"
+            ]
+          },
+          {
+            "key": "arreglos_rectangulares",
+            "name": "Arreglos rectangulares",
+            "short_description": "Representar multiplicaciones mediante arreglos de filas y columnas.",
+            "example_tasks": [
+              "Dibujar un arreglo rectangular de 4 filas con 6 elementos en cada fila. ¿Cuántos elementos hay en total?",
+              "Si organizas 24 sillas en 4 filas iguales, ¿cuántas sillas habrá en cada fila?",
+              "Representar 5 × 7 con un arreglo rectangular y escribir la operación"
+            ]
+          },
+          {
+            "key": "terminos_multiplicacion",
+            "name": "Términos de la multiplicación",
+            "short_description": "Identificar los factores y el producto en una multiplicación.",
+            "example_tasks": [
+              "En la multiplicación 8 × 5 = 40, identificar cuáles son los factores y cuál es el producto",
+              "Completar: En 6 × 7 = 42, los factores son _____ y _____, y el producto es _____",
+              "Escribir una multiplicación donde los factores sean 9 y 4"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tablas_multiplicar",
+        "name": "Tablas de multiplicar",
+        "short_description": "Memorizar y aplicar las tablas de multiplicar del 1 al 10.",
+        "sub_topics": [
+          {
+            "key": "tablas_del_1_al_5",
+            "name": "Tablas del 1 al 5",
+            "short_description": "Aprender y practicar las tablas de multiplicar del 1, 2, 3, 4 y 5.",
+            "example_tasks": [
+              "Completar: 4 × 7 = _____",
+              "Escribir la tabla del 3 completa",
+              "Resolver: 5 × 8, 2 × 9, 4 × 6"
+            ]
+          },
+          {
+            "key": "tablas_del_6_al_10",
+            "name": "Tablas del 6 al 10",
+            "short_description": "Aprender y practicar las tablas de multiplicar del 6, 7, 8, 9 y 10.",
+            "example_tasks": [
+              "Completar: 7 × 8 = _____",
+              "Escribir la tabla del 9 completa",
+              "Resolver: 6 × 7, 8 × 9, 10 × 6"
+            ]
+          },
+          {
+            "key": "practica_tablas_mixtas",
+            "name": "Práctica de tablas mixtas",
+            "short_description": "Resolver multiplicaciones combinando diferentes tablas.",
+            "example_tasks": [
+              "Resolver rápidamente: 7 × 6, 4 × 9, 8 × 5, 3 × 8",
+              "Completar la tabla: 6 × ___ = 48, ___ × 7 = 63, 9 × ___ = 54",
+              "Encontrar todos los productos de las tablas que dan como resultado 24"
+            ]
+          },
+          {
+            "key": "juegos_tablas",
+            "name": "Juegos y estrategias con tablas",
+            "short_description": "Usar patrones y estrategias para facilitar la memorización de tablas.",
+            "example_tasks": [
+              "Explicar el patrón de la tabla del 9 (suma de dígitos del producto es 9)",
+              "Usar la propiedad conmutativa: si sabes que 6 × 8 = 48, ¿cuánto es 8 × 6?",
+              "Tabla del 5: todos los productos terminan en 0 o 5. Verificar con tres ejemplos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "propiedades_multiplicacion",
+        "name": "Propiedades de la multiplicación",
+        "short_description": "Comprender y aplicar las propiedades conmutativa, asociativa, distributiva y del elemento neutro.",
+        "sub_topics": [
+          {
+            "key": "propiedad_conmutativa",
+            "name": "Propiedad conmutativa",
+            "short_description": "Entender que el orden de los factores no altera el producto.",
+            "example_tasks": [
+              "Verificar que 5 × 8 = 8 × 5",
+              "Si 7 × 6 = 42, ¿cuánto es 6 × 7? ¿Por qué?",
+              "Completar usando la propiedad conmutativa: 9 × 4 = 4 × ___"
+            ]
+          },
+          {
+            "key": "propiedad_asociativa",
+            "name": "Propiedad asociativa",
+            "short_description": "Comprender que se pueden agrupar factores de diferente manera sin cambiar el producto.",
+            "example_tasks": [
+              "Calcular de dos formas: (2 × 3) × 4 y 2 × (3 × 4)",
+              "¿Qué es más fácil calcular: (5 × 2) × 7 o 5 × (2 × 7)? ¿Por qué?",
+              "Resolver usando la asociativa: 25 × 4 × 8"
+            ]
+          },
+          {
+            "key": "propiedad_distributiva",
+            "name": "Propiedad distributiva",
+            "short_description": "Descomponer un factor para facilitar el cálculo mediante distribución.",
+            "example_tasks": [
+              "Calcular 6 × 13 descomponiendo 13 en 10 + 3: (6 × 10) + (6 × 3)",
+              "Resolver 8 × 15 usando la propiedad distributiva",
+              "Verificar que 7 × 12 = (7 × 10) + (7 × 2)"
+            ]
+          },
+          {
+            "key": "elemento_neutro_cero",
+            "name": "Elemento neutro y multiplicación por cero",
+            "short_description": "Comprender que multiplicar por 1 da el mismo número y por 0 da cero.",
+            "example_tasks": [
+              "¿Cuánto es 456 × 1? ¿Y 1 × 456?",
+              "¿Cuánto es 789 × 0? ¿Y 0 × 789?",
+              "Completar: ___ × 1 = 234; 567 × ___ = 0"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "multiplicacion_una_cifra",
+        "name": "Multiplicación por una cifra",
+        "short_description": "Multiplicar números de dos o más cifras por números de una cifra.",
+        "sub_topics": [
+          {
+            "key": "multiplicacion_dos_cifras_por_una",
+            "name": "Multiplicación de dos cifras por una",
+            "short_description": "Usar el algoritmo para multiplicar números de dos cifras por una cifra.",
+            "example_tasks": [
+              "Resolver: 34 × 5",
+              "Calcular: 67 × 8",
+              "Si un libro cuesta $48 pesos, ¿cuánto cuestan 6 libros?"
+            ]
+          },
+          {
+            "key": "multiplicacion_tres_cifras_por_una",
+            "name": "Multiplicación de tres cifras por una",
+            "short_description": "Multiplicar números de tres cifras usando el algoritmo estándar.",
+            "example_tasks": [
+              "Resolver: 345 × 7",
+              "Calcular: 628 × 9",
+              "Una caja contiene 456 lápices. Si hay 8 cajas, ¿cuántos lápices hay en total?"
+            ]
+          },
+          {
+            "key": "multiplicacion_llevando",
+            "name": "Multiplicación con reagrupación",
+            "short_description": "Multiplicar números llevando cuando el producto parcial es mayor que 10.",
+            "example_tasks": [
+              "Resolver: 58 × 7 (llevando en unidades y decenas)",
+              "Calcular: 347 × 6",
+              "Si cada estudiante necesita 78 hojas y hay 9 estudiantes, ¿cuántas hojas se necesitan?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "multiplicacion_dos_cifras",
+        "name": "Multiplicación por dos cifras",
+        "short_description": "Multiplicar números de dos o más cifras por números de dos cifras.",
+        "sub_topics": [
+          {
+            "key": "multiplicacion_decenas",
+            "name": "Multiplicación por decenas",
+            "short_description": "Multiplicar por 10, 20, 30, etc., agregando ceros.",
+            "example_tasks": [
+              "Resolver: 45 × 10",
+              "Calcular: 234 × 20",
+              "¿Cuánto es 67 × 30? Explica tu estrategia"
+            ]
+          },
+          {
+            "key": "multiplicacion_dos_cifras_algoritmo",
+            "name": "Algoritmo de multiplicación por dos cifras",
+            "short_description": "Usar el algoritmo estándar para multiplicar por números de dos cifras.",
+            "example_tasks": [
+              "Resolver: 34 × 25",
+              "Calcular: 56 × 47",
+              "Un salón tiene 24 filas con 18 sillas cada una. ¿Cuántas sillas hay en total?"
+            ]
+          },
+          {
+            "key": "multiplicacion_tres_por_dos_cifras",
+            "name": "Multiplicación de tres por dos cifras",
+            "short_description": "Multiplicar números de tres cifras por números de dos cifras.",
+            "example_tasks": [
+              "Resolver: 234 × 56",
+              "Calcular: 456 × 78",
+              "Una fábrica produce 345 productos por día. ¿Cuántos produce en 45 días?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "problemas_multiplicacion",
+        "name": "Problemas de multiplicación",
+        "short_description": "Resolver problemas contextualizados que requieren multiplicación.",
+        "sub_topics": [
+          {
+            "key": "problemas_arreglos_grupos",
+            "name": "Problemas de arreglos y grupos",
+            "short_description": "Resolver problemas que involucran grupos iguales o arreglos.",
+            "example_tasks": [
+              "En una granja hay 8 corrales con 12 animales en cada uno. ¿Cuántos animales hay en total?",
+              "Se van a plantar árboles en 6 filas de 15 árboles cada una. ¿Cuántos árboles se plantarán?",
+              "Una caja tiene 24 chocolates. Si hay 7 cajas, ¿cuántos chocolates hay en total?"
+            ]
+          },
+          {
+            "key": "problemas_comparacion_multiplicativa",
+            "name": "Problemas de comparación multiplicativa",
+            "short_description": "Resolver problemas donde una cantidad es varias veces otra.",
+            "example_tasks": [
+              "Pedro tiene 45 canicas y Juan tiene 3 veces más. ¿Cuántas canicas tiene Juan?",
+              "María ahorró $235 y su hermana ahorró 4 veces esa cantidad. ¿Cuánto ahorró la hermana?",
+              "Un edificio mide 8 metros y otro mide 6 veces esa altura. ¿Cuánto mide el segundo edificio?"
+            ]
+          },
+          {
+            "key": "problemas_combinacion_operaciones",
+            "name": "Problemas con combinación de operaciones",
+            "short_description": "Resolver problemas que requieren multiplicación y suma o resta.",
+            "example_tasks": [
+              "Compré 5 cuadernos de $23 cada uno y un libro de $145. ¿Cuánto gasté en total?",
+              "En una tienda hay 12 cajas con 35 lápices cada una. Se vendieron 87 lápices. ¿Cuántos quedan?",
+              "Una escuela tiene 8 salones con 32 estudiantes cada uno. Si 15 estudiantes faltaron, ¿cuántos asistieron?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "division",
+    "name": "División",
+    "short_description": "Comprensión del concepto de división como reparto y agrupamiento, desarrollo de algoritmos de división y su relación con la multiplicación.",
+    "sub_topics": [
+      {
+        "key": "concepto_division",
+        "name": "Concepto de división",
+        "short_description": "Comprender la división como reparto equitativo y agrupamiento.",
+        "sub_topics": [
+          {
+            "key": "division_reparto",
+            "name": "División como reparto",
+            "short_description": "Entender la división repartiendo una cantidad en partes iguales.",
+            "example_tasks": [
+              "Repartir 15 dulces entre 3 niños equitativamente. ¿Cuántos dulces le tocan a cada uno?",
+              "Si tengo 24 lápices para repartir entre 6 estudiantes, ¿cuántos le tocan a cada estudiante?",
+              "Dividir 36 manzanas en 4 canastas iguales. ¿Cuántas manzanas hay en cada canasta?"
+            ]
+          },
+          {
+            "key": "division_agrupamiento",
+            "name": "División como agrupamiento",
+            "short_description": "Comprender la división formando grupos de igual tamaño.",
+            "example_tasks": [
+              "Si tengo 20 galletas y quiero hacer bolsas de 4 galletas, ¿cuántas bolsas puedo hacer?",
+              "Con 30 estudiantes, ¿cuántos equipos de 5 se pueden formar?",
+              "Si tengo 28 flores y hago ramos de 7 flores, ¿cuántos ramos puedo hacer?"
+            ]
+          },
+          {
+            "key": "terminos_division",
+            "name": "Términos de la división",
+            "short_description": "Identificar dividendo, divisor, cociente y residuo.",
+            "example_tasks": [
+              "En la división 24 ÷ 6 = 4, identificar el dividendo, divisor y cociente",
+              "Completar: En 35 ÷ 5 = 7, el dividendo es _____, el divisor es _____ y el cociente es _____",
+              "Escribir una división donde el dividendo sea 48 y el divisor sea 8"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "division_multiplicacion",
+        "name": "Relación entre división y multiplicación",
+        "short_description": "Comprender que la división es la operación inversa de la multiplicación.",
+        "sub_topics": [
+          {
+            "key": "divisiones_usando_multiplicacion",
+            "name": "Resolver divisiones usando multiplicación",
+            "short_description": "Usar las tablas de multiplicar para encontrar cocientes.",
+            "example_tasks": [
+              "Resolver 56 ÷ 8 pensando: ¿8 por cuánto es 56?",
+              "Si 7 × 9 = 63, entonces 63 ÷ 7 = _____",
+              "Completar la familia de operaciones: 6 × 8 = 48; 8 × 6 = 48; 48 ÷ 6 = ___; 48 ÷ 8 = ___"
+            ]
+          },
+          {
+            "key": "comprobacion_division",
+            "name": "Comprobación de divisiones",
+            "short_description": "Verificar divisiones multiplicando el cociente por el divisor.",
+            "example_tasks": [
+              "Comprobar si 72 ÷ 9 = 8 es correcta",
+              "Verificar el resultado de 54 ÷ 6 mediante multiplicación",
+              "Si dividiste 45 ÷ 5 y obtuviste 9, ¿cómo puedes comprobar tu respuesta?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "division_exacta",
+        "name": "División exacta",
+        "short_description": "Realizar divisiones donde el residuo es cero.",
+        "sub_topics": [
+          {
+            "key": "divisiones_tablas",
+            "name": "Divisiones usando tablas",
+            "short_description": "Resolver divisiones exactas basadas en las tablas de multiplicar.",
+            "example_tasks": [
+              "Resolver: 42 ÷ 6",
+              "Calcular: 81 ÷ 9",
+              "¿Cuánto es 64 ÷ 8?"
+            ]
+          },
+          {
+            "key": "division_entre_10_100",
+            "name": "División entre 10, 100 y 1000",
+            "short_description": "Dividir números entre potencias de 10 eliminando ceros.",
+            "example_tasks": [
+              "Resolver: 560 ÷ 10",
+              "Calcular: 3,400 ÷ 100",
+              "¿Cuánto es 25,000 ÷ 1,000?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "division_con_residuo",
+        "name": "División con residuo",
+        "short_description": "Comprender y calcular divisiones donde hay un residuo diferente de cero.",
+        "sub_topics": [
+          {
+            "key": "concepto_residuo",
+            "name": "Concepto de residuo",
+            "short_description": "Entender qué es el residuo y por qué aparece en algunas divisiones.",
+            "example_tasks": [
+              "Dividir 17 caramelos entre 5 niños. ¿Cuántos le tocan a cada uno y cuántos sobran?",
+              "Resolver: 25 ÷ 4 e identificar el residuo",
+              "Si tengo 38 flores y hago ramos de 6, ¿cuántos ramos completos puedo hacer y cuántas flores sobran?"
+            ]
+          },
+          {
+            "key": "division_residuo_algoritmo",
+            "name": "Algoritmo de división con residuo",
+            "short_description": "Usar el algoritmo para dividir números con residuo.",
+            "example_tasks": [
+              "Resolver: 47 ÷ 6",
+              "Calcular: 83 ÷ 7 y expresar como: cociente y residuo",
+              "¿Cuál es el cociente y el residuo de 95 ÷ 8?"
+            ]
+          },
+          {
+            "key": "comprobacion_division_residuo",
+            "name": "Comprobación de división con residuo",
+            "short_description": "Verificar divisiones con residuo usando la fórmula: dividendo = (divisor × cociente) + residuo.",
+            "example_tasks": [
+              "Comprobar que 53 ÷ 7 = 7 con residuo 4 es correcta",
+              "Verificar: 68 ÷ 9 = 7 residuo 5",
+              "Si dividiste 91 ÷ 8 y obtuviste cociente 11 y residuo 3, ¿es correcta tu respuesta?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "division_una_cifra",
+        "name": "División entre números de una cifra",
+        "short_description": "Dividir números de dos o más cifras entre números de una cifra.",
+        "sub_topics": [
+          {
+            "key": "division_dos_cifras_entre_una",
+            "name": "División de dos cifras entre una",
+            "short_description": "Usar el algoritmo para dividir números de dos cifras.",
+            "example_tasks": [
+              "Resolver: 84 ÷ 7",
+              "Calcular: 96 ÷ 8",
+              "Si 72 lápices se reparten entre 6 estudiantes, ¿cuántos recibe cada uno?"
+            ]
+          },
+          {
+            "key": "division_tres_cifras_entre_una",
+            "name": "División de tres cifras entre una",
+            "short_description": "Dividir números de tres cifras usando el algoritmo largo.",
+            "example_tasks": [
+              "Resolver: 456 ÷ 3",
+              "Calcular: 789 ÷ 6",
+              "Una fábrica empaca 945 productos en 7 cajas iguales. ¿Cuántos productos van en cada caja?"
+            ]
+          },
+          {
+            "key": "division_ceros_cociente",
+            "name": "División con ceros en el cociente",
+            "short_description": "Resolver divisiones donde aparecen ceros en el cociente.",
+            "example_tasks": [
+              "Resolver: 618 ÷ 6",
+              "Calcular: 824 ÷ 8",
+              "¿Cuánto es 3,024 ÷ 3?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "division_dos_cifras",
+        "name": "División entre números de dos cifras",
+        "short_description": "Dividir números de tres o más cifras entre números de dos cifras.",
+        "sub_topics": [
+          {
+            "key": "division_decenas_exactas",
+            "name": "División entre decenas exactas",
+            "short_description": "Dividir entre 10, 20, 30, etc.",
+            "example_tasks": [
+              "Resolver: 360 ÷ 20",
+              "Calcular: 450 ÷ 30",
+              "¿Cuánto es 640 ÷ 40?"
+            ]
+          },
+          {
+            "key": "estimacion_cociente",
+            "name": "Estimación del cociente",
+            "short_description": "Estimar el cociente para facilitar la división.",
+            "example_tasks": [
+              "Estimar el cociente de 347 ÷ 23 (pensando en 340 ÷ 20)",
+              "¿Aproximadamente cuánto es 567 ÷ 38?",
+              "Estimar: 896 ÷ 29"
+            ]
+          },
+          {
+            "key": "algoritmo_division_dos_cifras",
+            "name": "Algoritmo de división entre dos cifras",
+            "short_description": "Usar el algoritmo largo para dividir entre números de dos cifras.",
+            "example_tasks": [
+              "Resolver: 456 ÷ 24",
+              "Calcular: 789 ÷ 35",
+              "Una escuela tiene 864 estudiantes que se organizarán en 24 grupos. ¿Cuántos estudiantes habrá en cada grupo?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "problemas_division",
+        "name": "Problemas de división",
+        "short_description": "Resolver problemas contextualizados que requieren división.",
+        "sub_topics": [
+          {
+            "key": "problemas_reparto_equitativo",
+            "name": "Problemas de reparto equitativo",
+            "short_description": "Resolver problemas donde se reparte una cantidad en partes iguales.",
+            "example_tasks": [
+              "Se van a repartir 96 naranjas en 8 bolsas iguales. ¿Cuántas naranjas habrá en cada bolsa?",
+              "Un pastel se divide en 12 partes iguales. Si hay 72 gramos de pastel, ¿cuántos gramos tiene cada parte?",
+              "125 estudiantes se organizan en 5 equipos iguales. ¿Cuántos estudiantes hay en cada equipo?"
+            ]
+          },
+          {
+            "key": "problemas_agrupamiento",
+            "name": "Problemas de agrupamiento",
+            "short_description": "Resolver problemas formando grupos de igual tamaño.",
+            "example_tasks": [
+              "Hay 84 libros para organizar en pilas de 7 libros. ¿Cuántas pilas se pueden hacer?",
+              "Si tengo 144 flores y quiero hacer ramos de 12 flores, ¿cuántos ramos puedo hacer?",
+              "Con 156 sillas, ¿cuántas filas de 13 sillas se pueden formar?"
+            ]
+          },
+          {
+            "key": "problemas_division_residuo_contexto",
+            "name": "Problemas con residuo en contexto",
+            "short_description": "Interpretar el residuo según el contexto del problema.",
+            "example_tasks": [
+              "Se necesitan cajas para empacar 85 juguetes. Si cada caja tiene capacidad para 8 juguetes, ¿cuántas cajas se necesitan?",
+              "Un autobús tiene 45 asientos. Si hay 287 personas esperando, ¿cuántos viajes completos debe hacer el autobús?",
+              "Tengo 100 pesos para comprar lápices de 7 pesos cada uno. ¿Cuántos lápices puedo comprar y cuánto dinero me sobra?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "numeros_decimales",
+    "name": "Números decimales",
+    "short_description": "Introducción a los números decimales, su representación, comparación y operaciones básicas en contextos de medición y dinero.",
+    "sub_topics": [
+      {
+        "key": "concepto_decimales",
+        "name": "Concepto de números decimales",
+        "short_description": "Comprender los números decimales como una extensión del sistema de numeración para representar partes menores que la unidad.",
+        "sub_topics": [
+          {
+            "key": "decimos_centesimos",
+            "name": "Décimos y centésimos",
+            "short_description": "Entender las décimas y centésimas como divisiones de la unidad.",
+            "example_tasks": [
+              "Representar gráficamente 0.5 (5 décimos) en una figura dividida en 10 partes",
+              "Escribir como decimal: 7 décimos",
+              "¿Cuántos centésimos hay en 0.45?"
+            ]
+          },
+          {
+            "key": "lectura_escritura_decimales",
+            "name": "Lectura y escritura de decimales",
+            "short_description": "Leer y escribir números decimales correctamente.",
+            "example_tasks": [
+              "Escribir con letra: 3.5 (tres enteros cinco décimos)",
+              "Escribir en decimal: cuatro enteros veinticinco centésimos",
+              "Leer correctamente: 12.75"
+            ]
+          },
+          {
+            "key": "valor_posicional_decimales",
+            "name": "Valor posicional en decimales",
+            "short_description": "Identificar el valor de cada dígito en un número decimal.",
+            "example_tasks": [
+              "En el número 45.67, ¿qué valor tiene el dígito 6?",
+              "Descomponer 23.48 en unidades, décimos y centésimos",
+              "¿Qué número tiene 5 unidades, 3 décimos y 2 centésimos?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "comparacion_decimales",
+        "name": "Comparación y ordenamiento de decimales",
+        "short_description": "Comparar y ordenar números decimales usando los símbolos > < =.",
+        "sub_topics": [
+          {
+            "key": "comparacion_mismo_entero",
+            "name": "Comparación con mismo número entero",
+            "short_description": "Comparar decimales que tienen la misma parte entera.",
+            "example_tasks": [
+              "Colocar >, < o =: 3.5 ___ 3.8",
+              "¿Cuál es mayor: 7.45 o 7.54?",
+              "Ordenar de menor a mayor: 5.3, 5.8, 5.1, 5.6"
+            ]
+          },
+          {
+            "key": "comparacion_diferente_entero",
+            "name": "Comparación con diferente número entero",
+            "short_description": "Comparar decimales con diferente parte entera.",
+            "example_tasks": [
+              "Colocar >, < o =: 4.9 ___ 5.1",
+              "¿Cuál es menor: 8.75 o 9.25?",
+              "Ordenar de mayor a menor: 12.5, 9.8, 10.3, 11.2"
+            ]
+          },
+          {
+            "key": "decimales_equivalentes",
+            "name": "Decimales equivalentes",
+            "short_description": "Reconocer que decimales como 0.5 y 0.50 son equivalentes.",
+            "example_tasks": [
+              "¿Son equivalentes 0.7 y 0.70? Explicar por qué",
+              "Escribir tres formas decimales equivalentes de 2.3",
+              "Comparar: 1.50 ___ 1.5"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "decimales_recta_numerica",
+        "name": "Decimales en la recta numérica",
+        "short_description": "Ubicar y representar números decimales en la recta numérica.",
+        "sub_topics": [
+          {
+            "key": "ubicacion_decimales_recta",
+            "name": "Ubicación de decimales en la recta",
+            "short_description": "Colocar números decimales en su posición correcta en la recta numérica.",
+            "example_tasks": [
+              "Ubicar 0.5, 1.5 y 2.5 en una recta numérica del 0 al 3",
+              "En una recta del 0 al 1, ¿dónde se ubica 0.75?",
+              "Marcar 3.2, 3.6 y 3.8 en una recta del 3 al 4"
+            ]
+          },
+          {
+            "key": "aproximacion_decimales",
+            "name": "Aproximación de decimales",
+            "short_description": "Aproximar decimales al entero más cercano.",
+            "example_tasks": [
+              "¿A qué entero está más cerca 4.7?",
+              "Redondear 8.3 al entero más cercano",
+              "Si 5.5 está exactamente entre 5 y 6, ¿a cuál lo aproximarías?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "suma_resta_decimales",
+        "name": "Suma y resta de decimales",
+        "short_description": "Sumar y restar números decimales alineando el punto decimal.",
+        "sub_topics": [
+          {
+            "key": "suma_decimales_mismo_denominador",
+            "name": "Suma de decimales con mismo número de cifras",
+            "short_description": "Sumar decimales que tienen el mismo número de cifras decimales.",
+            "example_tasks": [
+              "Resolver: 3.5 + 2.4",
+              "Calcular: 12.75 + 8.23",
+              "Luis compró un cuaderno de $23.50 y un lápiz de $8.25. ¿Cuánto gastó en total?"
+            ]
+          },
+          {
+            "key": "suma_decimales_diferente_denominador",
+            "name": "Suma de decimales con diferente número de cifras",
+            "short_description": "Sumar decimales completando con ceros cuando sea necesario.",
+            "example_tasks": [
+              "Resolver: 4.5 + 2.75",
+              "Calcular: 15.2 + 3.456",
+              "Sumar: 7 + 3.25 + 0.5"
+            ]
+          },
+          {
+            "key": "resta_decimales",
+            "name": "Resta de decimales",
+            "short_description": "Restar números decimales alineando correctamente el punto.",
+            "example_tasks": [
+              "Resolver: 8.7 - 3.5",
+              "Calcular: 15.48 - 7.25",
+              "María tenía $50.00 y gastó $23.75. ¿Cuánto dinero le queda?"
+            ]
+          },
+          {
+            "key": "problemas_decimales_dinero",
+            "name": "Problemas con decimales y dinero",
+            "short_description": "Resolver problemas del contexto de dinero usando decimales.",
+            "example_tasks": [
+              "Compré 2.5 kg de manzanas a $18.50 el kg. Pagué con $50.00. ¿Cuánto me dieron de cambio?",
+              "Un litro de leche cuesta $22.50 y un kilo de tortillas $16.75. ¿Cuánto cuestan 3 litros de leche y 2 kilos de tortillas?",
+              "Tengo $100.00. Si gasto $45.50 en el mercado y $28.25 en la farmacia, ¿cuánto dinero me queda?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "decimales_medicion",
+        "name": "Decimales en medición",
+        "short_description": "Usar números decimales en contextos de medición de longitud, peso y capacidad.",
+        "sub_topics": [
+          {
+            "key": "medidas_longitud_decimales",
+            "name": "Medidas de longitud con decimales",
+            "short_description": "Expresar y operar con medidas de longitud usando decimales.",
+            "example_tasks": [
+              "Convertir 2 metros 50 centímetros a metros usando decimales (2.50 m)",
+              "Sumar: 3.5 m + 2.75 m",
+              "Una cuerda mide 5.80 m. Si se corta un pedazo de 2.35 m, ¿cuánto mide el pedazo que queda?"
+            ]
+          },
+          {
+            "key": "medidas_peso_decimales",
+            "name": "Medidas de peso con decimales",
+            "short_description": "Expresar y operar con medidas de peso usando decimales.",
+            "example_tasks": [
+              "Convertir 3 kg 250 g a kilogramos usando decimales (3.25 kg)",
+              "Sumar: 2.5 kg + 1.750 kg",
+              "Compré 1.5 kg de azúcar y 2.25 kg de arroz. ¿Cuántos kilogramos compré en total?"
+            ]
+          },
+          {
+            "key": "medidas_capacidad_decimales",
+            "name": "Medidas de capacidad con decimales",
+            "short_description": "Expresar y operar con medidas de capacidad usando decimales.",
+            "example_tasks": [
+              "Convertir 1 litro 500 mililitros a litros usando decimales (1.5 L)",
+              "Restar: 2.5 L - 0.75 L",
+              "Una botella tiene 2.25 litros de agua. Si se sirven 0.5 litros, ¿cuánta agua queda en la botella?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "fracciones",
+    "name": "Fracciones",
+    "short_description": "Comprensión del concepto de fracción como parte de un todo, representación gráfica y numérica, equivalencia y comparación de fracciones.",
+    "sub_topics": [
+      {
+        "key": "concepto_fraccion",
+        "name": "Concepto de fracción",
+        "short_description": "Entender la fracción como representación de partes iguales de un todo.",
+        "sub_topics": [
+          {
+            "key": "fracciones_como_partes",
+            "name": "Fracciones como partes de un todo",
+            "short_description": "Reconocer que una fracción representa partes iguales de una unidad.",
+            "example_tasks": [
+              "Si un pastel se divide en 8 partes iguales y tomas 3, ¿qué fracción del pastel tomaste?",
+              "Representar gráficamente la fracción 2/5 en un rectángulo dividido en partes iguales",
+              "¿Qué fracción de un día son 6 horas? (El día tiene 24 horas)"
+            ]
+          },
+          {
+            "key": "terminos_fraccion",
+            "name": "Términos de la fracción",
+            "short_description": "Identificar el numerador y el denominador de una fracción.",
+            "example_tasks": [
+              "En la fracción 3/4, ¿cuál es el numerador y cuál es el denominador?",
+              "Escribir una fracción donde el numerador sea 5 y el denominador sea 8",
+              "¿Qué indica el denominador en la fracción 2/7? ¿Y el numerador?"
+            ]
+          },
+          {
+            "key": "lectura_escritura_fracciones",
+            "name": "Lectura y escritura de fracciones",
+            "short_description": "Leer y escribir fracciones correctamente.",
+            "example_tasks": [
+              "Leer correctamente: 3/5 (tres quintos)",
+              "Escribir en fracción: siete octavos",
+              "¿Cómo se lee la fracción 2/3?"
+            ]
+          },
+          {
+            "key": "fracciones_recta_numerica",
+            "name": "Fracciones en la recta numérica",
+            "short_description": "Ubicar fracciones en la recta numérica.",
+            "example_tasks": [
+              "Ubicar 1/2, 1/4 y 3/4 en una recta numérica del 0 al 1",
+              "En una recta del 0 al 2, ¿dónde se ubica 3/2?",
+              "Marcar 2/5, 3/5 y 4/5 en una recta del 0 al 1"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tipos_fracciones",
+        "name": "Tipos de fracciones",
+        "short_description": "Clasificar fracciones en propias, impropias y mixtas.",
+        "sub_topics": [
+          {
+            "key": "fracciones_propias",
+            "name": "Fracciones propias",
+            "short_description": "Identificar fracciones donde el numerador es menor que el denominador.",
+            "example_tasks": [
+              "Identificar cuáles son fracciones propias: 2/3, 5/4, 1/8, 7/5",
+              "Escribir tres fracciones propias diferentes",
+              "¿Por qué 3/7 es una fracción propia?"
+            ]
+          },
+          {
+            "key": "fracciones_impropias",
+            "name": "Fracciones impropias",
+            "short_description": "Reconocer fracciones donde el numerador es mayor o igual que el denominador.",
+            "example_tasks": [
+              "Identificar las fracciones impropias: 3/2, 4/5, 8/8, 5/3",
+              "Escribir tres fracciones impropias diferentes",
+              "¿Cuántos enteros hay en 7/4?"
+            ]
+          },
+          {
+            "key": "numeros_mixtos",
+            "name": "Números mixtos",
+            "short_description": "Representar cantidades mayores que uno con parte entera y fraccionaria.",
+            "example_tasks": [
+              "Escribir 5/2 como número mixto",
+              "Convertir 2 1/3 a fracción impropia",
+              "Representar gráficamente el número mixto 1 3/4"
+            ]
+          },
+          {
+            "key": "conversion_fracciones_mixtos",
+            "name": "Conversión entre fracciones impropias y mixtos",
+            "short_description": "Convertir fracciones impropias a números mixtos y viceversa.",
+            "example_tasks": [
+              "Convertir 11/4 a número mixto",
+              "Convertir 3 2/5 a fracción impropia",
+              "Si tienes 13/6 pizzas, ¿cuántas pizzas completas tienes y qué fracción sobra?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fracciones_equivalentes",
+        "name": "Fracciones equivalentes",
+        "short_description": "Reconocer y generar fracciones que representan la misma cantidad aunque tengan diferentes numeradores y denominadores.",
+        "sub_topics": [
+          {
+            "key": "concepto_equivalencia",
+            "name": "Concepto de equivalencia",
+            "short_description": "Comprender que fracciones diferentes pueden representar la misma cantidad.",
+            "example_tasks": [
+              "Demostrar gráficamente que 1/2 = 2/4",
+              "¿Son equivalentes 3/6 y 1/2? Explicar por qué",
+              "Representar 2/3 y 4/6 para mostrar que son equivalentes"
+            ]
+          },
+          {
+            "key": "amplificacion_fracciones",
+            "name": "Amplificación de fracciones",
+            "short_description": "Obtener fracciones equivalentes multiplicando numerador y denominador por el mismo número.",
+            "example_tasks": [
+              "Encontrar una fracción equivalente a 2/5 multiplicando por 3",
+              "Completar: 3/4 = __/12",
+              "Escribir tres fracciones equivalentes a 1/3"
+            ]
+          },
+          {
+            "key": "simplificacion_fracciones",
+            "name": "Simplificación de fracciones",
+            "short_description": "Obtener fracciones equivalentes dividiendo numerador y denominador por el mismo número.",
+            "example_tasks": [
+              "Simplificar 6/8 a su mínima expresión",
+              "Reducir 12/18 dividiendo numerador y denominador entre 6",
+              "¿Cuál es la fracción más simple equivalente a 15/20?"
+            ]
+          },
+          {
+            "key": "fracciones_irreductibles",
+            "name": "Fracciones irreductibles",
+            "short_description": "Identificar fracciones que ya están en su forma más simple.",
+            "example_tasks": [
+              "¿Está 3/7 en su forma irreductible? ¿Por qué?",
+              "Simplificar estas fracciones a su forma irreductible: 8/12, 5/9, 10/15",
+              "Escribir 20/30 en su mínima expresión"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "comparacion_fracciones",
+        "name": "Comparación de fracciones",
+        "short_description": "Comparar fracciones usando diferentes estrategias según sus denominadores.",
+        "sub_topics": [
+          {
+            "key": "comparacion_mismo_denominador",
+            "name": "Comparación con el mismo denominador",
+            "short_description": "Comparar fracciones que tienen igual denominador.",
+            "example_tasks": [
+              "Colocar >, < o =: 3/7 ___ 5/7",
+              "Ordenar de menor a mayor: 2/9, 5/9, 1/9, 7/9",
+              "¿Cuál es mayor: 4/11 o 8/11? ¿Por qué?"
+            ]
+          },
+          {
+            "key": "comparacion_mismo_numerador",
+            "name": "Comparación con el mismo numerador",
+            "short_description": "Comparar fracciones que tienen igual numerador.",
+            "example_tasks": [
+              "Colocar >, < o =: 2/5 ___ 2/7",
+              "¿Cuál es mayor: 3/4 o 3/8? Explicar por qué",
+              "Ordenar de mayor a menor: 5/6, 5/3, 5/9, 5/12"
+            ]
+          },
+          {
+            "key": "comparacion_con_unidad",
+            "name": "Comparación con la unidad",
+            "short_description": "Comparar fracciones identificando si son mayores, menores o iguales a 1.",
+            "example_tasks": [
+              "¿Cuáles de estas fracciones son mayores que 1: 3/4, 5/5, 7/6, 2/3?",
+              "Ordenar: 8/9, 9/8, 9/9",
+              "¿Qué fracción es mayor: 4/3 o 1? ¿Por cuánto?"
+            ]
+          },
+          {
+            "key": "comparacion_denominadores_diferentes",
+            "name": "Comparación con denominadores diferentes",
+            "short_description": "Comparar fracciones buscando equivalentes con el mismo denominador.",
+            "example_tasks": [
+              "Comparar 2/3 y 3/4 encontrando fracciones equivalentes con denominador 12",
+              "¿Cuál es mayor: 5/6 o 7/8?",
+              "Ordenar de menor a mayor: 1/2, 2/5, 3/4"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fracciones_unidad",
+        "name": "Fracciones de una cantidad",
+        "short_description": "Calcular la fracción de una cantidad entera.",
+        "sub_topics": [
+          {
+            "key": "fraccion_de_cantidad",
+            "name": "Calcular la fracción de una cantidad",
+            "short_description": "Encontrar qué cantidad representa una fracción de un total.",
+            "example_tasks": [
+              "¿Cuánto es 1/4 de 20?",
+              "Calcular 2/5 de 30",
+              "En un grupo de 24 estudiantes, 3/8 son niñas. ¿Cuántas niñas hay?"
+            ]
+          },
+          {
+            "key": "problemas_fracciones_cantidades",
+            "name": "Problemas con fracciones de cantidades",
+            "short_description": "Resolver problemas que implican calcular fracciones de cantidades.",
+            "example_tasks": [
+              "María gastó 2/5 de sus $300. ¿Cuánto dinero gastó?",
+              "De 40 libros, 3/4 son de matemáticas. ¿Cuántos libros de matemáticas hay?",
+              "Un depósito tiene 120 litros de agua. Si se usa 5/6 del agua, ¿cuántos litros se usaron?"
+            ]
+          },
+          {
+            "key": "cantidad_dada_fraccion",
+            "name": "Encontrar el total dada una fracción",
+            "short_description": "Calcular el total cuando se conoce el valor de una fracción.",
+            "example_tasks": [
+              "Si 1/3 de una cantidad es 15, ¿cuál es la cantidad total?",
+              "2/5 de los estudiantes son 12. ¿Cuántos estudiantes hay en total?",
+              "Pedro gastó $60 que representan 3/4 de su dinero. ¿Cuánto dinero tenía?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "operaciones_fracciones",
+    "name": "Operaciones con fracciones",
+    "short_description": "Sumar, restar, multiplicar y dividir fracciones aplicando los algoritmos correspondientes.",
+    "sub_topics": [
+      {
+        "key": "suma_fracciones",
+        "name": "Suma de fracciones",
+        "short_description": "Sumar fracciones con igual y diferente denominador.",
+        "sub_topics": [
+          {
+            "key": "suma_mismo_denominador",
+            "name": "Suma con el mismo denominador",
+            "short_description": "Sumar fracciones que tienen igual denominador.",
+            "example_tasks": [
+              "Resolver: 2/7 + 3/7",
+              "Calcular: 5/9 + 2/9",
+              "Juan comió 1/8 de un pastel y María comió 3/8. ¿Qué fracción del pastel comieron entre los dos?"
+            ]
+          },
+          {
+            "key": "suma_diferente_denominador",
+            "name": "Suma con diferente denominador",
+            "short_description": "Sumar fracciones buscando un denominador común.",
+            "example_tasks": [
+              "Resolver: 1/2 + 1/4",
+              "Calcular: 2/3 + 1/6",
+              "Sumar: 3/5 + 1/10"
+            ]
+          },
+          {
+            "key": "suma_numeros_mixtos",
+            "name": "Suma de números mixtos",
+            "short_description": "Sumar números mixtos y fracciones.",
+            "example_tasks": [
+              "Resolver: 2 1/3 + 1 1/3",
+              "Calcular: 3 2/5 + 1 3/5",
+              "Sumar: 1 3/4 + 2 1/2"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "resta_fracciones",
+        "name": "Resta de fracciones",
+        "short_description": "Restar fracciones con igual y diferente denominador.",
+        "sub_topics": [
+          {
+            "key": "resta_mismo_denominador",
+            "name": "Resta con el mismo denominador",
+            "short_description": "Restar fracciones que tienen igual denominador.",
+            "example_tasks": [
+              "Resolver: 5/8 - 2/8",
+              "Calcular: 7/9 - 4/9",
+              "Había 6/7 de un pastel y se comió 2/7. ¿Qué fracción del pastel queda?"
+            ]
+          },
+          {
+            "key": "resta_diferente_denominador",
+            "name": "Resta con diferente denominador",
+            "short_description": "Restar fracciones buscando un denominador común.",
+            "example_tasks": [
+              "Resolver: 3/4 - 1/2",
+              "Calcular: 5/6 - 1/3",
+              "Restar: 7/8 - 1/4"
+            ]
+          },
+          {
+            "key": "resta_numeros_mixtos",
+            "name": "Resta de números mixtos",
+            "short_description": "Restar números mixtos y fracciones.",
+            "example_tasks": [
+              "Resolver: 3 3/5 - 1 1/5",
+              "Calcular: 4 1/2 - 2 3/4",
+              "Tenía 5 1/3 metros de tela y usé 2 2/3 metros. ¿Cuánta tela me queda?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "multiplicacion_fracciones",
+        "name": "Multiplicación de fracciones",
+        "short_description": "Multiplicar fracciones, números mixtos y fracciones por enteros.",
+        "sub_topics": [
+          {
+            "key": "multiplicacion_fraccion_entero",
+            "name": "Multiplicación de fracción por entero",
+            "short_description": "Multiplicar una fracción por un número entero.",
+            "example_tasks": [
+              "Resolver: 3 × 2/5",
+              "Calcular: 4 × 3/8",
+              "Si una receta requiere 2/3 de taza de harina y quieres hacer 5 recetas, ¿cuánta harina necesitas?"
+            ]
+          },
+          {
+            "key": "multiplicacion_fraccion_fraccion",
+            "name": "Multiplicación de fracción por fracción",
+            "short_description": "Multiplicar dos fracciones entre sí.",
+            "example_tasks": [
+              "Resolver: 2/3 × 3/4",
+              "Calcular: 5/6 × 2/5",
+              "¿Cuánto es 1/2 de 3/4?"
+            ]
+          },
+          {
+            "key": "multiplicacion_numeros_mixtos",
+            "name": "Multiplicación con números mixtos",
+            "short_description": "Multiplicar números mixtos convirtiéndolos a fracciones impropias.",
+            "example_tasks": [
+              "Resolver: 2 1/2 × 3",
+              "Calcular: 1 1/3 × 2 1/4",
+              "Un rectángulo mide 2 1/2 metros de largo y 1 1/3 metros de ancho. ¿Cuál es su área?"
+            ]
+          },
+          {
+            "key": "simplificacion_multiplicacion",
+            "name": "Simplificación en la multiplicación",
+            "short_description": "Simplificar antes o después de multiplicar fracciones.",
+            "example_tasks": [
+              "Resolver simplificando primero: 4/9 × 3/8",
+              "Calcular: 5/12 × 8/15 (simplifica antes de multiplicar)",
+              "Multiplicar y simplificar el resultado: 6/10 × 5/9"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "division_fracciones",
+        "name": "División de fracciones",
+        "short_description": "Dividir fracciones usando el algoritmo de invertir y multiplicar.",
+        "sub_topics": [
+          {
+            "key": "division_fraccion_entero",
+            "name": "División de fracción entre entero",
+            "short_description": "Dividir una fracción entre un número entero.",
+            "example_tasks": [
+              "Resolver: 3/4 ÷ 2",
+              "Calcular: 5/6 ÷ 5",
+              "Se reparte 2/3 de pizza entre 4 personas. ¿Qué fracción le toca a cada persona?"
+            ]
+          },
+          {
+            "key": "division_entero_fraccion",
+            "name": "División de entero entre fracción",
+            "short_description": "Dividir un número entero entre una fracción.",
+            "example_tasks": [
+              "Resolver: 6 ÷ 1/2",
+              "Calcular: 8 ÷ 2/3",
+              "¿Cuántas botellas de 1/4 de litro se pueden llenar con 3 litros de agua?"
+            ]
+          },
+          {
+            "key": "division_fraccion_fraccion",
+            "name": "División de fracción entre fracción",
+            "short_description": "Dividir una fracción entre otra fracción.",
+            "example_tasks": [
+              "Resolver: 3/4 ÷ 1/2",
+              "Calcular: 2/3 ÷ 4/5",
+              "¿Cuántas veces cabe 1/6 en 2/3?"
+            ]
+          },
+          {
+            "key": "division_numeros_mixtos",
+            "name": "División con números mixtos",
+            "short_description": "Dividir números mixtos convirtiéndolos a fracciones impropias.",
+            "example_tasks": [
+              "Resolver: 2 1/2 ÷ 1 1/4",
+              "Calcular: 3 3/4 ÷ 1/2",
+              "Si tengo 5 1/2 metros de listón y quiero cortarlo en pedazos de 1 1/4 metros, ¿cuántos pedazos obtengo?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "problemas_operaciones_fracciones",
+        "name": "Problemas con operaciones de fracciones",
+        "short_description": "Resolver problemas que combinan diferentes operaciones con fracciones.",
+        "sub_topics": [
+          {
+            "key": "problemas_suma_resta_fracciones",
+            "name": "Problemas de suma y resta",
+            "short_description": "Resolver problemas aplicando suma y resta de fracciones.",
+            "example_tasks": [
+              "Luis leyó 2/5 de un libro el lunes y 1/4 el martes. ¿Qué fracción del libro ha leído?",
+              "Tenía 3/4 de litro de jugo y bebí 1/3 de litro. ¿Cuánto jugo me queda?",
+              "En una huerta se cosecharon 5 1/2 toneladas de maíz y 3 3/4 toneladas de frijol. ¿Cuántas toneladas se cosecharon en total?"
+            ]
+          },
+          {
+            "key": "problemas_multiplicacion_fracciones",
+            "name": "Problemas de multiplicación",
+            "short_description": "Resolver problemas aplicando multiplicación de fracciones.",
+            "example_tasks": [
+              "Una receta usa 2/3 de taza de azúcar. Si hago 1/2 receta, ¿cuánta azúcar necesito?",
+              "Un terreno rectangular mide 3 1/2 metros de largo y 2 1/4 metros de ancho. ¿Cuál es su área?",
+              "De los 240 estudiantes de una escuela, 3/4 son niñas. De las niñas, 2/3 practican algún deporte. ¿Cuántas niñas practican deporte?"
+            ]
+          },
+          {
+            "key": "problemas_division_fracciones",
+            "name": "Problemas de división",
+            "short_description": "Resolver problemas aplicando división de fracciones.",
+            "example_tasks": [
+              "Tengo 4 1/2 metros de tela para hacer manteles. Si cada mantel requiere 3/4 de metro, ¿cuántos manteles puedo hacer?",
+              "Un recipiente tiene 6 litros de agua. ¿Cuántas botellas de 2/3 de litro se pueden llenar?",
+              "Si recorres 15 kilómetros en 2 1/2 horas, ¿cuántos kilómetros recorres por hora?"
+            ]
+          },
+          {
+            "key": "problemas_operaciones_combinadas",
+            "name": "Problemas con operaciones combinadas",
+            "short_description": "Resolver problemas que requieren más de una operación con fracciones.",
+            "example_tasks": [
+              "Pedro tenía 2/3 de pizza. Comió 1/4 de lo que tenía y le dio 1/6 a su hermana. ¿Qué fracción de pizza le queda?",
+              "Una familia gasta 1/4 de su ingreso en renta, 1/3 en comida y ahorra 1/5. ¿Qué fracción del ingreso queda para otros gastos?",
+              "Un tanque estaba lleno a 3/4 de su capacidad. Se usaron 2/5 del agua que había. ¿Qué fracción de la capacidad total del tanque queda con agua?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "razones_proporciones",
+    "name": "Razones y proporciones",
+    "short_description": "Comprensión de razones como comparación entre cantidades y uso de proporciones para resolver problemas de variación proporcional.",
+    "sub_topics": [
+      {
+        "key": "concepto_razon",
+        "name": "Concepto de razón",
+        "short_description": "Entender la razón como la comparación entre dos cantidades.",
+        "sub_topics": [
+          {
+            "key": "razones_como_comparacion",
+            "name": "Razones como comparación",
+            "short_description": "Expresar la relación entre dos cantidades como razón.",
+            "example_tasks": [
+              "En un salón hay 15 niños y 12 niñas. ¿Cuál es la razón de niños a niñas?",
+              "La razón de manzanas a naranjas es 3 a 5. Si hay 9 manzanas, ¿cuántas naranjas hay?",
+              "En una receta se usan 2 tazas de harina por cada 3 tazas de agua. Escribir esta razón de tres formas diferentes"
+            ]
+          },
+          {
+            "key": "escritura_razones",
+            "name": "Formas de escribir razones",
+            "short_description": "Expresar razones usando diferentes notaciones.",
+            "example_tasks": [
+              "Escribir la razón 4 a 7 de tres formas: con palabras, con dos puntos y como fracción",
+              "Si la razón es 5:8, ¿cómo se escribe como fracción?",
+              "Expresar 'por cada 3 niños hay 5 niñas' como razón"
+            ]
+          },
+          {
+            "key": "razones_equivalentes",
+            "name": "Razones equivalentes",
+            "short_description": "Identificar y generar razones equivalentes.",
+            "example_tasks": [
+              "¿Son equivalentes las razones 2:3 y 6:9? Explicar por qué",
+              "Encontrar dos razones equivalentes a 4:5",
+              "Simplificar la razón 12:18 a su forma más simple"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "proporcionalidad_directa",
+        "name": "Proporcionalidad directa",
+        "short_description": "Reconocer y resolver situaciones de variación proporcional directa.",
+        "sub_topics": [
+          {
+            "key": "concepto_proporcionalidad",
+            "name": "Concepto de proporcionalidad",
+            "short_description": "Identificar relaciones donde al aumentar una cantidad, la otra aumenta proporcionalmente.",
+            "example_tasks": [
+              "Si 3 lápices cuestan $15, ¿cuánto cuestan 5 lápices?",
+              "Un auto recorre 120 km en 2 horas. ¿Cuántos kilómetros recorrerá en 5 horas a la misma velocidad?",
+              "¿Es proporcional la relación entre el número de trabajadores y el tiempo que tardan en hacer un trabajo? Explicar"
+            ]
+          },
+          {
+            "key": "tabla_proporcionalidad",
+            "name": "Tablas de proporcionalidad",
+            "short_description": "Completar y analizar tablas de valores proporcionales.",
+            "example_tasks": [
+              "Completar la tabla: si 2 kg cuestan $50, ¿cuánto cuestan 1 kg, 3 kg y 5 kg?",
+              "Una máquina produce 60 piezas en 3 horas. Hacer una tabla que muestre la producción en 1, 2, 4 y 6 horas",
+              "Identificar cuál de estas tablas representa una relación proporcional y cuál no"
+            ]
+          },
+          {
+            "key": "constante_proporcionalidad",
+            "name": "Constante de proporcionalidad",
+            "short_description": "Identificar y usar la constante de proporcionalidad.",
+            "example_tasks": [
+              "Si 4 cuadernos cuestan $120, ¿cuál es el costo por cuaderno (constante de proporcionalidad)?",
+              "La constante de proporcionalidad entre kilómetros y metros es 1,000. ¿Cuántos metros hay en 5 km?",
+              "Encontrar la constante de proporcionalidad si 6 litros de gasolina cuestan $150"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "proporciones",
+        "name": "Proporciones",
+        "short_description": "Establecer y resolver proporciones mediante productos cruzados.",
+        "sub_topics": [
+          {
+            "key": "concepto_proporcion",
+            "name": "Concepto de proporción",
+            "short_description": "Entender una proporción como igualdad entre dos razones.",
+            "example_tasks": [
+              "Verificar si 2/3 = 6/9 es una proporción verdadera",
+              "Escribir una proporción con las cantidades 4, 8, 5 y 10",
+              "¿Es 3/4 = 9/12 una proporción? Explicar por qué"
+            ]
+          },
+          {
+            "key": "termino_faltante_proporcion",
+            "name": "Encontrar términos faltantes",
+            "short_description": "Calcular el término faltante en una proporción.",
+            "example_tasks": [
+              "Resolver: 3/5 = x/15",
+              "Encontrar el valor faltante: 4/7 = 12/?",
+              "Si 2 kg cuestan $60, ¿cuánto costarán 5 kg? Plantear y resolver la proporción"
+            ]
+          },
+          {
+            "key": "productos_cruzados",
+            "name": "Productos cruzados",
+            "short_description": "Usar el método de productos cruzados para resolver proporciones.",
+            "example_tasks": [
+              "Resolver usando productos cruzados: 5/8 = x/24",
+              "Encontrar x: 3/x = 9/27",
+              "Verificar si 4/6 = 10/15 usando productos cruzados"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "problemas_proporcionalidad",
+        "name": "Problemas de proporcionalidad",
+        "short_description": "Resolver problemas de la vida cotidiana usando razones y proporciones.",
+        "sub_topics": [
+          {
+            "key": "problemas_recetas",
+            "name": "Problemas de recetas y mezclas",
+            "short_description": "Resolver problemas de proporcionalidad en recetas y mezclas.",
+            "example_tasks": [
+              "Una receta para 4 personas usa 300 gramos de harina. ¿Cuánta harina se necesita para 10 personas?",
+              "Para hacer 5 litros de limonada se usan 8 limones. ¿Cuántos limones se necesitan para 12 litros?",
+              "Una mezcla de pintura usa 2 partes de azul por cada 3 partes de amarillo. Si usas 10 litros de azul, ¿cuánto amarillo necesitas?"
+            ]
+          },
+          {
+            "key": "problemas_velocidad_distancia",
+            "name": "Problemas de velocidad y distancia",
+            "short_description": "Resolver problemas de proporcionalidad con velocidad, distancia y tiempo.",
+            "example_tasks": [
+              "Un ciclista recorre 45 km en 3 horas. ¿Cuántos kilómetros recorrerá en 5 horas a la misma velocidad?",
+              "Si un auto viaja a velocidad constante y recorre 180 km en 2 horas, ¿cuánto tiempo tardará en recorrer 450 km?",
+              "Un tren recorre 240 km en 4 horas. ¿Qué distancia recorrerá en 7 horas?"
+            ]
+          },
+          {
+            "key": "problemas_escalas",
+            "name": "Problemas de escalas",
+            "short_description": "Resolver problemas usando escalas proporcionales.",
+            "example_tasks": [
+              "En un mapa, 2 cm representan 50 km. ¿Cuántos kilómetros representan 7 cm?",
+              "La escala de un plano es 1:100. Si una habitación mide 6 cm en el plano, ¿cuál es su medida real?",
+              "En una maqueta, la escala es 1 cm = 5 metros. Si un edificio mide 40 metros de alto, ¿cuánto medirá en la maqueta?"
+            ]
+          },
+          {
+            "key": "problemas_compras_costos",
+            "name": "Problemas de compras y costos",
+            "short_description": "Resolver problemas de proporcionalidad en contextos de compras.",
+            "example_tasks": [
+              "Si 3 kg de manzanas cuestan $75, ¿cuánto costarán 8 kg?",
+              "12 lápices cuestan $84. ¿Cuánto costarán 20 lápices?",
+              "Una tienda vende 5 cuadernos por $125. ¿Cuántos cuadernos puedes comprar con $300?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "escala_mapas",
+        "name": "Escala en mapas y planos",
+        "short_description": "Interpretar y usar escalas en mapas, planos y maquetas.",
+        "sub_topics": [
+          {
+            "key": "lectura_escalas",
+            "name": "Lectura e interpretación de escalas",
+            "short_description": "Comprender el significado de la escala en mapas y planos.",
+            "example_tasks": [
+              "Si un mapa tiene escala 1:1,000, ¿qué significa esto?",
+              "En un plano con escala 1:50, ¿cuántos centímetros en el plano representan 10 metros reales?",
+              "Explicar la diferencia entre escalas 1:100 y 1:500"
+            ]
+          },
+          {
+            "key": "calculos_con_escala",
+            "name": "Cálculos usando escala",
+            "short_description": "Realizar cálculos de distancias y medidas usando la escala.",
+            "example_tasks": [
+              "En un mapa con escala 1:500,000, dos ciudades están a 8 cm de distancia. ¿Cuál es la distancia real entre ellas?",
+              "Un jardín rectangular mide 20 metros por 15 metros. ¿Cuánto medirá en un plano con escala 1:200?",
+              "Si la escala de un plano es 2 cm = 10 m, y una pared mide 3 cm en el plano, ¿cuánto mide realmente?"
+            ]
+          },
+          {
+            "key": "problemas_mapas_planos",
+            "name": "Problemas con mapas y planos",
+            "short_description": "Resolver problemas aplicados sobre mapas y planos.",
+            "example_tasks": [
+              "En un mapa de México con escala 1:2,000,000, la distancia entre dos ciudades es 12 cm. ¿Cuál es la distancia real en kilómetros?",
+              "Un arquitecto dibuja el plano de una casa con escala 1:100. Si la sala mide 5 m × 4 m, ¿qué dimensiones tendrá en el plano?",
+              "En una maqueta con escala 1:500, un edificio mide 6 cm de alto. ¿Cuál es la altura real del edificio?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "porcentajes",
+    "name": "Porcentajes",
+    "short_description": "Comprensión del concepto de porcentaje como fracción de 100, cálculo de porcentajes y aplicación en situaciones cotidianas como descuentos e incrementos.",
+    "sub_topics": [
+      {
+        "key": "concepto_porcentaje",
+        "name": "Concepto de porcentaje",
+        "short_description": "Entender el porcentaje como una forma especial de expresar fracciones con denominador 100.",
+        "sub_topics": [
+          {
+            "key": "porcentaje_fraccion_decimal",
+            "name": "Porcentaje, fracción y decimal",
+            "short_description": "Convertir entre porcentajes, fracciones y decimales.",
+            "example_tasks": [
+              "Escribir 25% como fracción y como decimal",
+              "Convertir 3/4 a porcentaje",
+              "Expresar 0.6 como porcentaje"
+            ]
+          },
+          {
+            "key": "representacion_grafica_porcentajes",
+            "name": "Representación gráfica de porcentajes",
+            "short_description": "Representar porcentajes visualmente en cuadrículas de 100.",
+            "example_tasks": [
+              "Sombrear 35% en una cuadrícula de 10×10",
+              "¿Qué porcentaje está sombreado si hay 60 cuadros pintados de 100?",
+              "Representar 75% en un círculo dividido en partes iguales"
+            ]
+          },
+          {
+            "key": "porcentajes_comunes",
+            "name": "Porcentajes comunes",
+            "short_description": "Reconocer porcentajes frecuentes y su equivalencia con fracciones.",
+            "example_tasks": [
+              "¿Qué fracción representa 50%? ¿Y 25%? ¿Y 10%?",
+              "Ordenar de menor a mayor: 25%, 1/2, 0.75, 10%",
+              "Completar: 100% = 1 entero; 50% = ___; 25% = ___"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "calculo_porcentajes",
+        "name": "Cálculo de porcentajes",
+        "short_description": "Calcular el porcentaje de una cantidad.",
+        "sub_topics": [
+          {
+            "key": "porcentaje_de_cantidad",
+            "name": "Calcular el porcentaje de una cantidad",
+            "short_description": "Encontrar qué cantidad representa un porcentaje dado.",
+            "example_tasks": [
+              "¿Cuánto es 20% de 150?",
+              "Calcular 15% de 200",
+              "En una escuela de 400 estudiantes, 30% son de sexto grado. ¿Cuántos estudiantes de sexto hay?"
+            ]
+          },
+          {
+            "key": "porcentaje_como_fraccion",
+            "name": "Usar fracciones para calcular porcentajes",
+            "short_description": "Calcular porcentajes convirtiéndolos a fracciones.",
+            "example_tasks": [
+              "Calcular 50% de 80 pensando en 1/2 de 80",
+              "Encontrar 25% de 120 usando la fracción 1/4",
+              "¿Cuánto es 10% de 300? Usa la fracción 1/10"
+            ]
+          },
+          {
+            "key": "porcentaje_como_decimal",
+            "name": "Usar decimales para calcular porcentajes",
+            "short_description": "Calcular porcentajes multiplicando por su equivalente decimal.",
+            "example_tasks": [
+              "Calcular 35% de 200 multiplicando 200 × 0.35",
+              "Encontrar 8% de 500 usando decimales",
+              "¿Cuánto es 45% de 160?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "problemas_porcentajes",
+        "name": "Problemas con porcentajes",
+        "short_description": "Resolver problemas cotidianos que involucran porcentajes.",
+        "sub_topics": [
+          {
+            "key": "descuentos",
+            "name": "Descuentos",
+            "short_description": "Calcular descuentos en compras.",
+            "example_tasks": [
+              "Un juguete cuesta $250 y tiene 20% de descuento. ¿Cuánto dinero se descuenta? ¿Cuál es el precio final?",
+              "Una tienda ofrece 15% de descuento en toda la ropa. Si un pantalón cuesta $400, ¿cuánto pagarás con el descuento?",
+              "Un libro de $180 tiene un descuento de 25%. ¿Cuál es su nuevo precio?"
+            ]
+          },
+          {
+            "key": "incrementos",
+            "name": "Incrementos y aumentos",
+            "short_description": "Calcular incrementos porcentuales.",
+            "example_tasks": [
+              "El precio de un producto era $200 y aumentó 10%. ¿Cuál es su nuevo precio?",
+              "Una población de 5,000 habitantes creció 8% en un año. ¿Cuántos habitantes tiene ahora?",
+              "El salario de Juan era $8,000 y recibió un aumento de 12%. ¿Cuál es su nuevo salario?"
+            ]
+          },
+          {
+            "key": "impuestos_propinas",
+            "name": "Impuestos y propinas",
+            "short_description": "Calcular impuestos, propinas y recargos.",
+            "example_tasks": [
+              "Una comida cuesta $350 sin IVA. Si el IVA es 16%, ¿cuánto se paga en total?",
+              "Si la cuenta del restaurante es $450 y quieres dejar 10% de propina, ¿cuánto dejarás?",
+              "Un producto cuesta $600 más 16% de IVA. ¿Cuál es el precio final?"
+            ]
+          },
+          {
+            "key": "encontrar_total_porcentaje",
+            "name": "Encontrar el total dado un porcentaje",
+            "short_description": "Calcular el total cuando se conoce el valor de un porcentaje.",
+            "example_tasks": [
+              "Si 40% de un número es 80, ¿cuál es el número?",
+              "30% de los estudiantes son 90. ¿Cuántos estudiantes hay en total?",
+              "Pagué $420 que representa el 70% del precio total (con descuento). ¿Cuál era el precio original?"
+            ]
+          },
+          {
+            "key": "encontrar_porcentaje",
+            "name": "Encontrar qué porcentaje representa una cantidad",
+            "short_description": "Calcular qué porcentaje representa una parte del total.",
+            "example_tasks": [
+              "De 200 estudiantes, 50 practican fútbol. ¿Qué porcentaje representa?",
+              "En un grupo de 80 personas, 20 son niños. ¿Qué porcentaje son niños?",
+              "Acerté 18 de 20 preguntas en un examen. ¿Qué porcentaje de aciertos tuve?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "multiplos_divisores",
+    "name": "Múltiplos y divisores",
+    "short_description": "Identificación de múltiplos y divisores de números naturales, números primos y compuestos, y cálculo del mínimo común múltiplo y máximo común divisor.",
+    "sub_topics": [
+      {
+        "key": "multiplos",
+        "name": "Múltiplos de un número",
+        "short_description": "Identificar y generar múltiplos de números naturales.",
+        "sub_topics": [
+          {
+            "key": "concepto_multiplo",
+            "name": "Concepto de múltiplo",
+            "short_description": "Comprender que los múltiplos son el resultado de multiplicar un número por los naturales.",
+            "example_tasks": [
+              "Escribir los primeros 5 múltiplos de 6",
+              "¿Es 24 múltiplo de 4? ¿Por qué?",
+              "Identificar cuáles de estos números son múltiplos de 7: 14, 21, 30, 35, 42"
+            ]
+          },
+          {
+            "key": "multiplos_comunes",
+            "name": "Múltiplos comunes",
+            "short_description": "Encontrar múltiplos que son comunes a dos o más números.",
+            "example_tasks": [
+              "Escribir los múltiplos de 3 y de 4 hasta el 40. ¿Cuáles son comunes?",
+              "Encontrar tres múltiplos comunes de 5 y 6",
+              "¿Cuál es el múltiplo común más pequeño de 2 y 3?"
+            ]
+          },
+          {
+            "key": "minimo_comun_multiplo",
+            "name": "Mínimo común múltiplo (mcm)",
+            "short_description": "Calcular el mínimo común múltiplo de dos o más números.",
+            "example_tasks": [
+              "Encontrar el mcm de 4 y 6",
+              "Calcular el mcm de 8 y 12",
+              "Dos autobuses salen de la terminal. Uno sale cada 15 minutos y otro cada 20 minutos. Si salen juntos a las 8:00 am, ¿a qué hora volverán a salir juntos?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "divisores",
+        "name": "Divisores de un número",
+        "short_description": "Identificar todos los divisores de un número natural.",
+        "sub_topics": [
+          {
+            "key": "concepto_divisor",
+            "name": "Concepto de divisor",
+            "short_description": "Comprender que un divisor es un número que divide exactamente a otro.",
+            "example_tasks": [
+              "Encontrar todos los divisores de 12",
+              "¿Es 5 divisor de 35? ¿Por qué?",
+              "Listar todos los divisores de 24"
+            ]
+          },
+          {
+            "key": "criterios_divisibilidad",
+            "name": "Criterios de divisibilidad",
+            "short_description": "Usar reglas para determinar si un número es divisible por 2, 3, 5, 6, 9 o 10.",
+            "example_tasks": [
+              "Sin dividir, determinar si 342 es divisible por 2, 3, 5, 6 y 9",
+              "¿Qué números entre 50 y 60 son divisibles por 3?",
+              "Encontrar el menor número de tres cifras que sea divisible por 5 y por 9"
+            ]
+          },
+          {
+            "key": "divisores_comunes",
+            "name": "Divisores comunes",
+            "short_description": "Encontrar divisores que son comunes a dos o más números.",
+            "example_tasks": [
+              "Encontrar los divisores comunes de 12 y 18",
+              "¿Cuáles son los divisores comunes de 24 y 36?",
+              "Listar todos los divisores comunes de 30 y 45"
+            ]
+          },
+          {
+            "key": "maximo_comun_divisor",
+            "name": "Máximo común divisor (MCD)",
+            "short_description": "Calcular el máximo común divisor de dos o más números.",
+            "example_tasks": [
+              "Encontrar el MCD de 12 y 18",
+              "Calcular el MCD de 24 y 36",
+              "Tengo 18 manzanas y 24 naranjas. Quiero hacer canastas con el mismo contenido. ¿Cuál es el mayor número de canastas que puedo hacer?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "numeros_primos_compuestos",
+        "name": "Números primos y compuestos",
+        "short_description": "Distinguir entre números primos y compuestos según sus divisores.",
+        "sub_topics": [
+          {
+            "key": "numeros_primos",
+            "name": "Números primos",
+            "short_description": "Identificar números que solo tienen dos divisores: 1 y ellos mismos.",
+            "example_tasks": [
+              "¿Es 13 un número primo? ¿Por qué?",
+              "Escribir todos los números primos menores que 30",
+              "Identificar cuáles de estos son primos: 17, 21, 23, 27, 29"
+            ]
+          },
+          {
+            "key": "numeros_compuestos",
+            "name": "Números compuestos",
+            "short_description": "Identificar números que tienen más de dos divisores.",
+            "example_tasks": [
+              "¿Es 15 un número compuesto? ¿Por qué?",
+              "Escribir cinco números compuestos entre 20 y 40",
+              "Explicar por qué 1 no es primo ni compuesto"
+            ]
+          },
+          {
+            "key": "descomposicion_factores_primos",
+            "name": "Descomposición en factores primos",
+            "short_description": "Expresar un número como producto de factores primos.",
+            "example_tasks": [
+              "Descomponer 24 en factores primos",
+              "Escribir 60 como producto de factores primos",
+              "Encontrar la descomposición en factores primos de 72"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "problemas_multiplos_divisores",
+        "name": "Problemas con múltiplos y divisores",
+        "short_description": "Resolver problemas aplicando conceptos de múltiplos, divisores, mcm y MCD.",
+        "sub_topics": [
+          {
+            "key": "problemas_mcm",
+            "name": "Problemas con mcm",
+            "short_description": "Aplicar el mínimo común múltiplo en situaciones problemáticas.",
+            "example_tasks": [
+              "Dos luces parpadean: una cada 4 segundos y otra cada 6 segundos. Si parpadean juntas ahora, ¿en cuántos segundos volverán a parpadear juntas?",
+              "Un autobús pasa cada 12 minutos y otro cada 18 minutos. Si pasan juntos a las 9:00 am, ¿a qué hora volverán a pasar juntos?",
+              "Para una fiesta quiero hacer bolsas de dulces iguales. Tengo 24 chocolates y 36 caramelos. ¿Cuál es el mayor número de bolsas que puedo hacer sin que sobren dulces?"
+            ]
+          },
+          {
+            "key": "problemas_mcd",
+            "name": "Problemas con MCD",
+            "short_description": "Aplicar el máximo común divisor en situaciones problemáticas.",
+            "example_tasks": [
+              "Quiero cortar dos listones, uno de 24 cm y otro de 36 cm, en pedazos iguales lo más largos posibles. ¿Cuánto debe medir cada pedazo?",
+              "Tengo 48 rosas rojas y 60 rosas blancas. Quiero hacer ramos iguales con el mayor número posible de flores. ¿Cuántas flores tendrá cada ramo?",
+              "Una sala rectangular de 12 m por 18 m se quiere cubrir con losetas cuadradas del mayor tamaño posible. ¿Cuánto debe medir el lado de cada loseta?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "figuras_geometricas_planas",
+    "name": "Figuras geométricas planas",
+    "short_description": "Identificación, clasificación y análisis de propiedades de figuras geométricas bidimensionales como triángulos, cuadriláteros, polígonos y círculos.",
+    "sub_topics": [
+      {
+        "key": "lineas_segmentos_angulos",
+        "name": "Líneas, segmentos y ángulos",
+        "short_description": "Reconocer y clasificar líneas, segmentos, semirrectas y ángulos.",
+        "sub_topics": [
+          {
+            "key": "tipos_lineas",
+            "name": "Tipos de líneas",
+            "short_description": "Identificar líneas rectas, curvas, paralelas y perpendiculares.",
+            "example_tasks": [
+              "Dibujar dos líneas paralelas y dos líneas perpendiculares",
+              "Identificar líneas paralelas y perpendiculares en objetos del salón de clase",
+              "¿Cuál es la diferencia entre líneas paralelas y líneas que se intersectan?"
+            ]
+          },
+          {
+            "key": "segmentos_semirrectas",
+            "name": "Segmentos y semirrectas",
+            "short_description": "Distinguir entre rectas, semirrectas y segmentos.",
+            "example_tasks": [
+              "Dibujar un segmento AB, una semirrecta que inicie en C, y una recta",
+              "¿Cuál es la diferencia entre una recta y un segmento?",
+              "Identificar segmentos en figuras geométricas como triángulos y cuadrados"
+            ]
+          },
+          {
+            "key": "tipos_angulos",
+            "name": "Tipos de ángulos",
+            "short_description": "Clasificar ángulos en rectos, agudos, obtusos y llanos.",
+            "example_tasks": [
+              "Identificar ángulos rectos, agudos y obtusos en un conjunto de figuras",
+              "Dibujar un ángulo recto, un ángulo agudo y un ángulo obtuso",
+              "Buscar ejemplos de ángulos rectos en el salón de clases"
+            ]
+          },
+          {
+            "key": "medicion_angulos",
+            "name": "Medición de ángulos",
+            "short_description": "Usar el transportador para medir ángulos en grados.",
+            "example_tasks": [
+              "Medir con un transportador los ángulos de un triángulo",
+              "Dibujar un ángulo de 60 grados usando el transportador",
+              "Medir y clasificar tres ángulos diferentes (agudo, recto, obtuso)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "triangulos",
+        "name": "Triángulos",
+        "short_description": "Clasificar triángulos según sus lados y ángulos, identificar sus propiedades.",
+        "sub_topics": [
+          {
+            "key": "clasificacion_triangulos_lados",
+            "name": "Clasificación según sus lados",
+            "short_description": "Clasificar triángulos en equiláteros, isósceles y escalenos.",
+            "example_tasks": [
+              "Identificar cuál triángulo es equilátero, isósceles o escaleno dado el tamaño de sus lados",
+              "Dibujar un triángulo equilátero, uno isósceles y uno escaleno",
+              "¿Cuántos lados iguales tiene un triángulo isósceles?"
+            ]
+          },
+          {
+            "key": "clasificacion_triangulos_angulos",
+            "name": "Clasificación según sus ángulos",
+            "short_description": "Clasificar triángulos en rectángulos, acutángulos y obtusángulos.",
+            "example_tasks": [
+              "Identificar triángulos rectángulos, acutángulos y obtusángulos en un conjunto",
+              "Dibujar un triángulo que tenga un ángulo recto",
+              "¿Puede un triángulo tener dos ángulos obtusos? Explicar por qué"
+            ]
+          },
+          {
+            "key": "propiedades_triangulos",
+            "name": "Propiedades de los triángulos",
+            "short_description": "Reconocer que la suma de los ángulos internos es 180° y otras propiedades.",
+            "example_tasks": [
+              "Si dos ángulos de un triángulo miden 50° y 60°, ¿cuánto mide el tercer ángulo?",
+              "Verificar que la suma de los ángulos de un triángulo es 180°",
+              "¿Puede existir un triángulo con ángulos de 90°, 60° y 40°? Explicar"
+            ]
+          },
+          {
+            "key": "construccion_triangulos",
+            "name": "Construcción de triángulos",
+            "short_description": "Construir triángulos usando regla y compás o escuadras.",
+            "example_tasks": [
+              "Construir un triángulo equilátero de 5 cm de lado usando compás",
+              "Dibujar un triángulo rectángulo con catetos de 3 cm y 4 cm",
+              "Trazar un triángulo cuyos lados midan 4 cm, 5 cm y 6 cm"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "cuadrilateros",
+        "name": "Cuadriláteros",
+        "short_description": "Identificar y clasificar cuadriláteros según sus propiedades: paralelogramos, trapecios y trapezoides.",
+        "sub_topics": [
+          {
+            "key": "tipos_cuadrilateros",
+            "name": "Tipos de cuadriláteros",
+            "short_description": "Distinguir entre paralelogramos, trapecios y trapezoides.",
+            "example_tasks": [
+              "Clasificar cuadriláteros según sus lados paralelos",
+              "Identificar paralelogramos, trapecios y trapezoides en un conjunto de figuras",
+              "¿Cuál es la diferencia entre un trapecio y un paralelogramo?"
+            ]
+          },
+          {
+            "key": "paralelogramos",
+            "name": "Paralelogramos",
+            "short_description": "Identificar cuadrados, rectángulos, rombos y romboides.",
+            "example_tasks": [
+              "¿Cuáles de estas figuras son paralelogramos: cuadrado, rectángulo, rombo, trapecio?",
+              "Dibujar un cuadrado, un rectángulo y un rombo",
+              "¿En qué se parece un cuadrado a un rectángulo? ¿En qué se diferencia?"
+            ]
+          },
+          {
+            "key": "propiedades_cuadrilateros",
+            "name": "Propiedades de los cuadriláteros",
+            "short_description": "Reconocer propiedades como lados paralelos, ángulos rectos, diagonales.",
+            "example_tasks": [
+              "¿Cuántos pares de lados paralelos tiene un rectángulo? ¿Y un trapecio?",
+              "Identificar cuadriláteros que tienen los cuatro ángulos rectos",
+              "¿Las diagonales de un cuadrado son iguales? ¿Y las de un rectángulo?"
+            ]
+          },
+          {
+            "key": "construccion_cuadrilateros",
+            "name": "Construcción de cuadriláteros",
+            "short_description": "Trazar cuadriláteros usando instrumentos geométricos.",
+            "example_tasks": [
+              "Construir un cuadrado de 4 cm de lado",
+              "Dibujar un rectángulo de 6 cm de largo y 4 cm de ancho",
+              "Trazar un rombo con diagonales de 6 cm y 8 cm"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "poligonos",
+        "name": "Polígonos",
+        "short_description": "Identificar, nombrar y clasificar polígonos regulares e irregulares.",
+        "sub_topics": [
+          {
+            "key": "concepto_poligono",
+            "name": "Concepto de polígono",
+            "short_description": "Reconocer polígonos como figuras cerradas con lados rectos.",
+            "example_tasks": [
+              "¿Cuáles de estas figuras son polígonos: círculo, triángulo, óvalo, pentágono?",
+              "Explicar qué es un polígono y dar tres ejemplos",
+              "¿Por qué un círculo no es un polígono?"
+            ]
+          },
+          {
+            "key": "clasificacion_poligonos",
+            "name": "Clasificación de polígonos",
+            "short_description": "Nombrar polígonos según su número de lados: pentágono, hexágono, octágono.",
+            "example_tasks": [
+              "¿Cómo se llama un polígono de 5 lados? ¿Y uno de 6? ¿Y uno de 8?",
+              "Dibujar un pentágono, un hexágono y un octágono",
+              "Contar los lados de diferentes polígonos y nombrarlos"
+            ]
+          },
+          {
+            "key": "poligonos_regulares_irregulares",
+            "name": "Polígonos regulares e irregulares",
+            "short_description": "Distinguir entre polígonos regulares (lados y ángulos iguales) e irregulares.",
+            "example_tasks": [
+              "¿Cuál es la diferencia entre un hexágono regular y uno irregular?",
+              "Identificar polígonos regulares en un conjunto de figuras",
+              "Dibujar un pentágono regular y uno irregular"
+            ]
+          },
+          {
+            "key": "elementos_poligonos",
+            "name": "Elementos de los polígonos",
+            "short_description": "Identificar vértices, lados, ángulos y diagonales en polígonos.",
+            "example_tasks": [
+              "¿Cuántos vértices tiene un hexágono?",
+              "Trazar todas las diagonales de un pentágono",
+              "Contar lados, vértices y ángulos en diferentes polígonos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "circulos_circunferencias",
+        "name": "Círculos y circunferencias",
+        "short_description": "Identificar elementos del círculo: centro, radio, diámetro, circunferencia.",
+        "sub_topics": [
+          {
+            "key": "elementos_circulo",
+            "name": "Elementos del círculo",
+            "short_description": "Reconocer centro, radio, diámetro y circunferencia.",
+            "example_tasks": [
+              "Dibujar un círculo y marcar su centro, un radio y un diámetro",
+              "¿Cuál es la relación entre el radio y el diámetro de un círculo?",
+              "Si el radio de un círculo es 5 cm, ¿cuánto mide su diámetro?"
+            ]
+          },
+          {
+            "key": "circunferencia_vs_circulo",
+            "name": "Diferencia entre circunferencia y círculo",
+            "short_description": "Distinguir entre la circunferencia (línea) y el círculo (superficie).",
+            "example_tasks": [
+              "Explicar la diferencia entre circunferencia y círculo",
+              "¿Qué es la circunferencia de un círculo?",
+              "Dibujar una circunferencia sin rellenar el interior"
+            ]
+          },
+          {
+            "key": "construccion_circulos",
+            "name": "Construcción de círculos",
+            "short_description": "Usar el compás para trazar círculos con diferentes radios.",
+            "example_tasks": [
+              "Trazar un círculo de 3 cm de radio usando el compás",
+              "Dibujar dos círculos concéntricos (mismo centro) con radios de 2 cm y 4 cm",
+              "Construir un círculo que pase por tres puntos dados"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "simetria",
+        "name": "Simetría",
+        "short_description": "Identificar ejes de simetría en figuras planas y crear figuras simétricas.",
+        "sub_topics": [
+          {
+            "key": "concepto_simetria",
+            "name": "Concepto de simetría",
+            "short_description": "Reconocer figuras que tienen simetría axial.",
+            "example_tasks": [
+              "Identificar cuáles de estas letras tienen simetría: A, B, C, D, M, T",
+              "¿Cuántos ejes de simetría tiene un cuadrado?",
+              "Doblar una hoja de papel y recortar para crear una figura simétrica"
+            ]
+          },
+          {
+            "key": "ejes_simetria",
+            "name": "Ejes de simetría",
+            "short_description": "Trazar ejes de simetría en diferentes figuras.",
+            "example_tasks": [
+              "Dibujar todos los ejes de simetría de un rectángulo",
+              "¿Cuántos ejes de simetría tiene un triángulo equilátero? ¿Y un círculo?",
+              "Trazar el eje de simetría de figuras como corazones, estrellas, mariposas"
+            ]
+          },
+          {
+            "key": "completar_figuras_simetricas",
+            "name": "Completar figuras simétricas",
+            "short_description": "Dibujar la mitad faltante de una figura usando simetría.",
+            "example_tasks": [
+              "Completar una figura dada la mitad y el eje de simetría",
+              "Dibujar la imagen reflejada de una figura en un espejo (eje de simetría)",
+              "Crear diseños simétricos en papel cuadriculado"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "perimetro_area",
+    "name": "Perímetro y área",
+    "short_description": "Cálculo de perímetros y áreas de figuras geométricas planas usando fórmulas y estrategias de conteo.",
+    "sub_topics": [
+      {
+        "key": "concepto_perimetro",
+        "name": "Concepto de perímetro",
+        "short_description": "Comprender el perímetro como la medida del contorno de una figura.",
+        "sub_topics": [
+          {
+            "key": "perimetro_suma_lados",
+            "name": "Perímetro como suma de lados",
+            "short_description": "Calcular perímetros sumando las longitudes de los lados.",
+            "example_tasks": [
+              "Calcular el perímetro de un triángulo con lados de 5 cm, 7 cm y 8 cm",
+              "Un rectángulo mide 12 cm de largo y 8 cm de ancho. ¿Cuál es su perímetro?",
+              "Encontrar el perímetro de un pentágono irregular con lados de 3, 4, 5, 6 y 7 cm"
+            ]
+          },
+          {
+            "key": "perimetro_figuras_regulares",
+            "name": "Perímetro de figuras regulares",
+            "short_description": "Calcular perímetros de polígonos regulares multiplicando lado por número de lados.",
+            "example_tasks": [
+              "Un cuadrado tiene lados de 6 cm. ¿Cuál es su perímetro?",
+              "Calcular el perímetro de un hexágono regular de 4 cm de lado",
+              "Un pentágono regular tiene perímetro de 40 cm. ¿Cuánto mide cada lado?"
+            ]
+          },
+          {
+            "key": "problemas_perimetro",
+            "name": "Problemas de perímetro",
+            "short_description": "Resolver problemas contextualizados sobre perímetros.",
+            "example_tasks": [
+              "Se quiere cercar un terreno rectangular de 25 m de largo y 18 m de ancho. ¿Cuántos metros de cerca se necesitan?",
+              "Un jardín triangular tiene lados de 12 m, 15 m y 20 m. ¿Cuánto mide su perímetro?",
+              "Si el perímetro de un cuadrado es 48 cm, ¿cuánto mide cada lado?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "concepto_area",
+        "name": "Concepto de área",
+        "short_description": "Comprender el área como la medida de la superficie de una figura.",
+        "sub_topics": [
+          {
+            "key": "area_por_conteo",
+            "name": "Área por conteo",
+            "short_description": "Calcular áreas contando unidades cuadradas.",
+            "example_tasks": [
+              "Contar cuántos cuadrados de 1 cm² caben en un rectángulo dibujado en papel cuadriculado",
+              "Calcular el área de una figura irregular contando los cuadrados que cubre",
+              "Comparar áreas de dos figuras diferentes contando cuadrados"
+            ]
+          },
+          {
+            "key": "unidades_area",
+            "name": "Unidades de área",
+            "short_description": "Reconocer unidades cuadradas: cm², m², km².",
+            "example_tasks": [
+              "¿Cuál unidad usarías para medir el área de tu cuaderno: cm² o m²?",
+              "¿Qué unidad es apropiada para medir el área de un terreno: m² o km²?",
+              "Convertir 2 m² a cm² (1 m² = 10,000 cm²)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "area_rectangulo_cuadrado",
+        "name": "Área de rectángulos y cuadrados",
+        "short_description": "Calcular el área de rectángulos y cuadrados usando fórmulas.",
+        "sub_topics": [
+          {
+            "key": "area_rectangulo",
+            "name": "Área del rectángulo",
+            "short_description": "Usar la fórmula: área = largo × ancho.",
+            "example_tasks": [
+              "Calcular el área de un rectángulo de 8 cm de largo y 5 cm de ancho",
+              "Un salón rectangular mide 12 m de largo y 9 m de ancho. ¿Cuál es su área?",
+              "Si un rectángulo tiene área de 56 cm² y ancho de 7 cm, ¿cuál es su largo?"
+            ]
+          },
+          {
+            "key": "area_cuadrado",
+            "name": "Área del cuadrado",
+            "short_description": "Usar la fórmula: área = lado × lado.",
+            "example_tasks": [
+              "Calcular el área de un cuadrado de 6 cm de lado",
+              "Un terreno cuadrado tiene 15 m de lado. ¿Cuál es su área?",
+              "Si el área de un cuadrado es 64 cm², ¿cuánto mide su lado?"
+            ]
+          },
+          {
+            "key": "problemas_area_rectangulo_cuadrado",
+            "name": "Problemas con áreas de rectángulos y cuadrados",
+            "short_description": "Resolver problemas aplicados de áreas.",
+            "example_tasks": [
+              "Se va a poner losetas en un piso rectangular de 8 m por 6 m. Si cada loseta mide 1 m², ¿cuántas losetas se necesitan?",
+              "Un jardín cuadrado de 20 m de lado se dividirá en 4 partes iguales. ¿Cuál es el área de cada parte?",
+              "Comparar las áreas de un cuadrado de 5 cm de lado y un rectángulo de 6 cm × 4 cm"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "area_triangulo",
+        "name": "Área de triángulos",
+        "short_description": "Calcular el área de triángulos usando la fórmula: área = (base × altura) ÷ 2.",
+        "sub_topics": [
+          {
+            "key": "formula_area_triangulo",
+            "name": "Fórmula del área del triángulo",
+            "short_description": "Aplicar la fórmula: área = (base × altura) / 2.",
+            "example_tasks": [
+              "Calcular el área de un triángulo con base de 10 cm y altura de 6 cm",
+              "Un triángulo tiene base de 8 m y altura de 5 m. ¿Cuál es su área?",
+              "Si el área de un triángulo es 24 cm² y su base mide 8 cm, ¿cuánto mide su altura?"
+            ]
+          },
+          {
+            "key": "relacion_triangulo_rectangulo",
+            "name": "Relación entre triángulo y rectángulo",
+            "short_description": "Comprender que un triángulo es la mitad de un rectángulo.",
+            "example_tasks": [
+              "Dibujar un rectángulo de 8 cm × 6 cm y dividirlo diagonalmente. ¿Cuál es el área de cada triángulo?",
+              "Verificar que el área de un triángulo rectángulo es la mitad del rectángulo formado por sus catetos",
+              "Un rectángulo de área 40 cm² se divide en dos triángulos iguales. ¿Cuál es el área de cada triángulo?"
+            ]
+          },
+          {
+            "key": "problemas_area_triangulo",
+            "name": "Problemas con área de triángulos",
+            "short_description": "Resolver problemas aplicados sobre áreas de triángulos.",
+            "example_tasks": [
+              "Una bandera triangular tiene base de 50 cm y altura de 30 cm. ¿Cuál es su área?",
+              "Un terreno triangular tiene base de 24 m y altura de 18 m. ¿Cuál es su superficie?",
+              "Comparar las áreas de un triángulo de base 12 cm y altura 8 cm, y un rectángulo de 6 cm × 8 cm"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "area_otras_figuras",
+        "name": "Área de otras figuras",
+        "short_description": "Calcular áreas de paralelogramos, trapecios y figuras compuestas.",
+        "sub_topics": [
+          {
+            "key": "area_paralelogramo",
+            "name": "Área del paralelogramo",
+            "short_description": "Usar la fórmula: área = base × altura.",
+            "example_tasks": [
+              "Calcular el área de un paralelogramo con base de 10 cm y altura de 7 cm",
+              "Un rombo tiene base de 8 m y altura de 5 m. ¿Cuál es su área?",
+              "Si el área de un romboide es 72 cm² y su altura es 9 cm, ¿cuál es su base?"
+            ]
+          },
+          {
+            "key": "area_trapecio",
+            "name": "Área del trapecio",
+            "short_description": "Usar la fórmula: área = ((base mayor + base menor) × altura) ÷ 2.",
+            "example_tasks": [
+              "Calcular el área de un trapecio con bases de 12 cm y 8 cm, y altura de 5 cm",
+              "Un terreno en forma de trapecio tiene bases de 20 m y 15 m, y altura de 10 m. ¿Cuál es su área?",
+              "Si el área de un trapecio es 60 cm², sus bases son 10 cm y 8 cm, ¿cuál es su altura?"
+            ]
+          },
+          {
+            "key": "area_figuras_compuestas",
+            "name": "Área de figuras compuestas",
+            "short_description": "Calcular áreas descomponiendo figuras en partes conocidas.",
+            "example_tasks": [
+              "Calcular el área de una figura formada por un rectángulo de 6×4 cm y un triángulo de base 6 cm y altura 3 cm",
+              "Una casa tiene forma de rectángulo (8 m × 6 m) con un triángulo encima (base 8 m, altura 3 m). ¿Cuál es el área total?",
+              "Encontrar el área de una figura L descomponiéndola en dos rectángulos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "comparacion_perimetro_area",
+        "name": "Comparación de perímetro y área",
+        "short_description": "Comprender que figuras con igual perímetro pueden tener diferente área y viceversa.",
+        "sub_topics": [
+          {
+            "key": "mismo_perimetro_diferente_area",
+            "name": "Mismo perímetro, diferente área",
+            "short_description": "Explorar que perímetros iguales no implican áreas iguales.",
+            "example_tasks": [
+              "Dibujar dos rectángulos diferentes que tengan perímetro de 24 cm. ¿Tienen la misma área?",
+              "Comparar las áreas de un cuadrado de 6 cm de lado y un rectángulo de 8 cm × 4 cm (ambos con perímetro 24 cm)",
+              "Crear tres figuras diferentes con el mismo perímetro y comparar sus áreas"
+            ]
+          },
+          {
+            "key": "misma_area_diferente_perimetro",
+            "name": "Misma área, diferente perímetro",
+            "short_description": "Explorar que áreas iguales no implican perímetros iguales.",
+            "example_tasks": [
+              "Dibujar dos rectángulos con área de 36 cm² pero con diferentes perímetros",
+              "Comparar los perímetros de un cuadrado de 6 cm de lado y un rectángulo de 9 cm × 4 cm (ambos con área 36 cm²)",
+              "¿Qué figura tiene menor perímetro con la misma área: un cuadrado o un rectángulo alargado?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "cuerpos_geometricos",
+    "name": "Cuerpos geométricos",
+    "short_description": "Identificación, clasificación y análisis de cuerpos tridimensionales: prismas, pirámides, cilindros, conos y esferas, incluyendo el cálculo de volumen.",
+    "sub_topics": [
+      {
+        "key": "identificacion_cuerpos",
+        "name": "Identificación de cuerpos geométricos",
+        "short_description": "Reconocer y nombrar cuerpos geométricos en objetos del entorno.",
+        "sub_topics": [
+          {
+            "key": "elementos_cuerpos_geometricos",
+            "name": "Elementos de los cuerpos geométricos",
+            "short_description": "Identificar caras, aristas, vértices en cuerpos geométricos.",
+            "example_tasks": [
+              "Contar las caras, aristas y vértices de un cubo",
+              "¿Cuántas caras tiene una pirámide cuadrangular?",
+              "Identificar las aristas en un prisma triangular"
+            ]
+          },
+          {
+            "key": "cuerpos_en_entorno",
+            "name": "Cuerpos geométricos en el entorno",
+            "short_description": "Reconocer formas geométricas en objetos cotidianos.",
+            "example_tasks": [
+              "Identificar objetos del salón que tengan forma de cubo, cilindro o esfera",
+              "¿Qué forma geométrica tiene una lata de refresco? ¿Y una pelota?",
+              "Buscar cinco objetos en casa que tengan forma de prisma rectangular"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "prismas",
+        "name": "Prismas",
+        "short_description": "Identificar y clasificar prismas según la forma de sus bases.",
+        "sub_topics": [
+          {
+            "key": "concepto_prisma",
+            "name": "Concepto de prisma",
+            "short_description": "Reconocer prismas como cuerpos con dos bases paralelas e iguales.",
+            "example_tasks": [
+              "¿Cuáles de estos cuerpos son prismas: cubo, pirámide, cilindro, prisma triangular?",
+              "Explicar qué características tiene un prisma",
+              "Identificar las bases y las caras laterales de un prisma"
+            ]
+          },
+          {
+            "key": "tipos_prismas",
+            "name": "Tipos de prismas",
+            "short_description": "Clasificar prismas según sus bases: triangulares, cuadrangulares, pentagonales.",
+            "example_tasks": [
+              "¿Cómo se llama un prisma cuyas bases son triángulos?",
+              "Dibujar un prisma triangular y un prisma pentagonal",
+              "¿Cuántas caras laterales tiene un prisma hexagonal?"
+            ]
+          },
+          {
+            "key": "cubo_prisma_rectangular",
+            "name": "Cubo y prisma rectangular",
+            "short_description": "Estudiar las características especiales del cubo y el prisma rectangular.",
+            "example_tasks": [
+              "¿En qué se parece un cubo a un prisma rectangular? ¿En qué se diferencia?",
+              "Contar caras, aristas y vértices de un cubo y de un prisma rectangular",
+              "Dibujar el desarrollo plano (red) de un cubo"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "piramides",
+        "name": "Pirámides",
+        "short_description": "Identificar y clasificar pirámides según la forma de su base.",
+        "sub_topics": [
+          {
+            "key": "concepto_piramide",
+            "name": "Concepto de pirámide",
+            "short_description": "Reconocer pirámides como cuerpos con una base y caras triangulares.",
+            "example_tasks": [
+              "¿Qué características tiene una pirámide?",
+              "Identificar la base y el vértice superior (cúspide) de una pirámide",
+              "¿En qué se diferencia una pirámide de un prisma?"
+            ]
+          },
+          {
+            "key": "tipos_piramides",
+            "name": "Tipos de pirámides",
+            "short_description": "Clasificar pirámides según sus bases: triangular, cuadrangular, pentagonal.",
+            "example_tasks": [
+              "¿Cuántas caras triangulares tiene una pirámide cuadrangular?",
+              "Dibujar una pirámide triangular y una pentagonal",
+              "Las pirámides de Egipto, ¿qué tipo de pirámides son?"
+            ]
+          },
+          {
+            "key": "elementos_piramides",
+            "name": "Elementos de las pirámides",
+            "short_description": "Contar caras, aristas y vértices de diferentes pirámides.",
+            "example_tasks": [
+              "Contar las caras, aristas y vértices de una pirámide cuadrangular",
+              "¿Cuántas aristas tiene una pirámide pentagonal?",
+              "Una pirámide triangular, ¿cuántas caras tiene en total (incluyendo la base)?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "cuerpos_redondos",
+        "name": "Cuerpos redondos",
+        "short_description": "Identificar cilindros, conos y esferas y sus características.",
+        "sub_topics": [
+          {
+            "key": "cilindro",
+            "name": "Cilindro",
+            "short_description": "Reconocer cilindros y sus elementos: bases circulares y superficie lateral.",
+            "example_tasks": [
+              "Identificar objetos con forma de cilindro en el salón",
+              "¿Cuántas caras planas tiene un cilindro?",
+              "Dibujar un cilindro y señalar sus bases"
+            ]
+          },
+          {
+            "key": "cono",
+            "name": "Cono",
+            "short_description": "Reconocer conos y sus elementos: base circular y vértice.",
+            "example_tasks": [
+              "¿Qué objetos cotidianos tienen forma de cono?",
+              "Dibujar un cono y señalar su base y su vértice",
+              "¿En qué se parece un cono a una pirámide? ¿En qué se diferencia?"
+            ]
+          },
+          {
+            "key": "esfera",
+            "name": "Esfera",
+            "short_description": "Reconocer esferas como cuerpos completamente redondos.",
+            "example_tasks": [
+              "Dar cinco ejemplos de objetos con forma esférica",
+              "¿Tiene caras, aristas o vértices una esfera?",
+              "¿En qué se diferencia una esfera de un círculo?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "desarrollos_planos",
+        "name": "Desarrollos planos (redes)",
+        "short_description": "Relacionar cuerpos geométricos con sus desarrollos planos.",
+        "sub_topics": [
+          {
+            "key": "concepto_desarrollo_plano",
+            "name": "Concepto de desarrollo plano",
+            "short_description": "Comprender que un cuerpo puede desplegarse en una figura plana.",
+            "example_tasks": [
+              "Recortar y armar el desarrollo plano de un cubo",
+              "Identificar qué cuerpo se forma con un desarrollo plano dado",
+              "Dibujar el desarrollo plano de un prisma triangular"
+            ]
+          },
+          {
+            "key": "desarrollo_prismas",
+            "name": "Desarrollo de prismas",
+            "short_description": "Dibujar y construir desarrollos de prismas.",
+            "example_tasks": [
+              "Dibujar el desarrollo plano de un prisma rectangular",
+              "Construir un prisma triangular a partir de su red",
+              "¿Cuántos rectángulos y cuántos cuadrados tiene el desarrollo de un cubo?"
+            ]
+          },
+          {
+            "key": "desarrollo_piramides",
+            "name": "Desarrollo de pirámides",
+            "short_description": "Dibujar y construir desarrollos de pirámides.",
+            "example_tasks": [
+              "Dibujar el desarrollo plano de una pirámide cuadrangular",
+              "Construir una pirámide triangular usando su desarrollo",
+              "¿Cuántos triángulos tiene el desarrollo de una pirámide pentagonal?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "volumen",
+        "name": "Volumen",
+        "short_description": "Comprender el concepto de volumen y calcular volúmenes de prismas rectangulares.",
+        "sub_topics": [
+          {
+            "key": "concepto_volumen",
+            "name": "Concepto de volumen",
+            "short_description": "Entender el volumen como el espacio que ocupa un cuerpo.",
+            "example_tasks": [
+              "¿Qué es el volumen de un cuerpo?",
+              "Comparar el volumen de dos cajas de diferentes tamaños",
+              "¿Cuál tiene mayor volumen: una pelota de fútbol o una de tenis?"
+            ]
+          },
+          {
+            "key": "unidades_volumen",
+            "name": "Unidades de volumen",
+            "short_description": "Reconocer unidades cúbicas: cm³, m³.",
+            "example_tasks": [
+              "¿Qué unidad usarías para medir el volumen de una caja pequeña: cm³ o m³?",
+              "¿Qué unidad es apropiada para medir el volumen de un salón de clases?",
+              "Explicar qué significa 1 m³"
+            ]
+          },
+          {
+            "key": "volumen_por_conteo",
+            "name": "Volumen por conteo de cubos",
+            "short_description": "Calcular volúmenes contando cubos unitarios.",
+            "example_tasks": [
+              "Contar cuántos cubos de 1 cm³ caben en una caja de 3 cm × 2 cm × 4 cm",
+              "Calcular el volumen de construcciones hechas con cubos",
+              "Si un prisma está formado por 24 cubitos de 1 cm³, ¿cuál es su volumen?"
+            ]
+          },
+          {
+            "key": "volumen_prisma_rectangular",
+            "name": "Volumen del prisma rectangular",
+            "short_description": "Usar la fórmula: volumen = largo × ancho × altura.",
+            "example_tasks": [
+              "Calcular el volumen de una caja de 10 cm × 8 cm × 6 cm",
+              "Una alberca rectangular mide 8 m de largo, 4 m de ancho y 2 m de profundidad. ¿Cuál es su volumen?",
+              "Si el volumen de un cubo es 125 cm³, ¿cuánto mide su arista?"
+            ]
+          },
+          {
+            "key": "problemas_volumen",
+            "name": "Problemas de volumen",
+            "short_description": "Resolver problemas aplicados sobre volúmenes.",
+            "example_tasks": [
+              "¿Cuántos litros de agua caben en un tanque de 2 m × 1.5 m × 1 m? (1 m³ = 1,000 litros)",
+              "Una caja mide 30 cm × 20 cm × 15 cm. ¿Cuántas cajas de 10 cm × 10 cm × 10 cm caben dentro?",
+              "Comparar los volúmenes de dos cajas: una de 5×4×3 cm y otra de 6×3×3 cm"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "medidas_longitud_capacidad_peso",
+    "name": "Medidas de longitud, capacidad y peso",
+    "short_description": "Uso de unidades del Sistema Métrico Decimal para medir longitud, capacidad y peso, incluyendo conversiones entre unidades.",
+    "sub_topics": [
+      {
+        "key": "medidas_longitud",
+        "name": "Medidas de longitud",
+        "short_description": "Usar y convertir unidades de longitud: milímetro, centímetro, metro, kilómetro.",
+        "sub_topics": [
+          {
+            "key": "unidades_longitud",
+            "name": "Unidades de longitud",
+            "short_description": "Reconocer y usar mm, cm, m, km según el contexto.",
+            "example_tasks": [
+              "¿Qué unidad usarías para medir el largo de un lápiz? ¿Y la distancia entre dos ciudades?",
+              "Medir objetos del salón en centímetros y metros",
+              "¿Cuándo es apropiado usar milímetros? Dar tres ejemplos"
+            ]
+          },
+          {
+            "key": "conversiones_longitud",
+            "name": "Conversiones entre unidades de longitud",
+            "short_description": "Convertir entre mm, cm, m, km.",
+            "example_tasks": [
+              "Convertir 5 metros a centímetros",
+              "¿Cuántos milímetros hay en 12 cm?",
+              "Convertir 3.5 km a metros"
+            ]
+          },
+          {
+            "key": "problemas_longitud",
+            "name": "Problemas con medidas de longitud",
+            "short_description": "Resolver problemas usando medidas de longitud.",
+            "example_tasks": [
+              "Tengo dos listones: uno de 2.5 m y otro de 180 cm. ¿Cuál es más largo?",
+              "La distancia de mi casa a la escuela es 1.2 km. ¿Cuántos metros recorro en el día si voy y regreso?",
+              "Un atleta corre 5 km diarios. ¿Cuántos metros corre en una semana?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "medidas_capacidad",
+        "name": "Medidas de capacidad",
+        "short_description": "Usar y convertir unidades de capacidad: mililitro, litro.",
+        "sub_topics": [
+          {
+            "key": "unidades_capacidad",
+            "name": "Unidades de capacidad",
+            "short_description": "Reconocer y usar ml y L según el contexto.",
+            "example_tasks": [
+              "¿Qué unidad usarías para medir el agua de una alberca: ml o L?",
+              "Identificar recipientes en casa y estimar su capacidad en litros",
+              "¿Cuándo es apropiado usar mililitros? Dar tres ejemplos"
+            ]
+          },
+          {
+            "key": "conversiones_capacidad",
+            "name": "Conversiones entre unidades de capacidad",
+            "short_description": "Convertir entre ml y L.",
+            "example_tasks": [
+              "Convertir 3 litros a mililitros",
+              "¿Cuántos litros hay en 2,500 ml?",
+              "Convertir 1.5 L a mililitros"
+            ]
+          },
+          {
+            "key": "problemas_capacidad",
+            "name": "Problemas con medidas de capacidad",
+            "short_description": "Resolver problemas usando medidas de capacidad.",
+            "example_tasks": [
+              "Una botella tiene 2 L de agua. Si sirvo 4 vasos de 250 ml cada uno, ¿cuánta agua queda?",
+              "Un tanque de 1,000 L está lleno a 3/4. ¿Cuántos litros de agua contiene?",
+              "Si una llave llena un recipiente de 500 ml en 2 minutos, ¿cuánto tardará en llenar uno de 3 litros?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "medidas_peso",
+        "name": "Medidas de peso",
+        "short_description": "Usar y convertir unidades de peso: gramo, kilogramo, tonelada.",
+        "sub_topics": [
+          {
+            "key": "unidades_peso",
+            "name": "Unidades de peso",
+            "short_description": "Reconocer y usar g, kg, t según el contexto.",
+            "example_tasks": [
+              "¿Qué unidad usarías para pesar una manzana? ¿Y un camión?",
+              "Estimar el peso de objetos en gramos o kilogramos",
+              "¿Cuándo se usa la tonelada? Dar tres ejemplos"
+            ]
+          },
+          {
+            "key": "conversiones_peso",
+            "name": "Conversiones entre unidades de peso",
+            "short_description": "Convertir entre g, kg, t.",
+            "example_tasks": [
+              "Convertir 5 kilogramos a gramos",
+              "¿Cuántos kilogramos hay en 3,500 g?",
+              "Convertir 2.5 toneladas a kilogramos"
+            ]
+          },
+          {
+            "key": "problemas_peso",
+            "name": "Problemas con medidas de peso",
+            "short_description": "Resolver problemas usando medidas de peso.",
+            "example_tasks": [
+              "Compré 2.5 kg de manzanas y 1,800 g de naranjas. ¿Cuántos kilogramos de fruta compré en total?",
+              "Un camión puede cargar 5 toneladas. Si ya lleva 3,200 kg, ¿cuántos kilogramos más puede cargar?",
+              "Una receta usa 250 g de harina. Si quiero hacer 4 recetas, ¿cuántos kilogramos de harina necesito?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "estimacion_medicion",
+        "name": "Estimación y medición",
+        "short_description": "Estimar y verificar medidas usando instrumentos de medición.",
+        "sub_topics": [
+          {
+            "key": "estimacion_medidas",
+            "name": "Estimación de medidas",
+            "short_description": "Desarrollar el sentido de estimación de longitudes, capacidades y pesos.",
+            "example_tasks": [
+              "Estimar la longitud de la mesa en metros antes de medirla",
+              "¿Aproximadamente cuánto pesa tu mochila: 2 kg, 5 kg o 10 kg?",
+              "Estimar la capacidad de una taza: ¿200 ml, 500 ml o 1 L?"
+            ]
+          },
+          {
+            "key": "uso_instrumentos_medicion",
+            "name": "Uso de instrumentos de medición",
+            "short_description": "Usar regla, cinta métrica, báscula y recipientes graduados.",
+            "example_tasks": [
+              "Medir el largo y ancho del cuaderno con una regla",
+              "Usar una balanza para pesar diferentes objetos",
+              "Medir 500 ml de agua usando un recipiente graduado"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "angulos_transformaciones",
+    "name": "Ángulos y transformaciones",
+    "short_description": "Clasificación y medición de ángulos, y comprensión de transformaciones geométricas como traslaciones, reflexiones y rotaciones.",
+    "sub_topics": [
+      {
+        "key": "angulos_clasificacion",
+        "name": "Clasificación de ángulos",
+        "short_description": "Clasificar ángulos según su amplitud en agudos, rectos, obtusos y llanos.",
+        "sub_topics": [
+          {
+            "key": "angulo_recto",
+            "name": "Ángulo recto",
+            "short_description": "Reconocer ángulos de 90 grados.",
+            "example_tasks": [
+              "Identificar ángulos rectos en figuras geométricas",
+              "Usar una escuadra para trazar ángulos rectos",
+              "Encontrar ejemplos de ángulos rectos en el salón de clases"
+            ]
+          },
+          {
+            "key": "angulo_agudo",
+            "name": "Ángulo agudo",
+            "short_description": "Reconocer ángulos menores de 90 grados.",
+            "example_tasks": [
+              "Dibujar tres ángulos agudos diferentes",
+              "Identificar ángulos agudos en un triángulo",
+              "¿Es 45° un ángulo agudo? ¿Por qué?"
+            ]
+          },
+          {
+            "key": "angulo_obtuso",
+            "name": "Ángulo obtuso",
+            "short_description": "Reconocer ángulos mayores de 90° y menores de 180°.",
+            "example_tasks": [
+              "Dibujar un ángulo obtuso",
+              "Identificar ángulos obtusos en diferentes figuras",
+              "¿Es 120° un ángulo obtuso? ¿Por qué?"
+            ]
+          },
+          {
+            "key": "angulo_llano",
+            "name": "Ángulo llano",
+            "short_description": "Reconocer ángulos de 180 grados.",
+            "example_tasks": [
+              "Dibujar un ángulo llano",
+              "¿Cuántos ángulos rectos hay en un ángulo llano?",
+              "Identificar ángulos llanos en líneas rectas"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "medicion_angulos_grados",
+        "name": "Medición de ángulos",
+        "short_description": "Medir y construir ángulos usando el transportador.",
+        "sub_topics": [
+          {
+            "key": "uso_transportador",
+            "name": "Uso del transportador",
+            "short_description": "Aprender a usar el transportador para medir ángulos.",
+            "example_tasks": [
+              "Medir los ángulos de un triángulo usando el transportador",
+              "Verificar que la suma de los ángulos de un triángulo es 180°",
+              "Medir y comparar ángulos en diferentes figuras"
+            ]
+          },
+          {
+            "key": "construccion_angulos",
+            "name": "Construcción de ángulos",
+            "short_description": "Trazar ángulos de medidas específicas con el transportador.",
+            "example_tasks": [
+              "Construir un ángulo de 60° usando el transportador",
+              "Trazar ángulos de 45°, 90° y 135°",
+              "Dibujar un triángulo con ángulos de 60°, 60° y 60°"
+            ]
+          },
+          {
+            "key": "suma_angulos",
+            "name": "Suma de ángulos",
+            "short_description": "Calcular la suma de ángulos y encontrar ángulos complementarios y suplementarios.",
+            "example_tasks": [
+              "Si un ángulo mide 35°, ¿cuánto mide su complemento para formar 90°?",
+              "Dos ángulos suman 180°. Si uno mide 75°, ¿cuánto mide el otro?",
+              "Calcular el tercer ángulo de un triángulo si dos miden 50° y 70°"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "traslaciones",
+        "name": "Traslaciones",
+        "short_description": "Mover figuras en el plano sin rotarlas ni reflejarlas.",
+        "sub_topics": [
+          {
+            "key": "concepto_traslacion",
+            "name": "Concepto de traslación",
+            "short_description": "Comprender la traslación como movimiento de una figura sin cambiar su orientación.",
+            "example_tasks": [
+              "Trasladar un triángulo 5 unidades a la derecha en papel cuadriculado",
+              "Mover una figura 3 unidades arriba y 2 unidades a la izquierda",
+              "¿Cambia el tamaño o la forma de una figura al trasladarla?"
+            ]
+          },
+          {
+            "key": "traslaciones_cuadricula",
+            "name": "Traslaciones en cuadrícula",
+            "short_description": "Realizar traslaciones en papel cuadriculado.",
+            "example_tasks": [
+              "Trasladar un rectángulo según las instrucciones: 4 a la derecha, 3 hacia arriba",
+              "Dibujar la imagen de un polígono después de trasladarlo 6 unidades a la izquierda",
+              "Describir la traslación que lleva una figura de una posición a otra"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "reflexiones",
+        "name": "Reflexiones (simetría axial)",
+        "short_description": "Reflejar figuras respecto a un eje de simetría.",
+        "sub_topics": [
+          {
+            "key": "concepto_reflexion",
+            "name": "Concepto de reflexión",
+            "short_description": "Comprender la reflexión como imagen especular de una figura.",
+            "example_tasks": [
+              "Reflejar un triángulo respecto a una línea vertical",
+              "Dibujar la imagen reflejada de una figura en un eje horizontal",
+              "¿Qué sucede con los puntos de una figura al reflejarla?"
+            ]
+          },
+          {
+            "key": "reflexion_ejes_coordenados",
+            "name": "Reflexión en ejes",
+            "short_description": "Reflejar figuras respecto a ejes horizontales y verticales.",
+            "example_tasks": [
+              "Reflejar un polígono respecto al eje vertical en papel cuadriculado",
+              "Dibujar la reflexión de una figura respecto a una línea diagonal",
+              "Identificar si dos figuras son reflexiones una de otra"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "rotaciones",
+        "name": "Rotaciones",
+        "short_description": "Girar figuras alrededor de un punto.",
+        "sub_topics": [
+          {
+            "key": "concepto_rotacion",
+            "name": "Concepto de rotación",
+            "short_description": "Comprender la rotación como giro de una figura alrededor de un punto.",
+            "example_tasks": [
+              "Rotar un triángulo 90° en sentido horario alrededor de un vértice",
+              "¿Qué sucede al rotar un cuadrado 90°, 180° y 270°?",
+              "Identificar el centro de rotación de dos figuras"
+            ]
+          },
+          {
+            "key": "rotacion_90_180_grados",
+            "name": "Rotaciones de 90° y 180°",
+            "short_description": "Realizar rotaciones de cuartos de vuelta y medias vueltas.",
+            "example_tasks": [
+              "Rotar una figura 90° en sentido antihorario",
+              "Dibujar la imagen de un polígono después de rotarlo 180°",
+              "¿Cuántas rotaciones de 90° se necesitan para regresar a la posición original?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "combinacion_transformaciones",
+        "name": "Combinación de transformaciones",
+        "short_description": "Aplicar dos o más transformaciones a una figura.",
+        "sub_topics": [
+          {
+            "key": "composicion_transformaciones",
+            "name": "Composición de transformaciones",
+            "short_description": "Aplicar traslaciones, reflexiones y rotaciones sucesivamente.",
+            "example_tasks": [
+              "Trasladar una figura 3 unidades a la derecha y luego reflejarla verticalmente",
+              "Rotar una figura 90° y después trasladarla 5 unidades arriba",
+              "Describir la secuencia de transformaciones que lleva una figura de una posición a otra"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "recoleccion_organizacion_datos",
+    "name": "Recolección y organización de datos",
+    "short_description": "Métodos para recopilar información, organizar datos en tablas de frecuencia y pictogramas para facilitar su análisis.",
+    "sub_topics": [
+      {
+        "key": "concepto_datos",
+        "name": "Concepto de datos",
+        "short_description": "Comprender qué son los datos y por qué es importante recopilarlos.",
+        "sub_topics": [
+          {
+            "key": "que_son_datos",
+            "name": "¿Qué son los datos?",
+            "short_description": "Reconocer datos como información recopilada sobre un tema.",
+            "example_tasks": [
+              "Dar ejemplos de datos que se pueden recopilar en el salón: edades, colores favoritos, deportes preferidos",
+              "¿Por qué es útil recopilar datos sobre el clima?",
+              "Identificar qué tipo de información son datos y cuáles no"
+            ]
+          },
+          {
+            "key": "fuentes_datos",
+            "name": "Fuentes de datos",
+            "short_description": "Identificar diferentes formas de obtener datos.",
+            "example_tasks": [
+              "¿Cómo puedes saber cuál es el deporte favorito de tus compañeros?",
+              "Mencionar tres formas de recopilar información para un proyecto",
+              "Distinguir entre datos obtenidos por observación, encuestas o experimentos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "metodos_recoleccion",
+        "name": "Métodos de recolección de datos",
+        "short_description": "Usar encuestas, observaciones y conteos para recopilar información.",
+        "sub_topics": [
+          {
+            "key": "encuestas",
+            "name": "Encuestas",
+            "short_description": "Diseñar y aplicar encuestas sencillas para recopilar datos.",
+            "example_tasks": [
+              "Diseñar una encuesta con 3 preguntas sobre preferencias de comida",
+              "Aplicar una encuesta a tus compañeros sobre su materia favorita",
+              "¿Qué preguntas harías en una encuesta sobre actividades recreativas?"
+            ]
+          },
+          {
+            "key": "conteo_registro",
+            "name": "Conteo y registro",
+            "short_description": "Usar marcas de conteo y listas para registrar información.",
+            "example_tasks": [
+              "Hacer marcas de conteo (||||) para registrar los colores favoritos de 20 personas",
+              "Contar cuántos compañeros prefieren cada sabor de helado y registrarlo",
+              "Usar una tabla para registrar cuántos vehículos de cada tipo pasan por la calle en 10 minutos"
+            ]
+          },
+          {
+            "key": "observacion_medicion",
+            "name": "Observación y medición",
+            "short_description": "Recopilar datos mediante observación directa o mediciones.",
+            "example_tasks": [
+              "Medir la estatura de 10 compañeros y registrar los datos",
+              "Observar y contar cuántos estudiantes llegan a la escuela en coche, autobús o caminando",
+              "Registrar la temperatura diaria durante una semana"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tablas_frecuencia",
+        "name": "Tablas de frecuencia",
+        "short_description": "Organizar datos en tablas mostrando frecuencias absolutas.",
+        "sub_topics": [
+          {
+            "key": "construccion_tablas",
+            "name": "Construcción de tablas de frecuencia",
+            "short_description": "Crear tablas para organizar datos recopilados.",
+            "example_tasks": [
+              "Organizar en una tabla los datos de colores favoritos de 30 estudiantes",
+              "Crear una tabla de frecuencia para las mascotas que tienen tus compañeros",
+              "Hacer una tabla que muestre cuántos estudiantes nacieron en cada mes"
+            ]
+          },
+          {
+            "key": "lectura_tablas",
+            "name": "Lectura de tablas de frecuencia",
+            "short_description": "Interpretar información presentada en tablas.",
+            "example_tasks": [
+              "Según la tabla, ¿cuántos estudiantes prefieren el fútbol?",
+              "¿Qué fruta es la más popular según los datos de la tabla?",
+              "Comparar dos categorías usando la información de una tabla"
+            ]
+          },
+          {
+            "key": "frecuencia_absoluta",
+            "name": "Frecuencia absoluta",
+            "short_description": "Comprender la frecuencia como el número de veces que aparece un dato.",
+            "example_tasks": [
+              "¿Cuál es la frecuencia del color azul en los datos recopilados?",
+              "Identificar qué dato tiene la mayor frecuencia en una tabla",
+              "Calcular la frecuencia total sumando todas las frecuencias"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "pictogramas",
+        "name": "Pictogramas",
+        "short_description": "Representar datos usando símbolos o dibujos.",
+        "sub_topics": [
+          {
+            "key": "construccion_pictogramas",
+            "name": "Construcción de pictogramas",
+            "short_description": "Crear pictogramas para visualizar datos.",
+            "example_tasks": [
+              "Hacer un pictograma de frutas favoritas donde cada dibujo representa 2 votos",
+              "Crear un pictograma que muestre cuántos libros leyó cada estudiante (1 libro = 1 símbolo)",
+              "Representar con pictogramas los medios de transporte que usan los estudiantes"
+            ]
+          },
+          {
+            "key": "lectura_pictogramas",
+            "name": "Lectura de pictogramas",
+            "short_description": "Interpretar información en pictogramas.",
+            "example_tasks": [
+              "Si cada símbolo representa 5 personas, ¿cuántas personas eligieron pizza?",
+              "¿Qué categoría tiene más símbolos en el pictograma?",
+              "Calcular la diferencia entre dos categorías usando un pictograma"
+            ]
+          },
+          {
+            "key": "escalas_pictogramas",
+            "name": "Escalas en pictogramas",
+            "short_description": "Usar símbolos que representen más de una unidad.",
+            "example_tasks": [
+              "Crear un pictograma donde cada estrella = 10 puntos",
+              "Si cada símbolo representa 3 estudiantes y hay 4 símbolos, ¿cuántos estudiantes son?",
+              "Decidir qué escala usar en un pictograma con datos grandes (cada símbolo = 5, 10 o 20)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "organizacion_analisis_datos",
+        "name": "Organización y análisis de datos",
+        "short_description": "Ordenar datos para facilitar su interpretación.",
+        "sub_topics": [
+          {
+            "key": "ordenamiento_datos",
+            "name": "Ordenamiento de datos",
+            "short_description": "Ordenar datos de menor a mayor o por categorías.",
+            "example_tasks": [
+              "Ordenar las estaturas de 10 estudiantes de menor a mayor",
+              "Organizar por orden alfabético los nombres de frutas en una encuesta",
+              "Agrupar datos en categorías: pequeño, mediano, grande"
+            ]
+          },
+          {
+            "key": "comparacion_datos",
+            "name": "Comparación de datos",
+            "short_description": "Comparar frecuencias para hacer observaciones.",
+            "example_tasks": [
+              "¿Qué deporte tiene más preferencias? ¿Cuál tiene menos?",
+              "Comparar cuántos estudiantes prefieren perros vs. gatos",
+              "¿Cuántas personas más prefieren el verano que el invierno?"
+            ]
+          },
+          {
+            "key": "conclusiones_datos",
+            "name": "Conclusiones a partir de datos",
+            "short_description": "Hacer observaciones y sacar conclusiones de los datos.",
+            "example_tasks": [
+              "Según los datos, ¿cuál es la conclusión sobre el color favorito del grupo?",
+              "¿Qué puedes concluir sobre las preferencias de transporte de tus compañeros?",
+              "Hacer tres observaciones a partir de una tabla de datos"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "graficas",
+    "name": "Gráficas",
+    "short_description": "Construcción e interpretación de diferentes tipos de gráficas: barras, pictogramas, lineales y circulares para representar datos.",
+    "sub_topics": [
+      {
+        "key": "graficas_barras",
+        "name": "Gráficas de barras",
+        "short_description": "Representar datos usando barras horizontales o verticales.",
+        "sub_topics": [
+          {
+            "key": "construccion_graficas_barras",
+            "name": "Construcción de gráficas de barras",
+            "short_description": "Crear gráficas de barras a partir de datos organizados.",
+            "example_tasks": [
+              "Hacer una gráfica de barras que muestre los deportes favoritos de 30 estudiantes",
+              "Crear una gráfica de barras verticales con los datos de mascotas preferidas",
+              "Construir una gráfica de barras horizontales mostrando ventas de diferentes productos"
+            ]
+          },
+          {
+            "key": "elementos_grafica_barras",
+            "name": "Elementos de la gráfica de barras",
+            "short_description": "Identificar título, ejes, etiquetas y escala en gráficas de barras.",
+            "example_tasks": [
+              "Identificar el título, el eje horizontal y el eje vertical en una gráfica",
+              "¿Qué representa cada barra en la gráfica?",
+              "Explicar qué significan los números en el eje vertical"
+            ]
+          },
+          {
+            "key": "lectura_graficas_barras",
+            "name": "Lectura de gráficas de barras",
+            "short_description": "Interpretar información presentada en gráficas de barras.",
+            "example_tasks": [
+              "Según la gráfica, ¿cuántos estudiantes prefieren el básquetbol?",
+              "¿Qué categoría tiene la barra más alta? ¿Qué significa?",
+              "Comparar dos barras: ¿cuántos más prefieren A que B?"
+            ]
+          },
+          {
+            "key": "escala_graficas",
+            "name": "Escala en gráficas",
+            "short_description": "Usar escalas apropiadas en los ejes de las gráficas.",
+            "example_tasks": [
+              "Si los datos van de 0 a 100, ¿qué escala usarías: de 1 en 1, de 5 en 5 o de 10 en 10?",
+              "Leer una gráfica donde cada división del eje representa 5 unidades",
+              "Decidir si la escala de una gráfica es apropiada para los datos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "graficas_lineales",
+        "name": "Gráficas lineales",
+        "short_description": "Representar cambios o tendencias a lo largo del tiempo.",
+        "sub_topics": [
+          {
+            "key": "construccion_graficas_lineales",
+            "name": "Construcción de gráficas lineales",
+            "short_description": "Crear gráficas que muestren cambios en el tiempo.",
+            "example_tasks": [
+              "Hacer una gráfica lineal de la temperatura diaria durante una semana",
+              "Graficar el crecimiento de una planta durante 8 semanas",
+              "Crear una gráfica lineal que muestre las ventas mensuales de una tienda"
+            ]
+          },
+          {
+            "key": "lectura_graficas_lineales",
+            "name": "Lectura de gráficas lineales",
+            "short_description": "Interpretar tendencias y cambios en gráficas lineales.",
+            "example_tasks": [
+              "¿En qué mes hubo la temperatura más alta según la gráfica?",
+              "¿La gráfica muestra un aumento o una disminución en las ventas?",
+              "Identificar periodos de crecimiento y decrecimiento en una gráfica lineal"
+            ]
+          },
+          {
+            "key": "tendencias_graficas",
+            "name": "Tendencias en gráficas",
+            "short_description": "Identificar patrones y hacer predicciones usando gráficas lineales.",
+            "example_tasks": [
+              "Si la tendencia continúa, ¿qué temperatura esperas para el próximo día?",
+              "¿La población está aumentando o disminuyendo según la gráfica?",
+              "Predecir el siguiente valor en una gráfica que muestra un patrón constante"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "graficas_circulares",
+        "name": "Gráficas circulares (de pastel)",
+        "short_description": "Representar partes de un todo usando círculos divididos.",
+        "sub_topics": [
+          {
+            "key": "lectura_graficas_circulares",
+            "name": "Lectura de gráficas circulares",
+            "short_description": "Interpretar información en gráficas de pastel.",
+            "example_tasks": [
+              "¿Qué porción del círculo representa la categoría más grande?",
+              "Si el círculo completo representa 100 estudiantes, ¿cuántos están en la sección que ocupa 1/4?",
+              "Comparar dos categorías en una gráfica circular: ¿cuál es mayor?"
+            ]
+          },
+          {
+            "key": "construccion_graficas_circulares",
+            "name": "Construcción de gráficas circulares",
+            "short_description": "Crear gráficas circulares sencillas dividiendo un círculo.",
+            "example_tasks": [
+              "Dividir un círculo en 4 partes iguales para representar 4 categorías con la misma frecuencia",
+              "Crear una gráfica circular mostrando que 1/2 prefiere pizza, 1/4 hamburguesas y 1/4 tacos",
+              "Representar datos usando un círculo dividido en secciones proporcionales"
+            ]
+          },
+          {
+            "key": "porcentajes_graficas_circulares",
+            "name": "Porcentajes en gráficas circulares",
+            "short_description": "Relacionar las secciones del círculo con porcentajes.",
+            "example_tasks": [
+              "Si una sección ocupa 1/4 del círculo, ¿qué porcentaje representa?",
+              "¿Qué sección representa el 50% en una gráfica circular?",
+              "Identificar aproximadamente qué porcentaje representa cada sección"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "comparacion_graficas",
+        "name": "Comparación entre tipos de gráficas",
+        "short_description": "Decidir qué tipo de gráfica es más apropiada para diferentes datos.",
+        "sub_topics": [
+          {
+            "key": "eleccion_tipo_grafica",
+            "name": "Elección del tipo de gráfica",
+            "short_description": "Seleccionar la gráfica más adecuada según los datos.",
+            "example_tasks": [
+              "¿Qué tipo de gráfica usarías para mostrar cambios de temperatura durante un mes?",
+              "Para comparar preferencias de colores, ¿es mejor una gráfica de barras o lineal?",
+              "¿Cuándo es apropiado usar una gráfica circular?"
+            ]
+          },
+          {
+            "key": "ventajas_desventajas_graficas",
+            "name": "Ventajas y desventajas de cada gráfica",
+            "short_description": "Comprender cuándo es mejor usar cada tipo de gráfica.",
+            "example_tasks": [
+              "¿Qué ventaja tiene una gráfica de barras sobre una tabla de datos?",
+              "¿Por qué una gráfica lineal es buena para mostrar cambios en el tiempo?",
+              "¿Cuándo es más clara una gráfica circular que una de barras?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "analisis_graficas",
+        "name": "Análisis de gráficas",
+        "short_description": "Interpretar, comparar y sacar conclusiones de gráficas.",
+        "sub_topics": [
+          {
+            "key": "interpretacion_graficas",
+            "name": "Interpretación de gráficas",
+            "short_description": "Responder preguntas usando información de gráficas.",
+            "example_tasks": [
+              "¿Qué mes tuvo las ventas más altas según la gráfica?",
+              "¿Cuántos estudiantes en total participaron en la encuesta? (sumar datos de la gráfica)",
+              "Identificar la diferencia entre el valor más alto y el más bajo en una gráfica"
+            ]
+          },
+          {
+            "key": "comparacion_datos_graficas",
+            "name": "Comparación de datos en gráficas",
+            "short_description": "Comparar información entre diferentes categorías o periodos.",
+            "example_tasks": [
+              "¿Cuántos más estudiantes prefieren A que B según la gráfica?",
+              "Comparar las ventas de enero con las de junio",
+              "¿Qué categoría tiene el doble de frecuencia que otra?"
+            ]
+          },
+          {
+            "key": "predicciones_graficas",
+            "name": "Predicciones usando gráficas",
+            "short_description": "Hacer predicciones basadas en tendencias observadas.",
+            "example_tasks": [
+              "Si la tendencia continúa, ¿qué esperas que suceda el próximo mes?",
+              "Basándose en la gráfica de crecimiento, ¿cuánto medirá la planta la próxima semana?",
+              "¿Qué conclusión puedes sacar sobre el futuro según esta gráfica?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "medidas_tendencia_central",
+    "name": "Medidas de tendencia central",
+    "short_description": "Cálculo e interpretación de la media (promedio), mediana y moda como formas de resumir un conjunto de datos.",
+    "sub_topics": [
+      {
+        "key": "moda",
+        "name": "Moda",
+        "short_description": "Identificar el dato que aparece con mayor frecuencia.",
+        "sub_topics": [
+          {
+            "key": "concepto_moda",
+            "name": "Concepto de moda",
+            "short_description": "Comprender la moda como el valor más frecuente.",
+            "example_tasks": [
+              "En el conjunto {3, 5, 5, 7, 5, 8}, ¿cuál es la moda?",
+              "Encontrar la moda de los colores favoritos de un grupo",
+              "¿Qué significa que la moda de las edades sea 10 años?"
+            ]
+          },
+          {
+            "key": "calculo_moda",
+            "name": "Cálculo de la moda",
+            "short_description": "Encontrar la moda en diferentes conjuntos de datos.",
+            "example_tasks": [
+              "Encontrar la moda en: 2, 4, 4, 6, 7, 4, 9",
+              "¿Cuál es la moda de las calificaciones: 8, 9, 7, 8, 10, 8, 9?",
+              "Determinar la moda usando una tabla de frecuencias"
+            ]
+          },
+          {
+            "key": "casos_especiales_moda",
+            "name": "Casos especiales de moda",
+            "short_description": "Reconocer cuando hay más de una moda o ninguna.",
+            "example_tasks": [
+              "En el conjunto {1, 2, 2, 3, 3, 4}, ¿cuántas modas hay?",
+              "¿Qué sucede si todos los datos aparecen la misma cantidad de veces?",
+              "Identificar si un conjunto de datos tiene moda o no"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "mediana",
+        "name": "Mediana",
+        "short_description": "Encontrar el valor central de un conjunto de datos ordenados.",
+        "sub_topics": [
+          {
+            "key": "concepto_mediana",
+            "name": "Concepto de mediana",
+            "short_description": "Comprender la mediana como el valor que está en el centro.",
+            "example_tasks": [
+              "¿Qué significa que la mediana de las estaturas sea 1.45 m?",
+              "Explicar por qué se necesita ordenar los datos para encontrar la mediana",
+              "¿La mediana es siempre uno de los datos del conjunto?"
+            ]
+          },
+          {
+            "key": "calculo_mediana_impar",
+            "name": "Mediana con cantidad impar de datos",
+            "short_description": "Encontrar la mediana cuando hay un número impar de datos.",
+            "example_tasks": [
+              "Encontrar la mediana de: 3, 7, 5, 9, 2 (primero ordenar)",
+              "¿Cuál es la mediana de: 10, 15, 20, 25, 30?",
+              "Calcular la mediana de las edades: 8, 10, 9, 11, 7"
+            ]
+          },
+          {
+            "key": "calculo_mediana_par",
+            "name": "Mediana con cantidad par de datos",
+            "short_description": "Encontrar la mediana promediando los dos valores centrales.",
+            "example_tasks": [
+              "Encontrar la mediana de: 4, 6, 8, 10 (promediar 6 y 8)",
+              "¿Cuál es la mediana de: 2, 5, 7, 9, 11, 13?",
+              "Calcular la mediana de: 15, 20, 25, 30, 35, 40"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "media_promedio",
+        "name": "Media o promedio",
+        "short_description": "Calcular el promedio sumando todos los datos y dividiendo entre la cantidad.",
+        "sub_topics": [
+          {
+            "key": "concepto_promedio",
+            "name": "Concepto de promedio",
+            "short_description": "Comprender el promedio como la distribución equitativa de una cantidad.",
+            "example_tasks": [
+              "Si tres amigos tienen 6, 9 y 12 dulces, ¿cuántos tendría cada uno si se reparten equitativamente?",
+              "¿Qué significa que el promedio de calificaciones sea 8?",
+              "Explicar con tus palabras qué es un promedio"
+            ]
+          },
+          {
+            "key": "calculo_promedio",
+            "name": "Cálculo del promedio",
+            "short_description": "Calcular la media aritmética de un conjunto de datos.",
+            "example_tasks": [
+              "Calcular el promedio de: 5, 7, 9, 11",
+              "¿Cuál es el promedio de las calificaciones: 8, 9, 7, 10, 6?",
+              "Encontrar la media de los siguientes datos: 12, 15, 18, 20, 25"
+            ]
+          },
+          {
+            "key": "promedio_situaciones",
+            "name": "Promedio en situaciones cotidianas",
+            "short_description": "Aplicar el cálculo de promedios en contextos reales.",
+            "example_tasks": [
+              "Si en 5 días leíste 10, 15, 12, 18 y 20 páginas, ¿cuál es el promedio de páginas por día?",
+              "Las temperaturas de la semana fueron: 22°, 24°, 23°, 25°, 21°, 23°, 22°. ¿Cuál fue la temperatura promedio?",
+              "Un estudiante obtuvo 80, 85, 90 y 95 en cuatro exámenes. ¿Cuál es su promedio?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "comparacion_medidas",
+        "name": "Comparación de media, mediana y moda",
+        "short_description": "Comparar las tres medidas de tendencia central y entender cuándo usar cada una.",
+        "sub_topics": [
+          {
+            "key": "calculo_tres_medidas",
+            "name": "Calcular las tres medidas",
+            "short_description": "Encontrar media, mediana y moda del mismo conjunto de datos.",
+            "example_tasks": [
+              "Para el conjunto {3, 5, 5, 6, 7, 5, 9}, calcular media, mediana y moda",
+              "Encontrar las tres medidas de tendencia central de: 10, 12, 15, 15, 18, 20",
+              "Calcular media, mediana y moda de las edades: 8, 9, 9, 10, 11, 9, 12"
+            ]
+          },
+          {
+            "key": "interpretacion_medidas",
+            "name": "Interpretación de cada medida",
+            "short_description": "Comprender qué representa cada medida de tendencia central.",
+            "example_tasks": [
+              "Si la media es 8, la mediana 7 y la moda 6, ¿qué te dice cada una sobre los datos?",
+              "¿Cuál medida se ve más afectada por valores muy altos o muy bajos?",
+              "¿Cuándo es más útil usar la mediana que la media?"
+            ]
+          },
+          {
+            "key": "eleccion_medida_apropiada",
+            "name": "Elección de la medida apropiada",
+            "short_description": "Decidir qué medida usar según el contexto.",
+            "example_tasks": [
+              "Para saber qué talla de zapato ordenar más en una tienda, ¿usarías media, mediana o moda?",
+              "Para calcular el gasto promedio de un grupo, ¿qué medida es más apropiada?",
+              "Si hay valores extremos en los datos, ¿cuál medida es más confiable?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "problemas_tendencia_central",
+        "name": "Problemas con medidas de tendencia central",
+        "short_description": "Resolver problemas aplicados usando media, mediana y moda.",
+        "sub_topics": [
+          {
+            "key": "problemas_promedio",
+            "name": "Problemas de promedio",
+            "short_description": "Resolver situaciones que requieren calcular o usar promedios.",
+            "example_tasks": [
+              "Juan obtuvo 8, 9 y 7 en tres exámenes. ¿Qué calificación necesita en el cuarto para tener promedio de 8?",
+              "El promedio de 4 números es 15. Si tres de ellos son 12, 14 y 16, ¿cuál es el cuarto número?",
+              "Un equipo anotó 20, 25, 18, 22 y 30 puntos en 5 partidos. ¿Cuál fue su promedio de puntos?"
+            ]
+          },
+          {
+            "key": "problemas_mediana_moda",
+            "name": "Problemas de mediana y moda",
+            "short_description": "Aplicar mediana y moda en situaciones reales.",
+            "example_tasks": [
+              "Las edades de 7 niños son: 9, 10, 8, 10, 11, 10, 9. ¿Cuál es la edad más común (moda)?",
+              "Los precios de 5 productos son: $50, $60, $55, $70, $65. ¿Cuál es el precio mediano?",
+              "En una tienda, las tallas vendidas fueron: S, M, M, L, M, S, M, L. ¿Qué talla se vendió más?"
+            ]
+          },
+          {
+            "key": "analisis_datos_medidas",
+            "name": "Análisis de datos usando medidas",
+            "short_description": "Usar las medidas de tendencia central para analizar y comparar.",
+            "example_tasks": [
+              "Comparar el desempeño de dos equipos usando sus promedios de puntos",
+              "¿Qué grupo tiene calificaciones más altas si uno tiene media 8.5 y otro media 8.2?",
+              "Analizar si un conjunto de datos está concentrado o disperso usando media y mediana"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "probabilidad",
+    "name": "Probabilidad",
+    "short_description": "Introducción a conceptos básicos de probabilidad: eventos seguros, posibles e imposibles, y cálculo de probabilidades simples.",
+    "sub_topics": [
+      {
+        "key": "conceptos_basicos_probabilidad",
+        "name": "Conceptos básicos de probabilidad",
+        "short_description": "Comprender qué es la probabilidad y el lenguaje de eventos.",
+        "sub_topics": [
+          {
+            "key": "concepto_evento",
+            "name": "Concepto de evento",
+            "short_description": "Reconocer qué es un evento o suceso en probabilidad.",
+            "example_tasks": [
+              "Identificar eventos al lanzar una moneda: que salga cara, que salga cruz",
+              "¿Qué eventos pueden ocurrir al lanzar un dado?",
+              "Dar tres ejemplos de eventos en situaciones cotidianas"
+            ]
+          },
+          {
+            "key": "eventos_aleatorios",
+            "name": "Eventos aleatorios",
+            "short_description": "Comprender que algunos eventos ocurren al azar.",
+            "example_tasks": [
+              "¿Es aleatorio el resultado de lanzar una moneda? ¿Por qué?",
+              "Dar ejemplos de situaciones donde el resultado es aleatorio",
+              "¿Puedes predecir con certeza el resultado de lanzar un dado?"
+            ]
+          },
+          {
+            "key": "espacio_muestral",
+            "name": "Espacio muestral",
+            "short_description": "Identificar todos los resultados posibles de un experimento.",
+            "example_tasks": [
+              "¿Cuáles son todos los resultados posibles al lanzar una moneda?",
+              "Listar todos los resultados posibles al lanzar un dado",
+              "¿Cuántos resultados posibles hay al girar una ruleta dividida en 4 colores?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tipos_eventos",
+        "name": "Tipos de eventos",
+        "short_description": "Clasificar eventos en seguros, posibles e imposibles.",
+        "sub_topics": [
+          {
+            "key": "eventos_seguros",
+            "name": "Eventos seguros",
+            "short_description": "Identificar eventos que siempre ocurren.",
+            "example_tasks": [
+              "Al lanzar un dado, ¿es seguro que salga un número menor que 7?",
+              "Dar tres ejemplos de eventos seguros",
+              "¿Es seguro que al sacar una canica roja de una bolsa con solo canicas rojas, salga roja?"
+            ]
+          },
+          {
+            "key": "eventos_imposibles",
+            "name": "Eventos imposibles",
+            "short_description": "Identificar eventos que nunca pueden ocurrir.",
+            "example_tasks": [
+              "Al lanzar un dado normal, ¿es imposible que salga 7?",
+              "Dar tres ejemplos de eventos imposibles",
+              "¿Es imposible sacar una canica azul de una bolsa que solo tiene canicas rojas?"
+            ]
+          },
+          {
+            "key": "eventos_posibles",
+            "name": "Eventos posibles",
+            "short_description": "Identificar eventos que pueden o no ocurrir.",
+            "example_tasks": [
+              "Al lanzar una moneda, ¿es posible que salga cara?",
+              "Dar ejemplos de eventos que son posibles pero no seguros",
+              "¿Es posible sacar una canica verde de una bolsa con canicas rojas y verdes?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "probabilidad_cualitativa",
+        "name": "Probabilidad cualitativa",
+        "short_description": "Usar términos como 'más probable', 'menos probable', 'igualmente probable'.",
+        "sub_topics": [
+          {
+            "key": "comparacion_probabilidades",
+            "name": "Comparación de probabilidades",
+            "short_description": "Comparar qué evento es más o menos probable.",
+            "example_tasks": [
+              "Si una bolsa tiene 7 canicas rojas y 3 azules, ¿es más probable sacar roja o azul?",
+              "Al lanzar un dado, ¿qué es más probable: sacar un número par o sacar 6?",
+              "Comparar la probabilidad de lluvia cuando está nublado vs. cuando está despejado"
+            ]
+          },
+          {
+            "key": "equiprobabilidad",
+            "name": "Eventos igualmente probables",
+            "short_description": "Reconocer cuando dos eventos tienen la misma probabilidad.",
+            "example_tasks": [
+              "Al lanzar una moneda, ¿cara y cruz son igualmente probables?",
+              "Si una ruleta tiene 4 colores en partes iguales, ¿todos los colores tienen la misma probabilidad?",
+              "Dar ejemplos de dos eventos igualmente probables"
+            ]
+          },
+          {
+            "key": "lenguaje_probabilidad",
+            "name": "Lenguaje de probabilidad",
+            "short_description": "Usar vocabulario apropiado: probable, improbable, poco probable, muy probable.",
+            "example_tasks": [
+              "¿Es probable que llueva si hay nubes negras?",
+              "¿Es improbable sacar un 6 al lanzar un dado?",
+              "Describir situaciones usando: muy probable, poco probable, imposible"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "probabilidad_cuantitativa",
+        "name": "Probabilidad cuantitativa simple",
+        "short_description": "Calcular probabilidades simples como fracciones.",
+        "sub_topics": [
+          {
+            "key": "calculo_probabilidad_simple",
+            "name": "Cálculo de probabilidad simple",
+            "short_description": "Calcular la probabilidad como casos favorables entre casos posibles.",
+            "example_tasks": [
+              "¿Cuál es la probabilidad de sacar cara al lanzar una moneda? (1/2)",
+              "Al lanzar un dado, ¿cuál es la probabilidad de sacar un 4? (1/6)",
+              "Si una bolsa tiene 3 canicas rojas y 2 azules, ¿cuál es la probabilidad de sacar roja? (3/5)"
+            ]
+          },
+          {
+            "key": "probabilidad_eventos_compuestos",
+            "name": "Probabilidad de varios resultados",
+            "short_description": "Calcular la probabilidad de eventos que incluyen varios resultados.",
+            "example_tasks": [
+              "Al lanzar un dado, ¿cuál es la probabilidad de sacar un número par? (3/6 = 1/2)",
+              "¿Cuál es la probabilidad de sacar un número mayor que 4 en un dado? (2/6 = 1/3)",
+              "De 10 tarjetas numeradas del 1 al 10, ¿cuál es la probabilidad de sacar un número menor que 5?"
+            ]
+          },
+          {
+            "key": "probabilidad_cero_uno",
+            "name": "Probabilidad 0 y probabilidad 1",
+            "short_description": "Comprender que eventos imposibles tienen probabilidad 0 y seguros probabilidad 1.",
+            "example_tasks": [
+              "¿Cuál es la probabilidad de sacar 7 en un dado normal? (0)",
+              "¿Cuál es la probabilidad de sacar un número menor que 7 en un dado? (1 o 6/6)",
+              "Dar ejemplos de eventos con probabilidad 0 y con probabilidad 1"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "experimentos_probabilidad",
+        "name": "Experimentos de probabilidad",
+        "short_description": "Realizar experimentos simples para observar frecuencias y probabilidades.",
+        "sub_topics": [
+          {
+            "key": "lanzamiento_moneda",
+            "name": "Experimentos con monedas",
+            "short_description": "Realizar y analizar lanzamientos de monedas.",
+            "example_tasks": [
+              "Lanzar una moneda 20 veces y registrar resultados. ¿Cuántas veces salió cara?",
+              "¿La frecuencia observada se acerca a la probabilidad teórica de 1/2?",
+              "Predecir cuántas caras esperas en 30 lanzamientos"
+            ]
+          },
+          {
+            "key": "lanzamiento_dado",
+            "name": "Experimentos con dados",
+            "short_description": "Realizar y analizar lanzamientos de dados.",
+            "example_tasks": [
+              "Lanzar un dado 30 veces y contar cuántas veces sale cada número",
+              "¿Todos los números salieron aproximadamente la misma cantidad de veces?",
+              "¿Qué esperas que suceda si lanzas el dado 60 veces?"
+            ]
+          },
+          {
+            "key": "extraccion_objetos",
+            "name": "Experimentos de extracción",
+            "short_description": "Realizar experimentos sacando objetos de bolsas o recipientes.",
+            "example_tasks": [
+              "Sacar 20 veces una canica de una bolsa (regresándola cada vez) y registrar colores",
+              "Comparar las frecuencias observadas con las probabilidades teóricas",
+              "Predecir qué color saldrá más si una bolsa tiene 6 rojas y 4 azules"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "problemas_probabilidad",
+        "name": "Problemas de probabilidad",
+        "short_description": "Resolver problemas aplicados de probabilidad en contextos cotidianos.",
+        "sub_topics": [
+          {
+            "key": "juegos_azar",
+            "name": "Juegos de azar",
+            "short_description": "Analizar probabilidades en juegos sencillos.",
+            "example_tasks": [
+              "En un juego se lanza un dado. Ganas si sale 5 o 6. ¿Cuál es la probabilidad de ganar?",
+              "Una ruleta tiene 8 secciones iguales: 3 rojas, 3 azules, 2 verdes. ¿Cuál es la probabilidad de cada color?",
+              "Si sacas una carta de una baraja de 10 cartas numeradas, ¿cuál es la probabilidad de sacar un número impar?"
+            ]
+          },
+          {
+            "key": "situaciones_cotidianas",
+            "name": "Situaciones cotidianas",
+            "short_description": "Aplicar probabilidad en situaciones de la vida real.",
+            "example_tasks": [
+              "Si el pronóstico dice 70% de probabilidad de lluvia, ¿qué significa?",
+              "En una rifa de 100 boletos, compraste 5. ¿Cuál es tu probabilidad de ganar?",
+              "Si 3 de cada 10 productos salen defectuosos, ¿cuál es la probabilidad de que uno esté defectuoso?"
+            ]
+          },
+          {
+            "key": "toma_decisiones",
+            "name": "Toma de decisiones usando probabilidad",
+            "short_description": "Usar probabilidad para tomar decisiones informadas.",
+            "example_tasks": [
+              "¿Es justo un juego donde uno gana si sale 1, 2 o 3, y el otro si sale 4, 5 o 6?",
+              "Si tienes más probabilidad de ganar en un juego que en otro, ¿cuál elegirías?",
+              "Diseñar un juego justo usando un dado o una moneda"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "resolucion_problemas",
+    "name": "Resolución de problemas",
+    "short_description": "Estrategias generales para resolver problemas matemáticos: comprensión, planificación, ejecución y verificación de soluciones.",
+    "sub_topics": [
+      {
+        "key": "comprension_problema",
+        "name": "Comprensión del problema",
+        "short_description": "Leer y entender qué pide el problema antes de resolverlo.",
+        "sub_topics": [
+          {
+            "key": "lectura_problema",
+            "name": "Lectura cuidadosa",
+            "short_description": "Leer el problema completo y varias veces si es necesario.",
+            "example_tasks": [
+              "Leer un problema dos veces antes de intentar resolverlo",
+              "Subrayar los datos importantes en un problema",
+              "Identificar las palabras clave en el enunciado"
+            ]
+          },
+          {
+            "key": "identificacion_datos",
+            "name": "Identificación de datos",
+            "short_description": "Reconocer qué datos proporciona el problema.",
+            "example_tasks": [
+              "Hacer una lista de todos los datos numéricos de un problema",
+              "Identificar qué información es relevante y cuál no",
+              "Organizar los datos en una tabla o esquema"
+            ]
+          },
+          {
+            "key": "identificacion_pregunta",
+            "name": "Identificación de la pregunta",
+            "short_description": "Comprender claramente qué se debe encontrar.",
+            "example_tasks": [
+              "Escribir con tus propias palabras qué pregunta el problema",
+              "Identificar si el problema pide un total, una diferencia, un promedio, etc.",
+              "Reformular la pregunta para asegurarte de entenderla"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "estrategias_resolucion",
+        "name": "Estrategias de resolución",
+        "short_description": "Aplicar diferentes estrategias para resolver problemas.",
+        "sub_topics": [
+          {
+            "key": "hacer_dibujo_diagrama",
+            "name": "Hacer un dibujo o diagrama",
+            "short_description": "Representar visualmente el problema.",
+            "example_tasks": [
+              "Dibujar la situación de un problema de geometría",
+              "Hacer un diagrama para un problema de comparación",
+              "Representar un problema de fracciones con dibujos"
+            ]
+          },
+          {
+            "key": "hacer_tabla_lista",
+            "name": "Hacer una tabla o lista",
+            "short_description": "Organizar información en tablas o listas.",
+            "example_tasks": [
+              "Crear una tabla para organizar datos de un problema",
+              "Hacer una lista sistemática de posibilidades",
+              "Usar una tabla para encontrar patrones"
+            ]
+          },
+          {
+            "key": "buscar_patron",
+            "name": "Buscar un patrón",
+            "short_description": "Identificar patrones o regularidades en el problema.",
+            "example_tasks": [
+              "Encontrar el patrón en una secuencia para resolver el problema",
+              "Identificar si el problema tiene una estructura repetitiva",
+              "Usar patrones para predecir o calcular"
+            ]
+          },
+          {
+            "key": "resolver_problema_simple",
+            "name": "Resolver un problema más simple",
+            "short_description": "Simplificar el problema para entender la estrategia.",
+            "example_tasks": [
+              "Si el problema tiene números grandes, resolverlo primero con números pequeños",
+              "Resolver casos particulares antes del caso general",
+              "Dividir un problema complejo en problemas más simples"
+            ]
+          },
+          {
+            "key": "trabajar_hacia_atras",
+            "name": "Trabajar hacia atrás",
+            "short_description": "Empezar desde el resultado y retroceder.",
+            "example_tasks": [
+              "Si el problema da el resultado final, trabajar hacia atrás para encontrar el dato inicial",
+              "Usar operaciones inversas para resolver",
+              "Verificar la solución trabajando hacia adelante"
+            ]
+          },
+          {
+            "key": "ensayo_error",
+            "name": "Ensayo y error",
+            "short_description": "Probar diferentes soluciones hasta encontrar la correcta.",
+            "example_tasks": [
+              "Probar diferentes números hasta encontrar el que cumple las condiciones",
+              "Verificar cada intento para ver si funciona",
+              "Ajustar los intentos basándose en resultados anteriores"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "ejecucion_solucion",
+        "name": "Ejecución de la solución",
+        "short_description": "Llevar a cabo el plan y realizar los cálculos necesarios.",
+        "sub_topics": [
+          {
+            "key": "seleccion_operaciones",
+            "name": "Selección de operaciones",
+            "short_description": "Decidir qué operaciones usar para resolver el problema.",
+            "example_tasks": [
+              "Identificar si se necesita sumar, restar, multiplicar o dividir",
+              "Determinar el orden de las operaciones en problemas de varios pasos",
+              "Elegir la estrategia de cálculo más eficiente"
+            ]
+          },
+          {
+            "key": "realizacion_calculos",
+            "name": "Realización de cálculos",
+            "short_description": "Ejecutar los cálculos de manera ordenada y cuidadosa.",
+            "example_tasks": [
+              "Escribir todos los pasos del cálculo claramente",
+              "Verificar cada operación antes de continuar",
+              "Usar estimación para verificar si el resultado es razonable"
+            ]
+          },
+          {
+            "key": "problemas_multiples_pasos",
+            "name": "Problemas de múltiples pasos",
+            "short_description": "Resolver problemas que requieren varios pasos.",
+            "example_tasks": [
+              "Identificar todos los pasos necesarios antes de empezar",
+              "Resolver cada paso en orden y anotar resultados intermedios",
+              "Verificar que cada paso use el resultado correcto del paso anterior"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "verificacion_solucion",
+        "name": "Verificación de la solución",
+        "short_description": "Comprobar que la respuesta es correcta y tiene sentido.",
+        "sub_topics": [
+          {
+            "key": "revision_calculos",
+            "name": "Revisión de cálculos",
+            "short_description": "Verificar que todos los cálculos sean correctos.",
+            "example_tasks": [
+              "Revisar cada operación para detectar errores",
+              "Hacer los cálculos de nuevo de manera diferente",
+              "Usar la operación inversa para verificar"
+            ]
+          },
+          {
+            "key": "razonabilidad_respuesta",
+            "name": "Razonabilidad de la respuesta",
+            "short_description": "Verificar que la respuesta tenga sentido en el contexto.",
+            "example_tasks": [
+              "¿La respuesta es razonable según el contexto del problema?",
+              "Comparar la respuesta con una estimación",
+              "Verificar que la respuesta tenga las unidades correctas"
+            ]
+          },
+          {
+            "key": "respuesta_completa",
+            "name": "Respuesta completa",
+            "short_description": "Asegurarse de responder exactamente lo que pregunta el problema.",
+            "example_tasks": [
+              "Escribir la respuesta en una oración completa",
+              "Verificar que respondiste la pregunta que se hizo",
+              "Incluir las unidades apropiadas en la respuesta"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "comunicacion_matematica",
+        "name": "Comunicación matemática",
+        "short_description": "Explicar el razonamiento y la solución de manera clara.",
+        "sub_topics": [
+          {
+            "key": "explicacion_razonamiento",
+            "name": "Explicación del razonamiento",
+            "short_description": "Explicar por qué se eligió cierta estrategia.",
+            "example_tasks": [
+              "Explicar por qué decidiste sumar en lugar de restar",
+              "Justificar la estrategia que usaste para resolver",
+              "Describir tu proceso de pensamiento"
+            ]
+          },
+          {
+            "key": "presentacion_solucion",
+            "name": "Presentación de la solución",
+            "short_description": "Organizar y presentar el trabajo de manera clara.",
+            "example_tasks": [
+              "Escribir la solución de manera ordenada y legible",
+              "Mostrar todos los pasos importantes",
+              "Usar diagramas o dibujos cuando ayuden a explicar"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

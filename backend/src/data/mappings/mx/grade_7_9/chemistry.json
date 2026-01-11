@@ -1,0 +1,3586 @@
+[
+  {
+    "key": "introduccion_quimica",
+    "name": "Introducción a la Química",
+    "short_description": "Comprende la naturaleza de la química como ciencia, su importancia en la vida cotidiana y los métodos científicos para el estudio de la materia.",
+    "sub_topics": [
+      {
+        "key": "que_es_quimica",
+        "name": "¿Qué es la química?",
+        "short_description": "Define la química y su campo de estudio, identificando su relación con otras ciencias y la vida diaria.",
+        "sub_topics": [
+          {
+            "key": "definicion_quimica",
+            "name": "Definición y campo de estudio",
+            "short_description": "Identifica la química como la ciencia que estudia la materia, sus propiedades, composición y transformaciones.",
+            "example_tasks": [
+              "Explica con tus propias palabras qué estudia la química y da tres ejemplos de fenómenos químicos que observes en tu casa",
+              "Clasifica las siguientes situaciones como fenómenos químicos o físicos: cocinar un huevo, hervir agua, oxidación del hierro, fundir hielo",
+              "Investiga y describe una aplicación de la química en la medicina moderna, explicando su importancia para la salud"
+            ]
+          },
+          {
+            "key": "historia_quimica",
+            "name": "Desarrollo histórico de la química",
+            "short_description": "Reconoce los aportes de científicos destacados al desarrollo de la química como ciencia.",
+            "example_tasks": [
+              "Elabora una línea de tiempo con cinco acontecimientos importantes en la historia de la química desde la alquimia hasta el siglo XX",
+              "Investiga las contribuciones de Marie Curie a la química y explica por qué recibió dos premios Nobel",
+              "Compara las ideas de los alquimistas con la química moderna, identificando similitudes y diferencias"
+            ]
+          },
+          {
+            "key": "quimica_vida_cotidiana",
+            "name": "La química en la vida cotidiana",
+            "short_description": "Identifica la presencia de la química en productos y procesos del hogar y la industria.",
+            "example_tasks": [
+              "Elabora una lista de diez productos químicos que uses en casa y clasifícalos por su función (limpieza, alimentos, higiene personal)",
+              "Explica el proceso químico que ocurre al usar jabón para lavar trastes y por qué el agua sola no elimina la grasa",
+              "Investiga cómo la química ha mejorado la calidad de vida en México en áreas como agricultura, medicina o construcción"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "metodo_cientifico",
+        "name": "Método científico en química",
+        "short_description": "Aplica el método científico para resolver problemas y realizar investigaciones químicas.",
+        "sub_topics": [
+          {
+            "key": "pasos_metodo_cientifico",
+            "name": "Etapas del método científico",
+            "short_description": "Identifica y aplica las etapas del método científico: observación, hipótesis, experimentación, análisis y conclusión.",
+            "example_tasks": [
+              "Diseña un experimento siguiendo el método científico para determinar cuál de tres marcas de bicarbonato reacciona más rápido con vinagre",
+              "Observa la oxidación de una manzana cortada y plantea una hipótesis sobre cómo evitarla, luego diseña un experimento para probarla",
+              "Analiza un experimento dado sobre la solubilidad del azúcar en agua a diferentes temperaturas e identifica cada etapa del método científico aplicada"
+            ]
+          },
+          {
+            "key": "mediciones_quimicas",
+            "name": "Mediciones y unidades",
+            "short_description": "Utiliza correctamente el Sistema Internacional de Unidades para mediciones químicas básicas.",
+            "example_tasks": [
+              "Convierte las siguientes medidas: 2.5 kg a gramos, 500 mL a litros, 25°C a Kelvin",
+              "Mide con exactitud 50 mL de agua usando una probeta y explica la importancia de leer correctamente el menisco",
+              "Calcula el volumen de un objeto irregular usando el método de desplazamiento de agua y registra tus mediciones con las unidades correctas"
+            ]
+          },
+          {
+            "key": "notacion_cientifica",
+            "name": "Notación científica",
+            "short_description": "Expresa cantidades muy grandes o muy pequeñas utilizando notación científica.",
+            "example_tasks": [
+              "Expresa en notación científica: la masa de la Tierra (5,972,000,000,000,000,000,000,000 kg) y el radio de un átomo de hidrógeno (0.000000000053 m)",
+              "Realiza las siguientes operaciones en notación científica: (3 × 10⁴) × (2 × 10³) y (8 × 10⁶) ÷ (4 × 10²)",
+              "Investiga el número de Avogadro y exprésalo en notación científica, explicando su importancia en química"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "seguridad_laboratorio",
+        "name": "Seguridad en el laboratorio",
+        "short_description": "Aplica normas de seguridad e identifica materiales y equipo de laboratorio para trabajar de manera segura.",
+        "sub_topics": [
+          {
+            "key": "normas_seguridad",
+            "name": "Reglas de seguridad en el laboratorio",
+            "short_description": "Reconoce y aplica las normas básicas de seguridad para prevenir accidentes en el laboratorio escolar.",
+            "example_tasks": [
+              "Elabora un cartel con las diez reglas de seguridad más importantes para el laboratorio de química de tu escuela",
+              "Explica qué hacer en caso de: derrame de un ácido, fuego en el mechero, rotura de un termómetro de mercurio",
+              "Identifica tres errores de seguridad en una imagen de estudiantes trabajando en el laboratorio y propón correcciones"
+            ]
+          },
+          {
+            "key": "material_laboratorio",
+            "name": "Material y equipo de laboratorio",
+            "short_description": "Identifica el material de laboratorio básico y su uso correcto en experimentos químicos.",
+            "example_tasks": [
+              "Dibuja y nombra diez instrumentos de laboratorio comunes, indicando para qué se usa cada uno (vaso de precipitados, matraz, probeta, etc.)",
+              "Explica las diferencias entre un vaso de precipitados, un matraz Erlenmeyer y un matraz aforado, indicando cuándo usar cada uno",
+              "Selecciona el material de laboratorio adecuado para realizar las siguientes tareas: medir exactamente 25 mL de agua, calentar una sustancia, filtrar una mezcla"
+            ]
+          },
+          {
+            "key": "simbolos_peligro",
+            "name": "Símbolos de peligrosidad",
+            "short_description": "Interpreta los símbolos de peligrosidad de sustancias químicas para su manejo seguro.",
+            "example_tasks": [
+              "Identifica y explica el significado de seis pictogramas de peligrosidad química (inflamable, tóxico, corrosivo, oxidante, etc.)",
+              "Investiga las etiquetas de tres productos de limpieza en tu casa e identifica los símbolos de peligro presentes",
+              "Propón medidas de seguridad para almacenar y manejar una sustancia con los símbolos de 'corrosivo' e 'irritante'"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "propiedades_materia",
+    "name": "Propiedades de la Materia",
+    "short_description": "Identifica y clasifica las propiedades físicas y químicas de la materia, distinguiendo entre sustancias puras y mezclas.",
+    "sub_topics": [
+      {
+        "key": "definicion_materia",
+        "name": "Concepto de materia",
+        "short_description": "Define la materia y reconoce sus características fundamentales: masa, volumen y estados de agregación.",
+        "sub_topics": [
+          {
+            "key": "caracteristicas_materia",
+            "name": "Masa, volumen y densidad",
+            "short_description": "Comprende las propiedades generales de la materia y calcula la densidad de diferentes sustancias.",
+            "example_tasks": [
+              "Calcula la densidad de un trozo de aluminio que tiene una masa de 135 g y un volumen de 50 cm³",
+              "Explica por qué el aceite flota sobre el agua usando el concepto de densidad",
+              "Determina experimentalmente la densidad de tres líquidos diferentes y ordénalos de menor a mayor densidad",
+              "Predice si un objeto de 200 g y 250 cm³ flotará o se hundirá en agua (densidad = 1 g/cm³)"
+            ]
+          },
+          {
+            "key": "estados_materia",
+            "name": "Estados de agregación",
+            "short_description": "Identifica los tres estados fundamentales de la materia y sus características.",
+            "example_tasks": [
+              "Elabora una tabla comparativa de las características de sólidos, líquidos y gases en cuanto a forma, volumen y movimiento de partículas",
+              "Clasifica las siguientes sustancias según su estado de agregación a temperatura ambiente: hierro, oxígeno, mercurio, agua, dióxido de carbono",
+              "Explica por qué los gases se pueden comprimir fácilmente pero los sólidos y líquidos no"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "propiedades_fisicas_quimicas",
+        "name": "Propiedades físicas y químicas",
+        "short_description": "Distingue entre propiedades físicas y químicas de la materia mediante observación y experimentación.",
+        "sub_topics": [
+          {
+            "key": "propiedades_fisicas",
+            "name": "Propiedades físicas",
+            "short_description": "Identifica propiedades físicas como color, olor, punto de fusión, punto de ebullición y solubilidad.",
+            "example_tasks": [
+              "Observa una muestra de sal de mesa y describe cinco propiedades físicas que puedas identificar sin cambiar su composición",
+              "Investiga y compara los puntos de fusión y ebullición del agua, alcohol etílico y acetona, explicando cuál es más volátil",
+              "Diseña un experimento para determinar la solubilidad del azúcar en agua a diferentes temperaturas"
+            ]
+          },
+          {
+            "key": "propiedades_quimicas",
+            "name": "Propiedades químicas",
+            "short_description": "Reconoce propiedades químicas como reactividad, combustibilidad y oxidación.",
+            "example_tasks": [
+              "Describe tres propiedades químicas del hierro y explica cómo se manifiestan (por ejemplo, su oxidación al aire húmedo)",
+              "Compara la reactividad del sodio y el oro con el agua, explicando por qué uno reacciona violentamente y el otro no",
+              "Observa la combustión de una vela e identifica las evidencias de que ocurre un cambio químico"
+            ]
+          },
+          {
+            "key": "cambios_fisicos_quimicos",
+            "name": "Cambios físicos y químicos",
+            "short_description": "Distingue entre cambios físicos y químicos identificando la formación de nuevas sustancias.",
+            "example_tasks": [
+              "Clasifica los siguientes procesos como cambios físicos o químicos: evaporación del agua, combustión de papel, disolución de sal en agua, digestión de alimentos",
+              "Realiza un experimento mezclando bicarbonato de sodio con vinagre, observa lo que sucede y explica por qué es un cambio químico",
+              "Explica por qué el ciclo del agua involucra solo cambios físicos, mientras que la fotosíntesis es un cambio químico"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "clasificacion_materia",
+        "name": "Clasificación de la materia",
+        "short_description": "Clasifica la materia en sustancias puras (elementos y compuestos) y mezclas (homogéneas y heterogéneas).",
+        "sub_topics": [
+          {
+            "key": "sustancias_puras",
+            "name": "Sustancias puras: elementos y compuestos",
+            "short_description": "Diferencia entre elementos y compuestos químicos según su composición.",
+            "example_tasks": [
+              "Clasifica las siguientes sustancias como elementos o compuestos: oxígeno (O₂), agua (H₂O), hierro (Fe), sal de mesa (NaCl), oro (Au)",
+              "Explica la diferencia entre un elemento y un compuesto usando como ejemplos el hidrógeno y el agua",
+              "Investiga cinco elementos que se encuentren en estado puro en la naturaleza y explica dónde se localizan"
+            ]
+          },
+          {
+            "key": "mezclas",
+            "name": "Mezclas homogéneas y heterogéneas",
+            "short_description": "Identifica y clasifica mezclas según la uniformidad de sus componentes.",
+            "example_tasks": [
+              "Clasifica como mezclas homogéneas o heterogéneas: agua con azúcar, ensalada, aire, agua con aceite, bronce, granito",
+              "Prepara dos mezclas, una homogénea y una heterogénea, y explica las diferencias observables entre ambas",
+              "Investiga tres ejemplos de mezclas homogéneas (soluciones) importantes en la industria mexicana y su aplicación"
+            ]
+          },
+          {
+            "key": "metodos_separacion",
+            "name": "Métodos de separación de mezclas",
+            "short_description": "Aplica diferentes métodos de separación según las propiedades de los componentes de una mezcla.",
+            "example_tasks": [
+              "Describe cómo separarías una mezcla de arena y sal, indicando los métodos y el orden en que los aplicarías",
+              "Explica el principio de funcionamiento de la destilación y menciona una aplicación industrial en México",
+              "Diseña un procedimiento experimental para separar una mezcla de limaduras de hierro, arena y sal, justificando cada método elegido",
+              "Investiga cómo funciona una planta potabilizadora de agua y qué métodos de separación utiliza"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "estructura_atomica",
+    "name": "Estructura Atómica",
+    "short_description": "Comprende la estructura del átomo, identifica las partículas subatómicas y reconoce la evolución de los modelos atómicos.",
+    "sub_topics": [
+      {
+        "key": "modelos_atomicos",
+        "name": "Evolución de los modelos atómicos",
+        "short_description": "Analiza el desarrollo histórico de los modelos atómicos desde Dalton hasta el modelo actual.",
+        "sub_topics": [
+          {
+            "key": "modelo_dalton",
+            "name": "Modelo atómico de Dalton",
+            "short_description": "Reconoce las contribuciones de Dalton y su teoría del átomo como esfera indivisible.",
+            "example_tasks": [
+              "Describe los postulados principales de la teoría atómica de Dalton y explica cuáles siguen siendo válidos hoy",
+              "Explica cómo el modelo de Dalton ayudó a entender las leyes ponderales de las reacciones químicas",
+              "Identifica las limitaciones del modelo de Dalton que fueron superadas por modelos posteriores"
+            ]
+          },
+          {
+            "key": "modelo_thomson",
+            "name": "Modelo atómico de Thomson",
+            "short_description": "Comprende el modelo del 'budín de pasas' y el descubrimiento del electrón.",
+            "example_tasks": [
+              "Dibuja el modelo atómico de Thomson y explica por qué se le llamó 'budín de pasas' o 'sandía'",
+              "Describe el experimento del tubo de rayos catódicos que llevó a Thomson a descubrir el electrón",
+              "Compara el modelo de Dalton con el de Thomson, explicando qué avance representó el segundo"
+            ]
+          },
+          {
+            "key": "modelo_rutherford",
+            "name": "Modelo atómico de Rutherford",
+            "short_description": "Analiza el experimento de la lámina de oro y el descubrimiento del núcleo atómico.",
+            "example_tasks": [
+              "Explica el experimento de Rutherford con la lámina de oro y qué conclusiones obtuvo sobre la estructura del átomo",
+              "Dibuja el modelo planetario de Rutherford identificando el núcleo y los electrones",
+              "Explica por qué la mayoría de las partículas alfa atravesaron la lámina de oro sin desviarse"
+            ]
+          },
+          {
+            "key": "modelo_bohr",
+            "name": "Modelo atómico de Bohr",
+            "short_description": "Comprende el concepto de niveles de energía cuantizados propuesto por Bohr.",
+            "example_tasks": [
+              "Dibuja el modelo de Bohr para el átomo de hidrógeno, mostrando los niveles de energía",
+              "Explica qué significa que los electrones se encuentran en órbitas cuantizadas según el modelo de Bohr",
+              "Describe cómo el modelo de Bohr explica los espectros de emisión de los elementos"
+            ]
+          },
+          {
+            "key": "modelo_actual",
+            "name": "Modelo cuántico actual",
+            "short_description": "Reconoce las características básicas del modelo actual de la nube electrónica u orbital.",
+            "example_tasks": [
+              "Explica en qué se diferencia el modelo cuántico actual del modelo de Bohr respecto a la ubicación de los electrones",
+              "Describe qué representa un orbital atómico en el modelo cuántico",
+              "Investiga las contribuciones de Schrödinger y Heisenberg al modelo atómico actual"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "particulas_subatomicas",
+        "name": "Partículas subatómicas",
+        "short_description": "Identifica las características de protones, neutrones y electrones, y su ubicación en el átomo.",
+        "sub_topics": [
+          {
+            "key": "protones",
+            "name": "Protones",
+            "short_description": "Reconoce las propiedades del protón: carga positiva, masa y ubicación en el núcleo.",
+            "example_tasks": [
+              "Completa la siguiente información sobre el protón: carga eléctrica, masa relativa, ubicación en el átomo",
+              "Explica por qué el número de protones determina la identidad de un elemento químico",
+              "Calcula cuántos protones tiene un átomo de sodio (Na) si su número atómico es 11"
+            ]
+          },
+          {
+            "key": "neutrones",
+            "name": "Neutrones",
+            "short_description": "Comprende las propiedades del neutrón: sin carga eléctrica, masa similar al protón, ubicación en el núcleo.",
+            "example_tasks": [
+              "Explica la función de los neutrones en el núcleo atómico y por qué son importantes para la estabilidad",
+              "Calcula el número de neutrones en un átomo de cloro-35 sabiendo que su número atómico es 17",
+              "Compara las masas del protón y el neutrón e indica cuál es más pesado"
+            ]
+          },
+          {
+            "key": "electrones",
+            "name": "Electrones",
+            "short_description": "Identifica las propiedades del electrón: carga negativa, masa muy pequeña, ubicación en niveles de energía.",
+            "example_tasks": [
+              "Describe las características del electrón en cuanto a carga, masa y ubicación en el átomo",
+              "Explica por qué un átomo neutro tiene el mismo número de protones que de electrones",
+              "Calcula cuántos electrones tiene un átomo neutro de oxígeno si su número atómico es 8"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "numero_atomico_masico",
+        "name": "Número atómico y número de masa",
+        "short_description": "Utiliza el número atómico y el número de masa para determinar la composición de un átomo.",
+        "sub_topics": [
+          {
+            "key": "numero_atomico",
+            "name": "Número atómico (Z)",
+            "short_description": "Define el número atómico como el número de protones en el núcleo e identifica elementos por su Z.",
+            "example_tasks": [
+              "Define qué es el número atómico y explica por qué identifica a cada elemento químico",
+              "Usa la tabla periódica para identificar los elementos con números atómicos 6, 11, 17 y 26",
+              "Explica por qué todos los átomos de carbono tienen el mismo número atómico pero pueden tener diferentes masas"
+            ]
+          },
+          {
+            "key": "numero_masico",
+            "name": "Número de masa (A)",
+            "short_description": "Calcula el número de masa como la suma de protones y neutrones en el núcleo.",
+            "example_tasks": [
+              "Calcula el número de masa de un átomo que tiene 12 protones y 13 neutrones",
+              "Un átomo de hierro tiene número atómico 26 y número de masa 56. Calcula cuántos protones, neutrones y electrones tiene",
+              "Representa el símbolo completo de un átomo de nitrógeno con 7 protones y 8 neutrones usando la notación ᴬ/ᴢX"
+            ]
+          },
+          {
+            "key": "isotopos",
+            "name": "Isótopos",
+            "short_description": "Identifica isótopos como átomos del mismo elemento con diferente número de neutrones.",
+            "example_tasks": [
+              "Explica qué son los isótopos y por qué el carbono-12 y el carbono-14 son isótopos del mismo elemento",
+              "Calcula cuántos protones, neutrones y electrones tienen los siguientes isótopos del hidrógeno: ¹H, ²H (deuterio), ³H (tritio)",
+              "Investiga al menos dos aplicaciones de los isótopos radiactivos en medicina o industria en México",
+              "Explica por qué los isótopos de un elemento tienen las mismas propiedades químicas pero diferentes propiedades físicas"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "configuracion_electronica",
+        "name": "Configuración electrónica",
+        "short_description": "Representa la distribución de electrones en los niveles y subniveles de energía de un átomo.",
+        "sub_topics": [
+          {
+            "key": "niveles_energia",
+            "name": "Niveles de energía",
+            "short_description": "Identifica los niveles de energía principales y su capacidad máxima de electrones.",
+            "example_tasks": [
+              "Indica cuántos electrones puede contener cada uno de los primeros cuatro niveles de energía (n=1, 2, 3, 4)",
+              "Dibuja un átomo de neón mostrando la distribución de sus 10 electrones en los niveles de energía correspondientes",
+              "Explica por qué el primer nivel de energía solo puede contener 2 electrones mientras que el segundo puede contener hasta 8"
+            ]
+          },
+          {
+            "key": "distribucion_electrones",
+            "name": "Distribución de electrones",
+            "short_description": "Aplica las reglas para distribuir electrones en los niveles de energía de átomos neutros.",
+            "example_tasks": [
+              "Escribe la configuración electrónica simplificada de los siguientes elementos: litio (Z=3), carbono (Z=6), neón (Z=10), sodio (Z=11)",
+              "Representa mediante un diagrama la distribución de electrones del oxígeno (Z=8) en sus niveles de energía",
+              "Determina cuántos electrones de valencia tiene el cloro (Z=17) a partir de su configuración electrónica"
+            ]
+          },
+          {
+            "key": "electrones_valencia",
+            "name": "Electrones de valencia",
+            "short_description": "Identifica los electrones de valencia y su importancia en las propiedades químicas y enlaces.",
+            "example_tasks": [
+              "Define qué son los electrones de valencia y explica por qué son importantes para la formación de enlaces químicos",
+              "Determina el número de electrones de valencia de los siguientes elementos: nitrógeno (Z=7), magnesio (Z=12), azufre (Z=16)",
+              "Explica por qué los elementos del grupo 18 (gases nobles) son muy estables y poco reactivos"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "tabla_periodica",
+    "name": "Tabla Periódica de los Elementos",
+    "short_description": "Comprende la organización de la tabla periódica, identifica grupos y periodos, y reconoce las tendencias periódicas de las propiedades de los elementos.",
+    "sub_topics": [
+      {
+        "key": "organizacion_tabla",
+        "name": "Organización de la tabla periódica",
+        "short_description": "Reconoce la estructura de la tabla periódica basada en el número atómico, grupos y periodos.",
+        "sub_topics": [
+          {
+            "key": "historia_tabla",
+            "name": "Desarrollo histórico",
+            "short_description": "Conoce las contribuciones de Mendeleev y la evolución hacia la tabla periódica moderna.",
+            "example_tasks": [
+              "Investiga y describe las principales contribuciones de Dmitri Mendeleev al desarrollo de la tabla periódica",
+              "Explica cómo Mendeleev ordenó los elementos en su tabla periódica original y qué predicciones hizo",
+              "Compara la tabla de Mendeleev con la tabla periódica moderna, identificando las principales diferencias"
+            ]
+          },
+          {
+            "key": "grupos_familias",
+            "name": "Grupos o familias",
+            "short_description": "Identifica los grupos como columnas verticales de elementos con propiedades químicas similares.",
+            "example_tasks": [
+              "Localiza en la tabla periódica los siguientes grupos: metales alcalinos (Grupo 1), halógenos (Grupo 17), gases nobles (Grupo 18)",
+              "Explica por qué los elementos de un mismo grupo tienen propiedades químicas similares",
+              "Nombra tres elementos del grupo de los metales alcalinotérreos (Grupo 2) y menciona una propiedad que compartan"
+            ]
+          },
+          {
+            "key": "periodos",
+            "name": "Periodos",
+            "short_description": "Reconoce los periodos como filas horizontales que indican el número de niveles de energía.",
+            "example_tasks": [
+              "Identifica a qué periodo pertenecen los siguientes elementos: hidrógeno (Z=1), carbono (Z=6), sodio (Z=11), hierro (Z=26)",
+              "Explica qué tienen en común todos los elementos de un mismo periodo",
+              "Determina cuántos niveles de energía tiene un átomo de fósforo (Z=15) sabiendo que está en el tercer periodo"
+            ]
+          },
+          {
+            "key": "ubicacion_elementos",
+            "name": "Localización de elementos",
+            "short_description": "Ubica elementos en la tabla periódica conociendo su número atómico, grupo y periodo.",
+            "example_tasks": [
+              "Localiza en la tabla periódica: magnesio (Z=12), cloro (Z=17), hierro (Z=26) e indica su grupo y periodo",
+              "Identifica qué elemento se encuentra en el periodo 3, grupo 16 de la tabla periódica",
+              "Explica cómo puedes determinar la ubicación de un elemento en la tabla si conoces su configuración electrónica"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "clasificacion_elementos",
+        "name": "Clasificación de los elementos",
+        "short_description": "Clasifica los elementos en metales, no metales y metaloides según sus propiedades.",
+        "sub_topics": [
+          {
+            "key": "metales",
+            "name": "Metales",
+            "short_description": "Identifica las propiedades características de los metales: conductividad, maleabilidad, brillo metálico.",
+            "example_tasks": [
+              "Describe cinco propiedades físicas y químicas características de los metales",
+              "Localiza la región de los metales en la tabla periódica y nombra diez elementos metálicos",
+              "Explica por qué el aluminio y el cobre son tan utilizados en la industria eléctrica y de construcción en México",
+              "Investiga tres metales importantes para la economía mexicana y sus principales usos"
+            ]
+          },
+          {
+            "key": "no_metales",
+            "name": "No metales",
+            "short_description": "Reconoce las propiedades de los no metales: malos conductores, quebradizos en estado sólido, variedad de estados.",
+            "example_tasks": [
+              "Compara las propiedades de los metales y los no metales elaborando una tabla con al menos cinco diferencias",
+              "Identifica la ubicación de los no metales en la tabla periódica y nombra cinco ejemplos",
+              "Explica por qué el oxígeno y el nitrógeno, siendo no metales, son esenciales para la vida"
+            ]
+          },
+          {
+            "key": "metaloides",
+            "name": "Metaloides o semimetales",
+            "short_description": "Identifica los metaloides como elementos con propiedades intermedias entre metales y no metales.",
+            "example_tasks": [
+              "Localiza los metaloides en la tabla periódica y nombra al menos cuatro elementos de esta categoría",
+              "Explica por qué el silicio es un metaloide importante en la fabricación de dispositivos electrónicos",
+              "Describe las propiedades del boro y explica por qué se clasifica como metaloide"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "propiedades_periodicas",
+        "name": "Propiedades periódicas",
+        "short_description": "Analiza las tendencias periódicas de propiedades como radio atómico, energía de ionización y electronegatividad.",
+        "sub_topics": [
+          {
+            "key": "radio_atomico",
+            "name": "Radio atómico",
+            "short_description": "Comprende cómo varía el tamaño atómico en grupos y periodos de la tabla periódica.",
+            "example_tasks": [
+              "Explica cómo varía el radio atómico al descender en un grupo y al avanzar en un periodo de izquierda a derecha",
+              "Ordena los siguientes elementos de mayor a menor radio atómico: litio, sodio, potasio (todos del Grupo 1)",
+              "Predice cuál de los siguientes elementos tiene mayor tamaño: carbono (Z=6) o silicio (Z=14), justificando tu respuesta"
+            ]
+          },
+          {
+            "key": "energia_ionizacion",
+            "name": "Energía de ionización",
+            "short_description": "Define la energía de ionización y analiza su variación en la tabla periódica.",
+            "example_tasks": [
+              "Define qué es la energía de ionización y explica por qué los gases nobles tienen las energías de ionización más altas",
+              "Explica cómo varía la energía de ionización en un grupo (de arriba hacia abajo) y en un periodo (de izquierda a derecha)",
+              "Predice cuál elemento tendrá mayor energía de ionización: sodio (Z=11) o cloro (Z=17), justificando tu respuesta"
+            ]
+          },
+          {
+            "key": "electronegatividad",
+            "name": "Electronegatividad",
+            "short_description": "Comprende el concepto de electronegatividad y su importancia en la formación de enlaces.",
+            "example_tasks": [
+              "Define electronegatividad y explica por qué el flúor es el elemento más electronegativo",
+              "Describe cómo varía la electronegatividad en los grupos y periodos de la tabla periódica",
+              "Usa valores de electronegatividad para predecir qué tipo de enlace se formará entre: Na-Cl, C-H, O-O"
+            ]
+          },
+          {
+            "key": "caracter_metalico",
+            "name": "Carácter metálico",
+            "short_description": "Analiza cómo varía el carácter metálico en la tabla periódica.",
+            "example_tasks": [
+              "Explica qué es el carácter metálico y cómo varía en grupos y periodos",
+              "Ordena los siguientes elementos de mayor a menor carácter metálico: sodio, magnesio, aluminio, silicio (todos del periodo 3)",
+              "Explica por qué los elementos de la izquierda de la tabla periódica son más metálicos que los de la derecha"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "grupos_especiales",
+        "name": "Grupos especiales de elementos",
+        "short_description": "Identifica grupos de elementos con características particulares y su importancia.",
+        "sub_topics": [
+          {
+            "key": "metales_alcalinos",
+            "name": "Metales alcalinos (Grupo 1)",
+            "short_description": "Reconoce las propiedades y reactividad de los metales alcalinos.",
+            "example_tasks": [
+              "Describe tres propiedades características de los metales alcalinos (Li, Na, K, Rb, Cs)",
+              "Explica por qué los metales alcalinos se almacenan en aceite y nunca se encuentran libres en la naturaleza",
+              "Investiga los usos del sodio y el potasio en la industria y la vida diaria en México"
+            ]
+          },
+          {
+            "key": "halogenos",
+            "name": "Halógenos (Grupo 17)",
+            "short_description": "Identifica las propiedades de los halógenos y su alta reactividad.",
+            "example_tasks": [
+              "Nombra los elementos del grupo de los halógenos y describe tres propiedades que comparten",
+              "Explica por qué el flúor y el cloro son tan reactivos y se usan como desinfectantes",
+              "Investiga el uso del yodo en la sal de mesa en México y su importancia para la salud"
+            ]
+          },
+          {
+            "key": "gases_nobles",
+            "name": "Gases nobles (Grupo 18)",
+            "short_description": "Comprende la estabilidad química de los gases nobles y sus aplicaciones.",
+            "example_tasks": [
+              "Explica por qué los gases nobles son tan estables y poco reactivos",
+              "Investiga tres aplicaciones de los gases nobles (helio, neón, argón) en tecnología e industria",
+              "Describe la configuración electrónica característica de los gases nobles y por qué se considera estable"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "enlaces_quimicos",
+    "name": "Enlaces Químicos",
+    "short_description": "Comprende los diferentes tipos de enlaces químicos, sus características y cómo se forman según la electronegatividad de los elementos.",
+    "sub_topics": [
+      {
+        "key": "formacion_enlaces",
+        "name": "Formación de enlaces químicos",
+        "short_description": "Explica por qué se forman los enlaces químicos y la regla del octeto.",
+        "sub_topics": [
+          {
+            "key": "estabilidad_quimica",
+            "name": "Estabilidad química",
+            "short_description": "Comprende que los átomos forman enlaces para alcanzar configuraciones electrónicas más estables.",
+            "example_tasks": [
+              "Explica por qué los átomos forman enlaces químicos usando como ejemplo el sodio y el cloro",
+              "Describe la regla del octeto y por qué los átomos tienden a tener ocho electrones en su capa de valencia",
+              "Explica por qué los gases nobles no forman enlaces químicos fácilmente"
+            ]
+          },
+          {
+            "key": "electrones_valencia_enlaces",
+            "name": "Electrones de valencia y enlaces",
+            "short_description": "Reconoce el papel de los electrones de valencia en la formación de enlaces.",
+            "example_tasks": [
+              "Determina cuántos electrones de valencia tienen los siguientes átomos y cuántos enlaces pueden formar: hidrógeno, oxígeno, nitrógeno, carbono",
+              "Dibuja la estructura de Lewis para los átomos de carbono, nitrógeno y oxígeno, mostrando sus electrones de valencia",
+              "Predice cuántos átomos de hidrógeno se combinarán con un átomo de oxígeno para formar una molécula estable"
+            ]
+          },
+          {
+            "key": "transferencia_comparticion",
+            "name": "Transferencia vs. compartición de electrones",
+            "short_description": "Distingue entre la transferencia de electrones (enlace iónico) y la compartición (enlace covalente).",
+            "example_tasks": [
+              "Explica la diferencia entre transferir electrones y compartir electrones al formar enlaces",
+              "Predice si el enlace entre sodio y cloro será por transferencia o por compartición de electrones",
+              "Predice si el enlace entre dos átomos de oxígeno será por transferencia o por compartición de electrones"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "enlace_ionico",
+        "name": "Enlace iónico",
+        "short_description": "Comprende la formación del enlace iónico por transferencia de electrones entre metales y no metales.",
+        "sub_topics": [
+          {
+            "key": "formacion_iones",
+            "name": "Formación de iones",
+            "short_description": "Explica cómo se forman cationes y aniones por pérdida o ganancia de electrones.",
+            "example_tasks": [
+              "Explica qué es un catión y un anión, y da tres ejemplos de cada uno",
+              "Determina qué ion forma el sodio (Z=11) y el cloro (Z=17) al reaccionar, indicando la carga de cada uno",
+              "Escribe la configuración electrónica del magnesio (Z=12) neutro y del ion Mg²⁺, explicando qué sucedió"
+            ]
+          },
+          {
+            "key": "compuestos_ionicos",
+            "name": "Compuestos iónicos",
+            "short_description": "Identifica las propiedades de los compuestos iónicos y su estructura cristalina.",
+            "example_tasks": [
+              "Describe cinco propiedades características de los compuestos iónicos (punto de fusión, solubilidad, conductividad, etc.)",
+              "Explica por qué la sal de mesa (NaCl) conduce electricidad cuando está disuelta en agua pero no cuando está sólida",
+              "Investiga la estructura cristalina de la sal de mesa y explica cómo están organizados los iones Na⁺ y Cl⁻"
+            ]
+          },
+          {
+            "key": "formulas_ionicas",
+            "name": "Fórmulas de compuestos iónicos",
+            "short_description": "Escribe fórmulas químicas de compuestos iónicos balanceando las cargas.",
+            "example_tasks": [
+              "Escribe las fórmulas de los compuestos iónicos formados por: Na⁺ y Cl⁻, Ca²⁺ y O²⁻, Al³⁺ y S²⁻",
+              "Determina la fórmula del compuesto iónico formado entre el magnesio y el cloro, explicando cómo se balancea",
+              "Explica por qué la fórmula del óxido de aluminio es Al₂O₃ y no AlO"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "enlace_covalente",
+        "name": "Enlace covalente",
+        "short_description": "Comprende la formación del enlace covalente por compartición de electrones entre no metales.",
+        "sub_topics": [
+          {
+            "key": "enlace_covalente_simple",
+            "name": "Enlace covalente simple",
+            "short_description": "Identifica enlaces covalentes simples donde se comparte un par de electrones.",
+            "example_tasks": [
+              "Dibuja la estructura de Lewis de la molécula de hidrógeno (H₂) mostrando el enlace covalente simple",
+              "Explica cómo se forma el enlace covalente en la molécula de cloro (Cl₂)",
+              "Representa mediante diagramas de Lewis las moléculas de H₂, Cl₂ y HCl"
+            ]
+          },
+          {
+            "key": "enlaces_multiples",
+            "name": "Enlaces múltiples (dobles y triples)",
+            "short_description": "Reconoce enlaces dobles y triples donde se comparten dos o tres pares de electrones.",
+            "example_tasks": [
+              "Dibuja la estructura de Lewis del oxígeno (O₂) mostrando el enlace doble",
+              "Dibuja la estructura de Lewis del nitrógeno (N₂) mostrando el enlace triple",
+              "Explica por qué en el CO₂ se forman enlaces dobles entre el carbono y cada oxígeno"
+            ]
+          },
+          {
+            "key": "propiedades_compuestos_covalentes",
+            "name": "Propiedades de compuestos covalentes",
+            "short_description": "Identifica las propiedades de los compuestos covalentes: bajos puntos de fusión, no conductores.",
+            "example_tasks": [
+              "Compara las propiedades de los compuestos iónicos y covalentes elaborando una tabla",
+              "Explica por qué el agua (H₂O) tiene punto de ebullición más bajo que la sal (NaCl)",
+              "Investiga por qué el azúcar (compuesto covalente) se disuelve en agua pero no conduce electricidad"
+            ]
+          },
+          {
+            "key": "polaridad_moleculas",
+            "name": "Polaridad de moléculas",
+            "short_description": "Distingue entre moléculas polares y no polares según la distribución de cargas.",
+            "example_tasks": [
+              "Define qué es una molécula polar y una molécula no polar, dando dos ejemplos de cada una",
+              "Explica por qué la molécula de agua (H₂O) es polar y la molécula de oxígeno (O₂) es no polar",
+              "Predice si las siguientes moléculas son polares o no polares: CO₂, NH₃, CH₄"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "enlace_metalico",
+        "name": "Enlace metálico",
+        "short_description": "Comprende el enlace metálico como un mar de electrones compartidos entre átomos metálicos.",
+        "sub_topics": [
+          {
+            "key": "modelo_mar_electrones",
+            "name": "Modelo del mar de electrones",
+            "short_description": "Explica el modelo del mar de electrones en metales.",
+            "example_tasks": [
+              "Describe el modelo del mar de electrones y explica cómo se mantienen unidos los átomos en un metal",
+              "Dibuja un diagrama que represente el enlace metálico en el cobre",
+              "Explica por qué los electrones en un metal se pueden mover libremente"
+            ]
+          },
+          {
+            "key": "propiedades_metales_enlaces",
+            "name": "Propiedades de los metales por su enlace",
+            "short_description": "Relaciona las propiedades de los metales (conductividad, maleabilidad, brillo) con el enlace metálico.",
+            "example_tasks": [
+              "Explica por qué los metales son buenos conductores de electricidad usando el modelo del enlace metálico",
+              "Describe por qué los metales son maleables y dúctiles a diferencia de los compuestos iónicos",
+              "Investiga por qué el oro y el cobre tienen brillo metálico característico"
+            ]
+          },
+          {
+            "key": "aleaciones",
+            "name": "Aleaciones",
+            "short_description": "Identifica las aleaciones como mezclas de metales con propiedades mejoradas.",
+            "example_tasks": [
+              "Define qué es una aleación y da tres ejemplos de aleaciones comunes (bronce, acero, latón)",
+              "Investiga la composición del acero inoxidable y explica por qué es más resistente a la corrosión que el hierro puro",
+              "Explica por qué las aleaciones suelen tener propiedades superiores a los metales puros, dando un ejemplo"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "estructuras_lewis",
+        "name": "Estructuras de Lewis",
+        "short_description": "Representa enlaces y electrones no compartidos mediante diagramas de Lewis.",
+        "sub_topics": [
+          {
+            "key": "reglas_lewis",
+            "name": "Reglas para dibujar estructuras de Lewis",
+            "short_description": "Aplica las reglas para construir estructuras de Lewis correctamente.",
+            "example_tasks": [
+              "Explica los pasos para dibujar una estructura de Lewis de una molécula",
+              "Dibuja las estructuras de Lewis de las siguientes moléculas: H₂O, NH₃, CH₄, CO₂",
+              "Identifica los errores en una estructura de Lewis dada y corrígelos"
+            ]
+          },
+          {
+            "key": "pares_libres",
+            "name": "Pares de electrones libres",
+            "short_description": "Identifica y representa los pares de electrones no enlazantes en estructuras de Lewis.",
+            "example_tasks": [
+              "Dibuja la estructura de Lewis del agua (H₂O) y señala los pares de electrones libres en el oxígeno",
+              "Explica qué son los pares de electrones libres y cómo afectan la geometría de las moléculas",
+              "Determina cuántos pares de electrones libres tiene el nitrógeno en la molécula de amoníaco (NH₃)"
+            ]
+          },
+          {
+            "key": "excepciones_octeto",
+            "name": "Excepciones a la regla del octeto",
+            "short_description": "Reconoce moléculas que no cumplen la regla del octeto (expansión o contracción).",
+            "example_tasks": [
+              "Identifica cuál de las siguientes moléculas no cumple la regla del octeto: H₂O, BF₃, PCl₅",
+              "Explica por qué el boro en BF₃ solo tiene seis electrones de valencia",
+              "Investiga ejemplos de moléculas con expansión del octeto (más de 8 electrones)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "nomenclatura_quimica",
+    "name": "Nomenclatura Química",
+    "short_description": "Aplica las reglas de nomenclatura para nombrar y escribir fórmulas de compuestos químicos inorgánicos.",
+    "sub_topics": [
+      {
+        "key": "nomenclatura_oxidos",
+        "name": "Óxidos",
+        "short_description": "Nombra y escribe fórmulas de óxidos metálicos y no metálicos según las reglas de nomenclatura.",
+        "sub_topics": [
+          {
+            "key": "oxidos_metalicos",
+            "name": "Óxidos metálicos (básicos)",
+            "short_description": "Nombra óxidos metálicos usando nomenclatura stock y tradicional.",
+            "example_tasks": [
+              "Escribe las fórmulas de los siguientes óxidos: óxido de sodio, óxido de calcio, óxido de aluminio",
+              "Nombra los siguientes compuestos usando nomenclatura stock: Na₂O, CaO, Fe₂O₃, CuO",
+              "Explica la diferencia entre óxido de hierro (II) y óxido de hierro (III), escribiendo sus fórmulas"
+            ]
+          },
+          {
+            "key": "oxidos_no_metalicos",
+            "name": "Óxidos no metálicos (ácidos)",
+            "short_description": "Nombra óxidos no metálicos usando prefijos numéricos.",
+            "example_tasks": [
+              "Escribe las fórmulas de: monóxido de carbono, dióxido de carbono, trióxido de azufre",
+              "Nombra los siguientes compuestos: CO, CO₂, SO₂, SO₃, N₂O₅",
+              "Explica por qué se usan prefijos (mono-, di-, tri-) en la nomenclatura de óxidos no metálicos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "nomenclatura_hidruros",
+        "name": "Hidruros",
+        "short_description": "Nombra y escribe fórmulas de hidruros metálicos y no metálicos.",
+        "sub_topics": [
+          {
+            "key": "hidruros_metalicos",
+            "name": "Hidruros metálicos",
+            "short_description": "Nombra compuestos binarios de hidrógeno con metales.",
+            "example_tasks": [
+              "Escribe las fórmulas de: hidruro de sodio, hidruro de calcio, hidruro de aluminio",
+              "Nombra los siguientes compuestos: NaH, CaH₂, AlH₃",
+              "Explica la regla general para escribir la fórmula de un hidruro metálico"
+            ]
+          },
+          {
+            "key": "hidruros_no_metalicos",
+            "name": "Hidruros no metálicos",
+            "short_description": "Nombra compuestos binarios de hidrógeno con no metales (nombres especiales).",
+            "example_tasks": [
+              "Nombra los siguientes hidruros no metálicos: H₂O, NH₃, CH₄, HCl usando sus nombres comunes",
+              "Explica por qué el agua (H₂O) y el amoníaco (NH₃) tienen nombres especiales en lugar de seguir la nomenclatura sistemática",
+              "Escribe las fórmulas de: agua, amoníaco, metano, ácido clorhídrico (gas)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "nomenclatura_acidos_bases",
+        "name": "Ácidos y bases",
+        "short_description": "Nombra ácidos hidrácidos, oxácidos e hidróxidos usando nomenclatura tradicional.",
+        "sub_topics": [
+          {
+            "key": "acidos_hidracidos",
+            "name": "Ácidos hidrácidos",
+            "short_description": "Nombra ácidos binarios (hidrógeno + no metal) en solución acuosa.",
+            "example_tasks": [
+              "Nombra los siguientes ácidos hidrácidos en solución acuosa: HCl, HBr, H₂S",
+              "Escribe las fórmulas de: ácido clorhídrico, ácido bromhídrico, ácido sulfhídrico",
+              "Explica la diferencia entre HCl(g) (cloruro de hidrógeno) y HCl(ac) (ácido clorhídrico)"
+            ]
+          },
+          {
+            "key": "oxacidos",
+            "name": "Oxácidos",
+            "short_description": "Nombra ácidos que contienen oxígeno usando terminaciones -oso e -ico.",
+            "example_tasks": [
+              "Nombra los siguientes oxácidos: H₂SO₄, H₂SO₃, HNO₃, HNO₂",
+              "Escribe las fórmulas de: ácido sulfúrico, ácido sulfuroso, ácido nítrico, ácido nitroso",
+              "Explica la regla para usar las terminaciones -oso e -ico en la nomenclatura de oxácidos"
+            ]
+          },
+          {
+            "key": "hidroxidos",
+            "name": "Hidróxidos (bases)",
+            "short_description": "Nombra hidróxidos o bases formados por metal + grupo OH⁻.",
+            "example_tasks": [
+              "Escribe las fórmulas de: hidróxido de sodio, hidróxido de calcio, hidróxido de aluminio",
+              "Nombra los siguientes compuestos: NaOH, Ca(OH)₂, Al(OH)₃, Fe(OH)₂",
+              "Explica por qué el hidróxido de calcio se escribe Ca(OH)₂ y no CaOH₂"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "nomenclatura_sales",
+        "name": "Sales",
+        "short_description": "Nombra sales binarias y oxisales según las reglas de nomenclatura.",
+        "sub_topics": [
+          {
+            "key": "sales_binarias",
+            "name": "Sales binarias (haloideas)",
+            "short_description": "Nombra sales formadas por metal + no metal.",
+            "example_tasks": [
+              "Escribe las fórmulas de: cloruro de sodio, bromuro de potasio, sulfuro de hierro (II)",
+              "Nombra los siguientes compuestos: NaCl, KBr, CaF₂, FeS",
+              "Explica cómo se forma una sal binaria a partir de un ácido hidrácido y una base"
+            ]
+          },
+          {
+            "key": "oxisales",
+            "name": "Oxisales",
+            "short_description": "Nombra sales que contienen oxígeno derivadas de oxácidos.",
+            "example_tasks": [
+              "Nombra las siguientes oxisales: Na₂SO₄, CaSO₃, KNO₃, NaNO₂",
+              "Escribe las fórmulas de: sulfato de sodio, sulfito de calcio, nitrato de potasio",
+              "Explica la relación entre la terminación del oxácido (-ico, -oso) y la terminación de la oxisal (-ato, -ito)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "reacciones_quimicas",
+    "name": "Reacciones Químicas",
+    "short_description": "Identifica los tipos de reacciones químicas, balancea ecuaciones y reconoce evidencias de cambios químicos.",
+    "sub_topics": [
+      {
+        "key": "ecuaciones_quimicas",
+        "name": "Ecuaciones químicas",
+        "short_description": "Representa reacciones químicas mediante ecuaciones balanceadas usando símbolos y fórmulas.",
+        "sub_topics": [
+          {
+            "key": "partes_ecuacion",
+            "name": "Componentes de una ecuación química",
+            "short_description": "Identifica reactivos, productos, coeficientes y estados de agregación en ecuaciones químicas.",
+            "example_tasks": [
+              "Identifica los reactivos y productos en la ecuación: 2H₂(g) + O₂(g) → 2H₂O(l)",
+              "Explica el significado de los símbolos (s), (l), (g) y (ac) en las ecuaciones químicas",
+              "Escribe la ecuación química para la reacción entre hidrógeno y oxígeno que forma agua, incluyendo estados de agregación"
+            ]
+          },
+          {
+            "key": "ley_conservacion_masa",
+            "name": "Ley de conservación de la masa",
+            "short_description": "Aplica la ley de conservación de la masa para balancear ecuaciones químicas.",
+            "example_tasks": [
+              "Explica la ley de conservación de la masa propuesta por Lavoisier con tus propias palabras",
+              "Verifica si la ecuación H₂ + O₂ → H₂O está balanceada y explica por qué",
+              "Diseña un experimento simple para demostrar la ley de conservación de la masa usando bicarbonato de sodio y vinagre en un sistema cerrado"
+            ]
+          },
+          {
+            "key": "balanceo_tanteo",
+            "name": "Balanceo por tanteo",
+            "short_description": "Balancea ecuaciones químicas usando el método de tanteo (inspección).",
+            "example_tasks": [
+              "Balancea las siguientes ecuaciones por tanteo: N₂ + H₂ → NH₃, Fe + O₂ → Fe₂O₃, C₃H₈ + O₂ → CO₂ + H₂O",
+              "Explica los pasos que sigues para balancear una ecuación química por el método de tanteo",
+              "Balancea la ecuación de la combustión del propano: C₃H₈ + O₂ → CO₂ + H₂O",
+              "Verifica que la ecuación 2Al + 3Cl₂ → 2AlCl₃ está correctamente balanceada contando átomos en ambos lados"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tipos_reacciones",
+        "name": "Tipos de reacciones químicas",
+        "short_description": "Clasifica reacciones químicas en síntesis, descomposición, sustitución simple y doble sustitución.",
+        "sub_topics": [
+          {
+            "key": "sintesis_combinacion",
+            "name": "Reacciones de síntesis o combinación",
+            "short_description": "Identifica reacciones donde dos o más sustancias se combinan para formar una sola.",
+            "example_tasks": [
+              "Identifica cuáles de las siguientes son reacciones de síntesis: 2H₂ + O₂ → 2H₂O, 2HgO → 2Hg + O₂, C + O₂ → CO₂",
+              "Escribe la ecuación balanceada para la síntesis del agua a partir de sus elementos",
+              "Predice el producto de la reacción de síntesis entre magnesio y oxígeno, escribiendo la ecuación balanceada"
+            ]
+          },
+          {
+            "key": "descomposicion",
+            "name": "Reacciones de descomposición o análisis",
+            "short_description": "Identifica reacciones donde un compuesto se separa en dos o más sustancias más simples.",
+            "example_tasks": [
+              "Escribe la ecuación balanceada para la descomposición del agua por electrólisis: H₂O → H₂ + O₂",
+              "Identifica cuáles son reacciones de descomposición: 2H₂O → 2H₂ + O₂, CaCO₃ → CaO + CO₂, Zn + HCl → ZnCl₂ + H₂",
+              "Balancea la ecuación de descomposición del clorato de potasio: KClO₃ → KCl + O₂"
+            ]
+          },
+          {
+            "key": "sustitucion_simple",
+            "name": "Reacciones de sustitución simple o desplazamiento",
+            "short_description": "Identifica reacciones donde un elemento desplaza a otro de un compuesto.",
+            "example_tasks": [
+              "Identifica el elemento que se desplaza en la reacción: Zn + 2HCl → ZnCl₂ + H₂",
+              "Predice si ocurrirá reacción entre magnesio y sulfato de cobre (II), escribiendo la ecuación si procede",
+              "Balancea: Cu + AgNO₃ → Cu(NO₃)₂ + Ag, e identifica qué elemento desplaza a cuál"
+            ]
+          },
+          {
+            "key": "doble_sustitucion",
+            "name": "Reacciones de doble sustitución o metátesis",
+            "short_description": "Identifica reacciones donde dos compuestos intercambian elementos entre sí.",
+            "example_tasks": [
+              "Identifica cuáles son reacciones de doble sustitución: NaCl + AgNO₃ → NaNO₃ + AgCl, 2Na + Cl₂ → 2NaCl",
+              "Completa y balancea la ecuación de doble sustitución: HCl + NaOH → ___ + ___",
+              "Predice los productos de la reacción entre BaCl₂ y Na₂SO₄, escribiendo la ecuación balanceada"
+            ]
+          },
+          {
+            "key": "combustion",
+            "name": "Reacciones de combustión",
+            "short_description": "Identifica reacciones de combustión donde una sustancia reacciona con oxígeno liberando energía.",
+            "example_tasks": [
+              "Escribe la ecuación balanceada para la combustión completa del metano (CH₄)",
+              "Explica qué productos se forman siempre en una combustión completa de un hidrocarburo",
+              "Balancea la ecuación de combustión del etanol: C₂H₅OH + O₂ → CO₂ + H₂O"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "evidencias_reacciones",
+        "name": "Evidencias de reacciones químicas",
+        "short_description": "Reconoce las señales que indican que ha ocurrido una reacción química.",
+        "sub_topics": [
+          {
+            "key": "cambios_observables",
+            "name": "Cambios observables",
+            "short_description": "Identifica evidencias como cambio de color, formación de precipitado, liberación de gas.",
+            "example_tasks": [
+              "Enumera cinco evidencias que indican que ha ocurrido una reacción química",
+              "Observa la reacción entre bicarbonato de sodio y vinagre, e identifica al menos tres evidencias de cambio químico",
+              "Explica por qué la formación de un precipitado indica que ocurrió una reacción química"
+            ]
+          },
+          {
+            "key": "energia_reacciones",
+            "name": "Cambios de energía",
+            "short_description": "Reconoce liberación o absorción de energía (luz, calor) como evidencia de reacción.",
+            "example_tasks": [
+              "Clasifica las siguientes reacciones como exotérmicas o endotérmicas: combustión de madera, descomposición térmica del carbonato de calcio, fotosíntesis",
+              "Explica qué es una reacción exotérmica y da tres ejemplos de la vida cotidiana",
+              "Diseña un experimento para medir el cambio de temperatura en una reacción entre ácido y base"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "estequiometria",
+    "name": "Estequiometría",
+    "short_description": "Aplica cálculos estequiométricos para determinar cantidades de reactivos y productos en reacciones químicas usando el concepto de mol.",
+    "sub_topics": [
+      {
+        "key": "concepto_mol",
+        "name": "El concepto de mol",
+        "short_description": "Comprende el mol como unidad fundamental para contar partículas en química.",
+        "sub_topics": [
+          {
+            "key": "numero_avogadro",
+            "name": "Número de Avogadro",
+            "short_description": "Define el número de Avogadro (6.022 × 10²³) y su relación con el mol.",
+            "example_tasks": [
+              "Define qué es el número de Avogadro y explica su importancia en química",
+              "Calcula cuántas moléculas hay en 2 moles de agua (H₂O)",
+              "Explica por qué es necesario usar el concepto de mol en lugar de contar átomos individuales"
+            ]
+          },
+          {
+            "key": "masa_molar",
+            "name": "Masa molar",
+            "short_description": "Calcula la masa molar de sustancias usando la tabla periódica.",
+            "example_tasks": [
+              "Calcula la masa molar de los siguientes compuestos: H₂O, CO₂, NaCl, H₂SO₄",
+              "Determina cuántos gramos hay en un mol de glucosa (C₆H₁₂O₆)",
+              "Explica la relación entre masa atómica, masa molecular y masa molar"
+            ]
+          },
+          {
+            "key": "conversiones_mol",
+            "name": "Conversiones con moles",
+            "short_description": "Convierte entre gramos, moles y número de partículas.",
+            "example_tasks": [
+              "Convierte 36 g de agua (H₂O) a moles. Masa molar H₂O = 18 g/mol",
+              "Calcula cuántas moléculas hay en 0.5 moles de oxígeno (O₂)",
+              "Determina cuántos gramos hay en 3 moles de dióxido de carbono (CO₂). Masa molar CO₂ = 44 g/mol",
+              "Calcula cuántos átomos de oxígeno hay en 2 moles de glucosa (C₆H₁₂O₆)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "calculos_estequiometricos",
+        "name": "Cálculos estequiométricos",
+        "short_description": "Realiza cálculos para determinar cantidades de reactivos necesarios y productos formados.",
+        "sub_topics": [
+          {
+            "key": "relaciones_molares",
+            "name": "Relaciones molares",
+            "short_description": "Utiliza los coeficientes de ecuaciones balanceadas para establecer proporciones molares.",
+            "example_tasks": [
+              "En la reacción 2H₂ + O₂ → 2H₂O, ¿cuántos moles de O₂ se necesitan para reaccionar con 4 moles de H₂?",
+              "Determina la relación molar entre reactivos y productos en la ecuación: N₂ + 3H₂ → 2NH₃",
+              "Si se forman 6 moles de agua según 2H₂ + O₂ → 2H₂O, ¿cuántos moles de H₂ reaccionaron?"
+            ]
+          },
+          {
+            "key": "calculos_masa_masa",
+            "name": "Cálculos masa-masa",
+            "short_description": "Calcula la masa de productos que se forman a partir de una masa dada de reactivos.",
+            "example_tasks": [
+              "¿Cuántos gramos de agua se producen al quemar 4 g de hidrógeno según: 2H₂ + O₂ → 2H₂O? (Masas molares: H₂=2 g/mol, H₂O=18 g/mol)",
+              "Calcula cuántos gramos de CO₂ se producen al quemar completamente 12 g de carbono: C + O₂ → CO₂",
+              "En la reacción 2Mg + O₂ → 2MgO, ¿cuántos gramos de MgO se forman a partir de 24 g de Mg? (Mg=24 g/mol, MgO=40 g/mol)"
+            ]
+          },
+          {
+            "key": "reactivo_limitante",
+            "name": "Reactivo limitante y en exceso",
+            "short_description": "Identifica el reactivo limitante que determina la cantidad máxima de producto formado.",
+            "example_tasks": [
+              "En la reacción 2H₂ + O₂ → 2H₂O, si se mezclan 4 moles de H₂ con 1 mol de O₂, ¿cuál es el reactivo limitante?",
+              "Se hacen reaccionar 10 g de Na con 10 g de Cl₂ según: 2Na + Cl₂ → 2NaCl. Determina el reactivo limitante (Na=23 g/mol, Cl₂=71 g/mol)",
+              "Explica qué es un reactivo limitante y por qué es importante identificarlo en una reacción química",
+              "Calcula cuántos gramos de NaCl se forman en el problema anterior (NaCl=58.5 g/mol)"
+            ]
+          },
+          {
+            "key": "rendimiento_reaccion",
+            "name": "Rendimiento teórico y real",
+            "short_description": "Calcula el porcentaje de rendimiento comparando el rendimiento real con el teórico.",
+            "example_tasks": [
+              "Define qué es el rendimiento teórico y el rendimiento real de una reacción",
+              "Si teóricamente se deben producir 50 g de producto pero solo se obtienen 40 g, ¿cuál es el porcentaje de rendimiento?",
+              "Explica tres razones por las que el rendimiento real suele ser menor que el teórico",
+              "En una reacción se esperaban obtener 100 g de NaCl pero solo se obtuvieron 85 g. Calcula el porcentaje de rendimiento"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "composicion_porcentual",
+        "name": "Composición porcentual",
+        "short_description": "Calcula la composición porcentual de los elementos en un compuesto.",
+        "sub_topics": [
+          {
+            "key": "porcentaje_masa",
+            "name": "Porcentaje en masa",
+            "short_description": "Determina el porcentaje en masa de cada elemento en un compuesto.",
+            "example_tasks": [
+              "Calcula el porcentaje en masa de hidrógeno y oxígeno en el agua (H₂O). Masas atómicas: H=1, O=16",
+              "Determina la composición porcentual del dióxido de carbono (CO₂). Masas atómicas: C=12, O=16",
+              "Verifica que la suma de los porcentajes de todos los elementos en un compuesto es 100%"
+            ]
+          },
+          {
+            "key": "formula_empirica",
+            "name": "Fórmula empírica",
+            "short_description": "Determina la fórmula empírica a partir de la composición porcentual o datos experimentales.",
+            "example_tasks": [
+              "Determina la fórmula empírica de un compuesto que contiene 40% de carbono, 6.7% de hidrógeno y 53.3% de oxígeno en masa",
+              "Explica la diferencia entre fórmula empírica y fórmula molecular, dando un ejemplo",
+              "Un compuesto contiene 52.2% de C, 13% de H y 34.8% de O. Calcula su fórmula empírica"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "leyes_ponderales",
+    "name": "Leyes Ponderales",
+    "short_description": "Comprende las leyes fundamentales que rigen las combinaciones químicas y las relaciones de masa en las reacciones.",
+    "sub_topics": [
+      {
+        "key": "ley_conservacion_masa_lavoisier",
+        "name": "Ley de conservación de la masa",
+        "short_description": "Aplica la ley de Lavoisier que establece que la masa total se conserva en las reacciones químicas.",
+        "sub_topics": [
+          {
+            "key": "aplicaciones_conservacion",
+            "name": "Aplicaciones de la ley de conservación",
+            "short_description": "Verifica experimentalmente que la masa de reactivos es igual a la masa de productos.",
+            "example_tasks": [
+              "En una reacción se combinan 10 g de calcio con 8 g de oxígeno. ¿Cuántos gramos de óxido de calcio se forman?",
+              "Diseña un experimento para verificar la ley de conservación de la masa usando la reacción entre bicarbonato y vinagre",
+              "Explica por qué es importante realizar experimentos en sistemas cerrados para verificar esta ley"
+            ]
+          },
+          {
+            "key": "balanceo_masa",
+            "name": "Balanceo de ecuaciones y conservación",
+            "short_description": "Relaciona el balanceo de ecuaciones con la conservación de la masa.",
+            "example_tasks": [
+              "Explica cómo el balanceo de una ecuación química refleja la ley de conservación de la masa",
+              "Verifica que la ecuación 2H₂ + O₂ → 2H₂O cumple con la conservación de masa calculando masas totales",
+              "Calcula la masa total de reactivos y productos en: C + O₂ → CO₂, usando masas molares"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "ley_proporciones_definidas",
+        "name": "Ley de las proporciones definidas (Proust)",
+        "short_description": "Comprende que los elementos se combinan en proporciones fijas de masa para formar compuestos.",
+        "sub_topics": [
+          {
+            "key": "proporciones_constantes",
+            "name": "Proporciones constantes en compuestos",
+            "short_description": "Verifica que un compuesto siempre contiene los mismos elementos en la misma proporción de masa.",
+            "example_tasks": [
+              "El agua siempre contiene hidrógeno y oxígeno en proporción de masa 1:8. Si tienes 18 g de agua, ¿cuántos gramos de cada elemento contiene?",
+              "Explica con tus propias palabras la ley de las proporciones definidas de Proust",
+              "Calcula la proporción de masa entre sodio y cloro en el NaCl usando las masas atómicas (Na=23, Cl=35.5)"
+            ]
+          },
+          {
+            "key": "pureza_compuestos",
+            "name": "Pureza de compuestos",
+            "short_description": "Distingue entre compuestos puros y mezclas usando proporciones de masa.",
+            "example_tasks": [
+              "Una muestra de 10 g de 'cloruro de sodio' contiene 4 g de Na y 5.5 g de Cl. ¿Es NaCl puro? Justifica tu respuesta",
+              "Explica cómo la ley de proporciones definidas ayuda a determinar la pureza de una sustancia",
+              "Calcula el porcentaje de pureza de una muestra de CaCO₃ que contiene proporción incorrecta de Ca:C:O"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "ley_proporciones_multiples",
+        "name": "Ley de las proporciones múltiples (Dalton)",
+        "short_description": "Reconoce que dos elementos pueden formar varios compuestos con proporciones de masa en relaciones simples.",
+        "sub_topics": [
+          {
+            "key": "compuestos_diferentes",
+            "name": "Diferentes compuestos de los mismos elementos",
+            "short_description": "Identifica ejemplos de elementos que forman múltiples compuestos.",
+            "example_tasks": [
+              "El carbono y el oxígeno forman CO y CO₂. Calcula la proporción de masa de oxígeno que se combina con 12 g de carbono en cada caso",
+              "Explica la ley de las proporciones múltiples usando como ejemplo los óxidos de nitrógeno (N₂O, NO, NO₂)",
+              "Verifica que en CO y CO₂ las masas de oxígeno que se combinan con masa fija de carbono están en relación 1:2"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "ley_volumenes_combinacion",
+        "name": "Ley de los volúmenes de combinación (Gay-Lussac)",
+        "short_description": "Comprende que los gases reaccionan en proporciones volumétricas simples a temperatura y presión constantes.",
+        "sub_topics": [
+          {
+            "key": "proporciones_volumen_gases",
+            "name": "Proporciones de volumen en gases",
+            "short_description": "Aplica la ley de Gay-Lussac para predecir volúmenes de gases en reacciones.",
+            "example_tasks": [
+              "Según la reacción 2H₂(g) + O₂(g) → 2H₂O(g), si reaccionan 2 L de H₂, ¿cuántos litros de O₂ se necesitan?",
+              "Explica por qué la ley de Gay-Lussac solo se aplica a gases",
+              "En la reacción N₂ + 3H₂ → 2NH₃, si se usan 3 L de N₂, ¿cuántos litros de H₂ se necesitan y cuántos de NH₃ se forman?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "velocidad_reaccion",
+    "name": "Velocidad de Reacción",
+    "short_description": "Comprende los factores que afectan la velocidad de las reacciones químicas y su importancia en procesos industriales y biológicos.",
+    "sub_topics": [
+      {
+        "key": "concepto_velocidad",
+        "name": "Concepto de velocidad de reacción",
+        "short_description": "Define la velocidad de reacción como el cambio en la concentración de reactivos o productos por unidad de tiempo.",
+        "sub_topics": [
+          {
+            "key": "medicion_velocidad",
+            "name": "Medición de velocidad",
+            "short_description": "Reconoce formas de medir la velocidad observando cambios en la reacción.",
+            "example_tasks": [
+              "Explica qué significa que una reacción sea rápida o lenta, dando dos ejemplos de cada tipo",
+              "Describe tres formas de medir la velocidad de una reacción (cambio de color, formación de gas, cambio de temperatura)",
+              "Compara la velocidad de reacciones como la oxidación del hierro vs. la combustión del papel"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "factores_velocidad",
+        "name": "Factores que afectan la velocidad",
+        "short_description": "Analiza cómo la concentración, temperatura, superficie de contacto y catalizadores afectan la velocidad.",
+        "sub_topics": [
+          {
+            "key": "concentracion_reactivos",
+            "name": "Concentración de reactivos",
+            "short_description": "Comprende que mayor concentración aumenta la frecuencia de colisiones y la velocidad.",
+            "example_tasks": [
+              "Explica por qué una pastilla efervescente se disuelve más rápido en menos agua que en más agua",
+              "Diseña un experimento para probar cómo la concentración de HCl afecta su reacción con magnesio",
+              "Predice qué sucede con la velocidad de reacción si se duplica la concentración de uno de los reactivos"
+            ]
+          },
+          {
+            "key": "temperatura",
+            "name": "Temperatura",
+            "short_description": "Explica que mayor temperatura aumenta la energía cinética de las partículas y la velocidad de reacción.",
+            "example_tasks": [
+              "Explica por qué los alimentos se conservan más tiempo en el refrigerador usando el concepto de velocidad de reacción",
+              "Diseña un experimento para demostrar el efecto de la temperatura en la reacción entre bicarbonato y vinagre",
+              "Predice qué le sucede a la velocidad de una reacción cuando aumenta la temperatura de 25°C a 50°C"
+            ]
+          },
+          {
+            "key": "superficie_contacto",
+            "name": "Superficie de contacto",
+            "short_description": "Comprende que mayor superficie de contacto aumenta la velocidad de reacción.",
+            "example_tasks": [
+              "Explica por qué un terrón de azúcar se disuelve más lento que azúcar en polvo",
+              "Diseña un experimento comparando la reacción de una pastilla antiácida entera vs. triturada con agua",
+              "Predice cuál reaccionará más rápido con ácido: limaduras de hierro o un clavo de hierro del mismo peso"
+            ]
+          },
+          {
+            "key": "catalizadores",
+            "name": "Catalizadores",
+            "short_description": "Identifica catalizadores como sustancias que aumentan la velocidad sin consumirse en la reacción.",
+            "example_tasks": [
+              "Define qué es un catalizador y explica cómo funciona para acelerar una reacción",
+              "Investiga el papel del dióxido de manganeso (MnO₂) como catalizador en la descomposición del peróxido de hidrógeno",
+              "Explica la importancia de los catalizadores en procesos industriales como la producción de amoníaco (proceso Haber)",
+              "Menciona tres ejemplos de catalizadores biológicos (enzimas) y las reacciones que aceleran"
+            ]
+          },
+          {
+            "key": "inhibidores",
+            "name": "Inhibidores",
+            "short_description": "Reconoce sustancias que disminuyen la velocidad de reacciones no deseadas.",
+            "example_tasks": [
+              "Explica qué es un inhibidor y da un ejemplo de su uso en conservación de alimentos",
+              "Investiga cómo funcionan los antioxidantes para prevenir la oxidación de alimentos",
+              "Compara el efecto de un catalizador vs. un inhibidor en la velocidad de reacción"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "teoria_colisiones",
+        "name": "Teoría de colisiones",
+        "short_description": "Comprende que las reacciones ocurren cuando las partículas chocan con energía y orientación adecuadas.",
+        "sub_topics": [
+          {
+            "key": "colisiones_efectivas",
+            "name": "Colisiones efectivas",
+            "short_description": "Explica que no todas las colisiones producen reacción, solo las que tienen suficiente energía.",
+            "example_tasks": [
+              "Explica qué condiciones debe cumplir una colisión entre moléculas para que ocurra una reacción química",
+              "Describe cómo la teoría de colisiones explica por qué aumentar la temperatura incrementa la velocidad de reacción",
+              "Usa la teoría de colisiones para explicar por qué aumentar la concentración aumenta la velocidad"
+            ]
+          },
+          {
+            "key": "energia_activacion",
+            "name": "Energía de activación",
+            "short_description": "Define la energía de activación como la energía mínima necesaria para que ocurra una reacción.",
+            "example_tasks": [
+              "Define qué es la energía de activación y explica su relación con la velocidad de reacción",
+              "Explica cómo un catalizador reduce la energía de activación sin cambiar los productos",
+              "Compara la energía de activación de reacciones rápidas vs. reacciones lentas"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "estados_agregacion",
+    "name": "Estados de Agregación de la Materia",
+    "short_description": "Identifica las características de los estados sólido, líquido, gaseoso y plasma, relacionándolos con la teoría cinético-molecular.",
+    "sub_topics": [
+      {
+        "key": "estado_solido",
+        "name": "Estado sólido",
+        "short_description": "Reconoce las características del estado sólido: forma y volumen definidos, partículas en posiciones fijas.",
+        "sub_topics": [
+          {
+            "key": "propiedades_solidos",
+            "name": "Propiedades de los sólidos",
+            "short_description": "Identifica propiedades como rigidez, incompresibilidad y densidad elevada.",
+            "example_tasks": [
+              "Describe cinco propiedades características de los sólidos y explica por qué tienen forma definida",
+              "Explica a nivel molecular por qué los sólidos no pueden comprimirse fácilmente",
+              "Compara la distancia entre partículas en sólidos, líquidos y gases usando diagramas"
+            ]
+          },
+          {
+            "key": "tipos_solidos",
+            "name": "Tipos de sólidos",
+            "short_description": "Distingue entre sólidos cristalinos y amorfos según su estructura interna.",
+            "example_tasks": [
+              "Explica la diferencia entre un sólido cristalino (sal, diamante) y un sólido amorfo (vidrio, plástico)",
+              "Investiga tres ejemplos de sólidos cristalinos y describe sus propiedades",
+              "Dibuja la estructura ordenada de un cristal de sal (NaCl) mostrando la disposición de iones"
+            ]
+          },
+          {
+            "key": "punto_fusion",
+            "name": "Punto de fusión",
+            "short_description": "Define el punto de fusión como la temperatura a la cual un sólido se convierte en líquido.",
+            "example_tasks": [
+              "Define qué es el punto de fusión y menciona el punto de fusión del hielo (0°C)",
+              "Compara los puntos de fusión del hierro (1535°C) y la mantequilla (~35°C), explicando la diferencia",
+              "Explica qué sucede a nivel molecular cuando un sólido alcanza su punto de fusión"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "estado_liquido",
+        "name": "Estado líquido",
+        "short_description": "Reconoce las características del estado líquido: volumen definido, forma variable, partículas con movilidad.",
+        "sub_topics": [
+          {
+            "key": "propiedades_liquidos",
+            "name": "Propiedades de los líquidos",
+            "short_description": "Identifica propiedades como fluidez, viscosidad y tensión superficial.",
+            "example_tasks": [
+              "Describe las propiedades de los líquidos en cuanto a forma, volumen y movimiento de partículas",
+              "Explica por qué los líquidos toman la forma del recipiente que los contiene pero los sólidos no",
+              "Define viscosidad y compara la viscosidad del agua, aceite y miel"
+            ]
+          },
+          {
+            "key": "tension_superficial",
+            "name": "Tensión superficial",
+            "short_description": "Comprende la tensión superficial como la fuerza que mantiene unida la superficie de un líquido.",
+            "example_tasks": [
+              "Explica qué es la tensión superficial y por qué algunos insectos pueden caminar sobre el agua",
+              "Diseña un experimento para demostrar la tensión superficial usando agua y un clip",
+              "Investiga cómo el jabón reduce la tensión superficial del agua y sus aplicaciones"
+            ]
+          },
+          {
+            "key": "punto_ebullicion",
+            "name": "Punto de ebullición",
+            "short_description": "Define el punto de ebullición como la temperatura a la cual un líquido se convierte en gas.",
+            "example_tasks": [
+              "Define qué es el punto de ebullición y menciona el punto de ebullición del agua (100°C a nivel del mar)",
+              "Explica por qué el punto de ebullición del agua cambia con la altitud, relacionándolo con la presión atmosférica",
+              "Compara los puntos de ebullición del agua (100°C) y el alcohol etílico (78°C)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "estado_gaseoso",
+        "name": "Estado gaseoso",
+        "short_description": "Reconoce las características de los gases: sin forma ni volumen definidos, alta compresibilidad, partículas muy separadas.",
+        "sub_topics": [
+          {
+            "key": "propiedades_gases",
+            "name": "Propiedades de los gases",
+            "short_description": "Identifica propiedades como expansión, compresibilidad y difusión.",
+            "example_tasks": [
+              "Describe las propiedades de los gases en cuanto a forma, volumen y compresibilidad",
+              "Explica por qué los gases se pueden comprimir fácilmente mientras que líquidos y sólidos no",
+              "Define difusión y explica por qué podemos oler un perfume a distancia cuando alguien lo aplica"
+            ]
+          },
+          {
+            "key": "presion_gases",
+            "name": "Presión de gases",
+            "short_description": "Comprende el concepto de presión como resultado de las colisiones de las partículas contra las paredes.",
+            "example_tasks": [
+              "Explica qué es la presión de un gas a nivel molecular (colisiones con las paredes del recipiente)",
+              "Describe qué sucede con la presión de un gas cuando se calienta en un recipiente cerrado",
+              "Investiga la presión atmosférica y cómo afecta nuestra vida diaria"
+            ]
+          },
+          {
+            "key": "leyes_gases",
+            "name": "Leyes de los gases (introducción)",
+            "short_description": "Reconoce las relaciones básicas entre presión, volumen y temperatura en gases.",
+            "example_tasks": [
+              "Explica qué sucede con el volumen de un globo cuando aumenta la temperatura (Ley de Charles)",
+              "Describe qué pasa con el volumen de un gas cuando aumenta la presión (Ley de Boyle)",
+              "Investiga cómo funcionan las ollas de presión usando las leyes de los gases"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "estado_plasma",
+        "name": "Estado plasma",
+        "short_description": "Reconoce el plasma como el cuarto estado de la materia, presente en estrellas y fenómenos eléctricos.",
+        "sub_topics": [
+          {
+            "key": "caracteristicas_plasma",
+            "name": "Características del plasma",
+            "short_description": "Identifica el plasma como gas ionizado con propiedades especiales.",
+            "example_tasks": [
+              "Define qué es el plasma y explica en qué se diferencia de un gas",
+              "Menciona tres ejemplos naturales de plasma (Sol, relámpagos, auroras boreales)",
+              "Investiga aplicaciones tecnológicas del plasma (pantallas de plasma, soldadura, lámparas de neón)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "cambios_estado",
+    "name": "Cambios de Estado",
+    "short_description": "Comprende los procesos de transformación entre estados de la materia y los cambios energéticos involucrados.",
+    "sub_topics": [
+      {
+        "key": "tipos_cambios_estado",
+        "name": "Tipos de cambios de estado",
+        "short_description": "Identifica los seis cambios de estado: fusión, solidificación, vaporización, condensación, sublimación y deposición.",
+        "sub_topics": [
+          {
+            "key": "fusion_solidificacion",
+            "name": "Fusión y solidificación",
+            "short_description": "Comprende la fusión (sólido→líquido) y solidificación (líquido→sólido) como procesos inversos.",
+            "example_tasks": [
+              "Describe el proceso de fusión del hielo usando un diagrama que muestre el cambio de estado",
+              "Explica qué sucede a nivel molecular durante la solidificación del agua",
+              "Da tres ejemplos de fusión y tres de solidificación de la vida cotidiana"
+            ]
+          },
+          {
+            "key": "vaporizacion_condensacion",
+            "name": "Vaporización y condensación",
+            "short_description": "Distingue entre evaporación y ebullición; comprende la condensación como el proceso inverso.",
+            "example_tasks": [
+              "Explica la diferencia entre evaporación (superficie) y ebullición (todo el líquido)",
+              "Describe cómo se forma el rocío de la mañana usando el concepto de condensación",
+              "Explica por qué sientes frío cuando sales mojado de la alberca (enfriamiento por evaporación)"
+            ]
+          },
+          {
+            "key": "sublimacion_deposicion",
+            "name": "Sublimación y deposición",
+            "short_description": "Identifica la sublimación (sólido→gas) y deposición (gas→sólido) sin pasar por estado líquido.",
+            "example_tasks": [
+              "Explica qué es la sublimación y da el ejemplo del hielo seco (CO₂ sólido)",
+              "Describe el proceso de formación de escarcha como un ejemplo de deposición",
+              "Investiga otros ejemplos de sustancias que subliman (naftalina, yodo)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "energia_cambios_estado",
+        "name": "Energía en los cambios de estado",
+        "short_description": "Comprende que los cambios de estado implican absorción o liberación de energía sin cambio de temperatura.",
+        "sub_topics": [
+          {
+            "key": "calor_latente",
+            "name": "Calor latente",
+            "short_description": "Reconoce el calor latente como la energía absorbida o liberada durante un cambio de estado.",
+            "example_tasks": [
+              "Explica por qué la temperatura del agua permanece constante en 100°C mientras está hirviendo",
+              "Describe qué tipo de energía se absorbe durante la fusión del hielo (romper enlaces)",
+              "Explica por qué se usa hielo para enfriar bebidas en lugar de agua fría a la misma temperatura"
+            ]
+          },
+          {
+            "key": "procesos_endotermicos_exotermicos",
+            "name": "Procesos endotérmicos y exotérmicos",
+            "short_description": "Clasifica cambios de estado como endotérmicos (absorben energía) o exotérmicos (liberan energía).",
+            "example_tasks": [
+              "Clasifica los siguientes cambios como endotérmicos o exotérmicos: fusión, solidificación, vaporización, condensación, sublimación",
+              "Explica por qué la condensación de vapor libera energía al ambiente",
+              "Describe cómo el sudor enfría el cuerpo mediante un proceso endotérmico"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "curvas_calentamiento",
+        "name": "Curvas de calentamiento y enfriamiento",
+        "short_description": "Interpreta gráficas de temperatura vs. tiempo durante cambios de estado.",
+        "sub_topics": [
+          {
+            "key": "interpretacion_curvas",
+            "name": "Interpretación de curvas",
+            "short_description": "Analiza las zonas de calentamiento y las mesetas en curvas de temperatura.",
+            "example_tasks": [
+              "Interpreta una curva de calentamiento del agua identificando las etapas: calentamiento del hielo, fusión, calentamiento del agua, ebullición",
+              "Explica por qué hay segmentos horizontales (mesetas) en las curvas de calentamiento durante los cambios de estado",
+              "Dibuja una curva de enfriamiento para el agua desde 120°C hasta -20°C, identificando todos los cambios"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "teoria_cinetico_molecular",
+    "name": "Teoría Cinético-Molecular",
+    "short_description": "Comprende los postulados de la teoría cinético-molecular y su aplicación para explicar el comportamiento de la materia.",
+    "sub_topics": [
+      {
+        "key": "postulados_tcm",
+        "name": "Postulados de la teoría cinético-molecular",
+        "short_description": "Identifica los principios fundamentales sobre el movimiento y energía de las partículas.",
+        "sub_topics": [
+          {
+            "key": "particulas_movimiento",
+            "name": "Partículas en movimiento continuo",
+            "short_description": "Comprende que todas las partículas están en constante movimiento.",
+            "example_tasks": [
+              "Explica el primer postulado de la teoría cinético-molecular sobre el movimiento de las partículas",
+              "Describe cómo el movimiento de partículas difiere en sólidos, líquidos y gases",
+              "Relaciona el movimiento browniano con la teoría cinético-molecular"
+            ]
+          },
+          {
+            "key": "temperatura_energia_cinetica",
+            "name": "Temperatura y energía cinética",
+            "short_description": "Relaciona la temperatura con la energía cinética promedio de las partículas.",
+            "example_tasks": [
+              "Explica qué sucede con la velocidad de las partículas cuando aumenta la temperatura",
+              "Describe qué representa la temperatura a nivel molecular según la teoría cinético-molecular",
+              "Compara la energía cinética de partículas de agua a 10°C y a 80°C"
+            ]
+          },
+          {
+            "key": "fuerzas_intermoleculares",
+            "name": "Fuerzas intermoleculares",
+            "short_description": "Reconoce las fuerzas de atracción entre partículas y su relación con los estados de agregación.",
+            "example_tasks": [
+              "Explica cómo las fuerzas intermoleculares determinan si una sustancia es sólida, líquida o gaseosa",
+              "Compara la intensidad de fuerzas intermoleculares en hielo, agua líquida y vapor de agua",
+              "Describe por qué las sustancias con fuerzas intermoleculares fuertes tienen puntos de ebullición altos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "aplicaciones_tcm",
+        "name": "Aplicaciones de la teoría cinético-molecular",
+        "short_description": "Utiliza la teoría cinético-molecular para explicar fenómenos observables.",
+        "sub_topics": [
+          {
+            "key": "explicacion_difusion",
+            "name": "Explicación de la difusión",
+            "short_description": "Explica la difusión de gases y líquidos usando el movimiento de partículas.",
+            "example_tasks": [
+              "Usa la teoría cinético-molecular para explicar por qué el olor de un perfume se dispersa en una habitación",
+              "Explica por qué la difusión ocurre más rápido en gases que en líquidos",
+              "Diseña un experimento para demostrar la difusión usando colorante en agua"
+            ]
+          },
+          {
+            "key": "explicacion_presion",
+            "name": "Explicación de la presión de gases",
+            "short_description": "Explica la presión como resultado de colisiones de partículas.",
+            "example_tasks": [
+              "Usa la teoría cinético-molecular para explicar por qué aumenta la presión de un gas cuando se calienta",
+              "Explica a nivel molecular qué sucede cuando se comprime un gas en un recipiente más pequeño",
+              "Describe cómo la teoría cinético-molecular explica la ley de Boyle (presión inversamente proporcional al volumen)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "mezclas_soluciones",
+    "name": "Mezclas y Soluciones",
+    "short_description": "Identifica tipos de mezclas, comprende el proceso de disolución y los factores que afectan la solubilidad.",
+    "sub_topics": [
+      {
+        "key": "tipos_mezclas",
+        "name": "Tipos de mezclas",
+        "short_description": "Clasifica mezclas en homogéneas (soluciones) y heterogéneas según su uniformidad.",
+        "sub_topics": [
+          {
+            "key": "mezclas_homogeneas",
+            "name": "Mezclas homogéneas (soluciones)",
+            "short_description": "Identifica soluciones como mezclas uniformes de dos o más componentes.",
+            "example_tasks": [
+              "Define qué es una solución y da cinco ejemplos (agua con sal, aire, bronce, vinagre, suero fisiológico)",
+              "Explica por qué el aire es una solución gaseosa y menciona sus componentes principales",
+              "Clasifica las siguientes mezclas como homogéneas o heterogéneas: agua con azúcar, agua con arena, agua con aceite, alcohol con agua"
+            ]
+          },
+          {
+            "key": "mezclas_heterogeneas",
+            "name": "Mezclas heterogéneas",
+            "short_description": "Distingue mezclas heterogéneas donde se pueden identificar diferentes componentes.",
+            "example_tasks": [
+              "Describe tres características de las mezclas heterogéneas y da ejemplos",
+              "Diferencia entre una suspensión (tierra en agua) y una emulsión (aceite en agua con jabón)",
+              "Investiga qué es un coloide y da tres ejemplos (leche, mayonesa, gelatina)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "componentes_solucion",
+        "name": "Componentes de una solución",
+        "short_description": "Identifica soluto (componente en menor cantidad) y solvente (componente en mayor cantidad).",
+        "sub_topics": [
+          {
+            "key": "soluto_solvente",
+            "name": "Soluto y solvente",
+            "short_description": "Distingue entre soluto y solvente en diferentes tipos de soluciones.",
+            "example_tasks": [
+              "Identifica el soluto y el solvente en las siguientes soluciones: agua con sal, bronce (Cu-Sn), aire, alcohol al 70%",
+              "Explica por qué el agua es llamada 'solvente universal' y menciona tres sustancias que disuelve",
+              "Describe qué sucede a nivel molecular cuando el azúcar se disuelve en agua"
+            ]
+          },
+          {
+            "key": "tipos_soluciones_estado",
+            "name": "Tipos de soluciones según estado",
+            "short_description": "Clasifica soluciones en sólidas, líquidas y gaseosas según el estado del solvente.",
+            "example_tasks": [
+              "Da dos ejemplos de cada tipo de solución: sólida-sólida, sólida-líquida, líquida-líquida, gas-gas",
+              "Explica por qué el bronce es una solución sólida de cobre y estaño",
+              "Investiga qué tipo de solución es la gasolina y cuáles son sus componentes principales"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "solubilidad",
+        "name": "Solubilidad",
+        "short_description": "Comprende la solubilidad como la cantidad máxima de soluto que se disuelve en un solvente a cierta temperatura.",
+        "sub_topics": [
+          {
+            "key": "concepto_solubilidad",
+            "name": "Concepto y medición de solubilidad",
+            "short_description": "Define solubilidad y la expresa en unidades adecuadas.",
+            "example_tasks": [
+              "Define qué es la solubilidad y menciona las unidades comunes para expresarla (g/100g agua, g/L)",
+              "La solubilidad del NaCl en agua a 20°C es 36 g/100g agua. Calcula cuántos gramos se pueden disolver en 500 g de agua",
+              "Explica la diferencia entre solubilidad y velocidad de disolución"
+            ]
+          },
+          {
+            "key": "factores_solubilidad",
+            "name": "Factores que afectan la solubilidad",
+            "short_description": "Analiza cómo la temperatura, presión y naturaleza química afectan la solubilidad.",
+            "example_tasks": [
+              "Explica cómo afecta la temperatura a la solubilidad de sólidos en líquidos (generalmente aumenta)",
+              "Describe el efecto de la temperatura en la solubilidad de gases en agua (generalmente disminuye)",
+              "Investiga cómo se aplica el efecto de la presión en la solubilidad de gases (refrescos carbonatados)",
+              "Explica la regla 'semejante disuelve a semejante' usando ejemplos de sustancias polares y no polares"
+            ]
+          },
+          {
+            "key": "curvas_solubilidad",
+            "name": "Curvas de solubilidad",
+            "short_description": "Interpreta gráficas de solubilidad vs. temperatura para diferentes sustancias.",
+            "example_tasks": [
+              "Interpreta una curva de solubilidad para determinar cuántos gramos de KNO₃ se disuelven en 100 g de agua a 40°C",
+              "Usa una gráfica de solubilidad para predecir qué sucede cuando se enfría una solución saturada de azúcar",
+              "Compara las curvas de solubilidad de NaCl y KNO₃, indicando cuál es más afectado por la temperatura"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tipos_soluciones_saturacion",
+        "name": "Tipos de soluciones según saturación",
+        "short_description": "Clasifica soluciones en insaturadas, saturadas y sobresaturadas.",
+        "sub_topics": [
+          {
+            "key": "solucion_insaturada",
+            "name": "Solución insaturada",
+            "short_description": "Identifica soluciones que pueden disolver más soluto a esa temperatura.",
+            "example_tasks": [
+              "Define qué es una solución insaturada y da un ejemplo",
+              "Si la solubilidad del azúcar es 200 g/100 mL a 20°C, ¿es insaturada una solución con 150 g/100 mL?",
+              "Explica cómo puedes saber si una solución está insaturada"
+            ]
+          },
+          {
+            "key": "solucion_saturada",
+            "name": "Solución saturada",
+            "short_description": "Reconoce soluciones en equilibrio con exceso de soluto no disuelto.",
+            "example_tasks": [
+              "Define qué es una solución saturada y describe qué se observa cuando se agrega más soluto",
+              "Explica qué significa que una solución saturada está en equilibrio dinámico",
+              "Describe cómo preparar una solución saturada de sal en agua en el laboratorio"
+            ]
+          },
+          {
+            "key": "solucion_sobresaturada",
+            "name": "Solución sobresaturada",
+            "short_description": "Identifica soluciones metaestables que contienen más soluto del que pueden disolver normalmente.",
+            "example_tasks": [
+              "Explica qué es una solución sobresaturada y cómo se puede preparar (calentar y enfriar cuidadosamente)",
+              "Describe qué sucede cuando se perturba una solución sobresaturada (cristalización rápida)",
+              "Investiga el proceso de formación de cristales a partir de soluciones sobresaturadas"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "proceso_disolucion",
+        "name": "Proceso de disolución",
+        "short_description": "Comprende los pasos del proceso de disolución a nivel molecular.",
+        "sub_topics": [
+          {
+            "key": "interacciones_moleculares",
+            "name": "Interacciones soluto-solvente",
+            "short_description": "Explica cómo las moléculas del solvente rodean e interactúan con las del soluto.",
+            "example_tasks": [
+              "Describe el proceso de solvatación o hidratación cuando la sal se disuelve en agua",
+              "Explica por qué sustancias iónicas como NaCl se disuelven bien en agua (solvente polar)",
+              "Describe qué tipo de fuerzas intermoleculares se rompen y se forman durante la disolución"
+            ]
+          },
+          {
+            "key": "factores_velocidad_disolucion",
+            "name": "Factores que afectan la velocidad de disolución",
+            "short_description": "Identifica agitación, temperatura y tamaño de partícula como factores que aceleran la disolución.",
+            "example_tasks": [
+              "Explica por qué el azúcar en polvo se disuelve más rápido que un terrón de azúcar",
+              "Describe cómo la agitación aumenta la velocidad de disolución",
+              "Diseña un experimento para comparar la velocidad de disolución del azúcar en agua fría vs. agua caliente"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "concentracion_soluciones",
+    "name": "Concentración de Soluciones",
+    "short_description": "Calcula y expresa la concentración de soluciones usando diferentes unidades como porcentaje, molaridad y ppm.",
+    "sub_topics": [
+      {
+        "key": "expresiones_cualitativas",
+        "name": "Expresiones cualitativas de concentración",
+        "short_description": "Describe soluciones usando términos como diluida, concentrada, saturada.",
+        "sub_topics": [
+          {
+            "key": "diluida_concentrada",
+            "name": "Soluciones diluidas y concentradas",
+            "short_description": "Distingue entre soluciones con poca o mucha cantidad de soluto.",
+            "example_tasks": [
+              "Explica la diferencia entre una solución diluida y una solución concentrada",
+              "Da tres ejemplos de soluciones diluidas y tres de soluciones concentradas de uso cotidiano",
+              "Describe cómo preparar una solución diluida a partir de una solución concentrada"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "porcentaje_masa",
+        "name": "Porcentaje en masa (% m/m)",
+        "short_description": "Calcula la concentración como gramos de soluto por cada 100 gramos de solución.",
+        "sub_topics": [
+          {
+            "key": "calculo_porcentaje_masa",
+            "name": "Cálculo de % m/m",
+            "short_description": "Aplica la fórmula: % m/m = (masa soluto / masa solución) × 100.",
+            "example_tasks": [
+              "Calcula el % m/m de una solución preparada disolviendo 25 g de sal en 100 g de agua",
+              "Una solución al 15% m/m de azúcar contiene 300 g totales. ¿Cuántos gramos de azúcar contiene?",
+              "Describe cómo preparar 200 g de una solución de NaCl al 10% m/m",
+              "Calcula cuántos gramos de agua se necesitan para preparar una solución al 20% m/m usando 40 g de soluto"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "porcentaje_volumen",
+        "name": "Porcentaje en volumen (% v/v)",
+        "short_description": "Calcula la concentración como volumen de soluto por cada 100 unidades de volumen de solución.",
+        "sub_topics": [
+          {
+            "key": "calculo_porcentaje_volumen",
+            "name": "Cálculo de % v/v",
+            "short_description": "Aplica la fórmula: % v/v = (volumen soluto / volumen solución) × 100.",
+            "example_tasks": [
+              "El alcohol para desinfección es etanol al 70% v/v. ¿Cuántos mL de etanol hay en un frasco de 500 mL?",
+              "Calcula el % v/v de una solución preparada mezclando 30 mL de alcohol con agua hasta completar 100 mL",
+              "Describe cómo preparar 250 mL de una solución de alcohol al 60% v/v"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "molaridad",
+        "name": "Molaridad (M)",
+        "short_description": "Calcula la concentración como moles de soluto por litro de solución.",
+        "sub_topics": [
+          {
+            "key": "definicion_molaridad",
+            "name": "Definición y cálculo de molaridad",
+            "short_description": "Aplica la fórmula: M = moles de soluto / litros de solución.",
+            "example_tasks": [
+              "Calcula la molaridad de una solución que contiene 0.5 moles de NaCl en 2 litros de solución",
+              "¿Cuántos moles de H₂SO₄ hay en 500 mL de una solución 2 M?",
+              "Calcula la molaridad de una solución preparada disolviendo 58.5 g de NaCl en agua hasta 1 L (masa molar NaCl = 58.5 g/mol)"
+            ]
+          },
+          {
+            "key": "preparacion_soluciones_molares",
+            "name": "Preparación de soluciones molares",
+            "short_description": "Calcula cantidades necesarias para preparar soluciones de molaridad específica.",
+            "example_tasks": [
+              "Describe el procedimiento para preparar 500 mL de una solución 0.1 M de NaOH (masa molar = 40 g/mol)",
+              "Calcula cuántos gramos de glucosa (C₆H₁₂O₆) se necesitan para preparar 250 mL de solución 0.5 M (masa molar = 180 g/mol)",
+              "Explica por qué se usa un matraz aforado para preparar soluciones de concentración exacta"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "ppm",
+        "name": "Partes por millón (ppm)",
+        "short_description": "Expresa concentraciones muy bajas en partes de soluto por millón de partes de solución.",
+        "sub_topics": [
+          {
+            "key": "calculo_ppm",
+            "name": "Cálculo de ppm",
+            "short_description": "Aplica la conversión: 1 ppm = 1 mg/L para soluciones acuosas.",
+            "example_tasks": [
+              "Define qué significa ppm y cuándo se usa esta unidad de concentración",
+              "Una muestra de agua contiene 5 mg de plomo en 1 L. Expresa esta concentración en ppm",
+              "La concentración máxima permitida de cloro en agua potable es 4 ppm. Calcula cuántos mg de cloro puede haber en 500 L de agua",
+              "Investiga los límites máximos permisibles de contaminantes en agua potable en México expresados en ppm"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "dilucion",
+        "name": "Dilución de soluciones",
+        "short_description": "Calcula concentraciones y volúmenes en procesos de dilución.",
+        "sub_topics": [
+          {
+            "key": "formula_dilucion",
+            "name": "Fórmula de dilución",
+            "short_description": "Aplica la fórmula: C₁V₁ = C₂V₂ para calcular diluciones.",
+            "example_tasks": [
+              "Explica qué sucede con la concentración de una solución cuando se le agrega más solvente",
+              "Calcula qué volumen de solución 6 M se necesita para preparar 500 mL de solución 2 M",
+              "Se diluyen 100 mL de HCl 12 M hasta 600 mL. Calcula la concentración final",
+              "Describe el procedimiento correcto para diluir un ácido concentrado con agua (siempre agregar ácido al agua)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "acidos_bases",
+    "name": "Ácidos y Bases",
+    "short_description": "Identifica las propiedades de ácidos y bases, comprende las teorías que los definen y reconoce su importancia en la vida cotidiana.",
+    "sub_topics": [
+      {
+        "key": "propiedades_acidos_bases",
+        "name": "Propiedades de ácidos y bases",
+        "short_description": "Reconoce las características observables de ácidos y bases.",
+        "sub_topics": [
+          {
+            "key": "propiedades_acidos",
+            "name": "Propiedades de los ácidos",
+            "short_description": "Identifica propiedades como sabor agrio, reacción con metales, cambio de color en indicadores.",
+            "example_tasks": [
+              "Enumera cinco propiedades características de los ácidos (sabor, reacción con metales, efecto en indicadores, etc.)",
+              "Explica por qué los ácidos reaccionan con metales como magnesio o zinc produciendo hidrógeno gaseoso",
+              "Da cinco ejemplos de ácidos de uso común: ácido cítrico (limones), ácido acético (vinagre), ácido clorhídrico (estómago)",
+              "Describe las precauciones de seguridad al manejar ácidos en el laboratorio"
+            ]
+          },
+          {
+            "key": "propiedades_bases",
+            "name": "Propiedades de las bases",
+            "short_description": "Identifica propiedades como sabor amargo, textura resbalosa, reacción con ácidos.",
+            "example_tasks": [
+              "Enumera cinco propiedades características de las bases (sabor amargo, tacto jabonoso, efecto en indicadores)",
+              "Explica por qué las bases tienen textura resbalosa al tacto (reaccionan con grasas de la piel)",
+              "Da cinco ejemplos de bases de uso común: hidróxido de sodio (limpiadores), hidróxido de magnesio (antiácidos), amoníaco (limpieza)",
+              "Compara las propiedades de ácidos y bases elaborando una tabla"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "teorias_acidos_bases",
+        "name": "Teorías de ácidos y bases",
+        "short_description": "Comprende las definiciones de ácidos y bases según Arrhenius y Brønsted-Lowry.",
+        "sub_topics": [
+          {
+            "key": "teoria_arrhenius",
+            "name": "Teoría de Arrhenius",
+            "short_description": "Define ácidos como sustancias que liberan H⁺ y bases como las que liberan OH⁻ en solución acuosa.",
+            "example_tasks": [
+              "Define qué es un ácido y una base según la teoría de Arrhenius",
+              "Escribe la ecuación de disociación del HCl en agua según Arrhenius: HCl → H⁺ + Cl⁻",
+              "Escribe la ecuación de disociación del NaOH en agua: NaOH → Na⁺ + OH⁻",
+              "Explica las limitaciones de la teoría de Arrhenius (solo funciona en solución acuosa)"
+            ]
+          },
+          {
+            "key": "teoria_bronsted_lowry",
+            "name": "Teoría de Brønsted-Lowry",
+            "short_description": "Define ácidos como donadores de protones (H⁺) y bases como aceptores de protones.",
+            "example_tasks": [
+              "Define qué es un ácido y una base según la teoría de Brønsted-Lowry",
+              "Identifica el ácido y la base en la reacción: HCl + H₂O → H₃O⁺ + Cl⁻",
+              "Explica por qué el amoníaco (NH₃) es una base según Brønsted-Lowry aunque no contiene OH⁻",
+              "Identifica los pares conjugados ácido-base en: NH₃ + H₂O ⇌ NH₄⁺ + OH⁻"
+            ]
+          },
+          {
+            "key": "pares_conjugados",
+            "name": "Pares conjugados ácido-base",
+            "short_description": "Identifica pares de especies que difieren por un protón.",
+            "example_tasks": [
+              "Define qué es un par conjugado ácido-base",
+              "Identifica el ácido conjugado del agua (H₂O) y la base conjugada del ácido acético (CH₃COOH)",
+              "Completa los pares conjugados en la reacción: HNO₃ + H₂O ⇌ H₃O⁺ + NO₃⁻"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "indicadores",
+        "name": "Indicadores ácido-base",
+        "short_description": "Utiliza indicadores para identificar si una sustancia es ácida, básica o neutra.",
+        "sub_topics": [
+          {
+            "key": "indicadores_comunes",
+            "name": "Tipos de indicadores",
+            "short_description": "Identifica indicadores naturales y sintéticos como tornasol, fenolftaleína, col morada.",
+            "example_tasks": [
+              "Describe cómo funciona el papel tornasol: tornasol azul se vuelve rojo en ácidos, tornasol rojo se vuelve azul en bases",
+              "Explica los cambios de color de la fenolftaleína: incolora en ácidos, rosa/magenta en bases",
+              "Investiga cómo preparar un indicador natural usando col morada y describe sus cambios de color",
+              "Diseña un experimento para probar si sustancias comunes (vinagre, jabón, jugo de limón) son ácidas o básicas usando indicadores"
+            ]
+          },
+          {
+            "key": "indicador_universal",
+            "name": "Indicador universal",
+            "short_description": "Utiliza el indicador universal para estimar el pH mediante una escala de colores.",
+            "example_tasks": [
+              "Describe qué es el indicador universal y qué información proporciona",
+              "Interpreta la escala de colores del indicador universal: rojo (muy ácido), verde (neutro), violeta (muy básico)",
+              "Compara las ventajas del indicador universal sobre indicadores simples como el tornasol"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "neutralizacion",
+        "name": "Reacciones de neutralización",
+        "short_description": "Comprende las reacciones entre ácidos y bases que producen sal y agua.",
+        "sub_topics": [
+          {
+            "key": "ecuaciones_neutralizacion",
+            "name": "Ecuaciones de neutralización",
+            "short_description": "Escribe y balancea ecuaciones de neutralización ácido-base.",
+            "example_tasks": [
+              "Escribe la ecuación general de neutralización: ácido + base → sal + agua",
+              "Completa y balancea: HCl + NaOH → ___ + ___",
+              "Escribe la ecuación de neutralización entre H₂SO₄ y Ca(OH)₂",
+              "Explica por qué las reacciones de neutralización son exotérmicas"
+            ]
+          },
+          {
+            "key": "aplicaciones_neutralizacion",
+            "name": "Aplicaciones de la neutralización",
+            "short_description": "Reconoce aplicaciones prácticas de las reacciones de neutralización.",
+            "example_tasks": [
+              "Explica cómo funcionan los antiácidos para aliviar la acidez estomacal (neutralización del HCl)",
+              "Describe cómo se trata un derrame de ácido usando bicarbonato de sodio",
+              "Investiga el uso de cal (hidróxido de calcio) para neutralizar suelos ácidos en agricultura",
+              "Explica el proceso de neutralización en el tratamiento de aguas residuales industriales"
+            ]
+          },
+          {
+            "key": "titulacion",
+            "name": "Titulación (valoración)",
+            "short_description": "Comprende el método de titulación para determinar concentraciones desconocidas.",
+            "example_tasks": [
+              "Explica en qué consiste una titulación ácido-base",
+              "Describe qué es el punto de equivalencia y cómo se detecta usando un indicador",
+              "Calcula la concentración de NaOH si 25 mL requieren 20 mL de HCl 0.1 M para neutralizarse completamente"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "acidos_bases_cotidianos",
+        "name": "Ácidos y bases en la vida cotidiana",
+        "short_description": "Identifica ácidos y bases presentes en alimentos, productos de limpieza y el cuerpo humano.",
+        "sub_topics": [
+          {
+            "key": "acidos_alimentos",
+            "name": "Ácidos en alimentos",
+            "short_description": "Reconoce ácidos comunes en frutas, vinagre y productos lácteos.",
+            "example_tasks": [
+              "Identifica qué ácidos están presentes en: limón (cítrico), vinagre (acético), yogurt (láctico), naranja (ascórbico)",
+              "Explica por qué los cítricos tienen sabor ácido",
+              "Investiga la función de los ácidos en la conservación de alimentos"
+            ]
+          },
+          {
+            "key": "bases_productos",
+            "name": "Bases en productos de uso común",
+            "short_description": "Identifica bases en productos de limpieza, higiene personal y medicamentos.",
+            "example_tasks": [
+              "Identifica bases en productos del hogar: limpiadores (NaOH), antiácidos (Mg(OH)₂), jabones (sales de ácidos grasos)",
+              "Explica por qué los productos de limpieza suelen ser básicos",
+              "Investiga las precauciones al usar productos básicos fuertes como destapacaños"
+            ]
+          },
+          {
+            "key": "acidos_bases_cuerpo",
+            "name": "Ácidos y bases en el cuerpo humano",
+            "short_description": "Reconoce la importancia del balance ácido-base en funciones biológicas.",
+            "example_tasks": [
+              "Explica la función del ácido clorhídrico (HCl) en el estómago para la digestión",
+              "Describe cómo el bicarbonato en la sangre mantiene el pH constante",
+              "Investiga qué es la acidosis y la alcalosis y sus efectos en el organismo"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "escala_ph",
+    "name": "Escala de pH",
+    "short_description": "Comprende la escala de pH para medir la acidez o basicidad de soluciones y su importancia en diversos contextos.",
+    "sub_topics": [
+      {
+        "key": "concepto_ph",
+        "name": "Concepto de pH",
+        "short_description": "Define el pH como medida de la concentración de iones hidrógeno en una solución.",
+        "sub_topics": [
+          {
+            "key": "definicion_ph",
+            "name": "Definición y escala",
+            "short_description": "Comprende que la escala de pH va de 0 a 14, siendo 7 neutro.",
+            "example_tasks": [
+              "Define qué es el pH y explica qué mide",
+              "Describe la escala de pH: 0-6 (ácido), 7 (neutro), 8-14 (básico)",
+              "Explica por qué una disminución de una unidad de pH representa un aumento de 10 veces en acidez"
+            ]
+          },
+          {
+            "key": "interpretacion_valores",
+            "name": "Interpretación de valores de pH",
+            "short_description": "Clasifica sustancias como ácidas, neutras o básicas según su pH.",
+            "example_tasks": [
+              "Clasifica las siguientes sustancias según su pH: jugo gástrico (pH 2), sangre (pH 7.4), limpiador amoníaco (pH 11), agua pura (pH 7)",
+              "Ordena de más ácida a más básica: vinagre (pH 3), agua (pH 7), jabón (pH 10), jugo de limón (pH 2)",
+              "Explica qué significa que una solución tenga pH 5 y otra pH 9"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "medicion_ph",
+        "name": "Medición del pH",
+        "short_description": "Utiliza diferentes métodos para medir el pH de soluciones.",
+        "sub_topics": [
+          {
+            "key": "papel_indicador",
+            "name": "Papel indicador de pH",
+            "short_description": "Usa papel tornasol y papel indicador universal para estimar pH.",
+            "example_tasks": [
+              "Describe cómo usar el papel indicador universal para medir el pH de una solución",
+              "Compara la precisión del papel tornasol (solo ácido/base) vs. papel indicador universal (rango de pH)",
+              "Diseña un experimento para medir el pH de diferentes bebidas usando papel indicador"
+            ]
+          },
+          {
+            "key": "phmetro",
+            "name": "pHmetro o potenciómetro",
+            "short_description": "Reconoce el pHmetro como instrumento de medición precisa del pH.",
+            "example_tasks": [
+              "Describe qué es un pHmetro y cómo funciona",
+              "Explica las ventajas del pHmetro sobre los indicadores de color",
+              "Investiga la importancia de calibrar el pHmetro antes de usarlo"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "ph_cotidiano",
+        "name": "pH en la vida cotidiana",
+        "short_description": "Reconoce la importancia del pH en diversos contextos de la vida diaria.",
+        "sub_topics": [
+          {
+            "key": "ph_alimentos",
+            "name": "pH en alimentos y bebidas",
+            "short_description": "Identifica el pH de alimentos comunes y su relación con sabor y conservación.",
+            "example_tasks": [
+              "Investiga y ordena por pH: leche, jugo de naranja, café, refresco de cola, agua mineral",
+              "Explica por qué los alimentos ácidos se conservan mejor (dificultan crecimiento microbiano)",
+              "Describe cómo el pH afecta el sabor de los alimentos"
+            ]
+          },
+          {
+            "key": "ph_cuerpo",
+            "name": "pH en el cuerpo humano",
+            "short_description": "Comprende la importancia del pH en diferentes fluidos corporales.",
+            "example_tasks": [
+              "Menciona el pH normal de: sangre (7.35-7.45), orina (4.5-8), saliva (6.5-7.5), jugo gástrico (1.5-3.5)",
+              "Explica por qué es importante mantener el pH de la sangre en un rango muy estrecho",
+              "Describe cómo el cuerpo regula el pH sanguíneo usando sistemas buffer"
+            ]
+          },
+          {
+            "key": "ph_ambiente",
+            "name": "pH en el ambiente",
+            "short_description": "Reconoce la importancia del pH en suelos, agua y lluvia ácida.",
+            "example_tasks": [
+              "Explica qué es la lluvia ácida y cómo se forma (óxidos de azufre y nitrógeno)",
+              "Describe los efectos de la lluvia ácida en edificios, monumentos y ecosistemas",
+              "Investiga el pH ideal del suelo para diferentes cultivos agrícolas",
+              "Explica por qué es importante monitorear el pH del agua en acuarios y piscinas"
+            ]
+          },
+          {
+            "key": "ph_higiene",
+            "name": "pH en productos de higiene",
+            "short_description": "Reconoce la importancia del pH en shampoos, jabones y productos para la piel.",
+            "example_tasks": [
+              "Explica por qué algunos shampoos se anuncian como 'pH neutro' o 'pH balanceado'",
+              "Investiga el pH normal de la piel humana (aproximadamente 5.5, ligeramente ácido)",
+              "Describe por qué usar jabones muy alcalinos puede resecar la piel"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "soluciones_reguladoras",
+        "name": "Soluciones reguladoras o buffer",
+        "short_description": "Comprende cómo las soluciones buffer resisten cambios de pH.",
+        "sub_topics": [
+          {
+            "key": "concepto_buffer",
+            "name": "Concepto de solución amortiguadora",
+            "short_description": "Define buffer como sistema que mantiene pH relativamente constante al agregar ácidos o bases.",
+            "example_tasks": [
+              "Explica qué es una solución buffer y cómo funciona",
+              "Describe un ejemplo de sistema buffer: ácido acético/acetato de sodio",
+              "Explica la importancia del sistema buffer bicarbonato/ácido carbónico en la sangre"
+            ]
+          },
+          {
+            "key": "aplicaciones_buffer",
+            "name": "Aplicaciones de soluciones buffer",
+            "short_description": "Reconoce la importancia de buffers en biología, medicina e industria.",
+            "example_tasks": [
+              "Investiga el uso de soluciones buffer en laboratorios de biología y bioquímica",
+              "Explica cómo funcionan los antiácidos que contienen buffers",
+              "Describe la importancia de los buffers en la fabricación de medicamentos"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "oxido_reduccion",
+    "name": "Reacciones de Óxido-Reducción",
+    "short_description": "Comprende las reacciones redox donde ocurre transferencia de electrones, identifica agentes oxidantes y reductores.",
+    "sub_topics": [
+      {
+        "key": "conceptos_redox",
+        "name": "Conceptos fundamentales de redox",
+        "short_description": "Define oxidación, reducción y sus relaciones en reacciones químicas.",
+        "sub_topics": [
+          {
+            "key": "oxidacion_reduccion",
+            "name": "Oxidación y reducción",
+            "short_description": "Define oxidación como pérdida de electrones y reducción como ganancia de electrones.",
+            "example_tasks": [
+              "Define oxidación y reducción usando el concepto de transferencia de electrones",
+              "Usa la regla nemotécnica LEO GER (Lose Electrons = Oxidation, Gain Electrons = Reduction) para recordar las definiciones",
+              "Explica por qué oxidación y reducción siempre ocurren simultáneamente en una reacción"
+            ]
+          },
+          {
+            "key": "numero_oxidacion",
+            "name": "Número de oxidación",
+            "short_description": "Asigna números de oxidación a elementos en compuestos e iones.",
+            "example_tasks": [
+              "Determina el número de oxidación de todos los elementos en: H₂O, NaCl, H₂SO₄, KMnO₄",
+              "Explica las reglas para asignar números de oxidación (elementos libres = 0, iones monoatómicos = su carga, etc.)",
+              "Calcula el número de oxidación del azufre en: H₂S, SO₂, H₂SO₄",
+              "Identifica qué elemento cambia su número de oxidación en: 2Mg + O₂ → 2MgO"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "identificacion_redox",
+        "name": "Identificación de reacciones redox",
+        "short_description": "Distingue reacciones redox de otras reacciones químicas.",
+        "sub_topics": [
+          {
+            "key": "cambios_numero_oxidacion",
+            "name": "Cambios en número de oxidación",
+            "short_description": "Identifica reacciones redox observando cambios en números de oxidación.",
+            "example_tasks": [
+              "Determina cuál de las siguientes es redox: Zn + 2HCl → ZnCl₂ + H₂, NaCl + AgNO₃ → AgCl + NaNO₃",
+              "Identifica qué elemento se oxida y cuál se reduce en: Fe + CuSO₄ → FeSO₄ + Cu",
+              "Explica por qué las reacciones de neutralización ácido-base NO son reacciones redox"
+            ]
+          },
+          {
+            "key": "agentes_oxidantes_reductores",
+            "name": "Agentes oxidantes y reductores",
+            "short_description": "Identifica la sustancia que se oxida (agente reductor) y la que se reduce (agente oxidante).",
+            "example_tasks": [
+              "Define agente oxidante como la sustancia que se reduce y agente reductor como la que se oxida",
+              "En la reacción 2Na + Cl₂ → 2NaCl, identifica el agente oxidante y el agente reductor",
+              "Explica por qué el oxígeno es un agente oxidante común en muchas reacciones",
+              "Identifica agentes oxidantes y reductores en: Cu + 2AgNO₃ → Cu(NO₃)₂ + 2Ag"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tipos_reacciones_redox",
+        "name": "Tipos de reacciones redox",
+        "short_description": "Clasifica reacciones redox en combustión, corrosión y otras.",
+        "sub_topics": [
+          {
+            "key": "combustion",
+            "name": "Combustión",
+            "short_description": "Reconoce la combustión como reacción redox con oxígeno que libera energía.",
+            "example_tasks": [
+              "Explica por qué la combustión es una reacción redox (el carbono se oxida, el oxígeno se reduce)",
+              "Escribe la ecuación de combustión completa del metano: CH₄ + 2O₂ → CO₂ + 2H₂O",
+              "Identifica los cambios en números de oxidación durante la combustión de la glucosa",
+              "Investiga ejemplos de combustión en la vida diaria: cocinar, calefacción, motores de automóviles"
+            ]
+          },
+          {
+            "key": "corrosion",
+            "name": "Corrosión",
+            "short_description": "Comprende la corrosión como oxidación de metales, especialmente el hierro.",
+            "example_tasks": [
+              "Explica el proceso de oxidación del hierro (formación de óxido o herrumbre)",
+              "Escribe la ecuación simplificada: 4Fe + 3O₂ → 2Fe₂O₃ (óxido de hierro)",
+              "Describe tres métodos para prevenir la corrosión: pintura, galvanizado, aleaciones resistentes",
+              "Investiga la importancia económica de la corrosión y su prevención en México"
+            ]
+          },
+          {
+            "key": "respiracion_celular",
+            "name": "Respiración celular y fotosíntesis",
+            "short_description": "Reconoce reacciones redox en procesos biológicos fundamentales.",
+            "example_tasks": [
+              "Explica cómo la respiración celular es una reacción redox donde la glucosa se oxida",
+              "Describe cómo la fotosíntesis es el proceso inverso (reducción de CO₂ para formar glucosa)",
+              "Compara las ecuaciones generales de respiración y fotosíntesis identificando cambios redox"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "balanceo_redox",
+        "name": "Balanceo de ecuaciones redox",
+        "short_description": "Balancea ecuaciones de óxido-reducción usando el método del cambio en número de oxidación.",
+        "sub_topics": [
+          {
+            "key": "metodo_cambio_oxidacion",
+            "name": "Método del cambio en número de oxidación",
+            "short_description": "Balancea ecuaciones redox igualando electrones perdidos y ganados.",
+            "example_tasks": [
+              "Balancea la ecuación: Fe + O₂ → Fe₂O₃ usando números de oxidación",
+              "Explica los pasos para balancear ecuaciones redox: (1) asignar números de oxidación, (2) identificar cambios, (3) igualar electrones",
+              "Balancea: Cu + HNO₃ → Cu(NO₃)₂ + NO + H₂O",
+              "Verifica que la ecuación balanceada cumple con la conservación de masa y carga"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "aplicaciones_redox",
+        "name": "Aplicaciones de reacciones redox",
+        "short_description": "Reconoce aplicaciones tecnológicas e industriales de reacciones redox.",
+        "sub_topics": [
+          {
+            "key": "pilas_baterias",
+            "name": "Pilas y baterías",
+            "short_description": "Comprende cómo las reacciones redox producen electricidad en pilas.",
+            "example_tasks": [
+              "Explica cómo una pila convierte energía química en energía eléctrica mediante reacciones redox",
+              "Describe el funcionamiento básico de una pila alcalina",
+              "Investiga la importancia del reciclaje de baterías y sus componentes en México"
+            ]
+          },
+          {
+            "key": "electroquimica_aplicaciones",
+            "name": "Otras aplicaciones electroquímicas",
+            "short_description": "Reconoce aplicaciones como galvanizado, electroplateado y refinación de metales.",
+            "example_tasks": [
+              "Explica qué es el galvanizado y cómo protege al hierro de la corrosión",
+              "Describe el proceso de electroplateado (cromado, niquelado, plateado)",
+              "Investiga cómo se refina el cobre mediante electrólisis en la industria minera"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "contaminacion_agua",
+    "name": "Contaminación del Agua",
+    "short_description": "Identifica las fuentes y tipos de contaminación del agua, sus efectos en la salud y el ambiente, y métodos de tratamiento.",
+    "sub_topics": [
+      {
+        "key": "importancia_agua",
+        "name": "Importancia del agua",
+        "short_description": "Reconoce el agua como recurso esencial para la vida y las actividades humanas.",
+        "sub_topics": [
+          {
+            "key": "agua_recurso_vital",
+            "name": "El agua como recurso vital",
+            "short_description": "Comprende la distribución del agua en la Tierra y su disponibilidad.",
+            "example_tasks": [
+              "Explica por qué el agua es esencial para la vida en la Tierra",
+              "Describe la distribución del agua: 97% océanos (salada), 3% dulce (mayoría en hielo y acuíferos)",
+              "Investiga la situación del agua potable en México y las regiones con mayor escasez"
+            ]
+          },
+          {
+            "key": "usos_agua",
+            "name": "Usos del agua",
+            "short_description": "Identifica los principales usos del agua: doméstico, agrícola, industrial.",
+            "example_tasks": [
+              "Enumera los principales usos del agua en México: agricultura (76%), uso público (14%), industria (10%)",
+              "Explica la importancia del agua en la agricultura mexicana",
+              "Investiga el consumo promedio de agua por persona en tu ciudad"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fuentes_contaminacion_agua",
+        "name": "Fuentes de contaminación del agua",
+        "short_description": "Identifica fuentes puntuales y no puntuales de contaminación acuática.",
+        "sub_topics": [
+          {
+            "key": "contaminacion_domestica",
+            "name": "Contaminación doméstica",
+            "short_description": "Reconoce aguas residuales domésticas como fuente de contaminación.",
+            "example_tasks": [
+              "Describe qué contienen las aguas residuales domésticas: materia orgánica, detergentes, microorganismos",
+              "Explica los efectos de descargar aguas residuales sin tratar en ríos y lagos",
+              "Investiga el porcentaje de aguas residuales que se tratan en México"
+            ]
+          },
+          {
+            "key": "contaminacion_industrial",
+            "name": "Contaminación industrial",
+            "short_description": "Identifica descargas industriales como fuente de contaminantes químicos.",
+            "example_tasks": [
+              "Menciona tres tipos de contaminantes industriales: metales pesados, solventes orgánicos, ácidos/bases",
+              "Explica los efectos del mercurio y plomo en cuerpos de agua",
+              "Investiga casos de contaminación industrial de ríos en México"
+            ]
+          },
+          {
+            "key": "contaminacion_agricola",
+            "name": "Contaminación agrícola",
+            "short_description": "Reconoce fertilizantes y pesticidas como contaminantes del agua.",
+            "example_tasks": [
+              "Explica qué es la eutrofización causada por exceso de nitratos y fosfatos",
+              "Describe cómo los pesticidas pueden contaminar aguas superficiales y subterráneas",
+              "Investiga el uso de fertilizantes en agricultura y su impacto en cuerpos de agua en México"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tipos_contaminantes_agua",
+        "name": "Tipos de contaminantes del agua",
+        "short_description": "Clasifica contaminantes en físicos, químicos y biológicos.",
+        "sub_topics": [
+          {
+            "key": "contaminantes_fisicos",
+            "name": "Contaminantes físicos",
+            "short_description": "Identifica contaminantes como sólidos suspendidos, temperatura, radiactividad.",
+            "example_tasks": [
+              "Describe qué son los sólidos suspendidos y cómo afectan la calidad del agua",
+              "Explica qué es la contaminación térmica y sus efectos en ecosistemas acuáticos",
+              "Investiga el problema de los microplásticos en océanos y ríos"
+            ]
+          },
+          {
+            "key": "contaminantes_quimicos",
+            "name": "Contaminantes químicos",
+            "short_description": "Identifica contaminantes como metales pesados, compuestos orgánicos, nutrientes.",
+            "example_tasks": [
+              "Enumera cinco contaminantes químicos del agua: mercurio, plomo, pesticidas, detergentes, nitratos",
+              "Explica por qué los metales pesados son particularmente peligrosos (bioacumulación)",
+              "Describe los efectos del exceso de nutrientes (nitrógeno, fósforo) en cuerpos de agua"
+            ]
+          },
+          {
+            "key": "contaminantes_biologicos",
+            "name": "Contaminantes biológicos",
+            "short_description": "Identifica microorganismos patógenos como fuente de enfermedades.",
+            "example_tasks": [
+              "Menciona microorganismos que pueden contaminar el agua: bacterias, virus, parásitos",
+              "Explica enfermedades transmitidas por agua contaminada: cólera, hepatitis A, disentería",
+              "Describe la importancia de clorar el agua para eliminar microorganismos patógenos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "efectos_contaminacion_agua",
+        "name": "Efectos de la contaminación del agua",
+        "short_description": "Reconoce los impactos en salud humana, ecosistemas y economía.",
+        "sub_topics": [
+          {
+            "key": "efectos_salud",
+            "name": "Efectos en la salud humana",
+            "short_description": "Identifica enfermedades y problemas de salud causados por agua contaminada.",
+            "example_tasks": [
+              "Describe cinco enfermedades relacionadas con agua contaminada",
+              "Explica los efectos del consumo de agua con metales pesados a largo plazo",
+              "Investiga estadísticas de enfermedades gastrointestinales por agua contaminada en México"
+            ]
+          },
+          {
+            "key": "efectos_ecosistemas",
+            "name": "Efectos en ecosistemas acuáticos",
+            "short_description": "Comprende el impacto en flora y fauna acuática.",
+            "example_tasks": [
+              "Explica cómo la eutrofización reduce el oxígeno disuelto y causa muerte de peces",
+              "Describe el fenómeno de bioacumulación de tóxicos en cadenas alimenticias acuáticas",
+              "Investiga el estado de contaminación de ríos importantes en México (Lerma, Santiago, Pánuco)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tratamiento_agua",
+        "name": "Tratamiento y purificación del agua",
+        "short_description": "Comprende los procesos para potabilizar agua y tratar aguas residuales.",
+        "sub_topics": [
+          {
+            "key": "potabilizacion",
+            "name": "Potabilización del agua",
+            "short_description": "Identifica las etapas del tratamiento de agua para consumo humano.",
+            "example_tasks": [
+              "Describe las etapas de potabilización: coagulación, sedimentación, filtración, desinfección",
+              "Explica el papel del cloro en la desinfección del agua potable",
+              "Investiga cómo funciona una planta potabilizadora en tu ciudad o región"
+            ]
+          },
+          {
+            "key": "tratamiento_aguas_residuales",
+            "name": "Tratamiento de aguas residuales",
+            "short_description": "Comprende los procesos primarios, secundarios y terciarios de tratamiento.",
+            "example_tasks": [
+              "Describe las tres etapas del tratamiento de aguas residuales: primaria (física), secundaria (biológica), terciaria (química)",
+              "Explica cómo funcionan los lodos activados en el tratamiento secundario",
+              "Investiga el porcentaje de aguas residuales tratadas en México y los desafíos existentes"
+            ]
+          },
+          {
+            "key": "metodos_caseros",
+            "name": "Métodos caseros de purificación",
+            "short_description": "Reconoce métodos simples para purificar agua en emergencias.",
+            "example_tasks": [
+              "Describe métodos de purificación casera: hervir, cloración, filtros de arena, luz solar (SODIS)",
+              "Explica por qué hervir el agua durante al menos 5 minutos mata microorganismos",
+              "Diseña un filtro casero simple usando arena, grava y carbón activado"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "conservacion_agua",
+        "name": "Conservación del agua",
+        "short_description": "Propone acciones individuales y colectivas para cuidar el recurso hídrico.",
+        "sub_topics": [
+          {
+            "key": "uso_responsable",
+            "name": "Uso responsable del agua",
+            "short_description": "Identifica prácticas para reducir el consumo de agua.",
+            "example_tasks": [
+              "Enumera diez acciones para ahorrar agua en casa: cerrar llaves, reparar fugas, duchas cortas, etc.",
+              "Calcula cuánta agua se puede ahorrar al reparar una llave que gotea",
+              "Investiga sistemas de captación de agua de lluvia para uso doméstico"
+            ]
+          },
+          {
+            "key": "prevencion_contaminacion",
+            "name": "Prevención de la contaminación",
+            "short_description": "Propone acciones para evitar contaminar el agua.",
+            "example_tasks": [
+              "Enumera acciones para prevenir contaminación: no tirar aceite por el drenaje, reducir uso de detergentes, no arrojar basura en ríos",
+              "Explica por qué no se debe tirar medicamentos caducados por el drenaje",
+              "Diseña una campaña escolar para concientizar sobre el cuidado del agua"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "contaminacion_aire",
+    "name": "Contaminación del Aire",
+    "short_description": "Identifica las fuentes y tipos de contaminación atmosférica, sus efectos en salud y ambiente, y medidas de prevención.",
+    "sub_topics": [
+      {
+        "key": "composicion_aire",
+        "name": "Composición del aire",
+        "short_description": "Reconoce los componentes naturales del aire limpio.",
+        "sub_topics": [
+          {
+            "key": "gases_atmosfera",
+            "name": "Gases de la atmósfera",
+            "short_description": "Identifica los gases principales: nitrógeno, oxígeno, argón, dióxido de carbono.",
+            "example_tasks": [
+              "Menciona la composición porcentual del aire: N₂ (78%), O₂ (21%), Ar (0.9%), CO₂ (0.04%), otros",
+              "Explica la importancia del oxígeno para la respiración y del CO₂ para la fotosíntesis",
+              "Describe las capas de la atmósfera: troposfera, estratosfera, mesosfera, termosfera"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "contaminantes_aire",
+        "name": "Contaminantes del aire",
+        "short_description": "Identifica los principales contaminantes atmosféricos y sus fuentes.",
+        "sub_topics": [
+          {
+            "key": "contaminantes_primarios",
+            "name": "Contaminantes primarios",
+            "short_description": "Reconoce contaminantes emitidos directamente: CO, SO₂, NOₓ, partículas.",
+            "example_tasks": [
+              "Define contaminantes primarios y menciona cinco ejemplos: CO, SO₂, NO₂, partículas suspendidas, COV",
+              "Explica las fuentes de monóxido de carbono (CO): combustión incompleta en vehículos",
+              "Describe las fuentes de óxidos de azufre (SO₂): combustión de carbón y petróleo",
+              "Investiga los niveles de contaminantes criterio en tu ciudad según monitoreo oficial"
+            ]
+          },
+          {
+            "key": "contaminantes_secundarios",
+            "name": "Contaminantes secundarios",
+            "short_description": "Identifica contaminantes formados por reacciones en la atmósfera: ozono troposférico, smog.",
+            "example_tasks": [
+              "Explica qué es el ozono troposférico y cómo se forma a partir de NOₓ y COV con luz solar",
+              "Describe qué es el smog fotoquímico y en qué condiciones se forma",
+              "Compara ozono estratosférico (protector) vs. ozono troposférico (contaminante)"
+            ]
+          },
+          {
+            "key": "particulas_suspendidas",
+            "name": "Partículas suspendidas (PM)",
+            "short_description": "Distingue entre PM₁₀ y PM₂.₅ según su tamaño y efectos en salud.",
+            "example_tasks": [
+              "Explica la diferencia entre PM₁₀ (partículas gruesas) y PM₂.₅ (partículas finas)",
+              "Describe las fuentes de partículas: combustión, polvo, construcción, industria",
+              "Investiga por qué las PM₂.₅ son más peligrosas (penetran profundamente en pulmones)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fuentes_contaminacion_aire",
+        "name": "Fuentes de contaminación del aire",
+        "short_description": "Clasifica fuentes en naturales y antropogénicas, fijas y móviles.",
+        "sub_topics": [
+          {
+            "key": "fuentes_moviles",
+            "name": "Fuentes móviles",
+            "short_description": "Identifica vehículos automotores como principal fuente de contaminación urbana.",
+            "example_tasks": [
+              "Explica por qué los vehículos son la principal fuente de contaminación en ciudades como la CDMX",
+              "Describe los contaminantes emitidos por vehículos: CO, NOₓ, COV, partículas",
+              "Investiga programas como 'Hoy No Circula' y su efectividad en reducir contaminación"
+            ]
+          },
+          {
+            "key": "fuentes_fijas",
+            "name": "Fuentes fijas",
+            "short_description": "Reconoce industrias, termoeléctricas y otras instalaciones como fuentes estacionarias.",
+            "example_tasks": [
+              "Menciona ejemplos de fuentes fijas: industrias, refinerías, termoeléctricas, incineradoras",
+              "Explica los contaminantes típicos de cada tipo de industria",
+              "Investiga la normatividad mexicana para emisiones industriales"
+            ]
+          },
+          {
+            "key": "fuentes_naturales",
+            "name": "Fuentes naturales",
+            "short_description": "Identifica fuentes naturales como volcanes, incendios forestales, polvo.",
+            "example_tasks": [
+              "Menciona fuentes naturales de contaminación: erupciones volcánicas, incendios forestales, tormentas de polvo",
+              "Explica cómo las erupciones volcánicas emiten SO₂ y partículas",
+              "Investiga el impacto del Popocatépetl en la calidad del aire de la región"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "efectos_contaminacion_aire",
+        "name": "Efectos de la contaminación del aire",
+        "short_description": "Reconoce impactos en salud humana, ecosistemas y clima.",
+        "sub_topics": [
+          {
+            "key": "efectos_salud_aire",
+            "name": "Efectos en la salud",
+            "short_description": "Identifica enfermedades respiratorias y cardiovasculares asociadas a contaminación.",
+            "example_tasks": [
+              "Describe efectos en salud: irritación de ojos y garganta, asma, bronquitis, enfermedades cardiacas",
+              "Explica por qué niños y ancianos son más vulnerables a contaminación del aire",
+              "Investiga estadísticas de muertes prematuras por contaminación del aire en México"
+            ]
+          },
+          {
+            "key": "lluvia_acida_efectos",
+            "name": "Lluvia ácida",
+            "short_description": "Comprende la formación y efectos de la lluvia ácida.",
+            "example_tasks": [
+              "Explica cómo se forma la lluvia ácida a partir de SO₂ y NOₓ: SO₂ + H₂O → H₂SO₃ (ácido sulfuroso)",
+              "Describe los efectos de la lluvia ácida en edificios, monumentos históricos y bosques",
+              "Investiga casos documentados de daño por lluvia ácida en monumentos mexicanos"
+            ]
+          },
+          {
+            "key": "deterioro_capa_ozono",
+            "name": "Deterioro de la capa de ozono",
+            "short_description": "Comprende el papel de CFCs en la destrucción del ozono estratosférico.",
+            "example_tasks": [
+              "Explica qué son los CFC (clorofluorocarbonos) y cómo destruyen el ozono",
+              "Describe la importancia del ozono estratosférico en proteger de radiación UV",
+              "Investiga el Protocolo de Montreal y sus logros en recuperar la capa de ozono"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "efecto_invernadero_cambio_climatico",
+        "name": "Efecto invernadero y cambio climático",
+        "short_description": "Comprende el efecto invernadero natural, su intensificación y consecuencias climáticas.",
+        "sub_topics": [
+          {
+            "key": "efecto_invernadero_natural",
+            "name": "Efecto invernadero natural",
+            "short_description": "Explica el efecto invernadero como proceso natural que mantiene temperatura terrestre.",
+            "example_tasks": [
+              "Explica cómo funciona el efecto invernadero natural y por qué es necesario para la vida",
+              "Identifica los principales gases de efecto invernadero: CO₂, CH₄, N₂O, vapor de agua",
+              "Describe qué pasaría sin efecto invernadero (Tierra sería muy fría, ~-18°C)"
+            ]
+          },
+          {
+            "key": "intensificacion_efecto_invernadero",
+            "name": "Intensificación del efecto invernadero",
+            "short_description": "Reconoce actividades humanas que aumentan gases de efecto invernadero.",
+            "example_tasks": [
+              "Explica cómo la combustión de combustibles fósiles aumenta el CO₂ atmosférico",
+              "Describe fuentes de metano (CH₄): ganadería, arrozales, descomposición de basura",
+              "Investiga las emisiones de gases de efecto invernadero de México por sector"
+            ]
+          },
+          {
+            "key": "consecuencias_cambio_climatico",
+            "name": "Consecuencias del cambio climático",
+            "short_description": "Identifica impactos actuales y proyectados del calentamiento global.",
+            "example_tasks": [
+              "Enumera consecuencias del cambio climático: aumento de temperatura, deshielo, aumento nivel del mar, eventos extremos",
+              "Explica cómo el cambio climático afecta la agricultura y seguridad alimentaria en México",
+              "Investiga fenómenos relacionados: sequías más intensas, huracanes más fuertes, pérdida de biodiversidad",
+              "Describe impactos proyectados para México: escasez de agua, afectación de costas, estrés térmico"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "prevencion_control_contaminacion_aire",
+        "name": "Prevención y control de la contaminación del aire",
+        "short_description": "Propone medidas individuales, tecnológicas y políticas para mejorar calidad del aire.",
+        "sub_topics": [
+          {
+            "key": "acciones_individuales_aire",
+            "name": "Acciones individuales",
+            "short_description": "Identifica acciones personales para reducir emisiones.",
+            "example_tasks": [
+              "Enumera acciones individuales: usar transporte público, compartir auto, bicicleta, caminar, reducir consumo energético",
+              "Explica cómo reducir el consumo de electricidad ayuda a disminuir contaminación",
+              "Diseña un plan personal para reducir tu huella de carbono"
+            ]
+          },
+          {
+            "key": "tecnologias_limpias",
+            "name": "Tecnologías limpias",
+            "short_description": "Reconoce tecnologías para reducir emisiones: convertidores catalíticos, energías renovables.",
+            "example_tasks": [
+              "Explica cómo funcionan los convertidores catalíticos en vehículos",
+              "Describe ventajas de energías renovables (solar, eólica) sobre combustibles fósiles",
+              "Investiga el desarrollo de vehículos eléctricos e híbridos en México"
+            ]
+          },
+          {
+            "key": "politicas_normatividad",
+            "name": "Políticas y normatividad",
+            "short_description": "Reconoce instrumentos legales y programas gubernamentales.",
+            "example_tasks": [
+              "Investiga la normatividad mexicana sobre calidad del aire (NOMs)",
+              "Explica cómo funcionan los índices de calidad del aire (IMECA o AQI)",
+              "Describe programas como verificación vehicular y sus objetivos"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "introduccion_quimica_organica",
+    "name": "Introducción a la Química Orgánica",
+    "short_description": "Comprende las características del carbono que permiten la formación de compuestos orgánicos y reconoce los hidrocarburos básicos.",
+    "sub_topics": [
+      {
+        "key": "caracteristicas_carbono",
+        "name": "Características del átomo de carbono",
+        "short_description": "Reconoce las propiedades únicas del carbono: tetravalencia, formación de cadenas y enlaces múltiples.",
+        "sub_topics": [
+          {
+            "key": "tetravalencia",
+            "name": "Tetravalencia del carbono",
+            "short_description": "Comprende que el carbono forma cuatro enlaces covalentes.",
+            "example_tasks": [
+              "Explica por qué el carbono puede formar cuatro enlaces usando su configuración electrónica",
+              "Dibuja la estructura de Lewis del metano (CH₄) mostrando los cuatro enlaces del carbono",
+              "Describe la geometría tetraédrica del carbono con cuatro enlaces simples"
+            ]
+          },
+          {
+            "key": "formacion_cadenas",
+            "name": "Formación de cadenas carbonadas",
+            "short_description": "Reconoce la capacidad del carbono de formar cadenas largas, ramificadas y cíclicas.",
+            "example_tasks": [
+              "Explica por qué el carbono puede formar cadenas largas de átomos (catenación)",
+              "Dibuja ejemplos de cadenas carbonadas: lineal, ramificada y cíclica",
+              "Compara la capacidad de catenación del carbono con otros elementos como silicio"
+            ]
+          },
+          {
+            "key": "enlaces_multiples_organica",
+            "name": "Enlaces múltiples",
+            "short_description": "Reconoce que el carbono puede formar enlaces dobles y triples con otros carbonos.",
+            "example_tasks": [
+              "Dibuja la estructura del eteno (C₂H₄) mostrando el enlace doble C=C",
+              "Dibuja la estructura del etino (C₂H₂) mostrando el enlace triple C≡C",
+              "Explica cómo varían las propiedades según el tipo de enlace (simple, doble, triple)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "compuestos_organicos_inorganicos",
+        "name": "Diferencias entre compuestos orgánicos e inorgánicos",
+        "short_description": "Distingue compuestos orgánicos de inorgánicos según composición y propiedades.",
+        "sub_topics": [
+          {
+            "key": "caracteristicas_organicos",
+            "name": "Características de compuestos orgánicos",
+            "short_description": "Identifica propiedades: contienen carbono e hidrógeno, bajos puntos de fusión, combustibles.",
+            "example_tasks": [
+              "Enumera cinco características de compuestos orgánicos: contienen C-H, bajos puntos de fusión/ebullición, inflamables, insolubles en agua",
+              "Explica por qué la mayoría de compuestos orgánicos son combustibles",
+              "Compara puntos de ebullición de compuestos orgánicos (metano -162°C) vs. inorgánicos (NaCl 1413°C)"
+            ]
+          },
+          {
+            "key": "abundancia_compuestos",
+            "name": "Abundancia de compuestos orgánicos",
+            "short_description": "Reconoce que existen millones de compuestos orgánicos debido a la versatilidad del carbono.",
+            "example_tasks": [
+              "Explica por qué existen más compuestos orgánicos que inorgánicos",
+              "Menciona ejemplos de compuestos orgánicos naturales: proteínas, carbohidratos, lípidos, ADN",
+              "Investiga ejemplos de compuestos orgánicos sintéticos: plásticos, medicamentos, colorantes"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "hidrocarburos",
+        "name": "Hidrocarburos",
+        "short_description": "Identifica y clasifica hidrocarburos en alcanos, alquenos y alquinos según sus enlaces.",
+        "sub_topics": [
+          {
+            "key": "alcanos",
+            "name": "Alcanos (hidrocarburos saturados)",
+            "short_description": "Reconoce alcanos como hidrocarburos con enlaces simples, fórmula general CₙH₂ₙ₊₂.",
+            "example_tasks": [
+              "Define qué son los alcanos y escribe la fórmula general CₙH₂ₙ₊₂",
+              "Escribe las fórmulas moleculares y estructurales de los primeros cinco alcanos: metano, etano, propano, butano, pentano",
+              "Explica por qué los alcanos se llaman hidrocarburos saturados (solo enlaces simples)",
+              "Nombra los alcanos con 6, 7, 8, 9 y 10 carbonos: hexano, heptano, octano, nonano, decano"
+            ]
+          },
+          {
+            "key": "alquenos",
+            "name": "Alquenos (hidrocarburos insaturados)",
+            "short_description": "Identifica alquenos como hidrocarburos con al menos un enlace doble C=C, fórmula CₙH₂ₙ.",
+            "example_tasks": [
+              "Define qué son los alquenos y escribe la fórmula general CₙH₂ₙ",
+              "Escribe las estructuras de: eteno (etileno), propeno, buteno",
+              "Explica la regla de nomenclatura: cambiar terminación -ano por -eno",
+              "Compara las propiedades de alcanos vs. alquenos (mayor reactividad de alquenos)"
+            ]
+          },
+          {
+            "key": "alquinos",
+            "name": "Alquinos (hidrocarburos insaturados)",
+            "short_description": "Reconoce alquinos como hidrocarburos con al menos un enlace triple C≡C, fórmula CₙH₂ₙ₋₂.",
+            "example_tasks": [
+              "Define qué son los alquinos y escribe la fórmula general CₙH₂ₙ₋₂",
+              "Escribe las estructuras de: etino (acetileno), propino, butino",
+              "Explica la regla de nomenclatura: cambiar terminación -ano por -ino",
+              "Investiga el uso del acetileno en soldadura autógena"
+            ]
+          },
+          {
+            "key": "isomeria_hidrocarburos",
+            "name": "Isomería en hidrocarburos",
+            "short_description": "Reconoce que compuestos con misma fórmula molecular pueden tener diferentes estructuras.",
+            "example_tasks": [
+              "Define qué es un isómero (misma fórmula molecular, diferente estructura)",
+              "Dibuja los isómeros del butano (C₄H₁₀): n-butano e isobutano",
+              "Explica por qué los isómeros tienen propiedades físicas diferentes",
+              "Dibuja los tres isómeros del pentano (C₅H₁₂)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "propiedades_hidrocarburos",
+        "name": "Propiedades de los hidrocarburos",
+        "short_description": "Reconoce las propiedades físicas y químicas de los hidrocarburos.",
+        "sub_topics": [
+          {
+            "key": "propiedades_fisicas_hidrocarburos",
+            "name": "Propiedades físicas",
+            "short_description": "Identifica tendencias en puntos de ebullición, solubilidad y densidad.",
+            "example_tasks": [
+              "Explica cómo aumenta el punto de ebullición con el número de carbonos en alcanos",
+              "Describe la solubilidad de hidrocarburos: solubles en solventes no polares, insolubles en agua",
+              "Compara la densidad de hidrocarburos (< 1 g/mL) con la del agua"
+            ]
+          },
+          {
+            "key": "reacciones_hidrocarburos",
+            "name": "Reacciones químicas",
+            "short_description": "Reconoce reacciones características: combustión, sustitución, adición.",
+            "example_tasks": [
+              "Escribe la ecuación de combustión completa del metano: CH₄ + 2O₂ → CO₂ + 2H₂O",
+              "Explica qué es una reacción de sustitución en alcanos (reemplazo de H por halógeno)",
+              "Explica qué es una reacción de adición en alquenos (rompe enlace doble, agrega átomos)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "grupos_funcionales",
+    "name": "Grupos Funcionales",
+    "short_description": "Identifica los principales grupos funcionales orgánicos y reconoce compuestos que los contienen.",
+    "sub_topics": [
+      {
+        "key": "alcoholes",
+        "name": "Alcoholes",
+        "short_description": "Reconoce el grupo funcional hidroxilo (-OH) en alcoholes.",
+        "sub_topics": [
+          {
+            "key": "estructura_alcoholes",
+            "name": "Estructura y nomenclatura",
+            "short_description": "Identifica la estructura R-OH y nomenclatura con terminación -ol.",
+            "example_tasks": [
+              "Identifica el grupo funcional -OH (hidroxilo) en alcoholes",
+              "Escribe las estructuras de: metanol (CH₃OH), etanol (C₂H₅OH), propanol (C₃H₇OH)",
+              "Explica la regla de nomenclatura: cambiar terminación -ano por -ol",
+              "Dibuja la estructura del glicerol (1,2,3-propanotriol), un alcohol con tres grupos -OH"
+            ]
+          },
+          {
+            "key": "propiedades_alcoholes",
+            "name": "Propiedades y usos",
+            "short_description": "Reconoce propiedades y aplicaciones de alcoholes comunes.",
+            "example_tasks": [
+              "Explica por qué los alcoholes tienen puntos de ebullición más altos que hidrocarburos (puentes de hidrógeno)",
+              "Describe usos del etanol: bebidas alcohólicas, desinfectante, biocombustible",
+              "Investiga usos del metanol en industria y sus peligros (tóxico)",
+              "Explica el uso del alcohol isopropílico como desinfectante"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "aldehydos_cetonas",
+        "name": "Aldehídos y cetonas",
+        "short_description": "Identifica el grupo carbonilo (C=O) en aldehídos y cetonas.",
+        "sub_topics": [
+          {
+            "key": "aldehydos",
+            "name": "Aldehídos",
+            "short_description": "Reconoce aldehídos con grupo -CHO al final de la cadena.",
+            "example_tasks": [
+              "Identifica la estructura del grupo aldehído: -CHO (carbonilo en carbono terminal)",
+              "Escribe las estructuras de: metanal (formaldehído), etanal (acetaldehído)",
+              "Explica la nomenclatura: terminación -al",
+              "Investiga el uso del formaldehído como conservante y desinfectante"
+            ]
+          },
+          {
+            "key": "cetonas",
+            "name": "Cetonas",
+            "short_description": "Reconoce cetonas con grupo carbonilo en carbono interno.",
+            "example_tasks": [
+              "Identifica la estructura del grupo cetona: C=O en carbono interno",
+              "Escribe la estructura de la propanona (acetona): CH₃-CO-CH₃",
+              "Explica la nomenclatura: terminación -ona",
+              "Describe el uso de la acetona como solvente (removedor de esmalte, limpieza)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "acidos_carboxilicos",
+        "name": "Ácidos carboxílicos",
+        "short_description": "Identifica el grupo carboxilo (-COOH) en ácidos orgánicos.",
+        "sub_topics": [
+          {
+            "key": "estructura_acidos",
+            "name": "Estructura y nomenclatura",
+            "short_description": "Reconoce el grupo -COOH y nomenclatura con terminación -oico.",
+            "example_tasks": [
+              "Identifica el grupo funcional carboxilo: -COOH",
+              "Escribe las estructuras de: ácido metanoico (fórmico), ácido etanoico (acético), ácido propanoico",
+              "Explica la nomenclatura: ácido + nombre del alcano + -oico",
+              "Describe propiedades ácidas del grupo -COOH"
+            ]
+          },
+          {
+            "key": "acidos_comunes",
+            "name": "Ácidos carboxílicos comunes",
+            "short_description": "Reconoce ácidos orgánicos presentes en alimentos y naturaleza.",
+            "example_tasks": [
+              "Identifica ácidos en alimentos: ácido acético (vinagre), cítrico (cítricos), láctico (yogurt), ascórbico (vitamina C)",
+              "Explica el sabor ácido de frutas y vinagre",
+              "Investiga la importancia de los ácidos grasos en nutrición",
+              "Describe el uso del ácido acético en conservación de alimentos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "esteres",
+        "name": "Ésteres",
+        "short_description": "Identifica ésteres como compuestos formados por ácidos y alcoholes.",
+        "sub_topics": [
+          {
+            "key": "formacion_esteres",
+            "name": "Formación de ésteres (esterificación)",
+            "short_description": "Comprende la reacción entre ácido carboxílico y alcohol que forma éster y agua.",
+            "example_tasks": [
+              "Escribe la ecuación general de esterificación: R-COOH + R'-OH → R-COO-R' + H₂O",
+              "Explica cómo se forma el acetato de etilo a partir de ácido acético y etanol",
+              "Identifica el grupo funcional éster: -COO-"
+            ]
+          },
+          {
+            "key": "propiedades_esteres",
+            "name": "Propiedades y aplicaciones",
+            "short_description": "Reconoce ésteres como compuestos aromáticos usados en fragancias y saborizantes.",
+            "example_tasks": [
+              "Explica por qué los ésteres tienen aromas agradables (frutas, flores)",
+              "Investiga el uso de ésteres en: saborizantes artificiales, fragancias, solventes",
+              "Menciona ejemplos: acetato de isoamilo (plátano), butirato de etilo (piña)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "eteres",
+        "name": "Éteres",
+        "short_description": "Reconoce éteres como compuestos con oxígeno entre dos grupos alquilo (R-O-R').",
+        "sub_topics": [
+          {
+            "key": "estructura_eteres",
+            "name": "Estructura de éteres",
+            "short_description": "Identifica la estructura R-O-R' característica de éteres.",
+            "example_tasks": [
+              "Identifica el grupo funcional éter: R-O-R'",
+              "Escribe la estructura del dietil éter (éter etílico): CH₃CH₂-O-CH₂CH₃",
+              "Explica las propiedades de los éteres: volátiles, inflamables, solventes"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "aminas",
+        "name": "Aminas",
+        "short_description": "Identifica aminas como derivados del amoníaco con grupos alquilo.",
+        "sub_topics": [
+          {
+            "key": "estructura_aminas",
+            "name": "Estructura y clasificación",
+            "short_description": "Clasifica aminas en primarias, secundarias y terciarias según sustitución del nitrógeno.",
+            "example_tasks": [
+              "Identifica el grupo funcional amino: -NH₂ (primaria), -NH- (secundaria), -N< (terciaria)",
+              "Escribe la estructura de metilamina (CH₃NH₂), dimetilamina, trimetilamina",
+              "Explica la importancia de aminas en química biológica (aminoácidos, proteínas)",
+              "Describe el olor característico de aminas (pescado descompuesto)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "amidas",
+        "name": "Amidas",
+        "short_description": "Reconoce amidas como derivados de ácidos carboxílicos con grupo amino.",
+        "sub_topics": [
+          {
+            "key": "estructura_amidas",
+            "name": "Estructura de amidas",
+            "short_description": "Identifica el grupo funcional -CO-NH₂ en amidas.",
+            "example_tasks": [
+              "Identifica el grupo funcional amida: -CO-NH₂",
+              "Explica la importancia de enlaces amida (peptídicos) en proteínas",
+              "Investiga ejemplos de amidas: urea, nylon, proteínas"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "petroleo_derivados",
+    "name": "Petróleo y sus Derivados",
+    "short_description": "Comprende el origen, composición, refinación del petróleo y la importancia de sus productos en la vida moderna.",
+    "sub_topics": [
+      {
+        "key": "origen_petroleo",
+        "name": "Origen y composición del petróleo",
+        "short_description": "Reconoce el petróleo como mezcla de hidrocarburos formada por descomposición de organismos antiguos.",
+        "sub_topics": [
+          {
+            "key": "formacion_petroleo",
+            "name": "Formación del petróleo",
+            "short_description": "Comprende el origen fósil del petróleo a partir de restos orgánicos marinos.",
+            "example_tasks": [
+              "Explica cómo se forma el petróleo a partir de plancton y organismos marinos hace millones de años",
+              "Describe las condiciones necesarias: presión, temperatura, tiempo, ausencia de oxígeno",
+              "Investiga las principales zonas petroleras en México: Golfo de México, Chicontepec, Sureste"
+            ]
+          },
+          {
+            "key": "composicion_petroleo",
+            "name": "Composición química",
+            "short_description": "Identifica el petróleo como mezcla compleja de hidrocarburos de diferentes tamaños.",
+            "example_tasks": [
+              "Explica que el petróleo crudo es una mezcla de hidrocarburos de diferentes longitudes de cadena",
+              "Describe los componentes principales: alcanos, alquenos, compuestos aromáticos, azufrados",
+              "Investiga las diferencias entre petróleo ligero y pesado"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "refinacion_petroleo",
+        "name": "Refinación del petróleo",
+        "short_description": "Comprende el proceso de separación del petróleo crudo en fracciones útiles.",
+        "sub_topics": [
+          {
+            "key": "destilacion_fraccional",
+            "name": "Destilación fraccionada",
+            "short_description": "Explica la separación de hidrocarburos según sus puntos de ebullición.",
+            "example_tasks": [
+              "Describe el proceso de destilación fraccionada en una torre de refinación",
+              "Explica cómo se separan las fracciones según temperatura de ebullición: gases, gasolina, queroseno, diesel, aceites, asfalto",
+              "Ordena las fracciones de menor a mayor punto de ebullición",
+              "Investiga cómo funciona una refinería en México (Tula, Salamanca, Salina Cruz)"
+            ]
+          },
+          {
+            "key": "cracking",
+            "name": "Cracking o craqueo",
+            "short_description": "Comprende el proceso de romper moléculas grandes para obtener gasolina.",
+            "example_tasks": [
+              "Explica qué es el cracking: romper hidrocarburos pesados en más ligeros",
+              "Describe por qué se necesita cracking (mayor demanda de gasolina que de fracciones pesadas)",
+              "Investiga el cracking térmico vs. cracking catalítico"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "productos_petroleo",
+        "name": "Productos derivados del petróleo",
+        "short_description": "Identifica los principales productos obtenidos del petróleo y sus usos.",
+        "sub_topics": [
+          {
+            "key": "combustibles",
+            "name": "Combustibles",
+            "short_description": "Reconoce los principales combustibles: gas LP, gasolina, queroseno, diesel.",
+            "example_tasks": [
+              "Describe los usos de diferentes combustibles: gas LP (cocina, calefacción), gasolina (automóviles), queroseno (aviación), diesel (transporte pesado)",
+              "Explica qué es el octanaje en gasolinas y su importancia",
+              "Investiga la diferencia entre gasolinas Premium y Magna en México",
+              "Calcula cuánta gasolina se consume diariamente en tu ciudad y su impacto ambiental"
+            ]
+          },
+          {
+            "key": "lubricantes_asfalto",
+            "name": "Lubricantes y asfalto",
+            "short_description": "Reconoce usos de fracciones pesadas del petróleo.",
+            "example_tasks": [
+              "Describe el uso de aceites lubricantes en motores y maquinaria",
+              "Explica el uso del asfalto en pavimentación de carreteras",
+              "Investiga qué son las parafinas y sus aplicaciones (velas, cosméticos)"
+            ]
+          },
+          {
+            "key": "petroquimica",
+            "name": "Productos petroquímicos",
+            "short_description": "Identifica productos sintéticos derivados del petróleo: plásticos, fibras, medicamentos.",
+            "example_tasks": [
+              "Enumera productos petroquímicos: plásticos (polietileno, PVC), fibras sintéticas (nylon, poliéster), fertilizantes, detergentes",
+              "Explica la importancia de la industria petroquímica en México",
+              "Investiga el complejo petroquímico de Coatzacoalcos, Veracruz",
+              "Describe el impacto ambiental de los plásticos derivados del petróleo"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "importancia_impacto_petroleo",
+        "name": "Importancia económica e impacto ambiental",
+        "short_description": "Reconoce la importancia del petróleo y los desafíos de su uso.",
+        "sub_topics": [
+          {
+            "key": "importancia_economica",
+            "name": "Importancia económica",
+            "short_description": "Comprende el papel del petróleo en la economía mexicana y mundial.",
+            "example_tasks": [
+              "Investiga la importancia de PEMEX en la economía mexicana",
+              "Describe cómo los precios del petróleo afectan la economía nacional",
+              "Explica por qué México exporta petróleo crudo e importa gasolina refinada"
+            ]
+          },
+          {
+            "key": "impacto_ambiental_petroleo",
+            "name": "Impacto ambiental",
+            "short_description": "Reconoce problemas ambientales asociados al petróleo: derrames, contaminación, cambio climático.",
+            "example_tasks": [
+              "Describe los efectos de derrames petroleros en océanos y costas",
+              "Explica cómo la combustión de derivados del petróleo contribuye al cambio climático",
+              "Investiga el derrame de petróleo en el Golfo de México (Deepwater Horizon) y sus consecuencias",
+              "Propón alternativas al uso de combustibles fósiles: energías renovables, transporte eléctrico"
+            ]
+          },
+          {
+            "key": "recursos_no_renovables",
+            "name": "Petróleo como recurso no renovable",
+            "short_description": "Comprende la necesidad de usar responsablemente los recursos fósiles limitados.",
+            "example_tasks": [
+              "Explica por qué el petróleo es un recurso no renovable",
+              "Investiga las reservas probadas de petróleo en México y cuánto tiempo podrían durar",
+              "Propón estrategias para reducir la dependencia del petróleo"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "quimica_vida_cotidiana",
+    "name": "Química en la Vida Cotidiana",
+    "short_description": "Reconoce aplicaciones de la química en alimentos, medicamentos, materiales y productos de uso diario.",
+    "sub_topics": [
+      {
+        "key": "quimica_alimentos",
+        "name": "Química de los alimentos",
+        "short_description": "Identifica los principales grupos de biomoléculas y aditivos alimentarios.",
+        "sub_topics": [
+          {
+            "key": "carbohidratos",
+            "name": "Carbohidratos",
+            "short_description": "Reconoce carbohidratos como fuente de energía: azúcares, almidones, fibra.",
+            "example_tasks": [
+              "Define qué son los carbohidratos y su función principal (energía)",
+              "Clasifica carbohidratos: monosacáridos (glucosa), disacáridos (sacarosa), polisacáridos (almidón, celulosa)",
+              "Identifica alimentos ricos en carbohidratos: tortillas, pan, arroz, frutas, legumbres",
+              "Explica la diferencia entre azúcares simples y carbohidratos complejos"
+            ]
+          },
+          {
+            "key": "lipidos",
+            "name": "Lípidos (grasas y aceites)",
+            "short_description": "Reconoce lípidos como fuente concentrada de energía y sus funciones.",
+            "example_tasks": [
+              "Define qué son los lípidos y sus funciones (energía, membranas celulares, vitaminas)",
+              "Diferencia entre grasas saturadas (sólidas) e insaturadas (líquidas a temperatura ambiente)",
+              "Identifica alimentos ricos en lípidos: aceites, mantequilla, aguacate, nueces, carnes",
+              "Explica la diferencia entre grasas 'buenas' (insaturadas) y 'malas' (trans, saturadas en exceso)"
+            ]
+          },
+          {
+            "key": "proteinas",
+            "name": "Proteínas",
+            "short_description": "Reconoce proteínas como macromoléculas formadas por aminoácidos.",
+            "example_tasks": [
+              "Define qué son las proteínas y sus funciones (estructura, enzimas, anticuerpos)",
+              "Explica que las proteínas están formadas por aminoácidos unidos por enlaces peptídicos",
+              "Identifica alimentos ricos en proteínas: carne, pescado, huevos, legumbres, lácteos",
+              "Investiga qué son los aminoácidos esenciales y por qué deben obtenerse de la dieta"
+            ]
+          },
+          {
+            "key": "vitaminas_minerales",
+            "name": "Vitaminas y minerales",
+            "short_description": "Reconoce la importancia de micronutrientes en la salud.",
+            "example_tasks": [
+              "Menciona cinco vitaminas importantes y sus funciones: A (visión), C (sistema inmune), D (huesos), E (antioxidante), B12 (sangre)",
+              "Identifica minerales esenciales: calcio (huesos), hierro (sangre), yodo (tiroides), sodio (equilibrio de fluidos)",
+              "Investiga enfermedades por deficiencia: escorbuto (vitamina C), raquitismo (vitamina D), anemia (hierro)",
+              "Describe la importancia de la yodación de la sal en México para prevenir bocio"
+            ]
+          },
+          {
+            "key": "aditivos_alimentarios",
+            "name": "Aditivos alimentarios",
+            "short_description": "Identifica conservadores, colorantes y saborizantes en alimentos procesados.",
+            "example_tasks": [
+              "Define qué son los aditivos alimentarios y para qué se usan",
+              "Menciona tipos de aditivos: conservadores (benzoatos, nitritos), colorantes, saborizantes, antioxidantes",
+              "Lee etiquetas de alimentos procesados e identifica aditivos presentes",
+              "Investiga la normatividad mexicana sobre aditivos permitidos en alimentos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "quimica_medicamentos",
+        "name": "Química de medicamentos",
+        "short_description": "Reconoce la importancia de la química en el desarrollo de fármacos.",
+        "sub_topics": [
+          {
+            "key": "tipos_medicamentos",
+            "name": "Tipos de medicamentos",
+            "short_description": "Identifica categorías básicas: analgésicos, antibióticos, antiácidos, antiinflamatorios.",
+            "example_tasks": [
+              "Describe la función de analgésicos como el paracetamol y la aspirina (alivio del dolor)",
+              "Explica qué son los antibióticos y cómo combaten infecciones bacterianas",
+              "Describe cómo funcionan los antiácidos para neutralizar acidez estomacal",
+              "Investiga la diferencia entre medicamentos de patente y genéricos"
+            ]
+          },
+          {
+            "key": "uso_responsable_medicamentos",
+            "name": "Uso responsable de medicamentos",
+            "short_description": "Comprende la importancia de seguir prescripciones médicas y evitar automedicación.",
+            "example_tasks": [
+              "Explica los peligros de la automedicación y resistencia a antibióticos",
+              "Describe la importancia de completar tratamientos con antibióticos",
+              "Investiga qué hacer con medicamentos caducados (no tirarlos en basura o drenaje)",
+              "Explica por qué algunos medicamentos requieren receta médica"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "quimica_materiales",
+        "name": "Química de materiales",
+        "short_description": "Identifica materiales sintéticos y naturales de uso común.",
+        "sub_topics": [
+          {
+            "key": "plasticos_polimeros",
+            "name": "Plásticos y polímeros",
+            "short_description": "Reconoce plásticos como polímeros sintéticos con diversas aplicaciones.",
+            "example_tasks": [
+              "Define qué es un polímero (macromolécula formada por unidades repetidas llamadas monómeros)",
+              "Identifica plásticos comunes: polietileno (bolsas), PVC (tuberías), PET (botellas), poliestireno (unicel)",
+              "Explica las ventajas (durabilidad, ligereza) y desventajas (no biodegradables) de los plásticos",
+              "Investiga el problema de contaminación por plásticos y alternativas biodegradables",
+              "Describe la importancia del reciclaje de plásticos (símbolos de reciclaje del 1 al 7)"
+            ]
+          },
+          {
+            "key": "fibras_textiles",
+            "name": "Fibras textiles",
+            "short_description": "Distingue entre fibras naturales y sintéticas.",
+            "example_tasks": [
+              "Clasifica fibras textiles: naturales (algodón, lana, seda) y sintéticas (nylon, poliéster, acrílico)",
+              "Explica las propiedades de fibras sintéticas: resistencia, elasticidad, fácil cuidado",
+              "Investiga el impacto ambiental de la industria textil (uso de agua, químicos, residuos)"
+            ]
+          },
+          {
+            "key": "ceramicos_vidrios",
+            "name": "Cerámicos y vidrios",
+            "short_description": "Reconoce materiales cerámicos y vidrios en construcción y utensilios.",
+            "example_tasks": [
+              "Describe propiedades de materiales cerámicos: dureza, resistencia al calor, fragilidad",
+              "Explica cómo se fabrica el vidrio a partir de arena (sílice), carbonato de sodio y caliza",
+              "Investiga el reciclaje de vidrio y sus beneficios ambientales"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "quimica_productos_limpieza",
+        "name": "Química de productos de limpieza e higiene",
+        "short_description": "Identifica componentes químicos en productos de limpieza y cuidado personal.",
+        "sub_topics": [
+          {
+            "key": "jabones_detergentes",
+            "name": "Jabones y detergentes",
+            "short_description": "Comprende cómo funcionan jabones y detergentes para eliminar grasa.",
+            "example_tasks": [
+              "Explica cómo funcionan los jabones: moléculas con parte polar (atrae agua) y no polar (atrae grasa)",
+              "Describe el proceso de saponificación (reacción de grasa con base para formar jabón)",
+              "Diferencia entre jabones (sales de ácidos grasos) y detergentes sintéticos",
+              "Investiga el impacto ambiental de detergentes con fosfatos en cuerpos de agua"
+            ]
+          },
+          {
+            "key": "desinfectantes",
+            "name": "Desinfectantes y antisépticos",
+            "short_description": "Identifica sustancias que eliminan microorganismos.",
+            "example_tasks": [
+              "Menciona desinfectantes comunes: cloro (hipoclorito), alcohol, peróxido de hidrógeno, yodo",
+              "Explica la diferencia entre desinfectante (superficies) y antiséptico (piel)",
+              "Describe el uso adecuado de gel antibacterial y su efectividad",
+              "Investiga las precauciones al mezclar productos de limpieza (nunca mezclar cloro con ácidos)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "quimica_cosmeticos",
+        "name": "Química de cosméticos",
+        "short_description": "Reconoce componentes químicos en productos de cuidado personal.",
+        "sub_topics": [
+          {
+            "key": "productos_cuidado_personal",
+            "name": "Productos de cuidado personal",
+            "short_description": "Identifica componentes en shampoos, cremas, desodorantes.",
+            "example_tasks": [
+              "Identifica componentes en shampoos: surfactantes, acondicionadores, fragancias, conservadores",
+              "Explica la función de emulsionantes en cremas y lociones",
+              "Lee la etiqueta de un producto cosmético e identifica al menos cinco ingredientes químicos",
+              "Investiga la importancia del pH en productos para la piel y cabello"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "energia_quimica",
+    "name": "Energía Química",
+    "short_description": "Comprende conceptos básicos de energía en reacciones químicas y su relación con transformaciones energéticas.",
+    "sub_topics": [
+      {
+        "key": "energia_reacciones_quimicas",
+        "name": "Energía en reacciones químicas",
+        "short_description": "Reconoce que las reacciones químicas implican cambios de energía.",
+        "sub_topics": [
+          {
+            "key": "reacciones_exotermicas_endotermicas",
+            "name": "Reacciones exotérmicas y endotérmicas",
+            "short_description": "Clasifica reacciones según liberen o absorban energía.",
+            "example_tasks": [
+              "Define reacción exotérmica (libera calor) y endotérmica (absorbe calor)",
+              "Menciona tres ejemplos de reacciones exotérmicas: combustión, neutralización, respiración celular",
+              "Menciona tres ejemplos de reacciones endotérmicas: fotosíntesis, descomposición térmica, evaporación",
+              "Diseña un experimento para medir el cambio de temperatura en una reacción ácido-base"
+            ]
+          },
+          {
+            "key": "energia_enlaces",
+            "name": "Energía de enlaces",
+            "short_description": "Comprende que romper enlaces requiere energía y formar enlaces libera energía.",
+            "example_tasks": [
+              "Explica que romper enlaces químicos requiere energía (proceso endotérmico)",
+              "Explica que formar enlaces químicos libera energía (proceso exotérmico)",
+              "Describe por qué una reacción es exotérmica neta cuando se libera más energía formando enlaces que la absorbida rompiendo enlaces"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fuentes_energia",
+        "name": "Fuentes de energía",
+        "short_description": "Identifica diferentes fuentes de energía y su relación con procesos químicos.",
+        "sub_topics": [
+          {
+            "key": "combustibles_fosiles",
+            "name": "Combustibles fósiles",
+            "short_description": "Reconoce petróleo, carbón y gas natural como fuentes de energía química.",
+            "example_tasks": [
+              "Explica cómo los combustibles fósiles almacenan energía química de organismos antiguos",
+              "Describe las ventajas (alta densidad energética) y desventajas (contaminación, no renovables) de combustibles fósiles",
+              "Investiga el consumo de combustibles fósiles en México y su impacto en emisiones de CO₂"
+            ]
+          },
+          {
+            "key": "biocombustibles",
+            "name": "Biocombustibles",
+            "short_description": "Reconoce el etanol y biodiesel como alternativas renovables.",
+            "example_tasks": [
+              "Define qué son los biocombustibles (derivados de biomasa reciente)",
+              "Explica cómo se produce etanol a partir de caña de azúcar o maíz mediante fermentación",
+              "Describe ventajas de biocombustibles: renovables, menor emisión neta de CO₂",
+              "Investiga la producción de biocombustibles en México y los desafíos (competencia con alimentos)"
+            ]
+          },
+          {
+            "key": "hidrogeno_energia",
+            "name": "Hidrógeno como combustible",
+            "short_description": "Reconoce el potencial del hidrógeno como combustible limpio del futuro.",
+            "example_tasks": [
+              "Explica la reacción de combustión del hidrógeno: 2H₂ + O₂ → 2H₂O (solo produce agua)",
+              "Describe ventajas del hidrógeno: limpio, alta densidad energética",
+              "Investiga los desafíos del hidrógeno: producción, almacenamiento, distribución"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "pilas_baterias_energia",
+        "name": "Pilas y baterías",
+        "short_description": "Comprende cómo las pilas convierten energía química en eléctrica.",
+        "sub_topics": [
+          {
+            "key": "funcionamiento_pilas",
+            "name": "Funcionamiento de pilas",
+            "short_description": "Explica cómo las reacciones redox producen corriente eléctrica.",
+            "example_tasks": [
+              "Explica cómo una pila convierte energía química en energía eléctrica mediante reacciones redox",
+              "Describe los componentes básicos: ánodo (oxidación), cátodo (reducción), electrolito",
+              "Investiga la diferencia entre pilas primarias (desechables) y secundarias (recargables)"
+            ]
+          },
+          {
+            "key": "tipos_pilas_baterias",
+            "name": "Tipos de pilas y baterías",
+            "short_description": "Identifica diferentes tipos según su aplicación.",
+            "example_tasks": [
+              "Compara pilas alcalinas, de litio, de níquel-cadmio, de ión-litio",
+              "Explica las ventajas de baterías de ión-litio en dispositivos portátiles y vehículos eléctricos",
+              "Investiga la importancia del reciclaje de pilas (contienen metales pesados tóxicos)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "conservacion_energia",
+        "name": "Conservación y eficiencia energética",
+        "short_description": "Reconoce la importancia de usar eficientemente la energía.",
+        "sub_topics": [
+          {
+            "key": "eficiencia_energetica",
+            "name": "Eficiencia energética",
+            "short_description": "Comprende que no toda la energía química se convierte en trabajo útil.",
+            "example_tasks": [
+              "Explica qué es la eficiencia energética: (energía útil / energía total) × 100%",
+              "Compara la eficiencia de motores de combustión (~25%) vs. motores eléctricos (~90%)",
+              "Propón acciones para mejorar eficiencia energética en casa: focos LED, electrodomésticos eficientes, aislamiento"
+            ]
+          },
+          {
+            "key": "ahorro_energia",
+            "name": "Ahorro de energía",
+            "short_description": "Propone acciones individuales para reducir consumo energético.",
+            "example_tasks": [
+              "Enumera diez acciones para ahorrar energía en casa: apagar luces, desconectar aparatos, usar luz natural",
+              "Calcula cuánta energía se ahorra al cambiar focos incandescentes por LED",
+              "Diseña una campaña escolar para promover el ahorro de energía"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

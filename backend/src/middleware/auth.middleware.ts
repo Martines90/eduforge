@@ -28,7 +28,10 @@ export const authenticate = async (
   try {
     // Get token from Authorization header
     const authHeader = req.headers.authorization;
-    console.log('[Auth Middleware] Authorization header:', authHeader ? 'present' : 'missing');
+    console.log(
+      "[Auth Middleware] Authorization header:",
+      authHeader ? "present" : "missing"
+    );
 
     if (!authHeader) {
       res.status(401).json({
@@ -53,10 +56,15 @@ export const authenticate = async (
       return;
     }
 
-    console.log('[Auth Middleware] Token extracted, verifying...');
+    console.log("[Auth Middleware] Token extracted, verifying...");
     // Verify token and extract user info
     const decoded = verifyToken(token);
-    console.log('[Auth Middleware] Token verified successfully:', { uid: decoded.uid, email: decoded.email, role: decoded.role, country: decoded.country });
+    console.log("[Auth Middleware] Token verified successfully:", {
+      uid: decoded.uid,
+      email: decoded.email,
+      role: decoded.role,
+      country: decoded.country,
+    });
 
     // Attach user to request object
     (req as AuthRequest).user = {
@@ -67,7 +75,10 @@ export const authenticate = async (
       country: decoded.country,
     };
 
-    console.log('[Auth Middleware] User attached to request with country:', decoded.country);
+    console.log(
+      "[Auth Middleware] User attached to request with country:",
+      decoded.country
+    );
     next();
   } catch (error) {
     console.error("[Auth Middleware] Authentication error:", error);
@@ -93,11 +104,14 @@ export const requireTeacher = (
 ): void => {
   const authReq = req as AuthRequest;
 
-  console.log('[requireTeacher] Checking if user exists on request:', !!authReq.user);
-  console.log('[requireTeacher] User role:', authReq.user?.role);
+  console.log(
+    "[requireTeacher] Checking if user exists on request:",
+    !!authReq.user
+  );
+  console.log("[requireTeacher] User role:", authReq.user?.role);
 
   if (!authReq.user) {
-    console.error('[requireTeacher] No user on request object');
+    console.error("[requireTeacher] No user on request object");
     res.status(401).json({
       success: false,
       error: "Unauthorized",
@@ -107,7 +121,7 @@ export const requireTeacher = (
   }
 
   if (authReq.user.role !== "teacher") {
-    console.error('[requireTeacher] User is not a teacher:', authReq.user.role);
+    console.error("[requireTeacher] User is not a teacher:", authReq.user.role);
     res.status(403).json({
       success: false,
       error: "Forbidden",
@@ -116,7 +130,7 @@ export const requireTeacher = (
     return;
   }
 
-  console.log('[requireTeacher] Teacher check passed');
+  console.log("[requireTeacher] Teacher check passed");
   next();
 };
 

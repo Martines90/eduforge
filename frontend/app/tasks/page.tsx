@@ -25,6 +25,7 @@ import { Subject } from '@/types/i18n';
 import { useTranslation } from '@/lib/i18n';
 import { fetchTreeMap } from '@/lib/services/api.service';
 import { useUser } from '@/lib/context/UserContext';
+import { GradeLevel } from '@eduforger/shared';
 
 /**
  * Tasks Page
@@ -35,54 +36,52 @@ import { useUser } from '@/lib/context/UserContext';
 export default function TasksPage() {
   const router = useRouter();
   const { t } = useTranslation();
-  const { user } = useUser();
+  const { user, gradeSystem } = useUser();
   const [searchQuery, setSearchQuery] = useState('');
   const [filterSubject, setFilterSubject] = useState<Subject>('mathematics');
-  const [filterGrade, setFilterGrade] = useState('all');
-  const [treeDataGrade9_10, setTreeDataGrade9_10] = useState<TreeNode[]>([]);
-  const [treeDataGrade11_12, setTreeDataGrade11_12] = useState<TreeNode[]>([]);
+  const [filterGrade, setFilterGrade] = useState<string>('all');
+
+  // Dynamic tree data storage - one entry per grade level
+  const [treeDataByGrade, setTreeDataByGrade] = useState<Record<string, TreeNode[]>>({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Fetch tree data from backend API
+  // Fetch tree data from backend API - dynamically for all grades
   useEffect(() => {
     const fetchTreeData = async () => {
       setIsLoading(true);
       setError(null);
 
       try {
-        // Use user's country for curriculum, fallback to HU if not set
-        const country = user.isRegistered && user.country ? user.country : 'HU';
-        console.log('[Tasks Page] User country:', user.country, 'isRegistered:', user.isRegistered, 'Using country:', country);
+        // Use user's country for curriculum
+        const country = user.country;
+        console.log('[Tasks Page] User country:', country, 'Available grades:', gradeSystem.gradeValues);
 
-        // Fetch both grade levels if 'all' is selected, otherwise fetch only the selected one
-        if (filterGrade === 'all') {
-          const [data9_10, data11_12] = await Promise.all([
-            fetchTreeMap(country, filterSubject, 'grade_9_10'),
-            fetchTreeMap(country, filterSubject, 'grade_11_12'),
-          ]);
+        // Determine which grades to fetch
+        const gradesToFetch = filterGrade === 'all'
+          ? gradeSystem.gradeValues
+          : [filterGrade as GradeLevel];
 
-          if (data9_10.success && data9_10.data) {
-            setTreeDataGrade9_10(data9_10.data.tree);
-          }
-          if (data11_12.success && data11_12.data) {
-            setTreeDataGrade11_12(data11_12.data.tree);
-          }
-        } else if (filterGrade === 'grade_9_10') {
-          const data = await fetchTreeMap(country, filterSubject, 'grade_9_10');
-          if (data.success && data.data) {
-            setTreeDataGrade9_10(data.data.tree);
-            setTreeDataGrade11_12([]);
-          }
-        } else if (filterGrade === 'grade_11_12') {
-          const data = await fetchTreeMap(country, filterSubject, 'grade_11_12');
-          if (data.success && data.data) {
-            setTreeDataGrade11_12(data.data.tree);
-            setTreeDataGrade9_10([]);
-          }
-        }
+        // Fetch all selected grades in parallel
+        const fetchPromises = gradesToFetch.map(async (gradeLevel) => {
+          const data = await fetchTreeMap(country, filterSubject, gradeLevel);
+          return {
+            gradeLevel,
+            tree: data.success && data.data ? data.data.tree : [],
+          };
+        });
+
+        const results = await Promise.all(fetchPromises);
+
+        // Build tree data map
+        const newTreeData: Record<string, TreeNode[]> = {};
+        results.forEach(({ gradeLevel, tree }) => {
+          newTreeData[gradeLevel] = tree;
+        });
+
+        setTreeDataByGrade(newTreeData);
       } catch (err: any) {
-        console.error('Error fetching tree data:', err);
+        console.error('[Tasks Page] Error fetching tree data:', err);
         setError(err.message || 'Failed to connect to server');
       } finally {
         setIsLoading(false);
@@ -90,9 +89,15 @@ export default function TasksPage() {
     };
 
     fetchTreeData();
-  }, [filterSubject, filterGrade, user.country, user.isRegistered]);
+  }, [filterSubject, filterGrade, user.country, gradeSystem.gradeValues]);
 
-  const hasNoTasks = !isLoading && treeDataGrade9_10.length === 0 && treeDataGrade11_12.length === 0 && !error;
+  // Check if all grades have no tasks
+  const hasNoTasks = !isLoading && !error && Object.values(treeDataByGrade).every(tree => tree.length === 0);
+
+  // Get grades to display (either all or just the filtered one)
+  const gradesToDisplay = filterGrade === 'all'
+    ? gradeSystem.availableGrades
+    : gradeSystem.availableGrades.filter(g => g.value === filterGrade);
 
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
@@ -124,8 +129,11 @@ export default function TasksPage() {
                 onChange={(e) => setFilterGrade(e.target.value)}
               >
                 <MenuItem value="all">{t('All Grades')}</MenuItem>
-                <MenuItem value="grade_9_10">{t('Grade 9-10')}</MenuItem>
-                <MenuItem value="grade_11_12">{t('Grade 11-12')}</MenuItem>
+                {gradeSystem.availableGrades.map((grade) => (
+                  <MenuItem key={grade.value} value={grade.value}>
+                    {grade.labelLocal}
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
           </Grid>
@@ -202,43 +210,31 @@ export default function TasksPage() {
         </Paper>
       ) : (
         <>
-          {/* Grade 9-10 Block */}
-          {(filterGrade === 'all' || filterGrade === 'grade_9_10') && treeDataGrade9_10.length > 0 && (
-            <Box sx={{ mb: 4 }}>
-              <Typography variant="h5" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
-                {t('Grade 9-10')}
-              </Typography>
-              <TaskTreeView
-                data={treeDataGrade9_10}
-                subject={filterSubject}
-                gradeLevel="grade_9_10"
-                searchQuery={searchQuery}
-                onTaskClick={(task) => {
-                  console.log('Task clicked:', task);
-                  router.push(`/tasks/${task.id}`);
-                }}
-              />
-            </Box>
-          )}
+          {/* Dynamic Grade Blocks - One for each grade in the user's country */}
+          {gradesToDisplay.map((grade) => {
+            const treeData = treeDataByGrade[grade.value] || [];
 
-          {/* Grade 11-12 Block */}
-          {(filterGrade === 'all' || filterGrade === 'grade_11_12') && treeDataGrade11_12.length > 0 && (
-            <Box sx={{ mb: 4 }}>
-              <Typography variant="h5" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
-                {t('Grade 11-12')}
-              </Typography>
-              <TaskTreeView
-                data={treeDataGrade11_12}
-                subject={filterSubject}
-                gradeLevel="grade_11_12"
-                searchQuery={searchQuery}
-                onTaskClick={(task) => {
-                  console.log('Task clicked:', task);
-                  router.push(`/tasks/${task.id}`);
-                }}
-              />
-            </Box>
-          )}
+            // Only show grade block if it has tasks
+            if (treeData.length === 0) return null;
+
+            return (
+              <Box key={grade.value} sx={{ mb: 4 }}>
+                <Typography variant="h5" component="h2" sx={{ mb: 2, fontWeight: 600 }}>
+                  {grade.labelLocal}
+                </Typography>
+                <TaskTreeView
+                  data={treeData}
+                  subject={filterSubject}
+                  gradeLevel={grade.value}
+                  searchQuery={searchQuery}
+                  onTaskClick={(task) => {
+                    console.log('Task clicked:', task);
+                    router.push(`/tasks/${task.id}`);
+                  }}
+                />
+              </Box>
+            );
+          })}
         </>
       )}
     </Container>

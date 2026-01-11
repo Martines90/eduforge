@@ -1,14 +1,14 @@
-import { Page, Locator } from '@playwright/test';
+import { Page, Locator } from "@playwright/test";
 
 /**
  * Page Object for Task Generator page
  * Handles interactions with the task generation flow
+ * NOTE: Uses dynamic grade selection based on country context
  */
 export class TaskGeneratorPage {
   readonly page: Page;
   readonly pageTitle: Locator;
-  readonly gradeTab910: Locator;
-  readonly gradeTab1112: Locator;
+  readonly gradeSelect: Locator;
   readonly guestBanner: Locator;
   readonly ongoingTaskBanner: Locator;
   readonly generateButton: Locator;
@@ -21,44 +21,74 @@ export class TaskGeneratorPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.pageTitle = page.getByRole('heading', { name: /task generator/i });
-    this.gradeTab910 = page.getByRole('tab', { name: /grade 9-10/i });
-    this.gradeTab1112 = page.getByRole('tab', { name: /grade 11-12/i });
-    this.guestBanner = page.locator('div[role="alert"]').filter({ hasText: /free generations remaining/i });
-    this.ongoingTaskBanner = page.locator('div[role="alert"]').filter({ hasText: /you have an ongoing task/i });
-    this.generateButton = page.getByRole('button', { name: /generate/i });
+    this.pageTitle = page.getByRole("heading", { name: /task generator/i });
+    this.gradeSelect = page.getByLabel(/grade level/i);
+    this.guestBanner = page
+      .locator('div[role="alert"]')
+      .filter({ hasText: /free generations remaining/i });
+    this.ongoingTaskBanner = page
+      .locator('div[role="alert"]')
+      .filter({ hasText: /you have an ongoing task/i });
+    this.generateButton = page.getByRole("button", { name: /generate/i });
     this.taskResult = page.locator('[data-testid="task-result"]');
-    this.saveButton = page.getByRole('button', { name: /save.*database/i });
-    this.closeButton = page.getByRole('button', { name: /close/i });
-    this.taskDescription = page.locator('.task-description');
-    this.taskSolution = page.locator('.task-solution');
-    this.loginRegisterButton = page.getByRole('button', { name: /login.*register/i });
+    this.saveButton = page.getByRole("button", { name: /save.*database/i });
+    this.closeButton = page.getByRole("button", { name: /close/i });
+    this.taskDescription = page.locator(".task-description");
+    this.taskSolution = page.locator(".task-solution");
+    this.loginRegisterButton = page.getByRole("button", {
+      name: /login.*register/i,
+    });
   }
 
   /**
    * Navigate to task generator page
    */
   async goto() {
-    await this.page.goto('/task_generator');
-    await this.page.waitForLoadState('networkidle');
+    await this.page.goto("/task_generator");
+    await this.page.waitForLoadState("networkidle");
   }
 
   /**
    * Wait for page to load
    */
   async waitForPageLoad() {
-    await this.pageTitle.waitFor({ state: 'visible' });
+    await this.pageTitle.waitFor({ state: "visible" });
   }
 
   /**
-   * Select grade level
+   * Select grade level by label (e.g., "Grade 9-10", "Elementary (K-5)", etc.)
+   * Works with any country's grade system
    */
-  async selectGrade(grade: '9-10' | '11-12') {
-    if (grade === '9-10') {
-      await this.gradeTab910.click();
-    } else {
-      await this.gradeTab1112.click();
-    }
+  async selectGradeByLabel(gradeLabel: string) {
+    await this.gradeSelect.click();
+    await this.page
+      .getByRole("option", { name: new RegExp(gradeLabel, "i") })
+      .click();
+  }
+
+  /**
+   * Select grade level by range notation (e.g., '9-10', 'K-5', '3-6')
+   * Country-aware - works for all countries
+   */
+  async selectGrade(
+    grade:
+      | "9-10"
+      | "11-12"
+      | "K-5"
+      | "6-8"
+      | "1-4"
+      | "5-8"
+      | "3-6"
+      | "7-9"
+      | "10-12"
+  ) {
+    await this.gradeSelect.click();
+    // Match any grade label that contains the grade range
+    await this.page
+      .getByRole("option", {
+        name: new RegExp(grade.replace("-", "[\\-\\s]"), "i"),
+      })
+      .click();
   }
 
   /**
@@ -67,26 +97,34 @@ export class TaskGeneratorPage {
    */
   async selectTopic() {
     // Wait for the cascading select to be visible
-    await this.page.waitForSelector('[data-testid="cascading-select"]', { timeout: 10000 });
+    await this.page.waitForSelector('[data-testid="cascading-select"]', {
+      timeout: 10000,
+    });
 
     // Click first level
-    const firstLevel = this.page.locator('[data-testid="select-level-0"]').first();
-    await firstLevel.waitFor({ state: 'visible' });
+    const firstLevel = this.page
+      .locator('[data-testid="select-level-0"]')
+      .first();
+    await firstLevel.waitFor({ state: "visible" });
     await firstLevel.click();
 
     // Wait a bit for second level to appear
     await this.page.waitForTimeout(500);
 
     // Click second level if exists
-    const secondLevel = this.page.locator('[data-testid="select-level-1"]').first();
-    if (await secondLevel.count() > 0) {
+    const secondLevel = this.page
+      .locator('[data-testid="select-level-1"]')
+      .first();
+    if ((await secondLevel.count()) > 0) {
       await secondLevel.click();
       await this.page.waitForTimeout(500);
     }
 
     // Click third level if exists
-    const thirdLevel = this.page.locator('[data-testid="select-level-2"]').first();
-    if (await thirdLevel.count() > 0) {
+    const thirdLevel = this.page
+      .locator('[data-testid="select-level-2"]')
+      .first();
+    if ((await thirdLevel.count()) > 0) {
       await thirdLevel.click();
       await this.page.waitForTimeout(500);
     }
@@ -97,22 +135,26 @@ export class TaskGeneratorPage {
    */
   async completeTaskConfiguration() {
     // Wait for configuration form
-    await this.page.waitForSelector('[data-testid="task-config-form"]', { timeout: 5000 });
+    await this.page.waitForSelector('[data-testid="task-config-form"]', {
+      timeout: 5000,
+    });
 
     // Select difficulty
     const difficultySelect = this.page.locator('select[name="difficulty"]');
-    if (await difficultySelect.count() > 0) {
-      await difficultySelect.selectOption('medium');
+    if ((await difficultySelect.count()) > 0) {
+      await difficultySelect.selectOption("medium");
     }
 
     // Select target group
     const targetGroupSelect = this.page.locator('select[name="targetGroup"]');
-    if (await targetGroupSelect.count() > 0) {
-      await targetGroupSelect.selectOption('mixed');
+    if ((await targetGroupSelect.count()) > 0) {
+      await targetGroupSelect.selectOption("mixed");
     }
 
     // Click generate button
-    const generateBtn = this.page.getByRole('button', { name: /generate task/i });
+    const generateBtn = this.page.getByRole("button", {
+      name: /generate task/i,
+    });
     await generateBtn.click();
   }
 
@@ -121,10 +163,13 @@ export class TaskGeneratorPage {
    */
   async waitForTaskGeneration(timeout = 60000) {
     // Wait for loading to disappear
-    await this.page.waitForSelector('[data-testid="task-loading"]', { state: 'hidden', timeout });
+    await this.page.waitForSelector('[data-testid="task-loading"]', {
+      state: "hidden",
+      timeout,
+    });
 
     // Wait for task result to appear
-    await this.taskResult.waitFor({ state: 'visible', timeout: 10000 });
+    await this.taskResult.waitFor({ state: "visible", timeout: 10000 });
   }
 
   /**
@@ -168,10 +213,10 @@ export class TaskGeneratorPage {
    * Set localStorage value
    */
   async setLocalStorageItem(key: string, value: string): Promise<void> {
-    await this.page.evaluate(
-      ({ k, v }) => localStorage.setItem(k, v),
-      { k: key, v: value }
-    );
+    await this.page.evaluate(({ k, v }) => localStorage.setItem(k, v), {
+      k: key,
+      v: value,
+    });
   }
 
   /**
@@ -185,7 +230,9 @@ export class TaskGeneratorPage {
    * Check if task exists in localStorage
    */
   async hasUnpublishedTask(): Promise<boolean> {
-    const task = await this.getLocalStorageItem('eduforge_last_unpublished_task');
+    const task = await this.getLocalStorageItem(
+      "eduforge_last_unpublished_task"
+    );
     return task !== null;
   }
 
@@ -193,7 +240,9 @@ export class TaskGeneratorPage {
    * Get unpublished task from localStorage
    */
   async getUnpublishedTask(): Promise<any> {
-    const taskJson = await this.getLocalStorageItem('eduforge_last_unpublished_task');
+    const taskJson = await this.getLocalStorageItem(
+      "eduforge_last_unpublished_task"
+    );
     return taskJson ? JSON.parse(taskJson) : null;
   }
 

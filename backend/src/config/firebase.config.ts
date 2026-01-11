@@ -19,7 +19,8 @@ export function initializeFirebase(): void {
     }
 
     // Check if running in Cloud Run / Firebase Functions environment
-    const isCloudEnvironment = process.env.K_SERVICE || process.env.FUNCTION_TARGET;
+    const isCloudEnvironment =
+      process.env.K_SERVICE || process.env.FUNCTION_TARGET;
 
     if (isCloudEnvironment) {
       // In Cloud Run/Functions, use Application Default Credentials (ADC)
@@ -28,7 +29,9 @@ export function initializeFirebase(): void {
         storageBucket:
           process.env.STORAGE_BUCKET || "eduforge-d29d9.firebasestorage.app",
       });
-      console.log("✅ Firebase Admin SDK initialized (Cloud environment with ADC)");
+      console.log(
+        "✅ Firebase Admin SDK initialized (Cloud environment with ADC)"
+      );
     } else {
       // Local development: try to use service account key file
       const serviceAccountFilename =

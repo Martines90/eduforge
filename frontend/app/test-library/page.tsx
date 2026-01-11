@@ -28,6 +28,7 @@ import type { PublishedTest } from "@/types/test.types";
 import { SubjectSelector } from "@/components/molecules/SubjectSelector";
 import { SUBJECTS } from "@/lib/data/subjects";
 import type { Subject } from "@/types/i18n";
+import { useUser } from "@/lib/context/UserContext";
 
 /**
  * Test Library Page
@@ -36,6 +37,7 @@ import type { Subject } from "@/types/i18n";
 export default function TestLibraryPage() {
   const router = useRouter();
   const { t } = useTranslation();
+  const { gradeSystem } = useUser();
 
   // Get translated subject label
   const getSubjectLabel = (subject: Subject): string => {
@@ -309,9 +311,7 @@ export default function TestLibraryPage() {
                         />
                         {test.gradeLevel && (
                           <Chip
-                            label={test.gradeLevel
-                              .replace("grade_", "Grade ")
-                              .replace("_", "-")}
+                            label={gradeSystem.getGrade(test.gradeLevel as any)?.labelLocal || test.gradeLevel}
                             size="small"
                           />
                         )}

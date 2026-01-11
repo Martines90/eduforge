@@ -18,6 +18,7 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import SearchIcon from '@mui/icons-material/Search';
 import { Subject } from '@/types/i18n';
 import { useTranslation } from '@/lib/i18n';
+import { SUBJECTS } from '@/lib/data/subjects';
 import styles from './ActionSelectionModal.module.scss';
 
 export interface ActionSelectionModalProps {
@@ -25,17 +26,6 @@ export interface ActionSelectionModalProps {
   subject: Subject;
   onSelect: (action: 'create' | 'search') => void;
 }
-
-const subjectLabels: Record<Subject, string> = {
-  'mathematics': 'Mathematics',
-  'physics': 'Physics',
-  'chemistry': 'Chemistry',
-  'biology': 'Biology',
-  'information_technology': 'Informatics',
-  'history': 'History',
-  'geography': 'Geography',
-  'literature': 'Literature',
-};
 
 /**
  * ActionSelectionModal Organism Component
@@ -48,6 +38,12 @@ export const ActionSelectionModal: React.FC<ActionSelectionModalProps> = ({
 }) => {
   const { t } = useTranslation();
   const [selectedAction, setSelectedAction] = useState<'create' | 'search' | null>(null);
+
+  // Get subject label from SUBJECTS config (single source of truth)
+  const getSubjectLabel = (subjectValue: Subject): string => {
+    const subjectConfig = SUBJECTS.find(s => s.value === subjectValue);
+    return subjectConfig?.labelEN || subjectValue;
+  };
 
   const handleConfirm = () => {
     if (selectedAction) {
@@ -62,7 +58,7 @@ export const ActionSelectionModal: React.FC<ActionSelectionModalProps> = ({
     }
   }, [open]);
 
-  const subjectLabel = subjectLabels[subject];
+  const subjectLabel = getSubjectLabel(subject);
 
   const actions = [
     {

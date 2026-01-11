@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import { CountryCode, UserIdentity, UserRole, Subject, UserProfile } from '@/types/i18n';
 import { DEFAULT_COUNTRY } from '@/lib/i18n/countries';
 import { getCookie, setCookie, COOKIE_NAMES, isFirstVisit, clearAuthCookies } from '@/lib/utils/cookies';
@@ -8,6 +8,15 @@ import { logoutUser as firebaseLogout, onAuthChange } from '@/lib/firebase/auth'
 import { getUserById } from '@/lib/firebase/users';
 import * as apiService from '@/lib/services/api.service';
 import { CountrySelectionModal } from '@/components/organisms/CountrySelectionModal/CountrySelectionModal';
+import {
+  GradeLevel,
+  GradeConfig,
+  getGradesForCountry,
+  getGradeConfig,
+  TeacherRole,
+  getTeacherRole,
+  getTeacherRoleLabel
+} from '@eduforger/shared';
 
 export type EducationalModel =
   | 'secular'
@@ -56,11 +65,29 @@ export interface UserState {
 }
 
 /**
+ * Grade system helpers based on user's country
+ */
+export interface GradeSystemHelpers {
+  /** All grade levels available for the user's country */
+  availableGrades: GradeConfig[];
+  /** Get configuration for a specific grade level */
+  getGrade: (gradeLevel: GradeLevel) => GradeConfig | undefined;
+  /** Get teacher role for a grade level */
+  getRole: (gradeLevel: GradeLevel) => TeacherRole | undefined;
+  /** Get localized teacher role label */
+  getRoleLabel: (gradeLevel: GradeLevel) => string | undefined;
+  /** Get all grade level values as array */
+  gradeValues: GradeLevel[];
+}
+
+/**
  * User context interface
  */
 interface UserContextType {
   user: UserState;
   authInitialized: boolean;
+  /** Grade system information based on user's country */
+  gradeSystem: GradeSystemHelpers;
   setCountry: (country: CountryCode) => void;
   setIdentity: (identity: UserIdentity) => void;
   setSubject: (subject: Subject) => void;
@@ -588,8 +615,24 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   const hasCountry = Boolean(getCookie(COOKIE_NAMES.COUNTRY));
   const isCountryReady = hasCountry || !mounted;
 
+  /**
+   * Grade system helpers - automatically updates when user's country changes
+   * Provides country-specific grade information and utilities
+   */
+  const gradeSystem: GradeSystemHelpers = useMemo(() => {
+    const availableGrades = getGradesForCountry(user.country);
+
+    return {
+      availableGrades,
+      getGrade: (gradeLevel: GradeLevel) => getGradeConfig(user.country, gradeLevel),
+      getRole: (gradeLevel: GradeLevel) => getTeacherRole(user.country, gradeLevel),
+      getRoleLabel: (gradeLevel: GradeLevel) => getTeacherRoleLabel(user.country, gradeLevel),
+      gradeValues: availableGrades.map(g => g.value),
+    };
+  }, [user.country]);
+
   return (
-    <UserContext.Provider value={{ user, authInitialized, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser, logoutUser, completeOnboarding, resetUser }}>
+    <UserContext.Provider value={{ user, authInitialized, gradeSystem, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser, logoutUser, completeOnboarding, resetUser }}>
       {/* Only render children when country is selected - prevents API calls and content rendering */}
       {isCountryReady ? children : null}
 

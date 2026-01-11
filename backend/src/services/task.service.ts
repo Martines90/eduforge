@@ -318,10 +318,14 @@ export async function getTasks(
       );
     }
     if (query.createdBy) {
-      console.log("[getTasks] Filtering by createdBy (in-memory):", query.createdBy);
+      console.log(
+        "[getTasks] Filtering by createdBy (in-memory):",
+        query.createdBy
+      );
       // Check both field names for backward compatibility
-      tasks = tasks.filter((t: any) =>
-        t.createdBy === query.createdBy || t.created_by === query.createdBy
+      tasks = tasks.filter(
+        (t: any) =>
+          t.createdBy === query.createdBy || t.created_by === query.createdBy
       );
     }
 
@@ -339,7 +343,10 @@ export async function getTasks(
         tasks.sort((a: any, b: any) => (b.viewCount || 0) - (a.viewCount || 0));
         break;
       case "popular":
-        tasks.sort((a: any, b: any) => (b.completionCount || 0) - (a.completionCount || 0));
+        tasks.sort(
+          (a: any, b: any) =>
+            (b.completionCount || 0) - (a.completionCount || 0)
+        );
         break;
       case "recent":
       default:
@@ -355,7 +362,7 @@ export async function getTasks(
           let aTime: number;
           let bTime: number;
 
-          if (typeof aCreated === 'string') {
+          if (typeof aCreated === "string") {
             aTime = new Date(aCreated).getTime();
           } else if (aCreated.toMillis) {
             aTime = aCreated.toMillis();
@@ -365,7 +372,7 @@ export async function getTasks(
             aTime = new Date(aCreated).getTime();
           }
 
-          if (typeof bCreated === 'string') {
+          if (typeof bCreated === "string") {
             bTime = new Date(bCreated).getTime();
           } else if (bCreated.toMillis) {
             bTime = bCreated.toMillis();
@@ -434,7 +441,9 @@ export async function getTasks(
     // Get all tasks by this creator without sorting (to avoid index requirement)
     firestoreQuery = firestoreQuery.where("created_by", "==", query.createdBy);
 
-    console.log("[getTasks] Executing query without sorting to avoid index requirement...");
+    console.log(
+      "[getTasks] Executing query without sorting to avoid index requirement..."
+    );
     const snapshot = await firestoreQuery.get();
     console.log("[getTasks] Query returned:", snapshot.size, "documents");
 
@@ -450,7 +459,9 @@ export async function getTasks(
 
     // Apply difficultyLevel filter in-memory
     if (query.difficultyLevel) {
-      tasks = tasks.filter((t: any) => t.difficultyLevel === query.difficultyLevel);
+      tasks = tasks.filter(
+        (t: any) => t.difficultyLevel === query.difficultyLevel
+      );
     }
 
     // Sort in-memory
@@ -467,7 +478,10 @@ export async function getTasks(
         tasks.sort((a: any, b: any) => (b.viewCount || 0) - (a.viewCount || 0));
         break;
       case "popular":
-        tasks.sort((a: any, b: any) => (b.completionCount || 0) - (a.completionCount || 0));
+        tasks.sort(
+          (a: any, b: any) =>
+            (b.completionCount || 0) - (a.completionCount || 0)
+        );
         break;
       case "recent":
       default:
@@ -483,7 +497,7 @@ export async function getTasks(
           let aTime: number;
           let bTime: number;
 
-          if (typeof aCreated === 'string') {
+          if (typeof aCreated === "string") {
             aTime = new Date(aCreated).getTime();
           } else if (aCreated.toMillis) {
             aTime = aCreated.toMillis();
@@ -493,7 +507,7 @@ export async function getTasks(
             aTime = new Date(aCreated).getTime();
           }
 
-          if (typeof bCreated === 'string') {
+          if (typeof bCreated === "string") {
             bTime = new Date(bCreated).getTime();
           } else if (bCreated.toMillis) {
             bTime = bCreated.toMillis();

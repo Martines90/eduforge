@@ -1,0 +1,247 @@
+# Curriculum Mapping Prompt: Informatics for Mexico (Grade 7-9 (Secundaria))
+
+You are an expert curriculum analyst specializing in Mexico's official national education standards for Informatics.
+
+Your task is to create a comprehensive, hierarchical JSON structure that maps the complete Informatics curriculum for Grade 7-9 (Secundaria) (7-9, ages 12-15) according to Mexico's official government education standards: Secretaría de Educación Pública (SEP) Curriculum.
+
+---
+
+## 1. Research and Accuracy Requirements
+
+Authoritative Sources:
+- Base your structure on the official Secretaría de Educación Pública (SEP) curriculum documents
+- Follow the Secretaría de Educación Pública (SEP) Curriculum standards and framework
+- Ensure accuracy to Mexico's actual teaching practices and pedagogical approaches
+- Use terminology and concepts standard in Mexico's education system
+
+Grade Level Context:
+- Grade Range: 7-9
+- Local Label: Secundaria (7-9)
+- Age Range: 12-15
+- Teacher Role: Maestro de Secundaria
+
+---
+
+## 2. JSON Structure Format
+
+Follow this exact hierarchical structure (start directly with an array):
+
+```json
+[
+  {
+    "key": "unique_topic_key",
+    "name": "Topic Name in Spanish",
+    "short_description": "Brief description of the topic scope and key learning goals (1-2 sentences)",
+    "sub_topics": [
+      {
+        "key": "unique_subtopic_key",
+        "name": "Subtopic Name in Spanish",
+        "short_description": "Brief description of what students will learn in this subtopic",
+        "sub_topics": [
+          {
+            "key": "unique_sub_subtopic_key",
+            "name": "Detailed Concept Name in Spanish",
+            "short_description": "Specific learning objective or skill to be mastered",
+            "example_tasks": [
+              "Example task 1 that demonstrates this concept (age-appropriate and curriculum-aligned)",
+              "Example task 2 with slightly different approach or difficulty",
+              "Example task 3 showing practical application or real-world connection"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
+**IMPORTANT**: Return ONLY the JSON array. Do NOT wrap it in an object with a "grade_7_9" key.
+
+---
+
+## 3. Depth and Coverage Requirements
+
+Breadth (Horizontal Coverage):
+- Include 10-30 main topics to ensure COMPLETE coverage of the curriculum for Grade 7-9 (Secundaria)
+- Cover ALL mandatory content areas from the official curriculum
+- Better to have more topics with good coverage than fewer topics with gaps
+
+Depth (Vertical Hierarchy):
+- Level 1 (Main Topics): 10-30 topics (adapt based on subject complexity and curriculum breadth)
+- Level 2 (Sub Topics): 3-6 per main topic
+- Level 3 (Sub Topics with example Tasks): 3-5 tasks per detailed sub topic
+
+Total Size Target:
+- Minimum 1000-1500 lines of JSON for this grade level
+- Minimum 60,000-100,000 characters
+- This ensures comprehensive coverage of the curriculum for 7-9
+
+**Priority**: Completeness over size constraints. If the curriculum requires 25 main topics to be fully covered, include all 25.
+
+---
+
+## 4. Content Quality Standards
+
+### Language and Terminology:
+- All names and descriptions MUST be in Spanish
+- Use official terminology from Mexico's education system
+- Keys should be in lowercase_with_underscores (English or transliterated)
+- Be consistent with naming conventions throughout
+
+### Short Descriptions:
+- Keep to 1-2 sentences (concise but informative)
+- Focus on learning objectives and key concepts
+- Use pedagogically accurate language
+- Align with official curriculum language and goals
+
+### Example Tasks:
+Each example task must be:
+- Authentic: Reflect the types of assessments and exercises used in Mexico
+- Age-appropriate: Suitable for ages 12-15
+- Progressive: Show increasing complexity across the 3-5 examples
+- Curriculum-aligned: Match the learning objectives of the official curriculum
+- Practical: Where possible, connect to real-world contexts relevant to Mexico
+- Diverse: Cover different cognitive levels (recall, application, analysis, synthesis)
+- Clear: Fully specified so a student or teacher understands what is being asked
+
+---
+
+
+### Subject-Specific Requirements for Informatics:
+
+Core Topics to Include:
+- Programming Fundamentals (Python, JavaScript, control structures, data structures)
+- Web Development (HTML, CSS, JavaScript, frontend and backend development)
+- Computer Systems (hardware, operating systems, networks, software)
+- Database Management (SQL, database design, data modeling)
+- Digital Literacy and Ethics (digital citizenship, cybersecurity, privacy, online safety)
+- Software Engineering (testing, debugging, version control, project management)
+- Emerging Technologies (cloud computing, AI/ML basics, mobile development)
+- Data Science Basics (data analysis, visualization, statistics)
+
+Pedagogical Considerations:
+- Balance theoretical concepts with hands-on practical projects
+- Include real-world applications and industry-relevant skills
+- Progress from visual/block-based programming to text-based coding
+- Emphasize problem-solving and computational thinking
+- Include ethical considerations and responsible technology use
+- Connect to careers and pathways in technology
+- Use project-based learning and portfolio development
+
+Example Task Types:
+- Coding exercises and programming challenges
+- Web development projects (building websites and applications)
+- System configuration and troubleshooting tasks
+- Database design and query writing
+- Cybersecurity scenarios and best practices
+- Collaborative software development projects
+- Technical documentation and presentation
+- Debugging and code review exercises
+- Research and analysis of emerging technologies
+
+
+---
+
+## 5. Curriculum Alignment Checklist
+
+Before and during your work, ensure:
+- [ ] You have researched the official Secretaría de Educación Pública (SEP) Curriculum for 7-9
+- [ ] All main topics reflect mandatory content for Grade 7-9 (Secundaria)
+- [ ] Topic sequence matches the typical teaching order in Mexico
+- [ ] Content is age-appropriate for 12-15
+- [ ] Examples are relevant for Maestro de Secundaria teaching this level
+- [ ] Cultural context is appropriate (examples, references, applications)
+- [ ] Language is natural and authentic for Spanish
+
+---
+
+## 6. Delivery Format - CHUNKED APPROACH
+
+**IMPORTANT**: Deliver the curriculum in **5 CHUNKS** to ensure comprehensive coverage and better organization.
+
+### Before Starting: Create a Complete Plan
+
+Before generating any JSON, provide a detailed plan that divides the curriculum into 5 chunks:
+
+```markdown
+# Curriculum Plan for Informatics - Mexico (Grade 7-9 (Secundaria))
+
+## Chunk 1 (Topics 1-X): [Thematic Group Name]
+Main topics to include:
+- Topic 1: [Topic name and brief scope]
+- Topic 2: [Topic name and brief scope]
+- ...
+
+## Chunk 2 (Topics X-Y): [Thematic Group Name]
+Main topics to include:
+- Topic X: [Topic name and brief scope]
+- ...
+
+## Chunk 3 (Topics Y-Z): [Thematic Group Name]
+Main topics to include:
+- Topic Y: [Topic name and brief scope]
+- ...
+
+## Chunk 4 (Topics Z-W): [Thematic Group Name]
+Main topics to include:
+- Topic Z: [Topic name and brief scope]
+- ...
+
+## Chunk 5 (Topics W-end): [Thematic Group Name]
+Main topics to include:
+- Topic W: [Topic name and brief scope]
+- ...
+
+Total Topics: [Estimate total number]
+```
+
+### Then Generate Each Chunk
+
+After presenting the plan, generate each chunk sequentially. Each chunk should:
+- Cover approximately 20% of the total curriculum (2-6 topics per chunk depending on subject complexity)
+- Be a valid JSON array that can be concatenated with other chunks
+- Include complete topic structures with all sub_topics and example_tasks
+
+**Structure Requirements for Each Chunk**:
+- Each chunk is a JSON array: `[{...}, {...}]`
+- All chunks combined will form the complete curriculum array
+- First chunk: `[{ topic_1 }, { topic_2 }, ...]`
+- Middle chunks: `[{ topic_x }, { topic_y }, ...]`
+- Last chunk: `[{ topic_n-1 }, { topic_n }]`
+
+**Final Assembly**:
+After all 5 chunks, confirm the total structure:
+- Total main topics: [count]
+- Total subtopics: [estimate]
+- Total example tasks: [estimate]
+- Estimated JSON size: [characters]
+
+Example of CORRECT chunk format:
+```json
+[
+  { "key": "topic_1", "name": "...", "sub_topics": [...] },
+  { "key": "topic_2", "name": "...", "sub_topics": [...] }
+]
+```
+
+**DO NOT** wrap in an object with "grade_7_9" key
+
+---
+
+## 7. Important Notes
+
+- DO NOT hallucinate or invent curriculum content. If you are unsure about specific topics in Mexico's curriculum for Grade 7-9 (Secundaria), indicate this and use general best practices for the subject.
+- Prioritize accuracy over creativity. This data will be used for educational purposes.
+- Be consistent with JSON formatting, key naming, and structure throughout.
+- All content must be in Spanish except for keys.
+- Focus specifically on 7-9 content - don't mix in content from other grade levels.
+
+---
+
+## Ready to Begin?
+
+Please provide the complete curriculum mapping JSON for:
+- Country: Mexico
+- Grade Level: Grade 7-9 (Secundaria) (7-9)
+- Subject: Informática
+- Language: Spanish

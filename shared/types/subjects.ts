@@ -14,7 +14,7 @@ export type Subject =
   | "physics"
   | "chemistry"
   | "biology"
-  | "information_technology"
+  | "informatics"
   | "history"
   | "geography"
   | "literature";
@@ -75,7 +75,7 @@ export const SUBJECTS: SubjectOption[] = [
     category: "stem",
   },
   {
-    value: "information_technology",
+    value: "informatics",
     labelEN: "Informatics",
     labelHU: "Informatika",
     labelMX: "Tecnología de la Información",

@@ -447,7 +447,9 @@ export async function canGuestViewTasks(sessionId: string): Promise<boolean> {
 /**
  * Get remaining task views for a guest session
  */
-export async function getRemainingTaskViews(sessionId: string): Promise<number> {
+export async function getRemainingTaskViews(
+  sessionId: string
+): Promise<number> {
   const session = await getGuestSession(sessionId);
   if (!session) return 0;
 

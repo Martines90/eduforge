@@ -1,0 +1,3476 @@
+[
+  {
+    "key": "estados_de_la_materia",
+    "name": "Estados de la Materia",
+    "short_description": "Los estudiantes identifican y describen las características de los tres estados de la materia (sólido, líquido y gas) y comprenden los cambios de estado a través de la teoría cinética de partículas.",
+    "sub_topics": [
+      {
+        "key": "caracteristicas_solidos",
+        "name": "Características de los Sólidos",
+        "short_description": "Los estudiantes reconocen que los sólidos tienen forma y volumen definidos, y comprenden la disposición de sus partículas.",
+        "sub_topics": [
+          {
+            "key": "propiedades_solidos",
+            "name": "Propiedades de los Sólidos",
+            "short_description": "Identificar y describir las propiedades distintivas de los materiales sólidos en la vida cotidiana.",
+            "example_tasks": [
+              "Observa tres objetos sólidos (piedra, lápiz, libro) y describe sus formas. ¿Cambian de forma cuando los mueves de un lugar a otro?",
+              "Compara un cubito de hielo y una pelota de goma. ¿En qué se parecen como sólidos? ¿En qué son diferentes?",
+              "Diseña un experimento para demostrar que los sólidos mantienen su forma. Explica qué materiales usarías y qué observarías."
+            ]
+          },
+          {
+            "key": "particulas_en_solidos",
+            "name": "Partículas en los Sólidos",
+            "short_description": "Comprender que los sólidos están compuestos de partículas muy juntas que vibran en su lugar.",
+            "example_tasks": [
+              "Dibuja cómo crees que están organizadas las partículas dentro de un cubo de madera. ¿Están juntas o separadas?",
+              "Usando canicas en una caja, representa cómo se mueven las partículas en un sólido. ¿Se mueven mucho o poco?",
+              "Explica por qué un sólido como un libro no se derrama cuando lo inclinas, usando la idea de partículas."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "caracteristicas_liquidos",
+        "name": "Características de los Líquidos",
+        "short_description": "Los estudiantes observan que los líquidos tienen volumen definido pero toman la forma del recipiente que los contiene.",
+        "sub_topics": [
+          {
+            "key": "propiedades_liquidos",
+            "name": "Propiedades de los Líquidos",
+            "short_description": "Identificar y describir las propiedades distintivas de los líquidos y cómo fluyen.",
+            "example_tasks": [
+              "Vierte agua en tres recipientes de diferente forma (vaso, botella, plato). ¿Qué observas sobre la forma del agua?",
+              "Compara cómo se comporta el agua y el aceite cuando los viertes. ¿Fluyen de la misma manera?",
+              "Mide 100 ml de jugo en un vaso medidor. Viértelo en diferentes recipientes. ¿Cambia la cantidad de jugo o solo su forma?"
+            ]
+          },
+          {
+            "key": "particulas_en_liquidos",
+            "name": "Partículas en los Líquidos",
+            "short_description": "Comprender que las partículas en líquidos están más separadas y se mueven libremente.",
+            "example_tasks": [
+              "Dibuja cómo imaginas que están las partículas del agua en un vaso. Compáralo con tu dibujo de las partículas de un sólido.",
+              "Explica por qué puedes verter un líquido pero no puedes verter un sólido, usando la idea de cómo se mueven las partículas.",
+              "Si las partículas de un líquido pueden moverse, ¿por qué el líquido no se expande para llenar toda una habitación como un gas?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "caracteristicas_gases",
+        "name": "Características de los Gases",
+        "short_description": "Los estudiantes comprenden que los gases no tienen forma ni volumen definidos y se expanden para llenar el espacio disponible.",
+        "sub_topics": [
+          {
+            "key": "propiedades_gases",
+            "name": "Propiedades de los Gases",
+            "short_description": "Identificar y describir las propiedades de los gases y su comportamiento.",
+            "example_tasks": [
+              "Infla un globo y describe qué sucede. ¿Qué hay dentro del globo? ¿Tiene forma definida?",
+              "Abre un frasco de perfume en una esquina del salón. Espera unos minutos. ¿Qué observas? ¿Cómo viajó el olor?",
+              "Compara el aire en un globo inflado con el aire en una habitación. ¿En qué se parecen y en qué se diferencian?"
+            ]
+          },
+          {
+            "key": "particulas_en_gases",
+            "name": "Partículas en los Gases",
+            "short_description": "Comprender que las partículas en gases están muy separadas y se mueven rápidamente en todas direcciones.",
+            "example_tasks": [
+              "Dibuja cómo crees que están distribuidas las partículas del aire en un globo inflado.",
+              "Explica por qué el olor de la comida cocinándose puede llegar hasta tu habitación, usando la idea del movimiento de partículas.",
+              "Compara los tres dibujos que hiciste de partículas en sólidos, líquidos y gases. ¿Qué diferencias notas en la distancia entre partículas?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "cambios_de_estado",
+        "name": "Cambios de Estado",
+        "short_description": "Los estudiantes identifican y describen los procesos de fusión, solidificación, evaporación, condensación y sublimación.",
+        "sub_topics": [
+          {
+            "key": "fusion_solidificacion",
+            "name": "Fusión y Solidificación",
+            "short_description": "Comprender los cambios entre estado sólido y líquido mediante calentamiento y enfriamiento.",
+            "example_tasks": [
+              "Observa un cubito de hielo al sol. Describe qué le sucede y explica por qué ocurre este cambio.",
+              "Derrite chocolate en tus manos. Luego ponlo en el refrigerador. ¿Qué cambios de estado observaste?",
+              "Diseña un experimento para determinar a qué temperatura se derrite la mantequilla. ¿Qué materiales necesitarías?"
+            ]
+          },
+          {
+            "key": "evaporacion_condensacion",
+            "name": "Evaporación y Condensación",
+            "short_description": "Comprender los cambios entre estado líquido y gaseoso en la vida cotidiana.",
+            "example_tasks": [
+              "Deja un charco de agua al sol y otro en la sombra. Observa qué sucede después de unas horas. ¿Por qué desaparece el agua?",
+              "Observa el espejo del baño después de una ducha caliente. ¿Qué ves? ¿De dónde viene esa agua?",
+              "Explica el ciclo del agua usando los conceptos de evaporación y condensación. Dibuja un diagrama que lo muestre."
+            ]
+          },
+          {
+            "key": "sublimacion",
+            "name": "Sublimación",
+            "short_description": "Identificar el proceso donde un sólido se convierte directamente en gas sin pasar por estado líquido.",
+            "example_tasks": [
+              "Observa hielo seco (dióxido de carbono sólido). ¿Qué notas? ¿Se derrite como el hielo normal?",
+              "Compara cómo desaparece el hielo seco con cómo se derrite un cubito de hielo regular. ¿Qué diferencias observas?",
+              "La naftalina (alcanfor) usada para proteger la ropa desaparece con el tiempo sin mojarse. ¿Qué tipo de cambio de estado es este?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "propiedades_materiales",
+    "name": "Propiedades de los Materiales",
+    "short_description": "Los estudiantes identifican, comparan y clasifican materiales según sus propiedades físicas observables como textura, dureza, flexibilidad, permeabilidad y transparencia.",
+    "sub_topics": [
+      {
+        "key": "textura_materiales",
+        "name": "Textura de los Materiales",
+        "short_description": "Los estudiantes exploran y describen la textura superficial de diferentes materiales.",
+        "sub_topics": [
+          {
+            "key": "texturas_tactiles",
+            "name": "Texturas Táctiles",
+            "short_description": "Identificar y describir texturas mediante el sentido del tacto.",
+            "example_tasks": [
+              "Toca cinco objetos diferentes (papel lija, algodón, metal, madera, plástico). Describe la textura de cada uno usando palabras como áspero, liso, rugoso, suave.",
+              "Agrupa diez objetos del salón en dos categorías: texturas ásperas y texturas lisas. Explica tu clasificación.",
+              "Busca en tu casa tres objetos con texturas diferentes y explica para qué sirve cada textura. Por ejemplo, ¿por qué el mango de un sartén es rugoso?"
+            ]
+          },
+          {
+            "key": "relacion_textura_uso",
+            "name": "Relación entre Textura y Uso",
+            "short_description": "Comprender cómo la textura de un material determina su uso práctico.",
+            "example_tasks": [
+              "Compara la suela de un zapato deportivo con la suela de un zapato formal. ¿Por qué tienen texturas diferentes?",
+              "Explica por qué el papel de lija es áspero. ¿Para qué se usa esta propiedad?",
+              "Diseña una herramienta para un propósito específico (por ejemplo, un agarrador de cocina). ¿Qué textura debería tener y por qué?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "dureza_materiales",
+        "name": "Dureza de los Materiales",
+        "short_description": "Los estudiantes comparan la dureza de diferentes materiales y comprenden su relación con las aplicaciones prácticas.",
+        "sub_topics": [
+          {
+            "key": "comparacion_dureza",
+            "name": "Comparación de Dureza",
+            "short_description": "Realizar pruebas simples para comparar la dureza relativa de materiales.",
+            "example_tasks": [
+              "Intenta rayar diferentes materiales (madera, plástico, metal, vidrio) con tu uña. Ordénalos del más suave al más duro.",
+              "Usa una moneda para rayar distintos objetos. ¿Cuáles se rayan fácilmente y cuáles no? ¿Qué te dice esto sobre su dureza?",
+              "Investiga la escala de Mohs (versión simplificada). Prueba rayar un clavo con una piedra y viceversa. ¿Cuál es más duro?"
+            ]
+          },
+          {
+            "key": "dureza_aplicaciones",
+            "name": "Dureza y Aplicaciones",
+            "short_description": "Relacionar la dureza de los materiales con sus usos en la vida cotidiana.",
+            "example_tasks": [
+              "Explica por qué los cuchillos están hechos de metal y no de madera. ¿Qué propiedad es importante aquí?",
+              "Compara un lápiz con una pluma. ¿Por qué el grafito del lápiz puede dejar marca en el papel?",
+              "Investiga de qué están hechas las brocas de taladro. ¿Por qué necesitan ser muy duras?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "flexibilidad_elasticidad",
+        "name": "Flexibilidad y Elasticidad",
+        "short_description": "Los estudiantes identifican materiales flexibles y elásticos, y comprenden la diferencia entre estas propiedades.",
+        "sub_topics": [
+          {
+            "key": "materiales_flexibles",
+            "name": "Materiales Flexibles",
+            "short_description": "Identificar materiales que pueden doblarse sin romperse.",
+            "example_tasks": [
+              "Prueba doblar diferentes materiales (papel, alambre, regla de plástico, rama seca). ¿Cuáles se doblan fácilmente sin romperse?",
+              "Compara una hoja de papel con una hoja de metal delgado (aluminio). ¿Cuál es más flexible? ¿Por qué?",
+              "Busca tres objetos flexibles en tu mochila. Explica por qué es útil que sean flexibles para su función."
+            ]
+          },
+          {
+            "key": "materiales_elasticos",
+            "name": "Materiales Elásticos",
+            "short_description": "Identificar materiales que recuperan su forma original después de ser deformados.",
+            "example_tasks": [
+              "Estira una liga y suéltala. Luego estira un pedazo de plastilina. ¿Qué diferencia observas? ¿Cuál es elástico?",
+              "Experimenta con diferentes materiales (resorte, esponja, banda de goma). ¿Cuáles regresan a su forma original?",
+              "Explica por qué la ropa deportiva está hecha de materiales elásticos. ¿Qué ventaja proporciona esta propiedad?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "permeabilidad",
+        "name": "Permeabilidad de los Materiales",
+        "short_description": "Los estudiantes investigan la capacidad de diferentes materiales para permitir o bloquear el paso de líquidos.",
+        "sub_topics": [
+          {
+            "key": "materiales_permeables",
+            "name": "Materiales Permeables",
+            "short_description": "Identificar materiales que permiten el paso de líquidos a través de ellos.",
+            "example_tasks": [
+              "Vierte agua sobre diferentes materiales (tela, papel, plástico, esponja). ¿Cuáles dejan pasar el agua?",
+              "Diseña un experimento para probar qué tan permeable es un papel toalla comparado con un papel encerado.",
+              "Explica por qué los filtros de café están hechos de material permeable. ¿Qué pasaría si fueran impermeables?"
+            ]
+          },
+          {
+            "key": "materiales_impermeables",
+            "name": "Materiales Impermeables",
+            "short_description": "Identificar materiales que bloquean el paso de líquidos.",
+            "example_tasks": [
+              "Observa un impermeable o paraguas. ¿De qué material está hecho? ¿Por qué no deja pasar el agua?",
+              "Compara una bolsa de plástico con una bolsa de tela. ¿Cuál usarías para cargar algo mojado? ¿Por qué?",
+              "Investiga cómo hacen impermeables algunas telas como las de las tiendas de campaña. ¿Qué tratamiento reciben?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "transparencia_opacidad",
+        "name": "Transparencia y Opacidad",
+        "short_description": "Los estudiantes clasifican materiales según su capacidad para permitir el paso de la luz.",
+        "sub_topics": [
+          {
+            "key": "materiales_transparentes",
+            "name": "Materiales Transparentes",
+            "short_description": "Identificar materiales que permiten ver claramente a través de ellos.",
+            "example_tasks": [
+              "Coloca diferentes objetos frente a una linterna (vidrio, plástico transparente, papel). ¿A través de cuáles puedes ver la luz claramente?",
+              "Observa diferentes ventanas (vidrio claro, vidrio esmerilado). ¿Cuál es más transparente? ¿Por qué?",
+              "Explica por qué los lentes de los anteojos están hechos de material transparente."
+            ]
+          },
+          {
+            "key": "materiales_translucidos",
+            "name": "Materiales Translúcidos",
+            "short_description": "Identificar materiales que permiten el paso de luz pero no permiten ver claramente a través de ellos.",
+            "example_tasks": [
+              "Coloca tu mano detrás de un papel delgado iluminado por una lámpara. ¿Puedes ver tu mano? ¿Puedes ver los detalles?",
+              "Compara papel de china, papel albanene y papel bond. ¿Cuál es más translúcido?",
+              "Investiga por qué algunas puertas de baño usan vidrio esmerilado en lugar de vidrio transparente."
+            ]
+          },
+          {
+            "key": "materiales_opacos",
+            "name": "Materiales Opacos",
+            "short_description": "Identificar materiales que bloquean completamente el paso de la luz.",
+            "example_tasks": [
+              "Intenta ver una linterna a través de diferentes materiales (madera, metal, cartón). ¿Cuáles bloquean completamente la luz?",
+              "Explica por qué las cortinas oscuras (opacas) son mejores para dormir durante el día que las cortinas delgadas.",
+              "Diseña una caja para proteger una planta de la luz solar directa. ¿Qué materiales usarías?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "clasificacion_materiales",
+        "name": "Clasificación de Materiales",
+        "short_description": "Los estudiantes clasifican materiales en naturales y manufacturados, y comprenden sus orígenes y procesos de obtención.",
+        "sub_topics": [
+          {
+            "key": "materiales_naturales",
+            "name": "Materiales Naturales",
+            "short_description": "Identificar materiales que provienen directamente de la naturaleza.",
+            "example_tasks": [
+              "Haz una lista de diez objetos en tu casa hechos de materiales naturales (madera, algodón, piedra, etc.). Indica su origen.",
+              "Investiga de dónde proviene la lana. Describe el proceso desde la oveja hasta tu suéter.",
+              "Compara las propiedades de la madera de pino con la madera de encino. ¿Son iguales todos los materiales naturales?"
+            ]
+          },
+          {
+            "key": "materiales_manufacturados",
+            "name": "Materiales Manufacturados",
+            "short_description": "Identificar materiales creados por el ser humano mediante procesos industriales.",
+            "example_tasks": [
+              "Identifica cinco objetos de plástico en tu salón. Investiga cómo se fabrica el plástico.",
+              "Compara una botella de vidrio con una botella de plástico. ¿Cuáles son las ventajas de cada material?",
+              "Investiga qué materiales se usan para fabricar una computadora. ¿Son naturales o manufacturados?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "mezclas_soluciones",
+    "name": "Mezclas y Soluciones",
+    "short_description": "Los estudiantes identifican diferentes tipos de mezclas, comprenden la diferencia entre mezclas homogéneas y heterogéneas, y aprenden métodos para separar los componentes de las mezclas.",
+    "sub_topics": [
+      {
+        "key": "tipos_de_mezclas",
+        "name": "Tipos de Mezclas",
+        "short_description": "Los estudiantes clasifican mezclas según la distribución de sus componentes.",
+        "sub_topics": [
+          {
+            "key": "mezclas_heterogeneas",
+            "name": "Mezclas Heterogéneas",
+            "short_description": "Identificar mezclas donde se pueden distinguir sus componentes a simple vista.",
+            "example_tasks": [
+              "Mezcla arena con frijoles. ¿Puedes ver cada componente? ¿Es una mezcla homogénea o heterogénea?",
+              "Observa una ensalada. Identifica todos sus componentes. ¿Por qué es una mezcla heterogénea?",
+              "Prepara una mezcla de agua con aceite. Agita y observa. ¿Qué sucede después de unos minutos? ¿Por qué?"
+            ]
+          },
+          {
+            "key": "mezclas_homogeneas",
+            "name": "Mezclas Homogéneas (Soluciones)",
+            "short_description": "Identificar mezclas donde los componentes están distribuidos uniformemente y no se distinguen a simple vista.",
+            "example_tasks": [
+              "Disuelve una cucharada de azúcar en un vaso de agua. ¿Puedes ver el azúcar después de revolver? ¿Qué tipo de mezcla es?",
+              "Compara agua con sal disuelta y agua con arena. ¿En cuál se distinguen los componentes?",
+              "Observa diferentes líquidos (agua pura, agua con colorante, leche). ¿Cuáles son soluciones y cuáles no?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "componentes_solucion",
+        "name": "Componentes de una Solución",
+        "short_description": "Los estudiantes identifican el soluto y el solvente en diferentes soluciones.",
+        "sub_topics": [
+          {
+            "key": "soluto_solvente",
+            "name": "Soluto y Solvente",
+            "short_description": "Distinguir entre la sustancia que se disuelve (soluto) y la sustancia que disuelve (solvente).",
+            "example_tasks": [
+              "Prepara agua con azúcar. Identifica cuál es el soluto y cuál es el solvente en esta mezcla.",
+              "En una limonada, ¿qué es el soluto y qué es el solvente? ¿Puede haber más de un soluto?",
+              "Investiga qué es el solvente universal. ¿Por qué al agua se le llama así?"
+            ]
+          },
+          {
+            "key": "solubilidad",
+            "name": "Solubilidad",
+            "short_description": "Comprender que diferentes sustancias tienen diferente capacidad para disolverse en un solvente.",
+            "example_tasks": [
+              "Intenta disolver sal, azúcar, aceite y arena en agua. ¿Cuáles se disuelven completamente?",
+              "Agrega cucharadas de azúcar al agua hasta que no se disuelva más. ¿Qué sucede? ¿Qué es una solución saturada?",
+              "Calienta agua y prueba disolver azúcar. Compara con agua fría. ¿En cuál se disuelve más azúcar?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "metodos_separacion",
+        "name": "Métodos de Separación de Mezclas",
+        "short_description": "Los estudiantes aprenden y aplican diferentes técnicas para separar los componentes de las mezclas.",
+        "sub_topics": [
+          {
+            "key": "tamizado",
+            "name": "Tamizado",
+            "short_description": "Separar sólidos de diferente tamaño usando una malla o colador.",
+            "example_tasks": [
+              "Mezcla harina con piedritas pequeñas. Usa un colador para separarlas. ¿Qué se queda en el colador?",
+              "Explica cómo se usa el tamizado en la construcción para separar arena gruesa de arena fina.",
+              "Diseña un experimento usando dos tamices de diferente tamaño de malla para separar una mezcla de tres componentes."
+            ]
+          },
+          {
+            "key": "filtrado",
+            "name": "Filtración",
+            "short_description": "Separar sólidos de líquidos usando un filtro que retiene las partículas sólidas.",
+            "example_tasks": [
+              "Mezcla agua con tierra. Vierte la mezcla a través de un papel filtro o tela. ¿Qué observas?",
+              "Explica cómo funciona un filtro de café. ¿Qué se queda en el filtro y qué pasa a través de él?",
+              "Investiga cómo se purifica el agua en una planta de tratamiento. ¿Usan filtración?"
+            ]
+          },
+          {
+            "key": "decantacion",
+            "name": "Decantación",
+            "short_description": "Separar líquidos de sólidos o líquidos de diferente densidad dejando reposar la mezcla.",
+            "example_tasks": [
+              "Mezcla agua con arena. Deja reposar. ¿Qué sucede? ¿Puedes separar el agua vertiendo con cuidado?",
+              "Mezcla agua con aceite en una botella transparente. Deja reposar. ¿Qué líquido queda arriba? ¿Por qué?",
+              "Explica cómo se separa el aceite del vinagre en un aderezo para ensalada después de dejarlo reposar."
+            ]
+          },
+          {
+            "key": "evaporacion",
+            "name": "Evaporación",
+            "short_description": "Separar un sólido disuelto de un líquido mediante la evaporación del líquido.",
+            "example_tasks": [
+              "Disuelve sal en agua. Deja el vaso al sol varios días. ¿Qué queda en el vaso cuando se evapora el agua?",
+              "Investiga cómo se obtiene la sal en las salinas. ¿Qué método de separación se usa?",
+              "Compara la velocidad de evaporación de agua salada en un lugar soleado versus un lugar sombreado. ¿Dónde se obtiene la sal más rápido?"
+            ]
+          },
+          {
+            "key": "magnetismo_separacion",
+            "name": "Separación Magnética",
+            "short_description": "Separar materiales magnéticos de no magnéticos usando un imán.",
+            "example_tasks": [
+              "Mezcla clips de metal con botones de plástico. Usa un imán para separarlos. ¿Qué sucede?",
+              "Explica cómo se podría usar un imán para separar clavos de hierro de arena.",
+              "Investiga cómo se usa la separación magnética en los centros de reciclaje para separar diferentes metales."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "cambios_materia",
+    "name": "Cambios en la Materia",
+    "short_description": "Los estudiantes distinguen entre cambios físicos y químicos, identifican transformaciones reversibles e irreversibles, y comprenden el principio de conservación de la masa.",
+    "sub_topics": [
+      {
+        "key": "cambios_fisicos",
+        "name": "Cambios Físicos",
+        "short_description": "Los estudiantes identifican cambios donde la materia cambia de forma o estado pero no de composición.",
+        "sub_topics": [
+          {
+            "key": "cambios_forma",
+            "name": "Cambios de Forma",
+            "short_description": "Reconocer transformaciones que solo afectan la forma del material.",
+            "example_tasks": [
+              "Rompe un papel en pedazos pequeños. ¿Sigue siendo papel? ¿Cambió su composición o solo su forma?",
+              "Moldea plastilina en diferentes formas. ¿Es un cambio físico o químico? Explica tu respuesta.",
+              "Compara un vaso de vidrio entero con uno roto. ¿Cambió la naturaleza del vidrio o solo su forma?"
+            ]
+          },
+          {
+            "key": "cambios_estado_fisicos",
+            "name": "Cambios de Estado como Cambios Físicos",
+            "short_description": "Comprender que los cambios de estado son cambios físicos reversibles.",
+            "example_tasks": [
+              "Congela agua y luego derrítela. ¿Sigue siendo agua? ¿Es un cambio físico o químico?",
+              "Observa una vela derretirse. ¿El cambio de cera sólida a líquida cambia qué es la cera?",
+              "Explica por qué hervir agua es un cambio físico aunque el agua parezca desaparecer."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "cambios_quimicos",
+        "name": "Cambios Químicos",
+        "short_description": "Los estudiantes identifican cambios donde se forman nuevas sustancias con propiedades diferentes.",
+        "sub_topics": [
+          {
+            "key": "evidencias_cambio_quimico",
+            "name": "Evidencias de Cambio Químico",
+            "short_description": "Identificar señales que indican que ocurrió un cambio químico.",
+            "example_tasks": [
+              "Observa una manzana cortada que se vuelve café. ¿Es un cambio físico o químico? ¿Qué evidencia lo indica?",
+              "Mezcla vinagre con bicarbonato de sodio. ¿Qué observas? ¿Burbujas, cambio de color, calor? ¿Qué tipo de cambio es?",
+              "Lista cinco señales que te ayudan a identificar un cambio químico (cambio de color, producción de gas, cambio de olor, etc.)."
+            ]
+          },
+          {
+            "key": "combustion",
+            "name": "Combustión",
+            "short_description": "Comprender la combustión como un cambio químico que produce nuevas sustancias.",
+            "example_tasks": [
+              "Observa (con supervisión) cómo se quema un pedazo de papel. ¿Qué queda? ¿Es lo mismo que el papel original?",
+              "Compara madera con cenizas. ¿Tienen las mismas propiedades? ¿Puedes convertir cenizas de nuevo en madera?",
+              "Explica por qué quemar una vela es un cambio químico irreversible."
+            ]
+          },
+          {
+            "key": "oxidacion",
+            "name": "Oxidación",
+            "short_description": "Identificar la oxidación como un cambio químico común en metales.",
+            "example_tasks": [
+              "Observa un clavo de hierro oxidado. ¿En qué se diferencia del clavo nuevo? ¿Qué causó el cambio?",
+              "Deja un objeto de metal (con supervisión) en agua salada por varios días. ¿Qué observas? ¿Por qué?",
+              "Investiga por qué las estatuas de cobre se vuelven verdes con el tiempo. ¿Es un cambio físico o químico?"
+            ]
+          },
+          {
+            "key": "coccion_alimentos",
+            "name": "Cocción de Alimentos",
+            "short_description": "Reconocer la cocción como un cambio químico que transforma los alimentos.",
+            "example_tasks": [
+              "Compara un huevo crudo con un huevo cocido. ¿Son iguales? ¿Puedes hacer que el huevo cocido vuelva a estar crudo?",
+              "Observa cómo cambia el pan cuando se hornea. ¿Qué cambios notas en color, textura y olor?",
+              "Explica por qué cocinar palomitas de maíz es un cambio químico irreversible."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "reversibilidad",
+        "name": "Cambios Reversibles e Irreversibles",
+        "short_description": "Los estudiantes distinguen entre cambios que pueden revertirse y cambios permanentes.",
+        "sub_topics": [
+          {
+            "key": "cambios_reversibles",
+            "name": "Cambios Reversibles",
+            "short_description": "Identificar transformaciones que pueden deshacerse para recuperar el estado original.",
+            "example_tasks": [
+              "Congela agua y luego derrítela. ¿Recuperaste el agua original? ¿Es reversible este cambio?",
+              "Mezcla agua con arena, luego sepáralas por filtración. ¿Pudiste revertir el cambio?",
+              "Lista cinco ejemplos de cambios reversibles que observes en tu vida diaria."
+            ]
+          },
+          {
+            "key": "cambios_irreversibles",
+            "name": "Cambios Irreversibles",
+            "short_description": "Identificar transformaciones permanentes que no pueden deshacerse.",
+            "example_tasks": [
+              "Intenta 'descocinar' un huevo hervido. ¿Es posible? ¿Por qué algunos cambios son irreversibles?",
+              "Compara romper un vaso de vidrio (cambio físico) con quemar papel (cambio químico). ¿Cuál es más difícil o imposible de revertir?",
+              "Investiga ejemplos de cambios irreversibles importantes: digestión de alimentos, fotosíntesis, respiración."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "conservacion_masa",
+        "name": "Conservación de la Masa",
+        "short_description": "Los estudiantes comprenden que la masa total se conserva durante los cambios físicos y químicos.",
+        "sub_topics": [
+          {
+            "key": "masa_antes_despues",
+            "name": "Masa Antes y Después del Cambio",
+            "short_description": "Medir y comparar la masa antes y después de diferentes transformaciones.",
+            "example_tasks": [
+              "Pesa un cubito de hielo. Déjalo derretir completamente. Pesa el agua resultante. ¿Cambió la masa?",
+              "Pesa una porción de plastilina. Modélala en diferentes formas. Vuelve a pesarla. ¿Qué observas?",
+              "Diseña un experimento para demostrar que la masa se conserva cuando disuelves sal en agua."
+            ]
+          },
+          {
+            "key": "masa_mezclas",
+            "name": "Conservación de Masa en Mezclas",
+            "short_description": "Verificar que la masa total de una mezcla es igual a la suma de las masas de sus componentes.",
+            "example_tasks": [
+              "Pesa 50g de arena y 100g de frijoles por separado. Mézclalos y pesa la mezcla. ¿Cuánto debería pesar?",
+              "Pesa agua y azúcar separadamente, luego pesa la solución después de disolver el azúcar. ¿Se conserva la masa?",
+              "Explica por qué la masa de una limonada es igual a la suma de las masas de agua, limón, azúcar y hielo que usaste."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "formas_energia",
+    "name": "Formas de Energía",
+    "short_description": "Los estudiantes identifican diferentes formas de energía (lumínica, térmica, sonora, eléctrica, mecánica) y reconocen sus fuentes y usos en la vida cotidiana.",
+    "sub_topics": [
+      {
+        "key": "concepto_energia",
+        "name": "Concepto de Energía",
+        "short_description": "Los estudiantes comprenden que la energía es la capacidad de realizar trabajo o producir cambios.",
+        "sub_topics": [
+          {
+            "key": "energia_vida_diaria",
+            "name": "Energía en la Vida Diaria",
+            "short_description": "Identificar manifestaciones de energía en actividades cotidianas.",
+            "example_tasks": [
+              "Observa tu salón de clases e identifica cinco ejemplos donde se use energía (luz, ventilador, computadora, etc.).",
+              "Describe qué formas de energía usas desde que te despiertas hasta que llegas a la escuela.",
+              "Explica qué pasaría en tu casa si no hubiera energía eléctrica por un día completo."
+            ]
+          },
+          {
+            "key": "transformacion_energia",
+            "name": "Transformación de Energía",
+            "short_description": "Reconocer que la energía puede cambiar de una forma a otra.",
+            "example_tasks": [
+              "Observa una lámpara encendida. ¿Qué tipo de energía entra (eléctrica) y qué tipos de energía salen (luz y calor)?",
+              "Cuando hablas, ¿qué tipo de energía estás produciendo? ¿De dónde viene esa energía originalmente?",
+              "Describe las transformaciones de energía que ocurren cuando usas una licuadora para hacer un jugo."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fuentes_energia",
+        "name": "Fuentes de Energía",
+        "short_description": "Los estudiantes identifican diferentes fuentes de energía renovables y no renovables.",
+        "sub_topics": [
+          {
+            "key": "fuentes_renovables",
+            "name": "Fuentes de Energía Renovables",
+            "short_description": "Identificar fuentes de energía que no se agotan con su uso.",
+            "example_tasks": [
+              "Investiga tres fuentes de energía renovable (solar, eólica, hidráulica). ¿Por qué se llaman renovables?",
+              "Observa un panel solar. ¿De dónde obtiene su energía? ¿Se puede agotar esa fuente?",
+              "Diseña un cartel que muestre las ventajas de usar energía solar en México."
+            ]
+          },
+          {
+            "key": "fuentes_no_renovables",
+            "name": "Fuentes de Energía No Renovables",
+            "short_description": "Identificar fuentes de energía que pueden agotarse.",
+            "example_tasks": [
+              "Investiga qué combustibles fósiles se usan en México (petróleo, gas natural, carbón). ¿Por qué se consideran no renovables?",
+              "Explica por qué es importante ahorrar energía si viene de fuentes no renovables.",
+              "Compara las ventajas y desventajas de usar gasolina versus energía solar para un automóvil."
+            ]
+          },
+          {
+            "key": "sol_fuente_principal",
+            "name": "El Sol como Fuente Principal",
+            "short_description": "Comprender que el Sol es la fuente principal de energía para la Tierra.",
+            "example_tasks": [
+              "Explica cómo el Sol ayuda a las plantas a crecer y producir alimento. ¿Qué tipo de energía usan?",
+              "Describe cómo la energía del Sol llega a estar en los alimentos que comes.",
+              "Investiga cómo la energía solar se transforma en energía eólica (viento) y energía hidráulica (agua en movimiento)."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "energia_mecanica",
+        "name": "Energía Mecánica",
+        "short_description": "Los estudiantes reconocen la energía relacionada con el movimiento y la posición de los objetos.",
+        "sub_topics": [
+          {
+            "key": "energia_cinetica_simple",
+            "name": "Energía del Movimiento",
+            "short_description": "Identificar que los objetos en movimiento tienen energía.",
+            "example_tasks": [
+              "Compara rodar una pelota lentamente versus rápidamente. ¿Cuál tiene más energía de movimiento? ¿Cómo lo sabes?",
+              "Observa un carro de juguete en movimiento. ¿Qué puede hacer gracias a su energía de movimiento?",
+              "Explica por qué un camión en movimiento tiene más energía que una bicicleta moviéndose a la misma velocidad."
+            ]
+          },
+          {
+            "key": "energia_potencial_simple",
+            "name": "Energía Almacenada por Posición",
+            "short_description": "Reconocer que los objetos pueden tener energía por su posición.",
+            "example_tasks": [
+              "Levanta un libro a diferentes alturas y suéltalo. ¿Desde qué altura hace más ruido al caer? ¿Por qué?",
+              "Compara un resorte comprimido con un resorte relajado. ¿Cuál tiene energía almacenada?",
+              "Explica por qué el agua en una presa (represa) tiene energía aunque no se esté moviendo."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "usos_energia",
+        "name": "Usos de la Energía",
+        "short_description": "Los estudiantes identifican cómo se usa la energía en diferentes actividades humanas.",
+        "sub_topics": [
+          {
+            "key": "energia_hogar",
+            "name": "Energía en el Hogar",
+            "short_description": "Reconocer los usos de energía en actividades domésticas.",
+            "example_tasks": [
+              "Haz una lista de diez aparatos en tu casa que usen energía eléctrica. ¿Para qué sirve cada uno?",
+              "Investiga cuánta energía consume tu refrigerador en un mes. ¿Es mucha o poca comparada con una lámpara?",
+              "Diseña un plan para reducir el consumo de energía en tu hogar. Menciona cinco acciones concretas."
+            ]
+          },
+          {
+            "key": "energia_transporte",
+            "name": "Energía en el Transporte",
+            "short_description": "Identificar las fuentes de energía que mueven diferentes vehículos.",
+            "example_tasks": [
+              "Compara un automóvil de gasolina, una bicicleta y un autobús eléctrico. ¿Qué fuente de energía usa cada uno?",
+              "Explica cómo funciona un automóvil eléctrico. ¿De dónde obtiene su energía?",
+              "Investiga qué combustible usan los aviones. ¿Es una fuente renovable o no renovable?"
+            ]
+          },
+          {
+            "key": "energia_industria",
+            "name": "Energía en la Industria",
+            "short_description": "Reconocer el uso de energía en procesos de fabricación y producción.",
+            "example_tasks": [
+              "Investiga cómo se fabrica el papel. ¿Qué tipos de energía se necesitan en el proceso?",
+              "Visita (o investiga) una panadería. ¿Qué formas de energía se usan para hacer el pan?",
+              "Explica por qué las fábricas necesitan mucha energía para funcionar."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "calor_temperatura",
+    "name": "Calor y Temperatura",
+    "short_description": "Los estudiantes comprenden la diferencia entre calor y temperatura, exploran la transferencia de calor y clasifican materiales según su conductividad térmica.",
+    "sub_topics": [
+      {
+        "key": "diferencia_calor_temperatura",
+        "name": "Diferencia entre Calor y Temperatura",
+        "short_description": "Los estudiantes distinguen entre calor como energía en tránsito y temperatura como medida del nivel térmico.",
+        "sub_topics": [
+          {
+            "key": "concepto_temperatura",
+            "name": "Concepto de Temperatura",
+            "short_description": "Comprender la temperatura como medida de qué tan caliente o frío está un objeto.",
+            "example_tasks": [
+              "Toca diferentes objetos (metal, madera, plástico) que han estado en el salón. ¿Algunos se sienten más fríos aunque estén a la misma temperatura?",
+              "Mide la temperatura de agua fría, tibia y caliente con un termómetro. Registra las diferencias.",
+              "Explica qué significa cuando decimos que la temperatura corporal normal es 36.5°C."
+            ]
+          },
+          {
+            "key": "concepto_calor",
+            "name": "Concepto de Calor",
+            "short_description": "Comprender el calor como energía que fluye de objetos calientes a objetos fríos.",
+            "example_tasks": [
+              "Sostén un cubito de hielo en tu mano. ¿Hacia dónde fluye el calor: de tu mano al hielo o del hielo a tu mano?",
+              "Coloca una cuchara de metal en una taza de chocolate caliente. ¿Qué sucede con la cuchara después de un minuto?",
+              "Explica por qué el chocolate caliente se enfría cuando lo dejas en la mesa."
+            ]
+          },
+          {
+            "key": "equilibrio_termico",
+            "name": "Equilibrio Térmico",
+            "short_description": "Reconocer que el calor fluye hasta que dos objetos alcanzan la misma temperatura.",
+            "example_tasks": [
+              "Mezcla agua caliente con agua fría. Mide la temperatura de la mezcla. ¿Es un promedio de las dos temperaturas?",
+              "Deja una lata de refresco fría en el salón. Mide su temperatura cada 10 minutos. ¿Qué observas?",
+              "Explica por qué una bebida caliente en una taza eventualmente alcanza la temperatura del ambiente."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "medicion_temperatura",
+        "name": "Medición de la Temperatura",
+        "short_description": "Los estudiantes aprenden a usar termómetros y comprenden las escalas de temperatura.",
+        "sub_topics": [
+          {
+            "key": "uso_termometro",
+            "name": "Uso del Termómetro",
+            "short_description": "Aprender a leer y usar termómetros correctamente.",
+            "example_tasks": [
+              "Practica leer diferentes termómetros (digital, de mercurio, infrarrojo). ¿Cómo funcionan cada uno?",
+              "Mide la temperatura del aire en diferentes lugares de tu escuela (soleado, sombra, salón). Compara los resultados.",
+              "Diseña un experimento para medir cómo cambia la temperatura del agua cuando le agregas cubitos de hielo."
+            ]
+          },
+          {
+            "key": "escala_celsius",
+            "name": "Escala Celsius",
+            "short_description": "Comprender la escala Celsius y sus puntos de referencia.",
+            "example_tasks": [
+              "Investiga a qué temperatura se congela el agua (0°C) y a qué temperatura hierve (100°C).",
+              "Registra la temperatura diaria de tu ciudad durante una semana. ¿Cuál fue la más alta y la más baja?",
+              "Explica por qué en algunos lugares de México la temperatura puede ser de 40°C en verano pero en otros lugares nunca pasa de 25°C."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "transferencia_calor",
+        "name": "Transferencia de Calor",
+        "short_description": "Los estudiantes identifican las tres formas de transferencia de calor: conducción, convección y radiación.",
+        "sub_topics": [
+          {
+            "key": "conduccion",
+            "name": "Conducción",
+            "short_description": "Comprender la transferencia de calor por contacto directo entre materiales.",
+            "example_tasks": [
+              "Coloca una cuchara de metal y una de madera en agua caliente. Después de un minuto, toca el extremo de cada una. ¿Cuál está más caliente?",
+              "Explica por qué el mango de una olla está hecho de un material diferente al resto de la olla.",
+              "Diseña un experimento para probar qué metal (cobre, aluminio, hierro) conduce mejor el calor."
+            ]
+          },
+          {
+            "key": "conveccion",
+            "name": "Convección",
+            "short_description": "Comprender la transferencia de calor mediante el movimiento de fluidos (líquidos y gases).",
+            "example_tasks": [
+              "Calienta agua en una olla transparente. Agrega colorante en el fondo. ¿Qué observas? ¿Por qué se mueve el colorante?",
+              "Explica por qué el aire caliente sube. ¿Qué pasa con el aire frío?",
+              "Investiga cómo funcionan los calentadores de ambiente. ¿Por qué se colocan cerca del piso?"
+            ]
+          },
+          {
+            "key": "radiacion",
+            "name": "Radiación",
+            "short_description": "Comprender la transferencia de calor sin necesidad de contacto o medio material.",
+            "example_tasks": [
+              "Siéntete el calor del Sol en tu piel. ¿Cómo llega ese calor hasta ti si no estás tocando el Sol?",
+              "Compara estar cerca de una fogata versus estar lejos. ¿Sientes el calor aunque no toques el fuego?",
+              "Explica cómo un horno de microondas calienta la comida sin tocarla directamente."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "conductores_aislantes",
+        "name": "Conductores y Aislantes Térmicos",
+        "short_description": "Los estudiantes clasifican materiales según su capacidad de conducir o bloquear el calor.",
+        "sub_topics": [
+          {
+            "key": "materiales_conductores",
+            "name": "Materiales Conductores de Calor",
+            "short_description": "Identificar materiales que permiten el paso fácil del calor.",
+            "example_tasks": [
+              "Prueba diferentes materiales (metal, vidrio, madera, plástico) tocándolos después de estar al sol. ¿Cuáles se sienten más calientes?",
+              "Explica por qué las ollas y sartenes están hechas generalmente de metal.",
+              "Compara la conducción de calor en una moneda de metal versus una ficha de plástico. ¿Cuál es mejor conductor?"
+            ]
+          },
+          {
+            "key": "materiales_aislantes",
+            "name": "Materiales Aislantes de Calor",
+            "short_description": "Identificar materiales que dificultan el paso del calor.",
+            "example_tasks": [
+              "Envuelve un vaso de agua caliente con diferentes materiales (periódico, aluminio, tela, plástico). ¿Cuál mantiene el agua caliente por más tiempo?",
+              "Investiga por qué los vasos térmicos tienen doble pared. ¿Qué hay entre las dos paredes?",
+              "Diseña un contenedor para mantener una paleta helada sin que se derrita rápidamente. ¿Qué materiales usarías?"
+            ]
+          },
+          {
+            "key": "aplicaciones_aislantes",
+            "name": "Aplicaciones de Aislantes Térmicos",
+            "short_description": "Reconocer el uso de aislantes térmicos en la vida cotidiana.",
+            "example_tasks": [
+              "Observa la ropa de invierno. ¿Por qué los suéteres gruesos nos mantienen calientes?",
+              "Investiga cómo están construidas las casas en lugares muy fríos o muy calurosos. ¿Qué materiales usan en las paredes?",
+              "Explica por qué una hielera mantiene frías las bebidas aunque esté en un día caluroso."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "efectos_calor",
+        "name": "Efectos del Calor en la Materia",
+        "short_description": "Los estudiantes observan cómo el calor causa expansión y otros cambios en los materiales.",
+        "sub_topics": [
+          {
+            "key": "expansion_termica",
+            "name": "Expansión Térmica",
+            "short_description": "Comprender que los materiales se expanden al calentarse y se contraen al enfriarse.",
+            "example_tasks": [
+              "Observa un globo inflado en agua caliente y luego en agua fría. ¿Qué le sucede? ¿Por qué?",
+              "Investiga por qué los puentes tienen juntas de expansión. ¿Qué pasaría sin ellas en un día muy caluroso?",
+              "Coloca una tapa de metal atascada bajo agua caliente. ¿Por qué se afloja?"
+            ]
+          },
+          {
+            "key": "calor_cambios_estado",
+            "name": "Calor y Cambios de Estado",
+            "short_description": "Relacionar el calor con los cambios de estado de la materia.",
+            "example_tasks": [
+              "Calienta mantequilla sólida. ¿Qué sucede? ¿Qué pasaría si la enfrías de nuevo?",
+              "Explica el papel del calor en hacer paletas heladas: congelar el agua requiere quitar calor.",
+              "Investiga a qué temperatura se derrite el chocolate. ¿Por qué se derrite en tu mano?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "luz",
+    "name": "Luz",
+    "short_description": "Los estudiantes exploran las propiedades de la luz, sus fuentes, propagación, interacción con materiales, formación de sombras, reflexión, refracción y composición en colores.",
+    "sub_topics": [
+      {
+        "key": "fuentes_luz",
+        "name": "Fuentes de Luz",
+        "short_description": "Los estudiantes identifican y clasifican diferentes fuentes de luz naturales y artificiales.",
+        "sub_topics": [
+          {
+            "key": "fuentes_naturales",
+            "name": "Fuentes Naturales de Luz",
+            "short_description": "Identificar fuentes de luz que existen en la naturaleza.",
+            "example_tasks": [
+              "Haz una lista de fuentes naturales de luz. ¿Cuál es la más importante para la Tierra?",
+              "Observa el cielo nocturno. ¿Qué fuentes naturales de luz puedes identificar (luna, estrellas, relámpagos)?",
+              "Investiga otros seres vivos que producen luz, como las luciérnagas. ¿Cómo se llama este fenómeno?"
+            ]
+          },
+          {
+            "key": "fuentes_artificiales",
+            "name": "Fuentes Artificiales de Luz",
+            "short_description": "Identificar fuentes de luz creadas por el ser humano.",
+            "example_tasks": [
+              "Identifica cinco fuentes de luz artificial en tu salón de clases. ¿Qué energía usan para producir luz?",
+              "Compara una vela, un foco incandescente y un LED. ¿Cuál produce más luz? ¿Cuál consume menos energía?",
+              "Investiga cómo han cambiado las fuentes de luz que usamos en casa a lo largo de la historia."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "propagacion_luz",
+        "name": "Propagación de la Luz",
+        "short_description": "Los estudiantes comprenden que la luz viaja en línea recta y a gran velocidad.",
+        "sub_topics": [
+          {
+            "key": "linea_recta",
+            "name": "Luz Viaja en Línea Recta",
+            "short_description": "Demostrar que la luz se propaga en líneas rectas.",
+            "example_tasks": [
+              "Ilumina una linterna a través de una habitación oscura. ¿Qué forma tiene el haz de luz?",
+              "Haz tres tarjetas con agujeros alineados. Ilumina con una linterna. ¿Pasa la luz? Desalinea una tarjeta. ¿Qué sucede?",
+              "Explica por qué no podemos ver a través de esquinas. ¿Cómo se relaciona con que la luz viaja en línea recta?"
+            ]
+          },
+          {
+            "key": "velocidad_luz",
+            "name": "Velocidad de la Luz",
+            "short_description": "Comprender que la luz viaja muy rápidamente.",
+            "example_tasks": [
+              "Compara encender una linterna con hacer sonar una campana. ¿Cuál percibes primero a la distancia: luz o sonido?",
+              "Observa un relámpago distante seguido de un trueno. ¿Por qué hay un retraso entre ellos?",
+              "Investiga cuánto tarda la luz del Sol en llegar a la Tierra (aproximadamente 8 minutos)."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "sombras",
+        "name": "Sombras",
+        "short_description": "Los estudiantes exploran la formación de sombras y los factores que afectan su tamaño y forma.",
+        "sub_topics": [
+          {
+            "key": "formacion_sombras",
+            "name": "Formación de Sombras",
+            "short_description": "Comprender cómo se forman las sombras cuando la luz es bloqueada.",
+            "example_tasks": [
+              "Coloca tu mano entre una linterna y una pared. ¿Qué observas en la pared? ¿Cómo se forma la sombra?",
+              "Experimenta con objetos transparentes, translúcidos y opacos. ¿Cuáles producen sombras más oscuras?",
+              "Explica por qué tu sombra aparece cuando estás bajo el Sol pero no en un día muy nublado."
+            ]
+          },
+          {
+            "key": "tamano_sombras",
+            "name": "Tamaño de las Sombras",
+            "short_description": "Investigar qué factores afectan el tamaño de las sombras.",
+            "example_tasks": [
+              "Acerca y aleja un objeto de una fuente de luz. ¿Cómo cambia el tamaño de la sombra?",
+              "Observa tu sombra al mediodía y luego por la tarde. ¿Por qué cambia de tamaño durante el día?",
+              "Diseña un experimento para crear sombras de diferentes tamaños usando un mismo objeto."
+            ]
+          },
+          {
+            "key": "sombras_multiples",
+            "name": "Sombras Múltiples",
+            "short_description": "Explorar qué sucede cuando hay múltiples fuentes de luz.",
+            "example_tasks": [
+              "Ilumina un objeto con dos linternas desde diferentes ángulos. ¿Cuántas sombras ves?",
+              "Observa las sombras en un campo de fútbol con múltiples reflectores. ¿Por qué un jugador tiene varias sombras?",
+              "Explica cómo se forman los eclipses usando el concepto de sombras."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "reflexion_luz",
+        "name": "Reflexión de la Luz",
+        "short_description": "Los estudiantes comprenden cómo la luz rebota en superficies y exploran diferentes tipos de reflexión.",
+        "sub_topics": [
+          {
+            "key": "espejos_reflexion",
+            "name": "Reflexión en Espejos",
+            "short_description": "Explorar cómo los espejos reflejan la luz y forman imágenes.",
+            "example_tasks": [
+              "Observa tu reflejo en un espejo plano. ¿Dónde parece estar tu imagen? ¿Es del mismo tamaño que tú?",
+              "Usa un espejo para dirigir la luz de una linterna hacia diferentes lugares. ¿Qué sucede con el haz de luz?",
+              "Compara tu reflejo en un espejo plano, una cuchara convexa y una cuchara cóncava. ¿Qué diferencias notas?"
+            ]
+          },
+          {
+            "key": "superficies_reflectantes",
+            "name": "Diferentes Superficies Reflectantes",
+            "short_description": "Comparar cómo diferentes superficies reflejan la luz.",
+            "example_tasks": [
+              "Compara el reflejo en un espejo, agua tranquila, metal pulido y papel aluminio. ¿Cuál refleja mejor?",
+              "Explica por qué puedes ver tu reflejo en una ventana de noche pero no durante el día.",
+              "Investiga por qué las superficies lisas reflejan mejor la luz que las superficies rugosas."
+            ]
+          },
+          {
+            "key": "aplicaciones_reflexion",
+            "name": "Aplicaciones de la Reflexión",
+            "short_description": "Identificar usos prácticos de la reflexión de la luz.",
+            "example_tasks": [
+              "Investiga cómo funcionan los periscopios. ¿Cuántos espejos usan y por qué?",
+              "Observa los reflectores en las bicicletas o señales de tránsito. ¿Por qué son importantes para la seguridad?",
+              "Explica cómo los dentistas usan espejos pequeños para examinar los dientes."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "refraccion_luz",
+        "name": "Refracción de la Luz",
+        "short_description": "Los estudiantes observan cómo la luz cambia de dirección al pasar de un material a otro.",
+        "sub_topics": [
+          {
+            "key": "observacion_refraccion",
+            "name": "Observación de la Refracción",
+            "short_description": "Identificar fenómenos donde ocurre refracción de la luz.",
+            "example_tasks": [
+              "Coloca un lápiz en un vaso con agua. Obsérvalo desde un lado. ¿Por qué parece quebrado o doblado?",
+              "Mira una moneda en el fondo de un vaso vacío desde un ángulo donde no la veas. Agrega agua. ¿Qué sucede?",
+              "Observa una alberca o pecera. ¿Por qué el agua parece menos profunda de lo que realmente es?"
+            ]
+          },
+          {
+            "key": "lentes",
+            "name": "Lentes y Refracción",
+            "short_description": "Comprender cómo las lentes usan la refracción para enfocar o dispersar la luz.",
+            "example_tasks": [
+              "Usa una lupa para concentrar la luz del Sol en un punto. ¿Qué observas? (Con supervisión)",
+              "Mira un objeto a través de un vaso lleno de agua. ¿Cómo se ve comparado con verlo directamente?",
+              "Compara cómo se ven las cosas a través de lentes convexas (lupas) y lentes cóncavas. ¿Qué diferencias notas?"
+            ]
+          },
+          {
+            "key": "aplicaciones_lentes",
+            "name": "Aplicaciones de Lentes",
+            "short_description": "Identificar usos de lentes en instrumentos y dispositivos.",
+            "example_tasks": [
+              "Investiga cómo funcionan los anteojos. ¿Cómo ayudan a las personas a ver mejor?",
+              "Observa una cámara fotográfica o microscopio. ¿Qué papel juegan las lentes en estos instrumentos?",
+              "Explica la diferencia entre un telescopio y un microscopio en términos de las lentes que usan."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "colores_luz",
+        "name": "Colores de la Luz",
+        "short_description": "Los estudiantes descubren que la luz blanca está compuesta de diferentes colores y exploran la formación del arcoíris.",
+        "sub_topics": [
+          {
+            "key": "descomposicion_luz",
+            "name": "Descomposición de la Luz Blanca",
+            "short_description": "Comprender que la luz blanca está formada por diferentes colores.",
+            "example_tasks": [
+              "Haz pasar luz blanca a través de un prisma. ¿Qué colores observas? ¿En qué orden aparecen?",
+              "Observa un arcoíris después de la lluvia. ¿Qué colores identificas? ¿Están siempre en el mismo orden?",
+              "Usa un CD o DVD como superficie reflectante bajo la luz. ¿Qué colores ves? ¿Por qué?"
+            ]
+          },
+          {
+            "key": "espectro_visible",
+            "name": "Espectro Visible",
+            "short_description": "Identificar los colores que componen el espectro de luz visible.",
+            "example_tasks": [
+              "Memoriza los colores del arcoíris en orden: rojo, naranja, amarillo, verde, azul, añil, violeta.",
+              "Crea tu propio arcoíris rociando agua con una manguera en un día soleado. ¿Qué posición debe tener el Sol?",
+              "Investiga qué significa que algunos colores tienen ondas más largas que otros."
+            ]
+          },
+          {
+            "key": "mezcla_colores_luz",
+            "name": "Mezcla de Colores de Luz",
+            "short_description": "Explorar cómo se combinan diferentes colores de luz.",
+            "example_tasks": [
+              "Ilumina un mismo lugar con linternas cubiertas con celofán rojo, verde y azul. ¿Qué color resulta?",
+              "Investiga por qué las pantallas de TV y computadora usan píxeles rojos, verdes y azules (RGB).",
+              "Compara mezclar pinturas de colores con mezclar luces de colores. ¿Es diferente? ¿Por qué?"
+            ]
+          },
+          {
+            "key": "absorcion_reflexion_color",
+            "name": "Absorción y Reflexión del Color",
+            "short_description": "Comprender que vemos colores porque los objetos reflejan algunas longitudes de onda y absorben otras.",
+            "example_tasks": [
+              "Observa una manzana roja. ¿Por qué la ves roja? ¿Qué colores absorbe y cuál refleja?",
+              "Ilumina diferentes objetos de colores con luces de distintos colores. ¿Cómo cambia su apariencia?",
+              "Explica por qué un objeto blanco se ve blanco (refleja todos los colores) y uno negro se ve negro (absorbe todos los colores)."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "vision",
+        "name": "Cómo Vemos",
+        "short_description": "Los estudiantes comprenden el proceso básico de la visión y el papel de la luz en este proceso.",
+        "sub_topics": [
+          {
+            "key": "necesidad_luz",
+            "name": "Necesidad de Luz para Ver",
+            "short_description": "Comprender que necesitamos luz para poder ver los objetos.",
+            "example_tasks": [
+              "Entra a un cuarto completamente oscuro. ¿Puedes ver algo? Enciende una luz. ¿Qué cambió?",
+              "Explica por qué no puedes ver dentro de una caja cerrada sin abrir o hacer un agujero para que entre luz.",
+              "Compara ver durante el día versus durante la noche. ¿Por qué necesitamos lámparas en la noche?"
+            ]
+          },
+          {
+            "key": "ojo_receptor",
+            "name": "El Ojo como Receptor de Luz",
+            "short_description": "Comprender que el ojo recibe la luz reflejada por los objetos.",
+            "example_tasks": [
+              "Dibuja el camino que sigue la luz desde una lámpara hasta un libro y luego hasta tu ojo.",
+              "Investiga las partes básicas del ojo (pupila, iris, cristalino, retina). ¿Qué función cumple cada una?",
+              "Explica por qué puedes ver tu reflejo en un espejo pero no en una pared (el espejo refleja luz hacia tus ojos)."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "sonido",
+    "name": "Sonido",
+    "short_description": "Los estudiantes exploran la producción del sonido mediante vibraciones, su propagación a través de diferentes medios, las propiedades del sonido (tono y volumen) y la audición.",
+    "sub_topics": [
+      {
+        "key": "produccion_sonido",
+        "name": "Producción del Sonido",
+        "short_description": "Los estudiantes comprenden que el sonido se produce por vibraciones de objetos.",
+        "sub_topics": [
+          {
+            "key": "vibraciones",
+            "name": "Vibraciones y Sonido",
+            "short_description": "Identificar que todos los sonidos son causados por vibraciones.",
+            "example_tasks": [
+              "Toca una regla que sobresale del borde de una mesa. ¿Qué observas? ¿Qué escuchas? ¿Cómo se relacionan?",
+              "Coloca tu mano en tu garganta mientras hablas o cantas. ¿Qué sientes? ¿Por qué?",
+              "Golpea suavemente un tambor y observa granos de arroz sobre él. ¿Qué les sucede a los granos? ¿Por qué saltan?"
+            ]
+          },
+          {
+            "key": "objetos_vibrantes",
+            "name": "Objetos que Vibran para Producir Sonido",
+            "short_description": "Identificar diferentes objetos que vibran para producir sonidos.",
+            "example_tasks": [
+              "Investiga cómo producen sonido diferentes instrumentos: guitarra (cuerdas vibran), flauta (columna de aire vibra), tambor (membrana vibra).",
+              "Tensa una liga entre tus dedos y plázcala. ¿Qué observas y escuchas? ¿Qué está vibrando?",
+              "Compara el sonido de golpear un tubo de metal hueco versus uno sólido. ¿Cuál vibra más? ¿Cuál suena más fuerte?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "propagacion_sonido",
+        "name": "Propagación del Sonido",
+        "short_description": "Los estudiantes comprenden que el sonido necesita un medio para propagarse y viaja a diferentes velocidades en distintos materiales.",
+        "sub_topics": [
+          {
+            "key": "medios_propagacion",
+            "name": "Medios de Propagación",
+            "short_description": "Comprender que el sonido viaja a través de sólidos, líquidos y gases.",
+            "example_tasks": [
+              "Escucha a un compañero hablar normalmente. Tápate los oídos con las manos. ¿Aún escuchas? ¿Por qué?",
+              "Golpea suavemente una mesa y escucha con tu oído pegado a la mesa. Compara con escuchar sin pegar el oído. ¿Qué diferencia notas?",
+              "Mete la cabeza bajo el agua (con supervisión) y haz que alguien golpee dos piedras bajo el agua. ¿Escuchas el sonido?"
+            ]
+          },
+          {
+            "key": "vacio_sonido",
+            "name": "El Sonido No Viaja en el Vacío",
+            "short_description": "Comprender que el sonido requiere un medio material para propagarse.",
+            "example_tasks": [
+              "Investiga por qué los astronautas no pueden hablar entre sí en el espacio sin radios. ¿Qué falta en el espacio?",
+              "Observa un video de una campana sonando dentro de una campana de vacío. ¿Qué sucede cuando se saca el aire?",
+              "Explica por qué en las películas del espacio no deberían escucharse explosiones (no hay aire para transmitir el sonido)."
+            ]
+          },
+          {
+            "key": "velocidad_sonido",
+            "name": "Velocidad del Sonido",
+            "short_description": "Reconocer que el sonido viaja a diferentes velocidades en diferentes medios.",
+            "example_tasks": [
+              "Observa un rayo y cuenta los segundos hasta escuchar el trueno. ¿Por qué hay un retraso?",
+              "Investiga en qué viaja más rápido el sonido: ¿en aire, agua o metal? Ordena de más rápido a más lento.",
+              "Explica por qué ves primero el golpe de un martillo distante antes de escucharlo."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "propiedades_sonido",
+        "name": "Propiedades del Sonido",
+        "short_description": "Los estudiantes identifican las características del sonido: tono (agudo o grave) y volumen (fuerte o débil).",
+        "sub_topics": [
+          {
+            "key": "tono_altura",
+            "name": "Tono (Altura)",
+            "short_description": "Diferenciar entre sonidos agudos y graves según la frecuencia de vibración.",
+            "example_tasks": [
+              "Compara la voz de un niño con la de un adulto. ¿Cuál es más aguda? ¿Cuál es más grave?",
+              "Tensa una liga entre tus dedos. Plázcala flojas y luego muy tensa. ¿Cómo cambia el tono del sonido?",
+              "Golpea botellas con diferentes cantidades de agua. ¿Cuál produce el sonido más agudo? ¿Cuál el más grave?"
+            ]
+          },
+          {
+            "key": "intensidad_volumen",
+            "name": "Intensidad (Volumen)",
+            "short_description": "Diferenciar entre sonidos fuertes y débiles según la amplitud de vibración.",
+            "example_tasks": [
+              "Golpea suavemente un tambor y luego fuertemente. ¿Qué diferencia notas en el sonido? ¿Cambia el tono o el volumen?",
+              "Habla en voz baja y luego en voz alta. ¿Qué propiedad del sonido estás cambiando?",
+              "Compara el volumen de un susurro, una conversación normal y un grito. ¿Cuál tiene mayor intensidad?"
+            ]
+          },
+          {
+            "key": "relacion_vibracion_propiedades",
+            "name": "Relación entre Vibración y Propiedades",
+            "short_description": "Comprender cómo las características de la vibración afectan el tono y volumen.",
+            "example_tasks": [
+              "Experimenta con una regla vibrando: ¿Cómo haces que vibre más rápido (tono más agudo)? ¿Cómo haces que suene más fuerte?",
+              "Investiga por qué las cuerdas delgadas de una guitarra producen sonidos más agudos que las cuerdas gruesas.",
+              "Explica por qué golpear más fuerte un tambor no cambia el tono, solo el volumen."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "instrumentos_musicales",
+        "name": "Instrumentos Musicales",
+        "short_description": "Los estudiantes exploran cómo diferentes instrumentos producen sonido y clasifican instrumentos según su mecanismo de producción.",
+        "sub_topics": [
+          {
+            "key": "instrumentos_cuerda",
+            "name": "Instrumentos de Cuerda",
+            "short_description": "Comprender cómo los instrumentos de cuerda producen sonido mediante cuerdas vibrantes.",
+            "example_tasks": [
+              "Observa una guitarra. ¿Cómo produce diferentes notas? ¿Qué sucede cuando presionas las cuerdas en diferentes lugares?",
+              "Construye un instrumento simple usando una caja y ligas de diferentes grosores. ¿Cómo varía el sonido?",
+              "Compara el sonido de una cuerda de violín versus una de guitarra. ¿Qué diferencias notas?"
+            ]
+          },
+          {
+            "key": "instrumentos_viento",
+            "name": "Instrumentos de Viento",
+            "short_description": "Comprender cómo los instrumentos de viento producen sonido mediante columnas de aire vibrantes.",
+            "example_tasks": [
+              "Sopla por encima de una botella vacía. ¿Qué sonido produces? Agrega agua y vuelve a soplar. ¿Cómo cambia el sonido?",
+              "Investiga cómo funciona una flauta. ¿Qué vibra para producir el sonido? ¿Cómo se cambia la nota?",
+              "Compara el sonido de soplar fuerte versus suave en una flauta dulce. ¿Qué cambia: tono o volumen?"
+            ]
+          },
+          {
+            "key": "instrumentos_percusion",
+            "name": "Instrumentos de Percusión",
+            "short_description": "Comprender cómo los instrumentos de percusión producen sonido mediante objetos que vibran al ser golpeados.",
+            "example_tasks": [
+              "Golpea diferentes objetos (mesa, metal, plástico). ¿Todos suenan igual? ¿Por qué?",
+              "Construye un tambor simple usando una lata y papel o tela estirada. ¿Cómo produces sonidos de diferente volumen?",
+              "Investiga cómo funciona un xilófono. ¿Por qué las barras de diferente tamaño producen diferentes notas?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "audicion",
+        "name": "Audición",
+        "short_description": "Los estudiantes comprenden cómo funciona el oído para captar y procesar el sonido.",
+        "sub_topics": [
+          {
+            "key": "partes_oido",
+            "name": "Partes del Oído",
+            "short_description": "Identificar las partes básicas del oído y sus funciones.",
+            "example_tasks": [
+              "Investiga las tres partes principales del oído: externo, medio e interno. ¿Qué función cumple cada una?",
+              "Dibuja un diagrama simple del oído mostrando el tímpano. ¿Qué hace el tímpano cuando llega el sonido?",
+              "Explica cómo las vibraciones del aire se convierten en señales que el cerebro puede entender."
+            ]
+          },
+          {
+            "key": "cuidado_oidos",
+            "name": "Cuidado de los Oídos",
+            "short_description": "Comprender la importancia de proteger los oídos de daños.",
+            "example_tasks": [
+              "Investiga qué sonidos pueden dañar los oídos. ¿Qué tan fuerte es peligroso?",
+              "Explica por qué no debes introducir objetos en tus oídos, ni siquiera hisopos.",
+              "Observa a personas que trabajan en ambientes ruidosos (construcción, aeropuertos). ¿Qué usan para proteger sus oídos?"
+            ]
+          },
+          {
+            "key": "rango_audicion",
+            "name": "Rango de Audición",
+            "short_description": "Reconocer que hay sonidos que los humanos no pueden escuchar.",
+            "example_tasks": [
+              "Investiga qué son los ultrasonidos y los infrasonidos. ¿Los humanos podemos escucharlos?",
+              "Compara el rango de audición humana con el de perros y murciélagos. ¿Quién puede escuchar sonidos más agudos?",
+              "Explica cómo los murciélagos usan ultrasonidos para orientarse en la oscuridad (ecolocación)."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "contaminacion_acustica",
+        "name": "Contaminación Acústica",
+        "short_description": "Los estudiantes reconocen los problemas causados por el ruido excesivo.",
+        "sub_topics": [
+          {
+            "key": "fuentes_ruido",
+            "name": "Fuentes de Contaminación Acústica",
+            "short_description": "Identificar fuentes de ruido excesivo en el ambiente.",
+            "example_tasks": [
+              "Haz una lista de las fuentes de ruido en tu comunidad (tráfico, construcción, música alta, aviones).",
+              "Mide con una aplicación (si es posible) los niveles de ruido en diferentes lugares de tu escuela. ¿Dónde es más ruidoso?",
+              "Investiga qué nivel de ruido (en decibeles) es considerado seguro y cuál puede causar daño."
+            ]
+          },
+          {
+            "key": "efectos_ruido",
+            "name": "Efectos del Ruido Excesivo",
+            "short_description": "Comprender los efectos negativos del ruido en la salud y bienestar.",
+            "example_tasks": [
+              "Investiga cómo el ruido excesivo puede afectar la audición, el sueño y la concentración.",
+              "Explica por qué es importante tener momentos de silencio durante el día.",
+              "Discute cómo el ruido en las ciudades afecta a las personas y animales que viven allí."
+            ]
+          },
+          {
+            "key": "reduccion_ruido",
+            "name": "Reducción del Ruido",
+            "short_description": "Identificar medidas para reducir la contaminación acústica.",
+            "example_tasks": [
+              "Propón cinco acciones que puedes hacer para reducir el ruido en tu hogar y escuela.",
+              "Investiga qué materiales se usan para aislar el sonido (insonorización). ¿Por qué funcionan?",
+              "Diseña un cartel promoviendo la reducción de ruido innecesario en tu comunidad."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "fuerza_movimiento",
+    "name": "Fuerza y Movimiento",
+    "short_description": "Los estudiantes comprenden el concepto de fuerza, identifican diferentes tipos de fuerzas y exploran cómo las fuerzas afectan el movimiento y la forma de los objetos.",
+    "sub_topics": [
+      {
+        "key": "concepto_fuerza",
+        "name": "Concepto de Fuerza",
+        "short_description": "Los estudiantes definen la fuerza como empujar o jalar y reconocen que las fuerzas pueden cambiar el movimiento de los objetos.",
+        "sub_topics": [
+          {
+            "key": "empujar_jalar",
+            "name": "Empujar y Jalar",
+            "short_description": "Identificar acciones de empujar y jalar como aplicaciones de fuerza.",
+            "example_tasks": [
+              "Observa diferentes acciones en el recreo (empujar un columpio, jalar una cuerda, patear una pelota). ¿Cuáles son ejemplos de empujar y cuáles de jalar?",
+              "Abre una puerta de diferentes maneras (empujando, jalando). ¿Qué fuerza aplicas en cada caso?",
+              "Haz una lista de diez actividades diarias donde apliques fuerzas de empuje o jalón."
+            ]
+          },
+          {
+            "key": "direccion_fuerza",
+            "name": "Dirección de la Fuerza",
+            "short_description": "Comprender que las fuerzas tienen dirección y magnitud.",
+            "example_tasks": [
+              "Empuja un objeto sobre una mesa en diferentes direcciones. ¿Hacia dónde se mueve el objeto en cada caso?",
+              "Juega un juego de jalar la cuerda con un compañero. ¿Qué sucede cuando ambos jalan con la misma fuerza? ¿Y cuando uno jala más fuerte?",
+              "Dibuja flechas que representen la dirección de las fuerzas cuando: empujas una puerta, jalas una maleta, levantas un libro."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "efectos_fuerzas",
+        "name": "Efectos de las Fuerzas",
+        "short_description": "Los estudiantes observan cómo las fuerzas pueden iniciar, detener, cambiar la dirección o la velocidad del movimiento, y deformar objetos.",
+        "sub_topics": [
+          {
+            "key": "iniciar_movimiento",
+            "name": "Iniciar el Movimiento",
+            "short_description": "Reconocer que se necesita una fuerza para poner en movimiento un objeto en reposo.",
+            "example_tasks": [
+              "Observa una pelota en el suelo. ¿Se mueve sola? ¿Qué necesitas hacer para que comience a moverse?",
+              "Compara la fuerza necesaria para mover un libro versus mover una mochila pesada. ¿Cuál requiere más fuerza?",
+              "Explica por qué un automóvil necesita un motor (que produce fuerza) para comenzar a moverse."
+            ]
+          },
+          {
+            "key": "detener_movimiento",
+            "name": "Detener el Movimiento",
+            "short_description": "Comprender que se necesita una fuerza para detener un objeto en movimiento.",
+            "example_tasks": [
+              "Rueda una pelota y luego deténla con tu mano. ¿Qué fuerza aplicaste para detenerla?",
+              "Observa cómo un automóvil se detiene. ¿Qué hace el conductor? ¿Qué fuerza detiene al automóvil?",
+              "Experimenta deslizando objetos sobre diferentes superficies (lisa, rugosa). ¿En cuál se detienen más rápido? ¿Por qué?"
+            ]
+          },
+          {
+            "key": "cambiar_direccion",
+            "name": "Cambiar la Dirección",
+            "short_description": "Reconocer que las fuerzas pueden cambiar la dirección del movimiento.",
+            "example_tasks": [
+              "Rueda una pelota en línea recta y luego golpéala desde un lado. ¿Qué le sucede a su trayectoria?",
+              "Observa un juego de fútbol. ¿Cómo cambian los jugadores la dirección de la pelota?",
+              "Experimenta con un carrito de juguete: hazlo girar empujándolo desde diferentes ángulos."
+            ]
+          },
+          {
+            "key": "cambiar_velocidad",
+            "name": "Cambiar la Velocidad",
+            "short_description": "Comprender que las fuerzas pueden aumentar o disminuir la velocidad de un objeto.",
+            "example_tasks": [
+              "Empuja un carrito de juguete suavemente y luego con más fuerza. ¿Cómo afecta esto su velocidad?",
+              "Observa un ciclista subiendo una cuesta. ¿Por qué va más lento? ¿Qué fuerza lo está frenando?",
+              "Experimenta con una pelota rodando por una rampa. ¿Va más rápido al bajar o al subir? ¿Por qué?"
+            ]
+          },
+          {
+            "key": "deformar_objetos",
+            "name": "Deformar Objetos",
+            "short_description": "Observar que las fuerzas pueden cambiar la forma de los objetos.",
+            "example_tasks": [
+              "Aprieta una esponja, estira una liga, moldea plastilina. ¿Qué efecto tiene la fuerza en cada material?",
+              "Compara objetos rígidos (lápiz) con objetos flexibles (papel). ¿Cuáles son más fáciles de deformar?",
+              "Investiga qué sucede cuando aplicas demasiada fuerza a un objeto (se puede romper). Da ejemplos."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tipos_fuerzas",
+        "name": "Tipos de Fuerzas",
+        "short_description": "Los estudiantes identifican diferentes tipos de fuerzas que actúan en situaciones cotidianas.",
+        "sub_topics": [
+          {
+            "key": "fuerza_contacto",
+            "name": "Fuerzas de Contacto",
+            "short_description": "Identificar fuerzas que actúan cuando dos objetos están en contacto.",
+            "example_tasks": [
+              "Empuja un libro sobre una mesa. ¿Hay contacto entre tu mano y el libro? ¿Entre el libro y la mesa?",
+              "Observa diferentes deportes. Identifica momentos donde se aplican fuerzas de contacto (patear, atrapar, empujar).",
+              "Explica por qué no puedes mover un objeto sin tocarlo (excepto con imanes o gravedad)."
+            ]
+          },
+          {
+            "key": "fuerza_distancia",
+            "name": "Fuerzas a Distancia",
+            "short_description": "Reconocer fuerzas que actúan sin contacto directo.",
+            "example_tasks": [
+              "Suelta un objeto. ¿Qué fuerza lo jala hacia abajo sin tocarlo?",
+              "Acerca un imán a clips de metal sin tocarlos. ¿Qué tipo de fuerza está actuando?",
+              "Frota un globo en tu cabello y acércalo a pedacitos de papel. ¿Qué observas? (Fuerza eléctrica)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "medicion_fuerzas",
+        "name": "Medición de Fuerzas",
+        "short_description": "Los estudiantes comprenden que las fuerzas pueden medirse y compararse.",
+        "sub_topics": [
+          {
+            "key": "comparacion_fuerzas",
+            "name": "Comparación de Fuerzas",
+            "short_description": "Comparar la magnitud de diferentes fuerzas de forma cualitativa.",
+            "example_tasks": [
+              "Compara la fuerza necesaria para levantar diferentes objetos (pluma, libro, mochila). Ordénalos de menor a mayor fuerza.",
+              "Juega un juego de jalar la cuerda. ¿Quién aplica más fuerza: el que gana o el que pierde?",
+              "Experimenta con ligas: estira diferentes ligas la misma distancia. ¿Cuál requiere más fuerza?"
+            ]
+          },
+          {
+            "key": "dinamometro_basico",
+            "name": "Introducción al Dinamómetro",
+            "short_description": "Conocer instrumentos simples que miden fuerzas.",
+            "example_tasks": [
+              "Observa un dinamómetro o balanza de resorte. ¿Cómo funciona para medir fuerzas?",
+              "Usa una balanza de resorte para medir la fuerza necesaria para levantar diferentes objetos.",
+              "Construye un dinamómetro simple usando una liga y una regla. Calibra usando objetos de peso conocido."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "friccion_gravedad",
+    "name": "Fricción y Gravedad",
+    "short_description": "Los estudiantes comprenden la fricción como fuerza que se opone al movimiento, la gravedad como fuerza que atrae objetos hacia la Tierra, y distinguen entre masa y peso.",
+    "sub_topics": [
+      {
+        "key": "friccion",
+        "name": "Fricción",
+        "short_description": "Los estudiantes exploran la fricción como fuerza que se opone al movimiento entre superficies en contacto.",
+        "sub_topics": [
+          {
+            "key": "observacion_friccion",
+            "name": "Observación de la Fricción",
+            "short_description": "Identificar situaciones donde la fricción está presente.",
+            "example_tasks": [
+              "Desliza un libro sobre diferentes superficies (mesa, alfombra, piso). ¿En cuál se detiene más rápido? ¿Por qué?",
+              "Frota tus manos rápidamente. ¿Qué sientes? ¿Qué produce ese calor?",
+              "Observa las suelas de diferentes zapatos (deportivos, formales). ¿Por qué algunas tienen más textura que otras?"
+            ]
+          },
+          {
+            "key": "factores_friccion",
+            "name": "Factores que Afectan la Fricción",
+            "short_description": "Explorar cómo diferentes factores influyen en la magnitud de la fricción.",
+            "example_tasks": [
+              "Compara empujar un objeto pesado versus uno ligero. ¿Cuál requiere más fuerza para moverlo?",
+              "Experimenta deslizando un objeto sobre superficies rugosas versus lisas. ¿Dónde hay más fricción?",
+              "Investiga por qué es más fácil deslizar algo usando ruedas que arrastrándolo."
+            ]
+          },
+          {
+            "key": "friccion_util",
+            "name": "Fricción Útil",
+            "short_description": "Reconocer situaciones donde la fricción es beneficiosa.",
+            "example_tasks": [
+              "Explica por qué necesitamos fricción para caminar. ¿Qué pasaría si el piso fuera completamente liso (como hielo)?",
+              "Investiga cómo funcionan los frenos de una bicicleta. ¿Qué papel juega la fricción?",
+              "Observa las llantas de un automóvil. ¿Por qué tienen surcos? ¿Cómo ayuda esto con la fricción?"
+            ]
+          },
+          {
+            "key": "reducir_friccion",
+            "name": "Reducir la Fricción",
+            "short_description": "Identificar métodos para reducir la fricción cuando es un obstáculo.",
+            "example_tasks": [
+              "Experimenta empujando un objeto con y sin aceite en la superficie. ¿Qué diferencia notas?",
+              "Investiga para qué se usa aceite en las bisagras de las puertas o en los motores.",
+              "Explica por qué los patines tienen ruedas y no simplemente una base plana."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "gravedad",
+        "name": "Gravedad",
+        "short_description": "Los estudiantes comprenden la gravedad como fuerza de atracción que ejerce la Tierra sobre los objetos.",
+        "sub_topics": [
+          {
+            "key": "observacion_gravedad",
+            "name": "Observación de la Gravedad",
+            "short_description": "Identificar la acción de la gravedad en la vida cotidiana.",
+            "example_tasks": [
+              "Suelta diferentes objetos (pluma, piedra, libro). ¿Hacia dónde caen todos? ¿Por qué?",
+              "Lanza una pelota hacia arriba. ¿Qué sucede? ¿Qué fuerza la hace regresar?",
+              "Explica por qué los objetos no flotan en el aire sino que caen al suelo."
+            ]
+          },
+          {
+            "key": "direccion_gravedad",
+            "name": "Dirección de la Gravedad",
+            "short_description": "Comprender que la gravedad siempre jala hacia el centro de la Tierra.",
+            "example_tasks": [
+              "Observa una plomada (peso en un hilo). ¿Hacia dónde apunta siempre? ¿Por qué?",
+              "Explica por qué el agua en una fuente cae hacia abajo y no hacia los lados.",
+              "Investiga cómo la gravedad mantiene a la Luna orbitando alrededor de la Tierra."
+            ]
+          },
+          {
+            "key": "todos_objetos_caen",
+            "name": "Todos los Objetos Caen",
+            "short_description": "Comprender que la gravedad actúa sobre todos los objetos sin importar su masa.",
+            "example_tasks": [
+              "Suelta simultáneamente una hoja de papel arrugada y una hoja plana. ¿Cuál cae más rápido? ¿Por qué? (resistencia del aire)",
+              "Si pudieras soltar una pluma y una piedra en el vacío (sin aire), ¿caerían a la misma velocidad? Investiga.",
+              "Observa videos de astronautas en la Luna soltando objetos. ¿Qué diferencias notas con la Tierra?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "peso_masa",
+        "name": "Peso y Masa",
+        "short_description": "Los estudiantes distinguen entre masa (cantidad de materia) y peso (fuerza de gravedad sobre un objeto).",
+        "sub_topics": [
+          {
+            "key": "concepto_masa",
+            "name": "Concepto de Masa",
+            "short_description": "Comprender la masa como la cantidad de materia en un objeto.",
+            "example_tasks": [
+              "Compara dos objetos del mismo tamaño pero diferente masa (pelota de ping-pong vs. pelota de golf). ¿Cuál tiene más materia?",
+              "Usa una balanza para medir la masa de diferentes objetos. Registra tus mediciones en gramos o kilogramos.",
+              "Explica por qué un objeto tiene la misma masa en la Tierra que en la Luna."
+            ]
+          },
+          {
+            "key": "concepto_peso",
+            "name": "Concepto de Peso",
+            "short_description": "Comprender el peso como la fuerza con que la gravedad atrae un objeto.",
+            "example_tasks": [
+              "Levanta diferentes objetos. ¿Algunos se sienten más pesados? ¿Qué estás sintiendo: su masa o su peso?",
+              "Investiga qué pasaría con tu peso si fueras a la Luna (menos gravedad) o a Júpiter (más gravedad).",
+              "Explica la diferencia entre decir 'este objeto tiene una masa de 1 kg' versus 'este objeto pesa 10 Newtons'."
+            ]
+          },
+          {
+            "key": "diferencia_masa_peso",
+            "name": "Diferencia entre Masa y Peso",
+            "short_description": "Distinguir claramente entre masa y peso.",
+            "example_tasks": [
+              "Tu masa es de 30 kg. ¿Sería diferente en la Luna? ¿Y tu peso?",
+              "Usa una balanza (mide masa) y un dinamómetro (mide peso) con el mismo objeto. ¿Qué diferencias observas en las mediciones?",
+              "Explica por qué los astronautas 'flotan' en la Estación Espacial Internacional pero aún tienen masa."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "caida_objetos",
+        "name": "Caída de Objetos",
+        "short_description": "Los estudiantes observan cómo diferentes objetos caen y comprenden el papel de la resistencia del aire.",
+        "sub_topics": [
+          {
+            "key": "caida_libre",
+            "name": "Caída Libre",
+            "short_description": "Observar que los objetos caen cuando se sueltan.",
+            "example_tasks": [
+              "Suelta objetos desde diferentes alturas. ¿Caen más rápido desde mayor altura?",
+              "Mide el tiempo que tarda en caer un objeto desde 1 metro versus 2 metros. ¿Qué observas?",
+              "Explica por qué los objetos aceleran (van cada vez más rápido) mientras caen."
+            ]
+          },
+          {
+            "key": "resistencia_aire",
+            "name": "Resistencia del Aire",
+            "short_description": "Comprender que el aire puede oponerse a la caída de los objetos.",
+            "example_tasks": [
+              "Suelta una hoja de papel plana y otra arrugada. ¿Cuál cae más rápido? ¿Por qué?",
+              "Observa un paracaídas (o construye uno simple). ¿Cómo funciona para hacer que algo caiga más lentamente?",
+              "Compara la caída de una pluma versus una piedra. Si no hubiera aire, ¿caerían igual?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "maquinas_simples",
+    "name": "Máquinas Simples",
+    "short_description": "Los estudiantes identifican diferentes tipos de máquinas simples, comprenden cómo facilitan el trabajo al multiplicar o cambiar la dirección de las fuerzas, y reconocen sus aplicaciones en la vida diaria.",
+    "sub_topics": [
+      {
+        "key": "concepto_maquina",
+        "name": "Concepto de Máquina Simple",
+        "short_description": "Los estudiantes comprenden que las máquinas simples son herramientas que facilitan el trabajo.",
+        "sub_topics": [
+          {
+            "key": "que_es_maquina_simple",
+            "name": "¿Qué es una Máquina Simple?",
+            "short_description": "Definir máquinas simples como dispositivos que facilitan las tareas.",
+            "example_tasks": [
+              "Compara abrir una tapa con tus manos versus usar un destapador. ¿Cuál es más fácil? ¿Por qué?",
+              "Observa herramientas en casa y la escuela. ¿Cuáles te ayudan a hacer trabajo más fácilmente?",
+              "Explica cómo una tijera facilita cortar papel comparado con rasgar el papel con las manos."
+            ]
+          },
+          {
+            "key": "ventaja_mecanica",
+            "name": "Ventaja Mecánica",
+            "short_description": "Comprender que las máquinas permiten aplicar menos fuerza para hacer el mismo trabajo.",
+            "example_tasks": [
+              "Usa una palanca para levantar un objeto pesado. Compara con levantarlo directamente. ¿Dónde usas menos fuerza?",
+              "Experimenta con un plano inclinado: empuja un objeto hacia arriba por una rampa versus levantarlo directamente.",
+              "Explica por qué es más fácil cortar papel con tijeras que tienen mangos largos."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "palanca",
+        "name": "Palanca",
+        "short_description": "Los estudiantes comprenden cómo funciona una palanca y sus aplicaciones.",
+        "sub_topics": [
+          {
+            "key": "partes_palanca",
+            "name": "Partes de la Palanca",
+            "short_description": "Identificar el punto de apoyo, la fuerza aplicada y la carga en una palanca.",
+            "example_tasks": [
+              "Observa un balancín (sube y baja). Identifica dónde está el punto de apoyo, dónde aplicas fuerza y dónde está la carga.",
+              "Usa una regla como palanca para levantar un libro. ¿Dónde está el punto de apoyo? ¿Dónde empujas?",
+              "Dibuja un diagrama de una palanca mostrando sus tres componentes principales."
+            ]
+          },
+          {
+            "key": "tipos_palancas",
+            "name": "Tipos de Palancas",
+            "short_description": "Reconocer diferentes configuraciones de palancas según la posición del punto de apoyo.",
+            "example_tasks": [
+              "Compara diferentes palancas: tijeras (punto de apoyo en el centro), carretilla (punto de apoyo en un extremo), pinzas (punto de apoyo en un extremo).",
+              "Identifica qué tipo de palanca es un balancín, un martillo sacando un clavo, y unas pinzas para hielo.",
+              "Experimenta moviendo el punto de apoyo en una regla. ¿Cómo afecta esto la facilidad para levantar un objeto?"
+            ]
+          },
+          {
+            "key": "aplicaciones_palanca",
+            "name": "Aplicaciones de la Palanca",
+            "short_description": "Identificar palancas en herramientas y objetos cotidianos.",
+            "example_tasks": [
+              "Busca diez ejemplos de palancas en tu casa (destapador, tijeras, pinzas, alicate, balanza).",
+              "Explica cómo un destapador usa el principio de la palanca para quitar las tapas de botellas.",
+              "Investiga cómo funcionan los remos de un bote como palancas para mover el agua."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "polea",
+        "name": "Polea",
+        "short_description": "Los estudiantes comprenden cómo las poleas cambian la dirección de la fuerza o multiplican la fuerza aplicada.",
+        "sub_topics": [
+          {
+            "key": "polea_fija",
+            "name": "Polea Fija",
+            "short_description": "Comprender que una polea fija cambia la dirección de la fuerza.",
+            "example_tasks": [
+              "Observa la polea de un asta de bandera. ¿Qué dirección jalas? ¿Qué dirección se mueve la bandera?",
+              "Construye una polea simple usando un carrete y cuerda. Úsala para levantar un objeto jalando hacia abajo.",
+              "Explica por qué es más fácil izar una bandera jalando hacia abajo que escalando para empujarla hacia arriba."
+            ]
+          },
+          {
+            "key": "polea_movil",
+            "name": "Polea Móvil",
+            "short_description": "Comprender que una polea móvil reduce la fuerza necesaria para levantar un objeto.",
+            "example_tasks": [
+              "Experimenta con una polea móvil. Compara la fuerza necesaria con y sin la polea para levantar el mismo peso.",
+              "Investiga cómo funcionan las grúas de construcción usando sistemas de poleas.",
+              "Explica por qué un sistema de poleas te permite levantar objetos más pesados con menos esfuerzo."
+            ]
+          },
+          {
+            "key": "aplicaciones_poleas",
+            "name": "Aplicaciones de Poleas",
+            "short_description": "Identificar el uso de poleas en diferentes situaciones.",
+            "example_tasks": [
+              "Observa un elevador. ¿Usa poleas? ¿Cómo funcionan?",
+              "Investiga cómo los pozos antiguos usaban poleas para sacar agua.",
+              "Identifica poleas en gimnasios, cortinas, grúas de construcción y otros lugares."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "rueda_eje",
+        "name": "Rueda y Eje",
+        "short_description": "Los estudiantes comprenden cómo la rueda y el eje facilitan el movimiento y el trabajo.",
+        "sub_topics": [
+          {
+            "key": "funcionamiento_rueda_eje",
+            "name": "Funcionamiento de Rueda y Eje",
+            "short_description": "Comprender que girar un eje grande (rueda) puede girar un eje pequeño con más fuerza o viceversa.",
+            "example_tasks": [
+              "Observa una perilla de puerta. ¿Sería más fácil o más difícil abrir la puerta sin la perilla, solo girando el eje pequeño?",
+              "Experimenta con una manivela. ¿Por qué el mango está alejado del centro del eje?",
+              "Compara girar un tornillo con los dedos versus usar un destornillador (rueda y eje)."
+            ]
+          },
+          {
+            "key": "aplicaciones_rueda_eje",
+            "name": "Aplicaciones de Rueda y Eje",
+            "short_description": "Identificar rueda y eje en objetos cotidianos.",
+            "example_tasks": [
+              "Identifica ejemplos de rueda y eje: volante de auto, perilla, llave de agua, carrete de pesca.",
+              "Explica cómo un volante de automóvil usa el principio de rueda y eje para dirigir las llantas con menos esfuerzo.",
+              "Investiga cómo funciona un molinillo de viento o una noria usando rueda y eje."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "plano_inclinado",
+        "name": "Plano Inclinado",
+        "short_description": "Los estudiantes comprenden cómo una rampa facilita mover objetos a diferentes alturas.",
+        "sub_topics": [
+          {
+            "key": "funcionamiento_plano_inclinado",
+            "name": "Funcionamiento del Plano Inclinado",
+            "short_description": "Comprender que una rampa permite usar menos fuerza para levantar un objeto aunque se recorra mayor distancia.",
+            "example_tasks": [
+              "Compara empujar una caja pesada por una rampa versus levantarla directamente. ¿Dónde usas menos fuerza?",
+              "Experimenta con rampas de diferente inclinación. ¿Una rampa más larga (menos inclinada) es más fácil o más difícil?",
+              "Mide la fuerza necesaria para jalar un carrito directo hacia arriba versus por una rampa."
+            ]
+          },
+          {
+            "key": "aplicaciones_plano_inclinado",
+            "name": "Aplicaciones del Plano Inclinado",
+            "short_description": "Identificar planos inclinados en la vida cotidiana.",
+            "example_tasks": [
+              "Observa rampas para sillas de ruedas, caminos de montaña en zigzag, rampas de estacionamiento. ¿Por qué se usan?",
+              "Explica por qué es más fácil subir una maleta por una rampa del aeropuerto que por escaleras.",
+              "Investiga cómo se usaban planos inclinados para construir las pirámides egipcias."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "cuña",
+        "name": "Cuña",
+        "short_description": "Los estudiantes comprenden la cuña como dos planos inclinados unidos que pueden separar o cortar objetos.",
+        "sub_topics": [
+          {
+            "key": "funcionamiento_cuña",
+            "name": "Funcionamiento de la Cuña",
+            "short_description": "Comprender que la cuña convierte una fuerza aplicada en su extremo grueso en fuerzas laterales que separan.",
+            "example_tasks": [
+              "Observa un hacha o cuchillo. ¿Qué forma tiene el filo? ¿Cómo ayuda esta forma a cortar?",
+              "Experimenta empujando una cuña de madera debajo de una puerta. ¿Qué sucede?",
+              "Compara cortar con un cuchillo afilado (cuña delgada) versus uno sin filo (cuña gruesa). ¿Cuál es más fácil?"
+            ]
+          },
+          {
+            "key": "aplicaciones_cuña",
+            "name": "Aplicaciones de la Cuña",
+            "short_description": "Identificar cuñas en herramientas y objetos cotidianos.",
+            "example_tasks": [
+              "Identifica cuñas: hacha, cuchillo, clavo, tijeras (el filo), arado.",
+              "Explica cómo un hacha usa la forma de cuña para dividir madera.",
+              "Investiga cómo los clavos y tachuelas son cuñas que se introducen en materiales."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tornillo",
+        "name": "Tornillo",
+        "short_description": "Los estudiantes comprenden el tornillo como un plano inclinado enrollado alrededor de un cilindro.",
+        "sub_topics": [
+          {
+            "key": "funcionamiento_tornillo",
+            "name": "Funcionamiento del Tornillo",
+            "short_description": "Comprender que el tornillo convierte movimiento rotatorio en movimiento lineal.",
+            "example_tasks": [
+              "Observa la rosca de un tornillo. ¿Qué forma tiene? ¿Parece una rampa enrollada?",
+              "Compara clavar un clavo versus atornillar un tornillo. ¿Cuál requiere menos fuerza pero más vueltas?",
+              "Experimenta con tornillos de diferente paso (separación entre roscas). ¿Cuál entra más fácilmente?"
+            ]
+          },
+          {
+            "key": "aplicaciones_tornillo",
+            "name": "Aplicaciones del Tornillo",
+            "short_description": "Identificar tornillos en objetos y herramientas.",
+            "example_tasks": [
+              "Identifica tornillos: tornillos de madera, tornillos de metal, tornillos de banco, tapas de frascos, escaleras de caracol.",
+              "Explica cómo una tapa de rosca funciona como tornillo para sellar un frasco.",
+              "Investiga cómo funciona un gato de tornillo para levantar automóviles."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "combinacion_maquinas",
+        "name": "Combinación de Máquinas Simples",
+        "short_description": "Los estudiantes reconocen que muchas herramientas combinan varias máquinas simples.",
+        "sub_topics": [
+          {
+            "key": "maquinas_compuestas",
+            "name": "Máquinas Compuestas",
+            "short_description": "Identificar objetos que usan múltiples máquinas simples juntas.",
+            "example_tasks": [
+              "Analiza unas tijeras. ¿Qué máquinas simples tiene? (palanca + cuña)",
+              "Observa una bicicleta. Identifica rueda y eje, palancas (pedales, frenos), tornillos.",
+              "Desarma (con supervisión) una herramienta simple y identifica las máquinas simples que la componen."
+            ]
+          },
+          {
+            "key": "ejemplos_cotidianos",
+            "name": "Ejemplos Cotidianos de Máquinas Compuestas",
+            "short_description": "Reconocer máquinas compuestas en la vida diaria.",
+            "example_tasks": [
+              "Analiza cómo funciona un abrelatas manual. ¿Qué máquinas simples usa?",
+              "Investiga las máquinas simples en una carretilla: rueda y eje + palanca.",
+              "Examina un sacapuntas manual. Identifica las máquinas simples que lo forman."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "magnetismo",
+    "name": "Magnetismo",
+    "short_description": "Los estudiantes exploran las propiedades de los imanes, identifican materiales magnéticos y no magnéticos, comprenden los polos magnéticos y sus interacciones, y reconocen aplicaciones del magnetismo.",
+    "sub_topics": [
+      {
+        "key": "propiedades_imanes",
+        "name": "Propiedades de los Imanes",
+        "short_description": "Los estudiantes identifican las características básicas de los imanes.",
+        "sub_topics": [
+          {
+            "key": "atraccion_magnetica",
+            "name": "Atracción Magnética",
+            "short_description": "Observar que los imanes atraen ciertos materiales.",
+            "example_tasks": [
+              "Acerca un imán a diferentes objetos (clips, monedas, papel, plástico, madera). ¿Cuáles son atraídos?",
+              "Experimenta con la distancia: ¿desde qué tan lejos puede un imán atraer un clip?",
+              "Compara la fuerza de diferentes imanes probando cuántos clips puede sostener cada uno."
+            ]
+          },
+          {
+            "key": "fuerza_distancia_magnetica",
+            "name": "Fuerza a Distancia",
+            "short_description": "Comprender que los imanes pueden atraer objetos sin tocarlos.",
+            "example_tasks": [
+              "Coloca un clip sobre una mesa. Mueve un imán debajo de la mesa. ¿Qué le sucede al clip?",
+              "Experimenta acercando lentamente un imán a un clip. ¿En qué momento el clip salta hacia el imán?",
+              "Explica por qué el magnetismo es una 'fuerza a distancia' como la gravedad."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "materiales_magneticos",
+        "name": "Materiales Magnéticos y No Magnéticos",
+        "short_description": "Los estudiantes clasifican materiales según su respuesta a los imanes.",
+        "sub_topics": [
+          {
+            "key": "metales_magneticos",
+            "name": "Metales Magnéticos",
+            "short_description": "Identificar metales que son atraídos por imanes.",
+            "example_tasks": [
+              "Prueba diferentes metales con un imán: hierro, aluminio, cobre, acero. ¿Cuáles son magnéticos?",
+              "Investiga por qué el hierro y el acero son magnéticos pero el aluminio no lo es.",
+              "Busca objetos de hierro o acero en tu casa usando un imán."
+            ]
+          },
+          {
+            "key": "materiales_no_magneticos",
+            "name": "Materiales No Magnéticos",
+            "short_description": "Identificar materiales que no son atraídos por imanes.",
+            "example_tasks": [
+              "Haz una lista de materiales no magnéticos: madera, plástico, vidrio, papel, tela.",
+              "Explica por qué un imán pegado a un refrigerador de metal no atrae el papel que sostiene.",
+              "Experimenta: ¿puede un imán atraer un clip a través de diferentes materiales (papel, plástico, vidrio, madera)?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "polos_magneticos",
+        "name": "Polos Magnéticos",
+        "short_description": "Los estudiantes identifican los polos de un imán y comprenden cómo interactúan.",
+        "sub_topics": [
+          {
+            "key": "norte_sur",
+            "name": "Polo Norte y Polo Sur",
+            "short_description": "Identificar que cada imán tiene dos polos.",
+            "example_tasks": [
+              "Observa un imán de barra. Identifica dónde están marcados N (norte) y S (sur).",
+              "Experimenta: ¿qué parte del imán tiene más fuerza para atraer clips: el centro o los extremos?",
+              "Usa limaduras de hierro sobre un imán. ¿Dónde se concentran más? ¿Por qué?"
+            ]
+          },
+          {
+            "key": "interaccion_polos",
+            "name": "Interacción entre Polos",
+            "short_description": "Comprender que polos iguales se repelen y polos opuestos se atraen.",
+            "example_tasks": [
+              "Acerca dos imanes: norte con norte, sur con sur, norte con sur. ¿Qué sucede en cada caso?",
+              "Experimenta con imanes flotantes: coloca imanes del mismo polo enfrentados en un lápiz. ¿Por qué flotan?",
+              "Explica el dicho 'los opuestos se atraen' usando imanes como ejemplo."
+            ]
+          },
+          {
+            "key": "campo_magnetico",
+            "name": "Campo Magnético",
+            "short_description": "Introducir el concepto de campo magnético alrededor de un imán.",
+            "example_tasks": [
+              "Coloca un papel sobre un imán y esparce limaduras de hierro. ¿Qué patrón forman?",
+              "Dibuja las líneas que observas alrededor del imán con limaduras. ¿De qué polo a qué polo van?",
+              "Investiga cómo las brújulas usan el campo magnético de la Tierra para señalar el norte."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "imanes_temporales",
+        "name": "Imanes Temporales y Permanentes",
+        "short_description": "Los estudiantes comprenden la diferencia entre imanes permanentes y materiales que pueden magnetizarse temporalmente.",
+        "sub_topics": [
+          {
+            "key": "crear_iman_temporal",
+            "name": "Crear un Imán Temporal",
+            "short_description": "Aprender a magnetizar objetos de hierro temporalmente.",
+            "example_tasks": [
+              "Frota un clavo con un imán en la misma dirección muchas veces. Prueba si el clavo ahora atrae otros clips.",
+              "Experimenta: ¿cuánto tiempo mantiene el clavo sus propiedades magnéticas?",
+              "Investiga qué sucede si golpeas o calientas un imán temporal: ¿pierde su magnetismo?"
+            ]
+          },
+          {
+            "key": "imanes_permanentes",
+            "name": "Imanes Permanentes",
+            "short_description": "Comprender que algunos imanes mantienen sus propiedades por mucho tiempo.",
+            "example_tasks": [
+              "Compara un imán de refrigerador (permanente) con un clavo magnetizado (temporal). ¿Cuál dura más tiempo magnetizado?",
+              "Investiga de qué están hechos los imanes permanentes (ferrita, neodimio, etc.).",
+              "Explica por qué los imanes de refrigerador no pierden su magnetismo con el tiempo."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "brujula",
+        "name": "La Brújula",
+        "short_description": "Los estudiantes comprenden cómo funciona una brújula y su relación con el magnetismo terrestre.",
+        "sub_topics": [
+          {
+            "key": "funcionamiento_brujula",
+            "name": "Funcionamiento de la Brújula",
+            "short_description": "Comprender que una brújula es un imán que se alinea con el campo magnético de la Tierra.",
+            "example_tasks": [
+              "Observa una brújula. ¿Hacia dónde apunta siempre la aguja? ¿Por qué?",
+              "Acerca un imán a una brújula. ¿Qué sucede con la aguja? ¿Por qué se desvía?",
+              "Experimenta en diferentes lugares de tu salón. ¿La brújula siempre apunta en la misma dirección?"
+            ]
+          },
+          {
+            "key": "magnetismo_tierra",
+            "name": "Magnetismo de la Tierra",
+            "short_description": "Comprender que la Tierra actúa como un imán gigante.",
+            "example_tasks": [
+              "Investiga dónde están ubicados los polos magnéticos de la Tierra. ¿Coinciden exactamente con los polos geográficos?",
+              "Explica cómo los exploradores antiguos usaban brújulas para navegar.",
+              "Investiga qué animales (como aves migratorias) usan el campo magnético terrestre para orientarse."
+            ]
+          },
+          {
+            "key": "hacer_brujula",
+            "name": "Hacer una Brújula Simple",
+            "short_description": "Construir una brújula casera para comprender su funcionamiento.",
+            "example_tasks": [
+              "Magnetiza una aguja frotándola con un imán. Colócala sobre un corcho flotando en agua. ¿Hacia dónde apunta?",
+              "Compara tu brújula casera con una brújula comercial. ¿Apuntan en la misma dirección?",
+              "Explica por qué la aguja magnetizada flotante se orienta hacia el norte."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "usos_magnetismo",
+        "name": "Usos del Magnetismo",
+        "short_description": "Los estudiantes identifican aplicaciones prácticas del magnetismo en la vida cotidiana y la tecnología.",
+        "sub_topics": [
+          {
+            "key": "magnetismo_hogar",
+            "name": "Magnetismo en el Hogar",
+            "short_description": "Identificar usos de imanes en objetos domésticos.",
+            "example_tasks": [
+              "Busca imanes en tu casa: en el refrigerador, en cierres de puertas, en bocinas, en juguetes.",
+              "Observa cómo funcionan los cierres magnéticos en bolsas, puertas de refrigerador, etc.",
+              "Investiga por qué las tarjetas de crédito tienen bandas magnéticas. ¿Qué información almacenan?"
+            ]
+          },
+          {
+            "key": "magnetismo_tecnologia",
+            "name": "Magnetismo en la Tecnología",
+            "short_description": "Reconocer aplicaciones tecnológicas del magnetismo.",
+            "example_tasks": [
+              "Investiga cómo funcionan las bocinas y audífonos usando magnetismo.",
+              "Explora cómo se usan imanes en motores eléctricos y generadores.",
+              "Investiga qué es un tren de levitación magnética (maglev) y cómo funciona."
+            ]
+          },
+          {
+            "key": "magnetismo_separacion",
+            "name": "Separación Magnética",
+            "short_description": "Comprender el uso de imanes para separar materiales.",
+            "example_tasks": [
+              "Investiga cómo se usan grandes imanes en centros de reciclaje para separar metales ferrosos.",
+              "Experimenta separando una mezcla de arena y limaduras de hierro usando un imán.",
+              "Explica cómo se usan imanes en la industria alimentaria para remover partículas metálicas."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "electricidad_estatica",
+    "name": "Electricidad Estática",
+    "short_description": "Los estudiantes exploran la electricidad estática, comprenden cómo se generan cargas eléctricas por fricción, observan fenómenos de atracción y repulsión, y distinguen entre materiales conductores y aislantes.",
+    "sub_topics": [
+      {
+        "key": "cargas_electricas",
+        "name": "Cargas Eléctricas",
+        "short_description": "Los estudiantes comprenden que los objetos pueden adquirir carga eléctrica.",
+        "sub_topics": [
+          {
+            "key": "observacion_estatica",
+            "name": "Observación de Electricidad Estática",
+            "short_description": "Identificar fenómenos de electricidad estática en la vida cotidiana.",
+            "example_tasks": [
+              "Frota un globo en tu cabello y acércalo a pedacitos de papel. ¿Qué observas? ¿Por qué el papel es atraído?",
+              "Camina sobre una alfombra y toca una perilla de metal. ¿Sientes un pequeño choque? ¿Qué lo causa?",
+              "Observa chispas cuando te quitas un suéter en un día seco. ¿Qué tipo de electricidad es esta?"
+            ]
+          },
+          {
+            "key": "carga_por_friccion",
+            "name": "Carga por Fricción",
+            "short_description": "Comprender que frotar dos materiales puede transferir cargas eléctricas.",
+            "example_tasks": [
+              "Frota diferentes materiales (globo con lana, plástico con seda, peine con cabello). ¿Todos se cargan igual?",
+              "Experimenta frotando un globo y otro no frotándolo. ¿Cuál atrae papelitos?",
+              "Explica por qué frotar un globo es necesario para que atraiga objetos pequeños."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "interaccion_cargas",
+        "name": "Interacción entre Cargas",
+        "short_description": "Los estudiantes observan cómo las cargas eléctricas se atraen o se repelen.",
+        "sub_topics": [
+          {
+            "key": "atraccion_repulsion",
+            "name": "Atracción y Repulsión",
+            "short_description": "Comprender que cargas opuestas se atraen y cargas iguales se repelen.",
+            "example_tasks": [
+              "Frota dos globos con lana y acércalos. ¿Se atraen o se repelen? ¿Por qué?",
+              "Frota un globo y acércalo a un chorro delgado de agua. ¿Qué sucede con el agua?",
+              "Compara la interacción de cargas eléctricas con la interacción de polos magnéticos. ¿Qué similitudes encuentras?"
+            ]
+          },
+          {
+            "key": "objetos_neutros",
+            "name": "Atracción de Objetos Neutros",
+            "short_description": "Observar que objetos cargados pueden atraer objetos neutros.",
+            "example_tasks": [
+              "Frota un peine y acércalo a pedacitos de papel (neutros). ¿Son atraídos?",
+              "Experimenta acercando un globo cargado a una pared neutra. ¿Se pega? ¿Por qué?",
+              "Explica por qué el cabello (neutro) se para cuando acercas un globo cargado."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "conductores_aislantes_electricos",
+        "name": "Conductores y Aislantes Eléctricos",
+        "short_description": "Los estudiantes clasifican materiales según su capacidad para conducir electricidad.",
+        "sub_topics": [
+          {
+            "key": "materiales_conductores",
+            "name": "Materiales Conductores",
+            "short_description": "Identificar materiales que permiten el paso de la electricidad.",
+            "example_tasks": [
+              "Prueba diferentes materiales (monedas, clips, alambre de cobre) para ver si conducen electricidad en un circuito simple.",
+              "Investiga por qué la mayoría de los metales son buenos conductores de electricidad.",
+              "Explica por qué los cables eléctricos están hechos generalmente de cobre o aluminio."
+            ]
+          },
+          {
+            "key": "materiales_aislantes",
+            "name": "Materiales Aislantes",
+            "short_description": "Identificar materiales que no permiten el paso fácil de la electricidad.",
+            "example_tasks": [
+              "Prueba materiales como plástico, madera, vidrio, goma en un circuito. ¿Cuáles no permiten que pase la electricidad?",
+              "Observa cables eléctricos. ¿De qué material es el recubrimiento? ¿Por qué?",
+              "Explica por qué los electricistas usan guantes de goma y herramientas con mangos de plástico."
+            ]
+          },
+          {
+            "key": "seguridad_electricidad",
+            "name": "Seguridad Eléctrica",
+            "short_description": "Comprender la importancia de los aislantes para la seguridad eléctrica.",
+            "example_tasks": [
+              "Identifica materiales aislantes en tu casa que protegen de la electricidad (recubrimiento de cables, carcasas de plástico).",
+              "Explica por qué no debes tocar aparatos eléctricos con las manos mojadas (el agua conduce electricidad).",
+              "Investiga qué son los fusibles e interruptores y cómo protegen de sobrecargas eléctricas."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "descarga_electrica",
+        "name": "Descarga Eléctrica",
+        "short_description": "Los estudiantes comprenden cómo se produce una descarga eléctrica.",
+        "sub_topics": [
+          {
+            "key": "chispas_estaticas",
+            "name": "Chispas Estáticas",
+            "short_description": "Observar pequeñas descargas eléctricas en situaciones cotidianas.",
+            "example_tasks": [
+              "Observa (con precaución) una pequeña chispa cuando tocas metal después de caminar sobre alfombra. ¿Qué la causa?",
+              "Experimenta en un cuarto oscuro: frota un globo y acércalo a un objeto metálico. ¿Ves una pequeña chispa?",
+              "Explica por qué es más común sentir choques eléctricos en días secos que en días húmedos."
+            ]
+          },
+          {
+            "key": "rayos",
+            "name": "Rayos como Descargas Eléctricas",
+            "short_description": "Comprender que los rayos son descargas eléctricas gigantes en la atmósfera.",
+            "example_tasks": [
+              "Investiga cómo se forman los rayos durante las tormentas. ¿Qué tipo de electricidad es?",
+              "Observa videos de rayos. Compara con las pequeñas chispas que produces con un globo.",
+              "Explica qué precauciones debes tomar durante una tormenta eléctrica para estar seguro."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "corriente_electrica",
+    "name": "Corriente Eléctrica",
+    "short_description": "Los estudiantes comprenden el concepto de corriente eléctrica, identifican fuentes de electricidad, aprenden sobre circuitos eléctricos básicos y reconocen medidas de seguridad eléctrica.",
+    "sub_topics": [
+      {
+        "key": "concepto_corriente",
+        "name": "Concepto de Corriente Eléctrica",
+        "short_description": "Los estudiantes comprenden que la corriente eléctrica es el flujo de cargas eléctricas.",
+        "sub_topics": [
+          {
+            "key": "flujo_cargas",
+            "name": "Flujo de Cargas",
+            "short_description": "Comprender la corriente como movimiento de electricidad por un conductor.",
+            "example_tasks": [
+              "Compara la corriente eléctrica con el flujo de agua en una manguera. ¿En qué se parecen?",
+              "Observa una lámpara encendida. ¿Qué debe estar pasando por el cable para que funcione?",
+              "Explica la diferencia entre electricidad estática (cargas estacionarias) y corriente eléctrica (cargas en movimiento)."
+            ]
+          },
+          {
+            "key": "circuito_cerrado",
+            "name": "Necesidad de un Circuito Cerrado",
+            "short_description": "Comprender que la corriente necesita un camino completo para fluir.",
+            "example_tasks": [
+              "Construye un circuito simple con batería, cables y foco. ¿Qué sucede si cortas un cable?",
+              "Experimenta abriendo y cerrando un circuito. ¿Cuándo enciende el foco?",
+              "Explica por qué un interruptor puede controlar una lámpara: abre o cierra el circuito."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fuentes_electricidad",
+        "name": "Fuentes de Electricidad",
+        "short_description": "Los estudiantes identifican diferentes dispositivos que proporcionan energía eléctrica.",
+        "sub_topics": [
+          {
+            "key": "pilas_baterias",
+            "name": "Pilas y Baterías",
+            "short_description": "Comprender que las pilas y baterías almacenan energía química que se convierte en eléctrica.",
+            "example_tasks": [
+              "Observa diferentes pilas (AA, AAA, 9V, batería de automóvil). ¿Todas proporcionan la misma cantidad de electricidad?",
+              "Experimenta con un circuito: usa una pila, luego dos pilas. ¿Cómo afecta al brillo del foco?",
+              "Investiga qué significan los símbolos + y - en una pila. ¿Qué sucede si las conectas al revés?"
+            ]
+          },
+          {
+            "key": "generadores",
+            "name": "Generadores",
+            "short_description": "Reconocer que los generadores convierten movimiento en electricidad.",
+            "example_tasks": [
+              "Investiga cómo se genera la electricidad en una central eléctrica. ¿Qué hace girar los generadores?",
+              "Observa una dinamo de bicicleta. ¿Cómo produce electricidad para la luz?",
+              "Explica la diferencia entre una pila (almacena energía) y un generador (produce energía)."
+            ]
+          },
+          {
+            "key": "fuentes_renovables_electricidad",
+            "name": "Fuentes Renovables de Electricidad",
+            "short_description": "Identificar fuentes renovables que generan electricidad.",
+            "example_tasks": [
+              "Investiga cómo los paneles solares convierten luz del Sol en electricidad.",
+              "Explora cómo funcionan los aerogeneradores (turbinas de viento) para generar electricidad.",
+              "Investiga cómo las presas hidroeléctricas usan agua en movimiento para generar electricidad."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "circuitos_simples",
+        "name": "Circuitos Simples",
+        "short_description": "Los estudiantes construyen y analizan circuitos eléctricos básicos.",
+        "sub_topics": [
+          {
+            "key": "construir_circuito",
+            "name": "Construir un Circuito Simple",
+            "short_description": "Aprender a construir un circuito básico con batería, cables y bombilla.",
+            "example_tasks": [
+              "Construye un circuito con una pila, dos cables y un foco. ¿Qué necesitas para que el foco encienda?",
+              "Experimenta con diferentes configuraciones. ¿Todas hacen que el foco encienda?",
+              "Dibuja un diagrama de tu circuito funcionando mostrando la batería, cables y foco."
+            ]
+          },
+          {
+            "key": "interruptores",
+            "name": "Interruptores",
+            "short_description": "Comprender cómo los interruptores controlan el flujo de electricidad.",
+            "example_tasks": [
+              "Agrega un interruptor simple (puede ser dos cables que se tocan) a tu circuito. ¿Cómo controlas el foco?",
+              "Observa diferentes interruptores en tu casa (de palanca, de botón, de presión). ¿Cómo funcionan?",
+              "Explica qué hace un interruptor en términos de abrir y cerrar el circuito."
+            ]
+          },
+          {
+            "key": "diagnosticar_problemas",
+            "name": "Diagnosticar Problemas en Circuitos",
+            "short_description": "Identificar por qué un circuito puede no funcionar.",
+            "example_tasks": [
+              "Si tu circuito no funciona, revisa: ¿la pila está bien colocada? ¿hay alguna conexión suelta? ¿el foco está fundido?",
+              "Experimenta quitando un cable del circuito. ¿Qué sucede? ¿Por qué?",
+              "Explica por qué es importante que todas las conexiones estén firmes para que el circuito funcione."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "seguridad_electrica",
+        "name": "Seguridad Eléctrica",
+        "short_description": "Los estudiantes aprenden reglas importantes de seguridad al trabajar con electricidad.",
+        "sub_topics": [
+          {
+            "key": "peligros_electricidad",
+            "name": "Peligros de la Electricidad",
+            "short_description": "Reconocer situaciones peligrosas relacionadas con electricidad.",
+            "example_tasks": [
+              "Identifica situaciones peligrosas: cables pelados, enchufes sobrecargados, aparatos cerca del agua.",
+              "Explica por qué no debes meter objetos metálicos en enchufes eléctricos.",
+              "Investiga qué es un corto circuito y por qué es peligroso."
+            ]
+          },
+          {
+            "key": "reglas_seguridad",
+            "name": "Reglas de Seguridad",
+            "short_description": "Aprender y aplicar reglas básicas de seguridad eléctrica.",
+            "example_tasks": [
+              "Haz una lista de diez reglas de seguridad eléctrica para tu casa y escuela.",
+              "Explica por qué nunca debes volar papalotes cerca de cables eléctricos.",
+              "Investiga qué hacer si alguien recibe un choque eléctrico: nunca tocarlos directamente, llamar ayuda."
+            ]
+          },
+          {
+            "key": "simbolos_advertencia",
+            "name": "Símbolos de Advertencia",
+            "short_description": "Reconocer símbolos que indican peligro eléctrico.",
+            "example_tasks": [
+              "Identifica el símbolo de peligro eléctrico (rayo en un triángulo). ¿Dónde lo has visto?",
+              "Observa señales de advertencia cerca de transformadores y subestaciones eléctricas. ¿Qué dicen?",
+              "Explica por qué es importante obedecer estas señales de advertencia."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "componentes_electricos",
+    "name": "Componentes Eléctricos",
+    "short_description": "Los estudiantes identifican diferentes componentes eléctricos (cables, bombillas, interruptores), comprenden sus funciones, aprenden sobre circuitos en serie y paralelo, y pueden representar circuitos con diagramas.",
+    "sub_topics": [
+      {
+        "key": "cables_conductores",
+        "name": "Cables y Conductores",
+        "short_description": "Los estudiantes comprenden la función de los cables en un circuito.",
+        "sub_topics": [
+          {
+            "key": "funcion_cables",
+            "name": "Función de los Cables",
+            "short_description": "Comprender que los cables proporcionan el camino para la corriente eléctrica.",
+            "example_tasks": [
+              "Observa diferentes tipos de cables. ¿Por qué tienen recubrimiento de plástico?",
+              "Experimenta con cables de diferentes longitudes en tu circuito. ¿Afecta la longitud al funcionamiento?",
+              "Explica por qué los cables están hechos de metal (conductor) cubierto de plástico (aislante)."
+            ]
+          },
+          {
+            "key": "conexiones",
+            "name": "Conexiones",
+            "short_description": "Aprender a hacer conexiones seguras y efectivas.",
+            "example_tasks": [
+              "Practica conectar cables a una batería y un foco. ¿Qué pasa si la conexión está floja?",
+              "Observa diferentes tipos de conectores: pinzas de cocodrilo, tornillos de terminal, enchufes.",
+              "Explica por qué es importante que las conexiones estén limpias y firmes."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bombillas_focos",
+        "name": "Bombillas y Focos",
+        "short_description": "Los estudiantes comprenden cómo funcionan las bombillas en un circuito.",
+        "sub_topics": [
+          {
+            "key": "funcionamiento_bombilla",
+            "name": "Funcionamiento de la Bombilla",
+            "short_description": "Comprender que la bombilla convierte energía eléctrica en luz y calor.",
+            "example_tasks": [
+              "Observa una bombilla encendida. ¿Qué observas además de luz? (calor)",
+              "Compara diferentes tipos de focos: incandescentes, fluorescentes, LED. ¿Cuál es más eficiente?",
+              "Investiga cómo funciona el filamento dentro de una bombilla incandescente."
+            ]
+          },
+          {
+            "key": "brillo_bombilla",
+            "name": "Brillo de la Bombilla",
+            "short_description": "Explorar factores que afectan el brillo de una bombilla.",
+            "example_tasks": [
+              "Experimenta con una pila versus dos pilas en tu circuito. ¿Cómo cambia el brillo del foco?",
+              "Usa pilas gastadas versus nuevas. ¿Qué diferencia observas en el brillo?",
+              "Explica por qué las luces de tu casa a veces se ven más tenues (bajo voltaje)."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tipos_interruptores",
+        "name": "Tipos de Interruptores",
+        "short_description": "Los estudiantes identifican diferentes tipos de interruptores y sus usos.",
+        "sub_topics": [
+          {
+            "key": "interruptor_simple",
+            "name": "Interruptor Simple",
+            "short_description": "Comprender el interruptor básico de dos posiciones (abierto/cerrado).",
+            "example_tasks": [
+              "Construye un interruptor simple con dos cables que se toquen. ¿Cómo controla el circuito?",
+              "Observa interruptores de luz en tu casa. ¿Cuántas posiciones tienen (generalmente dos: on/off)?",
+              "Explica qué sucede dentro de un interruptor cuando lo presionas para encender una luz."
+            ]
+          },
+          {
+            "key": "interruptores_especiales",
+            "name": "Interruptores Especiales",
+            "short_description": "Reconocer otros tipos de interruptores con funciones específicas.",
+            "example_tasks": [
+              "Investiga qué es un interruptor de tres vías (controla una luz desde dos lugares diferentes).",
+              "Observa un atenuador (dimmer). ¿Cómo permite controlar el brillo de una luz?",
+              "Identifica interruptores automáticos: sensores de movimiento, temporizadores, interruptores crepusculares."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "circuitos_serie_paralelo",
+        "name": "Circuitos en Serie y en Paralelo",
+        "short_description": "Los estudiantes construyen y comparan circuitos en serie y en paralelo.",
+        "sub_topics": [
+          {
+            "key": "circuito_serie",
+            "name": "Circuito en Serie",
+            "short_description": "Comprender circuitos donde los componentes están conectados uno tras otro.",
+            "example_tasks": [
+              "Construye un circuito con dos focos en serie (uno después del otro). ¿Cómo es su brillo comparado con un solo foco?",
+              "Quita uno de los focos del circuito en serie. ¿Qué sucede con el otro foco? ¿Por qué?",
+              "Explica por qué en series antiguas de luces navideñas, si una bombilla se fundía, todas se apagaban."
+            ]
+          },
+          {
+            "key": "circuito_paralelo",
+            "name": "Circuito en Paralelo",
+            "short_description": "Comprender circuitos donde los componentes tienen caminos separados para la corriente.",
+            "example_tasks": [
+              "Construye un circuito con dos focos en paralelo (cada uno tiene su propio camino). ¿Cómo es su brillo?",
+              "Quita uno de los focos del circuito en paralelo. ¿Qué sucede con el otro foco? ¿Por qué sigue encendido?",
+              "Compara el brillo de focos en serie versus en paralelo. ¿Cuáles brillan más?"
+            ]
+          },
+          {
+            "key": "comparacion_serie_paralelo",
+            "name": "Comparación Serie vs. Paralelo",
+            "short_description": "Identificar ventajas y desventajas de cada tipo de circuito.",
+            "example_tasks": [
+              "Haz una tabla comparando circuitos en serie y paralelo: ¿qué pasa si falla un componente? ¿cómo es el brillo?",
+              "Investiga cómo están conectadas las luces de tu casa. ¿En serie o en paralelo? ¿Cómo lo sabes?",
+              "Explica por qué la mayoría de instalaciones eléctricas usan circuitos en paralelo."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "diagramas_circuitos",
+        "name": "Diagramas de Circuitos",
+        "short_description": "Los estudiantes aprenden a representar circuitos usando símbolos estandarizados.",
+        "sub_topics": [
+          {
+            "key": "simbolos_basicos",
+            "name": "Símbolos Básicos",
+            "short_description": "Aprender los símbolos para representar componentes eléctricos.",
+            "example_tasks": [
+              "Aprende los símbolos: batería (líneas largas y cortas), foco (círculo con X), interruptor (línea rota), cable (línea).",
+              "Dibuja el símbolo de cada componente y etiquétalo con su nombre.",
+              "Practica identificando componentes en diagramas de circuitos."
+            ]
+          },
+          {
+            "key": "dibujar_diagramas",
+            "name": "Dibujar Diagramas de Circuitos",
+            "short_description": "Representar circuitos usando símbolos en lugar de dibujos realistas.",
+            "example_tasks": [
+              "Construye un circuito simple. Luego dibuja su diagrama usando símbolos estándar.",
+              "Convierte un diagrama de circuito en serie a un circuito real. ¿Funciona como esperabas?",
+              "Diseña un circuito en papel (usando símbolos) antes de construirlo físicamente."
+            ]
+          },
+          {
+            "key": "leer_diagramas",
+            "name": "Leer Diagramas de Circuitos",
+            "short_description": "Interpretar diagramas para construir circuitos.",
+            "example_tasks": [
+              "Se te da un diagrama de circuito. Construye el circuito real siguiendo el diagrama.",
+              "Compara dos diagramas: uno en serie y uno en paralelo. ¿Puedes identificar la diferencia sin construirlos?",
+              "Encuentra el error en un diagrama de circuito (por ejemplo, camino incompleto) y corrígelo."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "otros_componentes",
+        "name": "Otros Componentes Eléctricos",
+        "short_description": "Los estudiantes identifican componentes adicionales en circuitos.",
+        "sub_topics": [
+          {
+            "key": "motores_electricos",
+            "name": "Motores Eléctricos",
+            "short_description": "Comprender que los motores convierten energía eléctrica en movimiento.",
+            "example_tasks": [
+              "Construye un circuito con un motor pequeño. ¿Qué sucede cuando cierras el circuito?",
+              "Experimenta invirtiendo las conexiones del motor. ¿Cambia la dirección de giro?",
+              "Identifica motores eléctricos en objetos cotidianos: ventilador, licuadora, juguetes."
+            ]
+          },
+          {
+            "key": "timbres_zumbadores",
+            "name": "Timbres y Zumbadores",
+            "short_description": "Reconocer componentes que convierten electricidad en sonido.",
+            "example_tasks": [
+              "Agrega un zumbador a tu circuito. ¿Qué sucede cuando cierras el circuito?",
+              "Observa el timbre de una casa. ¿Cómo funciona cuando presionas el botón?",
+              "Explica la diferencia entre un motor (produce movimiento) y un zumbador (produce sonido)."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "uso_responsable_energia_electrica",
+    "name": "Uso Responsable de la Energía Eléctrica",
+    "short_description": "Los estudiantes comprenden la importancia del ahorro de energía eléctrica, identifican aparatos eficientes, aprenden medidas de conservación y reconocen fuentes de energía renovable para generar electricidad.",
+    "sub_topics": [
+      {
+        "key": "consumo_energia",
+        "name": "Consumo de Energía Eléctrica",
+        "short_description": "Los estudiantes comprenden que diferentes aparatos consumen diferentes cantidades de energía.",
+        "sub_topics": [
+          {
+            "key": "aparatos_alto_consumo",
+            "name": "Aparatos de Alto Consumo",
+            "short_description": "Identificar aparatos que usan mucha energía eléctrica.",
+            "example_tasks": [
+              "Haz una lista de aparatos en tu casa que consumen mucha energía: refrigerador, aire acondicionado, calentador de agua.",
+              "Compara el consumo de una computadora encendida todo el día versus encenderla solo cuando la uses.",
+              "Investiga qué significa 'kWh' (kilowatt-hora) en un recibo de luz."
+            ]
+          },
+          {
+            "key": "aparatos_bajo_consumo",
+            "name": "Aparatos de Bajo Consumo",
+            "short_description": "Identificar aparatos que consumen poca energía.",
+            "example_tasks": [
+              "Compara el consumo de un foco LED versus un foco incandescente. ¿Cuál consume menos?",
+              "Investiga el consumo de un reloj, cargador de celular, radio pequeño. ¿Son altos o bajos consumidores?",
+              "Explica por qué es mejor usar aparatos de bajo consumo cuando sea posible."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "ahorro_energia",
+        "name": "Ahorro de Energía",
+        "short_description": "Los estudiantes aprenden acciones concretas para reducir el consumo de electricidad.",
+        "sub_topics": [
+          {
+            "key": "habitos_ahorro",
+            "name": "Hábitos de Ahorro",
+            "short_description": "Desarrollar prácticas diarias que reduzcan el consumo eléctrico.",
+            "example_tasks": [
+              "Haz una lista de diez acciones para ahorrar energía: apagar luces al salir, desconectar cargadores, usar luz natural.",
+              "Realiza un 'día de ahorro de energía' en tu casa. Registra qué acciones tomaste.",
+              "Diseña carteles promoviendo el ahorro de energía para colocar en tu escuela."
+            ]
+          },
+          {
+            "key": "modo_espera",
+            "name": "Consumo en Modo de Espera",
+            "short_description": "Comprender que los aparatos consumen energía incluso cuando no están en uso activo.",
+            "example_tasks": [
+              "Investiga qué es el 'consumo vampiro' o 'consumo fantasma' de los aparatos en stand-by.",
+              "Identifica aparatos en tu casa que quedan en modo de espera: televisión, microondas, cargadores.",
+              "Explica por qué es mejor desconectar completamente los aparatos cuando no se usan."
+            ]
+          },
+          {
+            "key": "eficiencia_iluminacion",
+            "name": "Eficiencia en Iluminación",
+            "short_description": "Reconocer opciones eficientes para iluminación.",
+            "example_tasks": [
+              "Compara diferentes tipos de focos: incandescente (100W), fluorescente (23W), LED (10W) con igual brillo. ¿Cuál es más eficiente?",
+              "Calcula cuánta energía ahorrarías en un mes reemplazando focos incandescentes por LED.",
+              "Investiga por qué México ha promovido el cambio a focos ahorradores."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "energia_renovable_electricidad",
+        "name": "Energía Renovable para Electricidad",
+        "short_description": "Los estudiantes reconocen fuentes renovables que generan electricidad limpia.",
+        "sub_topics": [
+          {
+            "key": "energia_solar_electrica",
+            "name": "Energía Solar Fotovoltaica",
+            "short_description": "Comprender cómo los paneles solares generan electricidad.",
+            "example_tasks": [
+              "Observa paneles solares (en calculadoras, casas, edificios). ¿Cómo convierten luz solar en electricidad?",
+              "Investiga dónde en México hay grandes plantas de energía solar (desiertos del norte).",
+              "Experimenta con una calculadora solar: cúbrela y descúbrela. ¿Qué observas?"
+            ]
+          },
+          {
+            "key": "energia_eolica",
+            "name": "Energía Eólica",
+            "short_description": "Comprender cómo el viento genera electricidad.",
+            "example_tasks": [
+              "Investiga cómo funcionan los aerogeneradores (turbinas de viento) para producir electricidad.",
+              "Identifica regiones de México con parques eólicos (Oaxaca, península de Yucatán).",
+              "Construye un molino simple con papel. ¿Cómo el viento lo hace girar? ¿Podría esto generar electricidad?"
+            ]
+          },
+          {
+            "key": "energia_hidroelectrica",
+            "name": "Energía Hidroeléctrica",
+            "short_description": "Comprender cómo el agua en movimiento genera electricidad.",
+            "example_tasks": [
+              "Investiga cómo funcionan las presas hidroeléctricas. ¿Qué hace girar los generadores?",
+              "Identifica presas importantes en México: Presa Chicoasén, Presa La Angostura.",
+              "Explica las ventajas y desventajas de la energía hidroeléctrica para el medio ambiente."
+            ]
+          },
+          {
+            "key": "comparacion_renovables",
+            "name": "Comparación de Fuentes Renovables",
+            "short_description": "Evaluar diferentes opciones de energía renovable.",
+            "example_tasks": [
+              "Compara energía solar, eólica e hidroeléctrica. ¿Cuáles son apropiadas para diferentes regiones de México?",
+              "Investiga qué porcentaje de la electricidad en México proviene de fuentes renovables.",
+              "Explica por qué es importante desarrollar más fuentes de energía renovable."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "impacto_ambiental",
+        "name": "Impacto Ambiental del Consumo Eléctrico",
+        "short_description": "Los estudiantes comprenden las consecuencias ambientales de la generación y uso de electricidad.",
+        "sub_topics": [
+          {
+            "key": "combustibles_fosiles",
+            "name": "Generación con Combustibles Fósiles",
+            "short_description": "Comprender el impacto ambiental de generar electricidad con carbón, petróleo y gas.",
+            "example_tasks": [
+              "Investiga cómo se genera electricidad en centrales termoeléctricas usando combustibles fósiles.",
+              "Explica qué contaminantes se liberan al quemar carbón o gas para generar electricidad.",
+              "Compara la huella de carbono de electricidad de fuentes fósiles versus renovables."
+            ]
+          },
+          {
+            "key": "beneficios_ahorro",
+            "name": "Beneficios Ambientales del Ahorro",
+            "short_description": "Comprender cómo ahorrar energía ayuda al medio ambiente.",
+            "example_tasks": [
+              "Calcula cuánto CO₂ se evita emitir al apagar luces innecesarias por un mes.",
+              "Investiga cómo reducir el consumo eléctrico ayuda a combatir el cambio climático.",
+              "Diseña una campaña escolar promoviendo el ahorro de energía por razones ambientales."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "certificaciones_eficiencia",
+        "name": "Certificaciones de Eficiencia Energética",
+        "short_description": "Los estudiantes reconocen etiquetas y certificaciones que indican eficiencia energética.",
+        "sub_topics": [
+          {
+            "key": "etiquetas_eficiencia",
+            "name": "Etiquetas de Eficiencia",
+            "short_description": "Identificar y comprender etiquetas de eficiencia energética en aparatos.",
+            "example_tasks": [
+              "Observa la etiqueta de eficiencia energética en un refrigerador. ¿Qué significan las letras A, B, C, etc.?",
+              "Compara dos aparatos similares: uno con etiqueta A y otro con etiqueta C. ¿Cuál consume menos?",
+              "Investiga el programa mexicano de certificación de eficiencia energética (FIDE, CONUEE)."
+            ]
+          },
+          {
+            "key": "decisiones_compra",
+            "name": "Decisiones de Compra Responsable",
+            "short_description": "Aprender a considerar la eficiencia energética al elegir aparatos.",
+            "example_tasks": [
+              "Si tuvieras que comprar un refrigerador nuevo, ¿qué información buscarías sobre eficiencia?",
+              "Compara el costo a largo plazo de un aparato barato pero ineficiente versus uno más caro pero eficiente.",
+              "Explica por qué invertir en aparatos eficientes ahorra dinero a largo plazo."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "sol_fuente_energia",
+    "name": "El Sol como Fuente de Energía",
+    "short_description": "Los estudiantes comprenden que el Sol es la principal fuente de energía para la Tierra, proporcionando luz y calor esenciales para la vida, y exploran cómo esta energía afecta nuestro planeta.",
+    "sub_topics": [
+      {
+        "key": "luz_solar",
+        "name": "Luz Solar",
+        "short_description": "Los estudiantes reconocen al Sol como fuente principal de luz natural.",
+        "sub_topics": [
+          {
+            "key": "sol_estrella",
+            "name": "El Sol es una Estrella",
+            "short_description": "Comprender que el Sol es una estrella que produce su propia luz y calor.",
+            "example_tasks": [
+              "Compara el Sol con otras estrellas que ves en la noche. ¿Por qué el Sol se ve más grande y brillante?",
+              "Investiga de qué está hecho el Sol. ¿Qué reacciones producen su luz y calor?",
+              "Explica la diferencia entre el Sol (estrella que produce luz) y la Luna (satélite que refleja luz)."
+            ]
+          },
+          {
+            "key": "importancia_luz_solar",
+            "name": "Importancia de la Luz Solar",
+            "short_description": "Reconocer cómo la luz del Sol es esencial para la vida en la Tierra.",
+            "example_tasks": [
+              "Observa plantas que crecen cerca de una ventana versus en un lugar oscuro. ¿Qué diferencias notas?",
+              "Investiga cómo las plantas usan la luz solar para hacer fotosíntesis y producir alimento.",
+              "Explica por qué no podría existir vida en la Tierra sin la luz del Sol."
+            ]
+          },
+          {
+            "key": "intensidad_luz_solar",
+            "name": "Intensidad de la Luz Solar",
+            "short_description": "Observar que la intensidad de la luz solar varía según la hora y el lugar.",
+            "example_tasks": [
+              "Compara la intensidad de la luz solar al mediodía versus al amanecer o atardecer. ¿Cuándo es más intensa?",
+              "Mide la temperatura en un lugar soleado y en la sombra. ¿Qué diferencia encuentras?",
+              "Investiga por qué los lugares cerca del Ecuador reciben más luz solar directa que los polos."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "calor_solar",
+        "name": "Calor Solar",
+        "short_description": "Los estudiantes comprenden que el Sol es la principal fuente de calor para la Tierra.",
+        "sub_topics": [
+          {
+            "key": "calentamiento_tierra",
+            "name": "Calentamiento de la Tierra",
+            "short_description": "Observar cómo la radiación solar calienta nuestro planeta.",
+            "example_tasks": [
+              "Coloca dos termómetros: uno al sol y otro en la sombra. Registra la temperatura cada 10 minutos. ¿Qué observas?",
+              "Toca diferentes superficies al sol (metal, madera, plástico, tierra). ¿Cuáles se calientan más?",
+              "Explica por qué hace más calor durante el día que durante la noche."
+            ]
+          },
+          {
+            "key": "absorcion_reflexion_calor",
+            "name": "Absorción y Reflexión del Calor Solar",
+            "short_description": "Comprender que diferentes materiales absorben o reflejan el calor de manera distinta.",
+            "example_tasks": [
+              "Coloca objetos de diferentes colores (negro, blanco) al sol. ¿Cuál se calienta más? ¿Por qué?",
+              "Experimenta con papel de aluminio (refleja) versus papel negro (absorbe). ¿Qué diferencias observas?",
+              "Explica por qué en lugares calurosos las casas se pintan de colores claros."
+            ]
+          },
+          {
+            "key": "distribucion_calor",
+            "name": "Distribución del Calor Solar",
+            "short_description": "Reconocer que el calor del Sol no se distribuye uniformemente en la Tierra.",
+            "example_tasks": [
+              "Investiga por qué en el Ecuador hace calor todo el año mientras que en los polos hace frío.",
+              "Compara las temperaturas promedio en diferentes regiones de México: norte, centro, costa, montaña.",
+              "Explica cómo la inclinación de los rayos solares afecta la cantidad de calor que recibe un lugar."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "energia_vida",
+        "name": "Energía Solar y la Vida",
+        "short_description": "Los estudiantes comprenden cómo la energía del Sol sustenta la vida en la Tierra.",
+        "sub_topics": [
+          {
+            "key": "fotosintesis",
+            "name": "Fotosíntesis",
+            "short_description": "Comprender que las plantas capturan energía solar para producir alimento.",
+            "example_tasks": [
+              "Investiga cómo las plantas verdes usan luz solar, agua y dióxido de carbono para hacer alimento.",
+              "Observa hojas de plantas. ¿Por qué son verdes? ¿Qué pigmento captura la luz solar?",
+              "Explica por qué las plantas son llamadas 'productores' en las cadenas alimentarias."
+            ]
+          },
+          {
+            "key": "cadena_alimentaria",
+            "name": "Energía en la Cadena Alimentaria",
+            "short_description": "Reconocer que toda la energía en los ecosistemas proviene originalmente del Sol.",
+            "example_tasks": [
+              "Traza una cadena alimentaria simple: Sol → planta → herbívoro → carnívoro. ¿De dónde viene la energía en cada paso?",
+              "Explica cómo la energía solar llega hasta los alimentos que comes (tortillas, frutas, carne).",
+              "Investiga qué pasaría con la vida en la Tierra si el Sol dejara de brillar."
+            ]
+          },
+          {
+            "key": "ciclo_agua_solar",
+            "name": "Energía Solar y el Ciclo del Agua",
+            "short_description": "Comprender que el Sol impulsa el ciclo del agua mediante evaporación.",
+            "example_tasks": [
+              "Explica cómo el calor del Sol evapora agua de océanos, ríos y lagos.",
+              "Diseña un experimento que demuestre evaporación usando agua y calor solar.",
+              "Investiga cómo la energía solar mueve el agua a través del ciclo: evaporación → condensación → precipitación."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "aprovechamiento_energia_solar",
+        "name": "Aprovechamiento de la Energía Solar",
+        "short_description": "Los estudiantes identifican formas en que los humanos utilizan la energía del Sol.",
+        "sub_topics": [
+          {
+            "key": "energia_solar_directa",
+            "name": "Uso Directo de Energía Solar",
+            "short_description": "Reconocer aplicaciones que usan directamente la luz y el calor del Sol.",
+            "example_tasks": [
+              "Investiga cómo funcionan los calentadores solares de agua. ¿Por qué son populares en México?",
+              "Observa paneles solares fotovoltaicos. ¿Cómo convierten luz solar en electricidad?",
+              "Explica cómo secar ropa al sol aprovecha la energía solar de manera simple."
+            ]
+          },
+          {
+            "key": "aplicaciones_cotidianas",
+            "name": "Aplicaciones Cotidianas",
+            "short_description": "Identificar usos prácticos de la energía solar en la vida diaria.",
+            "example_tasks": [
+              "Identifica objetos que funcionen con energía solar: calculadoras, lámparas de jardín, cargadores.",
+              "Investiga las ventajas de cocinar con hornos solares. ¿Dónde se usan en México?",
+              "Diseña un proyecto simple que use energía solar (secar frutas, calentar agua, cargar una batería)."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "proteccion_solar",
+        "name": "Protección contra la Radiación Solar",
+        "short_description": "Los estudiantes aprenden sobre los efectos de la exposición excesiva al Sol y medidas de protección.",
+        "sub_topics": [
+          {
+            "key": "efectos_exposicion",
+            "name": "Efectos de la Exposición Solar",
+            "short_description": "Comprender beneficios y riesgos de la exposición al Sol.",
+            "example_tasks": [
+              "Investiga cómo la luz solar ayuda al cuerpo a producir vitamina D, importante para los huesos.",
+              "Explica qué son las quemaduras solares y por qué son peligrosas para la piel.",
+              "Investiga qué es el índice UV y cómo indica la intensidad de la radiación solar."
+            ]
+          },
+          {
+            "key": "medidas_proteccion",
+            "name": "Medidas de Protección",
+            "short_description": "Aprender prácticas para protegerse de la radiación solar excesiva.",
+            "example_tasks": [
+              "Haz una lista de medidas para protegerte del Sol: bloqueador solar, ropa protectora, sombrero, sombra.",
+              "Investiga qué significa SPF en los bloqueadores solares. ¿Cuál es recomendable para niños?",
+              "Explica por qué es importante evitar la exposición al Sol en las horas de mayor intensidad (11 AM - 3 PM)."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "dia_noche",
+    "name": "Día y Noche",
+    "short_description": "Los estudiantes comprenden que la rotación de la Tierra sobre su eje causa la alternancia de día y noche, observan cómo cambian las sombras durante el día y reconocen la relación entre posición del Sol y hora del día.",
+    "sub_topics": [
+      {
+        "key": "rotacion_tierra",
+        "name": "Rotación de la Tierra",
+        "short_description": "Los estudiantes comprenden que la Tierra gira sobre su propio eje.",
+        "sub_topics": [
+          {
+            "key": "movimiento_rotacion",
+            "name": "Movimiento de Rotación",
+            "short_description": "Comprender que la Tierra completa un giro sobre su eje cada 24 horas.",
+            "example_tasks": [
+              "Usa una pelota o globo terráqueo con una lámpara. Gira la pelota. ¿Qué partes están iluminadas y cuáles oscuras?",
+              "Investiga cuánto tarda la Tierra en dar una vuelta completa sobre su eje (24 horas = 1 día).",
+              "Explica por qué la Tierra gira de oeste a este, haciendo que el Sol parezca salir por el este."
+            ]
+          },
+          {
+            "key": "eje_terrestre",
+            "name": "Eje de Rotación",
+            "short_description": "Reconocer que la Tierra gira alrededor de un eje imaginario que pasa por los polos.",
+            "example_tasks": [
+              "Localiza en un globo terráqueo el Polo Norte y el Polo Sur. ¿Por dónde pasa el eje de rotación?",
+              "Gira un trompo. Compara su eje de rotación con el de la Tierra. ¿En qué se parecen?",
+              "Investiga qué significa que el eje de la Tierra está inclinado (23.5 grados)."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "ciclo_dia_noche",
+        "name": "Ciclo de Día y Noche",
+        "short_description": "Los estudiantes comprenden cómo la rotación causa la alternancia entre día y noche.",
+        "sub_topics": [
+          {
+            "key": "mitad_iluminada",
+            "name": "Mitad Iluminada de la Tierra",
+            "short_description": "Comprender que solo la mitad de la Tierra que mira al Sol está iluminada (día).",
+            "example_tasks": [
+              "Ilumina un globo terráqueo con una lámpara. ¿Qué mitad tiene luz (día) y cuál está oscura (noche)?",
+              "Ubica México en el globo. ¿Está en el lado del día o de la noche? Gira el globo y observa el cambio.",
+              "Explica por qué cuando es de día en México, es de noche en China."
+            ]
+          },
+          {
+            "key": "duracion_dia_noche",
+            "name": "Duración del Día y la Noche",
+            "short_description": "Observar que la duración del día y la noche varía según la época del año y el lugar.",
+            "example_tasks": [
+              "Registra a qué hora sale y se pone el Sol durante una semana. ¿Es siempre a la misma hora?",
+              "Compara la duración del día en verano versus invierno. ¿Cuándo son los días más largos?",
+              "Investiga qué sucede en los polos: días de 24 horas de luz (verano) o 24 horas de oscuridad (invierno)."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "movimiento_aparente_sol",
+        "name": "Movimiento Aparente del Sol",
+        "short_description": "Los estudiantes observan que el Sol parece moverse en el cielo debido a la rotación de la Tierra.",
+        "sub_topics": [
+          {
+            "key": "trayectoria_sol",
+            "name": "Trayectoria del Sol",
+            "short_description": "Observar que el Sol aparece por el este, alcanza su punto más alto al mediodía y se pone por el oeste.",
+            "example_tasks": [
+              "Observa dónde sale el Sol por la mañana. ¿Por qué punto cardinal aparece (este)?",
+              "Registra la posición del Sol en el cielo a diferentes horas: mañana, mediodía, tarde. ¿Cómo cambia?",
+              "Explica por qué decimos que el Sol 'sale' y 'se pone' aunque en realidad es la Tierra la que gira."
+            ]
+          },
+          {
+            "key": "altura_sol",
+            "name": "Altura del Sol en el Cielo",
+            "short_description": "Reconocer que la altura del Sol varía durante el día.",
+            "example_tasks": [
+              "Observa dónde está el Sol al mediodía. ¿Está más alto o más bajo que en la mañana?",
+              "Mide la longitud de tu sombra a diferentes horas. ¿Cuándo es más corta (mediodía) y cuándo más larga?",
+              "Explica la relación entre la altura del Sol y la longitud de las sombras."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "sombras_dia",
+        "name": "Sombras Durante el Día",
+        "short_description": "Los estudiantes observan cómo cambian las sombras según la posición del Sol.",
+        "sub_topics": [
+          {
+            "key": "cambio_sombras",
+            "name": "Cambio de Sombras",
+            "short_description": "Observar que las sombras cambian de tamaño y dirección durante el día.",
+            "example_tasks": [
+              "Coloca un palo vertical en el suelo. Marca la posición de su sombra cada hora. ¿Qué patrón observas?",
+              "Compara tu sombra en la mañana, al mediodía y en la tarde. ¿Cuándo es más larga? ¿Cuándo más corta?",
+              "Dibuja la posición de las sombras de un árbol a diferentes horas del día."
+            ]
+          },
+          {
+            "key": "reloj_solar",
+            "name": "Reloj Solar",
+            "short_description": "Comprender que las sombras se pueden usar para medir el tiempo.",
+            "example_tasks": [
+              "Investiga cómo funcionaban los relojes de sol antiguos. ¿Qué proyectaba la sombra?",
+              "Construye un reloj solar simple usando un palo (gnomon) y marcando las horas según las sombras.",
+              "Explica por qué los relojes de sol solo funcionan cuando hay Sol y no durante la noche."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "husos_horarios",
+        "name": "Husos Horarios",
+        "short_description": "Los estudiantes comprenden el concepto básico de zonas horarias.",
+        "sub_topics": [
+          {
+            "key": "concepto_husos",
+            "name": "Concepto de Husos Horarios",
+            "short_description": "Comprender que diferentes lugares tienen diferentes horas debido a la rotación terrestre.",
+            "example_tasks": [
+              "Investiga por qué cuando es mediodía en Ciudad de México, es una hora diferente en Tijuana.",
+              "Observa un mapa de husos horarios de México. ¿Cuántas zonas horarias tiene el país?",
+              "Explica por qué necesitamos husos horarios: no puede ser mediodía (Sol en lo alto) en todo el mundo al mismo tiempo."
+            ]
+          },
+          {
+            "key": "diferencias_horarias",
+            "name": "Diferencias Horarias",
+            "short_description": "Calcular diferencias de hora entre distintos lugares.",
+            "example_tasks": [
+              "Si son las 12:00 PM en Ciudad de México, ¿qué hora es en Nueva York (está más al este)?",
+              "Investiga qué hora es en Japón cuando en México es de noche. ¿Por qué hay tanta diferencia?",
+              "Explica cómo la rotación de la Tierra hacia el este hace que el Sol salga primero en el este."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "actividades_dia_noche",
+        "name": "Actividades Asociadas al Día y la Noche",
+        "short_description": "Los estudiantes reconocen patrones de actividad relacionados con el ciclo día-noche.",
+        "sub_topics": [
+          {
+            "key": "actividades_diurnas",
+            "name": "Actividades Diurnas",
+            "short_description": "Identificar actividades humanas y naturales que ocurren durante el día.",
+            "example_tasks": [
+              "Haz una lista de actividades que haces durante el día (escuela, juegos, comidas).",
+              "Observa animales diurnos (aves, abejas, mariposas). ¿Cuándo están más activos?",
+              "Explica por qué muchas actividades humanas se realizan de día (aprovechamos la luz solar)."
+            ]
+          },
+          {
+            "key": "actividades_nocturnas",
+            "name": "Actividades Nocturnas",
+            "short_description": "Identificar actividades que ocurren durante la noche.",
+            "example_tasks": [
+              "Investiga animales nocturnos (búhos, murciélagos, algunos insectos). ¿Por qué están activos de noche?",
+              "Observa el cielo nocturno. ¿Qué puedes ver que no ves durante el día (estrellas, Luna)?",
+              "Explica cómo las luces artificiales permiten a los humanos realizar actividades durante la noche."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "estaciones_ano",
+    "name": "Estaciones del Año",
+    "short_description": "Los estudiantes comprenden que la inclinación del eje terrestre y la traslación alrededor del Sol causan las estaciones, observan cambios en temperatura y duración del día, y reconocen cómo las estaciones afectan a los seres vivos.",
+    "sub_topics": [
+      {
+        "key": "traslacion_tierra",
+        "name": "Traslación de la Tierra",
+        "short_description": "Los estudiantes comprenden que la Tierra orbita alrededor del Sol.",
+        "sub_topics": [
+          {
+            "key": "movimiento_traslacion",
+            "name": "Movimiento de Traslación",
+            "short_description": "Comprender que la Tierra se mueve alrededor del Sol en una órbita.",
+            "example_tasks": [
+              "Usa una lámpara (Sol) y una pelota (Tierra). Mueve la pelota alrededor de la lámpara. Este es el movimiento de traslación.",
+              "Investiga cuánto tarda la Tierra en dar una vuelta completa alrededor del Sol (365 días = 1 año).",
+              "Explica la diferencia entre rotación (giro sobre su eje = día) y traslación (órbita alrededor del Sol = año)."
+            ]
+          },
+          {
+            "key": "orbita_eliptica",
+            "name": "Órbita de la Tierra",
+            "short_description": "Reconocer que la órbita de la Tierra es casi circular.",
+            "example_tasks": [
+              "Dibuja la órbita de la Tierra alrededor del Sol. ¿Es un círculo perfecto?",
+              "Investiga si la Tierra está siempre a la misma distancia del Sol (no, la órbita es ligeramente elíptica).",
+              "Explica que las estaciones NO son causadas por la distancia al Sol sino por la inclinación del eje."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "inclinacion_eje",
+        "name": "Inclinación del Eje Terrestre",
+        "short_description": "Los estudiantes comprenden que el eje de la Tierra está inclinado respecto a su órbita.",
+        "sub_topics": [
+          {
+            "key": "eje_inclinado",
+            "name": "Eje Inclinado",
+            "short_description": "Observar que el eje de la Tierra tiene una inclinación de 23.5 grados.",
+            "example_tasks": [
+              "Observa un globo terráqueo. ¿El eje está vertical o inclinado?",
+              "Inclina una pelota mientras la mueves alrededor de una lámpara. ¿Qué partes reciben más luz en diferentes posiciones?",
+              "Investiga qué pasaría si el eje de la Tierra no estuviera inclinado (no habría estaciones)."
+            ]
+          },
+          {
+            "key": "efecto_inclinacion",
+            "name": "Efecto de la Inclinación",
+            "short_description": "Comprender cómo la inclinación causa diferente incidencia de luz solar.",
+            "example_tasks": [
+              "Ilumina una superficie con una linterna perpendicular y luego inclinada. ¿Dónde la luz es más intensa?",
+              "Explica por qué en verano los rayos del Sol llegan más directos y en invierno más inclinados.",
+              "Investiga cómo la inclinación del eje hace que diferentes hemisferios reciban más o menos luz en diferentes épocas."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "cuatro_estaciones",
+        "name": "Las Cuatro Estaciones",
+        "short_description": "Los estudiantes identifican las características de cada estación.",
+        "sub_topics": [
+          {
+            "key": "primavera",
+            "name": "Primavera",
+            "short_description": "Reconocer las características de la primavera.",
+            "example_tasks": [
+              "Observa cambios en primavera: flores florecen, días se alargan, temperatura aumenta. ¿Qué más notas?",
+              "Investiga qué es el equinoccio de primavera (alrededor del 21 de marzo). ¿Qué significa que día y noche tengan igual duración?",
+              "Describe cómo se comportan los animales y plantas durante la primavera."
+            ]
+          },
+          {
+            "key": "verano",
+            "name": "Verano",
+            "short_description": "Reconocer las características del verano.",
+            "example_tasks": [
+              "Identifica características del verano: días largos, temperaturas altas, vacaciones escolares. ¿Qué más?",
+              "Investiga qué es el solsticio de verano (alrededor del 21 de junio). ¿Por qué es el día más largo del año?",
+              "Explica por qué en verano hace más calor: los rayos del Sol llegan más directos y hay más horas de luz."
+            ]
+          },
+          {
+            "key": "otono",
+            "name": "Otoño",
+            "short_description": "Reconocer las características del otoño.",
+            "example_tasks": [
+              "Observa cambios en otoño: hojas cambian de color y caen, días se acortan, temperatura baja. ¿Qué más notas?",
+              "Investiga qué es el equinoccio de otoño (alrededor del 22 de septiembre).",
+              "Describe cómo los animales se preparan para el invierno durante el otoño (almacenan comida, migran)."
+            ]
+          },
+          {
+            "key": "invierno",
+            "name": "Invierno",
+            "short_description": "Reconocer las características del invierno.",
+            "example_tasks": [
+              "Identifica características del invierno: días cortos, temperaturas bajas, en algunos lugares nieve. ¿Qué más?",
+              "Investiga qué es el solsticio de invierno (alrededor del 21 de diciembre). ¿Por qué es el día más corto?",
+              "Explica por qué en invierno hace más frío: los rayos del Sol llegan más inclinados y hay menos horas de luz."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "estaciones_hemisferios",
+        "name": "Estaciones en Diferentes Hemisferios",
+        "short_description": "Los estudiantes comprenden que las estaciones son opuestas en hemisferios norte y sur.",
+        "sub_topics": [
+          {
+            "key": "hemisferio_norte_sur",
+            "name": "Hemisferio Norte vs. Sur",
+            "short_description": "Comprender que cuando es verano en el norte, es invierno en el sur.",
+            "example_tasks": [
+              "Investiga qué estación es en Argentina cuando en México es verano. ¿Por qué son opuestas?",
+              "Usa un modelo de Tierra y Sol para mostrar cómo un hemisferio está inclinado hacia el Sol mientras el otro se aleja.",
+              "Explica por qué celebramos la Navidad en invierno (hemisferio norte) pero en Australia es verano en esas fechas."
+            ]
+          },
+          {
+            "key": "ecuador_estaciones",
+            "name": "Estaciones en el Ecuador",
+            "short_description": "Reconocer que cerca del Ecuador las estaciones son menos marcadas.",
+            "example_tasks": [
+              "Investiga cómo son las estaciones en países ecuatoriales. ¿Tienen las mismas diferencias de temperatura que México?",
+              "Explica por qué en el Ecuador los días y las noches tienen casi la misma duración todo el año.",
+              "Compara el clima de Cancún (sur de México, cerca del Trópico) con el de Chihuahua (norte). ¿Qué diferencias notas?"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "cambios_estacionales",
+        "name": "Cambios Estacionales",
+        "short_description": "Los estudiantes observan cómo cambian el clima, los seres vivos y las actividades humanas con las estaciones.",
+        "sub_topics": [
+          {
+            "key": "temperatura_estaciones",
+            "name": "Cambios de Temperatura",
+            "short_description": "Observar variaciones de temperatura durante el año.",
+            "example_tasks": [
+              "Registra la temperatura diaria durante un año. Haz una gráfica. ¿En qué meses hace más calor y más frío?",
+              "Compara las temperaturas promedio de verano e invierno en tu ciudad. ¿Cuántos grados de diferencia hay?",
+              "Explica por qué las temperaturas son más altas en verano y más bajas en invierno."
+            ]
+          },
+          {
+            "key": "precipitacion_estaciones",
+            "name": "Precipitación y Estaciones",
+            "short_description": "Reconocer patrones de lluvia según las estaciones.",
+            "example_tasks": [
+              "Investiga cuándo llueve más en tu región. ¿Hay una temporada de lluvias?",
+              "En México, generalmente llueve más en verano. ¿Por qué ocurre esto?",
+              "Compara la cantidad de lluvia en diferentes estaciones. Haz una gráfica con los datos."
+            ]
+          },
+          {
+            "key": "plantas_estaciones",
+            "name": "Plantas y Estaciones",
+            "short_description": "Observar cómo las plantas responden a los cambios estacionales.",
+            "example_tasks": [
+              "Observa un árbol durante las cuatro estaciones. ¿Qué cambios notas en sus hojas y flores?",
+              "Investiga por qué algunos árboles pierden sus hojas en otoño (árboles caducifolios).",
+              "Explica cómo las plantas se adaptan a cada estación (florecen en primavera, producen frutos en verano/otoño)."
+            ]
+          },
+          {
+            "key": "animales_estaciones",
+            "name": "Animales y Estaciones",
+            "short_description": "Reconocer adaptaciones de animales a las estaciones.",
+            "example_tasks": [
+              "Investiga animales que hibernan en invierno (osos, algunas ardillas). ¿Por qué lo hacen?",
+              "Observa aves migratorias. ¿Por qué algunas aves viajan a lugares más cálidos en invierno?",
+              "Explica cómo algunos animales cambian su pelaje según la estación (más grueso en invierno)."
+            ]
+          },
+          {
+            "key": "actividades_humanas_estaciones",
+            "name": "Actividades Humanas y Estaciones",
+            "short_description": "Identificar cómo las actividades cambian con las estaciones.",
+            "example_tasks": [
+              "Compara tu ropa en verano versus invierno. ¿Por qué usas ropa diferente?",
+              "Investiga actividades agrícolas. ¿En qué estación se siembra y en cuál se cosecha?",
+              "Identifica celebraciones y festividades asociadas a cada estación (Día de Muertos en otoño, Navidad en invierno)."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "fases_luna_mareas",
+    "name": "Fases de la Luna y Mareas",
+    "short_description": "Los estudiantes observan las diferentes fases lunares, comprenden que son causadas por la posición relativa de la Luna, la Tierra y el Sol, reconocen el ciclo lunar y exploran la relación entre la Luna y las mareas.",
+    "sub_topics": [
+      {
+        "key": "luna_satelite",
+        "name": "La Luna como Satélite",
+        "short_description": "Los estudiantes comprenden que la Luna es el satélite natural de la Tierra.",
+        "sub_topics": [
+          {
+            "key": "caracteristicas_luna",
+            "name": "Características de la Luna",
+            "short_description": "Identificar características básicas de la Luna.",
+            "example_tasks": [
+              "Observa la Luna con binoculares o telescopio simple. ¿Qué detalles puedes ver (cráteres, mares lunares)?",
+              "Investiga el tamaño de la Luna comparado con la Tierra. ¿Es más grande, más pequeña o igual?",
+              "Explica por qué la Luna brilla: no produce su propia luz, refleja la luz del Sol."
+            ]
+          },
+          {
+            "key": "orbita_lunar",
+            "name": "Órbita de la Luna",
+            "short_description": "Comprender que la Luna orbita alrededor de la Tierra.",
+            "example_tasks": [
+              "Investiga cuánto tarda la Luna en dar una vuelta completa alrededor de la Tierra (aproximadamente 28 días).",
+              "Usa una pelota (Luna) orbitando alrededor de ti (Tierra) mientras ambos orbitan una lámpara (Sol).",
+              "Explica por qué siempre vemos la misma cara de la Luna desde la Tierra."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fases_lunares",
+        "name": "Fases de la Luna",
+        "short_description": "Los estudiantes identifican y explican las diferentes fases lunares.",
+        "sub_topics": [
+          {
+            "key": "observacion_fases",
+            "name": "Observación de las Fases",
+            "short_description": "Observar cómo cambia la apariencia de la Luna durante el mes.",
+            "example_tasks": [
+              "Observa y dibuja la Luna cada noche durante un mes. ¿Qué cambios notas en su forma?",
+              "Registra la fase lunar y la hora en que ves la Luna. ¿A qué hora se ve la Luna llena? ¿Y el cuarto creciente?",
+              "Compara tus observaciones con un calendario lunar. ¿Coinciden tus dibujos con las fases predichas?"
+            ]
+          },
+          {
+            "key": "luna_nueva",
+            "name": "Luna Nueva",
+            "short_description": "Comprender la fase de Luna nueva.",
+            "example_tasks": [
+              "Investiga qué es la Luna nueva. ¿Por qué no podemos verla desde la Tierra?",
+              "Explica la posición de la Luna respecto al Sol y la Tierra durante Luna nueva (la Luna está entre el Sol y la Tierra).",
+              "Observa el cielo durante Luna nueva. ¿Puedes ver la Luna? ¿Por qué no?"
+            ]
+          },
+          {
+            "key": "cuarto_creciente",
+            "name": "Cuarto Creciente",
+            "short_description": "Comprender la fase de cuarto creciente.",
+            "example_tasks": [
+              "Observa el cuarto creciente. ¿Qué mitad de la Luna está iluminada: izquierda o derecha?",
+              "Investiga cuántos días después de la Luna nueva aparece el cuarto creciente (aproximadamente 7 días).",
+              "Explica por qué vemos solo la mitad de la Luna iluminada en esta fase."
+            ]
+          },
+          {
+            "key": "luna_llena",
+            "name": "Luna Llena",
+            "short_description": "Comprender la fase de Luna llena.",
+            "example_tasks": [
+              "Observa la Luna llena. ¿Está completamente iluminada? ¿A qué hora del día la ves mejor?",
+              "Investiga la posición de la Luna durante Luna llena (la Tierra está entre el Sol y la Luna).",
+              "Explica por qué la Luna llena sale al atardecer y se pone al amanecer."
+            ]
+          },
+          {
+            "key": "cuarto_menguante",
+            "name": "Cuarto Menguante",
+            "short_description": "Comprender la fase de cuarto menguante.",
+            "example_tasks": [
+              "Observa el cuarto menguante. ¿Qué mitad está iluminada? ¿Es la misma que en cuarto creciente?",
+              "Investiga cuándo aparece el cuarto menguante en el ciclo lunar (aproximadamente 21 días después de Luna nueva).",
+              "Compara el cuarto creciente y el cuarto menguante. ¿En qué se diferencian?"
+            ]
+          },
+          {
+            "key": "gibosas_crecientes",
+            "name": "Fases Gibosas y Crecientes",
+            "short_description": "Identificar fases intermedias entre cuartos y Luna llena/nueva.",
+            "example_tasks": [
+              "Observa una Luna gibosa (más de la mitad iluminada). ¿Es gibosa creciente o menguante?",
+              "Investiga qué es una Luna creciente (menos de la mitad iluminada, antes del cuarto creciente).",
+              "Ordena las ocho fases principales de la Luna en secuencia correcta."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "ciclo_lunar",
+        "name": "Ciclo Lunar",
+        "short_description": "Los estudiantes comprenden el patrón cíclico de las fases lunares.",
+        "sub_topics": [
+          {
+            "key": "duracion_ciclo",
+            "name": "Duración del Ciclo Lunar",
+            "short_description": "Comprender que el ciclo completo de fases dura aproximadamente 28-29 días.",
+            "example_tasks": [
+              "Cuenta cuántos días pasan desde una Luna llena hasta la siguiente. ¿Cuántos días son?",
+              "Investiga qué es un mes lunar (el tiempo que tarda la Luna en completar su ciclo de fases).",
+              "Explica por qué nuestros meses del calendario no coinciden exactamente con los ciclos lunares."
+            ]
+          },
+          {
+            "key": "patron_fases",
+            "name": "Patrón de las Fases",
+            "short_description": "Reconocer que las fases siguen siempre el mismo orden.",
+            "example_tasks": [
+              "Crea un diagrama circular mostrando las ocho fases de la Luna en orden.",
+              "Predice qué fase seguirá después de la Luna que observas hoy.",
+              "Explica por qué las fases siempre siguen el mismo patrón (debido a la órbita constante de la Luna)."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "eclipses_basico",
+        "name": "Eclipses (Introducción)",
+        "short_description": "Los estudiantes comprenden el concepto básico de eclipses.",
+        "sub_topics": [
+          {
+            "key": "eclipse_solar",
+            "name": "Eclipse Solar",
+            "short_description": "Comprender qué es un eclipse solar y cuándo ocurre.",
+            "example_tasks": [
+              "Investiga qué sucede durante un eclipse solar: la Luna pasa entre el Sol y la Tierra bloqueando la luz solar.",
+              "Usa una lámpara, una pelota grande (Tierra) y una pequeña (Luna) para simular un eclipse solar.",
+              "Explica por qué es peligroso ver directamente un eclipse solar sin protección adecuada."
+            ]
+          },
+          {
+            "key": "eclipse_lunar",
+            "name": "Eclipse Lunar",
+            "short_description": "Comprender qué es un eclipse lunar y cuándo ocurre.",
+            "example_tasks": [
+              "Investiga qué sucede durante un eclipse lunar: la Tierra pasa entre el Sol y la Luna, proyectando su sombra sobre la Luna.",
+              "Observa (si es posible) un eclipse lunar. ¿Qué color toma la Luna durante el eclipse?",
+              "Explica por qué los eclipses lunares solo pueden ocurrir durante Luna llena."
+            ]
+          },
+          {
+            "key": "frecuencia_eclipses",
+            "name": "Frecuencia de Eclipses",
+            "short_description": "Comprender por qué los eclipses no ocurren cada mes.",
+            "example_tasks": [
+              "Investiga por qué no hay un eclipse cada Luna nueva o Luna llena (la órbita lunar está inclinada).",
+              "Explica qué condiciones deben cumplirse para que ocurra un eclipse.",
+              "Investiga cuándo será el próximo eclipse visible desde México."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "mareas",
+        "name": "Mareas",
+        "short_description": "Los estudiantes comprenden que la Luna causa las mareas oceánicas.",
+        "sub_topics": [
+          {
+            "key": "que_son_mareas",
+            "name": "¿Qué son las Mareas?",
+            "short_description": "Comprender que las mareas son el ascenso y descenso del nivel del mar.",
+            "example_tasks": [
+              "Si vives cerca del mar o visitas la costa, observa cómo cambia el nivel del agua durante el día.",
+              "Investiga qué es marea alta y marea baja. ¿Cuántas veces al día ocurren?",
+              "Observa fotografías de la misma playa en marea alta y marea baja. ¿Qué diferencias notas?"
+            ]
+          },
+          {
+            "key": "atraccion_lunar",
+            "name": "Atracción Gravitacional de la Luna",
+            "short_description": "Comprender que la gravedad de la Luna jala el agua de los océanos.",
+            "example_tasks": [
+              "Investiga cómo la fuerza de gravedad de la Luna atrae el agua de los océanos, causando mareas.",
+              "Explica por qué hay dos mareas altas cada día (la Luna atrae agua en el lado cercano y el lado opuesto también se eleva).",
+              "Investiga si el Sol también influye en las mareas (sí, pero menos que la Luna porque está más lejos)."
+            ]
+          },
+          {
+            "key": "mareas_vivas_muertas",
+            "name": "Mareas Vivas y Mareas Muertas",
+            "short_description": "Comprender variaciones en la intensidad de las mareas.",
+            "example_tasks": [
+              "Investiga qué son las mareas vivas (spring tides): ocurren durante Luna llena y Luna nueva cuando Sol y Luna se alinean.",
+              "Investiga qué son las mareas muertas (neap tides): ocurren durante los cuartos cuando Sol y Luna están en ángulo recto.",
+              "Explica por qué las mareas vivas son más altas que las mareas muertas."
+            ]
+          },
+          {
+            "key": "importancia_mareas",
+            "name": "Importancia de las Mareas",
+            "short_description": "Reconocer la importancia de las mareas para ecosistemas y actividades humanas.",
+            "example_tasks": [
+              "Investiga cómo las mareas afectan a los organismos que viven en zonas intermareales (entre marea alta y baja).",
+              "Explica cómo los pescadores usan las tablas de mareas para planificar sus actividades.",
+              "Investiga si se puede generar energía eléctrica aprovechando las mareas (energía mareomotriz)."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "influencia_cultural_luna",
+        "name": "Influencia Cultural de la Luna",
+        "short_description": "Los estudiantes reconocen la importancia de la Luna en diferentes culturas.",
+        "sub_topics": [
+          {
+            "key": "calendarios_lunares",
+            "name": "Calendarios Lunares",
+            "short_description": "Reconocer que algunas culturas usan calendarios basados en ciclos lunares.",
+            "example_tasks": [
+              "Investiga culturas antiguas que usaban calendarios lunares (mayas, chinos, islámicos).",
+              "Compara un calendario lunar con nuestro calendario solar. ¿Qué diferencias hay?",
+              "Investiga si algunas celebraciones actuales siguen el calendario lunar (Semana Santa, Ramadán)."
+            ]
+          },
+          {
+            "key": "mitologia_luna",
+            "name": "Mitología y Creencias",
+            "short_description": "Reconocer la presencia de la Luna en mitologías y tradiciones.",
+            "example_tasks": [
+              "Investiga leyendas mexicanas sobre la Luna (el conejo en la Luna, por ejemplo).",
+              "Explora mitos de diferentes culturas sobre las fases lunares o los eclipses.",
+              "Investiga creencias sobre la influencia de la Luna en agricultura (siembra según fases lunares)."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

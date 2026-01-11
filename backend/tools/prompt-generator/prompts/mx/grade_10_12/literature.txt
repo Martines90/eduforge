@@ -1,0 +1,244 @@
+# Curriculum Mapping Prompt: Literature for Mexico (Grade 10-12 (Preparatoria))
+
+You are an expert curriculum analyst specializing in Mexico's official national education standards for Literature.
+
+Your task is to create a comprehensive, hierarchical JSON structure that maps the complete Literature curriculum for Grade 10-12 (Preparatoria) (10-12, ages 15-18) according to Mexico's official government education standards: Secretaría de Educación Pública (SEP) Curriculum.
+
+---
+
+## 1. Research and Accuracy Requirements
+
+Authoritative Sources:
+- Base your structure on the official Secretaría de Educación Pública (SEP) curriculum documents
+- Follow the Secretaría de Educación Pública (SEP) Curriculum standards and framework
+- Ensure accuracy to Mexico's actual teaching practices and pedagogical approaches
+- Use terminology and concepts standard in Mexico's education system
+
+Grade Level Context:
+- Grade Range: 10-12
+- Local Label: Preparatoria (10-12)
+- Age Range: 15-18
+- Teacher Role: Maestro de Preparatoria
+
+---
+
+## 2. JSON Structure Format
+
+Follow this exact hierarchical structure (start directly with an array):
+
+```json
+[
+  {
+    "key": "unique_topic_key",
+    "name": "Topic Name in Spanish",
+    "short_description": "Brief description of the topic scope and key learning goals (1-2 sentences)",
+    "sub_topics": [
+      {
+        "key": "unique_subtopic_key",
+        "name": "Subtopic Name in Spanish",
+        "short_description": "Brief description of what students will learn in this subtopic",
+        "sub_topics": [
+          {
+            "key": "unique_sub_subtopic_key",
+            "name": "Detailed Concept Name in Spanish",
+            "short_description": "Specific learning objective or skill to be mastered",
+            "example_tasks": [
+              "Example task 1 that demonstrates this concept (age-appropriate and curriculum-aligned)",
+              "Example task 2 with slightly different approach or difficulty",
+              "Example task 3 showing practical application or real-world connection"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
+**IMPORTANT**: Return ONLY the JSON array. Do NOT wrap it in an object with a "grade_10_12" key.
+
+---
+
+## 3. Depth and Coverage Requirements
+
+Breadth (Horizontal Coverage):
+- Include 10-30 main topics to ensure COMPLETE coverage of the curriculum for Grade 10-12 (Preparatoria)
+- Cover ALL mandatory content areas from the official curriculum
+- Better to have more topics with good coverage than fewer topics with gaps
+
+Depth (Vertical Hierarchy):
+- Level 1 (Main Topics): 10-30 topics (adapt based on subject complexity and curriculum breadth)
+- Level 2 (Sub Topics): 3-6 per main topic
+- Level 3 (Sub Topics with example Tasks): 3-5 tasks per detailed sub topic
+
+Total Size Target:
+- Minimum 1000-1500 lines of JSON for this grade level
+- Minimum 60,000-100,000 characters
+- This ensures comprehensive coverage of the curriculum for 10-12
+
+**Priority**: Completeness over size constraints. If the curriculum requires 25 main topics to be fully covered, include all 25.
+
+---
+
+## 4. Content Quality Standards
+
+### Language and Terminology:
+- All names and descriptions MUST be in Spanish
+- Use official terminology from Mexico's education system
+- Keys should be in lowercase_with_underscores (English or transliterated)
+- Be consistent with naming conventions throughout
+
+### Short Descriptions:
+- Keep to 1-2 sentences (concise but informative)
+- Focus on learning objectives and key concepts
+- Use pedagogically accurate language
+- Align with official curriculum language and goals
+
+### Example Tasks:
+Each example task must be:
+- Authentic: Reflect the types of assessments and exercises used in Mexico
+- Age-appropriate: Suitable for ages 15-18
+- Progressive: Show increasing complexity across the 3-5 examples
+- Curriculum-aligned: Match the learning objectives of the official curriculum
+- Practical: Where possible, connect to real-world contexts relevant to Mexico
+- Diverse: Cover different cognitive levels (recall, application, analysis, synthesis)
+- Clear: Fully specified so a student or teacher understands what is being asked
+
+---
+
+
+### Subject-Specific Requirements for Literature:
+
+Core Topics to Include:
+- Literary Periods and Movements (national and world literature)
+- Literary Genres (poetry, prose, drama, essay)
+- Literary Analysis (themes, symbols, narrative techniques, style)
+- Major Authors and Works (canonical texts from the country's literature)
+- Literary Theory and Criticism
+- Comparative Literature (connections between texts and authors)
+- Language and Style Analysis
+- Creative Writing and Expression
+
+Pedagogical Considerations:
+- Emphasize canonical works from the country's national literature
+- Include representative works from world literature
+- Develop close reading and analytical writing skills
+- Address cultural and historical contexts of literary works
+- Include both classical and contemporary literature
+- Use texts in the original language (primary language of instruction)
+
+Example Task Types:
+- Close reading and textual analysis
+- Essay writing (interpretation, comparison, argumentation)
+- Poetry analysis (form, meter, literary devices)
+- Character and plot analysis
+- Identification of literary devices and techniques
+- Contextual questions (historical, biographical, cultural)
+- Creative response to literature
+
+
+---
+
+## 5. Curriculum Alignment Checklist
+
+Before and during your work, ensure:
+- [ ] You have researched the official Secretaría de Educación Pública (SEP) Curriculum for 10-12
+- [ ] All main topics reflect mandatory content for Grade 10-12 (Preparatoria)
+- [ ] Topic sequence matches the typical teaching order in Mexico
+- [ ] Content is age-appropriate for 15-18
+- [ ] Examples are relevant for Maestro de Preparatoria teaching this level
+- [ ] Cultural context is appropriate (examples, references, applications)
+- [ ] Language is natural and authentic for Spanish
+
+---
+
+## 6. Delivery Format - CHUNKED APPROACH
+
+**IMPORTANT**: Deliver the curriculum in **5 CHUNKS** to ensure comprehensive coverage and better organization.
+
+### Before Starting: Create a Complete Plan
+
+Before generating any JSON, provide a detailed plan that divides the curriculum into 5 chunks:
+
+```markdown
+# Curriculum Plan for Literature - Mexico (Grade 10-12 (Preparatoria))
+
+## Chunk 1 (Topics 1-X): [Thematic Group Name]
+Main topics to include:
+- Topic 1: [Topic name and brief scope]
+- Topic 2: [Topic name and brief scope]
+- ...
+
+## Chunk 2 (Topics X-Y): [Thematic Group Name]
+Main topics to include:
+- Topic X: [Topic name and brief scope]
+- ...
+
+## Chunk 3 (Topics Y-Z): [Thematic Group Name]
+Main topics to include:
+- Topic Y: [Topic name and brief scope]
+- ...
+
+## Chunk 4 (Topics Z-W): [Thematic Group Name]
+Main topics to include:
+- Topic Z: [Topic name and brief scope]
+- ...
+
+## Chunk 5 (Topics W-end): [Thematic Group Name]
+Main topics to include:
+- Topic W: [Topic name and brief scope]
+- ...
+
+Total Topics: [Estimate total number]
+```
+
+### Then Generate Each Chunk
+
+After presenting the plan, generate each chunk sequentially. Each chunk should:
+- Cover approximately 20% of the total curriculum (2-6 topics per chunk depending on subject complexity)
+- Be a valid JSON array that can be concatenated with other chunks
+- Include complete topic structures with all sub_topics and example_tasks
+
+**Structure Requirements for Each Chunk**:
+- Each chunk is a JSON array: `[{...}, {...}]`
+- All chunks combined will form the complete curriculum array
+- First chunk: `[{ topic_1 }, { topic_2 }, ...]`
+- Middle chunks: `[{ topic_x }, { topic_y }, ...]`
+- Last chunk: `[{ topic_n-1 }, { topic_n }]`
+
+**Final Assembly**:
+After all 5 chunks, confirm the total structure:
+- Total main topics: [count]
+- Total subtopics: [estimate]
+- Total example tasks: [estimate]
+- Estimated JSON size: [characters]
+
+Example of CORRECT chunk format:
+```json
+[
+  { "key": "topic_1", "name": "...", "sub_topics": [...] },
+  { "key": "topic_2", "name": "...", "sub_topics": [...] }
+]
+```
+
+**DO NOT** wrap in an object with "grade_10_12" key
+
+---
+
+## 7. Important Notes
+
+- DO NOT hallucinate or invent curriculum content. If you are unsure about specific topics in Mexico's curriculum for Grade 10-12 (Preparatoria), indicate this and use general best practices for the subject.
+- Prioritize accuracy over creativity. This data will be used for educational purposes.
+- Be consistent with JSON formatting, key naming, and structure throughout.
+- All content must be in Spanish except for keys.
+- Focus specifically on 10-12 content - don't mix in content from other grade levels.
+
+---
+
+## Ready to Begin?
+
+Please provide the complete curriculum mapping JSON for:
+- Country: Mexico
+- Grade Level: Grade 10-12 (Preparatoria) (10-12)
+- Subject: Literatura
+- Language: Spanish

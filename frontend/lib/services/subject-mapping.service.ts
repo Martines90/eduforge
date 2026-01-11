@@ -114,29 +114,37 @@ export async function fetchSubjectTree(
 }
 
 /**
- * Fetch subject trees for both grade levels
+ * Fetch subject trees for all grade levels in the given country
  *
- * @param country - Country code (e.g., "HU", "MX")
+ * @param country - Country code (e.g., "HU", "MX", "US")
  * @param subject - Subject name (e.g., "mathematics")
- * @returns Object with grade_9_10 and grade_11_12 trees
+ * @returns Record mapping each grade level to its navigation tree
  */
 export async function fetchAllGradeTrees(
   country: string,
   subject: string = 'mathematics'
-): Promise<{
-  grade_9_10: NavigationTopic[];
-  grade_11_12: NavigationTopic[];
-}> {
+): Promise<Record<string, NavigationTopic[]>> {
   console.log('[Subject Mapping Service] Fetching all grade trees for:', { country, subject });
 
-  // Fetch both grade levels in parallel
-  const [grade9_10Tree, grade11_12Tree] = await Promise.all([
-    fetchSubjectTree(country, subject, 'grade_9_10'),
-    fetchSubjectTree(country, subject, 'grade_11_12'),
-  ]);
+  // Import grade system to get all grades for this country
+  const { getGradesForCountry } = await import('@eduforger/shared');
+  const countryGrades = getGradesForCountry(country as any);
 
-  return {
-    grade_9_10: grade9_10Tree,
-    grade_11_12: grade11_12Tree,
-  };
+  // Fetch all grade levels in parallel
+  const gradePromises = countryGrades.map(grade =>
+    fetchSubjectTree(country, subject, grade.value)
+      .then(tree => ({ gradeLevel: grade.value, tree }))
+  );
+
+  const results = await Promise.all(gradePromises);
+
+  // Build record mapping grade level to tree
+  const gradeTreesMap: Record<string, NavigationTopic[]> = {};
+  results.forEach(({ gradeLevel, tree }) => {
+    gradeTreesMap[gradeLevel] = tree;
+  });
+
+  console.log('[Subject Mapping Service] Fetched trees for grades:', Object.keys(gradeTreesMap));
+
+  return gradeTreesMap;
 }

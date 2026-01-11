@@ -94,7 +94,9 @@ describe("Test Service - Published Tests Browsing", () => {
         hasMore: false,
       });
 
-      expect(mockCollection).toHaveBeenCalledWith("countries/HU/published_tests");
+      expect(mockCollection).toHaveBeenCalledWith(
+        "countries/HU/published_tests"
+      );
       expect(mockOrderBy).toHaveBeenCalledWith("publishedAt", "desc");
       expect(mockLimit).toHaveBeenCalledWith(12);
       expect(mockOffset).toHaveBeenCalledWith(0);
@@ -105,7 +107,9 @@ describe("Test Service - Published Tests Browsing", () => {
 
       await testService.getPublishedTests("US");
 
-      expect(mockCollection).toHaveBeenCalledWith("countries/US/published_tests");
+      expect(mockCollection).toHaveBeenCalledWith(
+        "countries/US/published_tests"
+      );
     });
 
     it("should handle empty results", async () => {
@@ -342,10 +346,13 @@ describe("Test Service - Published Tests Browsing", () => {
       const result = await testService.getPublishedTests("HU", query);
 
       expect(result.tests.length).toBe(2);
-      expect(result.tests.every((t) =>
-        t.name.toLowerCase().includes("algebra") ||
-        t.description?.toLowerCase().includes("algebra")
-      )).toBe(true);
+      expect(
+        result.tests.every(
+          (t) =>
+            t.name.toLowerCase().includes("algebra") ||
+            t.description?.toLowerCase().includes("algebra")
+        )
+      ).toBe(true);
     });
 
     it("should filter by search term in description", async () => {
@@ -562,7 +569,9 @@ describe("Test Service - Published Tests Browsing", () => {
       const result = await testService.getPublishedTests("HU", query);
 
       expect(result.tests.length).toBe(5);
-      expect(result.tests.every((t) => t.name.toLowerCase().includes("algebra"))).toBe(true);
+      expect(
+        result.tests.every((t) => t.name.toLowerCase().includes("algebra"))
+      ).toBe(true);
     });
 
     it("should combine all filters with sorting and pagination", async () => {

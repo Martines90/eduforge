@@ -1,15 +1,16 @@
 import * as fs from "fs";
 import * as path from "path";
+import { CountryCode } from "../../../shared/types/countries";
+import { GradeLevel, getGradesForCountry } from "../../../shared/types/grades";
 
 /**
- * Curriculum topic structure extracted from hu_math_grade_9_12.json
+ * Curriculum topic structure
  */
 export interface CurriculumTopic {
   key: string;
   name: string;
   short_description?: string;
   example_tasks?: string[];
-  "example_tasks (COMPLETED)"?: string[]; // For purged file compatibility
   sub_topics?: CurriculumTopic[];
 }
 
@@ -20,131 +21,205 @@ export interface CurriculumPathResult {
   topic: CurriculumTopic;
   parentTopics: CurriculumTopic[]; // Hierarchy from root to current topic
   fullPath: string;
+  country: CountryCode;
+  gradeLevel: GradeLevel;
+  subject: string;
 }
 
 /**
- * Maps subject keys to curriculum filenames
+ * Subject keys supported by the system
  */
-const SUBJECT_FILE_MAP: Record<string, string> = {
-  mathematics: "hu_mathematics_grade_9_12.json",
-  math: "hu_mathematics_grade_9_12.json",
-  physics: "hu_physics_grade_9_12.json",
-  chemistry: "hu_chemistry_grade_9_12.json",
-  biology: "hu_biology_grade_9_12.json",
-  history: "hu_history_grade_9_12.json",
-  literature: "hu_literature_grade_9_12.json",
-  geography: "hu_geography_grade_9_12.json",
-  informatics: "hu_informatics_grade_9_12.json",
-  information_technology: "hu_informatics_grade_9_12.json",
-};
+const VALID_SUBJECTS = [
+  "mathematics",
+  "physics",
+  "chemistry",
+  "biology",
+  "history",
+  "geography",
+  "literature",
+  "informatics",
+] as const;
+
+type SubjectKey = (typeof VALID_SUBJECTS)[number];
 
 /**
- * Loads the curriculum JSON file for a specific subject
- * @param subject The subject key (e.g., "physics", "mathematics")
- * @returns The curriculum data or null if loading fails
+ * Validates if a string is a valid subject key
  */
-function loadCurriculumData(subject: string): any | null {
-  const filename = SUBJECT_FILE_MAP[subject.toLowerCase()];
+function isValidSubject(subject: string): subject is SubjectKey {
+  return VALID_SUBJECTS.includes(subject as SubjectKey);
+}
 
-  if (!filename) {
+/**
+ * Loads the curriculum JSON file for a specific country, grade, and subject
+ * New structure: data/mappings/{country}/{grade}/{subject}.json
+ * Legacy structure: data/mappings/{country}/{country}_{subject}_{grade}.json
+ *
+ * @param country The country code (e.g., "HU", "MX", "US")
+ * @param gradeLevel The grade level (e.g., "grade_9_12", "grade_3_6")
+ * @param subject The subject key (e.g., "mathematics", "physics")
+ * @returns The curriculum data (array of topics) or null if loading fails
+ */
+function loadCurriculumData(
+  country: CountryCode,
+  gradeLevel: GradeLevel,
+  subject: string
+): CurriculumTopic[] | null {
+  const countryLower = country.toLowerCase();
+
+  // Validate subject
+  if (!isValidSubject(subject)) {
     console.error(
-      `❌ Unknown subject: ${subject}. Available subjects: ${Object.keys(SUBJECT_FILE_MAP).join(", ")}`
+      `❌ Unknown subject: ${subject}. Available subjects: ${VALID_SUBJECTS.join(", ")}`
     );
     return null;
   }
 
-  const curriculumPath = path.join(__dirname, "../data/mappings/hu", filename);
+  // Try new structure first: mappings/{country}/{grade}/{subject}.json
+  const newPath = path.join(
+    __dirname,
+    "../data/mappings",
+    countryLower,
+    gradeLevel,
+    `${subject}.json`
+  );
 
-  try {
-    const data = fs.readFileSync(curriculumPath, "utf-8");
-    return JSON.parse(data);
-  } catch (error) {
-    console.error(
-      `❌ Error loading curriculum data for ${subject} (${filename}):`,
-      error
-    );
-    return null;
+  if (fs.existsSync(newPath)) {
+    try {
+      const data = fs.readFileSync(newPath, "utf-8");
+      const parsed = JSON.parse(data);
+      console.log(
+        `✓ Loaded curriculum: ${countryLower}/${gradeLevel}/${subject}.json`
+      );
+      return Array.isArray(parsed) ? parsed : null;
+    } catch (error) {
+      console.error(`❌ Error loading curriculum data from ${newPath}:`, error);
+      return null;
+    }
   }
+
+  // Try legacy structure: mappings/{country}/{country}_{subject}_{grade}.json
+  const legacyFilename = `${countryLower}_${subject}_${gradeLevel}.json`;
+  const legacyPath = path.join(
+    __dirname,
+    "../data/mappings",
+    countryLower,
+    legacyFilename
+  );
+
+  if (fs.existsSync(legacyPath)) {
+    try {
+      const data = fs.readFileSync(legacyPath, "utf-8");
+      const parsed = JSON.parse(data);
+      console.log(`⚠️  Using legacy curriculum: ${legacyFilename}`);
+
+      // Legacy files might have nested structure with grade keys
+      if (parsed[gradeLevel] && Array.isArray(parsed[gradeLevel])) {
+        return parsed[gradeLevel];
+      }
+
+      return Array.isArray(parsed) ? parsed : null;
+    } catch (error) {
+      console.error(
+        `❌ Error loading legacy curriculum data from ${legacyPath}:`,
+        error
+      );
+      return null;
+    }
+  }
+
+  console.error(
+    `❌ Curriculum file not found for ${country}/${gradeLevel}/${subject}. Tried:\n` +
+      `  - ${newPath}\n` +
+      `  - ${legacyPath}`
+  );
+  return null;
 }
 
 /**
  * Navigates the curriculum tree to find a topic by its path
- * @param curriculumPath Path like "math:grade_9_10:halmazok:halmaz_megadas:halmaz_megadas_felsorolassal"
- *                       or "physics:grade_9_10:mechanika:mozgasi_energia"
+ *
+ * Path format: "{country}:{subject}:{grade}:{topic_key}:{subtopic_key}:..."
+ * Examples:
+ *   - "MX:mathematics:grade_10_12:algebra_expresiones_algebraicas"
+ *   - "HU:physics:grade_9_12:mechanika:mozgasi_energia"
+ *   - "US:chemistry:grade_9_12:atomic_structure:periodic_table"
+ *
+ * @param curriculumPath Path with country, subject, grade, and topic keys
  * @returns The topic data and parent hierarchy, or null if not found
  */
 export function getCurriculumTopicByPath(
   curriculumPath: string
 ): CurriculumPathResult | null {
   // Split the path
-  let pathSegments = curriculumPath.split(":");
+  const pathSegments = curriculumPath.split(":");
 
-  if (pathSegments.length === 0) {
-    console.warn("⚠️  Empty curriculum path");
+  if (pathSegments.length < 3) {
+    console.warn(
+      "⚠️  Invalid curriculum path format. Expected: country:subject:grade[:topic_keys...]"
+    );
     return null;
   }
 
-  // First segment should be the subject (e.g., "math", "physics")
-  const subject = pathSegments[0];
+  // Extract country, subject, and grade from path
+  const [countryStr, subject, gradeStr, ...topicPath] = pathSegments;
+  const country = countryStr.toUpperCase() as CountryCode;
+  const gradeLevel = gradeStr as GradeLevel;
 
-  // Load curriculum data for this subject
-  const curriculumData = loadCurriculumData(subject);
+  // Validate country
+  const grades = getGradesForCountry(country);
+  if (grades.length === 0) {
+    console.warn(`⚠️  Invalid country code: ${country}`);
+    return null;
+  }
+
+  // Validate grade level for this country
+  const validGrade = grades.find((g) => g.value === gradeLevel);
+  if (!validGrade) {
+    console.warn(
+      `⚠️  Invalid grade level '${gradeLevel}' for country ${country}. Available: ${grades.map((g) => g.value).join(", ")}`
+    );
+    return null;
+  }
+
+  // Load curriculum data
+  const curriculumData = loadCurriculumData(country, gradeLevel, subject);
   if (!curriculumData) {
     return null;
   }
 
-  // Remove subject from path segments
-  pathSegments = pathSegments.slice(1);
-
-  if (pathSegments.length === 0) {
-    console.warn("⚠️  Curriculum path must include grade level after subject");
-    return null;
-  }
-
-  // First segment should be the grade level (e.g., "grade_9_10")
-  const gradeKey = pathSegments[0];
-  const gradeTopics = curriculumData[gradeKey];
-
-  if (!gradeTopics || !Array.isArray(gradeTopics)) {
-    console.warn(`⚠️  Grade level not found: ${gradeKey}`);
-    return null;
-  }
-
-  // Remove grade level from path segments
-  pathSegments = pathSegments.slice(1);
-
-  // If no more segments, return grade level info
-  if (pathSegments.length === 0) {
+  // If no topic path specified, return the root level
+  if (topicPath.length === 0) {
     return {
       topic: {
-        key: gradeKey,
-        name: gradeKey.replace(/_/g, " ").toUpperCase(),
-        short_description: "Grade level topics",
-        sub_topics: gradeTopics,
+        key: `${subject}_${gradeLevel}`,
+        name: `${subject.charAt(0).toUpperCase() + subject.slice(1)} - ${validGrade.labelEN}`,
+        short_description: `${subject} curriculum for ${validGrade.labelEN} in ${country}`,
+        sub_topics: curriculumData,
       },
       parentTopics: [],
       fullPath: curriculumPath,
+      country,
+      gradeLevel,
+      subject,
     };
   }
 
   // Navigate through the topic tree
-  let currentTopics: CurriculumTopic[] = gradeTopics;
+  let currentTopics: CurriculumTopic[] = curriculumData;
   const parentTopics: CurriculumTopic[] = [];
 
-  for (let i = 0; i < pathSegments.length; i++) {
-    const segment = pathSegments[i];
+  for (let i = 0; i < topicPath.length; i++) {
+    const segment = topicPath[i];
 
-    // Look for the segment in current topics array by key or name
-    const foundTopic = currentTopics.find(
-      (t) => t.key === segment || t.name === segment
-    );
+    // Look for the segment in current topics array by key
+    const foundTopic = currentTopics.find((t) => t.key === segment);
 
     if (!foundTopic) {
       console.warn(
         `⚠️  Topic not found in path: ${segment} (at depth ${i + 1})`
       );
       console.warn(
-        `   Available topics at this level: ${currentTopics.map((t) => `${t.key} ("${t.name}")`).join(", ")}`
+        `   Available topics at this level: ${currentTopics.map((t) => t.key).join(", ")}`
       );
       return null;
     }
@@ -152,11 +227,14 @@ export function getCurriculumTopicByPath(
     parentTopics.push(foundTopic);
 
     // If this is the last segment, we found our target
-    if (i === pathSegments.length - 1) {
+    if (i === topicPath.length - 1) {
       return {
         topic: foundTopic,
         parentTopics,
         fullPath: curriculumPath,
+        country,
+        gradeLevel,
+        subject,
       };
     }
 
@@ -181,30 +259,39 @@ export function getCurriculumTopicByPath(
 export function formatCurriculumTopicForPrompt(
   pathResult: CurriculumPathResult
 ): string {
-  const { topic, parentTopics } = pathResult;
+  const { topic, parentTopics, country, gradeLevel, subject } = pathResult;
 
   let formatted = "\n## CURRICULUM TOPIC INFORMATION\n\n";
 
+  // Show metadata
+  formatted += "**Curriculum Context:**\n";
+  formatted += `- **Country:** ${country}\n`;
+  formatted += `- **Grade Level:** ${gradeLevel}\n`;
+  formatted += `- **Subject:** ${subject}\n\n`;
+
   // Show the hierarchy
-  formatted += "**Topic Hierarchy:**\n";
-  const hierarchy = parentTopics.map((t) => t.name).join(" > ");
-  formatted += `${hierarchy}\n\n`;
+  if (parentTopics.length > 0) {
+    formatted += "**Topic Hierarchy:**\n";
+    const hierarchy = parentTopics.map((t) => t.name).join(" > ");
+    formatted += `${hierarchy}\n\n`;
+  }
 
   // Show current topic details
   formatted += "**Current Topic:**\n";
   formatted += `- **Key:** ${topic.key}\n`;
   formatted += `- **Name:** ${topic.name}\n`;
-  formatted += `- **Description:** ${topic.short_description}\n\n`;
-
-  // Get example tasks from either property name
-  const exampleTasks =
-    topic.example_tasks || topic["example_tasks (COMPLETED)"] || [];
+  if (topic.short_description) {
+    formatted += `- **Description:** ${topic.short_description}\n`;
+  }
+  formatted += "\n";
 
   // Show example tasks if available
+  const exampleTasks = topic.example_tasks || [];
+
   if (exampleTasks.length > 0) {
     formatted += "**Example Tasks from Curriculum:**\n\n";
     formatted +=
-      "These are traditional textbook-style problems from the Hungarian curriculum. ";
+      "These are traditional textbook-style problems from the official curriculum. ";
     formatted +=
       "Choose ONE of these tasks and transform it into a rich, story-driven, real-world problem.\n\n";
 
@@ -230,10 +317,59 @@ export function formatCurriculumTopicForPrompt(
  */
 export function getExampleTasks(pathResult: CurriculumPathResult): string[] {
   const { topic } = pathResult;
+  return topic.example_tasks || [];
+}
 
-  // Get example tasks from either property name
-  const exampleTasks =
-    topic.example_tasks || topic["example_tasks (COMPLETED)"] || [];
+/**
+ * Lists all available subjects for a given country and grade
+ * @param country The country code
+ * @param gradeLevel The grade level
+ * @returns Array of available subject keys
+ */
+export function getAvailableSubjects(
+  country: CountryCode,
+  gradeLevel: GradeLevel
+): SubjectKey[] {
+  const countryLower = country.toLowerCase();
+  const availableSubjects: SubjectKey[] = [];
 
-  return exampleTasks;
+  for (const subject of VALID_SUBJECTS) {
+    // Check new structure
+    const newPath = path.join(
+      __dirname,
+      "../data/mappings",
+      countryLower,
+      gradeLevel,
+      `${subject}.json`
+    );
+
+    // Check legacy structure
+    const legacyPath = path.join(
+      __dirname,
+      "../data/mappings",
+      countryLower,
+      `${countryLower}_${subject}_${gradeLevel}.json`
+    );
+
+    if (fs.existsSync(newPath) || fs.existsSync(legacyPath)) {
+      availableSubjects.push(subject);
+    }
+  }
+
+  return availableSubjects;
+}
+
+/**
+ * Gets the full curriculum tree for a subject
+ * @param country The country code
+ * @param gradeLevel The grade level
+ * @param subject The subject key
+ * @returns The full curriculum tree or null if not found
+ */
+export function getCurriculumTree(
+  country: CountryCode,
+  gradeLevel: GradeLevel,
+  subject: string
+): CurriculumTopic[] | null {
+  return loadCurriculumData(country, gradeLevel, subject);
 }

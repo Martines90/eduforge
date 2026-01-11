@@ -5,3 +5,5 @@
 
 export * from './database.types';
 export * from './subjects';
+export * from './countries';
+export * from './grades';

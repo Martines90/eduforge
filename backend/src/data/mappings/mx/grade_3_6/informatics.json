@@ -1,0 +1,1095 @@
+[
+  {
+    "key": "introduccion_computacion",
+    "name": "Introducción a la Computación",
+    "short_description": "Conceptos básicos sobre qué es una computadora, sus componentes principales, y cómo usarla de manera segura y responsable.",
+    "sub_topics": [
+      {
+        "key": "partes_computadora",
+        "name": "Partes de la Computadora",
+        "short_description": "Identificación y función de los componentes básicos del hardware de una computadora.",
+        "sub_topics": [
+          {
+            "key": "hardware_basico",
+            "name": "Hardware Básico",
+            "short_description": "Reconocer y nombrar las partes físicas principales de una computadora y sus periféricos.",
+            "example_tasks": [
+              "Identificar y etiquetar las partes principales de una computadora: monitor, teclado, ratón, CPU, bocinas",
+              "Dibujar y colorear una computadora completa señalando al menos 6 componentes diferentes",
+              "Crear un cartel explicando la función de cada componente: ¿para qué sirve el teclado?, ¿qué hace el monitor?",
+              "Clasificar dispositivos en categorías: entrada (teclado, ratón), salida (monitor, impresora) y almacenamiento (USB)",
+              "Realizar una presentación sobre un componente específico explicando su importancia en el funcionamiento de la computadora"
+            ]
+          },
+          {
+            "key": "dispositivos_entrada_salida",
+            "name": "Dispositivos de Entrada y Salida",
+            "short_description": "Distinguir entre dispositivos que permiten ingresar información y aquellos que muestran resultados.",
+            "example_tasks": [
+              "Crear una lista de 5 dispositivos de entrada y 5 de salida con ejemplos de uso diario",
+              "Realizar un experimento: escribir un texto con el teclado y observar cómo aparece en el monitor",
+              "Diseñar un mapa conceptual mostrando la relación entre dispositivos de entrada, la CPU y dispositivos de salida",
+              "Completar ejercicios interactivos identificando qué tipo de dispositivo es cada uno mostrado en imágenes",
+              "Investigar y presentar dispositivos de entrada y salida menos comunes como escáneres o proyectores"
+            ]
+          },
+          {
+            "key": "cuidado_equipo",
+            "name": "Cuidado del Equipo de Cómputo",
+            "short_description": "Aprender prácticas seguras para mantener el equipo en buen estado y prevenir daños.",
+            "example_tasks": [
+              "Elaborar un manual ilustrado con 5 reglas básicas para cuidar la computadora del aula",
+              "Practicar la postura correcta al sentarse frente a la computadora y ajustar la altura del monitor",
+              "Crear carteles de recordatorio sobre no comer ni beber cerca del equipo de cómputo",
+              "Demostrar cómo limpiar correctamente el teclado y el ratón usando materiales apropiados",
+              "Diseñar una lista de verificación para apagar correctamente la computadora al terminar de usarla"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "encendido_apagado",
+        "name": "Encendido y Apagado Correcto",
+        "short_description": "Procedimientos adecuados para iniciar y apagar una computadora de forma segura.",
+        "sub_topics": [
+          {
+            "key": "proceso_encendido",
+            "name": "Proceso de Encendido",
+            "short_description": "Seguir los pasos correctos para encender una computadora y esperar a que inicie el sistema operativo.",
+            "example_tasks": [
+              "Seguir una guía paso a paso para encender la computadora: presionar el botón de encendido, esperar la carga",
+              "Identificar las diferentes pantallas que aparecen durante el arranque del sistema operativo",
+              "Crear una secuencia visual (historieta) mostrando los pasos para encender correctamente el equipo",
+              "Practicar el inicio de sesión con usuario y contraseña de manera segura",
+              "Explicar por qué es importante esperar a que la computadora termine de cargar antes de usar programas"
+            ]
+          },
+          {
+            "key": "apagado_seguro",
+            "name": "Apagado Seguro del Sistema",
+            "short_description": "Utilizar el procedimiento correcto de apagado para proteger los datos y el sistema operativo.",
+            "example_tasks": [
+              "Demostrar cómo usar el menú Inicio para apagar correctamente la computadora en Windows",
+              "Explicar la diferencia entre apagar, reiniciar y suspender la computadora",
+              "Completar ejercicios sobre qué hacer antes de apagar: cerrar programas, guardar trabajos",
+              "Crear un diagrama de flujo mostrando el proceso correcto de apagado desde cerrar programas hasta apagar",
+              "Identificar errores en una secuencia de apagado incorrecta y proponer las correcciones necesarias"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "uso_teclado_raton",
+        "name": "Uso Básico del Teclado y Ratón",
+        "short_description": "Desarrollar habilidades fundamentales en el manejo del teclado y el ratón para interactuar con la computadora.",
+        "sub_topics": [
+          {
+            "key": "tecnicas_teclado",
+            "name": "Técnicas Básicas de Teclado",
+            "short_description": "Identificar las teclas principales y practicar la escritura básica con postura correcta.",
+            "example_tasks": [
+              "Localizar y nombrar las teclas principales: letras, números, Enter, Espacio, Retroceso, Shift",
+              "Practicar la escritura de su nombre completo usando ambas manos en el teclado",
+              "Completar ejercicios de mecanografía básica escribiendo palabras sencillas y oraciones cortas",
+              "Crear un mapa del teclado coloreando diferentes secciones: letras, números, teclas especiales",
+              "Participar en juegos educativos de mecanografía para mejorar la velocidad y precisión"
+            ]
+          },
+          {
+            "key": "manejo_raton",
+            "name": "Manejo del Ratón",
+            "short_description": "Dominar los movimientos básicos del ratón: apuntar, hacer clic, doble clic, arrastrar y soltar.",
+            "example_tasks": [
+              "Practicar el movimiento del cursor siguiendo líneas y formas en un programa educativo",
+              "Realizar ejercicios de clic simple abriendo y cerrando ventanas de programas",
+              "Practicar el doble clic para abrir archivos e iconos del escritorio",
+              "Completar actividades de arrastrar y soltar organizando objetos virtuales en categorías",
+              "Jugar juegos educativos que requieran precisión con el ratón como pintar, conectar puntos o rompecabezas"
+            ]
+          },
+          {
+            "key": "atajos_teclado_basicos",
+            "name": "Atajos de Teclado Básicos",
+            "short_description": "Aprender combinaciones de teclas útiles para realizar acciones comunes de manera más eficiente.",
+            "example_tasks": [
+              "Practicar el uso de Ctrl+C para copiar y Ctrl+V para pegar texto en un documento",
+              "Usar Ctrl+Z para deshacer acciones y Ctrl+Y para rehacer en un procesador de textos",
+              "Crear una hoja de referencia ilustrada con los atajos de teclado más comunes",
+              "Completar ejercicios de edición de texto usando únicamente atajos de teclado",
+              "Comparar la velocidad de realizar tareas con ratón versus usar atajos de teclado"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "escritorio_ventanas",
+        "name": "El Escritorio y las Ventanas",
+        "short_description": "Comprender la interfaz gráfica del sistema operativo y cómo interactuar con ventanas y programas.",
+        "sub_topics": [
+          {
+            "key": "elementos_escritorio",
+            "name": "Elementos del Escritorio",
+            "short_description": "Identificar y utilizar los componentes principales del escritorio: iconos, barra de tareas, menú inicio.",
+            "example_tasks": [
+              "Crear un mapa del escritorio señalando: iconos, barra de tareas, botón de inicio, reloj, área de notificaciones",
+              "Organizar los iconos del escritorio por categorías: programas, carpetas, archivos",
+              "Personalizar el fondo de pantalla eligiendo una imagen apropiada",
+              "Explorar el menú Inicio e identificar dónde se encuentran los programas más usados",
+              "Crear accesos directos en el escritorio para los programas que usan frecuentemente"
+            ]
+          },
+          {
+            "key": "manejo_ventanas",
+            "name": "Manejo de Ventanas",
+            "short_description": "Aprender a abrir, cerrar, minimizar, maximizar y mover ventanas de programas.",
+            "example_tasks": [
+              "Practicar abrir un programa y identificar los botones de minimizar, maximizar y cerrar",
+              "Cambiar el tamaño de una ventana arrastrando desde las esquinas o bordes",
+              "Mover ventanas por la pantalla arrastrando desde la barra de título",
+              "Trabajar con múltiples ventanas abiertas al mismo tiempo organizándolas en la pantalla",
+              "Usar Alt+Tab para cambiar rápidamente entre ventanas abiertas"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "sistemas_operativos_archivos",
+    "name": "Sistemas Operativos y Gestión de Archivos",
+    "short_description": "Fundamentos del sistema operativo Windows y organización eficiente de archivos y carpetas en la computadora.",
+    "sub_topics": [
+      {
+        "key": "introduccion_windows",
+        "name": "Introducción a Windows",
+        "short_description": "Conocer las características básicas y la navegación en el sistema operativo Windows.",
+        "sub_topics": [
+          {
+            "key": "interfaz_windows",
+            "name": "Interfaz de Windows",
+            "short_description": "Familiarizarse con los elementos principales de la interfaz gráfica de Windows.",
+            "example_tasks": [
+              "Explorar el menú Inicio e identificar las secciones: programas recientes, todas las aplicaciones, configuración",
+              "Usar la barra de búsqueda de Windows para encontrar programas, archivos y configuraciones",
+              "Identificar y usar los iconos de la barra de tareas para acceder rápidamente a programas",
+              "Practicar el uso del Explorador de Archivos para ver el contenido de la computadora",
+              "Personalizar la barra de tareas anclando y desanclando programas favoritos"
+            ]
+          },
+          {
+            "key": "configuraciones_basicas",
+            "name": "Configuraciones Básicas",
+            "short_description": "Ajustar configuraciones simples del sistema como volumen, brillo y fecha/hora.",
+            "example_tasks": [
+              "Ajustar el volumen del sistema usando el icono de sonido en la barra de tareas",
+              "Cambiar el brillo de la pantalla según las condiciones de iluminación del aula",
+              "Verificar y comprender la configuración de fecha y hora del sistema",
+              "Explorar el Panel de Control o Configuración de Windows con supervisión",
+              "Cambiar el tamaño del texto y otros elementos para mejorar la visibilidad"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "archivos_carpetas",
+        "name": "Archivos y Carpetas",
+        "short_description": "Comprender qué son los archivos y carpetas, y cómo se organizan en el sistema de archivos.",
+        "sub_topics": [
+          {
+            "key": "concepto_archivo",
+            "name": "Concepto de Archivo",
+            "short_description": "Entender qué es un archivo, sus propiedades básicas y diferentes tipos de archivos.",
+            "example_tasks": [
+              "Identificar diferentes tipos de archivos por sus iconos y extensiones: .docx, .xlsx, .jpg, .pdf",
+              "Crear un documento de texto sencillo y guardarlo con un nombre descriptivo",
+              "Explorar las propiedades de un archivo: nombre, tipo, tamaño, fecha de creación",
+              "Clasificar archivos según su función: documentos, imágenes, videos, música",
+              "Explicar por qué es importante dar nombres claros y descriptivos a los archivos"
+            ]
+          },
+          {
+            "key": "concepto_carpeta",
+            "name": "Concepto de Carpeta",
+            "short_description": "Comprender las carpetas como contenedores para organizar archivos de manera lógica.",
+            "example_tasks": [
+              "Crear carpetas nuevas con nombres apropiados para diferentes tipos de contenido",
+              "Organizar archivos sueltos del escritorio creando carpetas temáticas",
+              "Explorar la estructura de carpetas predeterminadas: Documentos, Imágenes, Descargas",
+              "Crear subcarpetas dentro de carpetas para organización más detallada",
+              "Diseñar un sistema de organización de carpetas para trabajos escolares por materia"
+            ]
+          },
+          {
+            "key": "extensiones_archivos",
+            "name": "Extensiones de Archivos",
+            "short_description": "Reconocer las extensiones comunes de archivos y lo que indican sobre el tipo de contenido.",
+            "example_tasks": [
+              "Crear una tabla de las extensiones más comunes y qué programa las abre: .doc, .pdf, .jpg, .mp3",
+              "Practicar identificar el tipo de archivo solo viendo su extensión",
+              "Configurar Windows para mostrar las extensiones de archivo en el Explorador",
+              "Comprender por qué no se debe cambiar la extensión de un archivo sin convertirlo",
+              "Buscar archivos específicos usando filtros por tipo de extensión"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "explorador_archivos",
+        "name": "Explorador de Archivos",
+        "short_description": "Navegar eficientemente por el sistema de archivos usando el Explorador de Windows.",
+        "sub_topics": [
+          {
+            "key": "navegacion_explorador",
+            "name": "Navegación en el Explorador",
+            "short_description": "Usar las herramientas del Explorador para moverse entre carpetas y ubicaciones.",
+            "example_tasks": [
+              "Abrir el Explorador de Archivos usando el icono o el atajo Windows+E",
+              "Navegar entre diferentes unidades: Disco Local (C:), USB, Red",
+              "Usar los botones Atrás, Adelante y Arriba para moverse entre carpetas",
+              "Explorar las ubicaciones rápidas: Escritorio, Documentos, Descargas, Imágenes",
+              "Usar la barra de direcciones para saltar rápidamente a ubicaciones específicas"
+            ]
+          },
+          {
+            "key": "vistas_explorador",
+            "name": "Vistas del Explorador",
+            "short_description": "Cambiar entre diferentes vistas para visualizar archivos según la necesidad.",
+            "example_tasks": [
+              "Cambiar entre vistas: iconos grandes, lista, detalles, mosaicos",
+              "Usar la vista de detalles para ver información como tamaño y fecha de modificación",
+              "Ordenar archivos por nombre, fecha, tamaño o tipo haciendo clic en los encabezados",
+              "Agrupar archivos por diferentes criterios para encontrarlos más fácilmente",
+              "Elegir la vista más apropiada según el tipo de contenido: imágenes vs documentos"
+            ]
+          },
+          {
+            "key": "busqueda_archivos",
+            "name": "Búsqueda de Archivos",
+            "short_description": "Utilizar herramientas de búsqueda para localizar archivos y carpetas rápidamente.",
+            "example_tasks": [
+              "Usar el cuadro de búsqueda del Explorador para encontrar archivos por nombre",
+              "Buscar archivos usando filtros: por fecha de modificación, por tamaño",
+              "Practicar búsquedas usando palabras clave que aparecen en el contenido de documentos",
+              "Usar la búsqueda de Windows desde el menú Inicio para encontrar archivos en toda la computadora",
+              "Guardar búsquedas frecuentes como favoritos para acceso rápido"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "operaciones_archivos",
+        "name": "Operaciones con Archivos",
+        "short_description": "Realizar acciones básicas con archivos: copiar, mover, eliminar, renombrar y restaurar.",
+        "sub_topics": [
+          {
+            "key": "copiar_pegar",
+            "name": "Copiar y Pegar Archivos",
+            "short_description": "Crear duplicados de archivos en diferentes ubicaciones usando copiar y pegar.",
+            "example_tasks": [
+              "Copiar un archivo usando clic derecho y Copiar, luego Pegar en otra carpeta",
+              "Usar atajos de teclado Ctrl+C y Ctrl+V para copiar y pegar archivos",
+              "Copiar múltiples archivos seleccionándolos con Ctrl+clic antes de copiar",
+              "Comprender la diferencia entre copiar (mantiene original) y mover (elimina original)",
+              "Practicar copiar archivos entre diferentes unidades como USB y disco duro"
+            ]
+          },
+          {
+            "key": "mover_cortar",
+            "name": "Mover y Cortar Archivos",
+            "short_description": "Reubicar archivos de una carpeta a otra eliminándolos de la ubicación original.",
+            "example_tasks": [
+              "Mover archivos usando clic derecho, Cortar, y Pegar en nueva ubicación",
+              "Usar atajos Ctrl+X (cortar) y Ctrl+V (pegar) para mover archivos",
+              "Arrastrar archivos entre carpetas en el Explorador para moverlos",
+              "Reorganizar estructura de carpetas moviendo archivos a ubicaciones más apropiadas",
+              "Practicar mover archivos con precaución para no perderlos"
+            ]
+          },
+          {
+            "key": "eliminar_recuperar",
+            "name": "Eliminar y Recuperar Archivos",
+            "short_description": "Eliminar archivos de forma segura y recuperarlos de la Papelera de Reciclaje si es necesario.",
+            "example_tasks": [
+              "Eliminar archivos enviándolos a la Papelera de Reciclaje con la tecla Supr",
+              "Abrir la Papelera de Reciclaje y explorar su contenido",
+              "Restaurar archivos eliminados por error desde la Papelera",
+              "Vaciar la Papelera de Reciclaje comprendiendo que los archivos se eliminan permanentemente",
+              "Practicar precaución antes de eliminar: verificar que realmente no se necesita el archivo"
+            ]
+          },
+          {
+            "key": "renombrar_archivos",
+            "name": "Renombrar Archivos y Carpetas",
+            "short_description": "Cambiar nombres de archivos y carpetas para mejorar la organización y claridad.",
+            "example_tasks": [
+              "Renombrar archivos usando clic derecho y seleccionar Cambiar nombre",
+              "Usar la tecla F2 como atajo rápido para renombrar archivos seleccionados",
+              "Aplicar convenciones de nombres: usar nombres descriptivos, evitar caracteres especiales",
+              "Renombrar múltiples archivos relacionados usando un sistema coherente",
+              "Practicar crear nombres de archivo que faciliten encontrarlos después"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "dispositivos_almacenamiento",
+        "name": "Dispositivos de Almacenamiento",
+        "short_description": "Conocer diferentes medios para guardar información: disco duro, USB, CD/DVD, nube.",
+        "sub_topics": [
+          {
+            "key": "almacenamiento_interno",
+            "name": "Almacenamiento Interno",
+            "short_description": "Comprender el disco duro como almacenamiento principal de la computadora.",
+            "example_tasks": [
+              "Explorar el Disco Local (C:) y comprender que ahí reside el sistema operativo y programas",
+              "Verificar el espacio disponible en el disco duro desde las propiedades",
+              "Comprender por qué es importante no llenar completamente el disco duro",
+              "Identificar qué tipos de archivos ocupan más espacio: videos, imágenes, documentos",
+              "Crear una presentación explicando cómo funciona el almacenamiento en el disco duro"
+            ]
+          },
+          {
+            "key": "usb_portatil",
+            "name": "USB y Almacenamiento Portátil",
+            "short_description": "Usar memorias USB para transportar y respaldar archivos de manera segura.",
+            "example_tasks": [
+              "Conectar una memoria USB y esperar a que Windows la reconozca",
+              "Copiar archivos desde la computadora hacia la USB y viceversa",
+              "Practicar la extracción segura de USB usando 'Expulsar' antes de retirarla",
+              "Organizar archivos en la USB creando carpetas apropiadas",
+              "Comprender las ventajas y limitaciones del almacenamiento en USB"
+            ]
+          },
+          {
+            "key": "cuidado_almacenamiento",
+            "name": "Cuidado de Medios de Almacenamiento",
+            "short_description": "Aprender a proteger dispositivos de almacenamiento para evitar pérdida de datos.",
+            "example_tasks": [
+              "Crear una lista de buenas prácticas: no exponer a calor, agua o campos magnéticos",
+              "Practicar etiquetar USBs para identificar su contenido",
+              "Comprender la importancia de hacer respaldos de archivos importantes",
+              "Demostrar cómo cerrar archivos antes de retirar una USB para evitar corrupción",
+              "Diseñar carteles informativos sobre el cuidado de dispositivos de almacenamiento"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "procesadores_texto",
+    "name": "Procesadores de Texto",
+    "short_description": "Uso de Microsoft Word o procesadores similares para crear, editar y formatear documentos de texto de manera profesional.",
+    "sub_topics": [
+      {
+        "key": "introduccion_word",
+        "name": "Introducción a Microsoft Word",
+        "short_description": "Familiarizarse con la interfaz y herramientas básicas del procesador de textos.",
+        "sub_topics": [
+          {
+            "key": "interfaz_word",
+            "name": "Interfaz de Word",
+            "short_description": "Identificar los elementos principales: cinta de opciones, barra de herramientas rápidas, regla, área de trabajo.",
+            "example_tasks": [
+              "Abrir Microsoft Word e identificar las pestañas principales: Inicio, Insertar, Diseño, Referencias",
+              "Explorar la cinta de opciones y localizar herramientas de uso frecuente",
+              "Personalizar la barra de herramientas de acceso rápido con funciones favoritas",
+              "Mostrar u ocultar la regla y comprender su utilidad para márgenes y sangrías",
+              "Cambiar entre diferentes vistas del documento: Diseño de impresión, Lectura, Web"
+            ]
+          },
+          {
+            "key": "crear_guardar",
+            "name": "Crear y Guardar Documentos",
+            "short_description": "Iniciar documentos nuevos y guardarlos con nombres apropiados en ubicaciones organizadas.",
+            "example_tasks": [
+              "Crear un nuevo documento en blanco desde Archivo > Nuevo",
+              "Guardar el documento por primera vez eligiendo nombre y ubicación apropiados",
+              "Practicar Guardar (Ctrl+S) frecuentemente mientras trabaja en un documento",
+              "Usar Guardar como para crear versiones diferentes del mismo documento",
+              "Organizar documentos de Word en carpetas por materia o proyecto"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "formato_texto_basico",
+        "name": "Formato de Texto Básico",
+        "short_description": "Aplicar estilos y formatos básicos al texto para mejorar presentación y legibilidad.",
+        "sub_topics": [
+          {
+            "key": "fuente_tamano",
+            "name": "Fuente y Tamaño",
+            "short_description": "Cambiar el tipo de letra, tamaño y estilo para dar formato apropiado al texto.",
+            "example_tasks": [
+              "Seleccionar texto y cambiar la fuente a diferentes tipos: Arial, Times New Roman, Calibri",
+              "Ajustar el tamaño de fuente usando la lista desplegable o atajos de teclado",
+              "Aplicar negritas (Ctrl+B), cursivas (Ctrl+I) y subrayado (Ctrl+U) al texto",
+              "Crear un documento usando diferentes fuentes y tamaños para títulos y cuerpo",
+              "Comprender cuándo usar cada formato: negritas para énfasis, cursivas para palabras extranjeras"
+            ]
+          },
+          {
+            "key": "color_resaltado",
+            "name": "Color y Resaltado de Texto",
+            "short_description": "Usar colores y resaltado para destacar información importante en documentos.",
+            "example_tasks": [
+              "Cambiar el color del texto usando la herramienta Color de fuente",
+              "Resaltar texto importante usando diferentes colores de fondo",
+              "Crear un documento informativo usando colores para organizar secciones",
+              "Aplicar efectos de texto como sombra, reflejo o contorno con moderación",
+              "Comprender la importancia de usar colores con propósito y no excederse"
+            ]
+          },
+          {
+            "key": "alineacion_texto",
+            "name": "Alineación de Texto",
+            "short_description": "Organizar el texto usando diferentes alineaciones: izquierda, centrado, derecha, justificado.",
+            "example_tasks": [
+              "Practicar las cuatro alineaciones: izquierda, centrado, derecha y justificado",
+              "Crear un documento con título centrado y párrafos justificados",
+              "Usar alineación derecha para fechas o firmas en cartas formales",
+              "Comprender cuándo usar cada tipo de alineación según el propósito del documento",
+              "Aplicar alineaciones usando botones de la cinta o atajos: Ctrl+L, Ctrl+E, Ctrl+R, Ctrl+J"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "formato_parrafos",
+        "name": "Formato de Párrafos",
+        "short_description": "Dar estructura y organización a los párrafos con sangrías, espaciado e interlineado.",
+        "sub_topics": [
+          {
+            "key": "sangrias",
+            "name": "Sangrías y Tabulaciones",
+            "short_description": "Aplicar sangrías para dar formato profesional y usar tabulaciones para alinear texto.",
+            "example_tasks": [
+              "Aplicar sangría de primera línea en párrafos usando la regla o el cuadro de diálogo",
+              "Crear listas con sangría francesa para bibliografías o referencias",
+              "Usar la tecla Tab para crear tabulaciones y alinear columnas de texto",
+              "Establecer tabulaciones personalizadas usando la regla",
+              "Formatear un ensayo corto aplicando sangrías apropiadas en cada párrafo"
+            ]
+          },
+          {
+            "key": "espaciado_interlineado",
+            "name": "Espaciado e Interlineado",
+            "short_description": "Ajustar el espacio entre líneas y párrafos para mejorar la legibilidad del documento.",
+            "example_tasks": [
+              "Cambiar el interlineado a sencillo, 1.5 o doble según los requisitos del documento",
+              "Ajustar el espaciado antes y después de párrafos para separar secciones",
+              "Crear un documento con diferentes interlineados y comparar legibilidad",
+              "Eliminar espacio adicional entre párrafos del mismo estilo",
+              "Aplicar formato de párrafo apropiado para trabajos escolares según indicaciones del maestro"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "listas_numeracion",
+        "name": "Listas y Numeración",
+        "short_description": "Crear y formatear listas con viñetas y numeración para organizar información.",
+        "sub_topics": [
+          {
+            "key": "listas_vinetas",
+            "name": "Listas con Viñetas",
+            "short_description": "Usar viñetas para crear listas de elementos sin orden específico.",
+            "example_tasks": [
+              "Crear una lista de útiles escolares usando viñetas predeterminadas",
+              "Cambiar el estilo de viñeta: círculos, cuadrados, flechas, símbolos personalizados",
+              "Crear listas con varios niveles usando sangrías (sublistas)",
+              "Ajustar la distancia entre la viñeta y el texto usando la regla",
+              "Organizar información en listas para mejorar claridad y lectura rápida"
+            ]
+          },
+          {
+            "key": "listas_numeradas",
+            "name": "Listas Numeradas",
+            "short_description": "Crear listas numeradas para secuencias, pasos o elementos ordenados.",
+            "example_tasks": [
+              "Escribir instrucciones paso a paso usando numeración automática",
+              "Cambiar el estilo de numeración: 1,2,3 o A,B,C o i,ii,iii",
+              "Crear listas multinivel combinando números y letras para esquemas",
+              "Reiniciar o continuar la numeración según sea necesario",
+              "Formatear un procedimiento o receta usando numeración apropiada"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "insertar_elementos",
+        "name": "Insertar Elementos en Documentos",
+        "short_description": "Enriquecer documentos insertando imágenes, tablas, formas y otros elementos visuales.",
+        "sub_topics": [
+          {
+            "key": "insertar_imagenes",
+            "name": "Insertar y Formatear Imágenes",
+            "short_description": "Agregar imágenes a documentos y ajustar su tamaño, posición y ajuste de texto.",
+            "example_tasks": [
+              "Insertar imágenes desde archivo usando Insertar > Imágenes",
+              "Cambiar el tamaño de imágenes arrastrando las esquinas manteniendo proporciones",
+              "Ajustar el ajuste de texto de imagen: en línea, cuadrado, estrecho, detrás del texto",
+              "Aplicar bordes, sombras o efectos artísticos a las imágenes",
+              "Crear un documento ilustrado combinando texto e imágenes de manera profesional"
+            ]
+          },
+          {
+            "key": "tablas_basicas",
+            "name": "Tablas Básicas",
+            "short_description": "Crear y formatear tablas simples para organizar información en filas y columnas.",
+            "example_tasks": [
+              "Insertar una tabla especificando número de filas y columnas",
+              "Escribir información en las celdas de la tabla organizadamente",
+              "Cambiar el ancho de columnas y alto de filas según el contenido",
+              "Aplicar diseños de tabla predefinidos para mejorar presentación",
+              "Crear un horario de clases o calendario usando una tabla formateada"
+            ]
+          },
+          {
+            "key": "formas_smartart",
+            "name": "Formas y SmartArt",
+            "short_description": "Usar formas básicas y gráficos SmartArt para representar información visualmente.",
+            "example_tasks": [
+              "Insertar formas básicas: rectángulos, círculos, flechas, líneas",
+              "Agregar texto dentro de formas para crear diagramas simples",
+              "Explorar SmartArt e insertar gráficos para listas, procesos o jerarquías",
+              "Cambiar colores y estilos de SmartArt usando las herramientas de diseño",
+              "Crear un organizador gráfico o mapa conceptual usando SmartArt apropiado"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "revision_correccion",
+        "name": "Revisión y Corrección",
+        "short_description": "Utilizar herramientas de revisión ortográfica y gramatical para mejorar la calidad del documento.",
+        "sub_topics": [
+          {
+            "key": "ortografia_gramatica",
+            "name": "Revisión Ortográfica y Gramatical",
+            "short_description": "Detectar y corregir errores de ortografía y gramática usando las herramientas automáticas.",
+            "example_tasks": [
+              "Activar la revisión ortográfica automática y observar subrayados rojos (ortografía) y azules (gramática)",
+              "Usar clic derecho en palabras subrayadas para ver sugerencias de corrección",
+              "Ejecutar revisión ortográfica completa usando F7 o Revisar > Ortografía y gramática",
+              "Agregar palabras correctas al diccionario personalizado cuando sea apropiado",
+              "Revisar un texto con errores intencionales y corregirlos usando las herramientas de Word"
+            ]
+          },
+          {
+            "key": "sinonimos_buscar_reemplazar",
+            "name": "Sinónimos y Buscar/Reemplazar",
+            "short_description": "Mejorar vocabulario usando sinónimos y modificar texto eficientemente con buscar y reemplazar.",
+            "example_tasks": [
+              "Usar clic derecho > Sinónimos para encontrar palabras alternativas y enriquecer vocabulario",
+              "Abrir el panel de búsqueda (Ctrl+B) para encontrar palabras específicas en el documento",
+              "Usar Reemplazar (Ctrl+L) para cambiar todas las instancias de una palabra por otra",
+              "Practicar reemplazar palabras repetitivas por sinónimos apropiados",
+              "Mejorar un texto simple sustituyendo palabras comunes por vocabulario más variado"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "impresion_documentos",
+        "name": "Impresión de Documentos",
+        "short_description": "Preparar y configurar documentos para impresión en papel.",
+        "sub_topics": [
+          {
+            "key": "vista_previa",
+            "name": "Vista Previa de Impresión",
+            "short_description": "Revisar cómo se verá el documento impreso antes de enviarlo a la impresora.",
+            "example_tasks": [
+              "Abrir Vista previa de impresión desde Archivo > Imprimir",
+              "Revisar márgenes, orientación y ajuste de contenido en la página",
+              "Identificar problemas: imágenes cortadas, páginas en blanco, texto desalineado",
+              "Ajustar configuración de página antes de imprimir para optimizar uso de papel",
+              "Practicar revisión completa del documento en vista previa antes de cada impresión"
+            ]
+          },
+          {
+            "key": "configuracion_impresion",
+            "name": "Configuración de Impresión",
+            "short_description": "Seleccionar opciones de impresión: número de copias, páginas específicas, orientación.",
+            "example_tasks": [
+              "Seleccionar la impresora correcta de la lista de impresoras disponibles",
+              "Elegir imprimir todo el documento o páginas específicas",
+              "Configurar número de copias necesarias",
+              "Cambiar orientación entre vertical y horizontal según el documento",
+              "Seleccionar impresión a doble cara para ahorrar papel cuando sea posible"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "navegacion_internet",
+    "name": "Navegación Segura en Internet",
+    "short_description": "Fundamentos para usar Internet de manera segura, responsable y efectiva, incluyendo navegadores web y búsqueda de información.",
+    "sub_topics": [
+      {
+        "key": "introduccion_internet",
+        "name": "Introducción a Internet",
+        "short_description": "Comprender qué es Internet, cómo funciona y sus aplicaciones en la vida diaria.",
+        "sub_topics": [
+          {
+            "key": "concepto_internet",
+            "name": "¿Qué es Internet?",
+            "short_description": "Entender Internet como red global de computadoras conectadas para compartir información.",
+            "example_tasks": [
+              "Explicar con sus propias palabras qué es Internet y cómo funciona",
+              "Crear un diagrama mostrando cómo las computadoras se conectan a través de Internet",
+              "Identificar diferentes usos de Internet: comunicación, información, entretenimiento, educación",
+              "Comparar Internet antes (dial-up) y ahora (banda ancha, Wi-Fi, móvil)",
+              "Investigar y presentar cómo Internet ha cambiado la vida cotidiana en México"
+            ]
+          },
+          {
+            "key": "www_paginas_web",
+            "name": "World Wide Web y Páginas Web",
+            "short_description": "Distinguir entre Internet y la Web, comprender qué son las páginas web y sitios web.",
+            "example_tasks": [
+              "Explicar la diferencia entre Internet (infraestructura) y la Web (servicio sobre Internet)",
+              "Identificar elementos comunes en páginas web: encabezado, menú, contenido, pie de página",
+              "Explorar diferentes tipos de sitios web: informativos, educativos, comerciales, redes sociales",
+              "Comprender qué es una URL y sus componentes: protocolo, dominio, ruta",
+              "Crear una lista de sitios web educativos confiables apropiados para su edad"
+            ]
+          },
+          {
+            "key": "conexion_internet",
+            "name": "Conexión a Internet",
+            "short_description": "Conocer diferentes formas de conectarse a Internet: Wi-Fi, cable, datos móviles.",
+            "example_tasks": [
+              "Identificar si la computadora está conectada a Internet verificando el icono de red",
+              "Conectarse a una red Wi-Fi de la escuela con ayuda del maestro",
+              "Comprender los símbolos de conexión: Wi-Fi fuerte, débil, sin conexión",
+              "Explicar la diferencia entre conexión por cable y conexión inalámbrica",
+              "Practicar qué hacer cuando no hay conexión a Internet: verificar Wi-Fi, reiniciar router"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "uso_navegadores",
+        "name": "Uso de Navegadores Web",
+        "short_description": "Manejar navegadores como Chrome, Edge o Firefox para acceder a sitios web eficientemente.",
+        "sub_topics": [
+          {
+            "key": "interfaz_navegador",
+            "name": "Interfaz del Navegador",
+            "short_description": "Identificar elementos del navegador: barra de direcciones, pestañas, botones de navegación, favoritos.",
+            "example_tasks": [
+              "Abrir el navegador web predeterminado y explorar su interfaz",
+              "Identificar barra de direcciones, botones Atrás/Adelante, Actualizar, Inicio",
+              "Usar la barra de direcciones para escribir URLs directamente",
+              "Comprender la diferencia entre escribir una URL y hacer una búsqueda",
+              "Personalizar la página de inicio del navegador con un sitio educativo apropiado"
+            ]
+          },
+          {
+            "key": "navegacion_basica",
+            "name": "Navegación Básica",
+            "short_description": "Moverse entre páginas web usando enlaces, botones de navegación y la barra de direcciones.",
+            "example_tasks": [
+              "Hacer clic en enlaces (hipervínculos) para navegar entre páginas relacionadas",
+              "Usar el botón Atrás para regresar a la página anterior",
+              "Usar el botón Adelante después de haber usado Atrás",
+              "Actualizar una página cuando no carga correctamente usando F5 o el botón Actualizar",
+              "Detener la carga de una página si está tardando demasiado"
+            ]
+          },
+          {
+            "key": "pestanas_ventanas",
+            "name": "Pestañas y Ventanas",
+            "short_description": "Trabajar con múltiples pestañas y ventanas para explorar varios sitios simultáneamente.",
+            "example_tasks": [
+              "Abrir una nueva pestaña usando Ctrl+T o el botón (+) en la barra de pestañas",
+              "Cambiar entre pestañas abiertas haciendo clic en ellas",
+              "Cerrar pestañas usando el botón X o Ctrl+W",
+              "Abrir enlaces en nueva pestaña usando clic derecho > Abrir en pestaña nueva",
+              "Organizar pestañas arrastrándolas para reordenarlas según preferencia"
+            ]
+          },
+          {
+            "key": "marcadores_favoritos",
+            "name": "Marcadores y Favoritos",
+            "short_description": "Guardar sitios web frecuentes como marcadores para acceso rápido.",
+            "example_tasks": [
+              "Agregar una página a favoritos usando el icono de estrella o Ctrl+D",
+              "Organizar favoritos en carpetas por categoría: Educación, Tareas, Diversión",
+              "Acceder a sitios guardados desde la barra de favoritos o el menú",
+              "Editar nombres de favoritos para que sean más descriptivos",
+              "Crear una carpeta de favoritos con recursos educativos recomendados por el maestro"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "seguridad_en_linea",
+        "name": "Seguridad en Línea",
+        "short_description": "Prácticas fundamentales para navegar de manera segura y proteger información personal.",
+        "sub_topics": [
+          {
+            "key": "informacion_personal",
+            "name": "Protección de Información Personal",
+            "short_description": "Comprender qué información es privada y no debe compartirse en línea.",
+            "example_tasks": [
+              "Identificar información personal que nunca debe compartirse: dirección, teléfono, escuela, contraseñas",
+              "Crear una lista de qué información es segura compartir y cuál no",
+              "Practicar decir 'no' a solicitudes de información personal en sitios web",
+              "Comprender que personas en línea pueden no ser quienes dicen ser",
+              "Diseñar un cartel sobre protección de información personal en Internet"
+            ]
+          },
+          {
+            "key": "sitios_seguros",
+            "name": "Identificar Sitios Seguros",
+            "short_description": "Reconocer indicadores de sitios web seguros y confiables.",
+            "example_tasks": [
+              "Identificar el candado en la barra de direcciones que indica conexión segura (HTTPS)",
+              "Verificar la URL antes de hacer clic en enlaces, especialmente en correos electrónicos",
+              "Reconocer señales de sitios no confiables: muchos anuncios, errores ortográficos, solicitan información personal",
+              "Usar solo sitios web aprobados por padres o maestros para tareas escolares",
+              "Practicar consultar con un adulto antes de registrarse en cualquier sitio web nuevo"
+            ]
+          },
+          {
+            "key": "contenido_apropiado",
+            "name": "Contenido Apropiado para la Edad",
+            "short_description": "Navegar solo en sitios con contenido adecuado para niños y evitar contenido inapropiado.",
+            "example_tasks": [
+              "Comprender que no todo el contenido en Internet es apropiado para su edad",
+              "Cerrar inmediatamente ventanas con contenido inadecuado y reportar a un adulto",
+              "Usar buscadores y sitios diseñados específicamente para niños",
+              "Reconocer clasificaciones de contenido en sitios web y aplicaciones",
+              "Practicar navegar solo en sitios educativos y recreativos aprobados"
+            ]
+          },
+          {
+            "key": "peligros_en_linea",
+            "name": "Peligros en Línea y Cómo Evitarlos",
+            "short_description": "Identificar riesgos comunes en Internet y estrategias para mantenerse seguro.",
+            "example_tasks": [
+              "Reconocer intentos de estafa o phishing: correos solicitando información, premios falsos",
+              "Comprender que no deben descargar archivos sin permiso de un adulto",
+              "Identificar y evitar hacer clic en anuncios engañosos o pop-ups",
+              "Practicar reportar comportamiento sospechoso o acoso a un adulto de confianza",
+              "Crear una presentación sobre los peligros en línea y cómo protegerse"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "comportamiento_en_linea",
+        "name": "Comportamiento Responsable en Línea",
+        "short_description": "Desarrollar netiqueta y ciudadanía digital positiva en todas las interacciones en línea.",
+        "sub_topics": [
+          {
+            "key": "netiqueta_basica",
+            "name": "Netiqueta Básica",
+            "short_description": "Aprender reglas de cortesía y respeto en comunicaciones digitales.",
+            "example_tasks": [
+              "Crear una lista de reglas de netiqueta: ser respetuoso, no usar MAYÚSCULAS (gritar), usar lenguaje apropiado",
+              "Practicar escribir mensajes amables y respetuosos en foros educativos",
+              "Comprender que las palabras escritas pueden malinterpretarse sin tono de voz",
+              "Usar emojis apropiadamente para comunicar tono en mensajes",
+              "Reflexionar sobre cómo sus palabras en línea pueden afectar a otras personas"
+            ]
+          },
+          {
+            "key": "huella_digital",
+            "name": "Huella Digital",
+            "short_description": "Comprender que todo lo que hacen en línea deja un rastro permanente.",
+            "example_tasks": [
+              "Explicar qué es una huella digital y por qué es importante cuidarla",
+              "Comprender que imágenes y comentarios en línea pueden ser permanentes",
+              "Practicar pensar antes de publicar: '¿Quiero que esto permanezca en Internet para siempre?'",
+              "Discutir cómo la huella digital puede afectar el futuro (escuela, empleo)",
+              "Crear un compromiso personal sobre cómo construir una huella digital positiva"
+            ]
+          },
+          {
+            "key": "privacidad_configuraciones",
+            "name": "Configuraciones de Privacidad",
+            "short_description": "Conocer la importancia de configuraciones de privacidad en navegadores y sitios web.",
+            "example_tasks": [
+              "Explorar configuraciones básicas de privacidad en el navegador con ayuda del maestro",
+              "Comprender qué son las cookies y por qué sitios web las usan",
+              "Aprender a borrar historial de navegación cuando usan computadoras compartidas",
+              "Practicar cerrar sesión en sitios web después de usarlos",
+              "Comprender la importancia de no guardar contraseñas en computadoras públicas"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "descargas_seguras",
+        "name": "Descargas Seguras",
+        "short_description": "Comprender cómo descargar archivos de forma segura y con permiso apropiado.",
+        "sub_topics": [
+          {
+            "key": "antes_descargar",
+            "name": "Precauciones Antes de Descargar",
+            "short_description": "Verificar seguridad de descargas y pedir permiso antes de descargar archivos.",
+            "example_tasks": [
+              "Practicar pedir permiso a un adulto antes de descargar cualquier archivo",
+              "Identificar fuentes confiables para descargas: sitios oficiales, tiendas de aplicaciones verificadas",
+              "Reconocer advertencias del navegador sobre descargas potencialmente peligrosas",
+              "Comprender que algunos archivos pueden contener virus o malware",
+              "Verificar que el archivo a descargar es lo que realmente necesitan para su tarea"
+            ]
+          },
+          {
+            "key": "proceso_descarga",
+            "name": "Proceso de Descarga",
+            "short_description": "Realizar descargas correctamente y ubicar archivos descargados en la computadora.",
+            "example_tasks": [
+              "Hacer clic en el botón de descarga correcto evitando anuncios falsos",
+              "Esperar pacientemente mientras el archivo se descarga observando la barra de progreso",
+              "Localizar archivos descargados en la carpeta Descargas",
+              "Mover archivos descargados a carpetas apropiadas después de descargar",
+              "Verificar que el archivo descargado se abre correctamente antes de eliminarlo de Descargas"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "comunicacion_digital_correo",
+    "name": "Comunicación Digital y Correo Electrónico",
+    "short_description": "Fundamentos de comunicación en línea, uso apropiado del correo electrónico y herramientas de mensajería educativas.",
+    "sub_topics": [
+      {
+        "key": "introduccion_correo",
+        "name": "Introducción al Correo Electrónico",
+        "short_description": "Comprender qué es el correo electrónico, sus componentes y cuándo usarlo apropiadamente.",
+        "sub_topics": [
+          {
+            "key": "concepto_correo",
+            "name": "¿Qué es el Correo Electrónico?",
+            "short_description": "Entender el correo electrónico como medio de comunicación digital formal y asincrónico.",
+            "example_tasks": [
+              "Explicar qué es el correo electrónico y en qué se diferencia de mensajes instantáneos",
+              "Identificar partes de una dirección de correo: nombre de usuario, arroba (@), dominio",
+              "Comprender cuándo es apropiado usar correo electrónico vs. otras formas de comunicación",
+              "Crear una lista de situaciones donde el correo electrónico es la mejor opción de comunicación",
+              "Comparar el correo electrónico con el correo postal tradicional encontrando similitudes y diferencias"
+            ]
+          },
+          {
+            "key": "estructura_correo",
+            "name": "Estructura de un Correo Electrónico",
+            "short_description": "Identificar los componentes de un correo: destinatario, asunto, cuerpo, firma, archivos adjuntos.",
+            "example_tasks": [
+              "Explorar la interfaz de un cliente de correo identificando campos: Para, Asunto, CC, CCO",
+              "Comprender la importancia de un asunto claro y descriptivo",
+              "Practicar escribir el cuerpo del mensaje con saludo, mensaje principal y despedida",
+              "Crear una firma de correo sencilla con su nombre y grado escolar",
+              "Analizar ejemplos de correos bien estructurados vs. mal estructurados"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "uso_correo_basico",
+        "name": "Uso Básico del Correo Electrónico",
+        "short_description": "Realizar tareas fundamentales: crear cuenta, enviar, recibir, responder y organizar correos.",
+        "sub_topics": [
+          {
+            "key": "crear_cuenta",
+            "name": "Crear Cuenta de Correo",
+            "short_description": "Proceso de crear una dirección de correo electrónico con supervisión adulta.",
+            "example_tasks": [
+              "Crear una cuenta de correo educativo con ayuda del maestro o padres",
+              "Elegir un nombre de usuario apropiado y profesional para uso escolar",
+              "Crear una contraseña segura siguiendo reglas: longitud mínima, mezcla de caracteres",
+              "Configurar pregunta de seguridad y correo de recuperación con ayuda de un adulto",
+              "Comprender la responsabilidad de mantener segura la información de su cuenta"
+            ]
+          },
+          {
+            "key": "enviar_correos",
+            "name": "Redactar y Enviar Correos",
+            "short_description": "Componer mensajes de correo apropiados y enviarlos a destinatarios correctos.",
+            "example_tasks": [
+              "Hacer clic en Redactar o Nuevo para crear un mensaje nuevo",
+              "Escribir la dirección del destinatario verificando que sea correcta",
+              "Redactar un asunto claro que resuma el contenido del mensaje",
+              "Escribir el cuerpo del correo con saludo, mensaje y despedida apropiados",
+              "Revisar el correo antes de enviar verificando ortografía y que el destinatario sea correcto"
+            ]
+          },
+          {
+            "key": "recibir_leer",
+            "name": "Recibir y Leer Correos",
+            "short_description": "Acceder a la bandeja de entrada, abrir y leer mensajes recibidos.",
+            "example_tasks": [
+              "Acceder a la bandeja de entrada y revisar correos nuevos (no leídos)",
+              "Abrir un correo haciendo clic en él para leer su contenido completo",
+              "Identificar correos importantes por el remitente y asunto",
+              "Marcar correos como leídos o no leídos según sea necesario",
+              "Practicar revisar el correo regularmente en horarios apropiados"
+            ]
+          },
+          {
+            "key": "responder_reenviar",
+            "name": "Responder y Reenviar Correos",
+            "short_description": "Usar las funciones Responder y Reenviar apropiadamente en conversaciones por correo.",
+            "example_tasks": [
+              "Usar el botón Responder para contestar al remitente original",
+              "Usar Responder a todos cuando el mensaje involucra múltiples personas",
+              "Incluir el mensaje original al responder para mantener contexto de la conversación",
+              "Usar Reenviar para compartir un correo recibido con otra persona (con precaución)",
+              "Practicar mantener hilos de conversación organizados respondiendo en lugar de crear correos nuevos"
+            ]
+          },
+          {
+            "key": "archivos_adjuntos",
+            "name": "Archivos Adjuntos",
+            "short_description": "Adjuntar archivos a correos y descargar adjuntos recibidos de forma segura.",
+            "example_tasks": [
+              "Usar el botón de adjuntar (clip) para añadir archivos a un correo",
+              "Seleccionar el archivo correcto desde la computadora para adjuntar",
+              "Verificar que el archivo se haya adjuntado antes de enviar el correo",
+              "Descargar archivos adjuntos de correos recibidos de remitentes conocidos",
+              "Comprender que no deben abrir adjuntos de desconocidos por riesgo de virus"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "organizacion_correos",
+        "name": "Organización de Correos",
+        "short_description": "Mantener la bandeja de entrada organizada usando carpetas, etiquetas y funciones de búsqueda.",
+        "sub_topics": [
+          {
+            "key": "carpetas_etiquetas",
+            "name": "Carpetas y Etiquetas",
+            "short_description": "Crear y usar carpetas o etiquetas para clasificar correos por categoría.",
+            "example_tasks": [
+              "Crear carpetas para organizar correos: Escuela, Tareas, Familia, Proyectos",
+              "Mover correos a carpetas específicas arrastrándolos o usando el menú contextual",
+              "Usar etiquetas de colores para clasificar correos por prioridad o tema",
+              "Mantener la bandeja de entrada limpia archivando correos ya procesados",
+              "Crear un sistema personal de organización que funcione para sus necesidades"
+            ]
+          },
+          {
+            "key": "buscar_correos",
+            "name": "Buscar Correos",
+            "short_description": "Utilizar la función de búsqueda para encontrar correos específicos rápidamente.",
+            "example_tasks": [
+              "Usar la barra de búsqueda escribiendo palabras clave del correo buscado",
+              "Buscar correos de un remitente específico escribiendo su dirección o nombre",
+              "Filtrar correos por fecha para encontrar mensajes de períodos específicos",
+              "Buscar correos que contienen archivos adjuntos usando filtros",
+              "Usar búsqueda avanzada combinando múltiples criterios cuando sea necesario"
+            ]
+          },
+          {
+            "key": "eliminar_correos",
+            "name": "Eliminar Correos No Deseados",
+            "short_description": "Gestionar correos basura y eliminar mensajes innecesarios de forma segura.",
+            "example_tasks": [
+              "Identificar correos no deseados o spam en la bandeja de entrada",
+              "Mover correos basura a la carpeta de spam para entrenar el filtro",
+              "Eliminar correos que ya no necesitan enviándolos a la papelera",
+              "Vaciar la papelera periódicamente para liberar espacio",
+              "Comprender que algunos correos eliminados pueden recuperarse de la papelera temporalmente"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "etiqueta_correo",
+        "name": "Etiqueta en Correo Electrónico",
+        "short_description": "Aplicar normas de cortesía y profesionalismo en comunicaciones por correo electrónico.",
+        "sub_topics": [
+          {
+            "key": "tono_lenguaje",
+            "name": "Tono y Lenguaje Apropiado",
+            "short_description": "Usar lenguaje formal, respetuoso y claro en correos electrónicos.",
+            "example_tasks": [
+              "Practicar usar saludos formales apropiados: 'Estimado/a', 'Apreciado/a Maestro/a'",
+              "Escribir mensajes claros y directos evitando abreviaciones informales",
+              "Usar despedidas apropiadas: 'Atentamente', 'Saludos cordiales', 'Respetuosamente'",
+              "Evitar usar lenguaje de mensajes de texto (abreviaciones, emojis excesivos) en correos formales",
+              "Releer correos antes de enviar verificando que el tono sea respetuoso y apropiado"
+            ]
+          },
+          {
+            "key": "tiempo_respuesta",
+            "name": "Tiempo de Respuesta",
+            "short_description": "Comprender expectativas de tiempo razonable para responder correos.",
+            "example_tasks": [
+              "Entender que el correo no requiere respuesta inmediata como mensajería instantánea",
+              "Practicar responder correos de maestros dentro de 24-48 horas",
+              "Comprender que está bien tomarse tiempo para redactar una respuesta pensada",
+              "No esperar que otros respondan inmediatamente a sus correos",
+              "Usar líneas de asunto claras para facilitar respuestas oportunas"
+            ]
+          },
+          {
+            "key": "formato_profesional",
+            "name": "Formato Profesional",
+            "short_description": "Estructurar correos de manera organizada y profesional.",
+            "example_tasks": [
+              "Usar párrafos cortos para facilitar la lectura del mensaje",
+              "Incluir espacios en blanco entre párrafos para mejor presentación",
+              "Evitar usar fuentes extravagantes, colores excesivos o fondos distractores",
+              "Usar viñetas o listas numeradas cuando sea apropiado para claridad",
+              "Mantener los correos concisos yendo directo al punto principal"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "seguridad_correo",
+        "name": "Seguridad en Correo Electrónico",
+        "short_description": "Identificar amenazas comunes por correo y proteger información personal.",
+        "sub_topics": [
+          {
+            "key": "phishing_spam",
+            "name": "Reconocer Phishing y Spam",
+            "short_description": "Identificar correos fraudulentos que intentan obtener información personal o instalar malware.",
+            "example_tasks": [
+              "Identificar señales de phishing: errores ortográficos, remitentes desconocidos, urgencia artificial",
+              "Nunca hacer clic en enlaces de correos sospechosos",
+              "Verificar el remitente real pasando el cursor sobre el nombre (sin hacer clic)",
+              "Reportar correos de phishing al maestro o adulto responsable",
+              "Comprender que bancos y empresas legítimas nunca piden contraseñas por correo"
+            ]
+          },
+          {
+            "key": "compartir_informacion",
+            "name": "No Compartir Información Sensible",
+            "short_description": "Saber qué información nunca debe enviarse por correo electrónico.",
+            "example_tasks": [
+              "Nunca enviar contraseñas, números de tarjetas o información financiera por correo",
+              "Evitar compartir dirección física completa, número de teléfono personal sin supervisión",
+              "Pedir permiso a padres o maestros antes de compartir información personal",
+              "Comprender que correos pueden ser reenviados y leídos por personas no intencionadas",
+              "Usar métodos más seguros para información sensible cuando sea necesario"
+            ]
+          },
+          {
+            "key": "adjuntos_seguros",
+            "name": "Precaución con Adjuntos",
+            "short_description": "Evaluar seguridad de archivos adjuntos antes de abrirlos.",
+            "example_tasks": [
+              "Solo abrir adjuntos de remitentes conocidos y confiables",
+              "Desconfiar de adjuntos inesperados incluso de contactos conocidos",
+              "Verificar con el remitente antes de abrir adjuntos sospechosos",
+              "Comprender que adjuntos pueden contener virus o malware",
+              "Reportar adjuntos sospechosos a un adulto antes de abrirlos"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

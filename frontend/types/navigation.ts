@@ -1,3 +1,5 @@
+import { GradeLevel } from '@eduforger/shared';
+
 /**
  * Navigation topic structure
  * Represents a hierarchical topic that can contain sub-topics
@@ -8,17 +10,16 @@ export interface NavigationTopic {
 }
 
 /**
- * Grade level type
+ * Grade level type - imported from shared
+ * Re-export for backward compatibility
  */
-export type GradeLevel = 'grade_9_10' | 'grade_11_12';
+export type { GradeLevel };
 
 /**
  * Complete navigation mapping structure
+ * Dynamic record type that supports all grade levels from all countries
  */
-export interface NavigationMapping {
-  grade_9_10: NavigationTopic[];
-  grade_11_12: NavigationTopic[];
-}
+export type NavigationMapping = Record<GradeLevel, NavigationTopic[]>;
 
 /**
  * Selection path item - represents a single selection in the cascade

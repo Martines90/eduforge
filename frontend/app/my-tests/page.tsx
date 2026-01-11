@@ -25,7 +25,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import ShareIcon from '@mui/icons-material/Share';
 import DescriptionIcon from '@mui/icons-material/Description';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import QrCodeIcon from '@mui/icons-material/QrCode';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -37,7 +36,8 @@ import { Pagination } from '@/components/molecules/Pagination';
 import { SubjectSelector } from '@/components/molecules/SubjectSelector/SubjectSelector';
 import { useRouteProtection } from '@/lib/hooks/useRouteProtection';
 import { useTranslation } from '@/lib/i18n';
-import { fetchMyTests, deleteTest, createTest, fetchTestById, uploadTestPDF } from '@/lib/services/test.service';
+import { useUser } from '@/lib/context/UserContext';
+import { fetchMyTests, deleteTest, createTest, fetchTestById } from '@/lib/services/test.service';
 import { fetchTaskById } from '@/lib/services/api.service';
 import { Test, CreateTestRequest } from '@/types/test.types';
 import { Subject } from '@/types/i18n';
@@ -51,6 +51,7 @@ import QRCode from 'qrcode';
 export default function MyTestsPage() {
   const router = useRouter();
   const { t } = useTranslation();
+  const { gradeSystem } = useUser();
   const { isAuthorized, isLoading: authLoading } = useRouteProtection({
     requireAuth: true,
     requireIdentity: 'teacher',
@@ -480,7 +481,7 @@ export default function MyTestsPage() {
                         />
                         {test.gradeLevel && (
                           <Chip
-                            label={test.gradeLevel.replace('grade_', 'Grade ').replace('_', '-')}
+                            label={gradeSystem.getGrade(test.gradeLevel as any)?.labelLocal || test.gradeLevel}
                             size="small"
                             variant="outlined"
                           />
@@ -649,10 +650,11 @@ export default function MyTestsPage() {
               fullWidth
             >
               <MenuItem value="">None</MenuItem>
-              <MenuItem value="grade_1_4">Grade 1-4</MenuItem>
-              <MenuItem value="grade_5_8">Grade 5-8</MenuItem>
-              <MenuItem value="grade_9_10">Grade 9-10</MenuItem>
-              <MenuItem value="grade_11_12">Grade 11-12</MenuItem>
+              {gradeSystem.availableGrades.map((grade: any) => (
+                <MenuItem key={grade.value} value={grade.value}>
+                  {grade.labelLocal}
+                </MenuItem>
+              ))}
             </TextField>
 
             <TextField

@@ -232,7 +232,8 @@ export async function uploadTestPDF(
     console.error("[PDF Storage] Error uploading test PDF:", error);
     return {
       success: false,
-      error: error instanceof Error ? error.message : "Failed to upload test PDF",
+      error:
+        error instanceof Error ? error.message : "Failed to upload test PDF",
     };
   }
 }
@@ -242,7 +243,10 @@ export async function uploadTestPDF(
  * @param testId - The test ID
  * @param country - Country code for the test
  */
-export async function deleteTestPDF(testId: string, country?: string): Promise<void> {
+export async function deleteTestPDF(
+  testId: string,
+  country?: string
+): Promise<void> {
   try {
     console.log("[PDF Storage] Deleting PDF for test:", testId);
 

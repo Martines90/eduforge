@@ -1,4 +1,5 @@
 import * as path from "path";
+import { Module } from "module";
 
 // Set up module resolution for @eduforger/shared
 // This file MUST be imported before any other application code
@@ -10,6 +11,7 @@ if (!process.env.NODE_PATH) {
 } else {
   process.env.NODE_PATH = `${process.env.NODE_PATH}:${modulesPath}`;
 }
-require("module").Module._initPaths();
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(Module as any)._initPaths();
 
 console.log("✅ Module paths configured:", process.env.NODE_PATH);
