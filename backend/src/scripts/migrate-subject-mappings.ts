@@ -93,7 +93,7 @@ function collectNodes(
   const isLeaf = !hasSubTopics;
 
   const mappingDoc: SubjectMappingDocument = {
-    key: node.key,
+    id: docId, // Document ID (will match Firestore document ID)
     name: node.name,
     shortDescription: node.short_description,
     level,
@@ -222,7 +222,7 @@ async function importSubjectGrade(
   const gradeDocId = generateDocId(gradeConfig.value, "root");
 
   const gradeDoc: SubjectMappingDocument = {
-    key: gradeConfig.value,
+    id: gradeDocId, // Document ID (will match Firestore document ID)
     name: gradeConfig.labelEN,
     shortDescription: `${SUBJECTS[subjectKey]} curriculum for ${gradeConfig.labelEN}`,
     level: 1,

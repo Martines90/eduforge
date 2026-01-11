@@ -14,3 +14,26 @@ vi.mock('js-cookie', () => ({
     remove: vi.fn(),
   },
 }));
+
+// Mock UserContext globally to prevent "useUser must be used within a UserProvider" errors
+vi.mock('@/lib/context/UserContext', () => ({
+  useUser: () => ({
+    user: null,
+    loading: false,
+    gradeSystem: 'grade_9_12' as const,
+    login: vi.fn(),
+    logout: vi.fn(),
+    updateUser: vi.fn(),
+  }),
+  UserProvider: ({ children }: { children: React.ReactNode }) => children,
+}));
+
+// Mock CountryContext globally to prevent "useCountry must be used within CountryProvider" errors
+vi.mock('@/lib/context/CountryContext', () => ({
+  useCountry: () => ({
+    country: 'HU' as const,
+    setCountry: vi.fn(),
+    loading: false,
+  }),
+  CountryProvider: ({ children }: { children: React.ReactNode }) => children,
+}));

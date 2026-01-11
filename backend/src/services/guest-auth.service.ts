@@ -8,7 +8,8 @@ import {
   GUEST_TASK_VIEW_LIMIT,
 } from "../constants/credits";
 
-const FieldValue = admin.firestore.FieldValue;
+// Lazy getter for FieldValue to avoid initialization issues in tests
+const getFieldValue = () => admin.firestore.FieldValue;
 
 const JWT_SECRET =
   process.env.JWT_SECRET || "your-secret-key-change-in-production";
@@ -154,7 +155,7 @@ export async function createGuestToken(
   const sessionsRef = getGuestSessionsCollection();
   await sessionsRef.doc(sessionId).set({
     ...guestSession,
-    createdAt: FieldValue.serverTimestamp(),
+    createdAt: getFieldValue().serverTimestamp(),
   });
 
   // Create JWT token
@@ -266,7 +267,7 @@ export async function incrementGuestGeneration(
 
   await sessionRef.update({
     ...updatedSession,
-    lastGenerationAt: FieldValue.serverTimestamp(),
+    lastGenerationAt: getFieldValue().serverTimestamp(),
   });
 
   console.log(
@@ -357,7 +358,7 @@ export async function markGuestConverted(
   await getGuestSessionsCollection().doc(sessionId).update({
     convertedToUser: true,
     convertedUserId: userId,
-    convertedAt: FieldValue.serverTimestamp(),
+    convertedAt: getFieldValue().serverTimestamp(),
   });
 
   console.log(
@@ -424,7 +425,7 @@ export async function incrementGuestTaskView(
 
   await sessionRef.update({
     ...updatedSession,
-    lastTaskViewAt: FieldValue.serverTimestamp(),
+    lastTaskViewAt: getFieldValue().serverTimestamp(),
   });
 
   console.log(

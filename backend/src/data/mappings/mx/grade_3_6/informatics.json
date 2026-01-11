@@ -1091,5 +1091,3748 @@
         ]
       }
     ]
+  },
+  {
+    "key": "presentaciones_digitales",
+    "name": "Presentaciones Digitales",
+    "short_description": "Creación y diseño de presentaciones efectivas usando Microsoft PowerPoint o software similar para comunicar ideas visualmente.",
+    "sub_topics": [
+      {
+        "key": "introduccion_powerpoint",
+        "name": "Introducción a PowerPoint",
+        "short_description": "Familiarizarse con la interfaz y herramientas básicas para crear presentaciones.",
+        "sub_topics": [
+          {
+            "key": "interfaz_powerpoint",
+            "name": "Interfaz de PowerPoint",
+            "short_description": "Identificar elementos principales: panel de diapositivas, área de trabajo, notas, vista previa.",
+            "example_tasks": [
+              "Abrir PowerPoint e identificar las diferentes vistas: Normal, Clasificador de diapositivas, Presentación",
+              "Explorar la cinta de opciones y localizar pestañas: Inicio, Insertar, Diseño, Transiciones, Animaciones",
+              "Navegar entre diapositivas usando el panel lateral de miniaturas",
+              "Usar el área de notas para agregar recordatorios sobre qué decir en cada diapositiva",
+              "Cambiar entre vistas para diferentes propósitos: edición, organización, presentación"
+            ]
+          },
+          {
+            "key": "crear_presentacion",
+            "name": "Crear Nueva Presentación",
+            "short_description": "Iniciar presentaciones nuevas desde cero o usando plantillas prediseñadas.",
+            "example_tasks": [
+              "Crear una presentación en blanco desde Archivo > Nuevo",
+              "Explorar plantillas prediseñadas y seleccionar una apropiada para el tema",
+              "Guardar la presentación con un nombre descriptivo en la ubicación correcta",
+              "Usar Guardar como para crear copias de respaldo de trabajos importantes",
+              "Comprender la diferencia entre .pptx (editable) y .pdf (solo lectura)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "diseño_diapositivas",
+        "name": "Diseño de Diapositivas",
+        "short_description": "Aplicar diseños, temas y formato consistente para crear presentaciones profesionales.",
+        "sub_topics": [
+          {
+            "key": "diseños_predefinidos",
+            "name": "Diseños Predefinidos",
+            "short_description": "Usar diseños de diapositiva apropiados según el tipo de contenido a presentar.",
+            "example_tasks": [
+              "Aplicar diseño de Título para la primera diapositiva de la presentación",
+              "Usar diseño de Título y contenido para diapositivas con información principal",
+              "Aplicar diseño de Dos contenidos para comparar información lado a lado",
+              "Usar diseño de Solo título cuando se necesita más espacio para imágenes o contenido visual",
+              "Cambiar el diseño de una diapositiva existente según el contenido que contiene"
+            ]
+          },
+          {
+            "key": "temas_colores",
+            "name": "Temas y Colores",
+            "short_description": "Seleccionar y personalizar temas para dar aspecto coherente y profesional a la presentación.",
+            "example_tasks": [
+              "Explorar y aplicar diferentes temas desde la pestaña Diseño",
+              "Cambiar la variante de color del tema para ajustar la paleta de colores",
+              "Mantener consistencia usando los mismos colores de tema en toda la presentación",
+              "Elegir combinaciones de colores con buen contraste para facilitar lectura",
+              "Personalizar colores de fondo evitando tonos que dificulten leer el texto"
+            ]
+          },
+          {
+            "key": "fondos_texturas",
+            "name": "Fondos y Texturas",
+            "short_description": "Aplicar fondos atractivos sin comprometer la legibilidad del contenido.",
+            "example_tasks": [
+              "Aplicar color sólido como fondo de diapositiva",
+              "Usar gradientes para fondos más dinámicos sin ser distractores",
+              "Insertar imágenes como fondo ajustando transparencia para no opacar texto",
+              "Comprender que fondos muy elaborados pueden dificultar lectura del contenido",
+              "Mantener consistencia de fondos o usar cambios intencionalmente para separar secciones"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "contenido_diapositivas",
+        "name": "Contenido de Diapositivas",
+        "short_description": "Agregar y formatear texto, imágenes y otros elementos en las diapositivas.",
+        "sub_topics": [
+          {
+            "key": "texto_presentaciones",
+            "name": "Trabajar con Texto",
+            "short_description": "Agregar y formatear texto efectivamente siguiendo reglas de presentaciones claras.",
+            "example_tasks": [
+              "Escribir títulos claros y concisos que resuman el contenido de cada diapositiva",
+              "Usar viñetas para presentar información en puntos clave, no párrafos largos",
+              "Aplicar regla 6x6: máximo 6 viñetas con máximo 6 palabras cada una",
+              "Cambiar tamaño de fuente apropiadamente: títulos grandes (44pt), contenido legible (28-32pt)",
+              "Usar negritas para énfasis pero evitar combinar múltiples formatos (negrita+cursiva+subrayado)"
+            ]
+          },
+          {
+            "key": "imagenes_presentacion",
+            "name": "Insertar Imágenes",
+            "short_description": "Agregar imágenes relevantes que apoyen y refuercen el mensaje de la presentación.",
+            "example_tasks": [
+              "Insertar imágenes desde archivo o desde Internet (con derechos de uso apropiados)",
+              "Redimensionar imágenes manteniendo proporciones para evitar distorsión",
+              "Recortar imágenes para mostrar solo la parte relevante del contenido",
+              "Aplicar estilos de imagen: marcos, sombras, efectos artísticos con moderación",
+              "Posicionar imágenes estratégicamente sin bloquear texto importante"
+            ]
+          },
+          {
+            "key": "formas_iconos",
+            "name": "Formas e Iconos",
+            "short_description": "Usar formas básicas e iconos para crear diagramas y elementos visuales.",
+            "example_tasks": [
+              "Insertar formas básicas: rectángulos, círculos, flechas, líneas",
+              "Agregar texto dentro de formas para crear botones o elementos destacados",
+              "Usar iconos para representar conceptos visualmente de manera clara",
+              "Agrupar formas relacionadas para moverlas juntas como unidad",
+              "Crear diagramas simples usando combinaciones de formas y conectores"
+            ]
+          },
+          {
+            "key": "tablas_graficas",
+            "name": "Tablas y Gráficas",
+            "short_description": "Insertar tablas y gráficas para presentar datos de manera visual y comprensible.",
+            "example_tasks": [
+              "Insertar tabla especificando filas y columnas para organizar información",
+              "Formatear tabla con diseños predefinidos para mejor presentación",
+              "Crear gráficas básicas: columnas, barras, circular para representar datos",
+              "Editar datos de la gráfica desde la hoja de datos vinculada",
+              "Agregar título y etiquetas claras a gráficas para facilitar comprensión"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "efectos_visuales",
+        "name": "Efectos Visuales y Animaciones",
+        "short_description": "Aplicar transiciones entre diapositivas y animaciones a elementos para presentaciones dinámicas.",
+        "sub_topics": [
+          {
+            "key": "transiciones",
+            "name": "Transiciones entre Diapositivas",
+            "short_description": "Agregar efectos de transición suaves y profesionales al cambiar de diapositiva.",
+            "example_tasks": [
+              "Aplicar transiciones simples como Desvanecer o Empujar desde la pestaña Transiciones",
+              "Ajustar la duración de transiciones para que no sean muy rápidas ni muy lentas",
+              "Aplicar la misma transición a todas las diapositivas para consistencia",
+              "Usar transiciones más llamativas solo en momentos clave de la presentación",
+              "Vista previa de transiciones antes de la presentación final"
+            ]
+          },
+          {
+            "key": "animaciones_objetos",
+            "name": "Animaciones de Objetos",
+            "short_description": "Animar texto e imágenes para revelar información gradualmente durante la presentación.",
+            "example_tasks": [
+              "Aplicar animación de entrada para hacer aparecer viñetas una por una",
+              "Usar animación de énfasis para llamar atención a elementos importantes",
+              "Configurar orden de animación cuando hay múltiples elementos en una diapositiva",
+              "Ajustar velocidad y retraso de animaciones para timing apropiado",
+              "Usar animaciones con propósito, no solo por decoración"
+            ]
+          },
+          {
+            "key": "multimedia",
+            "name": "Multimedia en Presentaciones",
+            "short_description": "Insertar y configurar audio y video para enriquecer presentaciones.",
+            "example_tasks": [
+              "Insertar un video desde archivo en una diapositiva",
+              "Configurar video para que se reproduzca automáticamente o al hacer clic",
+              "Insertar audio como música de fondo o narración",
+              "Ajustar volumen y configurar reproducción de multimedia",
+              "Comprender que archivos multimedia grandes aumentan el tamaño del archivo de presentación"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "presentar_proyectar",
+        "name": "Presentar y Proyectar",
+        "short_description": "Ejecutar presentaciones efectivamente usando modo de presentación y herramientas del presentador.",
+        "sub_topics": [
+          {
+            "key": "modo_presentacion",
+            "name": "Modo de Presentación",
+            "short_description": "Iniciar y navegar presentaciones en pantalla completa de manera efectiva.",
+            "example_tasks": [
+              "Iniciar presentación desde el principio usando F5 o botón Presentación con diapositivas",
+              "Iniciar desde diapositiva actual usando Shift+F5",
+              "Navegar entre diapositivas con clic, flechas del teclado o espaciador",
+              "Usar la tecla Esc para salir del modo presentación",
+              "Practicar presentar manteniendo contacto visual con la audiencia, no leyendo las diapositivas"
+            ]
+          },
+          {
+            "key": "herramientas_presentador",
+            "name": "Herramientas del Presentador",
+            "short_description": "Usar puntero láser, resaltador y otras herramientas durante la presentación.",
+            "example_tasks": [
+              "Activar el puntero láser durante presentación con Ctrl+clic manteniendo presionado",
+              "Usar herramientas de lápiz o resaltador para marcar puntos importantes",
+              "Hacer clic derecho durante presentación para acceder a opciones de navegación",
+              "Poner la pantalla en negro o blanco temporalmente para centrar atención",
+              "Practicar el uso de herramientas sin distraer excesivamente de la presentación"
+            ]
+          },
+          {
+            "key": "notas_presentador",
+            "name": "Notas del Presentador",
+            "short_description": "Usar notas como guía personal sin mostrarlas a la audiencia.",
+            "example_tasks": [
+              "Escribir notas recordatorias en el panel de notas de cada diapositiva",
+              "Usar Vista del presentador para ver notas mientras audiencia ve solo diapositivas",
+              "Incluir en notas puntos clave a mencionar que no están en la diapositiva",
+              "Agregar recordatorios de tiempo o actividades a realizar durante la presentación",
+              "Practicar usar notas como guía sin leerlas textualmente"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "principios_diseño",
+        "name": "Principios de Diseño de Presentaciones",
+        "short_description": "Aplicar mejores prácticas para crear presentaciones efectivas y atractivas.",
+        "sub_topics": [
+          {
+            "key": "regla_menos_mas",
+            "name": "Menos es Más",
+            "short_description": "Mantener diapositivas simples con contenido enfocado y sin saturación visual.",
+            "example_tasks": [
+              "Crear diapositivas con una idea principal por diapositiva",
+              "Evitar poner demasiado texto usando viñetas concisas en lugar de párrafos",
+              "Usar espacio en blanco estratégicamente para que diapositivas no se vean abarrotadas",
+              "Limitar número de fuentes diferentes a 2-3 en toda la presentación",
+              "Comparar diapositiva saturada vs. simple y evaluar cuál comunica mejor"
+            ]
+          },
+          {
+            "key": "jerarquia_visual",
+            "name": "Jerarquía Visual",
+            "short_description": "Organizar elementos por importancia usando tamaño, color y posición.",
+            "example_tasks": [
+              "Hacer títulos más grandes que subtítulos y contenido",
+              "Usar color o negritas para destacar información más importante",
+              "Posicionar elementos clave en áreas que atraen la vista primero",
+              "Crear contraste entre fondo y texto para asegurar legibilidad",
+              "Diseñar diapositiva guiando el ojo de la audiencia por un flujo lógico"
+            ]
+          },
+          {
+            "key": "imagenes_efectivas",
+            "name": "Uso Efectivo de Imágenes",
+            "short_description": "Seleccionar y usar imágenes que refuercen el mensaje sin ser solo decoración.",
+            "example_tasks": [
+              "Elegir imágenes de alta calidad que se relacionen directamente con el contenido",
+              "Usar imágenes para explicar conceptos complejos visualmente",
+              "Evitar imágenes de stock genéricas que no aportan al mensaje",
+              "Dar crédito apropiado a fuentes de imágenes cuando sea necesario",
+              "Balancear uso de imágenes con texto para presentaciones equilibradas"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "hojas_calculo",
+    "name": "Hojas de Cálculo",
+    "short_description": "Fundamentos de Microsoft Excel para organizar datos, realizar cálculos básicos y crear gráficas simples.",
+    "sub_topics": [
+      {
+        "key": "introduccion_excel",
+        "name": "Introducción a Excel",
+        "short_description": "Familiarizarse con la interfaz de hojas de cálculo y conceptos básicos de celdas, filas y columnas.",
+        "sub_topics": [
+          {
+            "key": "interfaz_excel",
+            "name": "Interfaz de Excel",
+            "short_description": "Identificar elementos principales: celdas, filas, columnas, barra de fórmulas, hojas.",
+            "example_tasks": [
+              "Abrir Excel e identificar la cuadrícula de celdas, encabezados de columna (A,B,C) y fila (1,2,3)",
+              "Comprender que cada celda tiene una dirección única como A1, B5, C10",
+              "Explorar la barra de fórmulas donde se muestra y edita el contenido de celdas",
+              "Navegar entre diferentes hojas usando las pestañas en la parte inferior",
+              "Usar las barras de desplazamiento para moverse por hojas grandes"
+            ]
+          },
+          {
+            "key": "navegacion_seleccion",
+            "name": "Navegación y Selección",
+            "short_description": "Moverse eficientemente por la hoja y seleccionar rangos de celdas.",
+            "example_tasks": [
+              "Hacer clic en una celda para seleccionarla y ver su dirección en el cuadro de nombres",
+              "Usar flechas del teclado para moverse entre celdas",
+              "Seleccionar rangos de celdas arrastrando con el ratón",
+              "Seleccionar columna completa haciendo clic en el encabezado de columna",
+              "Seleccionar fila completa haciendo clic en el número de fila"
+            ]
+          },
+          {
+            "key": "ingresar_datos",
+            "name": "Ingresar Datos",
+            "short_description": "Escribir diferentes tipos de datos: texto, números, fechas en las celdas.",
+            "example_tasks": [
+              "Hacer clic en una celda, escribir datos y presionar Enter para confirmar",
+              "Ingresar texto como encabezados de columnas o descripciones",
+              "Ingresar números para realizar cálculos posteriores",
+              "Ingresar fechas en formato correcto (día/mes/año)",
+              "Editar contenido de celda haciendo doble clic o usando F2"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "formato_celdas",
+        "name": "Formato de Celdas",
+        "short_description": "Aplicar formato visual a celdas para mejorar presentación y legibilidad de datos.",
+        "sub_topics": [
+          {
+            "key": "formato_texto",
+            "name": "Formato de Texto",
+            "short_description": "Cambiar fuente, tamaño, color y estilo del texto en celdas.",
+            "example_tasks": [
+              "Aplicar negritas a encabezados de columnas para destacarlos",
+              "Cambiar tamaño de fuente para hacer títulos más grandes",
+              "Centrar texto en celdas para mejor presentación",
+              "Cambiar color de fuente para destacar datos importantes",
+              "Aplicar formato de moneda a números que representan dinero"
+            ]
+          },
+          {
+            "key": "bordes_relleno",
+            "name": "Bordes y Relleno",
+            "short_description": "Agregar bordes y color de fondo a celdas para crear tablas visualmente organizadas.",
+            "example_tasks": [
+              "Aplicar bordes externos a un rango de celdas para crear tabla",
+              "Usar todos los bordes para separar claramente cada celda",
+              "Aplicar color de relleno a fila de encabezados para distinguirla",
+              "Usar colores alternados en filas para facilitar lectura (bandas)",
+              "Crear tablas con formato profesional usando estilos predefinidos"
+            ]
+          },
+          {
+            "key": "ancho_alto",
+            "name": "Ancho de Columnas y Alto de Filas",
+            "short_description": "Ajustar dimensiones de filas y columnas para que el contenido se muestre completamente.",
+            "example_tasks": [
+              "Hacer doble clic en el borde entre columnas para autoajustar ancho al contenido",
+              "Arrastrar bordes de columnas para ajustar ancho manualmente",
+              "Ajustar alto de filas para acomodar texto de varias líneas",
+              "Ocultar columnas o filas que no necesitan mostrarse temporalmente",
+              "Mostrar columnas o filas ocultas cuando se necesiten de nuevo"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "formulas_basicas",
+        "name": "Fórmulas Básicas",
+        "short_description": "Crear fórmulas simples para realizar cálculos automáticos con los datos.",
+        "sub_topics": [
+          {
+            "key": "operaciones_aritmeticas",
+            "name": "Operaciones Aritméticas",
+            "short_description": "Realizar sumas, restas, multiplicaciones y divisiones usando fórmulas.",
+            "example_tasks": [
+              "Crear fórmula de suma escribiendo =A1+A2 para sumar dos celdas",
+              "Usar operador - para restar: =B5-B3",
+              "Multiplicar usando asterisco *: =C2*D2",
+              "Dividir usando diagonal /: =E10/F10",
+              "Combinar operaciones en una fórmula respetando orden de operaciones"
+            ]
+          },
+          {
+            "key": "funcion_suma",
+            "name": "Función SUMA",
+            "short_description": "Usar la función SUMA para agregar rápidamente rangos de números.",
+            "example_tasks": [
+              "Escribir =SUMA(A1:A10) para sumar un rango de celdas",
+              "Usar el botón de Autosuma (Σ) para insertar función SUMA rápidamente",
+              "Sumar rangos no contiguos: =SUMA(A1:A5,C1:C5)",
+              "Crear fórmulas de suma para calcular totales en tablas de datos",
+              "Verificar que el resultado de SUMA sea correcto comparando con suma manual"
+            ]
+          },
+          {
+            "key": "promedio_conteo",
+            "name": "PROMEDIO y CONTAR",
+            "short_description": "Calcular promedios y contar elementos usando funciones básicas.",
+            "example_tasks": [
+              "Usar =PROMEDIO(B2:B20) para calcular el promedio de calificaciones",
+              "Aplicar función CONTAR para saber cuántas celdas contienen números",
+              "Usar CONTARA para contar celdas con cualquier tipo de contenido",
+              "Combinar funciones: calcular promedio de un rango y contar cuántos valores tiene",
+              "Interpretar resultados de funciones en contextos reales como calificaciones o gastos"
+            ]
+          },
+          {
+            "key": "referencias_celdas",
+            "name": "Referencias de Celdas",
+            "short_description": "Comprender cómo las fórmulas usan referencias a celdas y cómo copiarlas.",
+            "example_tasks": [
+              "Crear fórmula en una celda y copiarla hacia abajo viendo cómo referencias se ajustan",
+              "Comprender referencias relativas: cuando se copia =A1+B1, cambia a =A2+B2",
+              "Usar copiar y pegar para replicar fórmulas en múltiples celdas",
+              "Arrastrar el controlador de relleno para copiar fórmulas rápidamente",
+              "Verificar que fórmulas copiadas hagan referencia a celdas correctas"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "organizacion_datos",
+        "name": "Organización de Datos",
+        "short_description": "Estructurar y organizar información en tablas lógicas y funcionales.",
+        "sub_topics": [
+          {
+            "key": "crear_tablas",
+            "name": "Crear Tablas de Datos",
+            "short_description": "Diseñar tablas con encabezados claros y datos bien organizados.",
+            "example_tasks": [
+              "Crear tabla con encabezados descriptivos en primera fila",
+              "Organizar datos en columnas según categorías: nombre, fecha, cantidad, precio",
+              "Mantener un tipo de dato consistente en cada columna",
+              "Evitar celdas vacías en medio de datos para facilitar cálculos",
+              "Crear tabla de control de gastos mensuales o registro de calificaciones"
+            ]
+          },
+          {
+            "key": "ordenar_datos",
+            "name": "Ordenar Datos",
+            "short_description": "Organizar información alfabéticamente, numéricamente o por fecha.",
+            "example_tasks": [
+              "Seleccionar datos y ordenar alfabéticamente de A a Z por una columna",
+              "Ordenar números de mayor a menor o viceversa",
+              "Ordenar por múltiples columnas cuando sea necesario",
+              "Comprender que al ordenar, las filas se mantienen juntas",
+              "Practicar ordenar lista de estudiantes por nombre o por calificación"
+            ]
+          },
+          {
+            "key": "filtrar_datos",
+            "name": "Filtrar Datos",
+            "short_description": "Mostrar solo datos que cumplen ciertos criterios ocultando el resto temporalmente.",
+            "example_tasks": [
+              "Activar autofiltro haciendo clic en Datos > Filtro",
+              "Usar flechas de filtro para seleccionar qué valores mostrar",
+              "Filtrar por texto: mostrar solo filas que contienen cierta palabra",
+              "Filtrar por números: mostrar solo valores mayores que cierto número",
+              "Quitar filtros para volver a mostrar todos los datos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "graficas_excel",
+        "name": "Gráficas en Excel",
+        "short_description": "Crear representaciones visuales de datos usando diferentes tipos de gráficas.",
+        "sub_topics": [
+          {
+            "key": "tipos_graficas",
+            "name": "Tipos de Gráficas",
+            "short_description": "Conocer cuándo usar gráficas de columnas, barras, líneas o circulares.",
+            "example_tasks": [
+              "Crear gráfica de columnas para comparar cantidades entre categorías",
+              "Usar gráfica de barras cuando hay muchas categorías o nombres largos",
+              "Crear gráfica de líneas para mostrar tendencias a través del tiempo",
+              "Usar gráfica circular para mostrar partes de un total (porcentajes)",
+              "Seleccionar el tipo de gráfica apropiado según los datos y mensaje a comunicar"
+            ]
+          },
+          {
+            "key": "crear_grafica",
+            "name": "Crear Gráfica Básica",
+            "short_description": "Proceso de seleccionar datos e insertar gráfica en la hoja.",
+            "example_tasks": [
+              "Seleccionar rango de datos incluyendo encabezados",
+              "Ir a Insertar > Gráficas y elegir tipo apropiado",
+              "Observar cómo Excel crea la gráfica basándose en datos seleccionados",
+              "Mover y redimensionar gráfica en la hoja",
+              "Crear gráfica simple de sus calificaciones o gastos semanales"
+            ]
+          },
+          {
+            "key": "personalizar_grafica",
+            "name": "Personalizar Gráficas",
+            "short_description": "Agregar títulos, etiquetas y cambiar colores para mejorar claridad de gráficas.",
+            "example_tasks": [
+              "Agregar título descriptivo a la gráfica explicando qué muestra",
+              "Agregar etiquetas a ejes X e Y para clarificar qué representan",
+              "Cambiar colores de las barras o sectores para mejor visualización",
+              "Mostrar valores exactos en las barras o sectores",
+              "Modificar estilo de gráfica usando diseños predefinidos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "aplicaciones_practicas",
+        "name": "Aplicaciones Prácticas de Excel",
+        "short_description": "Usar Excel para resolver problemas cotidianos y escolares.",
+        "sub_topics": [
+          {
+            "key": "control_gastos",
+            "name": "Control de Gastos Personales",
+            "short_description": "Crear hoja para registrar y calcular ingresos y gastos.",
+            "example_tasks": [
+              "Diseñar tabla con columnas: Fecha, Concepto, Ingreso, Gasto",
+              "Usar fórmulas SUMA para calcular total de ingresos y gastos",
+              "Calcular saldo restando gastos de ingresos",
+              "Crear gráfica mostrando distribución de gastos por categoría",
+              "Analizar datos para identificar en qué gastan más"
+            ]
+          },
+          {
+            "key": "registro_calificaciones",
+            "name": "Registro de Calificaciones",
+            "short_description": "Organizar calificaciones por materia y calcular promedios.",
+            "example_tasks": [
+              "Crear tabla con materias en filas y parciales en columnas",
+              "Usar PROMEDIO para calcular promedio por materia",
+              "Calcular promedio general de todas las materias",
+              "Aplicar formato condicional destacando calificaciones bajas",
+              "Crear gráfica de líneas mostrando evolución de calificaciones"
+            ]
+          },
+          {
+            "key": "horarios_listas",
+            "name": "Horarios y Listas",
+            "short_description": "Crear horarios de clase, listas de tareas o inventarios simples.",
+            "example_tasks": [
+              "Diseñar horario semanal con días en columnas y horas en filas",
+              "Crear lista de útiles escolares con cantidad y precio",
+              "Calcular costo total usando multiplicación y suma",
+              "Organizar lista de tareas pendientes con fechas de entrega",
+              "Usar formato condicional para resaltar tareas urgentes"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "busqueda_informacion",
+    "name": "Búsqueda y Evaluación de Información",
+    "short_description": "Estrategias para buscar información en Internet de manera efectiva y evaluar la confiabilidad de las fuentes.",
+    "sub_topics": [
+      {
+        "key": "motores_busqueda",
+        "name": "Motores de Búsqueda",
+        "short_description": "Usar buscadores como Google de manera efectiva con estrategias de búsqueda apropiadas.",
+        "sub_topics": [
+          {
+            "key": "busquedas_basicas",
+            "name": "Búsquedas Básicas",
+            "short_description": "Realizar búsquedas simples usando palabras clave relevantes.",
+            "example_tasks": [
+              "Escribir palabras clave relacionadas con el tema en lugar de preguntas completas",
+              "Usar palabras específicas para obtener resultados más relevantes",
+              "Intentar diferentes palabras clave si los primeros resultados no son útiles",
+              "Revisar los primeros resultados pero considerar explorar más allá de la primera página",
+              "Practicar búsquedas sobre temas de tarea escolar usando términos apropiados"
+            ]
+          },
+          {
+            "key": "refinar_busquedas",
+            "name": "Refinar Búsquedas",
+            "short_description": "Mejorar resultados usando operadores y filtros de búsqueda.",
+            "example_tasks": [
+              "Usar comillas para buscar frase exacta: \"Revolución Mexicana\"",
+              "Excluir palabras usando el signo menos: animales -domésticos",
+              "Buscar en sitio específico usando site: ejemplo site:gob.mx",
+              "Filtrar resultados por fecha para encontrar información reciente",
+              "Usar búsqueda de imágenes, videos o noticias según lo necesitado"
+            ]
+          },
+          {
+            "key": "interpretar_resultados",
+            "name": "Interpretar Resultados de Búsqueda",
+            "short_description": "Analizar títulos y descripciones de resultados para elegir los más relevantes.",
+            "example_tasks": [
+              "Leer títulos y fragmentos antes de hacer clic en resultados",
+              "Identificar si el resultado es artículo, video, PDF u otro formato",
+              "Verificar la URL para asegurar que sea un sitio confiable",
+              "Abrir varios resultados prometedores en pestañas diferentes para comparar",
+              "Evitar hacer clic en anuncios que aparecen como primeros resultados"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fuentes_confiables",
+        "name": "Identificar Fuentes Confiables",
+        "short_description": "Evaluar la credibilidad y confiabilidad de sitios web e información encontrada.",
+        "sub_topics": [
+          {
+            "key": "tipos_fuentes",
+            "name": "Tipos de Fuentes",
+            "short_description": "Distinguir entre diferentes tipos de fuentes: académicas, gubernamentales, comerciales, personales.",
+            "example_tasks": [
+              "Identificar sitios gubernamentales por extensión .gob.mx como fuentes oficiales",
+              "Reconocer sitios educativos .edu.mx como fuentes académicas confiables",
+              "Distinguir entre sitios informativos y blogs de opinión personal",
+              "Comprender que Wikipedia es punto de partida pero no fuente final para trabajos",
+              "Crear lista de sitios confiables para diferentes tipos de información"
+            ]
+          },
+          {
+            "key": "evaluar_credibilidad",
+            "name": "Evaluar Credibilidad",
+            "short_description": "Aplicar criterios para determinar si una fuente es confiable y precisa.",
+            "example_tasks": [
+              "Verificar quién es el autor y si tiene credenciales en el tema",
+              "Revisar la fecha de publicación para asegurar que información es actual",
+              "Buscar referencias o fuentes citadas dentro del artículo",
+              "Comparar información con otras fuentes para verificar consistencia",
+              "Desconfiar de sitios con muchos errores ortográficos o diseño muy pobre"
+            ]
+          },
+          {
+            "key": "detectar_desinformacion",
+            "name": "Detectar Desinformación",
+            "short_description": "Reconocer señales de información falsa o engañosa en Internet.",
+            "example_tasks": [
+              "Identificar titulares sensacionalistas diseñados para atraer clics",
+              "Cuestionar información que parece demasiado increíble o extrema",
+              "Verificar imágenes usando búsqueda inversa de imágenes si parecen sospechosas",
+              "Reconocer diferencia entre hechos y opiniones en artículos",
+              "Consultar sitios de verificación de hechos cuando haya dudas"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tomar_notas",
+        "name": "Tomar Notas de Fuentes en Línea",
+        "short_description": "Recopilar información efectivamente evitando plagio y organizando ideas.",
+        "sub_topics": [
+          {
+            "key": "parafrasear",
+            "name": "Parafrasear Información",
+            "short_description": "Expresar ideas de fuentes con propias palabras en lugar de copiar textualmente.",
+            "example_tasks": [
+              "Leer un párrafo completo antes de escribir notas",
+              "Cerrar la página y escribir la idea principal con sus propias palabras",
+              "Comparar su paráfrasis con el original para asegurar que es diferente",
+              "Comprender que cambiar solo algunas palabras sigue siendo plagio",
+              "Practicar resumir artículos cortos en 3-4 oraciones propias"
+            ]
+          },
+          {
+            "key": "organizar_notas",
+            "name": "Organizar Notas de Investigación",
+            "short_description": "Estructurar información recopilada de manera lógica para facilitar su uso.",
+            "example_tasks": [
+              "Crear documento con secciones para diferentes aspectos del tema investigado",
+              "Anotar la fuente de cada información: título del artículo, sitio web, fecha",
+              "Usar viñetas o números para organizar puntos clave",
+              "Destacar información más importante con negritas o colores",
+              "Mantener lista de todas las fuentes consultadas para referencias"
+            ]
+          },
+          {
+            "key": "citar_fuentes",
+            "name": "Citar Fuentes Correctamente",
+            "short_description": "Dar crédito apropiado a fuentes de información usadas en trabajos.",
+            "example_tasks": [
+              "Comprender por qué es importante dar crédito a autores originales",
+              "Incluir nombre del sitio web o autor cuando usan información específica",
+              "Crear lista de sitios web consultados al final del trabajo",
+              "Usar formato simple de citación: Título, Autor, Sitio web, Fecha de consulta",
+              "Pedir ayuda al maestro para formato de citas más complejas"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "investigacion_escolar",
+        "name": "Investigación para Trabajos Escolares",
+        "short_description": "Proceso completo de investigación desde definir tema hasta presentar resultados.",
+        "sub_topics": [
+          {
+            "key": "definir_tema",
+            "name": "Definir Tema de Investigación",
+            "short_description": "Seleccionar y delimitar tema de investigación apropiadamente.",
+            "example_tasks": [
+              "Elegir tema que sea ni muy amplio ni muy específico",
+              "Convertir tema general en preguntas específicas a responder",
+              "Hacer lluvia de ideas sobre qué aspectos del tema investigar",
+              "Consultar con maestro que el tema sea apropiado y manejable",
+              "Crear lista de palabras clave relacionadas con el tema"
+            ]
+          },
+          {
+            "key": "plan_investigacion",
+            "name": "Planear la Investigación",
+            "short_description": "Organizar proceso de búsqueda antes de comenzar.",
+            "example_tasks": [
+              "Hacer lista de qué información específica necesitan encontrar",
+              "Identificar tipos de fuentes que serán más útiles para su tema",
+              "Establecer cuántas fuentes necesitan consultar según requisitos",
+              "Crear cronograma con fechas para completar cada parte de investigación",
+              "Preparar plantilla para organizar notas antes de comenzar búsqueda"
+            ]
+          },
+          {
+            "key": "sintetizar_informacion",
+            "name": "Sintetizar Información",
+            "short_description": "Combinar información de múltiples fuentes en trabajo coherente.",
+            "example_tasks": [
+              "Identificar ideas comunes que aparecen en varias fuentes",
+              "Notar cuando fuentes tienen información contradictoria",
+              "Organizar información por temas o subtemas en lugar de por fuente",
+              "Crear esquema del trabajo antes de escribir basándose en notas",
+              "Escribir con propias palabras integrando información de diferentes fuentes"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "recursos_educativos",
+        "name": "Recursos Educativos en Línea",
+        "short_description": "Conocer y utilizar plataformas educativas y bibliotecas digitales apropiadas.",
+        "sub_topics": [
+          {
+            "key": "bibliotecas_digitales",
+            "name": "Bibliotecas Digitales",
+            "short_description": "Acceder a colecciones de libros y artículos digitales confiables.",
+            "example_tasks": [
+              "Explorar bibliotecas digitales mexicanas y latinoamericanas disponibles",
+              "Buscar libros electrónicos sobre temas de interés",
+              "Usar catálogos de bibliotecas para encontrar recursos por tema",
+              "Comprender reglas de préstamo digital cuando apliquen",
+              "Crear lista de bibliotecas digitales favoritas para consultas futuras"
+            ]
+          },
+          {
+            "key": "plataformas_educativas",
+            "name": "Plataformas Educativas",
+            "short_description": "Usar sitios educativos interactivos para aprender y practicar.",
+            "example_tasks": [
+              "Explorar plataformas educativas apropiadas recomendadas por maestro",
+              "Completar lecciones interactivas sobre temas escolares",
+              "Ver videos educativos para complementar aprendizaje en clase",
+              "Realizar ejercicios de práctica en línea para diferentes materias",
+              "Registrarse en plataformas educativas con supervisión de adultos"
+            ]
+          },
+          {
+            "key": "contenido_multimedia",
+            "name": "Contenido Multimedia Educativo",
+            "short_description": "Aprovechar videos, podcasts y recursos interactivos para aprender.",
+            "example_tasks": [
+              "Buscar videos educativos en YouTube o plataformas similares sobre temas de estudio",
+              "Evaluar calidad y confiabilidad de canales educativos",
+              "Tomar notas mientras ven videos educativos",
+              "Usar simulaciones y experimentos virtuales cuando estén disponibles",
+              "Compartir recursos educativos útiles con compañeros de clase"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "contenido_multimedia",
+    "name": "Creación de Contenido Multimedia",
+    "short_description": "Introducción a la creación y edición básica de imágenes, audio y video para proyectos educativos.",
+    "sub_topics": [
+      {
+        "key": "imagenes_digitales",
+        "name": "Trabajo con Imágenes Digitales",
+        "short_description": "Comprender conceptos básicos de imágenes digitales y realizar ediciones simples.",
+        "sub_topics": [
+          {
+            "key": "formatos_imagen",
+            "name": "Formatos de Imagen",
+            "short_description": "Conocer diferentes formatos de imagen y cuándo usar cada uno.",
+            "example_tasks": [
+              "Identificar formatos comunes: JPG (fotografías), PNG (transparencias), GIF (animaciones)",
+              "Comprender que JPG es mejor para fotos mientras PNG mantiene mejor calidad",
+              "Reconocer íconos de diferentes tipos de archivos de imagen",
+              "Guardar imágenes en formato apropiado según el uso previsto",
+              "Comprender concepto básico de compresión y calidad de imagen"
+            ]
+          },
+          {
+            "key": "edicion_basica",
+            "name": "Edición Básica de Imágenes",
+            "short_description": "Realizar ajustes simples a imágenes usando herramientas básicas.",
+            "example_tasks": [
+              "Recortar imágenes para eliminar partes no deseadas usando Paint o herramienta similar",
+              "Cambiar tamaño de imágenes para usar en presentaciones o documentos",
+              "Rotar o voltear imágenes cuando estén en orientación incorrecta",
+              "Ajustar brillo y contraste básico para mejorar visibilidad",
+              "Agregar texto simple a imágenes para crear carteles o anuncios"
+            ]
+          },
+          {
+            "key": "captura_pantalla",
+            "name": "Captura de Pantalla",
+            "short_description": "Tomar capturas de pantalla para documentar trabajo o crear tutoriales.",
+            "example_tasks": [
+              "Usar tecla Impr Pant (Print Screen) para capturar toda la pantalla",
+              "Usar Alt+Impr Pant para capturar solo la ventana activa",
+              "Pegar captura en Paint o Word usando Ctrl+V",
+              "Usar Herramienta Recortes de Windows para capturas personalizadas",
+              "Guardar capturas con nombres descriptivos para encontrarlas fácilmente"
+            ]
+          },
+          {
+            "key": "derechos_imagen",
+            "name": "Derechos de Uso de Imágenes",
+            "short_description": "Comprender que no todas las imágenes en Internet pueden usarse libremente.",
+            "example_tasks": [
+              "Entender que las imágenes en Internet tienen dueño y derechos de autor",
+              "Buscar imágenes con licencia de uso libre o Creative Commons",
+              "Usar herramientas de búsqueda con filtro de derechos de uso",
+              "Dar crédito al autor cuando usan imágenes de otros",
+              "Crear sus propias imágenes cuando sea posible para evitar problemas de derechos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "audio_digital",
+        "name": "Audio Digital Básico",
+        "short_description": "Grabar y editar audio simple para proyectos educativos.",
+        "sub_topics": [
+          {
+            "key": "grabar_audio",
+            "name": "Grabar Audio",
+            "short_description": "Usar grabadora de voz para crear archivos de audio.",
+            "example_tasks": [
+              "Abrir Grabadora de Voz de Windows u otra herramienta simple",
+              "Probar micrófono antes de grabar verificando niveles de volumen",
+              "Grabar voz con claridad en ambiente silencioso",
+              "Escuchar grabación para verificar calidad antes de guardar",
+              "Guardar archivo de audio con nombre descriptivo"
+            ]
+          },
+          {
+            "key": "edicion_audio_simple",
+            "name": "Edición Simple de Audio",
+            "short_description": "Realizar recortes básicos y ajustes de volumen en audio.",
+            "example_tasks": [
+              "Recortar principio y final de grabación para eliminar silencios",
+              "Ajustar volumen si la grabación es muy baja o muy alta",
+              "Combinar varios clips de audio en secuencia simple",
+              "Exportar audio en formato común como MP3",
+              "Usar audio grabado en presentaciones agregándolo a diapositivas"
+            ]
+          },
+          {
+            "key": "podcast_simple",
+            "name": "Podcast o Narración Simple",
+            "short_description": "Crear narraciones de audio para presentar información.",
+            "example_tasks": [
+              "Escribir guion breve antes de grabar para organizarse",
+              "Grabar lectura en voz alta de cuento o reporte",
+              "Practicar buena dicción y velocidad apropiada al hablar",
+              "Agregar música de fondo simple si está disponible",
+              "Compartir podcast con compañeros de clase para retroalimentación"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "video_basico",
+        "name": "Video Digital Básico",
+        "short_description": "Introducción a creación de videos simples para proyectos escolares.",
+        "sub_topics": [
+          {
+            "key": "grabar_video",
+            "name": "Grabar Video",
+            "short_description": "Usar cámara web o dispositivo móvil para grabar videos simples.",
+            "example_tasks": [
+              "Configurar cámara web y probar antes de grabar",
+              "Planear qué mostrar o decir en el video antes de iniciar grabación",
+              "Grabar en buena iluminación y con fondo apropiado",
+              "Mantener cámara estable durante grabación",
+              "Hacer varias tomas si es necesario hasta lograr buen resultado"
+            ]
+          },
+          {
+            "key": "edicion_video_simple",
+            "name": "Edición Simple de Video",
+            "short_description": "Recortar y combinar clips usando herramientas básicas.",
+            "example_tasks": [
+              "Usar Editor de Video de Windows o herramienta similar simple",
+              "Recortar inicio y final de clips para eliminar partes no deseadas",
+              "Unir varios clips en secuencia lógica",
+              "Agregar títulos de texto al principio y créditos al final",
+              "Exportar video en formato apropiado para compartir"
+            ]
+          },
+          {
+            "key": "presentacion_video",
+            "name": "Presentación en Video",
+            "short_description": "Crear video presentaciones explicando temas o mostrando proyectos.",
+            "example_tasks": [
+              "Grabar presentación de tema escolar mirando a la cámara",
+              "Usar apoyo visual mostrando objetos o dibujos durante video",
+              "Practicar antes de grabar para hablar con confianza",
+              "Mantener videos cortos y enfocados (2-3 minutos)",
+              "Compartir video con maestro y compañeros como presentación alternativa"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "herramientas_creatividad",
+        "name": "Herramientas de Creatividad Digital",
+        "short_description": "Explorar aplicaciones simples para expresión creativa digital.",
+        "sub_topics": [
+          {
+            "key": "dibujo_digital",
+            "name": "Dibujo Digital",
+            "short_description": "Crear dibujos usando Paint u otras herramientas de dibujo simple.",
+            "example_tasks": [
+              "Usar herramientas de Paint: lápiz, pincel, formas, relleno, texto",
+              "Crear dibujos originales para ilustrar cuentos o proyectos",
+              "Experimentar con diferentes colores y grosores de línea",
+              "Combinar formas para crear ilustraciones más complejas",
+              "Guardar dibujos como imágenes para usar en otros proyectos"
+            ]
+          },
+          {
+            "key": "collages_digitales",
+            "name": "Collages Digitales",
+            "short_description": "Combinar múltiples imágenes para crear composiciones.",
+            "example_tasks": [
+              "Recopilar imágenes relacionadas con tema específico",
+              "Usar PowerPoint o Word para organizar imágenes en composición",
+              "Ajustar tamaño y posición de cada imagen en el collage",
+              "Agregar texto o etiquetas explicativas",
+              "Exportar collage completo como imagen única"
+            ]
+          },
+          {
+            "key": "infografias_simples",
+            "name": "Infografías Simples",
+            "short_description": "Crear representaciones visuales de información combinando texto e imágenes.",
+            "example_tasks": [
+              "Seleccionar información clave sobre un tema para visualizar",
+              "Usar PowerPoint para diseñar infografía con título, secciones y datos",
+              "Combinar texto breve con íconos o imágenes ilustrativas",
+              "Usar colores y formas para organizar información jerárquicamente",
+              "Presentar información compleja de manera visual y fácil de entender"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "proyectos_multimedia",
+        "name": "Proyectos Multimedia Integrados",
+        "short_description": "Combinar diferentes tipos de medios en proyectos creativos.",
+        "sub_topics": [
+          {
+            "key": "presentacion_multimedia",
+            "name": "Presentación Multimedia",
+            "short_description": "Crear presentaciones que integren texto, imágenes, audio y video.",
+            "example_tasks": [
+              "Planear presentación que incluya diferentes tipos de contenido",
+              "Insertar imágenes, videos y audio en diapositivas de PowerPoint",
+              "Grabar narración para acompañar diapositivas",
+              "Sincronizar transiciones con audio si es posible",
+              "Presentar proyecto multimedia combinando múltiples habilidades aprendidas"
+            ]
+          },
+          {
+            "key": "cuento_digital",
+            "name": "Cuento Digital",
+            "short_description": "Crear historia ilustrada con imágenes, texto y posiblemente audio.",
+            "example_tasks": [
+              "Escribir cuento corto original o adaptar uno conocido",
+              "Crear o buscar imágenes para ilustrar cada parte del cuento",
+              "Diseñar páginas combinando texto e imágenes en PowerPoint o Word",
+              "Agregar narración de audio leyendo el cuento si lo desean",
+              "Compartir cuento digital con compañeros o familia"
+            ]
+          },
+          {
+            "key": "tutorial_video",
+            "name": "Tutorial en Video",
+            "short_description": "Enseñar algo a otros mediante video demostrativo.",
+            "example_tasks": [
+              "Elegir habilidad o proceso simple que puedan enseñar",
+              "Planear pasos del tutorial de manera lógica y clara",
+              "Grabar video mostrando cada paso mientras explican verbalmente",
+              "Agregar títulos de texto resaltando pasos clave",
+              "Revisar que tutorial sea claro y fácil de seguir antes de compartir"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "ciudadania_digital_etica",
+    "name": "Ciudadanía Digital y Ética",
+    "short_description": "Desarrollo de comportamiento responsable, ético y seguro en entornos digitales, incluyendo derechos y responsabilidades en línea.",
+    "sub_topics": [
+      {
+        "key": "derechos_digitales",
+        "name": "Derechos Digitales",
+        "short_description": "Comprender los derechos fundamentales en el mundo digital.",
+        "sub_topics": [
+          {
+            "key": "acceso_informacion",
+            "name": "Derecho al Acceso a la Información",
+            "short_description": "Reconocer el derecho de acceder a información y recursos digitales.",
+            "example_tasks": [
+              "Comprender que todos tienen derecho a acceder a Internet e información",
+              "Identificar barreras que limitan acceso digital: económicas, geográficas, educativas",
+              "Apreciar recursos digitales disponibles en escuela y biblioteca",
+              "Reconocer importancia de alfabetización digital para ejercer este derecho",
+              "Discutir cómo acceso digital puede mejorar educación y oportunidades"
+            ]
+          },
+          {
+            "key": "privacidad_digital",
+            "name": "Derecho a la Privacidad",
+            "short_description": "Entender el derecho a controlar información personal en línea.",
+            "example_tasks": [
+              "Comprender que tienen derecho a decidir qué información personal compartir",
+              "Reconocer que empresas y sitios deben proteger datos personales",
+              "Aprender a leer políticas de privacidad básicas (con ayuda)",
+              "Saber que pueden pedir eliminación de su información en ciertos casos",
+              "Comprender límites de privacidad en espacios compartidos como escuela"
+            ]
+          },
+          {
+            "key": "expresion_digital",
+            "name": "Derecho a la Expresión",
+            "short_description": "Reconocer el derecho a expresar ideas respetando derechos de otros.",
+            "example_tasks": [
+              "Comprender que pueden expresar ideas y opiniones en línea",
+              "Reconocer límites: no pueden publicar cosas que dañen a otros",
+              "Entender diferencia entre libertad de expresión y discurso de odio",
+              "Practicar expresar desacuerdos respetuosamente",
+              "Crear contenido digital original ejerciendo su expresión creativa"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "responsabilidades_digitales",
+        "name": "Responsabilidades Digitales",
+        "short_description": "Reconocer obligaciones y comportamientos éticos esperados en línea.",
+        "sub_topics": [
+          {
+            "key": "respeto_en_linea",
+            "name": "Respetar a Otros en Línea",
+            "short_description": "Tratar a todos con dignidad y respeto en comunicaciones digitales.",
+            "example_tasks": [
+              "Aplicar mismas reglas de respeto que en persona a interacciones en línea",
+              "Evitar comentarios hirientes, burlas o lenguaje ofensivo",
+              "Pensar antes de publicar: '¿Cómo me sentiría si esto se dijera sobre mí?'",
+              "Defender a otros que están siendo tratados irrespetuosamente",
+              "Reportar comportamiento irrespetuoso a adultos apropiados"
+            ]
+          },
+          {
+            "key": "honestidad_digital",
+            "name": "Honestidad e Integridad",
+            "short_description": "Ser honesto en interacciones digitales y dar crédito apropiado.",
+            "example_tasks": [
+              "No hacerse pasar por otra persona en línea",
+              "Dar crédito a fuentes cuando usan trabajo o ideas de otros",
+              "Admitir errores en lugar de culpar a problemas técnicos",
+              "No compartir información falsa intencionalmente",
+              "Hacer trabajos escolares propios sin copiar de Internet"
+            ]
+          },
+          {
+            "key": "uso_responsable",
+            "name": "Uso Responsable de Tecnología",
+            "short_description": "Usar recursos digitales apropiadamente y para propósitos educativos.",
+            "example_tasks": [
+              "Usar tiempo de computadora en escuela para actividades de aprendizaje",
+              "No desperdiciar recursos digitales con uso frívolo",
+              "Respetar reglas de uso de tecnología de escuela y hogar",
+              "Cuidar equipos compartidos usándolos apropiadamente",
+              "Balancear tiempo en pantalla con otras actividades"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "ciberbullying",
+        "name": "Prevención del Ciberbullying",
+        "short_description": "Reconocer, prevenir y responder apropiadamente al acoso cibernético.",
+        "sub_topics": [
+          {
+            "key": "que_es_ciberbullying",
+            "name": "¿Qué es el Ciberbullying?",
+            "short_description": "Identificar diferentes formas de acoso en línea.",
+            "example_tasks": [
+              "Definir ciberbullying: acoso repetido usando tecnología digital",
+              "Identificar ejemplos: mensajes hirientes, exclusión intencional, difundir rumores",
+              "Comprender que ciberbullying puede ser anónimo pero sigue siendo dañino",
+              "Reconocer que compartir información vergonzosa de otros es ciberbullying",
+              "Diferenciar entre desacuerdo único y patrón de acoso repetido"
+            ]
+          },
+          {
+            "key": "no_participar",
+            "name": "No Participar en Ciberbullying",
+            "short_description": "Comprometerse a no acosar a otros en línea.",
+            "example_tasks": [
+              "Firmar compromiso de no enviar mensajes hirientes a compañeros",
+              "No compartir o dar 'me gusta' a contenido que se burla de otros",
+              "No difundir rumores o información privada de compañeros",
+              "Pensar en impacto emocional antes de publicar sobre otros",
+              "Usar empatía: imaginar cómo se sentiría estar en lugar de la otra persona"
+            ]
+          },
+          {
+            "key": "responder_ciberbullying",
+            "name": "Responder al Ciberbullying",
+            "short_description": "Saber qué hacer si son víctimas o testigos de acoso en línea.",
+            "example_tasks": [
+              "No responder a mensajes de acoso directamente",
+              "Guardar evidencia tomando capturas de pantalla",
+              "Reportar inmediatamente a padre, maestro u otro adulto de confianza",
+              "Bloquear a personas que envían mensajes de acoso",
+              "Apoyar a víctimas de ciberbullying en lugar de ignorar la situación"
+            ]
+          },
+          {
+            "key": "ser_upstander",
+            "name": "Ser un 'Upstander' Digital",
+            "short_description": "Defender a otros y tomar acción positiva contra el acoso.",
+            "example_tasks": [
+              "No ser espectador pasivo cuando ven ciberbullying",
+              "Enviar mensaje de apoyo privado a quien está siendo acosado",
+              "Reportar comportamiento de acoso a autoridades escolares",
+              "No compartir ni amplificar contenido de acoso",
+              "Crear cultura en línea de respeto y apoyo mutuo"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "propiedad_intelectual",
+        "name": "Propiedad Intelectual y Plagio",
+        "short_description": "Respetar derechos de autor y usar trabajo de otros apropiadamente.",
+        "sub_topics": [
+          {
+            "key": "derechos_autor",
+            "name": "Derechos de Autor",
+            "short_description": "Comprender qué son derechos de autor y por qué existen.",
+            "example_tasks": [
+              "Entender que creadores tienen derechos sobre su trabajo original",
+              "Reconocer que textos, imágenes, música y videos tienen derechos de autor",
+              "Comprender que no pueden copiar y usar libremente todo en Internet",
+              "Aprender sobre 'uso justo' para educación con supervisión",
+              "Respetar tiempo y esfuerzo de creadores pidiendo permiso cuando sea necesario"
+            ]
+          },
+          {
+            "key": "evitar_plagio",
+            "name": "Evitar el Plagio",
+            "short_description": "Comprender qué es plagio y cómo evitarlo en trabajos escolares.",
+            "example_tasks": [
+              "Definir plagio: presentar trabajo de otros como propio",
+              "Reconocer que copiar de Internet sin citar es plagio",
+              "Practicar parafrasear en lugar de copiar textualmente",
+              "Usar comillas cuando citan palabras exactas de una fuente",
+              "Comprender consecuencias del plagio en contexto escolar"
+            ]
+          },
+          {
+            "key": "creative_commons",
+            "name": "Contenido de Uso Libre",
+            "short_description": "Encontrar y usar recursos con licencias que permiten uso educativo.",
+            "example_tasks": [
+              "Aprender sobre Creative Commons y contenido de dominio público",
+              "Buscar imágenes y música con licencia de uso libre",
+              "Leer condiciones de licencias: algunos requieren atribución",
+              "Dar crédito apropiado incluso cuando contenido es gratuito",
+              "Crear sus propios trabajos originales cuando sea posible"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "identidad_digital",
+        "name": "Identidad Digital y Reputación",
+        "short_description": "Construir y mantener presencia en línea positiva y apropiada.",
+        "sub_topics": [
+          {
+            "key": "construccion_identidad",
+            "name": "Construir Identidad Positiva",
+            "short_description": "Crear imagen en línea que refleje mejor versión de sí mismos.",
+            "example_tasks": [
+              "Comprender que todo lo que publican contribuye a su identidad digital",
+              "Publicar contenido que los haría sentir orgullosos si padres o maestros lo vieran",
+              "Compartir logros y trabajos positivos apropiadamente",
+              "Usar nombres de usuario apropiados que no sean ofensivos",
+              "Pensar a largo plazo: cómo queremos ser recordados en línea"
+            ]
+          },
+          {
+            "key": "reputacion_en_linea",
+            "name": "Gestionar Reputación en Línea",
+            "short_description": "Cuidar cómo otros los perciben basándose en actividad digital.",
+            "example_tasks": [
+              "Buscar su propio nombre ocasionalmente para ver qué aparece",
+              "Pedir ayuda para eliminar contenido inapropiado sobre ellos",
+              "Pensar antes de publicar: '¿Esto mejora o daña mi reputación?'",
+              "Ser conscientes que comentarios y fotos pueden durar para siempre",
+              "Construir reputación de ser persona amable y respetuosa en línea"
+            ]
+          },
+          {
+            "key": "multiples_identidades",
+            "name": "Identidades en Diferentes Contextos",
+            "short_description": "Comprender cómo comportarse apropiadamente en diferentes espacios digitales.",
+            "example_tasks": [
+              "Reconocer diferencia entre comunicación con amigos vs. maestros",
+              "Ajustar lenguaje y tono según contexto (formal vs. informal)",
+              "Mantener consistencia en valores incluso al cambiar de contexto",
+              "No crear identidades falsas o engañosas en línea",
+              "Comprender que diferentes plataformas tienen diferentes expectativas"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "equilibrio_digital",
+        "name": "Equilibrio y Bienestar Digital",
+        "short_description": "Desarrollar hábitos saludables de uso de tecnología.",
+        "sub_topics": [
+          {
+            "key": "tiempo_pantalla",
+            "name": "Manejo del Tiempo de Pantalla",
+            "short_description": "Balancear uso de tecnología con otras actividades importantes.",
+            "example_tasks": [
+              "Establecer límites de tiempo para uso recreativo de tecnología",
+              "Tomar descansos regulares de pantallas para descansar ojos",
+              "Priorizar tareas escolares y responsabilidades antes de entretenimiento digital",
+              "Participar en actividades físicas y sociales fuera de pantallas",
+              "Usar tecnología intencionalmente, no por aburrimiento o hábito"
+            ]
+          },
+          {
+            "key": "desconexion_digital",
+            "name": "Desconexión Digital",
+            "short_description": "Reconocer importancia de tiempo sin dispositivos.",
+            "example_tasks": [
+              "Practicar apagar dispositivos durante comidas familiares",
+              "Evitar pantallas al menos una hora antes de dormir",
+              "Designar espacios o tiempos libres de tecnología",
+              "Disfrutar actividades que no requieren dispositivos",
+              "Reconocer beneficios de estar presente en momento sin distracciones digitales"
+            ]
+          },
+          {
+            "key": "autocuidado_digital",
+            "name": "Autocuidado Digital",
+            "short_description": "Proteger salud mental y emocional en entornos digitales.",
+            "example_tasks": [
+              "Reconocer cuándo uso de tecnología los hace sentir mal o ansiosos",
+              "Dejar de seguir o silenciar cuentas que generan sentimientos negativos",
+              "No compararse constantemente con vidas 'perfectas' en redes sociales",
+              "Tomar descansos de tecnología cuando se sientan abrumados",
+              "Buscar apoyo de adultos si experiencias en línea los afectan negativamente"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "pensamiento_computacional",
+    "name": "Introducción al Pensamiento Computacional",
+    "short_description": "Desarrollo de habilidades de resolución de problemas mediante descomposición, reconocimiento de patrones, abstracción y diseño de algoritmos.",
+    "sub_topics": [
+      {
+        "key": "que_es_pensamiento_computacional",
+        "name": "¿Qué es el Pensamiento Computacional?",
+        "short_description": "Comprender el pensamiento computacional como método de resolver problemas de manera lógica y estructurada.",
+        "sub_topics": [
+          {
+            "key": "conceptos_basicos",
+            "name": "Conceptos Básicos",
+            "short_description": "Introducción a los cuatro pilares del pensamiento computacional.",
+            "example_tasks": [
+              "Identificar los cuatro componentes: descomposición, patrones, abstracción, algoritmos",
+              "Explicar con ejemplos cotidianos cómo usamos pensamiento computacional sin darnos cuenta",
+              "Resolver problemas simples aplicando conscientemente cada componente",
+              "Crear un cartel explicando qué es pensamiento computacional con ejemplos visuales",
+              "Discutir cómo pensamiento computacional ayuda no solo en programación sino en vida diaria"
+            ]
+          },
+          {
+            "key": "pensamiento_logico",
+            "name": "Desarrollo de Pensamiento Lógico",
+            "short_description": "Fortalecer habilidades de razonamiento lógico y análisis secuencial.",
+            "example_tasks": [
+              "Resolver acertijos lógicos que requieren pensar paso a paso",
+              "Completar secuencias y predecir el siguiente elemento",
+              "Identificar causas y efectos en situaciones presentadas",
+              "Distinguir entre hechos y opiniones en argumentos",
+              "Practicar razonamiento deductivo con juegos de lógica apropiados para la edad"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "descomposicion",
+        "name": "Descomposición de Problemas",
+        "short_description": "Dividir problemas complejos en partes más pequeñas y manejables.",
+        "sub_topics": [
+          {
+            "key": "dividir_problemas",
+            "name": "Dividir Problemas Grandes",
+            "short_description": "Aprender a separar un problema en componentes más simples.",
+            "example_tasks": [
+              "Descomponer la tarea de 'organizar una fiesta' en pasos específicos",
+              "Dividir problema de limpiar su habitación en tareas pequeñas manejables",
+              "Separar proyecto escolar grande en actividades específicas con plazos",
+              "Crear diagrama mostrando cómo problema complejo se divide en partes",
+              "Practicar identificar subtareas necesarias para completar diferentes proyectos"
+            ]
+          },
+          {
+            "key": "resolver_partes",
+            "name": "Resolver Parte por Parte",
+            "short_description": "Abordar cada componente individualmente antes de integrar solución completa.",
+            "example_tasks": [
+              "Resolver un problema matemático complejo dividiéndolo en operaciones individuales",
+              "Completar proyecto de arte trabajando en una sección a la vez",
+              "Preparar receta siguiendo cada paso sin saltar adelante",
+              "Armar rompecabezas comenzando con bordes y luego secciones",
+              "Reflexionar sobre cómo resolver partes facilita completar el todo"
+            ]
+          },
+          {
+            "key": "jerarquia_tareas",
+            "name": "Jerarquía de Tareas",
+            "short_description": "Organizar tareas en orden lógico identificando dependencias.",
+            "example_tasks": [
+              "Ordenar pasos de un proceso identificando qué debe hacerse primero",
+              "Crear lista de tareas numeradas para proyecto en orden correcto",
+              "Identificar tareas que dependen de completar otras primero",
+              "Usar diagramas de flujo simples mostrando secuencia de actividades",
+              "Planificar su día organizando actividades en orden lógico"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "patrones",
+        "name": "Reconocimiento de Patrones",
+        "short_description": "Identificar similitudes, repeticiones y tendencias en datos y problemas.",
+        "sub_topics": [
+          {
+            "key": "identificar_patrones",
+            "name": "Identificar Patrones",
+            "short_description": "Reconocer elementos que se repiten o siguen una regla.",
+            "example_tasks": [
+              "Encontrar patrones en secuencias numéricas: 2, 4, 6, 8...",
+              "Identificar patrones visuales en diseños y formas geométricas",
+              "Reconocer patrones en horarios o rutinas diarias",
+              "Buscar patrones en datos simples como tabla del clima semanal",
+              "Crear sus propios patrones usando números, colores o formas"
+            ]
+          },
+          {
+            "key": "predecir_siguiente",
+            "name": "Predecir Siguientes Elementos",
+            "short_description": "Usar patrones identificados para predecir qué sigue.",
+            "example_tasks": [
+              "Completar secuencias numéricas prediciendo los siguientes números",
+              "Predecir siguiente forma en patrón visual",
+              "Anticipar eventos basándose en patrones observados",
+              "Extender series de Fibonacci o secuencias similares",
+              "Explicar la regla que permite hacer la predicción"
+            ]
+          },
+          {
+            "key": "usar_patrones",
+            "name": "Usar Patrones para Resolver Problemas",
+            "short_description": "Aplicar patrones conocidos a situaciones nuevas similares.",
+            "example_tasks": [
+              "Reconocer que problema nuevo es similar a uno resuelto anteriormente",
+              "Aplicar mismo método usado antes a problema con estructura similar",
+              "Identificar patrones en errores cometidos para evitarlos en futuro",
+              "Usar patrones para hacer estimaciones razonables",
+              "Crear estrategias basadas en patrones exitosos del pasado"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "abstraccion",
+        "name": "Abstracción",
+        "short_description": "Enfocarse en información importante ignorando detalles irrelevantes.",
+        "sub_topics": [
+          {
+            "key": "informacion_esencial",
+            "name": "Identificar Información Esencial",
+            "short_description": "Distinguir entre detalles importantes y secundarios.",
+            "example_tasks": [
+              "Leer un texto y subrayar solo información más importante",
+              "Crear resumen de historia enfocándose en eventos principales",
+              "Identificar datos clave necesarios para resolver problema matemático",
+              "Filtrar información relevante de un texto largo para tarea específica",
+              "Practicar ignorar detalles distractores al resolver problemas"
+            ]
+          },
+          {
+            "key": "modelos_simplificados",
+            "name": "Crear Modelos Simplificados",
+            "short_description": "Representar ideas complejas de manera más simple manteniendo lo esencial.",
+            "example_tasks": [
+              "Dibujar mapa simple de su escuela mostrando solo ubicaciones principales",
+              "Crear diagrama de su rutina matutina con pasos básicos",
+              "Representar ecosistema con símbolos simples en lugar de dibujos detallados",
+              "Usar iconos para representar conceptos en organizadores gráficos",
+              "Simplificar instrucciones complejas en pasos claros y concisos"
+            ]
+          },
+          {
+            "key": "generalizacion",
+            "name": "Generalización",
+            "short_description": "Crear reglas o soluciones que funcionen para múltiples casos.",
+            "example_tasks": [
+              "Formular regla general observando varios ejemplos específicos",
+              "Crear instrucciones que funcionen para diferentes situaciones similares",
+              "Identificar características comunes en grupo de objetos o problemas",
+              "Desarrollar estrategia que se pueda aplicar a varios problemas del mismo tipo",
+              "Practicar pensar en términos generales en lugar de solo casos específicos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "algoritmos_introduccion",
+        "name": "Introducción a Algoritmos",
+        "short_description": "Crear secuencias de pasos claros y ordenados para resolver problemas.",
+        "sub_topics": [
+          {
+            "key": "que_es_algoritmo",
+            "name": "¿Qué es un Algoritmo?",
+            "short_description": "Comprender algoritmo como conjunto de instrucciones paso a paso.",
+            "example_tasks": [
+              "Definir algoritmo como receta o instrucciones para completar tarea",
+              "Identificar algoritmos en vida diaria: recetas, instrucciones para llegar a lugar",
+              "Explicar por qué el orden de pasos es importante en un algoritmo",
+              "Comparar algoritmos eficientes vs. ineficientes para misma tarea",
+              "Reconocer que computadoras siguen algoritmos exactamente como se escriben"
+            ]
+          },
+          {
+            "key": "escribir_instrucciones",
+            "name": "Escribir Instrucciones Claras",
+            "short_description": "Crear pasos precisos y sin ambigüedad que otros puedan seguir.",
+            "example_tasks": [
+              "Escribir instrucciones para hacer sándwich siendo muy específicos",
+              "Crear algoritmo para cepillarse dientes sin omitir ningún paso",
+              "Escribir direcciones para llegar de un punto a otro en la escuela",
+              "Probar sus instrucciones con compañero viendo si puede seguirlas exactamente",
+              "Mejorar instrucciones basándose en problemas encontrados al probarlas"
+            ]
+          },
+          {
+            "key": "pseudocodigo_simple",
+            "name": "Pseudocódigo Simple",
+            "short_description": "Escribir algoritmos en lenguaje estructurado pero no formal.",
+            "example_tasks": [
+              "Escribir algoritmo usando estructura: Inicio, Pasos numerados, Fin",
+              "Crear pseudocódigo para rutina matutina con formato claro",
+              "Usar verbos de acción específicos: tomar, colocar, mezclar, esperar",
+              "Incluir decisiones simples: 'Si llueve, tomar paraguas'",
+              "Revisar pseudocódigo verificando que sea lógico y completo"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "depuracion_pensamiento",
+        "name": "Depuración de Procesos",
+        "short_description": "Identificar y corregir errores en soluciones y algoritmos.",
+        "sub_topics": [
+          {
+            "key": "encontrar_errores",
+            "name": "Encontrar Errores",
+            "short_description": "Detectar dónde y por qué un proceso no funciona como esperado.",
+            "example_tasks": [
+              "Seguir algoritmo paso a paso buscando dónde falla",
+              "Identificar instrucciones ambiguas que pueden interpretarse incorrectamente",
+              "Encontrar pasos faltantes que causan que proceso no funcione",
+              "Detectar pasos en orden incorrecto que causan problemas",
+              "Probar sistemáticamente cada parte para aislar el error"
+            ]
+          },
+          {
+            "key": "corregir_errores",
+            "name": "Corregir Errores",
+            "short_description": "Modificar proceso para que funcione correctamente.",
+            "example_tasks": [
+              "Reescribir instrucciones ambiguas de manera más clara",
+              "Agregar pasos faltantes donde sea necesario",
+              "Reordenar pasos para que estén en secuencia lógica",
+              "Probar solución corregida verificando que ahora funcione",
+              "Documentar qué error encontraron y cómo lo solucionaron"
+            ]
+          },
+          {
+            "key": "mentalidad_depuracion",
+            "name": "Mentalidad de Depuración",
+            "short_description": "Ver errores como oportunidades de aprendizaje, no fracasos.",
+            "example_tasks": [
+              "Comprender que errores son normales y parte del proceso de aprendizaje",
+              "Mantener actitud positiva cuando algo no funciona a la primera",
+              "Practicar persistencia intentando múltiples soluciones",
+              "Aprender de errores para evitarlos en el futuro",
+              "Celebrar cuando encuentran y corrigen errores exitosamente"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "programacion_bloques",
+    "name": "Programación Visual con Bloques",
+    "short_description": "Introducción a la programación usando plataformas visuales como Scratch para crear proyectos interactivos.",
+    "sub_topics": [
+      {
+        "key": "introduccion_scratch",
+        "name": "Introducción a Scratch",
+        "short_description": "Familiarizarse con la interfaz y conceptos básicos de Scratch.",
+        "sub_topics": [
+          {
+            "key": "interfaz_scratch",
+            "name": "Interfaz de Scratch",
+            "short_description": "Identificar áreas principales: escenario, área de bloques, área de código, lista de sprites.",
+            "example_tasks": [
+              "Abrir Scratch y explorar las diferentes secciones de la interfaz",
+              "Identificar el escenario donde se ejecuta el proyecto",
+              "Localizar la paleta de bloques organizada por categorías de color",
+              "Explorar el área de código donde se arrastran y conectan bloques",
+              "Comprender la lista de sprites y fondos en el proyecto"
+            ]
+          },
+          {
+            "key": "sprites_fondos",
+            "name": "Sprites y Fondos",
+            "short_description": "Agregar y personalizar personajes y escenarios.",
+            "example_tasks": [
+              "Seleccionar sprites de la biblioteca de Scratch",
+              "Crear sprite personalizado usando el editor de pintura",
+              "Cambiar disfraces de sprites para crear animaciones",
+              "Agregar fondos desde biblioteca o crear propios",
+              "Cambiar tamaño y posición inicial de sprites en el escenario"
+            ]
+          },
+          {
+            "key": "bloques_basicos",
+            "name": "Bloques Básicos",
+            "short_description": "Conocer los diferentes tipos de bloques y cómo se conectan.",
+            "example_tasks": [
+              "Identificar categorías de bloques: Movimiento, Apariencia, Sonido, Eventos, Control",
+              "Arrastrar bloques al área de código y conectarlos como piezas de rompecabezas",
+              "Comprender que bloques se ejecutan de arriba hacia abajo",
+              "Experimentar con diferentes bloques observando qué hace cada uno",
+              "Desconectar y reorganizar bloques para cambiar comportamiento"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "movimiento_apariencia",
+        "name": "Movimiento y Apariencia",
+        "short_description": "Programar sprites para moverse y cambiar su apariencia.",
+        "sub_topics": [
+          {
+            "key": "movimiento_basico",
+            "name": "Movimiento Básico",
+            "short_description": "Hacer que sprites se muevan por el escenario.",
+            "example_tasks": [
+              "Usar bloque 'mover 10 pasos' para mover sprite hacia adelante",
+              "Hacer que sprite gire usando bloques de rotación",
+              "Mover sprite a posición específica con coordenadas X e Y",
+              "Programar sprite para deslizarse suavemente a una ubicación",
+              "Crear movimiento continuo usando bloques dentro de ciclos"
+            ]
+          },
+          {
+            "key": "cambios_apariencia",
+            "name": "Cambios de Apariencia",
+            "short_description": "Modificar cómo se ve el sprite durante el programa.",
+            "example_tasks": [
+              "Cambiar disfraz de sprite para crear animación simple",
+              "Hacer que sprite diga algo con bocadillo de diálogo",
+              "Cambiar tamaño del sprite haciéndolo crecer o encogerse",
+              "Aplicar efectos visuales como color, brillo o transparencia",
+              "Mostrar y ocultar sprites en momentos específicos"
+            ]
+          },
+          {
+            "key": "coordenadas",
+            "name": "Sistema de Coordenadas",
+            "short_description": "Comprender posición de sprites usando coordenadas X e Y.",
+            "example_tasks": [
+              "Identificar que el centro del escenario es posición (0, 0)",
+              "Mover sprite a diferentes posiciones especificando coordenadas",
+              "Comprender que X aumenta hacia derecha y Y hacia arriba",
+              "Usar sensor de posición para ver coordenadas del sprite",
+              "Crear programa que mueva sprite a las cuatro esquinas del escenario"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "eventos_interactividad",
+        "name": "Eventos e Interactividad",
+        "short_description": "Hacer que programas respondan a acciones del usuario.",
+        "sub_topics": [
+          {
+            "key": "eventos_inicio",
+            "name": "Eventos de Inicio",
+            "short_description": "Usar bloques de eventos para comenzar ejecución de código.",
+            "example_tasks": [
+              "Usar bloque 'al presionar bandera verde' para iniciar programa",
+              "Hacer que diferentes sprites inicien cuando se presiona bandera",
+              "Comprender que bloques debajo de evento se ejecutan cuando ocurre",
+              "Usar evento 'al presionar tecla' para control con teclado",
+              "Iniciar acciones cuando se hace clic en sprite específico"
+            ]
+          },
+          {
+            "key": "interaccion_teclado",
+            "name": "Interacción con Teclado",
+            "short_description": "Controlar sprites usando teclas del teclado.",
+            "example_tasks": [
+              "Programar sprite para moverse con flechas del teclado",
+              "Usar tecla espacio para hacer que sprite salte o dispare",
+              "Asignar diferentes acciones a diferentes teclas",
+              "Crear control de videojuego simple con WASD o flechas",
+              "Combinar múltiples teclas para controles más complejos"
+            ]
+          },
+          {
+            "key": "interaccion_raton",
+            "name": "Interacción con Ratón",
+            "short_description": "Responder a clics y movimiento del ratón.",
+            "example_tasks": [
+              "Hacer que sprite siga el puntero del ratón",
+              "Programar acciones al hacer clic en sprite",
+              "Usar posición del ratón para controlar movimiento",
+              "Detectar cuándo sprite toca el puntero del ratón",
+              "Crear juego simple que requiere hacer clic en sprites en movimiento"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "sonido_multimedia",
+        "name": "Sonido y Multimedia",
+        "short_description": "Agregar efectos de sonido y música a proyectos.",
+        "sub_topics": [
+          {
+            "key": "agregar_sonidos",
+            "name": "Agregar Sonidos",
+            "short_description": "Incorporar efectos de sonido y música en programas.",
+            "example_tasks": [
+              "Seleccionar sonidos de la biblioteca de Scratch",
+              "Usar bloque 'tocar sonido' para reproducir efectos",
+              "Grabar sonidos propios usando micrófono",
+              "Reproducir música de fondo durante el proyecto",
+              "Sincronizar sonidos con acciones de sprites"
+            ]
+          },
+          {
+            "key": "control_sonido",
+            "name": "Control de Sonido",
+            "short_description": "Ajustar volumen, duración y propiedades de sonidos.",
+            "example_tasks": [
+              "Cambiar volumen de sonidos usando bloques apropiados",
+              "Esperar a que sonido termine antes de continuar",
+              "Detener todos los sonidos en momento específico",
+              "Crear secuencias de sonidos para efectos especiales",
+              "Ajustar tono de notas musicales para crear melodías"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "variables_datos",
+        "name": "Variables y Datos",
+        "short_description": "Almacenar y manipular información usando variables.",
+        "sub_topics": [
+          {
+            "key": "crear_variables",
+            "name": "Crear y Usar Variables",
+            "short_description": "Comprender variables como contenedores de información.",
+            "example_tasks": [
+              "Crear variable llamada 'puntos' para llevar marcador en juego",
+              "Dar valor inicial a variable al comenzar programa",
+              "Cambiar valor de variable sumando o restando",
+              "Mostrar variable en el escenario para que usuario la vea",
+              "Usar múltiples variables para diferentes propósitos: vidas, nivel, tiempo"
+            ]
+          },
+          {
+            "key": "operaciones_variables",
+            "name": "Operaciones con Variables",
+            "short_description": "Realizar cálculos y comparaciones con variables.",
+            "example_tasks": [
+              "Aumentar puntos cuando sprite toca objeto",
+              "Disminuir vidas cuando sprite toca enemigo",
+              "Multiplicar o dividir valores de variables",
+              "Comparar variables para tomar decisiones: si puntos > 100",
+              "Crear contador que aumenta automáticamente con el tiempo"
+            ]
+          },
+          {
+            "key": "listas_basicas",
+            "name": "Listas Básicas",
+            "short_description": "Introducción a listas para almacenar múltiples valores.",
+            "example_tasks": [
+              "Crear lista para almacenar nombres o palabras",
+              "Agregar elementos a lista durante ejecución del programa",
+              "Mostrar elementos específicos de la lista",
+              "Usar longitud de lista en programas",
+              "Crear juego de trivia almacenando preguntas en lista"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "mensajes_comunicacion",
+        "name": "Mensajes y Comunicación entre Sprites",
+        "short_description": "Coordinar acciones entre diferentes sprites usando mensajes.",
+        "sub_topics": [
+          {
+            "key": "enviar_mensajes",
+            "name": "Enviar y Recibir Mensajes",
+            "short_description": "Usar sistema de mensajes para sincronizar sprites.",
+            "example_tasks": [
+              "Crear mensaje personalizado con nombre descriptivo",
+              "Enviar mensaje desde un sprite para activar acción en otro",
+              "Programar sprite para recibir mensaje y responder apropiadamente",
+              "Usar mensajes para coordinar secuencia de eventos",
+              "Enviar mensaje y esperar para sincronizar animaciones"
+            ]
+          },
+          {
+            "key": "coordinacion_sprites",
+            "name": "Coordinación de Sprites",
+            "short_description": "Hacer que múltiples sprites trabajen juntos en proyecto.",
+            "example_tasks": [
+              "Crear conversación entre dos sprites usando mensajes alternados",
+              "Programar enemigos para aparecer cuando jugador alcanza cierto nivel",
+              "Sincronizar animación de múltiples sprites para escena compleja",
+              "Usar mensajes para iniciar y terminar diferentes fases de juego",
+              "Crear proyecto colaborativo donde cada sprite tiene rol específico"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "proyectos_scratch",
+        "name": "Proyectos en Scratch",
+        "short_description": "Aplicar habilidades aprendidas en proyectos creativos completos.",
+        "sub_topics": [
+          {
+            "key": "animacion_simple",
+            "name": "Crear Animación",
+            "short_description": "Diseñar historia o escena animada.",
+            "example_tasks": [
+              "Planear historia corta con principio, desarrollo y final",
+              "Crear sprites y fondos para la animación",
+              "Programar movimientos y diálogos secuencialmente",
+              "Agregar sonidos y música para ambiente",
+              "Presentar animación a compañeros"
+            ]
+          },
+          {
+            "key": "juego_simple",
+            "name": "Crear Juego Simple",
+            "short_description": "Diseñar juego interactivo con objetivo y puntuación.",
+            "example_tasks": [
+              "Definir reglas y objetivo del juego claramente",
+              "Crear jugador controlado por teclado o ratón",
+              "Programar objetos a recolectar que dan puntos",
+              "Agregar obstáculos o enemigos que quitan vidas",
+              "Incluir pantalla de inicio y de fin de juego"
+            ]
+          },
+          {
+            "key": "tarjeta_interactiva",
+            "name": "Tarjeta Interactiva",
+            "short_description": "Crear tarjeta de felicitación o invitación interactiva.",
+            "example_tasks": [
+              "Diseñar tarjeta para ocasión específica: cumpleaños, día festivo",
+              "Agregar elementos interactivos que respondan a clics",
+              "Incluir animaciones y efectos visuales",
+              "Agregar música o mensaje de voz personalizado",
+              "Compartir tarjeta con destinatario previsto"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "secuencias_patrones",
+    "name": "Secuencias y Patrones en Programación",
+    "short_description": "Comprender y aplicar secuencias lógicas y patrones repetitivos en programación.",
+    "sub_topics": [
+      {
+        "key": "secuencias_lineales",
+        "name": "Secuencias Lineales",
+        "short_description": "Ejecutar instrucciones en orden específico de arriba hacia abajo.",
+        "sub_topics": [
+          {
+            "key": "orden_ejecucion",
+            "name": "Orden de Ejecución",
+            "short_description": "Comprender que computadora ejecuta instrucciones en secuencia.",
+            "example_tasks": [
+              "Predecir resultado de secuencia de bloques antes de ejecutar",
+              "Crear programa simple que ejecuta 5 pasos en orden específico",
+              "Cambiar orden de bloques y observar cómo cambia el resultado",
+              "Identificar errores causados por pasos en orden incorrecto",
+              "Explicar por qué el orden importa en programación"
+            ]
+          },
+          {
+            "key": "programas_multiples_pasos",
+            "name": "Programas de Múltiples Pasos",
+            "short_description": "Crear secuencias más largas que completan tareas complejas.",
+            "example_tasks": [
+              "Programar sprite para realizar rutina completa: caminar, hablar, girar, saltar",
+              "Crear secuencia de 10+ bloques que cuenten una historia",
+              "Planear programa escribiendo pseudocódigo antes de programar",
+              "Ejecutar programa paso a paso para verificar cada parte",
+              "Crear animación que requiere múltiples acciones secuenciales"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "repeticion_patrones",
+        "name": "Repetición y Patrones",
+        "short_description": "Identificar y usar patrones repetitivos en programación.",
+        "sub_topics": [
+          {
+            "key": "reconocer_repeticion",
+            "name": "Reconocer Repetición en Código",
+            "short_description": "Identificar cuándo se repiten las mismas instrucciones.",
+            "example_tasks": [
+              "Analizar programa y encontrar bloques que se repiten",
+              "Identificar patrones en secuencias de movimiento o animación",
+              "Reconocer oportunidades de simplificar código repetitivo",
+              "Comparar programa con repetición vs. sin ella",
+              "Explicar ventajas de reconocer patrones repetitivos"
+            ]
+          },
+          {
+            "key": "ciclos_contados",
+            "name": "Repetición con Número Específico",
+            "short_description": "Usar ciclos que se repiten número exacto de veces.",
+            "example_tasks": [
+              "Usar bloque 'repetir 10' para hacer que sprite se mueva varias veces",
+              "Crear patrón visual repitiendo dibujo 4 o 6 veces",
+              "Programar sprite para girar completamente usando repeticiones",
+              "Crear efectos de animación repitiendo cambios de disfraz",
+              "Experimentar cambiando número de repeticiones para ver diferencias"
+            ]
+          },
+          {
+            "key": "patrones_geometricos",
+            "name": "Crear Patrones Geométricos",
+            "short_description": "Usar repetición para dibujar formas y diseños.",
+            "example_tasks": [
+              "Programar sprite con lápiz para dibujar cuadrado repitiendo 4 veces",
+              "Crear triángulo, hexágono u otras formas usando repetición y giros",
+              "Diseñar patrones complejos repitiendo formas básicas",
+              "Experimentar con ángulos y distancias para crear diferentes formas",
+              "Crear arte generativo usando repeticiones anidadas"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "optimizacion_codigo",
+        "name": "Optimización de Código",
+        "short_description": "Hacer programas más eficientes eliminando redundancia.",
+        "sub_topics": [
+          {
+            "key": "eliminar_redundancia",
+            "name": "Eliminar Código Redundante",
+            "short_description": "Simplificar programas reemplazando repetición con ciclos.",
+            "example_tasks": [
+              "Reescribir programa que repite bloques usando un ciclo en su lugar",
+              "Comparar longitud de código antes y después de optimizar",
+              "Identificar secciones de programa que pueden simplificarse",
+              "Refactorizar código propio haciéndolo más limpio y corto",
+              "Explicar cómo código más corto puede ser mejor que código largo"
+            ]
+          },
+          {
+            "key": "eficiencia",
+            "name": "Eficiencia en Programación",
+            "short_description": "Comprender importancia de código eficiente y legible.",
+            "example_tasks": [
+              "Comparar dos programas que hacen lo mismo de diferentes formas",
+              "Identificar cuál programa es más fácil de entender y modificar",
+              "Practicar escribir código claro desde el inicio",
+              "Agregar comentarios explicando secciones importantes del código",
+              "Discutir por qué eficiencia importa en programas más grandes"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "arte_generativo",
+        "name": "Arte Generativo con Patrones",
+        "short_description": "Crear diseños artísticos usando programación y repetición.",
+        "sub_topics": [
+          {
+            "key": "diseños_repetitivos",
+            "name": "Diseños Basados en Repetición",
+            "short_description": "Crear arte visual usando ciclos y patrones.",
+            "example_tasks": [
+              "Programar sprite con lápiz para crear espiral usando repetición",
+              "Crear diseño de estrella o flor con pétalos usando ciclos",
+              "Experimentar con cambios graduales de color en cada repetición",
+              "Crear caleidoscopio digital repitiendo patrones con rotación",
+              "Diseñar mosaico o patrón de baldosas usando repetición"
+            ]
+          },
+          {
+            "key": "variacion_patrones",
+            "name": "Variación en Patrones",
+            "short_description": "Modificar patrones ligeramente en cada repetición.",
+            "example_tasks": [
+              "Crear patrón donde tamaño aumenta en cada repetición",
+              "Programar cambio gradual de color a través del patrón",
+              "Variar posición o rotación ligeramente en cada ciclo",
+              "Combinar múltiples variaciones para efectos complejos",
+              "Crear efectos visuales interesantes con pequeños cambios incrementales"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "estructuras_control",
+    "name": "Estructuras de Control Básicas",
+    "short_description": "Uso de condicionales y ciclos para controlar flujo de programas y tomar decisiones.",
+    "sub_topics": [
+      {
+        "key": "condicionales",
+        "name": "Condicionales - Si/Entonces",
+        "short_description": "Hacer que programas tomen decisiones basadas en condiciones.",
+        "sub_topics": [
+          {
+            "key": "concepto_si",
+            "name": "Concepto de Condicional",
+            "short_description": "Comprender estructura 'Si [condición] entonces [acción]'.",
+            "example_tasks": [
+              "Identificar situaciones cotidianas que usan lógica condicional",
+              "Explicar con ejemplos cuándo usar bloques 'si' en programas",
+              "Crear diagrama de flujo mostrando caminos diferentes según condición",
+              "Predecir qué hará programa con bloques 'si' antes de ejecutar",
+              "Escribir pseudocódigo usando estructura si/entonces para problemas simples"
+            ]
+          },
+          {
+            "key": "condiciones_simples",
+            "name": "Condiciones Simples",
+            "short_description": "Crear condiciones usando comparaciones y sensores.",
+            "example_tasks": [
+              "Programar sprite para decir algo solo si es cliqueado",
+              "Hacer que sprite cambie color si toca borde del escenario",
+              "Usar sensor de teclado: si tecla presionada entonces mover",
+              "Verificar si variable es mayor, menor o igual a cierto valor",
+              "Detectar si sprite toca otro sprite específico"
+            ]
+          },
+          {
+            "key": "si_entonces_sino",
+            "name": "Si/Entonces/Sino",
+            "short_description": "Usar condicionales con alternativa cuando condición es falsa.",
+            "example_tasks": [
+              "Programar: si sprite toca borde entonces rebotar, sino seguir adelante",
+              "Crear programa: si respuesta es correcta decir 'Bien', sino decir 'Intenta otra vez'",
+              "Cambiar fondo: si es de día mostrar sol, sino mostrar luna",
+              "Programar sprite para moverse en direcciones diferentes según tecla presionada",
+              "Crear juego donde resultado cambia según puntuación alcanzada"
+            ]
+          },
+          {
+            "key": "condiciones_multiples",
+            "name": "Múltiples Condiciones",
+            "short_description": "Anidar condicionales o usar varias condiciones en secuencia.",
+            "example_tasks": [
+              "Crear programa con si anidados para verificar múltiples condiciones",
+              "Programar respuestas diferentes según valor específico de variable",
+              "Usar múltiples bloques 'si' independientes para diferentes acciones simultáneas",
+              "Crear sistema de niveles donde cada nivel tiene condiciones diferentes",
+              "Programar juego de trivia con diferentes respuestas según pregunta"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "ciclos_avanzados",
+        "name": "Ciclos Avanzados",
+        "short_description": "Usar diferentes tipos de ciclos para repetición más compleja.",
+        "sub_topics": [
+          {
+            "key": "por_siempre",
+            "name": "Ciclo Por Siempre",
+            "short_description": "Crear bucles infinitos que se ejecutan continuamente.",
+            "example_tasks": [
+              "Usar 'por siempre' para hacer que sprite patrule continuamente",
+              "Crear reloj que actualiza constantemente",
+              "Programar enemigo que se mueve infinitamente en patrón",
+              "Verificar condiciones constantemente usando ciclo por siempre",
+              "Comprender cuándo usar 'por siempre' vs. 'repetir [n] veces'"
+            ]
+          },
+          {
+            "key": "repetir_hasta",
+            "name": "Repetir Hasta",
+            "short_description": "Ciclos que continúan hasta que condición se cumpla.",
+            "example_tasks": [
+              "Programar: repetir hasta que sprite toque borde",
+              "Crear bucle que continúa hasta que variable alcance cierto valor",
+              "Programar juego que repite hasta que vidas lleguen a cero",
+              "Mover sprite hasta que llegue a posición específica",
+              "Crear cuenta regresiva que repite hasta llegar a cero"
+            ]
+          },
+          {
+            "key": "ciclos_anidados",
+            "name": "Ciclos Anidados",
+            "short_description": "Colocar ciclos dentro de otros ciclos para patrones complejos.",
+            "example_tasks": [
+              "Crear cuadrícula usando ciclo dentro de ciclo",
+              "Programar patrón complejo con repeticiones en múltiples niveles",
+              "Dibujar matriz de formas usando bucles anidados",
+              "Crear efectos visuales complejos con múltiples capas de repetición",
+              "Comprender cómo ciclos anidados multiplican repeticiones"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "operadores_logicos",
+        "name": "Operadores Lógicos",
+        "short_description": "Combinar condiciones usando Y, O, NO para lógica más compleja.",
+        "sub_topics": [
+          {
+            "key": "operador_y",
+            "name": "Operador Y",
+            "short_description": "Verificar que múltiples condiciones sean verdaderas simultáneamente.",
+            "example_tasks": [
+              "Programar: si tecla presionada Y no tocando borde, entonces mover",
+              "Verificar que puntos > 10 Y vidas > 0 antes de continuar",
+              "Crear condición que requiere dos sensores activos al mismo tiempo",
+              "Usar Y para verificar múltiples requisitos antes de acción",
+              "Explicar diferencia entre usar Y vs. condicionales separados"
+            ]
+          },
+          {
+            "key": "operador_o",
+            "name": "Operador O",
+            "short_description": "Ejecutar acción si cualquiera de varias condiciones es verdadera.",
+            "example_tasks": [
+              "Programar: si tecla flecha arriba O tecla W presionada, mover arriba",
+              "Verificar si sprite toca enemigo1 O enemigo2 para perder vida",
+              "Crear múltiples formas de ganar puntos usando O",
+              "Usar O para dar opciones alternativas al jugador",
+              "Combinar múltiples condiciones con O para flexibilidad"
+            ]
+          },
+          {
+            "key": "operador_no",
+            "name": "Operador NO",
+            "short_description": "Invertir condición para verificar lo opuesto.",
+            "example_tasks": [
+              "Programar: si NO tocando color rojo, entonces continuar",
+              "Verificar que tecla NO esté presionada antes de acción",
+              "Crear lógica: hacer algo solo si condición NO es verdadera",
+              "Usar NO para evitar situaciones en lugar de buscarlas",
+              "Combinar NO con otros operadores para lógica compleja"
+            ]
+          },
+          {
+            "key": "combinar_operadores",
+            "name": "Combinar Operadores",
+            "short_description": "Usar múltiples operadores lógicos juntos.",
+            "example_tasks": [
+              "Crear condición: (A Y B) O (C Y D)",
+              "Programar lógica compleja para comportamiento sofisticado",
+              "Usar paréntesis implícitos para agrupar condiciones correctamente",
+              "Verificar múltiples estados del juego simultáneamente",
+              "Crear sistema de decisión con múltiples factores"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "deteccion_eventos",
+        "name": "Detección y Respuesta a Eventos",
+        "short_description": "Responder a diferentes eventos y situaciones en programas.",
+        "sub_topics": [
+          {
+            "key": "colisiones",
+            "name": "Detectar Colisiones",
+            "short_description": "Identificar cuándo sprites se tocan entre sí.",
+            "example_tasks": [
+              "Programar sprite para rebotar cuando toca otro sprite",
+              "Detectar cuando jugador toca coleccionable y aumentar puntos",
+              "Crear sistema de daño cuando sprite toca enemigo",
+              "Usar diferentes acciones para diferentes tipos de colisiones",
+              "Programar juego donde colisiones son mecánica principal"
+            ]
+          },
+          {
+            "key": "limites_bordes",
+            "name": "Límites y Bordes",
+            "short_description": "Responder cuando sprites alcanzan bordes del escenario.",
+            "example_tasks": [
+              "Hacer que sprite rebote al tocar borde del escenario",
+              "Teletransportar sprite al lado opuesto cuando cruza borde",
+              "Detener movimiento si sprite alcanza borde",
+              "Crear límites invisibles dentro del escenario",
+              "Programar comportamientos diferentes para cada borde del escenario"
+            ]
+          },
+          {
+            "key": "deteccion_colores",
+            "name": "Detección de Colores",
+            "short_description": "Responder a colores específicos en escenario o sprites.",
+            "example_tasks": [
+              "Programar sprite para detenerse al tocar línea de color específico",
+              "Cambiar comportamiento según color del fondo bajo el sprite",
+              "Crear laberinto donde sprite debe evitar paredes de cierto color",
+              "Usar colores para crear zonas con diferentes efectos",
+              "Detectar cuando sprite toca múltiples colores simultáneamente"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "depuracion_control",
+        "name": "Depuración de Estructuras de Control",
+        "short_description": "Identificar y corregir errores en condicionales y ciclos.",
+        "sub_topics": [
+          {
+            "key": "errores_comunes",
+            "name": "Errores Comunes en Condicionales",
+            "short_description": "Reconocer problemas típicos en estructuras de control.",
+            "example_tasks": [
+              "Identificar condiciones que nunca son verdaderas",
+              "Encontrar ciclos infinitos no intencionados",
+              "Detectar condicionales con lógica invertida",
+              "Corregir operadores lógicos mal usados",
+              "Solucionar problemas de anidación incorrecta"
+            ]
+          },
+          {
+            "key": "probar_condiciones",
+            "name": "Probar Condiciones",
+            "short_description": "Verificar sistemáticamente que condicionales funcionen correctamente.",
+            "example_tasks": [
+              "Probar cada rama de condicional individualmente",
+              "Usar valores extremos para verificar condiciones límite",
+              "Agregar bloques 'decir' temporales para ver qué rama se ejecuta",
+              "Verificar que todas las condiciones posibles estén cubiertas",
+              "Documentar resultados de pruebas para cada caso"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "proyectos_creativos",
+    "name": "Proyectos de Programación Creativa",
+    "short_description": "Aplicación integrada de conceptos de programación en proyectos completos: historias interactivas, juegos y animaciones.",
+    "sub_topics": [
+      {
+        "key": "historias_interactivas",
+        "name": "Historias Interactivas",
+        "short_description": "Crear narrativas donde el usuario puede tomar decisiones que afectan la historia.",
+        "sub_topics": [
+          {
+            "key": "planear_historia",
+            "name": "Planificación de Historia",
+            "short_description": "Diseñar estructura narrativa con múltiples caminos.",
+            "example_tasks": [
+              "Crear mapa de historia mostrando diferentes finales posibles",
+              "Escribir guion básico con puntos de decisión del usuario",
+              "Diseñar personajes y escenarios para la historia",
+              "Planear qué variables afectarán el desarrollo de la historia",
+              "Crear storyboard visual de escenas principales"
+            ]
+          },
+          {
+            "key": "implementar_decisiones",
+            "name": "Implementar Decisiones",
+            "short_description": "Programar opciones que lleven a diferentes resultados.",
+            "example_tasks": [
+              "Usar bloques 'preguntar' para recibir decisiones del usuario",
+              "Programar diferentes caminos según respuesta del usuario",
+              "Almacenar decisiones en variables para uso posterior",
+              "Crear consecuencias a largo plazo de decisiones tempranas",
+              "Implementar múltiples finales basados en decisiones acumuladas"
+            ]
+          },
+          {
+            "key": "narrativa_visual",
+            "name": "Narrativa Visual y Audio",
+            "short_description": "Enriquecer historia con elementos multimedia.",
+            "example_tasks": [
+              "Cambiar fondos para representar diferentes locaciones",
+              "Animar personajes durante diálogos importantes",
+              "Agregar efectos de sonido apropiados para cada escena",
+              "Usar música de fondo para crear atmósfera",
+              "Sincronizar elementos visuales y de audio con narrativa"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "juegos_completos",
+        "name": "Diseño de Juegos Completos",
+        "short_description": "Crear juegos funcionales con mecánicas, objetivos y sistema de puntuación.",
+        "sub_topics": [
+          {
+            "key": "mecanicas_juego",
+            "name": "Mecánicas de Juego",
+            "short_description": "Implementar reglas y sistemas que definen cómo se juega.",
+            "example_tasks": [
+              "Definir objetivo claro del juego: recolectar puntos, llegar a meta, sobrevivir tiempo",
+              "Programar controles responsivos y precisos para el jugador",
+              "Crear obstáculos o enemigos con comportamiento consistente",
+              "Implementar sistema de vidas o salud",
+              "Diseñar niveles con dificultad progresiva"
+            ]
+          },
+          {
+            "key": "sistema_puntuacion",
+            "name": "Sistema de Puntuación",
+            "short_description": "Implementar y mostrar puntos, niveles y progreso.",
+            "example_tasks": [
+              "Crear variable de puntos que aumenta con logros",
+              "Mostrar puntuación en pantalla constantemente",
+              "Implementar sistema de niveles basado en puntos",
+              "Guardar puntuación máxima del jugador",
+              "Crear tabla de clasificación simple con mejores puntajes"
+            ]
+          },
+          {
+            "key": "interfaz_usuario",
+            "name": "Interfaz de Usuario",
+            "short_description": "Diseñar pantallas de inicio, instrucciones y fin de juego.",
+            "example_tasks": [
+              "Crear pantalla de inicio con título y botón de comenzar",
+              "Diseñar pantalla de instrucciones explicando cómo jugar",
+              "Implementar pantalla de fin mostrando puntuación final",
+              "Agregar botón de reiniciar para jugar nuevamente",
+              "Mostrar indicadores visuales de vidas, nivel, tiempo restante"
+            ]
+          },
+          {
+            "key": "balanceo_juego",
+            "name": "Balanceo y Pruebas",
+            "short_description": "Ajustar dificultad y probar jugabilidad.",
+            "example_tasks": [
+              "Probar juego múltiples veces ajustando velocidades y dificultad",
+              "Pedir a compañeros que prueben y den retroalimentación",
+              "Asegurar que juego no sea muy fácil ni imposiblemente difícil",
+              "Eliminar errores que permiten 'hacer trampa' no intencionalmente",
+              "Refinar controles basándose en experiencia de jugadores de prueba"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "animaciones_avanzadas",
+        "name": "Animaciones Avanzadas",
+        "short_description": "Crear animaciones sofisticadas con múltiples escenas y efectos.",
+        "sub_topics": [
+          {
+            "key": "storyboard_animacion",
+            "name": "Storyboard de Animación",
+            "short_description": "Planear visualmente cada escena de la animación.",
+            "example_tasks": [
+              "Dibujar bocetos de escenas clave en secuencia",
+              "Planear transiciones entre escenas",
+              "Determinar timing de cada escena y movimiento",
+              "Identificar dónde se necesitan efectos especiales o sonidos",
+              "Crear lista de todos los sprites y fondos necesarios"
+            ]
+          },
+          {
+            "key": "sincronizacion",
+            "name": "Sincronización de Elementos",
+            "short_description": "Coordinar múltiples sprites y sonidos perfectamente.",
+            "example_tasks": [
+              "Usar mensajes para sincronizar acciones entre sprites",
+              "Programar esperas precisas para timing correcto",
+              "Sincronizar cambios de fondo con narración",
+              "Coordinar música con momentos clave de animación",
+              "Usar variables para mantener todos los elementos en sincronía"
+            ]
+          },
+          {
+            "key": "efectos_especiales",
+            "name": "Efectos Especiales",
+            "short_description": "Agregar efectos visuales para mejorar calidad de animación.",
+            "example_tasks": [
+              "Usar efectos gráficos como desvanecer, brillar o pixelar",
+              "Crear efectos de transición entre escenas",
+              "Animar efectos de partículas simples",
+              "Implementar efectos de cámara como zoom o seguimiento",
+              "Agregar títulos y créditos con animación profesional"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "simulaciones",
+        "name": "Simulaciones Educativas",
+        "short_description": "Crear programas que modelen fenómenos o conceptos educativos.",
+        "sub_topics": [
+          {
+            "key": "modelos_cientificos",
+            "name": "Modelos Científicos",
+            "short_description": "Simular conceptos de ciencias naturales.",
+            "example_tasks": [
+              "Crear simulación del ciclo del agua con animaciones",
+              "Modelar sistema solar con planetas en órbita",
+              "Simular cadena alimenticia o ecosistema simple",
+              "Programar modelo de día y noche con rotación",
+              "Crear simulación de estados de la materia respondiendo a temperatura"
+            ]
+          },
+          {
+            "key": "experimentos_virtuales",
+            "name": "Experimentos Virtuales",
+            "short_description": "Permitir al usuario experimentar con variables y observar resultados.",
+            "example_tasks": [
+              "Crear experimento donde usuario cambia variables y ve efectos",
+              "Programar simulación de crecimiento de plantas con factores ajustables",
+              "Diseñar calculadora interactiva para conceptos matemáticos",
+              "Implementar simulación de mezcla de colores",
+              "Crear modelo interactivo de conceptos de física básica"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "arte_musica",
+        "name": "Arte y Música Generativa",
+        "short_description": "Crear programas que generen arte visual o música mediante código.",
+        "sub_topics": [
+          {
+            "key": "generador_arte",
+            "name": "Generador de Arte Visual",
+            "short_description": "Programar creación automática de diseños artísticos.",
+            "example_tasks": [
+              "Crear programa que dibuja patrones únicos cada vez que se ejecuta",
+              "Usar números aleatorios para generar arte impredecible",
+              "Programar diseños fractales simples con repetición",
+              "Crear generador de mandalas con parámetros ajustables",
+              "Diseñar arte que responde a interacción del usuario"
+            ]
+          },
+          {
+            "key": "composicion_musical",
+            "name": "Composición Musical Simple",
+            "short_description": "Generar secuencias musicales mediante programación.",
+            "example_tasks": [
+              "Programar secuencia de notas que forma melodía simple",
+              "Crear generador de ritmos usando patrones de percusión",
+              "Usar aleatoriedad controlada para composiciones únicas",
+              "Programar instrumento virtual que responde a teclado",
+              "Crear visualizador que muestra patrones mientras música suena"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "portafolio_proyectos",
+        "name": "Portafolio de Proyectos",
+        "short_description": "Documentar y presentar proyectos creados.",
+        "sub_topics": [
+          {
+            "key": "documentar_proyectos",
+            "name": "Documentación de Proyectos",
+            "short_description": "Explicar qué hace cada proyecto y cómo funciona.",
+            "example_tasks": [
+              "Escribir descripción de cada proyecto con objetivo y características",
+              "Agregar comentarios en código explicando partes importantes",
+              "Crear instrucciones de uso para cada juego o programa",
+              "Documentar problemas encontrados y cómo se resolvieron",
+              "Reflexionar sobre qué aprendieron en cada proyecto"
+            ]
+          },
+          {
+            "key": "presentar_trabajos",
+            "name": "Presentar Trabajos",
+            "short_description": "Compartir proyectos con otros y recibir retroalimentación.",
+            "example_tasks": [
+              "Demostrar proyecto funcionando a compañeros de clase",
+              "Explicar decisiones de diseño y características interesantes",
+              "Recibir comentarios y sugerencias constructivamente",
+              "Publicar proyectos en plataforma de Scratch para compartir",
+              "Crear video o presentación mostrando portafolio completo"
+            ]
+          },
+          {
+            "key": "mejorar_iterar",
+            "name": "Mejora e Iteración",
+            "short_description": "Revisar y mejorar proyectos basándose en retroalimentación.",
+            "example_tasks": [
+              "Identificar áreas de mejora en proyectos existentes",
+              "Implementar sugerencias recibidas de compañeros",
+              "Agregar características nuevas a proyectos anteriores",
+              "Corregir errores o problemas identificados después de publicar",
+              "Reflexionar sobre evolución de habilidades comparando proyectos antiguos y nuevos"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "herramientas_colaboracion",
+    "name": "Herramientas de Colaboración en Línea",
+    "short_description": "Uso de plataformas como Google Workspace o Microsoft 365 para trabajar colaborativamente en documentos, presentaciones y proyectos.",
+    "sub_topics": [
+      {
+        "key": "introduccion_nube",
+        "name": "Introducción a la Nube",
+        "short_description": "Comprender qué es la nube y cómo permite acceso a archivos desde cualquier lugar.",
+        "sub_topics": [
+          {
+            "key": "concepto_nube",
+            "name": "¿Qué es la Nube?",
+            "short_description": "Entender el almacenamiento en la nube como servidores remotos accesibles por Internet.",
+            "example_tasks": [
+              "Explicar con sus propias palabras qué significa 'la nube' en tecnología",
+              "Identificar ventajas de la nube: acceso desde múltiples dispositivos, respaldos automáticos",
+              "Comprender diferencia entre guardar en computadora local vs. en la nube",
+              "Discutir situaciones donde la nube es útil: trabajo escolar, colaboración, acceso móvil",
+              "Crear diagrama simple mostrando cómo funcionan servicios en la nube"
+            ]
+          },
+          {
+            "key": "acceso_dispositivos",
+            "name": "Acceso desde Múltiples Dispositivos",
+            "short_description": "Acceder a archivos en la nube desde diferentes computadoras o dispositivos.",
+            "example_tasks": [
+              "Iniciar sesión en cuenta de nube desde diferentes computadoras",
+              "Verificar que cambios en un dispositivo aparecen en otro",
+              "Comprender sincronización automática de archivos",
+              "Practicar trabajar en documento en escuela y continuarlo en casa",
+              "Identificar requisitos para acceso: cuenta, Internet, navegador"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "google_workspace",
+        "name": "Google Workspace para Educación",
+        "short_description": "Usar herramientas de Google para crear y colaborar: Docs, Slides, Sheets, Drive.",
+        "sub_topics": [
+          {
+            "key": "google_drive",
+            "name": "Google Drive",
+            "short_description": "Organizar y gestionar archivos en Google Drive.",
+            "example_tasks": [
+              "Acceder a Google Drive desde navegador o aplicación",
+              "Crear carpetas para organizar archivos por materia o proyecto",
+              "Subir archivos desde computadora a Drive",
+              "Buscar archivos usando el cuadro de búsqueda",
+              "Comprender estructura: Mi unidad, Compartido conmigo, Reciente"
+            ]
+          },
+          {
+            "key": "google_docs",
+            "name": "Google Docs (Documentos)",
+            "short_description": "Crear y editar documentos de texto en línea.",
+            "example_tasks": [
+              "Crear documento nuevo desde Google Drive",
+              "Usar herramientas de formato similares a Word",
+              "Observar guardado automático mientras trabajan",
+              "Ver historial de versiones para recuperar versiones anteriores",
+              "Trabajar sin conexión cuando Internet no está disponible"
+            ]
+          },
+          {
+            "key": "google_slides",
+            "name": "Google Slides (Presentaciones)",
+            "short_description": "Crear presentaciones colaborativas en línea.",
+            "example_tasks": [
+              "Crear presentación nueva aplicando tema apropiado",
+              "Insertar texto, imágenes y formas en diapositivas",
+              "Aplicar transiciones y animaciones básicas",
+              "Presentar directamente desde navegador",
+              "Descargar presentación como PowerPoint si es necesario"
+            ]
+          },
+          {
+            "key": "google_sheets",
+            "name": "Google Sheets (Hojas de Cálculo)",
+            "short_description": "Trabajar con hojas de cálculo en línea.",
+            "example_tasks": [
+              "Crear hoja de cálculo nueva e ingresar datos",
+              "Usar fórmulas básicas como en Excel",
+              "Crear gráficas a partir de datos ingresados",
+              "Usar filtros para organizar información",
+              "Compartir hoja con otros para recopilación de datos colaborativa"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "colaboracion_tiempo_real",
+        "name": "Colaboración en Tiempo Real",
+        "short_description": "Trabajar simultáneamente con otros en el mismo documento.",
+        "sub_topics": [
+          {
+            "key": "compartir_archivos",
+            "name": "Compartir Archivos y Permisos",
+            "short_description": "Dar acceso a otros usuarios con diferentes niveles de permiso.",
+            "example_tasks": [
+              "Hacer clic en botón 'Compartir' e ingresar correos de colaboradores",
+              "Comprender diferencia entre permisos: ver, comentar, editar",
+              "Compartir archivo con compañeros para trabajo en equipo",
+              "Cambiar permisos según necesidad del proyecto",
+              "Generar enlace para compartir con personas sin cuenta de Google"
+            ]
+          },
+          {
+            "key": "edicion_simultanea",
+            "name": "Edición Simultánea",
+            "short_description": "Trabajar al mismo tiempo que otros colaboradores en documento.",
+            "example_tasks": [
+              "Ver cursores de colores mostrando dónde están trabajando otros",
+              "Observar cambios de otros aparecer en tiempo real",
+              "Coordinar con compañeros quién trabaja en qué sección",
+              "Usar chat integrado para comunicarse mientras editan",
+              "Evitar editar mismo párrafo simultáneamente para prevenir conflictos"
+            ]
+          },
+          {
+            "key": "comentarios_sugerencias",
+            "name": "Comentarios y Sugerencias",
+            "short_description": "Dar retroalimentación sin modificar directamente el documento.",
+            "example_tasks": [
+              "Agregar comentarios en secciones específicas del documento",
+              "Responder a comentarios de otros colaboradores",
+              "Usar modo 'Sugerencias' para proponer cambios sin editar directamente",
+              "Aceptar o rechazar sugerencias de compañeros",
+              "Resolver comentarios una vez que se atienden"
+            ]
+          },
+          {
+            "key": "etiqueta_colaboracion",
+            "name": "Etiqueta de Colaboración",
+            "short_description": "Mejores prácticas para trabajar respetuosamente en equipo.",
+            "example_tasks": [
+              "No eliminar trabajo de otros sin consultar primero",
+              "Usar comentarios en lugar de borrar cuando no están de acuerdo",
+              "Comunicarse claramente sobre quién trabaja en qué parte",
+              "Respetar decisiones del grupo incluso si prefieren otra opción",
+              "Dar crédito a compañeros por sus contribuciones"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "organizacion_equipos",
+        "name": "Organización de Trabajo en Equipo",
+        "short_description": "Estructurar proyectos colaborativos de manera efectiva.",
+        "sub_topics": [
+          {
+            "key": "asignar_tareas",
+            "name": "Asignación de Tareas",
+            "short_description": "Dividir trabajo entre miembros del equipo claramente.",
+            "example_tasks": [
+              "Crear lista de tareas necesarias para completar proyecto",
+              "Asignar responsable a cada tarea según fortalezas del equipo",
+              "Establecer fechas límite para cada tarea individual",
+              "Usar comentarios con @ para asignar tareas específicas a personas",
+              "Verificar regularmente que cada miembro complete su parte"
+            ]
+          },
+          {
+            "key": "carpetas_compartidas",
+            "name": "Carpetas Compartidas",
+            "short_description": "Organizar archivos del proyecto en ubicación accesible para todos.",
+            "example_tasks": [
+              "Crear carpeta compartida en Drive para proyecto de equipo",
+              "Dar acceso a todos los miembros del equipo",
+              "Organizar subcarpetas para diferentes tipos de archivos",
+              "Usar nombres descriptivos para archivos fáciles de identificar",
+              "Mantener carpeta organizada eliminando archivos obsoletos"
+            ]
+          },
+          {
+            "key": "comunicacion_equipo",
+            "name": "Comunicación del Equipo",
+            "short_description": "Mantenerse en contacto y coordinar efectivamente.",
+            "example_tasks": [
+              "Usar chat de Google Docs para comunicación rápida durante edición",
+              "Programar reuniones virtuales si la plataforma lo permite",
+              "Enviar actualizaciones por correo sobre avances en tareas asignadas",
+              "Reportar problemas o retrasos al equipo oportunamente",
+              "Celebrar logros del equipo y reconocer contribuciones"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "presentaciones_virtuales",
+        "name": "Presentaciones Virtuales",
+        "short_description": "Preparar y realizar presentaciones en línea.",
+        "sub_topics": [
+          {
+            "key": "compartir_pantalla",
+            "name": "Compartir Pantalla",
+            "short_description": "Mostrar presentación o documento compartiendo pantalla.",
+            "example_tasks": [
+              "Usar función de presentación en Google Slides",
+              "Compartir pantalla en plataforma de videollamada si disponible",
+              "Asegurar que solo comparten ventana relevante, no todo el escritorio",
+              "Practicar cambio entre diapositivas fluidamente",
+              "Cerrar ventanas y notificaciones distractoras antes de presentar"
+            ]
+          },
+          {
+            "key": "presentar_distancia",
+            "name": "Presentar a Distancia",
+            "short_description": "Adaptarse a presentar sin estar físicamente presente.",
+            "example_tasks": [
+              "Hablar claramente y a buen ritmo aunque no vean audiencia",
+              "Usar notas del presentador como recordatorios",
+              "Mantener contacto visual mirando a cámara cuando sea posible",
+              "Gestionar preguntas usando chat o función de levantar mano",
+              "Grabar presentación si la plataforma lo permite para quienes no puedan asistir"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "formularios_encuestas",
+        "name": "Formularios y Encuestas",
+        "short_description": "Crear y usar formularios para recopilar información.",
+        "sub_topics": [
+          {
+            "key": "crear_formulario",
+            "name": "Crear Formulario Simple",
+            "short_description": "Diseñar formulario para recopilar datos de compañeros.",
+            "example_tasks": [
+              "Crear Google Form con título y descripción clara",
+              "Agregar preguntas de diferentes tipos: opción múltiple, texto corto, escala",
+              "Hacer preguntas obligatorias cuando sea necesario",
+              "Personalizar tema y colores del formulario",
+              "Obtener enlace para compartir formulario con otros"
+            ]
+          },
+          {
+            "key": "analizar_respuestas",
+            "name": "Analizar Respuestas",
+            "short_description": "Ver y analizar datos recopilados mediante formulario.",
+            "example_tasks": [
+              "Ver resumen de respuestas en gráficas automáticas",
+              "Exportar respuestas a Google Sheets para análisis detallado",
+              "Crear gráficas adicionales con datos recopilados",
+              "Identificar tendencias y patrones en respuestas",
+              "Presentar resultados de encuesta a la clase"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "almacenamiento_nube",
+    "name": "Almacenamiento en la Nube",
+    "short_description": "Gestión de archivos en servicios de almacenamiento en la nube: Google Drive, OneDrive, conceptos de sincronización y respaldo.",
+    "sub_topics": [
+      {
+        "key": "servicios_nube",
+        "name": "Servicios de Almacenamiento",
+        "short_description": "Conocer diferentes opciones de almacenamiento en la nube disponibles.",
+        "sub_topics": [
+          {
+            "key": "comparar_servicios",
+            "name": "Comparar Servicios",
+            "short_description": "Identificar similitudes y diferencias entre plataformas de nube.",
+            "example_tasks": [
+              "Comparar Google Drive, OneDrive y Dropbox en términos básicos",
+              "Identificar cuánto espacio gratuito ofrece cada servicio",
+              "Reconocer qué aplicaciones están integradas con cada servicio",
+              "Comprender que funcionan de manera similar con diferentes interfaces",
+              "Discutir cuál servicio usa la escuela y por qué"
+            ]
+          },
+          {
+            "key": "elegir_servicio",
+            "name": "Elegir Servicio Apropiado",
+            "short_description": "Seleccionar plataforma según necesidades y contexto.",
+            "example_tasks": [
+              "Usar servicio que escuela proporciona para trabajos escolares",
+              "Comprender ventajas de usar mismo servicio que compañeros de equipo",
+              "Identificar cuál servicio es compatible con dispositivos disponibles",
+              "Considerar espacio de almacenamiento necesario para proyecto",
+              "Respetar políticas de la escuela sobre servicios permitidos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "gestion_espacio",
+        "name": "Gestión de Espacio de Almacenamiento",
+        "short_description": "Administrar espacio disponible en la nube eficientemente.",
+        "sub_topics": [
+          {
+            "key": "verificar_espacio",
+            "name": "Verificar Espacio Disponible",
+            "short_description": "Revisar cuánto espacio están usando y cuánto queda disponible.",
+            "example_tasks": [
+              "Localizar indicador de espacio usado en interfaz de servicio de nube",
+              "Identificar qué tipos de archivos ocupan más espacio",
+              "Comprender límites de almacenamiento gratuito",
+              "Calcular cuánto espacio necesitan para proyecto actual",
+              "Recibir y comprender alertas cuando espacio es limitado"
+            ]
+          },
+          {
+            "key": "liberar_espacio",
+            "name": "Liberar Espacio",
+            "short_description": "Eliminar archivos innecesarios para recuperar espacio de almacenamiento.",
+            "example_tasks": [
+              "Identificar archivos antiguos o duplicados que pueden eliminarse",
+              "Revisar papelera y eliminar permanentemente archivos no necesarios",
+              "Descargar archivos importantes localmente antes de eliminarlos de nube",
+              "Comprimir archivos grandes cuando sea posible",
+              "Mover archivos muy grandes a almacenamiento local o disco externo"
+            ]
+          },
+          {
+            "key": "organizar_eficientemente",
+            "name": "Organizar Eficientemente",
+            "short_description": "Estructurar archivos para encontrarlos fácilmente y gestionar espacio.",
+            "example_tasks": [
+              "Crear estructura de carpetas lógica por año escolar, materia, proyecto",
+              "Usar nombres de archivo descriptivos que incluyan fecha si relevante",
+              "Archivar proyectos completados en carpeta separada",
+              "Eliminar versiones antiguas de archivos manteniendo solo la más reciente",
+              "Revisar y limpiar almacenamiento periódicamente (mensualmente)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "sincronizacion",
+        "name": "Sincronización de Archivos",
+        "short_description": "Comprender cómo archivos se mantienen actualizados entre dispositivos.",
+        "sub_topics": [
+          {
+            "key": "como_funciona",
+            "name": "Cómo Funciona la Sincronización",
+            "short_description": "Entender proceso de mantener archivos idénticos en múltiples lugares.",
+            "example_tasks": [
+              "Explicar que cambios en un dispositivo aparecen automáticamente en otros",
+              "Comprender que sincronización requiere conexión a Internet",
+              "Identificar ícono de sincronización mostrando cuando está activa",
+              "Observar cómo archivo cambia de 'sincronizando' a 'sincronizado'",
+              "Entender que pueden trabajar sin conexión y sincronizar después"
+            ]
+          },
+          {
+            "key": "conflictos_sincronizacion",
+            "name": "Resolver Conflictos",
+            "short_description": "Manejar situaciones cuando versiones diferentes existen en múltiples dispositivos.",
+            "example_tasks": [
+              "Reconocer cuando aparece 'copia en conflicto' de un archivo",
+              "Abrir ambas versiones y decidir cuál mantener",
+              "Combinar información de ambas versiones manualmente si necesario",
+              "Evitar conflictos no editando mismo archivo en múltiples dispositivos simultáneamente",
+              "Usar función de historial de versiones en lugar de crear múltiples copias"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "respaldos",
+        "name": "Respaldos y Recuperación",
+        "short_description": "Proteger información importante mediante respaldos adecuados.",
+        "sub_topics": [
+          {
+            "key": "importancia_respaldos",
+            "name": "Importancia de Respaldos",
+            "short_description": "Comprender por qué es crítico tener copias de archivos importantes.",
+            "example_tasks": [
+              "Identificar qué archivos son críticos y necesitan respaldo: trabajos escolares, proyectos",
+              "Comprender riesgos: pérdida de dispositivo, falla de hardware, eliminación accidental",
+              "Reconocer que nube es una forma de respaldo automático",
+              "Discutir experiencias de pérdida de datos y cómo se pudo prevenir",
+              "Desarrollar hábito de guardar trabajos importantes en múltiples lugares"
+            ]
+          },
+          {
+            "key": "estrategia_321",
+            "name": "Estrategia de Respaldo",
+            "short_description": "Aplicar regla básica: tener copias en diferentes ubicaciones.",
+            "example_tasks": [
+              "Guardar trabajo en computadora local como primera copia",
+              "Subir a nube como segunda copia en ubicación diferente",
+              "Considerar USB o correo a sí mismos como tercera opción ocasional",
+              "No depender solo de un método de respaldo",
+              "Verificar que respaldo fue exitoso antes de eliminar original"
+            ]
+          },
+          {
+            "key": "recuperar_archivos",
+            "name": "Recuperar Archivos",
+            "short_description": "Restaurar archivos eliminados o versiones anteriores.",
+            "example_tasks": [
+              "Buscar archivo eliminado en papelera de servicio de nube",
+              "Restaurar archivo desde papelera dentro del período permitido",
+              "Usar historial de versiones para recuperar versión anterior de documento",
+              "Pedir ayuda a maestro o IT si no pueden recuperar archivo importante",
+              "Aprender de experiencia de pérdida para mejorar hábitos de respaldo"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "seguridad_nube",
+        "name": "Seguridad en la Nube",
+        "short_description": "Proteger cuentas y archivos en servicios de nube.",
+        "sub_topics": [
+          {
+            "key": "contraseñas_seguras",
+            "name": "Contraseñas Seguras",
+            "short_description": "Crear y mantener contraseñas fuertes para cuentas de nube.",
+            "example_tasks": [
+              "Crear contraseña con combinación de letras, números y símbolos",
+              "Evitar usar información personal obvia como fechas de nacimiento",
+              "No compartir contraseña de nube con compañeros",
+              "Cambiar contraseña si sospechan que fue comprometida",
+              "Usar administrador de contraseñas si escuela lo proporciona"
+            ]
+          },
+          {
+            "key": "permisos_compartir",
+            "name": "Permisos al Compartir",
+            "short_description": "Controlar quién tiene acceso a archivos compartidos.",
+            "example_tasks": [
+              "Revisar permisos antes de compartir archivos importantes",
+              "Usar 'solo lectura' cuando no quieren que otros editen",
+              "Revocar acceso a colaboradores cuando proyecto termina",
+              "No hacer archivos públicos a menos que sea apropiado",
+              "Comprender que personas con acceso pueden hacer copias"
+            ]
+          },
+          {
+            "key": "sesiones_seguras",
+            "name": "Cerrar Sesión Apropiadamente",
+            "short_description": "Proteger cuenta cerrando sesión en computadoras compartidas.",
+            "example_tasks": [
+              "Siempre cerrar sesión al terminar en computadora de escuela",
+              "No seleccionar 'mantener sesión iniciada' en computadoras públicas",
+              "Verificar que cerraron todas las pestañas de su cuenta",
+              "Reportar si olvidan cerrar sesión para que administrador lo haga",
+              "Usar modo incógnito en navegadores compartidos si está disponible"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "acceso_offline",
+        "name": "Acceso sin Conexión",
+        "short_description": "Trabajar con archivos de nube cuando no hay Internet disponible.",
+        "sub_topics": [
+          {
+            "key": "habilitar_offline",
+            "name": "Habilitar Modo Sin Conexión",
+            "short_description": "Configurar archivos para acceso sin Internet.",
+            "example_tasks": [
+              "Activar modo sin conexión en Google Drive si está disponible",
+              "Marcar archivos específicos para disponibilidad offline",
+              "Verificar que archivos están descargados antes de perder conexión",
+              "Comprender limitaciones: solo archivos marcados estarán disponibles",
+              "Planear con anticipación descargando archivos necesarios"
+            ]
+          },
+          {
+            "key": "trabajar_offline",
+            "name": "Trabajar Sin Conexión",
+            "short_description": "Editar documentos localmente y sincronizar después.",
+            "example_tasks": [
+              "Abrir y editar documentos cuando no hay Internet",
+              "Ver indicador mostrando que están trabajando offline",
+              "Guardar cambios que se sincronizarán cuando conecten",
+              "Reconectar a Internet para que cambios se suban a nube",
+              "Verificar que sincronización fue completa después de reconectar"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "resolucion_problemas",
+    "name": "Resolución de Problemas Técnicos",
+    "short_description": "Desarrollo de habilidades para identificar, diagnosticar y resolver problemas técnicos comunes de manera independiente.",
+    "sub_topics": [
+      {
+        "key": "diagnostico_problemas",
+        "name": "Diagnóstico de Problemas",
+        "short_description": "Identificar síntomas y determinar causa probable de problemas técnicos.",
+        "sub_topics": [
+          {
+            "key": "identificar_sintomas",
+            "name": "Identificar Síntomas",
+            "short_description": "Describir claramente qué no está funcionando correctamente.",
+            "example_tasks": [
+              "Anotar exactamente qué sucede cuando intentan realizar acción",
+              "Observar mensajes de error y copiarlos textualmente",
+              "Determinar si problema es constante o intermitente",
+              "Identificar cuándo comenzó el problema",
+              "Describir problema específicamente: 'No puedo abrir Word' en lugar de 'No funciona'"
+            ]
+          },
+          {
+            "key": "reproducir_problema",
+            "name": "Reproducir el Problema",
+            "short_description": "Intentar hacer que problema ocurra nuevamente para entenderlo mejor.",
+            "example_tasks": [
+              "Repetir pasos que causaron problema original",
+              "Documentar secuencia exacta de acciones antes del problema",
+              "Verificar si problema ocurre cada vez o solo a veces",
+              "Probar en diferente archivo o programa para ver si persiste",
+              "Observar condiciones bajo las cuales problema aparece"
+            ]
+          },
+          {
+            "key": "aislar_causa",
+            "name": "Aislar la Causa",
+            "short_description": "Determinar qué específicamente está causando el problema.",
+            "example_tasks": [
+              "Probar una variable a la vez para identificar culpable",
+              "Verificar si problema es con hardware, software, conexión o archivo específico",
+              "Comparar con equipo o programa que funciona correctamente",
+              "Eliminar variables probando en condiciones más simples",
+              "Usar proceso de eliminación para reducir posibles causas"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "soluciones_basicas",
+        "name": "Soluciones Básicas",
+        "short_description": "Aplicar soluciones comunes que resuelven muchos problemas técnicos.",
+        "sub_topics": [
+          {
+            "key": "reiniciar",
+            "name": "Reiniciar Dispositivo o Programa",
+            "short_description": "Resolver problemas mediante reinicio - solución más común y efectiva.",
+            "example_tasks": [
+              "Cerrar programa que no responde y abrirlo nuevamente",
+              "Reiniciar computadora cuando funciona lentamente o tiene errores",
+              "Esperar a que reinicio complete totalmente antes de continuar",
+              "Comprender que reiniciar limpia memoria y cierra procesos problemáticos",
+              "Intentar reinicio antes de reportar problema a maestro"
+            ]
+          },
+          {
+            "key": "verificar_conexiones",
+            "name": "Verificar Conexiones",
+            "short_description": "Asegurar que todos los cables y conexiones están bien conectados.",
+            "example_tasks": [
+              "Verificar que cable de red o WiFi están conectados",
+              "Asegurar que ratón y teclado están bien enchufados",
+              "Revisar que monitor está conectado y encendido",
+              "Verificar conexión a Internet antes de reportar problema de red",
+              "Reconectar dispositivos USB que no son reconocidos"
+            ]
+          },
+          {
+            "key": "actualizar_refrescar",
+            "name": "Actualizar o Refrescar",
+            "short_description": "Recargar página o actualizar programa para resolver problemas.",
+            "example_tasks": [
+              "Presionar F5 para refrescar página web que no carga correctamente",
+              "Cerrar y reabrir archivo que muestra contenido antiguo",
+              "Actualizar programa si aparece notificación de actualización disponible",
+              "Limpiar caché del navegador si páginas no se ven correctamente",
+              "Forzar sincronización de archivo en nube si cambios no aparecen"
+            ]
+          },
+          {
+            "key": "verificar_permisos",
+            "name": "Verificar Permisos y Acceso",
+            "short_description": "Asegurar que tienen autorización para realizar acción deseada.",
+            "example_tasks": [
+              "Verificar que están iniciados sesión con cuenta correcta",
+              "Confirmar que tienen permiso de edición en archivo compartido",
+              "Revisar que programa tiene permisos necesarios para funcionar",
+              "Pedir a maestro permisos adicionales si es necesario",
+              "Comprender mensaje de error sobre permisos insuficientes"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "buscar_ayuda",
+        "name": "Buscar Ayuda y Recursos",
+        "short_description": "Encontrar soluciones usando recursos disponibles cuando soluciones básicas fallan.",
+        "sub_topics": [
+          {
+            "key": "mensajes_error",
+            "name": "Interpretar Mensajes de Error",
+            "short_description": "Leer y comprender mensajes de error para encontrar solución.",
+            "example_tasks": [
+              "Leer mensaje de error completo en lugar de solo hacer clic en OK",
+              "Copiar texto exacto del mensaje de error para búsqueda",
+              "Buscar código de error en Internet si aparece",
+              "Tomar captura de pantalla de error para mostrar a maestro",
+              "Comprender partes importantes del mensaje que indican causa"
+            ]
+          },
+          {
+            "key": "buscar_soluciones",
+            "name": "Buscar Soluciones en Línea",
+            "short_description": "Usar Internet para encontrar soluciones a problemas técnicos.",
+            "example_tasks": [
+              "Buscar mensaje de error exacto en Google",
+              "Agregar modelo de software o versión a búsqueda para resultados específicos",
+              "Buscar en foros de ayuda o sitios de soporte oficiales",
+              "Ver videos tutoriales mostrando cómo resolver problema similar",
+              "Evaluar si solución encontrada es segura y apropiada antes de aplicar"
+            ]
+          },
+          {
+            "key": "ayuda_integrada",
+            "name": "Usar Ayuda Integrada",
+            "short_description": "Acceder a documentación y asistentes incluidos en programas.",
+            "example_tasks": [
+              "Presionar F1 para abrir ayuda en la mayoría de programas",
+              "Buscar en centro de ayuda del programa por tema relevante",
+              "Usar asistente de configuración cuando está disponible",
+              "Consultar tutoriales incluidos en software",
+              "Leer mensajes de sugerencias que programas muestran"
+            ]
+          },
+          {
+            "key": "pedir_ayuda",
+            "name": "Pedir Ayuda Apropiadamente",
+            "short_description": "Comunicar problema claramente al solicitar asistencia.",
+            "example_tasks": [
+              "Explicar qué estaban intentando hacer cuando ocurrió problema",
+              "Describir pasos exactos que tomaron antes del error",
+              "Mencionar qué soluciones ya intentaron",
+              "Mostrar mensajes de error o comportamiento problemático",
+              "Agradecer a quien proporciona ayuda y aplicar solución cuidadosamente"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "problemas_comunes",
+        "name": "Problemas Comunes y Soluciones",
+        "short_description": "Reconocer y resolver problemas técnicos frecuentes.",
+        "sub_topics": [
+          {
+            "key": "problemas_conectividad",
+            "name": "Problemas de Conectividad",
+            "short_description": "Resolver problemas de conexión a Internet o red.",
+            "example_tasks": [
+              "Verificar que WiFi está encendido y conectado a red correcta",
+              "Olvidar red y reconectar si conexión es inestable",
+              "Verificar que otros dispositivos pueden conectarse para identificar si es problema general",
+              "Reiniciar router o modem si tienen acceso",
+              "Reportar a maestro o IT si problema persiste"
+            ]
+          },
+          {
+            "key": "programas_congelados",
+            "name": "Programas que No Responden",
+            "short_description": "Cerrar y recuperar de programas congelados.",
+            "example_tasks": [
+              "Esperar unos minutos para ver si programa responde",
+              "Usar Administrador de Tareas (Ctrl+Alt+Supr) para cerrar programa",
+              "Seleccionar programa y hacer clic en 'Finalizar tarea'",
+              "Verificar si programa ofrece recuperar trabajo no guardado al reabrir",
+              "Guardar trabajo frecuentemente para minimizar pérdida si ocurre congelamiento"
+            ]
+          },
+          {
+            "key": "archivos_no_abren",
+            "name": "Archivos que No Abren",
+            "short_description": "Solucionar problemas al abrir documentos o archivos.",
+            "example_tasks": [
+              "Verificar que tienen programa apropiado instalado para tipo de archivo",
+              "Intentar abrir archivo con programa diferente",
+              "Verificar que archivo no está corrupto intentando abrirlo en otro dispositivo",
+              "Descargar archivo nuevamente si vino de Internet",
+              "Pedir versión diferente del archivo si continúa sin abrir"
+            ]
+          },
+          {
+            "key": "rendimiento_lento",
+            "name": "Computadora Lenta",
+            "short_description": "Mejorar rendimiento de computadora que funciona lentamente.",
+            "example_tasks": [
+              "Cerrar programas que no están usando para liberar memoria",
+              "Cerrar pestañas de navegador innecesarias",
+              "Reiniciar computadora para limpiar memoria",
+              "Verificar que no hay actualizaciones instalándose en segundo plano",
+              "Reportar a IT si computadora es consistentemente lenta"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "prevencion",
+        "name": "Prevención de Problemas",
+        "short_description": "Desarrollar hábitos que minimizan problemas técnicos.",
+        "sub_topics": [
+          {
+            "key": "guardar_frecuentemente",
+            "name": "Guardar Trabajo Regularmente",
+            "short_description": "Proteger trabajo guardando con frecuencia.",
+            "example_tasks": [
+              "Usar Ctrl+S para guardar cada pocos minutos mientras trabajan",
+              "Habilitar guardado automático cuando está disponible",
+              "Guardar antes de realizar cambios grandes o riesgosos",
+              "Crear versiones de respaldo de archivos importantes",
+              "Nunca depender de una sola copia de trabajo importante"
+            ]
+          },
+          {
+            "key": "mantener_organizado",
+            "name": "Mantener Sistema Organizado",
+            "short_description": "Evitar problemas manteniendo archivos y sistema ordenados.",
+            "example_tasks": [
+              "No llenar disco duro completamente dejando espacio libre",
+              "Organizar archivos en carpetas en lugar de tener todo en escritorio",
+              "Eliminar archivos temporales y descargas antiguas regularmente",
+              "No instalar programas sin autorización",
+              "Mantener escritorio limpio con solo accesos directos necesarios"
+            ]
+          },
+          {
+            "key": "actualizaciones",
+            "name": "Mantener Software Actualizado",
+            "short_description": "Instalar actualizaciones para prevenir problemas de seguridad y compatibilidad.",
+            "example_tasks": [
+              "Permitir que actualizaciones de Windows se instalen",
+              "Actualizar navegador cuando aparece notificación",
+              "No posponer actualizaciones indefinidamente",
+              "Comprender que actualizaciones corrigen errores y vulnerabilidades",
+              "Reportar a maestro si actualización causa problemas"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "documentar_aprender",
+        "name": "Documentar y Aprender",
+        "short_description": "Registrar soluciones y aprender de problemas resueltos.",
+        "sub_topics": [
+          {
+            "key": "llevar_registro",
+            "name": "Llevar Registro de Soluciones",
+            "short_description": "Documentar problemas y sus soluciones para referencia futura.",
+            "example_tasks": [
+              "Anotar problema y solución que funcionó en cuaderno o documento",
+              "Crear lista personal de soluciones a problemas frecuentes",
+              "Compartir soluciones útiles con compañeros de clase",
+              "Referirse a registro antes de pedir ayuda para problemas recurrentes",
+              "Actualizar registro con nuevas soluciones aprendidas"
+            ]
+          },
+          {
+            "key": "aprender_errores",
+            "name": "Aprender de Errores",
+            "short_description": "Usar problemas como oportunidades de aprendizaje.",
+            "example_tasks": [
+              "Comprender qué causó problema para evitarlo en futuro",
+              "Desarrollar mejores hábitos basados en problemas experimentados",
+              "No sentirse frustrados por problemas técnicos - son oportunidades de aprender",
+              "Compartir lecciones aprendidas con otros",
+              "Reconocer que todos enfrentan problemas técnicos ocasionalmente"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "bases_datos_basicas",
+    "name": "Introducción a Bases de Datos",
+    "short_description": "Conceptos básicos de organización de datos en tablas, ordenamiento, filtrado y búsqueda de información estructurada.",
+    "sub_topics": [
+      {
+        "key": "concepto_base_datos",
+        "name": "¿Qué es una Base de Datos?",
+        "short_description": "Comprender bases de datos como colecciones organizadas de información relacionada.",
+        "sub_topics": [
+          {
+            "key": "definicion_ejemplos",
+            "name": "Definición y Ejemplos",
+            "short_description": "Identificar bases de datos en vida cotidiana y su propósito.",
+            "example_tasks": [
+              "Explicar base de datos como colección organizada de información",
+              "Identificar ejemplos cotidianos: directorio telefónico, biblioteca escolar, tienda en línea",
+              "Comprender que bases de datos permiten almacenar y encontrar información rápidamente",
+              "Comparar base de datos con archivos desordenados vs. organizados",
+              "Discutir por qué escuelas, hospitales y negocios necesitan bases de datos"
+            ]
+          },
+          {
+            "key": "componentes_basicos",
+            "name": "Componentes Básicos",
+            "short_description": "Reconocer elementos fundamentales: tablas, registros, campos.",
+            "example_tasks": [
+              "Identificar tabla como estructura básica que organiza información",
+              "Comprender registro como fila con información completa sobre un elemento",
+              "Reconocer campo como columna con tipo específico de información",
+              "Crear ejemplo simple: tabla de estudiantes con campos nombre, edad, grado",
+              "Explicar cómo estos componentes trabajan juntos para organizar datos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tablas_datos",
+        "name": "Trabajar con Tablas de Datos",
+        "short_description": "Crear y estructurar tablas para almacenar información de manera organizada.",
+        "sub_topics": [
+          {
+            "key": "diseñar_tabla",
+            "name": "Diseñar Tabla Simple",
+            "short_description": "Planear estructura de tabla identificando campos necesarios.",
+            "example_tasks": [
+              "Decidir qué información necesitan almacenar sobre cada elemento",
+              "Crear lista de campos necesarios: título descriptivo para cada columna",
+              "Determinar tipo de datos para cada campo: texto, número, fecha",
+              "Evitar redundancia no duplicando información innecesariamente",
+              "Diseñar tabla de biblioteca personal con campos: título, autor, género, fecha de lectura"
+            ]
+          },
+          {
+            "key": "ingresar_datos",
+            "name": "Ingresar Datos Consistentemente",
+            "short_description": "Llenar tabla manteniendo formato y consistencia.",
+            "example_tasks": [
+              "Ingresar un registro completo en cada fila",
+              "Mantener consistencia en formato: mismo formato de fecha, mayúsculas, etc.",
+              "Evitar dejar campos vacíos cuando sea posible",
+              "Usar listas desplegables para opciones limitadas cuando sea posible",
+              "Verificar que datos ingresados son correctos antes de continuar"
+            ]
+          },
+          {
+            "key": "tipos_datos",
+            "name": "Tipos de Datos",
+            "short_description": "Comprender diferentes tipos de información y cómo manejarlos.",
+            "example_tasks": [
+              "Identificar datos de texto: nombres, descripciones, direcciones",
+              "Reconocer datos numéricos que se usan para cálculos",
+              "Trabajar con fechas en formato consistente",
+              "Usar valores verdadero/falso para datos sí/no",
+              "Comprender que tipo correcto permite operaciones apropiadas"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "ordenar_filtrar",
+        "name": "Ordenar y Filtrar Datos",
+        "short_description": "Organizar y buscar información en tablas usando ordenamiento y filtros.",
+        "sub_topics": [
+          {
+            "key": "ordenar_datos",
+            "name": "Ordenar Información",
+            "short_description": "Organizar registros según criterios específicos.",
+            "example_tasks": [
+              "Ordenar tabla alfabéticamente por nombre o título",
+              "Ordenar numéricamente de menor a mayor o viceversa",
+              "Ordenar por fecha para ver más reciente o más antiguo primero",
+              "Usar ordenamiento de múltiples niveles: primero por categoría, luego por nombre",
+              "Comprender que ordenar no elimina datos, solo cambia presentación"
+            ]
+          },
+          {
+            "key": "filtrar_datos",
+            "name": "Filtrar para Encontrar",
+            "short_description": "Mostrar solo registros que cumplen criterios específicos.",
+            "example_tasks": [
+              "Aplicar filtro para mostrar solo cierta categoría",
+              "Filtrar por rango: solo fechas en cierto período, números mayores que X",
+              "Usar múltiples filtros simultáneamente para búsqueda específica",
+              "Quitar filtros para volver a ver todos los datos",
+              "Crear tabla de gastos y filtrar solo gastos de categoría 'Escuela'"
+            ]
+          },
+          {
+            "key": "buscar_datos",
+            "name": "Buscar Datos Específicos",
+            "short_description": "Localizar registros usando función de búsqueda.",
+            "example_tasks": [
+              "Usar Ctrl+F para buscar palabra o número en tabla",
+              "Buscar registros que contienen cierto texto",
+              "Combinar búsqueda con filtros para resultados precisos",
+              "Navegar entre múltiples resultados de búsqueda",
+              "Usar búsqueda para verificar si información ya existe en base de datos"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "consultas_simples",
+        "name": "Consultas Simples",
+        "short_description": "Hacer preguntas a la base de datos para obtener información específica.",
+        "sub_topics": [
+          {
+            "key": "formular_preguntas",
+            "name": "Formular Preguntas",
+            "short_description": "Traducir preguntas cotidianas a criterios de búsqueda.",
+            "example_tasks": [
+              "Convertir '¿Cuántos libros de aventuras tengo?' en filtro de género",
+              "Traducir '¿Quiénes cumplen años en junio?' a filtro de fecha",
+              "Formular '¿Qué películas son apropiadas para niños?' como consulta",
+              "Combinar criterios: '¿Qué juegos son educativos Y para edades 8-10?'",
+              "Practicar crear preguntas que datos en tabla pueden responder"
+            ]
+          },
+          {
+            "key": "interpretar_resultados",
+            "name": "Interpretar Resultados",
+            "short_description": "Analizar información obtenida de consultas.",
+            "example_tasks": [
+              "Contar cuántos registros cumplen criterio de búsqueda",
+              "Identificar patrones en resultados filtrados",
+              "Comparar resultados de diferentes consultas",
+              "Crear gráfica simple basada en datos filtrados",
+              "Sacar conclusiones de información encontrada"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "aplicaciones_practicas",
+        "name": "Aplicaciones Prácticas de Bases de Datos",
+        "short_description": "Crear bases de datos simples para necesidades personales o escolares.",
+        "sub_topics": [
+          {
+            "key": "inventario_personal",
+            "name": "Inventario Personal",
+            "short_description": "Catalogar colecciones personales: libros, juegos, juguetes.",
+            "example_tasks": [
+              "Crear tabla para catalogar colección personal",
+              "Incluir campos relevantes: nombre, categoría, condición, ubicación",
+              "Ingresar todos los elementos de la colección",
+              "Usar filtros para encontrar elementos específicos rápidamente",
+              "Actualizar base de datos cuando agregan o quitan elementos"
+            ]
+          },
+          {
+            "key": "directorio_contactos",
+            "name": "Directorio de Contactos",
+            "short_description": "Organizar información de contacto de amigos y familia.",
+            "example_tasks": [
+              "Diseñar tabla con campos: nombre, relación, teléfono, correo, cumpleaños",
+              "Ingresar contactos importantes respetando privacidad",
+              "Ordenar alfabéticamente para encontrar contactos fácilmente",
+              "Filtrar por cumpleaños para recordar fechas importantes",
+              "Mantener información actualizada cuando cambia"
+            ]
+          },
+          {
+            "key": "planificador_tareas",
+            "name": "Planificador de Tareas",
+            "short_description": "Organizar tareas escolares y actividades.",
+            "example_tasks": [
+              "Crear base de datos de tareas con campos: materia, descripción, fecha entrega, estado",
+              "Ingresar todas las tareas y proyectos pendientes",
+              "Filtrar por fecha para ver qué vence pronto",
+              "Marcar tareas completadas y filtrar solo pendientes",
+              "Usar ordenamiento por prioridad o fecha para organizar trabajo"
+            ]
+          },
+          {
+            "key": "proyecto_investigacion",
+            "name": "Organizar Investigación",
+            "short_description": "Catalogar fuentes e información para proyectos escolares.",
+            "example_tasks": [
+              "Crear tabla para fuentes con campos: autor, título, tipo, fecha, notas",
+              "Ingresar cada fuente consultada durante investigación",
+              "Filtrar por tipo de fuente: libro, sitio web, video",
+              "Organizar citas y referencias usando base de datos",
+              "Exportar lista organizada para bibliografía del proyecto"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "integridad_datos",
+        "name": "Integridad y Calidad de Datos",
+        "short_description": "Mantener datos precisos, completos y confiables.",
+        "sub_topics": [
+          {
+            "key": "verificar_precision",
+            "name": "Verificar Precisión",
+            "short_description": "Asegurar que información ingresada es correcta.",
+            "example_tasks": [
+              "Revisar datos después de ingresar para detectar errores tipográficos",
+              "Verificar números y fechas especialmente cuidadosamente",
+              "Comparar con fuente original al ingresar información",
+              "Corregir errores inmediatamente cuando se detectan",
+              "Establecer proceso de revisión antes de finalizar ingreso de datos"
+            ]
+          },
+          {
+            "key": "evitar_duplicados",
+            "name": "Evitar Duplicados",
+            "short_description": "Prevenir registros repetidos en la base de datos.",
+            "example_tasks": [
+              "Buscar antes de agregar para verificar que elemento no existe",
+              "Usar identificadores únicos cuando sea posible",
+              "Revisar periódicamente tabla para encontrar duplicados",
+              "Combinar información de duplicados en un solo registro",
+              "Establecer regla de verificar primero antes de agregar nuevo registro"
+            ]
+          },
+          {
+            "key": "completitud_datos",
+            "name": "Completitud de Datos",
+            "short_description": "Asegurar que registros contienen toda información necesaria.",
+            "example_tasks": [
+              "Llenar todos los campos importantes, no dejar vacíos críticos",
+              "Marcar claramente cuando información no está disponible",
+              "Completar datos faltantes cuando se obtenga información",
+              "Establecer campos obligatorios vs. opcionales",
+              "Revisar que cada registro tiene información completa suficiente"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "robotica_educativa",
+    "name": "Robótica Educativa Básica",
+    "short_description": "Introducción a conceptos de robótica mediante kits educativos, programación de robots simples y comprensión de sensores y actuadores.",
+    "sub_topics": [
+      {
+        "key": "introduccion_robotica",
+        "name": "Introducción a la Robótica",
+        "short_description": "Comprender qué son los robots y cómo funcionan en nivel básico.",
+        "sub_topics": [
+          {
+            "key": "que_es_robot",
+            "name": "¿Qué es un Robot?",
+            "short_description": "Definir robot y distinguir de otras máquinas.",
+            "example_tasks": [
+              "Explicar robot como máquina programable que puede realizar tareas",
+              "Identificar robots en vida diaria: aspiradoras robóticas, robots industriales",
+              "Distinguir entre robots autónomos y controlados remotamente",
+              "Discutir componentes básicos: cerebro (computadora), cuerpo (estructura), sentidos (sensores)",
+              "Crear lista de robots reales vs. robots de ciencia ficción"
+            ]
+          },
+          {
+            "key": "componentes_robot",
+            "name": "Componentes de un Robot",
+            "short_description": "Identificar partes principales de robots educativos.",
+            "example_tasks": [
+              "Reconocer controlador o cerebro del robot",
+              "Identificar motores como actuadores que producen movimiento",
+              "Localizar sensores que permiten al robot detectar entorno",
+              "Comprender fuente de energía: baterías o conexión eléctrica",
+              "Examinar estructura física que sostiene componentes"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "construir_robot",
+        "name": "Construcción de Robot Simple",
+        "short_description": "Ensamblar robot básico siguiendo instrucciones o diseño propio.",
+        "sub_topics": [
+          {
+            "key": "seguir_instrucciones",
+            "name": "Seguir Instrucciones de Construcción",
+            "short_description": "Armar robot según manual o guía proporcionada.",
+            "example_tasks": [
+              "Leer instrucciones completamente antes de comenzar ensamblaje",
+              "Identificar y organizar piezas necesarias",
+              "Seguir pasos secuencialmente para construir robot",
+              "Verificar que cada conexión está segura antes de continuar",
+              "Pedir ayuda si instrucción no es clara"
+            ]
+          },
+          {
+            "key": "diseño_propio",
+            "name": "Diseño Básico Propio",
+            "short_description": "Crear diseño simple de robot para propósito específico.",
+            "example_tasks": [
+              "Decidir qué tarea quieren que robot realice",
+              "Planear qué componentes necesitan para esa tarea",
+              "Dibujar diseño básico antes de construir",
+              "Construir prototipo y probar funcionalidad",
+              "Modificar diseño basándose en resultados de prueba"
+            ]
+          },
+          {
+            "key": "trabajo_equipo",
+            "name": "Trabajo en Equipo",
+            "short_description": "Colaborar con compañeros en construcción de robot.",
+            "example_tasks": [
+              "Dividir tareas de construcción entre miembros del equipo",
+              "Comunicarse sobre progreso y problemas",
+              "Ayudar a compañeros cuando tienen dificultades",
+              "Tomar decisiones grupales sobre diseño",
+              "Celebrar éxitos del equipo cuando robot funciona"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "programar_robot",
+        "name": "Programación de Robot",
+        "short_description": "Crear programas para controlar comportamiento del robot.",
+        "sub_topics": [
+          {
+            "key": "movimientos_basicos",
+            "name": "Programar Movimientos Básicos",
+            "short_description": "Controlar motores para hacer que robot se mueva.",
+            "example_tasks": [
+              "Programar robot para moverse hacia adelante distancia específica",
+              "Hacer que robot gire ángulo determinado",
+              "Crear secuencia de movimientos: adelante, girar, adelante",
+              "Ajustar velocidad de motores para movimiento preciso",
+              "Programar robot para navegar camino simple"
+            ]
+          },
+          {
+            "key": "usar_sensores",
+            "name": "Usar Sensores",
+            "short_description": "Programar robot para responder a información de sensores.",
+            "example_tasks": [
+              "Usar sensor de proximidad para detectar obstáculos",
+              "Programar robot para detenerse cuando sensor detecta objeto",
+              "Usar sensor de luz para seguir línea en el piso",
+              "Programar respuestas diferentes según lectura de sensor",
+              "Crear robot que evita obstáculos automáticamente"
+            ]
+          },
+          {
+            "key": "condicionales_robot",
+            "name": "Lógica Condicional en Robots",
+            "short_description": "Usar estructuras si/entonces para comportamiento inteligente.",
+            "example_tasks": [
+              "Programar: si detecta obstáculo entonces girar",
+              "Crear lógica: si sensor de luz detecta negro entonces seguir línea",
+              "Usar múltiples condiciones para navegación compleja",
+              "Programar diferentes comportamientos para diferentes situaciones",
+              "Crear robot que toma decisiones basadas en sensores"
+            ]
+          },
+          {
+            "key": "ciclos_robot",
+            "name": "Ciclos en Programación de Robots",
+            "short_description": "Usar repetición para comportamiento continuo.",
+            "example_tasks": [
+              "Programar patrullaje continuo usando ciclo por siempre",
+              "Repetir verificación de sensores constantemente",
+              "Crear comportamiento que repite hasta que condición cambia",
+              "Programar secuencia de acciones que se repiten",
+              "Combinar ciclos con condicionales para autonomía"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "desafios_robotica",
+        "name": "Desafíos de Robótica",
+        "short_description": "Resolver problemas específicos usando robot programado.",
+        "sub_topics": [
+          {
+            "key": "laberinto",
+            "name": "Navegación de Laberinto",
+            "short_description": "Programar robot para encontrar salida de laberinto.",
+            "example_tasks": [
+              "Analizar laberinto para planear estrategia",
+              "Programar algoritmo simple: seguir pared derecha",
+              "Usar sensores para detectar paredes y espacios abiertos",
+              "Probar y ajustar programa para mejorar navegación",
+              "Comparar diferentes estrategias de navegación"
+            ]
+          },
+          {
+            "key": "seguir_linea",
+            "name": "Seguidor de Línea",
+            "short_description": "Programar robot para seguir línea en piso.",
+            "example_tasks": [
+              "Comprender cómo sensor de luz detecta contraste",
+              "Programar robot para mantenerse sobre línea negra",
+              "Ajustar velocidad para curvas cerradas",
+              "Manejar intersecciones y bifurcaciones",
+              "Competir con compañeros en pista de seguidor de línea"
+            ]
+          },
+          {
+            "key": "recolectar_objetos",
+            "name": "Recolectar Objetos",
+            "short_description": "Diseñar robot que puede recoger y mover objetos.",
+            "example_tasks": [
+              "Diseñar mecanismo para agarrar o empujar objetos",
+              "Programar secuencia para acercarse, agarrar y mover objeto",
+              "Usar sensores para localizar objetos",
+              "Transportar objeto a zona designada",
+              "Optimizar tiempo y eficiencia de recolección"
+            ]
+          },
+          {
+            "key": "carrera_obstaculos",
+            "name": "Carrera de Obstáculos",
+            "short_description": "Navegar curso con múltiples desafíos.",
+            "example_tasks": [
+              "Analizar curso identificando diferentes tipos de desafíos",
+              "Planear estrategia para cada sección del curso",
+              "Programar comportamientos diferentes para cada obstáculo",
+              "Practicar recorrido completo ajustando programa",
+              "Competir con otros equipos por mejor tiempo o puntuación"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "depuracion_robot",
+        "name": "Depuración de Robots",
+        "short_description": "Identificar y corregir problemas en construcción y programación.",
+        "sub_topics": [
+          {
+            "key": "problemas_mecanicos",
+            "name": "Resolver Problemas Mecánicos",
+            "short_description": "Identificar y corregir problemas físicos del robot.",
+            "example_tasks": [
+              "Verificar que todas las conexiones están firmes",
+              "Identificar piezas flojas o mal colocadas",
+              "Revisar que motores están conectados correctamente",
+              "Balancear peso del robot para movimiento estable",
+              "Ajustar ruedas o patas para mejor tracción"
+            ]
+          },
+          {
+            "key": "depurar_programa",
+            "name": "Depurar Programa del Robot",
+            "short_description": "Encontrar y corregir errores en código del robot.",
+            "example_tasks": [
+              "Probar programa paso a paso identificando dónde falla",
+              "Verificar que sensores están leyendo valores correctos",
+              "Ajustar valores de tiempo, distancia o velocidad",
+              "Simplificar programa complejo para aislar problema",
+              "Pedir a compañero que revise código para encontrar errores"
+            ]
+          },
+          {
+            "key": "iteracion_mejora",
+            "name": "Iteración y Mejora",
+            "short_description": "Refinar robot y programa mediante prueba y error.",
+            "example_tasks": [
+              "Hacer cambio pequeño, probar, observar resultado",
+              "Documentar qué cambios mejoran desempeño",
+              "No desanimarse cuando robot no funciona a la primera",
+              "Aprender de cada fallo para mejorar siguiente versión",
+              "Celebrar progreso incremental hacia objetivo"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "aplicaciones_robotica",
+        "name": "Aplicaciones de la Robótica",
+        "short_description": "Comprender cómo robots se usan en mundo real.",
+        "sub_topics": [
+          {
+            "key": "robots_industria",
+            "name": "Robots en la Industria",
+            "short_description": "Conocer cómo robots ayudan en manufactura y producción.",
+            "example_tasks": [
+              "Investigar robots en líneas de ensamblaje automotriz",
+              "Comprender ventajas: precisión, velocidad, tareas peligrosas",
+              "Discutir cómo robots trabajan junto con humanos",
+              "Ver videos de robots industriales en acción",
+              "Crear presentación sobre robot específico y su función"
+            ]
+          },
+          {
+            "key": "robots_servicio",
+            "name": "Robots de Servicio",
+            "short_description": "Explorar robots que ayudan en vida diaria.",
+            "example_tasks": [
+              "Investigar robots aspiradoras, robots de entrega, drones",
+              "Discutir robots médicos que ayudan en cirugías",
+              "Explorar robots de rescate en desastres",
+              "Debatir ventajas y desventajas de robots en servicio",
+              "Imaginar nuevo robot de servicio que sería útil"
+            ]
+          },
+          {
+            "key": "futuro_robotica",
+            "name": "Futuro de la Robótica",
+            "short_description": "Pensar en cómo robots podrían evolucionar.",
+            "example_tasks": [
+              "Investigar desarrollos recientes en robótica",
+              "Discutir trabajos que robots podrían hacer en futuro",
+              "Considerar implicaciones éticas de robots inteligentes",
+              "Imaginar y diseñar robot del futuro",
+              "Reflexionar sobre carreras en robótica e ingeniería"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

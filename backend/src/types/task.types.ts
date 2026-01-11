@@ -1,4 +1,5 @@
 import { Timestamp } from "firebase-admin/firestore";
+import { Subject, GradeLevel } from "@eduforger/shared";
 
 // Legacy types - kept for backward compatibility with storage service
 export interface LegacyTaskImage {
@@ -25,28 +26,29 @@ export type { TaskGenerationResult } from "./task-generator.types";
 /**
  * Subject Mapping Document
  * Represents a node in the curriculum hierarchy
+ *
+ * NOTE: This should match the SubjectMapping interface in @eduforger/shared
+ * Additional fields like taskCount are denormalized stats not in the shared type
  */
 export interface SubjectMappingDocument {
   // Identity
-  key: string;
-  name: string;
-  shortDescription?: string;
+  id: string; // Document ID
+  name: string; // Display name (e.g., "Algebrai kifejezések, azonosságok")
+
+  // Classification (typed to match shared types)
+  subject: Subject; // Use Subject type from single source of truth
+  gradeLevel: GradeLevel; // Use GradeLevel type from single source of truth
 
   // Hierarchy
-  level: number; // 0=subject, 1=grade, 2+=categories
-  parentId: string | null;
-  path: string; // "mathematics/grade_9_10/halmazok"
+  level: number; // Depth in tree (0 = root)
+  orderIndex: number; // Order among siblings
+  parentId: string | null; // Parent node ID
+  path: string; // Full path in tree (e.g., "algebra/linear_equations")
+  isLeaf: boolean; // True if this is a terminal node (can have tasks)
 
-  // Classification
-  subject: string; // "mathematics", "physics", etc.
-  gradeLevel: string; // "grade_9_10", "grade_11_12"
-
-  // Metadata
-  orderIndex: number;
-  isLeaf: boolean; // TRUE if tasks can be assigned
-
-  // Stats (denormalized)
-  taskCount: number;
+  // Additional fields (not in shared type but used in backend)
+  shortDescription?: string;
+  taskCount?: number; // Denormalized stat
 
   // Timestamps
   createdAt: Timestamp;

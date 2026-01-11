@@ -3,6 +3,7 @@ module.exports = {
   testEnvironment: "node",
   roots: ["<rootDir>/src"],
   testMatch: ["**/__tests__/**/*.test.ts"],
+  setupFiles: ["<rootDir>/jest.setup.ts"],
   collectCoverageFrom: [
     "src/**/*.ts",
     "!src/**/*.d.ts",
@@ -13,6 +14,7 @@ module.exports = {
   coverageReporters: ["text", "lcov", "html"],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
+    "^@eduforger/shared$": "<rootDir>/../shared/types/index.ts",
   },
   transform: {
     "^.+\\.ts$": [

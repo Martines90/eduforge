@@ -243,7 +243,8 @@ describe("TaskGeneratorService - Prompt Generation", () => {
       const systemPrompt = getTaskSystemPrompt();
 
       // Should contain template content with placeholders replaced
-      expect(systemPrompt).toContain("You are an expert math task designer");
+      expect(systemPrompt).toContain("THE IMMORTAL TEACHER");
+      expect(systemPrompt).toContain("CURRICULUM ALIGNMENT IS MANDATORY");
       expect(systemPrompt).toContain("Hungarian"); // {{LANGUAGE}} replaced
       expect(systemPrompt).toContain("metric"); // {{METRIC_SYSTEM}} replaced
     });

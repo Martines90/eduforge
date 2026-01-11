@@ -30,6 +30,14 @@ vi.mock('@/lib/i18n', () => ({
   }),
 }));
 
+vi.mock('@/lib/context/UserContext', () => ({
+  useUser: () => ({
+    gradeSystem: 'grade_9_12',
+    user: null,
+    loading: false,
+  }),
+}));
+
 vi.mock('@/lib/services/test.service', () => ({
   fetchPublishedTests: vi.fn(),
 }));

@@ -10,6 +10,16 @@ import { PublishedTestPage } from '../pages/published-test.page';
 import { ApiMocks } from './api-mocks';
 
 /**
+ * Authenticated user type for e2e tests
+ */
+export type AuthenticatedUser = {
+  uid: string;
+  email: string;
+  displayName?: string;
+  token: string;
+};
+
+/**
  * Extended test fixtures with Page Objects and API mocks
  */
 type TestFixtures = {
@@ -22,6 +32,7 @@ type TestFixtures = {
   testEditorPage: TestEditorPage;
   publishedTestPage: PublishedTestPage;
   apiMocks: ApiMocks;
+  authenticatedUser: AuthenticatedUser;
 };
 
 /**
@@ -71,6 +82,30 @@ export const test = base.extend<TestFixtures>({
   publishedTestPage: async ({ page }, use) => {
     const publishedTestPage = new PublishedTestPage(page);
     await use(publishedTestPage);
+  },
+
+  authenticatedUser: async ({ page }, use) => {
+    // Create a mock authenticated user
+    const mockUser: AuthenticatedUser = {
+      uid: 'test-user-123',
+      email: 'test@example.com',
+      displayName: 'Test User',
+      token: 'mock-jwt-token-for-testing',
+    };
+
+    // Set up authentication in localStorage
+    await page.addInitScript((user) => {
+      localStorage.setItem('user', JSON.stringify(user));
+      localStorage.setItem('token', user.token);
+    }, mockUser);
+
+    await use(mockUser);
+
+    // Cleanup: Remove auth data after test
+    await page.evaluate(() => {
+      localStorage.removeItem('user');
+      localStorage.removeItem('token');
+    });
   },
 });
 

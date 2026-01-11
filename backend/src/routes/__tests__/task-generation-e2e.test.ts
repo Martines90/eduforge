@@ -9,6 +9,37 @@
  * - Credit deduction
  */
 
+// Mock firebase-admin BEFORE any imports
+jest.mock("firebase-admin", () => ({
+  firestore: Object.assign(
+    jest.fn(() => ({
+      collection: jest.fn(),
+    })),
+    {
+      FieldValue: {
+        serverTimestamp: jest.fn(() => new Date()),
+        increment: jest.fn((n: number) => n),
+        delete: jest.fn(() => undefined),
+        arrayUnion: jest.fn((...elements: any[]) => elements),
+        arrayRemove: jest.fn((...elements: any[]) => elements),
+      },
+      Timestamp: {
+        now: jest.fn(() => ({ toDate: () => new Date() })),
+        fromDate: jest.fn((date: Date) => ({ toDate: () => date })),
+      },
+    }
+  ),
+  auth: jest.fn(() => ({
+    getUserByEmail: jest.fn(),
+    createUser: jest.fn(),
+    deleteUser: jest.fn(),
+  })),
+  credential: {
+    cert: jest.fn(),
+  },
+  initializeApp: jest.fn(),
+}));
+
 import request from "supertest";
 import express from "express";
 import taskRoutes from "../task.routes";

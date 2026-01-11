@@ -29,10 +29,11 @@ export async function getSubjectMappings(
     .orderBy("orderIndex")
     .get();
 
-  return snapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...(doc.data() as SubjectMappingDocument),
-  }));
+  return snapshot.docs.map((doc) => {
+    const data = doc.data() as SubjectMappingDocument;
+    // Ensure the id field matches the document ID
+    return { ...data, id: doc.id };
+  });
 }
 
 /**
@@ -106,10 +107,11 @@ export async function getLeafNodes(
     .orderBy("path")
     .get();
 
-  return snapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...(doc.data() as SubjectMappingDocument),
-  }));
+  return snapshot.docs.map((doc) => {
+    const data = doc.data() as SubjectMappingDocument;
+    // Ensure the id field matches the document ID
+    return { ...data, id: doc.id };
+  });
 }
 
 /**
@@ -135,10 +137,9 @@ export async function getSubjectMappingById(
     return null;
   }
 
-  return {
-    id: doc.id,
-    ...(doc.data() as SubjectMappingDocument),
-  };
+  const data = doc.data() as SubjectMappingDocument;
+  // Ensure the id field matches the document ID
+  return { ...data, id: doc.id };
 }
 
 /**
@@ -162,10 +163,11 @@ export async function getChildren(
     .orderBy("orderIndex")
     .get();
 
-  return snapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...(doc.data() as SubjectMappingDocument),
-  }));
+  return snapshot.docs.map((doc) => {
+    const data = doc.data() as SubjectMappingDocument;
+    // Ensure the id field matches the document ID
+    return { ...data, id: doc.id };
+  });
 }
 
 /**
@@ -275,10 +277,8 @@ export async function getBreadcrumbPath(
     }
 
     const data = doc.data() as SubjectMappingDocument;
-    breadcrumbs.unshift({
-      id: doc.id,
-      ...data,
-    });
+    // Ensure the id field matches the document ID
+    breadcrumbs.unshift({ ...data, id: doc.id });
 
     currentId = data.parentId;
   }

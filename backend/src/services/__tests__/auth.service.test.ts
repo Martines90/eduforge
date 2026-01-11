@@ -48,7 +48,14 @@ describe("Auth Service", () => {
     it("should create and store verification code", async () => {
       const mockSet = jest.fn().mockResolvedValue(undefined);
       const mockDoc = jest.fn().mockReturnValue({ set: mockSet });
-      const mockCollection = jest.fn().mockReturnValue({ doc: mockDoc });
+      const mockAdd = jest.fn().mockResolvedValue({ id: "mock-mail-id" });
+
+      const mockCollection = jest.fn((collectionName) => {
+        if (collectionName === "mail") {
+          return { add: mockAdd };
+        }
+        return { doc: mockDoc };
+      });
 
       mockFirestore.collection = mockCollection;
       (bcrypt.hash as jest.Mock).mockResolvedValue("hashed-password");
@@ -68,8 +75,10 @@ describe("Auth Service", () => {
 
       expect(code).toMatch(/^\d{6}$/);
       expect(mockCollection).toHaveBeenCalledWith("pendingRegistrations");
+      expect(mockCollection).toHaveBeenCalledWith("mail");
       expect(mockDoc).toHaveBeenCalledWith("test@example.com");
       expect(mockSet).toHaveBeenCalled();
+      expect(mockAdd).toHaveBeenCalled();
     });
   });
 
@@ -447,10 +456,14 @@ describe("Auth Service", () => {
       });
 
       const mockSet = jest.fn().mockResolvedValue(undefined);
+      const mockAdd = jest.fn().mockResolvedValue({ id: "mock-mail-id" });
 
       mockFirestore.collection = jest.fn((collectionName) => {
         if (collectionName === "users") {
           return { where: mockWhere };
+        }
+        if (collectionName === "mail") {
+          return { add: mockAdd };
         }
         // For pendingRegistrations
         return {
@@ -476,6 +489,7 @@ describe("Auth Service", () => {
 
       expect(code).toMatch(/^\d{6}$/);
       expect(mockSet).toHaveBeenCalled();
+      expect(mockAdd).toHaveBeenCalled();
     });
 
     it("should throw error if email already registered", async () => {
