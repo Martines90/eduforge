@@ -32,4 +32,12 @@ export const config = {
 
   // CORS configuration
   corsOrigin: process.env.CORS_ORIGIN || "*",
+
+  // Email configuration (SendGrid)
+  email: {
+    sendgridApiKey: process.env.SENDGRID_API_KEY || "",
+    fromEmail: process.env.SENDGRID_FROM_EMAIL || "noreply@eduforger.com",
+    fromName: process.env.SENDGRID_FROM_NAME || "EduForger",
+    supportEmail: process.env.SENDGRID_SUPPORT_EMAIL || "support@eduforger.com",
+  },
 };

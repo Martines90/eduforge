@@ -855,4 +855,69 @@ export const en: Translations = {
     "By continuing, you agree to our Terms of Service and Privacy Policy",
   "To view more tasks you need to register! Get {{count}} free task generation credits when you sign up.":
     "To view more tasks you need to register! Get {{count}} free task generation credits when you sign up.",
+
+  // Forgot Password Modal
+  "Reset Password": "Reset Password",
+  "Enter your email address and we'll send you a link to reset your password":
+    "Enter your email address and we'll send you a link to reset your password",
+  "Please enter your email address": "Please enter your email address",
+  "Send Reset Link": "Send Reset Link",
+  "Sending...": "Sending...",
+  "Reset Link Sent!": "Reset Link Sent!",
+  "If an account exists with this email, you will receive a password reset link shortly.":
+    "If an account exists with this email, you will receive a password reset link shortly.",
+  "Check your inbox and click the link to reset your password. The link will expire in 30 minutes.":
+    "Check your inbox and click the link to reset your password. The link will expire in 30 minutes.",
+  "Server error occurred": "Server error occurred",
+
+  // Reset Password Page
+  "Validating reset link...": "Validating reset link...",
+  "Reset Your Password": "Reset Your Password",
+  "Link Expired or Invalid": "Link Expired or Invalid",
+  "This password reset link has expired or is invalid. Password reset links are valid for 30 minutes.":
+    "This password reset link has expired or is invalid. Password reset links are valid for 30 minutes.",
+  "Request New Reset Link": "Request New Reset Link",
+  "Enter your new password below": "Enter your new password below",
+  "New password (min. 8 characters)": "New password (min. 8 characters)",
+  "Confirm new password": "Confirm new password",
+  "Reset My Password": "Reset My Password",
+  "Resetting Password...": "Resetting Password...",
+  "Password Reset Successful!": "Password Reset Successful!",
+  "Your password has been reset successfully. You can now log in with your new password.":
+    "Your password has been reset successfully. You can now log in with your new password.",
+  "Redirecting to login...": "Redirecting to login...",
+  "Please enter a new password": "Please enter a new password",
+  "Password must be at least 8 characters": "Password must be at least 8 characters",
+  "Passwords do not match": "Passwords do not match",
+  "Token has expired": "Token has expired",
+
+  // Contact Support Page
+  "Contact Support": "Contact Support",
+  "Need help? Send us a message and we'll get back to you within 48 hours.":
+    "Need help? Send us a message and we'll get back to you within 48 hours.",
+  "Your Email:": "Your Email:",
+  "Your Name:": "Your Name:",
+  "Subject": "Subject",
+  "Select a subject": "Select a subject",
+  "Technical Issue": "Technical Issue",
+  "Billing Question": "Billing Question",
+  "Feature Request": "Feature Request",
+  "Account Problem": "Account Problem",
+  "Task Generation Issue": "Task Generation Issue",
+  "Other": "Other",
+  "Message": "Message",
+  "Describe your issue or question...": "Describe your issue or question...",
+  "{{current}} / {{max}} characters": "{{current}} / {{max}} characters",
+  "Send Message": "Send Message",
+  "Message Sent Successfully!": "Message Sent Successfully!",
+  "Thank you for contacting us! We've received your message and will get back to you within 48 hours.":
+    "Thank you for contacting us! We've received your message and will get back to you within 48 hours.",
+  "You'll receive a confirmation email at": "You'll receive a confirmation email at",
+  "Send Another Message": "Send Another Message",
+  "Back to Dashboard": "Back to Dashboard",
+  "Please select a subject": "Please select a subject",
+  "Please enter a message": "Please enter a message",
+  "Message must be at least 10 characters": "Message must be at least 10 characters",
+  "Message must be less than 5000 characters":
+    "Message must be less than 5000 characters",
 };

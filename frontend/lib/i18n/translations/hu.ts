@@ -870,4 +870,69 @@ export const hu: Translations = {
     "A folytatással elfogadja Felhasználási Feltételeinket és Adatvédelmi Irányelveinket",
   "To view more tasks you need to register! Get {{count}} free task generation credits when you sign up.":
     "További feladatok megtekintéséhez regisztrálnia kell! Kapjon {{count}} ingyenes feladatgenerálási kreditet a regisztrációval.",
+
+  // Forgot Password Modal
+  "Reset Password": "Jelszó Visszaállítása",
+  "Enter your email address and we'll send you a link to reset your password":
+    "Adja meg e-mail címét és küldünk egy linket a jelszó visszaállításához",
+  "Please enter your email address": "Kérjük, adja meg e-mail címét",
+  "Send Reset Link": "Visszaállítási Link Küldése",
+  "Sending...": "Küldés...",
+  "Reset Link Sent!": "Visszaállítási Link Elküldve!",
+  "If an account exists with this email, you will receive a password reset link shortly.":
+    "Ha létezik fiók ezzel az e-mail címmel, hamarosan megkapja a jelszó-visszaállítási linket.",
+  "Check your inbox and click the link to reset your password. The link will expire in 30 minutes.":
+    "Ellenőrizze postafiókját és kattintson a linkre a jelszó visszaállításához. A link 30 perc múlva lejár.",
+  "Server error occurred": "Szerverhiba történt",
+
+  // Reset Password Page
+  "Validating reset link...": "Visszaállítási link ellenőrzése...",
+  "Reset Your Password": "Jelszó Visszaállítása",
+  "Link Expired or Invalid": "Link Lejárt vagy Érvénytelen",
+  "This password reset link has expired or is invalid. Password reset links are valid for 30 minutes.":
+    "Ez a jelszó-visszaállítási link lejárt vagy érvénytelen. A jelszó-visszaállítási linkek 30 percig érvényesek.",
+  "Request New Reset Link": "Új Visszaállítási Link Kérése",
+  "Enter your new password below": "Adja meg új jelszavát alább",
+  "New password (min. 8 characters)": "Új jelszó (min. 8 karakter)",
+  "Confirm new password": "Új jelszó megerősítése",
+  "Reset My Password": "Jelszó Visszaállítása",
+  "Resetting Password...": "Jelszó Visszaállítása...",
+  "Password Reset Successful!": "Jelszó Sikeresen Visszaállítva!",
+  "Your password has been reset successfully. You can now log in with your new password.":
+    "Jelszava sikeresen visszaállításra került. Most már bejelentkezhet az új jelszavával.",
+  "Redirecting to login...": "Átirányítás a bejelentkezéshez...",
+  "Please enter a new password": "Kérjük, adjon meg új jelszót",
+  "Password must be at least 8 characters": "A jelszónak legalább 8 karakter hosszúnak kell lennie",
+  "Passwords do not match": "A jelszavak nem egyeznek",
+  "Token has expired": "A token lejárt",
+
+  // Contact Support Page
+  "Contact Support": "Kapcsolat az Ügyfélszolgálattal",
+  "Need help? Send us a message and we'll get back to you within 48 hours.":
+    "Segítségre van szüksége? Küldjön üzenetet és 48 órán belül válaszolunk.",
+  "Your Email:": "E-mail címe:",
+  "Your Name:": "Neve:",
+  "Subject": "Tárgy",
+  "Select a subject": "Válasszon tárgyat",
+  "Technical Issue": "Technikai Probléma",
+  "Billing Question": "Számlázási Kérdés",
+  "Feature Request": "Funkció Kérés",
+  "Account Problem": "Fiók Probléma",
+  "Task Generation Issue": "Feladatgenerálási Probléma",
+  "Other": "Egyéb",
+  "Message": "Üzenet",
+  "Describe your issue or question...": "Írja le problémáját vagy kérdését...",
+  "{{current}} / {{max}} characters": "{{current}} / {{max}} karakter",
+  "Send Message": "Üzenet Küldése",
+  "Message Sent Successfully!": "Üzenet Sikeresen Elküldve!",
+  "Thank you for contacting us! We've received your message and will get back to you within 48 hours.":
+    "Köszönjük, hogy kapcsolatba lépett velünk! Megkaptuk üzenetét és 48 órán belül válaszolunk.",
+  "You'll receive a confirmation email at": "Megerősítő e-mailt fog kapni a következő címre:",
+  "Send Another Message": "Másik Üzenet Küldése",
+  "Back to Dashboard": "Vissza az Irányítópulthoz",
+  "Please select a subject": "Kérjük, válasszon tárgyat",
+  "Please enter a message": "Kérjük, írjon üzenetet",
+  "Message must be at least 10 characters": "Az üzenetnek legalább 10 karakter hosszúnak kell lennie",
+  "Message must be less than 5000 characters":
+    "Az üzenetnek 5000 karakternél rövidebbnek kell lennie",
 };

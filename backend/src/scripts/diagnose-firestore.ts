@@ -10,7 +10,7 @@ import { initializeFirebase, getFirestore } from "../config/firebase.config";
 async function diagnose() {
   try {
     console.log("\n🔍 Diagnosing Firestore Structure\n");
-    console.log("=" .repeat(60));
+    console.log("=".repeat(60));
 
     initializeFirebase();
     const db = getFirestore();
@@ -18,7 +18,9 @@ async function diagnose() {
     // Check countries collection
     console.log("\n1️⃣ Checking 'countries' collection...");
     const countriesSnapshot = await db.collection("countries").get();
-    console.log(`   Found ${countriesSnapshot.size} countries: ${countriesSnapshot.docs.map(d => d.id).join(", ")}`);
+    console.log(
+      `   Found ${countriesSnapshot.size} countries: ${countriesSnapshot.docs.map((d) => d.id).join(", ")}`
+    );
 
     // For each country, check structure
     for (const countryDoc of countriesSnapshot.docs) {
@@ -29,7 +31,7 @@ async function diagnose() {
       // Check what collections exist under this country
       const collections = await countryDoc.ref.listCollections();
       console.log(`\n   Collections under countries/${countryDoc.id}:`);
-      console.log(`   ${collections.map(c => c.id).join(", ")}`);
+      console.log(`   ${collections.map((c) => c.id).join(", ")}`);
 
       // Check subjectMappings specifically
       const subjectMappingsSnapshot = await countryDoc.ref
@@ -40,7 +42,9 @@ async function diagnose() {
       console.log(`      Documents: ${subjectMappingsSnapshot.size}`);
 
       if (subjectMappingsSnapshot.size > 0) {
-        console.log(`      Subject docs: ${subjectMappingsSnapshot.docs.map(d => d.id).join(", ")}`);
+        console.log(
+          `      Subject docs: ${subjectMappingsSnapshot.docs.map((d) => d.id).join(", ")}`
+        );
 
         // For each subject, check grade subcollections
         for (const subjectDoc of subjectMappingsSnapshot.docs) {
@@ -48,15 +52,19 @@ async function diagnose() {
 
           // List subcollections (grades)
           const gradeCollections = await subjectDoc.ref.listCollections();
-          console.log(`         Grade collections: ${gradeCollections.map(c => c.id).join(", ")}`);
+          console.log(
+            `         Grade collections: ${gradeCollections.map((c) => c.id).join(", ")}`
+          );
 
           // Count documents in each grade
           for (const gradeCol of gradeCollections) {
             const gradeSnapshot = await gradeCol.get();
-            console.log(`         - ${gradeCol.id}: ${gradeSnapshot.size} documents`);
+            console.log(
+              `         - ${gradeCol.id}: ${gradeSnapshot.size} documents`
+            );
 
             // Show first 3 document IDs as sample
-            const sampleDocs = gradeSnapshot.docs.slice(0, 3).map(d => d.id);
+            const sampleDocs = gradeSnapshot.docs.slice(0, 3).map((d) => d.id);
             if (sampleDocs.length > 0) {
               console.log(`           Sample docs: ${sampleDocs.join(", ")}`);
             }
@@ -70,7 +78,9 @@ async function diagnose() {
       for (const collection of collections) {
         if (collection.id !== "subjectMappings") {
           const snapshot = await collection.get();
-          console.log(`\n   📁 ${collection.id} collection: ${snapshot.size} documents`);
+          console.log(
+            `\n   📁 ${collection.id} collection: ${snapshot.size} documents`
+          );
         }
       }
     }
@@ -78,7 +88,6 @@ async function diagnose() {
     console.log("\n" + "=".repeat(60));
     console.log("✅ Diagnostic complete!");
     console.log("=".repeat(60) + "\n");
-
   } catch (error) {
     console.error("\n❌ Diagnostic failed:", error);
     throw error;

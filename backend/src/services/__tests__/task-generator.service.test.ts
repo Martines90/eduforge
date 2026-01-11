@@ -40,7 +40,8 @@ describe("TaskGeneratorService - Prompt Generation", () => {
   // Sample request for Hungary (Metric, Hungarian)
   // New path format: country:subject:grade:topic_keys...
   const metricRequest: TaskGeneratorRequest = {
-    curriculum_path: "HU:mathematics:grade_9_12:algebra:linear_equations:solving_basic",
+    curriculum_path:
+      "HU:mathematics:grade_9_12:algebra:linear_equations:solving_basic",
     country_code: "HU",
     target_group: "mixed",
     difficulty_level: "medium",

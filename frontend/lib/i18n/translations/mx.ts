@@ -875,4 +875,69 @@ export const mx: Translations = {
     "Al continuar, aceptas nuestros Términos de Servicio y Política de Privacidad",
   "To view more tasks you need to register! Get {{count}} free task generation credits when you sign up.":
     "¡Para ver más tareas necesitas registrarte! Obtén {{count}} créditos gratuitos de generación de tareas al registrarte.",
+
+  // Forgot Password Modal
+  "Reset Password": "Restablecer Contraseña",
+  "Enter your email address and we'll send you a link to reset your password":
+    "Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña",
+  "Please enter your email address": "Por favor ingresa tu correo electrónico",
+  "Send Reset Link": "Enviar Enlace de Restablecimiento",
+  "Sending...": "Enviando...",
+  "Reset Link Sent!": "¡Enlace de Restablecimiento Enviado!",
+  "If an account exists with this email, you will receive a password reset link shortly.":
+    "Si existe una cuenta con este correo electrónico, recibirás un enlace para restablecer la contraseña en breve.",
+  "Check your inbox and click the link to reset your password. The link will expire in 30 minutes.":
+    "Revisa tu bandeja de entrada y haz clic en el enlace para restablecer tu contraseña. El enlace expirará en 30 minutos.",
+  "Server error occurred": "Ocurrió un error del servidor",
+
+  // Reset Password Page
+  "Validating reset link...": "Validando enlace de restablecimiento...",
+  "Reset Your Password": "Restablece Tu Contraseña",
+  "Link Expired or Invalid": "Enlace Expirado o Inválido",
+  "This password reset link has expired or is invalid. Password reset links are valid for 30 minutes.":
+    "Este enlace de restablecimiento de contraseña ha expirado o es inválido. Los enlaces de restablecimiento de contraseña son válidos por 30 minutos.",
+  "Request New Reset Link": "Solicitar Nuevo Enlace de Restablecimiento",
+  "Enter your new password below": "Ingresa tu nueva contraseña abajo",
+  "New password (min. 8 characters)": "Nueva contraseña (mín. 8 caracteres)",
+  "Confirm new password": "Confirmar nueva contraseña",
+  "Reset My Password": "Restablecer Mi Contraseña",
+  "Resetting Password...": "Restableciendo Contraseña...",
+  "Password Reset Successful!": "¡Contraseña Restablecida Exitosamente!",
+  "Your password has been reset successfully. You can now log in with your new password.":
+    "Tu contraseña ha sido restablecida exitosamente. Ahora puedes iniciar sesión con tu nueva contraseña.",
+  "Redirecting to login...": "Redirigiendo al inicio de sesión...",
+  "Please enter a new password": "Por favor ingresa una nueva contraseña",
+  "Password must be at least 8 characters": "La contraseña debe tener al menos 8 caracteres",
+  "Passwords do not match": "Las contraseñas no coinciden",
+  "Token has expired": "El token ha expirado",
+
+  // Contact Support Page
+  "Contact Support": "Contactar Soporte",
+  "Need help? Send us a message and we'll get back to you within 48 hours.":
+    "¿Necesitas ayuda? Envíanos un mensaje y te responderemos en 48 horas.",
+  "Your Email:": "Tu Correo Electrónico:",
+  "Your Name:": "Tu Nombre:",
+  "Subject": "Asunto",
+  "Select a subject": "Selecciona un asunto",
+  "Technical Issue": "Problema Técnico",
+  "Billing Question": "Pregunta de Facturación",
+  "Feature Request": "Solicitud de Funcionalidad",
+  "Account Problem": "Problema de Cuenta",
+  "Task Generation Issue": "Problema de Generación de Tareas",
+  "Other": "Otro",
+  "Message": "Mensaje",
+  "Describe your issue or question...": "Describe tu problema o pregunta...",
+  "{{current}} / {{max}} characters": "{{current}} / {{max}} caracteres",
+  "Send Message": "Enviar Mensaje",
+  "Message Sent Successfully!": "¡Mensaje Enviado Exitosamente!",
+  "Thank you for contacting us! We've received your message and will get back to you within 48 hours.":
+    "¡Gracias por contactarnos! Hemos recibido tu mensaje y te responderemos en 48 horas.",
+  "You'll receive a confirmation email at": "Recibirás un correo de confirmación en",
+  "Send Another Message": "Enviar Otro Mensaje",
+  "Back to Dashboard": "Volver al Panel",
+  "Please select a subject": "Por favor selecciona un asunto",
+  "Please enter a message": "Por favor ingresa un mensaje",
+  "Message must be at least 10 characters": "El mensaje debe tener al menos 10 caracteres",
+  "Message must be less than 5000 characters":
+    "El mensaje debe tener menos de 5000 caracteres",
 };

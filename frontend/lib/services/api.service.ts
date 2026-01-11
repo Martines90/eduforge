@@ -401,3 +401,91 @@ export async function fetchMyTasks(params?: {
 
   return data;
 }
+
+/**
+ * Request password reset - sends email with reset link
+ */
+export async function requestPasswordReset(email: string): Promise<ApiResponse> {
+  const response = await fetch(`${API_BASE_URL}/api/password-reset/request`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ email }),
+  });
+
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(result.error || result.message || 'Failed to request password reset');
+  }
+
+  return result;
+}
+
+/**
+ * Verify password reset token
+ */
+export async function verifyResetToken(token: string): Promise<ApiResponse<{ valid: boolean }>> {
+  const response = await fetch(`${API_BASE_URL}/api/password-reset/verify/${token}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(result.error || result.message || 'Failed to verify reset token');
+  }
+
+  return result;
+}
+
+/**
+ * Reset password with token
+ */
+export async function resetPassword(token: string, newPassword: string): Promise<ApiResponse> {
+  const response = await fetch(`${API_BASE_URL}/api/password-reset/reset`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ token, newPassword }),
+  });
+
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(result.error || result.message || 'Failed to reset password');
+  }
+
+  return result;
+}
+
+/**
+ * Submit contact support message
+ */
+export async function submitContactSupport(data: {
+  userEmail: string;
+  userName: string;
+  subject: string;
+  message: string;
+}): Promise<ApiResponse> {
+  const response = await fetch(`${API_BASE_URL}/api/contact/submit`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(result.error || result.message || 'Failed to submit contact message');
+  }
+
+  return result;
+}
