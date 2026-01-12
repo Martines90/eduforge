@@ -329,16 +329,17 @@ describe("Task Generation E2E Flow", () => {
       });
   });
 
-
   describe("POST /api/task/generate-task - Complete E2E Flow", () => {
     it("should call AI text API with properly formatted prompts", async () => {
       const response = await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send(createRequestBody({
-          number_of_images: 1,
-          custom_keywords: ["engineering", "construction"],
-        }));
+        .send(
+          createRequestBody({
+            number_of_images: 1,
+            custom_keywords: ["engineering", "construction"],
+          })
+        );
 
       if (response.status !== 201) {
         console.log("ERROR RESPONSE:", JSON.stringify(response.body, null, 2));
@@ -562,9 +563,11 @@ describe("Task Generation E2E Flow", () => {
       const response = await request(app)
         .post("/api/task/generate-task-text")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send(createRequestBody({
-          custom_keywords: ["engineering"],
-        }))
+        .send(
+          createRequestBody({
+            custom_keywords: ["engineering"],
+          })
+        )
         .expect(200);
 
       // Verify text generator was called for task generation

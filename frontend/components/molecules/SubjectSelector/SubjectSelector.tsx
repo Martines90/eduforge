@@ -11,8 +11,9 @@ import {
   Chip,
 } from '@mui/material';
 import { Subject, CountryCode } from '@/types/i18n';
-import { SUBJECTS, getSubjectsForCountry } from '@/lib/data/subjects';
+import { SUBJECTS, getSubjectsForCountry, SubjectOption } from '@/lib/data/subjects';
 import { useTranslation } from '@/lib/i18n';
+import { useUser } from '@/lib/context/UserContext';
 
 export interface SubjectSelectorProps {
   value: Subject | Subject[] | null | '';
@@ -49,8 +50,9 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
   sx,
   country: countryProp,
 }) => {
-  const { t, country: contextCountry } = useTranslation();
-  const effectiveCountry = countryProp || contextCountry;
+  const { t } = useTranslation();
+  const { user } = useUser();
+  const effectiveCountry = countryProp || user.country;
 
   // Get subjects list (country-specific if country prop provided)
   const subjectsList = countryProp
@@ -62,13 +64,14 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
     if (countryProp) {
       // Use country-specific label directly
       const subjectOption = subjectsList.find((s) => s.value === subject);
-      return subjectOption?.label || subject;
+      // Type assertion because SubjectOption type is complex (can have label or labelEN/labelLocal)
+      return (subjectOption as any)?.label || (subjectOption as any)?.labelEN || subject;
     }
 
     // Use translation system
     const subjectOption = SUBJECTS.find((s) => s.value === subject);
     if (!subjectOption) return subject;
-    return t(subjectOption.labelEN);
+    return t(subjectOption.labelEN as any);
   };
 
   const handleSelectChange = (event: SelectChangeEvent<Subject | Subject[]>) => {

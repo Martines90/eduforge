@@ -363,7 +363,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
 
     const savedCountry = getCookie(COOKIE_NAMES.COUNTRY) as CountryCode | undefined;
 
-    if (savedCountry && savedCountry !== 'UNSUPPORTED') {
+    if (savedCountry && (savedCountry as string) !== 'UNSUPPORTED') {
       // Restore valid country preference (auth state is managed by Firebase listener)
       setUser((prev) => ({
         ...prev,

@@ -71,15 +71,15 @@ describe('UserContext Country Detection', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     // Clear all cookies before each test by resetting the js-cookie mock
-    vi.mocked(Cookies.get).mockReturnValue(undefined);
-    vi.mocked(Cookies.set).mockClear();
-    vi.mocked(Cookies.remove).mockClear();
+    (Cookies.get as any).mockReturnValue(undefined);
+    (Cookies.set as any).mockClear();
+    (Cookies.remove as any).mockClear();
   });
 
   describe('No Country Cookie - Show Modal', () => {
     it('should show country selection modal when no cookie exists', async () => {
       // Mock: No country cookie
-      vi.mocked(Cookies.get).mockReturnValue(undefined);
+      (Cookies.get as any).mockReturnValue(undefined);
 
       render(
         <UserProvider>
@@ -100,14 +100,14 @@ describe('UserContext Country Detection', () => {
       let countryCookie: string | undefined = undefined;
 
       // Mock cookie get/set to track state changes
-      vi.mocked(Cookies.get).mockImplementation((name) => {
+      (Cookies.get as any).mockImplementation((name: string) => {
         if (name === 'eduforge_country') {
           return countryCookie;
         }
         return undefined;
       });
 
-      vi.mocked(Cookies.set).mockImplementation((name, value) => {
+      (Cookies.set as any).mockImplementation((name: string, value: string) => {
         if (name === 'eduforge_country') {
           countryCookie = value as string;
         }
@@ -159,7 +159,7 @@ describe('UserContext Country Detection', () => {
 
   describe('Valid Country Cookie - No Modal', () => {
     it('should NOT show modal when valid US cookie exists', async () => {
-      vi.mocked(Cookies.get).mockImplementation((name) => {
+      (Cookies.get as any).mockImplementation((name: string) => {
         if (name === 'eduforge_country') {
           return 'US';
         }
@@ -181,7 +181,7 @@ describe('UserContext Country Detection', () => {
     });
 
     it('should NOT show modal when valid HU cookie exists', async () => {
-      vi.mocked(Cookies.get).mockImplementation((name) => {
+      (Cookies.get as any).mockImplementation((name: string) => {
         if (name === 'eduforge_country') {
           return 'HU';
         }
@@ -202,7 +202,7 @@ describe('UserContext Country Detection', () => {
     });
 
     it('should NOT show modal when valid MX cookie exists', async () => {
-      vi.mocked(Cookies.get).mockImplementation((name) => {
+      (Cookies.get as any).mockImplementation((name: string) => {
         if (name === 'eduforge_country') {
           return 'MX';
         }
@@ -225,7 +225,7 @@ describe('UserContext Country Detection', () => {
 
   describe('UNSUPPORTED Country Cookie', () => {
     it('should NOT show modal when UNSUPPORTED cookie exists (user already redirected)', async () => {
-      vi.mocked(Cookies.get).mockImplementation((name) => {
+      (Cookies.get as any).mockImplementation((name: string) => {
         if (name === 'eduforge_country') {
           return 'UNSUPPORTED';
         }
@@ -250,7 +250,7 @@ describe('UserContext Country Detection', () => {
 
   describe('setCountry function', () => {
     it('should update country and set cookie when setCountry is called', async () => {
-      vi.mocked(Cookies.get).mockImplementation((name) => {
+      (Cookies.get as any).mockImplementation((name: string) => {
         if (name === 'eduforge_country') {
           return 'US';
         }
@@ -295,7 +295,7 @@ describe('UserContext Country Detection', () => {
 
   describe('Country Selection Modal', () => {
     it('should show modal with default country (HU) when no cookie exists', async () => {
-      vi.mocked(Cookies.get).mockReturnValue(undefined);
+      (Cookies.get as any).mockReturnValue(undefined);
 
       render(
         <UserProvider>

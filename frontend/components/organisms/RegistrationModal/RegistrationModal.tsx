@@ -191,8 +191,11 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
     updateUserCountry(country);
   };
 
-  const handleSubjectSelect = (subject: Subject) => {
-    setSelectedSubject(subject);
+  const handleSubjectSelect = (subject: Subject | Subject[] | null) => {
+    // Type guard - only handle single Subject values
+    if (subject && !Array.isArray(subject)) {
+      setSelectedSubject(subject);
+    }
   };
 
   const handleNext = () => {

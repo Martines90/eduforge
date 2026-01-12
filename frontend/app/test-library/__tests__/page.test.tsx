@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach, vi, type Mock } from 'vitest';
 import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import TestLibraryPage from '../page';
@@ -67,32 +67,34 @@ vi.mock('@/lib/services/test.service', () => ({
   fetchPublishedTests: vi.fn(),
 }));
 
-const mockFetchPublishedTests = fetchPublishedTests as vi.MockedFunction<typeof fetchPublishedTests>;
+const mockFetchPublishedTests = fetchPublishedTests as unknown as Mock;
 
 describe('TestLibraryPage', () => {
   beforeEach(() => {
     vi.clearAllMocks();
 
     // Mock window.scrollTo
-    window.scrollTo = vi.fn();
+    window.scrollTo = vi.fn() as any;
   });
 
   const createMockTests = (count: number): PublishedTest[] => {
     return Array.from({ length: count }, (_, i) => ({
-      id: `test${i + 1}`,
+      originalTestId: `source${i + 1}`,
+      publicId: `public${i + 1}`,
       name: `Test ${i + 1}`,
       description: `Description ${i + 1}`,
       subject: i % 2 === 0 ? 'mathematics' : 'physics',
       gradeLevel: 'grade_9_10',
       taskCount: 5,
       totalScore: 100,
-      publishedAt: new Date(`2026-01-${String(i + 1).padStart(2, '0')}`),
+      publishedAt: new Date(`2026-01-${String(i + 1).padStart(2, '0')}`).toISOString(),
+      lastUpdatedAt: new Date(`2026-01-${String(i + 1).padStart(2, '0')}`).toISOString(),
       viewCount: i * 10,
       downloadCount: i * 5,
-      creatorId: 'user123',
+      createdBy: 'user123',
       creatorName: 'John Doe',
-      isPublished: true,
-      sourceTestId: `source${i + 1}`,
+      country: 'US',
+      tasks: [],
       pdfUrl: `https://example.com/test${i + 1}.pdf`,
     }));
   };

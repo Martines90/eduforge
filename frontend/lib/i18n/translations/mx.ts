@@ -917,7 +917,6 @@ export const mx: Translations = {
     "¿Necesitas ayuda? Envíanos un mensaje y te responderemos en 48 horas.",
   "Your Email:": "Tu Correo Electrónico:",
   "Your Name:": "Tu Nombre:",
-  "Subject": "Asunto",
   "Select a subject": "Selecciona un asunto",
   "Technical Issue": "Problema Técnico",
   "Billing Question": "Pregunta de Facturación",

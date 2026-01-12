@@ -42,10 +42,10 @@ const admin = {
     applicationDefault: jest.fn(),
   },
   initializeApp: jest.fn(() => ({
-    name: '[DEFAULT]',
+    name: "[DEFAULT]",
   })),
   app: jest.fn(() => ({
-    name: '[DEFAULT]',
+    name: "[DEFAULT]",
   })),
   apps: [],
 };

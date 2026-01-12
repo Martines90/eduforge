@@ -141,9 +141,12 @@ function TaskGeneratorContent() {
       setSelectedSubject(subjectParam);
     }
 
-    // Apply grade level
-    if (gradeParam && (gradeParam === 'grade_9_10' || gradeParam === 'grade_11_12')) {
-      setSelectedGrade(gradeParam);
+    // Apply grade level - validate it's a valid grade for this country
+    if (gradeParam) {
+      const isValidGrade = gradeSystem.availableGrades.some(g => g.value === gradeParam);
+      if (isValidGrade) {
+        setSelectedGrade(gradeParam as GradeLevel);
+      }
     }
 
     // Apply initial path if we have path params

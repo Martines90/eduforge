@@ -897,7 +897,6 @@ export const en: Translations = {
     "Need help? Send us a message and we'll get back to you within 48 hours.",
   "Your Email:": "Your Email:",
   "Your Name:": "Your Name:",
-  "Subject": "Subject",
   "Select a subject": "Select a subject",
   "Technical Issue": "Technical Issue",
   "Billing Question": "Billing Question",

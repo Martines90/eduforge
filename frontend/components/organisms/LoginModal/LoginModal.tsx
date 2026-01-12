@@ -22,6 +22,7 @@ import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { ForgotPasswordModal } from '../ForgotPasswordModal';
 import { useTranslation } from '@/lib/i18n';
+import { Translations } from '@/types/i18n';
 import styles from './LoginModal.module.scss';
 
 export interface LoginModalProps {
@@ -33,13 +34,13 @@ export interface LoginModalProps {
 }
 
 // Schema will be created inside the component to access t() function
-const createLoginSchema = (t: (key: string) => string) => Yup.object().shape({
+const createLoginSchema = (t: (key: keyof Translations, params?: Record<string, string | number>) => string) => Yup.object().shape({
   email: Yup.string()
-    .email(t('Please enter a valid email address'))
-    .required(t('Email is required')),
+    .email(t('Please enter a valid email address' as any))
+    .required(t('Email is required' as any)),
   password: Yup.string()
-    .min(6, t('Password must be at least 6 characters'))
-    .required(t('Password is required')),
+    .min(6, t('Password must be at least 6 characters' as any))
+    .required(t('Password is required' as any)),
 });
 
 /**

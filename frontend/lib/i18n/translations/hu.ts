@@ -912,7 +912,6 @@ export const hu: Translations = {
     "Segítségre van szüksége? Küldjön üzenetet és 48 órán belül válaszolunk.",
   "Your Email:": "E-mail címe:",
   "Your Name:": "Neve:",
-  "Subject": "Tárgy",
   "Select a subject": "Válasszon tárgyat",
   "Technical Issue": "Technikai Probléma",
   "Billing Question": "Számlázási Kérdés",

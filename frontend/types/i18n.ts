@@ -752,6 +752,62 @@ export interface Translations {
   "Password is required": string;
   "By continuing, you agree to our Terms of Service and Privacy Policy": string;
   "To view more tasks you need to register! Get {{count}} free task generation credits when you sign up.": string;
+
+  // Forgot Password Modal
+  "Reset Password": string;
+  "Enter your email address and we'll send you a link to reset your password": string;
+  "Please enter your email address": string;
+  "Send Reset Link": string;
+  "Sending...": string;
+  "Reset Link Sent!": string;
+  "If an account exists with this email, you will receive a password reset link shortly.": string;
+  "Check your inbox and click the link to reset your password. The link will expire in 30 minutes.": string;
+  "Server error occurred": string;
+
+  // Reset Password Page
+  "Validating reset link...": string;
+  "Reset Your Password": string;
+  "Link Expired or Invalid": string;
+  "This password reset link has expired or is invalid. Password reset links are valid for 30 minutes.": string;
+  "Request New Reset Link": string;
+  "Enter your new password below": string;
+  "New password (min. 8 characters)": string;
+  "Confirm new password": string;
+  "Reset My Password": string;
+  "Resetting Password...": string;
+  "Password Reset Successful!": string;
+  "Your password has been reset successfully. You can now log in with your new password.": string;
+  "Redirecting to login...": string;
+  "Please enter a new password": string;
+  "Password must be at least 8 characters": string;
+  "Passwords do not match": string;
+  "Token has expired": string;
+
+  // Contact Support
+  "Contact Support": string;
+  "Need help? Send us a message and we'll get back to you within 48 hours.": string;
+  "Your Email:": string;
+  "Your Name:": string;
+  "Select a subject": string;
+  "Technical Issue": string;
+  "Billing Question": string;
+  "Feature Request": string;
+  "Account Problem": string;
+  "Task Generation Issue": string;
+  Other: string;
+  Message: string;
+  "Describe your issue or question...": string;
+  "{{current}} / {{max}} characters": string;
+  "Send Message": string;
+  "Message Sent Successfully!": string;
+  "Thank you for contacting us! We've received your message and will get back to you within 48 hours.": string;
+  "You'll receive a confirmation email at": string;
+  "Send Another Message": string;
+  "Back to Dashboard": string;
+  "Please select a subject": string;
+  "Please enter a message": string;
+  "Message must be at least 10 characters": string;
+  "Message must be less than 5000 characters": string;
 }
 
 export type TranslationKey = keyof Translations;

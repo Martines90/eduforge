@@ -80,12 +80,12 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
   const handleSave = async () => {
     // Validation
     if (!title.trim()) {
-      setError(t('Title is required'));
+      setError(t('Title is required' as any));
       return;
     }
 
     if (!text.trim()) {
-      setError(t('Text is required'));
+      setError(t('Text is required' as any));
       return;
     }
 
@@ -93,7 +93,7 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
     if (questions.length > 0) {
       for (let i = 0; i < questions.length; i++) {
         if (!questions[i].question.trim()) {
-          setError(t('Question {{number}}', { number: i + 1 }) + ' ' + t('Question text is required'));
+          setError(t('Question {{number}}', { number: i + 1 }) + ' ' + t('Question text is required' as any));
           return;
         }
       }
@@ -117,7 +117,7 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
       setTotalScore(undefined);
       onClose();
     } catch (err: any) {
-      setError(err.message || t('Failed to create custom task'));
+      setError(err.message || t('Failed to create custom task' as any));
     } finally {
       setIsSaving(false);
     }
@@ -133,7 +133,7 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
   return (
     <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
       <DialogTitle>
-        {initialData ? t('Edit Task') : t('Create Custom Task')}
+        {initialData ? t('Edit Task' as any) : t('Create Custom Task' as any)}
       </DialogTitle>
       <DialogContent>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 1 }}>
@@ -146,27 +146,27 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
 
           {/* Title */}
           <TextField
-            label={t('Task Title')}
+            label={t('Task Title' as any)}
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
             fullWidth
             autoFocus
-            placeholder={t('Enter task title')}
-            helperText={t('Task title is required')}
+            placeholder={t('Enter task title' as any)}
+            helperText={t('Task title is required' as any)}
           />
 
           {/* Task Description */}
           <TextField
-            label={t('Task Text')}
+            label={t('Task Text' as any)}
             value={text}
             onChange={(e) => setText(e.target.value)}
             required
             fullWidth
             multiline
             rows={6}
-            placeholder={t('Enter the task description or problem')}
-            helperText={t('Task text is required')}
+            placeholder={t('Enter the task description or problem' as any)}
+            helperText={t('Task text is required' as any)}
           />
 
           <Divider />
@@ -175,7 +175,7 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
           <Box>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
               <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-                {t('Questions (Optional)')}
+                {t('Questions (Optional)' as any)}
               </Typography>
               <Button
                 variant="secondary"
@@ -183,13 +183,13 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
                 startIcon={<AddIcon />}
                 onClick={handleAddQuestion}
               >
-                {t('Add Question')}
+                {t('Add Question' as any)}
               </Button>
             </Box>
 
             {questions.length === 0 ? (
               <Typography variant="body2" color="text.secondary">
-                {t('No questions added yet. Click "Add Question" to add sub-questions with individual scores.')}
+                {t('No questions added yet. Click "Add Question" to add sub-questions with individual scores.' as any)}
               </Typography>
             ) : (
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -209,20 +209,20 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
                       {index + 1}.
                     </Typography>
                     <TextField
-                      label={t('Question')}
+                      label={t('Question' as any)}
                       value={q.question}
                       onChange={(e) => handleQuestionChange(index, 'question', e.target.value)}
                       fullWidth
-                      placeholder={t('e.g., Calculate the value of x')}
+                      placeholder={t('e.g., Calculate the value of x' as any)}
                       size="small"
                     />
                     <TextField
-                      label={t('Score')}
+                      label={t('Score' as any)}
                       type="number"
                       value={q.score || ''}
                       onChange={(e) => handleQuestionChange(index, 'score', e.target.value)}
                       sx={{ width: 100 }}
-                      placeholder={t('Points')}
+                      placeholder={t('Points' as any)}
                       size="small"
                       inputProps={{ min: 0, step: 0.5 }}
                     />
@@ -231,7 +231,7 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
                       color="error"
                       size="small"
                       sx={{ mt: 0.5 }}
-                      aria-label={t('Remove question')}
+                      aria-label={t('Remove question' as any)}
                     >
                       <DeleteIcon />
                     </IconButton>
@@ -245,27 +245,27 @@ export const CustomTaskDialog: React.FC<CustomTaskDialogProps> = ({
 
           {/* Total Score */}
           <TextField
-            label={t('Total Score (Optional)')}
+            label={t('Total Score (Optional)' as any)}
             type="number"
             value={totalScore || ''}
             onChange={(e) => setTotalScore(e.target.value ? Number(e.target.value) : undefined)}
             sx={{ width: 200 }}
-            placeholder={t('Total points')}
-            helperText={t('Overall score for this task')}
+            placeholder={t('Total points' as any)}
+            helperText={t('Overall score for this task' as any)}
             inputProps={{ min: 0, step: 0.5 }}
           />
         </Box>
       </DialogContent>
       <DialogActions>
         <Button variant="secondary" onClick={handleClose} disabled={isSaving}>
-          {t('Cancel')}
+          {t('Cancel' as any)}
         </Button>
         <Button
           variant="primary"
           onClick={handleSave}
           disabled={isSaving || !title.trim() || !text.trim()}
         >
-          {isSaving ? t('Saving...') : initialData ? t('Update') : t('Add to Test')}
+          {isSaving ? t('Saving...' as any) : initialData ? t('Update' as any) : t('Add to Test' as any)}
         </Button>
       </DialogActions>
     </Dialog>

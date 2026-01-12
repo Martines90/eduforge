@@ -31,8 +31,11 @@ export const SubjectSelectionModal: React.FC<SubjectSelectionModalProps> = ({
 
   const { user } = useUser();
 
-  const handleChange = (subject: Subject) => {
-    setSelectedSubject(subject);
+  const handleChange = (subject: Subject | Subject[] | null) => {
+    // Type guard - only handle single Subject values
+    if (subject && !Array.isArray(subject)) {
+      setSelectedSubject(subject);
+    }
   };
 
   const handleConfirm = () => {

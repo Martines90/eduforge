@@ -7,7 +7,7 @@ import { CascadingSelect, TaskConfiguration } from '@/components/organisms/Casca
 import { TaskResult } from '@/components/organisms/TaskResult';
 import { Button } from '@/components/atoms/Button';
 import { LoadingSpinner } from '@/components/atoms/LoadingSpinner/LoadingSpinner';
-import { NavigationTopic, GradeLevel } from '@/types/navigation';
+import { NavigationTopic } from '@/types/navigation';
 import { GeneratedTask, TaskGeneratorRequest } from '@/types/task';
 import { useTranslation } from '@/lib/i18n';
 import { useRouteProtection } from '@/lib/hooks/useRouteProtection';
@@ -17,6 +17,7 @@ import { generateTaskComplete, TaskGenerationStep } from '@/lib/services/task-ge
 import { saveTask, SaveTaskRequest } from '@/lib/services/task-save.service';
 import { TaskSavedModal } from '@/components/organisms/TaskSavedModal';
 import { fetchAllGradeTrees } from '@/lib/services/subject-mapping.service';
+import { GradeLevel, GradeConfig } from '@eduforger/shared';
 import styles from './page.module.scss';
 
 interface TabPanelProps {
@@ -62,9 +63,10 @@ function TaskCreatorContent() {
   const [showSavedModal, setShowSavedModal] = useState(false);
   const [savedTaskInfo, setSavedTaskInfo] = useState<{ taskId: string; publicShareLink: string; pdfUrl?: string } | null>(null);
   const [currentCurriculumPath, setCurrentCurriculumPath] = useState<string>('');
-  const [navigationData, setNavigationData] = useState<{ grade_9_10: NavigationTopic[]; grade_11_12: NavigationTopic[] } | null>(null);
+  const [navigationData, setNavigationData] = useState<Record<string, NavigationTopic[]> | null>(null);
   const [isLoadingNavigation, setIsLoadingNavigation] = useState(true);
   const [navigationError, setNavigationError] = useState<string | null>(null);
+  const [availableGrades, setAvailableGrades] = useState<GradeConfig[]>([]);
 
   // Fetch navigation data from API based on user's country
   // Only fetch once when user is fully loaded and isAuthorized
@@ -100,6 +102,12 @@ function TaskCreatorContent() {
 
       try {
         console.log('[Task Creator] Fetching navigation data for country:', user.country, 'subject:', user.subject);
+
+        // Import gradeSystem helpers
+        const { getGradesForCountry } = await import('@eduforger/shared');
+        const grades = getGradesForCountry(user.country as any);
+        setAvailableGrades(grades);
+
         const data = await fetchAllGradeTrees(user.country, user.subject);
         setNavigationData(data);
         console.log('[Task Creator] Navigation data loaded successfully');
@@ -125,12 +133,11 @@ function TaskCreatorContent() {
       console.log('Initial path from URL:', keys);
     }
 
-    if (gradeParam) {
-      // Set the grade tab based on URL param
-      if (gradeParam === 'grade_11_12') {
-        setSelectedGrade(1);
-      } else {
-        setSelectedGrade(0);
+    if (gradeParam && availableGrades.length > 0) {
+      // Set the grade tab based on URL param - find the index matching the gradeParam
+      const gradeIndex = availableGrades.findIndex(g => g.value === gradeParam);
+      if (gradeIndex >= 0) {
+        setSelectedGrade(gradeIndex);
       }
     }
 
@@ -138,7 +145,7 @@ function TaskCreatorContent() {
     if ((pathParam || gradeParam) && !urlParamsApplied) {
       setUrlParamsApplied(true);
     }
-  }, [searchParams, urlParamsApplied]);
+  }, [searchParams, urlParamsApplied, availableGrades]);
 
   // Remove URL params after they've been applied to state
   useEffect(() => {
@@ -188,9 +195,17 @@ function TaskCreatorContent() {
 
       console.log('[Task Creator] Starting multi-step task generation');
 
+      // Get current grade level
+      const currentGradeConfig = availableGrades[selectedGrade];
+      if (!currentGradeConfig) {
+        setGenerationError('Invalid grade level selection.');
+        setIsGenerating(false);
+        return;
+      }
+
       // Build curriculum path from selection
       // Use user's subject to match the subjectMappings collection format
-      const curriculumPath = `${user.subject}:${gradeLevel}:${path.join(':')}`;
+      const curriculumPath = `${user.subject}:${currentGradeConfig.value}:${path.join(':')}`;
       setCurrentCurriculumPath(curriculumPath);
 
       // Map targetGroupSex to TargetGroup type
@@ -356,8 +371,10 @@ function TaskCreatorContent() {
     setShowSavedModal(false);
   };
 
-  const gradeLevel: GradeLevel = selectedGrade === 0 ? 'grade_9_10' : 'grade_11_12';
-  const currentData = navigationData ? navigationData[gradeLevel] : [];
+  // Get current grade level based on selected tab index
+  const currentGradeConfig = availableGrades[selectedGrade];
+  const gradeLevel: GradeLevel | undefined = currentGradeConfig?.value;
+  const currentData = navigationData && gradeLevel ? navigationData[gradeLevel] : [];
 
   // Show loading state while checking authorization
   if (isLoading) {
@@ -427,28 +444,27 @@ function TaskCreatorContent() {
             variant="fullWidth"
             className={styles.tabs}
           >
-            <Tab label={t('Grade 9-10')} id="grade-tab-0" aria-controls="grade-tabpanel-0" />
-            <Tab label={t('Grade 11-12')} id="grade-tab-1" aria-controls="grade-tabpanel-1" />
+            {availableGrades.map((grade, index) => (
+              <Tab
+                key={grade.value}
+                label={grade.labelEN}
+                id={`grade-tab-${index}`}
+                aria-controls={`grade-tabpanel-${index}`}
+              />
+            ))}
           </Tabs>
         </Paper>
 
-        <TabPanel value={selectedGrade} index={0}>
-          <CascadingSelect
-            data={currentData}
-            title={`${t('Select Topic')} (${t('Grade 9-10')})`}
-            onSelectionComplete={handleSelectionComplete}
-            initialPath={selectedGrade === 0 ? initialPath : undefined}
-          />
-        </TabPanel>
-
-        <TabPanel value={selectedGrade} index={1}>
-          <CascadingSelect
-            data={currentData}
-            title={`${t('Select Topic')} (${t('Grade 11-12')})`}
-            onSelectionComplete={handleSelectionComplete}
-            initialPath={selectedGrade === 1 ? initialPath : undefined}
-          />
-        </TabPanel>
+        {availableGrades.map((grade, index) => (
+          <TabPanel key={grade.value} value={selectedGrade} index={index}>
+            <CascadingSelect
+              data={selectedGrade === index && navigationData ? navigationData[grade.value] || [] : []}
+              title={`${t('Select Topic')} (${grade.labelEN})`}
+              onSelectionComplete={handleSelectionComplete}
+              initialPath={selectedGrade === index ? initialPath : undefined}
+            />
+          </TabPanel>
+        ))}
 
         {/* Task Generation Result */}
         {(isGenerating || generatedTask || generationError) && (
