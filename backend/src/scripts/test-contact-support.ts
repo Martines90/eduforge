@@ -16,7 +16,7 @@ async function testContactSupport() {
 
     // Test contact support submission
     await submitContactSupport({
-      userEmail: "marton.horvath@stocksaver.com",
+      userEmail: "hmartonsandor@gmail.com",
       userName: "Test User",
       subject: "Testing SendGrid Integration",
       message:
@@ -25,10 +25,10 @@ async function testContactSupport() {
 
     console.log("\n✅ Contact support emails sent!");
     console.log(
-      "✉️  Check your inbox at marton.horvath@stocksaver.com (user confirmation)"
+      "✉️  Check your inbox at hmartonsandor@gmail.com (user confirmation)"
     );
     console.log(
-      "✉️  Check support inbox at marton.horvath@stocksaver.com (support notification)"
+      "✉️  Check support inbox at hmartonsandor@gmail.com (support notification)"
     );
     console.log("📧 You should receive 2 emails total");
   } catch (error: any) {

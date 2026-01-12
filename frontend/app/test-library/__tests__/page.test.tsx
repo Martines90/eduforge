@@ -32,9 +32,34 @@ vi.mock('@/lib/i18n', () => ({
 
 vi.mock('@/lib/context/UserContext', () => ({
   useUser: () => ({
-    gradeSystem: 'grade_9_12',
-    user: null,
-    loading: false,
+    user: {
+      country: 'HU',
+      isFirstVisit: false,
+      hasCompletedOnboarding: true,
+      isRegistered: false,
+      profile: null,
+      identity: null,
+      role: 'guest',
+      subject: null,
+      educationalModel: null,
+    },
+    authInitialized: true,
+    gradeSystem: {
+      availableGrades: [],
+      getGrade: vi.fn(),
+      getRole: vi.fn(),
+      getRoleLabel: vi.fn(),
+      gradeValues: [],
+    },
+    setCountry: vi.fn(),
+    setIdentity: vi.fn(),
+    setSubject: vi.fn(),
+    setEducationalModel: vi.fn(),
+    registerUser: vi.fn(),
+    loginUser: vi.fn(),
+    logoutUser: vi.fn(),
+    completeOnboarding: vi.fn(),
+    resetUser: vi.fn(),
   }),
 }));
 

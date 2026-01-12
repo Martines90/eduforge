@@ -11,7 +11,7 @@ async function testSendGrid() {
   try {
     // Test sending a verification email
     const result = await sendVerificationEmail({
-      recipientEmail: "marton.horvath@stocksaver.com", // Your email
+      recipientEmail: "hmartonsandor@gmail.com", // Your email
       recipientName: "Test User",
       verificationCode: "123456",
     });
@@ -19,7 +19,7 @@ async function testSendGrid() {
     if (result.success) {
       console.log("✅ Email sent successfully!");
       console.log("📬 Message ID:", result.messageId);
-      console.log("\n✉️  Check your inbox at marton.horvath@stocksaver.com");
+      console.log("\n✉️  Check your inbox at hmartonsandor@gmail.com");
     } else {
       console.error("❌ Failed to send email");
       console.error("Error:", result.error);

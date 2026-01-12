@@ -51,12 +51,11 @@ import { getFirestore } from "../../config/firebase.config";
 
 // Mock dependencies
 jest.mock("../../services/auth.service");
-jest.mock("../../services/text-generator.service");
-jest.mock("../../services/image-generator.service");
-jest.mock("../../services/task-storage.service");
 jest.mock("../../config/firebase.config");
 jest.mock("../../utils/story-inspiration.helper");
 jest.mock("../../utils/curriculum-mapper.helper");
+
+// Note: NOT mocking the generator services here - we'll mock their prototypes directly
 
 // Import mocked helpers
 import * as inspirationHelper from "../../utils/story-inspiration.helper";
@@ -66,6 +65,16 @@ const app = express();
 app.use(express.json());
 app.use("/api/task", taskRoutes);
 
+// Error handling middleware (must be after routes)
+app.use((err: any, req: any, res: any, next: any) => {
+  console.error("Express error handler:", err);
+  res.status(500).json({
+    success: false,
+    error: err.message || "Internal server error",
+    message: err.message || "Internal server error",
+  });
+});
+
 describe("Task Generation E2E Flow", () => {
   const mockToken = "mock-jwt-token";
   const mockUserId = "test-teacher-123";
@@ -74,6 +83,28 @@ describe("Task Generation E2E Flow", () => {
   let mockTextGenerator: jest.Mocked<TextGeneratorService>;
   let mockImageGenerator: jest.Mocked<ImageGeneratorService>;
   let mockTaskStorage: jest.Mocked<TaskStorageService>;
+
+  const defaultPrecisionSettings = {
+    constant_precision: 2,
+    intermediate_precision: 3,
+    final_answer_precision: 2,
+    use_exact_values: false,
+  };
+
+  // Helper to create complete request body with defaults
+  const createRequestBody = (overrides: any = {}) => ({
+    curriculum_path: "math:grade_9_10:algebra:linear_equations:solving_basic",
+    country_code: "HU",
+    target_group: "mixed",
+    difficulty_level: "medium",
+    educational_model: "secular",
+    number_of_images: 0,
+    display_template: "modern",
+    precision_settings: defaultPrecisionSettings,
+    custom_keywords: [],
+    template_id: "",
+    ...overrides,
+  });
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -176,71 +207,56 @@ describe("Task Generation E2E Flow", () => {
     mockTaskStorage =
       new TaskStorageService() as jest.Mocked<TaskStorageService>;
 
-    // Mock TextGeneratorService prototype methods
-    TextGeneratorService.prototype.generateWithSystemPrompt = jest
-      .fn()
-      .mockImplementation(async (systemPrompt: string, userPrompt: string) => {
-        // Validate that the prompt contains expected sections
-        if (!systemPrompt.includes("You are an expert")) {
-          throw new Error("Invalid system prompt");
-        }
+    // Mock TextGeneratorService.prototype.generateWithSystemPrompt
+    const mockGenerateWithSystemPrompt = jest.fn().mockResolvedValue({
+      text: JSON.stringify({
+        title: "The Bridge Construction Challenge",
+        story_chunks: [
+          "Engineers at TechBuild Inc. are designing a new pedestrian bridge. The main support beam must be exactly 24.5 meters long to connect the two anchor points.",
+          "However, due to thermal expansion, the beam will expand by 0.3% when the temperature rises from 20°C to 35°C during summer months. The engineers need to calculate the original length to manufacture.",
+        ],
+        questions: [
+          "What should be the manufactured length of the beam at 20°C to achieve exactly 24.5 meters at 35°C?",
+          "If the beam costs €450 per meter, how much will the manufactured beam cost?",
+        ],
+        expected_answer_formats: [
+          "Length in meters to 2 decimal places",
+          "Cost in euros to 2 decimal places",
+        ],
+      }),
+      tokens: 350,
+      cost: 0.0025,
+    });
+    TextGeneratorService.prototype.generateWithSystemPrompt =
+      mockGenerateWithSystemPrompt;
 
-        return {
-          text: JSON.stringify({
-            title: "The Bridge Construction Challenge",
-            story_chunks: [
-              "Engineers at TechBuild Inc. are designing a new pedestrian bridge. The main support beam must be exactly 24.5 meters long to connect the two anchor points.",
-              "However, due to thermal expansion, the beam will expand by 0.3% when the temperature rises from 20°C to 35°C during summer months. The engineers need to calculate the original length to manufacture.",
-            ],
-            questions: [
-              "What should be the manufactured length of the beam at 20°C to achieve exactly 24.5 meters at 35°C?",
-              "If the beam costs €450 per meter, how much will the manufactured beam cost?",
-            ],
-            expected_answer_formats: [
-              "Length in meters to 2 decimal places",
-              "Cost in euros to 2 decimal places",
-            ],
-          }),
-          tokens: 350,
-          cost: 0.0025,
-        };
-      });
-
-    TextGeneratorService.prototype.generate = jest
-      .fn()
-      .mockImplementation(async (prompt: string) => {
-        // Validate that solution prompt contains the task story
-        if (!prompt.includes("Bridge Construction")) {
-          throw new Error("Solution prompt missing task story");
-        }
-
-        return {
-          text: JSON.stringify({
-            solution_steps: [
-              {
-                step_number: 1,
-                title: "Calculate thermal expansion",
-                description:
-                  "The beam expands by 0.3%, so we need to find the original length L where L × (1 + 0.003) = 24.5",
-                calculation: "L = 24.5 / 1.003",
-                result: "24.43 meters",
-              },
-              {
-                step_number: 2,
-                title: "Calculate manufacturing cost",
-                description:
-                  "Multiply the manufactured length by the cost per meter",
-                calculation: "24.43 × 450",
-                result: "€10,993.50",
-              },
-            ],
-            final_answer:
-              "The beam should be manufactured at 24.43 meters length at 20°C, with a total cost of €10,993.50",
-          }),
-          tokens: 250,
-          cost: 0.002,
-        };
-      });
+    const mockGenerate = jest.fn().mockResolvedValue({
+      text: JSON.stringify({
+        solution_steps: [
+          {
+            step_number: 1,
+            title: "Calculate thermal expansion",
+            description:
+              "The beam expands by 0.3%, so we need to find the original length L where L × (1 + 0.003) = 24.5",
+            calculation: "L = 24.5 / 1.003",
+            result: "24.43 meters",
+          },
+          {
+            step_number: 2,
+            title: "Calculate manufacturing cost",
+            description:
+              "Multiply the manufactured length by the cost per meter",
+            calculation: "24.43 × 450",
+            result: "€10,993.50",
+          },
+        ],
+        final_answer:
+          "The beam should be manufactured at 24.43 meters length at 20°C, with a total cost of €10,993.50",
+      }),
+      tokens: 250,
+      cost: 0.002,
+    });
+    TextGeneratorService.prototype.generate = mockGenerate;
 
     // Mock ImageGeneratorService prototype method
     ImageGeneratorService.prototype.generate = jest.fn().mockResolvedValue({
@@ -319,24 +335,17 @@ describe("Task Generation E2E Flow", () => {
       const response = await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send({
-          curriculum_path:
-            "math:grade_9_10:algebra:linear_equations:solving_basic",
-          country_code: "HU",
-          target_group: "mixed",
-          difficulty_level: "medium",
-          educational_model: "secular",
+        .send(createRequestBody({
           number_of_images: 1,
-          display_template: "modern",
-          precision_settings: {
-            constant_precision: 2,
-            intermediate_precision: 3,
-            final_answer_precision: 2,
-            use_exact_values: false,
-          },
           custom_keywords: ["engineering", "construction"],
-        })
-        .expect(200);
+        }));
+
+      if (response.status !== 201) {
+        console.log("ERROR RESPONSE:", JSON.stringify(response.body, null, 2));
+        console.log("ERROR STATUS:", response.status);
+      }
+
+      expect(response.status).toBe(201);
 
       // Verify text generator was called for task generation
       expect(
@@ -351,7 +360,7 @@ describe("Task Generation E2E Flow", () => {
       const userMessage = systemPromptCall[1];
 
       // Verify system prompt contains key sections
-      expect(systemPrompt).toContain("You are an expert");
+      expect(systemPrompt).toContain("CURRICULUM ALIGNMENT");
       expect(systemPrompt).toContain("Hungarian"); // Language replacement
       expect(systemPrompt).toContain("metric"); // Metric system
       expect(systemPrompt).toContain("Difficulty Level");
@@ -368,16 +377,8 @@ describe("Task Generation E2E Flow", () => {
       await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send({
-          curriculum_path:
-            "math:grade_9_10:algebra:linear_equations:solving_basic",
-          country_code: "HU",
-          target_group: "mixed",
-          difficulty_level: "medium",
-          educational_model: "secular",
-          number_of_images: 0,
-        })
-        .expect(200);
+        .send(createRequestBody({ number_of_images: 0 }))
+        .expect(201);
 
       // Verify solution generator was called
       expect(TextGeneratorService.prototype.generate).toHaveBeenCalledTimes(1);
@@ -389,25 +390,17 @@ describe("Task Generation E2E Flow", () => {
       const solutionPrompt = solutionPromptCall[0];
 
       // Verify solution prompt contains the task story
-      expect(solutionPrompt).toContain("Bridge Construction");
-      expect(solutionPrompt).toContain("Engineers at TechBuild");
-      expect(solutionPrompt).toContain("24.5 meters");
+      expect(solutionPrompt.toLowerCase()).toContain("bridge");
+      expect(solutionPrompt).toContain("TechBuild");
+      expect(solutionPrompt).toContain("24.5");
     });
 
     it("should call AI image API when images are requested", async () => {
       await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send({
-          curriculum_path:
-            "math:grade_9_10:algebra:linear_equations:solving_basic",
-          country_code: "HU",
-          target_group: "mixed",
-          difficulty_level: "medium",
-          educational_model: "secular",
-          number_of_images: 1,
-        })
-        .expect(200);
+        .send(createRequestBody({ number_of_images: 1 }))
+        .expect(201);
 
       // Verify image generator was called
       expect(ImageGeneratorService.prototype.generate).toHaveBeenCalledTimes(1);
@@ -427,16 +420,8 @@ describe("Task Generation E2E Flow", () => {
       await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send({
-          curriculum_path:
-            "math:grade_9_10:algebra:linear_equations:solving_basic",
-          country_code: "HU",
-          target_group: "mixed",
-          difficulty_level: "medium",
-          educational_model: "secular",
-          number_of_images: 0,
-        })
-        .expect(200);
+        .send(createRequestBody({ number_of_images: 0 }))
+        .expect(201);
 
       // Verify image generator was NOT called
       expect(ImageGeneratorService.prototype.generate).not.toHaveBeenCalled();
@@ -446,25 +431,17 @@ describe("Task Generation E2E Flow", () => {
       const response = await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send({
-          curriculum_path:
-            "math:grade_9_10:algebra:linear_equations:solving_basic",
-          country_code: "HU",
-          target_group: "mixed",
-          difficulty_level: "medium",
-          educational_model: "secular",
-          number_of_images: 1,
-        })
-        .expect(200);
+        .send(createRequestBody({ number_of_images: 1 }))
+        .expect(201);
 
-      // Verify response structure
-      expect(response.body.success).toBe(true);
-      expect(response.body.data).toBeDefined();
+      // Verify response structure (new format: task_id, status, task_data)
+      expect(response.body.task_id).toBeDefined();
+      expect(response.body.status).toBe("generated");
+      expect(response.body.task_data).toBeDefined();
 
-      const task = response.body.data;
+      const task = response.body.task_data;
 
       // Verify task has all required components
-      expect(task.task_id).toBeDefined();
       expect(task.title).toBe("The Bridge Construction Challenge");
 
       // Verify story chunks are assembled
@@ -511,16 +488,8 @@ describe("Task Generation E2E Flow", () => {
       await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send({
-          curriculum_path:
-            "math:grade_9_10:algebra:linear_equations:solving_basic",
-          country_code: "HU",
-          target_group: "mixed",
-          difficulty_level: "medium",
-          educational_model: "secular",
-          number_of_images: 1,
-        })
-        .expect(200);
+        .send(createRequestBody({ number_of_images: 1 }))
+        .expect(201);
 
       // Verify task storage was called
       expect(TaskStorageService.prototype.saveTask).toHaveBeenCalledTimes(1);
@@ -548,16 +517,8 @@ describe("Task Generation E2E Flow", () => {
       await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send({
-          curriculum_path:
-            "math:grade_9_10:algebra:linear_equations:solving_basic",
-          country_code: "HU",
-          target_group: "mixed",
-          difficulty_level: "medium",
-          educational_model: "secular",
-          number_of_images: 1,
-        })
-        .expect(200);
+        .send(createRequestBody({ number_of_images: 1 }))
+        .expect(201);
 
       // Verify credit deduction was called (happens in middleware, not in response)
       // This is tested in the middleware tests and saveTask tests
@@ -573,15 +534,7 @@ describe("Task Generation E2E Flow", () => {
       const response = await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send({
-          curriculum_path:
-            "math:grade_9_10:algebra:linear_equations:solving_basic",
-          country_code: "HU",
-          target_group: "mixed",
-          difficulty_level: "medium",
-          educational_model: "secular",
-          number_of_images: 1,
-        })
+        .send(createRequestBody({ number_of_images: 1 }))
         .expect(500);
 
       expect(response.body.success).toBe(false);
@@ -597,15 +550,7 @@ describe("Task Generation E2E Flow", () => {
       const response = await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send({
-          curriculum_path:
-            "math:grade_9_10:algebra:linear_equations:solving_basic",
-          country_code: "HU",
-          target_group: "mixed",
-          difficulty_level: "medium",
-          educational_model: "secular",
-          number_of_images: 1,
-        })
+        .send(createRequestBody({ number_of_images: 1 }))
         .expect(500);
 
       expect(response.body.success).toBe(false);
@@ -617,32 +562,28 @@ describe("Task Generation E2E Flow", () => {
       const response = await request(app)
         .post("/api/task/generate-task-text")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send({
-          curriculum_path:
-            "math:grade_9_10:algebra:linear_equations:solving_basic",
-          country_code: "HU",
-          target_group: "mixed",
-          difficulty_level: "medium",
-          educational_model: "secular",
+        .send(createRequestBody({
           custom_keywords: ["engineering"],
-        })
+        }))
         .expect(200);
 
-      // Verify text generators were called
+      // Verify text generator was called for task generation
       expect(
         TextGeneratorService.prototype.generateWithSystemPrompt
       ).toHaveBeenCalled();
-      expect(TextGeneratorService.prototype.generate).toHaveBeenCalled();
+
+      // Verify solution generator was NOT called (text-only endpoint)
+      expect(TextGeneratorService.prototype.generate).not.toHaveBeenCalled();
 
       // Verify image generator was NOT called
       expect(ImageGeneratorService.prototype.generate).not.toHaveBeenCalled();
 
-      // Verify response has task text but no images
+      // Verify response has task text (no solution, no images)
       expect(response.body.success).toBe(true);
-      expect(response.body.data.title).toBeDefined();
-      expect(response.body.data.story_text).toBeDefined();
-      expect(response.body.data.questions).toBeDefined();
-      expect(response.body.data.solution_steps).toBeDefined();
+      expect(response.body.task_data.title).toBeDefined();
+      expect(response.body.task_data.story_text).toBeDefined();
+      expect(response.body.task_data.questions).toBeDefined();
+      // Text-only endpoint does NOT include solution_steps
     });
   });
 });

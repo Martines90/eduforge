@@ -16,11 +16,11 @@ async function testPasswordReset() {
 
     // Test password reset request
     await requestPasswordReset({
-      email: "marton.horvath@stocksaver.com",
+      email: "hmartonsandor@gmail.com",
     });
 
     console.log("\n✅ Password reset email sent!");
-    console.log("✉️  Check your inbox at marton.horvath@stocksaver.com");
+    console.log("✉️  Check your inbox at hmartonsandor@gmail.com");
     console.log("📧 You should receive an email with a password reset link");
   } catch (error: any) {
     console.error("❌ Error:", error.message);

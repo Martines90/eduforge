@@ -1,9 +1,48 @@
 import React from 'react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { screen, waitFor } from '@testing-library/react';
-import { renderWithProviders as render } from '@/lib/test-utils';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { LoginModal } from '../LoginModal';
+import { I18nProvider } from '@/lib/i18n/I18nContext';
+
+// Mock UserContext to provide a stable test environment
+vi.mock('@/lib/context/UserContext', () => ({
+  useUser: () => ({
+    user: {
+      country: 'HU',
+      isFirstVisit: false,
+      hasCompletedOnboarding: true,
+      isRegistered: false,
+      profile: null,
+      identity: null,
+      role: 'guest',
+      subject: null,
+      educationalModel: null,
+    },
+    authInitialized: true,
+    gradeSystem: {
+      availableGrades: [],
+      getGrade: vi.fn(),
+      getRole: vi.fn(),
+      getRoleLabel: vi.fn(),
+      gradeValues: [],
+    },
+    setCountry: vi.fn(),
+    setIdentity: vi.fn(),
+    setSubject: vi.fn(),
+    setEducationalModel: vi.fn(),
+    registerUser: vi.fn(),
+    loginUser: vi.fn(),
+    logoutUser: vi.fn(),
+    completeOnboarding: vi.fn(),
+    resetUser: vi.fn(),
+  }),
+}));
+
+// Helper to wrap component with I18nProvider
+const renderWithI18n = (ui: React.ReactElement) => {
+  return render(<I18nProvider>{ui}</I18nProvider>);
+};
 
 describe('LoginModal', () => {
   const mockOnLogin = vi.fn();
@@ -15,7 +54,7 @@ describe('LoginModal', () => {
 
   describe('Rendering', () => {
     it('should render login form when opened', () => {
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -30,7 +69,7 @@ describe('LoginModal', () => {
     });
 
     it('should render account creation buttons', () => {
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -43,7 +82,7 @@ describe('LoginModal', () => {
     });
 
     it('should not render when closed', () => {
-      render(
+      renderWithI18n(
         <LoginModal
           open={false}
           onLogin={mockOnLogin}
@@ -59,7 +98,7 @@ describe('LoginModal', () => {
     it('should show error for invalid email format', async () => {
       const user = userEvent.setup();
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -79,7 +118,7 @@ describe('LoginModal', () => {
     it('should show error for empty email', async () => {
       const user = userEvent.setup();
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -99,7 +138,7 @@ describe('LoginModal', () => {
     it('should show error for short password', async () => {
       const user = userEvent.setup();
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -119,7 +158,7 @@ describe('LoginModal', () => {
     it('should show error for empty password', async () => {
       const user = userEvent.setup();
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -139,7 +178,7 @@ describe('LoginModal', () => {
     it('should disable submit button when form is invalid', async () => {
       const user = userEvent.setup();
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -164,7 +203,7 @@ describe('LoginModal', () => {
 
       mockOnLogin.mockResolvedValue(undefined);
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -192,7 +231,7 @@ describe('LoginModal', () => {
       // Make login take some time
       mockOnLogin.mockImplementation(() => new Promise(resolve => setTimeout(resolve, 100)));
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -217,7 +256,7 @@ describe('LoginModal', () => {
 
       mockOnLogin.mockRejectedValue(new Error('Invalid email or password'));
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -244,7 +283,7 @@ describe('LoginModal', () => {
 
       mockOnLogin.mockRejectedValue(new Error('Network error'));
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -268,7 +307,7 @@ describe('LoginModal', () => {
       // First attempt fails
       mockOnLogin.mockRejectedValueOnce(new Error('Invalid email or password'));
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -301,7 +340,7 @@ describe('LoginModal', () => {
     it('should call onCreateAccount with true for teacher account', async () => {
       const user = userEvent.setup();
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -318,7 +357,7 @@ describe('LoginModal', () => {
     it('should call onCreateAccount with false for general account', async () => {
       const user = userEvent.setup();
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -335,7 +374,7 @@ describe('LoginModal', () => {
 
   describe('Accessibility', () => {
     it('should have proper form labels', () => {
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -348,7 +387,7 @@ describe('LoginModal', () => {
     });
 
     it('should have proper input types', () => {
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -366,7 +405,7 @@ describe('LoginModal', () => {
     it('should support keyboard navigation', async () => {
       const user = userEvent.setup();
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -390,7 +429,7 @@ describe('LoginModal', () => {
 
       mockOnLogin.mockResolvedValue(undefined);
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -409,7 +448,7 @@ describe('LoginModal', () => {
 
   describe('UI Elements', () => {
     it('should render forgot password link', () => {
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -421,7 +460,7 @@ describe('LoginModal', () => {
     });
 
     it('should render terms and privacy notice', () => {
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -435,7 +474,7 @@ describe('LoginModal', () => {
     });
 
     it('should have OR divider between login and account creation', () => {
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -453,7 +492,7 @@ describe('LoginModal', () => {
 
       mockOnLogin.mockResolvedValue(undefined);
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -475,7 +514,7 @@ describe('LoginModal', () => {
 
       mockOnLogin.mockResolvedValue(undefined);
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}
@@ -497,7 +536,7 @@ describe('LoginModal', () => {
 
       mockOnLogin.mockResolvedValue(undefined);
 
-      render(
+      renderWithI18n(
         <LoginModal
           open={true}
           onLogin={mockOnLogin}

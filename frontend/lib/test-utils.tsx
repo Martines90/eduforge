@@ -6,6 +6,9 @@ import { I18nProvider } from '@/lib/i18n/I18nContext';
 /**
  * Custom render function that wraps components with necessary providers
  * for testing (UserProvider, I18nProvider)
+ *
+ * NOTE: The js-cookie mock in vitest.setup.ts ensures the country cookie is set to 'HU'
+ * This prevents the CountrySelectionModal from appearing and blocking tests
  */
 function AllTheProviders({ children }: { children: React.ReactNode }) {
   return (

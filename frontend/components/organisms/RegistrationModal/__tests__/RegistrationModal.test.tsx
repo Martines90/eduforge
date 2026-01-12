@@ -28,6 +28,41 @@ vi.mock('@/lib/firebase/users', () => ({
   getUserById: vi.fn(),
 }));
 
+// Mock UserContext to provide a stable test environment
+vi.mock('@/lib/context/UserContext', () => ({
+  useUser: () => ({
+    user: {
+      country: 'HU',
+      isFirstVisit: false,
+      hasCompletedOnboarding: true,
+      isRegistered: false,
+      profile: null,
+      identity: null,
+      role: 'guest',
+      subject: null,
+      educationalModel: null,
+    },
+    authInitialized: true,
+    gradeSystem: {
+      availableGrades: [],
+      getGrade: vi.fn(),
+      getRole: vi.fn(),
+      getRoleLabel: vi.fn(),
+      gradeValues: [],
+    },
+    setCountry: vi.fn(),
+    setIdentity: vi.fn(),
+    setSubject: vi.fn(),
+    setEducationalModel: vi.fn(),
+    registerUser: vi.fn(),
+    loginUser: vi.fn(),
+    logoutUser: vi.fn(),
+    completeOnboarding: vi.fn(),
+    resetUser: vi.fn(),
+  }),
+  UserProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+}));
+
 // Mock cookies
 vi.mock('@/lib/utils/cookies', () => ({
   getCookie: vi.fn(),
