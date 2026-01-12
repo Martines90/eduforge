@@ -19,11 +19,18 @@ vi.mock('@/lib/services/api.service', () => ({
   fetchTasksByCurriculumPath: vi.fn(),
 }));
 
+// Mock grade values - must be stable to avoid infinite re-renders
+const mockGradeValues = ['grade_9_10', 'grade_11_12'] as const;
+const mockAvailableGrades = [
+  { value: 'grade_9_10', label: 'Grade 9-10', labelLocal: 'Grade 9-10' },
+  { value: 'grade_11_12', label: 'Grade 11-12', labelLocal: 'Grade 11-12' },
+];
+
 // Mock UserContext
 vi.mock('@/lib/context/UserContext', () => ({
   useUser: () => ({
     user: {
-      country: 'HU',
+      country: 'US', // Use US for English translations in tests
       isFirstVisit: false,
       hasCompletedOnboarding: true,
       isRegistered: false,
@@ -35,11 +42,11 @@ vi.mock('@/lib/context/UserContext', () => ({
     },
     authInitialized: true,
     gradeSystem: {
-      availableGrades: [],
+      availableGrades: mockAvailableGrades,
       getGrade: vi.fn(),
       getRole: vi.fn(),
       getRoleLabel: vi.fn(),
-      gradeValues: [],
+      gradeValues: mockGradeValues,
     },
     setCountry: vi.fn(),
     setIdentity: vi.fn(),
@@ -109,8 +116,8 @@ describe('TasksPage', () => {
 
     await waitFor(() => {
       // Should fetch both grade levels (default is "all")
-      expect(mockFetchTreeMap).toHaveBeenCalledWith('HU', 'mathematics', 'grade_9_10');
-      expect(mockFetchTreeMap).toHaveBeenCalledWith('HU', 'mathematics', 'grade_11_12');
+      expect(mockFetchTreeMap).toHaveBeenCalledWith('US', 'mathematics', 'grade_9_10');
+      expect(mockFetchTreeMap).toHaveBeenCalledWith('US', 'mathematics', 'grade_11_12');
     });
   });
 
@@ -136,8 +143,8 @@ describe('TasksPage', () => {
 
     // Should fetch new data for physics
     await waitFor(() => {
-      expect(mockFetchTreeMap).toHaveBeenCalledWith('HU', 'physics', 'grade_9_10');
-      expect(mockFetchTreeMap).toHaveBeenCalledWith('HU', 'physics', 'grade_11_12');
+      expect(mockFetchTreeMap).toHaveBeenCalledWith('US', 'physics', 'grade_9_10');
+      expect(mockFetchTreeMap).toHaveBeenCalledWith('US', 'physics', 'grade_11_12');
     });
   });
 
@@ -163,7 +170,7 @@ describe('TasksPage', () => {
 
     // Should fetch only grade_9_10 data
     await waitFor(() => {
-      expect(mockFetchTreeMap).toHaveBeenCalledWith('HU', 'mathematics', 'grade_9_10');
+      expect(mockFetchTreeMap).toHaveBeenCalledWith('US', 'mathematics', 'grade_9_10');
       expect(mockFetchTreeMap).toHaveBeenCalledTimes(1);
     });
   });
@@ -251,8 +258,8 @@ describe('TasksPage', () => {
     render(<TasksPage />);
 
     await waitFor(() => {
-      // Should use HU from mocked user context
-      expect(mockFetchTreeMap).toHaveBeenCalledWith('HU', expect.any(String), expect.any(String));
+      // Should use US from mocked user context
+      expect(mockFetchTreeMap).toHaveBeenCalledWith('US', expect.any(String), expect.any(String));
     });
   });
 

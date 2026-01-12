@@ -9,7 +9,7 @@ import { I18nProvider } from '@/lib/i18n/I18nContext';
 vi.mock('@/lib/context/UserContext', () => ({
   useUser: () => ({
     user: {
-      country: 'HU',
+      country: 'US', // Use US for English translations in tests
       isFirstVisit: false,
       hasCompletedOnboarding: true,
       isRegistered: false,

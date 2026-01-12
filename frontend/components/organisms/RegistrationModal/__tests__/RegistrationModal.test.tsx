@@ -1,10 +1,10 @@
 import React from 'react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { screen, waitFor } from '@testing-library/react';
-import { render } from '@/lib/test-utils';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { RegistrationModal } from '../RegistrationModal';
 import * as apiService from '@/lib/services/api.service';
+import { I18nProvider } from '@/lib/i18n/I18nContext';
 
 // Mock API service
 vi.mock('@/lib/services/api.service');
@@ -32,7 +32,7 @@ vi.mock('@/lib/firebase/users', () => ({
 vi.mock('@/lib/context/UserContext', () => ({
   useUser: () => ({
     user: {
-      country: 'HU',
+      country: 'US', // Use US for English translations in tests
       isFirstVisit: false,
       hasCompletedOnboarding: true,
       isRegistered: false,
@@ -80,6 +80,11 @@ vi.mock('@/lib/utils/cookies', () => ({
   },
 }));
 
+// Helper to wrap with I18nProvider
+const renderWithI18n = (ui: React.ReactElement) => {
+  return render(<I18nProvider>{ui}</I18nProvider>);
+};
+
 describe('RegistrationModal - Basic Functionality', () => {
   const mockOnRegister = vi.fn();
   const mockOnBack = vi.fn();
@@ -90,7 +95,7 @@ describe('RegistrationModal - Basic Functionality', () => {
 
   describe('Teacher Flow - Basic Rendering', () => {
     it('should render the registration modal for teachers', () => {
-      render(
+      renderWithI18n(
         <RegistrationModal
           open={true}
           onRegister={mockOnRegister}
@@ -105,7 +110,7 @@ describe('RegistrationModal - Basic Functionality', () => {
     });
 
     it('should show progress stepper with 3 steps for teachers', () => {
-      render(
+      renderWithI18n(
         <RegistrationModal
           open={true}
           onRegister={mockOnRegister}
@@ -120,7 +125,7 @@ describe('RegistrationModal - Basic Functionality', () => {
     });
 
     it('should show back button', () => {
-      render(
+      renderWithI18n(
         <RegistrationModal
           open={true}
           onRegister={mockOnRegister}
@@ -136,7 +141,7 @@ describe('RegistrationModal - Basic Functionality', () => {
     it('should call onBack when back button is clicked', async () => {
       const user = userEvent.setup();
 
-      render(
+      renderWithI18n(
         <RegistrationModal
           open={true}
           onRegister={mockOnRegister}
@@ -154,7 +159,7 @@ describe('RegistrationModal - Basic Functionality', () => {
 
   describe('Non-Teacher Flow - Basic Rendering', () => {
     it('should render the registration modal for non-teachers', () => {
-      render(
+      renderWithI18n(
         <RegistrationModal
           open={true}
           onRegister={mockOnRegister}
@@ -167,7 +172,7 @@ describe('RegistrationModal - Basic Functionality', () => {
     });
 
     it('should show progress stepper with 3 steps for non-teachers', () => {
-      render(
+      renderWithI18n(
         <RegistrationModal
           open={true}
           onRegister={mockOnRegister}
@@ -181,7 +186,7 @@ describe('RegistrationModal - Basic Functionality', () => {
     });
 
     it('should not show subject selection for non-teachers', () => {
-      render(
+      renderWithI18n(
         <RegistrationModal
           open={true}
           onRegister={mockOnRegister}
@@ -202,7 +207,7 @@ describe('RegistrationModal - Basic Functionality', () => {
 
       // This is a simplified test that just verifies the modal can be rendered
       // Full integration tests would be more complex with MUI components
-      render(
+      renderWithI18n(
         <RegistrationModal
           open={true}
           onRegister={mockOnRegister}
@@ -228,7 +233,7 @@ describe('RegistrationModal - Basic Functionality', () => {
         },
       } as any);
 
-      render(
+      renderWithI18n(
         <RegistrationModal
           open={true}
           onRegister={mockOnRegister}
@@ -249,7 +254,7 @@ describe('RegistrationModal - Basic Functionality', () => {
         message: 'Code sent',
       } as any);
 
-      render(
+      renderWithI18n(
         <RegistrationModal
           open={true}
           onRegister={mockOnRegister}
@@ -268,7 +273,7 @@ describe('RegistrationModal - Basic Functionality', () => {
         new Error('Email already exists')
       );
 
-      render(
+      renderWithI18n(
         <RegistrationModal
           open={true}
           onRegister={mockOnRegister}
@@ -284,7 +289,7 @@ describe('RegistrationModal - Basic Functionality', () => {
         new Error('Invalid code')
       );
 
-      render(
+      renderWithI18n(
         <RegistrationModal
           open={true}
           onRegister={mockOnRegister}

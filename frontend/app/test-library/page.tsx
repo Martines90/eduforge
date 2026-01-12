@@ -37,7 +37,7 @@ import { useUser } from "@/lib/context/UserContext";
 export default function TestLibraryPage() {
   const router = useRouter();
   const { t } = useTranslation();
-  const { gradeSystem } = useUser();
+  const { user, gradeSystem } = useUser();
 
   // Get translated subject label
   const getSubjectLabel = (subject: Subject): string => {
@@ -46,25 +46,10 @@ export default function TestLibraryPage() {
     return subjectOption.labelEN;
   };
 
-  // Get user's subject from localStorage (for teachers)
-  const getUserSubject = (): string => {
-    if (typeof window === "undefined") return "mathematics";
-    try {
-      const userStr = localStorage.getItem("user");
-      if (userStr) {
-        const user = JSON.parse(userStr);
-        // Return teacher's subject if available, otherwise fallback to mathematics
-        return user.subject || "mathematics";
-      }
-    } catch (error) {
-      console.error("Error getting user subject:", error);
-    }
-    return "mathematics";
-  };
-
   const [searchQuery, setSearchQuery] = useState("");
+  // Initialize selectedSubject from UserContext (teacher's subject if available)
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(
-    getUserSubject() as Subject
+    user.subject || null
   );
   const [sortBy, setSortBy] = useState<"recent" | "views" | "downloads">(
     "recent"
@@ -80,21 +65,6 @@ export default function TestLibraryPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12; // 12 items for grid layout (4 columns x 3 rows)
 
-  // Get user's country from localStorage (for filtering tests by country)
-  const getUserCountry = (): string => {
-    if (typeof window === "undefined") return "US";
-    try {
-      const userStr = localStorage.getItem("user");
-      if (userStr) {
-        const user = JSON.parse(userStr);
-        return user.country || "US";
-      }
-    } catch (error) {
-      console.error("Error getting user country:", error);
-    }
-    return "US";
-  };
-
   // Fetch tests from API
   const loadTests = async () => {
     setLoading(true);
@@ -102,7 +72,8 @@ export default function TestLibraryPage() {
 
     try {
       const offset = (currentPage - 1) * itemsPerPage;
-      const country = getUserCountry();
+      // Use country from UserContext (NOT localStorage)
+      const country = user.country;
 
       console.log("[TestLibrary] Fetching tests:", {
         country,

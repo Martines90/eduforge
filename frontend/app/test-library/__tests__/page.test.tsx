@@ -33,7 +33,7 @@ vi.mock('@/lib/i18n', () => ({
 vi.mock('@/lib/context/UserContext', () => ({
   useUser: () => ({
     user: {
-      country: 'HU',
+      country: 'US', // Use US for English translations in tests
       isFirstVisit: false,
       hasCompletedOnboarding: true,
       isRegistered: false,
@@ -72,22 +72,6 @@ const mockFetchPublishedTests = fetchPublishedTests as vi.MockedFunction<typeof 
 describe('TestLibraryPage', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-
-    // Mock localStorage
-    Object.defineProperty(window, 'localStorage', {
-      value: {
-        getItem: vi.fn((key) => {
-          if (key === 'user') {
-            return JSON.stringify({ country: 'HU' });
-          }
-          return null;
-        }),
-        setItem: vi.fn(),
-        removeItem: vi.fn(),
-        clear: vi.fn(),
-      },
-      writable: true,
-    });
 
     // Mock window.scrollTo
     window.scrollTo = vi.fn();
@@ -137,7 +121,7 @@ describe('TestLibraryPage', () => {
 
       await waitFor(() => {
         expect(mockFetchPublishedTests).toHaveBeenCalledWith({
-          country: 'HU',
+          country: 'US',
           subject: undefined,
           search: undefined,
           sort: 'recent',
@@ -269,7 +253,7 @@ describe('TestLibraryPage', () => {
 
       await waitFor(() => {
         expect(mockFetchPublishedTests).toHaveBeenCalledWith({
-          country: 'HU',
+          country: 'US',
           subject: undefined,
           search: undefined,
           sort: 'recent',
@@ -327,7 +311,7 @@ describe('TestLibraryPage', () => {
 
       await waitFor(() => {
         expect(mockFetchPublishedTests).toHaveBeenCalledWith({
-          country: 'HU',
+          country: 'US',
           subject: undefined,
           search: undefined,
           sort: 'recent',
@@ -418,12 +402,15 @@ describe('TestLibraryPage', () => {
         expect(screen.getByText('Test 1')).toBeInTheDocument();
       });
 
-      const mathChip = screen.getByText('Mathematics');
-      fireEvent.click(mathChip);
+      // Find all Mathematics chips (one is in the filter, others are in test cards)
+      // Get the first one which should be the filter chip
+      const mathChips = screen.getAllByText('Mathematics');
+      const mathFilterChip = mathChips[0]; // First one is the filter
+      fireEvent.click(mathFilterChip);
 
       await waitFor(() => {
         expect(mockFetchPublishedTests).toHaveBeenCalledWith({
-          country: 'HU',
+          country: 'US',
           subject: 'mathematics',
           search: undefined,
           sort: 'recent',
@@ -476,12 +463,13 @@ describe('TestLibraryPage', () => {
         );
       });
 
-      // Filter by physics
-      fireEvent.click(screen.getByText('Physics'));
+      // Filter by physics - get the first chip (filter chip, not test card chip)
+      const physicsChips = screen.getAllByText('Physics');
+      fireEvent.click(physicsChips[0]);
 
       await waitFor(() => {
         expect(mockFetchPublishedTests).toHaveBeenCalledWith({
-          country: 'HU',
+          country: 'US',
           subject: 'physics',
           search: undefined,
           sort: 'recent',
@@ -491,7 +479,7 @@ describe('TestLibraryPage', () => {
       });
     });
 
-    it('should clear subject filter when clicking All Subjects', async () => {
+    it('should clear subject filter when clicking selected subject chip again', async () => {
       const mockTests = createMockTests(5);
       mockFetchPublishedTests
         .mockResolvedValueOnce({
@@ -526,7 +514,8 @@ describe('TestLibraryPage', () => {
       });
 
       // Filter by math
-      fireEvent.click(screen.getByText('Mathematics'));
+      const mathChips = screen.getAllByText('Mathematics');
+      fireEvent.click(mathChips[0]);
 
       await waitFor(() => {
         expect(mockFetchPublishedTests).toHaveBeenCalledWith(
@@ -534,12 +523,13 @@ describe('TestLibraryPage', () => {
         );
       });
 
-      // Clear filter
-      fireEvent.click(screen.getByText('All Subjects'));
+      // Clear filter by clicking the same chip again (toggle off)
+      const mathChipsAfter = screen.getAllByText('Mathematics');
+      fireEvent.click(mathChipsAfter[0]);
 
       await waitFor(() => {
         expect(mockFetchPublishedTests).toHaveBeenCalledWith({
-          country: 'HU',
+          country: 'US',
           subject: undefined,
           search: undefined,
           sort: 'recent',
@@ -583,7 +573,7 @@ describe('TestLibraryPage', () => {
 
       await waitFor(() => {
         expect(mockFetchPublishedTests).toHaveBeenCalledWith({
-          country: 'HU',
+          country: 'US',
           subject: undefined,
           search: 'algebra',
           sort: 'recent',
@@ -672,7 +662,7 @@ describe('TestLibraryPage', () => {
 
       await waitFor(() => {
         expect(mockFetchPublishedTests).toHaveBeenCalledWith({
-          country: 'HU',
+          country: 'US',
           subject: undefined,
           search: undefined,
           sort: 'views',
@@ -703,7 +693,7 @@ describe('TestLibraryPage', () => {
 
       await waitFor(() => {
         expect(mockFetchPublishedTests).toHaveBeenCalledWith({
-          country: 'HU',
+          country: 'US',
           subject: undefined,
           search: undefined,
           sort: 'downloads',
@@ -769,8 +759,9 @@ describe('TestLibraryPage', () => {
         expect(screen.getByText('Test 1')).toBeInTheDocument();
       });
 
-      // Filter by subject
-      fireEvent.click(screen.getByText('Physics'));
+      // Filter by subject - get the first Physics chip (filter chip)
+      const physicsChips = screen.getAllByText('Physics');
+      fireEvent.click(physicsChips[0]);
 
       await waitFor(() => {
         expect(mockFetchPublishedTests).toHaveBeenCalledWith(
@@ -793,57 +784,13 @@ describe('TestLibraryPage', () => {
 
       await waitFor(() => {
         expect(mockFetchPublishedTests).toHaveBeenCalledWith({
-          country: 'HU',
+          country: 'US',
           subject: 'physics',
           search: 'mechanics',
           sort: 'views',
           limit: 12,
           offset: 0,
         });
-      });
-    });
-  });
-
-  describe('Country Detection', () => {
-    it('should use country from localStorage', async () => {
-      const mockTests = createMockTests(5);
-      mockFetchPublishedTests.mockResolvedValue({
-        success: true,
-        tests: mockTests,
-        total: 5,
-        page: 1,
-        limit: 12,
-        hasMore: false,
-      });
-
-      render(<TestLibraryPage />);
-
-      await waitFor(() => {
-        expect(mockFetchPublishedTests).toHaveBeenCalledWith(
-          expect.objectContaining({ country: 'HU' })
-        );
-      });
-    });
-
-    it('should default to US when no user in localStorage', async () => {
-      (window.localStorage.getItem as unknown as vi.Mock).mockReturnValue(null);
-
-      const mockTests = createMockTests(5);
-      mockFetchPublishedTests.mockResolvedValue({
-        success: true,
-        tests: mockTests,
-        total: 5,
-        page: 1,
-        limit: 12,
-        hasMore: false,
-      });
-
-      render(<TestLibraryPage />);
-
-      await waitFor(() => {
-        expect(mockFetchPublishedTests).toHaveBeenCalledWith(
-          expect.objectContaining({ country: 'US' })
-        );
       });
     });
   });
@@ -855,11 +802,14 @@ describe('TestLibraryPage', () => {
       render(<TestLibraryPage />);
 
       const searchInput = screen.getByPlaceholderText('Search tests...');
-      const allSubjectsChip = screen.getByText('All Subjects');
-      const recentChip = screen.getByText('Recent');
-
       expect(searchInput).toBeDisabled();
-      expect(allSubjectsChip).toHaveClass('Mui-disabled');
+
+      // Check that subject chips and sort chips are disabled by checking their parent containers
+      // The chips should be in disabled state (look for aria-disabled or checking the Chip component itself)
+      const mathChip = screen.getByText('Mathematics').closest('.MuiChip-root');
+      const recentChip = screen.getByText('Recent').closest('.MuiChip-root');
+
+      expect(mathChip).toHaveClass('Mui-disabled');
       expect(recentChip).toHaveClass('Mui-disabled');
     });
 
