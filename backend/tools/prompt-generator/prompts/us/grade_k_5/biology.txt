@@ -1,0 +1,242 @@
+# Curriculum Mapping Prompt: Biology for United States (Elementary (K-5))
+
+You are an expert curriculum analyst specializing in United States's official national education standards for Biology.
+
+Your task is to create a comprehensive, hierarchical JSON structure that maps the complete Biology curriculum for Elementary (K-5) (K-5, ages 5-11) according to United States's official government education standards: Common Core State Standards / Next Generation Science Standards (NGSS).
+
+---
+
+## 1. Research and Accuracy Requirements
+
+Authoritative Sources:
+- Base your structure on the official State Boards of Education (following Common Core / NGSS) curriculum documents
+- Follow the Common Core State Standards / Next Generation Science Standards (NGSS) standards and framework
+- Ensure accuracy to United States's actual teaching practices and pedagogical approaches
+- Use terminology and concepts standard in United States's education system
+
+Grade Level Context:
+- Grade Range: K-5
+- Local Label: Elementary School (K-5)
+- Age Range: 5-11
+- Teacher Role: Elementary Teacher
+
+---
+
+## 2. JSON Structure Format
+
+Follow this exact hierarchical structure (start directly with an array):
+
+```json
+[
+  {
+    "key": "unique_topic_key",
+    "name": "Topic Name in English",
+    "short_description": "Brief description of the topic scope and key learning goals (1-2 sentences)",
+    "sub_topics": [
+      {
+        "key": "unique_subtopic_key",
+        "name": "Subtopic Name in English",
+        "short_description": "Brief description of what students will learn in this subtopic",
+        "sub_topics": [
+          {
+            "key": "unique_sub_subtopic_key",
+            "name": "Detailed Concept Name in English",
+            "short_description": "Specific learning objective or skill to be mastered",
+            "example_tasks": [
+              "Example task 1 that demonstrates this concept (age-appropriate and curriculum-aligned)",
+              "Example task 2 with slightly different approach or difficulty",
+              "Example task 3 showing practical application or real-world connection"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
+**IMPORTANT**: Return ONLY the JSON array. Do NOT wrap it in an object with a "grade_k_5" key.
+
+---
+
+## 3. Depth and Coverage Requirements
+
+Breadth (Horizontal Coverage):
+- Include 10-30 main topics to ensure COMPLETE coverage of the curriculum for Elementary (K-5)
+- Cover ALL mandatory content areas from the official curriculum
+- Better to have more topics with good coverage than fewer topics with gaps
+
+Depth (Vertical Hierarchy):
+- Level 1 (Main Topics): 10-30 topics (adapt based on subject complexity and curriculum breadth)
+- Level 2 (Sub Topics): 3-6 per main topic
+- Level 3 (Sub Topics with example Tasks): 3-5 tasks per detailed sub topic
+
+Total Size Target:
+- Minimum 1000-1500 lines of JSON for this grade level
+- Minimum 60,000-100,000 characters
+- This ensures comprehensive coverage of the curriculum for K-5
+
+**Priority**: Completeness over size constraints. If the curriculum requires 25 main topics to be fully covered, include all 25.
+
+---
+
+## 4. Content Quality Standards
+
+### Language and Terminology:
+- All names and descriptions MUST be in English
+- Use official terminology from United States's education system
+- Keys should be in lowercase_with_underscores (English or transliterated)
+- Be consistent with naming conventions throughout
+
+### Short Descriptions:
+- Keep to 1-2 sentences (concise but informative)
+- Focus on learning objectives and key concepts
+- Use pedagogically accurate language
+- Align with official curriculum language and goals
+
+### Example Tasks:
+Each example task must be:
+- Authentic: Reflect the types of assessments and exercises used in United States
+- Age-appropriate: Suitable for ages 5-11
+- Progressive: Show increasing complexity across the 3-5 examples
+- Curriculum-aligned: Match the learning objectives of the official curriculum
+- Practical: Where possible, connect to real-world contexts relevant to United States
+- Diverse: Cover different cognitive levels (recall, application, analysis, synthesis)
+- Clear: Fully specified so a student or teacher understands what is being asked
+
+---
+
+
+### Subject-Specific Requirements for Biology:
+
+Core Topics to Include:
+- Cell Biology (structure, function, organelles, cell division)
+- Genetics (Mendelian genetics, DNA, molecular genetics)
+- Evolution and Natural Selection
+- Ecology (ecosystems, populations, biodiversity)
+- Human Biology (anatomy, physiology, organ systems)
+- Plant Biology (structure, photosynthesis, reproduction)
+- Microbiology (bacteria, viruses, fungi)
+- Biochemistry (proteins, enzymes, metabolism)
+
+Pedagogical Considerations:
+- Connect different levels of biological organization (molecular → organism → ecosystem)
+- Include taxonomy and classification systems
+- Reference local ecosystems and species where appropriate
+- Include microscopy and laboratory investigation skills
+- Address ethical considerations in biology (especially genetics and ecology)
+
+Example Task Types:
+- Diagram labeling and interpretation
+- Experimental design and hypothesis testing
+- Classification and identification tasks
+- Process explanations (photosynthesis, respiration, mitosis, etc.)
+- Data analysis from experiments or field studies
+- Application to health, medicine, and environmental issues
+
+
+---
+
+## 5. Curriculum Alignment Checklist
+
+Before and during your work, ensure:
+- [ ] You have researched the official Common Core State Standards / Next Generation Science Standards (NGSS) for K-5
+- [ ] All main topics reflect mandatory content for Elementary (K-5)
+- [ ] Topic sequence matches the typical teaching order in United States
+- [ ] Content is age-appropriate for 5-11
+- [ ] Examples are relevant for Elementary Teacher teaching this level
+- [ ] Cultural context is appropriate (examples, references, applications)
+- [ ] Language is natural and authentic for English
+
+---
+
+## 6. Delivery Format - CHUNKED APPROACH
+
+**IMPORTANT**: Deliver the curriculum in **5 CHUNKS** to ensure comprehensive coverage and better organization.
+
+### Before Starting: Create a Complete Plan
+
+Before generating any JSON, provide a detailed plan that divides the curriculum into 5 chunks:
+
+```markdown
+# Curriculum Plan for Biology - United States (Elementary (K-5))
+
+## Chunk 1 (Topics 1-X): [Thematic Group Name]
+Main topics to include:
+- Topic 1: [Topic name and brief scope]
+- Topic 2: [Topic name and brief scope]
+- ...
+
+## Chunk 2 (Topics X-Y): [Thematic Group Name]
+Main topics to include:
+- Topic X: [Topic name and brief scope]
+- ...
+
+## Chunk 3 (Topics Y-Z): [Thematic Group Name]
+Main topics to include:
+- Topic Y: [Topic name and brief scope]
+- ...
+
+## Chunk 4 (Topics Z-W): [Thematic Group Name]
+Main topics to include:
+- Topic Z: [Topic name and brief scope]
+- ...
+
+## Chunk 5 (Topics W-end): [Thematic Group Name]
+Main topics to include:
+- Topic W: [Topic name and brief scope]
+- ...
+
+Total Topics: [Estimate total number]
+```
+
+### Then Generate Each Chunk
+
+After presenting the plan, generate each chunk sequentially. Each chunk should:
+- Cover approximately 20% of the total curriculum (2-6 topics per chunk depending on subject complexity)
+- Be a valid JSON array that can be concatenated with other chunks
+- Include complete topic structures with all sub_topics and example_tasks
+
+**Structure Requirements for Each Chunk**:
+- Each chunk is a JSON array: `[{...}, {...}]`
+- All chunks combined will form the complete curriculum array
+- First chunk: `[{ topic_1 }, { topic_2 }, ...]`
+- Middle chunks: `[{ topic_x }, { topic_y }, ...]`
+- Last chunk: `[{ topic_n-1 }, { topic_n }]`
+
+**Final Assembly**:
+After all 5 chunks, confirm the total structure:
+- Total main topics: [count]
+- Total subtopics: [estimate]
+- Total example tasks: [estimate]
+- Estimated JSON size: [characters]
+
+Example of CORRECT chunk format:
+```json
+[
+  { "key": "topic_1", "name": "...", "sub_topics": [...] },
+  { "key": "topic_2", "name": "...", "sub_topics": [...] }
+]
+```
+
+**DO NOT** wrap in an object with "grade_k_5" key
+
+---
+
+## 7. Important Notes
+
+- DO NOT hallucinate or invent curriculum content. If you are unsure about specific topics in United States's curriculum for Elementary (K-5), indicate this and use general best practices for the subject.
+- Prioritize accuracy over creativity. This data will be used for educational purposes.
+- Be consistent with JSON formatting, key naming, and structure throughout.
+- All content must be in English except for keys.
+- Focus specifically on K-5 content - don't mix in content from other grade levels.
+
+---
+
+## Ready to Begin?
+
+Please provide the complete curriculum mapping JSON for:
+- Country: United States
+- Grade Level: Elementary (K-5) (K-5)
+- Subject: Biology
+- Language: English
