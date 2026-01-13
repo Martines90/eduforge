@@ -16,8 +16,8 @@ import { useUser } from '@/lib/context/UserContext';
 import { generateTaskComplete, TaskGenerationStep } from '@/lib/services/task-generator.service';
 import { saveTask, SaveTaskRequest } from '@/lib/services/task-save.service';
 import { TaskSavedModal } from '@/components/organisms/TaskSavedModal';
-import { fetchAllGradeTrees } from '@/lib/services/subject-mapping.service';
-import { GradeLevel, GradeConfig } from '@eduforger/shared';
+import { fetchSubjectTree } from '@/lib/services/subject-mapping.service';
+import { GradeLevel, GradeConfig, Subject } from '@eduforger/shared';
 import styles from './page.module.scss';
 
 interface TabPanelProps {
@@ -50,6 +50,7 @@ function TaskCreatorContent() {
     requireIdentity: 'teacher',
   });
   const [selectedGrade, setSelectedGrade] = useState<number>(0);
+  const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
   const [selectedTopic, setSelectedTopic] = useState<NavigationTopic | null>(null);
   const [selectionPath, setSelectionPath] = useState<string[]>([]);
   const [taskConfig, setTaskConfig] = useState<TaskConfiguration | null>(null);
@@ -63,7 +64,7 @@ function TaskCreatorContent() {
   const [showSavedModal, setShowSavedModal] = useState(false);
   const [savedTaskInfo, setSavedTaskInfo] = useState<{ taskId: string; publicShareLink: string; pdfUrl?: string } | null>(null);
   const [currentCurriculumPath, setCurrentCurriculumPath] = useState<string>('');
-  const [navigationData, setNavigationData] = useState<Record<string, NavigationTopic[]> | null>(null);
+  const [navigationData, setNavigationData] = useState<NavigationTopic[]>([]);
   const [isLoadingNavigation, setIsLoadingNavigation] = useState(true);
   const [navigationError, setNavigationError] = useState<string | null>(null);
   const [availableGrades, setAvailableGrades] = useState<GradeConfig[]>([]);
@@ -74,6 +75,7 @@ function TaskCreatorContent() {
     const loadNavigationData = async () => {
       console.log('[Task Creator] User object:', user);
       console.log('[Task Creator] User country:', user.country);
+      console.log('[Task Creator] User teacherRole:', user.teacherRole);
       console.log('[Task Creator] isAuthorized:', isAuthorized);
 
       // Wait for authorization check to complete
@@ -92,8 +94,27 @@ function TaskCreatorContent() {
         return;
       }
 
-      if (!user.subjects || user.subjects.length === 0) {
+      // For registered teachers, check if they have subjects
+      if (user.role === 'registered' && (!user.subjects || user.subjects.length === 0)) {
         console.log('[Task Creator] Waiting for user subject...');
+        return;
+      }
+
+      // Set default selected subject if not already set
+      if (!selectedSubject) {
+        // For registered teachers, use their first subject
+        if (user.role === 'registered' && user.subjects && user.subjects.length > 0) {
+          setSelectedSubject(user.subjects[0]);
+        } else {
+          // For guests, default to mathematics
+          setSelectedSubject('mathematics');
+        }
+      }
+
+      // Determine current subject to fetch data for
+      const currentSubject = selectedSubject || (user.role === 'registered' && user.subjects && user.subjects.length > 0 ? user.subjects[0] : 'mathematics');
+      if (!currentSubject) {
+        console.log('[Task Creator] No subject selected yet');
         return;
       }
 
@@ -101,14 +122,41 @@ function TaskCreatorContent() {
       setNavigationError(null);
 
       try {
-        console.log('[Task Creator] Fetching navigation data for country:', user.country, 'subject:', user.subjects[0]);
+        console.log('[Task Creator] Fetching navigation data for country:', user.country, 'subject:', currentSubject);
 
         // Import gradeSystem helpers
         const { getGradesForCountry } = await import('@eduforger/shared');
-        const grades = getGradesForCountry(user.country as any);
+        const allGrades = getGradesForCountry(user.country as any);
+
+        // Filter grades based on teacher's teacherRole - only show their assigned grade level
+        let grades: GradeConfig[];
+        if (user.teacherRole) {
+          const teacherGrade = allGrades.find(g => g.value === user.teacherRole);
+          if (teacherGrade) {
+            console.log('[Task Creator] Restricting to teacher\'s grade level:', user.teacherRole);
+            grades = [teacherGrade]; // Only allow the teacher's assigned grade
+            setSelectedGrade(0); // Always select the first (and only) grade
+          } else {
+            console.warn('[Task Creator] Teacher role not found in available grades, showing all grades');
+            grades = allGrades;
+          }
+        } else {
+          console.log('[Task Creator] No teacherRole set, showing all grades');
+          grades = allGrades;
+        }
+
         setAvailableGrades(grades);
 
-        const data = await fetchAllGradeTrees(user.country, user.subjects[0]);
+        // Get the current grade level to fetch
+        const currentGradeLevel = grades[selectedGrade]?.value;
+        if (!currentGradeLevel) {
+          console.warn('[Task Creator] No grade level found at index:', selectedGrade);
+          setNavigationData([]);
+          return;
+        }
+
+        console.log('[Task Creator] Fetching tree for grade level:', currentGradeLevel);
+        const data = await fetchSubjectTree(user.country, currentSubject, currentGradeLevel);
         setNavigationData(data);
         console.log('[Task Creator] Navigation data loaded successfully');
       } catch (error) {
@@ -120,7 +168,7 @@ function TaskCreatorContent() {
     };
 
     loadNavigationData();
-  }, [user.country, user.subjects, isAuthorized, isLoading]);
+  }, [user.country, user.subjects, isAuthorized, isLoading, user.teacherRole, selectedSubject, selectedGrade]);
 
   // Read URL params on mount
   useEffect(() => {
@@ -166,6 +214,13 @@ function TaskCreatorContent() {
     setInitialPath(undefined); // Clear initial path when manually changing grade
   };
 
+  const handleSubjectChange = (newSubject: Subject) => {
+    setSelectedSubject(newSubject);
+    setSelectedTopic(null);
+    setSelectionPath([]);
+    setInitialPath(undefined); // Clear initial path when manually changing subject
+  };
+
   const handleSelectionComplete = async (topic: NavigationTopic, path: string[], config: TaskConfiguration) => {
     setSelectedTopic(topic);
     setSelectionPath(path);
@@ -204,8 +259,9 @@ function TaskCreatorContent() {
       }
 
       // Build curriculum path from selection
-      // Use user's first subject to match the subjectMappings collection format
-      const curriculumPath = `${user.subjects[0]}:${currentGradeConfig.value}:${path.join(':')}`;
+      // Use currently selected subject to match the subjectMappings collection format
+      const currentSubject = selectedSubject || (user.role === 'registered' && user.subjects && user.subjects[0]) || 'mathematics';
+      const curriculumPath = `${currentSubject}:${currentGradeConfig.value}:${path.join(':')}`;
       setCurrentCurriculumPath(curriculumPath);
 
       // Map targetGroupSex to TargetGroup type
@@ -373,8 +429,6 @@ function TaskCreatorContent() {
 
   // Get current grade level based on selected tab index
   const currentGradeConfig = availableGrades[selectedGrade];
-  const gradeLevel: GradeLevel | undefined = currentGradeConfig?.value;
-  const currentData = navigationData && gradeLevel ? navigationData[gradeLevel] : [];
 
   // Show loading state while checking authorization
   if (isLoading) {
@@ -411,13 +465,13 @@ function TaskCreatorContent() {
   }
 
   // Show error if navigation data is empty
-  if (!navigationData || !currentData || currentData.length === 0) {
+  if (!navigationData || navigationData.length === 0) {
     return (
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Alert severity="warning">
           <Typography variant="h6" gutterBottom>No curriculum data available</Typography>
           <Typography variant="body2">
-            Curriculum data for {user.country} is not yet available. Please contact support.
+            Curriculum data for {user.country} / {selectedSubject} / {currentGradeConfig?.labelEN} is not yet available. Please contact support.
           </Typography>
         </Alert>
       </Container>
@@ -436,32 +490,38 @@ function TaskCreatorContent() {
           </Typography>
         </Box>
 
-        <Paper elevation={2} className={styles.gradeSelector}>
-          <Tabs
-            value={selectedGrade}
-            onChange={handleGradeChange}
-            aria-label="Select grade level"
-            variant="fullWidth"
-            className={styles.tabs}
-          >
-            {availableGrades.map((grade, index) => (
-              <Tab
-                key={grade.value}
-                label={grade.labelEN}
-                id={`grade-tab-${index}`}
-                aria-controls={`grade-tabpanel-${index}`}
-              />
-            ))}
-          </Tabs>
-        </Paper>
+        {/* Only show grade selector tabs if teacher doesn't have a specific teacherRole or if there are multiple grades */}
+        {availableGrades.length > 1 && (
+          <Paper elevation={2} className={styles.gradeSelector}>
+            <Tabs
+              value={selectedGrade}
+              onChange={handleGradeChange}
+              aria-label="Select grade level"
+              variant="fullWidth"
+              className={styles.tabs}
+            >
+              {availableGrades.map((grade, index) => (
+                <Tab
+                  key={grade.value}
+                  label={grade.labelEN}
+                  id={`grade-tab-${index}`}
+                  aria-controls={`grade-tabpanel-${index}`}
+                />
+              ))}
+            </Tabs>
+          </Paper>
+        )}
 
         {availableGrades.map((grade, index) => (
           <TabPanel key={grade.value} value={selectedGrade} index={index}>
             <CascadingSelect
-              data={selectedGrade === index && navigationData ? navigationData[grade.value] || [] : []}
+              data={selectedGrade === index ? navigationData : []}
               title={`${t('Select Topic')} (${grade.labelEN})`}
               onSelectionComplete={handleSelectionComplete}
               initialPath={selectedGrade === index ? initialPath : undefined}
+              selectedSubject={selectedSubject}
+              onSubjectChange={handleSubjectChange}
+              availableSubjects={user.role === 'registered' ? user.subjects : undefined}
             />
           </TabPanel>
         ))}

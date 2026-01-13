@@ -9,6 +9,10 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  FormControl,
+  InputLabel,
+  Select as MuiSelect,
+  MenuItem,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -24,6 +28,7 @@ import { DifficultyLevelSelect } from '@/components/molecules/DifficultyLevelSel
 import { DifficultyLevel } from '@/lib/data/difficulty-levels';
 import { ImageNumberSelect, ImageNumber } from '@/components/molecules/ImageNumberSelect';
 import { TargetGroupSelect, TargetGroupSex } from '@/components/molecules/TargetGroupSelect';
+import { Subject, SUBJECTS, getSubjectOption } from '@eduforger/shared';
 import styles from './CascadingSelect.module.scss';
 
 export interface TaskConfiguration {
@@ -40,6 +45,10 @@ export interface CascadingSelectProps {
   onSelectionChange?: (path: string[]) => void; // Callback for intermediate selections
   className?: string;
   initialPath?: string[]; // Array of topic keys to pre-select
+  // Subject selector props
+  selectedSubject?: Subject | null;
+  onSubjectChange?: (subject: Subject) => void;
+  availableSubjects?: Subject[]; // For teachers - only their subjects
 }
 
 /**
@@ -54,6 +63,9 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
   onSelectionChange,
   className,
   initialPath,
+  selectedSubject,
+  onSubjectChange,
+  availableSubjects,
 }) => {
   const { t } = useTranslation();
   const { user } = useUser();
@@ -95,6 +107,21 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
     }
   };
 
+  // Check if a subject is enabled for the current user
+  const isSubjectEnabled = (subject: Subject): boolean => {
+    // If no available subjects specified, all are enabled (guest mode)
+    if (!availableSubjects) return true;
+    // For registered teachers, only their subjects are enabled
+    return availableSubjects.includes(subject);
+  };
+
+  const handleSubjectChangeInternal = (event: any) => {
+    const newSubject = event.target.value as Subject;
+    if (onSubjectChange) {
+      onSubjectChange(newSubject);
+    }
+  };
+
   return (
     <Paper elevation={2} className={`${styles.container} ${className || ''}`}>
       <div className={styles.header}>
@@ -107,6 +134,39 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
           </Button>
         )}
       </div>
+
+      {/* Subject selector - show if onSubjectChange is provided */}
+      {onSubjectChange && (
+        <Box sx={{ mb: 3 }}>
+          <FormControl fullWidth>
+            <InputLabel id="subject-select-label">{t('Subject')}</InputLabel>
+            <MuiSelect
+              labelId="subject-select-label"
+              id="subject-select"
+              value={selectedSubject || ''}
+              label={t('Subject')}
+              onChange={handleSubjectChangeInternal}
+            >
+              {SUBJECTS.map((subjectOption) => {
+                const enabled = isSubjectEnabled(subjectOption.value);
+                return (
+                  <MenuItem
+                    key={subjectOption.value}
+                    value={subjectOption.value}
+                    disabled={!enabled}
+                  >
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, width: '100%' }}>
+                      <span>{subjectOption.emoji}</span>
+                      <span>{subjectOption.labelEN}</span>
+                      {!enabled && <span style={{ marginLeft: 'auto', fontSize: '0.85em', color: '#999' }}>({t('Not in your skillset')})</span>}
+                    </Box>
+                  </MenuItem>
+                );
+              })}
+            </MuiSelect>
+          </FormControl>
+        </Box>
+      )}
 
       {/* Breadcrumb showing current path */}
       {selectionPath.length > 0 && (
