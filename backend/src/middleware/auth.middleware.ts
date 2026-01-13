@@ -11,6 +11,8 @@ export interface AuthRequest extends Request {
     role: "teacher" | "general_user";
     name: string;
     country: string;
+    subjects?: string[]; // For teachers - their assigned subjects
+    teacherRole?: string; // For teachers - their assigned grade level (e.g., "grade_9_12")
   };
 }
 
@@ -73,6 +75,8 @@ export const authenticate = async (
       role: decoded.role as "teacher" | "general_user",
       name: decoded.name,
       country: decoded.country,
+      subjects: decoded.subjects, // For teachers - their assigned subjects
+      teacherRole: decoded.teacherRole, // For teachers - their assigned grade level
     };
 
     console.log(

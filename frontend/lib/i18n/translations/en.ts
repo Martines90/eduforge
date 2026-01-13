@@ -931,4 +931,10 @@ export const en: Translations = {
   "Message must be at least 10 characters": "Message must be at least 10 characters",
   "Message must be less than 5000 characters":
     "Message must be less than 5000 characters",
+
+  // Task Save Validation Errors
+  "You can only save tasks for your assigned grade level. Your profile: {{teacherRole}}, Task grade: {{taskGrade}}":
+    "You can only save tasks for your assigned grade level. Your profile: {{teacherRole}}, Task grade: {{taskGrade}}",
+  "You can only save tasks for your assigned subjects. Your subjects: {{teacherSubjects}}, Task subject: {{taskSubject}}":
+    "You can only save tasks for your assigned subjects. Your subjects: {{teacherSubjects}}, Task subject: {{taskSubject}}",
 };

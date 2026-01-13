@@ -207,6 +207,8 @@ export async function verifyCodeAndCreateUser(
       role: userData.role,
       name: userData.name,
       country: userData.country,
+      subjects: userData.subjects,
+      teacherRole: userData.teacherRole,
     },
     JWT_SECRET,
     { expiresIn: JWT_EXPIRES_IN }
@@ -334,6 +336,8 @@ export async function loginUser(
       role: user.role,
       name: user.name,
       country: user.country,
+      subjects: user.subjects,
+      teacherRole: user.teacherRole,
     },
     JWT_SECRET,
     { expiresIn: JWT_EXPIRES_IN }
@@ -365,6 +369,8 @@ export function verifyToken(token: string): {
   role: string;
   name: string;
   country: string;
+  subjects?: string[];
+  teacherRole?: string;
 } {
   try {
     const decoded = jwt.verify(token, JWT_SECRET) as {
@@ -373,6 +379,8 @@ export function verifyToken(token: string): {
       role: string;
       name: string;
       country: string;
+      subjects?: string[];
+      teacherRole?: string;
     };
     return decoded;
   } catch (error) {

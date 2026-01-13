@@ -115,6 +115,9 @@ describe("TaskController", () => {
           name: mockUserName,
           email: mockUserEmail,
           role: "teacher",
+          country: "US",
+          subjects: ["math", "physics"],
+          teacherRole: "grade_9_10",
         },
       } as AuthRequest;
     });
@@ -319,6 +322,17 @@ describe("TaskController", () => {
     });
 
     it("should correctly parse curriculum path with multiple levels", async () => {
+      // Update teacher to grade_11_12 to match the task
+      (mockRequest as any).user = {
+        uid: mockUserId,
+        name: mockUserName,
+        email: mockUserEmail,
+        role: "teacher",
+        country: "US",
+        subjects: ["math", "physics"],
+        teacherRole: "grade_11_12",
+      };
+
       mockRequest.body.curriculum_path =
         "math:grade_11_12:geometry:circles:arc_length:advanced";
 
@@ -340,6 +354,17 @@ describe("TaskController", () => {
     });
 
     it("should handle missing curriculum path gracefully", async () => {
+      // Remove teacherRole and subjects so validation doesn't fail on missing curriculum path
+      (mockRequest as any).user = {
+        uid: mockUserId,
+        name: mockUserName,
+        email: mockUserEmail,
+        role: "teacher",
+        country: "US",
+        subjects: undefined,
+        teacherRole: undefined,
+      };
+
       mockRequest.body.curriculum_path = undefined;
 
       (deductTaskCredit as jest.Mock).mockResolvedValue(99);
@@ -460,6 +485,176 @@ describe("TaskController", () => {
       expect(mockResponse.json).toHaveBeenCalledWith(
         expect.objectContaining({
           public_share_link: "https://eduforger.app/tasks/task_abc123",
+        })
+      );
+    });
+
+    it("should return 403 if teacher's grade level does not match task grade level", async () => {
+      // Teacher is grade_9_10, but trying to save a grade_11_12 task
+      mockRequest.body.curriculum_path = "math:grade_11_12:calculus:derivatives";
+
+      await taskController.saveTask(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      expect(mockResponse.status).toHaveBeenCalledWith(403);
+      expect(mockResponse.json).toHaveBeenCalledWith({
+        success: false,
+        error: "GRADE_LEVEL_MISMATCH",
+        message: "You can only save tasks for your assigned grade level. Your profile: grade_9_10, Task grade: grade_11_12",
+      });
+
+      // Credit should not be deducted
+      expect(deductTaskCredit).not.toHaveBeenCalled();
+
+      // Firestore should not be called
+      expect(mockFirestore.set).not.toHaveBeenCalled();
+    });
+
+    it("should return 403 if teacher's subjects do not include task subject", async () => {
+      // Teacher teaches math and physics, but trying to save a chemistry task
+      mockRequest.body.curriculum_path = "chemistry:grade_9_10:atoms:elements";
+
+      await taskController.saveTask(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      expect(mockResponse.status).toHaveBeenCalledWith(403);
+      expect(mockResponse.json).toHaveBeenCalledWith({
+        success: false,
+        error: "SUBJECT_MISMATCH",
+        message: "You can only save tasks for your assigned subjects. Your subjects: math, physics, Task subject: chemistry",
+      });
+
+      // Credit should not be deducted
+      expect(deductTaskCredit).not.toHaveBeenCalled();
+
+      // Firestore should not be called
+      expect(mockFirestore.set).not.toHaveBeenCalled();
+    });
+
+    it("should allow saving task if teacher has no teacherRole set", async () => {
+      // Remove teacherRole from user (backward compatibility)
+      (mockRequest as any).user = {
+        uid: mockUserId,
+        name: mockUserName,
+        email: mockUserEmail,
+        role: "teacher",
+        country: "US",
+        subjects: ["math", "physics"],
+        teacherRole: undefined,
+      };
+
+      (deductTaskCredit as jest.Mock).mockResolvedValue(99);
+
+      await taskController.saveTask(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      // Should succeed without validation error
+      expect(mockResponse.status).toHaveBeenCalledWith(201);
+      expect(mockResponse.json).toHaveBeenCalledWith(
+        expect.objectContaining({
+          success: true,
+          message: "Task saved successfully",
+        })
+      );
+    });
+
+    it("should allow saving task if teacher has no subjects set", async () => {
+      // Remove subjects from user (backward compatibility)
+      (mockRequest as any).user = {
+        uid: mockUserId,
+        name: mockUserName,
+        email: mockUserEmail,
+        role: "teacher",
+        country: "US",
+        subjects: undefined,
+        teacherRole: "grade_9_10",
+      };
+
+      (deductTaskCredit as jest.Mock).mockResolvedValue(99);
+
+      await taskController.saveTask(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      // Should succeed without validation error
+      expect(mockResponse.status).toHaveBeenCalledWith(201);
+      expect(mockResponse.json).toHaveBeenCalledWith(
+        expect.objectContaining({
+          success: true,
+          message: "Task saved successfully",
+        })
+      );
+    });
+
+    it("should allow saving task if teacher has empty subjects array", async () => {
+      // Empty subjects array (backward compatibility)
+      (mockRequest as any).user = {
+        uid: mockUserId,
+        name: mockUserName,
+        email: mockUserEmail,
+        role: "teacher",
+        country: "US",
+        subjects: [],
+        teacherRole: "grade_9_10",
+      };
+
+      (deductTaskCredit as jest.Mock).mockResolvedValue(99);
+
+      await taskController.saveTask(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      // Should succeed without validation error
+      expect(mockResponse.status).toHaveBeenCalledWith(201);
+      expect(mockResponse.json).toHaveBeenCalledWith(
+        expect.objectContaining({
+          success: true,
+          message: "Task saved successfully",
+        })
+      );
+    });
+
+    it("should validate using correct subject from curriculum path", async () => {
+      // Teacher teaches physics, task is physics - should succeed
+      (mockRequest as any).user = {
+        uid: mockUserId,
+        name: mockUserName,
+        email: mockUserEmail,
+        role: "teacher",
+        country: "US",
+        subjects: ["physics"],
+        teacherRole: "grade_9_10",
+      };
+
+      mockRequest.body.curriculum_path = "physics:grade_9_10:mechanics:force";
+
+      (deductTaskCredit as jest.Mock).mockResolvedValue(99);
+
+      await taskController.saveTask(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      // Should succeed
+      expect(mockResponse.status).toHaveBeenCalledWith(201);
+      expect(mockResponse.json).toHaveBeenCalledWith(
+        expect.objectContaining({
+          success: true,
+          message: "Task saved successfully",
         })
       );
     });

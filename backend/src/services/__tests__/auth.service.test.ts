@@ -48,12 +48,8 @@ describe("Auth Service", () => {
     it("should create and store verification code", async () => {
       const mockSet = jest.fn().mockResolvedValue(undefined);
       const mockDoc = jest.fn().mockReturnValue({ set: mockSet });
-      const mockAdd = jest.fn().mockResolvedValue({ id: "mock-mail-id" });
 
-      const mockCollection = jest.fn((collectionName) => {
-        if (collectionName === "mail") {
-          return { add: mockAdd };
-        }
+      const mockCollection = jest.fn(() => {
         return { doc: mockDoc };
       });
 
@@ -66,6 +62,9 @@ describe("Auth Service", () => {
         name: "Test User",
         role: "teacher" as const,
         country: "US",
+        subjects: ["mathematics", "physics"],
+        educationalModel: "secular",
+        teacherRole: "grade_9_12",
       };
 
       const code = await authService.createVerificationCode(
@@ -75,10 +74,9 @@ describe("Auth Service", () => {
 
       expect(code).toMatch(/^\d{6}$/);
       expect(mockCollection).toHaveBeenCalledWith("pendingRegistrations");
-      expect(mockCollection).toHaveBeenCalledWith("mail");
       expect(mockDoc).toHaveBeenCalledWith("test@example.com");
       expect(mockSet).toHaveBeenCalled();
-      expect(mockAdd).toHaveBeenCalled();
+      // Email is now sent via SendGrid directly, not via Firestore mail collection
     });
   });
 
@@ -95,6 +93,9 @@ describe("Auth Service", () => {
           password: "hashed-password",
           role: "teacher",
           country: "US",
+          subjects: ["mathematics"],
+          educationalModel: "secular",
+          teacherRole: "grade_9_12",
         },
       };
 
@@ -243,6 +244,8 @@ describe("Auth Service", () => {
         role: "teacher",
         status: "active",
         emailVerified: true,
+        subjects: ["mathematics"],
+        teacherRole: "grade_9_12",
       };
 
       const mockUserSnapshot = {
@@ -456,14 +459,10 @@ describe("Auth Service", () => {
       });
 
       const mockSet = jest.fn().mockResolvedValue(undefined);
-      const mockAdd = jest.fn().mockResolvedValue({ id: "mock-mail-id" });
 
       mockFirestore.collection = jest.fn((collectionName) => {
         if (collectionName === "users") {
           return { where: mockWhere };
-        }
-        if (collectionName === "mail") {
-          return { add: mockAdd };
         }
         // For pendingRegistrations
         return {
@@ -485,11 +484,12 @@ describe("Auth Service", () => {
         name: "New User",
         role: "general_user",
         country: "US",
+        subjects: [],
       });
 
       expect(code).toMatch(/^\d{6}$/);
       expect(mockSet).toHaveBeenCalled();
-      expect(mockAdd).toHaveBeenCalled();
+      // Email is now sent via SendGrid directly, not via Firestore mail collection
     });
 
     it("should throw error if email already registered", async () => {
@@ -512,6 +512,7 @@ describe("Auth Service", () => {
           name: "Existing User",
           role: "general_user",
           country: "US",
+          subjects: [],
         })
       ).rejects.toThrow("Email already registered");
     });

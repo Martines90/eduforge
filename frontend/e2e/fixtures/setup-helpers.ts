@@ -26,13 +26,13 @@ export async function setupGuest(page: Page, country: 'US' | 'HU' | 'MX' = 'US')
 export async function setupTeacher(page: Page, options?: {
   name?: string;
   email?: string;
-  subject?: 'mathematics' | 'physics' | 'chemistry' | 'biology';
+  subjects?: ('mathematics' | 'physics' | 'chemistry' | 'biology')[];
   country?: 'US' | 'HU' | 'MX';
 }) {
   const {
     name = 'Test Teacher',
     email = 'teacher@school.edu',
-    subject = 'mathematics',
+    subjects = ['mathematics'],
     country = 'US',
   } = options || {};
 
@@ -67,8 +67,8 @@ export async function setupTeacher(page: Page, options?: {
       path: '/',
     },
     {
-      name: 'eduforge_subject',
-      value: subject,
+      name: 'eduforge_subjects',
+      value: JSON.stringify(subjects),
       domain: 'localhost',
       path: '/',
     },

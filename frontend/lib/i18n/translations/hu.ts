@@ -946,4 +946,10 @@ export const hu: Translations = {
   "Message must be at least 10 characters": "Az üzenetnek legalább 10 karakter hosszúnak kell lennie",
   "Message must be less than 5000 characters":
     "Az üzenetnek 5000 karakternél rövidebbnek kell lennie",
+
+  // Task Save Validation Errors
+  "You can only save tasks for your assigned grade level. Your profile: {{teacherRole}}, Task grade: {{taskGrade}}":
+    "Csak a hozzárendelt évfolyamához menthet feladatokat. Profilja: {{teacherRole}}, Feladat évfolyama: {{taskGrade}}",
+  "You can only save tasks for your assigned subjects. Your subjects: {{teacherSubjects}}, Task subject: {{taskSubject}}":
+    "Csak a hozzárendelt tantárgyakhoz menthet feladatokat. Tantárgyai: {{teacherSubjects}}, Feladat tantárgya: {{taskSubject}}",
 };

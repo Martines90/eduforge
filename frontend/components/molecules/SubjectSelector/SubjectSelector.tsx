@@ -30,6 +30,7 @@ export interface SubjectSelectorProps {
   'data-testid'?: string;
   sx?: object;
   country?: CountryCode; // Optional: if provided, uses country-specific labels
+  maxSelections?: number; // Maximum number of subjects that can be selected (for multi-select)
 }
 
 /**
@@ -51,6 +52,7 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
   'data-testid': dataTestId,
   sx,
   country: countryProp,
+  maxSelections,
 }) => {
   const { t } = useTranslation();
   const { user } = useUser();
@@ -90,10 +92,20 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
 
     if (isMultiSelect) {
       const currentValues = (value as Subject[]) || [];
-      const newValues = currentValues.includes(subject)
-        ? currentValues.filter((s) => s !== subject)
-        : [...currentValues, subject];
-      onChange(newValues.length > 0 ? newValues : null);
+      const isAlreadySelected = currentValues.includes(subject);
+
+      // If deselecting, always allow
+      if (isAlreadySelected) {
+        const newValues = currentValues.filter((s) => s !== subject);
+        onChange(newValues.length > 0 ? newValues : null);
+      } else {
+        // If selecting, check max limit
+        if (maxSelections && currentValues.length >= maxSelections) {
+          return; // Don't allow selection if max reached
+        }
+        const newValues = [...currentValues, subject];
+        onChange(newValues.length > 0 ? newValues : null);
+      }
     } else {
       onChange(value === subject ? null : subject);
     }
@@ -101,12 +113,16 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
 
   // Chip mode
   if (type === 'chip') {
+    const currentValues = (value as Subject[]) || [];
+    const isMaxReached = maxSelections ? currentValues.length >= maxSelections : false;
+
     return (
       <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', ...sx }} className={className}>
         {subjectsList.map((subject) => {
           const isSelected = isMultiSelect
-            ? (value as Subject[])?.includes(subject.value)
+            ? currentValues.includes(subject.value)
             : value === subject.value;
+          const isDisabled = disabled || (isMultiSelect && !isSelected && isMaxReached);
 
           return (
             <Chip
@@ -115,7 +131,7 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
               onClick={() => handleChipClick(subject.value)}
               color={isSelected ? 'primary' : 'default'}
               variant={isSelected ? 'filled' : 'outlined'}
-              disabled={disabled}
+              disabled={isDisabled}
               data-testid={dataTestId ? `${dataTestId}-${subject.value}` : undefined}
             />
           );
@@ -126,6 +142,7 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
 
   // Select mode
   const selectedValues = Array.isArray(value) ? value : [];
+  const isMaxReached = maxSelections ? selectedValues.length >= maxSelections : false;
 
   return (
     <FormControl fullWidth={fullWidth} disabled={disabled} className={className} required={required} sx={sx}>
@@ -168,11 +185,13 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
         )}
         {subjectsList.map((subject) => {
           const isSelected = isMultiSelect && selectedValues.includes(subject.value);
+          const isItemDisabled = isMultiSelect && !isSelected && isMaxReached;
 
           return (
             <MenuItem
               key={subject.value}
               value={subject.value}
+              disabled={isItemDisabled}
               sx={{
                 backgroundColor: isSelected ? 'primary.main' : 'transparent',
                 color: isSelected ? 'white' : 'inherit',
@@ -187,11 +206,15 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
                     backgroundColor: 'primary.dark',
                   },
                 },
+                '&.Mui-disabled': {
+                  opacity: 0.5,
+                },
               }}
             >
               {isMultiSelect && (
                 <Checkbox
                   checked={isSelected}
+                  disabled={isItemDisabled}
                   sx={{
                     color: isSelected ? 'white' : 'inherit',
                     '&.Mui-checked': {

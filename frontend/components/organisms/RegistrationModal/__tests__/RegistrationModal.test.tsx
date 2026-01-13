@@ -39,8 +39,9 @@ vi.mock('@/lib/context/UserContext', () => ({
       profile: null,
       identity: null,
       role: 'guest',
-      subject: null,
+      subjects: [],
       educationalModel: null,
+      teacherRole: undefined,
     },
     authInitialized: true,
     gradeSystem: {
@@ -52,7 +53,7 @@ vi.mock('@/lib/context/UserContext', () => ({
     },
     setCountry: vi.fn(),
     setIdentity: vi.fn(),
-    setSubject: vi.fn(),
+    setSubjects: vi.fn(),
     setEducationalModel: vi.fn(),
     registerUser: vi.fn(),
     loginUser: vi.fn(),
@@ -106,7 +107,7 @@ describe('RegistrationModal - Basic Functionality', () => {
       );
 
       expect(screen.getByText('Create Your Account')).toBeInTheDocument();
-      expect(screen.getByText('Select Your Country & Subject')).toBeInTheDocument();
+      expect(screen.getByText('Select Your Teaching Information')).toBeInTheDocument();
     });
 
     it('should show progress stepper with 3 steps for teachers', () => {
@@ -119,7 +120,7 @@ describe('RegistrationModal - Basic Functionality', () => {
       );
 
       // Check for step labels
-      expect(screen.getByText('Country & Subject')).toBeInTheDocument();
+      expect(screen.getByText('Teaching Info')).toBeInTheDocument();
       expect(screen.getByText('Personal Info')).toBeInTheDocument();
       expect(screen.getByText('Verify Email')).toBeInTheDocument();
     });
@@ -185,7 +186,7 @@ describe('RegistrationModal - Basic Functionality', () => {
       expect(screen.getAllByText(/verify email/i).length).toBeGreaterThan(0);
     });
 
-    it('should not show subject selection for non-teachers', () => {
+    it('should not show subject and teaching level selection for non-teachers', () => {
       renderWithI18n(
         <RegistrationModal
           open={true}
@@ -195,6 +196,7 @@ describe('RegistrationModal - Basic Functionality', () => {
       );
 
       expect(screen.queryByText(/subject/i)).not.toBeInTheDocument();
+      expect(screen.queryByText(/teaching level/i)).not.toBeInTheDocument();
     });
   });
 

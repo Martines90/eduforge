@@ -507,6 +507,28 @@ export class TaskController {
 
       console.log(`   Extracted - Subject: ${subject}, Grade: ${gradeLevel}`);
 
+      // Validate teacher profile matches the task they're trying to save
+      // Teachers can only save tasks for their assigned subjects and grade levels
+      if (authenticatedUser.teacherRole && authenticatedUser.teacherRole !== gradeLevel) {
+        res.status(403).json({
+          success: false,
+          error: "GRADE_LEVEL_MISMATCH",
+          message: `You can only save tasks for your assigned grade level. Your profile: ${authenticatedUser.teacherRole}, Task grade: ${gradeLevel}`,
+        });
+        return;
+      }
+
+      if (authenticatedUser.subjects && authenticatedUser.subjects.length > 0) {
+        if (!authenticatedUser.subjects.includes(subject)) {
+          res.status(403).json({
+            success: false,
+            error: "SUBJECT_MISMATCH",
+            message: `You can only save tasks for your assigned subjects. Your subjects: ${authenticatedUser.subjects.join(", ")}, Task subject: ${subject}`,
+          });
+          return;
+        }
+      }
+
       // Extract educational model from task_data metadata
       const educationalModel =
         task_data.metadata?.educational_model || "secular";

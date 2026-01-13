@@ -22,7 +22,6 @@ describe("Subscription Validation Middleware E2E Tests", () => {
     // Mock system date FIRST to 2025-12-01 to make all subscription dates valid
     const realDate = Date;
     const mockDate = new realDate("2025-12-01");
-    // @ts-expect-error - Mocking global Date for testing
     global.Date = class extends realDate {
       constructor(...args: any[]) {
         if (args.length === 0) {

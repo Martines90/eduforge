@@ -45,7 +45,7 @@ import { CountrySelect } from "@/components/molecules/CountrySelect";
 import { SubjectSelector } from "@/components/molecules/SubjectSelector";
 import { EducationalModelSelect } from "@/components/molecules/EducationalModelSelect";
 import { TeacherRoleSelector } from "@/components/molecules/TeacherRoleSelector";
-import { GradeLevel } from "@eduforger/shared";
+import { GradeLevel, getGradeConfig } from "@eduforger/shared";
 import * as apiService from "@/lib/services/api.service";
 import styles from "./RegistrationModal.module.scss";
 
@@ -204,6 +204,22 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
       setSelectedSubjects([subject]);
     } else {
       setSelectedSubjects([]);
+    }
+  };
+
+  const handleTeacherRoleChange = (role: GradeLevel | null) => {
+    setSelectedTeacherRole(role);
+
+    // If changing to a higher grade (not primary) and more than 2 subjects are selected,
+    // keep only the first 2 subjects
+    if (role && selectedCountry) {
+      const gradeConfig = getGradeConfig(selectedCountry, role);
+      const isPrimaryGrade = gradeConfig?.order === 1;
+
+      if (!isPrimaryGrade && selectedSubjects.length > 2) {
+        // Trim to first 2 subjects
+        setSelectedSubjects(selectedSubjects.slice(0, 2));
+      }
     }
   };
 
@@ -466,7 +482,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                 <>
                   <TeacherRoleSelector
                     value={selectedTeacherRole}
-                    onChange={(role) => setSelectedTeacherRole(role)}
+                    onChange={handleTeacherRoleChange}
                     country={selectedCountry}
                     label={t("Teaching Level")}
                     required
@@ -485,6 +501,15 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                     className={styles.formControl}
                     data-testid="subject-select"
                     sx={{ mt: 3 }}
+                    maxSelections={
+                      // Primary/elementary teachers (order 1) can select unlimited subjects
+                      // Higher grade teachers can only select up to 2 subjects
+                      selectedTeacherRole && selectedCountry
+                        ? getGradeConfig(selectedCountry, selectedTeacherRole)?.order === 1
+                          ? undefined
+                          : 2
+                        : undefined
+                    }
                   />
 
                   <EducationalModelSelect
