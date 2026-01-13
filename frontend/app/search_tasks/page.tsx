@@ -22,7 +22,7 @@ export default function SearchTasks() {
     'literature': 'Literature',
   };
 
-  const subjectLabel = user.subject ? subjectLabels[user.subject] : 'All Subjects';
+  const subjectLabel = user.subjects && user.subjects.length > 0 ? subjectLabels[user.subjects[0]] : 'All Subjects';
 
   // Show loading state while checking authorization
   if (isLoading) {

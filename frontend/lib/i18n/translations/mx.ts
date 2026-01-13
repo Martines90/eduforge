@@ -958,4 +958,7 @@ export const mx: Translations = {
     "Solo puedes guardar tareas para tu nivel de grado asignado. Tu perfil: {{teacherRole}}, Grado de la tarea: {{taskGrade}}",
   "You can only save tasks for your assigned subjects. Your subjects: {{teacherSubjects}}, Task subject: {{taskSubject}}":
     "Solo puedes guardar tareas para tus materias asignadas. Tus materias: {{teacherSubjects}}, Materia de la tarea: {{taskSubject}}",
+
+  // Subject Selection
+  "Not in your skillset": "No está en tus habilidades",
 };

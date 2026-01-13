@@ -49,7 +49,7 @@ export default function TestLibraryPage() {
   const [searchQuery, setSearchQuery] = useState("");
   // Initialize selectedSubject from UserContext (teacher's subject if available)
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(
-    user.subject || null
+    (user.subjects && user.subjects.length > 0 ? user.subjects[0] : null) || null
   );
   const [sortBy, setSortBy] = useState<"recent" | "views" | "downloads">(
     "recent"

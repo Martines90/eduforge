@@ -85,7 +85,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
   const [editedDescription, setEditedDescription] = useState('');
   const [editedSolution, setEditedSolution] = useState('');
   const [latexReady, setLatexReady] = useState(false);
-  const [descriptionValidation, setDescriptionValidation] = useState(validateCharacterLength(''));
+  const [descriptionValidation, setDescriptionValidation] = useState(validateCharacterLength('', true));
 
   // Helper to decode HTML entities in URLs (fixes &amp; issue with Azure Blob Storage)
   const decodeHtmlEntities = (text: string): string => {
@@ -149,7 +149,8 @@ export const TaskResult: React.FC<TaskResultProps> = ({
       // Store the raw description with placeholders for editing
       setEditedDescription(task.description);
       setEditedSolution(task.solution);
-      setDescriptionValidation(validateCharacterLength(task.description));
+      // Use edit mode validation (max 1500 characters, no minimum)
+      setDescriptionValidation(validateCharacterLength(task.description, true));
     }
   }, [task]);
 
@@ -160,8 +161,9 @@ export const TaskResult: React.FC<TaskResultProps> = ({
   };
 
   // Validate description length whenever it changes
+  // Use edit mode validation (max 1500 characters, no minimum)
   useEffect(() => {
-    setDescriptionValidation(validateCharacterLength(editedDescription));
+    setDescriptionValidation(validateCharacterLength(editedDescription, true));
   }, [editedDescription]);
 
   // Process LaTeX after content changes and latex.js is loaded

@@ -67,7 +67,7 @@ export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
   onRegistrationComplete,
   initialMode = 'register',
 }) => {
-  const { user, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser } = useUser();
+  const { user, setCountry, setIdentity, setSubjects, setEducationalModel, registerUser, loginUser } = useUser();
   const { enqueueSnackbar } = useSnackbar();
   const { t } = useTranslation();
 
@@ -124,7 +124,7 @@ export const GuestPromptModal: React.FC<GuestPromptModalProps> = ({
       setIdentity(profile.identity);
 
       if (profile.subject) {
-        setSubject(profile.subject);
+        setSubjects([profile.subject]);
       }
 
       if (profile.educationalModel) {

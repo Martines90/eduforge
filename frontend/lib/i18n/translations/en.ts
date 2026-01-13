@@ -938,4 +938,7 @@ export const en: Translations = {
     "You can only save tasks for your assigned grade level. Your profile: {{teacherRole}}, Task grade: {{taskGrade}}",
   "You can only save tasks for your assigned subjects. Your subjects: {{teacherSubjects}}, Task subject: {{taskSubject}}":
     "You can only save tasks for your assigned subjects. Your subjects: {{teacherSubjects}}, Task subject: {{taskSubject}}",
+
+  // Subject Selection
+  "Not in your skillset": "Not in your skillset",
 };

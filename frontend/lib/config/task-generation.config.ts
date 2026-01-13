@@ -17,6 +17,15 @@ export const TASK_CHARACTER_LENGTH = {
 } as const;
 
 /**
+ * Story character length constraints for EDITING mode
+ * More lenient limits to allow teachers to expand tasks when editing
+ */
+export const TASK_EDIT_CHARACTER_LENGTH = {
+  min: 600,    // Minimum 600 characters when editing
+  max: 1500,   // Allow up to 1500 characters when editing
+} as const;
+
+/**
  * Helper to get character count from HTML string
  * Only counts characters in the story section, excluding:
  * - HTML tags
@@ -49,8 +58,10 @@ export function getCharacterCount(html: string): number {
 
 /**
  * Helper to validate character length
+ * @param html - HTML content to validate
+ * @param isEditMode - Whether to use lenient edit mode limits (default: false)
  */
-export function validateCharacterLength(html: string): {
+export function validateCharacterLength(html: string, isEditMode = false): {
   isValid: boolean;
   count: number;
   min: number;
@@ -59,14 +70,15 @@ export function validateCharacterLength(html: string): {
   isTooLong: boolean;
 } {
   const count = getCharacterCount(html);
-  const isTooShort = count < TASK_CHARACTER_LENGTH.min;
-  const isTooLong = count > TASK_CHARACTER_LENGTH.max;
+  const limits = isEditMode ? TASK_EDIT_CHARACTER_LENGTH : TASK_CHARACTER_LENGTH;
+  const isTooShort = count < limits.min;
+  const isTooLong = count > limits.max;
 
   return {
     isValid: !isTooShort && !isTooLong,
     count,
-    min: TASK_CHARACTER_LENGTH.min,
-    max: TASK_CHARACTER_LENGTH.max,
+    min: limits.min,
+    max: limits.max,
     isTooShort,
     isTooLong,
   };

@@ -814,8 +814,16 @@ describe("TaskController", () => {
     });
 
     it("should use default values if optional fields are missing", async () => {
+      // Create task without metadata to test actual defaults
+      const taskWithoutMetadata = {
+        title: "Test Task",
+        story_text: "Test story",
+        questions: ["Test question?"],
+        metadata: {}, // Empty metadata
+      };
+
       mockRequest.body = {
-        task_text: mockTaskText,
+        task_text: taskWithoutMetadata,
         // No curriculum_path, difficulty_level, etc.
       };
 
@@ -828,7 +836,7 @@ describe("TaskController", () => {
       // Should succeed with defaults
       expect(mockResponse.status).toHaveBeenCalledWith(200);
       expect((taskController as any).taskGenerator.refineTaskText).toHaveBeenCalledWith(
-        mockTaskText,
+        taskWithoutMetadata,
         expect.objectContaining({
           curriculum_path: "math:general",
           difficulty_level: "medium",

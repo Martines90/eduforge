@@ -24,7 +24,7 @@ type OnboardingStep = 'login' | 'register' | 'country' | 'role' | 'subject' | 'c
  * - Task detail pages (/tasks/[id]) are publicly accessible and do not require login
  */
 export const OnboardingHandler: React.FC = () => {
-  const { user, authInitialized, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser, completeOnboarding } = useUser();
+  const { user, authInitialized, setCountry, setIdentity, setSubjects, setEducationalModel, registerUser, loginUser, completeOnboarding } = useUser();
   const router = useRouter();
   const pathname = usePathname();
   const [step, setStep] = useState<OnboardingStep>('login');
@@ -88,7 +88,7 @@ export const OnboardingHandler: React.FC = () => {
       setIdentity(profile.identity);
 
       if (profile.subject) {
-        setSubject(profile.subject);
+        setSubjects([profile.subject]);
       }
 
       if (profile.educationalModel) {

@@ -81,7 +81,7 @@ export const TeacherRoleSelector: React.FC<TeacherRoleSelectorProps> = ({
                   color: 'text.secondary',
                 }}
               >
-                {grade.label}
+                {grade.labelEN}
               </Box>
             </Box>
           </MenuItem>

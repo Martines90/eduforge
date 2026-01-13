@@ -953,4 +953,7 @@ export const hu: Translations = {
     "Csak a hozzárendelt évfolyamához menthet feladatokat. Profilja: {{teacherRole}}, Feladat évfolyama: {{taskGrade}}",
   "You can only save tasks for your assigned subjects. Your subjects: {{teacherSubjects}}, Task subject: {{taskSubject}}":
     "Csak a hozzárendelt tantárgyakhoz menthet feladatokat. Tantárgyai: {{teacherSubjects}}, Feladat tantárgya: {{taskSubject}}",
+
+  // Subject Selection
+  "Not in your skillset": "Nincs a szakterületében",
 };

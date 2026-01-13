@@ -819,6 +819,13 @@ export interface Translations {
   "Please enter a message": string;
   "Message must be at least 10 characters": string;
   "Message must be less than 5000 characters": string;
+
+  // Task Save Validation Errors
+  "You can only save tasks for your assigned grade level. Your profile: {{teacherRole}}, Task grade: {{taskGrade}}": string;
+  "You can only save tasks for your assigned subjects. Your subjects: {{teacherSubjects}}, Task subject: {{taskSubject}}": string;
+
+  // Subject Selection
+  "Not in your skillset": string;
 }
 
 export type TranslationKey = keyof Translations;

@@ -44,7 +44,7 @@ function TaskCreatorContent() {
   const { t } = useTranslation();
   const searchParams = useSearchParams();
   const router = useRouter();
-  const { user } = useUser();
+  const { user, authInitialized } = useUser();
   const { token: firebaseToken } = useFirebaseToken();
   const { isAuthorized, isLoading } = useRouteProtection({
     requireAuth: true,
@@ -74,6 +74,7 @@ function TaskCreatorContent() {
   const [isLoadingTask, setIsLoadingTask] = useState(false);
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
   const [lastLoadedTaskId, setLastLoadedTaskId] = useState<string | null>(null);
+  const [isRestoringFromTask, setIsRestoringFromTask] = useState(false);
 
   // Fetch navigation data from API based on user's country
   // Only fetch once when user is fully loaded and isAuthorized
@@ -84,6 +85,12 @@ function TaskCreatorContent() {
       console.log('[Task Creator] User teacherRole:', user.teacherRole);
       console.log('[Task Creator] isAuthorized:', isAuthorized);
 
+      // Wait for auth to initialize - prevents flashing guest content before teacher role loads
+      if (!authInitialized) {
+        console.log('[Task Creator] Waiting for auth to initialize...');
+        return;
+      }
+
       // Wait for authorization check to complete
       if (isLoading) {
         console.log('[Task Creator] Waiting for authorization check...');
@@ -92,6 +99,24 @@ function TaskCreatorContent() {
 
       if (!isAuthorized) {
         console.log('[Task Creator] User not authorized, skipping data fetch');
+        return;
+      }
+
+      // Skip reloading if we're in the middle of restoring from a task
+      // The task loading effect will handle navigation data loading
+      if (isRestoringFromTask) {
+        console.log('[Task Creator] Skipping navigation reload - restoring from task');
+        // Ensure loading state is false since restoration handles its own loading
+        if (isLoadingNavigation) {
+          setIsLoadingNavigation(false);
+        }
+        return;
+      }
+
+      // If we're in edit mode but haven't loaded the task yet, wait for task loading
+      // to complete before loading navigation data (task restoration will handle it)
+      if (editMode && !generatedTask && !lastLoadedTaskId) {
+        console.log('[Task Creator] Waiting for task to load in edit mode');
         return;
       }
 
@@ -141,7 +166,6 @@ function TaskCreatorContent() {
           if (teacherGrade) {
             console.log('[Task Creator] Restricting to teacher\'s grade level:', user.teacherRole);
             grades = [teacherGrade]; // Only allow the teacher's assigned grade
-            setSelectedGrade(0); // Always select the first (and only) grade
           } else {
             console.warn('[Task Creator] Teacher role not found in available grades, showing all grades');
             grades = allGrades;
@@ -152,6 +176,13 @@ function TaskCreatorContent() {
         }
 
         setAvailableGrades(grades);
+
+        // Reset selectedGrade to 0 if current index is out of bounds
+        // This happens when restoration set a higher index but teacher only has 1 grade
+        if (selectedGrade >= grades.length) {
+          console.log('[Task Creator] Resetting selectedGrade from', selectedGrade, 'to 0 (out of bounds)');
+          setSelectedGrade(0);
+        }
 
         // Get the current grade level to fetch
         const currentGradeLevel = grades[selectedGrade]?.value;
@@ -174,7 +205,9 @@ function TaskCreatorContent() {
     };
 
     loadNavigationData();
-  }, [user.country, user.subjects, isAuthorized, isLoading, user.teacherRole, selectedSubject, selectedGrade]);
+    // Note: isRestoringFromTask is intentionally NOT in the dependency array
+    // It's only used as a guard flag, not as a trigger
+  }, [authInitialized, user.country, user.subjects, isAuthorized, isLoading, user.teacherRole, selectedSubject, selectedGrade, editMode, generatedTask, lastLoadedTaskId]);
 
   // Detect edit mode from URL parameter
   useEffect(() => {
@@ -253,26 +286,55 @@ function TaskCreatorContent() {
           setHasUnsavedChanges(false);
           setLastLoadedTaskId(editingTaskId);
 
-          // Parse curriculum path to restore UI state (only if availableGrades is populated)
+          // Parse curriculum path to restore UI state
           // Format: "mathematics:grade_9_10:algebra:equations:..."
-          if (taskData.curriculum_path && availableGrades.length > 0) {
+          if (taskData.curriculum_path) {
             const pathParts = taskData.curriculum_path.split(':');
 
             if (pathParts.length >= 2) {
+              // Set flag to prevent navigation data reload during restoration
+              setIsRestoringFromTask(true);
+
               // Extract subject (first part)
               const subject = pathParts[0] as Subject;
               console.log('[Task Creator] Restoring subject:', subject);
-              setSelectedSubject(subject);
 
               // Extract grade level (second part)
               const gradeLevel = pathParts[1] as GradeLevel;
               console.log('[Task Creator] Restoring grade level:', gradeLevel);
 
-              // Find the grade index in availableGrades
-              const gradeIndex = availableGrades.findIndex(g => g.value === gradeLevel);
+              // Load the correct navigation data for this task's subject/grade
+              // even if it's different from the user's current selection
+              const { getGradesForCountry } = await import('@eduforger/shared');
+              const allGrades = getGradesForCountry(user.country as any);
+
+              // Find the grade index
+              const gradeIndex = allGrades.findIndex(g => g.value === gradeLevel);
+
               if (gradeIndex >= 0) {
-                console.log('[Task Creator] Setting grade tab to index:', gradeIndex);
+                console.log('[Task Creator] Found grade level at index:', gradeIndex);
+
+                // Update availableGrades if needed to include this grade
+                if (!availableGrades.find(g => g.value === gradeLevel)) {
+                  console.log('[Task Creator] Adding grade to availableGrades:', gradeLevel);
+                  setAvailableGrades(allGrades);
+                }
+
+                // Set the subject and grade
+                setSelectedSubject(subject);
                 setSelectedGrade(gradeIndex);
+
+                // Fetch navigation data for this specific subject/grade combination
+                try {
+                  console.log('[Task Creator] Fetching navigation for task:', { subject, gradeLevel });
+                  const data = await fetchSubjectTree(user.country, subject, gradeLevel);
+                  setNavigationData(data);
+                  console.log('[Task Creator] Navigation data loaded for task');
+                } catch (navError) {
+                  console.error('[Task Creator] Failed to load navigation for task:', navError);
+                }
+              } else {
+                console.warn('[Task Creator] Grade level not found:', gradeLevel);
               }
 
               // Extract topic path (remaining parts)
@@ -281,6 +343,11 @@ function TaskCreatorContent() {
                 console.log('[Task Creator] Restoring topic path:', topicPath);
                 setInitialPath(topicPath);
               }
+
+              // Clear the flag immediately - no need to wait
+              // We've already set all the state we need
+              setIsRestoringFromTask(false);
+              console.log('[Task Creator] Restoration complete, flag cleared');
             }
           }
         }
@@ -570,6 +637,11 @@ function TaskCreatorContent() {
   // Get current grade level based on selected tab index
   const currentGradeConfig = availableGrades[selectedGrade];
 
+  // Show loading state while auth initializes - prevents flash of wrong content
+  if (!authInitialized) {
+    return <LoadingSpinner message="Loading..." fullScreen />;
+  }
+
   // Show loading state while checking authorization
   if (isLoading) {
     return <LoadingSpinner message="Loading..." fullScreen />;
@@ -580,9 +652,9 @@ function TaskCreatorContent() {
     return <LoadingSpinner message="Redirecting..." fullScreen />;
   }
 
-  // Show loading state while fetching navigation data
-  if (isLoadingNavigation) {
-    return <LoadingSpinner message="Loading curriculum data..." fullScreen />;
+  // Show loading state while fetching navigation data OR loading task in edit mode
+  if (isLoadingNavigation || isLoadingTask) {
+    return <LoadingSpinner message={isLoadingTask ? "Loading task..." : "Loading curriculum data..."} fullScreen />;
   }
 
   // Show error if navigation data failed to load
@@ -604,8 +676,9 @@ function TaskCreatorContent() {
     );
   }
 
-  // Show error if navigation data is empty
-  if (!navigationData || navigationData.length === 0) {
+  // Show error if navigation data is empty (but only if we're not in edit mode with a loaded task)
+  // In edit mode, navigation data will be loaded after the task loads
+  if ((!navigationData || navigationData.length === 0) && !(editMode && generatedTask)) {
     return (
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Alert severity="warning">
@@ -631,7 +704,7 @@ function TaskCreatorContent() {
         </Box>
 
         {/* Only show grade selector tabs if teacher doesn't have a specific teacherRole or if there are multiple grades */}
-        {availableGrades.length > 1 && (
+        {!user.teacherRole && availableGrades.length > 1 && (
           <Paper elevation={2} className={styles.gradeSelector}>
             <Tabs
               value={selectedGrade}

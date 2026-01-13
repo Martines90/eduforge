@@ -179,11 +179,7 @@ export async function generateTaskImages(
     progress: 60,
   });
 
-  if (DEFAULT_NUMBER_OF_IMAGES === 0) {
-    console.log('[Task Generator] DEFAULT_NUMBER_OF_IMAGES is 0, skipping image generation');
-    return { images: [] };
-  }
-
+  // DEFAULT_NUMBER_OF_IMAGES is a const (1), so we always generate images
   console.log('[Task Generator] Proceeding with image generation API call...');
   if (visualDescription) {
     console.log('[Task Generator] Using AI-provided visual description:', visualDescription);

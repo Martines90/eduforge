@@ -46,7 +46,7 @@ function TaskGeneratorContent() {
   const lastUnpublishedTask = useLastUnpublishedTask();
 
   // Subject and Grade state
-  const [selectedSubject, setSelectedSubject] = useState<string>(user.subject || 'mathematics');
+  const [selectedSubject, setSelectedSubject] = useState<string>((user.subjects && user.subjects.length > 0 ? user.subjects[0] : null) || 'mathematics');
   // Initialize with first available grade for the user's country
   const [selectedGrade, setSelectedGrade] = useState<GradeLevel>(
     gradeSystem.availableGrades[0]?.value || 'grade_9_10'

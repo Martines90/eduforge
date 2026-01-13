@@ -48,7 +48,7 @@ export async function registerUser(data: RegistrationData): Promise<User> {
       email: data.email.toLowerCase(),
       name: data.name,
       role: data.role,
-      subject: data.subject,
+      subjects: data.subject ? [data.subject] : [],
       country: data.country,
     });
 
