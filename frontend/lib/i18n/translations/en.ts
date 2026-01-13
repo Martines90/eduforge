@@ -294,6 +294,7 @@ export const en: Translations = {
     "PDF is not ready yet. Please try again in a moment.",
   "An error occurred": "An error occurred",
   "Save Task": "Save Task",
+  "View Task Info": "View Task Info",
   "Saving...": "Saving...",
   Questions: "Questions",
   "Solution Steps": "Solution Steps",

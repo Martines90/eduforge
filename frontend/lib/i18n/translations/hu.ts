@@ -298,6 +298,7 @@ export const hu: Translations = {
     "A PDF még nem áll készen. Kérjük, próbálja újra egy pillanat múlva.",
   "An error occurred": "Hiba történt",
   "Save Task": "Feladat Mentése",
+  "View Task Info": "Feladat Információk Megtekintése",
   "Saving...": "Mentés...",
   Questions: "Feladatok",
   "Solution Steps": "Megoldás lépései",

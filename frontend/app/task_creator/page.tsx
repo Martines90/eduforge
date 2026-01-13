@@ -17,6 +17,7 @@ import { generateTaskComplete, TaskGenerationStep } from '@/lib/services/task-ge
 import { saveTask, SaveTaskRequest } from '@/lib/services/task-save.service';
 import { TaskSavedModal } from '@/components/organisms/TaskSavedModal';
 import { fetchSubjectTree } from '@/lib/services/subject-mapping.service';
+import { fetchTaskById } from '@/lib/services/api.service';
 import { GradeLevel, GradeConfig, Subject, DEFAULT_NUMBER_OF_IMAGES } from '@eduforger/shared';
 import styles from './page.module.scss';
 
@@ -68,6 +69,11 @@ function TaskCreatorContent() {
   const [isLoadingNavigation, setIsLoadingNavigation] = useState(true);
   const [navigationError, setNavigationError] = useState<string | null>(null);
   const [availableGrades, setAvailableGrades] = useState<GradeConfig[]>([]);
+  const [editMode, setEditMode] = useState(false);
+  const [editingTaskId, setEditingTaskId] = useState<string | null>(null);
+  const [isLoadingTask, setIsLoadingTask] = useState(false);
+  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
+  const [lastLoadedTaskId, setLastLoadedTaskId] = useState<string | null>(null);
 
   // Fetch navigation data from API based on user's country
   // Only fetch once when user is fully loaded and isAuthorized
@@ -170,6 +176,125 @@ function TaskCreatorContent() {
     loadNavigationData();
   }, [user.country, user.subjects, isAuthorized, isLoading, user.teacherRole, selectedSubject, selectedGrade]);
 
+  // Detect edit mode from URL parameter
+  useEffect(() => {
+    const editTaskId = searchParams.get('edit');
+    if (editTaskId) {
+      setEditMode(true);
+      setEditingTaskId(editTaskId);
+      console.log('[Task Creator] Edit mode enabled for task:', editTaskId);
+    } else {
+      setEditMode(false);
+      setEditingTaskId(null);
+      setLastLoadedTaskId(null); // Reset when exiting edit mode
+    }
+  }, [searchParams]);
+
+  // Load existing task when in edit mode
+  useEffect(() => {
+    const loadTask = async () => {
+      if (!editMode || !editingTaskId || !firebaseToken) return;
+
+      // Skip if we've already loaded this task
+      if (lastLoadedTaskId === editingTaskId) {
+        console.log('[Task Creator] Task already loaded, skipping');
+        return;
+      }
+
+      setIsLoadingTask(true);
+      try {
+        console.log('[Task Creator] Loading task for editing:', editingTaskId);
+        const response = await fetchTaskById(editingTaskId);
+
+        if (response.success && response.data) {
+          const taskData = response.data;
+          console.log('[Task Creator] Task loaded successfully:', taskData);
+
+          // Extract description and solution from content object (new format)
+          // with fallback to top-level fields (legacy format)
+          const description = taskData.content?.description || taskData.description;
+          const solution = taskData.content?.solution || taskData.solution;
+          const rawImages = taskData.content?.images || taskData.images || [];
+
+          // Normalize images to TaskImage[] format { id, url }
+          // Backend stores images as string[] of URLs, need to convert to { id, url }[]
+          const images = rawImages.map((img: any, index: number) => {
+            if (typeof img === 'string') {
+              // Convert string URL to TaskImage object
+              return { id: `${index + 1}`, url: img };
+            } else if (img && typeof img === 'object' && img.url) {
+              // Already in correct format
+              return img;
+            } else {
+              // Invalid format, create placeholder
+              console.warn('[Task Creator] Invalid image format:', img);
+              return { id: `${index + 1}`, url: '' };
+            }
+          });
+
+          console.log('[Task Creator] Extracted task content:', {
+            hasDescription: !!description,
+            hasSolution: !!solution,
+            imageCount: images.length,
+            imageFormat: images.length > 0 ? 'TaskImage[]' : 'none',
+            firstImage: images[0] || null,
+          });
+
+          // Set the generated task with the loaded data
+          const loadedTask: GeneratedTask = {
+            id: taskData.id,
+            description,
+            solution,
+            images,
+          };
+
+          setGeneratedTask(loadedTask);
+          setCurrentCurriculumPath(taskData.curriculum_path || '');
+          setHasUnsavedChanges(false);
+          setLastLoadedTaskId(editingTaskId);
+
+          // Parse curriculum path to restore UI state (only if availableGrades is populated)
+          // Format: "mathematics:grade_9_10:algebra:equations:..."
+          if (taskData.curriculum_path && availableGrades.length > 0) {
+            const pathParts = taskData.curriculum_path.split(':');
+
+            if (pathParts.length >= 2) {
+              // Extract subject (first part)
+              const subject = pathParts[0] as Subject;
+              console.log('[Task Creator] Restoring subject:', subject);
+              setSelectedSubject(subject);
+
+              // Extract grade level (second part)
+              const gradeLevel = pathParts[1] as GradeLevel;
+              console.log('[Task Creator] Restoring grade level:', gradeLevel);
+
+              // Find the grade index in availableGrades
+              const gradeIndex = availableGrades.findIndex(g => g.value === gradeLevel);
+              if (gradeIndex >= 0) {
+                console.log('[Task Creator] Setting grade tab to index:', gradeIndex);
+                setSelectedGrade(gradeIndex);
+              }
+
+              // Extract topic path (remaining parts)
+              if (pathParts.length > 2) {
+                const topicPath = pathParts.slice(2);
+                console.log('[Task Creator] Restoring topic path:', topicPath);
+                setInitialPath(topicPath);
+              }
+            }
+          }
+        }
+      } catch (error) {
+        console.error('[Task Creator] Failed to load task:', error);
+        setGenerationError(error instanceof Error ? error.message : 'Failed to load task');
+      } finally {
+        setIsLoadingTask(false);
+      }
+    };
+
+    loadTask();
+  }, [editMode, editingTaskId, firebaseToken, availableGrades, lastLoadedTaskId]);
+
   // Read URL params on mount
   useEffect(() => {
     const pathParam = searchParams.get('subject_path_selection');
@@ -235,10 +360,18 @@ function TaskCreatorContent() {
   const handleGenerateTask = async (topic: NavigationTopic, path: string[], config: TaskConfiguration) => {
     if (!topic || !config) return;
 
+    // Remove edit query param when generating a new task
+    if (editMode) {
+      const params = new URLSearchParams(searchParams.toString());
+      params.delete('edit');
+      router.replace(`/task_creator?${params.toString()}`, { scroll: false });
+    }
+
     setIsGenerating(true);
     setGenerationError(null);
     setGeneratedTask(null);
     setGenerationStep(null);
+    setHasUnsavedChanges(false);
 
     try {
       // Check if we have a Firebase token
@@ -377,7 +510,7 @@ function TaskCreatorContent() {
   const handleSaveTask = (editedTask: GeneratedTask) => {
     console.log('Saving edited task:', editedTask);
     setGeneratedTask(editedTask);
-    // TODO: Save to backend/Firestore
+    setHasUnsavedChanges(true);
   };
 
   const handleCloseResult = () => {
@@ -412,6 +545,14 @@ function TaskCreatorContent() {
         pdfUrl: response.pdf_url,
       });
       setShowSavedModal(true);
+      setHasUnsavedChanges(false);
+
+      // Add edit query param after saving
+      if (!editMode) {
+        const params = new URLSearchParams(searchParams.toString());
+        params.set('edit', response.task_id);
+        router.replace(`/task_creator?${params.toString()}`, { scroll: false });
+      }
 
       console.log('Task saved successfully:', response);
     } catch (error) {
@@ -526,17 +667,20 @@ function TaskCreatorContent() {
         ))}
 
         {/* Task Generation Result */}
-        {(isGenerating || generatedTask || generationError) && (
+        {(isGenerating || generatedTask || generationError || isLoadingTask) && (
           <TaskResult
             task={generatedTask}
-            loading={isGenerating}
-            loadingMessage={generationStep?.message ? t(generationStep.message as any) : undefined}
+            loading={isGenerating || isLoadingTask}
+            loadingMessage={isLoadingTask ? 'Loading task...' : (generationStep?.message ? t(generationStep.message as any) : undefined)}
             loadingProgress={generationStep?.progress}
             error={generationError || undefined}
             onClose={handleCloseResult}
             onSave={handleSaveTask}
             onSaveToDatabase={handleSaveTaskToDatabase}
             isSaving={isSaving}
+            hasUnsavedChanges={hasUnsavedChanges}
+            onViewTaskInfo={() => setShowSavedModal(true)}
+            savedTaskInfo={savedTaskInfo}
           />
         )}
 

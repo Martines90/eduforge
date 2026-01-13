@@ -299,6 +299,7 @@ export const mx: Translations = {
     "El PDF aún no está listo. Por favor intenta de nuevo en un momento.",
   "An error occurred": "Ocurrió un error",
   "Save Task": "Guardar Tarea",
+  "View Task Info": "Ver Información de la Tarea",
   "Saving...": "Guardando...",
   Questions: "Preguntas",
   "Solution Steps": "Pasos de Solución",

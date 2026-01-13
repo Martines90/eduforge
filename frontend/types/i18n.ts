@@ -264,6 +264,7 @@ export interface Translations {
   "PDF is not ready yet. Please try again in a moment.": string;
   "An error occurred": string;
   "Save Task": string;
+  "View Task Info": string;
   "Saving...": string;
   Questions: string;
   "Solution Steps": string;

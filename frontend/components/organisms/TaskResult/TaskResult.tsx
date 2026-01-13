@@ -45,6 +45,18 @@ export interface TaskResultProps {
    * Callback when guest tries to save/download and needs to register
    */
   onGuestPrompt?: (action: 'save' | 'download') => void;
+  /**
+   * Whether there are unsaved changes to the task
+   */
+  hasUnsavedChanges?: boolean;
+  /**
+   * Callback to view task info modal (after save)
+   */
+  onViewTaskInfo?: () => void;
+  /**
+   * Saved task info for showing VIEW button
+   */
+  savedTaskInfo?: { taskId: string; publicShareLink: string; pdfUrl?: string } | null;
 }
 
 /**
@@ -63,6 +75,9 @@ export const TaskResult: React.FC<TaskResultProps> = ({
   isSaving = false,
   isGuestMode = false,
   onGuestPrompt,
+  hasUnsavedChanges = false,
+  onViewTaskInfo,
+  savedTaskInfo,
 }) => {
   const { t } = useTranslation();
   const [isEditingDescription, setIsEditingDescription] = useState(false);
@@ -714,7 +729,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
             <Box
               ref={solutionPreviewRef}
               className={styles.preview}
-              dangerouslySetInnerHTML={{ __html: processLatexInHtml(task.solution) }}
+              dangerouslySetInnerHTML={{ __html: processLatexInHtml(editedSolution || task.solution) }}
             />
           )}
         </Box>
@@ -734,7 +749,15 @@ export const TaskResult: React.FC<TaskResultProps> = ({
           >
             {t('Download PDF')}
           </Button>
-          {onSaveToDatabase && (
+          {/* Show VIEW button if saved and no unsaved changes, otherwise show SAVE button */}
+          {savedTaskInfo && !hasUnsavedChanges && onViewTaskInfo ? (
+            <Button
+              variant="primary"
+              onClick={onViewTaskInfo}
+            >
+              {t('View Task Info')}
+            </Button>
+          ) : onSaveToDatabase ? (
             <Button
               variant="primary"
               onClick={() => {
@@ -750,7 +773,7 @@ export const TaskResult: React.FC<TaskResultProps> = ({
             >
               {isSaving ? t('Saving...') : t('Save Task')}
             </Button>
-          )}
+          ) : null}
         </Box>
       </Box>
       </Paper>
