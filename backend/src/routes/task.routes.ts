@@ -164,6 +164,17 @@ router.post(
 );
 
 /**
+ * V2 API: Refine a selected task for mathematical accuracy and narrative coherence
+ * POST /refine-task-text
+ * Supports both authenticated users and guest sessions
+ */
+router.post(
+  "/refine-task-text",
+  authenticateOrGuest,
+  taskController.refineTaskText
+);
+
+/**
  * V2 API: Generate solution only for given task text
  * POST /generate-task-solution
  * Supports both authenticated users and guest sessions

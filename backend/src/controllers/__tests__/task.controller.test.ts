@@ -659,4 +659,263 @@ describe("TaskController", () => {
       );
     });
   });
+
+  describe("refineTaskText", () => {
+    const mockTaskText = {
+      title: "Baghdad Merchant Problem",
+      story_text:
+        "You are a treasurer. Three merchants offer money: 15,000 + 8,000 later, or 25,000 in a year.",
+      questions: ["Which option is best?"],
+      metadata: {
+        curriculum_path: "math:grade_9_10:algebra:compound_interest",
+        difficulty_level: "medium",
+        educational_model: "secular",
+        target_group: "mixed",
+        country_code: "HU",
+      },
+    };
+
+    beforeEach(() => {
+      mockRequest = {
+        body: {
+          task_text: mockTaskText,
+          curriculum_path: "math:grade_9_10:algebra:compound_interest",
+          difficulty_level: "medium",
+          educational_model: "secular",
+          target_group: "mixed",
+          country_code: "HU",
+        },
+      };
+
+      // Mock the task generator service
+      const mockRefineTaskText = jest.fn().mockResolvedValue({
+        refined_title: "The Caliph's Financial Dilemma",
+        refined_story:
+          "As treasurer to the Caliph in 830 CE Baghdad, you must finance the House of Wisdom...",
+        refined_questions: ["Calculate which merchant offer is best."],
+        refinement_level: "moderate",
+        changes_made: "Reorganized story for better integration.",
+        mathematical_verification: "All values verified as consistent.",
+        image_visual_description: "A medieval Baghdad marketplace scene.",
+      });
+
+      (taskController as any).taskGenerator = {
+        refineTaskText: mockRefineTaskText,
+      };
+    });
+
+    it("should successfully refine task text", async () => {
+      await taskController.refineTaskText(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      expect(mockResponse.status).toHaveBeenCalledWith(200);
+      expect(mockResponse.json).toHaveBeenCalledWith({
+        success: true,
+        refinement_data: expect.objectContaining({
+          refined_title: "The Caliph's Financial Dilemma",
+          refined_story: expect.stringContaining("House of Wisdom"),
+          refined_questions: expect.arrayContaining([
+            expect.stringContaining("Calculate"),
+          ]),
+          refinement_level: "moderate",
+          changes_made: expect.any(String),
+          mathematical_verification: expect.any(String),
+          image_visual_description: expect.any(String),
+        }),
+      });
+    });
+
+    it("should return 400 if task_text is missing", async () => {
+      mockRequest.body = {
+        curriculum_path: "math:grade_9_10:algebra",
+      };
+
+      await taskController.refineTaskText(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      expect(mockResponse.status).toHaveBeenCalledWith(400);
+      expect(mockResponse.json).toHaveBeenCalledWith({
+        success: false,
+        message:
+          "Missing required task_text object with title, story_text, and questions",
+      });
+    });
+
+    it("should return 400 if task_text.title is missing", async () => {
+      mockRequest.body = {
+        task_text: {
+          story_text: "Some story",
+          questions: ["Question?"],
+        },
+      };
+
+      await taskController.refineTaskText(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      expect(mockResponse.status).toHaveBeenCalledWith(400);
+      expect(mockResponse.json).toHaveBeenCalledWith({
+        success: false,
+        message:
+          "Missing required task_text object with title, story_text, and questions",
+      });
+    });
+
+    it("should return 400 if task_text.story_text is missing", async () => {
+      mockRequest.body = {
+        task_text: {
+          title: "Test Title",
+          questions: ["Question?"],
+        },
+      };
+
+      await taskController.refineTaskText(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      expect(mockResponse.status).toHaveBeenCalledWith(400);
+      expect(mockResponse.json).toHaveBeenCalledWith({
+        success: false,
+        message:
+          "Missing required task_text object with title, story_text, and questions",
+      });
+    });
+
+    it("should return 400 if task_text.questions is missing", async () => {
+      mockRequest.body = {
+        task_text: {
+          title: "Test Title",
+          story_text: "Some story",
+        },
+      };
+
+      await taskController.refineTaskText(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      expect(mockResponse.status).toHaveBeenCalledWith(400);
+      expect(mockResponse.json).toHaveBeenCalledWith({
+        success: false,
+        message:
+          "Missing required task_text object with title, story_text, and questions",
+      });
+    });
+
+    it("should use default values if optional fields are missing", async () => {
+      mockRequest.body = {
+        task_text: mockTaskText,
+        // No curriculum_path, difficulty_level, etc.
+      };
+
+      await taskController.refineTaskText(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      // Should succeed with defaults
+      expect(mockResponse.status).toHaveBeenCalledWith(200);
+      expect((taskController as any).taskGenerator.refineTaskText).toHaveBeenCalledWith(
+        mockTaskText,
+        expect.objectContaining({
+          curriculum_path: "math:general",
+          difficulty_level: "medium",
+          educational_model: "secular",
+          target_group: "mixed",
+          country_code: "US",
+        })
+      );
+    });
+
+    it("should use metadata from task_text if provided", async () => {
+      mockRequest.body = {
+        task_text: mockTaskText,
+        // No explicit config, should use metadata
+      };
+
+      await taskController.refineTaskText(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      expect((taskController as any).taskGenerator.refineTaskText).toHaveBeenCalledWith(
+        mockTaskText,
+        expect.objectContaining({
+          curriculum_path: "math:grade_9_10:algebra:compound_interest",
+          difficulty_level: "medium",
+          educational_model: "secular",
+          target_group: "mixed",
+          country_code: "HU",
+        })
+      );
+    });
+
+    it("should call next with error if refinement fails", async () => {
+      const refinementError = new Error("Refinement service failed");
+      (taskController as any).taskGenerator.refineTaskText = jest
+        .fn()
+        .mockRejectedValue(refinementError);
+
+      await taskController.refineTaskText(
+        mockRequest as Request,
+        mockResponse as Response,
+        mockNext
+      );
+
+      expect(mockNext).toHaveBeenCalledWith(refinementError);
+      expect(mockResponse.status).not.toHaveBeenCalled();
+      expect(mockResponse.json).not.toHaveBeenCalled();
+    });
+
+    it("should handle all refinement levels", async () => {
+      const refinementLevels = ["minor", "moderate", "major"];
+
+      for (const level of refinementLevels) {
+        (taskController as any).taskGenerator.refineTaskText = jest
+          .fn()
+          .mockResolvedValue({
+            refined_title: "Test Title",
+            refined_story: "Test story",
+            refined_questions: ["Test question"],
+            refinement_level: level,
+            changes_made: `${level} changes made`,
+            mathematical_verification: "Verified",
+            image_visual_description: "Test scene",
+          });
+
+        await taskController.refineTaskText(
+          mockRequest as Request,
+          mockResponse as Response,
+          mockNext
+        );
+
+        expect(mockResponse.json).toHaveBeenCalledWith({
+          success: true,
+          refinement_data: expect.objectContaining({
+            refinement_level: level,
+          }),
+        });
+
+        jest.clearAllMocks();
+        // Reset mock response for next iteration
+        mockResponse = {
+          status: jest.fn().mockReturnThis(),
+          json: jest.fn().mockReturnThis(),
+        };
+      }
+    });
+  });
 });

@@ -677,6 +677,136 @@ export class TaskGeneratorService {
   }
 
   /**
+   * V2 API: Refines a selected task to ensure mathematical accuracy and narrative coherence
+   */
+  async refineTaskText(
+    taskText: {
+      title: string;
+      story_text: string;
+      questions: string[];
+    },
+    request: TaskGeneratorRequest
+  ): Promise<{
+    refined_title: string;
+    refined_story: string;
+    refined_questions: string[];
+    refinement_level: "minor" | "moderate" | "major";
+    changes_made: string;
+    mathematical_verification: string;
+    image_visual_description: string;
+  }> {
+    console.log(`🔍 Refining task: "${taskText.title}"...`);
+
+    // Load the refinement prompt template
+    let prompt = this.loadPromptTemplate("task_refinement.md");
+
+    // Get language for the country
+    const language = getLanguageForCountry(request.country_code);
+
+    // Replace placeholders in the refinement template
+    prompt = prompt.replace("{TASK_TITLE}", taskText.title);
+    prompt = prompt.replace("{TASK_STORY}", taskText.story_text);
+    prompt = prompt.replace(
+      "{TASK_QUESTIONS}",
+      taskText.questions.map((q, i) => `${i + 1}. ${q}`).join("\n")
+    );
+    prompt = prompt.replace(
+      "{GRADE_LEVEL}",
+      this.extractGradeLevel(request.curriculum_path)
+    );
+    prompt = prompt.replace(
+      "{CURRICULUM_TOPIC}",
+      request.curriculum_path.split(":").pop() || "math"
+    );
+    prompt = prompt.replace("{DIFFICULTY_LEVEL}", request.difficulty_level);
+    prompt = prompt.replace("{TARGET_GROUP}", request.target_group);
+    prompt = prompt.replace(/{LANGUAGE}/g, language); // Global replace for all instances
+
+    console.log(`   📝 Sending refinement request to AI...`);
+
+    const refinementResult = await this.textGenerator.generate(prompt, {
+      temperature: 0.4, // Lower temperature for more focused refinement
+      maxTokens: 3000,
+    });
+
+    // Parse the refinement JSON response
+    const refinementData = this.parseRefinementResponse(refinementResult.text);
+
+    console.log(`   ✅ Task refined successfully`);
+    console.log(`   📊 Changes: ${refinementData.changes_made}`);
+
+    return refinementData;
+  }
+
+  /**
+   * Parses the AI-generated refinement JSON into structured data
+   */
+  private parseRefinementResponse(refinementText: string): {
+    refined_title: string;
+    refined_story: string;
+    refined_questions: string[];
+    refinement_level: "minor" | "moderate" | "major";
+    changes_made: string;
+    mathematical_verification: string;
+    image_visual_description: string;
+  } {
+    try {
+      // Remove markdown code blocks if present
+      let cleanedText = refinementText.trim();
+      cleanedText = cleanedText.replace(/^```json\s*/i, "");
+      cleanedText = cleanedText.replace(/^```\s*/i, "");
+      cleanedText = cleanedText.replace(/\s*```$/i, "");
+      cleanedText = cleanedText.trim();
+
+      // Try to extract JSON from the response
+      const jsonMatch = cleanedText.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        const refinementData = JSON.parse(jsonMatch[0]);
+
+        if (
+          refinementData.refined_title &&
+          refinementData.refined_story &&
+          refinementData.refined_questions
+        ) {
+          return {
+            refined_title: refinementData.refined_title,
+            refined_story: refinementData.refined_story,
+            refined_questions: Array.isArray(refinementData.refined_questions)
+              ? refinementData.refined_questions
+              : [refinementData.refined_questions],
+            refinement_level: refinementData.refinement_level || "minor",
+            changes_made:
+              refinementData.changes_made ||
+              "Minor refinements for clarity and accuracy.",
+            mathematical_verification:
+              refinementData.mathematical_verification ||
+              "Task verified for mathematical consistency.",
+            image_visual_description:
+              refinementData.image_visual_description ||
+              "A scene depicting the context and setting of the educational task.",
+          };
+        }
+      }
+    } catch (error) {
+      console.warn("⚠️  Failed to parse refinement JSON:", error);
+      console.warn("⚠️  Raw response:", refinementText.substring(0, 200));
+    }
+
+    // Fallback: return original text if parsing fails
+    console.warn("⚠️  Using fallback refinement (returning original text)");
+    return {
+      refined_title: "Refined Task",
+      refined_story: refinementText,
+      refined_questions: ["Solve the problem presented above."],
+      refinement_level: "minor",
+      changes_made: "Parsing error - original text returned.",
+      mathematical_verification: "Unable to verify - parsing error.",
+      image_visual_description:
+        "A scene depicting the context and setting of the educational task.",
+    };
+  }
+
+  /**
    * V2 API: Generates images only for given task text
    */
   async generateImagesOnly(

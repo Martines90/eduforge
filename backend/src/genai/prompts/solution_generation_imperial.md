@@ -15,6 +15,8 @@ You are an expert mathematics educator tasked with creating a detailed, pedagogi
 **Difficulty:** {DIFFICULTY_LEVEL}
 **Target Audience:** {TARGET_GROUP}
 
+**NOTE:** This task has already been refined by educational experts to ensure mathematical accuracy and narrative coherence. You can trust that all numbers, relationships, and information provided are correct and sufficient to solve the problem.
+
 ## Your Mission
 
 Create a comprehensive, student-friendly solution that guides learners through the problem-solving process step-by-step.

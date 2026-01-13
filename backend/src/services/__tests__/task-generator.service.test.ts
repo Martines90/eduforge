@@ -403,4 +403,196 @@ describe("TaskGeneratorService - Prompt Generation", () => {
       expect(parsed.selected_example_index).toBeUndefined();
     });
   });
+
+  describe("Task Refinement", () => {
+    const sampleTaskText = {
+      title: "Baghdad Merchant Problem",
+      story_text:
+        "You are a treasurer. Three merchants offer money: 15,000 + 8,000 later, or 25,000 in a year. Money grows at 8% every 3 months.",
+      questions: ["Which option is best?"],
+    };
+
+    beforeEach(() => {
+      // Mock the refinement response with different levels
+      mockTextGenerator.generate = jest
+        .fn()
+        .mockImplementation(async (prompt: string) => {
+          // Check if this is a refinement prompt
+          if (prompt.includes("Task Refinement")) {
+            return {
+              text: JSON.stringify({
+                refined_title: "The Caliph's Financial Dilemma",
+                refined_story:
+                  "As treasurer to the Caliph in 830 CE Baghdad, you must finance the House of Wisdom's translation projects. Three merchants offer loans with different payment schedules. Your challenge: you can invest any money you receive into trade caravans that return 8% profit every three months. Which merchant's payment schedule allows you to maximize your total funds by year-end?",
+                refined_questions: [
+                  "Calculate which merchant offer maximizes your total funds after one year, considering the 8% quarterly returns from trade caravans.",
+                ],
+                refinement_level: "moderate",
+                changes_made:
+                  "Reorganized story to better integrate 8% profit rate into merchant's decision-making context. Added clear motivation (House of Wisdom funding) and explicit connection between payment timing and reinvestment opportunity.",
+                mathematical_verification:
+                  "Verified that all payment amounts are consistent, the 8% quarterly rate is realistic for medieval trade, and the problem is solvable with compound interest calculations.",
+                image_visual_description:
+                  "A medieval Baghdad marketplace with a treasurer examining scrolls at a wooden desk, surrounded by trade goods and lanterns, with the House of Wisdom visible in the background.",
+              }),
+              tokens: 200,
+              cost: 0.002,
+            };
+          }
+          // Default solution response
+          return {
+            text: JSON.stringify({
+              solution_steps: [
+                {
+                  step_number: 1,
+                  title: "Step 1",
+                  description: "First step",
+                  result: "10",
+                },
+              ],
+              final_answer: "The answer is 10",
+            }),
+            tokens: 150,
+            cost: 0.001,
+          };
+        });
+    });
+
+    it("should refine task text with moderate level changes", async () => {
+      const result = await service.refineTaskText(sampleTaskText, metricRequest);
+
+      expect(result.refined_title).toBe("The Caliph's Financial Dilemma");
+      expect(result.refined_story).toContain("House of Wisdom");
+      expect(result.refined_story).toContain("trade caravans");
+      expect(result.refinement_level).toBe("moderate");
+      expect(result.changes_made).toContain("Reorganized story");
+      expect(result.mathematical_verification).toContain("Verified");
+      expect(result.image_visual_description).toContain("Baghdad marketplace");
+    });
+
+    it("should include refinement level in response", async () => {
+      const result = await service.refineTaskText(sampleTaskText, metricRequest);
+
+      expect(result.refinement_level).toBeDefined();
+      expect(["minor", "moderate", "major"]).toContain(result.refinement_level);
+    });
+
+    it("should generate image visual description from refined task", async () => {
+      const result = await service.refineTaskText(sampleTaskText, metricRequest);
+
+      expect(result.image_visual_description).toBeDefined();
+      expect(result.image_visual_description).not.toContain("question");
+      expect(result.image_visual_description).not.toContain("formula");
+      expect(result.image_visual_description).not.toContain("calculate");
+    });
+
+    it("should call text generator with refinement prompt", async () => {
+      await service.refineTaskText(sampleTaskText, metricRequest);
+
+      expect(mockTextGenerator.generate).toHaveBeenCalledTimes(1);
+
+      const refinementPrompt = mockTextGenerator.generate.mock.calls[0][0];
+      expect(refinementPrompt).toContain("Task Refinement");
+      expect(refinementPrompt).toContain("Mathematical Accuracy");
+      expect(refinementPrompt).toContain("Narrative-Mathematical Integration");
+      expect(refinementPrompt).toContain(sampleTaskText.title);
+      expect(refinementPrompt).toContain(sampleTaskText.story_text);
+    });
+
+    it("should use correct language in refinement prompt", async () => {
+      await service.refineTaskText(sampleTaskText, metricRequest);
+
+      const refinementPrompt = mockTextGenerator.generate.mock.calls[0][0];
+      expect(refinementPrompt).toContain("Hungarian");
+    });
+
+    it("should preserve original task on minor refinement", async () => {
+      // Mock minor refinement response
+      mockTextGenerator.generate = jest.fn().mockResolvedValue({
+        text: JSON.stringify({
+          refined_title: sampleTaskText.title,
+          refined_story: sampleTaskText.story_text + " Minor clarification added.",
+          refined_questions: sampleTaskText.questions,
+          refinement_level: "minor",
+          changes_made: "Minor wording improvements for clarity.",
+          mathematical_verification: "All values are consistent and correct.",
+          image_visual_description: "A treasurer in medieval Baghdad.",
+        }),
+        tokens: 150,
+        cost: 0.001,
+      });
+
+      const result = await service.refineTaskText(sampleTaskText, metricRequest);
+
+      expect(result.refinement_level).toBe("minor");
+      expect(result.refined_title).toBe(sampleTaskText.title);
+      expect(result.refined_story).toContain(sampleTaskText.story_text);
+    });
+
+    it("should handle major redesign when task is fundamentally flawed", async () => {
+      const flawedTask = {
+        title: "Impossible Math",
+        story_text:
+          "Buy 0.43 books for a party. The merchant sells 2,847,392 apples daily.",
+        questions: ["Calculate something?"],
+      };
+
+      // Mock major redesign response
+      mockTextGenerator.generate = jest.fn().mockResolvedValue({
+        text: JSON.stringify({
+          refined_title: "Planning a School Book Fair",
+          refined_story:
+            "You're organizing a school book fair with a limited budget. The bookstore offers package deals: you can buy sets of 5 books for $20 each. If you have $85 to spend, how many complete sets can you purchase, and how much money will you have left over?",
+          refined_questions: [
+            "How many complete book sets can you buy with $85?",
+            "How much money will remain after purchasing the maximum number of sets?",
+          ],
+          refinement_level: "major",
+          changes_made:
+            "Major redesign required - original task contained unrealistic values (0.43 books, 2.8M apples daily) and incoherent narrative. Redesigned to create a realistic school book fair scenario while preserving division with remainders concept and age-appropriate context.",
+          mathematical_verification:
+            "Verified: $85 ÷ $20 per set = 4 complete sets with $5 remaining. Values are realistic for school context.",
+          image_visual_description:
+            "A school library or classroom with colorful books displayed on tables for a book fair, students browsing.",
+        }),
+        tokens: 250,
+        cost: 0.003,
+      });
+
+      const result = await service.refineTaskText(flawedTask, metricRequest);
+
+      expect(result.refinement_level).toBe("major");
+      expect(result.changes_made).toContain("Major redesign required");
+      expect(result.refined_story).not.toContain("0.43");
+      expect(result.refined_story).not.toContain("2,847,392");
+    });
+
+    it("should handle parsing errors gracefully", async () => {
+      // Mock invalid JSON response
+      mockTextGenerator.generate = jest.fn().mockResolvedValue({
+        text: "This is not valid JSON",
+        tokens: 50,
+        cost: 0.0005,
+      });
+
+      const result = await service.refineTaskText(sampleTaskText, metricRequest);
+
+      // Should return fallback values
+      expect(result.refined_title).toBe("Refined Task");
+      expect(result.refinement_level).toBe("minor");
+      expect(result.changes_made).toContain("Parsing error");
+    });
+
+    it("should include all required fields in refinement response", async () => {
+      const result = await service.refineTaskText(sampleTaskText, metricRequest);
+
+      expect(result).toHaveProperty("refined_title");
+      expect(result).toHaveProperty("refined_story");
+      expect(result).toHaveProperty("refined_questions");
+      expect(result).toHaveProperty("refinement_level");
+      expect(result).toHaveProperty("changes_made");
+      expect(result).toHaveProperty("mathematical_verification");
+      expect(result).toHaveProperty("image_visual_description");
+    });
+  });
 });

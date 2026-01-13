@@ -290,6 +290,63 @@ export class TaskController {
   };
 
   /**
+   * POST /refine-task-text
+   * V2 API: Refines a selected task to ensure mathematical accuracy and narrative coherence
+   */
+  refineTaskText = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<void> => {
+    try {
+      const { task_text, curriculum_path, difficulty_level, educational_model, target_group, country_code } =
+        req.body;
+
+      if (!task_text || !task_text.title || !task_text.story_text || !task_text.questions) {
+        res.status(400).json({
+          success: false,
+          message:
+            "Missing required task_text object with title, story_text, and questions",
+        });
+        return;
+      }
+
+      console.log("📥 Request to refine task text");
+      console.log(`   Task: ${task_text.title}`);
+
+      // Build a minimal request object for refinement
+      const request: TaskGeneratorRequest = {
+        curriculum_path: curriculum_path || task_text.metadata?.curriculum_path || "math:general",
+        difficulty_level: difficulty_level || task_text.metadata?.difficulty_level || "medium",
+        educational_model: educational_model || task_text.metadata?.educational_model || "secular",
+        target_group: target_group || task_text.metadata?.target_group || "mixed",
+        country_code: country_code || task_text.metadata?.country_code || "US",
+        display_template: "modern",
+        precision_settings: {
+          constant_precision: 2,
+          intermediate_precision: 4,
+          final_answer_precision: 2,
+          use_exact_values: false,
+        },
+        custom_keywords: [],
+        template_id: "",
+      };
+
+      const refinementData = await this.taskGenerator.refineTaskText(
+        task_text,
+        request
+      );
+
+      res.status(200).json({
+        success: true,
+        refinement_data: refinementData,
+      });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  /**
    * POST /generate-task-solution
    * V2 API: Generates solution only for given task text
    */
