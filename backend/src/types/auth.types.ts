@@ -6,8 +6,9 @@ export interface RegisterRequest {
   name: string;
   role: "teacher" | "general_user";
   country: string;
-  subject?: string; // For teachers only
-  educationalModel?: string; // For teachers only
+  subjects?: string[]; // For teachers only - multi-select
+  educationalModel?: string; // For teachers only - grade/school type level
+  teacherRole?: string; // For teachers only - the grade level they teach (e.g., "grade_6_8")
   recaptchaToken?: string; // reCAPTCHA verification token
 }
 
@@ -46,8 +47,9 @@ export interface UserDocument {
   name: string;
   role: "teacher" | "general_user";
   country: string;
-  subject?: string; // For teachers only
-  educationalModel?: string; // For teachers only
+  subjects?: string[]; // For teachers only - multi-select, stored as array in profile
+  educationalModel?: string; // For teachers only - grade/school type level
+  teacherRole?: string; // For teachers only - the grade level they teach (e.g., "grade_6_8")
   emailVerificationCode?: string;
   emailVerificationCodeExp?: FirebaseFirestore.Timestamp;
   status: "active" | "inactive" | "banned";

@@ -55,8 +55,9 @@ export interface UserState {
   profile: UserProfile | null;
   identity: UserIdentity | null;
   role: UserRole;
-  subject: Subject | null;
+  subjects: Subject[]; // For teachers - multi-select subjects
   educationalModel: EducationalModel | null;
+  teacherRole?: GradeLevel; // For teachers - the grade level they teach (e.g., "grade_6_8")
   subscription?: SubscriptionInfo;
   taskCredits?: number;
   // Future: can add more user preferences here
@@ -90,7 +91,7 @@ interface UserContextType {
   gradeSystem: GradeSystemHelpers;
   setCountry: (country: CountryCode) => void;
   setIdentity: (identity: UserIdentity) => void;
-  setSubject: (subject: Subject) => void;
+  setSubjects: (subjects: Subject[]) => void;
   setEducationalModel: (model: EducationalModel) => void;
   registerUser: (profile: UserProfile) => void;
   loginUser: (email: string, password: string) => Promise<void>;
@@ -117,7 +118,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     profile: null,
     identity: null,
     role: 'guest',
-    subject: null,
+    subjects: [],
     educationalModel: null,
   });
 
@@ -192,7 +193,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
             profile,
             role: 'registered',
             identity: normalizedIdentity,
-            subject: userData.subject || null,
+            subjects: userData.subjects || [],
+            educationalModel: (userData.educationalModel as EducationalModel) || null,
+            teacherRole: (userData.teacherRole as GradeLevel) || undefined,
             country: userCountry || cookieCountry, // Fallback to cookie only if user has no country saved
             hasCompletedOnboarding: true, // If they're in Firestore, they've completed onboarding
             isFirstVisit: false,
@@ -212,8 +215,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
           if (normalizedIdentity) {
             setCookie(COOKIE_NAMES.IDENTITY, normalizedIdentity);
           }
-          if (userData.subject) {
-            setCookie(COOKIE_NAMES.SUBJECT, userData.subject);
+          if (userData.subjects && userData.subjects.length > 0) {
+            setCookie(COOKIE_NAMES.SUBJECT, JSON.stringify(userData.subjects));
           }
         } catch (error) {
           console.error('[UserContext] Error restoring user session:', error);
@@ -232,7 +235,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
             const cookieIdentity = getCookie(COOKIE_NAMES.IDENTITY);
             // Normalize backend role to frontend UserIdentity (backend uses 'general_user', frontend uses 'non-teacher')
             const identity: UserIdentity | undefined = cookieIdentity === 'general_user' ? 'non-teacher' : cookieIdentity as UserIdentity | undefined;
-            const subject = getCookie(COOKIE_NAMES.SUBJECT) as Subject | undefined;
+            const subjectsCookie = getCookie(COOKIE_NAMES.SUBJECT);
+            const subjects: Subject[] = subjectsCookie ? JSON.parse(subjectsCookie) : [];
             const savedCountry = (getCookie(COOKIE_NAMES.COUNTRY) as CountryCode) || DEFAULT_COUNTRY;
 
             console.log('[UserContext] Restoring session from localStorage/cookies, fetching fresh user data...');
@@ -247,6 +251,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
                 const userIdentity: UserIdentity | undefined = backendRole === 'general_user' ? 'non-teacher' : backendRole as UserIdentity | undefined;
                 const userSubscription = (userData as any).subscription as any;
                 const userTaskCredits = (userData as any).taskCredits as number | undefined;
+                const userSubjects = (userData as any).subjects as Subject[] | undefined;
+                const userEducationalModel = (userData as any).educationalModel as EducationalModel | undefined;
+                const userTeacherRole = (userData as any).teacherRole as GradeLevel | undefined;
                 // IMPORTANT: Get country from user profile (logged-in user's preference takes precedence)
                 const userCountry = (userData as any).country as CountryCode | undefined;
 
@@ -277,7 +284,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
                   profile: { ...profile, token: authToken },
                   role: 'registered',
                   identity: userIdentity || identity || null,
-                  subject: subject || null,
+                  subjects: userSubjects || subjects || [],
+                  educationalModel: userEducationalModel || null,
+                  teacherRole: userTeacherRole,
                   country: finalCountry,
                   hasCompletedOnboarding: true,
                   isFirstVisit: false,
@@ -319,7 +328,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
                   profile: { ...profile, token: authToken },
                   role: 'registered',
                   identity: identity || null,
-                  subject: subject || null,
+                  subjects: subjects || [],
                   country: savedCountry,
                   hasCompletedOnboarding: true,
                   isFirstVisit: false,
@@ -407,10 +416,10 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     setCookie(COOKIE_NAMES.IDENTITY, newIdentity);
   }, []);
 
-  // Set subject and save to cookie
-  const setSubject = useCallback((newSubject: Subject) => {
-    setUser((prev) => ({ ...prev, subject: newSubject }));
-    setCookie(COOKIE_NAMES.SUBJECT, newSubject);
+  // Set subjects and save to cookie
+  const setSubjects = useCallback((newSubjects: Subject[]) => {
+    setUser((prev) => ({ ...prev, subjects: newSubjects }));
+    setCookie(COOKIE_NAMES.SUBJECT, JSON.stringify(newSubjects));
   }, []);
 
   // Set educational model and save to cookie
@@ -474,7 +483,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       // Normalize backend role to frontend UserIdentity (backend uses 'general_user', frontend uses 'non-teacher')
       const userRole: UserIdentity | undefined = backendRole === 'general_user' ? 'non-teacher' : backendRole as UserIdentity | undefined;
       const userCountry = (userData as any).country as CountryCode | undefined;
-      const userSubject = (userData as any).subject as Subject | undefined;
+      const userSubjects = (userData as any).subjects as Subject[] | undefined;
+      const userEducationalModel = (userData as any).educationalModel as EducationalModel | undefined;
+      const userTeacherRole = (userData as any).teacherRole as GradeLevel | undefined;
       const userSubscription = (userData as any).subscription as any;
       const userTaskCredits = (userData as any).taskCredits as number | undefined;
 
@@ -508,7 +519,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
         profile,
         role: 'registered',
         identity: userRole || prev.identity,
-        subject: userSubject || prev.subject,
+        subjects: userSubjects || prev.subjects,
+        educationalModel: userEducationalModel || prev.educationalModel,
+        teacherRole: userTeacherRole,
         country: finalCountry,
         hasCompletedOnboarding: true,
         isFirstVisit: false,
@@ -528,8 +541,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       if (userRole) {
         setCookie(COOKIE_NAMES.IDENTITY, userRole);
       }
-      if (userSubject) {
-        setCookie(COOKIE_NAMES.SUBJECT, userSubject);
+      if (userSubjects && userSubjects.length > 0) {
+        setCookie(COOKIE_NAMES.SUBJECT, JSON.stringify(userSubjects));
       }
 
       console.log('[UserContext] Login complete, user state updated');
@@ -556,7 +569,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       profile: null,
       role: 'guest',
       identity: null,
-      subject: null,
+      subjects: [],
       educationalModel: null,
       hasCompletedOnboarding: false,
       isFirstVisit: true,
@@ -599,7 +612,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       profile: null,
       identity: null,
       role: 'guest',
-      subject: null,
+      subjects: [],
       educationalModel: null,
     });
   }, []);
@@ -632,7 +645,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   }, [user.country]);
 
   return (
-    <UserContext.Provider value={{ user, authInitialized, gradeSystem, setCountry, setIdentity, setSubject, setEducationalModel, registerUser, loginUser, logoutUser, completeOnboarding, resetUser }}>
+    <UserContext.Provider value={{ user, authInitialized, gradeSystem, setCountry, setIdentity, setSubjects, setEducationalModel, registerUser, loginUser, logoutUser, completeOnboarding, resetUser }}>
       {/* Only render children when country is selected - prevents API calls and content rendering */}
       {isCountryReady ? children : null}
 

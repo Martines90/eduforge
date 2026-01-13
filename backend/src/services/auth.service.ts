@@ -8,6 +8,7 @@ import {
   VerificationCodeDocument,
 } from "../types/auth.types";
 import { TRIAL_START_CREDITS } from "../constants/credits";
+import { sendVerificationEmail } from "./email.service";
 
 const SALT_ROUNDS = 10;
 const JWT_SECRET = process.env.JWT_SECRET || "your-secret-key-change-this";
@@ -53,38 +54,23 @@ export async function createVerificationCode(
         password: await bcrypt.hash(userData.password, SALT_ROUNDS),
         role: userData.role,
         country: userData.country,
-        subject: userData.subject,
+        subjects: userData.subjects, // Store as array
         educationalModel: userData.educationalModel,
+        teacherRole: userData.teacherRole,
       },
     });
 
-  // Send verification email via Firebase Extension
-  await db.collection("mail").add({
-    to: email.toLowerCase(),
-    message: {
-      subject: "EduForger - Email Verification Code",
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h2 style="color: #1976d2;">Welcome to EduForger!</h2>
-          <p>Hello ${userData.name},</p>
-          <p>Thank you for registering with EduForger. To complete your registration, please use the following verification code:</p>
-          <div style="background-color: #f5f5f5; padding: 20px; text-align: center; margin: 20px 0; border-radius: 8px;">
-            <h1 style="color: #1976d2; margin: 0; font-size: 32px; letter-spacing: 5px;">${code}</h1>
-          </div>
-          <p>This code will expire in 15 minutes.</p>
-          <p>If you didn't request this verification code, please ignore this email.</p>
-          <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0;">
-          <p style="color: #666; font-size: 12px;">This is an automated message from EduForger. Please do not reply to this email.</p>
-        </div>
-      `,
-      text: `Welcome to EduForger!\n\nYour verification code is: ${code}\n\nThis code will expire in 15 minutes.\n\nIf you didn't request this code, please ignore this email.`,
-    },
+  // Send verification email directly via SendGrid API
+  const emailResult = await sendVerificationEmail({
+    recipientEmail: email.toLowerCase(),
+    recipientName: userData.name,
+    verificationCode: code,
   });
 
   console.log("=".repeat(50));
-  console.log(`VERIFICATION CODE EMAIL QUEUED FOR: ${email}`);
+  console.log(`VERIFICATION CODE EMAIL SENT TO: ${email}`);
   console.log(`CODE: ${code}`);
-  console.log("Email will be sent by Firebase Extension");
+  console.log(`Email result:`, emailResult);
   console.log("=".repeat(50));
 
   return code;
@@ -178,8 +164,9 @@ export async function verifyCodeAndCreateUser(
     name: userData.name,
     role: userData.role,
     country: userData.country,
-    subject: userData.subject,
+    subjects: userData.subjects, // Store as array in profile
     educationalModel: userData.educationalModel,
+    teacherRole: userData.teacherRole,
     status: "active", // User is active immediately after verification
     emailVerified: true,
     createdAt: new Date() as any,

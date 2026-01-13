@@ -56,6 +56,9 @@ export interface Translations {
   Menu: string;
   Language: string;
   Country: string;
+  grade: string;
+  "grade 1-12": string;
+  "Create educational tasks based on curriculum topics for": string;
 
   // Tasks page
   Tasks: string;
@@ -86,6 +89,7 @@ export interface Translations {
   "Please enter at least 3 characters": string;
 
   // Subjects
+  Subjects: string;
   Mathematics: string;
   Physics: string;
   Chemistry: string;
@@ -164,6 +168,8 @@ export interface Translations {
   // Registration Modal
   "Create Your Account": string;
   "Country & Subject": string;
+  "Teaching Info": string;
+  "Location, level & subjects": string;
   "Location and expertise": string;
   "Personal Info": string;
   "Name and Email": string;
@@ -171,8 +177,12 @@ export interface Translations {
   "Enter verification code": string;
   "Select your location": string;
   "Select Your Country & Subject": string;
+  "Select Your Teaching Information": string;
   "Select Your Country": string;
+  "Teaching Level": string;
   "Choose your location and primary teaching subject": string;
+  "Choose your location, teaching subjects, and grade level": string;
+  "Choose your location, teaching level, subjects, and educational model": string;
   "Choose your country to personalize your experience": string;
   "Your Work Information": string;
   "Your Information": string;

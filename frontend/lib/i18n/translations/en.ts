@@ -46,6 +46,9 @@ export const en: Translations = {
   Menu: "Menu",
   Language: "Language",
   Country: "Country",
+  grade: "grade",
+  "grade 1-12": "grade 1-12",
+  "Create educational tasks based on curriculum topics for": "Create educational tasks based on curriculum topics for",
 
   // Tasks page
   Tasks: "Tasks",
@@ -81,6 +84,7 @@ export const en: Translations = {
   "Please enter at least 3 characters": "Please enter at least 3 characters",
 
   // Subjects
+  Subjects: "Subjects",
   Mathematics: "Mathematics",
   Physics: "Physics",
   Chemistry: "Chemistry",
@@ -171,6 +175,8 @@ export const en: Translations = {
   // Registration Modal
   "Create Your Account": "Create Your Account",
   "Country & Subject": "Country & Subject",
+  "Teaching Info": "Teaching Info",
+  "Location, level & subjects": "Location, level & subjects",
   "Location and expertise": "Location and expertise",
   "Personal Info": "Personal Info",
   "Name and Email": "Name and Email",
@@ -178,9 +184,15 @@ export const en: Translations = {
   "Enter verification code": "Enter verification code",
   "Select your location": "Select your location",
   "Select Your Country & Subject": "Select Your Country & Subject",
+  "Select Your Teaching Information": "Select Your Teaching Information",
   "Select Your Country": "Select Your Country",
+  "Teaching Level": "Teaching Level",
   "Choose your location and primary teaching subject":
     "Choose your location and primary teaching subject",
+  "Choose your location, teaching subjects, and grade level":
+    "Choose your location, teaching subjects, and grade level",
+  "Choose your location, teaching level, subjects, and educational model":
+    "Choose your location, teaching level, subjects, and educational model",
   "Choose your country to personalize your experience":
     "Choose your country to personalize your experience",
   "Your Work Information": "Your Work Information",

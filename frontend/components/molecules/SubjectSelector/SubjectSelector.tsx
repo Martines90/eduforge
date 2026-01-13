@@ -9,6 +9,8 @@ import {
   SelectChangeEvent,
   Box,
   Chip,
+  Checkbox,
+  ListItemText,
 } from '@mui/material';
 import { Subject, CountryCode } from '@/types/i18n';
 import { SUBJECTS, getSubjectsForCountry, SubjectOption } from '@/lib/data/subjects';
@@ -123,6 +125,8 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
   }
 
   // Select mode
+  const selectedValues = Array.isArray(value) ? value : [];
+
   return (
     <FormControl fullWidth={fullWidth} disabled={disabled} className={className} required={required} sx={sx}>
       <InputLabel>{label}</InputLabel>
@@ -132,20 +136,77 @@ export const SubjectSelector: React.FC<SubjectSelectorProps> = ({
         label={label}
         multiple={isMultiSelect}
         data-testid={dataTestId}
+        renderValue={isMultiSelect ? (selected) => (
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+            {(selected as Subject[]).map((selectedSubject) => {
+              const subjectOption = subjectsList.find((s) => s.value === selectedSubject);
+              return (
+                <Chip
+                  key={selectedSubject}
+                  label={getSubjectLabel(selectedSubject)}
+                  size="small"
+                  sx={{
+                    backgroundColor: 'primary.main',
+                    color: 'white',
+                    fontWeight: 600,
+                    '& .MuiChip-label': {
+                      paddingLeft: 0.5,
+                      paddingRight: 0.5,
+                    }
+                  }}
+                  icon={<span style={{ fontSize: '1rem', marginLeft: '4px' }}>{subjectOption?.emoji}</span>}
+                />
+              );
+            })}
+          </Box>
+        ) : undefined}
       >
         {!isMultiSelect && !required && (
           <MenuItem value="">
             <em>{t('All Subjects')}</em>
           </MenuItem>
         )}
-        {subjectsList.map((subject) => (
-          <MenuItem key={subject.value} value={subject.value}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <span style={{ fontSize: '1.5rem' }}>{subject.emoji}</span>
-              <span>{getSubjectLabel(subject.value)}</span>
-            </Box>
-          </MenuItem>
-        ))}
+        {subjectsList.map((subject) => {
+          const isSelected = isMultiSelect && selectedValues.includes(subject.value);
+
+          return (
+            <MenuItem
+              key={subject.value}
+              value={subject.value}
+              sx={{
+                backgroundColor: isSelected ? 'primary.main' : 'transparent',
+                color: isSelected ? 'white' : 'inherit',
+                fontWeight: isSelected ? 600 : 400,
+                '&:hover': {
+                  backgroundColor: isSelected ? 'primary.dark' : 'action.hover',
+                },
+                '&.Mui-selected': {
+                  backgroundColor: 'primary.main',
+                  color: 'white',
+                  '&:hover': {
+                    backgroundColor: 'primary.dark',
+                  },
+                },
+              }}
+            >
+              {isMultiSelect && (
+                <Checkbox
+                  checked={isSelected}
+                  sx={{
+                    color: isSelected ? 'white' : 'inherit',
+                    '&.Mui-checked': {
+                      color: 'white',
+                    },
+                  }}
+                />
+              )}
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <span style={{ fontSize: '1.5rem' }}>{subject.emoji}</span>
+                <span>{getSubjectLabel(subject.value)}</span>
+              </Box>
+            </MenuItem>
+          );
+        })}
       </MuiSelect>
     </FormControl>
   );

@@ -8,16 +8,25 @@ import { useUser } from '@/lib/context';
 import AddIcon from '@mui/icons-material/Add';
 import SearchIcon from '@mui/icons-material/Search';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
 export default function Home() {
   const { t } = useTranslation();
-  const { user } = useUser();
+  const { user, gradeSystem } = useUser();
   const [showTrialMessage, setShowTrialMessage] = useState(false);
 
   const isGuest = !user.isRegistered;
   const isTeacher = user.identity === 'teacher';
   const isNonTeacher = user.identity === 'non-teacher';
+
+  // Get teacher's grade level label based on their teacherRole preference
+  const teacherGradeLabel = useMemo(() => {
+    if (!isTeacher || !user.teacherRole) {
+      return t('grade 1-12'); // Default fallback for all grades
+    }
+    const gradeConfig = gradeSystem.getGrade(user.teacherRole);
+    return gradeConfig ? `${t('grade')} ${gradeConfig.gradeRange}` : t('grade 1-12');
+  }, [isTeacher, user.teacherRole, gradeSystem, t]);
 
   // Check if we should show the trial subscription message
   useEffect(() => {
@@ -176,7 +185,7 @@ export default function Home() {
                         {t('Create Task')}
                       </Typography>
                       <Typography variant="body1" color="text.secondary" paragraph>
-                        {t('Create educational tasks based on curriculum topics for grades 9-12')}
+                        {t('Create educational tasks based on curriculum topics for')} {teacherGradeLabel}
                       </Typography>
                     </Box>
                     <Box sx={{ mt: 3 }}>

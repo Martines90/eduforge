@@ -1,0 +1,2770 @@
+[
+  {
+    "key": "reading_literature_key_ideas_details",
+    "name": "Reading Literature - Key Ideas and Details",
+    "short_description": "Students analyze how literature conveys meaning through textual evidence, themes, and narrative elements. They develop skills in close reading, citing specific evidence, and analyzing character development and plot progression.",
+    "sub_topics": [
+      {
+        "key": "textual_evidence_citations",
+        "name": "Citing Textual Evidence",
+        "short_description": "Students learn to support analysis and inferences with explicit textual evidence and strong reasoning.",
+        "sub_topics": [
+          {
+            "key": "explicit_textual_support",
+            "name": "Using Explicit Evidence from Text",
+            "short_description": "Identifying and citing specific quotes and passages that directly support interpretations and claims.",
+            "example_tasks": [
+              "Find three quotes from a short story that show how the main character changes from the beginning to the end of the story.",
+              "Cite specific evidence from a novel chapter that reveals the conflict between two characters.",
+              "Identify textual evidence that supports the claim that the setting influences the protagonist's decisions in the story.",
+              "Use direct quotations to support an analysis of how the author develops the theme of friendship in the text.",
+              "Select the strongest piece of textual evidence that explains why a character made a particular choice at a critical moment."
+            ]
+          },
+          {
+            "key": "making_inferences",
+            "name": "Drawing Inferences from Text",
+            "short_description": "Using textual clues and prior knowledge to draw logical conclusions about unstated information.",
+            "example_tasks": [
+              "Make an inference about a character's motivation based on their actions and dialogue in a scene.",
+              "What can you infer about the relationship between two characters based on their interactions in the first three chapters?",
+              "Draw a conclusion about the historical time period of the story using details about clothing, technology, and social customs.",
+              "Infer the meaning of a character's symbolic dream by analyzing other elements in the story.",
+              "Based on the story's ending, what can you infer about what will happen to the characters after the story concludes?"
+            ]
+          },
+          {
+            "key": "strong_thorough_textual_support",
+            "name": "Developing Strong and Thorough Analysis",
+            "short_description": "Building comprehensive arguments supported by multiple pieces of evidence and detailed reasoning.",
+            "example_tasks": [
+              "Write a paragraph analyzing a character's internal conflict, using at least three pieces of textual evidence.",
+              "Develop a thorough explanation of how the author uses foreshadowing, citing four specific examples from the text.",
+              "Create an evidence-based argument about the story's central message, supporting your claim with quotations from different parts of the text.",
+              "Analyze how the setting contributes to the mood in a story, using detailed evidence from multiple scenes.",
+              "Build a comprehensive interpretation of a poem's meaning using evidence from both the literal and figurative language."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "theme_development_analysis",
+        "name": "Determining and Analyzing Themes",
+        "short_description": "Students identify central themes and analyze how they are developed through characters, setting, and plot.",
+        "sub_topics": [
+          {
+            "key": "identifying_central_themes",
+            "name": "Identifying Central Themes and Ideas",
+            "short_description": "Recognizing the main messages, lessons, or insights about life that a text conveys.",
+            "example_tasks": [
+              "Identify the central theme of a short story and explain how the title relates to this theme.",
+              "Determine two major themes in a novel and explain how they are different but related.",
+              "What is the author's message about courage in this text? Support your answer with evidence.",
+              "Distinguish between the topic (what the story is about) and the theme (what the story means) in a given passage.",
+              "Identify the universal theme in a folktale and explain why it applies across different cultures and time periods."
+            ]
+          },
+          {
+            "key": "theme_development_over_text",
+            "name": "Analyzing Theme Development",
+            "short_description": "Tracing how themes emerge and are reinforced throughout a text through various literary elements.",
+            "example_tasks": [
+              "Trace how the theme of identity is developed from the beginning to the end of a novel, citing specific chapters.",
+              "Explain how the author develops the theme of justice through the protagonist's experiences and decisions.",
+              "Analyze how dialogue between characters contributes to developing the theme of family loyalty.",
+              "Describe how the author uses symbolism to reinforce the central theme throughout the story.",
+              "Create a timeline showing how the theme of perseverance is developed through key events in the plot."
+            ]
+          },
+          {
+            "key": "objective_summary_with_theme",
+            "name": "Providing Objective Summaries",
+            "short_description": "Summarizing texts accurately without personal opinions while capturing key details and themes.",
+            "example_tasks": [
+              "Write an objective summary of a chapter that includes the main events and how they relate to the central theme.",
+              "Summarize a short story in 3-5 sentences, including the essential plot points without adding personal judgments.",
+              "Create a brief, unbiased summary of a poem that captures its literal meaning and suggested theme.",
+              "Summarize the key conflict and resolution in a story without using opinion words like 'interesting' or 'exciting.'",
+              "Write an objective summary of an article about the author's life and explain how it connects to themes in their literary work."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "character_plot_setting_analysis",
+        "name": "Analyzing Story Elements",
+        "short_description": "Students examine how characters develop, how plots unfold, and how settings influence narratives.",
+        "sub_topics": [
+          {
+            "key": "character_development_analysis",
+            "name": "Character Development and Motivation",
+            "short_description": "Analyzing how characters change over time and understanding the reasons behind their actions.",
+            "example_tasks": [
+              "Create a character development chart showing how the protagonist changes from the exposition to the resolution.",
+              "Analyze what motivates the antagonist's actions and how this affects the conflict in the story.",
+              "Compare how two characters respond differently to the same challenging situation and what this reveals about their personalities.",
+              "Explain how a character's background and experiences influence their decisions at a crucial moment.",
+              "Trace the internal and external conflicts a character faces and how resolving them leads to personal growth."
+            ]
+          },
+          {
+            "key": "plot_structure_sequence",
+            "name": "Plot Structure and Sequence",
+            "short_description": "Understanding how plot events are structured and unfold, including cause-and-effect relationships.",
+            "example_tasks": [
+              "Identify the exposition, rising action, climax, falling action, and resolution in a short story.",
+              "Create a plot diagram showing the major events and turning points in a novel chapter.",
+              "Explain how one event in the story directly causes another event later in the plot.",
+              "Analyze how the author builds suspense through the sequence and pacing of plot events.",
+              "Compare the chronological order of events with the order in which the author presents them (flashbacks, etc.)."
+            ]
+          },
+          {
+            "key": "setting_influence_analysis",
+            "name": "Setting and Its Influence",
+            "short_description": "Examining how time and place affect characters, mood, and plot development.",
+            "example_tasks": [
+              "Explain how the historical time period of the story affects the characters' options and decisions.",
+              "Analyze how the physical setting (weather, location, environment) contributes to the story's mood.",
+              "Describe how the story would be different if it were set in a different time or place.",
+              "Identify how the setting creates obstacles or opportunities for the main character.",
+              "Analyze how changes in setting throughout the story reflect changes in the character or plot."
+            ]
+          },
+          {
+            "key": "plot_episodes_interaction",
+            "name": "How Plot Episodes Build on Each Other",
+            "short_description": "Understanding how individual scenes and episodes connect to create a cohesive narrative.",
+            "example_tasks": [
+              "Explain how the opening scene establishes expectations that are later fulfilled or subverted.",
+              "Trace how a minor event in an early chapter becomes significant to the climax of the story.",
+              "Analyze how parallel plot lines in a novel intersect and affect each other.",
+              "Describe how the resolution of one conflict sets up a new conflict in the next section of the text.",
+              "Create a cause-and-effect chain showing how five key events in the story connect to each other."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "reading_literature_craft_structure",
+    "name": "Reading Literature - Craft and Structure",
+    "short_description": "Students analyze the author's choices regarding word usage, text structure, and narrative perspective. They learn how these craft elements shape meaning, style, and reader experience.",
+    "sub_topics": [
+      {
+        "key": "word_choice_impact",
+        "name": "Analyzing Word Choice and Meaning",
+        "short_description": "Examining how specific word choices create meaning, tone, and impact on the reader.",
+        "sub_topics": [
+          {
+            "key": "figurative_meaning",
+            "name": "Figurative and Connotative Meanings",
+            "short_description": "Understanding how words can have meanings beyond their literal definitions, including emotional associations.",
+            "example_tasks": [
+              "Explain the difference between calling a character 'slim' versus 'scrawny' and how each word choice affects the reader's perception.",
+              "Identify examples of figurative language in a poem and explain what they literally mean versus what they suggest.",
+              "Analyze how the connotations of words like 'home' versus 'house' contribute to the theme in a passage.",
+              "Compare two descriptions of the same sunset and explain how different word choices create different moods.",
+              "Explain how the metaphor in a key sentence reveals something important about a character's feelings."
+            ]
+          },
+          {
+            "key": "technical_meaning",
+            "name": "Technical and Academic Language",
+            "short_description": "Understanding specialized vocabulary and formal language used in literary analysis and specific genres.",
+            "example_tasks": [
+              "Define literary terms such as 'protagonist,' 'foreshadowing,' and 'internal conflict' and identify examples in a text.",
+              "Explain the technical meaning of 'irony' and identify whether an example from a story is situational, dramatic, or verbal irony.",
+              "Use academic language to describe the narrative structure of a text (linear, non-linear, frame story, etc.).",
+              "Identify and explain genre-specific vocabulary in a science fiction story (dystopia, utopia, parallel universe, etc.).",
+              "Write an analysis using literary terminology to discuss how an author creates suspense."
+            ]
+          },
+          {
+            "key": "tone_and_word_choice",
+            "name": "Tone and Word Choice Connection",
+            "short_description": "Analyzing how an author's word choices create and reinforce the tone of a passage or entire work.",
+            "example_tasks": [
+              "Identify words and phrases that create a somber tone in a descriptive passage.",
+              "Compare how word choice differs in two passages with different tones (humorous vs. serious) from the same story.",
+              "Analyze how the author's word choice shifts when describing the setting before and after a tragic event.",
+              "Explain how specific adjectives and verbs contribute to an optimistic tone in a character's monologue.",
+              "Rewrite a paragraph using different word choices to change the tone from suspicious to trusting."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "text_structure_analysis",
+        "name": "Analyzing Text Structure",
+        "short_description": "Understanding how authors organize texts and how structural choices affect meaning and emphasis.",
+        "sub_topics": [
+          {
+            "key": "overall_text_structure",
+            "name": "Overall Structure of Literary Texts",
+            "short_description": "Recognizing different organizational patterns in literature and their purposes.",
+            "example_tasks": [
+              "Identify whether a story follows a chronological structure or uses flashbacks, and explain why the author made this choice.",
+              "Analyze how a novel is divided into parts or chapters and what this structure emphasizes.",
+              "Compare how a poem is structured (stanzas, line breaks, refrain) and how this affects the reading experience.",
+              "Explain how the circular structure of a story (ending where it began) reinforces the theme.",
+              "Diagram the structure of a story told from multiple perspectives and explain how this affects understanding."
+            ]
+          },
+          {
+            "key": "structural_elements_contribution",
+            "name": "How Structural Elements Contribute to Meaning",
+            "short_description": "Analyzing how specific structural choices like scene breaks, chapter divisions, and stanza organization develop ideas.",
+            "example_tasks": [
+              "Explain why the author chose to end a chapter at a moment of suspense and how this affects the reader.",
+              "Analyze how the division between acts in a play corresponds to major turning points in the plot.",
+              "Describe how the repetition of a line or stanza in a poem emphasizes a particular theme or emotion.",
+              "Examine how alternating between past and present scenes in a story helps develop characterization.",
+              "Explain how the short, fragmented structure of a particular chapter reflects the character's emotional state."
+            ]
+          },
+          {
+            "key": "sentence_structure_analysis",
+            "name": "Sentence Structure and Effect",
+            "short_description": "Understanding how sentence length, complexity, and patterns affect pacing and emphasis.",
+            "example_tasks": [
+              "Analyze how the use of short, choppy sentences creates tension during an action scene.",
+              "Explain how a long, flowing sentence with multiple clauses mirrors the peaceful mood being described.",
+              "Identify a passage where sentence structure changes dramatically and explain the effect on the reader.",
+              "Compare complex sentences in a formal speech with simple sentences in casual dialogue and explain the purpose.",
+              "Analyze how the repetition of sentence structure (parallel structure) emphasizes a character's conviction."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "point_of_view_perspective",
+        "name": "Point of View and Perspective",
+        "short_description": "Students analyze how narrator choice and perspective shape the reader's understanding and experience of the story.",
+        "sub_topics": [
+          {
+            "key": "identifying_point_of_view",
+            "name": "Identifying Narrative Point of View",
+            "short_description": "Recognizing first-person, third-person limited, third-person omniscient, and other narrative perspectives.",
+            "example_tasks": [
+              "Identify whether a story is told in first person, third person limited, or third person omniscient and cite evidence.",
+              "Explain the difference between third person limited and third person omniscient using examples from two different texts.",
+              "Determine whose perspective the reader experiences in each chapter of a novel with multiple narrators.",
+              "Identify shifts in point of view within a text and explain why the author made these shifts.",
+              "Recognize an unreliable narrator and explain what clues suggest the narrator's perspective may not be trustworthy."
+            ]
+          },
+          {
+            "key": "pov_effect_on_reader",
+            "name": "How Point of View Affects the Reader",
+            "short_description": "Analyzing how narrative perspective influences what information readers receive and how they respond emotionally.",
+            "example_tasks": [
+              "Explain how first-person narration creates intimacy between the reader and the protagonist.",
+              "Analyze what information the reader knows that the characters don't know due to third-person omniscient narration.",
+              "Describe how limited third-person narration creates suspense by restricting what the reader can know.",
+              "Compare how the same event would feel different if told from a different character's perspective.",
+              "Explain how a child narrator's limited understanding affects how the reader interprets events."
+            ]
+          },
+          {
+            "key": "contrasting_povs",
+            "name": "Contrasting Points of View",
+            "short_description": "Examining how different characters' perspectives on the same events reveal conflicting interpretations and biases.",
+            "example_tasks": [
+              "Compare how two characters describe the same event differently based on their backgrounds and motivations.",
+              "Analyze a novel told from multiple perspectives and explain how each narrator's viewpoint reveals different aspects of the truth.",
+              "Explain how a minor character's perspective challenges the protagonist's interpretation of events.",
+              "Contrast the narrator's perspective with that of other characters to identify bias or misunderstanding.",
+              "Rewrite a scene from a different character's point of view and explain how this changes the meaning."
+            ]
+          },
+          {
+            "key": "pov_suspense_irony",
+            "name": "Point of View in Creating Suspense and Irony",
+            "short_description": "Understanding how authors manipulate perspective to create dramatic irony, suspense, and surprise.",
+            "example_tasks": [
+              "Identify an example of dramatic irony where the reader knows something the character doesn't, and explain its effect.",
+              "Analyze how limiting the point of view to one character creates suspense about what other characters are planning.",
+              "Explain how an unreliable narrator creates surprise when the truth is revealed.",
+              "Describe how the author uses shifting perspectives to gradually reveal a mystery or secret.",
+              "Analyze how the omniscient narrator builds tension by revealing characters' hidden thoughts and intentions."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "reading_literature_integration_knowledge",
+    "name": "Reading Literature - Integration of Knowledge and Ideas",
+    "short_description": "Students compare and contrast texts, analyze how different media treat the same subject, and make connections across literary works. They develop skills in synthesizing information from multiple sources and formats.",
+    "sub_topics": [
+      {
+        "key": "comparing_texts",
+        "name": "Comparing and Contrasting Texts",
+        "short_description": "Analyzing similarities and differences between multiple literary works in terms of themes, approaches, and techniques.",
+        "sub_topics": [
+          {
+            "key": "comparing_similar_themes",
+            "name": "Comparing Texts with Similar Themes",
+            "short_description": "Examining how different authors approach similar themes or topics in their works.",
+            "example_tasks": [
+              "Compare how two different poems explore the theme of loss and identify similarities and differences in their approaches.",
+              "Analyze how two short stories about coming of age use different settings to develop similar themes.",
+              "Compare the portrayal of courage in a novel and a play, explaining how genre affects the presentation.",
+              "Contrast how two authors from different time periods treat the theme of social justice.",
+              "Create a Venn diagram comparing themes, characters, and conflicts in two stories with similar subject matter."
+            ]
+          },
+          {
+            "key": "comparing_fiction_historical_accounts",
+            "name": "Comparing Fictional and Historical Accounts",
+            "short_description": "Analyzing how fictional portrayals differ from or reflect historical events and figures.",
+            "example_tasks": [
+              "Compare a historical fiction novel set during World War II with a non-fiction account of the same period.",
+              "Analyze what elements a biographical novel adds to or changes from the actual historical figure's life.",
+              "Explain how a fictional story captures the emotional reality of a historical event even if specific details differ.",
+              "Compare a folktale's version of a historical figure with documented historical facts about that person.",
+              "Evaluate how accurately a historical novel portrays the social customs and attitudes of its time period."
+            ]
+          },
+          {
+            "key": "comparing_different_genres",
+            "name": "Comparing Texts from Different Genres",
+            "short_description": "Understanding how genre conventions affect how stories are told and themes are developed.",
+            "example_tasks": [
+              "Compare how a legend and a realistic short story each develop a hero character differently.",
+              "Analyze the differences in how a novel and a poem can tell a story, focusing on structure and language.",
+              "Contrast how magical realism and straight realism treat the boundary between the ordinary and extraordinary.",
+              "Compare a drama and a short story on the same topic, explaining how staging vs. narration affects the reader's experience.",
+              "Explain how genre expectations influence the resolution of conflicts in a mystery versus a literary fiction story."
+            ]
+          },
+          {
+            "key": "comparing_modern_traditional",
+            "name": "Comparing Modern and Traditional Works",
+            "short_description": "Analyzing how contemporary works draw from, revise, or respond to traditional stories and classics.",
+            "example_tasks": [
+              "Compare a modern retelling of a Greek myth with the original, identifying what has been updated and why.",
+              "Analyze how a contemporary young adult novel references or reimagines a classic fairy tale.",
+              "Contrast the values and perspectives in a 19th-century novel with a modern work addressing similar issues.",
+              "Explain how a recent work challenges or reinforces the themes of a traditional story it references.",
+              "Compare the language, structure, and themes of a Shakespearean sonnet with a contemporary poem on love."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "analyzing_media_formats",
+        "name": "Analyzing Different Media and Formats",
+        "short_description": "Examining how various media (print, audio, visual, digital) present literary content differently.",
+        "sub_topics": [
+          {
+            "key": "text_to_film_comparison",
+            "name": "Comparing Written Texts to Film Adaptations",
+            "short_description": "Analyzing what is gained and lost when translating literature to film.",
+            "example_tasks": [
+              "Compare a scene from a novel with its film adaptation, explaining what details were added, omitted, or changed.",
+              "Analyze how a film director's visual choices interpret or alter the mood described in the written text.",
+              "Explain how casting choices in a film adaptation affect the portrayal of characters from the original text.",
+              "Compare the pacing of a novel's plot with the film version and explain reasons for any differences.",
+              "Evaluate whether a film adaptation successfully captures the theme of the original literary work."
+            ]
+          },
+          {
+            "key": "text_to_audio_comparison",
+            "name": "Comparing Written Texts to Audio Productions",
+            "short_description": "Understanding how audio elements like voice, music, and sound effects enhance or change the experience of a text.",
+            "example_tasks": [
+              "Compare reading a poem silently with hearing it performed aloud, noting differences in emphasis and meaning.",
+              "Analyze how a narrator's voice in an audiobook affects the interpretation of a character's personality.",
+              "Explain how music and sound effects in a radio drama create mood that the written play only suggests.",
+              "Compare the experience of reading dialogue in a story versus hearing it performed by voice actors.",
+              "Evaluate how the pacing and pauses in an audio recording affect the listener's understanding of a poem."
+            ]
+          },
+          {
+            "key": "multimedia_text_analysis",
+            "name": "Analyzing Multimedia and Graphic Texts",
+            "short_description": "Understanding how images, graphics, and multimedia elements combine with text to create meaning.",
+            "example_tasks": [
+              "Analyze how illustrations in a graphic novel contribute to characterization and mood beyond what the text alone provides.",
+              "Compare a traditional short story with a multimodal digital story that includes images, sound, and interactive elements.",
+              "Explain how the layout and visual design of a picture book affects the pacing and emotional impact of the story.",
+              "Evaluate how photographs or artwork included with a poem enhance or change its meaning.",
+              "Analyze how a website or digital presentation of a story uses hyperlinks and multimedia to create a non-linear reading experience."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "analyzing_arguments_in_fiction",
+        "name": "Analyzing Arguments and Claims in Literature",
+        "short_description": "Identifying and evaluating themes, messages, and implicit arguments within literary texts.",
+        "sub_topics": [
+          {
+            "key": "identifying_authors_message",
+            "name": "Identifying the Author's Message or Argument",
+            "short_description": "Recognizing the implicit claims or arguments an author makes through literary techniques.",
+            "example_tasks": [
+              "Identify the social commentary an author is making through the portrayal of class differences in a novel.",
+              "Explain what argument about human nature a story makes through its characters' choices and consequences.",
+              "Analyze what message about family relationships the author conveys through the resolution of the conflict.",
+              "Determine what the author suggests about the relationship between individuals and society in a dystopian story.",
+              "Identify the author's implicit argument about courage or morality based on which characters are rewarded or punished."
+            ]
+          },
+          {
+            "key": "evaluating_thematic_claims",
+            "name": "Evaluating Thematic Claims",
+            "short_description": "Assessing whether the text effectively supports its themes and messages through evidence and development.",
+            "example_tasks": [
+              "Evaluate whether a story's resolution effectively reinforces or contradicts its apparent theme.",
+              "Analyze whether the characterization provides sufficient evidence for the message about human behavior.",
+              "Assess whether the ending of a novel supports or undermines the moral lesson implied throughout the story.",
+              "Evaluate how convincingly a text argues for a particular value or perspective through its characters' experiences.",
+              "Determine whether symbolic elements consistently support the author's thematic claims throughout the work."
+            ]
+          },
+          {
+            "key": "recognizing_cultural_values",
+            "name": "Recognizing Cultural and Historical Values",
+            "short_description": "Identifying the cultural assumptions, values, and historical perspectives reflected in literary works.",
+            "example_tasks": [
+              "Identify the cultural values about gender roles reflected in a historical novel's portrayal of male and female characters.",
+              "Analyze how a text from a particular time period reflects the social attitudes of that era.",
+              "Explain what a folktale reveals about the values and beliefs of the culture that created it.",
+              "Compare the assumptions about childhood in a 19th-century text with contemporary perspectives.",
+              "Identify instances where an author challenges or reinforces the dominant cultural values of their time."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "reading_informational_key_ideas",
+    "name": "Reading Informational Text - Key Ideas and Details",
+    "short_description": "Students analyze non-fiction texts to identify main ideas, supporting details, and relationships between ideas. They learn to read critically and comprehend complex informational content across various formats.",
+    "sub_topics": [
+      {
+        "key": "informational_text_evidence",
+        "name": "Citing Evidence in Informational Text",
+        "short_description": "Using textual evidence to support analysis of what the text explicitly states and what can be inferred.",
+        "sub_topics": [
+          {
+            "key": "explicit_info_identification",
+            "name": "Identifying Explicit Information",
+            "short_description": "Locating and citing specific facts, data, and statements directly stated in informational texts.",
+            "example_tasks": [
+              "Cite three specific facts from an article about climate change that support the claim that temperatures are rising.",
+              "Identify the main reasons an author gives for a particular historical event in a textbook chapter.",
+              "Quote the exact statistics from a report that support a conclusion about population growth.",
+              "Find and cite the definition of a key term as it is explicitly stated in a science article.",
+              "Locate specific examples the author provides to illustrate a complex concept in an informational text."
+            ]
+          },
+          {
+            "key": "inferring_from_informational_text",
+            "name": "Drawing Inferences from Informational Text",
+            "short_description": "Using evidence and reasoning to reach conclusions not explicitly stated in the text.",
+            "example_tasks": [
+              "Based on data presented in a chart about renewable energy, what can you infer about future energy trends?",
+              "Infer the author's attitude toward the subject based on word choice and emphasis in a biographical article.",
+              "What can you conclude about the significance of a scientific discovery based on how it is described?",
+              "Draw an inference about the relationship between two historical events using information from separate sections of the text.",
+              "Based on the evidence provided about animal behavior, what can you infer about the species' adaptation to its environment?"
+            ]
+          },
+          {
+            "key": "supporting_analysis_with_evidence",
+            "name": "Supporting Analysis with Strong Evidence",
+            "short_description": "Building interpretations and conclusions with multiple pieces of relevant, well-explained evidence.",
+            "example_tasks": [
+              "Write an analytical paragraph about the causes of a historical event, using at least three pieces of evidence from the text.",
+              "Support the claim that an invention was revolutionary by citing specific impacts described in the article.",
+              "Develop an analysis of how an ecosystem functions using evidence from different sections of the informational text.",
+              "Explain why a particular policy was effective or ineffective using statistical and qualitative evidence from a report.",
+              "Build an argument about the significance of a biographical subject using facts about their accomplishments and influence."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "central_ideas_summary",
+        "name": "Determining Central Ideas and Summaries",
+        "short_description": "Identifying main ideas and creating accurate, objective summaries of informational texts.",
+        "sub_topics": [
+          {
+            "key": "identifying_central_ideas",
+            "name": "Identifying Central Ideas",
+            "short_description": "Determining the most important ideas and concepts in informational texts.",
+            "example_tasks": [
+              "Identify the central idea of each section in a multi-part article about space exploration.",
+              "Determine the main point the author is making in a persuasive essay about environmental protection.",
+              "State the central idea of a biographical text and explain how it differs from supporting details.",
+              "Identify the overarching concept that connects multiple topics discussed in a chapter about ecosystems.",
+              "Determine which sentence in a paragraph best expresses the central idea of that paragraph."
+            ]
+          },
+          {
+            "key": "analyzing_idea_development",
+            "name": "Analyzing How Ideas Are Developed",
+            "short_description": "Tracing how authors introduce, support, and elaborate on central ideas throughout a text.",
+            "example_tasks": [
+              "Trace how the author develops the central idea about recycling from the introduction through the conclusion.",
+              "Analyze how facts, examples, and expert quotations work together to support the main point in an article.",
+              "Explain how the author uses a series of historical examples to build up to the central claim.",
+              "Describe how headings and subheadings organize the development of the central idea in an informational text.",
+              "Analyze how the author refines and narrows the central idea as the text progresses from general to specific."
+            ]
+          },
+          {
+            "key": "objective_summarizing_informational",
+            "name": "Creating Objective Summaries",
+            "short_description": "Summarizing informational texts accurately without opinions or irrelevant details.",
+            "example_tasks": [
+              "Write a three-sentence objective summary of a five-paragraph article about renewable energy.",
+              "Summarize the key findings of a scientific report without including your opinion about their importance.",
+              "Create a brief summary of a historical event that includes causes, key developments, and outcomes.",
+              "Summarize a biographical article by focusing on the subject's major accomplishments and contributions.",
+              "Write an objective summary that captures the central ideas of each section in a multi-part informational text."
+            ]
+          },
+          {
+            "key": "distinguishing_relevant_details",
+            "name": "Distinguishing Relevant from Irrelevant Details",
+            "short_description": "Determining which details support central ideas and which are tangential or less important.",
+            "example_tasks": [
+              "Identify which details in a passage directly support the central idea and which are interesting but not essential.",
+              "Explain why certain facts in an article are examples or evidence rather than main ideas.",
+              "Create two lists: one with supporting details relevant to the central idea and one with less relevant information.",
+              "Evaluate whether a particular anecdote in an informational text strengthens the main argument or distracts from it.",
+              "Determine which paragraphs in a longer text could be removed without losing the central message."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "individuals_events_ideas_interaction",
+        "name": "Analyzing Relationships Among Ideas, Events, and Individuals",
+        "short_description": "Understanding how people, events, and concepts interact and influence each other in informational texts.",
+        "sub_topics": [
+          {
+            "key": "cause_effect_relationships",
+            "name": "Cause and Effect Relationships",
+            "short_description": "Identifying and analyzing causal relationships between events, actions, and outcomes.",
+            "example_tasks": [
+              "Create a cause-and-effect chain showing how one historical event led to another in a textbook chapter.",
+              "Identify the multiple causes of a scientific phenomenon explained in an article.",
+              "Analyze the short-term and long-term effects of a historical figure's actions described in a biography.",
+              "Explain how environmental factors cause particular adaptations in a species as described in an informational text.",
+              "Trace the chain of events that led to a technological innovation based on information in an article."
+            ]
+          },
+          {
+            "key": "sequence_chronology",
+            "name": "Sequence and Chronology",
+            "short_description": "Understanding the order and timing of events and how sequence affects outcomes.",
+            "example_tasks": [
+              "Create a timeline of the major events described in a historical article, including dates and significance.",
+              "Explain how the sequence of scientific discoveries described in the text built upon each other.",
+              "Analyze how the order of events in a process described in an informational text is essential to the outcome.",
+              "Compare the chronological order of events with the order in which the author presents them and explain why.",
+              "Describe the steps in a procedure or process in correct sequential order based on the informational text."
+            ]
+          },
+          {
+            "key": "comparison_relationships",
+            "name": "Comparison and Contrast Relationships",
+            "short_description": "Identifying similarities and differences among individuals, events, or concepts in informational texts.",
+            "example_tasks": [
+              "Compare and contrast two historical figures' approaches to solving a similar problem.",
+              "Create a comparison chart showing similarities and differences between two ecosystems described in a science text.",
+              "Analyze how two different inventors approached the same challenge in different ways.",
+              "Compare the characteristics of two time periods or cultures described in a social studies text.",
+              "Explain the advantages and disadvantages of two different solutions to a problem presented in an article."
+            ]
+          },
+          {
+            "key": "problem_solution_relationships",
+            "name": "Problem-Solution Relationships",
+            "short_description": "Identifying problems and their solutions, and evaluating their effectiveness.",
+            "example_tasks": [
+              "Identify the problem presented in an article and the solutions proposed, including their potential effectiveness.",
+              "Analyze how a historical figure addressed a specific challenge and what resulted from their solution.",
+              "Explain how scientists solved a research problem through the process described in an informational text.",
+              "Compare multiple solutions to the same problem presented in an article and evaluate their pros and cons.",
+              "Trace how one solution to a problem created new challenges that required additional solutions."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "reading_informational_craft_structure",
+    "name": "Reading Informational Text - Craft and Structure",
+    "short_description": "Students analyze how authors of informational texts make choices about vocabulary, structure, and purpose to convey their messages effectively. They learn to recognize and evaluate these rhetorical strategies.",
+    "sub_topics": [
+      {
+        "key": "vocabulary_in_context",
+        "name": "Determining Word Meanings in Context",
+        "short_description": "Using context clues and analyzing word parts to understand vocabulary in informational texts.",
+        "sub_topics": [
+          {
+            "key": "context_clues_strategies",
+            "name": "Using Context Clues",
+            "short_description": "Employing surrounding text to determine the meaning of unfamiliar words and phrases.",
+            "example_tasks": [
+              "Use context clues to determine the meaning of a technical term in a science article without using a dictionary.",
+              "Identify which type of context clue (definition, example, contrast, inference) helps you understand an unfamiliar word.",
+              "Determine the meaning of an academic vocabulary word based on how it is used in several sentences throughout the text.",
+              "Explain how the surrounding paragraph helps clarify the meaning of a specialized term in a historical document.",
+              "Use both context clues and knowledge of the subject to figure out what a domain-specific word means."
+            ]
+          },
+          {
+            "key": "word_parts_analysis",
+            "name": "Analyzing Word Parts (Affixes and Roots)",
+            "short_description": "Using knowledge of prefixes, suffixes, and root words to determine meanings of complex words.",
+            "example_tasks": [
+              "Identify the prefix, root, and suffix in the word 'biodegradable' and explain how each part contributes to the meaning.",
+              "Use your knowledge of the Latin root 'port' (to carry) to determine the meaning of 'transportation' and 'export' in a text.",
+              "Explain how the prefix 'micro-' helps you understand scientific terms like 'microorganism' and 'microscope.'",
+              "Determine the meaning of 'uncharacteristic' by analyzing its parts: un- (prefix), character (root), -istic (suffix).",
+              "Identify three words in an informational text that share the same root and explain their related meanings."
+            ]
+          },
+          {
+            "key": "technical_domain_vocabulary",
+            "name": "Understanding Domain-Specific Vocabulary",
+            "short_description": "Learning and using specialized vocabulary specific to different academic disciplines and subjects.",
+            "example_tasks": [
+              "Define three technical terms used in a biology article (e.g., 'photosynthesis,' 'chlorophyll,' 'glucose').",
+              "Explain the specific meaning of 'revolution' when used in a historical context versus an astronomical context.",
+              "Identify mathematical vocabulary in a problem-solving text and explain each term's precise meaning.",
+              "Learn the definitions of legal or government terms (e.g., 'amendment,' 'ratify,' 'constitution') used in a civics article.",
+              "Create a glossary of important domain-specific vocabulary for a unit on earth science or American history."
+            ]
+          },
+          {
+            "key": "connotative_meaning_informational",
+            "name": "Recognizing Connotative Meanings",
+            "short_description": "Understanding how word choice in informational texts reflects the author's perspective or bias.",
+            "example_tasks": [
+              "Compare the connotations of 'determined' versus 'stubborn' when describing a historical figure and explain the difference.",
+              "Analyze how calling a group 'freedom fighters' versus 'rebels' reveals the author's perspective.",
+              "Identify words with positive or negative connotations in a persuasive article and explain their effect on the reader.",
+              "Explain how changing one word in a sentence (e.g., 'used' to 'exploited') changes the implied judgment.",
+              "Compare two articles on the same topic and analyze how different word choices reveal different attitudes toward the subject."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "informational_text_structure",
+        "name": "Analyzing Text Structure",
+        "short_description": "Understanding how informational texts are organized and how structure supports the author's purpose.",
+        "sub_topics": [
+          {
+            "key": "organizational_patterns",
+            "name": "Identifying Organizational Patterns",
+            "short_description": "Recognizing common structures like chronological order, comparison, cause-effect, problem-solution, and description.",
+            "example_tasks": [
+              "Identify whether an article uses chronological order, cause-effect, comparison, or problem-solution structure.",
+              "Explain how the author organizes information about the water cycle (process/sequence structure).",
+              "Recognize that an article comparing renewable and non-renewable energy uses a comparison/contrast structure.",
+              "Identify the problem-solution structure in an article about addressing climate change.",
+              "Analyze how a biography combines chronological structure with thematic organization."
+            ]
+          },
+          {
+            "key": "structure_supporting_ideas",
+            "name": "How Structure Develops Ideas",
+            "short_description": "Analyzing how organizational choices help convey information and support the author's claims.",
+            "example_tasks": [
+              "Explain how the cause-effect structure in an article helps readers understand why an event happened.",
+              "Analyze how comparison-contrast structure helps readers understand similarities and differences between two concepts.",
+              "Describe how chronological organization helps readers follow the development of a historical movement.",
+              "Explain why an author chose problem-solution structure to present information about an environmental issue.",
+              "Analyze how descriptive structure with spatial organization helps readers visualize a geographical region."
+            ]
+          },
+          {
+            "key": "text_features_analysis",
+            "name": "Analyzing Text Features",
+            "short_description": "Understanding how headings, graphics, captions, and other features organize information and aid comprehension.",
+            "example_tasks": [
+              "Explain how headings and subheadings help organize the main ideas in a textbook chapter.",
+              "Analyze how a diagram or chart clarifies information that would be difficult to understand from text alone.",
+              "Describe how captions provide essential context for photographs in a historical article.",
+              "Explain how bold or italicized words draw attention to key vocabulary in an informational text.",
+              "Analyze how sidebars, text boxes, or pull quotes provide additional or supporting information."
+            ]
+          },
+          {
+            "key": "paragraph_sentence_structure",
+            "name": "Analyzing Paragraph and Sentence Structure",
+            "short_description": "Understanding how ideas are developed within and across paragraphs through topic sentences, transitions, and support.",
+            "example_tasks": [
+              "Identify the topic sentence in a paragraph and explain how the supporting sentences develop that main idea.",
+              "Analyze how transition words and phrases connect ideas between paragraphs in an article.",
+              "Explain how the author uses enumeration (first, second, third) to organize points within a paragraph.",
+              "Describe how the concluding sentence in a paragraph reinforces or extends the topic sentence.",
+              "Analyze how varying sentence lengths and structures affects the pacing and emphasis in an informational text."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "authors_purpose_point_of_view",
+        "name": "Determining Author's Purpose and Point of View",
+        "short_description": "Analyzing why authors write texts and how their perspectives and purposes shape content and presentation.",
+        "sub_topics": [
+          {
+            "key": "identifying_authors_purpose",
+            "name": "Identifying Author's Purpose",
+            "short_description": "Determining whether the author's primary purpose is to inform, persuade, entertain, or explain.",
+            "example_tasks": [
+              "Determine whether an article's primary purpose is to inform readers about facts or to persuade them to take action.",
+              "Identify multiple purposes in a text (e.g., to inform about history and to persuade readers about its relevance today).",
+              "Explain how you know the author's purpose based on the content, tone, and structure of the text.",
+              "Compare the purposes of a scientific report (to inform) and an editorial about science policy (to persuade).",
+              "Analyze how the author's purpose affects the type of evidence and examples included in the text."
+            ]
+          },
+          {
+            "key": "analyzing_authors_point_of_view",
+            "name": "Analyzing Author's Point of View and Perspective",
+            "short_description": "Identifying the author's position on a topic and understanding how it influences the presentation.",
+            "example_tasks": [
+              "Identify the author's point of view on a controversial issue and cite evidence from the text that reveals this perspective.",
+              "Analyze how the author's professional background or personal experience influences their perspective on the topic.",
+              "Compare how two authors with different perspectives present information about the same historical event.",
+              "Explain how the author's cultural or historical context affects their point of view in a primary source document.",
+              "Identify instances where the author's bias or assumptions are revealed through word choice or selection of evidence."
+            ]
+          },
+          {
+            "key": "distinguishing_own_views",
+            "name": "Distinguishing Own View from Author's",
+            "short_description": "Recognizing the difference between the author's perspective and the reader's own opinions or interpretations.",
+            "example_tasks": [
+              "Identify a point where you disagree with the author's interpretation of events and explain your different perspective.",
+              "Distinguish between facts presented in the text and the author's opinions or interpretations of those facts.",
+              "Explain how your background knowledge might lead you to interpret information differently than the author does.",
+              "Analyze whether you find the author's arguments persuasive and why, supporting your evaluation with reasons.",
+              "Compare your initial opinion on a topic with the author's viewpoint and explain whether the text changed your thinking."
+            ]
+          },
+          {
+            "key": "purpose_audience_relationship",
+            "name": "How Purpose and Audience Shape the Text",
+            "short_description": "Understanding how authors adapt content, style, and organization based on their intended audience and purpose.",
+            "example_tasks": [
+              "Analyze how a science article written for young students differs from one written for experts in the field.",
+              "Explain how the author's persuasive purpose affects the selection and presentation of evidence.",
+              "Compare how the same information might be presented differently in a textbook versus a news article.",
+              "Identify language and examples the author chose to appeal to a specific intended audience.",
+              "Evaluate whether the author's approach is effective for their stated purpose and intended audience."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "reading_informational_integration_knowledge",
+    "name": "Reading Informational Text - Integration of Knowledge and Ideas",
+    "short_description": "Students evaluate arguments, assess evidence quality, and compare how different texts and media present information. They develop critical thinking skills to analyze credibility, logic, and effectiveness of informational content.",
+    "sub_topics": [
+      {
+        "key": "evaluating_arguments_claims",
+        "name": "Evaluating Arguments and Claims",
+        "short_description": "Analyzing the quality of reasoning, evidence, and rhetoric in persuasive and argumentative texts.",
+        "sub_topics": [
+          {
+            "key": "identifying_claims_counterclaims",
+            "name": "Identifying Claims and Counterclaims",
+            "short_description": "Recognizing the main argument and alternative perspectives presented in a text.",
+            "example_tasks": [
+              "Identify the central claim in an argumentative essay about school uniforms and state it in your own words.",
+              "Locate where the author acknowledges and responds to a counterclaim in a persuasive article.",
+              "Distinguish between the author's main claim and the supporting claims that build toward it.",
+              "Identify what opposing viewpoint the author is arguing against, even if not explicitly stated.",
+              "Create a two-column chart listing the author's claims in one column and counterclaims addressed in the other."
+            ]
+          },
+          {
+            "key": "analyzing_supporting_evidence",
+            "name": "Analyzing Supporting Evidence",
+            "short_description": "Evaluating the types, quality, and relevance of evidence used to support claims.",
+            "example_tasks": [
+              "Identify three different types of evidence (facts, statistics, expert opinions, examples) used to support the claim.",
+              "Evaluate whether the statistical evidence provided is recent and relevant enough to support the argument.",
+              "Analyze whether the examples given are representative or if they are isolated cases.",
+              "Assess the credibility of expert opinions cited by examining the experts' qualifications.",
+              "Determine whether the author provides sufficient evidence for each claim or if some claims lack adequate support."
+            ]
+          },
+          {
+            "key": "evaluating_reasoning_logic",
+            "name": "Evaluating Reasoning and Logic",
+            "short_description": "Assessing whether the connections between claims and evidence are logical and sound.",
+            "example_tasks": [
+              "Identify whether the author's reasoning follows logically from the evidence or if there are logical gaps.",
+              "Recognize a logical fallacy (such as hasty generalization or false cause) in an argument.",
+              "Evaluate whether the author's conclusion is warranted based on the evidence and reasoning provided.",
+              "Analyze whether the author makes unwarranted assumptions that weaken the argument.",
+              "Trace the line of reasoning from initial claim through supporting points to conclusion and identify any weak links."
+            ]
+          },
+          {
+            "key": "assessing_irrelevant_evidence",
+            "name": "Identifying Irrelevant or Insufficient Evidence",
+            "short_description": "Recognizing when evidence doesn't support claims or when more evidence is needed.",
+            "example_tasks": [
+              "Identify a piece of evidence in the argument that doesn't directly support the claim it's supposed to support.",
+              "Explain why an emotional anecdote, while engaging, doesn't provide sufficient evidence for a factual claim.",
+              "Determine what additional evidence the author would need to make their argument more convincing.",
+              "Analyze whether the evidence addresses the specific claim or if it's related but not directly relevant.",
+              "Identify where the author relies on opinions presented as facts without providing verifiable evidence."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "comparing_informational_texts",
+        "name": "Comparing Multiple Informational Texts",
+        "short_description": "Analyzing how different authors approach the same topic and synthesizing information from multiple sources.",
+        "sub_topics": [
+          {
+            "key": "comparing_treatments_same_topic",
+            "name": "Comparing Different Treatments of the Same Topic",
+            "short_description": "Examining how different texts present similar information with varying emphasis, detail, or perspective.",
+            "example_tasks": [
+              "Compare how two articles about the same historical event emphasize different causes or consequences.",
+              "Analyze why one author includes certain details about a topic while another author omits them.",
+              "Compare the level of detail and technical complexity in two texts about the same scientific concept for different audiences.",
+              "Identify which aspects of a topic each author focuses on and explain what this reveals about their purpose or perspective.",
+              "Create a comparison chart showing what information is unique to each text and what information they share."
+            ]
+          },
+          {
+            "key": "integrating_information_sources",
+            "name": "Integrating Information from Multiple Sources",
+            "short_description": "Combining information from different texts to develop a comprehensive understanding of a topic.",
+            "example_tasks": [
+              "Write a summary of a historical event using information from three different sources, noting where they agree and disagree.",
+              "Synthesize information from a scientific article, a diagram, and a video to explain a complex process.",
+              "Create a timeline of events using information gathered from multiple texts about the same time period.",
+              "Develop a comprehensive answer to a research question by integrating facts and ideas from four different articles.",
+              "Compare information from a primary source document and two secondary sources to build a fuller picture of an event."
+            ]
+          },
+          {
+            "key": "analyzing_conflicting_information",
+            "name": "Analyzing Conflicting Information",
+            "short_description": "Recognizing contradictions between sources and evaluating which information is more reliable.",
+            "example_tasks": [
+              "Identify where two sources provide conflicting information about a historical event and research to determine which is accurate.",
+              "Analyze why two scientific sources might present different conclusions based on the same data.",
+              "Evaluate which of two conflicting accounts seems more credible based on the evidence and source reliability.",
+              "Explain possible reasons for discrepancies between sources (different time periods, perspectives, purposes).",
+              "Determine how to handle conflicting information when synthesizing research: which source to trust and why."
+            ]
+          },
+          {
+            "key": "comparing_primary_secondary_sources",
+            "name": "Comparing Primary and Secondary Sources",
+            "short_description": "Understanding the differences between firsthand accounts and interpretive texts on the same subject.",
+            "example_tasks": [
+              "Compare a historical figure's own writing (primary source) with a biography about them (secondary source).",
+              "Analyze what a primary source letter or diary reveals that a history textbook account might not include.",
+              "Explain how a secondary source interprets or analyzes evidence from primary sources.",
+              "Identify the advantages and limitations of using primary sources versus secondary sources for research.",
+              "Compare the perspective and potential bias in a firsthand account versus a historian's analysis of the same event."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "analyzing_visual_multimedia_elements",
+        "name": "Analyzing Visual and Multimedia Elements",
+        "short_description": "Evaluating how non-text elements contribute to understanding and analyzing informational content across media.",
+        "sub_topics": [
+          {
+            "key": "interpreting_visual_data",
+            "name": "Interpreting Charts, Graphs, and Data Visualizations",
+            "short_description": "Reading and analyzing visual representations of quantitative information.",
+            "example_tasks": [
+              "Analyze a bar graph showing population changes over time and explain the trend it reveals.",
+              "Compare information presented in a pie chart with information in the written text and explain how they complement each other.",
+              "Interpret a line graph showing temperature changes and make predictions based on the trend.",
+              "Evaluate whether a data visualization accurately represents the information or if it is misleading in some way.",
+              "Synthesize information from a table of statistics and the surrounding text to draw a conclusion."
+            ]
+          },
+          {
+            "key": "analyzing_images_illustrations",
+            "name": "Analyzing Images and Illustrations",
+            "short_description": "Understanding how photographs, diagrams, and illustrations support or enhance informational text.",
+            "example_tasks": [
+              "Explain how a diagram of the water cycle clarifies the process described in the text.",
+              "Analyze what additional information a historical photograph provides beyond what the text states.",
+              "Evaluate how effectively an illustration helps readers visualize a complex scientific concept.",
+              "Compare what you learn from a photograph versus the written caption and explanation.",
+              "Analyze how images in an article about a social issue create emotional impact that supports the author's argument."
+            ]
+          },
+          {
+            "key": "evaluating_multimedia_presentations",
+            "name": "Evaluating Multimedia Presentations",
+            "short_description": "Analyzing how audio, video, and interactive elements convey information in digital texts.",
+            "example_tasks": [
+              "Compare information gained from watching a video documentary versus reading an article on the same topic.",
+              "Analyze how sound effects and music in a multimedia presentation affect the viewer's understanding or emotional response.",
+              "Evaluate the effectiveness of an interactive website feature in helping users understand complex information.",
+              "Compare the pacing and emphasis in a video presentation versus a written article on the same subject.",
+              "Assess whether multimedia elements genuinely enhance understanding or primarily serve to entertain."
+            ]
+          },
+          {
+            "key": "analyzing_media_techniques",
+            "name": "Analyzing Media Techniques and Purpose",
+            "short_description": "Understanding how different media use specific techniques to inform, persuade, or influence audiences.",
+            "example_tasks": [
+              "Identify persuasive techniques used in a public service announcement video (emotional appeal, expert testimony, statistics).",
+              "Analyze how camera angles and editing choices in a documentary affect the viewer's perception of the subject.",
+              "Compare how a news website uses layout, images, and headlines to emphasize certain stories over others.",
+              "Evaluate whether an infographic presents information objectively or uses design choices to promote a particular viewpoint.",
+              "Analyze how different media outlets present the same news story and what their choices reveal about their purpose or bias."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "writing_text_types_purposes",
+    "name": "Writing - Text Types and Purposes",
+    "short_description": "Students write arguments, informative/explanatory texts, and narratives, developing each type with appropriate structure, evidence, and techniques. They learn to adapt their writing for different purposes and audiences.",
+    "sub_topics": [
+      {
+        "key": "argumentative_writing",
+        "name": "Writing Arguments",
+        "short_description": "Developing claims and supporting them with logical reasoning and relevant evidence to persuade readers.",
+        "sub_topics": [
+          {
+            "key": "introducing_claims",
+            "name": "Introducing and Establishing Claims",
+            "short_description": "Presenting a clear, arguable position and distinguishing it from opposing claims.",
+            "example_tasks": [
+              "Write an opening paragraph that introduces a clear claim about whether schools should extend the school day.",
+              "Develop a thesis statement that takes a specific, debatable position on an issue related to technology use.",
+              "Introduce your claim while acknowledging that there are different perspectives on the issue.",
+              "Write an introduction that provides context for the issue before stating your position clearly.",
+              "Revise a vague claim to make it more specific, arguable, and clearly stated."
+            ]
+          },
+          {
+            "key": "supporting_claims_evidence",
+            "name": "Supporting Claims with Evidence and Reasoning",
+            "short_description": "Using relevant facts, examples, and expert opinions to build a convincing argument.",
+            "example_tasks": [
+              "Develop three reasons that support your claim, each backed by specific evidence (facts, statistics, examples).",
+              "Write a body paragraph that includes a clear reason, supporting evidence, and explanation of how the evidence supports your claim.",
+              "Use at least two different types of evidence (statistical data and expert opinion) to support one reason in your argument.",
+              "Explain the reasoning that connects your evidence to your claim, making the logical connection clear to readers.",
+              "Select the most relevant and convincing evidence from multiple sources to support your argument."
+            ]
+          },
+          {
+            "key": "addressing_counterclaims",
+            "name": "Addressing Counterclaims and Opposing Views",
+            "short_description": "Acknowledging alternative perspectives and refuting them with evidence and reasoning.",
+            "example_tasks": [
+              "Identify a counterclaim to your argument and explain why your position is stronger.",
+              "Write a paragraph that acknowledges an opposing viewpoint fairly and then refutes it with evidence.",
+              "Address a potential objection to your argument by providing additional evidence or reasoning.",
+              "Anticipate and respond to the strongest argument someone might make against your position.",
+              "Strengthen your argument by showing why the opposing view is based on insufficient evidence or faulty reasoning."
+            ]
+          },
+          {
+            "key": "organizing_argumentative_writing",
+            "name": "Organizing Argumentative Writing",
+            "short_description": "Structuring arguments logically with clear relationships among claims, reasons, and evidence.",
+            "example_tasks": [
+              "Create an outline for an argumentative essay that sequences your reasons from least to most convincing.",
+              "Use transition words and phrases (furthermore, however, consequently) to show relationships between ideas.",
+              "Organize your essay so that each body paragraph focuses on one clear reason supporting your claim.",
+              "Write a conclusion that reinforces your claim without simply repeating the introduction.",
+              "Revise the order of paragraphs in your argument to create a more logical and persuasive flow."
+            ]
+          },
+          {
+            "key": "argumentative_style_tone",
+            "name": "Establishing and Maintaining Style and Tone",
+            "short_description": "Using appropriate formal style and objective tone to enhance credibility and persuasiveness.",
+            "example_tasks": [
+              "Revise informal language in your argument to create a more formal, academic tone.",
+              "Maintain an objective tone while arguing for a position you feel strongly about.",
+              "Use precise vocabulary and domain-specific terms appropriate to your topic and audience.",
+              "Avoid emotional language that weakens your credibility and focus on logical appeals.",
+              "Write a conclusion that leaves a strong impression while maintaining a formal, respectful tone."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "informative_explanatory_writing",
+        "name": "Writing Informative/Explanatory Texts",
+        "short_description": "Examining topics and conveying information and ideas clearly through effective selection, organization, and analysis.",
+        "sub_topics": [
+          {
+            "key": "introducing_topics",
+            "name": "Introducing and Previewing Topics",
+            "short_description": "Clearly presenting the topic and organizing ideas to guide readers through the information.",
+            "example_tasks": [
+              "Write an introduction that clearly identifies the topic and previews the main concepts you will explain.",
+              "Create an engaging opening that captures reader interest while introducing your informational topic.",
+              "Develop a thesis statement that identifies the main idea you will explain about your topic.",
+              "Write an introduction that provides necessary background information before introducing specific details.",
+              "Preview the organization of your essay so readers know what to expect in each section."
+            ]
+          },
+          {
+            "key": "developing_topic_with_evidence",
+            "name": "Developing the Topic with Relevant Information",
+            "short_description": "Using facts, definitions, details, quotations, and examples to thoroughly explain the topic.",
+            "example_tasks": [
+              "Write a paragraph that explains a scientific concept using at least three different types of supporting details (facts, examples, definitions).",
+              "Develop an explanation of a historical event using specific dates, names, and factual details.",
+              "Include relevant quotations from experts to support your explanation of a complex topic.",
+              "Use concrete examples to help readers understand an abstract concept or process.",
+              "Select the most relevant information from your research to include, excluding details that don't directly develop the topic."
+            ]
+          },
+          {
+            "key": "organizing_informative_writing",
+            "name": "Organizing Informative/Explanatory Writing",
+            "short_description": "Structuring information clearly using appropriate strategies for the content and purpose.",
+            "example_tasks": [
+              "Organize an explanation of a process using chronological order with clear sequence words.",
+              "Structure an informative essay using categories or classifications to organize related information.",
+              "Use comparison-contrast organization to explain similarities and differences between two concepts.",
+              "Organize information using a cause-and-effect structure to explain why something happens.",
+              "Create clear sections with headings to help readers navigate through complex information."
+            ]
+          },
+          {
+            "key": "transitions_cohesion",
+            "name": "Using Transitions and Ensuring Cohesion",
+            "short_description": "Creating smooth connections between ideas and maintaining clarity throughout the text.",
+            "example_tasks": [
+              "Use transition words and phrases to clarify relationships between paragraphs and sections (for example, in addition, consequently).",
+              "Revise your writing to ensure that each paragraph connects logically to the previous one.",
+              "Use transitional sentences at the end or beginning of paragraphs to create smooth flow between ideas.",
+              "Ensure pronoun references are clear so readers always know what 'it,' 'this,' or 'they' refers to.",
+              "Create coherence by repeating key terms throughout your writing to reinforce main ideas."
+            ]
+          },
+          {
+            "key": "precise_language_vocabulary",
+            "name": "Using Precise Language and Domain-Specific Vocabulary",
+            "short_description": "Selecting accurate, specific words and appropriate terminology to convey information clearly.",
+            "example_tasks": [
+              "Replace vague or general words with more precise vocabulary that conveys exact meaning.",
+              "Use domain-specific terminology correctly when explaining concepts in science, history, or other subjects.",
+              "Define technical terms for your audience when first introducing them in your writing.",
+              "Choose words with appropriate connotations for an informative, objective tone.",
+              "Revise your writing to eliminate redundancy and use the most efficient, precise phrasing."
+            ]
+          },
+          {
+            "key": "concluding_informative_writing",
+            "name": "Writing Effective Conclusions",
+            "short_description": "Providing closure while reinforcing the significance of the information presented.",
+            "example_tasks": [
+              "Write a conclusion that summarizes the main points without simply repeating the introduction.",
+              "End your informative essay with a statement about the significance or implications of the information.",
+              "Conclude by connecting the topic back to a broader context or why readers should care about this information.",
+              "Provide a sense of completeness while leaving the reader with something to think about.",
+              "Avoid introducing new information in the conclusion while still creating a strong ending."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "narrative_writing",
+        "name": "Writing Narratives",
+        "short_description": "Developing real or imagined experiences using effective techniques, descriptive details, and clear event sequences.",
+        "sub_topics": [
+          {
+            "key": "engaging_orienting_reader",
+            "name": "Engaging and Orienting the Reader",
+            "short_description": "Creating effective openings that establish context, introduce characters, and draw readers into the story.",
+            "example_tasks": [
+              "Write an opening paragraph that immediately establishes the setting, introduces the narrator or main character, and hints at a conflict.",
+              "Create an engaging first sentence that captures the reader's attention and makes them want to continue reading.",
+              "Begin your narrative at a strategic point (in medias res, flashback, traditional beginning) and explain your choice.",
+              "Establish the narrative point of view (first person, third person) clearly in your opening.",
+              "Introduce your narrator's or protagonist's voice and personality in the first few sentences."
+            ]
+          },
+          {
+            "key": "narrative_techniques",
+            "name": "Using Narrative Techniques",
+            "short_description": "Employing dialogue, pacing, description, and reflection to develop experiences, events, and characters.",
+            "example_tasks": [
+              "Write a scene that uses dialogue to reveal character traits and advance the plot simultaneously.",
+              "Use descriptive details to show rather than tell about a character's emotional state.",
+              "Vary your pacing by slowing down for important moments and speeding up for less critical events.",
+              "Include a moment of reflection where the narrator or character considers the significance of events.",
+              "Use sensory details (sight, sound, smell, taste, touch) to make a scene vivid and immersive."
+            ]
+          },
+          {
+            "key": "sequencing_events_smoothly",
+            "name": "Sequencing Events and Using Transitions",
+            "short_description": "Organizing events logically and using transitional techniques to guide readers through the narrative.",
+            "example_tasks": [
+              "Create a clear sequence of events that builds toward a climax and resolution.",
+              "Use transition words and phrases to signal shifts in time (later that day, the next morning, years earlier).",
+              "Incorporate a flashback that provides essential background without disrupting the narrative flow.",
+              "Use pacing and event sequencing to build suspense toward a crucial moment in your story.",
+              "Create smooth transitions between scenes or time periods using narrative techniques rather than just stating time changes."
+            ]
+          },
+          {
+            "key": "developing_characters_setting",
+            "name": "Developing Characters and Setting",
+            "short_description": "Creating believable characters and vivid settings through specific details and interactions.",
+            "example_tasks": [
+              "Develop a character through their actions, dialogue, and thoughts rather than just physical description.",
+              "Create a setting that influences the mood and events of your narrative.",
+              "Show how a character changes from the beginning to the end of your narrative through specific details.",
+              "Use setting details that reflect or contrast with the character's emotional state.",
+              "Develop relationships between characters through their interactions and dialogue."
+            ]
+          },
+          {
+            "key": "descriptive_language_sensory_details",
+            "name": "Using Descriptive Language and Sensory Details",
+            "short_description": "Employing precise words and phrases, relevant details, and sensory language to convey experiences.",
+            "example_tasks": [
+              "Write a descriptive paragraph that appeals to at least three different senses.",
+              "Use figurative language (simile, metaphor, personification) to create vivid descriptions.",
+              "Choose specific, concrete nouns and active verbs instead of general or passive language.",
+              "Create atmosphere through descriptive details that engage the reader's senses and emotions.",
+              "Revise vague descriptions by adding precise, sensory details that help readers visualize the scene."
+            ]
+          },
+          {
+            "key": "narrative_conclusion",
+            "name": "Crafting Effective Narrative Conclusions",
+            "short_description": "Providing resolution and reflection that follows from and completes the narrative arc.",
+            "example_tasks": [
+              "Write a conclusion that resolves the main conflict while showing how the character has changed.",
+              "End your narrative with a moment of reflection that reveals the significance of the events.",
+              "Create a satisfying conclusion that feels inevitable yet not completely predictable.",
+              "Use the conclusion to reinforce the theme or main idea without stating it too explicitly.",
+              "Conclude your narrative with an image, action, or line of dialogue that resonates with readers."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "writing_production_distribution",
+    "name": "Writing - Production and Distribution of Writing",
+    "short_description": "Students develop skills in planning, drafting, revising, editing, and publishing writing. They learn to use technology effectively and adapt their writing process for different tasks, purposes, and audiences.",
+    "sub_topics": [
+      {
+        "key": "planning_prewriting",
+        "name": "Planning and Prewriting",
+        "short_description": "Developing ideas and organizing thoughts before drafting through various prewriting strategies.",
+        "sub_topics": [
+          {
+            "key": "brainstorming_strategies",
+            "name": "Using Brainstorming Strategies",
+            "short_description": "Generating ideas through freewriting, listing, clustering, and other prewriting techniques.",
+            "example_tasks": [
+              "Create a cluster diagram to generate and organize ideas for a narrative about a personal experience.",
+              "Brainstorm a list of at least ten potential topics for an argumentative essay, then narrow it to the most promising one.",
+              "Use freewriting for five minutes to explore what you already know about a research topic.",
+              "Create a T-chart listing pros and cons to help you develop an argument on a debatable issue.",
+              "Use questioning techniques (who, what, when, where, why, how) to develop details about your topic."
+            ]
+          },
+          {
+            "key": "outlining_organizing",
+            "name": "Outlining and Organizing Ideas",
+            "short_description": "Creating structures and frameworks to guide drafting and ensure logical organization.",
+            "example_tasks": [
+              "Create a formal outline for an informative essay with main points and supporting details.",
+              "Develop a story map or plot diagram to plan the sequence of events in a narrative.",
+              "Organize your evidence and reasons in an argument outline from weakest to strongest.",
+              "Create a graphic organizer that shows the relationships among ideas you will develop in your writing.",
+              "Develop a working thesis statement and outline that shows how your body paragraphs will support it."
+            ]
+          },
+          {
+            "key": "considering_purpose_audience",
+            "name": "Considering Purpose and Audience",
+            "short_description": "Analyzing the writing task and adapting approach based on intended readers and goals.",
+            "example_tasks": [
+              "Identify your purpose (to inform, persuade, entertain, explain) and list specific strategies you'll use to achieve it.",
+              "Analyze your intended audience and list what they already know versus what you need to explain.",
+              "Determine the appropriate tone and level of formality for your audience and purpose.",
+              "Consider what objections or questions your audience might have and plan how to address them.",
+              "Identify the most convincing types of evidence for your particular audience (statistics, anecdotes, expert opinions)."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "drafting_developing",
+        "name": "Drafting and Developing Writing",
+        "short_description": "Producing initial drafts with focus on developing ideas fully and maintaining appropriate style.",
+        "sub_topics": [
+          {
+            "key": "developing_first_draft",
+            "name": "Creating a Complete First Draft",
+            "short_description": "Writing a full draft focused on getting ideas down rather than perfecting every detail.",
+            "example_tasks": [
+              "Write a complete first draft of your essay, focusing on developing your ideas fully rather than perfect grammar.",
+              "Draft your narrative with attention to sequence and detail, knowing you'll revise later for precision.",
+              "Write through the entire draft without stopping to edit, marking places you want to return to later.",
+              "Develop each paragraph fully in your first draft, ensuring each has a clear main idea and support.",
+              "Use your outline as a guide but remain flexible to develop ideas that emerge during drafting."
+            ]
+          },
+          {
+            "key": "establishing_maintaining_style",
+            "name": "Establishing and Maintaining Style",
+            "short_description": "Developing an appropriate voice and tone that suits the purpose and audience.",
+            "example_tasks": [
+              "Maintain a formal, objective tone throughout an informative essay about a scientific topic.",
+              "Develop a distinctive narrative voice that reflects your character's personality and background.",
+              "Adjust your writing style to match the level of formality appropriate for your audience.",
+              "Use vocabulary and sentence structures that create the desired mood or tone in your narrative.",
+              "Maintain consistency in point of view, verb tense, and tone throughout your draft."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "revising_strengthening_writing",
+        "name": "Revising to Strengthen Writing",
+        "short_description": "Making substantive changes to improve focus, development, organization, style, and coherence.",
+        "sub_topics": [
+          {
+            "key": "revising_content_ideas",
+            "name": "Revising for Content and Ideas",
+            "short_description": "Improving the development and clarity of ideas, adding or deleting content as needed.",
+            "example_tasks": [
+              "Identify paragraphs that need more development and add specific examples, facts, or details to strengthen them.",
+              "Remove sentences or paragraphs that don't directly support your main idea or purpose.",
+              "Strengthen your thesis statement or central claim to make it more clear and specific.",
+              "Add evidence or reasoning where your argument needs more support to be convincing.",
+              "Expand descriptive passages in your narrative with more sensory details and specific language."
+            ]
+          },
+          {
+            "key": "revising_organization_structure",
+            "name": "Revising for Organization and Structure",
+            "short_description": "Improving the logical flow and structure of ideas throughout the piece.",
+            "example_tasks": [
+              "Rearrange paragraphs to create a more logical sequence of ideas in your essay.",
+              "Add transition words, phrases, or sentences to improve flow between paragraphs.",
+              "Strengthen topic sentences to more clearly introduce the main idea of each paragraph.",
+              "Ensure that each paragraph in your argument builds on the previous one logically.",
+              "Revise your introduction to more effectively preview your main points and engage readers."
+            ]
+          },
+          {
+            "key": "revising_word_choice_style",
+            "name": "Revising for Word Choice and Style",
+            "short_description": "Improving precision, variety, and effectiveness of language choices.",
+            "example_tasks": [
+              "Replace vague or overused words with more precise, vivid vocabulary.",
+              "Vary sentence structure by combining short, choppy sentences or breaking up long, complex ones.",
+              "Eliminate wordiness and redundancy to make your writing more concise and powerful.",
+              "Replace passive voice with active voice where it strengthens your writing.",
+              "Revise to eliminate repetitive sentence patterns and create more variety in your prose."
+            ]
+          },
+          {
+            "key": "peer_self_revision",
+            "name": "Using Peer and Self-Revision Strategies",
+            "short_description": "Evaluating your own work and using feedback from others to improve writing.",
+            "example_tasks": [
+              "Exchange drafts with a peer and provide specific, constructive feedback on strengths and areas for improvement.",
+              "Use a revision checklist to systematically evaluate whether your draft meets all requirements.",
+              "Read your draft aloud to yourself or another person to identify awkward phrasing or unclear ideas.",
+              "Identify the three most important revisions you could make to improve your draft and complete them.",
+              "Consider peer feedback carefully and decide which suggestions will most improve your writing."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "editing_for_conventions",
+        "name": "Editing for Conventions",
+        "short_description": "Correcting errors in grammar, usage, punctuation, capitalization, and spelling.",
+        "sub_topics": [
+          {
+            "key": "grammar_usage_editing",
+            "name": "Editing for Grammar and Usage",
+            "short_description": "Identifying and correcting grammatical errors and nonstandard usage.",
+            "example_tasks": [
+              "Correct subject-verb agreement errors throughout your draft.",
+              "Fix run-on sentences and comma splices by using appropriate punctuation or conjunctions.",
+              "Ensure consistent verb tense throughout your writing unless shifts in time are intentional.",
+              "Correct pronoun-antecedent agreement and ensure pronoun references are clear.",
+              "Identify and correct sentence fragments by adding subjects or predicates as needed."
+            ]
+          },
+          {
+            "key": "punctuation_editing",
+            "name": "Editing for Punctuation",
+            "short_description": "Using punctuation correctly to clarify meaning and improve readability.",
+            "example_tasks": [
+              "Add or remove commas to correctly punctuate compound and complex sentences.",
+              "Use semicolons correctly to join related independent clauses.",
+              "Punctuate dialogue correctly with quotation marks, commas, and end punctuation.",
+              "Use apostrophes correctly in contractions and possessives.",
+              "Check that all sentences end with appropriate punctuation marks."
+            ]
+          },
+          {
+            "key": "capitalization_spelling_editing",
+            "name": "Editing for Capitalization and Spelling",
+            "short_description": "Ensuring correct capitalization and spelling throughout the text.",
+            "example_tasks": [
+              "Capitalize proper nouns, titles, and the first word of sentences correctly.",
+              "Use spell-check as a first step, then proofread carefully for words spell-check doesn't catch (their/there/they're).",
+              "Ensure titles of works are capitalized and punctuated according to standard conventions.",
+              "Check spelling of domain-specific vocabulary and technical terms.",
+              "Proofread for commonly confused words (affect/effect, accept/except) that spell-check won't identify."
+            ]
+          },
+          {
+            "key": "using_editing_resources",
+            "name": "Using Editing Resources and Tools",
+            "short_description": "Employing reference materials and technology to identify and correct errors.",
+            "example_tasks": [
+              "Use a grammar handbook or online resource to check a rule you're unsure about.",
+              "Run spell-check and grammar-check, but evaluate suggestions critically before accepting them.",
+              "Consult a dictionary to verify spelling and usage of unfamiliar words.",
+              "Use a style guide (MLA, APA) to check formatting conventions for your paper.",
+              "Have a peer edit your paper specifically for grammar and mechanics errors you might have missed."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "publishing_presenting",
+        "name": "Publishing and Presenting Writing",
+        "short_description": "Preparing final versions of writing and using technology to produce and share work.",
+        "sub_topics": [
+          {
+            "key": "formatting_final_drafts",
+            "name": "Formatting Final Drafts",
+            "short_description": "Preparing polished final versions that follow appropriate formatting conventions.",
+            "example_tasks": [
+              "Format your essay according to MLA guidelines, including proper heading, spacing, and margins.",
+              "Create a title page for your research paper with all required information.",
+              "Format your final draft with consistent font, spacing, and appropriate page numbers.",
+              "Add a works cited page or bibliography formatted according to the required style guide.",
+              "Ensure your final draft is neat, legible, and professionally presented."
+            ]
+          },
+          {
+            "key": "using_technology_to_publish",
+            "name": "Using Technology to Produce and Publish",
+            "short_description": "Leveraging word processing and digital tools to create and share writing.",
+            "example_tasks": [
+              "Use word processing software to draft, revise, and format your essay with proper styling.",
+              "Create a digital presentation of your narrative using slides with text and images.",
+              "Publish your writing to a class blog or website, including appropriate tags and categories.",
+              "Use collaborative writing tools to work with peers on a group project.",
+              "Create a multimedia version of your writing that incorporates images, audio, or video."
+            ]
+          },
+          {
+            "key": "presenting_orally",
+            "name": "Presenting Writing Orally",
+            "short_description": "Sharing written work through oral presentation and reading.",
+            "example_tasks": [
+              "Read your narrative aloud to the class, using appropriate pacing and expression.",
+              "Present the key points of your argumentative essay to peers, emphasizing your strongest evidence.",
+              "Create and deliver a brief talk that shares the findings from your informative writing.",
+              "Participate in a peer writing conference where you read and discuss your work with others.",
+              "Record an audio or video version of your writing with appropriate tone and expression."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "writing_research_build_knowledge",
+    "name": "Writing - Research to Build and Present Knowledge",
+    "short_description": "Students conduct research projects, gather information from multiple sources, evaluate credibility, and synthesize findings. They learn to integrate research into their writing while avoiding plagiarism.",
+    "sub_topics": [
+      {
+        "key": "conducting_research_projects",
+        "name": "Conducting Research Projects",
+        "short_description": "Planning and carrying out short and sustained research projects to answer questions and solve problems.",
+        "sub_topics": [
+          {
+            "key": "developing_research_questions",
+            "name": "Developing Research Questions",
+            "short_description": "Formulating focused questions that guide inquiry and can be answered through research.",
+            "example_tasks": [
+              "Transform a broad topic (climate change) into a focused research question (How does deforestation contribute to climate change?).",
+              "Develop a research question that is neither too broad nor too narrow for a two-week research project.",
+              "Refine your initial research question after preliminary reading to make it more specific and answerable.",
+              "Create several related research questions that explore different aspects of your topic.",
+              "Evaluate whether your research question can be answered with available sources or needs to be revised."
+            ]
+          },
+          {
+            "key": "planning_research_process",
+            "name": "Planning the Research Process",
+            "short_description": "Creating a research plan that outlines steps, sources, and timeline for completing the project.",
+            "example_tasks": [
+              "Create a research plan that lists the types of sources you will consult and when you will complete each stage.",
+              "Identify keywords and search terms you will use to find relevant sources on your topic.",
+              "Develop a timeline for your research project with specific deadlines for research, drafting, and revision.",
+              "List potential sources (library databases, books, websites, interviews) you plan to consult.",
+              "Create a system for organizing notes and keeping track of source information as you research."
+            ]
+          },
+          {
+            "key": "sustained_research_projects",
+            "name": "Conducting Sustained Research",
+            "short_description": "Carrying out longer research projects that involve multiple sources and deeper investigation.",
+            "example_tasks": [
+              "Conduct a two-week research project on a historical event, consulting at least six different sources.",
+              "Complete a science research project that includes reading scientific articles, analyzing data, and drawing conclusions.",
+              "Investigate a social issue over several weeks, gathering information from diverse perspectives and sources.",
+              "Conduct research that combines primary sources (interviews, surveys) with secondary sources (articles, books).",
+              "Refine your focus as you research, adjusting your questions based on what you learn from sources."
+            ]
+          },
+          {
+            "key": "short_focused_research",
+            "name": "Conducting Short, Focused Research",
+            "short_description": "Answering specific questions through brief, targeted research efforts.",
+            "example_tasks": [
+              "Answer a specific factual question by consulting 2-3 credible sources in one class period.",
+              "Conduct focused research to find a specific piece of information needed for a larger project.",
+              "Research a narrow aspect of a topic (e.g., one battle in a war) to add depth to your understanding.",
+              "Complete a quick research task to verify a fact or find an example to support a claim in your writing.",
+              "Use targeted research to answer a question that arose while reading or discussing a topic."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "gathering_assessing_information",
+        "name": "Gathering and Assessing Information",
+        "short_description": "Locating relevant sources, evaluating their credibility and accuracy, and selecting appropriate information.",
+        "sub_topics": [
+          {
+            "key": "using_search_strategies",
+            "name": "Using Effective Search Strategies",
+            "short_description": "Employing various techniques to find relevant print and digital sources.",
+            "example_tasks": [
+              "Use library databases to search for peer-reviewed articles on your research topic using appropriate keywords.",
+              "Conduct an advanced internet search using search operators (quotation marks, minus sign) to narrow results.",
+              "Search the library catalog for books on your topic and identify the most relevant ones based on titles and descriptions.",
+              "Use multiple search terms and synonyms when initial searches don't yield useful results.",
+              "Follow citations in one source to find additional relevant sources on your topic."
+            ]
+          },
+          {
+            "key": "evaluating_source_credibility",
+            "name": "Evaluating Source Credibility and Reliability",
+            "short_description": "Assessing whether sources are trustworthy, accurate, and appropriate for research purposes.",
+            "example_tasks": [
+              "Evaluate a website's credibility by examining the author's credentials, publication date, and domain (.edu, .gov, .org, .com).",
+              "Compare information from multiple sources to verify facts and identify any discrepancies.",
+              "Determine whether an author has potential bias based on their affiliations or the publication's purpose.",
+              "Assess whether a source provides evidence and citations for its claims or makes unsupported assertions.",
+              "Decide whether a source is appropriate for academic research based on its credibility, relevance, and publication type."
+            ]
+          },
+          {
+            "key": "selecting_relevant_information",
+            "name": "Selecting Relevant Information",
+            "short_description": "Identifying which information from sources directly addresses research questions.",
+            "example_tasks": [
+              "Skim multiple sources to determine which contain information relevant to your specific research question.",
+              "Identify the most important facts, statistics, or expert opinions from a source that support your research.",
+              "Determine which sections of a longer source are relevant to your needs and which can be skipped.",
+              "Evaluate whether information is directly relevant, somewhat related, or not useful for your research question.",
+              "Select the best evidence from multiple sources, choosing the most current, specific, or authoritative information."
+            ]
+          },
+          {
+            "key": "using_multiple_sources",
+            "name": "Using Multiple Sources",
+            "short_description": "Consulting various sources to gain comprehensive understanding and diverse perspectives.",
+            "example_tasks": [
+              "Gather information from at least five different sources representing different types (books, articles, websites).",
+              "Consult sources that present different perspectives on a controversial issue.",
+              "Use both primary sources (original documents, interviews) and secondary sources (analyses, textbooks) in your research.",
+              "Compare how different sources treat the same topic and note areas of agreement and disagreement.",
+              "Ensure you have consulted authoritative, scholarly sources rather than relying solely on general websites."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "synthesizing_integrating_sources",
+        "name": "Synthesizing and Integrating Information from Sources",
+        "short_description": "Combining information from multiple sources and incorporating it effectively into writing.",
+        "sub_topics": [
+          {
+            "key": "taking_effective_notes",
+            "name": "Taking Effective Research Notes",
+            "short_description": "Recording information from sources accurately while tracking sources for citation.",
+            "example_tasks": [
+              "Take notes on index cards or digital notes, recording one main idea per card along with source information.",
+              "Use a note-taking system that distinguishes between direct quotes, paraphrases, and your own ideas.",
+              "Record complete bibliographic information for each source as you take notes.",
+              "Organize notes by subtopic or research question to make synthesizing information easier.",
+              "Summarize main ideas from sources in your own words while noting page numbers for later citation."
+            ]
+          },
+          {
+            "key": "quoting_paraphrasing_summarizing",
+            "name": "Quoting, Paraphrasing, and Summarizing",
+            "short_description": "Representing source information accurately through direct quotation, paraphrase, or summary.",
+            "example_tasks": [
+              "Decide whether to quote directly, paraphrase, or summarize based on the importance and wording of the original.",
+              "Quote directly when the author's exact wording is particularly powerful or precise.",
+              "Paraphrase information from a source by completely restating ideas in your own words and sentence structure.",
+              "Write a one-paragraph summary that captures the main ideas from a three-page article.",
+              "Avoid plagiarism by ensuring your paraphrase doesn't just substitute a few synonyms but truly restates the idea."
+            ]
+          },
+          {
+            "key": "integrating_sources_into_writing",
+            "name": "Integrating Sources into Writing",
+            "short_description": "Incorporating evidence from sources smoothly and effectively into your own prose.",
+            "example_tasks": [
+              "Introduce quotations with signal phrases that provide context (According to historian Jane Smith...).",
+              "Integrate a quote into your own sentence structure rather than dropping it in abruptly.",
+              "Follow quotations or paraphrases with your own analysis explaining how the evidence supports your point.",
+              "Balance source material with your own ideas so the paper represents your thinking, not just a compilation of quotes.",
+              "Use a variety of verbs in signal phrases (argues, suggests, demonstrates, explains) rather than repeating 'says.'"
+            ]
+          },
+          {
+            "key": "synthesizing_multiple_sources",
+            "name": "Synthesizing Information from Multiple Sources",
+            "short_description": "Combining ideas from different sources to create new understanding or support arguments.",
+            "example_tasks": [
+              "Write a paragraph that synthesizes information from three different sources on the same topic.",
+              "Compare and contrast what different sources say about an issue, noting agreements and disagreements.",
+              "Draw a conclusion based on evidence gathered from multiple sources.",
+              "Identify patterns or themes that emerge when reading several sources on the same topic.",
+              "Create a comprehensive explanation of a topic by combining unique information from different sources."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "avoiding_plagiarism_citing_sources",
+        "name": "Avoiding Plagiarism and Citing Sources",
+        "short_description": "Understanding academic integrity and properly crediting sources following standard citation formats.",
+        "sub_topics": [
+          {
+            "key": "understanding_plagiarism",
+            "name": "Understanding Plagiarism and Academic Integrity",
+            "short_description": "Recognizing what constitutes plagiarism and why proper attribution is essential.",
+            "example_tasks": [
+              "Explain the difference between quoting, paraphrasing, summarizing, and plagiarizing with specific examples.",
+              "Identify instances of plagiarism in sample texts (copying without quotes, improper paraphrasing, missing citations).",
+              "Understand that plagiarism includes using ideas, not just exact words, without giving credit.",
+              "Recognize that accidental plagiarism is still plagiarism and learn strategies to avoid it.",
+              "Explain why academic integrity matters and how plagiarism violates ethical standards and trust."
+            ]
+          },
+          {
+            "key": "in_text_citations",
+            "name": "Using In-Text Citations",
+            "short_description": "Providing parenthetical citations or footnotes to credit sources within the text.",
+            "example_tasks": [
+              "Add MLA in-text citations after quotations and paraphrases (Author page number) in your research paper.",
+              "Use signal phrases combined with parenthetical citations to integrate sources smoothly.",
+              "Correctly cite sources with multiple authors, no author, or corporate authors following MLA format.",
+              "Place in-text citations appropriately (before the period for short quotes, after for block quotes).",
+              "Ensure every fact, statistic, or idea from a source has an appropriate citation."
+            ]
+          },
+          {
+            "key": "works_cited_bibliography",
+            "name": "Creating Works Cited and Bibliographies",
+            "short_description": "Compiling complete citation information for all sources in proper format.",
+            "example_tasks": [
+              "Create an MLA Works Cited page with correct formatting (hanging indent, alphabetical order, proper punctuation).",
+              "Write citations for different source types (books, articles, websites, videos) following MLA format.",
+              "Include all required elements in each citation (author, title, publication information, access date for websites).",
+              "Format online source citations correctly, including URLs and access dates when required.",
+              "Ensure every source cited in your paper appears in the Works Cited and vice versa."
+            ]
+          },
+          {
+            "key": "using_citation_tools",
+            "name": "Using Citation Tools and Resources",
+            "short_description": "Employing handbooks, websites, and citation generators to create accurate citations.",
+            "example_tasks": [
+              "Use a citation handbook or reliable website (Purdue OWL) to check proper MLA format for various source types.",
+              "Use a citation generator to create citations, but verify accuracy by checking against official guidelines.",
+              "Consult your teacher or librarian when you encounter an unusual source type you're not sure how to cite.",
+              "Keep a style guide handy while writing to quickly check citation rules as needed.",
+              "Learn the basic pattern of MLA citations so you can create accurate citations even without tools."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "writing_range_of_writing",
+    "name": "Writing - Range of Writing",
+    "short_description": "Students write routinely over extended and shorter time frames for various purposes and audiences. They develop flexibility in adapting their writing process to different tasks and deadlines.",
+    "sub_topics": [
+      {
+        "key": "extended_time_writing",
+        "name": "Writing Over Extended Time Frames",
+        "short_description": "Completing substantial writing projects that involve research, planning, multiple drafts, and revision.",
+        "sub_topics": [
+          {
+            "key": "extended_research_papers",
+            "name": "Extended Research Papers and Projects",
+            "short_description": "Writing comprehensive research-based papers developed over weeks.",
+            "example_tasks": [
+              "Complete a 3-5 page research paper on a historical topic over three weeks, including research, drafting, and revision.",
+              "Write a multi-week science research report that includes hypothesis, methodology, results, and analysis.",
+              "Develop a literary analysis essay over two weeks, including multiple drafts with peer and teacher feedback.",
+              "Create a comprehensive informative essay on a complex topic using multiple sources and developed over several weeks.",
+              "Write an extended argumentative essay addressing a controversial issue with thorough research and multiple revisions."
+            ]
+          },
+          {
+            "key": "extended_creative_projects",
+            "name": "Extended Creative Writing Projects",
+            "short_description": "Developing substantial narrative or creative pieces over extended periods.",
+            "example_tasks": [
+              "Write a short story or personal narrative of 1500+ words developed over two to three weeks.",
+              "Create a portfolio of related poems developed and revised over a month-long unit.",
+              "Write and revise a multi-chapter narrative piece over several weeks.",
+              "Develop a creative nonfiction piece (memoir, personal essay) with multiple drafts and revisions.",
+              "Complete a dramatic scene or one-act play developed over an extended time period."
+            ]
+          },
+          {
+            "key": "revision_multiple_drafts",
+            "name": "Engaging in Substantive Revision",
+            "short_description": "Producing multiple drafts with significant revision between them.",
+            "example_tasks": [
+              "Complete at least three distinct drafts of an essay, making substantive changes beyond just correcting errors.",
+              "Revise a draft based on peer and teacher feedback, addressing content, organization, and style issues.",
+              "Track changes between drafts to see how your writing improves through the revision process.",
+              "Set aside a draft for several days, then return with fresh perspective to revise substantially.",
+              "Focus different revision sessions on different aspects: content, organization, style, then conventions."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "shorter_time_frame_writing",
+        "name": "Writing in Shorter Time Frames",
+        "short_description": "Producing writing in single sittings or over a day or two for specific tasks.",
+        "sub_topics": [
+          {
+            "key": "timed_writing_responses",
+            "name": "Timed Writing and Responses",
+            "short_description": "Writing focused responses within time constraints, such as during tests or class periods.",
+            "example_tasks": [
+              "Write a literary analysis paragraph in response to a passage in 30 minutes.",
+              "Complete a one-page argumentative response to a prompt during a 45-minute class period.",
+              "Write a summary and response to an article within a single class period.",
+              "Answer an extended response question on a test with a well-developed paragraph in 20 minutes.",
+              "Write a quick reflective response to a text or discussion in 15 minutes."
+            ]
+          },
+          {
+            "key": "short_informative_pieces",
+            "name": "Short Informative and Explanatory Writing",
+            "short_description": "Writing brief explanations, summaries, or informative pieces in one or two sittings.",
+            "example_tasks": [
+              "Write a one-page explanation of a scientific concept for homework, completed in one evening.",
+              "Create a summary of a chapter or article that captures main ideas in 1-2 paragraphs.",
+              "Write a brief informative email or letter explaining a process or providing information.",
+              "Compose a short comparison of two historical events or literary characters in one class period.",
+              "Write a quick-write response explaining your understanding of a new concept."
+            ]
+          },
+          {
+            "key": "daily_writing_practice",
+            "name": "Daily Writing Practice and Journals",
+            "short_description": "Writing regularly in journals, learning logs, or quick-writes to develop fluency.",
+            "example_tasks": [
+              "Keep a reading journal with brief entries reflecting on daily reading.",
+              "Write daily quick-writes responding to prompts or reflecting on learning.",
+              "Maintain a writer's notebook with observations, ideas, and experimental writing.",
+              "Complete learning log entries that summarize and reflect on lessons.",
+              "Practice freewriting regularly to develop fluency and generate ideas."
+            ]
+          },
+          {
+            "key": "on_demand_writing",
+            "name": "On-Demand Writing for Various Purposes",
+            "short_description": "Writing for immediate needs in academic and real-world contexts.",
+            "example_tasks": [
+              "Write a persuasive email to a principal suggesting a school improvement in 20 minutes.",
+              "Draft a letter to the editor about a current issue in one sitting.",
+              "Write directions or instructions for completing a task clearly and concisely.",
+              "Compose a thank-you note or formal correspondence following appropriate conventions.",
+              "Write a brief proposal for a class project or activity in one class period."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "writing_for_range_purposes",
+        "name": "Writing for a Range of Purposes and Audiences",
+        "short_description": "Adapting writing approaches for different contexts, purposes, and intended readers.",
+        "sub_topics": [
+          {
+            "key": "academic_writing_tasks",
+            "name": "Academic Writing Tasks",
+            "short_description": "Writing for teachers and academic audiences across disciplines.",
+            "example_tasks": [
+              "Write lab reports, science explanations, and research papers following disciplinary conventions.",
+              "Complete literary analyses and text-based responses for English class.",
+              "Write historical analyses and document-based essays for social studies.",
+              "Create mathematical explanations and problem-solving write-ups showing reasoning.",
+              "Write various academic essays (expository, analytical, argumentative) with appropriate formal style."
+            ]
+          },
+          {
+            "key": "personal_reflective_writing",
+            "name": "Personal and Reflective Writing",
+            "short_description": "Writing about personal experiences, thoughts, and learning for authentic purposes.",
+            "example_tasks": [
+              "Write personal narratives about meaningful experiences in your life.",
+              "Keep reflective journals about your learning, growth, and challenges.",
+              "Write memoir pieces that explore significant moments or relationships.",
+              "Create reflective essays about your reading experiences and responses to literature.",
+              "Write self-assessments that honestly evaluate your work and set goals for improvement."
+            ]
+          },
+          {
+            "key": "practical_real_world_writing",
+            "name": "Practical and Real-World Writing",
+            "short_description": "Writing for authentic purposes outside of academic exercises.",
+            "example_tasks": [
+              "Write business letters, emails, and formal correspondence following appropriate conventions.",
+              "Create instructions, directions, or how-to guides that others can follow.",
+              "Write persuasive letters to community members, officials, or publications.",
+              "Draft applications, cover letters, or proposals for real opportunities.",
+              "Create informative brochures, flyers, or presentations for authentic audiences."
+            ]
+          },
+          {
+            "key": "creative_expressive_writing",
+            "name": "Creative and Expressive Writing",
+            "short_description": "Writing stories, poems, and other creative pieces for various audiences.",
+            "example_tasks": [
+              "Write short stories in various genres for peers or wider audiences.",
+              "Create poetry using different forms and techniques to express ideas and emotions.",
+              "Write scripts or dramatic scenes that could be performed.",
+              "Develop creative nonfiction pieces that use literary techniques to tell true stories.",
+              "Write for publication in school literary magazines, online platforms, or contests."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "language_conventions_standard_english",
+    "name": "Language - Conventions of Standard English",
+    "short_description": "Students demonstrate command of grammar, usage, and mechanics when writing and speaking. They learn to apply standard English conventions appropriately and effectively in various contexts.",
+    "sub_topics": [
+      {
+        "key": "grammar_and_usage",
+        "name": "Grammar and Usage",
+        "short_description": "Applying rules of standard English grammar and usage correctly in writing and speaking.",
+        "sub_topics": [
+          {
+            "key": "pronouns_usage",
+            "name": "Pronoun Usage and Agreement",
+            "short_description": "Using pronouns correctly with proper case, agreement, and clear antecedents.",
+            "example_tasks": [
+              "Identify and correct pronoun case errors (I/me, who/whom, they/them) in sentences.",
+              "Ensure pronoun-antecedent agreement in number and gender throughout a paragraph.",
+              "Revise sentences to clarify vague pronoun references (ambiguous 'it,' 'this,' 'they').",
+              "Use intensive pronouns (myself, herself, themselves) correctly for emphasis.",
+              "Correct shifts in pronoun point of view (switching from 'you' to 'one' or from third to second person)."
+            ]
+          },
+          {
+            "key": "verb_usage_tense",
+            "name": "Verb Tense and Agreement",
+            "short_description": "Using verb tenses consistently and ensuring subject-verb agreement.",
+            "example_tasks": [
+              "Maintain consistent verb tense throughout a narrative or essay unless shifts are intentional.",
+              "Correct subject-verb agreement errors, especially with compound subjects and intervening phrases.",
+              "Use perfect tenses (present perfect, past perfect, future perfect) correctly to show time relationships.",
+              "Form and use progressive tenses correctly (am running, was reading, will be studying).",
+              "Recognize and correct inappropriate tense shifts within sentences and paragraphs."
+            ]
+          },
+          {
+            "key": "recognizing_correcting_errors",
+            "name": "Recognizing and Correcting Common Errors",
+            "short_description": "Identifying and fixing frequently occurring grammatical mistakes.",
+            "example_tasks": [
+              "Identify and correct sentence fragments by adding subjects or predicates.",
+              "Fix run-on sentences and comma splices using appropriate punctuation or conjunctions.",
+              "Correct double negatives to express intended meaning clearly.",
+              "Identify and revise dangling or misplaced modifiers for clarity.",
+              "Correct faulty parallelism in lists or comparisons to improve sentence structure."
+            ]
+          },
+          {
+            "key": "phrases_clauses",
+            "name": "Using Phrases and Clauses",
+            "short_description": "Employing various phrase and clause types to add variety and complexity to writing.",
+            "example_tasks": [
+              "Identify and use different types of phrases (prepositional, appositive, participial, infinitive) in sentences.",
+              "Combine sentences using subordinate clauses to show relationships between ideas.",
+              "Distinguish between independent and dependent clauses in complex sentences.",
+              "Use relative clauses (who, which, that) correctly to add descriptive information.",
+              "Place phrases and clauses strategically to emphasize important information and vary sentence structure."
+            ]
+          },
+          {
+            "key": "adjectives_adverbs",
+            "name": "Using Adjectives and Adverbs Correctly",
+            "short_description": "Choosing and placing modifiers appropriately to describe and enhance meaning.",
+            "example_tasks": [
+              "Distinguish between adjectives and adverbs and use each correctly (good/well, bad/badly).",
+              "Use comparative and superlative forms correctly (better/best, more interesting/most interesting).",
+              "Avoid overuse of adverbs by choosing stronger, more precise verbs instead.",
+              "Place adjectives and adverbs to clearly modify the intended words.",
+              "Use articles (a, an, the) correctly in various contexts."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "punctuation_and_capitalization",
+        "name": "Punctuation and Capitalization",
+        "short_description": "Using punctuation marks and capital letters correctly to clarify meaning and follow conventions.",
+        "sub_topics": [
+          {
+            "key": "end_punctuation",
+            "name": "End Punctuation",
+            "short_description": "Using periods, question marks, and exclamation points appropriately.",
+            "example_tasks": [
+              "Ensure all sentences end with appropriate punctuation marks.",
+              "Distinguish between statements, questions, and exclamations and punctuate accordingly.",
+              "Avoid overusing exclamation points in formal or academic writing.",
+              "Punctuate indirect questions correctly with periods rather than question marks.",
+              "Use question marks appropriately in sentences containing embedded questions."
+            ]
+          },
+          {
+            "key": "commas_usage",
+            "name": "Comma Usage",
+            "short_description": "Using commas correctly in various grammatical situations.",
+            "example_tasks": [
+              "Use commas to separate items in a series, including before the coordinating conjunction (Oxford comma).",
+              "Place commas correctly in compound sentences before coordinating conjunctions (and, but, or, so).",
+              "Use commas after introductory elements (phrases and clauses) at the beginning of sentences.",
+              "Set off nonessential clauses and phrases with commas (My brother, who lives in Texas, is visiting).",
+              "Use commas correctly with appositives, direct address, and interrupting elements."
+            ]
+          },
+          {
+            "key": "semicolons_colons",
+            "name": "Semicolons and Colons",
+            "short_description": "Using semicolons and colons appropriately to connect ideas and introduce lists or explanations.",
+            "example_tasks": [
+              "Use semicolons to join closely related independent clauses without a conjunction.",
+              "Use semicolons to separate items in a series when items contain internal commas.",
+              "Use colons to introduce lists, explanations, or quotations following independent clauses.",
+              "Distinguish between situations requiring semicolons versus colons.",
+              "Avoid common errors like placing colons after verbs or prepositions."
+            ]
+          },
+          {
+            "key": "quotation_marks_dialogue",
+            "name": "Quotation Marks and Dialogue Punctuation",
+            "short_description": "Punctuating direct quotations and dialogue correctly.",
+            "example_tasks": [
+              "Punctuate direct quotations correctly with commas, periods, and other marks inside quotation marks.",
+              "Format dialogue in narratives with proper paragraphing and punctuation.",
+              "Use quotation marks correctly for titles of short works (poems, articles, short stories).",
+              "Distinguish between direct quotations requiring quotation marks and indirect quotations that don't.",
+              "Place other punctuation marks (semicolons, colons, question marks) correctly in relation to quotation marks."
+            ]
+          },
+          {
+            "key": "apostrophes_hyphens",
+            "name": "Apostrophes, Hyphens, and Dashes",
+            "short_description": "Using apostrophes, hyphens, and dashes correctly for various purposes.",
+            "example_tasks": [
+              "Use apostrophes correctly to form possessives (singular and plural nouns).",
+              "Use apostrophes correctly in contractions to show omitted letters.",
+              "Use hyphens correctly in compound adjectives (well-known author) and numbers.",
+              "Use em dashes to set off additional information or create emphasis.",
+              "Avoid confusing its/it's, your/you're, and their/they're/there."
+            ]
+          },
+          {
+            "key": "capitalization_rules",
+            "name": "Capitalization Rules",
+            "short_description": "Applying capitalization rules correctly for various words and contexts.",
+            "example_tasks": [
+              "Capitalize proper nouns (names of specific people, places, organizations) correctly.",
+              "Capitalize titles of people when used with names but not when used generally.",
+              "Capitalize the first word of sentences and direct quotations.",
+              "Capitalize titles of works correctly, following standard rules for major and minor words.",
+              "Recognize when to capitalize words like 'north,' 'mother,' or 'school' based on context."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "spelling_conventions",
+        "name": "Spelling Conventions",
+        "short_description": "Applying spelling rules and using resources to spell words correctly.",
+        "sub_topics": [
+          {
+            "key": "spelling_patterns_rules",
+            "name": "Applying Spelling Patterns and Rules",
+            "short_description": "Using knowledge of spelling patterns to spell words correctly.",
+            "example_tasks": [
+              "Apply the rule for adding suffixes to words ending in 'e' (hope/hoping, care/careful).",
+              "Use the 'i before e except after c' rule and know its exceptions.",
+              "Apply rules for doubling consonants when adding suffixes (run/running, big/bigger).",
+              "Spell words with common prefixes and suffixes correctly (un-, re-, -tion, -ness).",
+              "Recognize and spell homophones correctly based on context (their/there/they're, to/too/two)."
+            ]
+          },
+          {
+            "key": "commonly_confused_words",
+            "name": "Distinguishing Commonly Confused Words",
+            "short_description": "Correctly using words that are often confused due to similar spelling or pronunciation.",
+            "example_tasks": [
+              "Choose correctly between affect/effect, accept/except, principle/principal in sentences.",
+              "Use lie/lay, sit/set, and rise/raise correctly based on whether objects are involved.",
+              "Distinguish between then/than, lose/loose, and quiet/quite in writing.",
+              "Use further/farther and fewer/less correctly based on context.",
+              "Correctly choose between complement/compliment, counsel/council, and dessert/desert."
+            ]
+          },
+          {
+            "key": "using_spelling_resources",
+            "name": "Using Spelling Resources",
+            "short_description": "Employing dictionaries, spell-check, and other tools to verify correct spelling.",
+            "example_tasks": [
+              "Use a dictionary to check spelling and verify word choice when uncertain.",
+              "Use spell-check as a first step but recognize its limitations with homophones.",
+              "Consult style guides for spelling of technical or specialized terms.",
+              "Keep a personal list of words you commonly misspell and study them.",
+              "Verify spelling of proper nouns and specialized vocabulary through reliable sources."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "language_knowledge_of_language",
+    "name": "Language - Knowledge of Language",
+    "short_description": "Students make effective language choices regarding style, register, and vocabulary. They understand how language functions in different contexts and how to adapt their expression for various purposes and audiences.",
+    "sub_topics": [
+      {
+        "key": "choosing_language_for_effect",
+        "name": "Choosing Language for Effect",
+        "short_description": "Selecting words and phrases strategically to achieve desired effects on readers or listeners.",
+        "sub_topics": [
+          {
+            "key": "varying_syntax_for_effect",
+            "name": "Varying Syntax for Effect",
+            "short_description": "Manipulating sentence structure to control emphasis, rhythm, and reader engagement.",
+            "example_tasks": [
+              "Rewrite a passage using varied sentence lengths to create different effects (tension vs. calm).",
+              "Combine short sentences to create complexity or break long sentences to add emphasis.",
+              "Experiment with different sentence openings to avoid monotonous patterns.",
+              "Use periodic sentences (main idea at end) to build suspense or emphasis.",
+              "Analyze how sentence structure affects the pace and mood of a piece of writing."
+            ]
+          },
+          {
+            "key": "word_choice_precision",
+            "name": "Choosing Words for Precision and Tone",
+            "short_description": "Selecting specific words that convey exact meaning and appropriate tone.",
+            "example_tasks": [
+              "Replace general verbs (went, said, got) with more precise alternatives (trudged, whispered, acquired).",
+              "Choose words with connotations that support your intended tone (cheap vs. economical vs. inexpensive).",
+              "Revise writing to eliminate vague words (thing, stuff, very, really) with specific alternatives.",
+              "Select vocabulary that matches the formality level appropriate for your audience and purpose.",
+              "Compare word choices in professional writing versus casual communication and explain the differences."
+            ]
+          },
+          {
+            "key": "maintaining_consistency",
+            "name": "Maintaining Consistency in Style and Tone",
+            "short_description": "Ensuring consistent approach to language throughout a piece of writing.",
+            "example_tasks": [
+              "Maintain consistent level of formality throughout an essay (avoid mixing slang with academic language).",
+              "Ensure consistent point of view throughout a narrative (don't shift from first to third person).",
+              "Keep verb tense consistent unless shifts are intentionally used for effect.",
+              "Maintain consistent tone (serious, humorous, objective) appropriate to purpose.",
+              "Identify and revise inconsistencies in style that distract or confuse readers."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "formal_informal_language",
+        "name": "Understanding Formal and Informal English",
+        "short_description": "Recognizing different registers of language and when each is appropriate.",
+        "sub_topics": [
+          {
+            "key": "formal_english_contexts",
+            "name": "Using Formal English Appropriately",
+            "short_description": "Employing formal language in academic and professional contexts.",
+            "example_tasks": [
+              "Rewrite informal sentences in formal academic style for a research paper.",
+              "Identify informal language in a draft (contractions, slang, colloquialisms) and revise to formal style.",
+              "Write a formal letter or email using appropriate conventions and tone.",
+              "Explain when formal language is expected (essays, presentations, professional communication).",
+              "Compare the same message written in formal versus informal style and identify specific differences."
+            ]
+          },
+          {
+            "key": "informal_english_contexts",
+            "name": "Using Informal English Appropriately",
+            "short_description": "Employing informal language effectively in personal and creative contexts.",
+            "example_tasks": [
+              "Write realistic dialogue for characters using informal, conversational language.",
+              "Create a personal narrative that uses informal language appropriately to establish voice.",
+              "Distinguish between contexts where informal language is acceptable versus inappropriate.",
+              "Use contractions, casual vocabulary, and conversational tone in informal writing.",
+              "Explain how informal language can create authenticity in certain types of writing (personal essays, creative nonfiction)."
+            ]
+          },
+          {
+            "key": "code_switching",
+            "name": "Adapting Language for Different Contexts",
+            "short_description": "Adjusting language register based on audience, purpose, and situation.",
+            "example_tasks": [
+              "Rewrite the same message for three different audiences (teacher, friend, principal) with appropriate register for each.",
+              "Explain how you would adjust your language when speaking to different audiences (peers vs. adults).",
+              "Identify which register is appropriate for different writing tasks (thank-you note, lab report, text message).",
+              "Practice switching between formal and informal language based on context.",
+              "Analyze examples of professional writing that use different levels of formality for different audiences."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "consulting_references",
+        "name": "Consulting Reference Materials",
+        "short_description": "Using dictionaries, style guides, and other resources to make informed language choices.",
+        "sub_topics": [
+          {
+            "key": "using_dictionaries_thesauruses",
+            "name": "Using Dictionaries and Thesauruses",
+            "short_description": "Consulting reference materials to verify meanings, spellings, and find alternatives.",
+            "example_tasks": [
+              "Look up a word in the dictionary to check pronunciation, part of speech, and multiple meanings.",
+              "Use a thesaurus to find synonyms but verify meanings before substituting words.",
+              "Use dictionary pronunciation guides and etymology information to understand word origins.",
+              "Compare definitions from multiple dictionaries when encountering subtle differences in meaning.",
+              "Use digital dictionaries effectively, understanding how to interpret abbreviations and usage labels."
+            ]
+          },
+          {
+            "key": "using_style_guides",
+            "name": "Using Style Guides and Grammar Resources",
+            "short_description": "Consulting authoritative sources for grammar, usage, and formatting questions.",
+            "example_tasks": [
+              "Use a grammar handbook to look up rules for punctuation or grammar questions.",
+              "Consult MLA or APA style guides for formatting questions in research papers.",
+              "Use reliable online resources (Purdue OWL, Grammarly Handbook) to answer usage questions.",
+              "Check style guides to determine correct capitalization, italicization, or formatting of titles.",
+              "Develop the habit of consulting references rather than guessing when uncertain about conventions."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "language_vocabulary_acquisition",
+    "name": "Language - Vocabulary Acquisition and Use",
+    "short_description": "Students determine word meanings, understand figurative language, analyze word relationships, and acquire academic and domain-specific vocabulary. They develop strategies for independent vocabulary learning.",
+    "sub_topics": [
+      {
+        "key": "context_clues_strategies",
+        "name": "Using Context Clues",
+        "short_description": "Determining word meanings by analyzing surrounding text and situational context.",
+        "sub_topics": [
+          {
+            "key": "types_of_context_clues",
+            "name": "Identifying Types of Context Clues",
+            "short_description": "Recognizing different ways context provides clues to word meaning.",
+            "example_tasks": [
+              "Identify definition clues where the text directly defines an unfamiliar word.",
+              "Find example clues where the text provides examples that illustrate the word's meaning.",
+              "Recognize contrast clues where the text shows what the word does NOT mean.",
+              "Use inference clues by piecing together meaning from general context.",
+              "Identify synonym or restatement clues where the text uses a familiar word with similar meaning."
+            ]
+          },
+          {
+            "key": "using_context_effectively",
+            "name": "Using Context to Determine Meaning",
+            "short_description": "Applying context clue strategies to figure out unfamiliar words while reading.",
+            "example_tasks": [
+              "Read a passage with unfamiliar words and use context to determine their meanings before checking a dictionary.",
+              "Explain how you used specific context clues to figure out the meaning of a challenging word.",
+              "Determine which meaning of a multiple-meaning word fits the context of a particular sentence.",
+              "Use context to distinguish between similar words (imply vs. infer, empathy vs. sympathy).",
+              "Practice reading increasingly complex texts and using context to understand new vocabulary independently."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "word_parts_analysis",
+        "name": "Analyzing Word Parts",
+        "short_description": "Using knowledge of roots, prefixes, and suffixes to determine meanings of unfamiliar words.",
+        "sub_topics": [
+          {
+            "key": "common_prefixes_suffixes",
+            "name": "Using Prefixes and Suffixes",
+            "short_description": "Applying knowledge of common affixes to decode word meanings.",
+            "example_tasks": [
+              "Identify how prefixes like un-, re-, pre-, mis- change the meaning of base words.",
+              "Determine how suffixes like -tion, -ity, -ness, -ment change words from one part of speech to another.",
+              "Break down complex words into prefix + root + suffix and determine meaning from parts.",
+              "Learn common negative prefixes (un-, in-, dis-, non-) and how they negate meaning.",
+              "Use knowledge of comparative and superlative suffixes (-er, -est, more, most) to understand word relationships."
+            ]
+          },
+          {
+            "key": "greek_latin_roots",
+            "name": "Using Greek and Latin Roots",
+            "short_description": "Applying knowledge of common root words to understand related vocabulary.",
+            "example_tasks": [
+              "Identify the root 'scrib/script' (write) in words like describe, prescription, manuscript.",
+              "Learn common roots like port (carry), dict (speak), ject (throw) and find words containing them.",
+              "Use knowledge of Greek roots like bio (life), geo (earth), photo (light) to understand scientific terms.",
+              "Recognize word families that share the same root (spectator, spectacle, inspection, respect).",
+              "Create word webs showing how one root connects multiple related words."
+            ]
+          },
+          {
+            "key": "etymology_word_origins",
+            "name": "Understanding Etymology and Word Origins",
+            "short_description": "Using knowledge of word origins to understand and remember vocabulary.",
+            "example_tasks": [
+              "Use dictionary etymology information to understand how a word's origin relates to its current meaning.",
+              "Explain how knowing that 'biography' comes from Greek 'bio' (life) + 'graphy' (writing) helps understand related words.",
+              "Trace how words borrowed from other languages (Spanish, French, German) retain elements of their origins.",
+              "Understand how some words' meanings have evolved from their original meanings over time.",
+              "Use knowledge of word origins to remember and distinguish between similar words."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "figurative_language",
+        "name": "Interpreting Figurative Language",
+        "short_description": "Understanding and analyzing nonliteral language including figures of speech and word relationships.",
+        "sub_topics": [
+          {
+            "key": "similes_metaphors",
+            "name": "Understanding Similes and Metaphors",
+            "short_description": "Identifying and interpreting comparisons that create imagery and meaning.",
+            "example_tasks": [
+              "Identify similes (using 'like' or 'as') in a text and explain what is being compared.",
+              "Identify metaphors (direct comparisons without 'like' or 'as') and explain their meaning.",
+              "Explain what a metaphor reveals that a literal statement would not (e.g., 'time is money').",
+              "Create your own similes and metaphors to describe abstract concepts or experiences.",
+              "Analyze extended metaphors in poetry or literature and trace the comparison throughout the text."
+            ]
+          },
+          {
+            "key": "personification_hyperbole",
+            "name": "Understanding Personification and Hyperbole",
+            "short_description": "Recognizing when nonhuman things are given human qualities or when exaggeration is used for effect.",
+            "example_tasks": [
+              "Identify personification in texts where nonhuman things are described with human characteristics.",
+              "Explain the effect of personification in creating mood or emphasizing ideas.",
+              "Identify hyperbole (extreme exaggeration) and explain its purpose in the text.",
+              "Distinguish between literal statements and hyperbole in various contexts.",
+              "Create examples of personification and hyperbole appropriate for different purposes."
+            ]
+          },
+          {
+            "key": "idioms_expressions",
+            "name": "Understanding Idioms and Expressions",
+            "short_description": "Interpreting common expressions whose meanings differ from their literal words.",
+            "example_tasks": [
+              "Identify idioms in text (e.g., 'break the ice,' 'piece of cake') and explain their figurative meanings.",
+              "Explain why idioms can be confusing to non-native speakers or those unfamiliar with them.",
+              "Determine the meaning of unfamiliar idioms using context clues.",
+              "Distinguish between idioms and literal language in various texts.",
+              "Understand that idioms are culturally specific and may not translate directly to other languages."
+            ]
+          },
+          {
+            "key": "symbolism_allusion",
+            "name": "Understanding Symbolism and Allusion",
+            "short_description": "Recognizing when objects represent abstract ideas and when texts reference other works or events.",
+            "example_tasks": [
+              "Identify symbols in literature (e.g., a dove representing peace) and explain their meaning in context.",
+              "Recognize allusions to historical events, mythology, or other literary works in texts.",
+              "Explain how understanding an allusion enriches the meaning of a text.",
+              "Interpret what abstract concepts or themes symbols represent in specific texts.",
+              "Create your own symbols to represent complex ideas in creative writing."
+            ]
+          },
+          {
+            "key": "connotation_denotation",
+            "name": "Understanding Connotation and Denotation",
+            "short_description": "Distinguishing between literal meanings and emotional associations of words.",
+            "example_tasks": [
+              "Distinguish between the denotation (dictionary definition) and connotation (emotional association) of words.",
+              "Explain how words like 'childlike' and 'childish' have similar denotations but different connotations.",
+              "Analyze how an author's word choice creates positive, negative, or neutral connotations.",
+              "Choose synonyms with appropriate connotations for different contexts and purposes.",
+              "Explain how connotation affects tone and reader response in specific passages."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "word_relationships",
+        "name": "Understanding Word Relationships",
+        "short_description": "Analyzing how words relate to each other through synonyms, antonyms, analogies, and other connections.",
+        "sub_topics": [
+          {
+            "key": "synonyms_antonyms",
+            "name": "Using Synonyms and Antonyms",
+            "short_description": "Understanding words with similar and opposite meanings.",
+            "example_tasks": [
+              "Identify synonyms for overused words to add variety to writing (happy: joyful, content, elated).",
+              "Distinguish between near-synonyms that have subtle differences in meaning or connotation.",
+              "Identify antonyms and explain how they create contrast in writing.",
+              "Use synonym and antonym relationships to understand new vocabulary.",
+              "Choose the most precise synonym from several options based on context and connotation."
+            ]
+          },
+          {
+            "key": "analogies",
+            "name": "Understanding and Completing Analogies",
+            "short_description": "Analyzing relationships between word pairs and applying them to new situations.",
+            "example_tasks": [
+              "Complete analogies showing part-to-whole relationships (wheel : car :: page : book).",
+              "Complete analogies showing cause-and-effect relationships (practice : improvement :: study : knowledge).",
+              "Complete analogies showing synonym or antonym relationships.",
+              "Explain the type of relationship shown in a given analogy.",
+              "Create your own analogies to demonstrate understanding of word relationships."
+            ]
+          },
+          {
+            "key": "word_categories",
+            "name": "Understanding Word Categories and Hierarchies",
+            "short_description": "Recognizing how words fit into categories and levels of specificity.",
+            "example_tasks": [
+              "Arrange words from general to specific (vehicle → car → sedan → Honda Accord).",
+              "Identify which words belong to the same category and which do not.",
+              "Understand relationships between broader terms and specific examples (fruit: apple, banana, orange).",
+              "Use category words to organize vocabulary and understand relationships.",
+              "Create word maps showing hierarchical relationships among related terms."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "academic_domain_vocabulary",
+        "name": "Acquiring Academic and Domain-Specific Vocabulary",
+        "short_description": "Learning and using specialized vocabulary for different academic subjects and contexts.",
+        "sub_topics": [
+          {
+            "key": "academic_vocabulary",
+            "name": "Learning General Academic Vocabulary",
+            "short_description": "Acquiring vocabulary commonly used across academic disciplines.",
+            "example_tasks": [
+              "Learn and use academic words like analyze, evaluate, synthesize, infer, and justify in discussions and writing.",
+              "Understand transition words and phrases used in academic writing (furthermore, consequently, nevertheless).",
+              "Use precise academic verbs instead of general ones (examine rather than look at, demonstrate rather than show).",
+              "Build vocabulary related to thinking and learning (hypothesis, evidence, conclusion, perspective).",
+              "Practice using academic vocabulary in written and spoken responses across subjects."
+            ]
+          },
+          {
+            "key": "subject_specific_vocabulary",
+            "name": "Learning Subject-Specific Vocabulary",
+            "short_description": "Acquiring specialized terminology for different academic disciplines.",
+            "example_tasks": [
+              "Learn and use literary terms (theme, characterization, foreshadowing, symbolism, irony).",
+              "Build vocabulary specific to science (hypothesis, variable, organism, ecosystem, photosynthesis).",
+              "Learn historical and social studies terms (democracy, revolution, migration, imperialism).",
+              "Acquire mathematical vocabulary (equation, coefficient, proportion, variable, theorem).",
+              "Create subject-specific vocabulary journals or glossaries to track new terms."
+            ]
+          },
+          {
+            "key": "using_vocabulary_context",
+            "name": "Using New Vocabulary in Context",
+            "short_description": "Incorporating learned vocabulary into speaking and writing appropriately.",
+            "example_tasks": [
+              "Use newly learned vocabulary words correctly in original sentences showing their meaning.",
+              "Incorporate domain-specific terms in subject-area writing and discussions.",
+              "Practice using academic vocabulary in formal presentations and essays.",
+              "Avoid overusing sophisticated vocabulary when simpler words communicate more clearly.",
+              "Demonstrate understanding of new words by using them accurately in varied contexts."
+            ]
+          },
+          {
+            "key": "independent_vocabulary_learning",
+            "name": "Developing Independent Vocabulary Learning Strategies",
+            "short_description": "Building habits and strategies for continuous vocabulary acquisition.",
+            "example_tasks": [
+              "Keep a vocabulary notebook or digital list of new words encountered in reading with definitions and examples.",
+              "Set personal goals for learning a certain number of new words per week.",
+              "Use new vocabulary words in conversation and writing to reinforce learning.",
+              "Create flashcards, word maps, or other study tools for vocabulary review.",
+              "Practice reading widely to encounter diverse vocabulary in various contexts."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "poetry_analysis_forms",
+    "name": "Poetry Analysis and Forms",
+    "short_description": "Students analyze poetic techniques, interpret meaning in poetry, and understand various poetic forms and structures. They explore how poets use language, sound devices, and structure to create meaning and emotional effect.",
+    "sub_topics": [
+      {
+        "key": "poetic_devices_techniques",
+        "name": "Poetic Devices and Techniques",
+        "short_description": "Identifying and analyzing literary devices specific to poetry.",
+        "sub_topics": [
+          {
+            "key": "sound_devices",
+            "name": "Sound Devices in Poetry",
+            "short_description": "Analyzing how poets use sound to create musical effects and enhance meaning.",
+            "example_tasks": [
+              "Identify examples of alliteration (repetition of initial consonant sounds) in a poem and explain their effect.",
+              "Find assonance (repetition of vowel sounds) and consonance (repetition of consonant sounds) in a poem.",
+              "Analyze how onomatopoeia (words that imitate sounds) contributes to imagery in a poem.",
+              "Identify rhyme scheme in a poem using letter notation (ABAB, AABB, etc.).",
+              "Explain how sound devices like repetition create rhythm, emphasis, or mood in a specific poem."
+            ]
+          },
+          {
+            "key": "imagery_sensory_language",
+            "name": "Imagery and Sensory Language",
+            "short_description": "Analyzing how poets create vivid mental pictures through descriptive language.",
+            "example_tasks": [
+              "Identify imagery that appeals to different senses (visual, auditory, tactile, olfactory, gustatory) in a poem.",
+              "Explain how specific images contribute to the overall mood or theme of a poem.",
+              "Analyze how concrete images represent abstract ideas in a poem.",
+              "Compare how two poets use different imagery to describe similar subjects.",
+              "Create a visualization or illustration based on the imagery in a poem."
+            ]
+          },
+          {
+            "key": "figurative_language_poetry",
+            "name": "Figurative Language in Poetry",
+            "short_description": "Interpreting metaphors, similes, personification, and other figures of speech in poems.",
+            "example_tasks": [
+              "Identify and interpret extended metaphors that run throughout a poem.",
+              "Analyze how personification brings abstract concepts or inanimate objects to life in poetry.",
+              "Explain what a particular simile or metaphor reveals that literal language would not.",
+              "Identify symbolism in a poem and explain what objects or images represent.",
+              "Trace how a poet develops a central image or comparison throughout a poem."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "poetic_structure_form",
+        "name": "Poetic Structure and Form",
+        "short_description": "Understanding how poets organize language through line breaks, stanzas, and traditional forms.",
+        "sub_topics": [
+          {
+            "key": "line_breaks_stanzas",
+            "name": "Lines, Line Breaks, and Stanzas",
+            "short_description": "Analyzing how poets use line and stanza structure to create meaning and emphasis.",
+            "example_tasks": [
+              "Explain how a poet's choice of where to break lines affects emphasis and pacing.",
+              "Analyze the effect of enjambment (lines that run on without punctuation) versus end-stopped lines.",
+              "Describe how stanza breaks create pauses or shifts in thought or mood.",
+              "Compare the effect of short versus long lines in conveying different emotions or pacing.",
+              "Rewrite a poem with different line breaks and explain how it changes the reading experience."
+            ]
+          },
+          {
+            "key": "traditional_poetic_forms",
+            "name": "Traditional Poetic Forms",
+            "short_description": "Recognizing and understanding characteristics of structured poetic forms.",
+            "example_tasks": [
+              "Identify the characteristics of a sonnet (14 lines, specific rhyme scheme) and analyze an example.",
+              "Recognize haiku structure (three lines, 5-7-5 syllable pattern) and its focus on nature and moments.",
+              "Identify free verse poetry and explain how it differs from formal poetry with set patterns.",
+              "Analyze a ballad and identify its narrative elements and regular rhythm and rhyme.",
+              "Compare limerick structure (AABBA rhyme, humorous tone) with more serious poetic forms."
+            ]
+          },
+          {
+            "key": "rhythm_meter",
+            "name": "Rhythm and Meter",
+            "short_description": "Understanding patterns of stressed and unstressed syllables in poetry.",
+            "example_tasks": [
+              "Identify regular rhythm patterns in poems by marking stressed and unstressed syllables.",
+              "Recognize common meters like iambic (unstressed-stressed) in simple poems.",
+              "Explain how regular rhythm creates a musical quality or predictable pattern in poetry.",
+              "Identify where a poet breaks from regular rhythm for emphasis or effect.",
+              "Compare the rhythm of a formal poem with regular meter to free verse with irregular rhythm."
+            ]
+          },
+          {
+            "key": "repetition_refrain",
+            "name": "Repetition and Refrain",
+            "short_description": "Analyzing how poets use repeated words, phrases, or lines for emphasis.",
+            "example_tasks": [
+              "Identify repeated words or phrases in a poem and explain their effect on meaning or emotion.",
+              "Analyze how a refrain (repeated line or stanza) reinforces the theme or creates unity.",
+              "Explain how repetition creates emphasis, rhythm, or builds intensity in a poem.",
+              "Compare how different poets use repetition to achieve different effects.",
+              "Identify parallel structure (repeated grammatical patterns) and its effect in poetry."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "interpreting_poetry",
+        "name": "Interpreting Meaning in Poetry",
+        "short_description": "Analyzing poems to understand theme, tone, speaker, and deeper meanings.",
+        "sub_topics": [
+          {
+            "key": "identifying_theme_poetry",
+            "name": "Identifying Theme in Poetry",
+            "short_description": "Determining the central message or insight about life that a poem conveys.",
+            "example_tasks": [
+              "Identify the theme of a poem by analyzing key images, repeated ideas, and the overall message.",
+              "Distinguish between the subject (what the poem is about) and the theme (what it says about the subject).",
+              "Explain how specific poetic devices and images develop the theme throughout the poem.",
+              "Compare how two poems explore similar themes in different ways.",
+              "Support your interpretation of theme with specific evidence from the poem's language and structure."
+            ]
+          },
+          {
+            "key": "tone_mood_poetry",
+            "name": "Analyzing Tone and Mood",
+            "short_description": "Identifying the speaker's attitude and the emotional atmosphere of a poem.",
+            "example_tasks": [
+              "Identify the tone (speaker's attitude) in a poem by analyzing word choice and imagery.",
+              "Distinguish between tone (poet's attitude) and mood (reader's emotional response).",
+              "Explain how sound devices, rhythm, and word choice create a particular mood.",
+              "Trace how tone shifts during a poem and what causes those shifts.",
+              "Compare the tones of two poems on similar subjects and explain the differences."
+            ]
+          },
+          {
+            "key": "speaker_point_of_view",
+            "name": "Understanding Speaker and Point of View",
+            "short_description": "Identifying who is speaking in the poem and their perspective.",
+            "example_tasks": [
+              "Distinguish between the poet and the speaker of a poem (they may not be the same).",
+              "Describe the speaker's perspective, situation, and attitude based on evidence in the poem.",
+              "Identify whether the speaker is addressing someone specific or speaking generally.",
+              "Analyze how the speaker's point of view affects the reader's understanding of the poem.",
+              "Explain what the speaker reveals about themselves through their observations and language."
+            ]
+          },
+          {
+            "key": "close_reading_poetry",
+            "name": "Close Reading and Analysis of Poetry",
+            "short_description": "Examining poems carefully to understand how all elements work together to create meaning.",
+            "example_tasks": [
+              "Perform a close reading by analyzing each stanza's contribution to overall meaning.",
+              "Explain how multiple poetic devices work together in a single poem to create a unified effect.",
+              "Analyze how the form and structure of a poem relate to its content and meaning.",
+              "Support an interpretation with specific quotations and analysis of language and technique.",
+              "Write an analytical paragraph explaining how a poet uses specific techniques to convey theme."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "comparing_poems",
+        "name": "Comparing and Contrasting Poems",
+        "short_description": "Analyzing similarities and differences between poems in terms of themes, techniques, and forms.",
+        "sub_topics": [
+          {
+            "key": "comparing_themes_approaches",
+            "name": "Comparing Themes and Approaches",
+            "short_description": "Examining how different poets treat similar subjects or themes.",
+            "example_tasks": [
+              "Compare how two poems approach the same theme (nature, love, loss) with different perspectives.",
+              "Analyze how two poets use different tones to convey similar messages.",
+              "Compare traditional and contemporary poems on the same subject and explain how approaches differ.",
+              "Identify which poem's approach to a theme you find more effective and explain why with evidence.",
+              "Create a comparison chart showing how two poems differ in theme, tone, form, and technique."
+            ]
+          },
+          {
+            "key": "comparing_techniques_styles",
+            "name": "Comparing Techniques and Styles",
+            "short_description": "Analyzing how different poets use poetic devices and structural elements differently.",
+            "example_tasks": [
+              "Compare how two poets use imagery differently (sparse vs. rich, concrete vs. abstract).",
+              "Analyze differences in form between a structured poem (sonnet) and free verse on the same theme.",
+              "Compare how two poets use sound devices to create different effects.",
+              "Explain how two poets' different styles (simple language vs. complex, formal vs. conversational) suit their purposes.",
+              "Compare the pacing and rhythm of two poems and how it affects their emotional impact."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "drama_theater_analysis",
+    "name": "Drama and Theater",
+    "short_description": "Students analyze dramatic texts and performances, understanding how plays use dialogue, action, staging, and dramatic elements to convey meaning. They explore how drama differs from other literary forms.",
+    "sub_topics": [
+      {
+        "key": "dramatic_structure_elements",
+        "name": "Dramatic Structure and Elements",
+        "short_description": "Understanding the components and organization of dramatic texts.",
+        "sub_topics": [
+          {
+            "key": "acts_scenes_structure",
+            "name": "Acts, Scenes, and Dramatic Structure",
+            "short_description": "Analyzing how plays are organized into acts and scenes with specific structural purposes.",
+            "example_tasks": [
+              "Identify the five-act structure in a traditional play and explain what happens in each act.",
+              "Analyze how a scene break creates a shift in time, place, or focus in a play.",
+              "Explain how the climax and resolution function differently in drama than in prose fiction.",
+              "Compare the pacing created by many short scenes versus fewer long scenes in a play.",
+              "Identify where the exposition, rising action, climax, and falling action occur in a play you've read."
+            ]
+          },
+          {
+            "key": "stage_directions_setting",
+            "name": "Stage Directions and Setting",
+            "short_description": "Understanding how playwrights convey information about action, setting, and staging through directions.",
+            "example_tasks": [
+              "Analyze stage directions to understand how characters move and interact on stage.",
+              "Explain how stage directions about lighting or sound create mood or emphasize important moments.",
+              "Visualize the physical setting of a scene based on the playwright's descriptions.",
+              "Compare how much information different playwrights provide in stage directions.",
+              "Explain how minimalist or detailed stage directions affect how a play might be interpreted and performed."
+            ]
+          },
+          {
+            "key": "dramatic_conventions",
+            "name": "Dramatic Conventions",
+            "short_description": "Recognizing special techniques used in drama like soliloquy, aside, and monologue.",
+            "example_tasks": [
+              "Identify soliloquies where characters speak their thoughts aloud when alone on stage.",
+              "Recognize asides where characters speak to the audience without other characters hearing.",
+              "Distinguish between monologues (long speeches to other characters) and soliloquies (speaking alone).",
+              "Explain how soliloquies and asides reveal characters' true thoughts and feelings.",
+              "Analyze what important information is conveyed through dramatic conventions that couldn't be shown through action alone."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "analyzing_dialogue",
+        "name": "Analyzing Dialogue",
+        "short_description": "Understanding how playwrights develop character and advance plot through spoken words.",
+        "sub_topics": [
+          {
+            "key": "characterization_through_dialogue",
+            "name": "Characterization Through Dialogue",
+            "short_description": "Analyzing how characters are revealed through their speech patterns and word choices.",
+            "example_tasks": [
+              "Analyze how a character's vocabulary, tone, and speech patterns reveal their personality and background.",
+              "Compare how two characters speak differently and what this reveals about their relationship or status.",
+              "Identify how a character's way of speaking changes in different situations or with different characters.",
+              "Explain how dialect, slang, or formal language characterizes different individuals in a play.",
+              "Analyze what a character reveals about themselves through both what they say and how they say it."
+            ]
+          },
+          {
+            "key": "subtext_dialogue",
+            "name": "Understanding Subtext in Dialogue",
+            "short_description": "Recognizing when characters mean something different from what they literally say.",
+            "example_tasks": [
+              "Identify instances where a character's words say one thing but their meaning is something else.",
+              "Analyze dialogue where characters are being sarcastic, evasive, or deliberately misleading.",
+              "Explain what unspoken tensions or emotions lie beneath polite or formal dialogue.",
+              "Identify dramatic irony where the audience understands more than the characters do.",
+              "Analyze how stage directions about tone or body language reveal subtext in dialogue."
+            ]
+          },
+          {
+            "key": "conflict_through_dialogue",
+            "name": "Conflict and Tension in Dialogue",
+            "short_description": "Analyzing how disagreements and conflicts unfold through character interactions.",
+            "example_tasks": [
+              "Identify how dialogue reveals conflicts between characters' goals, values, or desires.",
+              "Analyze how the pace and intensity of dialogue exchanges build dramatic tension.",
+              "Trace how an argument develops through dialogue, escalating toward a crisis point.",
+              "Explain how interruptions, short exchanges, or overlapping speech create urgency or conflict.",
+              "Analyze a heated exchange and identify the underlying issue beyond what's explicitly discussed."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "dramatic_techniques_effects",
+        "name": "Dramatic Techniques and Effects",
+        "short_description": "Understanding how playwrights use specific techniques to create meaning and engage audiences.",
+        "sub_topics": [
+          {
+            "key": "foreshadowing_dramatic_irony",
+            "name": "Foreshadowing and Dramatic Irony",
+            "short_description": "Analyzing how playwrights hint at future events and create tension through audience knowledge.",
+            "example_tasks": [
+              "Identify instances of foreshadowing where dialogue or events hint at what will happen later.",
+              "Explain how dramatic irony occurs when the audience knows something characters don't.",
+              "Analyze how foreshadowing creates suspense and prepares the audience for later developments.",
+              "Identify moments where a character's words take on additional meaning because of dramatic irony.",
+              "Explain how dramatic irony affects audience engagement and emotional response to events."
+            ]
+          },
+          {
+            "key": "symbolism_drama",
+            "name": "Symbolism in Drama",
+            "short_description": "Recognizing how objects, actions, or settings represent larger ideas in plays.",
+            "example_tasks": [
+              "Identify symbolic objects in a play and explain what they represent (e.g., a light, a photograph, a piece of clothing).",
+              "Analyze how a symbolic action or gesture reveals character or theme.",
+              "Explain how the setting itself might be symbolic of characters' situations or the play's themes.",
+              "Trace how a symbol's meaning develops or changes throughout the play.",
+              "Compare how different characters relate to or interpret the same symbolic element."
+            ]
+          },
+          {
+            "key": "humor_comedy_techniques",
+            "name": "Humor and Comedy Techniques",
+            "short_description": "Understanding how playwrights create comic effects through various devices.",
+            "example_tasks": [
+              "Identify verbal humor in dialogue (puns, wordplay, witty exchanges, exaggeration).",
+              "Recognize situational comedy based on misunderstandings, mistaken identity, or unlikely coincidences.",
+              "Analyze physical comedy suggested in stage directions (slapstick, pratfalls, comic business).",
+              "Explain how comedy can serve serious purposes by highlighting social issues or human foibles.",
+              "Compare how different characters provide comic relief in a serious or tragic play."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "staging_performance_analysis",
+        "name": "Staging and Performance Analysis",
+        "short_description": "Understanding how drama is designed for performance and how staging choices affect meaning.",
+        "sub_topics": [
+          {
+            "key": "visualizing_performance",
+            "name": "Visualizing Performance",
+            "short_description": "Imagining how a play would look and sound when performed on stage.",
+            "example_tasks": [
+              "Describe how you would stage a particular scene, including set, blocking, and character positioning.",
+              "Explain what costumes would be appropriate for characters based on the text and time period.",
+              "Visualize how lighting could be used to create mood or focus attention in specific scenes.",
+              "Imagine how actors might deliver lines based on context, character, and dramatic situation.",
+              "Sketch a simple set design for a scene based on the playwright's descriptions and the play's needs."
+            ]
+          },
+          {
+            "key": "comparing_text_performance",
+            "name": "Comparing Text to Performance",
+            "short_description": "Analyzing differences between reading a play and seeing it performed.",
+            "example_tasks": [
+              "Compare how you imagined a scene while reading with how it was performed in a video or live production.",
+              "Analyze how actors' choices (tone, gestures, pacing) add interpretation beyond the written text.",
+              "Explain what a performance reveals about characters or relationships that isn't obvious in the text alone.",
+              "Evaluate whether a director's staging choices effectively convey the playwright's intentions.",
+              "Discuss how different actors or productions might interpret the same scene differently."
+            ]
+          },
+          {
+            "key": "performance_elements",
+            "name": "Analyzing Performance Elements",
+            "short_description": "Understanding how technical and artistic elements contribute to theatrical meaning.",
+            "example_tasks": [
+              "Analyze how costume choices communicate information about character, time period, or status.",
+              "Explain how set design creates the world of the play and supports the action and themes.",
+              "Describe how lighting and sound effects create atmosphere or emphasize dramatic moments.",
+              "Evaluate how an actor's vocal choices (volume, pace, tone) affect the interpretation of a character.",
+              "Analyze how music underscores emotional moments or transitions between scenes in a performance."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "dramatic_genres",
+        "name": "Dramatic Genres and Forms",
+        "short_description": "Understanding different types of drama and their distinguishing characteristics.",
+        "sub_topics": [
+          {
+            "key": "tragedy_characteristics",
+            "name": "Tragedy and Tragic Elements",
+            "short_description": "Recognizing the conventions and purposes of tragic drama.",
+            "example_tasks": [
+              "Identify characteristics of tragedy: a protagonist with a tragic flaw, serious tone, unhappy ending.",
+              "Analyze how a tragic hero's flaw or error in judgment leads to their downfall.",
+              "Explain how tragedy creates catharsis (emotional release) for the audience.",
+              "Identify the moment of recognition or reversal in a tragic play.",
+              "Compare classical tragedy conventions with modern tragic plays."
+            ]
+          },
+          {
+            "key": "comedy_characteristics",
+            "name": "Comedy and Comic Elements",
+            "short_description": "Understanding the features and purposes of comic drama.",
+            "example_tasks": [
+              "Identify characteristics of comedy: humorous situations, happy endings, social commentary.",
+              "Analyze how comedies often resolve with marriages, reunions, or restored social order.",
+              "Explain how comedy can critique society or human behavior while entertaining.",
+              "Distinguish between different types of comedy (romantic, satirical, farcical).",
+              "Analyze how comedies often feature disguise, mistaken identity, or misunderstanding as plot devices."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

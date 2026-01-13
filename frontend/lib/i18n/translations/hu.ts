@@ -46,6 +46,9 @@ export const hu: Translations = {
   Menu: "Menü",
   Language: "Nyelv",
   Country: "Ország",
+  grade: "osztály",
+  "grade 1-12": "1-12. osztály",
+  "Create educational tasks based on curriculum topics for": "Hozzon létre oktatási feladatokat tantervi témákhoz",
 
   // Tasks page
   Tasks: "Feladatok",
@@ -83,6 +86,7 @@ export const hu: Translations = {
     "Kérjük, adjon meg legalább 3 karaktert",
 
   // Subjects
+  Subjects: "Tantárgyak",
   Mathematics: "Matematika",
   Physics: "Fizika",
   Chemistry: "Kémia",
@@ -174,6 +178,8 @@ export const hu: Translations = {
   // Registration Modal
   "Create Your Account": "Fiók Létrehozása",
   "Country & Subject": "Ország és Tantárgy",
+  "Teaching Info": "Tanítási Információk",
+  "Location, level & subjects": "Helyszín, szint és tantárgyak",
   "Location and expertise": "Helyszín és szakterület",
   "Personal Info": "Személyes Adatok",
   "Name and Email": "Név és E-mail",
@@ -181,9 +187,15 @@ export const hu: Translations = {
   "Enter verification code": "Adja meg az ellenőrző kódot",
   "Select your location": "Válassza ki az országot",
   "Select Your Country & Subject": "Válassza Ki az Országot és a Tantárgyat",
+  "Select Your Teaching Information": "Válassza Ki Tanítási Információit",
   "Select Your Country": "Válassza Ki az Országot",
+  "Teaching Level": "Tanítási Szint",
   "Choose your location and primary teaching subject":
     "Válassza ki az országot és az elsődleges tanítási tantárgyat",
+  "Choose your location, teaching subjects, and grade level":
+    "Válassza ki az országot, tanítási tantárgyakat és évfolyamot",
+  "Choose your location, teaching level, subjects, and educational model":
+    "Válassza ki az országot, tanítási szintet, tantárgyakat és oktatási modellt",
   "Choose your country to personalize your experience":
     "Válassza ki az országot a személyre szabott élményért",
   "Your Work Information": "Munkahelyi Adatok",

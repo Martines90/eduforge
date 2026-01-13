@@ -39,7 +39,12 @@ export default function TasksPage() {
   const { user, gradeSystem } = useUser();
   const [searchQuery, setSearchQuery] = useState('');
   const [filterSubject, setFilterSubject] = useState<Subject>('mathematics');
-  const [filterGrade, setFilterGrade] = useState<string>('all');
+  // Set default grade to teacher's teacherRole if available, otherwise 'all'
+  const [filterGrade, setFilterGrade] = useState<string>(
+    user.isRegistered && user.identity === 'teacher' && user.teacherRole
+      ? user.teacherRole
+      : 'all'
+  );
 
   // Dynamic tree data storage - one entry per grade level
   const [treeDataByGrade, setTreeDataByGrade] = useState<Record<string, TreeNode[]>>({});

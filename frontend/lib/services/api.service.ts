@@ -23,6 +23,9 @@ export interface RegisterData {
   name: string;
   role: 'teacher' | 'general_user';
   country: string;
+  subjects?: string[]; // For teachers - multi-select
+  educationalModel?: string; // For teachers - grade/school type level
+  teacherRole?: string; // For teachers - the grade level they teach (e.g., "grade_6_8")
   recaptchaToken?: string;
 }
 

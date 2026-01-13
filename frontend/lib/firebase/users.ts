@@ -22,7 +22,9 @@ export interface FirebaseUser {
   email: string;
   name: string;
   role: UserIdentity;
-  subject?: Subject;
+  subjects?: Subject[]; // For teachers - multi-select subjects
+  educationalModel?: string; // For teachers - educational model preference
+  teacherRole?: string; // For teachers - the grade level they teach (e.g., "grade_6_8")
   country: CountryCode;
   emailVerified: boolean;
   subscription?: {
@@ -47,7 +49,7 @@ export async function createUser(userData: {
   email: string;
   name: string;
   role: UserIdentity;
-  subject?: Subject;
+  subjects?: Subject[];
   country: CountryCode;
 }): Promise<void> {
   try {

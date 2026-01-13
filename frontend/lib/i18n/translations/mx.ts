@@ -47,6 +47,9 @@ export const mx: Translations = {
   Menu: "Menú",
   Language: "Idioma",
   Country: "País",
+  grade: "grado",
+  "grade 1-12": "grado 1-12",
+  "Create educational tasks based on curriculum topics for": "Crear tareas educativas basadas en temas curriculares para",
 
   // Tasks page
   Tasks: "Tareas",
@@ -83,6 +86,7 @@ export const mx: Translations = {
     "Por favor ingresa al menos 3 caracteres",
 
   // Subjects
+  Subjects: "Materias",
   Mathematics: "Matemáticas",
   Physics: "Física",
   Chemistry: "Química",
@@ -174,16 +178,24 @@ export const mx: Translations = {
   // Registration Modal
   "Create Your Account": "Crea Tu Cuenta",
   "Country & Subject": "País y Materia",
+  "Teaching Info": "Información de Enseñanza",
   "Location and expertise": "Ubicación y experiencia",
+  "Location, level & subjects": "Ubicación, nivel y materias",
   "Personal Info": "Información Personal",
   "Name and Email": "Nombre y Correo",
   "Verify Email": "Verificar Correo",
   "Enter verification code": "Ingresa el código de verificación",
   "Select your location": "Selecciona tu ubicación",
   "Select Your Country & Subject": "Selecciona Tu País y Materia",
+  "Select Your Teaching Information": "Selecciona Tu Información de Enseñanza",
   "Select Your Country": "Selecciona Tu País",
+  "Teaching Level": "Nivel de Enseñanza",
   "Choose your location and primary teaching subject":
     "Elige tu ubicación y materia principal de enseñanza",
+  "Choose your location, teaching subjects, and grade level":
+    "Elige tu ubicación, materias de enseñanza y nivel de grado",
+  "Choose your location, teaching level, subjects, and educational model":
+    "Elige tu ubicación, nivel de enseñanza, materias y modelo educativo",
   "Choose your country to personalize your experience":
     "Elige tu país para personalizar tu experiencia",
   "Your Work Information": "Tu Información Laboral",

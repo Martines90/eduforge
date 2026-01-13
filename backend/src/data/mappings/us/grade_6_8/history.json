@@ -4056,5 +4056,1315 @@
         ]
       }
     ]
+  },
+  {
+    "key": "world_war_one",
+    "name": "World War I",
+    "short_description": "Students analyze the causes of the Great War, the nature of trench warfare and modern military technology, the global scope of the conflict, the Treaty of Versailles, and how the war transformed European society and set the stage for future conflicts.",
+    "sub_topics": [
+      {
+        "key": "causes_wwi",
+        "name": "Causes of World War I",
+        "short_description": "Understanding the long-term and immediate factors that led to war in 1914.",
+        "sub_topics": [
+          {
+            "key": "militarism",
+            "name": "Militarism and Arms Race",
+            "short_description": "Learning about the military buildup and glorification of military power.",
+            "example_tasks": [
+              "Describe the naval arms race between Britain and Germany, especially the dreadnought battleship competition",
+              "Explain how European nations dramatically increased the size of their armies and military spending",
+              "Analyze the glorification of war and military values in European culture before 1914",
+              "Evaluate how military planning (like Germany's Schlieffen Plan) made war more likely"
+            ]
+          },
+          {
+            "key": "alliances",
+            "name": "Alliance System",
+            "short_description": "Understanding how alliances turned a regional conflict into a world war.",
+            "example_tasks": [
+              "Describe the Triple Alliance: Germany, Austria-Hungary, Italy (later switched sides)",
+              "Explain the Triple Entente: France, Russia, Britain",
+              "Analyze how alliance obligations meant a conflict between two nations would involve their allies",
+              "Create a diagram showing the alliance system and how it created two opposing camps",
+              "Evaluate Bismarck's statement that 'some damned foolish thing in the Balkans' would start a war"
+            ]
+          },
+          {
+            "key": "imperialism_rivalry",
+            "name": "Imperialism and Colonial Rivalry",
+            "short_description": "Learning how competition for colonies created tensions.",
+            "example_tasks": [
+              "Describe how Germany's late unification (1871) left it seeking colonies already claimed by others",
+              "Explain specific colonial disputes, such as the Moroccan Crises between France and Germany",
+              "Analyze how imperial competition increased distrust and hostility among European powers",
+              "Evaluate whether economic competition for resources and markets made war inevitable"
+            ]
+          },
+          {
+            "key": "nationalism",
+            "name": "Nationalism and Ethnic Tensions",
+            "short_description": "Understanding nationalist movements, especially in the Balkans.",
+            "example_tasks": [
+              "Describe intense nationalism and desire for national glory in all major European countries",
+              "Explain ethnic tensions in Austria-Hungary's multi-ethnic empire",
+              "Analyze Balkan nationalism, particularly Serbian desire to unite all South Slavs",
+              "Describe the Balkans as the 'powder keg of Europe' due to competing nationalist claims",
+              "Evaluate pan-Slavism and Russian support for Slavic peoples against Austria-Hungary"
+            ]
+          },
+          {
+            "key": "assassination_sarajevo",
+            "name": "Assassination at Sarajevo: The Spark",
+            "short_description": "Learning about the immediate cause that triggered the war.",
+            "example_tasks": [
+              "Describe the assassination of Archduke Franz Ferdinand of Austria by Gavrilo Princip (June 28, 1914)",
+              "Explain Austria-Hungary's harsh ultimatum to Serbia",
+              "Analyze the chain reaction: Austria declares war on Serbia, Russia mobilizes to support Serbia, Germany supports Austria and declares war on Russia and France, Germany invades Belgium bringing Britain into the war",
+              "Create a timeline showing how the crisis escalated from assassination to world war in just over a month",
+              "Evaluate whether the war was inevitable or if it could have been prevented"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "course_of_war",
+        "name": "The Course of World War I",
+        "short_description": "Examining major battles, military strategies, and the stalemate on the Western Front.",
+        "sub_topics": [
+          {
+            "key": "western_front",
+            "name": "The Western Front and Trench Warfare",
+            "short_description": "Understanding the deadlock and horrific conditions of trench warfare.",
+            "example_tasks": [
+              "Describe the German invasion of Belgium and France and the failure of the Schlieffen Plan",
+              "Explain the development of trench systems stretching from the English Channel to Switzerland",
+              "Analyze why trenches created a stalemate: defensive advantages of machine guns, artillery, barbed wire",
+              "Describe conditions in the trenches: mud, rats, disease, constant bombardment, psychological trauma",
+              "Explain major battles like the Somme (1916) and Verdun (1916) that killed hundreds of thousands for minimal gains",
+              "Evaluate the futility of 'going over the top' into no man's land against machine gun fire"
+            ]
+          },
+          {
+            "key": "new_weapons_technology",
+            "name": "New Weapons and Technology",
+            "short_description": "Learning about innovations that made WWI unprecedentedly deadly.",
+            "example_tasks": [
+              "Describe the devastating effectiveness of machine guns in defensive positions",
+              "Explain the introduction of poison gas (chlorine, mustard gas) and its horrific effects",
+              "Analyze the development of tanks as a way to break through trench defenses",
+              "Describe the use of airplanes for reconnaissance and later for combat (dogfights)",
+              "Explain submarine warfare and its impact on shipping and civilians",
+              "Evaluate how technology favored defense over offense, creating the stalemate"
+            ]
+          },
+          {
+            "key": "other_fronts",
+            "name": "Other Fronts and Global Scope",
+            "short_description": "Understanding that WWI was fought on multiple continents.",
+            "example_tasks": [
+              "Describe the Eastern Front where Germany and Austria fought Russia across vast distances",
+              "Explain the Italian Front in the Alps between Italy and Austria-Hungary",
+              "Analyze the Middle Eastern campaign including the Ottoman Empire's role and Arab revolts",
+              "Describe colonial fighting in Africa and the Pacific for German colonies",
+              "Evaluate why this was truly a 'world' war involving colonies and soldiers from around the globe"
+            ]
+          },
+          {
+            "key": "total_war",
+            "name": "Total War and the Home Front",
+            "short_description": "Learning how entire societies were mobilized for war.",
+            "example_tasks": [
+              "Define total war: all resources of society devoted to war effort",
+              "Describe government control of economies: rationing, propaganda, censorship",
+              "Explain how women entered workforce in unprecedented numbers to replace men at war",
+              "Analyze the use of propaganda to maintain morale and demonize enemies",
+              "Evaluate how WWI blurred the line between soldiers and civilians as legitimate targets"
+            ]
+          },
+          {
+            "key": "russian_revolution_exit",
+            "name": "Russian Revolution and Exit from War",
+            "short_description": "Understanding how revolution removed Russia from the war.",
+            "example_tasks": [
+              "Describe how war hardships (casualties, food shortages, economic collapse) led to revolution in Russia (1917)",
+              "Explain the Bolshevik seizure of power and Lenin's promise of 'peace, land, and bread'",
+              "Analyze the Treaty of Brest-Litovsk (1918): Russia's harsh peace with Germany",
+              "Evaluate how Russia's exit allowed Germany to shift forces to the Western Front"
+            ]
+          },
+          {
+            "key": "american_entry",
+            "name": "American Entry and Allied Victory",
+            "short_description": "Learning how American involvement tipped the balance.",
+            "example_tasks": [
+              "Explain American neutrality (1914-1917) and the policy of 'freedom of the seas'",
+              "Describe factors pushing America toward war: unrestricted submarine warfare, Lusitania sinking, Zimmermann Telegram",
+              "Analyze President Wilson's idealistic justification: making the world 'safe for democracy'",
+              "Explain how American troops, supplies, and financial support helped break the stalemate",
+              "Describe Germany's final offensives in 1918 and ultimate exhaustion leading to armistice (November 11, 1918)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "treaty_versailles",
+        "name": "Treaty of Versailles and Paris Peace Conference",
+        "short_description": "Examining the peace settlement and its controversial terms.",
+        "sub_topics": [
+          {
+            "key": "big_four",
+            "name": "The Big Four and Their Goals",
+            "short_description": "Understanding the leaders who shaped the peace.",
+            "example_tasks": [
+              "Describe Woodrow Wilson (USA) and his idealistic Fourteen Points for lasting peace",
+              "Explain Georges Clemenceau (France) and his desire to punish Germany and ensure French security",
+              "Analyze David Lloyd George (Britain) balancing between Wilson's idealism and Clemenceau's revenge",
+              "Describe Vittorio Orlando (Italy) and Italian territorial demands",
+              "Evaluate conflicts among the Big Four over how harsh the peace should be"
+            ]
+          },
+          {
+            "key": "wilson_fourteen_points",
+            "name": "Wilson's Fourteen Points",
+            "short_description": "Learning about Wilson's vision for preventing future wars.",
+            "example_tasks": [
+              "Describe key points: self-determination for peoples, open diplomacy, freedom of the seas, reduction of armaments",
+              "Explain Wilson's proposal for a League of Nations to prevent future wars through collective security",
+              "Analyze the principle of national self-determination and its application (and non-application)",
+              "Evaluate why European allies found Wilson's idealism impractical after such a devastating war"
+            ]
+          },
+          {
+            "key": "treaty_terms",
+            "name": "Terms of the Treaty of Versailles",
+            "short_description": "Understanding the harsh terms imposed on Germany.",
+            "example_tasks": [
+              "Describe territorial losses: Alsace-Lorraine to France, Polish corridor, all colonies taken away",
+              "Explain military restrictions: small army (100,000), no air force, no submarines, demilitarized Rhineland",
+              "Analyze the 'war guilt clause' (Article 231) forcing Germany to accept blame for the war",
+              "Describe reparations: massive payments for war damages (132 billion gold marks)",
+              "Evaluate German reaction: humiliation, resentment, refusal to accept 'diktat' (dictated peace)",
+              "Assess whether the treaty was too harsh (German view) or too lenient (French view)"
+            ]
+          },
+          {
+            "key": "league_of_nations",
+            "name": "League of Nations",
+            "short_description": "Learning about the first international peacekeeping organization.",
+            "example_tasks": [
+              "Describe the League's structure and purpose: prevent war through collective security and diplomacy",
+              "Explain weaknesses: no army, required unanimous decisions, major powers not members or left",
+              "Analyze the irony that the U.S. Senate rejected the Treaty and League membership",
+              "Evaluate early League successes in minor disputes and ultimate failure to prevent aggression in 1930s"
+            ]
+          },
+          {
+            "key": "other_peace_treaties",
+            "name": "Other Peace Treaties and New Nations",
+            "short_description": "Understanding the reshaping of Europe and the Middle East.",
+            "example_tasks": [
+              "Describe treaties with Austria, Hungary, Bulgaria, and Ottoman Empire",
+              "Explain the collapse of empires: Austro-Hungarian, Ottoman, Russian",
+              "Analyze creation of new nations: Poland, Czechoslovakia, Yugoslavia, Finland, Baltic states",
+              "Describe the mandate system placing former Ottoman territories under British and French control",
+              "Evaluate whether new boundaries reflected self-determination or created new problems"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "impact_consequences_wwi",
+        "name": "Impact and Consequences of World War I",
+        "short_description": "Analyzing the war's profound effects on the 20th century.",
+        "sub_topics": [
+          {
+            "key": "casualties_destruction",
+            "name": "Human Cost and Destruction",
+            "short_description": "Understanding the unprecedented death and devastation.",
+            "example_tasks": [
+              "Describe casualty figures: approximately 10 million soldiers killed, 20 million wounded",
+              "Explain additional civilian deaths from starvation, disease (Spanish flu pandemic), and genocide (Armenian genocide)",
+              "Analyze the psychological impact: 'shell shock' (PTSD), 'lost generation' of young men",
+              "Evaluate the war's destruction of Europe's economy, infrastructure, and optimistic pre-war culture"
+            ]
+          },
+          {
+            "key": "political_consequences",
+            "name": "Political Changes and Revolutions",
+            "short_description": "Learning how the war destroyed old orders and created instability.",
+            "example_tasks": [
+              "Describe the collapse of four empires: German, Austro-Hungarian, Ottoman, Russian",
+              "Explain the wave of revolutions across Europe (Russia, Germany, Austria-Hungary)",
+              "Analyze the replacement of monarchies with republics and democracies (often unstable)",
+              "Evaluate how the war's disruption created conditions for both communism and fascism"
+            ]
+          },
+          {
+            "key": "social_changes",
+            "name": "Social and Cultural Changes",
+            "short_description": "Understanding how the war transformed society.",
+            "example_tasks": [
+              "Describe expanded roles for women during and after the war, including suffrage gains",
+              "Explain the disillusionment and cynicism that replaced pre-war optimism",
+              "Analyze cultural responses: war poetry (Wilfred Owen, Siegfried Sassoon), novels (All Quiet on the Western Front), art",
+              "Evaluate the end of the idea that war was glorious or that progress was inevitable"
+            ]
+          },
+          {
+            "key": "seeds_future_conflict",
+            "name": "Seeds of Future Conflict",
+            "short_description": "Analyzing how WWI set the stage for WWII.",
+            "example_tasks": [
+              "Explain German resentment of the Versailles Treaty creating desire for revenge",
+              "Describe economic devastation making Germany vulnerable to extremism",
+              "Analyze unresolved territorial disputes and nationalist grievances",
+              "Evaluate the statement that WWI and WWII were really one long conflict with a 20-year pause",
+              "Describe how the 'war to end all wars' ironically created conditions for an even worse war"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "interwar_period_wwii",
+    "name": "Interwar Period and World War II",
+    "short_description": "Students examine the Great Depression's global impact, the rise of totalitarian regimes in Europe and Asia, the failure of appeasement, World War II's major events and battles, the Holocaust, and the war's devastating conclusion including atomic weapons.",
+    "sub_topics": [
+      {
+        "key": "great_depression",
+        "name": "The Great Depression",
+        "short_description": "Understanding the worldwide economic collapse and its political consequences.",
+        "sub_topics": [
+          {
+            "key": "causes_depression",
+            "name": "Causes of the Great Depression",
+            "short_description": "Learning about economic factors that led to global collapse.",
+            "example_tasks": [
+              "Describe the U.S. stock market crash of October 1929 (Black Tuesday)",
+              "Explain underlying economic problems: overproduction, unequal wealth distribution, speculation, weak banking system",
+              "Analyze how the crash spread from America to Europe and worldwide through international trade and loans",
+              "Evaluate the role of protective tariffs in worsening the global economic collapse"
+            ]
+          },
+          {
+            "key": "impact_depression",
+            "name": "Global Impact of the Depression",
+            "short_description": "Understanding economic devastation and social suffering.",
+            "example_tasks": [
+              "Describe unemployment reaching 25-30% in major industrial nations",
+              "Explain business failures, bank collapses, and loss of savings",
+              "Analyze social effects: poverty, hunger, homelessness, psychological despair",
+              "Evaluate how the Depression discredited capitalism and democracy in many people's eyes"
+            ]
+          },
+          {
+            "key": "responses_depression",
+            "name": "Responses to the Depression",
+            "short_description": "Learning about different approaches to economic crisis.",
+            "example_tasks": [
+              "Describe FDR's New Deal in America: government intervention, relief programs, regulations",
+              "Explain how some democracies maintained democratic systems while addressing crisis",
+              "Analyze how economic desperation in Germany and Japan contributed to militarism and aggression",
+              "Evaluate the connection between economic crisis and rise of totalitarianism"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "rise_totalitarianism",
+        "name": "Rise of Totalitarian Regimes",
+        "short_description": "Examining fascism, Nazism, and Stalinism as new forms of dictatorship.",
+        "sub_topics": [
+          {
+            "key": "characteristics_totalitarianism",
+            "name": "Characteristics of Totalitarian States",
+            "short_description": "Understanding how totalitarianism differed from traditional dictatorship.",
+            "example_tasks": [
+              "Define totalitarianism: government control over all aspects of life (political, economic, social, cultural)",
+              "Describe common features: single-party rule, cult of personality, state control of media, use of terror and secret police",
+              "Explain the use of propaganda to shape public opinion and ideology",
+              "Analyze the elimination of individual freedoms and civil society",
+              "Compare totalitarianism (attempting total control) to authoritarianism (controlling politics but less social control)"
+            ]
+          },
+          {
+            "key": "fascist_italy",
+            "name": "Mussolini and Fascist Italy",
+            "short_description": "Learning about the first fascist regime.",
+            "example_tasks": [
+              "Describe Italian discontent after WWI despite being on winning side",
+              "Explain Mussolini's rise to power through intimidation by Blackshirt paramilitary and 1922 'March on Rome'",
+              "Analyze fascist ideology: extreme nationalism, glorification of the state and leader, rejection of democracy, militarism",
+              "Describe Mussolini's totalitarian control and aggressive foreign policy",
+              "Evaluate how Mussolini provided a model for Hitler and other fascist movements"
+            ]
+          },
+          {
+            "key": "nazi_germany",
+            "name": "Hitler and Nazi Germany",
+            "short_description": "Understanding the most destructive totalitarian regime.",
+            "example_tasks": [
+              "Describe Hitler's rise to power: exploiting German resentment, economic crisis, fear of communism",
+              "Explain Hitler's appointment as Chancellor (1933) and rapid consolidation of dictatorial power",
+              "Analyze Nazi ideology: extreme nationalism, racism (Aryan superiority), anti-Semitism, Lebensraum (living space)",
+              "Describe Nazi totalitarian control: Gestapo secret police, propaganda ministry, Hitler Youth, persecution of opponents",
+              "Evaluate how Hitler rebuilt German military in violation of Versailles Treaty",
+              "Describe Nazi racial policies beginning with discrimination and leading to genocide"
+            ]
+          },
+          {
+            "key": "stalinist_soviet_union",
+            "name": "Stalin and the Soviet Union",
+            "short_description": "Learning about communist totalitarianism.",
+            "example_tasks": [
+              "Describe Stalin's rise to power after Lenin's death and elimination of rivals",
+              "Explain forced collectivization of agriculture causing famine killing millions in Ukraine",
+              "Analyze rapid industrialization through Five-Year Plans regardless of human cost",
+              "Describe the Great Purge (1930s): show trials, executions, and labor camps (Gulag) eliminating perceived enemies",
+              "Evaluate Stalin's totalitarian control through terror and propaganda",
+              "Compare communist totalitarianism (emphasizing class) to fascist totalitarianism (emphasizing nation/race)"
+            ]
+          },
+          {
+            "key": "militarist_japan",
+            "name": "Militarist Japan",
+            "short_description": "Understanding Japan's shift toward military dictatorship and imperialism.",
+            "example_tasks": [
+              "Describe how economic depression and desire for resources led to military influence over government",
+              "Explain Japanese invasion of Manchuria (1931) and China (1937)",
+              "Analyze Japanese imperialism justified by rhetoric of 'Greater East Asia Co-Prosperity Sphere'",
+              "Describe atrocities like the Rape of Nanking (1937-1938)",
+              "Evaluate how Japanese militarism aligned with fascist powers despite different ideology"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "road_to_wwii",
+        "name": "Road to World War II",
+        "short_description": "Examining aggression by dictatorships and the failure of democracies to respond.",
+        "sub_topics": [
+          {
+            "key": "axis_aggression",
+            "name": "Axis Aggression and Expansion",
+            "short_description": "Learning about the series of aggressive acts leading to war.",
+            "example_tasks": [
+              "Describe Italy's invasion of Ethiopia (1935)",
+              "Explain the Spanish Civil War (1936-1939) as a rehearsal for WWII with German and Italian intervention",
+              "Analyze Germany's remilitarization of the Rhineland (1936), Anschluss with Austria (1938), and seizure of Czechoslovakia (1938-1939)",
+              "Describe Japanese expansion in China",
+              "Create a timeline showing escalating aggression from 1931-1939"
+            ]
+          },
+          {
+            "key": "appeasement",
+            "name": "Appeasement Policy",
+            "short_description": "Understanding why democracies tried to avoid war through concessions.",
+            "example_tasks": [
+              "Define appeasement: giving in to demands of aggressor hoping to avoid war",
+              "Describe the Munich Conference (1938) where Britain and France allowed Hitler to take Sudetenland",
+              "Explain reasons for appeasement: memories of WWI, economic problems, military unpreparedness, hope Hitler's demands were limited",
+              "Analyze Neville Chamberlain's statement about achieving 'peace for our time'",
+              "Evaluate whether appeasement was realistic diplomacy or cowardly mistake that encouraged Hitler",
+              "Describe how 'appeasement' became a cautionary term in international relations"
+            ]
+          },
+          {
+            "key": "outbreak_wwii",
+            "name": "Outbreak of World War II",
+            "short_description": "Learning about the immediate causes of war in 1939.",
+            "example_tasks": [
+              "Describe the Nazi-Soviet Pact (August 1939) shocking the world with agreement between ideological enemies",
+              "Explain the secret protocol dividing Poland and Eastern Europe between Germany and Soviet Union",
+              "Analyze Germany's invasion of Poland (September 1, 1939) using blitzkrieg tactics",
+              "Describe Britain and France's declaration of war on Germany (September 3, 1939)",
+              "Evaluate whether WWII was inevitable or if it could have been prevented"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "wwii_europe",
+        "name": "World War II in Europe",
+        "short_description": "Examining major campaigns, battles, and turning points in the European theater.",
+        "sub_topics": [
+          {
+            "key": "german_victories",
+            "name": "Early German Victories (1939-1941)",
+            "short_description": "Understanding the period of Axis dominance.",
+            "example_tasks": [
+              "Describe blitzkrieg (lightning war) tactics: rapid coordinated attacks with tanks and aircraft",
+              "Explain Germany's quick defeats of Poland, Denmark, Norway, Netherlands, Belgium, and France (1939-1940)",
+              "Analyze the fall of France in six weeks and establishment of Vichy puppet government",
+              "Describe the evacuation at Dunkirk and Britain standing alone",
+              "Explain the Battle of Britain (1940): RAF defense against German air attacks preventing invasion",
+              "Describe Germany's invasion of Soviet Union (Operation Barbarossa, June 1941)"
+            ]
+          },
+          {
+            "key": "turning_points",
+            "name": "Turning Points of the War",
+            "short_description": "Learning about battles that shifted momentum to the Allies.",
+            "example_tasks": [
+              "Describe the Battle of Stalingrad (1942-1943): Soviet victory marking Germany's deepest penetration east",
+              "Explain the Battle of El Alamein (1942) stopping German advance in North Africa",
+              "Analyze the Battle of Midway (1942) in the Pacific, turning point against Japan",
+              "Evaluate 1942-1943 as the period when Allied victory became possible rather than certain defeat"
+            ]
+          },
+          {
+            "key": "allied_victory_europe",
+            "name": "Allied Victory in Europe",
+            "short_description": "Understanding the final defeat of Nazi Germany.",
+            "example_tasks": [
+              "Describe D-Day (June 6, 1944): Allied invasion of Normandy opening Western Front",
+              "Explain the Soviet advance from the east pushing German forces back",
+              "Analyze the Battle of the Bulge (winter 1944-1945) as Germany's last offensive",
+              "Describe the Allied advance into Germany from both east and west",
+              "Explain Hitler's suicide and Germany's unconditional surrender (May 8, 1945, V-E Day)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "wwii_pacific",
+        "name": "World War II in the Pacific",
+        "short_description": "Examining the war against Japan across the Pacific Ocean and Asia.",
+        "sub_topics": [
+          {
+            "key": "pearl_harbor",
+            "name": "Pearl Harbor and American Entry",
+            "short_description": "Understanding Japan's surprise attack bringing America into the war.",
+            "example_tasks": [
+              "Describe Japan's surprise attack on Pearl Harbor (December 7, 1941)",
+              "Explain Japanese strategy: destroy U.S. Pacific Fleet to allow expansion without interference",
+              "Analyze American reaction: unity and determination to defeat Japan",
+              "Describe President Roosevelt's 'day of infamy' speech and declaration of war",
+              "Evaluate Pearl Harbor as a strategic mistake that awakened American industrial and military power"
+            ]
+          },
+          {
+            "key": "island_hopping",
+            "name": "Island-Hopping Campaign",
+            "short_description": "Learning about the American strategy to advance toward Japan.",
+            "example_tasks": [
+              "Describe the island-hopping strategy: capturing key islands while bypassing others",
+              "Explain brutal battles: Guadalcanal, Iwo Jima, Okinawa with high casualties on both sides",
+              "Analyze Japanese tactics: refusal to surrender, kamikaze suicide attacks",
+              "Evaluate the effectiveness of the strategy in gradually bringing American forces within striking distance of Japan"
+            ]
+          },
+          {
+            "key": "atomic_bombs",
+            "name": "Atomic Bombs and Japanese Surrender",
+            "short_description": "Understanding the war's controversial conclusion.",
+            "example_tasks": [
+              "Describe the Manhattan Project developing atomic weapons",
+              "Explain the dropping of atomic bombs on Hiroshima (August 6, 1945) and Nagasaki (August 9, 1945)",
+              "Analyze arguments for using atomic bombs: end war quickly, save lives that invasion would cost, demonstrate power to Soviet Union",
+              "Describe arguments against: moral implications, civilian casualties, Japan might have surrendered anyway",
+              "Explain Japan's surrender (August 15, 1945, V-J Day) ending World War II",
+              "Evaluate the ongoing historical debate about whether using atomic weapons was necessary or justified"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "holocaust",
+        "name": "The Holocaust",
+        "short_description": "Examining the systematic genocide of European Jews and other victims by Nazi Germany.",
+        "sub_topics": [
+          {
+            "key": "nazi_racial_ideology",
+            "name": "Nazi Racial Ideology and Early Persecution",
+            "short_description": "Understanding the ideological basis for genocide.",
+            "example_tasks": [
+              "Describe Nazi racial theories: Aryan superiority, Jews as racial enemies, social Darwinism",
+              "Explain the progression from discrimination to persecution to genocide",
+              "Analyze the Nuremberg Laws (1935) stripping Jews of citizenship and rights",
+              "Describe Kristallnacht (1938): organized pogrom destroying Jewish businesses and synagogues",
+              "Evaluate how Nazi propaganda dehumanized Jews and other targeted groups"
+            ]
+          },
+          {
+            "key": "final_solution",
+            "name": "The Final Solution",
+            "short_description": "Learning about the systematic plan to exterminate European Jews.",
+            "example_tasks": [
+              "Define the 'Final Solution': Nazi plan for complete extermination of Jewish people",
+              "Describe the establishment of ghettos concentrating Jewish populations",
+              "Explain the use of mobile killing squads (Einsatzgruppen) in Eastern Europe",
+              "Analyze the creation of death camps (Auschwitz, Treblinka, others) with gas chambers designed for mass murder",
+              "Describe the deportation of Jews from across Europe to death camps",
+              "Explain the industrial scale and bureaucratic organization of genocide"
+            ]
+          },
+          {
+            "key": "victims_resistance",
+            "name": "Victims, Resistance, and Rescuers",
+            "short_description": "Understanding the scope of the Holocaust and responses to it.",
+            "example_tasks": [
+              "Describe the victims: approximately 6 million Jews, plus Roma, disabled people, political prisoners, homosexuals, others",
+              "Explain acts of resistance: Warsaw Ghetto Uprising, partisan fighters, spiritual resistance",
+              "Analyze the role of rescuers: individuals and organizations who saved Jewish lives at great risk (Righteous Among the Nations)",
+              "Evaluate questions of Allied knowledge and response during the war",
+              "Describe liberation of camps by Allied forces and the world's horror at discovering the full extent"
+            ]
+          },
+          {
+            "key": "legacy_holocaust",
+            "name": "Legacy and Lessons of the Holocaust",
+            "short_description": "Understanding the importance of remembering and learning from genocide.",
+            "example_tasks": [
+              "Explain the Nuremberg Trials prosecuting Nazi leaders for war crimes and crimes against humanity",
+              "Describe the concept of genocide codified in international law",
+              "Analyze the importance of Holocaust remembrance and education",
+              "Evaluate lessons: dangers of prejudice, importance of defending human rights, responsibility to prevent genocide",
+              "Describe Holocaust memorials and their role in ensuring 'Never Again'"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "wwii_home_front",
+        "name": "World War II Home Front and Total War",
+        "short_description": "Examining how societies mobilized completely for the war effort.",
+        "sub_topics": [
+          {
+            "key": "economic_mobilization",
+            "name": "Economic and Industrial Mobilization",
+            "short_description": "Understanding total war economics.",
+            "example_tasks": [
+              "Describe conversion of industries to war production",
+              "Explain rationing of food, fuel, and consumer goods",
+              "Analyze how American industrial capacity provided Allies with overwhelming material advantage",
+              "Evaluate the role of women in wartime factories and services"
+            ]
+          },
+          {
+            "key": "civilian_experience",
+            "name": "Civilian Life and Suffering",
+            "short_description": "Learning about the war's impact on non-combatants.",
+            "example_tasks": [
+              "Describe strategic bombing of cities: London Blitz, Dresden, Tokyo firebombing",
+              "Explain how WWII truly was 'total war' with civilians as targets",
+              "Analyze evacuation programs, blackouts, air raid shelters",
+              "Evaluate the blurring of lines between soldiers and civilians as legitimate targets"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "consequences_wwii",
+        "name": "Consequences and Legacy of World War II",
+        "short_description": "Analyzing the war's profound and lasting impact on the world.",
+        "sub_topics": [
+          {
+            "key": "casualties_destruction",
+            "name": "Casualties and Destruction",
+            "short_description": "Understanding the unprecedented scale of death and devastation.",
+            "example_tasks": [
+              "Describe casualty estimates: 60-85 million deaths including 40+ million civilians",
+              "Explain massive destruction of cities, infrastructure, and economies",
+              "Analyze particular suffering in Eastern Europe and Soviet Union",
+              "Evaluate WWII as the deadliest conflict in human history"
+            ]
+          },
+          {
+            "key": "political_changes",
+            "name": "Political and Territorial Changes",
+            "short_description": "Learning about the postwar reorganization of the world.",
+            "example_tasks": [
+              "Describe the defeat and occupation of Germany and Japan",
+              "Explain territorial changes: Soviet expansion, Polish borders shifted west",
+              "Analyze the division of Germany and Berlin among occupying powers",
+              "Evaluate the end of European dominance and rise of U.S. and Soviet superpowers"
+            ]
+          },
+          {
+            "key": "united_nations",
+            "name": "Creation of the United Nations",
+            "short_description": "Understanding the new international organization to prevent future wars.",
+            "example_tasks": [
+              "Describe the founding of the United Nations (1945) to replace the failed League of Nations",
+              "Explain UN structure: Security Council with veto power, General Assembly",
+              "Analyze the Universal Declaration of Human Rights (1948)",
+              "Evaluate whether the UN has been more successful than the League in maintaining peace"
+            ]
+          },
+          {
+            "key": "beginning_cold_war",
+            "name": "Seeds of the Cold War",
+            "short_description": "Learning how WWII allies became Cold War enemies.",
+            "example_tasks": [
+              "Describe growing tensions between U.S. and Soviet Union even before war ended",
+              "Explain disagreements over postwar Europe: democracy vs. communism, occupation vs. self-determination",
+              "Analyze the 'Iron Curtain' dividing Europe into Western and Soviet spheres",
+              "Evaluate how WWII's end immediately created conditions for the next global confrontation"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "cold_war",
+    "name": "The Cold War",
+    "short_description": "Students examine the ideological, political, and military confrontation between the United States and Soviet Union, analyzing containment policy, proxy wars, the nuclear arms race, the space race, and the eventual collapse of communism.",
+    "sub_topics": [
+      {
+        "key": "origins_cold_war",
+        "name": "Origins and Early Cold War",
+        "short_description": "Understanding how former WWII allies became bitter rivals.",
+        "sub_topics": [
+          {
+            "key": "ideological_conflict",
+            "name": "Ideological Differences: Democracy vs. Communism",
+            "short_description": "Learning about the fundamental clash of systems and values.",
+            "example_tasks": [
+              "Compare American capitalism and democracy to Soviet communism and dictatorship",
+              "Explain mutual suspicions: American fear of communist revolution, Soviet fear of capitalist encirclement",
+              "Analyze how each side viewed the other as an existential threat",
+              "Evaluate whether the Cold War was inevitable given these fundamental differences"
+            ]
+          },
+          {
+            "key": "division_europe",
+            "name": "Division of Europe",
+            "short_description": "Understanding how Europe split into two blocs.",
+            "example_tasks": [
+              "Describe Churchill's 'Iron Curtain' speech (1946) describing the division of Europe",
+              "Explain Soviet control over Eastern European countries and installation of communist governments",
+              "Analyze Western European alignment with the United States",
+              "Describe the symbolic and physical division of Germany and Berlin into zones"
+            ]
+          },
+          {
+            "key": "containment_policy",
+            "name": "Containment Policy and Truman Doctrine",
+            "short_description": "Learning about American strategy to prevent communist expansion.",
+            "example_tasks": [
+              "Explain George Kennan's containment theory: prevent spread of communism without direct war with Soviet Union",
+              "Describe the Truman Doctrine (1947): American pledge to support free peoples resisting communism",
+              "Analyze the Marshall Plan (1948): massive economic aid to rebuild Western Europe and prevent communist appeal",
+              "Evaluate containment as the guiding American strategy throughout the Cold War"
+            ]
+          },
+          {
+            "key": "berlin_blockade",
+            "name": "Berlin Blockade and Airlift",
+            "short_description": "Understanding the first major Cold War crisis.",
+            "example_tasks": [
+              "Describe Soviet blockade of West Berlin (1948-1949) cutting off land access",
+              "Explain the Berlin Airlift: American and British planes supplying the city by air",
+              "Analyze how the crisis demonstrated Western resolve without starting a war",
+              "Evaluate the eventual Soviet decision to lift the blockade"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "military_alliances",
+        "name": "Military Alliances and Global Divide",
+        "short_description": "Examining how the world split into opposing camps.",
+        "sub_topics": [
+          {
+            "key": "nato_warsaw_pact",
+            "name": "NATO and Warsaw Pact",
+            "short_description": "Learning about the competing military alliances.",
+            "example_tasks": [
+              "Describe the formation of NATO (North Atlantic Treaty Organization, 1949) as Western defense alliance",
+              "Explain Article 5: an attack on one member is an attack on all",
+              "Analyze the Warsaw Pact (1955) as Soviet-led Eastern European military alliance",
+              "Compare the two alliance systems dividing Europe into armed camps",
+              "Create a map showing NATO and Warsaw Pact member countries"
+            ]
+          },
+          {
+            "key": "global_cold_war",
+            "name": "Extension of the Cold War Globally",
+            "short_description": "Understanding how the U.S.-Soviet rivalry spread worldwide.",
+            "example_tasks": [
+              "Describe how decolonization created opportunities for superpower competition in Asia, Africa, and Latin America",
+              "Explain the concept of the 'Third World' and nonaligned movement trying to avoid choosing sides",
+              "Analyze how both superpowers sought allies and influence in developing nations",
+              "Evaluate the global impact of a conflict that began in Europe"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "nuclear_arms_race",
+        "name": "Nuclear Arms Race",
+        "short_description": "Examining the terrifying competition in nuclear weapons.",
+        "sub_topics": [
+          {
+            "key": "nuclear_competition",
+            "name": "Development of Nuclear Arsenals",
+            "short_description": "Understanding the escalating nuclear weapons programs.",
+            "example_tasks": [
+              "Describe the Soviet Union's first atomic bomb test (1949) ending American nuclear monopoly",
+              "Explain the development of hydrogen bombs (thermonuclear weapons) far more powerful than atomic bombs",
+              "Analyze the arms race: each side building thousands of nuclear weapons",
+              "Describe delivery systems: bombers, then intercontinental ballistic missiles (ICBMs), submarine-launched missiles"
+            ]
+          },
+          {
+            "key": "mad_deterrence",
+            "name": "MAD and Nuclear Deterrence",
+            "short_description": "Learning about the doctrine of mutually assured destruction.",
+            "example_tasks": [
+              "Define MAD (Mutually Assured Destruction): both sides have enough weapons to destroy each other even after being attacked first",
+              "Explain the theory of deterrence: possession of nuclear weapons prevents their use",
+              "Analyze the paradox: weapons built for security created unprecedented danger",
+              "Evaluate whether MAD kept the peace or brought humanity to the brink of annihilation"
+            ]
+          },
+          {
+            "key": "nuclear_crises",
+            "name": "Nuclear Crises and Near Misses",
+            "short_description": "Understanding how close the world came to nuclear war.",
+            "example_tasks": [
+              "Describe the Cuban Missile Crisis (1962) as the closest approach to nuclear war",
+              "Explain how Kennedy and Khrushchev managed the crisis and reached compromise",
+              "Analyze public fear of nuclear war: fallout shelters, 'duck and cover' drills",
+              "Evaluate the lasting psychological impact of living under threat of nuclear annihilation"
+            ]
+          },
+          {
+            "key": "arms_control",
+            "name": "Arms Control and Détente",
+            "short_description": "Learning about efforts to reduce nuclear danger.",
+            "example_tasks": [
+              "Describe the Limited Test Ban Treaty (1963) prohibiting atmospheric nuclear tests",
+              "Explain détente (relaxation of tensions) in the 1970s",
+              "Analyze arms control agreements: SALT I and II limiting nuclear weapons",
+              "Evaluate whether arms control agreements meaningfully reduced the nuclear threat"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "proxy_wars",
+        "name": "Proxy Wars and Regional Conflicts",
+        "short_description": "Examining how superpowers competed indirectly through client states.",
+        "sub_topics": [
+          {
+            "key": "korean_war",
+            "name": "Korean War",
+            "short_description": "Understanding the first major hot war of the Cold War.",
+            "example_tasks": [
+              "Describe the division of Korea along the 38th parallel after WWII",
+              "Explain North Korean invasion of South Korea (1950) with Soviet support",
+              "Analyze UN (primarily American) intervention to defend South Korea",
+              "Describe Chinese entry into the war pushing UN forces back",
+              "Explain the stalemate and armistice (1953) leaving Korea divided",
+              "Evaluate the Korean War as demonstrating both sides' willingness to fight but fear of direct superpower conflict"
+            ]
+          },
+          {
+            "key": "vietnam_war",
+            "name": "Vietnam War",
+            "short_description": "Learning about America's longest and most controversial Cold War conflict.",
+            "example_tasks": [
+              "Describe Vietnam's division after French colonial defeat (1954)",
+              "Explain American involvement escalating from advisors to major combat deployment",
+              "Analyze the domino theory: if one country falls to communism, neighbors will follow",
+              "Describe guerrilla warfare tactics of the Viet Cong and challenges for American forces",
+              "Explain growing American opposition to the war: protests, draft resistance",
+              "Describe American withdrawal (1973) and communist victory (1975)",
+              "Evaluate the Vietnam War's impact on American society and Cold War policy"
+            ]
+          },
+          {
+            "key": "afghanistan_soviet",
+            "name": "Soviet-Afghan War",
+            "short_description": "Understanding the Soviet Union's 'Vietnam.'",
+            "example_tasks": [
+              "Describe the Soviet invasion of Afghanistan (1979) to support communist government",
+              "Explain American support for Afghan mujahideen fighters (including Osama bin Laden)",
+              "Analyze the difficult guerrilla war in mountainous terrain",
+              "Describe the Soviet withdrawal (1989) after a costly, unsuccessful occupation",
+              "Evaluate how Afghanistan contributed to Soviet economic problems and eventual collapse"
+            ]
+          },
+          {
+            "key": "other_proxy_conflicts",
+            "name": "Other Cold War Conflicts",
+            "short_description": "Learning about additional regional wars influenced by superpower rivalry.",
+            "example_tasks": [
+              "Describe conflicts in Africa: Angola, Ethiopia, others where superpowers backed opposing sides",
+              "Explain conflicts in Latin America: Nicaragua, El Salvador, Grenada",
+              "Analyze the Middle East as a Cold War battleground with complex local and superpower interests",
+              "Evaluate the human cost of these proxy wars fought in the developing world"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "space_race",
+        "name": "Space Race",
+        "short_description": "Examining the competition for supremacy in space exploration.",
+        "sub_topics": [
+          {
+            "key": "sputnik_early_soviet_lead",
+            "name": "Sputnik and Early Soviet Successes",
+            "short_description": "Understanding the shock of Soviet space achievements.",
+            "example_tasks": [
+              "Describe Sputnik (1957) as the first artificial satellite and American reaction",
+              "Explain Soviet achievement of first human in space: Yuri Gagarin (1961)",
+              "Analyze American fears about Soviet technological and military superiority",
+              "Evaluate how space race was closely connected to nuclear missile technology"
+            ]
+          },
+          {
+            "key": "american_response",
+            "name": "American Space Program and Moon Landing",
+            "short_description": "Learning about the American effort to overtake the Soviets.",
+            "example_tasks": [
+              "Describe President Kennedy's 1961 pledge to land Americans on the moon by decade's end",
+              "Explain the massive investment in NASA and space technology",
+              "Analyze the Apollo program and its technological challenges",
+              "Describe Apollo 11 moon landing (1969): Neil Armstrong and Buzz Aldrin",
+              "Evaluate the moon landing as America's greatest Cold War propaganda victory"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "end_cold_war",
+        "name": "End of the Cold War",
+        "short_description": "Understanding the collapse of communism and Soviet Union.",
+        "sub_topics": [
+          {
+            "key": "soviet_problems",
+            "name": "Soviet Economic and Political Problems",
+            "short_description": "Learning about internal weaknesses that led to Soviet collapse.",
+            "example_tasks": [
+              "Describe the stagnant Soviet economy failing to provide consumer goods",
+              "Explain the unsustainable cost of military competition with wealthier America",
+              "Analyze ethnic tensions within the multi-national Soviet empire",
+              "Evaluate the role of dissidents and human rights activists challenging the system"
+            ]
+          },
+          {
+            "key": "gorbachev_reforms",
+            "name": "Gorbachev's Reforms",
+            "short_description": "Understanding how reform attempts accelerated Soviet collapse.",
+            "example_tasks": [
+              "Describe Mikhail Gorbachev's policies of glasnost (openness) and perestroika (restructuring)",
+              "Explain how allowing more freedom unleashed forces Gorbachev couldn't control",
+              "Analyze Gorbachev's decision not to use force to keep Eastern European satellites in line",
+              "Evaluate whether Gorbachev intended to end communism or reform it"
+            ]
+          },
+          {
+            "key": "fall_eastern_europe",
+            "name": "Collapse of Communist Eastern Europe",
+            "short_description": "Learning about the rapid fall of communist regimes.",
+            "example_tasks": [
+              "Describe the wave of revolutions in 1989: Poland, Hungary, Czechoslovakia, Romania",
+              "Explain the fall of the Berlin Wall (November 1989) as the most iconic moment",
+              "Analyze the largely peaceful nature of these revolutions (except Romania)",
+              "Describe German reunification (1990)",
+              "Evaluate why decades-old communist governments collapsed so quickly"
+            ]
+          },
+          {
+            "key": "soviet_dissolution",
+            "name": "Dissolution of the Soviet Union",
+            "short_description": "Understanding the end of the Soviet superpower.",
+            "example_tasks": [
+              "Describe the failed conservative coup against Gorbachev (1991)",
+              "Explain Boris Yeltsin's role in the Soviet Union's final collapse",
+              "Analyze the dissolution into 15 independent republics (December 1991)",
+              "Describe the peaceful end of a superpower—unprecedented in history",
+              "Evaluate the Cold War's end as Western victory, Soviet self-destruction, or combination"
+            ]
+          },
+          {
+            "key": "post_cold_war_world",
+            "name": "The Post-Cold War World",
+            "short_description": "Learning about the new international system after Soviet collapse.",
+            "example_tasks": [
+              "Describe the United States as sole superpower in a 'unipolar' world",
+              "Explain challenges in former Soviet republics and Yugoslavia: nationalism, ethnic conflict, economic collapse",
+              "Analyze debates about the 'end of history' versus new types of conflicts emerging",
+              "Evaluate whether the post-Cold War world is more peaceful or simply differently dangerous"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "decolonization_independence",
+    "name": "Decolonization and Independence Movements",
+    "short_description": "Students examine the end of European colonial empires after World War II, analyzing independence movements in Asia and Africa, the challenges facing new nations, and the lasting impact of colonialism.",
+    "sub_topics": [
+      {
+        "key": "causes_decolonization",
+        "name": "Causes of Decolonization",
+        "short_description": "Understanding why European empires collapsed after WWII.",
+        "sub_topics": [
+          {
+            "key": "impact_wwii",
+            "name": "Impact of World War II",
+            "short_description": "Learning how the war weakened European colonial powers.",
+            "example_tasks": [
+              "Describe how WWII devastated European economies, making colonies expensive to maintain",
+              "Explain how the war's rhetoric about freedom and democracy undermined justifications for colonial rule",
+              "Analyze how Japanese victories in Asia destroyed the myth of European invincibility",
+              "Evaluate how wartime promises of reform created expectations that couldn't be ignored"
+            ]
+          },
+          {
+            "key": "nationalist_movements",
+            "name": "Growth of Nationalist Movements",
+            "short_description": "Understanding the organized resistance to colonial rule.",
+            "example_tasks": [
+              "Describe how Western-educated elites led independence movements using European ideas against colonialism",
+              "Explain mass mobilization: strikes, boycotts, demonstrations involving ordinary people",
+              "Analyze various tactics: nonviolent resistance (Gandhi) versus armed struggle (Algeria, Vietnam)",
+              "Evaluate the role of WWII in strengthening nationalist movements by demonstrating colonial weakness"
+            ]
+          },
+          {
+            "key": "cold_war_decolonization",
+            "name": "Cold War and Decolonization",
+            "short_description": "Learning how superpower rivalry accelerated independence.",
+            "example_tasks": [
+              "Explain how both U.S. and Soviet Union opposed European colonialism (for different reasons)",
+              "Describe superpower support for independence movements to gain allies",
+              "Analyze how UN pressure supported decolonization",
+              "Evaluate whether colonies would have gained independence as quickly without Cold War dynamics"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "asian_independence",
+        "name": "Independence Movements in Asia",
+        "short_description": "Examining the end of colonial rule across Asia.",
+        "sub_topics": [
+          {
+            "key": "indian_independence",
+            "name": "Indian Independence and Partition",
+            "short_description": "Understanding the end of British rule in India.",
+            "example_tasks": [
+              "Describe Mohandas Gandhi's philosophy of nonviolent resistance (satyagraha) against British rule",
+              "Explain mass movements: Salt March, Quit India campaign",
+              "Analyze the role of the Indian National Congress and Muslim League",
+              "Describe the partition of India and Pakistan (1947) along religious lines",
+              "Explain the violence during partition: millions displaced, hundreds of thousands killed",
+              "Evaluate Gandhi's assassination (1948) by a Hindu nationalist opposed to conciliation with Muslims"
+            ]
+          },
+          {
+            "key": "southeast_asian_independence",
+            "name": "Independence in Southeast Asia",
+            "short_description": "Learning about decolonization in former European colonies.",
+            "example_tasks": [
+              "Describe Indonesian independence from the Netherlands after armed struggle (1949)",
+              "Explain the Philippines gaining independence from the United States (1946)",
+              "Analyze the French Indochina War and Vietnamese victory at Dien Bien Phu (1954)",
+              "Describe British withdrawal from Burma and Malaya",
+              "Evaluate the variety of decolonization experiences: negotiated versus violent"
+            ]
+          },
+          {
+            "key": "chinese_revolution",
+            "name": "Communist Victory in China",
+            "short_description": "Understanding the Chinese Civil War and establishment of People's Republic.",
+            "example_tasks": [
+              "Describe the Chinese Civil War between Nationalists (Kuomintang) and Communists",
+              "Explain how Japanese invasion (1937-1945) weakened Nationalists more than Communists",
+              "Analyze Mao Zedong's victory and proclamation of People's Republic of China (1949)",
+              "Describe the Nationalist retreat to Taiwan",
+              "Evaluate the significance of the world's most populous country becoming communist"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "african_independence",
+        "name": "African Independence Movements",
+        "short_description": "Examining the 'Year of Africa' and liberation across the continent.",
+        "sub_topics": [
+          {
+            "key": "north_african_independence",
+            "name": "North African Independence",
+            "short_description": "Learning about decolonization in North Africa.",
+            "example_tasks": [
+              "Describe the Algerian War of Independence (1954-1962) as a brutal conflict",
+              "Explain French resistance to Algerian independence due to large settler population",
+              "Analyze Egyptian independence and Nasser's challenge to Western influence (Suez Crisis, 1956)",
+              "Describe independence of Libya, Tunisia, and Morocco"
+            ]
+          },
+          {
+            "key": "sub_saharan_independence",
+            "name": "Sub-Saharan African Independence",
+            "short_description": "Understanding the rapid decolonization of most of Africa.",
+            "example_tasks": [
+              "Describe Ghana (1957) as first sub-Saharan colony to gain independence under Kwame Nkrumah",
+              "Explain the 'Year of Africa' (1960) when 17 colonies became independent",
+              "Analyze the variety of experiences: mostly peaceful British withdrawal, more difficult French and Belgian transitions",
+              "Describe the Congo Crisis following Belgian withdrawal as example of problems facing new nations",
+              "Evaluate why African independence came so rapidly in the late 1950s and early 1960s"
+            ]
+          },
+          {
+            "key": "southern_african_struggles",
+            "name": "Southern African Liberation Struggles",
+            "short_description": "Learning about the longer fights against white minority rule.",
+            "example_tasks": [
+              "Describe armed liberation movements in Portuguese colonies: Angola, Mozambique (independence 1975)",
+              "Explain the prolonged struggle against white minority rule in Rhodesia/Zimbabwe (independence 1980)",
+              "Analyze South African apartheid system and international opposition",
+              "Describe Nelson Mandela's imprisonment and eventual release",
+              "Explain South Africa's transition to majority rule (1994) ending apartheid",
+              "Evaluate why southern Africa's decolonization took decades longer than elsewhere"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "challenges_new_nations",
+        "name": "Challenges Facing New Nations",
+        "short_description": "Understanding problems that emerged after independence.",
+        "sub_topics": [
+          {
+            "key": "political_instability",
+            "name": "Political Instability and Authoritarianism",
+            "short_description": "Learning about the difficulty of establishing stable democracies.",
+            "example_tasks": [
+              "Describe the pattern of military coups and dictatorships replacing democratic governments",
+              "Explain ethnic and regional conflicts within states created by colonial borders",
+              "Analyze the lack of experience with self-government after decades of colonial rule",
+              "Evaluate debates about whether democracy or strong leadership was needed for development"
+            ]
+          },
+          {
+            "key": "economic_challenges",
+            "name": "Economic Underdevelopment",
+            "short_description": "Understanding the economic legacy of colonialism.",
+            "example_tasks": [
+              "Describe dependence on exporting raw materials while importing manufactured goods",
+              "Explain lack of industrial development and infrastructure",
+              "Analyze continued economic ties to former colonial powers (neocolonialism)",
+              "Evaluate debates about development strategies: state-led versus market-oriented"
+            ]
+          },
+          {
+            "key": "cold_war_intervention",
+            "name": "Cold War Intervention in New Nations",
+            "short_description": "Learning how superpower rivalry affected developing countries.",
+            "example_tasks": [
+              "Describe how both superpowers sought allies among new nations",
+              "Explain coups and interventions supported by U.S. or Soviet Union",
+              "Analyze how Cold War proxy conflicts devastated some newly independent nations",
+              "Evaluate the Nonaligned Movement's attempt to avoid choosing sides"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "contemporary_issues_historical_methods",
+    "name": "Contemporary Global Issues and Historical Thinking Skills",
+    "short_description": "Students analyze recent global developments including globalization, technological change, terrorism, and environmental challenges, while developing skills in historical analysis, source evaluation, and understanding multiple perspectives.",
+    "sub_topics": [
+      {
+        "key": "globalization",
+        "name": "Globalization",
+        "short_description": "Understanding increasing economic, cultural, and political interconnection worldwide.",
+        "sub_topics": [
+          {
+            "key": "economic_globalization",
+            "name": "Economic Globalization",
+            "short_description": "Learning about global trade, corporations, and economic integration.",
+            "example_tasks": [
+              "Define globalization as increasing interconnection and interdependence among nations",
+              "Describe the growth of international trade and multinational corporations",
+              "Explain technological advances (internet, containerized shipping) enabling global commerce",
+              "Analyze economic integration through trade agreements and organizations (WTO, NAFTA, EU)",
+              "Evaluate benefits (lower prices, economic growth) and costs (job losses, inequality) of globalization"
+            ]
+          },
+          {
+            "key": "cultural_globalization",
+            "name": "Cultural Exchange and Homogenization",
+            "short_description": "Understanding the spread of culture and ideas globally.",
+            "example_tasks": [
+              "Describe the spread of Western (particularly American) popular culture worldwide",
+              "Explain concerns about cultural homogenization and loss of traditional cultures",
+              "Analyze the role of social media and internet in connecting people globally",
+              "Evaluate debates about cultural imperialism versus cultural exchange"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "technology_society",
+        "name": "Technological Change and Society",
+        "short_description": "Examining how rapid technological advances have transformed life.",
+        "sub_topics": [
+          {
+            "key": "information_revolution",
+            "name": "Information Revolution",
+            "short_description": "Understanding the impact of computers and internet.",
+            "example_tasks": [
+              "Describe the development of personal computers and the internet",
+              "Explain how information technology has changed communication, work, and education",
+              "Analyze social media's impact on politics, social movements, and personal relationships",
+              "Evaluate both positive impacts (access to information, connectivity) and negative impacts (misinformation, privacy concerns, digital divide)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "terrorism_security",
+        "name": "Terrorism and Global Security",
+        "short_description": "Understanding new security challenges in the contemporary world.",
+        "sub_topics": [
+          {
+            "key": "911_war_on_terror",
+            "name": "September 11 and the War on Terror",
+            "short_description": "Learning about terrorism's impact on international relations.",
+            "example_tasks": [
+              "Describe the September 11, 2001 terrorist attacks on the United States",
+              "Explain the U.S. response: invasions of Afghanistan and Iraq",
+              "Analyze debates about balancing security and civil liberties",
+              "Evaluate the long-term impact of 9/11 on American foreign policy and global politics"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "environmental_challenges",
+        "name": "Environmental Challenges",
+        "short_description": "Understanding global environmental issues requiring international cooperation.",
+        "sub_topics": [
+          {
+            "key": "climate_change",
+            "name": "Climate Change",
+            "short_description": "Learning about global warming and its potential impacts.",
+            "example_tasks": [
+              "Describe scientific evidence for human-caused climate change through greenhouse gas emissions",
+              "Explain potential impacts: rising temperatures, sea level rise, extreme weather",
+              "Analyze challenges of international cooperation on climate issues",
+              "Evaluate debates about addressing climate change versus economic costs"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "historical_thinking_skills",
+        "name": "Historical Thinking and Analysis Skills",
+        "short_description": "Developing abilities to think like historians: analyzing sources, understanding causation and change, evaluating multiple perspectives.",
+        "sub_topics": [
+          {
+            "key": "primary_secondary_sources",
+            "name": "Primary and Secondary Sources",
+            "short_description": "Understanding different types of historical evidence.",
+            "example_tasks": [
+              "Define primary sources as firsthand evidence from the time period (documents, artifacts, eyewitness accounts)",
+              "Define secondary sources as interpretations created after the fact by historians",
+              "Analyze examples: identify whether sources are primary or secondary and explain reasoning",
+              "Evaluate the strengths and limitations of different types of sources",
+              "Practice using primary sources to make historical claims supported by evidence"
+            ]
+          },
+          {
+            "key": "sourcing_contextualization",
+            "name": "Sourcing and Contextualization",
+            "short_description": "Learning to analyze sources by considering author, purpose, and historical context.",
+            "example_tasks": [
+              "Practice identifying the author, date, and purpose of historical sources",
+              "Explain how an author's background and perspective might influence their account",
+              "Analyze how historical context affects the creation and meaning of sources",
+              "Evaluate the reliability of sources based on sourcing and context",
+              "Apply SOAPS analysis: Speaker, Occasion, Audience, Purpose, Subject"
+            ]
+          },
+          {
+            "key": "causation_change",
+            "name": "Causation and Change Over Time",
+            "short_description": "Understanding historical cause and effect and how societies change.",
+            "example_tasks": [
+              "Distinguish between long-term causes and immediate triggers of historical events",
+              "Analyze how multiple factors combine to cause historical changes",
+              "Identify continuities (things that stay the same) and changes over time",
+              "Evaluate the relative importance of different causes",
+              "Practice explaining historical change using specific evidence"
+            ]
+          },
+          {
+            "key": "multiple_perspectives",
+            "name": "Multiple Perspectives and Interpretations",
+            "short_description": "Learning that history can be understood from different viewpoints.",
+            "example_tasks": [
+              "Analyze how different groups experienced the same historical event differently",
+              "Compare how different historians interpret the same events and explain why interpretations differ",
+              "Evaluate how new evidence can change historical understanding",
+              "Practice considering perspectives of people often left out of historical narratives",
+              "Recognize that all historical accounts reflect choices about what to include and emphasize"
+            ]
+          },
+          {
+            "key": "historical_argumentation",
+            "name": "Historical Argumentation",
+            "short_description": "Developing skills to construct evidence-based historical arguments.",
+            "example_tasks": [
+              "Distinguish between claims, evidence, and reasoning in historical arguments",
+              "Practice supporting historical claims with specific, relevant evidence",
+              "Learn to acknowledge and address counterarguments",
+              "Evaluate the strength of historical arguments based on evidence and reasoning",
+              "Write thesis statements that make arguable historical claims"
+            ]
+          },
+          {
+            "key": "bias_reliability",
+            "name": "Evaluating Bias and Reliability",
+            "short_description": "Understanding that all sources have perspectives and limitations.",
+            "example_tasks": [
+              "Define bias as a particular perspective or point of view, not necessarily dishonesty",
+              "Analyze how to use biased sources effectively while recognizing their limitations",
+              "Practice corroborating information by comparing multiple sources",
+              "Evaluate what makes a source more or less reliable for answering specific historical questions",
+              "Explain that recognizing bias doesn't mean rejecting a source—all sources have perspectives"
+            ]
+          },
+          {
+            "key": "historical_significance",
+            "name": "Historical Significance and Relevance",
+            "short_description": "Understanding why some events, people, and developments are considered historically important.",
+            "example_tasks": [
+              "Analyze criteria for historical significance: impact, duration, relevance to present",
+              "Evaluate why certain events are emphasized in historical narratives while others are not",
+              "Practice making arguments about the significance of historical events or people",
+              "Compare how historical significance changes over time as perspectives and priorities shift",
+              "Connect past events to present circumstances to understand ongoing relevance"
+            ]
+          },
+          {
+            "key": "chronological_thinking",
+            "name": "Chronological Reasoning and Periodization",
+            "short_description": "Developing understanding of historical sequence and how historians divide time into periods.",
+            "example_tasks": [
+              "Practice organizing events chronologically and explaining their sequence",
+              "Analyze how historians create periods (Ancient, Medieval, Modern, etc.) and why these divisions matter",
+              "Evaluate how periodization can differ across cultures (Western calendar versus others)",
+              "Create timelines showing relationships between events in different regions",
+              "Understand that historical periods often overlap and boundaries are artificial but useful"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

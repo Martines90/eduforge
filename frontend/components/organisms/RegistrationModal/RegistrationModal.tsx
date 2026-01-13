@@ -44,6 +44,8 @@ import { useUser, EducationalModel } from "@/lib/context/UserContext";
 import { CountrySelect } from "@/components/molecules/CountrySelect";
 import { SubjectSelector } from "@/components/molecules/SubjectSelector";
 import { EducationalModelSelect } from "@/components/molecules/EducationalModelSelect";
+import { TeacherRoleSelector } from "@/components/molecules/TeacherRoleSelector";
+import { GradeLevel } from "@eduforger/shared";
 import * as apiService from "@/lib/services/api.service";
 import styles from "./RegistrationModal.module.scss";
 
@@ -54,7 +56,7 @@ export interface RegistrationModalProps {
       password: string;
       country: CountryCode;
       identity: UserIdentity;
-      subject?: Subject;
+      subjects?: Subject[];
       educationalModel?: EducationalModel;
     },
   ) => void;
@@ -142,7 +144,10 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
   const [selectedCountry, setSelectedCountry] = useState<CountryCode | null>(
     null,
   );
-  const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
+  const [selectedTeacherRole, setSelectedTeacherRole] = useState<GradeLevel | null>(
+    null,
+  );
+  const [selectedSubjects, setSelectedSubjects] = useState<Subject[]>([]);
   const [selectedEducationalModel, setSelectedEducationalModel] = useState<
     EducationalModel | ""
   >("");
@@ -165,7 +170,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
 
   // Define steps with translations
   const teacherSteps: StepConfig[] = [
-    { label: t("Country & Subject"), description: t("Location and expertise") },
+    { label: t("Teaching Info"), description: t("Location, level & subjects") },
     { label: t("Personal Info"), description: t("Name and Email") },
     { label: t("Verify Email"), description: t("Enter verification code") },
   ];
@@ -192,9 +197,13 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
   };
 
   const handleSubjectSelect = (subject: Subject | Subject[] | null) => {
-    // Type guard - only handle single Subject values
-    if (subject && !Array.isArray(subject)) {
-      setSelectedSubject(subject);
+    // Handle both single and multi-select
+    if (Array.isArray(subject)) {
+      setSelectedSubjects(subject);
+    } else if (subject) {
+      setSelectedSubjects([subject]);
+    } else {
+      setSelectedSubjects([]);
     }
   };
 
@@ -205,7 +214,8 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
 
   const isStep1Complete = isTeacher
     ? selectedCountry !== null &&
-      selectedSubject !== null &&
+      selectedTeacherRole !== null &&
+      selectedSubjects.length > 0 &&
       selectedEducationalModel !== ""
     : selectedCountry !== null;
 
@@ -217,7 +227,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
     confirmPassword: string;
   }) => {
     if (!selectedCountry) return;
-    if (isTeacher && !selectedSubject) return;
+    if (isTeacher && selectedSubjects.length === 0) return;
 
     // Verify reCAPTCHA was completed
     if (!recaptchaToken) {
@@ -248,9 +258,12 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         role,
         country: selectedCountry,
         recaptchaToken,
-        ...(isTeacher && selectedSubject ? { subject: selectedSubject } : {}),
+        ...(isTeacher && selectedSubjects.length > 0 ? { subjects: selectedSubjects } : {}),
         ...(isTeacher && selectedEducationalModel
           ? { educationalModel: selectedEducationalModel as string }
+          : {}),
+        ...(isTeacher && selectedTeacherRole
+          ? { teacherRole: selectedTeacherRole }
           : {}),
       });
 
@@ -298,7 +311,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         password: string;
         country: CountryCode;
         identity: UserIdentity;
-        subject?: Subject;
+        subjects?: Subject[];
         educationalModel?: EducationalModel;
       } = {
         name: pendingUserData.name,
@@ -307,7 +320,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         password: pendingUserData.password,
         country: selectedCountry,
         identity: identity,
-        ...(isTeacher && selectedSubject ? { subject: selectedSubject } : {}),
+        ...(isTeacher && selectedSubjects.length > 0 ? { subjects: selectedSubjects } : {}),
         ...(isTeacher && selectedEducationalModel
           ? { educationalModel: selectedEducationalModel as EducationalModel }
           : {}),
@@ -355,7 +368,8 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
       setActiveStep(0);
       setCompletedSteps([]);
       setSelectedCountry(null);
-      setSelectedSubject(null);
+      setSelectedTeacherRole(null);
+      setSelectedSubjects([]);
       setSelectedEducationalModel("");
       setPendingUserData(null);
       setVerificationCode("");
@@ -436,7 +450,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                 className={styles.stepTitle}
               >
                 {isTeacher
-                  ? t("Select Your Country & Subject")
+                  ? t("Select Your Teaching Information")
                   : t("Select Your Country")}
               </Typography>
 
@@ -450,12 +464,24 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
 
               {isTeacher && selectedCountry && (
                 <>
+                  <TeacherRoleSelector
+                    value={selectedTeacherRole}
+                    onChange={(role) => setSelectedTeacherRole(role)}
+                    country={selectedCountry}
+                    label={t("Teaching Level")}
+                    required
+                    className={styles.formControl}
+                    data-testid="teacher-role-select"
+                    sx={{ mt: 3 }}
+                  />
+
                   <SubjectSelector
-                    value={selectedSubject || ""}
+                    value={selectedSubjects}
                     onChange={handleSubjectSelect}
                     country={selectedCountry}
-                    label={t("Subject")}
+                    label={t("Subjects")}
                     required
+                    isMultiSelect={true}
                     className={styles.formControl}
                     data-testid="subject-select"
                     sx={{ mt: 3 }}
@@ -483,7 +509,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                 className={styles.helpText}
               >
                 {isTeacher
-                  ? t("Choose your location and primary teaching subject")
+                  ? t("Choose your location, teaching level, subjects, and educational model")
                   : t("Choose your country to personalize your experience")}
               </Typography>
             </Box>
