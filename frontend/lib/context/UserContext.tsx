@@ -107,19 +107,26 @@ const UserContext = createContext<UserContextType | undefined>(undefined);
  * Handles country selection, cookies, and onboarding flow
  */
 export function UserProvider({ children }: { children: React.ReactNode }) {
-  // Initialize country from cookie IMMEDIATELY (synchronous) to ensure translations work from the start
-  const initialCountry = (typeof window !== 'undefined' ? getCookie(COOKIE_NAMES.COUNTRY) as CountryCode : undefined) || DEFAULT_COUNTRY;
+  // Initialize country from cookie OR use DEFAULT_COUNTRY as fallback
+  // IMPORTANT: This runs only on client-side (after hydration) since this is a 'use client' component
+  // We delay rendering (see isCountryReady) to prevent hydration mismatches
+  const [user, setUser] = useState<UserState>(() => {
+    // Only read cookies on client-side (typeof window check is redundant but explicit)
+    const savedCountry = typeof window !== 'undefined'
+      ? (getCookie(COOKIE_NAMES.COUNTRY) as CountryCode)
+      : undefined;
 
-  const [user, setUser] = useState<UserState>({
-    country: initialCountry,
-    isFirstVisit: true,
-    hasCompletedOnboarding: false,
-    isRegistered: false,
-    profile: null,
-    identity: null,
-    role: 'guest',
-    subjects: [],
-    educationalModel: null,
+    return {
+      country: savedCountry || DEFAULT_COUNTRY,
+      isFirstVisit: true,
+      hasCompletedOnboarding: false,
+      isRegistered: false,
+      profile: null,
+      identity: null,
+      role: 'guest',
+      subjects: [],
+      educationalModel: null,
+    };
   });
 
   const [mounted, setMounted] = useState(false);
@@ -625,8 +632,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   }, [setCountry]);
 
   // Check if country is selected (either from cookie or user selection)
+  // IMPORTANT: Don't render children until mounted AND country is determined to prevent hydration issues
   const hasCountry = Boolean(getCookie(COOKIE_NAMES.COUNTRY));
-  const isCountryReady = hasCountry || !mounted;
+  const isCountryReady = mounted && hasCountry;
 
   /**
    * Grade system helpers - automatically updates when user's country changes
