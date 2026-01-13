@@ -10,6 +10,7 @@ import { NavigationTopic, GradeLevel } from '@/types/navigation';
 import { GeneratedTask, TaskGeneratorRequest } from '@/types/task';
 import { Subject } from '@/types/i18n';
 import { useTranslation } from '@/lib/i18n';
+import { DEFAULT_NUMBER_OF_IMAGES } from '@eduforger/shared';
 import { useUser } from '@/lib/context/UserContext';
 import { useGuestSession } from '@/lib/hooks/useGuestSession';
 import { useLastUnpublishedTask } from '@/lib/hooks/useLastUnpublishedTask';
@@ -313,7 +314,6 @@ function TaskGeneratorContent() {
         target_group: mapTargetGroup(config.targetGroupSex),
         difficulty_level: config.difficulty,
         educational_model: config.educationalModel,
-        number_of_images: config.numberOfImages,
         display_template: 'modern',
         precision_settings: {
           constant_precision: 2,
@@ -336,7 +336,7 @@ function TaskGeneratorContent() {
       // Format the result for display
       const generatedTask: GeneratedTask = {
         id: result.taskId,
-        description: formatTaskDescription(result.taskText, request.number_of_images),
+        description: formatTaskDescription(result.taskText),
         solution: formatSolution(result.solution),
         images: result.images.images || [],
       };
@@ -370,13 +370,13 @@ function TaskGeneratorContent() {
   };
 
   // Helper functions to format task data
-  const formatTaskDescription = (taskText: any, numberOfImages: number): string => {
+  const formatTaskDescription = (taskText: any): string => {
     let html = '';
     if (taskText.title) html += `<h1>${taskText.title}</h1>\n`;
     if (taskText.story_text) {
       let storyContent = '';
-      if (numberOfImages > 0) {
-        for (let i = 1; i <= numberOfImages; i++) {
+      if (DEFAULT_NUMBER_OF_IMAGES > 0) {
+        for (let i = 1; i <= DEFAULT_NUMBER_OF_IMAGES; i++) {
           storyContent += `[IMAGE_${i}]\n`;
         }
       }

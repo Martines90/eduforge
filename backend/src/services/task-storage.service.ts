@@ -107,7 +107,6 @@ export class TaskStorageService {
       difficulty_level: generatedTask.metadata.difficulty_level,
       target_group: generatedTask.metadata.target_group,
       created_at: generatedTask.created_at,
-      number_of_images: generatedTask.images.length,
       tags: generatedTask.metadata.tags,
     };
   }

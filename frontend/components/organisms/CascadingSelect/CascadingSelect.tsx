@@ -26,15 +26,13 @@ import { EducationalModel } from '@/lib/context/UserContext';
 import { EducationalModelSelect } from '@/components/molecules/EducationalModelSelect';
 import { DifficultyLevelSelect } from '@/components/molecules/DifficultyLevelSelect';
 import { DifficultyLevel } from '@/lib/data/difficulty-levels';
-import { ImageNumberSelect, ImageNumber } from '@/components/molecules/ImageNumberSelect';
 import { TargetGroupSelect, TargetGroupSex } from '@/components/molecules/TargetGroupSelect';
-import { Subject, SUBJECTS, getSubjectOption } from '@eduforger/shared';
+import { Subject, SUBJECTS } from '@eduforger/shared';
 import styles from './CascadingSelect.module.scss';
 
 export interface TaskConfiguration {
   difficulty: DifficultyLevel;
   educationalModel: EducationalModel;
-  numberOfImages: ImageNumber;
   targetGroupSex: TargetGroupSex;
 }
 
@@ -83,7 +81,6 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
   const [educationalModel, setEducationalModel] = useState<EducationalModel>(
     user.educationalModel || 'secular'
   );
-  const [numberOfImages, setNumberOfImages] = useState<ImageNumber>(1);
   const [targetGroupSex, setTargetGroupSex] = useState<TargetGroupSex>('mixed');
 
   // Notify parent of selection changes for URL updates
@@ -100,7 +97,6 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
       const config: TaskConfiguration = {
         difficulty,
         educationalModel,
-        numberOfImages,
         targetGroupSex,
       };
       onSelectionComplete(finalSelection, path, config);
@@ -246,13 +242,6 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
                 value={targetGroupSex}
                 onChange={setTargetGroupSex}
                 label={t('Target Group')}
-              />
-
-              {/* Image Number Selector */}
-              <ImageNumberSelect
-                value={numberOfImages}
-                onChange={setNumberOfImages}
-                label={t('Number of Images')}
               />
             </Box>
           </AccordionDetails>

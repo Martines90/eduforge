@@ -19,7 +19,6 @@ export interface TaskGeneratorRequest {
   educational_model: EducationalModel;
 
   // Visual configuration
-  number_of_images: NumberOfImages;
   display_template: DisplayTemplate;
 
   // Mathematical precision settings
@@ -56,11 +55,6 @@ export type EducationalModel =
   | "religious_jewish"
   | "montessori"
   | "waldorf";
-
-/**
- * Number of illustration images to generate
- */
-export type NumberOfImages = 0 | 1 | 2;
 
 /**
  * Display template options for task layout
@@ -166,7 +160,6 @@ export interface TaskEntry {
   difficulty_level: DifficultyLevel;
   target_group: TargetGroup;
   created_at: string; // ISO datetime
-  number_of_images: number;
   tags: string[];
 }
 

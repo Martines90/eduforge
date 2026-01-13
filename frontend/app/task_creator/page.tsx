@@ -17,7 +17,7 @@ import { generateTaskComplete, TaskGenerationStep } from '@/lib/services/task-ge
 import { saveTask, SaveTaskRequest } from '@/lib/services/task-save.service';
 import { TaskSavedModal } from '@/components/organisms/TaskSavedModal';
 import { fetchSubjectTree } from '@/lib/services/subject-mapping.service';
-import { GradeLevel, GradeConfig, Subject } from '@eduforger/shared';
+import { GradeLevel, GradeConfig, Subject, DEFAULT_NUMBER_OF_IMAGES } from '@eduforger/shared';
 import styles from './page.module.scss';
 
 interface TabPanelProps {
@@ -278,7 +278,6 @@ function TaskCreatorContent() {
         target_group: mapTargetGroup(config.targetGroupSex),
         difficulty_level: config.difficulty,
         educational_model: config.educationalModel,
-        number_of_images: config.numberOfImages,
         display_template: 'modern', // Default to modern, can be made configurable
         precision_settings: {
           constant_precision: 2,
@@ -305,7 +304,7 @@ function TaskCreatorContent() {
 
       const generatedTask: GeneratedTask = {
         id: result.taskId,
-        description: formatTaskDescription(result.taskText, request.number_of_images),
+        description: formatTaskDescription(result.taskText),
         solution: formatSolution(result.solution),
         images: result.images.images || [],
       };
@@ -323,14 +322,14 @@ function TaskCreatorContent() {
   };
 
   // Helper functions to format task data
-  const formatTaskDescription = (taskText: any, numberOfImages: number): string => {
+  const formatTaskDescription = (taskText: any): string => {
     let html = '';
     if (taskText.title) html += `<h1>${taskText.title}</h1>\n`;
     if (taskText.story_text) {
       // Add image placeholders as first child inside the story div
       let storyContent = '';
-      if (numberOfImages > 0) {
-        for (let i = 1; i <= numberOfImages; i++) {
+      if (DEFAULT_NUMBER_OF_IMAGES > 0) {
+        for (let i = 1; i <= DEFAULT_NUMBER_OF_IMAGES; i++) {
           storyContent += `[IMAGE_${i}]\n`;
         }
       }

@@ -19,6 +19,7 @@ import {
 import { TextGeneratorService } from "./text-generator.service";
 import { ImageGeneratorService } from "./image-generator.service";
 import { TaskStorageService } from "./task-storage.service";
+import { DEFAULT_NUMBER_OF_IMAGES } from "@eduforger/shared";
 
 export class TaskGeneratorService {
   private textGenerator: TextGeneratorService;
@@ -455,7 +456,8 @@ export class TaskGeneratorService {
     const images: TaskImage[] = [];
     const disableImageGeneration =
       process.env.DISABLE_IMAGE_GENERATION === "true";
-    const numImages = Math.min(request.number_of_images, 2); // Max 2 images
+    // Use DEFAULT_NUMBER_OF_IMAGES constant
+    const numImages = Math.min(DEFAULT_NUMBER_OF_IMAGES, 2); // Max 2 images
 
     if (disableImageGeneration) {
       console.log(
@@ -620,7 +622,7 @@ export class TaskGeneratorService {
     const estimatedTime = this.calculateEstimatedTime(
       request.difficulty_level,
       5, // Estimated number of steps
-      request.number_of_images
+      DEFAULT_NUMBER_OF_IMAGES
     );
 
     return {

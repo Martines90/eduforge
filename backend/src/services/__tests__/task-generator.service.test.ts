@@ -46,7 +46,6 @@ describe("TaskGeneratorService - Prompt Generation", () => {
     target_group: "mixed",
     difficulty_level: "medium",
     educational_model: "secular",
-    number_of_images: 1,
     display_template: "modern",
     precision_settings: {
       constant_precision: 2,
@@ -318,12 +317,9 @@ describe("TaskGeneratorService - Prompt Generation", () => {
       expect(mockImageGenerator.generate).toHaveBeenCalledTimes(1);
     });
 
-    it("should not call image generator when images = 0", async () => {
-      const noImageRequest: TaskGeneratorRequest = {
-        ...metricRequest,
-        number_of_images: 0 as const,
-      };
-      await service.generateTask(noImageRequest);
+    it("should not call image generator when DISABLE_IMAGE_GENERATION env is set", async () => {
+      process.env.DISABLE_IMAGE_GENERATION = "true";
+      await service.generateTask(metricRequest);
 
       expect(mockImageGenerator.generate).not.toHaveBeenCalled();
     });

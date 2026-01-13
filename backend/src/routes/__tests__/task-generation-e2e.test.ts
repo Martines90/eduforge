@@ -98,7 +98,6 @@ describe("Task Generation E2E Flow", () => {
     target_group: "mixed",
     difficulty_level: "medium",
     educational_model: "secular",
-    number_of_images: 0,
     display_template: "modern",
     precision_settings: defaultPrecisionSettings,
     custom_keywords: [],
@@ -336,7 +335,6 @@ describe("Task Generation E2E Flow", () => {
         .set("Authorization", `Bearer ${mockToken}`)
         .send(
           createRequestBody({
-            number_of_images: 1,
             custom_keywords: ["engineering", "construction"],
           })
         );
@@ -375,11 +373,14 @@ describe("Task Generation E2E Flow", () => {
     });
 
     it("should call AI text API for solution generation with task story", async () => {
+      // Disable image generation for this test
+      process.env.DISABLE_IMAGE_GENERATION = "true";
       await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send(createRequestBody({ number_of_images: 0 }))
+        .send(createRequestBody())
         .expect(201);
+      delete process.env.DISABLE_IMAGE_GENERATION;
 
       // Verify solution generator was called
       expect(TextGeneratorService.prototype.generate).toHaveBeenCalledTimes(1);
@@ -396,11 +397,11 @@ describe("Task Generation E2E Flow", () => {
       expect(solutionPrompt).toContain("24.5");
     });
 
-    it("should call AI image API when images are requested", async () => {
+    it("should call AI image API when images are enabled", async () => {
       await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send(createRequestBody({ number_of_images: 1 }))
+        .send(createRequestBody())
         .expect(201);
 
       // Verify image generator was called
@@ -417,22 +418,24 @@ describe("Task Generation E2E Flow", () => {
       expect(typeof imagePrompt).toBe("string");
     });
 
-    it("should NOT call AI image API when images = 0", async () => {
+    it("should NOT call AI image API when DISABLE_IMAGE_GENERATION is set", async () => {
+      process.env.DISABLE_IMAGE_GENERATION = "true";
       await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send(createRequestBody({ number_of_images: 0 }))
+        .send(createRequestBody())
         .expect(201);
 
       // Verify image generator was NOT called
       expect(ImageGeneratorService.prototype.generate).not.toHaveBeenCalled();
+      delete process.env.DISABLE_IMAGE_GENERATION;
     });
 
     it("should properly assemble complete task from AI responses", async () => {
       const response = await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send(createRequestBody({ number_of_images: 1 }))
+        .send(createRequestBody())
         .expect(201);
 
       // Verify response structure (new format: task_id, status, task_data)
@@ -489,7 +492,7 @@ describe("Task Generation E2E Flow", () => {
       await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send(createRequestBody({ number_of_images: 1 }))
+        .send(createRequestBody())
         .expect(201);
 
       // Verify task storage was called
@@ -518,7 +521,7 @@ describe("Task Generation E2E Flow", () => {
       await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send(createRequestBody({ number_of_images: 1 }))
+        .send(createRequestBody())
         .expect(201);
 
       // Verify credit deduction was called (happens in middleware, not in response)
@@ -535,7 +538,7 @@ describe("Task Generation E2E Flow", () => {
       const response = await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send(createRequestBody({ number_of_images: 1 }))
+        .send(createRequestBody())
         .expect(500);
 
       expect(response.body.success).toBe(false);
@@ -551,7 +554,7 @@ describe("Task Generation E2E Flow", () => {
       const response = await request(app)
         .post("/api/task/generate-task")
         .set("Authorization", `Bearer ${mockToken}`)
-        .send(createRequestBody({ number_of_images: 1 }))
+        .send(createRequestBody())
         .expect(500);
 
       expect(response.body.success).toBe(false);

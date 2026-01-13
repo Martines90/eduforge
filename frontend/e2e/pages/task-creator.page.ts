@@ -17,7 +17,6 @@ export class TaskCreatorPage {
   readonly difficultySelect: Locator;
   readonly targetGroupSelect: Locator;
   readonly educationalModelSelect: Locator;
-  readonly numberOfImagesInput: Locator;
   readonly generateButton: Locator;
 
   // Task result elements
@@ -51,7 +50,6 @@ export class TaskCreatorPage {
     this.difficultySelect = page.getByLabel(/difficulty/i);
     this.targetGroupSelect = page.getByLabel(/target group/i);
     this.educationalModelSelect = page.getByLabel(/educational model/i);
-    this.numberOfImagesInput = page.getByLabel(/number of images/i);
     this.generateButton = page.getByRole("button", { name: /generate.*task/i });
 
     // Task result
@@ -168,7 +166,6 @@ export class TaskCreatorPage {
     difficulty?: "easy" | "medium" | "hard";
     targetGroup?: "mixed" | "boys" | "girls";
     educationalModel?: "constructive" | "expository";
-    numberOfImages?: number;
   }) {
     if (options.difficulty) {
       await this.difficultySelect.click();
@@ -194,10 +191,6 @@ export class TaskCreatorPage {
         })
         .click();
       await this.page.waitForTimeout(200);
-    }
-
-    if (options.numberOfImages !== undefined) {
-      await this.numberOfImagesInput.fill(options.numberOfImages.toString());
     }
   }
 
@@ -299,7 +292,6 @@ export class TaskCreatorPage {
       await this.configureTask({
         difficulty: options.difficulty,
         targetGroup: options.targetGroup,
-        numberOfImages: 0,
       });
     }
 

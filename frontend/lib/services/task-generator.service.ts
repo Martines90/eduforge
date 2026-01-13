@@ -5,6 +5,7 @@
 
 import { TaskGeneratorRequest } from '@/types/task';
 import { API_BASE_URL } from './api.service';
+import { DEFAULT_NUMBER_OF_IMAGES } from '@eduforger/shared';
 
 export interface TaskGenerationStep {
   step: 'generating_variations' | 'selecting_best' | 'generating_images' | 'generating_solution' | 'completed';
@@ -163,25 +164,23 @@ export async function selectBestTask(
  */
 export async function generateTaskImages(
   taskText: GeneratedTaskText,
-  numberOfImages: number,
   token: string,
   onProgress?: (step: TaskGenerationStep) => void,
   visualDescription?: string // Optional visual description from AI task selector
 ): Promise<GeneratedImages> {
   console.log('[Task Generator - generateTaskImages] Called with:', {
-    numberOfImages,
     taskTitle: taskText.title,
     hasVisualDescription: !!visualDescription
   });
 
   onProgress?.({
     step: 'generating_images',
-    message: `Generating ${numberOfImages} images...`,
+    message: `Generating ${DEFAULT_NUMBER_OF_IMAGES} image(s)...`,
     progress: 60,
   });
 
-  if (numberOfImages === 0) {
-    console.log('[Task Generator] numberOfImages is 0, skipping image generation');
+  if (DEFAULT_NUMBER_OF_IMAGES === 0) {
+    console.log('[Task Generator] DEFAULT_NUMBER_OF_IMAGES is 0, skipping image generation');
     return { images: [] };
   }
 
@@ -198,7 +197,6 @@ export async function generateTaskImages(
     },
     body: JSON.stringify({
       task_text: taskText,
-      number_of_images: numberOfImages,
       visual_description: visualDescription, // Pass the AI-generated visual description
     }),
   });
@@ -285,7 +283,6 @@ export async function generateTaskComplete(
 
   // Steps 3 & 4: Generate images and solution in parallel (for efficiency)
   console.log('[Task Generator] About to generate images and solution');
-  console.log('[Task Generator] Number of images requested:', request.number_of_images);
 
   onProgress?.({
     step: 'generating_images',
@@ -294,7 +291,7 @@ export async function generateTaskComplete(
   });
 
   const [images, solution] = await Promise.all([
-    generateTaskImages(selectedTask, request.number_of_images, token, onProgress, selectionResult.image_visual_description),
+    generateTaskImages(selectedTask, token, onProgress, selectionResult.image_visual_description),
     generateTaskSolution(selectedTask, request, token, onProgress),
   ]);
 

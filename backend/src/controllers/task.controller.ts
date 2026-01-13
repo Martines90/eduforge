@@ -14,6 +14,7 @@ import {
   getRemainingGenerations,
 } from "../services/guest-auth.service";
 import { TRIAL_START_CREDITS } from "../constants/credits";
+import { DEFAULT_NUMBER_OF_IMAGES } from "@eduforger/shared";
 
 export class TaskController {
   private taskGenerator: TaskGeneratorService;
@@ -44,7 +45,6 @@ export class TaskController {
       console.log(`   Target Group: ${requestData.target_group}`);
       console.log(`   Difficulty: ${requestData.difficulty_level}`);
       console.log(`   Model: ${requestData.educational_model}`);
-      console.log(`   Images: ${requestData.number_of_images}`);
       console.log(`   Template: ${requestData.display_template}\n`);
 
       // Generate the task with comprehensive configuration
@@ -356,7 +356,7 @@ export class TaskController {
     next: NextFunction
   ): Promise<void> => {
     try {
-      const { task_text, number_of_images, visual_description } = req.body;
+      const { task_text, visual_description } = req.body;
 
       if (!task_text || !task_text.title || !task_text.story_text) {
         res.status(400).json({
@@ -367,11 +367,9 @@ export class TaskController {
         return;
       }
 
-      const numImages = number_of_images || 0;
-
       console.log("📥 Request to generate images");
       console.log(`   Task: ${task_text.title}`);
-      console.log(`   Images: ${numImages}`);
+      console.log(`   Images: ${DEFAULT_NUMBER_OF_IMAGES}`);
       if (visual_description) {
         console.log(
           `   Visual description provided: ${visual_description.substring(0, 100)}...`
@@ -380,7 +378,7 @@ export class TaskController {
 
       const images = await this.taskGenerator.generateImagesOnly(
         task_text,
-        numImages,
+        DEFAULT_NUMBER_OF_IMAGES,
         task_text.metadata?.display_template || "modern",
         task_text.metadata?.target_group || "mixed",
         visual_description // Pass the AI-generated visual description

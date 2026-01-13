@@ -1,7 +1,6 @@
 import { CountryCode } from './i18n';
 import { EducationalModel } from '@/lib/context/UserContext';
 import { DifficultyLevel } from '@/lib/data/difficulty-levels';
-import { ImageNumber } from '@/components/molecules/ImageNumberSelect';
 
 export type TargetGroup = 'boys' | 'girls' | 'mixed';
 export type DisplayTemplate = 'classic' | 'modern' | 'comic' | 'minimal' | 'illustrated';
@@ -19,7 +18,6 @@ export interface TaskGeneratorRequest {
   target_group: TargetGroup;
   difficulty_level: DifficultyLevel;
   educational_model: EducationalModel;
-  number_of_images: ImageNumber;
   display_template: DisplayTemplate;
   precision_settings: PrecisionSettings;
   custom_keywords?: string[];

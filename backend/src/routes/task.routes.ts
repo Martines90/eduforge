@@ -40,7 +40,6 @@ const taskController = new TaskController();
  *                 target_group: "mixed"
  *                 difficulty_level: "medium"
  *                 educational_model: "secular"
- *                 number_of_images: 2
  *                 display_template: "modern"
  *                 precision_settings:
  *                   constant_precision: 2
@@ -57,7 +56,6 @@ const taskController = new TaskController();
  *                 target_group: "boys"
  *                 difficulty_level: "hard"
  *                 educational_model: "traditional"
- *                 number_of_images: 1
  *                 display_template: "classic"
  *                 precision_settings:
  *                   constant_precision: 4
@@ -66,15 +64,14 @@ const taskController = new TaskController();
  *                   use_exact_values: true
  *                 custom_keywords: ["Renaissance", "architecture", "astronomy"]
  *                 template_id: ""
- *             noImages:
- *               summary: Text-only task
+ *             simpleStatistics:
+ *               summary: Simple statistics task
  *               value:
  *                 curriculum_path: "math:grade_7_8:statistics:mean_median_mode"
  *                 country_code: "HU"
  *                 target_group: "girls"
  *                 difficulty_level: "easy"
  *                 educational_model: "progressive"
- *                 number_of_images: 0
  *                 display_template: "minimal"
  *                 precision_settings:
  *                   constant_precision: 2

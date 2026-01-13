@@ -279,7 +279,6 @@ const swaggerDefinition = {
           "target_group",
           "difficulty_level",
           "educational_model",
-          "number_of_images",
           "display_template",
           "precision_settings",
         ],
@@ -326,12 +325,6 @@ const swaggerDefinition = {
               "waldorf",
             ],
             example: "secular",
-          },
-          number_of_images: {
-            type: "integer",
-            description: "Number of illustration images to generate",
-            enum: [0, 1, 2],
-            example: 2,
           },
           display_template: {
             type: "string",

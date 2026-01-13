@@ -93,7 +93,6 @@ export function buildSystemPrompt(request: TaskGeneratorRequest): string {
   additionalContext += `- **Difficulty Level:** ${request.difficulty_level}\n`;
   additionalContext += `- **Educational Model:** ${request.educational_model}\n`;
   additionalContext += `- **Display Template:** ${request.display_template}\n`;
-  additionalContext += `- **Number of Images:** ${request.number_of_images}\n`;
   additionalContext += `- **Country/Locale:** ${request.country_code}\n`;
   additionalContext += `- **Language:** ${language}\n`;
   additionalContext += `- **Measurement System:** ${metricSystem}\n\n`;
