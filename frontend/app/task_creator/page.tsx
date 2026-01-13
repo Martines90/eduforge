@@ -92,7 +92,7 @@ function TaskCreatorContent() {
         return;
       }
 
-      if (!user.subject) {
+      if (!user.subjects || user.subjects.length === 0) {
         console.log('[Task Creator] Waiting for user subject...');
         return;
       }
@@ -101,14 +101,14 @@ function TaskCreatorContent() {
       setNavigationError(null);
 
       try {
-        console.log('[Task Creator] Fetching navigation data for country:', user.country, 'subject:', user.subject);
+        console.log('[Task Creator] Fetching navigation data for country:', user.country, 'subject:', user.subjects[0]);
 
         // Import gradeSystem helpers
         const { getGradesForCountry } = await import('@eduforger/shared');
         const grades = getGradesForCountry(user.country as any);
         setAvailableGrades(grades);
 
-        const data = await fetchAllGradeTrees(user.country, user.subject);
+        const data = await fetchAllGradeTrees(user.country, user.subjects[0]);
         setNavigationData(data);
         console.log('[Task Creator] Navigation data loaded successfully');
       } catch (error) {
@@ -120,7 +120,7 @@ function TaskCreatorContent() {
     };
 
     loadNavigationData();
-  }, [user.country, user.subject, isAuthorized, isLoading]);
+  }, [user.country, user.subjects, isAuthorized, isLoading]);
 
   // Read URL params on mount
   useEffect(() => {
@@ -204,8 +204,8 @@ function TaskCreatorContent() {
       }
 
       // Build curriculum path from selection
-      // Use user's subject to match the subjectMappings collection format
-      const curriculumPath = `${user.subject}:${currentGradeConfig.value}:${path.join(':')}`;
+      // Use user's first subject to match the subjectMappings collection format
+      const curriculumPath = `${user.subjects[0]}:${currentGradeConfig.value}:${path.join(':')}`;
       setCurrentCurriculumPath(curriculumPath);
 
       // Map targetGroupSex to TargetGroup type

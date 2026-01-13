@@ -417,6 +417,258 @@
       ]
     },
     {
+      "collectionGroup": "grade_10_12",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "level",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "orderIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_10_12",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "isLeaf",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "path",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_10_12",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "parentId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "orderIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_k_5",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "level",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "orderIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_k_5",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "isLeaf",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "path",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_k_5",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "parentId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "orderIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_6_8",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "level",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "orderIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_6_8",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "isLeaf",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "path",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_6_8",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "parentId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "orderIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_9_12",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "level",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "orderIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_9_12",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "isLeaf",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "path",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_9_12",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "parentId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "orderIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_7_9",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "level",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "orderIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_7_9",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "isLeaf",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "path",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_7_9",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "parentId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "orderIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_3_6",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "level",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "orderIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_3_6",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "isLeaf",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "path",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "grade_3_6",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "parentId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "orderIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
       "collectionGroup": "tests",
       "queryScope": "COLLECTION_GROUP",
       "fields": [

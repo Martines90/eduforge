@@ -2766,5 +2766,1771 @@
         ]
       }
     ]
+  },
+  {
+    "key": "speaking_listening_comprehension_collaboration",
+    "name": "Speaking and Listening - Comprehension and Collaboration",
+    "short_description": "Students engage effectively in collaborative discussions, analyze diverse media and formats, and evaluate speakers' arguments and reasoning. They develop skills in active listening, respectful dialogue, and critical evaluation of oral presentations.",
+    "sub_topics": [
+      {
+        "key": "collaborative_discussions",
+        "name": "Engaging in Collaborative Discussions",
+        "short_description": "Participating effectively in one-on-one, group, and teacher-led discussions on various topics and texts.",
+        "sub_topics": [
+          {
+            "key": "preparing_for_discussions",
+            "name": "Preparing for Discussions",
+            "short_description": "Coming to discussions ready with evidence and ideas from reading or research.",
+            "example_tasks": [
+              "Read assigned texts and annotate key passages to reference during class discussion.",
+              "Prepare at least three discussion questions or comments based on your reading before a literature circle.",
+              "Gather evidence from multiple sources to support your position before a debate or discussion.",
+              "Review your notes and identify main ideas you want to contribute to the discussion.",
+              "Prepare specific quotations or examples from texts that you can cite during discussion."
+            ]
+          },
+          {
+            "key": "building_on_others_ideas",
+            "name": "Building on Others' Ideas",
+            "short_description": "Listening to others and responding by elaborating, clarifying, or extending their contributions.",
+            "example_tasks": [
+              "Listen to a peer's comment and respond by adding a related example or additional evidence.",
+              "Build on another student's interpretation by explaining how your ideas connect to or extend theirs.",
+              "Ask follow-up questions that help a peer develop or clarify their thinking.",
+              "Reference a classmate's earlier point and explain how new evidence supports or challenges it.",
+              "Synthesize multiple classmates' ideas to show connections or patterns in the discussion."
+            ]
+          },
+          {
+            "key": "expressing_own_ideas",
+            "name": "Expressing Ideas Clearly",
+            "short_description": "Articulating thoughts, ideas, and evidence clearly in discussions.",
+            "example_tasks": [
+              "State your interpretation of a text clearly and support it with specific evidence.",
+              "Explain your reasoning when you disagree with another person's point.",
+              "Contribute a new perspective or idea that hasn't been discussed yet.",
+              "Ask clarifying questions when you don't understand another person's point.",
+              "Summarize complex ideas in your own words to ensure understanding."
+            ]
+          },
+          {
+            "key": "discussion_roles_norms",
+            "name": "Following Discussion Roles and Norms",
+            "short_description": "Tracking progress toward goals, following agreed-upon rules, and fulfilling assigned roles.",
+            "example_tasks": [
+              "Serve as discussion leader by keeping the group on topic and ensuring everyone participates.",
+              "Take on the role of note-taker and record main ideas and decisions from the discussion.",
+              "Monitor time and help the group stay on schedule to address all discussion questions.",
+              "Follow norms like speaking one at a time, listening actively, and disagreeing respectfully.",
+              "Help redirect the discussion when it goes off-topic or ensure quieter members have opportunities to contribute."
+            ]
+          },
+          {
+            "key": "diverse_perspectives",
+            "name": "Engaging with Diverse Perspectives",
+            "short_description": "Considering multiple viewpoints and responding thoughtfully to different ideas and interpretations.",
+            "example_tasks": [
+              "Listen to perspectives that differ from your own and consider their merits before responding.",
+              "Acknowledge the validity of another viewpoint even when you disagree with it.",
+              "Ask questions to better understand why someone holds a different interpretation or opinion.",
+              "Identify common ground between differing perspectives in a discussion.",
+              "Revise or refine your thinking based on compelling evidence or reasoning from others."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "analyzing_media_formats",
+        "name": "Analyzing Information from Diverse Media",
+        "short_description": "Interpreting information presented in diverse formats and media, and evaluating its usefulness.",
+        "sub_topics": [
+          {
+            "key": "analyzing_visual_presentations",
+            "name": "Analyzing Visual and Multimedia Presentations",
+            "short_description": "Interpreting information from videos, graphics, audio, and digital sources.",
+            "example_tasks": [
+              "Analyze a video documentary and identify its main claims and supporting evidence.",
+              "Evaluate how graphics, charts, or animations in a presentation clarify or enhance information.",
+              "Compare information gained from watching a video with information from reading a text on the same topic.",
+              "Analyze how music, narration, and visuals work together in a multimedia presentation to convey a message.",
+              "Identify bias or persuasive techniques in a video presentation or advertisement."
+            ]
+          },
+          {
+            "key": "integrating_visual_oral_information",
+            "name": "Integrating Visual and Oral Information",
+            "short_description": "Combining information from multiple formats to develop comprehensive understanding.",
+            "example_tasks": [
+              "Take notes on a speech or presentation and integrate them with information from written sources.",
+              "Use information from both a video and a text to write a comprehensive summary of a topic.",
+              "Compare how the same information is presented differently in oral, visual, and written formats.",
+              "Synthesize information from a panel discussion or multiple speakers on the same topic.",
+              "Evaluate which format (text, video, audio, graphics) presents information most effectively for a given purpose."
+            ]
+          },
+          {
+            "key": "evaluating_media_sources",
+            "name": "Evaluating Media Sources",
+            "short_description": "Assessing the credibility and usefulness of information from various media.",
+            "example_tasks": [
+              "Evaluate the credibility of a video source by examining the creator, publication date, and purpose.",
+              "Identify potential bias in a multimedia presentation based on what information is included or emphasized.",
+              "Compare how different news outlets present the same event in video or audio reports.",
+              "Assess whether a video or audio source provides sufficient evidence to support its claims.",
+              "Determine whether information from a podcast or video is relevant and appropriate for your research needs."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "evaluating_speakers_arguments",
+        "name": "Evaluating a Speaker's Argument and Reasoning",
+        "short_description": "Analyzing and critiquing the claims, reasoning, evidence, and rhetoric in oral presentations.",
+        "sub_topics": [
+          {
+            "key": "identifying_claims_evidence_oral",
+            "name": "Identifying Claims and Evidence in Oral Arguments",
+            "short_description": "Recognizing the main argument and supporting evidence in speeches and presentations.",
+            "example_tasks": [
+              "Identify the main claim in a persuasive speech and state it in your own words.",
+              "List the types of evidence (facts, statistics, examples, expert opinions) a speaker uses to support their argument.",
+              "Distinguish between the speaker's opinions and factual evidence they provide.",
+              "Identify when a speaker makes unsupported claims without providing evidence.",
+              "Take organized notes that separate the speaker's claims from their supporting evidence."
+            ]
+          },
+          {
+            "key": "evaluating_reasoning_logic_oral",
+            "name": "Evaluating Reasoning and Logic",
+            "short_description": "Assessing whether a speaker's reasoning is sound and conclusions are warranted.",
+            "example_tasks": [
+              "Evaluate whether a speaker's conclusion logically follows from the evidence presented.",
+              "Identify logical fallacies in a speaker's argument (hasty generalization, false cause, ad hominem).",
+              "Assess whether a speaker's examples are representative or if they cherry-pick evidence.",
+              "Determine whether a speaker makes unwarranted assumptions or leaps in logic.",
+              "Explain whether a speaker adequately addresses potential counterarguments or objections."
+            ]
+          },
+          {
+            "key": "assessing_relevance_sufficiency_oral",
+            "name": "Assessing Relevance and Sufficiency of Evidence",
+            "short_description": "Evaluating whether evidence is relevant to claims and sufficient to support them.",
+            "example_tasks": [
+              "Identify evidence in a speech that doesn't directly support the claim it's meant to support.",
+              "Evaluate whether a speaker provides enough evidence to make their argument convincing.",
+              "Determine whether a speaker's evidence is current and from credible sources.",
+              "Assess whether anecdotal evidence is appropriate or if more substantial evidence is needed.",
+              "Identify what additional evidence would strengthen a speaker's argument."
+            ]
+          },
+          {
+            "key": "analyzing_rhetorical_techniques",
+            "name": "Analyzing Rhetorical Techniques",
+            "short_description": "Recognizing and evaluating persuasive techniques speakers use to influence audiences.",
+            "example_tasks": [
+              "Identify when a speaker uses emotional appeals (pathos) to persuade the audience.",
+              "Recognize when a speaker establishes credibility (ethos) through expertise or character.",
+              "Identify logical appeals (logos) based on facts, statistics, and reasoning.",
+              "Analyze how a speaker uses rhetorical questions, repetition, or parallel structure for effect.",
+              "Evaluate whether a speaker's persuasive techniques enhance or distract from the substance of their argument."
+            ]
+          },
+          {
+            "key": "recognizing_bias_perspective_oral",
+            "name": "Recognizing Bias and Perspective",
+            "short_description": "Identifying a speaker's point of view and potential biases that affect their presentation.",
+            "example_tasks": [
+              "Identify a speaker's perspective on an issue and what biases might influence their presentation.",
+              "Recognize loaded language or word choices that reveal a speaker's bias.",
+              "Analyze what information a speaker includes or omits and how this reveals their perspective.",
+              "Evaluate whether a speaker presents opposing viewpoints fairly or dismisses them.",
+              "Consider how a speaker's background or affiliation might influence their argument."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "speaking_listening_presentation",
+    "name": "Speaking and Listening - Presentation of Knowledge and Ideas",
+    "short_description": "Students present information, findings, and supporting evidence clearly and logically. They adapt speech to various contexts and tasks, use digital media strategically, and demonstrate command of formal English when appropriate.",
+    "sub_topics": [
+      {
+        "key": "presenting_claims_findings",
+        "name": "Presenting Claims and Findings",
+        "short_description": "Organizing and delivering presentations with clear claims, logical sequences, and relevant evidence.",
+        "sub_topics": [
+          {
+            "key": "organizing_presentations",
+            "name": "Organizing Content Logically",
+            "short_description": "Structuring presentations with clear introductions, body, and conclusions.",
+            "example_tasks": [
+              "Create an outline for a presentation that includes an engaging introduction, organized main points, and strong conclusion.",
+              "Organize information using an appropriate pattern (chronological, problem-solution, cause-effect) for your topic.",
+              "Develop transitions between main points to help the audience follow your presentation.",
+              "Structure a persuasive presentation with clear claim, reasons, evidence, and conclusion.",
+              "Plan the sequence of information to build toward your most important or convincing points."
+            ]
+          },
+          {
+            "key": "supporting_with_evidence",
+            "name": "Supporting Claims with Evidence",
+            "short_description": "Including relevant facts, definitions, details, and examples to support main ideas.",
+            "example_tasks": [
+              "Include at least three pieces of evidence (statistics, examples, expert quotes) for each main point in your presentation.",
+              "Cite sources orally when presenting information from research ('According to...', 'A study by...').",
+              "Use specific examples and details rather than general statements in your presentation.",
+              "Select the most compelling evidence from your research to include in a time-limited presentation.",
+              "Explain how each piece of evidence supports your claim or main point."
+            ]
+          },
+          {
+            "key": "creating_engaging_introductions_conclusions",
+            "name": "Creating Engaging Introductions and Conclusions",
+            "short_description": "Beginning and ending presentations effectively to capture and maintain audience interest.",
+            "example_tasks": [
+              "Begin a presentation with an attention-getting opening (question, surprising fact, relevant anecdote, quotation).",
+              "Clearly state your purpose or thesis early in your presentation.",
+              "End with a strong conclusion that reinforces your main message without simply repeating the introduction.",
+              "Conclude a persuasive speech with a clear call to action.",
+              "Create a conclusion that connects back to your opening and provides closure."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "effective_delivery",
+        "name": "Delivering Presentations Effectively",
+        "short_description": "Using appropriate eye contact, volume, pronunciation, and other delivery techniques.",
+        "sub_topics": [
+          {
+            "key": "verbal_delivery_skills",
+            "name": "Verbal Delivery Skills",
+            "short_description": "Speaking clearly with appropriate volume, pace, pronunciation, and expression.",
+            "example_tasks": [
+              "Practice speaking loudly and clearly enough for everyone in the room to hear comfortably.",
+              "Vary your pace to emphasize important points and maintain audience interest.",
+              "Pronounce words correctly, especially names and technical terms, practicing beforehand if needed.",
+              "Use appropriate pauses for emphasis and to give the audience time to process information.",
+              "Vary your tone and inflection to maintain interest and convey meaning rather than speaking in a monotone."
+            ]
+          },
+          {
+            "key": "nonverbal_communication",
+            "name": "Nonverbal Communication",
+            "short_description": "Using eye contact, gestures, posture, and facial expressions effectively.",
+            "example_tasks": [
+              "Make eye contact with different audience members throughout your presentation.",
+              "Use natural gestures to emphasize points and maintain audience engagement.",
+              "Stand with confident posture rather than slouching or swaying.",
+              "Use facial expressions that match the content and tone of your presentation.",
+              "Move purposefully rather than pacing or standing rigidly in one spot."
+            ]
+          },
+          {
+            "key": "managing_presentation_anxiety",
+            "name": "Managing Presentation Anxiety",
+            "short_description": "Using strategies to feel more confident and composed when presenting.",
+            "example_tasks": [
+              "Practice your presentation multiple times to build confidence and familiarity with content.",
+              "Use deep breathing or other calming techniques before presenting.",
+              "Focus on communicating your message rather than on your nervousness.",
+              "Prepare thoroughly so you feel knowledgeable about your topic.",
+              "Remember that slight nervousness is normal and can actually energize your delivery."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "using_digital_media",
+        "name": "Using Digital Media and Visual Displays",
+        "short_description": "Integrating multimedia and visual elements strategically to enhance presentations.",
+        "sub_topics": [
+          {
+            "key": "creating_effective_slides",
+            "name": "Creating Effective Slides and Visuals",
+            "short_description": "Designing visual aids that clarify and enhance rather than distract from the presentation.",
+            "example_tasks": [
+              "Create slides with clear, readable text (large font, simple backgrounds, limited words per slide).",
+              "Use images, charts, or graphs that genuinely illustrate or clarify your points.",
+              "Avoid overcrowding slides with too much text or too many visual elements.",
+              "Use consistent design elements (colors, fonts, layouts) throughout your presentation.",
+              "Include only information on slides that supports your oral presentation rather than duplicating your script."
+            ]
+          },
+          {
+            "key": "integrating_multimedia",
+            "name": "Integrating Multimedia Elements",
+            "short_description": "Using audio, video, and other media to enhance understanding and engagement.",
+            "example_tasks": [
+              "Include a relevant video clip that illustrates a key point in your presentation.",
+              "Use audio recordings (music, speeches, sound effects) to enhance specific moments.",
+              "Integrate multimedia smoothly so technical elements enhance rather than interrupt your presentation.",
+              "Ensure all multimedia elements work properly by testing equipment before presenting.",
+              "Explain how multimedia elements connect to and support your main points."
+            ]
+          },
+          {
+            "key": "visual_data_representation",
+            "name": "Presenting Data Visually",
+            "short_description": "Using charts, graphs, and infographics to present information clearly.",
+            "example_tasks": [
+              "Create charts or graphs that make statistical information easier to understand than numbers alone.",
+              "Choose the appropriate type of graph (bar, line, pie) for the data you're presenting.",
+              "Label charts and graphs clearly so the audience can understand them quickly.",
+              "Explain visual data presentations orally, highlighting key trends or significant information.",
+              "Use visual representations to compare information or show relationships clearly."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "adapting_speech",
+        "name": "Adapting Speech to Context and Task",
+        "short_description": "Adjusting language, style, and content based on purpose, audience, and situation.",
+        "sub_topics": [
+          {
+            "key": "formal_informal_speech",
+            "name": "Using Formal and Informal Language Appropriately",
+            "short_description": "Choosing appropriate register and vocabulary for different speaking situations.",
+            "example_tasks": [
+              "Use formal language and academic vocabulary when presenting research or making formal speeches.",
+              "Adjust your language to be more conversational when appropriate (discussions, informal presentations).",
+              "Avoid slang and casual expressions in formal presentations and academic contexts.",
+              "Use appropriate greeting and closing language for different speaking situations.",
+              "Recognize when humor, personal anecdotes, or casual language is appropriate versus when it's not."
+            ]
+          },
+          {
+            "key": "audience_awareness",
+            "name": "Considering Audience Needs",
+            "short_description": "Adapting content and delivery based on audience knowledge and interests.",
+            "example_tasks": [
+              "Define technical terms when presenting to an audience unfamiliar with your topic.",
+              "Adjust the complexity of your language based on your audience's age and background knowledge.",
+              "Include background information for audiences who may be unfamiliar with your topic.",
+              "Consider what examples and evidence will be most convincing or relevant to your specific audience.",
+              "Anticipate and address questions or objections your particular audience might have."
+            ]
+          },
+          {
+            "key": "purpose_driven_speaking",
+            "name": "Adapting to Purpose",
+            "short_description": "Adjusting approach based on whether the purpose is to inform, persuade, or entertain.",
+            "example_tasks": [
+              "Use objective language and focus on facts when the purpose is to inform.",
+              "Include persuasive appeals and calls to action when the purpose is to persuade.",
+              "Use engaging stories, humor, or creative elements when appropriate to the purpose.",
+              "Match your tone and style to your purpose (serious for formal informative, passionate for persuasive).",
+              "Structure your presentation differently based on purpose (comparison for informative, problem-solution for persuasive)."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "demonstrating_command_english",
+        "name": "Demonstrating Command of Formal English",
+        "short_description": "Using standard English grammar and conventions when presenting formally.",
+        "sub_topics": [
+          {
+            "key": "grammatical_speech",
+            "name": "Using Grammatically Correct Speech",
+            "short_description": "Applying standard English grammar rules in formal speaking situations.",
+            "example_tasks": [
+              "Use complete sentences rather than fragments when presenting formally.",
+              "Ensure subject-verb agreement in formal presentations ('The data show...' not 'The data shows...').",
+              "Use correct pronoun case (I/me, who/whom) in formal speech.",
+              "Avoid double negatives and other nonstandard constructions in formal contexts.",
+              "Self-correct grammatical errors during presentations when you notice them."
+            ]
+          },
+          {
+            "key": "precise_language_speaking",
+            "name": "Using Precise and Appropriate Language",
+            "short_description": "Choosing specific, accurate words and avoiding vague or imprecise language.",
+            "example_tasks": [
+              "Replace vague words (thing, stuff, a lot) with specific, precise alternatives in formal presentations.",
+              "Use domain-specific vocabulary correctly when presenting on academic topics.",
+              "Avoid filler words (um, like, you know) in formal presentations through practice.",
+              "Use transitional phrases that clearly show relationships between ideas.",
+              "Employ varied and sophisticated vocabulary appropriate to the topic and audience."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "literary_elements_devices",
+    "name": "Literary Elements and Devices",
+    "short_description": "Students identify and analyze how authors use various literary elements and devices to create meaning, develop themes, and enhance their writing. They understand how these techniques work together to create effective literature.",
+    "sub_topics": [
+      {
+        "key": "figurative_language_analysis",
+        "name": "Figurative Language",
+        "short_description": "Analyzing how authors use nonliteral language to create imagery, convey meaning, and enhance expression.",
+        "sub_topics": [
+          {
+            "key": "metaphor_simile_analysis",
+            "name": "Metaphors and Similes",
+            "short_description": "Identifying and interpreting comparisons that create vivid imagery and convey complex ideas.",
+            "example_tasks": [
+              "Identify similes and metaphors in a passage and explain what two things are being compared.",
+              "Analyze what a metaphor reveals about a character or situation that literal language would not.",
+              "Explain how an extended metaphor develops throughout a chapter or entire work.",
+              "Compare how two authors use different metaphors to describe similar experiences or emotions.",
+              "Create your own metaphors and similes to describe abstract concepts or complex feelings."
+            ]
+          },
+          {
+            "key": "personification_analysis",
+            "name": "Personification",
+            "short_description": "Understanding how giving human qualities to nonhuman things creates meaning and effect.",
+            "example_tasks": [
+              "Identify examples of personification in a text where natural elements or objects are given human characteristics.",
+              "Explain how personification helps readers connect emotionally to abstract concepts or nature.",
+              "Analyze how personification contributes to the mood or atmosphere in a descriptive passage.",
+              "Compare personification in poetry versus prose and how it functions differently in each.",
+              "Explain how personification can make settings or objects feel alive and significant to the story."
+            ]
+          },
+          {
+            "key": "hyperbole_understatement",
+            "name": "Hyperbole and Understatement",
+            "short_description": "Recognizing exaggeration and deliberate minimization used for emphasis or effect.",
+            "example_tasks": [
+              "Identify hyperbole in a text and explain what is being exaggerated and why.",
+              "Analyze how hyperbole creates humor or emphasizes the intensity of emotions or situations.",
+              "Recognize understatement and explain how minimizing something creates ironic or subtle effects.",
+              "Compare the effects of hyperbole versus understatement in different passages.",
+              "Explain how context determines whether exaggeration is hyperbole or literal description."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "symbolism_allegory",
+        "name": "Symbolism and Allegory",
+        "short_description": "Understanding how objects, characters, or events represent larger ideas beyond their literal meaning.",
+        "sub_topics": [
+          {
+            "key": "identifying_symbols",
+            "name": "Identifying and Interpreting Symbols",
+            "short_description": "Recognizing when objects or images represent abstract ideas or themes.",
+            "example_tasks": [
+              "Identify a recurring object or image in a story and explain what larger idea it might symbolize.",
+              "Analyze how the meaning of a symbol develops or changes throughout a text.",
+              "Explain how symbols enhance theme by representing abstract concepts concretely.",
+              "Compare how the same symbol (e.g., water, light, a journey) represents different things in different texts.",
+              "Distinguish between objects that are simply part of the setting and those that function symbolically."
+            ]
+          },
+          {
+            "key": "understanding_allegory",
+            "name": "Understanding Allegory",
+            "short_description": "Recognizing when entire narratives represent abstract ideas or moral lessons.",
+            "example_tasks": [
+              "Identify allegorical elements in a fable or parable where characters represent abstract qualities.",
+              "Explain what real-world situation or moral truth an allegorical story represents.",
+              "Analyze how different characters in an allegory represent different aspects of human nature or society.",
+              "Compare a straightforward narrative with an allegorical one on a similar theme.",
+              "Explain how allegory allows authors to comment on society or morality indirectly."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "irony_analysis",
+        "name": "Irony",
+        "short_description": "Identifying and analyzing situations where meaning differs from or contradicts expectations or literal statements.",
+        "sub_topics": [
+          {
+            "key": "verbal_irony",
+            "name": "Verbal Irony and Sarcasm",
+            "short_description": "Recognizing when characters say the opposite of what they mean.",
+            "example_tasks": [
+              "Identify examples of verbal irony where a character's words contradict their intended meaning.",
+              "Distinguish between gentle verbal irony and harsh sarcasm based on context and tone.",
+              "Explain how verbal irony reveals a character's true feelings or attitude.",
+              "Analyze how authors use verbal irony to create humor or social commentary.",
+              "Identify clues in context that signal when statements should be interpreted ironically."
+            ]
+          },
+          {
+            "key": "situational_irony",
+            "name": "Situational Irony",
+            "short_description": "Understanding when outcomes are the opposite of what was expected.",
+            "example_tasks": [
+              "Identify situational irony where events turn out contrary to what characters or readers expected.",
+              "Explain how situational irony creates surprise, disappointment, or dark humor.",
+              "Analyze how an ironic outcome reveals theme or character truth.",
+              "Compare situations where characters get what they want versus what they need (ironic outcome).",
+              "Explain how situational irony makes a story more complex or thought-provoking."
+            ]
+          },
+          {
+            "key": "dramatic_irony",
+            "name": "Dramatic Irony",
+            "short_description": "Recognizing when readers know something important that characters do not.",
+            "example_tasks": [
+              "Identify dramatic irony where the audience knows information that characters lack.",
+              "Explain how dramatic irony creates suspense or tension as readers anticipate consequences.",
+              "Analyze how dramatic irony affects reader sympathy toward characters.",
+              "Describe how an author creates dramatic irony through point of view or information timing.",
+              "Explain the emotional effect of watching characters act on incomplete or incorrect information."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "tone_mood_atmosphere",
+        "name": "Tone, Mood, and Atmosphere",
+        "short_description": "Analyzing how authors create emotional effects through word choice, imagery, and other techniques.",
+        "sub_topics": [
+          {
+            "key": "identifying_tone",
+            "name": "Identifying Author's Tone",
+            "short_description": "Recognizing the author's or narrator's attitude toward the subject or audience.",
+            "example_tasks": [
+              "Identify the tone of a passage (serious, humorous, sarcastic, nostalgic, etc.) based on word choice and details.",
+              "Explain how specific words and phrases create or reinforce the author's tone.",
+              "Trace how tone shifts during a text and what causes those changes.",
+              "Compare how two authors use different tones when writing about similar subjects.",
+              "Analyze how tone affects how readers respond to characters or events."
+            ]
+          },
+          {
+            "key": "analyzing_mood",
+            "name": "Analyzing Mood and Atmosphere",
+            "short_description": "Understanding how authors create emotional atmosphere that affects readers.",
+            "example_tasks": [
+              "Describe the mood (emotional atmosphere) created in a scene and identify what creates it.",
+              "Analyze how setting details, imagery, and word choice work together to create mood.",
+              "Explain how mood changes between different scenes or sections of a text.",
+              "Compare how different authors create similar moods (suspense, peace, dread) using different techniques.",
+              "Identify specific words and phrases that contribute most strongly to mood."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "foreshadowing_suspense",
+        "name": "Foreshadowing and Suspense",
+        "short_description": "Understanding how authors hint at future events and create anticipation in readers.",
+        "sub_topics": [
+          {
+            "key": "identifying_foreshadowing",
+            "name": "Identifying Foreshadowing",
+            "short_description": "Recognizing clues and hints about events that will occur later in the story.",
+            "example_tasks": [
+              "Identify early details in a story that foreshadow later events or outcomes.",
+              "Explain how dialogue, descriptions, or events hint at what will happen later.",
+              "Analyze how foreshadowing creates a sense of inevitability or impending doom.",
+              "Trace how subtle foreshadowing early in a text becomes clear only after later events.",
+              "Distinguish between obvious foreshadowing and subtle hints that require careful reading."
+            ]
+          },
+          {
+            "key": "analyzing_suspense",
+            "name": "Creating and Analyzing Suspense",
+            "short_description": "Understanding how authors build tension and anticipation about outcomes.",
+            "example_tasks": [
+              "Identify techniques an author uses to create suspense (pacing, withholding information, raising questions).",
+              "Explain how cliffhangers at chapter or section ends maintain reader interest.",
+              "Analyze how the author balances revealing and concealing information to maintain suspense.",
+              "Describe how time pressure or mounting obstacles increase suspense.",
+              "Compare how suspense functions differently in mysteries versus other genres."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "allusion_reference",
+        "name": "Allusion and Literary Reference",
+        "short_description": "Recognizing and interpreting references to other texts, historical events, or cultural knowledge.",
+        "sub_topics": [
+          {
+            "key": "identifying_allusions",
+            "name": "Identifying Allusions",
+            "short_description": "Recognizing references to mythology, literature, history, religion, or popular culture.",
+            "example_tasks": [
+              "Identify allusions to mythology, the Bible, or historical events in a text.",
+              "Recognize references to other literary works (Shakespearean phrases, fairy tales, famous novels).",
+              "Identify allusions to historical figures or events and explain their relevance.",
+              "Recognize pop culture references that would be familiar to the text's original audience.",
+              "Use footnotes, research, or context to understand unfamiliar allusions."
+            ]
+          },
+          {
+            "key": "interpreting_allusions",
+            "name": "Interpreting the Meaning of Allusions",
+            "short_description": "Understanding how allusions add layers of meaning and enrich interpretation.",
+            "example_tasks": [
+              "Explain how an allusion to a mythological story enriches the meaning of a character or situation.",
+              "Analyze how understanding a historical allusion changes your interpretation of a passage.",
+              "Describe what additional meaning a literary allusion brings to a text.",
+              "Compare a character's situation with the mythological or historical figure they're compared to through allusion.",
+              "Explain how allusions create connections between texts and broaden thematic resonance."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "narrative_techniques_story_elements",
+    "name": "Narrative Techniques and Story Elements",
+    "short_description": "Students analyze how authors construct narratives through plot structure, characterization, point of view, setting, and conflict. They understand how narrative choices affect reader experience and meaning.",
+    "sub_topics": [
+      {
+        "key": "plot_structure_development",
+        "name": "Plot Structure and Development",
+        "short_description": "Understanding how narratives are organized and how events build toward climax and resolution.",
+        "sub_topics": [
+          {
+            "key": "plot_elements",
+            "name": "Elements of Plot",
+            "short_description": "Identifying exposition, rising action, climax, falling action, and resolution in narratives.",
+            "example_tasks": [
+              "Create a plot diagram for a short story identifying all five elements of plot structure.",
+              "Explain what essential information is provided in the exposition of a novel.",
+              "Identify the climax of a story and explain why this moment is the turning point.",
+              "Analyze how the author builds tension during the rising action through complications and obstacles.",
+              "Describe how the resolution addresses the main conflict and provides closure."
+            ]
+          },
+          {
+            "key": "narrative_pacing",
+            "name": "Pacing and Narrative Time",
+            "short_description": "Analyzing how authors control the speed at which events unfold.",
+            "example_tasks": [
+              "Identify sections where the author slows down pacing through detailed description or reflection.",
+              "Analyze where the author speeds up pacing through summarizing events or using short sentences.",
+              "Explain how pacing changes between action scenes and quieter, reflective moments.",
+              "Describe how time is compressed or extended in different parts of a narrative.",
+              "Analyze how pacing contributes to suspense, mood, or emphasis on important events."
+            ]
+          },
+          {
+            "key": "flashback_foreshadowing_structure",
+            "name": "Flashbacks and Non-Linear Structure",
+            "short_description": "Understanding how stories can depart from chronological order.",
+            "example_tasks": [
+              "Identify flashbacks and explain what background information they provide.",
+              "Analyze why an author chooses to begin a story in the middle (in medias res) rather than at the beginning.",
+              "Trace the chronological order of events in a story told through multiple time periods.",
+              "Explain how a frame story (story within a story) structure affects the narrative.",
+              "Analyze how non-chronological storytelling creates mystery or emphasizes certain themes."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "characterization_development",
+        "name": "Characterization and Character Development",
+        "short_description": "Analyzing how authors create and develop characters through various techniques.",
+        "sub_topics": [
+          {
+            "key": "direct_indirect_characterization",
+            "name": "Direct and Indirect Characterization",
+            "short_description": "Understanding how authors reveal character through explicit description and implicit methods.",
+            "example_tasks": [
+              "Identify examples of direct characterization where the narrator explicitly describes a character's traits.",
+              "Analyze indirect characterization through a character's actions, speech, thoughts, and interactions.",
+              "Explain what a character's dialogue reveals about their personality, background, or education.",
+              "Describe what you learn about a character from how other characters respond to or describe them.",
+              "Analyze how physical descriptions and appearance details contribute to characterization."
+            ]
+          },
+          {
+            "key": "character_types",
+            "name": "Types of Characters",
+            "short_description": "Distinguishing between protagonist, antagonist, major, minor, static, and dynamic characters.",
+            "example_tasks": [
+              "Identify the protagonist and antagonist in a story and explain their opposing goals.",
+              "Distinguish between major characters (fully developed, important to plot) and minor characters (less developed).",
+              "Determine whether a character is static (unchanging) or dynamic (undergoes significant change).",
+              "Identify round characters (complex, realistic) versus flat characters (one-dimensional).",
+              "Explain the function of foil characters who contrast with main characters to highlight their traits."
+            ]
+          },
+          {
+            "key": "character_motivation",
+            "name": "Character Motivation",
+            "short_description": "Analyzing what drives characters' decisions and actions.",
+            "example_tasks": [
+              "Identify a character's main motivation (what they want or need) and how it drives the plot.",
+              "Analyze how a character's background or past experiences influence their current motivations.",
+              "Explain how internal motivations (emotions, desires) conflict with external circumstances.",
+              "Trace how a character's motivations change or evolve throughout the story.",
+              "Compare the motivations of different characters and how they create conflict."
+            ]
+          },
+          {
+            "key": "character_arc",
+            "name": "Character Arc and Development",
+            "short_description": "Tracing how characters change and grow over the course of a narrative.",
+            "example_tasks": [
+              "Create a character development chart showing how a protagonist changes from beginning to end.",
+              "Identify the experiences or events that cause a character to change or grow.",
+              "Analyze what a character learns about themselves or the world through their journey.",
+              "Explain how internal conflicts contribute to character development.",
+              "Compare a character's beliefs, values, or behavior at the start versus the end of the story."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "point_of_view_narrator",
+        "name": "Point of View and Narrator",
+        "short_description": "Understanding how narrative perspective shapes the reader's experience and access to information.",
+        "sub_topics": [
+          {
+            "key": "types_of_narration",
+            "name": "Types of Narration",
+            "short_description": "Identifying first-person, second-person, and third-person narration and their effects.",
+            "example_tasks": [
+              "Identify whether a story uses first-person (I/we), second-person (you), or third-person (he/she/they) narration.",
+              "Distinguish between third-person limited (one character's perspective) and omniscient (all-knowing narrator).",
+              "Explain what information readers have access to based on the point of view used.",
+              "Analyze how first-person narration creates intimacy and limits perspective simultaneously.",
+              "Compare how the same scene would feel different told from a different point of view."
+            ]
+          },
+          {
+            "key": "reliable_unreliable_narrators",
+            "name": "Reliable and Unreliable Narrators",
+            "short_description": "Evaluating whether narrators can be trusted to present events accurately.",
+            "example_tasks": [
+              "Identify clues that suggest a narrator might be unreliable (contradictions, bias, limited knowledge).",
+              "Analyze how an unreliable narrator creates uncertainty or requires readers to read between the lines.",
+              "Explain what might cause a narrator to be unreliable (youth, mental state, bias, deception).",
+              "Compare what a narrator says happened with evidence in the story of what actually happened.",
+              "Discuss how discovering a narrator is unreliable changes your interpretation of events."
+            ]
+          },
+          {
+            "key": "multiple_perspectives",
+            "name": "Multiple Narrators and Perspectives",
+            "short_description": "Analyzing stories told from multiple viewpoints.",
+            "example_tasks": [
+              "Compare how different narrators describe the same event and what this reveals about each character.",
+              "Analyze how multiple perspectives provide a more complete picture of events than a single viewpoint could.",
+              "Explain how different characters' perspectives reveal their biases, priorities, and limitations.",
+              "Trace how your understanding of events develops as you encounter different narrators' accounts.",
+              "Analyze why an author chose to tell a story from multiple perspectives rather than just one."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "setting_analysis",
+        "name": "Setting and Its Functions",
+        "short_description": "Understanding how time, place, and social context affect narratives.",
+        "sub_topics": [
+          {
+            "key": "elements_of_setting",
+            "name": "Elements of Setting",
+            "short_description": "Identifying the time period, geographical location, and social environment of a story.",
+            "example_tasks": [
+              "Describe the time period of a story and what historical details reveal this.",
+              "Identify the geographical and physical setting and how it's established through details.",
+              "Analyze the social and cultural context (customs, values, social structures) of the story's world.",
+              "Explain how the author uses sensory details to make the setting vivid and concrete.",
+              "Compare how setting differs in various parts of the story as characters move or time passes."
+            ]
+          },
+          {
+            "key": "setting_influence",
+            "name": "How Setting Influences Story",
+            "short_description": "Analyzing the relationship between setting and plot, character, or theme.",
+            "example_tasks": [
+              "Explain how the setting creates obstacles or opportunities for characters.",
+              "Analyze how the time period affects what choices are available to characters.",
+              "Describe how the physical environment reflects or contrasts with characters' emotional states.",
+              "Explain how the story would be fundamentally different if set in a different time or place.",
+              "Analyze how setting contributes to mood, atmosphere, or theme in the story."
+            ]
+          },
+          {
+            "key": "setting_as_symbol",
+            "name": "Setting as Symbol",
+            "short_description": "Understanding when setting represents larger ideas beyond its literal function.",
+            "example_tasks": [
+              "Identify aspects of setting that function symbolically (a storm representing turmoil, a garden representing growth).",
+              "Analyze how contrasting settings (city vs. country, light vs. dark spaces) represent opposing values or ideas.",
+              "Explain how the setting reflects the internal landscape of characters' minds or emotions.",
+              "Describe how changes in setting parallel or represent character development or thematic shifts.",
+              "Analyze how a confined or isolated setting symbolizes characters' psychological or social situations."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "conflict_analysis",
+        "name": "Conflict",
+        "short_description": "Identifying and analyzing the struggles that drive narratives forward.",
+        "sub_topics": [
+          {
+            "key": "types_of_conflict",
+            "name": "Types of Conflict",
+            "short_description": "Identifying external and internal conflicts in narratives.",
+            "example_tasks": [
+              "Identify the main external conflict (character vs. character, character vs. society, character vs. nature).",
+              "Identify internal conflicts where characters struggle with their own emotions, beliefs, or decisions.",
+              "Explain how a character faces both external obstacles and internal doubts or conflicts.",
+              "Analyze how different types of conflict interact (external conflict creating internal conflict, for example).",
+              "Compare the primary conflict with secondary conflicts in a story."
+            ]
+          },
+          {
+            "key": "conflict_development_resolution",
+            "name": "Conflict Development and Resolution",
+            "short_description": "Tracing how conflicts intensify and are ultimately resolved or transformed.",
+            "example_tasks": [
+              "Trace how a conflict develops from its introduction through complications to climax.",
+              "Analyze what events or decisions escalate the conflict to make it more intense.",
+              "Explain how the main conflict is resolved and whether the resolution is satisfying.",
+              "Identify whether conflicts are fully resolved or left ambiguous at the story's end.",
+              "Analyze how resolving external conflicts relates to resolving internal conflicts."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "fiction_genres_forms",
+    "name": "Fiction Genres and Forms",
+    "short_description": "Students explore different genres of fiction, understanding the conventions, purposes, and characteristic elements of each. They analyze how genre expectations shape both writing and reading experiences.",
+    "sub_topics": [
+      {
+        "key": "realistic_fiction",
+        "name": "Realistic Fiction",
+        "short_description": "Understanding stories set in contemporary or recent past with believable characters and events.",
+        "sub_topics": [
+          {
+            "key": "contemporary_realistic_fiction",
+            "name": "Contemporary Realistic Fiction",
+            "short_description": "Analyzing stories that reflect current times and real-world issues.",
+            "example_tasks": [
+              "Identify how a realistic fiction story addresses contemporary issues relevant to middle school readers.",
+              "Analyze how characters face believable challenges similar to those real people encounter.",
+              "Explain how the author creates authentic dialogue and relationships between characters.",
+              "Compare how different realistic fiction books approach similar themes (friendship, family, identity).",
+              "Evaluate whether the resolution of a realistic fiction story feels authentic and earned."
+            ]
+          },
+          {
+            "key": "historical_realism",
+            "name": "Historical Realism and Accuracy",
+            "short_description": "Understanding how realistic fiction creates believable settings and situations.",
+            "example_tasks": [
+              "Identify details that make the setting of a realistic fiction story feel authentic.",
+              "Analyze how the author balances optimism with realistic portrayal of difficulties.",
+              "Evaluate whether characters' responses to problems are psychologically realistic.",
+              "Explain how realistic fiction can address serious topics while remaining appropriate for young readers.",
+              "Compare a realistic fiction portrayal of an issue with non-fiction accounts of similar situations."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "historical_fiction",
+        "name": "Historical Fiction",
+        "short_description": "Analyzing narratives set in past time periods that blend historical facts with fictional elements.",
+        "sub_topics": [
+          {
+            "key": "historical_accuracy_fiction",
+            "name": "Historical Accuracy in Fiction",
+            "short_description": "Understanding how authors research and incorporate historical details authentically.",
+            "example_tasks": [
+              "Identify historical details in a novel that accurately reflect the time period (clothing, technology, social customs).",
+              "Research a historical event portrayed in a novel and compare fictional portrayal with historical facts.",
+              "Analyze how an author weaves real historical events with fictional characters and plot.",
+              "Identify anachronisms (things that don't fit the time period) if any appear in historical fiction.",
+              "Explain what aspects of a historical fiction novel are factual versus imagined."
+            ]
+          },
+          {
+            "key": "understanding_past_through_fiction",
+            "name": "Understanding Historical Periods Through Fiction",
+            "short_description": "Using historical fiction to gain insight into past eras and perspectives.",
+            "example_tasks": [
+              "Explain what you learned about daily life in a historical period from reading historical fiction.",
+              "Analyze how historical fiction helps readers understand the perspectives and values of people in the past.",
+              "Compare how characters in historical fiction face constraints that don't exist in contemporary settings.",
+              "Identify how historical events shape characters' lives and choices in historical fiction.",
+              "Discuss how historical fiction can make historical events more personal and emotionally accessible than textbooks."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fantasy_science_fiction",
+        "name": "Fantasy and Science Fiction",
+        "short_description": "Understanding genres that incorporate imaginative elements beyond realistic settings.",
+        "sub_topics": [
+          {
+            "key": "fantasy_conventions",
+            "name": "Fantasy Conventions and World-Building",
+            "short_description": "Analyzing how fantasy creates imaginary worlds with their own rules and logic.",
+            "example_tasks": [
+              "Identify elements that make a story fantasy (magic, imaginary creatures, invented worlds).",
+              "Analyze how an author establishes the rules of magic or supernatural elements in a fantasy world.",
+              "Describe how detailed world-building makes a fantasy setting feel consistent and believable.",
+              "Explain how a fantasy quest or journey structure develops characters and themes.",
+              "Compare how different fantasy works use or subvert common fantasy tropes (chosen one, magical object, etc.)."
+            ]
+          },
+          {
+            "key": "science_fiction_conventions",
+            "name": "Science Fiction and Speculative Elements",
+            "short_description": "Understanding stories based on scientific possibilities and futuristic scenarios.",
+            "example_tasks": [
+              "Identify science fiction elements like advanced technology, space travel, or future societies.",
+              "Analyze how a science fiction story extrapolates from current technology or scientific knowledge.",
+              "Explain how science fiction uses imagined futures to comment on current society.",
+              "Compare dystopian science fiction with utopian visions of the future.",
+              "Analyze how science fiction explores ethical questions about technology and scientific progress."
+            ]
+          },
+          {
+            "key": "themes_in_speculative_fiction",
+            "name": "Themes in Fantasy and Science Fiction",
+            "short_description": "Understanding how imaginative genres address real-world themes and human experiences.",
+            "example_tasks": [
+              "Identify universal themes (good vs. evil, power and responsibility, identity) in fantasy or science fiction.",
+              "Explain how fantastical elements serve as metaphors for real-world issues or experiences.",
+              "Analyze how science fiction explores consequences of technological or social changes.",
+              "Discuss how fantasy or science fiction settings allow authors to explore ideas that would be difficult in realistic fiction.",
+              "Compare how a theme is treated differently in realistic fiction versus fantasy or science fiction."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "mystery_suspense",
+        "name": "Mystery and Suspense",
+        "short_description": "Analyzing stories structured around solving puzzles or uncovering secrets.",
+        "sub_topics": [
+          {
+            "key": "mystery_structure",
+            "name": "Mystery Structure and Conventions",
+            "short_description": "Understanding how mysteries present clues, red herrings, and solutions.",
+            "example_tasks": [
+              "Identify the central mystery or puzzle that drives the plot forward.",
+              "Analyze how the author plants clues throughout the story that point toward the solution.",
+              "Identify red herrings (false clues) designed to mislead readers.",
+              "Explain how the detective or protagonist gathers and interprets information.",
+              "Evaluate whether the mystery's solution is fair (based on clues available to readers) or feels arbitrary."
+            ]
+          },
+          {
+            "key": "building_suspense_mystery",
+            "name": "Building Suspense and Tension",
+            "short_description": "Analyzing techniques for maintaining reader interest and anticipation.",
+            "example_tasks": [
+              "Identify how the author creates suspense by withholding information or raising questions.",
+              "Analyze how pacing controls the release of information to maintain interest.",
+              "Explain how multiple suspects or possibilities keep readers guessing.",
+              "Describe how danger or time pressure increases tension in a mystery or thriller.",
+              "Analyze how the author balances revealing information with maintaining suspense until the end."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "adventure_survival",
+        "name": "Adventure and Survival Stories",
+        "short_description": "Understanding narratives focused on physical challenges and overcoming obstacles.",
+        "sub_topics": [
+          {
+            "key": "adventure_elements",
+            "name": "Adventure Story Elements",
+            "short_description": "Analyzing journeys, quests, and physical challenges in adventure fiction.",
+            "example_tasks": [
+              "Identify the quest or goal that drives an adventure story forward.",
+              "Analyze how the protagonist must use physical skills, courage, or resourcefulness to overcome obstacles.",
+              "Explain how the journey or adventure leads to character growth beyond just physical accomplishment.",
+              "Describe how exotic or challenging settings contribute to the adventure.",
+              "Compare different types of adventures (exploration, escape, rescue, quest) and their structures."
+            ]
+          },
+          {
+            "key": "survival_themes",
+            "name": "Survival Stories and Human Resilience",
+            "short_description": "Understanding stories that focus on perseverance in extreme circumstances.",
+            "example_tasks": [
+              "Analyze how a character must rely on their own skills and ingenuity to survive.",
+              "Identify what internal qualities (determination, creativity, hope) help characters survive physical challenges.",
+              "Explain how conflict with nature or environment creates both external and internal challenges.",
+              "Describe how survival stories explore themes of human resilience and adaptation.",
+              "Compare how different survival stories show characters learning from and being changed by their ordeals."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "american_literature_cultural_identity",
+    "name": "American Literature and Cultural Identity",
+    "short_description": "Students explore American literary traditions, diverse voices, and how literature reflects and shapes American cultural identity. They analyze works from different periods, regions, and communities that contribute to the American literary canon.",
+    "sub_topics": [
+      {
+        "key": "diverse_american_voices",
+        "name": "Diverse American Voices and Perspectives",
+        "short_description": "Reading and analyzing literature from diverse American communities and experiences.",
+        "sub_topics": [
+          {
+            "key": "multicultural_american_literature",
+            "name": "Multicultural American Literature",
+            "short_description": "Exploring works by authors from various ethnic, racial, and cultural backgrounds.",
+            "example_tasks": [
+              "Read poetry or prose by African American authors and analyze themes of identity, heritage, and experience.",
+              "Analyze how Latino/Latina authors incorporate cultural traditions and bilingual elements in their writing.",
+              "Read works by Native American authors and discuss how they portray indigenous experiences and perspectives.",
+              "Explore Asian American literature and how it addresses themes of immigration, assimilation, and cultural identity.",
+              "Compare how authors from different cultural backgrounds approach similar themes like family, belonging, or the American Dream."
+            ]
+          },
+          {
+            "key": "regional_american_literature",
+            "name": "Regional American Voices",
+            "short_description": "Understanding how different regions of America are portrayed in literature.",
+            "example_tasks": [
+              "Analyze how Southern literature portrays the culture, history, and landscape of the American South.",
+              "Read works set in different American regions and compare how setting shapes character and story.",
+              "Identify dialect and regional language in American literature and discuss its authenticity and purpose.",
+              "Analyze how urban versus rural settings are portrayed in American literature.",
+              "Compare historical and contemporary depictions of the same American region in literature."
+            ]
+          },
+          {
+            "key": "immigrant_experience",
+            "name": "Immigration and the American Experience",
+            "short_description": "Exploring how literature portrays immigration and the immigrant experience in America.",
+            "example_tasks": [
+              "Read narratives about immigration and analyze themes of cultural adaptation, identity, and belonging.",
+              "Analyze how characters navigate between their heritage culture and American culture.",
+              "Compare immigration stories from different time periods and cultural backgrounds.",
+              "Identify challenges and opportunities immigrants face as portrayed in American literature.",
+              "Discuss how immigration narratives contribute to understanding American identity as multicultural."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "american_literary_periods",
+        "name": "American Literary Periods and Movements",
+        "short_description": "Understanding how American literature has evolved and responded to historical and social changes.",
+        "sub_topics": [
+          {
+            "key": "early_american_literature",
+            "name": "Early American and Colonial Literature",
+            "short_description": "Introduction to foundational American texts and their historical contexts.",
+            "example_tasks": [
+              "Read excerpts from early American documents or narratives and analyze their purposes and audiences.",
+              "Identify themes of freedom, opportunity, and new beginnings in early American writing.",
+              "Compare Native American oral traditions with European settler narratives.",
+              "Analyze how early American literature reflects the values and concerns of colonial society.",
+              "Discuss how early American texts established themes that continue in American literature."
+            ]
+          },
+          {
+            "key": "nineteenth_century_american_lit",
+            "name": "19th Century American Literature",
+            "short_description": "Exploring Romantic, Transcendentalist, and Realist movements in American literature.",
+            "example_tasks": [
+              "Read works by American Romantic authors and identify themes of nature, imagination, and emotion.",
+              "Analyze Transcendentalist ideas about individualism, nature, and social reform in essays or poetry.",
+              "Compare Romantic idealism with Realist depictions of everyday life and social issues.",
+              "Read literature addressing slavery and abolition and analyze its social and moral arguments.",
+              "Discuss how 19th-century literature reflects westward expansion and changing American identity."
+            ]
+          },
+          {
+            "key": "modern_contemporary_american_lit",
+            "name": "Modern and Contemporary American Literature",
+            "short_description": "Understanding 20th and 21st century American literature and its themes.",
+            "example_tasks": [
+              "Read contemporary young adult literature and analyze how it addresses current issues facing adolescents.",
+              "Identify themes in modern American literature such as technology, diversity, social justice, and identity.",
+              "Compare how authors from different decades address similar themes (war, family, coming of age).",
+              "Analyze how contemporary literature incorporates diverse formats (verse novels, graphic novels, multimedia).",
+              "Discuss how recent American literature reflects current social movements and cultural conversations."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "american_themes_values",
+        "name": "Themes and Values in American Literature",
+        "short_description": "Analyzing recurring themes that reflect American experiences, ideals, and conflicts.",
+        "sub_topics": [
+          {
+            "key": "american_dream",
+            "name": "The American Dream",
+            "short_description": "Exploring how literature portrays ideals of opportunity, success, and upward mobility.",
+            "example_tasks": [
+              "Analyze how different works portray the pursuit of the American Dream and whether characters achieve it.",
+              "Compare optimistic and critical portrayals of the American Dream in literature.",
+              "Discuss how the definition of the American Dream differs across time periods and communities.",
+              "Analyze barriers to achieving the American Dream as portrayed in various texts.",
+              "Examine how literature questions or affirms the reality of equal opportunity in America."
+            ]
+          },
+          {
+            "key": "freedom_individualism",
+            "name": "Freedom and Individualism",
+            "short_description": "Understanding how American literature emphasizes personal liberty and self-reliance.",
+            "example_tasks": [
+              "Analyze how characters assert their independence or rebel against authority.",
+              "Identify themes of self-reliance and individual responsibility in American texts.",
+              "Discuss how American literature balances individualism with community responsibility.",
+              "Compare how different authors portray the costs and benefits of independence.",
+              "Analyze how characters define freedom differently based on their circumstances and backgrounds."
+            ]
+          },
+          {
+            "key": "social_justice_equality",
+            "name": "Social Justice and Equality",
+            "short_description": "Examining how literature addresses injustice, inequality, and struggles for civil rights.",
+            "example_tasks": [
+              "Read literature addressing racial injustice and analyze how it portrays both oppression and resistance.",
+              "Analyze how authors use literature to advocate for social change and equality.",
+              "Identify how literature gives voice to marginalized communities and experiences.",
+              "Compare historical and contemporary literature addressing similar social justice issues.",
+              "Discuss how literature can raise awareness and inspire action on social issues."
+            ]
+          },
+          {
+            "key": "coming_of_age_identity",
+            "name": "Coming of Age and Identity Formation",
+            "short_description": "Understanding how American literature portrays adolescence and the search for identity.",
+            "example_tasks": [
+              "Analyze how young adult characters navigate challenges of growing up in American society.",
+              "Identify common stages or experiences in coming-of-age narratives across different works.",
+              "Discuss how characters' cultural backgrounds influence their identity formation.",
+              "Compare how different time periods and settings affect the coming-of-age experience.",
+              "Analyze how characters balance individual identity with family and cultural expectations."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "american_literary_forms",
+        "name": "American Literary Forms and Innovations",
+        "short_description": "Exploring distinctive forms and styles in American literature.",
+        "sub_topics": [
+          {
+            "key": "american_short_story",
+            "name": "The American Short Story",
+            "short_description": "Understanding the short story as a distinctly American literary form.",
+            "example_tasks": [
+              "Read classic and contemporary American short stories and analyze their structure and techniques.",
+              "Compare how different American authors use the short story form to explore themes.",
+              "Analyze how short stories create complete narratives and character development in limited space.",
+              "Identify signature techniques of American short story writers (surprise endings, character revelation, social commentary).",
+              "Discuss how the short story form suits particular types of stories or themes."
+            ]
+          },
+          {
+            "key": "american_poetry_traditions",
+            "name": "American Poetry Traditions",
+            "short_description": "Exploring diverse voices and forms in American poetry.",
+            "example_tasks": [
+              "Read poetry by diverse American poets and analyze themes of American identity and experience.",
+              "Compare traditional forms with free verse in American poetry.",
+              "Analyze how American poets use colloquial language and American speech patterns.",
+              "Identify how American poetry addresses social issues, nature, and personal experience.",
+              "Compare poetry from different American literary movements (Romantic, Modernist, contemporary)."
+            ]
+          },
+          {
+            "key": "contemporary_forms",
+            "name": "Contemporary and Innovative Forms",
+            "short_description": "Understanding new and hybrid forms in contemporary American literature.",
+            "example_tasks": [
+              "Read and analyze a verse novel and discuss how poetic form affects storytelling.",
+              "Explore graphic novels or illustrated narratives and analyze how text and images work together.",
+              "Analyze how contemporary literature incorporates technology and digital media.",
+              "Read examples of creative nonfiction or memoir and discuss how they blend literary techniques with true stories.",
+              "Compare traditional narrative forms with experimental or innovative contemporary forms."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "world_literature_global_perspectives",
+    "name": "World Literature and Global Perspectives",
+    "short_description": "Students explore literature from diverse world cultures, understanding how literature reflects universal human experiences while honoring cultural differences. They make connections across cultures and recognize global themes.",
+    "sub_topics": [
+      {
+        "key": "cultural_contexts_world_lit",
+        "name": "Cultural Contexts in World Literature",
+        "short_description": "Understanding how literature reflects and is shaped by specific cultural contexts.",
+        "sub_topics": [
+          {
+            "key": "reading_across_cultures",
+            "name": "Reading Literature from Different Cultures",
+            "short_description": "Approaching texts from unfamiliar cultures with openness and cultural awareness.",
+            "example_tasks": [
+              "Read a story or novel from a non-Western culture and identify cultural elements that differ from your own experience.",
+              "Research the cultural and historical context of a world literature text to better understand it.",
+              "Identify values, beliefs, or customs reflected in a text from another culture.",
+              "Discuss how understanding cultural context enriches interpretation of a literary work.",
+              "Compare how similar themes (family, honor, coming of age) are treated differently in different cultural contexts."
+            ]
+          },
+          {
+            "key": "translation_interpretation",
+            "name": "Translation and Interpretation",
+            "short_description": "Understanding how translation affects reading world literature.",
+            "example_tasks": [
+              "Discuss how reading a work in translation differs from reading in the original language.",
+              "Compare different translations of the same work and identify differences in word choice or style.",
+              "Identify when cultural concepts in a text may not translate directly into English.",
+              "Appreciate the translator's role in making world literature accessible while preserving meaning.",
+              "Recognize that some nuances of language and culture may be lost or altered in translation."
+            ]
+          },
+          {
+            "key": "respecting_cultural_differences",
+            "name": "Respecting Cultural Differences and Avoiding Stereotypes",
+            "short_description": "Reading world literature with cultural sensitivity and avoiding generalizations.",
+            "example_tasks": [
+              "Distinguish between individual characters' experiences and stereotypes about entire cultures.",
+              "Recognize that one text doesn't represent all people from a particular culture.",
+              "Approach unfamiliar cultural practices with curiosity rather than judgment.",
+              "Identify your own cultural assumptions and how they might affect your interpretation.",
+              "Discuss how literature can challenge stereotypes and provide nuanced cultural understanding."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "universal_themes_world_lit",
+        "name": "Universal Themes in World Literature",
+        "short_description": "Identifying common human experiences and themes across diverse cultural texts.",
+        "sub_topics": [
+          {
+            "key": "shared_human_experiences",
+            "name": "Shared Human Experiences",
+            "short_description": "Recognizing universal experiences portrayed across cultures.",
+            "example_tasks": [
+              "Identify universal themes like love, loss, courage, or justice in texts from different cultures.",
+              "Compare how different cultures approach similar life experiences (birth, death, marriage, transitions).",
+              "Discuss how literature from diverse cultures reveals common human emotions and struggles.",
+              "Analyze how coming-of-age experiences are portrayed similarly and differently across cultures.",
+              "Identify moral or ethical questions that transcend cultural boundaries in world literature."
+            ]
+          },
+          {
+            "key": "cultural_variations_universal_themes",
+            "name": "Cultural Variations on Universal Themes",
+            "short_description": "Understanding how cultures express shared themes in culturally specific ways.",
+            "example_tasks": [
+              "Compare how heroism is defined differently in texts from different cultural traditions.",
+              "Analyze how concepts of family and duty vary across cultures while remaining universally important.",
+              "Compare different cultural perspectives on relationships between individuals and community.",
+              "Discuss how justice and fairness are conceived differently in different cultural contexts.",
+              "Identify how storytelling traditions (oral, written, performance) vary across cultures."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "world_literary_traditions",
+        "name": "World Literary Traditions and Forms",
+        "short_description": "Exploring diverse literary traditions and forms from around the world.",
+        "sub_topics": [
+          {
+            "key": "folktales_mythology",
+            "name": "Folktales, Myths, and Legends",
+            "short_description": "Understanding traditional narratives from various world cultures.",
+            "example_tasks": [
+              "Read folktales from different cultures and identify common patterns (trickster figures, moral lessons, magic).",
+              "Compare creation myths from different cultures and their cultural values.",
+              "Analyze how folktales preserve and transmit cultural values and wisdom.",
+              "Identify archetypal characters and situations that appear across different cultural traditions.",
+              "Discuss how traditional stories continue to influence contemporary literature and culture."
+            ]
+          },
+          {
+            "key": "world_poetry_traditions",
+            "name": "World Poetry Traditions",
+            "short_description": "Exploring poetic forms and traditions from diverse cultures.",
+            "example_tasks": [
+              "Read and analyze haiku from Japanese tradition and understand its form and focus on nature.",
+              "Explore poetry from different cultural traditions and compare themes and techniques.",
+              "Identify how different cultures use poetry for different purposes (celebration, mourning, protest, love).",
+              "Compare structured poetic forms from different cultures (sonnets, ghazals, haiku, tankas).",
+              "Analyze how oral poetry traditions differ from written poetry in various cultures."
+            ]
+          },
+          {
+            "key": "contemporary_world_literature",
+            "name": "Contemporary World Literature",
+            "short_description": "Reading recent works from diverse global authors.",
+            "example_tasks": [
+              "Read contemporary novels or stories from non-American authors and analyze global themes.",
+              "Identify how contemporary world literature addresses global issues (environment, technology, migration).",
+              "Compare how young people's experiences are portrayed in contemporary literature from different countries.",
+              "Discuss how globalization affects contemporary world literature and cross-cultural understanding.",
+              "Analyze how contemporary authors blend traditional cultural elements with modern global influences."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "comparative_world_literature",
+        "name": "Comparative Approaches to World Literature",
+        "short_description": "Making connections and comparisons across texts from different cultures.",
+        "sub_topics": [
+          {
+            "key": "comparing_across_cultures",
+            "name": "Comparing Texts Across Cultures",
+            "short_description": "Analyzing similarities and differences between texts from different cultural origins.",
+            "example_tasks": [
+              "Compare how two stories from different cultures approach the same theme or type of conflict.",
+              "Analyze how different cultural values lead to different resolutions in similar stories.",
+              "Compare protagonists from different cultural contexts facing similar challenges.",
+              "Identify what makes each text culturally specific versus what is universal.",
+              "Create a comparison chart showing how different cultures portray similar concepts or experiences."
+            ]
+          },
+          {
+            "key": "global_connections",
+            "name": "Making Global Connections",
+            "short_description": "Understanding how world literature helps build cross-cultural understanding.",
+            "example_tasks": [
+              "Discuss how reading world literature broadens perspective and challenges assumptions.",
+              "Identify connections between your own experiences and those of characters from different cultures.",
+              "Analyze how literature can build empathy and understanding across cultural differences.",
+              "Reflect on what you learned about another culture through reading its literature.",
+              "Discuss how world literature reveals both diversity and shared humanity."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "media_literacy_multimodal_texts",
+    "name": "Media Literacy and Multimodal Texts",
+    "short_description": "Students analyze how meaning is created through various media and combinations of text, images, sound, and digital elements. They evaluate media messages critically and understand how different formats shape content and reception.",
+    "sub_topics": [
+      {
+        "key": "analyzing_visual_texts",
+        "name": "Analyzing Visual Texts",
+        "short_description": "Understanding how images, graphics, and visual design convey meaning.",
+        "sub_topics": [
+          {
+            "key": "reading_visual_images",
+            "name": "Reading and Interpreting Images",
+            "short_description": "Analyzing photographs, illustrations, and other visual texts.",
+            "example_tasks": [
+              "Analyze a photograph or illustration and describe what it communicates beyond its literal subject.",
+              "Identify the focal point of an image and explain how visual elements direct viewer attention.",
+              "Analyze how composition, lighting, and color in an image create mood or convey meaning.",
+              "Compare how different images represent the same subject and what each emphasizes.",
+              "Interpret symbolism or metaphorical meaning in visual images."
+            ]
+          },
+          {
+            "key": "graphic_novels_visual_narratives",
+            "name": "Graphic Novels and Visual Narratives",
+            "short_description": "Understanding how sequential art and text work together to tell stories.",
+            "example_tasks": [
+              "Analyze how a graphic novel uses panel size, layout, and gutters (spaces between panels) to control pacing.",
+              "Explain how images and text work together to convey meaning that neither could alone.",
+              "Identify how visual elements (facial expressions, body language, symbols) develop character.",
+              "Analyze how color, shading, and artistic style contribute to mood and theme in a graphic novel.",
+              "Compare how the same story element would be conveyed in prose versus in graphic form."
+            ]
+          },
+          {
+            "key": "infographics_data_visualization",
+            "name": "Infographics and Data Visualization",
+            "short_description": "Analyzing how visual design presents information and data.",
+            "example_tasks": [
+              "Analyze an infographic and evaluate how effectively it presents complex information visually.",
+              "Identify what information is emphasized or de-emphasized through visual design choices.",
+              "Evaluate whether a data visualization accurately represents information or is misleading.",
+              "Compare how information presented in an infographic versus in text affects understanding.",
+              "Create your own simple infographic to present information visually."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "digital_multimodal_texts",
+        "name": "Digital and Multimodal Texts",
+        "short_description": "Understanding texts that combine multiple modes of communication.",
+        "sub_topics": [
+          {
+            "key": "websites_digital_texts",
+            "name": "Websites and Digital Texts",
+            "short_description": "Analyzing how digital texts use layout, links, and multimedia.",
+            "example_tasks": [
+              "Analyze how a website's layout and navigation guide users through information.",
+              "Evaluate how hyperlinks create non-linear reading experiences and connections between ideas.",
+              "Identify how websites use text, images, and design elements together to convey messages.",
+              "Compare how information is presented differently on websites versus in print texts.",
+              "Analyze how website design reflects purpose (commercial, educational, entertainment, persuasive)."
+            ]
+          },
+          {
+            "key": "video_multimedia",
+            "name": "Video and Multimedia Texts",
+            "short_description": "Understanding how video combines visual, audio, and textual elements.",
+            "example_tasks": [
+              "Analyze how a video documentary uses narration, interviews, music, and visuals to make an argument.",
+              "Identify how editing choices (cuts, transitions, sequence) affect meaning in a video.",
+              "Explain how music and sound effects in a video enhance or alter the message.",
+              "Compare how the same information is presented in a video versus a written article.",
+              "Analyze how on-screen text, captions, or graphics complement or contrast with spoken content in a video."
+            ]
+          },
+          {
+            "key": "social_media_texts",
+            "name": "Social Media and Digital Communication",
+            "short_description": "Understanding how social media platforms shape communication and messages.",
+            "example_tasks": [
+              "Analyze how platform features (character limits, hashtags, sharing) affect how messages are crafted and spread.",
+              "Identify how images, emoji, and other visual elements convey meaning in social media posts.",
+              "Evaluate the credibility of information shared through social media.",
+              "Analyze how the same message might be adapted differently for different social media platforms.",
+              "Discuss how social media creates new forms of storytelling and self-expression."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "media_techniques_persuasion",
+        "name": "Media Techniques and Persuasion",
+        "short_description": "Identifying and analyzing persuasive techniques used in various media.",
+        "sub_topics": [
+          {
+            "key": "advertising_techniques",
+            "name": "Advertising and Marketing Techniques",
+            "short_description": "Understanding how advertisements use various strategies to persuade audiences.",
+            "example_tasks": [
+              "Identify persuasive techniques in advertisements (emotional appeal, celebrity endorsement, bandwagon, etc.).",
+              "Analyze how advertisements target specific audiences through language, imagery, and appeals.",
+              "Evaluate the claims made in advertisements and identify what evidence is provided (or missing).",
+              "Compare how the same product is advertised differently to different demographic groups.",
+              "Analyze how advertisements use visual design, color, and composition to attract attention and create associations."
+            ]
+          },
+          {
+            "key": "propaganda_bias_media",
+            "name": "Propaganda and Bias in Media",
+            "short_description": "Recognizing bias, manipulation, and propaganda techniques in media messages.",
+            "example_tasks": [
+              "Identify bias in media messages through word choice, image selection, and what information is included or omitted.",
+              "Recognize propaganda techniques like loaded language, oversimplification, or emotional manipulation.",
+              "Compare how different news sources present the same event and identify differences in perspective or bias.",
+              "Analyze how images can be selected or manipulated to create particular impressions.",
+              "Evaluate whether a media message presents information fairly or uses techniques to manipulate opinion."
+            ]
+          },
+          {
+            "key": "rhetorical_appeals_media",
+            "name": "Rhetorical Appeals in Media",
+            "short_description": "Identifying ethos, pathos, and logos in various media formats.",
+            "example_tasks": [
+              "Identify how media messages use emotional appeals (pathos) through images, music, or storytelling.",
+              "Analyze how media establishes credibility (ethos) through expert sources, data, or presenter authority.",
+              "Identify logical appeals (logos) using facts, statistics, and reasoning in media messages.",
+              "Evaluate the balance of different appeals in a persuasive media message.",
+              "Analyze whether emotional or logical appeals dominate in different types of media content."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "evaluating_media_sources",
+        "name": "Evaluating Media Sources and Messages",
+        "short_description": "Developing critical skills to assess media credibility, purpose, and reliability.",
+        "sub_topics": [
+          {
+            "key": "source_credibility",
+            "name": "Evaluating Source Credibility",
+            "short_description": "Assessing whether media sources are trustworthy and reliable.",
+            "example_tasks": [
+              "Evaluate a website's credibility by examining author credentials, publication date, domain, and purpose.",
+              "Identify signs of credible sources (citations, transparency about authorship, professional presentation).",
+              "Recognize warning signs of unreliable sources (sensational headlines, poor grammar, lack of citations).",
+              "Compare information from an unknown source with information from established, credible sources.",
+              "Research the background and reputation of a media source before trusting its information."
+            ]
+          },
+          {
+            "key": "fact_checking_verification",
+            "name": "Fact-Checking and Verification",
+            "short_description": "Using strategies to verify information accuracy in media.",
+            "example_tasks": [
+              "Use fact-checking websites to verify claims made in media messages.",
+              "Trace information back to original sources to verify accuracy.",
+              "Identify when statistics or facts are presented without sources or context.",
+              "Compare how multiple credible sources report the same information to verify facts.",
+              "Recognize the difference between verified facts, opinions, and unsubstantiated claims."
+            ]
+          },
+          {
+            "key": "misinformation_disinformation",
+            "name": "Recognizing Misinformation and Disinformation",
+            "short_description": "Identifying false or misleading information spread through media.",
+            "example_tasks": [
+              "Distinguish between misinformation (false information spread unintentionally) and disinformation (deliberately false information).",
+              "Identify characteristics of fake news and manipulated media content.",
+              "Recognize when images, videos, or quotes are taken out of context to mislead.",
+              "Analyze why certain types of false information spread rapidly on social media.",
+              "Develop habits of verification before sharing information through social media."
+            ]
+          },
+          {
+            "key": "purpose_audience_media",
+            "name": "Identifying Purpose and Intended Audience",
+            "short_description": "Understanding why media messages are created and who they target.",
+            "example_tasks": [
+              "Identify whether a media message's primary purpose is to inform, entertain, persuade, or sell.",
+              "Analyze who the intended audience is based on language, images, and content choices.",
+              "Recognize when entertainment content also carries persuasive or commercial messages.",
+              "Identify sponsored content or native advertising disguised as news or entertainment.",
+              "Evaluate whether a media message achieves its purpose effectively for its target audience."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "critical_reading_literary_criticism",
+    "name": "Critical Reading and Literary Criticism",
+    "short_description": "Students develop skills in analytical reading and interpretation, learning to support interpretations with evidence and engage with different critical perspectives. They understand that texts can be read in multiple valid ways.",
+    "sub_topics": [
+      {
+        "key": "close_reading_skills",
+        "name": "Close Reading and Textual Analysis",
+        "short_description": "Developing skills in careful, detailed reading and analysis of texts.",
+        "sub_topics": [
+          {
+            "key": "annotation_active_reading",
+            "name": "Annotation and Active Reading Strategies",
+            "short_description": "Using strategies to engage deeply with texts while reading.",
+            "example_tasks": [
+              "Annotate a text by marking important passages, noting questions, and making connections.",
+              "Use symbols or codes to mark different types of information (themes, literary devices, questions, reactions).",
+              "Write marginal notes that question, analyze, or make connections to other texts or experiences.",
+              "Identify and mark patterns (repeated words, images, ideas) as you read.",
+              "Track character development or theme development through annotations across an entire text."
+            ]
+          },
+          {
+            "key": "analyzing_word_choice",
+            "name": "Analyzing Specific Word Choices",
+            "short_description": "Examining how individual word choices create meaning and effect.",
+            "example_tasks": [
+              "Analyze why an author chose a particular word over its synonyms and what connotations it carries.",
+              "Identify patterns in diction (formal vs. informal, concrete vs. abstract, simple vs. complex).",
+              "Explain how word choice creates tone, mood, or characterization in specific passages.",
+              "Compare how changing one word in a sentence alters meaning or effect.",
+              "Analyze how an author's word choice reflects historical period, setting, or character voice."
+            ]
+          },
+          {
+            "key": "sentence_paragraph_analysis",
+            "name": "Analyzing Sentence and Paragraph Structure",
+            "short_description": "Understanding how structure at the sentence and paragraph level creates meaning.",
+            "example_tasks": [
+              "Analyze how sentence length and complexity affect pacing and emphasis in a passage.",
+              "Explain how paragraph structure develops and supports ideas.",
+              "Identify how topic sentences, supporting details, and transitions work within paragraphs.",
+              "Analyze how an author uses parallel structure for emphasis or comparison.",
+              "Examine how sentence fragments or non-standard syntax create specific effects."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "developing_interpretations",
+        "name": "Developing and Supporting Interpretations",
+        "short_description": "Creating evidence-based interpretations of texts and defending them with reasoning.",
+        "sub_topics": [
+          {
+            "key": "forming_interpretations",
+            "name": "Forming Literary Interpretations",
+            "short_description": "Developing thoughtful, evidence-based interpretations of texts.",
+            "example_tasks": [
+              "Develop an interpretation of a text's theme and identify specific evidence that supports it.",
+              "Create an interpretation of a character's motivation based on textual evidence.",
+              "Formulate an interpretation of a symbol's meaning and trace how it develops through the text.",
+              "Develop an explanation for an ambiguous or puzzling aspect of a text.",
+              "Create an interpretation that goes beyond surface-level or obvious meanings."
+            ]
+          },
+          {
+            "key": "supporting_with_evidence",
+            "name": "Supporting Interpretations with Evidence",
+            "short_description": "Using specific textual evidence and reasoning to support interpretations.",
+            "example_tasks": [
+              "Support your interpretation with direct quotations from the text and explain how they support your claim.",
+              "Use multiple pieces of evidence from different parts of the text to support an interpretation.",
+              "Explain the reasoning that connects your evidence to your interpretation.",
+              "Anticipate and address potential counterarguments to your interpretation.",
+              "Distinguish between strong evidence that directly supports your interpretation and weaker, less relevant evidence."
+            ]
+          },
+          {
+            "key": "revising_interpretations",
+            "name": "Revising and Refining Interpretations",
+            "short_description": "Adjusting interpretations based on new evidence or perspectives.",
+            "example_tasks": [
+              "Revise your initial interpretation after discussing the text with others or rereading carefully.",
+              "Adjust your interpretation when you encounter evidence that contradicts or complicates it.",
+              "Refine a general interpretation to make it more specific and nuanced.",
+              "Acknowledge complexity and ambiguity rather than forcing simple interpretations.",
+              "Recognize when multiple interpretations can be valid if supported by evidence."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "multiple_perspectives",
+        "name": "Considering Multiple Perspectives and Interpretations",
+        "short_description": "Understanding that texts can be interpreted in various valid ways.",
+        "sub_topics": [
+          {
+            "key": "alternative_interpretations",
+            "name": "Exploring Alternative Interpretations",
+            "short_description": "Considering different ways of understanding the same text.",
+            "example_tasks": [
+              "Identify at least two different valid interpretations of a text's theme or ending.",
+              "Explain how the same textual evidence could support different interpretations.",
+              "Consider how different readers might interpret a text differently based on their backgrounds or perspectives.",
+              "Evaluate which interpretation of a text you find most convincing and why.",
+              "Discuss how ambiguity in a text allows for multiple interpretations."
+            ]
+          },
+          {
+            "key": "textual_ambiguity",
+            "name": "Understanding Textual Ambiguity",
+            "short_description": "Recognizing when texts deliberately leave meanings open to interpretation.",
+            "example_tasks": [
+              "Identify aspects of a text that are deliberately ambiguous or open-ended.",
+              "Explain why an author might choose to leave certain elements ambiguous.",
+              "Discuss how ambiguous endings affect reader response and interpretation.",
+              "Analyze how symbolism can be ambiguous, carrying multiple potential meanings.",
+              "Distinguish between ambiguity that enriches a text and confusion caused by poor writing."
+            ]
+          },
+          {
+            "key": "reader_response",
+            "name": "Reader Response and Personal Connections",
+            "short_description": "Understanding how readers' own experiences affect interpretation while staying grounded in the text.",
+            "example_tasks": [
+              "Reflect on how your own experiences and background affect how you interpret a text.",
+              "Identify personal connections to a text while distinguishing between text-based and personal responses.",
+              "Discuss how different readers might respond differently to the same text based on their experiences.",
+              "Explain the difference between a personal response and a text-based interpretation.",
+              "Use personal connections to deepen engagement while supporting interpretations with textual evidence."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "introduction_literary_criticism",
+        "name": "Introduction to Literary Criticism Approaches",
+        "short_description": "Beginning to understand different lenses or approaches for analyzing literature.",
+        "sub_topics": [
+          {
+            "key": "biographical_historical_criticism",
+            "name": "Biographical and Historical Approaches",
+            "short_description": "Understanding how author's life and historical context inform interpretation.",
+            "example_tasks": [
+              "Research an author's biography and identify how their life experiences may have influenced their work.",
+              "Analyze how understanding the historical period when a text was written enriches interpretation.",
+              "Identify references to historical events or social conditions in a literary text.",
+              "Compare what a text reveals about its historical period with what you learn from history texts.",
+              "Discuss the benefits and limitations of focusing on biography or history when interpreting literature."
+            ]
+          },
+          {
+            "key": "thematic_critical_analysis",
+            "name": "Thematic and Archetypal Approaches",
+            "short_description": "Analyzing universal themes and recurring patterns in literature.",
+            "example_tasks": [
+              "Identify archetypal characters (hero, mentor, trickster) or situations (quest, journey) in a text.",
+              "Analyze how a text addresses universal themes that appear across cultures and time periods.",
+              "Compare how different texts use similar archetypal patterns or symbols.",
+              "Identify mythological or fairy tale patterns that appear in contemporary literature.",
+              "Discuss how archetypal approaches help connect literature across different periods and cultures."
+            ]
+          },
+          {
+            "key": "textual_formalist_analysis",
+            "name": "Textual/Formalist Approaches",
+            "short_description": "Focusing on how the text itself creates meaning through literary elements.",
+            "example_tasks": [
+              "Analyze a text focusing exclusively on its language, structure, and literary devices without reference to outside context.",
+              "Explain how various literary elements work together to create a unified artistic whole.",
+              "Analyze patterns of imagery, symbolism, or structure within a text.",
+              "Focus on what the text itself reveals without relying on author biography or historical context.",
+              "Discuss how close attention to the text's formal elements deepens understanding."
+            ]
+          },
+          {
+            "key": "social_cultural_criticism",
+            "name": "Social and Cultural Approaches",
+            "short_description": "Analyzing how literature reflects and comments on social issues and cultural values.",
+            "example_tasks": [
+              "Analyze how a text portrays social class, gender roles, or racial dynamics.",
+              "Identify how literature reflects or challenges the values of the society in which it was written.",
+              "Examine how power relationships between groups are portrayed in a text.",
+              "Analyze whose voices and perspectives are represented or absent in a text.",
+              "Discuss how literature can both reflect and critique social conditions and cultural assumptions."
+            ]
+          }
+        ]
+      },
+      {
+        "key": "literary_discussions_debates",
+        "name": "Engaging in Literary Discussions and Debates",
+        "short_description": "Participating in thoughtful conversations about literature and defending interpretations.",
+        "sub_topics": [
+          {
+            "key": "literature_circles_discussions",
+            "name": "Participating in Literature Circles and Discussions",
+            "short_description": "Engaging productively in collaborative literary analysis.",
+            "example_tasks": [
+              "Prepare discussion questions or observations about a text before meeting with your group.",
+              "Take on different roles in literature circles (discussion leader, passage selector, connector, questioner).",
+              "Build on others' interpretations by adding evidence or alternative perspectives.",
+              "Ask questions that push the group to think more deeply about the text.",
+              "Synthesize multiple perspectives from a discussion to develop a richer understanding."
+            ]
+          },
+          {
+            "key": "defending_interpretations",
+            "name": "Defending and Debating Interpretations",
+            "short_description": "Articulating and supporting interpretations in dialogue with others.",
+            "example_tasks": [
+              "Defend your interpretation of a text against someone who disagrees, using evidence and reasoning.",
+              "Acknowledge strengths in an alternative interpretation while explaining why you find yours more convincing.",
+              "Modify your interpretation based on compelling evidence or reasoning from others.",
+              "Distinguish between matters of interpretation (debatable) and matters of fact (verifiable in text).",
+              "Engage respectfully in interpretive disagreements, focusing on evidence rather than opinions."
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
