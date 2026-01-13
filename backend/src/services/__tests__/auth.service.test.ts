@@ -2,6 +2,7 @@ import * as authService from "../auth.service";
 import * as bcrypt from "bcrypt";
 import * as jwt from "jsonwebtoken";
 import { getFirestore, getAuth } from "../../config/firebase.config";
+import type { Subject } from "@eduforger/shared";
 
 // Mock dependencies
 jest.mock("../../config/firebase.config");
@@ -61,10 +62,10 @@ describe("Auth Service", () => {
         password: "password123",
         name: "Test User",
         role: "teacher" as const,
-        country: "US",
-        subjects: ["mathematics", "physics"],
-        educationalModel: "secular",
-        teacherRole: "grade_9_12",
+        country: "US" as const,
+        subjects: ["mathematics", "physics"] as Subject[],
+        educationalModel: "secular" as const,
+        teacherRole: "grade_9_12" as const,
       };
 
       const code = await authService.createVerificationCode(

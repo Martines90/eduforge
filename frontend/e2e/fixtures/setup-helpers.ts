@@ -1,4 +1,6 @@
 import { Page } from '@playwright/test';
+import { ApiMocks } from './api-mocks';
+import type { CountryCode, Subject } from '@eduforger/shared';
 
 /**
  * Common setup helpers for E2E tests
@@ -9,7 +11,7 @@ import { Page } from '@playwright/test';
  * Set up guest user with country selected
  * This simulates the country selection modal being completed
  */
-export async function setupGuest(page: Page, country: 'US' | 'HU' | 'MX' = 'US') {
+export async function setupGuest(page: Page, country: CountryCode = 'US') {
   await page.context().addCookies([
     {
       name: 'eduforge_country',
@@ -22,12 +24,13 @@ export async function setupGuest(page: Page, country: 'US' | 'HU' | 'MX' = 'US')
 
 /**
  * Set up authenticated teacher with all required cookies
+ * Uses shared types for type safety
  */
 export async function setupTeacher(page: Page, options?: {
   name?: string;
   email?: string;
-  subjects?: ('mathematics' | 'physics' | 'chemistry' | 'biology')[];
-  country?: 'US' | 'HU' | 'MX';
+  subjects?: Subject[];
+  country?: CountryCode;
 }) {
   const {
     name = 'Test Teacher',
@@ -35,6 +38,17 @@ export async function setupTeacher(page: Page, options?: {
     subjects = ['mathematics'],
     country = 'US',
   } = options || {};
+
+  // Set up API mocks FIRST before any cookies/storage
+  const apiMocks = new ApiMocks(page);
+  await apiMocks.mockFirebaseAuth();
+  await apiMocks.mockGetCurrentUser({
+    name,
+    email,
+    identity: 'teacher',
+    subjects,
+    country,
+  });
 
   await page.context().addCookies([
     {
@@ -87,17 +101,29 @@ export async function setupTeacher(page: Page, options?: {
 
 /**
  * Set up authenticated non-teacher
+ * Uses shared types for type safety
  */
 export async function setupNonTeacher(page: Page, options?: {
   name?: string;
   email?: string;
-  country?: 'US' | 'HU' | 'MX';
+  country?: CountryCode;
 }) {
   const {
     name = 'Test User',
     email = 'user@example.com',
     country = 'US',
   } = options || {};
+
+  // Set up API mocks FIRST before any cookies/storage
+  const apiMocks = new ApiMocks(page);
+  await apiMocks.mockFirebaseAuth();
+  await apiMocks.mockGetCurrentUser({
+    name,
+    email,
+    identity: 'non-teacher',
+    subjects: [],
+    country,
+  });
 
   await page.context().addCookies([
     {

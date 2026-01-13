@@ -15,34 +15,13 @@ import {
   getGradeConfig,
   TeacherRole,
   getTeacherRole,
-  getTeacherRoleLabel
+  getTeacherRoleLabel,
+  EducationalModel,
+  SubscriptionInfo,
 } from '@eduforger/shared';
 
-export type EducationalModel =
-  | 'secular'
-  | 'conservative'
-  | 'traditional'
-  | 'liberal'
-  | 'progressive'
-  | 'religious_christian'
-  | 'religious_islamic'
-  | 'religious_jewish'
-  | 'montessori'
-  | 'waldorf';
-
-export interface SubscriptionInfo {
-  tier: 'trial' | 'basic' | 'normal' | 'pro';
-  status: 'active' | 'expired' | 'cancelled' | 'past_due';
-  startDate?: string;
-  endDate?: string;
-  stripeCustomerId?: string;
-  stripeSubscriptionId?: string;
-  stripePriceId?: string;
-  cancelAtPeriodEnd?: boolean;
-  schoolId?: string;
-  schoolName?: string;
-  associatedTeachers?: string[];
-}
+// Re-export for backward compatibility
+export type { EducationalModel, SubscriptionInfo } from '@eduforger/shared';
 
 /**
  * User state interface

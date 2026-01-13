@@ -1,55 +1,39 @@
 import { SubscriptionData } from "./subscription.types";
+import type {
+  RegisterRequest as SharedRegisterRequest,
+  LoginRequest as SharedLoginRequest,
+  VerificationCodeRequest as SharedVerificationCodeRequest,
+  VerifyEmailRequest as SharedVerifyEmailRequest,
+  AuthResponse as SharedAuthResponse,
+  UserRole,
+  Subject,
+  CountryCode,
+  EducationalModel,
+  GradeLevel,
+} from "@eduforger/shared";
 
-export interface RegisterRequest {
-  email: string;
-  password: string;
-  name: string;
-  role: "teacher" | "general_user";
-  country: string;
-  subjects?: string[]; // For teachers only - multi-select
-  educationalModel?: string; // For teachers only - grade/school type level
-  teacherRole?: string; // For teachers only - the grade level they teach (e.g., "grade_6_8")
-  recaptchaToken?: string; // reCAPTCHA verification token
-}
+// Re-export shared types for backward compatibility
+export type {
+  RegisterRequest,
+  LoginRequest,
+  VerificationCodeRequest,
+  VerifyEmailRequest,
+  AuthResponse,
+} from "@eduforger/shared";
 
-export interface LoginRequest {
-  email: string;
-  password: string;
-}
-
-export interface VerificationCodeRequest {
-  email: string;
-}
-
-export interface VerifyEmailRequest {
-  email: string;
-  code: string;
-}
-
-export interface AuthResponse {
-  success: boolean;
-  message: string;
-  data?: {
-    user?: {
-      uid: string;
-      email: string;
-      name: string;
-      emailVerified: boolean;
-    };
-    token?: string;
-  };
-  error?: string;
-}
-
+/**
+ * User Document in Firestore (backend representation)
+ * Uses shared types for consistency with frontend
+ */
 export interface UserDocument {
   uid: string;
   email: string;
   name: string;
-  role: "teacher" | "general_user";
-  country: string;
-  subjects?: string[]; // For teachers only - multi-select, stored as array in profile
-  educationalModel?: string; // For teachers only - grade/school type level
-  teacherRole?: string; // For teachers only - the grade level they teach (e.g., "grade_6_8")
+  role: UserRole; // Use shared UserRole type
+  country: CountryCode; // Use shared CountryCode type
+  subjects?: Subject[]; // Use shared Subject type - For teachers only
+  educationalModel?: EducationalModel; // Use shared EducationalModel type - For teachers only
+  teacherRole?: GradeLevel; // Use shared GradeLevel type - For teachers only
   emailVerificationCode?: string;
   emailVerificationCodeExp?: FirebaseFirestore.Timestamp;
   status: "active" | "inactive" | "banned";

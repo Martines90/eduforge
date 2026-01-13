@@ -1,4 +1,5 @@
 import { Page } from '@playwright/test';
+import type { MockUserOptions } from '@eduforger/shared';
 
 /**
  * Mock API responses for registration flow
@@ -242,6 +243,59 @@ export class ApiMocks {
           message: 'Logged out successfully',
         }),
       });
+    });
+  }
+
+  /**
+   * Mock getCurrentUser endpoint
+   * Uses shared MockUserOptions type for consistency
+   */
+  async mockGetCurrentUser(options?: MockUserOptions) {
+    await this.page.route('**/api/auth/me', async (route) => {
+      if (options?.shouldFail) {
+        await route.fulfill({
+          status: 401,
+          contentType: 'application/json',
+          body: JSON.stringify({
+            success: false,
+            message: 'Unauthorized',
+          }),
+        });
+      } else {
+        const {
+          name = 'Test Teacher',
+          email = 'teacher@school.edu',
+          identity = 'teacher',
+          subjects = ['mathematics'],
+          country = 'US',
+        } = options || {};
+
+        await route.fulfill({
+          status: 200,
+          contentType: 'application/json',
+          body: JSON.stringify({
+            success: true,
+            data: {
+              user: {
+                email,
+                name,
+                role: identity === 'teacher' ? 'teacher' : 'general_user',
+                country,
+                subjects,
+                educationalModel: 'secular',
+                teacherRole: identity === 'teacher' ? 'grade_9_12' : undefined,
+                subscription: {
+                  tier: 'trial',
+                  status: 'active',
+                  startDate: new Date().toISOString(),
+                  endDate: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString(),
+                },
+                taskCredits: 100,
+              },
+            },
+          }),
+        });
+      }
     });
   }
 

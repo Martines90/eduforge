@@ -832,19 +832,10 @@ export type TranslationKey = keyof Translations;
 
 /**
  * User identity types
+ * Re-export from shared types for consistency
  */
-export type UserIdentity = "teacher" | "non-teacher";
+export type { UserIdentity, UserProfile } from '@eduforger/shared';
 export type UserRole = "guest" | "registered" | "admin";
-
-/**
- * User authentication state
- */
-export interface UserProfile {
-  email: string;
-  name: string;
-  registeredAt: string;
-  token?: string; // JWT token for future authentication
-}
 
 /**
  * Subject types for teachers
