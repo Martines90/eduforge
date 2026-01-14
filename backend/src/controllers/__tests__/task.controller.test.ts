@@ -91,7 +91,7 @@ describe("TaskController", () => {
     const mockUserEmail = "teacher@example.com";
 
     const mockTaskData = {
-      description: "<h1>Test Task</h1><p>This is a test task description</p>",
+      description: "<div class=\"story\"><h1>Test Task</h1><p>" + "This is a test task description with enough characters to pass validation. ".repeat(10) + "</p></div>",
       solution: "<p>This is the solution</p>",
       images: ["https://example.com/image1.png"],
       metadata: {
@@ -406,7 +406,7 @@ describe("TaskController", () => {
     it("should extract title from description HTML correctly", async () => {
       mockRequest.body.task_data = {
         ...mockTaskData,
-        description: "<h1>Linear Equations Practice</h1><p>Solve for x</p>",
+        description: "<div class=\"story\"><h1>Linear Equations Practice</h1><p>" + "Solve for x with detailed explanation. ".repeat(15) + "</p></div>",
       };
 
       (deductTaskCredit as jest.Mock).mockResolvedValue(99);
@@ -425,7 +425,7 @@ describe("TaskController", () => {
     });
 
     it("should truncate title if no h1 tag found", async () => {
-      const longDescription = "<p>" + "a".repeat(100) + "</p>";
+      const longDescription = "<div class=\"story\"><p>" + "a".repeat(700) + "</p></div>";
       mockRequest.body.task_data = {
         ...mockTaskData,
         description: longDescription,
@@ -448,7 +448,7 @@ describe("TaskController", () => {
 
     it("should set default values for missing metadata fields", async () => {
       mockRequest.body.task_data = {
-        description: "<h1>Test</h1>",
+        description: "<div class=\"story\"><h1>Test</h1><p>" + "x".repeat(700) + "</p></div>",
         solution: "<p>Solution</p>",
         metadata: {}, // Empty metadata
       };
@@ -657,6 +657,208 @@ describe("TaskController", () => {
           message: "Task saved successfully",
         })
       );
+    });
+
+    describe("Character Length Validation", () => {
+      it("should return 400 if task description is too short (below 600 chars)", async () => {
+        // Create description with 500 characters (below minimum of 600)
+        const shortDescription = "<div class=\"story\"><p>" + "a".repeat(500) + "</p></div>";
+        mockRequest.body.task_data = {
+          ...mockTaskData,
+          description: shortDescription,
+        };
+
+        await taskController.saveTask(
+          mockRequest as Request,
+          mockResponse as Response,
+          mockNext
+        );
+
+        expect(mockResponse.status).toHaveBeenCalledWith(400);
+        expect(mockResponse.json).toHaveBeenCalledWith({
+          success: false,
+          error: "INVALID_TASK_LENGTH",
+          message: expect.stringContaining("Task description is too short"),
+          validation: expect.objectContaining({
+            count: 500,
+            min: 600,
+            max: 1500,
+            isTooShort: true,
+            isTooLong: false,
+          }),
+        });
+
+        // Credit should not be deducted
+        expect(deductTaskCredit).not.toHaveBeenCalled();
+
+        // Firestore should not be called
+        expect(mockFirestore.set).not.toHaveBeenCalled();
+      });
+
+      it("should return 400 if task description is too long (above 1500 chars)", async () => {
+        // Create description with 1600 characters (above maximum of 1500)
+        const longDescription = "<div class=\"story\"><p>" + "a".repeat(1600) + "</p></div>";
+        mockRequest.body.task_data = {
+          ...mockTaskData,
+          description: longDescription,
+        };
+
+        await taskController.saveTask(
+          mockRequest as Request,
+          mockResponse as Response,
+          mockNext
+        );
+
+        expect(mockResponse.status).toHaveBeenCalledWith(400);
+        expect(mockResponse.json).toHaveBeenCalledWith({
+          success: false,
+          error: "INVALID_TASK_LENGTH",
+          message: expect.stringContaining("Task description is too long"),
+          validation: expect.objectContaining({
+            count: 1600,
+            min: 600,
+            max: 1500,
+            isTooShort: false,
+            isTooLong: true,
+          }),
+        });
+
+        // Credit should not be deducted
+        expect(deductTaskCredit).not.toHaveBeenCalled();
+
+        // Firestore should not be called
+        expect(mockFirestore.set).not.toHaveBeenCalled();
+      });
+
+      it("should accept valid task description at minimum boundary (600 chars)", async () => {
+        const minDescription = "<div class=\"story\"><p>" + "a".repeat(600) + "</p></div>";
+        mockRequest.body.task_data = {
+          ...mockTaskData,
+          description: minDescription,
+        };
+
+        (deductTaskCredit as jest.Mock).mockResolvedValue(99);
+
+        await taskController.saveTask(
+          mockRequest as Request,
+          mockResponse as Response,
+          mockNext
+        );
+
+        // Should succeed
+        expect(mockResponse.status).toHaveBeenCalledWith(201);
+        expect(mockResponse.json).toHaveBeenCalledWith(
+          expect.objectContaining({
+            success: true,
+            message: "Task saved successfully",
+          })
+        );
+      });
+
+      it("should accept valid task description at maximum boundary (1500 chars)", async () => {
+        const maxDescription = "<div class=\"story\"><p>" + "a".repeat(1500) + "</p></div>";
+        mockRequest.body.task_data = {
+          ...mockTaskData,
+          description: maxDescription,
+        };
+
+        (deductTaskCredit as jest.Mock).mockResolvedValue(99);
+
+        await taskController.saveTask(
+          mockRequest as Request,
+          mockResponse as Response,
+          mockNext
+        );
+
+        // Should succeed
+        expect(mockResponse.status).toHaveBeenCalledWith(201);
+        expect(mockResponse.json).toHaveBeenCalledWith(
+          expect.objectContaining({
+            success: true,
+            message: "Task saved successfully",
+          })
+        );
+      });
+
+      it("should accept valid task description in normal range (1000 chars)", async () => {
+        const normalDescription = "<div class=\"story\"><p>" + "a".repeat(1000) + "</p></div>";
+        mockRequest.body.task_data = {
+          ...mockTaskData,
+          description: normalDescription,
+        };
+
+        (deductTaskCredit as jest.Mock).mockResolvedValue(99);
+
+        await taskController.saveTask(
+          mockRequest as Request,
+          mockResponse as Response,
+          mockNext
+        );
+
+        // Should succeed
+        expect(mockResponse.status).toHaveBeenCalledWith(201);
+        expect(mockResponse.json).toHaveBeenCalledWith(
+          expect.objectContaining({
+            success: true,
+            message: "Task saved successfully",
+          })
+        );
+      });
+
+      it("should exclude HTML tags and image placeholders from character count", async () => {
+        // Create description with 700 actual characters + HTML tags + image placeholders
+        const htmlDescription = `
+          <div class="story">
+            <h2>Title</h2>
+            <p>${"a".repeat(200)} [IMAGE_1] ${"b".repeat(500)}</p>
+          </div>
+        `;
+        mockRequest.body.task_data = {
+          ...mockTaskData,
+          description: htmlDescription,
+        };
+
+        (deductTaskCredit as jest.Mock).mockResolvedValue(99);
+
+        await taskController.saveTask(
+          mockRequest as Request,
+          mockResponse as Response,
+          mockNext
+        );
+
+        // Should succeed (700 chars is within 600-1500 range)
+        expect(mockResponse.status).toHaveBeenCalledWith(201);
+        expect(mockResponse.json).toHaveBeenCalledWith(
+          expect.objectContaining({
+            success: true,
+            message: "Task saved successfully",
+          })
+        );
+      });
+
+      it("should allow saving task without description (backward compatibility)", async () => {
+        mockRequest.body.task_data = {
+          solution: "<p>Solution</p>",
+          metadata: {},
+        };
+
+        (deductTaskCredit as jest.Mock).mockResolvedValue(99);
+
+        await taskController.saveTask(
+          mockRequest as Request,
+          mockResponse as Response,
+          mockNext
+        );
+
+        // Should succeed (no validation when description is missing)
+        expect(mockResponse.status).toHaveBeenCalledWith(201);
+        expect(mockResponse.json).toHaveBeenCalledWith(
+          expect.objectContaining({
+            success: true,
+            message: "Task saved successfully",
+          })
+        );
+      });
     });
   });
 

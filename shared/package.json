@@ -5,6 +5,20 @@
   "main": "types/index.js",
   "types": "types/index.d.ts",
   "private": true,
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./types/index.js"
+    },
+    "./task-generation": {
+      "types": "./config/task-generation.config.d.ts",
+      "default": "./config/task-generation.config.js"
+    },
+    "./types": {
+      "types": "./types/index.d.ts",
+      "default": "./types/index.js"
+    }
+  },
   "scripts": {},
   "keywords": [
     "types",

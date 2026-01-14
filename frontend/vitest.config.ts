@@ -33,6 +33,8 @@ export default defineConfig({
       '@/styles': path.resolve(__dirname, './styles'),
       '@/types': path.resolve(__dirname, './types'),
       '@/data': path.resolve(__dirname, './data'),
+      '@eduforger/shared/task-generation': path.resolve(__dirname, '../shared/config/task-generation.config'),
+      '@eduforger/shared/types': path.resolve(__dirname, '../shared/types'),
       '@eduforger/shared': path.resolve(__dirname, '../shared/types'),
     },
   },

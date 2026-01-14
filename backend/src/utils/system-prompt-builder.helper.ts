@@ -9,7 +9,7 @@ import {
   getLanguageForCountry,
   getMeasurementSystem,
 } from "./measurement-system.helper";
-import { TASK_CHARACTER_LENGTH } from "../config/task-generation.config";
+import { TASK_CHARACTER_LENGTH } from "@eduforger/shared/task-generation";
 
 /**
  * Builds a complete system prompt by interpolating the template with all required data

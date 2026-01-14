@@ -43,6 +43,12 @@
       ],
       "@eduforger/shared": [
         "../shared/types"
+      ],
+      "@eduforger/shared/task-generation": [
+        "../shared/config/task-generation.config"
+      ],
+      "@eduforger/shared/types": [
+        "../shared/types"
       ]
     }
   },

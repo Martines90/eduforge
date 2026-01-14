@@ -7,7 +7,7 @@
     "build": "tsc && npm run copy:prompts && npm run copy:mappings && npm run copy:shared",
     "copy:prompts": "mkdir -p dist/genai/prompts && cp -r src/genai/prompts/* dist/genai/prompts/",
     "copy:mappings": "mkdir -p dist/data/mappings && cp -r src/data/mappings/* dist/data/mappings/",
-    "copy:shared": "mkdir -p dist/backend/_modules/@eduforger && cp ../shared/package.json dist/backend/_modules/@eduforger/shared-package.json.tmp && cp -r dist/shared dist/backend/_modules/@eduforger/shared && mv dist/backend/_modules/@eduforger/shared-package.json.tmp dist/backend/_modules/@eduforger/shared/package.json",
+    "copy:shared": "mkdir -p dist/backend/_modules/@eduforger/shared && cp ../shared/package.json dist/backend/_modules/@eduforger/shared/package.json && cp -r dist/shared/* dist/backend/_modules/@eduforger/shared/",
     "start": "node -r tsconfig-paths/register dist/backend/src/index.js",
     "dev": "ts-node -r tsconfig-paths/register src/index.ts",
     "dev:watch": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only src/index.ts",

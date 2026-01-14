@@ -15,6 +15,7 @@ import {
 } from "../services/guest-auth.service";
 import { TRIAL_START_CREDITS } from "../constants/credits";
 import { DEFAULT_NUMBER_OF_IMAGES } from "@eduforger/shared";
+import { validateCharacterLength } from "@eduforger/shared/task-generation";
 
 export class TaskController {
   private taskGenerator: TaskGeneratorService;
@@ -507,6 +508,31 @@ export class TaskController {
             "Missing required fields: task_id and task_data are required",
         });
         return;
+      }
+
+      // Validate task description character length using shared validation
+      if (task_data.description) {
+        const validation = validateCharacterLength(task_data.description, true); // Use edit mode limits
+
+        if (!validation.isValid) {
+          res.status(400).json({
+            success: false,
+            error: "INVALID_TASK_LENGTH",
+            message: validation.isTooShort
+              ? `Task description is too short. Minimum ${validation.min} characters required, but got ${validation.count}.`
+              : `Task description is too long. Maximum ${validation.max} characters allowed, but got ${validation.count}.`,
+            validation: {
+              count: validation.count,
+              min: validation.min,
+              max: validation.max,
+              isTooShort: validation.isTooShort,
+              isTooLong: validation.isTooLong,
+            },
+          });
+          return;
+        }
+
+        console.log(`✅ Task description validated: ${validation.count} characters (${validation.min}-${validation.max})`);
       }
 
       // Get authenticated user from request (added by auth middleware)

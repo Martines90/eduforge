@@ -10,6 +10,7 @@ export * from './grades';
 export * from './user.types';
 
 /**
- * Task Generation Constants
+ * Task Generation Constants and Config
  */
 export const DEFAULT_NUMBER_OF_IMAGES = 1 as const;
+export * from '../config/task-generation.config';

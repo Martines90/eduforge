@@ -4,6 +4,7 @@
  *
  * This config is shared between:
  * - Backend prompt generation
+ * - Backend task save endpoint validation
  * - Frontend task editor validation
  */
 
@@ -83,3 +84,18 @@ export function validateCharacterLength(html: string, isEditMode = false): {
     isTooLong,
   };
 }
+
+/**
+ * Task generation configuration object
+ * Can be extended with additional settings in the future
+ */
+export const TASK_GENERATION_CONFIG = {
+  characterLength: TASK_CHARACTER_LENGTH,
+  editCharacterLength: TASK_EDIT_CHARACTER_LENGTH,
+
+  // Future settings can be added here:
+  // maxQuestions: 3,
+  // minQuestions: 1,
+  // defaultLanguage: 'Hungarian',
+  // etc.
+} as const;

@@ -15,6 +15,8 @@ module.exports = {
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
     "^@eduforger/shared$": "<rootDir>/../shared/types/index.ts",
+    "^@eduforger/shared/task-generation$": "<rootDir>/../shared/config/task-generation.config.ts",
+    "^@eduforger/shared/types$": "<rootDir>/../shared/types/index.ts",
   },
   transform: {
     "^.+\\.ts$": [

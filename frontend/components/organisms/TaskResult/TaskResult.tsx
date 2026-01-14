@@ -19,7 +19,7 @@ import Script from 'next/script';
 import { GeneratedTask } from '@/types/task';
 import { Button } from '@/components/atoms/Button';
 import { processLatexInHtml } from '@/lib/utils/latex-converter';
-import { validateCharacterLength, TASK_CHARACTER_LENGTH } from '@/lib/config/task-generation.config';
+import { validateCharacterLength, TASK_CHARACTER_LENGTH } from '@eduforger/shared/task-generation';
 import { useTranslation } from '@/lib/i18n';
 import styles from './TaskResult.module.scss';
 import 'react-quill/dist/quill.snow.css';
