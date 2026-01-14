@@ -5,6 +5,7 @@
 
 import { API_BASE_URL } from './api.service';
 import { NavigationTopic } from '@/types/navigation';
+import { fetchWithRetry } from '@/lib/utils/fetch-with-retry';
 
 /**
  * SubjectMappingTreeNode from backend
@@ -65,12 +66,22 @@ export async function fetchSubjectTree(
       endpoint,
     });
 
-    const response = await fetch(endpoint, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
+    const response = await fetchWithRetry(
+      endpoint,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
       },
-    });
+      {
+        maxRetries: 2,
+        initialDelayMs: 1000,
+        onRetry: (error, attempt, delay) => {
+          console.log(`[Subject Mapping Service] Retry attempt ${attempt} after ${delay}ms due to:`, error);
+        },
+      }
+    );
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));

@@ -75,12 +75,13 @@ function TaskGeneratorContent() {
   const [modalMessage, setModalMessage] = useState('');
 
   // Auto-create guest session on mount (if guest)
+  // Only attempt once to prevent infinite loops
   useEffect(() => {
-    if (isGuest && !guestSession.guestToken && !guestSession.isLoading) {
+    if (isGuest && !guestSession.guestToken && !guestSession.isLoading && !guestSession.error) {
       console.log('[Task Generator] Creating guest session...');
       guestSession.createGuestSession();
     }
-  }, [isGuest, guestSession.guestToken, guestSession.isLoading]);
+  }, [isGuest]); // Only run when isGuest changes, not on every token/loading change
 
   // Load last unpublished task on mount (for all users)
   useEffect(() => {

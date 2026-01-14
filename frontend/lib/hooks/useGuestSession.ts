@@ -43,8 +43,13 @@ export function useGuestSession(): UseGuestSessionReturn {
   const [guestSession, setGuestSession] = useState<GuestSessionData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [retryCount, setRetryCount] = useState(0);
+  const [hasAttemptedCreate, setHasAttemptedCreate] = useState(false);
 
   const isGuest = !user.isRegistered;
+
+  // Maximum retry attempts to prevent infinite loops
+  const MAX_RETRY_ATTEMPTS = 3;
 
   // Load guest session from localStorage on mount
   useEffect(() => {
@@ -84,6 +89,15 @@ export function useGuestSession(): UseGuestSessionReturn {
       return;
     }
 
+    // Prevent infinite retry loops
+    if (retryCount >= MAX_RETRY_ATTEMPTS) {
+      console.error('[useGuestSession] Max retry attempts reached. Not creating guest session.');
+      setError('Failed to create guest session after multiple attempts. Please refresh the page.');
+      return;
+    }
+
+    // Mark that we've attempted to create a session
+    setHasAttemptedCreate(true);
     setIsLoading(true);
     setError(null);
 
@@ -146,13 +160,26 @@ export function useGuestSession(): UseGuestSessionReturn {
       localStorage.setItem(GUEST_SESSION_KEY, JSON.stringify(sessionData));
 
       console.log('✅ Guest session created:', sessionData.sessionId);
+
+      // Reset retry count on success
+      setRetryCount(0);
     } catch (err) {
       console.error('Failed to create guest session:', err);
-      setError(err instanceof Error ? err.message : 'Failed to create guest session');
+
+      // Increment retry count
+      setRetryCount(prev => prev + 1);
+
+      const errorMessage = err instanceof Error ? err.message : 'Failed to create guest session';
+      setError(errorMessage);
+
+      // Don't show the full error to user if it's a connection issue
+      if (errorMessage.includes('Cannot connect to backend server')) {
+        console.error('[useGuestSession] Backend connection error - this may be a deployment issue');
+      }
     } finally {
       setIsLoading(false);
     }
-  }, [user.isRegistered]);
+  }, [user.isRegistered, retryCount, MAX_RETRY_ATTEMPTS]);
 
   /**
    * Increment generation count locally (backend handles the actual increment)
