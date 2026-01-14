@@ -29,31 +29,32 @@ export const useCascadingSelect = ({ data, initialPath }: UseCascadingSelectProp
   // Initialize with preset path from URL params
   useEffect(() => {
     if (initialPath && initialPath.length > 0 && !initialized && data.length > 0) {
-      const buildPath = (names: string[], currentData: NavigationTopic[], level: number = 0): SelectionPathItem[] => {
-        if (names.length === 0 || !currentData) return [];
+      const buildPath = (keys: string[], currentData: NavigationTopic[], level: number = 0): SelectionPathItem[] => {
+        if (keys.length === 0 || !currentData) return [];
 
-        const currentName = names[0];
-        // Try to match by name (case-insensitive)
+        const currentKey = keys[0];
+        // Try to match by key first (exact match), then fall back to name (case-insensitive)
         const found = currentData.find(topic =>
-          topic.name.toLowerCase() === currentName.toLowerCase()
+          topic.key === currentKey || topic.name.toLowerCase() === currentKey.toLowerCase()
         );
 
         if (!found) {
-          console.warn(`Topic name "${currentName}" not found at level ${level}`);
+          console.warn(`Topic with key or name "${currentKey}" not found at level ${level}`);
           return [];
         }
 
         const pathItem: SelectionPathItem = {
           level,
           topic: found,
-          displayName: found.name,
+          key: found.key, // Machine-readable key for curriculum path
+          displayName: found.name, // Human-readable name for display
         };
 
-        if (names.length === 1) {
+        if (keys.length === 1) {
           return [pathItem];
         }
 
-        const subPath = buildPath(names.slice(1), found.sub_topics || [], level + 1);
+        const subPath = buildPath(keys.slice(1), found.sub_topics || [], level + 1);
         return [pathItem, ...subPath];
       };
 
@@ -95,7 +96,8 @@ export const useCascadingSelect = ({ data, initialPath }: UseCascadingSelectProp
       newPath.push({
         level,
         topic: selectedTopic,
-        displayName: selectedTopic.name,
+        key: selectedTopic.key, // Machine-readable key for curriculum path
+        displayName: selectedTopic.name, // Human-readable name for display
       });
       return newPath;
     });

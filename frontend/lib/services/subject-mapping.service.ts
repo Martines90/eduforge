@@ -32,6 +32,7 @@ interface SubjectMappingTreeNode {
  */
 function transformToNavigationTopic(node: SubjectMappingTreeNode): NavigationTopic {
   const navigationTopic: NavigationTopic = {
+    key: node.key, // CRITICAL: Include key for curriculum path construction
     name: node.name,
   };
 

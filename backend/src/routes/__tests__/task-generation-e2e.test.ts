@@ -92,8 +92,9 @@ describe("Task Generation E2E Flow", () => {
   };
 
   // Helper to create complete request body with defaults
+  // NOTE: curriculum_path format must be: "{country}:{subject}:{grade}:{topic_keys...}"
   const createRequestBody = (overrides: any = {}) => ({
-    curriculum_path: "math:grade_9_10:algebra:linear_equations:solving_basic",
+    curriculum_path: "HU:mathematics:grade_9_10:algebra:linear_equations:solving_basic",
     country_code: "HU",
     target_group: "mixed",
     difficulty_level: "medium",
@@ -168,7 +169,10 @@ describe("Task Generation E2E Flow", () => {
         { key: "algebra", name: "Algebra" },
         { key: "linear_equations", name: "Linear Equations" },
       ],
-      fullPath: "math:grade_9_10:algebra:linear_equations:solving_basic",
+      fullPath: "HU:mathematics:grade_9_10:algebra:linear_equations:solving_basic",
+      country: "HU",
+      gradeLevel: "grade_9_10",
+      subject: "mathematics",
     });
 
     (
@@ -482,7 +486,7 @@ describe("Task Generation E2E Flow", () => {
 
       // Verify metadata
       expect(task.metadata.curriculum_path).toBe(
-        "math:grade_9_10:algebra:linear_equations:solving_basic"
+        "HU:mathematics:grade_9_10:algebra:linear_equations:solving_basic"
       );
       expect(task.metadata.country_code).toBe("HU");
       expect(task.metadata.difficulty_level).toBe("medium");

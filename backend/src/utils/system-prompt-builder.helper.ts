@@ -18,30 +18,61 @@ import { TASK_CHARACTER_LENGTH } from "@eduforger/shared/task-generation";
  */
 export function buildSystemPrompt(request: TaskGeneratorRequest): string {
   // Load the system prompt template
-  // Path: from /workspace/dist/backend/src/utils/ -> /workspace/dist/genai/prompts/
-  const templatePath = path.join(
+  // Path varies based on environment:
+  // - Production/compiled: /workspace/dist/backend/src/utils/ -> /workspace/dist/genai/prompts/
+  // - Development/tests: /workspace/backend/src/utils/ -> /workspace/backend/src/genai/prompts/
+
+  // Try compiled path first (dist), then source path (src)
+  const compiledPath = path.join(
     __dirname,
     "../../../genai/prompts/latest/system_prompt.template"
   );
+  const sourcePath = path.join(
+    __dirname,
+    "../genai/prompts/latest/system_prompt.template.md"
+  );
 
   let systemPrompt = "";
+  let templatePath = compiledPath;
+
   try {
-    systemPrompt = fs.readFileSync(templatePath, "utf-8");
+    // Try compiled path first (production/built code)
+    if (fs.existsSync(compiledPath)) {
+      systemPrompt = fs.readFileSync(compiledPath, "utf-8");
+      templatePath = compiledPath;
+    } else if (fs.existsSync(sourcePath)) {
+      // Fall back to source path (development/tests)
+      systemPrompt = fs.readFileSync(sourcePath, "utf-8");
+      templatePath = sourcePath;
+    } else {
+      throw new Error(`Template not found in either compiled (${compiledPath}) or source (${sourcePath}) path`);
+    }
   } catch (error) {
     console.error("❌ Error loading system prompt template:", error);
-    console.error("❌ Attempted path:", templatePath);
+    console.error("❌ Attempted paths:", { compiledPath, sourcePath });
     throw new Error("Failed to load system prompt template");
   }
 
   // Load the scenario inspiration library
-  const scenarioLibraryPath = path.join(
+  // Try both compiled and source paths
+  const compiledScenarioPath = path.join(
     __dirname,
     "../../../genai/prompts/scenario-inspiration-library"
+  );
+  const sourceScenarioPath = path.join(
+    __dirname,
+    "../genai/prompts/scenario-inspiration-library.md"
   );
 
   let scenarioLibrary = "";
   try {
-    scenarioLibrary = fs.readFileSync(scenarioLibraryPath, "utf-8");
+    if (fs.existsSync(compiledScenarioPath)) {
+      scenarioLibrary = fs.readFileSync(compiledScenarioPath, "utf-8");
+    } else if (fs.existsSync(sourceScenarioPath)) {
+      scenarioLibrary = fs.readFileSync(sourceScenarioPath, "utf-8");
+    } else {
+      console.warn("⚠️  Scenario inspiration library not found in either compiled or source path");
+    }
   } catch (error) {
     console.warn("⚠️  Could not load scenario inspiration library:", error);
     // Continue without the library - it's optional
@@ -71,14 +102,42 @@ export function buildSystemPrompt(request: TaskGeneratorRequest): string {
   }
 
   // Step 2: Get curriculum topic information
+  console.log(`\n${"=".repeat(80)}`);
+  console.log(`🔍 LOADING CURRICULUM DATA FOR PROMPT`);
+  console.log(`${"=".repeat(80)}`);
+  console.log(`📚 Curriculum path: ${request.curriculum_path}`);
+
   const curriculumPathResult = getCurriculumTopicByPath(
     request.curriculum_path
   );
+
   if (!curriculumPathResult) {
     console.warn(
       `⚠️  Curriculum path not found: ${request.curriculum_path}, using generic prompt`
     );
+  } else {
+    console.log(`✅ Curriculum topic found:`);
+    console.log(`   Topic name: ${curriculumPathResult.topic.name}`);
+    console.log(`   Topic key: ${curriculumPathResult.topic.key}`);
+    console.log(`   Subject: ${curriculumPathResult.subject}`);
+    console.log(`   Grade: ${curriculumPathResult.gradeLevel}`);
+    console.log(`   Country: ${curriculumPathResult.country}`);
+    console.log(`   Short description: ${curriculumPathResult.topic.short_description || 'N/A'}`);
+
+    // Log example tasks
+    const exampleTasks = curriculumPathResult.topic.example_tasks ||
+                         curriculumPathResult.topic["example_tasks (COMPLETED)"] || [];
+    console.log(`   Example tasks count: ${exampleTasks.length}`);
+    if (exampleTasks.length > 0) {
+      console.log(`   Example tasks:`);
+      exampleTasks.forEach((task: string, i: number) => {
+        console.log(`     ${i + 1}. ${task.substring(0, 100)}${task.length > 100 ? '...' : ''}`);
+      });
+    } else {
+      console.warn(`   ⚠️  NO EXAMPLE TASKS FOUND! This will cause generic task generation!`);
+    }
   }
+  console.log(`${"=".repeat(80)}\n`);
 
   // Step 3: Build the enriched JSON input object that represents what the USER MESSAGE will contain
   const taskInputJson = buildTaskInputJson(request, curriculumPathResult);

@@ -86,14 +86,18 @@ export const CascadingSelect: React.FC<CascadingSelectProps> = ({
   // Notify parent of selection changes for URL updates
   React.useEffect(() => {
     if (onSelectionChange && selectionPath.length > 0) {
-      const path = selectionPath.map((item) => item.displayName);
+      // CRITICAL: Use 'key' not 'displayName' for curriculum path
+      // The curriculum path must use machine-readable keys to match the JSON structure
+      const path = selectionPath.map((item) => item.key);
       onSelectionChange(path);
     }
   }, [selectionPath, onSelectionChange]);
 
   const handleSelectionComplete = () => {
     if (finalSelection && onSelectionComplete) {
-      const path = selectionPath.map((item) => item.displayName);
+      // CRITICAL: Use 'key' not 'displayName' for curriculum path
+      // The curriculum path must use machine-readable keys to match the JSON structure
+      const path = selectionPath.map((item) => item.key);
       const config: TaskConfiguration = {
         difficulty,
         educationalModel,

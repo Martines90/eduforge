@@ -5,7 +5,8 @@ import { GradeLevel } from '@eduforger/shared';
  * Represents a hierarchical topic that can contain sub-topics
  */
 export interface NavigationTopic {
-  name: string;
+  key: string; // Machine-readable key (e.g., "literatura_grecolatina")
+  name: string; // Human-readable name (e.g., "Literatura Grecolatina")
   sub_topics?: NavigationTopic[];
 }
 
@@ -27,7 +28,8 @@ export type NavigationMapping = Record<GradeLevel, NavigationTopic[]>;
 export interface SelectionPathItem {
   level: number;
   topic: NavigationTopic;
-  displayName: string;
+  key: string; // The key from the topic (for curriculum path)
+  displayName: string; // The name from the topic (for display)
 }
 
 /**

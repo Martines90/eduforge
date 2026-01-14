@@ -287,20 +287,24 @@ function TaskCreatorContent() {
           setLastLoadedTaskId(editingTaskId);
 
           // Parse curriculum path to restore UI state
-          // Format: "mathematics:grade_9_10:algebra:equations:..."
+          // Format: "{country}:{subject}:{grade}:{topic_keys...}"
+          // Example: "MX:literature:grade_10_12:cronica_y_textos_periodisticos_literarios:..."
           if (taskData.curriculum_path) {
             const pathParts = taskData.curriculum_path.split(':');
 
-            if (pathParts.length >= 2) {
+            if (pathParts.length >= 3) {
               // Set flag to prevent navigation data reload during restoration
               setIsRestoringFromTask(true);
 
-              // Extract subject (first part)
-              const subject = pathParts[0] as Subject;
+              // Extract country (first part) - skip it, we use user.country
+              const _countryCode = pathParts[0];
+
+              // Extract subject (second part)
+              const subject = pathParts[1] as Subject;
               console.log('[Task Creator] Restoring subject:', subject);
 
-              // Extract grade level (second part)
-              const gradeLevel = pathParts[1] as GradeLevel;
+              // Extract grade level (third part)
+              const gradeLevel = pathParts[2] as GradeLevel;
               console.log('[Task Creator] Restoring grade level:', gradeLevel);
 
               // Load the correct navigation data for this task's subject/grade
@@ -337,9 +341,9 @@ function TaskCreatorContent() {
                 console.warn('[Task Creator] Grade level not found:', gradeLevel);
               }
 
-              // Extract topic path (remaining parts)
-              if (pathParts.length > 2) {
-                const topicPath = pathParts.slice(2);
+              // Extract topic path (remaining parts after country, subject, grade)
+              if (pathParts.length > 3) {
+                const topicPath = pathParts.slice(3);
                 console.log('[Task Creator] Restoring topic path:', topicPath);
                 setInitialPath(topicPath);
               }
@@ -459,9 +463,10 @@ function TaskCreatorContent() {
       }
 
       // Build curriculum path from selection
+      // Format: {country}:{subject}:{grade}:{topic_keys...}
       // Use currently selected subject to match the subjectMappings collection format
       const currentSubject = selectedSubject || (user.role === 'registered' && user.subjects && user.subjects[0]) || 'mathematics';
-      const curriculumPath = `${currentSubject}:${currentGradeConfig.value}:${path.join(':')}`;
+      const curriculumPath = `${user.country}:${currentSubject}:${currentGradeConfig.value}:${path.join(':')}`;
       setCurrentCurriculumPath(curriculumPath);
 
       // Map targetGroupSex to TargetGroup type

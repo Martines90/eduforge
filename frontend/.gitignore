@@ -25,6 +25,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+# .env.local contains localhost URLs for local development - NEVER commit!
 .env*.local
 .env
 

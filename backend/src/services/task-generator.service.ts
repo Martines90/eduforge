@@ -34,17 +34,24 @@ export class TaskGeneratorService {
 
   /**
    * Loads a prompt template from the prompts directory
-   * Path: from /workspace/dist/backend/src/services/ -> /workspace/dist/genai/prompts/
+   * Supports both compiled (dist) and source (src) paths
    */
   private loadPromptTemplate(filename: string): string {
-    const templatePath = path.join(__dirname, "../../../genai/prompts", filename);
+    // Try compiled path first (dist)
+    const compiledPath = path.join(__dirname, "../../../genai/prompts", filename);
+    // Try source path (src) with .md extension
+    const sourcePath = path.join(__dirname, "../genai/prompts", `${filename}.md`);
 
-    if (fs.existsSync(templatePath)) {
-      return fs.readFileSync(templatePath, "utf-8");
+    if (fs.existsSync(compiledPath)) {
+      return fs.readFileSync(compiledPath, "utf-8");
+    }
+
+    if (fs.existsSync(sourcePath)) {
+      return fs.readFileSync(sourcePath, "utf-8");
     }
 
     console.warn(`⚠️  Prompt template not found: ${filename}`);
-    console.warn(`⚠️  Attempted path: ${templatePath}`);
+    console.warn(`⚠️  Attempted paths:`, { compiledPath, sourcePath });
     return "";
   }
 

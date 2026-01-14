@@ -57,6 +57,24 @@ export function createApp(): Application {
   app.use(express.json({ limit: "10mb" }));
   app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
+  // Add detailed request logging AFTER body parsing (development only)
+  if (config.nodeEnv === "development") {
+    app.use((req, res, next) => {
+      console.log(`\n${"=".repeat(80)}`);
+      console.log(`🌐 INCOMING REQUEST: ${req.method} ${req.url}`);
+      console.log(`${"=".repeat(80)}`);
+      if (req.body && Object.keys(req.body).length > 0) {
+        console.log(`📦 Request Body:`);
+        console.log(JSON.stringify(req.body, null, 2).substring(0, 800));
+        if (JSON.stringify(req.body).length > 800) {
+          console.log(`... (truncated)`);
+        }
+      }
+      console.log(`${"=".repeat(80)}\n`);
+      next();
+    });
+  }
+
   // Swagger documentation
   app.use(
     "/api-docs",

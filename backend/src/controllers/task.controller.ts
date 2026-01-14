@@ -222,11 +222,26 @@ export class TaskController {
 
       console.log("📥 Request to generate task text");
       console.log(`   Curriculum: ${requestData.curriculum_path}`);
+      console.log(`   Country: ${requestData.country_code}`);
       console.log(`   Variation: ${requestData.variation_index || 1}`);
       if (requestData.assigned_location) {
         console.log(
           `   🌍 Assigned location: ${requestData.assigned_location}`
         );
+      }
+
+      // Validate curriculum path format
+      const validationError = this.validateCurriculumPath(
+        requestData.curriculum_path,
+        requestData.country_code
+      );
+      if (validationError) {
+        res.status(400).json({
+          success: false,
+          error: "INVALID_CURRICULUM_PATH",
+          message: validationError,
+        });
+        return;
       }
 
       const taskData =
@@ -984,5 +999,46 @@ export class TaskController {
     // Otherwise extract first 50 chars
     const textOnly = html.replace(/<[^>]*>/g, "").trim();
     return textOnly.substring(0, 50) + (textOnly.length > 50 ? "..." : "");
+  }
+
+  /**
+   * Validates curriculum path format and checks if curriculum exists
+   * Expected format: "{country}:{subject}:{grade}:{topic_keys...}"
+   * Example: "MX:literature:grade_10_12:cronica_y_textos_periodisticos_literarios:..."
+   */
+  private validateCurriculumPath(
+    curriculumPath: string,
+    countryCode: string
+  ): string | null {
+    if (!curriculumPath) {
+      return "Missing curriculum_path in request";
+    }
+
+    const parts = curriculumPath.split(":");
+
+    // Must have at least 3 parts: country:subject:grade
+    if (parts.length < 3) {
+      return `Invalid curriculum_path format. Expected "{country}:{subject}:{grade}:{topic_keys...}" but got "${curriculumPath}". Missing required parts (needs at least country, subject, and grade).`;
+    }
+
+    const pathCountry = parts[0];
+    const subject = parts[1];
+    const grade = parts[2];
+
+    // Check if country code matches the path
+    if (pathCountry.toUpperCase() !== countryCode.toUpperCase()) {
+      return `Curriculum path country mismatch. Path starts with "${pathCountry}" but country_code is "${countryCode}". The curriculum_path must start with the country code. Expected format: "${countryCode}:${subject}:${grade}:..."`;
+    }
+
+    // CRITICAL: Check if the curriculum topic actually exists in the JSON files
+    const { getCurriculumTopicByPath } = require("../utils/curriculum-mapper.helper");
+    const curriculumResult = getCurriculumTopicByPath(curriculumPath);
+
+    if (!curriculumResult) {
+      return `Curriculum path not found in database. The path "${curriculumPath}" does not exist in the curriculum files. Please verify: 1) Country "${pathCountry}" has curriculum for subject "${subject}" and grade "${grade}", 2) The topic path is correct. Check /backend/src/data/mappings/${pathCountry.toLowerCase()}/${grade}/${subject}.json`;
+    }
+
+    console.log(`✅ Curriculum path validated: ${curriculumResult.topic.name}`);
+    return null; // Valid
   }
 }
