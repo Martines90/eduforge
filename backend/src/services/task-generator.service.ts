@@ -34,15 +34,17 @@ export class TaskGeneratorService {
 
   /**
    * Loads a prompt template from the prompts directory
+   * Path: from /workspace/dist/backend/src/services/ -> /workspace/dist/genai/prompts/
    */
   private loadPromptTemplate(filename: string): string {
-    const templatePath = path.join(__dirname, "../genai/prompts", filename);
+    const templatePath = path.join(__dirname, "../../../genai/prompts", filename);
 
     if (fs.existsSync(templatePath)) {
       return fs.readFileSync(templatePath, "utf-8");
     }
 
     console.warn(`⚠️  Prompt template not found: ${filename}`);
+    console.warn(`⚠️  Attempted path: ${templatePath}`);
     return "";
   }
 
@@ -138,7 +140,7 @@ export class TaskGeneratorService {
   ): string {
     // Load the appropriate template based on measurement system
     const measurementSystem = getMeasurementSystem(request.country_code);
-    const templateName = `solution_generation_${measurementSystem}.md`;
+    const templateName = `solution_generation_${measurementSystem}`;
     let prompt = this.loadPromptTemplate(templateName);
 
     // Get language for the country
@@ -698,7 +700,7 @@ export class TaskGeneratorService {
     console.log(`🔍 Refining task: "${taskText.title}"...`);
 
     // Load the refinement prompt template
-    let prompt = this.loadPromptTemplate("task_refinement.md");
+    let prompt = this.loadPromptTemplate("task_refinement");
 
     // Get language for the country
     const language = getLanguageForCountry(request.country_code);

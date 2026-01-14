@@ -18,9 +18,10 @@ import { TASK_CHARACTER_LENGTH } from "@eduforger/shared/task-generation";
  */
 export function buildSystemPrompt(request: TaskGeneratorRequest): string {
   // Load the system prompt template
+  // Path: from /workspace/dist/backend/src/utils/ -> /workspace/dist/genai/prompts/
   const templatePath = path.join(
     __dirname,
-    "../genai/prompts/latest/system_prompt.template.md"
+    "../../../genai/prompts/latest/system_prompt.template"
   );
 
   let systemPrompt = "";
@@ -28,13 +29,14 @@ export function buildSystemPrompt(request: TaskGeneratorRequest): string {
     systemPrompt = fs.readFileSync(templatePath, "utf-8");
   } catch (error) {
     console.error("❌ Error loading system prompt template:", error);
+    console.error("❌ Attempted path:", templatePath);
     throw new Error("Failed to load system prompt template");
   }
 
   // Load the scenario inspiration library
   const scenarioLibraryPath = path.join(
     __dirname,
-    "../genai/prompts/scenario-inspiration-library.md"
+    "../../../genai/prompts/scenario-inspiration-library"
   );
 
   let scenarioLibrary = "";
