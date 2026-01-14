@@ -1,11 +1,12 @@
-import { API_BASE_URL } from './api.service';
+import { API_BASE_URL, buildApiUrl } from './api.service';
+import { APP_BASE_URL } from '@/lib/config/urls';
 import type { SubscriptionTier, PlansResponse, CheckoutSessionResponse } from '@/types/subscription';
 
 /**
  * Get all available subscription plans
  */
 export async function getSubscriptionPlans(): Promise<PlansResponse> {
-  const response = await fetch(`${API_BASE_URL}/subscription/plans`, {
+  const response = await fetch(buildApiUrl('/subscription/plans'), {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -27,9 +28,8 @@ export async function createCheckoutSession(
   tier: SubscriptionTier,
   token: string
 ): Promise<CheckoutSessionResponse> {
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3001';
 
-  const response = await fetch(`${API_BASE_URL}/subscription/create-checkout-session`, {
+  const response = await fetch(buildApiUrl('/subscription/create-checkout-session'), {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -37,8 +37,8 @@ export async function createCheckoutSession(
     },
     body: JSON.stringify({
       tier,
-      successUrl: `${baseUrl}/subscription/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancelUrl: `${baseUrl}/subscription/cancel?cancelled=true`,
+      successUrl: `${APP_BASE_URL}/subscription/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancelUrl: `${APP_BASE_URL}/subscription/cancel?cancelled=true`,
     }),
   });
 
@@ -58,7 +58,7 @@ export async function handleCheckoutSuccess(
   userId?: string,
   tier?: SubscriptionTier
 ): Promise<void> {
-  const response = await fetch(`${API_BASE_URL}/subscription/checkout-success`, {
+  const response = await fetch(buildApiUrl('/subscription/checkout-success'), {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ export async function handleCheckoutSuccess(
  * Cancel subscription at period end
  */
 export async function cancelSubscription(token: string): Promise<void> {
-  const response = await fetch(`${API_BASE_URL}/subscription/cancel`, {
+  const response = await fetch(buildApiUrl('/subscription/cancel'), {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ export async function cancelSubscription(token: string): Promise<void> {
  * Reactivate a cancelled subscription
  */
 export async function reactivateSubscription(token: string): Promise<void> {
-  const response = await fetch(`${API_BASE_URL}/subscription/reactivate`, {
+  const response = await fetch(buildApiUrl('/subscription/reactivate'), {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

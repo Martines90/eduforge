@@ -58,9 +58,8 @@ export async function requestPasswordReset(
 
   await db.collection("passwordResets").doc(token).set(resetDoc);
 
-  // Generate reset URL
-  const frontendUrl = config.corsOrigin || "http://localhost:3001";
-  const resetUrl = `${frontendUrl}/reset-password?token=${token}`;
+  // Generate reset URL using centralized config
+  const resetUrl = `${config.frontendUrl}/reset-password?token=${token}`;
 
   // Send password reset email via SendGrid
   const emailResult = await sendPasswordResetEmail({

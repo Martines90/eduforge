@@ -218,7 +218,8 @@ export default function MyTasksPage() {
         return;
       }
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'}/api/v2/tasks/${taskToDelete.id}`, {
+      const { buildApiUrl } = await import('@/lib/config/urls');
+      const response = await fetch(buildApiUrl(`/api/v2/tasks/${taskToDelete.id}`), {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

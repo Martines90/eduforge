@@ -4,33 +4,11 @@
  */
 
 import { TaskGeneratorRequest, TaskGeneratorResponse } from '@/types/task';
+import { API_BASE_URL, buildApiUrl as buildApiUrlUtil } from '@/lib/config/urls';
 
-// For Firebase Hosting with Cloud Functions rewrites, use empty string in production
-// This makes requests relative to the current domain
-// In production (when not localhost), always use relative URLs (empty string)
-// This allows Firebase Hosting rewrites to work properly
-const getApiBaseUrl = (): string => {
-  // If explicitly set via env var, use it
-  if (process.env.NEXT_PUBLIC_API_URL) {
-    return process.env.NEXT_PUBLIC_API_URL;
-  }
-
-  // Check if we're in a browser environment
-  if (typeof window !== 'undefined') {
-    // In production (not localhost), use relative URLs
-    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-      return '';
-    }
-    // In local development, use localhost
-    return 'http://localhost:3000';
-  }
-
-  // During SSR/build time in production, use relative URLs
-  // In development (local), use localhost
-  return process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3000';
-};
-
-export const API_BASE_URL = getApiBaseUrl();
+// Re-export for convenience
+export { API_BASE_URL };
+export const buildApiUrl = buildApiUrlUtil;
 
 export interface ApiResponse<T = any> {
   success: boolean;

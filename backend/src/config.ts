@@ -12,6 +12,30 @@ try {
   );
 }
 
+/**
+ * Get the frontend URL based on environment
+ * This is the SINGLE SOURCE OF TRUTH for frontend URL
+ */
+const getFrontendUrl = (): string => {
+  // 1. Explicit environment variable (highest priority)
+  if (process.env.FRONTEND_URL) {
+    return process.env.FRONTEND_URL;
+  }
+
+  // 2. CORS_ORIGIN as fallback (often set in production)
+  if (process.env.CORS_ORIGIN && process.env.CORS_ORIGIN !== "*") {
+    return process.env.CORS_ORIGIN;
+  }
+
+  // 3. Production default (Firebase Hosting)
+  if (process.env.NODE_ENV === "production") {
+    return "https://eduforge-d29d9.web.app";
+  }
+
+  // 4. Development default
+  return "http://localhost:3001";
+};
+
 export const config = {
   // Server configuration
   port: parseInt(process.env.PORT || "3000", 10),
@@ -32,6 +56,9 @@ export const config = {
 
   // CORS configuration
   corsOrigin: process.env.CORS_ORIGIN || "*",
+
+  // URL configuration - SINGLE SOURCE OF TRUTH
+  frontendUrl: getFrontendUrl(),
 
   // Email configuration (SendGrid)
   email: {

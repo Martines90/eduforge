@@ -104,18 +104,9 @@ export function useGuestSession(): UseGuestSessionReturn {
     try {
       // Call backend to create guest token
       // Backend automatically extracts browser fingerprint from headers
-      // Determine API URL: use env var if set, otherwise use relative URL in production, localhost in dev
-      const getApiUrl = () => {
-        if (process.env.NEXT_PUBLIC_API_URL) {
-          return process.env.NEXT_PUBLIC_API_URL;
-        }
-        if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-          return ''; // Relative URL in production
-        }
-        return 'http://localhost:3000'; // Localhost in development
-      };
+      const { buildApiUrl } = await import('@/lib/config/urls');
 
-      const response = await fetch(`${getApiUrl()}/api/auth/guest-token`, {
+      const response = await fetch(buildApiUrl('/api/auth/guest-token'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

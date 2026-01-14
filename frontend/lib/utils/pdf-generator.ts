@@ -230,12 +230,12 @@ export async function uploadTaskPDF(taskId: string, pdfData: string): Promise<st
     console.log('[PDF Generator] PDF data length:', pdfData.length);
     console.log('[PDF Generator] PDF data preview:', pdfData.substring(0, 100));
 
-    const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL ||
-      (typeof window !== 'undefined' && window.location.hostname !== 'localhost' ? '' : 'http://localhost:3000');
+    const { buildApiUrl } = await import('@/lib/config/urls');
+    const uploadUrl = buildApiUrl(`/tasks/${taskId}/upload-pdf`);
 
-    console.log('[PDF Generator] Uploading to:', `${API_BASE_URL}/tasks/${taskId}/upload-pdf`);
+    console.log('[PDF Generator] Uploading to:', uploadUrl);
 
-    const response = await fetch(`${API_BASE_URL}/tasks/${taskId}/upload-pdf`, {
+    const response = await fetch(uploadUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

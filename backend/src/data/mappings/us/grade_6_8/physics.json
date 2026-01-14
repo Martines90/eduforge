@@ -1,0 +1,2720 @@
+[
+  {
+    "key": "matter_and_interactions",
+    "name": "Matter and Its Interactions",
+    "short_description": "Students explore the properties of matter, atomic structure, and how substances interact through chemical and physical changes, establishing foundational understanding of the particulate nature of matter.",
+    "sub_topics": [
+      {
+        "key": "structure_of_matter",
+        "name": "Structure of Matter",
+        "short_description": "Understanding atoms, molecules, and the organization of matter at microscopic and macroscopic scales.",
+        "sub_topics": [
+          {
+            "key": "atomic_structure_basics",
+            "name": "Atomic Structure Basics",
+            "short_description": "Students learn about protons, neutrons, electrons, and how atoms form the building blocks of all matter.",
+            "example_tasks": [
+              "Draw and label a diagram of an atom showing the nucleus, protons, neutrons, and electrons in their respective locations",
+              "Explain why atoms are electrically neutral despite containing charged particles, using the concept of equal numbers of protons and electrons",
+              "Compare and contrast the masses and charges of protons, neutrons, and electrons using a data table",
+              "Determine the number of protons, neutrons, and electrons in common elements given their atomic number and mass number"
+            ]
+          },
+          {
+            "key": "elements_and_periodic_table",
+            "name": "Elements and the Periodic Table",
+            "short_description": "Students explore how elements are organized and identified by their atomic structure and properties.",
+            "example_tasks": [
+              "Use the periodic table to identify the atomic number, symbol, and atomic mass of five different elements",
+              "Explain how the atomic number determines an element's identity and position on the periodic table",
+              "Classify elements as metals, nonmetals, or metalloids based on their position and properties on the periodic table",
+              "Research and present how elements in the same group (column) share similar chemical properties"
+            ]
+          },
+          {
+            "key": "molecules_and_compounds",
+            "name": "Molecules and Compounds",
+            "short_description": "Understanding how atoms combine to form molecules and compounds with new properties.",
+            "example_tasks": [
+              "Distinguish between elements, compounds, and mixtures using everyday examples like water, salt, and air",
+              "Model the formation of water molecules (H₂O) using atom models to show how hydrogen and oxygen combine",
+              "Explain why compounds have different properties than the elements that compose them, using table salt (NaCl) as an example",
+              "Interpret chemical formulas to determine the types and numbers of atoms present in common compounds like CO₂, H₂O, and C₆H₁₂O₆"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "properties_of_matter",
+        "name": "Properties of Matter",
+        "short_description": "Exploring physical and chemical properties that characterize and distinguish different types of matter.",
+        "sub_topics": [
+          {
+            "key": "physical_properties",
+            "name": "Physical Properties",
+            "short_description": "Students identify and measure physical properties such as density, melting point, boiling point, and solubility.",
+            "example_tasks": [
+              "Measure and calculate the density of regular and irregular shaped objects using mass and volume measurements",
+              "Design an experiment to determine the melting point of ice and boiling point of water, recording temperature over time",
+              "Test the solubility of different substances (salt, sugar, sand) in water and explain the results based on particle interactions",
+              "Use physical properties like density, color, and magnetism to identify and separate a mixture of materials"
+            ]
+          },
+          {
+            "key": "chemical_properties",
+            "name": "Chemical Properties",
+            "short_description": "Understanding properties that describe how matter changes into new substances through chemical reactions.",
+            "example_tasks": [
+              "Observe and describe evidence of chemical reactions such as color change, gas production, or temperature change in common reactions",
+              "Compare flammability of different materials by researching their combustion properties and safety data",
+              "Investigate how iron reacts with oxygen to form rust and explain this as a chemical change",
+              "Distinguish between physical properties (observable without changing the substance) and chemical properties (observed during a chemical change)"
+            ]
+          },
+          {
+            "key": "states_of_matter",
+            "name": "States of Matter",
+            "short_description": "Examining solid, liquid, and gas states and the particle behavior that characterizes each state.",
+            "example_tasks": [
+              "Create particle diagrams showing the arrangement and motion of particles in solids, liquids, and gases",
+              "Explain why solids have definite shape and volume, liquids have definite volume but not shape, and gases have neither",
+              "Investigate how temperature affects the kinetic energy of particles in different states of matter",
+              "Observe and explain phase changes (melting, freezing, evaporation, condensation) using the particle model of matter"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "physical_and_chemical_changes",
+        "name": "Physical and Chemical Changes",
+        "short_description": "Distinguishing between changes that alter the form of matter versus changes that create new substances.",
+        "sub_topics": [
+          {
+            "key": "identifying_physical_changes",
+            "name": "Identifying Physical Changes",
+            "short_description": "Recognizing changes in form or state where the substance's chemical identity remains unchanged.",
+            "example_tasks": [
+              "Classify everyday changes (cutting paper, dissolving sugar, breaking glass, melting butter) as physical or chemical changes with justification",
+              "Demonstrate that physical changes are often reversible by freezing water, then melting it back to liquid",
+              "Observe and record physical changes during phase transitions and explain why the substance remains chemically the same",
+              "Separate mixtures using physical methods (filtering, evaporation, magnetism) and explain why these are physical processes"
+            ]
+          },
+          {
+            "key": "identifying_chemical_changes",
+            "name": "Identifying Chemical Changes",
+            "short_description": "Recognizing chemical reactions through evidence such as color change, gas production, and energy changes.",
+            "example_tasks": [
+              "Conduct the vinegar and baking soda reaction, observing and recording evidence of chemical change (gas production, temperature change)",
+              "Investigate the rusting of iron and explain how the formation of a new substance (iron oxide) indicates a chemical change",
+              "Compare burning wood to cutting wood, explaining why burning is a chemical change and cutting is physical",
+              "Analyze whether cooking an egg represents a physical or chemical change by examining changes in protein structure"
+            ]
+          },
+          {
+            "key": "conservation_of_mass",
+            "name": "Conservation of Mass in Chemical Reactions",
+            "short_description": "Understanding that mass is conserved in chemical reactions as atoms are rearranged but not created or destroyed.",
+            "example_tasks": [
+              "Weigh reactants before a chemical reaction and products after, demonstrating that total mass remains constant in a closed system",
+              "Explain why a sealed bag containing vinegar and baking soda maintains the same mass before and after mixing",
+              "Use particle diagrams to show how atoms are rearranged during a chemical reaction but the total number remains constant",
+              "Investigate apparent exceptions (like burning wood losing mass) and explain the role of gas products escaping to the atmosphere"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "forces_and_motion",
+    "name": "Forces and Motion",
+    "short_description": "Students investigate the relationship between forces and motion, applying Newton's laws to predict and explain the movement of objects in various contexts.",
+    "sub_topics": [
+      {
+        "key": "describing_motion",
+        "name": "Describing Motion",
+        "short_description": "Using position, distance, displacement, speed, and velocity to accurately describe and measure object motion.",
+        "sub_topics": [
+          {
+            "key": "position_and_distance",
+            "name": "Position and Distance",
+            "short_description": "Students learn to describe an object's location and the distance it travels using reference points and measurements.",
+            "example_tasks": [
+              "Plot the position of a moving object at different time intervals on a coordinate grid using a reference point",
+              "Calculate the total distance traveled by a student walking around a rectangular track using measurements of each side",
+              "Distinguish between distance (total path length) and displacement (straight-line change in position) for various motion scenarios",
+              "Use a motion detector or smartphone app to measure and graph the position of a moving object over time"
+            ]
+          },
+          {
+            "key": "speed_and_velocity",
+            "name": "Speed and Velocity",
+            "short_description": "Calculating and comparing speed as distance per unit time and velocity as speed with direction.",
+            "example_tasks": [
+              "Calculate the speed of a car that travels 150 kilometers in 2 hours using the formula speed = distance/time",
+              "Compare the speeds of different animals (cheetah, human, snail) and explain the meaning of the units (m/s, km/h)",
+              "Distinguish between speed (scalar) and velocity (vector) by analyzing motion on a circular track where speed is constant but velocity changes",
+              "Graph speed versus time for an object moving at constant speed, then interpret the graph to find distance traveled"
+            ]
+          },
+          {
+            "key": "acceleration",
+            "name": "Acceleration",
+            "short_description": "Understanding acceleration as the rate of change in velocity, including speeding up, slowing down, and changing direction.",
+            "example_tasks": [
+              "Calculate the acceleration of a car that goes from 0 to 30 m/s in 10 seconds using the formula a = Δv/Δt",
+              "Identify examples of positive acceleration (speeding up), negative acceleration/deceleration (slowing down), and changing direction",
+              "Analyze velocity-time graphs to determine when an object is accelerating, moving at constant velocity, or at rest",
+              "Design an experiment to measure the acceleration of a ball rolling down ramps of different slopes"
+            ]
+          },
+          {
+            "key": "motion_graphs",
+            "name": "Motion Graphs",
+            "short_description": "Interpreting and creating graphs that represent position-time and velocity-time relationships.",
+            "example_tasks": [
+              "Interpret a position-time graph to describe the motion of an object, including when it is stationary and when it is moving",
+              "Calculate the slope of a position-time graph to determine the velocity of an object during different time intervals",
+              "Create a velocity-time graph for a car that accelerates, moves at constant speed, then decelerates to a stop",
+              "Compare position-time and velocity-time graphs for the same motion scenario to understand the relationship between the two representations"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "forces",
+        "name": "Forces",
+        "short_description": "Exploring forces as pushes or pulls that can change an object's motion, including identifying and measuring forces.",
+        "sub_topics": [
+          {
+            "key": "types_of_forces",
+            "name": "Types of Forces",
+            "short_description": "Identifying different forces including gravity, friction, normal force, tension, and applied forces.",
+            "example_tasks": [
+              "Draw and label free-body diagrams showing all forces acting on a book resting on a table (gravity, normal force)",
+              "Investigate friction by measuring the force needed to pull objects across surfaces of different roughness (sandpaper, waxed paper, carpet)",
+              "Explain how gravity acts as a force pulling objects toward Earth's center and calculate weight using w = mg",
+              "Identify and describe the forces acting on a person in an elevator that is accelerating upward, moving at constant velocity, and accelerating downward"
+            ]
+          },
+          {
+            "key": "balanced_forces",
+            "name": "Balanced Forces",
+            "short_description": "Understanding that balanced forces produce no change in motion (net force = 0), resulting in constant velocity or rest.",
+            "example_tasks": [
+              "Analyze a tug-of-war where both teams pull with equal force and explain why the rope doesn't move (balanced forces)",
+              "Calculate net force for objects with multiple forces acting in opposite directions, determining when forces are balanced",
+              "Explain why a book resting on a table remains at rest using the concept of balanced forces (gravity and normal force)",
+              "Investigate terminal velocity by explaining how a falling skydiver reaches constant speed when air resistance balances gravitational force"
+            ]
+          },
+          {
+            "key": "unbalanced_forces",
+            "name": "Unbalanced Forces",
+            "short_description": "Recognizing that unbalanced forces cause acceleration, changing an object's speed or direction (net force ≠ 0).",
+            "example_tasks": [
+              "Predict and test how the motion of a toy car changes when forces are unbalanced (pushing harder, reducing friction)",
+              "Calculate net force when multiple forces act on an object and determine the direction of acceleration",
+              "Explain why a soccer ball changes direction and speed when kicked (unbalanced force applied)",
+              "Design an experiment to show that the greater the unbalanced force on an object, the greater its acceleration"
+            ]
+          },
+          {
+            "key": "measuring_forces",
+            "name": "Measuring Forces",
+            "short_description": "Using spring scales and force sensors to measure forces in Newtons and analyzing force relationships.",
+            "example_tasks": [
+              "Use a spring scale to measure the force needed to lift objects of different masses and compare to calculated weights",
+              "Measure and compare the force of friction for an object on different surfaces using a force meter",
+              "Construct a simple force meter using a rubber band and calibrate it by measuring known masses",
+              "Investigate how the angle of a ramp affects the force needed to pull an object up the incline"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "newtons_laws",
+        "name": "Newton's Laws of Motion",
+        "short_description": "Applying Newton's three laws to explain and predict the motion of objects in various situations.",
+        "sub_topics": [
+          {
+            "key": "newtons_first_law",
+            "name": "Newton's First Law (Law of Inertia)",
+            "short_description": "Understanding that objects at rest stay at rest and objects in motion stay in motion unless acted upon by an unbalanced force.",
+            "example_tasks": [
+              "Explain why passengers lurch forward when a car suddenly stops, using the concept of inertia",
+              "Demonstrate inertia by pulling a tablecloth from under dishes quickly, showing objects tend to remain at rest",
+              "Predict and explain the motion of a hockey puck sliding on ice (low friction) versus on carpet (high friction)",
+              "Analyze why seatbelts are necessary in vehicles by applying Newton's first law to sudden stops or collisions"
+            ]
+          },
+          {
+            "key": "newtons_second_law",
+            "name": "Newton's Second Law (F = ma)",
+            "short_description": "Relating force, mass, and acceleration through the equation F = ma and understanding their proportional relationships.",
+            "example_tasks": [
+              "Calculate the force needed to accelerate a 10 kg wagon at 2 m/s² using F = ma",
+              "Predict how changing the mass of an object affects its acceleration when the same force is applied",
+              "Explain why it's easier to push an empty shopping cart than a full one (same force, different masses)",
+              "Design an experiment to verify that acceleration is directly proportional to force and inversely proportional to mass"
+            ]
+          },
+          {
+            "key": "newtons_third_law",
+            "name": "Newton's Third Law (Action-Reaction)",
+            "short_description": "Understanding that for every action force there is an equal and opposite reaction force acting on different objects.",
+            "example_tasks": [
+              "Identify action-reaction force pairs when a swimmer pushes against the pool wall (swimmer pushes wall, wall pushes swimmer)",
+              "Explain how rockets work by applying Newton's third law to the expulsion of gases and the rocket's motion",
+              "Investigate action-reaction pairs when walking by analyzing the force your foot exerts on the ground and vice versa",
+              "Demonstrate Newton's third law using balloon rockets and explain the forces involved in propulsion"
+            ]
+          },
+          {
+            "key": "applying_newtons_laws",
+            "name": "Applying Newton's Laws to Real-World Situations",
+            "short_description": "Using all three laws together to analyze complex motion scenarios and solve problems.",
+            "example_tasks": [
+              "Analyze the forces and motion involved in a car crash, applying all three of Newton's laws to explain what happens to passengers",
+              "Design a safety device (like an airbag or crumple zone) that uses Newton's laws to protect people in vehicles",
+              "Explain the motion of a roller coaster through various points on the track using Newton's laws and force diagrams",
+              "Solve multi-step problems involving force, mass, acceleration, and multiple objects interacting"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "gravity_and_motion",
+        "name": "Gravity and Motion",
+        "short_description": "Investigating gravitational force and its effects on falling objects and projectile motion.",
+        "sub_topics": [
+          {
+            "key": "free_fall",
+            "name": "Free Fall and Air Resistance",
+            "short_description": "Understanding that all objects fall with the same acceleration (9.8 m/s²) in the absence of air resistance.",
+            "example_tasks": [
+              "Drop objects of different masses simultaneously and observe that they hit the ground at the same time (neglecting air resistance)",
+              "Calculate the velocity of a falling object after different time intervals using v = gt (where g = 9.8 m/s²)",
+              "Compare the fall of a feather and a coin in regular air versus in a vacuum to demonstrate the effect of air resistance",
+              "Explain why a skydiver accelerates initially but then reaches terminal velocity when air resistance equals gravitational force"
+            ]
+          },
+          {
+            "key": "mass_versus_weight",
+            "name": "Mass versus Weight",
+            "short_description": "Distinguishing between mass (amount of matter) and weight (gravitational force) and calculating weight using w = mg.",
+            "example_tasks": [
+              "Explain why your mass stays the same on Earth and the Moon, but your weight changes due to different gravitational forces",
+              "Calculate the weight of various objects on Earth using the equation w = mg (where g = 9.8 m/s²)",
+              "Compare the weight of a 50 kg person on Earth, the Moon (g = 1.6 m/s²), and Mars (g = 3.7 m/s²)",
+              "Design an experiment to measure mass using a balance and weight using a spring scale, demonstrating they measure different properties"
+            ]
+          },
+          {
+            "key": "projectile_motion",
+            "name": "Projectile Motion Basics",
+            "short_description": "Analyzing the curved path of projectiles under the influence of gravity, separating horizontal and vertical motion components.",
+            "example_tasks": [
+              "Sketch and describe the parabolic trajectory of a ball thrown horizontally from a height, identifying where it moves fastest and slowest",
+              "Explain why a football thrown at an angle follows a curved path by analyzing the constant horizontal velocity and accelerating vertical velocity",
+              "Predict the landing location of a marble rolling off a table at different speeds using concepts of independent horizontal and vertical motion",
+              "Compare the paths of projectiles launched at different angles and explain which angle provides the greatest range (45° for maximum range)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "types_of_interactions",
+    "name": "Types of Interactions",
+    "short_description": "Students explore different types of forces and interactions that occur between objects, including contact forces and forces at a distance.",
+    "sub_topics": [
+      {
+        "key": "contact_forces",
+        "name": "Contact Forces",
+        "short_description": "Examining forces that require physical contact between objects, including friction, tension, and normal forces.",
+        "sub_topics": [
+          {
+            "key": "friction",
+            "name": "Friction",
+            "short_description": "Understanding friction as a force that opposes motion between surfaces in contact and its dependence on surface properties.",
+            "example_tasks": [
+              "Measure the force required to drag a block across different surfaces (wood, carpet, tile) to compare friction coefficients",
+              "Explain how friction can be both helpful (walking, car brakes) and problematic (machine wear, heat generation)",
+              "Investigate factors affecting friction, including surface texture and the normal force between surfaces",
+              "Design modifications to increase or decrease friction for specific applications (adding grips, using lubricants)"
+            ]
+          },
+          {
+            "key": "tension",
+            "name": "Tension Forces",
+            "short_description": "Analyzing the pulling force transmitted through strings, ropes, and cables when pulled tight by forces at each end.",
+            "example_tasks": [
+              "Draw free-body diagrams showing tension forces in a rope used to pull a sled or lift a bucket",
+              "Calculate the tension in a rope holding a hanging object at rest using the balance of forces",
+              "Investigate how tension changes in a rope when objects are accelerating upward, downward, or at constant velocity",
+              "Explain why a rope breaks when the tension exceeds its breaking strength, relating to real-world applications"
+            ]
+          },
+          {
+            "key": "normal_force",
+            "name": "Normal Force",
+            "short_description": "Understanding the perpendicular support force exerted by surfaces on objects in contact with them.",
+            "example_tasks": [
+              "Identify and calculate the normal force on a book lying on a horizontal table (equal to weight if no vertical acceleration)",
+              "Analyze how the normal force changes when a person stands in an elevator accelerating up or down",
+              "Explain why you feel lighter at the top of a hill when driving fast, relating to changes in normal force",
+              "Investigate how the normal force on an object changes when placed on inclined planes of different angles"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "gravitational_forces",
+        "name": "Gravitational Forces",
+        "short_description": "Exploring gravitational attraction between objects and understanding universal gravitation.",
+        "sub_topics": [
+          {
+            "key": "gravitational_attraction",
+            "name": "Gravitational Attraction",
+            "short_description": "Understanding that gravity is an attractive force between all objects with mass, stronger for larger masses and shorter distances.",
+            "example_tasks": [
+              "Explain why we notice Earth's gravitational pull on objects but not the gravitational attraction between two books on a table",
+              "Compare the strength of gravitational forces between different mass combinations (Earth-Moon, Sun-Earth, person-person)",
+              "Describe how gravitational force decreases with distance using examples from space (planets, satellites)",
+              "Research and explain how gravitational force depends on both mass and distance using Newton's law of universal gravitation conceptually"
+            ]
+          },
+          {
+            "key": "weight_on_different_planets",
+            "name": "Weight on Different Planets",
+            "short_description": "Calculating and comparing weight on different celestial bodies based on their gravitational field strength.",
+            "example_tasks": [
+              "Calculate your weight on different planets (Mars, Jupiter, Venus) given their surface gravity values",
+              "Explain why astronauts can jump higher on the Moon than on Earth using gravitational differences",
+              "Create a chart comparing the weight of a 50 kg object on all planets in the solar system",
+              "Analyze how a planet's mass and radius affect its surface gravity and thus the weight of objects on its surface"
+            ]
+          },
+          {
+            "key": "orbital_motion",
+            "name": "Orbital Motion and Satellites",
+            "short_description": "Understanding how gravitational force keeps planets, moons, and satellites in orbit around larger bodies.",
+            "example_tasks": [
+              "Explain why satellites remain in orbit around Earth rather than falling down or flying off into space",
+              "Describe the relationship between orbital speed and altitude for satellites (higher orbit = slower speed)",
+              "Investigate why the Moon orbits Earth and Earth orbits the Sun, relating to gravitational forces and inertia",
+              "Analyze the forces on the International Space Station and explain the concept of apparent weightlessness in orbit"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "electromagnetic_forces",
+        "name": "Electromagnetic Forces",
+        "short_description": "Introducing electric and magnetic forces as fundamental interactions that act at a distance between charged particles and magnets.",
+        "sub_topics": [
+          {
+            "key": "electric_forces",
+            "name": "Electric Forces Between Charges",
+            "short_description": "Understanding that like charges repel and opposite charges attract with forces that depend on charge amount and distance.",
+            "example_tasks": [
+              "Demonstrate electric forces by rubbing balloons and observing attraction to walls or repulsion between charged balloons",
+              "Explain the force interactions between positive and negative charges using diagrams showing attraction and repulsion",
+              "Compare electric forces to gravitational forces, noting that electric forces can be attractive or repulsive",
+              "Investigate how distance affects electric force strength using charged objects and careful observation"
+            ]
+          },
+          {
+            "key": "magnetic_forces",
+            "name": "Magnetic Forces",
+            "short_description": "Exploring attractive and repulsive forces between magnetic poles and between magnets and magnetic materials.",
+            "example_tasks": [
+              "Investigate magnetic forces using bar magnets to demonstrate that like poles repel and opposite poles attract",
+              "Map the magnetic field around a bar magnet using iron filings or a compass to visualize force patterns",
+              "Test which materials are attracted to magnets (iron, nickel, cobalt) and explain that magnetism is selective",
+              "Measure how the force between two magnets changes with distance using a simple experimental setup"
+            ]
+          },
+          {
+            "key": "electromagnetic_interaction",
+            "name": "Electric and Magnetic Force Connection",
+            "short_description": "Introducing the concept that electric and magnetic forces are related aspects of electromagnetic interaction.",
+            "example_tasks": [
+              "Demonstrate that electric current produces a magnetic field by showing a compass deflection near a current-carrying wire",
+              "Explain how electromagnets work by combining electric current with magnetic materials like iron cores",
+              "Compare permanent magnets to electromagnets, discussing advantages and applications of each",
+              "Investigate the relationship between electricity and magnetism through simple experiments with batteries, wires, and compasses"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "force_fields",
+        "name": "Force Fields",
+        "short_description": "Understanding how forces can act at a distance through gravitational, electric, and magnetic fields.",
+        "sub_topics": [
+          {
+            "key": "concept_of_fields",
+            "name": "Concept of Fields",
+            "short_description": "Introducing fields as regions of space where forces are exerted on objects with specific properties (mass, charge, magnetic poles).",
+            "example_tasks": [
+              "Visualize a gravitational field around Earth by drawing field lines pointing toward the planet's center",
+              "Map an electric field around a charged object using arrows to show the direction of force on a positive test charge",
+              "Create a visual representation of a magnetic field using compasses arranged around a bar magnet",
+              "Compare gravitational, electric, and magnetic fields in terms of what objects they affect and how they exert forces"
+            ]
+          },
+          {
+            "key": "field_strength",
+            "name": "Field Strength and Distance",
+            "short_description": "Understanding that field strength decreases with distance from the source and affects the magnitude of forces experienced.",
+            "example_tasks": [
+              "Investigate how gravitational field strength decreases with altitude above Earth's surface, affecting weight",
+              "Measure how the magnetic force on a paper clip changes as it is moved farther from a magnet",
+              "Explain why Earth's gravitational field is stronger than the Moon's due to Earth's greater mass",
+              "Graph the relationship between distance and field strength for gravitational, electric, or magnetic fields"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "energy",
+    "name": "Energy",
+    "short_description": "Students investigate different forms of energy, energy transformations, and the principle of conservation of energy in various systems.",
+    "sub_topics": [
+      {
+        "key": "forms_of_energy",
+        "name": "Forms of Energy",
+        "short_description": "Identifying and describing various forms of energy including kinetic, potential, thermal, chemical, electrical, and nuclear energy.",
+        "sub_topics": [
+          {
+            "key": "kinetic_energy",
+            "name": "Kinetic Energy",
+            "short_description": "Understanding that moving objects possess kinetic energy that depends on mass and velocity (KE = ½mv²).",
+            "example_tasks": [
+              "Calculate the kinetic energy of a 5 kg object moving at 10 m/s using the formula KE = ½mv²",
+              "Compare the kinetic energies of a car and a bicycle moving at the same speed, explaining the role of mass",
+              "Investigate how doubling the speed of an object affects its kinetic energy (quadruples due to velocity squared)",
+              "Explain why faster-moving vehicles cause more damage in collisions using the concept of kinetic energy"
+            ]
+          },
+          {
+            "key": "gravitational_potential_energy",
+            "name": "Gravitational Potential Energy",
+            "short_description": "Understanding that objects have potential energy due to their position in a gravitational field (PE = mgh).",
+            "example_tasks": [
+              "Calculate the gravitational potential energy of a 2 kg book placed 3 meters above the ground using PE = mgh",
+              "Explain why water stored in an elevated tank has potential energy that can be converted to kinetic energy when released",
+              "Compare the potential energies of identical objects at different heights and predict which has more energy",
+              "Design a simple experiment to demonstrate that potential energy increases with height using a pendulum or ramp"
+            ]
+          },
+          {
+            "key": "elastic_potential_energy",
+            "name": "Elastic Potential Energy",
+            "short_description": "Recognizing that stretched or compressed elastic objects store potential energy that can be released.",
+            "example_tasks": [
+              "Demonstrate elastic potential energy by stretching rubber bands or compressing springs and observing energy release",
+              "Explain how a bow and arrow system stores and converts elastic potential energy to kinetic energy",
+              "Compare the potential energies of springs compressed different amounts and test by measuring projectile distances",
+              "Investigate real-world applications of elastic potential energy in trampolines, bungee cords, and shock absorbers"
+            ]
+          },
+          {
+            "key": "thermal_energy",
+            "name": "Thermal Energy",
+            "short_description": "Understanding thermal energy as the total kinetic energy of particles in a substance, related to temperature.",
+            "example_tasks": [
+              "Explain the relationship between temperature and the average kinetic energy of particles in a substance",
+              "Compare the thermal energy of hot water and cold water of equal mass, relating to particle motion",
+              "Investigate heat transfer between objects at different temperatures and explain in terms of energy movement",
+              "Describe how thermal energy affects the state of matter, causing phase changes when sufficient energy is added or removed"
+            ]
+          },
+          {
+            "key": "chemical_energy",
+            "name": "Chemical Energy",
+            "short_description": "Recognizing that energy stored in chemical bonds can be released during chemical reactions.",
+            "example_tasks": [
+              "Identify examples of chemical energy in everyday life (food, batteries, fuels, fireworks)",
+              "Explain how food provides energy through chemical reactions in the body that break down nutrients",
+              "Compare energy content of different fuels (gasoline, natural gas, coal) and discuss their energy density",
+              "Investigate exothermic reactions that release chemical energy as heat and light, such as combustion"
+            ]
+          },
+          {
+            "key": "electrical_energy",
+            "name": "Electrical Energy",
+            "short_description": "Understanding energy carried by electric charges moving through conductors and circuits.",
+            "example_tasks": [
+              "Identify devices that use electrical energy and describe what form of energy it is converted to (light, heat, motion, sound)",
+              "Explain how electrical energy is transmitted from power plants to homes through power lines",
+              "Calculate electrical energy consumption of household appliances using power ratings and time of use",
+              "Compare energy efficiency of different types of light bulbs (incandescent, CFL, LED) in terms of electrical energy use"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "energy_transfer",
+        "name": "Energy Transfer and Transformation",
+        "short_description": "Analyzing how energy moves between objects and changes from one form to another in various processes.",
+        "sub_topics": [
+          {
+            "key": "energy_transformations",
+            "name": "Energy Transformations",
+            "short_description": "Identifying and describing energy conversions in everyday devices and natural processes.",
+            "example_tasks": [
+              "Trace the energy transformations in a light bulb from electrical energy to light and thermal energy",
+              "Diagram the energy changes in a roller coaster from potential energy at the top to kinetic energy at the bottom",
+              "Explain the energy transformations in photosynthesis (light energy to chemical energy) and cellular respiration (chemical to other forms)",
+              "Analyze energy conversions in a hydroelectric dam from gravitational potential to kinetic to electrical energy"
+            ]
+          },
+          {
+            "key": "energy_transfer_mechanisms",
+            "name": "Mechanisms of Energy Transfer",
+            "short_description": "Understanding how energy transfers through work, heat, radiation, and wave motion.",
+            "example_tasks": [
+              "Explain how energy transfers when you push a box across the floor (work done by applied force)",
+              "Describe energy transfer by heating when a hot object contacts a cold object, causing temperature equalization",
+              "Investigate radiative energy transfer from the Sun to Earth and explain how this energy travels through space",
+              "Compare conduction, convection, and radiation as mechanisms for thermal energy transfer with examples"
+            ]
+          },
+          {
+            "key": "efficiency",
+            "name": "Energy Efficiency",
+            "short_description": "Understanding that energy transformations are never 100% efficient; some energy is always transferred to less useful forms.",
+            "example_tasks": [
+              "Calculate the efficiency of a device given useful energy output and total energy input using efficiency = (useful output / total input) × 100%",
+              "Explain why incandescent bulbs are less efficient than LED bulbs by comparing the amount of energy converted to light versus heat",
+              "Investigate why cars convert only about 25-30% of fuel's chemical energy to kinetic energy, with the rest lost as heat",
+              "Propose ways to improve energy efficiency in homes or schools (insulation, efficient appliances, renewable energy)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "conservation_of_energy",
+        "name": "Conservation of Energy",
+        "short_description": "Understanding that energy cannot be created or destroyed, only transformed or transferred, and that total energy in a closed system remains constant.",
+        "sub_topics": [
+          {
+            "key": "energy_conservation_principle",
+            "name": "Law of Conservation of Energy",
+            "short_description": "Applying the principle that the total energy of an isolated system remains constant through all transformations.",
+            "example_tasks": [
+              "Analyze a pendulum swing, showing how energy continually converts between gravitational potential and kinetic energy while total energy stays constant",
+              "Calculate the speed of an object at the bottom of a ramp by equating initial potential energy to final kinetic energy",
+              "Explain why a bouncing ball doesn't return to its original height, accounting for energy transferred to surroundings (sound, heat, air resistance)",
+              "Use energy conservation to predict the behavior of a roller coaster at various points along its track"
+            ]
+          },
+          {
+            "key": "energy_in_systems",
+            "name": "Energy in Open and Closed Systems",
+            "short_description": "Distinguishing between systems where energy is conserved within the system versus systems that exchange energy with surroundings.",
+            "example_tasks": [
+              "Classify everyday scenarios as open or closed energy systems and justify your classification",
+              "Explain why energy seems to 'disappear' in real-world situations but is actually transferred to the environment (friction producing heat)",
+              "Analyze a bouncing ball as an open system where energy transfers to surroundings, reducing mechanical energy over time",
+              "Compare ideal frictionless scenarios (closed systems) to real situations where friction and air resistance cause energy loss"
+            ]
+          },
+          {
+            "key": "energy_conservation_calculations",
+            "name": "Energy Conservation Calculations",
+            "short_description": "Solving problems using energy conservation principles to find unknown velocities, heights, or energies.",
+            "example_tasks": [
+              "Calculate the final velocity of a 3 kg object dropped from 5 meters using conservation of energy (PE initial = KE final)",
+              "Determine the height a pendulum must be released from to reach a specific speed at the bottom of its swing",
+              "Solve problems involving energy transformation on ramps, finding final speeds given initial heights and masses",
+              "Calculate the spring compression needed to launch a projectile to a certain height using elastic and gravitational potential energy"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "work_and_power",
+        "name": "Work and Power",
+        "short_description": "Understanding work as energy transfer through force and displacement, and power as the rate of energy transfer.",
+        "sub_topics": [
+          {
+            "key": "work_concept",
+            "name": "Work as Energy Transfer",
+            "short_description": "Defining work as force applied over a distance in the direction of force (W = Fd), transferring energy to objects.",
+            "example_tasks": [
+              "Calculate the work done when a 50 N force pushes a box 10 meters across a floor using W = Fd",
+              "Explain why no work is done when you hold a heavy book stationary, despite exerting force (no displacement)",
+              "Compare the work done lifting an object straight up versus pulling it up an inclined plane the same vertical height",
+              "Investigate situations where forces do positive work (adding energy), negative work (removing energy), or no work"
+            ]
+          },
+          {
+            "key": "calculating_work",
+            "name": "Calculating Work in Different Situations",
+            "short_description": "Applying the work formula to various scenarios including lifting, pushing, pulling, and work against friction.",
+            "example_tasks": [
+              "Calculate the work required to lift a 20 kg object 3 meters vertically against gravity",
+              "Determine the work done against friction when pulling a sled 15 meters with a 30 N friction force",
+              "Solve problems involving work done at angles, where only the force component parallel to displacement contributes",
+              "Compare the work done by different people completing the same task at different speeds (same work, different power)"
+            ]
+          },
+          {
+            "key": "power",
+            "name": "Power as Rate of Energy Transfer",
+            "short_description": "Understanding power as work done per unit time (P = W/t) or energy transferred per unit time, measured in watts.",
+            "example_tasks": [
+              "Calculate the power output of a person who does 300 J of work in 10 seconds using P = W/t",
+              "Compare the power of two students climbing stairs: one takes 5 seconds, the other takes 10 seconds to climb the same height",
+              "Explain why a 100-watt light bulb uses more electrical energy per second than a 60-watt bulb",
+              "Calculate the power of a motor that lifts a 500 N object 2 meters in 4 seconds, showing work calculation first"
+            ]
+          },
+          {
+            "key": "machines_and_work",
+            "name": "Simple Machines and Mechanical Advantage",
+            "short_description": "Understanding how simple machines make work easier by changing the force or distance, but not reducing total work.",
+            "example_tasks": [
+              "Explain how a ramp reduces the input force needed to lift an object, though it increases the distance through which force must be applied",
+              "Calculate mechanical advantage of a lever using MA = output force / input force, showing how position of fulcrum matters",
+              "Investigate pulleys and explain how they can reduce the input force needed to lift heavy objects",
+              "Compare work input and work output for a simple machine, showing that ideal machines have work output = work input (accounting for friction in real machines)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "waves_and_wave_properties",
+    "name": "Waves and Wave Properties",
+    "short_description": "Students explore the characteristics of waves, how waves transfer energy without transferring matter, and the behaviors of waves including reflection, refraction, and interference.",
+    "sub_topics": [
+      {
+        "key": "wave_basics",
+        "name": "Introduction to Waves",
+        "short_description": "Understanding waves as disturbances that transfer energy through matter or space without transferring matter itself.",
+        "sub_topics": [
+          {
+            "key": "mechanical_vs_electromagnetic",
+            "name": "Mechanical and Electromagnetic Waves",
+            "short_description": "Distinguishing between mechanical waves that require a medium and electromagnetic waves that can travel through vacuum.",
+            "example_tasks": [
+              "Classify examples of waves as mechanical (sound, water, seismic) or electromagnetic (light, radio, X-rays) based on whether they need a medium",
+              "Explain why sound cannot travel through the vacuum of space but light can, using the properties of wave types",
+              "Demonstrate mechanical waves using a slinky or rope and observe how energy travels while the medium oscillates in place",
+              "Research how astronauts communicate in space using radio waves instead of sound waves due to the vacuum environment"
+            ]
+          },
+          {
+            "key": "transverse_vs_longitudinal",
+            "name": "Transverse and Longitudinal Waves",
+            "short_description": "Comparing waves based on the direction of particle oscillation relative to wave direction of travel.",
+            "example_tasks": [
+              "Create transverse waves on a rope by moving it up and down perpendicular to the wave direction and label crests and troughs",
+              "Demonstrate longitudinal waves using a slinky compressed and stretched parallel to the wave direction, identifying compressions and rarefactions",
+              "Classify various waves as transverse (light, water surface waves, waves on strings) or longitudinal (sound, seismic P-waves)",
+              "Draw diagrams showing particle motion in both transverse and longitudinal waves and explain the differences"
+            ]
+          },
+          {
+            "key": "energy_transfer_by_waves",
+            "name": "Energy Transfer by Waves",
+            "short_description": "Understanding that waves transfer energy from one location to another without permanent displacement of the medium.",
+            "example_tasks": [
+              "Observe a cork floating on water waves and explain why it bobs up and down but doesn't move horizontally with the wave",
+              "Explain how ocean waves can transfer enough energy to erode coastlines and move sand without the water traveling across the ocean",
+              "Calculate or estimate the energy carried by waves based on amplitude, relating larger waves to greater energy transfer",
+              "Investigate how earthquake waves transfer destructive energy through Earth's crust causing damage at distant locations"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "wave_properties",
+        "name": "Wave Characteristics and Measurements",
+        "short_description": "Identifying and measuring wave properties including wavelength, frequency, amplitude, and speed.",
+        "sub_topics": [
+          {
+            "key": "wavelength",
+            "name": "Wavelength",
+            "short_description": "Measuring the distance between consecutive corresponding points on a wave, such as crest to crest or compression to compression.",
+            "example_tasks": [
+              "Measure the wavelength of waves on a rope or spring by determining the distance between consecutive crests",
+              "Identify wavelength on diagrams of transverse and longitudinal waves, labeling the appropriate distance",
+              "Compare wavelengths of different waves and predict how this affects their properties and behavior",
+              "Explain why radio waves have much longer wavelengths than visible light using the electromagnetic spectrum"
+            ]
+          },
+          {
+            "key": "frequency",
+            "name": "Frequency and Period",
+            "short_description": "Understanding frequency as the number of wave cycles per second (measured in Hertz) and period as the time for one complete cycle.",
+            "example_tasks": [
+              "Calculate frequency by counting the number of wave crests passing a point in one second and express in Hertz (Hz)",
+              "Determine the period of a wave given its frequency using T = 1/f, understanding their inverse relationship",
+              "Compare high-frequency waves (many oscillations per second) to low-frequency waves and relate to energy",
+              "Measure the frequency of a pendulum or vibrating object by timing multiple oscillations and calculating cycles per second"
+            ]
+          },
+          {
+            "key": "amplitude",
+            "name": "Amplitude",
+            "short_description": "Measuring the maximum displacement of particles from equilibrium position, relating amplitude to wave energy and intensity.",
+            "example_tasks": [
+              "Measure amplitude on wave diagrams as the distance from equilibrium to crest (or trough) for transverse waves",
+              "Investigate how amplitude affects wave energy by comparing gentle and vigorous wave generation on a rope",
+              "Explain the relationship between amplitude and loudness for sound waves or brightness for light waves",
+              "Create waves with different amplitudes and observe how larger amplitudes transfer more energy to objects"
+            ]
+          },
+          {
+            "key": "wave_speed",
+            "name": "Wave Speed",
+            "short_description": "Calculating wave speed using the relationship v = fλ (speed = frequency × wavelength).",
+            "example_tasks": [
+              "Calculate wave speed given frequency and wavelength using the equation v = fλ",
+              "Measure the speed of a wave pulse traveling along a rope or slinky by timing its travel over a known distance",
+              "Explain why wave speed depends on the medium properties (tension, density, temperature) rather than frequency or amplitude",
+              "Solve problems involving the wave equation, finding unknown values when two of the three variables are given"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "wave_behaviors",
+        "name": "Wave Behaviors and Interactions",
+        "short_description": "Exploring how waves interact with boundaries, other waves, and different media through reflection, refraction, diffraction, and interference.",
+        "sub_topics": [
+          {
+            "key": "reflection",
+            "name": "Wave Reflection",
+            "short_description": "Understanding that waves bounce back when encountering a boundary, following the law of reflection (angle of incidence = angle of reflection).",
+            "example_tasks": [
+              "Demonstrate wave reflection by sending pulses down a rope attached to a fixed end and observing the inverted reflected pulse",
+              "Apply the law of reflection to predict the path of reflected waves using diagrams with incident and reflected rays",
+              "Investigate how echoes are produced by sound wave reflection from hard surfaces like walls or cliffs",
+              "Explain why you see your reflection in a mirror using the principle of light wave reflection"
+            ]
+          },
+          {
+            "key": "refraction",
+            "name": "Wave Refraction",
+            "short_description": "Analyzing the bending of waves when they pass from one medium to another due to speed changes.",
+            "example_tasks": [
+              "Observe water waves in a ripple tank changing direction when passing from deep to shallow water, explaining the speed change",
+              "Explain why a pencil appears bent when partially submerged in water using light refraction at the water-air boundary",
+              "Predict the direction waves will bend when entering a medium where they travel faster or slower",
+              "Investigate how ocean waves approach shore nearly parallel to the beach due to refraction in varying water depths"
+            ]
+          },
+          {
+            "key": "diffraction",
+            "name": "Wave Diffraction",
+            "short_description": "Understanding how waves bend around obstacles and spread through openings, with greater diffraction for longer wavelengths.",
+            "example_tasks": [
+              "Demonstrate diffraction by creating water waves passing through openings of different sizes in a barrier",
+              "Explain why you can hear someone around a corner even though you cannot see them, using sound wave diffraction",
+              "Investigate how the size of an opening relative to wavelength affects the amount of diffraction observed",
+              "Compare diffraction of different wavelength waves and explain why radio waves diffract more than light waves around buildings"
+            ]
+          },
+          {
+            "key": "interference",
+            "name": "Wave Interference",
+            "short_description": "Analyzing constructive and destructive interference when two or more waves overlap in the same space.",
+            "example_tasks": [
+              "Create two wave pulses traveling toward each other on a rope and observe constructive interference (larger amplitude) when they meet",
+              "Demonstrate destructive interference where two pulses cancel each other when one is inverted relative to the other",
+              "Explain how noise-canceling headphones work by producing sound waves that destructively interfere with ambient noise",
+              "Investigate interference patterns created by two point sources generating waves in a ripple tank, identifying nodes and antinodes"
+            ]
+          },
+          {
+            "key": "standing_waves",
+            "name": "Standing Waves and Resonance",
+            "short_description": "Understanding standing waves formed by interference of waves reflecting back and forth, creating nodes and antinodes.",
+            "example_tasks": [
+              "Create standing waves on a rope or string by shaking it at specific frequencies, observing nodes (no motion) and antinodes (maximum motion)",
+              "Explain how musical instruments like guitars and violins produce standing waves on strings to create musical notes",
+              "Investigate resonance by finding the natural frequencies at which an object vibrates with maximum amplitude",
+              "Analyze standing wave patterns and count the number of nodes and antinodes to determine the harmonic number"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "sound_waves",
+    "name": "Sound Waves",
+    "short_description": "Students investigate sound as a mechanical longitudinal wave, exploring how sound is produced, transmitted, and detected, along with properties like pitch and volume.",
+    "sub_topics": [
+      {
+        "key": "sound_production_transmission",
+        "name": "Sound Production and Transmission",
+        "short_description": "Understanding how vibrating objects produce sound waves that travel through material media.",
+        "sub_topics": [
+          {
+            "key": "vibrations_produce_sound",
+            "name": "Vibrations Produce Sound",
+            "short_description": "Recognizing that all sounds originate from vibrating objects that create compressions and rarefactions in the surrounding medium.",
+            "example_tasks": [
+              "Observe and feel vibrations of a tuning fork, drum, or guitar string when producing sound, then stop the vibration to stop the sound",
+              "Explain how vocal cords vibrate to produce speech and singing, creating sound waves in air",
+              "Investigate different vibrating objects (ruler on desk edge, rubber band, speaker cone) and relate vibration to sound production",
+              "Demonstrate that sound stops when vibration stops by damping a vibrating object with your hand"
+            ]
+          },
+          {
+            "key": "sound_requires_medium",
+            "name": "Sound Requires a Medium",
+            "short_description": "Understanding that sound waves need a material medium (solid, liquid, or gas) to travel and cannot propagate through vacuum.",
+            "example_tasks": [
+              "Explain why astronauts cannot hear each other in space without radio communication, using the fact that sound needs a medium",
+              "Compare the speed of sound in different media (air: ~343 m/s, water: ~1,500 m/s, steel: ~5,000 m/s) and explain why solids transmit sound faster",
+              "Investigate how sound travels through different materials by listening through strings, walls, or water",
+              "Demonstrate sound transmission using a cup-and-string telephone to show sound traveling through solid materials"
+            ]
+          },
+          {
+            "key": "longitudinal_nature_sound",
+            "name": "Longitudinal Nature of Sound",
+            "short_description": "Recognizing sound as longitudinal waves with compressions and rarefactions parallel to the direction of travel.",
+            "example_tasks": [
+              "Model sound waves using a slinky showing compressions (particles close together) and rarefactions (particles spread apart)",
+              "Draw diagrams representing sound waves as pressure variations showing high and low pressure regions",
+              "Explain why sound waves are longitudinal rather than transverse, relating to how particles oscillate in gases and liquids",
+              "Visualize sound wave compressions and rarefactions using computer simulations or animations"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "properties_of_sound",
+        "name": "Properties of Sound",
+        "short_description": "Exploring the characteristics of sound including pitch, loudness, and timbre, and how they relate to wave properties.",
+        "sub_topics": [
+          {
+            "key": "pitch_and_frequency",
+            "name": "Pitch and Frequency",
+            "short_description": "Understanding that pitch is determined by frequency, with higher frequencies producing higher-pitched sounds.",
+            "example_tasks": [
+              "Compare high-pitched sounds (whistle, violin) to low-pitched sounds (bass drum, tuba) and relate to their vibration frequencies",
+              "Investigate how changing string length, tension, or thickness on a guitar affects pitch through frequency changes",
+              "Measure frequencies of different musical notes and show that doubling frequency raises pitch by one octave",
+              "Explain the human hearing range (approximately 20 Hz to 20,000 Hz) and what sounds fall outside this range (infrasound, ultrasound)"
+            ]
+          },
+          {
+            "key": "loudness_and_amplitude",
+            "name": "Loudness and Amplitude",
+            "short_description": "Relating loudness to wave amplitude and intensity, measured in decibels (dB).",
+            "example_tasks": [
+              "Demonstrate that louder sounds have greater amplitude by observing larger vibrations in a speaker cone at high volumes",
+              "Compare sound intensity levels of different environments (whisper ~30 dB, conversation ~60 dB, rock concert ~110 dB)",
+              "Explain why prolonged exposure to loud sounds (>85 dB) can damage hearing and the importance of hearing protection",
+              "Investigate how distance from a sound source affects loudness, showing intensity decreases with distance squared"
+            ]
+          },
+          {
+            "key": "timbre",
+            "name": "Timbre and Sound Quality",
+            "short_description": "Understanding that different sound sources playing the same note can be distinguished by timbre, determined by the mix of frequencies present.",
+            "example_tasks": [
+              "Explain why a piano and a violin playing the same note sound different, relating to their unique harmonic structures",
+              "Analyze sound waveforms showing how complex sounds are combinations of fundamental frequencies and overtones",
+              "Compare pure tones (single frequency like a tuning fork) to complex sounds with multiple frequencies",
+              "Investigate how the shape and material of instruments affect their characteristic timbre"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "sound_wave_behaviors",
+        "name": "Sound Wave Behaviors",
+        "short_description": "Applying wave behaviors specifically to sound, including echoes, resonance, and the Doppler effect.",
+        "sub_topics": [
+          {
+            "key": "echoes_and_reflection",
+            "name": "Echoes and Sound Reflection",
+            "short_description": "Understanding echoes as reflected sound waves and their applications in echolocation and sonar.",
+            "example_tasks": [
+              "Calculate the distance to a reflecting surface using echo time and the speed of sound (distance = speed × time / 2)",
+              "Explain how bats use echolocation by emitting ultrasonic sounds and detecting echoes to navigate and find prey",
+              "Investigate how sonar systems use sound reflection to map the ocean floor or detect underwater objects",
+              "Demonstrate echoes in large empty rooms or outdoor spaces and explain why soft furnishings reduce echoes through absorption"
+            ]
+          },
+          {
+            "key": "resonance_in_sound",
+            "name": "Resonance and Natural Frequency",
+            "short_description": "Understanding how objects vibrate at natural frequencies and resonate when driven at matching frequencies.",
+            "example_tasks": [
+              "Demonstrate resonance using tuning forks of the same frequency, showing one can cause another to vibrate sympathetically",
+              "Explain how musical instruments use resonance in sound boxes or air columns to amplify sound",
+              "Investigate the natural frequency of a pendulum or spring and show maximum amplitude oscillation at resonance",
+              "Research examples of destructive resonance, such as bridge collapse from wind or marching soldiers breaking step"
+            ]
+          },
+          {
+            "key": "doppler_effect",
+            "name": "Doppler Effect",
+            "short_description": "Observing and explaining the change in perceived frequency when the source or observer is moving.",
+            "example_tasks": [
+              "Describe the Doppler effect experienced when an ambulance siren passes by, explaining the pitch change from high to low",
+              "Explain why the observed frequency increases when a sound source moves toward you and decreases when moving away",
+              "Investigate applications of the Doppler effect in radar speed detection and medical ultrasound imaging",
+              "Predict whether pitch will increase or decrease in various scenarios involving moving sources or observers"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "applications_of_sound",
+        "name": "Applications of Sound",
+        "short_description": "Exploring practical applications of sound in technology, medicine, and communication.",
+        "sub_topics": [
+          {
+            "key": "ultrasound_applications",
+            "name": "Ultrasound Technology",
+            "short_description": "Understanding uses of ultrasound (frequencies above 20,000 Hz) in medical imaging, industrial testing, and cleaning.",
+            "example_tasks": [
+              "Explain how ultrasound imaging works by sending high-frequency sound waves into the body and detecting reflections from tissues",
+              "Research how ultrasound is used in prenatal imaging to visualize developing fetuses safely without radiation",
+              "Investigate industrial applications of ultrasound for detecting cracks or flaws in materials through non-destructive testing",
+              "Describe how ultrasonic cleaners use high-frequency vibrations to remove dirt from jewelry or dental instruments"
+            ]
+          },
+          {
+            "key": "sound_recording_reproduction",
+            "name": "Sound Recording and Reproduction",
+            "short_description": "Understanding how sound can be captured, stored, and reproduced using microphones, speakers, and digital technology.",
+            "example_tasks": [
+              "Explain how microphones convert sound waves into electrical signals and speakers convert electrical signals back to sound",
+              "Compare analog sound recording (vinyl records, cassette tapes) to digital recording (CDs, MP3s) in terms of how sound is stored",
+              "Investigate how digital audio samples sound waves at high frequencies to accurately reproduce the original sound",
+              "Trace the energy transformations in sound recording and playback systems from mechanical to electrical to mechanical energy"
+            ]
+          },
+          {
+            "key": "noise_control",
+            "name": "Noise Control and Soundproofing",
+            "short_description": "Applying understanding of sound transmission and absorption to reduce unwanted noise.",
+            "example_tasks": [
+              "Design soundproofing solutions for a room using materials that absorb or block sound waves effectively",
+              "Explain how noise-canceling technology uses destructive interference to reduce unwanted sounds",
+              "Investigate which materials are best at absorbing sound (foam, fabric, cork) versus reflecting sound (hard surfaces)",
+              "Research noise pollution in urban environments and propose solutions based on sound wave properties"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "light_and_electromagnetic_radiation",
+    "name": "Light and Electromagnetic Radiation",
+    "short_description": "Students explore light as an electromagnetic wave, investigating the electromagnetic spectrum, wave-particle duality, and the behavior of light including speed, transmission, and absorption.",
+    "sub_topics": [
+      {
+        "key": "nature_of_light",
+        "name": "Nature of Light",
+        "short_description": "Understanding light as electromagnetic radiation that can travel through vacuum and exhibits both wave and particle properties.",
+        "sub_topics": [
+          {
+            "key": "electromagnetic_waves",
+            "name": "Light as Electromagnetic Waves",
+            "short_description": "Recognizing light as transverse electromagnetic waves consisting of oscillating electric and magnetic fields.",
+            "example_tasks": [
+              "Explain how light differs from sound, emphasizing that light can travel through vacuum while sound cannot",
+              "Describe the wave nature of light including wavelength, frequency, and amplitude properties",
+              "Investigate how light is produced by accelerating electric charges or electron transitions in atoms",
+              "Calculate the speed of light in vacuum (approximately 3.0 × 10⁸ m/s) and explain why this is the maximum speed in the universe"
+            ]
+          },
+          {
+            "key": "electromagnetic_spectrum",
+            "name": "The Electromagnetic Spectrum",
+            "short_description": "Exploring the full range of electromagnetic radiation organized by wavelength and frequency, from radio waves to gamma rays.",
+            "example_tasks": [
+              "Create a diagram of the electromagnetic spectrum showing radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays in order",
+              "Compare wavelengths and frequencies across the spectrum, noting that radio waves have long wavelengths and low frequencies while gamma rays have short wavelengths and high frequencies",
+              "Identify applications of different regions of the spectrum (radio for communication, infrared for heat detection, X-rays for medical imaging)",
+              "Explain why we can only see a small portion of the electromagnetic spectrum (visible light from ~400-700 nm)"
+            ]
+          },
+          {
+            "key": "visible_light_spectrum",
+            "name": "Visible Light and Color",
+            "short_description": "Understanding that visible light consists of different wavelengths perceived as different colors.",
+            "example_tasks": [
+              "Use a prism to separate white light into its component colors (red, orange, yellow, green, blue, indigo, violet) and explain dispersion",
+              "Order the colors of visible light by wavelength from longest (red ~700 nm) to shortest (violet ~400 nm)",
+              "Explain why the sky appears blue and sunsets appear red using the scattering of different wavelengths by atmospheric particles",
+              "Investigate how rainbows form through refraction and reflection of sunlight in water droplets"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "light_transmission",
+        "name": "Light Transmission and Interaction with Matter",
+        "short_description": "Exploring how light interacts with different materials through transmission, absorption, and reflection.",
+        "sub_topics": [
+          {
+            "key": "transparent_translucent_opaque",
+            "name": "Transparent, Translucent, and Opaque Materials",
+            "short_description": "Classifying materials based on how they transmit light and understanding the mechanisms behind each property.",
+            "example_tasks": [
+              "Classify materials as transparent (clear glass, air), translucent (frosted glass, wax paper), or opaque (wood, metal) based on light transmission",
+              "Explain why transparent materials allow light to pass through with minimal scattering while translucent materials scatter light",
+              "Investigate how the thickness of a material affects its transparency by comparing thin and thick samples",
+              "Describe the atomic-level mechanisms that determine whether materials are transparent or opaque to visible light"
+            ]
+          },
+          {
+            "key": "absorption_and_color",
+            "name": "Light Absorption and Object Color",
+            "short_description": "Understanding that object color depends on which wavelengths are absorbed and which are reflected or transmitted.",
+            "example_tasks": [
+              "Explain why a red apple appears red: it reflects red wavelengths and absorbs other colors of the visible spectrum",
+              "Predict what color an object will appear under different colored lights (e.g., a red shirt under blue light appears black)",
+              "Investigate why objects appear black (absorb all wavelengths) or white (reflect all wavelengths)",
+              "Use colored filters to demonstrate selective absorption and transmission of specific wavelengths"
+            ]
+          },
+          {
+            "key": "speed_of_light_in_media",
+            "name": "Speed of Light in Different Media",
+            "short_description": "Understanding that light travels at different speeds in different materials, slowest in denser media.",
+            "example_tasks": [
+              "Compare the speed of light in vacuum (3.0 × 10⁸ m/s), air (~99.97% of vacuum speed), water (~75% of vacuum speed), and glass (~67% of vacuum speed)",
+              "Explain why light slows down when entering denser media due to interactions with atoms in the material",
+              "Calculate the index of refraction for materials using n = c/v where c is speed in vacuum and v is speed in the medium",
+              "Relate the change in light speed to refraction and the bending of light at material boundaries"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "electromagnetic_spectrum_applications",
+        "name": "Applications of Electromagnetic Radiation",
+        "short_description": "Exploring practical uses of different regions of the electromagnetic spectrum in technology and everyday life.",
+        "sub_topics": [
+          {
+            "key": "radio_and_microwave",
+            "name": "Radio Waves and Microwaves",
+            "short_description": "Understanding applications of long-wavelength electromagnetic radiation in communication and heating.",
+            "example_tasks": [
+              "Explain how radio waves are used for broadcasting AM/FM radio, television signals, and cell phone communication",
+              "Describe how microwave ovens use electromagnetic radiation to heat food by exciting water molecules",
+              "Investigate how radar systems use microwave reflections to detect objects and measure distances",
+              "Compare wavelengths and frequencies of radio waves (meters to kilometers) and microwaves (millimeters to centimeters)"
+            ]
+          },
+          {
+            "key": "infrared_radiation",
+            "name": "Infrared Radiation",
+            "short_description": "Exploring infrared as thermal radiation emitted by warm objects and its detection and applications.",
+            "example_tasks": [
+              "Explain how all objects emit infrared radiation based on their temperature, with hotter objects emitting more",
+              "Investigate applications of infrared technology in thermal imaging cameras, remote controls, and night vision devices",
+              "Describe how infrared lamps and heaters work by emitting radiation that is absorbed by objects and converted to heat",
+              "Measure heat emission using infrared thermometers and compare temperatures of different objects"
+            ]
+          },
+          {
+            "key": "ultraviolet_radiation",
+            "name": "Ultraviolet Radiation",
+            "short_description": "Understanding UV radiation from the Sun, its effects on living things, and protective measures.",
+            "example_tasks": [
+              "Explain the benefits and dangers of ultraviolet radiation, including vitamin D production and skin damage/cancer risk",
+              "Investigate how UV radiation causes fluorescence in certain materials and its use in security features on money",
+              "Describe the role of Earth's ozone layer in absorbing harmful UV radiation and protecting life",
+              "Test the effectiveness of different sunscreens and materials in blocking UV radiation using UV-sensitive beads"
+            ]
+          },
+          {
+            "key": "xrays_and_gamma",
+            "name": "X-rays and Gamma Rays",
+            "short_description": "Exploring high-energy electromagnetic radiation and its applications in medicine and industry despite safety concerns.",
+            "example_tasks": [
+              "Explain how X-rays penetrate soft tissue but are absorbed by bones, making them useful for medical imaging",
+              "Describe safety precautions needed when using X-rays and gamma rays due to their ionizing radiation that can damage cells",
+              "Investigate how gamma rays are used in cancer treatment (radiation therapy) to destroy tumor cells",
+              "Compare the penetrating power of different types of electromagnetic radiation, explaining why X-rays and gamma rays penetrate most materials"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "optics",
+    "name": "Optics",
+    "short_description": "Students investigate the behavior of light through reflection and refraction, exploring mirrors, lenses, and optical instruments.",
+    "sub_topics": [
+      {
+        "key": "reflection_of_light",
+        "name": "Reflection of Light",
+        "short_description": "Understanding how light bounces off surfaces following the law of reflection and forming images in mirrors.",
+        "sub_topics": [
+          {
+            "key": "law_of_reflection",
+            "name": "Law of Reflection",
+            "short_description": "Applying the principle that the angle of incidence equals the angle of reflection for light bouncing off surfaces.",
+            "example_tasks": [
+              "Draw ray diagrams showing incident rays, reflected rays, and normal lines, measuring and verifying that angles are equal",
+              "Use mirrors and laser pointers to demonstrate that angle of incidence equals angle of reflection experimentally",
+              "Explain why you see your reflection in smooth surfaces (specular reflection) but not in rough surfaces (diffuse reflection)",
+              "Predict the path of reflected light rays given different angles of incidence using the law of reflection"
+            ]
+          },
+          {
+            "key": "plane_mirrors",
+            "name": "Plane Mirrors",
+            "short_description": "Understanding image formation in flat mirrors, including virtual image properties and mirror symmetry.",
+            "example_tasks": [
+              "Describe characteristics of images formed by plane mirrors: virtual, upright, same size as object, and equal distance behind mirror",
+              "Use ray diagrams to show how plane mirrors create virtual images that cannot be projected on a screen",
+              "Explain why your mirror image appears reversed left-to-right but not top-to-bottom",
+              "Calculate the minimum height of a plane mirror needed to see your full body and explain using ray tracing"
+            ]
+          },
+          {
+            "key": "curved_mirrors",
+            "name": "Curved Mirrors (Concave and Convex)",
+            "short_description": "Exploring how concave and convex mirrors form different types of images depending on object position.",
+            "example_tasks": [
+              "Compare concave mirrors (converging, can form real or virtual images) to convex mirrors (diverging, form virtual images only)",
+              "Use ray diagrams to locate images formed by concave mirrors at different object distances relative to the focal point",
+              "Explain applications of curved mirrors: concave in telescopes and makeup mirrors, convex in security mirrors and side-view car mirrors",
+              "Investigate how concave mirrors can focus light to a focal point and produce magnified or diminished images"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "refraction_of_light",
+        "name": "Refraction of Light",
+        "short_description": "Analyzing the bending of light when it passes between materials with different optical densities.",
+        "sub_topics": [
+          {
+            "key": "refraction_basics",
+            "name": "Light Refraction and Speed Change",
+            "short_description": "Understanding that light bends when changing media because its speed changes based on optical density.",
+            "example_tasks": [
+              "Observe a pencil appearing bent when placed in water and explain using refraction at the air-water boundary",
+              "Predict whether light will bend toward or away from the normal when entering a denser or less dense medium",
+              "Investigate refraction using laser pointers and different transparent materials (water, glass, plastic)",
+              "Explain why pools appear shallower than they actually are due to refraction of light from the bottom"
+            ]
+          },
+          {
+            "key": "index_of_refraction",
+            "name": "Index of Refraction",
+            "short_description": "Using the index of refraction to quantify how much light bends when entering different materials.",
+            "example_tasks": [
+              "Calculate the index of refraction using n = c/v where c is the speed of light in vacuum and v is speed in the material",
+              "Compare indices of refraction for common materials (air ≈ 1.00, water ≈ 1.33, glass ≈ 1.5, diamond ≈ 2.42)",
+              "Explain why materials with higher refractive indices bend light more and slow light more",
+              "Use Snell's law qualitatively to predict refraction angles when light passes between materials with different indices"
+            ]
+          },
+          {
+            "key": "total_internal_reflection",
+            "name": "Total Internal Reflection",
+            "short_description": "Understanding conditions where light reflects completely at a boundary instead of refracting, and its applications.",
+            "example_tasks": [
+              "Explain how fiber optic cables use total internal reflection to transmit light signals over long distances without loss",
+              "Investigate the critical angle for total internal reflection and demonstrate it using a laser in a water-filled tank",
+              "Describe how diamonds sparkle due to total internal reflection of light within the gem",
+              "Predict when total internal reflection will occur based on angles and refractive indices of materials"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "lenses",
+        "name": "Lenses and Image Formation",
+        "short_description": "Exploring how convex and concave lenses refract light to form images with different characteristics.",
+        "sub_topics": [
+          {
+            "key": "convex_lenses",
+            "name": "Convex (Converging) Lenses",
+            "short_description": "Understanding how convex lenses bend light rays toward a focal point and can form real or virtual images.",
+            "example_tasks": [
+              "Use ray diagrams to show how convex lenses converge parallel light rays to a focal point",
+              "Investigate image formation with convex lenses at different object distances, noting when images are real/virtual, magnified/diminished, inverted/upright",
+              "Measure the focal length of a convex lens by focusing sunlight to a point or using a distant object",
+              "Explain applications of convex lenses in magnifying glasses, cameras, projectors, and correcting farsightedness"
+            ]
+          },
+          {
+            "key": "concave_lenses",
+            "name": "Concave (Diverging) Lenses",
+            "short_description": "Understanding how concave lenses spread out light rays and always form virtual, diminished images.",
+            "example_tasks": [
+              "Use ray diagrams to show how concave lenses diverge parallel light rays as if coming from a virtual focal point",
+              "Compare images formed by concave lenses (always virtual, upright, and diminished) to convex lens images",
+              "Explain how concave lenses are used to correct nearsightedness by diverging light before it enters the eye",
+              "Investigate the focal length of concave lenses and explain why it is considered negative"
+            ]
+          },
+          {
+            "key": "lens_equation",
+            "name": "Thin Lens Equation and Magnification",
+            "short_description": "Using equations to calculate image distance, focal length, and magnification for thin lenses.",
+            "example_tasks": [
+              "Apply the thin lens equation 1/f = 1/d₀ + 1/dᵢ to calculate unknown image or object distances given focal length",
+              "Calculate magnification using M = -dᵢ/d₀ or M = hᵢ/h₀ and interpret positive/negative values",
+              "Solve problems involving multiple scenarios to predict image location and characteristics",
+              "Verify lens equation calculations experimentally using lenses, light sources, and screens"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "optical_instruments",
+        "name": "Optical Instruments and the Human Eye",
+        "short_description": "Exploring how lenses and mirrors are combined in telescopes, microscopes, and cameras, and how the human eye functions.",
+        "sub_topics": [
+          {
+            "key": "human_eye",
+            "name": "The Human Eye",
+            "short_description": "Understanding the eye as an optical system with a lens that focuses light on the retina to form images.",
+            "example_tasks": [
+              "Label a diagram of the eye showing cornea, lens, pupil, iris, retina, and optic nerve, describing each function",
+              "Explain how the eye lens changes shape (accommodation) to focus on objects at different distances",
+              "Describe common vision problems: nearsightedness (myopia), farsightedness (hyperopia), and how corrective lenses help",
+              "Investigate how the pupil adjusts size in different light conditions to control the amount of light entering the eye"
+            ]
+          },
+          {
+            "key": "cameras",
+            "name": "Cameras",
+            "short_description": "Comparing camera operation to the human eye and understanding how aperture, shutter speed, and focal length affect images.",
+            "example_tasks": [
+              "Compare parts of a camera (lens, aperture, image sensor) to parts of the eye (lens, pupil, retina)",
+              "Explain how cameras form real, inverted images on a sensor or film, similar to images on the retina",
+              "Investigate how focal length affects field of view and magnification in camera lenses",
+              "Describe how aperture size affects depth of field and amount of light reaching the sensor"
+            ]
+          },
+          {
+            "key": "telescopes",
+            "name": "Telescopes",
+            "short_description": "Understanding how refracting and reflecting telescopes gather and focus light from distant objects.",
+            "example_tasks": [
+              "Explain the difference between refracting telescopes (use lenses) and reflecting telescopes (use mirrors) to collect light",
+              "Describe how telescopes increase the amount of light collected from faint objects and provide magnification",
+              "Investigate why larger telescope apertures allow observation of fainter, more distant objects",
+              "Research different types of telescopes used in astronomy and their advantages for observing the universe"
+            ]
+          },
+          {
+            "key": "microscopes",
+            "name": "Microscopes",
+            "short_description": "Exploring how compound microscopes use multiple lenses to magnify small objects for detailed viewing.",
+            "example_tasks": [
+              "Describe how a compound microscope uses an objective lens and eyepiece lens to achieve high magnification",
+              "Calculate total magnification by multiplying objective lens magnification by eyepiece lens magnification",
+              "Explain the importance of proper lighting and focus when using microscopes to view small specimens",
+              "Compare optical microscopes to electron microscopes in terms of magnification limits and applications"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "static_electricity_and_electric_fields",
+    "name": "Static Electricity and Electric Fields",
+    "short_description": "Students explore electric charge, static electricity phenomena, and how charged objects create electric fields that exert forces on other charges.",
+    "sub_topics": [
+      {
+        "key": "electric_charge",
+        "name": "Electric Charge",
+        "short_description": "Understanding the two types of electric charge, how objects become charged, and the conservation of charge.",
+        "sub_topics": [
+          {
+            "key": "types_of_charge",
+            "name": "Positive and Negative Charges",
+            "short_description": "Recognizing that there are two types of charge (positive and negative), and that like charges repel while opposite charges attract.",
+            "example_tasks": [
+              "Demonstrate charge interaction using charged balloons or rods, showing that like charges repel and opposite charges attract",
+              "Explain the atomic basis of charge: protons are positive, electrons are negative, and neutrons are neutral",
+              "Predict the force between various charge combinations (positive-positive, negative-negative, positive-negative)",
+              "Investigate why most objects are normally electrically neutral, containing equal numbers of protons and electrons"
+            ]
+          },
+          {
+            "key": "methods_of_charging",
+            "name": "Charging by Friction, Conduction, and Induction",
+            "short_description": "Understanding different methods by which objects can become electrically charged through electron transfer.",
+            "example_tasks": [
+              "Charge objects by friction (rubbing a balloon on hair or wool on plastic) and explain electron transfer between materials",
+              "Demonstrate charging by conduction by touching a charged object to a neutral object, transferring charge directly",
+              "Show charging by induction where a charged object near a conductor causes charge separation without direct contact",
+              "Explain why only electrons move during charging processes, not protons, due to electrons being loosely bound in atoms"
+            ]
+          },
+          {
+            "key": "conservation_of_charge",
+            "name": "Conservation of Electric Charge",
+            "short_description": "Understanding that electric charge cannot be created or destroyed, only transferred from one object to another.",
+            "example_tasks": [
+              "Explain why rubbing two neutral objects together results in one becoming positive and the other negative with equal magnitude",
+              "Calculate the total charge before and after a charging process, demonstrating that it remains constant",
+              "Analyze charge transfer scenarios and predict the final charges on objects based on conservation principles",
+              "Describe how grounding removes excess charge by allowing electrons to flow to or from the Earth"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "conductors_and_insulators",
+        "name": "Conductors and Insulators",
+        "short_description": "Distinguishing between materials that allow charge to flow easily and those that resist charge flow.",
+        "sub_topics": [
+          {
+            "key": "electrical_conductors",
+            "name": "Electrical Conductors",
+            "short_description": "Understanding that conductors contain mobile charge carriers (electrons) that can move freely through the material.",
+            "example_tasks": [
+              "Identify common conductors (metals like copper, aluminum, silver, gold) and explain why metals conduct electricity well",
+              "Test materials for conductivity using a simple circuit with a bulb or LED to determine which allow current flow",
+              "Explain how free electrons in metals allow charge and electric current to flow easily through conductors",
+              "Investigate why touching a charged conductor with your hand discharges it (you provide a path to ground)"
+            ]
+          },
+          {
+            "key": "electrical_insulators",
+            "name": "Electrical Insulators",
+            "short_description": "Recognizing that insulators have tightly bound electrons that do not move freely, preventing charge flow.",
+            "example_tasks": [
+              "Identify common insulators (rubber, plastic, glass, wood, air) and explain their use in electrical safety",
+              "Test insulators in circuits to show they do not allow current to flow, unlike conductors",
+              "Explain why power cords have plastic insulation around metal wires to prevent electric shock",
+              "Describe how insulators can hold static charge better than conductors because charges cannot move to neutralize"
+            ]
+          },
+          {
+            "key": "semiconductors",
+            "name": "Semiconductors",
+            "short_description": "Introducing materials with electrical properties between conductors and insulators, important in modern electronics.",
+            "example_tasks": [
+              "Identify silicon and germanium as common semiconductors used in computer chips and electronic devices",
+              "Explain that semiconductors conduct electricity better than insulators but not as well as conductors",
+              "Describe how semiconductors can be modified (doped) to control their electrical properties for specific applications",
+              "Research the importance of semiconductors in modern technology including computers, smartphones, and solar cells"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "static_electricity_phenomena",
+        "name": "Static Electricity Phenomena",
+        "short_description": "Exploring everyday examples of static electricity and discharge, including lightning and electric shock.",
+        "sub_topics": [
+          {
+            "key": "static_cling_and_attraction",
+            "name": "Static Cling and Attraction",
+            "short_description": "Understanding how charged objects attract neutral objects and cause static cling through polarization.",
+            "example_tasks": [
+              "Demonstrate static attraction by using a charged balloon to pick up small pieces of paper or attract a stream of water",
+              "Explain static cling in laundry using charge separation during tumbling and the attraction between charged fabrics",
+              "Describe polarization where a charged object causes charge separation in a neutral object, creating attraction",
+              "Investigate how humidity affects static electricity, noting that dry conditions enhance static effects"
+            ]
+          },
+          {
+            "key": "electric_discharge",
+            "name": "Electric Discharge",
+            "short_description": "Understanding how built-up static charge can suddenly flow, creating sparks or shocks.",
+            "example_tasks": [
+              "Explain the shock you feel when touching a doorknob after walking on carpet as rapid discharge of built-up static charge",
+              "Demonstrate electric discharge by creating small sparks between charged objects in a dark room",
+              "Describe safety concerns with static discharge near flammable gases or in electronics manufacturing",
+              "Investigate how anti-static devices and grounding prevent unwanted discharge in sensitive applications"
+            ]
+          },
+          {
+            "key": "lightning",
+            "name": "Lightning as Electric Discharge",
+            "short_description": "Understanding lightning as a massive static discharge between clouds and ground or between clouds.",
+            "example_tasks": [
+              "Explain how charge separation occurs in storm clouds through ice crystal collisions, creating regions of positive and negative charge",
+              "Describe the lightning process: charge buildup, air ionization, discharge along conducting path, and visible lightning bolt",
+              "Calculate the distance to lightning using the time delay between seeing the flash and hearing thunder (sound travels ~340 m/s)",
+              "Discuss lightning safety: why to avoid tall objects, open fields, and water, and why cars and buildings with lightning rods are safe"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "electric_fields",
+        "name": "Electric Fields",
+        "short_description": "Understanding how charged objects create electric fields in surrounding space that exert forces on other charges.",
+        "sub_topics": [
+          {
+            "key": "electric_field_concept",
+            "name": "Concept of Electric Field",
+            "short_description": "Introducing the electric field as a region around a charged object where electric forces are exerted on other charges.",
+            "example_tasks": [
+              "Draw electric field lines around positive and negative point charges, showing direction and field pattern",
+              "Explain that electric field lines point away from positive charges and toward negative charges, showing force direction on positive test charges",
+              "Visualize electric fields using grass seeds or small pieces of thread suspended in oil around charged objects",
+              "Describe how field line density indicates field strength, with lines closer together representing stronger fields"
+            ]
+          },
+          {
+            "key": "electric_field_strength",
+            "name": "Electric Field Strength and Distance",
+            "short_description": "Understanding that electric field strength decreases with distance from the charge and depends on charge magnitude.",
+            "example_tasks": [
+              "Investigate how the force on a test charge decreases as it moves farther from a source charge, showing field weakening",
+              "Explain why electric fields are stronger near charged objects and weaker farther away",
+              "Compare electric field patterns around single charges versus between oppositely charged parallel plates",
+              "Predict relative field strengths at different points around charged objects based on field line spacing"
+            ]
+          },
+          {
+            "key": "uniform_electric_fields",
+            "name": "Uniform Electric Fields",
+            "short_description": "Exploring the uniform electric field between parallel charged plates and its applications.",
+            "example_tasks": [
+              "Draw parallel electric field lines between oppositely charged parallel plates, showing constant field strength",
+              "Explain how charged particles experience constant force in uniform fields, useful for particle acceleration",
+              "Describe applications of uniform electric fields in capacitors, cathode ray tubes, and particle accelerators",
+              "Compare uniform fields (constant force) to non-uniform fields around point charges (varying force)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "current_electricity_and_circuits",
+    "name": "Current Electricity and Circuits",
+    "short_description": "Students investigate electric current, voltage, resistance, and circuit components, applying Ohm's law to analyze series and parallel circuits.",
+    "sub_topics": [
+      {
+        "key": "electric_current",
+        "name": "Electric Current",
+        "short_description": "Understanding current as the flow of electric charge through conductors, measured in amperes.",
+        "sub_topics": [
+          {
+            "key": "current_definition",
+            "name": "Definition of Electric Current",
+            "short_description": "Defining current as the rate of charge flow past a point in a circuit (I = Q/t), measured in amperes (A).",
+            "example_tasks": [
+              "Calculate current when 10 coulombs of charge flows past a point in 5 seconds using I = Q/t",
+              "Explain that one ampere equals one coulomb of charge flowing per second",
+              "Describe current as the movement of electrons through conductors from negative to positive terminal (electron flow)",
+              "Distinguish between conventional current direction (positive to negative) and actual electron flow direction"
+            ]
+          },
+          {
+            "key": "direct_vs_alternating",
+            "name": "Direct Current (DC) vs. Alternating Current (AC)",
+            "short_description": "Comparing DC current that flows in one direction with AC current that periodically reverses direction.",
+            "example_tasks": [
+              "Identify sources of DC current (batteries, solar cells, DC power supplies) and AC current (wall outlets, generators)",
+              "Explain that batteries produce DC current flowing steadily in one direction through circuits",
+              "Describe how AC current reverses direction periodically, typically 60 times per second (60 Hz) in North America",
+              "Compare advantages of DC (portable devices, electronics) and AC (long-distance power transmission, household electricity)"
+            ]
+          },
+          {
+            "key": "measuring_current",
+            "name": "Measuring Electric Current",
+            "short_description": "Using ammeters to measure current and understanding that ammeters must be connected in series.",
+            "example_tasks": [
+              "Connect an ammeter in series in a circuit to measure the current flowing through it",
+              "Explain why ammeters must be connected in series (current must flow through the meter) and have very low resistance",
+              "Measure currents in different parts of a series circuit, verifying that current is the same throughout",
+              "Read ammeter scales correctly, paying attention to range settings and units (mA vs. A)"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "voltage",
+        "name": "Voltage (Potential Difference)",
+        "short_description": "Understanding voltage as electrical potential energy difference per unit charge, driving current through circuits.",
+        "sub_topics": [
+          {
+            "key": "voltage_definition",
+            "name": "Definition of Voltage",
+            "short_description": "Defining voltage as the energy transferred per unit charge, measured in volts (V = E/Q).",
+            "example_tasks": [
+              "Calculate voltage when 12 joules of energy is transferred by 2 coulombs of charge using V = E/Q",
+              "Explain that one volt equals one joule per coulomb, relating voltage to energy transfer",
+              "Describe voltage as electrical 'pressure' that pushes charges through a circuit, analogous to water pressure in pipes",
+              "Compare voltages of common sources: AAA battery (1.5V), car battery (12V), household outlet (120V in US)"
+            ]
+          },
+          {
+            "key": "voltage_sources",
+            "name": "Voltage Sources",
+            "short_description": "Exploring devices that provide voltage to circuits, including batteries, generators, and power supplies.",
+            "example_tasks": [
+              "Identify components of a battery (electrodes and electrolyte) and explain how chemical reactions create voltage",
+              "Describe how batteries convert chemical energy to electrical energy, maintaining voltage across terminals",
+              "Explain the difference between voltage (energy per charge) and current (rate of charge flow)",
+              "Investigate how solar cells convert light energy to electrical energy, producing voltage when illuminated"
+            ]
+          },
+          {
+            "key": "measuring_voltage",
+            "name": "Measuring Voltage",
+            "short_description": "Using voltmeters to measure potential difference and understanding that voltmeters connect in parallel.",
+            "example_tasks": [
+              "Connect a voltmeter in parallel across a component to measure the voltage drop across it",
+              "Explain why voltmeters must be connected in parallel (to measure potential difference between two points) and have very high resistance",
+              "Measure voltage across different components in a circuit (batteries, resistors, bulbs)",
+              "Verify that voltage drops across components in series add up to the total source voltage"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "resistance",
+        "name": "Resistance",
+        "short_description": "Understanding resistance as opposition to current flow, factors affecting resistance, and its measurement.",
+        "sub_topics": [
+          {
+            "key": "resistance_concept",
+            "name": "Concept of Resistance",
+            "short_description": "Defining resistance as the property of materials that opposes current flow, measured in ohms (Ω).",
+            "example_tasks": [
+              "Explain resistance as the opposition to electron flow through a conductor due to collisions with atoms",
+              "Compare materials with low resistance (copper wire) to high resistance (nichrome wire, carbon resistors)",
+              "Describe how resistance converts electrical energy to thermal energy, causing wires and components to heat up",
+              "Investigate why thicker wires have lower resistance than thin wires (more paths for electron flow)"
+            ]
+          },
+          {
+            "key": "factors_affecting_resistance",
+            "name": "Factors Affecting Resistance",
+            "short_description": "Exploring how material type, length, cross-sectional area, and temperature affect resistance.",
+            "example_tasks": [
+              "Investigate how resistance increases with wire length by measuring current through wires of different lengths",
+              "Explain why resistance decreases with larger cross-sectional area (thicker wires allow more current)",
+              "Compare resistances of wires made from different materials (copper, aluminum, nichrome) of the same dimensions",
+              "Describe how resistance generally increases with temperature as atoms vibrate more, impeding electron flow"
+            ]
+          },
+          {
+            "key": "resistors",
+            "name": "Resistors in Circuits",
+            "short_description": "Understanding resistors as components designed to provide specific resistance values to control current.",
+            "example_tasks": [
+              "Read resistor color codes to determine resistance values and tolerance ranges",
+              "Explain the purpose of resistors in circuits: limiting current, dividing voltage, and protecting components",
+              "Investigate fixed resistors versus variable resistors (potentiometers, rheostats) and their applications",
+              "Design a circuit using resistors to achieve a desired current or voltage drop"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "ohms_law",
+        "name": "Ohm's Law",
+        "short_description": "Applying the relationship V = IR to calculate voltage, current, and resistance in circuits.",
+        "sub_topics": [
+          {
+            "key": "ohms_law_relationship",
+            "name": "Ohm's Law Relationship",
+            "short_description": "Understanding that voltage equals current times resistance (V = IR) for ohmic conductors.",
+            "example_tasks": [
+              "Calculate voltage across a 10 Ω resistor carrying 2 A of current using V = IR",
+              "Determine the current through a 6 Ω resistor connected to a 12 V battery using I = V/R",
+              "Find the resistance of a component that has 120 V across it and 5 A through it using R = V/I",
+              "Solve multi-step problems involving Ohm's law with various combinations of known and unknown quantities"
+            ]
+          },
+          {
+            "key": "graphing_ohms_law",
+            "name": "Graphing Voltage vs. Current",
+            "short_description": "Creating and interpreting V-I graphs to visualize Ohm's law and determine resistance from slope.",
+            "example_tasks": [
+              "Plot voltage versus current data for a resistor and observe the linear relationship",
+              "Calculate resistance from the slope of a V-I graph, understanding that R = ΔV/ΔI",
+              "Compare V-I graphs for different resistances, noting that steeper slopes indicate higher resistance",
+              "Distinguish between ohmic materials (linear V-I relationship) and non-ohmic materials (non-linear graphs)"
+            ]
+          },
+          {
+            "key": "power_in_circuits",
+            "name": "Electrical Power",
+            "short_description": "Calculating power as the rate of energy transfer in circuits using P = IV and related formulas.",
+            "example_tasks": [
+              "Calculate power dissipated by a component using P = IV where P is in watts, I in amperes, V in volts",
+              "Derive and use alternative power formulas: P = I²R and P = V²/R using Ohm's law substitutions",
+              "Determine energy consumed by an appliance over time using E = Pt (energy = power × time)",
+              "Compare power ratings of household appliances and calculate their operating costs based on electricity rates"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "series_circuits",
+        "name": "Series Circuits",
+        "short_description": "Analyzing circuits where components are connected in a single path with the same current through each component.",
+        "sub_topics": [
+          {
+            "key": "series_circuit_characteristics",
+            "name": "Characteristics of Series Circuits",
+            "short_description": "Understanding that current is constant throughout series circuits while voltage divides among components.",
+            "example_tasks": [
+              "Explain why the same current flows through all components in a series circuit (only one path available)",
+              "Demonstrate that removing or breaking one component in a series circuit stops current in the entire circuit",
+              "Measure current at different points in a series circuit to verify it's constant throughout",
+              "Describe why holiday lights wired in series all go out when one bulb burns out"
+            ]
+          },
+          {
+            "key": "voltage_in_series",
+            "name": "Voltage Division in Series Circuits",
+            "short_description": "Understanding that voltages across components in series add up to the source voltage.",
+            "example_tasks": [
+              "Calculate individual voltage drops across resistors in series using V = IR for each resistor",
+              "Verify that the sum of voltage drops across series components equals the battery voltage",
+              "Explain why components with higher resistance in series have larger voltage drops",
+              "Predict voltage distribution in series circuits with mixed resistor values"
+            ]
+          },
+          {
+            "key": "resistance_in_series",
+            "name": "Total Resistance in Series Circuits",
+            "short_description": "Calculating total resistance as the sum of individual resistances (R_total = R₁ + R₂ + R₃...).",
+            "example_tasks": [
+              "Calculate total resistance of series resistors by adding individual values: R_total = R₁ + R₂ + R₃",
+              "Explain why adding resistors in series always increases total resistance and decreases current",
+              "Solve problems finding total resistance, then use Ohm's law to find circuit current",
+              "Design series circuits with specific total resistance by selecting appropriate resistor combinations"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "parallel_circuits",
+        "name": "Parallel Circuits",
+        "short_description": "Analyzing circuits where components are connected across common points with the same voltage across each component.",
+        "sub_topics": [
+          {
+            "key": "parallel_circuit_characteristics",
+            "name": "Characteristics of Parallel Circuits",
+            "short_description": "Understanding that voltage is constant across parallel branches while current divides among branches.",
+            "example_tasks": [
+              "Explain why all components in parallel experience the same voltage (connected to same two points)",
+              "Demonstrate that removing one branch in a parallel circuit doesn't affect current in other branches",
+              "Measure voltage across different parallel branches to verify it equals the source voltage",
+              "Describe why household circuits are wired in parallel so each device can operate independently"
+            ]
+          },
+          {
+            "key": "current_in_parallel",
+            "name": "Current Division in Parallel Circuits",
+            "short_description": "Understanding that total current from the source equals the sum of currents through parallel branches.",
+            "example_tasks": [
+              "Calculate currents through individual parallel branches using Ohm's law (I = V/R for each branch)",
+              "Verify that the sum of branch currents equals the total current from the source: I_total = I₁ + I₂ + I₃",
+              "Explain why branches with lower resistance carry more current in parallel circuits",
+              "Measure and compare currents in different parallel branches and the total current"
+            ]
+          },
+          {
+            "key": "resistance_in_parallel",
+            "name": "Total Resistance in Parallel Circuits",
+            "short_description": "Calculating total resistance using the reciprocal formula (1/R_total = 1/R₁ + 1/R₂ + 1/R₃...).",
+            "example_tasks": [
+              "Calculate total resistance of parallel resistors using 1/R_total = 1/R₁ + 1/R₂ + 1/R₃",
+              "Explain why adding resistors in parallel always decreases total resistance and increases total current",
+              "Solve the special case of two equal resistors in parallel (R_total = R/2)",
+              "Design parallel circuits to achieve specific total resistance or current values"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "circuit_components",
+        "name": "Circuit Components and Diagrams",
+        "short_description": "Identifying common circuit components, their symbols, and functions in electrical circuits.",
+        "sub_topics": [
+          {
+            "key": "circuit_symbols",
+            "name": "Standard Circuit Symbols",
+            "short_description": "Learning to read and draw circuit diagrams using standard symbols for components.",
+            "example_tasks": [
+              "Identify symbols for common components: battery, resistor, bulb, switch, ammeter, voltmeter, wire connections",
+              "Draw circuit diagrams from physical setups and vice versa using proper symbols and conventions",
+              "Explain the importance of standardized symbols for clear communication in electrical engineering",
+              "Practice reading complex circuit diagrams and identifying series and parallel connections"
+            ]
+          },
+          {
+            "key": "switches",
+            "name": "Switches and Circuit Control",
+            "short_description": "Understanding how switches control current flow by opening and closing circuits.",
+            "example_tasks": [
+              "Explain how open switches create breaks in circuits preventing current flow, while closed switches complete the path",
+              "Design circuits with multiple switches to control different branches or functions",
+              "Investigate different switch types: single-pole single-throw (SPST), single-pole double-throw (SPDT), push-button switches",
+              "Explain applications of switches in everyday devices for controlling power and functions"
+            ]
+          },
+          {
+            "key": "fuses_and_circuit_breakers",
+            "name": "Fuses and Circuit Breakers",
+            "short_description": "Understanding safety devices that protect circuits from excessive current that could cause fires or damage.",
+            "example_tasks": [
+              "Explain how fuses contain metal strips that melt when current exceeds safe levels, breaking the circuit",
+              "Describe how circuit breakers use electromagnetic mechanisms to trip and open circuits during overcurrent conditions",
+              "Compare fuses (must be replaced after breaking) to circuit breakers (can be reset and reused)",
+              "Investigate why household electrical panels have circuit breakers rated for specific currents (15A, 20A, etc.)"
+            ]
+          },
+          {
+            "key": "capacitors_introduction",
+            "name": "Introduction to Capacitors",
+            "short_description": "Introducing capacitors as components that store electrical energy in electric fields between charged plates.",
+            "example_tasks": [
+              "Describe the basic structure of a capacitor as two conducting plates separated by an insulator (dielectric)",
+              "Explain how capacitors store energy by accumulating opposite charges on the two plates",
+              "Investigate how capacitors charge when connected to voltage sources and discharge through resistors",
+              "Identify applications of capacitors: camera flashes, power supply smoothing, timing circuits, energy storage"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "magnetism_and_electromagnetism",
+    "name": "Magnetism and Electromagnetism",
+    "short_description": "Students explore magnetic forces, magnetic fields, the relationship between electricity and magnetism, and applications including electromagnets, motors, and generators.",
+    "sub_topics": [
+      {
+        "key": "magnetism_basics",
+        "name": "Magnetism and Magnetic Materials",
+        "short_description": "Understanding magnetic forces, poles, and how magnetic materials interact with magnetic fields.",
+        "sub_topics": [
+          {
+            "key": "magnetic_poles",
+            "name": "Magnetic Poles and Forces",
+            "short_description": "Understanding that magnets have north and south poles, with like poles repelling and opposite poles attracting.",
+            "example_tasks": [
+              "Demonstrate that like magnetic poles (N-N or S-S) repel while opposite poles (N-S) attract using bar magnets",
+              "Explain why you cannot isolate a single magnetic pole; cutting a magnet creates two smaller magnets each with N and S poles",
+              "Investigate magnetic force strength by measuring how distance between magnets affects attraction or repulsion",
+              "Map the magnetic poles of various magnets using a compass or iron filings"
+            ]
+          },
+          {
+            "key": "magnetic_materials",
+            "name": "Magnetic and Non-magnetic Materials",
+            "short_description": "Identifying ferromagnetic materials attracted to magnets and understanding temporary versus permanent magnetization.",
+            "example_tasks": [
+              "Test various materials (iron, nickel, cobalt, aluminum, copper, plastic, wood) to determine which are attracted to magnets",
+              "Explain that ferromagnetic materials (iron, nickel, cobalt) contain magnetic domains that can align with external fields",
+              "Distinguish between temporary magnets (soft iron that loses magnetism) and permanent magnets (hard materials that retain magnetism)",
+              "Investigate how heating or striking magnets can weaken their magnetism by disrupting domain alignment"
+            ]
+          },
+          {
+            "key": "making_magnets",
+            "name": "Creating Magnets",
+            "short_description": "Understanding methods to magnetize ferromagnetic materials including stroking and using strong magnetic fields.",
+            "example_tasks": [
+              "Create a temporary magnet by stroking an iron nail repeatedly in one direction with a permanent magnet",
+              "Explain the domain theory of magnetism: how magnetic domains align when a material is magnetized",
+              "Investigate how strong magnetic fields from electromagnets can be used to magnetize materials",
+              "Test the strength of created magnets by counting how many paper clips they can pick up"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "magnetic_fields",
+        "name": "Magnetic Fields",
+        "short_description": "Visualizing and understanding magnetic fields around magnets and their properties.",
+        "sub_topics": [
+          {
+            "key": "magnetic_field_concept",
+            "name": "Concept of Magnetic Field",
+            "short_description": "Understanding magnetic fields as regions around magnets where magnetic forces are exerted on magnetic materials or other magnets.",
+            "example_tasks": [
+              "Define magnetic field as the region of space around a magnet where magnetic forces can be detected",
+              "Map magnetic field patterns using iron filings sprinkled around bar magnets to visualize field lines",
+              "Explain that magnetic field lines form closed loops from north pole to south pole outside the magnet",
+              "Use compasses to trace magnetic field direction at various points around magnets"
+            ]
+          },
+          {
+            "key": "magnetic_field_lines",
+            "name": "Magnetic Field Lines and Direction",
+            "short_description": "Understanding conventions for drawing field lines and interpreting their patterns.",
+            "example_tasks": [
+              "Draw magnetic field line patterns for bar magnets, showing lines emerging from N pole and entering S pole",
+              "Explain that field line density indicates field strength, with closer lines representing stronger fields",
+              "Compare field patterns around single magnets versus interacting magnets (attracting or repelling)",
+              "Describe how compass needles align with field lines, with the north end pointing in the field direction"
+            ]
+          },
+          {
+            "key": "earth_magnetic_field",
+            "name": "Earth's Magnetic Field",
+            "short_description": "Understanding Earth as a giant magnet with a magnetic field that compass needles align with.",
+            "example_tasks": [
+              "Explain how Earth's magnetic field is similar to that of a giant bar magnet with poles near the geographic poles",
+              "Describe how compasses work by aligning with Earth's magnetic field to point approximately north",
+              "Investigate why Earth's magnetic north pole is actually a magnetic south pole (attracts north end of compass)",
+              "Research how animals like birds and sea turtles use Earth's magnetic field for navigation during migration"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "electromagnetism_basics",
+        "name": "Relationship Between Electricity and Magnetism",
+        "short_description": "Discovering how electric currents create magnetic fields and how changing magnetic fields induce electric currents.",
+        "sub_topics": [
+          {
+            "key": "oersted_discovery",
+            "name": "Electric Current Creates Magnetic Field",
+            "short_description": "Understanding Oersted's discovery that current-carrying wires produce magnetic fields around them.",
+            "example_tasks": [
+              "Demonstrate that a compass needle deflects when brought near a current-carrying wire, proving electric current creates magnetism",
+              "Use the right-hand rule to determine the direction of magnetic field around a straight current-carrying wire",
+              "Investigate how reversing current direction reverses the magnetic field direction around the wire",
+              "Explain the historical significance of Oersted's discovery in linking electricity and magnetism"
+            ]
+          },
+          {
+            "key": "magnetic_field_current_loop",
+            "name": "Magnetic Field of Current Loops",
+            "short_description": "Understanding that loops and coils of current-carrying wire create magnetic field patterns similar to bar magnets.",
+            "example_tasks": [
+              "Map the magnetic field around a current loop, showing it resembles a bar magnet with N and S poles",
+              "Explain how coiling wire increases magnetic field strength by adding fields from multiple loops",
+              "Investigate how increasing current or number of turns in a coil strengthens the magnetic field",
+              "Use compasses or iron filings to visualize the field pattern around a current-carrying coil (solenoid)"
+            ]
+          },
+          {
+            "key": "electromagnets",
+            "name": "Electromagnets",
+            "short_description": "Understanding electromagnets as temporary magnets created by current in wire coils, often with iron cores.",
+            "example_tasks": [
+              "Build a simple electromagnet by wrapping insulated wire around an iron nail and connecting to a battery",
+              "Investigate factors that affect electromagnet strength: current, number of coil turns, core material",
+              "Compare electromagnets to permanent magnets, emphasizing that electromagnets can be turned on/off by controlling current",
+              "Test electromagnet strength by measuring the mass or number of objects it can lift"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "electromagnetic_induction",
+        "name": "Electromagnetic Induction",
+        "short_description": "Understanding how changing magnetic fields induce electric currents in conductors, the basis for generators.",
+        "sub_topics": [
+          {
+            "key": "faraday_law",
+            "name": "Faraday's Law of Induction",
+            "short_description": "Understanding that changing magnetic flux through a coil induces voltage and current in the coil.",
+            "example_tasks": [
+              "Demonstrate induced current by moving a magnet in and out of a coil connected to a galvanometer",
+              "Explain that a changing magnetic field, not a static field, is necessary to induce current",
+              "Investigate factors affecting induced voltage: speed of motion, magnet strength, number of coil turns",
+              "Compare induced current direction when magnet approaches versus moves away from the coil"
+            ]
+          },
+          {
+            "key": "lenz_law",
+            "name": "Lenz's Law and Current Direction",
+            "short_description": "Understanding that induced current direction opposes the change that caused it, conserving energy.",
+            "example_tasks": [
+              "Use Lenz's law to predict the direction of induced current when a magnet enters or exits a coil",
+              "Explain how Lenz's law is a consequence of energy conservation (induced current opposes the motion causing it)",
+              "Demonstrate the opposition force by showing that moving a magnet through a coil requires work against induced magnetic field",
+              "Apply Lenz's law to various scenarios involving changing magnetic fields and predict current direction"
+            ]
+          },
+          {
+            "key": "applications_of_induction",
+            "name": "Applications of Electromagnetic Induction",
+            "short_description": "Exploring practical applications including generators, transformers, and induction cooktops.",
+            "example_tasks": [
+              "Explain how electric generators convert mechanical energy to electrical energy using electromagnetic induction",
+              "Describe how transformers use mutual induction to step voltage up or down for efficient power transmission",
+              "Investigate induction cooktops that use changing magnetic fields to induce currents and heat in cookware",
+              "Research wireless charging technology that uses electromagnetic induction to transfer energy without physical connections"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "motors_and_generators",
+        "name": "Electric Motors and Generators",
+        "short_description": "Understanding how motors convert electrical energy to mechanical energy and generators do the reverse.",
+        "sub_topics": [
+          {
+            "key": "electric_motors",
+            "name": "Electric Motors",
+            "short_description": "Understanding how current-carrying coils in magnetic fields experience forces that produce rotation.",
+            "example_tasks": [
+              "Explain the basic principle of motors: magnetic fields exert forces on current-carrying wires, causing rotation",
+              "Describe the role of commutators in DC motors to reverse current direction and maintain continuous rotation",
+              "Build a simple motor using wire coils, magnets, and a battery to demonstrate energy conversion",
+              "Identify everyday applications of electric motors: fans, power tools, electric vehicles, appliances"
+            ]
+          },
+          {
+            "key": "generators",
+            "name": "Electric Generators",
+            "short_description": "Understanding how rotating coils in magnetic fields induce alternating current through electromagnetic induction.",
+            "example_tasks": [
+              "Explain how generators are essentially motors in reverse, converting mechanical to electrical energy",
+              "Describe the role of rotating coils in magnetic fields producing induced voltage through changing magnetic flux",
+              "Compare AC generators (alternators) that produce alternating current to DC generators with commutators",
+              "Trace energy transformations in power plants from fuel/falling water to mechanical rotation to electrical energy"
+            ]
+          },
+          {
+            "key": "motor_generator_comparison",
+            "name": "Comparing Motors and Generators",
+            "short_description": "Understanding the symmetry between motors and generators as energy conversion devices.",
+            "example_tasks": [
+              "Create a comparison table showing motors use electrical energy to produce mechanical motion while generators do the opposite",
+              "Explain how the same device can function as either motor or generator depending on whether you input electricity or mechanical rotation",
+              "Investigate regenerative braking in electric/hybrid vehicles that uses motors as generators to recover energy",
+              "Discuss the importance of electromagnetic induction and motor principles in modern electrical technology"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "electromagnetic_applications",
+        "name": "Applications of Electromagnetism",
+        "short_description": "Exploring practical devices and technologies that rely on electromagnetic principles.",
+        "sub_topics": [
+          {
+            "key": "electromagnet_applications",
+            "name": "Uses of Electromagnets",
+            "short_description": "Identifying applications of electromagnets in everyday technology and industry.",
+            "example_tasks": [
+              "Describe how electromagnets in scrapyards lift and release metal objects by controlling current",
+              "Explain how electric bells and buzzers use electromagnets to create vibrating motion and sound",
+              "Investigate magnetic levitation (maglev) trains that use electromagnets for levitation and propulsion",
+              "Research how MRI machines use powerful electromagnets to create detailed images of the body's interior"
+            ]
+          },
+          {
+            "key": "speakers_and_microphones",
+            "name": "Speakers and Microphones",
+            "short_description": "Understanding how electromagnetic induction enables sound recording and reproduction.",
+            "example_tasks": [
+              "Explain how speakers use electromagnets to convert electrical signals into sound through cone vibration",
+              "Describe how dynamic microphones use electromagnetic induction to convert sound vibrations into electrical signals",
+              "Compare the energy transformations in speakers (electrical to mechanical to sound) and microphones (sound to mechanical to electrical)",
+              "Investigate how headphones and earbuds use the same electromagnetic principles as speakers on a smaller scale"
+            ]
+          },
+          {
+            "key": "relays_and_solenoids",
+            "name": "Relays and Solenoids",
+            "short_description": "Understanding electromagnetic switches and linear actuators used in control systems.",
+            "example_tasks": [
+              "Explain how relays use small currents to control larger currents through electromagnetic switching",
+              "Describe solenoids as electromagnets that produce linear motion when energized, used in door locks and valves",
+              "Investigate applications of relays in automotive systems to control high-current devices like starter motors",
+              "Design a simple relay circuit that uses a low-voltage switch to control a high-voltage device safely"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "thermal_energy_and_heat_transfer",
+    "name": "Thermal Energy and Heat Transfer",
+    "short_description": "Students investigate thermal energy, temperature, heat transfer mechanisms, and the relationship between thermal energy and particle motion in matter.",
+    "sub_topics": [
+      {
+        "key": "temperature_and_thermal_energy",
+        "name": "Temperature and Thermal Energy",
+        "short_description": "Understanding the distinction between temperature and thermal energy and how they relate to particle motion.",
+        "sub_topics": [
+          {
+            "key": "kinetic_theory_temperature",
+            "name": "Kinetic Theory and Temperature",
+            "short_description": "Understanding temperature as a measure of average kinetic energy of particles in a substance.",
+            "example_tasks": [
+              "Explain temperature as the average kinetic energy of particles, with higher temperatures indicating faster-moving particles",
+              "Compare particle motion in hot versus cold substances using molecular models or simulations",
+              "Describe the relationship between temperature and particle speed in solids, liquids, and gases",
+              "Investigate how temperature affects the rate of diffusion, with higher temperatures causing faster spreading"
+            ]
+          },
+          {
+            "key": "temperature_scales",
+            "name": "Temperature Scales",
+            "short_description": "Using Celsius, Fahrenheit, and Kelvin temperature scales and converting between them.",
+            "example_tasks": [
+              "Convert temperatures between Celsius and Fahrenheit using the formulas F = (9/5)C + 32 and C = (5/9)(F - 32)",
+              "Explain the Kelvin scale starting at absolute zero (0 K = -273.15°C), the lowest possible temperature where particle motion ceases",
+              "Convert between Celsius and Kelvin using K = C + 273.15, noting that the degree size is the same",
+              "Compare the reference points for each scale: water freezes at 0°C, 32°F, 273 K and boils at 100°C, 212°F, 373 K"
+            ]
+          },
+          {
+            "key": "thermal_energy_vs_temperature",
+            "name": "Thermal Energy versus Temperature",
+            "short_description": "Distinguishing between thermal energy (total kinetic energy of all particles) and temperature (average kinetic energy per particle).",
+            "example_tasks": [
+              "Explain why a large container of lukewarm water has more thermal energy than a small cup of hot water despite lower temperature",
+              "Compare thermal energy in objects of different masses at the same temperature, showing that more particles mean more total energy",
+              "Predict which object will cause more temperature change when placed in cool water: large warm object or small hot object",
+              "Describe how both temperature and amount of matter determine total thermal energy in a system"
+            ]
+          },
+          {
+            "key": "measuring_temperature",
+            "name": "Measuring Temperature",
+            "short_description": "Using thermometers and understanding how different types measure temperature through thermal expansion or other properties.",
+            "example_tasks": [
+              "Explain how liquid thermometers work using thermal expansion of liquids (mercury or alcohol) in a narrow tube",
+              "Use various thermometer types (liquid, digital, infrared) to measure temperatures and compare readings",
+              "Describe how thermocouple thermometers measure temperature through voltage generated at junctions of different metals",
+              "Investigate proper thermometer use including equilibration time and placement to ensure accurate readings"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "heat_and_heat_transfer",
+        "name": "Heat and Heat Transfer",
+        "short_description": "Understanding heat as energy transfer due to temperature difference and the three mechanisms of heat transfer.",
+        "sub_topics": [
+          {
+            "key": "heat_definition",
+            "name": "Heat as Energy Transfer",
+            "short_description": "Defining heat as thermal energy flowing from higher temperature to lower temperature objects until thermal equilibrium.",
+            "example_tasks": [
+              "Explain that heat is energy in transit between objects at different temperatures, not a property stored in objects",
+              "Describe thermal equilibrium as the state where objects reach the same temperature and heat flow stops",
+              "Predict the direction of heat flow between objects of different temperatures (always from hot to cold)",
+              "Measure temperature changes when hot and cold water are mixed, demonstrating energy transfer to equilibrium"
+            ]
+          },
+          {
+            "key": "conduction",
+            "name": "Conduction",
+            "short_description": "Understanding heat transfer through direct contact as particles collide and transfer kinetic energy.",
+            "example_tasks": [
+              "Demonstrate conduction by heating one end of a metal rod and observing temperature increase along its length",
+              "Explain conduction at the particle level: fast-moving particles collide with slower ones, transferring energy",
+              "Compare thermal conductors (metals like copper and aluminum) to thermal insulators (wood, plastic, air)",
+              "Investigate why metals feel colder than wood at room temperature due to better heat conduction away from your hand"
+            ]
+          },
+          {
+            "key": "convection",
+            "name": "Convection",
+            "short_description": "Understanding heat transfer in fluids through the movement of heated material itself.",
+            "example_tasks": [
+              "Observe convection currents in water heated from below, with warm water rising and cool water sinking",
+              "Explain convection as the circulation of fluid caused by density differences: warm fluid is less dense and rises",
+              "Describe convection's role in atmospheric circulation, ocean currents, and weather patterns",
+              "Investigate home heating systems that use convection to circulate warm air throughout rooms"
+            ]
+          },
+          {
+            "key": "radiation",
+            "name": "Radiation (Thermal Radiation)",
+            "short_description": "Understanding heat transfer through electromagnetic waves without requiring a medium.",
+            "example_tasks": [
+              "Explain how the Sun heats Earth through radiation traveling through the vacuum of space as infrared waves",
+              "Demonstrate radiation by feeling warmth from a heat lamp or campfire without direct contact or air movement",
+              "Describe how all objects emit thermal radiation, with hotter objects emitting more and at shorter wavelengths",
+              "Investigate why dark surfaces absorb and emit radiation better than light, shiny surfaces that reflect it"
+            ]
+          },
+          {
+            "key": "comparing_heat_transfer",
+            "name": "Comparing Heat Transfer Methods",
+            "short_description": "Analyzing situations involving multiple heat transfer mechanisms and their relative effectiveness.",
+            "example_tasks": [
+              "Identify which heat transfer mechanisms are involved in everyday situations (cooking, home heating, thermos bottles)",
+              "Explain how thermos bottles minimize heat transfer by using vacuum (prevents conduction/convection) and reflective surfaces (reduces radiation)",
+              "Compare the speed of heat transfer by conduction in metals versus insulators through simple experiments",
+              "Design an insulated container that minimizes all three heat transfer methods to keep liquids hot or cold"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "specific_heat",
+        "name": "Specific Heat Capacity",
+        "short_description": "Understanding how different materials require different amounts of energy to change temperature.",
+        "sub_topics": [
+          {
+            "key": "specific_heat_concept",
+            "name": "Concept of Specific Heat",
+            "short_description": "Defining specific heat as the amount of energy needed to raise the temperature of 1 kg of a substance by 1°C.",
+            "example_tasks": [
+              "Explain that water has a high specific heat (4,186 J/kg·°C), meaning it requires much energy to change its temperature",
+              "Compare specific heats of different materials: water (high), metals (low), explaining why metals heat and cool quickly",
+              "Describe how high specific heat makes water useful for cooling systems and moderating climate near large bodies of water",
+              "Predict which of two materials will heat up faster when given the same energy based on specific heat values"
+            ]
+          },
+          {
+            "key": "heat_calculation",
+            "name": "Calculating Heat Transfer",
+            "short_description": "Using the equation Q = mcΔT to calculate energy transferred during temperature changes.",
+            "example_tasks": [
+              "Calculate the heat needed to raise 2 kg of water from 20°C to 100°C using Q = mcΔT where c = 4,186 J/kg·°C",
+              "Determine the final temperature when known amounts of heat energy are added to or removed from substances",
+              "Solve problems involving heat exchange between substances, using energy conservation (heat lost = heat gained)",
+              "Calculate specific heat of unknown materials by measuring temperature changes when known energy is added"
+            ]
+          },
+          {
+            "key": "calorimetry",
+            "name": "Calorimetry and Heat Measurement",
+            "short_description": "Using calorimeters to measure heat transfer and determine specific heats experimentally.",
+            "example_tasks": [
+              "Describe how calorimeters are insulated containers used to measure heat exchange with minimal energy loss to surroundings",
+              "Conduct experiments mixing hot and cold water in a calorimeter to verify energy conservation (Q_lost = Q_gained)",
+              "Calculate the specific heat of a metal by heating it and placing it in cool water, measuring temperature changes",
+              "Explain the importance of insulation in calorimetry to ensure accurate measurements by preventing heat loss"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "phase_changes",
+        "name": "Phase Changes and Energy",
+        "short_description": "Understanding how energy is absorbed or released during changes of state without temperature change.",
+        "sub_topics": [
+          {
+            "key": "states_and_phase_changes",
+            "name": "Phase Changes Between States",
+            "short_description": "Identifying the six phase changes and understanding energy changes during transitions.",
+            "example_tasks": [
+              "Name and describe the six phase changes: melting, freezing, vaporization, condensation, sublimation, deposition",
+              "Explain why temperature remains constant during phase changes despite continuous energy addition or removal",
+              "Describe energy absorption during melting/vaporization (endothermic) and energy release during freezing/condensation (exothermic)",
+              "Use heating/cooling curves to identify when a substance is changing phase (flat regions) versus changing temperature (sloped regions)"
+            ]
+          },
+          {
+            "key": "heat_of_fusion",
+            "name": "Heat of Fusion",
+            "short_description": "Understanding the energy required to change between solid and liquid phases at constant temperature.",
+            "example_tasks": [
+              "Define heat of fusion as the energy needed to melt 1 kg of a substance at its melting point (or released when freezing)",
+              "Calculate energy required to melt ice using Q = mL_f where L_f (heat of fusion for water) = 334,000 J/kg",
+              "Explain why ice at 0°C is more effective at cooling drinks than water at 0°C due to energy absorbed during melting",
+              "Compare heats of fusion for different substances and relate to the strength of intermolecular forces"
+            ]
+          },
+          {
+            "key": "heat_of_vaporization",
+            "name": "Heat of Vaporization",
+            "short_description": "Understanding the energy required to change between liquid and gas phases at constant temperature.",
+            "example_tasks": [
+              "Define heat of vaporization as energy needed to vaporize 1 kg of liquid at its boiling point (or released during condensation)",
+              "Calculate energy required to boil water using Q = mL_v where L_v (heat of vaporization for water) = 2,260,000 J/kg",
+              "Explain why steam burns are more severe than hot water burns due to energy released during condensation on skin",
+              "Compare heats of vaporization to heats of fusion, noting that vaporization requires much more energy"
+            ]
+          },
+          {
+            "key": "evaporation_and_cooling",
+            "name": "Evaporation and Cooling",
+            "short_description": "Understanding evaporation as vaporization below boiling point and its cooling effect.",
+            "example_tasks": [
+              "Explain evaporation as surface molecules with highest kinetic energy escaping the liquid, leaving cooler molecules behind",
+              "Describe how sweating cools the body through evaporative cooling as water absorbs heat from skin to evaporate",
+              "Investigate factors affecting evaporation rate: temperature, surface area, air movement, humidity",
+              "Demonstrate evaporative cooling by measuring temperature drop of water in a wet cloth versus dry cloth in moving air"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "thermal_expansion",
+        "name": "Thermal Expansion",
+        "short_description": "Understanding how materials expand when heated and contract when cooled due to increased particle motion.",
+        "sub_topics": [
+          {
+            "key": "expansion_in_solids",
+            "name": "Thermal Expansion in Solids",
+            "short_description": "Understanding how solids expand in length, area, and volume when temperature increases.",
+            "example_tasks": [
+              "Demonstrate thermal expansion by showing how a heated metal ball no longer fits through a ring it passed through when cool",
+              "Explain expansion at the particle level: increased temperature causes particles to vibrate more, increasing average separation",
+              "Describe practical applications: expansion joints in bridges, gaps in railroad tracks, bimetallic strips in thermostats",
+              "Investigate why different materials have different expansion rates (expansion coefficients)"
+            ]
+          },
+          {
+            "key": "expansion_in_liquids_gases",
+            "name": "Thermal Expansion in Liquids and Gases",
+            "short_description": "Understanding that liquids and gases generally expand more than solids when heated.",
+            "example_tasks": [
+              "Explain how liquid thermometers work based on the expansion of liquids (mercury or alcohol) with temperature increase",
+              "Describe the anomalous expansion of water: it expands when cooling from 4°C to 0°C, which is why ice floats",
+              "Investigate gas expansion using balloons or containers, showing gases expand significantly with temperature",
+              "Apply Charles's Law qualitatively: gas volume increases proportionally with temperature at constant pressure"
+            ]
+          },
+          {
+            "key": "expansion_problems",
+            "name": "Problems and Solutions Related to Expansion",
+            "short_description": "Analyzing engineering problems caused by thermal expansion and design solutions to accommodate it.",
+            "example_tasks": [
+              "Explain why bridges have expansion joints to allow for expansion on hot days without buckling",
+              "Describe why power lines sag more in summer than winter due to thermal expansion of the metal cables",
+              "Investigate why glass containers can crack when filled with very hot or very cold liquids (thermal shock)",
+              "Design solutions to thermal expansion problems: using materials with low expansion, adding gaps, using flexible joints"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "engineering_design_process",
+    "name": "Engineering Design Process",
+    "short_description": "Students apply the engineering design process to define problems, develop solutions, optimize designs, and test prototypes using scientific principles.",
+    "sub_topics": [
+      {
+        "key": "defining_problems",
+        "name": "Defining Engineering Problems",
+        "short_description": "Identifying problems, specifying criteria for success, and defining constraints that limit solutions.",
+        "sub_topics": [
+          {
+            "key": "problem_identification",
+            "name": "Identifying and Analyzing Problems",
+            "short_description": "Recognizing needs, understanding the problem context, and gathering relevant information.",
+            "example_tasks": [
+              "Identify a real-world problem that could be solved through engineering (improving insulation, designing a water filter, creating a safety device)",
+              "Gather information about the problem through research, interviews, observations, or surveys",
+              "Analyze the root causes of the problem rather than just the symptoms that are immediately visible",
+              "Document the problem clearly, including who is affected and what impacts it has"
+            ]
+          },
+          {
+            "key": "criteria_and_constraints",
+            "name": "Criteria and Constraints",
+            "short_description": "Defining success criteria (what the solution must accomplish) and constraints (limitations on the solution).",
+            "example_tasks": [
+              "List specific, measurable criteria for a successful solution (must support 5 kg, must cost under $10, must fit in 20 cm space)",
+              "Identify constraints that limit possible solutions: time, materials available, cost, size, safety requirements, environmental impact",
+              "Prioritize criteria by importance: which are essential (must have) versus which are desirable (nice to have)",
+              "Explain how criteria and constraints guide the design process and help evaluate potential solutions"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "developing_solutions",
+        "name": "Developing Possible Solutions",
+        "short_description": "Brainstorming multiple solutions, applying scientific principles, and selecting promising designs.",
+        "sub_topics": [
+          {
+            "key": "brainstorming",
+            "name": "Brainstorming and Generating Ideas",
+            "short_description": "Creating multiple possible solutions without judgment, then evaluating their potential.",
+            "example_tasks": [
+              "Generate at least 3-5 different solution ideas for a problem through sketching, listing, or mind-mapping",
+              "Apply brainstorming rules: defer judgment, encourage wild ideas, build on others' ideas, aim for quantity",
+              "Sketch or describe each potential solution clearly enough for others to understand",
+              "Explain how diverse team members can contribute different perspectives and ideas to brainstorming"
+            ]
+          },
+          {
+            "key": "applying_science",
+            "name": "Applying Scientific Principles",
+            "short_description": "Using physics concepts (forces, energy, electricity, heat) to develop and improve design solutions.",
+            "example_tasks": [
+              "Apply Newton's laws to design a structure that can withstand specific forces without collapsing",
+              "Use energy conservation principles to design a device that efficiently converts one energy form to another",
+              "Apply heat transfer concepts to design insulation that minimizes thermal energy loss",
+              "Use circuit principles to design an electrical system that safely delivers power to components"
+            ]
+          },
+          {
+            "key": "selecting_solutions",
+            "name": "Evaluating and Selecting Solutions",
+            "short_description": "Comparing potential solutions against criteria and constraints to select the most promising design.",
+            "example_tasks": [
+              "Create a decision matrix comparing each solution against the established criteria and constraints",
+              "Score each solution based on how well it meets criteria (1-5 scale) and whether it satisfies constraints",
+              "Justify the selection of one or two solutions to prototype based on evaluation results",
+              "Identify potential weaknesses in selected solutions that should be addressed during development"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "testing_and_optimization",
+        "name": "Testing and Optimizing Designs",
+        "short_description": "Building prototypes, conducting tests, collecting data, and iteratively improving designs based on results.",
+        "sub_topics": [
+          {
+            "key": "prototyping",
+            "name": "Building Prototypes",
+            "short_description": "Creating physical models or prototypes to test design concepts before final production.",
+            "example_tasks": [
+              "Build a prototype using available materials that represents the key features of the design solution",
+              "Explain the purpose of prototyping: testing ideas quickly and cheaply before investing in final products",
+              "Compare rapid prototyping (simple, quick models) to refined prototypes (closer to final product)",
+              "Document the prototype construction process with sketches, photos, or step-by-step descriptions"
+            ]
+          },
+          {
+            "key": "testing_designs",
+            "name": "Testing and Collecting Data",
+            "short_description": "Conducting systematic tests to evaluate how well the prototype meets criteria and identifying failures.",
+            "example_tasks": [
+              "Design fair tests that measure specific criteria (load capacity, insulation effectiveness, circuit voltage)",
+              "Collect quantitative data during testing using appropriate measuring tools (rulers, scales, thermometers, multimeters)",
+              "Conduct multiple trials to ensure results are reliable and identify inconsistencies",
+              "Document both successful performance and failures, noting what went wrong and why"
+            ]
+          },
+          {
+            "key": "analyzing_results",
+            "name": "Analyzing Test Results",
+            "short_description": "Interpreting data to determine if the design meets criteria and identifying areas for improvement.",
+            "example_tasks": [
+              "Compare test results to success criteria, determining which criteria were met and which were not",
+              "Analyze failure modes: identify what failed, when it failed, and what caused the failure",
+              "Use graphs or tables to display test data clearly and identify patterns or trends",
+              "Explain how scientific principles account for observed results (why the design worked or failed)"
+            ]
+          },
+          {
+            "key": "iteration_and_improvement",
+            "name": "Iterative Design and Optimization",
+            "short_description": "Using test results to make design improvements and repeating the test-analyze-improve cycle.",
+            "example_tasks": [
+              "Identify specific design modifications to address failures or improve performance based on test results",
+              "Explain the iterative nature of engineering: design-build-test-improve cycle repeated multiple times",
+              "Compare performance of original prototype to improved versions, showing measurable improvements",
+              "Determine when a design is 'good enough' by evaluating whether it meets all essential criteria within constraints"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "communicating_designs",
+        "name": "Communicating Design Solutions",
+        "short_description": "Presenting design solutions through drawings, models, written reports, and oral presentations.",
+        "sub_topics": [
+          {
+            "key": "technical_drawings",
+            "name": "Technical Drawings and Diagrams",
+            "short_description": "Creating clear drawings with labels and dimensions to communicate design details.",
+            "example_tasks": [
+              "Draw labeled diagrams showing all components of the design with dimensions and materials specified",
+              "Use multiple views (top, front, side) to fully represent three-dimensional objects",
+              "Include a scale or dimensions on drawings so others can accurately reproduce the design",
+              "Create exploded view diagrams showing how components fit together in assemblies"
+            ]
+          },
+          {
+            "key": "design_reports",
+            "name": "Written Design Reports",
+            "short_description": "Documenting the design process, testing results, and conclusions in written format.",
+            "example_tasks": [
+              "Write a design report including: problem statement, criteria/constraints, solutions considered, chosen design, testing procedures, results, conclusions",
+              "Present data in appropriate formats: tables for raw data, graphs for showing relationships or comparisons",
+              "Explain the reasoning behind design decisions, referencing scientific principles where applicable",
+              "Include recommendations for future improvements or additional testing based on current results"
+            ]
+          },
+          {
+            "key": "presentations",
+            "name": "Oral Presentations and Demonstrations",
+            "short_description": "Effectively presenting design solutions to audiences through organized talks and demonstrations.",
+            "example_tasks": [
+              "Prepare a presentation that includes problem definition, design solution, testing process, and results",
+              "Demonstrate the prototype in action, highlighting key features and explaining how it meets criteria",
+              "Use visual aids (posters, slides, models) to support verbal explanations",
+              "Respond to questions about design choices, testing methods, and potential improvements"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "engineering_practices",
+        "name": "Engineering Practices and Considerations",
+        "short_description": "Understanding broader aspects of engineering including teamwork, ethics, sustainability, and real-world applications.",
+        "sub_topics": [
+          {
+            "key": "teamwork_collaboration",
+            "name": "Teamwork and Collaboration",
+            "short_description": "Working effectively in teams with diverse skills and perspectives to solve engineering problems.",
+            "example_tasks": [
+              "Identify different roles team members can play in engineering projects (researcher, designer, builder, tester, presenter)",
+              "Practice effective communication within teams: active listening, clear explanations, constructive feedback",
+              "Resolve disagreements through evidence-based discussion and compromise",
+              "Explain how diverse teams bring different perspectives and expertise that lead to better solutions"
+            ]
+          },
+          {
+            "key": "failure_analysis",
+            "name": "Learning from Failure",
+            "short_description": "Understanding that failure is a valuable part of engineering, providing information for improvement.",
+            "example_tasks": [
+              "Analyze famous engineering failures (bridge collapses, product recalls) to understand what went wrong and lessons learned",
+              "Explain how failure during testing is preferable to failure after deployment, allowing for improvements",
+              "Document failures systematically: what failed, under what conditions, possible causes, proposed fixes",
+              "Describe how engineers use failure analysis to improve designs and prevent future problems"
+            ]
+          },
+          {
+            "key": "sustainability",
+            "name": "Sustainability and Environmental Impact",
+            "short_description": "Considering environmental impacts, resource use, and long-term sustainability in engineering designs.",
+            "example_tasks": [
+              "Evaluate designs based on environmental criteria: material sustainability, energy efficiency, recyclability, lifetime impact",
+              "Compare renewable versus non-renewable materials and energy sources in design choices",
+              "Analyze life cycle impacts: production, use, and disposal/recycling of engineered products",
+              "Propose modifications to existing designs to improve sustainability (reduce energy use, use recycled materials, improve longevity)"
+            ]
+          },
+          {
+            "key": "ethics_and_safety",
+            "name": "Ethics and Safety in Engineering",
+            "short_description": "Understanding ethical responsibilities and safety considerations in engineering practice.",
+            "example_tasks": [
+              "Identify safety hazards in designs and propose safety features to protect users",
+              "Discuss ethical considerations: who benefits from the design, who might be harmed, is it accessible to all who need it",
+              "Explain engineers' responsibility to prioritize public safety over cost or convenience",
+              "Research case studies where ethical considerations played important roles in engineering decisions"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "energy_in_chemical_processes",
+    "name": "Energy in Chemical Processes and Everyday Life",
+    "short_description": "Students explore energy changes in chemical reactions, including exothermic and endothermic processes, and analyze energy transformations in everyday systems.",
+    "sub_topics": [
+      {
+        "key": "energy_in_reactions",
+        "name": "Energy Changes in Chemical Reactions",
+        "short_description": "Understanding that chemical reactions involve energy changes as bonds are broken and formed.",
+        "sub_topics": [
+          {
+            "key": "bond_energy",
+            "name": "Chemical Bonds and Energy",
+            "short_description": "Understanding that energy is required to break bonds and released when bonds form.",
+            "example_tasks": [
+              "Explain that breaking chemical bonds requires energy input (endothermic process) while forming bonds releases energy (exothermic process)",
+              "Describe how the difference between energy needed to break bonds and energy released forming bonds determines if a reaction releases or absorbs energy overall",
+              "Diagram energy changes during a reaction showing bonds breaking in reactants and new bonds forming in products",
+              "Compare strong bonds (require more energy to break) to weak bonds (require less energy to break)"
+            ]
+          },
+          {
+            "key": "exothermic_reactions",
+            "name": "Exothermic Reactions",
+            "short_description": "Understanding reactions that release energy to surroundings, usually as heat and sometimes light.",
+            "example_tasks": [
+              "Identify exothermic reactions: combustion, many oxidation reactions, neutralization reactions, crystallization",
+              "Conduct exothermic reaction experiments (hand warmers, neutralizing acid and base) and measure temperature increases",
+              "Explain why exothermic reactions release energy: more energy released forming product bonds than absorbed breaking reactant bonds",
+              "Describe applications of exothermic reactions: heating, cooking, engines, explosives, hand warmers"
+            ]
+          },
+          {
+            "key": "endothermic_reactions",
+            "name": "Endothermic Reactions",
+            "short_description": "Understanding reactions that absorb energy from surroundings, causing temperature decreases.",
+            "example_tasks": [
+              "Identify endothermic reactions: photosynthesis, thermal decomposition, dissolving some salts (ammonium nitrate in water)",
+              "Conduct endothermic reaction experiments (instant cold packs) and measure temperature decreases",
+              "Explain why endothermic reactions absorb energy: more energy needed to break reactant bonds than released forming product bonds",
+              "Describe applications of endothermic reactions: cold packs, refrigeration, photosynthesis storing solar energy"
+            ]
+          },
+          {
+            "key": "activation_energy",
+            "name": "Activation Energy",
+            "short_description": "Understanding that reactions require initial energy input (activation energy) to break bonds and get started.",
+            "example_tasks": [
+              "Explain activation energy as the minimum energy needed to start a chemical reaction by breaking initial bonds",
+              "Use energy diagrams to show activation energy as the 'hill' that must be overcome for reactions to proceed",
+              "Describe how catalysts lower activation energy, allowing reactions to proceed faster at lower temperatures",
+              "Give examples of activation energy: striking a match, lighting a Bunsen burner, spark plugs in engines"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "combustion",
+        "name": "Combustion Reactions",
+        "short_description": "Understanding combustion as exothermic reactions with oxygen that release energy for heating and power.",
+        "sub_topics": [
+          {
+            "key": "combustion_basics",
+            "name": "Combustion Reactions and Products",
+            "short_description": "Understanding combustion as rapid reaction with oxygen producing heat, light, and specific products.",
+            "example_tasks": [
+              "Write word equations for combustion reactions: fuel + oxygen → carbon dioxide + water + energy",
+              "Identify requirements for combustion: fuel, oxygen, and activation energy (ignition temperature)",
+              "Explain complete combustion (sufficient oxygen) versus incomplete combustion (limited oxygen producing carbon monoxide or soot)",
+              "Test combustion products by collecting gases and testing with limewater (CO₂) or cobalt chloride paper (water)"
+            ]
+          },
+          {
+            "key": "fuels_and_energy",
+            "name": "Fuels and Energy Release",
+            "short_description": "Comparing energy content of different fuels and understanding factors affecting energy release.",
+            "example_tasks": [
+              "Compare energy density of different fuels (wood, coal, natural gas, gasoline) in terms of energy released per unit mass",
+              "Explain why hydrocarbons (molecules containing only carbon and hydrogen) make good fuels due to high energy content",
+              "Calculate energy released during combustion of known fuel masses using calorimetry experiments",
+              "Discuss renewable versus non-renewable fuels and environmental impacts of combustion"
+            ]
+          },
+          {
+            "key": "fire_safety",
+            "name": "Fire Triangle and Fire Safety",
+            "short_description": "Understanding the fire triangle (fuel, oxygen, heat) and methods to extinguish fires by removing one element.",
+            "example_tasks": [
+              "Explain the fire triangle: combustion requires fuel, oxygen, and heat (activation energy)",
+              "Describe fire extinguishing methods: removing fuel, excluding oxygen (smothering), cooling below ignition temperature",
+              "Identify appropriate fire extinguishers for different fire types (water for wood/paper, CO₂ for electrical, foam for oil)",
+              "Analyze fire safety in buildings: smoke detectors, sprinklers, fire doors, evacuation routes"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "energy_transformations_systems",
+        "name": "Energy Transformations in Systems",
+        "short_description": "Analyzing how energy is transformed and transferred in complex systems including vehicles, power plants, and living organisms.",
+        "sub_topics": [
+          {
+            "key": "energy_in_vehicles",
+            "name": "Energy Transformations in Vehicles",
+            "short_description": "Tracing energy conversions in cars, bicycles, and other transportation devices.",
+            "example_tasks": [
+              "Trace energy transformations in gasoline cars: chemical energy (fuel) → thermal energy (combustion) → kinetic energy (motion)",
+              "Compare energy efficiency of different vehicles, explaining where energy is 'lost' as waste heat and friction",
+              "Analyze energy transformations in electric vehicles: chemical (battery) → electrical → kinetic (motor)",
+              "Calculate the efficiency of a vehicle engine by comparing useful kinetic energy output to total chemical energy input"
+            ]
+          },
+          {
+            "key": "power_generation",
+            "name": "Energy in Power Plants",
+            "short_description": "Understanding how power plants convert various energy sources into electrical energy.",
+            "example_tasks": [
+              "Trace energy transformations in coal power plants: chemical (coal) → thermal (combustion) → kinetic (steam turbine) → electrical (generator)",
+              "Compare different power plant types: fossil fuel, nuclear, hydroelectric, wind, solar, in terms of energy conversions",
+              "Explain why power plants are typically only 30-40% efficient, with most energy lost as waste heat",
+              "Diagram the complete energy flow from fuel source through transmission lines to end users"
+            ]
+          },
+          {
+            "key": "energy_in_living_systems",
+            "name": "Energy in Living Organisms",
+            "short_description": "Understanding how organisms obtain, transform, and use energy for life processes.",
+            "example_tasks": [
+              "Explain photosynthesis as endothermic conversion of light energy to chemical energy stored in glucose",
+              "Describe cellular respiration as exothermic conversion of chemical energy (food) to ATP for cellular work",
+              "Trace energy flow in ecosystems from sunlight → producers → consumers → decomposers",
+              "Calculate the energy efficiency of human bodies in converting food energy to useful work versus waste heat"
+            ]
+          },
+          {
+            "key": "energy_in_home",
+            "name": "Energy Use in the Home",
+            "short_description": "Analyzing energy transformations and consumption in household appliances and systems.",
+            "example_tasks": [
+              "Identify energy transformations in common appliances: toaster (electrical → thermal), TV (electrical → light + sound), fan (electrical → kinetic)",
+              "Calculate energy consumption of household devices using power ratings and usage time (kWh = kW × hours)",
+              "Evaluate home energy efficiency: insulation, LED vs incandescent bulbs, Energy Star appliances",
+              "Propose energy conservation strategies for homes based on understanding of energy transformations and waste"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "renewable_nonrenewable_energy",
+        "name": "Renewable and Non-Renewable Energy Sources",
+        "short_description": "Comparing different energy sources based on renewability, environmental impact, and sustainability.",
+        "sub_topics": [
+          {
+            "key": "fossil_fuels",
+            "name": "Fossil Fuels",
+            "short_description": "Understanding formation, uses, and environmental impacts of coal, oil, and natural gas.",
+            "example_tasks": [
+              "Explain how fossil fuels formed from ancient organic matter over millions of years, making them non-renewable",
+              "Compare advantages (high energy density, established infrastructure) and disadvantages (pollution, climate change, finite supply) of fossil fuels",
+              "Analyze the carbon cycle and how burning fossil fuels increases atmospheric CO₂ concentrations",
+              "Calculate carbon footprints of different activities based on fossil fuel consumption"
+            ]
+          },
+          {
+            "key": "renewable_sources",
+            "name": "Renewable Energy Sources",
+            "short_description": "Exploring solar, wind, hydroelectric, geothermal, and biomass energy as sustainable alternatives.",
+            "example_tasks": [
+              "Compare renewable energy sources: solar (radiant → electrical), wind (kinetic → electrical), hydroelectric (gravitational potential → kinetic → electrical)",
+              "Explain advantages of renewables: sustainable, cleaner, reduce greenhouse gases; and challenges: intermittency, initial costs, location-dependent",
+              "Analyze energy transformations in solar panels (photovoltaic cells converting light directly to electricity)",
+              "Research local renewable energy projects and their contributions to regional energy needs"
+            ]
+          },
+          {
+            "key": "nuclear_energy",
+            "name": "Nuclear Energy",
+            "short_description": "Introducing nuclear fission as an energy source with high energy density but unique challenges.",
+            "example_tasks": [
+              "Explain at a basic level that nuclear fission splits atomic nuclei, releasing enormous amounts of energy from mass-energy conversion",
+              "Compare nuclear energy advantages (no greenhouse gases, high energy density) to disadvantages (radioactive waste, safety concerns, high costs)",
+              "Describe energy transformations in nuclear plants: nuclear → thermal → kinetic (steam) → electrical",
+              "Discuss the importance of safe nuclear waste storage and reactor containment systems"
+            ]
+          },
+          {
+            "key": "energy_future",
+            "name": "Future Energy Solutions",
+            "short_description": "Exploring emerging technologies and the transition toward sustainable energy systems.",
+            "example_tasks": [
+              "Research emerging energy technologies: fusion power, improved solar cells, advanced batteries, hydrogen fuel cells",
+              "Analyze the concept of energy portfolios: using multiple energy sources together for reliability and sustainability",
+              "Propose solutions for local energy challenges based on available resources, climate, and population needs",
+              "Debate the trade-offs between different energy sources considering environmental, economic, and social factors"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

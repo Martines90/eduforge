@@ -767,9 +767,9 @@ export class TaskController {
         }
       }
 
-      // Generate public share link
-      const baseUrl = process.env.FRONTEND_URL || "http://localhost:3000";
-      const publicShareLink = `${baseUrl}/tasks/${task_id}`;
+      // Generate public share link using centralized config
+      const { config } = await import("../config");
+      const publicShareLink = `${config.frontendUrl}/tasks/${task_id}`;
 
       res.status(201).json({
         success: true,
