@@ -218,6 +218,42 @@ async function importSubjectGrade(
     `\n📚 Processing ${gradeConfig.labelEN} (${jsonData.length} main topics)`
   );
 
+  // IMPORTANT: Create parent documents first to ensure they exist in Firestore
+  // Without this, the parent docs won't be queryable even though subcollections exist
+  console.log(`\n📝 Creating parent documents...`);
+
+  // Create country document
+  const countryDocRef = db.collection("countries").doc(country);
+  await countryDocRef.set(
+    {
+      id: country,
+      name: country,
+      createdAt: Timestamp.now(),
+      updatedAt: Timestamp.now(),
+    },
+    { merge: true }
+  );
+  console.log(`   ✓ Created/updated country document: ${country}`);
+
+  // Create subject document under subjectMappings
+  const subjectDocRef = db
+    .collection("countries")
+    .doc(country)
+    .collection("subjectMappings")
+    .doc(subjectKey);
+  await subjectDocRef.set(
+    {
+      id: subjectKey,
+      name: SUBJECTS[subjectKey],
+      createdAt: Timestamp.now(),
+      updatedAt: Timestamp.now(),
+    },
+    { merge: true }
+  );
+  console.log(
+    `   ✓ Created/updated subject document: ${country}/subjectMappings/${subjectKey}`
+  );
+
   // Create root node for this grade
   const gradeDocId = generateDocId(gradeConfig.value, "root");
 

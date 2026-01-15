@@ -10,6 +10,9 @@ import {
   getMeasurementSystem,
 } from "./measurement-system.helper";
 import { TASK_CHARACTER_LENGTH } from "@eduforger/shared/task-generation";
+import { getSubjectType } from "./subject-type.helper";
+import { Subject } from "@eduforger/shared";
+import { composeTemplate } from "./template-composer";
 
 /**
  * Builds a complete system prompt by interpolating the template with all required data
@@ -17,40 +20,25 @@ import { TASK_CHARACTER_LENGTH } from "@eduforger/shared/task-generation";
  * @returns The fully interpolated system prompt ready to use
  */
 export function buildSystemPrompt(request: TaskGeneratorRequest): string {
-  // Load the system prompt template
-  // Path varies based on environment:
-  // - Production/compiled: /workspace/dist/backend/src/utils/ -> /workspace/dist/genai/prompts/
-  // - Development/tests: /workspace/backend/src/utils/ -> /workspace/backend/src/genai/prompts/
+  // Extract subject from curriculum path
+  // Format: "country:subject:grade:topic..."
+  const pathParts = request.curriculum_path.split(":");
+  const subject =
+    pathParts.length >= 2 ? (pathParts[1] as Subject) : "mathematics";
 
-  // Try compiled path first (dist), then source path (src)
-  const compiledPath = path.join(
-    __dirname,
-    "../../../genai/prompts/latest/system_prompt.template"
-  );
-  const sourcePath = path.join(
-    __dirname,
-    "../genai/prompts/latest/system_prompt.template.md"
-  );
+  console.log(`📚 Detected subject: ${subject}`);
 
+  // Use the modular template composition system
+  // This composes the template from core modules + subject-specific modules
   let systemPrompt = "";
-  let templatePath = compiledPath;
 
   try {
-    // Try compiled path first (production/built code)
-    if (fs.existsSync(compiledPath)) {
-      systemPrompt = fs.readFileSync(compiledPath, "utf-8");
-      templatePath = compiledPath;
-    } else if (fs.existsSync(sourcePath)) {
-      // Fall back to source path (development/tests)
-      systemPrompt = fs.readFileSync(sourcePath, "utf-8");
-      templatePath = sourcePath;
-    } else {
-      throw new Error(`Template not found in either compiled (${compiledPath}) or source (${sourcePath}) path`);
-    }
+    console.log(`🔨 Composing modular template for ${subject}...`);
+    systemPrompt = composeTemplate(subject);
+    console.log(`✅ Modular template composed successfully`);
   } catch (error) {
-    console.error("❌ Error loading system prompt template:", error);
-    console.error("❌ Attempted paths:", { compiledPath, sourcePath });
-    throw new Error("Failed to load system prompt template");
+    console.error("❌ Error composing modular template:", error);
+    throw new Error(`Failed to compose template for subject: ${subject}`);
   }
 
   // Load the scenario inspiration library
@@ -71,7 +59,9 @@ export function buildSystemPrompt(request: TaskGeneratorRequest): string {
     } else if (fs.existsSync(sourceScenarioPath)) {
       scenarioLibrary = fs.readFileSync(sourceScenarioPath, "utf-8");
     } else {
-      console.warn("⚠️  Scenario inspiration library not found in either compiled or source path");
+      console.warn(
+        "⚠️  Scenario inspiration library not found in either compiled or source path"
+      );
     }
   } catch (error) {
     console.warn("⚠️  Could not load scenario inspiration library:", error);
@@ -122,19 +112,27 @@ export function buildSystemPrompt(request: TaskGeneratorRequest): string {
     console.log(`   Subject: ${curriculumPathResult.subject}`);
     console.log(`   Grade: ${curriculumPathResult.gradeLevel}`);
     console.log(`   Country: ${curriculumPathResult.country}`);
-    console.log(`   Short description: ${curriculumPathResult.topic.short_description || 'N/A'}`);
+    console.log(
+      `   Short description: ${curriculumPathResult.topic.short_description || "N/A"}`
+    );
 
     // Log example tasks
-    const exampleTasks = curriculumPathResult.topic.example_tasks ||
-                         curriculumPathResult.topic["example_tasks (COMPLETED)"] || [];
+    const exampleTasks =
+      curriculumPathResult.topic.example_tasks ||
+      (curriculumPathResult.topic as any)["example_tasks (COMPLETED)"] ||
+      [];
     console.log(`   Example tasks count: ${exampleTasks.length}`);
     if (exampleTasks.length > 0) {
       console.log(`   Example tasks:`);
       exampleTasks.forEach((task: string, i: number) => {
-        console.log(`     ${i + 1}. ${task.substring(0, 100)}${task.length > 100 ? '...' : ''}`);
+        console.log(
+          `     ${i + 1}. ${task.substring(0, 100)}${task.length > 100 ? "..." : ""}`
+        );
       });
     } else {
-      console.warn(`   ⚠️  NO EXAMPLE TASKS FOUND! This will cause generic task generation!`);
+      console.warn(
+        `   ⚠️  NO EXAMPLE TASKS FOUND! This will cause generic task generation!`
+      );
     }
   }
   console.log(`${"=".repeat(80)}\n`);
@@ -203,7 +201,13 @@ export function buildSystemPrompt(request: TaskGeneratorRequest): string {
   // Combine the template with additional context
   const finalPrompt = systemPrompt + additionalContext;
 
+  // Determine subject type for logging
+  const subjectType = getSubjectType(subject);
+
   console.log("✅ Built enhanced system prompt with all context");
+  console.log(`   - Subject: ${subject.toUpperCase()}`);
+  console.log(`   - Subject type: ${subjectType.toUpperCase()}`);
+  console.log(`   - Template: Modular (core + ${subject}-specific modules)`);
   console.log(`   - Template length: ${systemPrompt.length} chars`);
   console.log(
     `   - Scenario library: ${scenarioLibrary ? scenarioLibrary.length + " chars (included)" : "not loaded"}`
@@ -240,7 +244,7 @@ function buildTaskInputJson(
     const topic = curriculumPathResult.topic;
     // Get example tasks from either property name
     const exampleTasks =
-      topic.example_tasks || topic["example_tasks (COMPLETED)"] || [];
+      topic.example_tasks || (topic as any)["example_tasks (COMPLETED)"] || [];
 
     inputJson.curriculum_topic = {
       key: topic.key,

@@ -144,63 +144,103 @@ IMPORTANT:
     responseText: string,
     variations: TaskVariation[]
   ): TaskSelectionResult {
-    try {
-      // Remove markdown code blocks if present
-      let cleanedText = responseText.trim();
-      cleanedText = cleanedText.replace(/^```json\s*/i, "");
-      cleanedText = cleanedText.replace(/^```\s*/i, "");
-      cleanedText = cleanedText.replace(/\s*```$/i, "");
-      cleanedText = cleanedText.trim();
+    // Remove markdown code blocks if present
+    let cleanedText = responseText.trim();
+    cleanedText = cleanedText.replace(/^```json\s*/i, "");
+    cleanedText = cleanedText.replace(/^```\s*/i, "");
+    cleanedText = cleanedText.replace(/\s*```$/i, "");
+    cleanedText = cleanedText.trim();
 
-      // Try to extract JSON from the response
-      const jsonMatch = cleanedText.match(/\{[\s\S]*\}/);
-      if (jsonMatch) {
-        const selectionData = JSON.parse(jsonMatch[0]);
-
-        // Validate selected_index
-        const selectedIndex =
-          typeof selectionData.selected_index === "number"
-            ? selectionData.selected_index
-            : 0;
-
-        // Ensure index is valid (0, 1, or 2)
-        const validIndex = Math.max(0, Math.min(2, selectedIndex));
-
-        return {
-          selected_index: validIndex,
-          selected_task: variations[validIndex],
-          reasoning:
-            selectionData.reasoning ||
-            "Selected based on overall quality and curriculum alignment.",
-          scores: {
-            task_1: selectionData.scores?.task_1 || 7.5,
-            task_2: selectionData.scores?.task_2 || 7.5,
-            task_3: selectionData.scores?.task_3 || 7.5,
-          },
-          image_visual_description:
-            selectionData.image_visual_description ||
-            "A scene depicting the context and setting of the educational task.",
-        };
-      }
-    } catch (error) {
-      console.warn("⚠️  Failed to parse selection JSON:", error);
-      console.warn("⚠️  Raw response:", responseText.substring(0, 200));
+    // Try to extract JSON from the response
+    const jsonMatch = cleanedText.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) {
+      console.error("❌ TASK SELECTION FAILED: No JSON found in AI response");
+      console.error("   Raw response:", responseText.substring(0, 500));
+      throw new Error(
+        "Task selection failed: AI did not return valid JSON. The response could not be parsed. Please try again or contact support if the issue persists."
+      );
     }
 
-    // Fallback: select the first variation
-    console.warn("⚠️  Using fallback selection (task 1)");
+    let selectionData: any;
+    try {
+      selectionData = JSON.parse(jsonMatch[0]);
+    } catch (parseError) {
+      console.error("❌ TASK SELECTION FAILED: Invalid JSON in AI response");
+      console.error("   JSON parse error:", parseError);
+      console.error("   Attempted to parse:", jsonMatch[0].substring(0, 500));
+      throw new Error(
+        "Task selection failed: AI returned malformed JSON. The selection data could not be parsed. Please try again or contact support if the issue persists."
+      );
+    }
+
+    // Validate selected_index exists and is a number
+    if (
+      typeof selectionData.selected_index !== "number" ||
+      selectionData.selected_index < 0 ||
+      selectionData.selected_index > 2
+    ) {
+      console.error("❌ TASK SELECTION FAILED: Invalid selected_index");
+      console.error("   Received:", selectionData.selected_index);
+      console.error("   Expected: 0, 1, or 2");
+      throw new Error(
+        `Task selection failed: AI returned invalid task index (${selectionData.selected_index}). Expected a number between 0 and 2. Please try again or contact support if the issue persists.`
+      );
+    }
+
+    // Validate scores exist
+    if (
+      !selectionData.scores ||
+      typeof selectionData.scores.task_1 !== "number" ||
+      typeof selectionData.scores.task_2 !== "number" ||
+      typeof selectionData.scores.task_3 !== "number"
+    ) {
+      console.error("❌ TASK SELECTION FAILED: Missing or invalid scores");
+      console.error("   Received scores:", selectionData.scores);
+      throw new Error(
+        "Task selection failed: AI did not provide valid scores for all tasks. The evaluation data is incomplete. Please try again or contact support if the issue persists."
+      );
+    }
+
+    // Validate reasoning exists
+    if (!selectionData.reasoning || typeof selectionData.reasoning !== "string") {
+      console.error("❌ TASK SELECTION FAILED: Missing reasoning");
+      console.error("   Received reasoning:", selectionData.reasoning);
+      throw new Error(
+        "Task selection failed: AI did not provide reasoning for the selection. The evaluation is incomplete. Please try again or contact support if the issue persists."
+      );
+    }
+
+    // Validate image_visual_description exists
+    if (
+      !selectionData.image_visual_description ||
+      typeof selectionData.image_visual_description !== "string"
+    ) {
+      console.error("❌ TASK SELECTION FAILED: Missing image visual description");
+      console.error(
+        "   Received description:",
+        selectionData.image_visual_description
+      );
+      throw new Error(
+        "Task selection failed: AI did not provide a visual description for image generation. The selection data is incomplete. Please try again or contact support if the issue persists."
+      );
+    }
+
+    const selectedIndex = selectionData.selected_index;
+
+    console.log("✅ Task selection response validated successfully");
+    console.log(`   Selected task: ${selectedIndex + 1}`);
+    console.log(`   Scores: ${selectionData.scores.task_1.toFixed(1)}, ${selectionData.scores.task_2.toFixed(1)}, ${selectionData.scores.task_3.toFixed(1)}`);
+
     return {
-      selected_index: 0,
-      selected_task: variations[0],
-      reasoning:
-        "Selected first variation due to parsing error. All variations appear to meet curriculum requirements.",
+      selected_index: selectedIndex,
+      selected_task: variations[selectedIndex],
+      reasoning: selectionData.reasoning,
       scores: {
-        task_1: 8.0,
-        task_2: 7.5,
-        task_3: 7.5,
+        task_1: selectionData.scores.task_1,
+        task_2: selectionData.scores.task_2,
+        task_3: selectionData.scores.task_3,
       },
-      image_visual_description:
-        "A scene depicting the context and setting of the educational task.",
+      image_visual_description: selectionData.image_visual_description,
     };
   }
 }

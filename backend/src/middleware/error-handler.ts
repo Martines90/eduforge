@@ -26,7 +26,9 @@ export const errorHandler = (
   });
 
   res.status(statusCode).json({
+    success: false,
     error: message,
+    message: message, // Include both for compatibility
     ...(process.env.NODE_ENV === "development" && { stack: err.stack }),
   });
 };

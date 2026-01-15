@@ -6,3 +6,4 @@ export * from "./measurement-system.helper";
 export * from "./curriculum-path.helper";
 export * from "./curriculum-mapper.helper";
 export * from "./system-prompt-builder.helper";
+export * from "./subject-type.helper";
