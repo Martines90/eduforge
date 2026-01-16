@@ -1,294 +1,445 @@
-# 📚 LITERATURE - ANALYSIS TYPES & STRUCTURES
+# 📚 LITERATURE - SOURCE TYPES & KNOWLEDGE DOMAINS
 
-## 🎯 TYPES OF LITERARY ANALYSIS
+## 🎯 CORE LITERARY KNOWLEDGE CATEGORIES
 
-Different curriculum topics require different analytical approaches. Match the analysis type to the literary skill being taught.
+Literature education develops **4 interconnected knowledge domains**:
 
 ---
 
-## 👤 CHARACTER ANALYSIS
+## 1. 📖 LEXICAL KNOWLEDGE (Who, What, When, Where)
 
-### What Students Analyze:
+### What Students Know:
+- **Authors & Biographical Context**: Life circumstances influencing works, historical period, cultural background
+- **Literary Movements**: Romanticism, Realism, Modernism, Postmodernism - defining characteristics
+- **Works & Genres**: Novels, poetry, drama, essays - canonical and contemporary texts
+- **Characters & Plots**: Major works' storylines, character relationships, narrative arcs
+- **Historical & Cultural Context**: When/where works were written, social conditions, reception history
+- **Literary Terminology**: Metaphor, symbolism, irony, narrative voice, meter, structure
+
+### Why It Matters:
+Foundation for all literary analysis. You can't analyze what Don Quixote represents without knowing the picaresque tradition, Counter-Reformation Spain, and Cervantes' own captivity experience.
+
+---
+
+## 2. 🔍 ANALYTICAL KNOWLEDGE (How to Interpret)
+
+### Core Analytical Skills:
+
+#### **A. CHARACTER ANALYSIS**
 - Personality traits and motivations
 - Character development and change over time
 - Relationships between characters
-- How authors reveal character (dialogue, actions, descriptions)
+- How authors reveal character (dialogue, actions, descriptions, internal monologue)
 
-### Evidence Required:
-✅ **PROVIDE:**
+**Evidence Required:**
 - Direct dialogue spoken by the character
 - Descriptions of character actions
 - Other characters' reactions or descriptions
 - Internal monologue or narrator's commentary
 
-### Analytical Questions:
-- "How does the author characterize [character] as [trait]?"
-- "What evidence shows [character]'s motivation for [action]?"
-- "How does [character] change from [point A] to [point B]?"
-- "What do [character]'s choices reveal about their values?"
+**Real-World Application:**
+Theater director analyzing role for casting, screenwriter adapting character for different medium, actor preparing character interpretation.
 
-### Real-World Contexts:
-- Theater director analyzing role for casting/performance
-- Screenwriter adapting character for different medium
-- Literary scholar examining psychological complexity
-- Actor preparing character interpretation
-
----
-
-## 🎨 SYMBOLISM & IMAGERY
-
-### What Students Analyze:
+#### **B. SYMBOLISM & IMAGERY**
 - Recurring images and what they represent
 - How symbols develop meaning through context
 - Connection between literal and symbolic meanings
 - Patterns of imagery creating larger themes
 
-### Evidence Required:
-✅ **PROVIDE:**
+**Evidence Required:**
 - Multiple passages containing the symbolic element
 - Sufficient context to show pattern
 - Descriptions of images/objects being analyzed
 - Enough examples to identify recurrence
 
-### Analytical Questions:
-- "What does [image/object] symbolize in this work?"
-- "How does the author use [imagery] to represent [abstract concept]?"
-- "Trace the pattern of [symbolic element] through these excerpts"
-- "What connection exists between [symbol] and [theme]?"
+**Real-World Application:**
+Literary scholar publishing symbolic interpretation, museum curator explaining literary artifacts' significance, film director translating literary symbols to visual medium.
 
-### Real-World Contexts:
-- Literary scholar publishing symbolic interpretation
-- Museum curator explaining literary artifacts' significance
-- Film director translating literary symbols to visual medium
-- Cultural analyst examining symbolic traditions
-
----
-
-## 💭 THEME ANALYSIS
-
-### What Students Analyze:
+#### **C. THEME ANALYSIS**
 - Central ideas explored in the text
 - How themes develop through plot, character, symbolism
 - Multiple perspectives on a thematic question
 - Relevance of themes to human experience
 
-### Evidence Required:
-✅ **PROVIDE:**
+**Evidence Required:**
 - Multiple excerpts showing theme from different angles
 - Examples spanning different parts of the work
 - Quotes showing theme in dialogue, description, action
 - Sufficient breadth to show thematic development
 
-### Analytical Questions:
-- "What theme does the author explore through [events/characters]?"
-- "How do these excerpts develop the theme of [concept]?"
-- "What perspective does the text take on [thematic question]?"
-- "How does [element] contribute to the theme of [idea]?"
+**Real-World Application:**
+Publisher evaluating manuscript's thematic relevance, educator selecting texts for thematic curriculum unit, screenwriter identifying core themes for adaptation.
 
-### Real-World Contexts:
-- Publisher evaluating manuscript's thematic relevance
-- Educator selecting texts for thematic curriculum unit
-- Literary critic analyzing cultural significance
-- Screenwriter identifying core themes for adaptation
-
----
-
-## 🏗️ NARRATIVE STRUCTURE
-
-### What Students Analyze:
-- Plot organization (chronological, flashback, circular, etc.)
+#### **D. NARRATIVE STRUCTURE**
+- Plot organization (chronological, flashback, circular, non-linear)
 - Narrative perspective (first person, third person, unreliable narrator)
 - Pacing and tension building
 - How structure affects meaning and impact
 
-### Evidence Required:
-✅ **PROVIDE:**
+**Evidence Required:**
 - Excerpts from different structural points (beginning, middle, end)
 - Examples of narrative techniques being used
 - Passages showing perspective or voice
 - Enough text to demonstrate structural pattern
 
-### Analytical Questions:
-- "How does the narrative structure affect the reader's understanding?"
-- "What is the effect of the author's use of [narrative technique]?"
-- "How does the narrator's perspective shape the story?"
-- "Why does the author structure the narrative as [pattern]?"
+**Real-World Application:**
+Editor evaluating manuscript structure, writing instructor teaching narrative techniques, screenwriter restructuring narrative for film.
 
-### Real-World Contexts:
-- Editor evaluating manuscript structure
-- Writing instructor teaching narrative techniques
-- Literary scholar analyzing formal innovation
-- Screenwriter restructuring narrative for film
-
----
-
-## 🎭 DRAMATIC & RHETORICAL TECHNIQUES
-
-### What Students Analyze:
-- Literary devices (metaphor, simile, irony, etc.)
-- Sound devices (alliteration, assonance, rhythm)
+#### **E. LITERARY TECHNIQUES & CRAFT**
+- Literary devices (metaphor, simile, irony, paradox, allusion)
+- Sound devices (alliteration, assonance, rhythm, rhyme)
 - Rhetorical strategies (repetition, parallelism, contrast)
 - How techniques create specific effects
 
-### Evidence Required:
-✅ **PROVIDE:**
+**Evidence Required:**
 - Specific passages containing the techniques
 - Sufficient context to understand effect
 - Multiple examples if analyzing a pattern
-- Original language (for poetry, maintain line breaks)
+- Original language preserved (for poetry, maintain line breaks)
 
-### Analytical Questions:
-- "How does the author's use of [device] create [effect]?"
-- "What is the function of [rhetorical technique] in this passage?"
-- "How does [sound pattern] contribute to meaning?"
-- "Why does the author employ [literary technique] here?"
+**Real-World Application:**
+Translator preserving literary effects in new language, poet analyzing craft techniques, speech writer studying rhetorical effectiveness.
 
-### Real-World Contexts:
-- Translator preserving literary effects in new language
-- Poet analyzing craft techniques
-- Speech writer studying rhetorical effectiveness
-- Literary scholar examining stylistic innovation
-
----
-
-## 📖 COMPARATIVE ANALYSIS
-
-### What Students Analyze:
+#### **F. COMPARATIVE ANALYSIS**
 - Similarities and differences between texts, characters, or themes
 - How different works treat similar subject matter
 - Influence and intertextuality
 - Cultural or historical variations in literary treatment
 
-### Evidence Required:
-✅ **PROVIDE:**
+**Evidence Required:**
 - Excerpts from BOTH/ALL texts being compared
 - Parallel examples showing similarity or contrast
 - Sufficient text from each source
 - Context explaining relationship between texts
 
-### Analytical Questions:
-- "How do [Text A] and [Text B] treat [theme] differently?"
-- "What similarities exist in how [Character A] and [Character B] are portrayed?"
-- "How does [later work] respond to or transform [earlier work]?"
-- "What does comparing these texts reveal about [cultural context]?"
+**Real-World Application:**
+Comparative literature scholar examining cross-cultural influences, curriculum designer selecting complementary texts, anthologist grouping works for publication.
 
-### Real-World Contexts:
-- Comparative literature scholar examining cross-cultural influences
-- Curriculum designer selecting complementary texts
-- Literary historian tracing thematic evolution
-- Anthologist grouping works for publication
-
----
-
-## 📜 CONTEXTUAL & HISTORICAL ANALYSIS
-
-### What Students Analyze:
+#### **G. CONTEXTUAL & HISTORICAL ANALYSIS**
 - How historical context shapes the text
 - How text reflects or challenges social norms of its era
 - How contemporary readers might have interpreted it
 - How meaning changes with historical distance
 
-### Evidence Required:
-✅ **PROVIDE:**
+**Evidence Required:**
 - Literary excerpts showing cultural elements
 - Context about historical setting
 - Evidence of period-specific language, values, concerns
 - Enough information to analyze historical significance
 
-### Analytical Questions:
-- "How does this text reflect [historical period]'s values?"
-- "What does this passage reveal about [social issue] in [time period]?"
-- "How would contemporary readers have interpreted [element]?"
-- "What makes this text transgressive for its historical moment?"
-
-### Real-World Contexts:
-- Historian using literature as cultural evidence
-- Museum curator contextualizing literary artifacts
-- Cultural scholar analyzing representation and ideology
-- Dramaturg researching period context for production
+**Real-World Application:**
+Historian using literature as cultural evidence, museum curator contextualizing literary artifacts, dramaturg researching period context for production.
 
 ---
 
-## 🎯 MATCHING ANALYSIS TO CURRICULUM TOPIC
+## 3. ✍️ CREATIVE & WRITING KNOWLEDGE
 
-**CRITICAL: The analytical focus MUST match the curriculum topic specified.**
+### What Students Do with Literary Knowledge:
+- **Complete fragmentary texts**: Finish incomplete poems, stories, scenes
+- **Imitate styles**: Write in the manner of specific authors or periods
+- **Adapt across forms**: Transform poetry to prose, drama to narrative
+- **Translate/Localize**: Preserve meaning and literary effects across languages
+- **Create derivative works**: Sequels, prequels, alternative perspectives
+- **Write critical responses**: Essays, reviews, scholarly arguments
 
-### Step 1: Identify the Analytical Skill
-Read `curriculum_topic.name` and `example_tasks`:
-- What are students learning to analyze? (character, theme, symbol, technique, etc.)
-- What type of textual evidence should they examine?
-- What kind of interpretation should they produce?
+### Skills Required:
+- Understanding author's voice, style, technique
+- Recognizing patterns (meter, structure, imagery systems)
+- Applying genre conventions
+- Balancing fidelity to original with creative intervention
 
-### Step 2: Choose Appropriate Analytical Structure
-- **Character study** → Provide dialogue and action descriptions
-- **Symbolism** → Provide multiple instances of symbolic element
-- **Theme** → Provide excerpts showing thematic development
-- **Technique** → Provide passages demonstrating the technique
-- **Comparison** → Provide excerpts from both/all texts
-
-### Step 3: Select Fitting Professional Context
-Find professionals who ACTUALLY do this type of analysis:
-- Theater directors → Character and dramatic analysis
-- Literary scholars → Theme, symbolism, historical context
-- Translators → Language, technique, connotation
-- Publishers/Editors → Structure, marketability, cultural relevance
+### Real-World Application:
+Poetry competition completing rhyming verse, ghostwriter imitating author's style, translator preserving literary effects, screenwriter adapting novel.
 
 ---
 
-## 📌 QUALITY CHECKLIST FOR LITERATURE TASKS
+## 4. 🌍 INTERDISCIPLINARY & CULTURAL IMPACT
 
-Before finalizing, verify:
+### Where Literature Intersects Other Fields:
 
-✅ **Text Provision**
-- [ ] Primary source text provided in full (150-400 words minimum)
-- [ ] Excerpts sufficient for meaningful analysis
-- [ ] Original formatting preserved (line breaks for poetry, etc.)
-- [ ] Context provided (who's speaking, what scene, etc.)
+#### **Literature + History**
+- Literary works as historical evidence (what texts reveal about past societies)
+- Historical context shaping literary production
+- Literature influencing historical movements (Uncle Tom's Cabin, 1984, The Jungle)
 
-✅ **Analytical Alignment**
-- [ ] Analysis type matches curriculum topic
-- [ ] Questions ask for INTERPRETATION, not summary
-- [ ] Evidence-based reasoning expected
-- [ ] Multiple valid interpretations possible (if appropriate)
+#### **Literature + Law**
+- Censorship cases requiring literary merit assessment
+- Copyright/plagiarism requiring textual analysis
+- Legal text interpretation using literary close reading
+- Literary evidence in trials (letters, diaries, coded messages)
 
-✅ **Professional Authenticity**
-- [ ] This professional actually does this type of literary analysis
-- [ ] The analytical purpose is clear and realistic
-- [ ] The interpretation has practical consequences
+#### **Literature + Psychology**
+- Therapeutic uses of poetry and narrative
+- Character analysis revealing psychological complexity
+- Reader response and emotional impact
+- Bibliotherapy: selecting texts for mental health support
 
-✅ **Clear Expectations**
-- [ ] Students know WHAT to analyze (character, theme, technique, etc.)
-- [ ] Students know HOW to support their analysis (cite text, identify patterns)
-- [ ] Questions are specific, not vague ("What do you think?")
+#### **Literature + Art**
+- Ekphrastic poetry (poems about visual art)
+- Illustrated literary works (collaboration between text and image)
+- Literary-inspired visual art (paintings based on texts)
+- Museum curation connecting literature and artifacts
 
----
+#### **Literature + Media**
+- Literary adaptation to film, television, graphic novels, games
+- Screenplay evaluation using narrative analysis
+- Documentary research requiring literary source analysis
+- Journalistic writing applying literary techniques
 
-## 🚫 COMMON MISTAKES TO AVOID
-
-❌ **Wrong Analysis Type for Topic**
-- Topic: Character analysis
-- Mistake: Asking about historical context instead of character traits
-
-❌ **Insufficient Text Provided**
-- Topic: Symbolism analysis
-- Mistake: Mentioning a symbol but not providing passages containing it
-
-❌ **Asking for Summary Instead of Analysis**
-- Bad: "What happens in this scene?"
-- Good: "How does the author use dialogue to reveal character conflict?"
-
-❌ **Vague, Unanswerable Questions**
-- Bad: "What do you think this poem means?"
-- Good: "How does the poet use water imagery to symbolize renewal?"
-
-❌ **Confusing Literary Analysis with Other Disciplines**
-- Don't ask for historical facts (that's history, not literature)
-- Don't ask for visual interpretation (that's art, not literature)
-- Don't ask for biographical info (that's biography, not textual analysis)
+### Real-World Applications:
+Detective decoding literary clues in investigation, auction appraiser connecting paintings to poems, therapist selecting poetry for treatment, censorship officer identifying veiled political criticism.
 
 ---
 
-## 📚 TEXT PROVISION STANDARDS
+## 🎭 12 SCENARIO ARCHETYPES FOR LITERATURE TASKS
+
+Each archetype creates authentic situations where literary knowledge is **ESSENTIAL**:
+
+### 1. 📰 MAGAZINE EDITOR / LITERARY CURATOR
+
+**Role**: Editor selecting works for publication
+**Knowledge Required**: Quality assessment, thematic coherence, style analysis, target audience fit
+**Example**: "You are chief editor of *Nyugat* (Hungary, 1933). Evaluate 4 submitted poems for the next issue. Which 2 best represent avant-garde modernism while appealing to subscribers? Analyze style, theme, technique."
+
+**What This Tests:**
+- Comparative analysis of multiple texts
+- Style and quality assessment
+- Understanding literary movements
+- Thematic coherence evaluation
+
+---
+
+### 2. ✍️ POETRY COMPLETION COMPETITION
+
+**Role**: Poet completing fragmentary verse
+**Knowledge Required**: Meter, rhyme schemes, style imitation, thematic coherence
+**Example**: "Participate in *Rhyming Verse Competition* (Edinburgh, 2015). Here are stanzas 1-3 of a Romantic sonnet. Complete the final couplet maintaining iambic pentameter, ABAB CDCD EFEF GG rhyme scheme, and thematic focus on nature's transcendence."
+
+**What This Tests:**
+- Understanding poetic forms and meter
+- Ability to analyze and imitate style
+- Thematic interpretation
+- Creative application of literary technique
+
+---
+
+### 3. 🎬 FILM PRODUCER / ADAPTATION SELECTOR
+
+**Role**: Producer choosing novels for film adaptation
+**Knowledge Required**: Narrative structure, cinematic potential, character complexity, theme identification
+**Example**: "You are Netflix producer (Los Angeles, 2019). Evaluate 3 Latin American novels for adaptation: *Cien años de soledad* (García Márquez), *La casa de los espíritus* (Allende), *Ficciones* (Borges). Rank by adaptation feasibility. Analyze narrative structure, visual potential, international appeal."
+
+**What This Tests:**
+- Comparative narrative analysis
+- Understanding structural complexity
+- Theme and character assessment
+- Cross-medium translation thinking
+
+---
+
+### 4. 🗺️ LITERARY TOUR GUIDE
+
+**Role**: Tour guide creating literary location experiences
+**Knowledge Required**: Text-to-place connections, historical context, symbolic geography
+**Example**: "Design a *García Lorca's Granada* walking tour (2020). Connect 5 city locations to specific poems/plays. Provide textual excerpts showing how Lorca depicts each place. Explain historical/cultural context making these locations significant."
+
+**What This Tests:**
+- Close reading for setting details
+- Historical and cultural context
+- Symbolism and imagery analysis
+- Connecting text to real-world locations
+
+---
+
+### 5. 🏆 NOBEL PRIZE COMMITTEE NOMINATION
+
+**Role**: Committee member evaluating literary merit
+**Knowledge Required**: Comprehensive work analysis, cultural impact, innovation, thematic significance
+**Example**: "You are on Swedish Academy Nobel Committee (Stockholm, 2010). Evaluate Vargas Llosa's nomination. Analyze 3 major works: *La ciudad y los perros*, *Conversación en la catedral*, *La fiesta del chivo*. Assess thematic consistency, technical innovation, universal relevance, cultural impact."
+
+**What This Tests:**
+- Comparative analysis across author's oeuvre
+- Theme and technique identification
+- Understanding literary innovation
+- Cultural and historical context assessment
+
+---
+
+### 6. 🧠 THERAPY GROUP LEADER / BIBLIOTHERAPIST
+
+**Role**: Therapist selecting literature for mental health treatment
+**Knowledge Required**: Emotional tone, theme, character situations, reader impact
+**Example**: "You are poetry therapist (London clinic, 2018). Select 3 poems for grief counseling group. Analyze each for: emotional accessibility, thematic focus on loss/healing, imagery that avoids triggering trauma, hopeful vs. despairing tone. Justify selections."
+
+**What This Tests:**
+- Theme analysis (grief, healing, hope)
+- Emotional tone assessment
+- Imagery and symbolism analysis
+- Reader response prediction
+
+---
+
+### 7. 🔍 CENSORSHIP OFFICER / POLITICAL TEXT ANALYST
+
+**Role**: Analyst identifying veiled political criticism
+**Knowledge Required**: Allegory, symbolism, historical allusion, subtext
+**Example**: "You are Soviet censorship analyst (Moscow, 1968). Evaluate submitted novel for anti-state content. Author uses 18th-century historical setting. Identify potential allegorical references to current regime. Analyze character parallels, symbolic events, coded language."
+
+**What This Tests:**
+- Allegory and symbolism identification
+- Subtext and coded meaning analysis
+- Historical parallel recognition
+- Close reading for double meanings
+
+---
+
+### 8. 📚 RARE BOOK COLLECTOR / AUTHENTICATION
+
+**Role**: Collector identifying banned or historically significant works
+**Knowledge Required**: Historical context, publication history, textual variants, censorship history
+**Example**: "You are rare book specialist (Sotheby's, New York, 2017). Identify which 2 of 4 books would have been banned in Franco's Spain (1939-1975). Analyze content for: political dissent, regional nationalism, religious heterodoxy, moral transgression. Provide textual evidence."
+
+**What This Tests:**
+- Historical and political context
+- Theme and content analysis
+- Understanding censorship criteria
+- Textual evidence identification
+
+---
+
+### 9. 🕵️ LITERARY HISTORIAN / AUTHENTICATION
+
+**Role**: Historian verifying authorship and dating texts
+**Knowledge Required**: Style analysis, historical language patterns, biographical context, textual comparison
+**Example**: "You are literary historian (University of Salamanca, 2015). Authenticate alleged 16th-century letter attributed to Santa Teresa de Ávila. Analyze: language patterns, mystical imagery typical of her work, biographical consistency, comparison to verified writings. Real or forgery?"
+
+**What This Tests:**
+- Style and voice analysis
+- Comparative textual analysis
+- Historical language knowledge
+- Pattern recognition across texts
+
+---
+
+### 10. 📅 CHRONOLOGICAL STYLE ANALYST
+
+**Role**: Scholar dating texts by style evolution
+**Knowledge Required**: Literary period characteristics, author's stylistic development, historical language markers
+**Example**: "You are Neruda scholar (Chile, 2012). Arrange 4 undated poems chronologically by analyzing style evolution: *Veinte poemas* (early romantic), *Residencia en la tierra* (surrealist), *Canto general* (political epic), *Odas elementales* (accessible simplicity). Justify sequence."
+
+**What This Tests:**
+- Understanding stylistic periods
+- Comparative style analysis
+- Recognizing literary movement characteristics
+- Tracing author's development
+
+---
+
+### 11. 🔎 DETECTIVE / LITERARY CODE ANALYST
+
+**Role**: Investigator decoding literary references in evidence
+**Knowledge Required**: Literary allusion identification, symbolic meaning, authorial intent
+**Example**: "You are detective (Paris, 2016). Suspect's apartment contains cryptic note: 'Meet where Baudelaire's albatross fell, when l'heure bleue fades.' Analyze: *L'Albatros* poem significance, Baudelaire's Paris locations, symbolic meaning of 'heure bleue,' decode meeting time/place."
+
+**What This Tests:**
+- Literary allusion identification
+- Symbolic interpretation
+- Contextual knowledge (author's biography, locations)
+- Inferential reasoning from textual clues
+
+---
+
+### 12. 🖼️ ART AUCTION APPRAISER / EKPHRASIS
+
+**Role**: Appraiser connecting artworks to literary inspiration
+**Knowledge Required**: Ekphrastic tradition, visual-to-textual analysis, historical context, symbolism
+**Example**: "You are Christie's specialist (London, 2018). Painting titled *'Ophelia'* (1852, John Everett Millais). Analyze how it visually interprets *Hamlet* Act IV, Scene 7 (Gertrude's description). Compare: textual imagery, botanical symbolism, Pre-Raphaelite interpretation. Authenticate literary fidelity."
+
+**What This Tests:**
+- Close reading of descriptive passages
+- Visual-to-textual comparison
+- Symbolism analysis (flowers, water, death)
+- Understanding literary-artistic dialogue
+
+---
+
+## 📌 THE LITERATURE TASK FORMULA
+
+```
+AUTHENTIC PROFESSIONAL ROLE
+    ↓
+CRITICAL LITERARY DECISION NEEDED
+    ↓
+ONLY CLOSE TEXTUAL ANALYSIS SOLVES IT
+    ↓
+SUBSTANTIAL TEXT PROVIDED (50-150+ words)
+    ↓
+MULTIPLE OPTIONS TO EVALUATE
+    ↓
+INTERPRETATION REQUIRED (not just recall)
+    ↓
+CONSEQUENCES MATTER
+```
+
+**Every literature task = "You are [professional role]. You must [critical decision]. Here is [substantial text]. Based on [analytical skill], what do you conclude?"**
+
+---
+
+## ✅ TASK DESIGN PRINCIPLES
+
+### EVERY LITERATURE TASK MUST:
+
+1. **Place student in AUTHENTIC ROLE** requiring literary analysis
+   - NOT "student studying literature"
+   - YES: Editor, translator, curator, director, therapist, detective, critic
+
+2. **Create GENUINE NEED** for textual analysis
+   - Critical decision with consequences
+   - Problem that ONLY close reading can solve
+   - Real-world application (publishing, performance, adaptation, authentication)
+
+3. **Provide SUBSTANTIAL PRIMARY TEXT** (50-150+ words minimum)
+   - Complete poems or complete stanzas
+   - Complete scenes or complete paragraphs
+   - Sufficient text for meaningful analysis
+   - Original formatting preserved (line breaks, punctuation)
+
+4. **Demand INTERPRETATION**, not just recall
+   - Analyze HOW text creates meaning
+   - Compare multiple interpretive possibilities
+   - Support claims with textual evidence
+   - No single "right answer" (where appropriate)
+
+5. **Match ANALYSIS TYPE to CURRICULUM TOPIC**
+   - Character topic → Character analysis task
+   - Symbolism topic → Symbolism analysis task
+   - Theme topic → Theme analysis task
+   - Technique topic → Technique analysis task
+
+6. **Show CONSEQUENCES** of literary analysis
+   - What happens if you misinterpret the character?
+   - What if you miss the allegorical meaning?
+   - What if you choose the wrong text for adaptation?
+
+---
+
+## 🚫 AVOID THESE FAILURES
+
+❌ **"Analyze this poem" (no context)**
+✅ **"You are poetry therapist selecting poems for grief counseling. Analyze tone, imagery, theme of these 3 poems. Which 2 are appropriate? Why?"**
+
+❌ **Vague "What does the author mean?"**
+✅ **"You are Soviet censor, 1968. Does this historical novel contain allegorical criticism of current regime? Analyze character parallels, symbolic events."**
+
+❌ **No text provided, just asking about a work**
+✅ **"Here are 20-50 words from Act 3. Analyze how Shakespeare uses imagery of disease/corruption to develop theme of moral decay."**
+
+❌ **"How do you feel about this character?"**
+✅ **"You are casting director. Based on these 3 dialogue excerpts, what personality traits must the actor convey? Provide textual evidence."**
+
+---
+
+## 📖 TEXT PROVISION STANDARDS
 
 ### Poetry Analysis:
 - **Provide**: Complete poem OR complete stanzas being analyzed
@@ -298,17 +449,71 @@ Before finalizing, verify:
 ### Drama Analysis:
 - **Provide**: Complete dialogue exchanges, with speaker labels
 - **Format**: Preserve stage directions if relevant to analysis
-- **Minimum**: 150-300 words of dialogue
+- **Minimum**: 20-150 words of dialogue
 
 ### Prose Analysis:
 - **Provide**: Complete paragraphs or scenes, not fragments
 - **Format**: Preserve paragraph breaks
-- **Minimum**: 200-400 words for narrative analysis
+- **Minimum**: 20-150 words for narrative analysis
 
 ### Comparative Analysis:
 - **Provide**: Parallel excerpts from each text
 - **Format**: Clearly label which text each excerpt is from
-- **Minimum**: 150-250 words from EACH text
+- **Minimum**: 20-150 words from EACH text
+
+---
+
+## 🌍 DIVERSITY REQUIREMENTS
+
+### Geographic Coverage:
+- ✅ Spanish Literature: Golden Age, Generation of '98, Generation of '27, contemporary
+- ✅ Latin American Literature: Boom, post-Boom, contemporary voices, Indigenous perspectives
+- ✅ United States Latino/a Literature: Chicano/a, Caribbean diaspora, border narratives
+- ✅ Global Spanish: Philippines, Equatorial Guinea, Sephardic traditions
+- ✅ Comparative: Spanish literature in dialogue with other traditions
+
+### Temporal Coverage:
+- Medieval (Cantar de Mio Cid, *Celestina*)
+- Golden Age (Cervantes, Lope, Calderón, Quevedo, Góngora)
+- 19th Century (Romanticism, Realism, Naturalism)
+- Modernism & Generation of '98 (Darío, Unamuno, Machado)
+- Avant-Garde & Generation of '27 (Lorca, Alberti, Cernuda)
+- Contemporary (1950-present: Vargas Llosa, García Márquez, Allende, Bolaño)
+
+### Genre Diversity:
+- Poetry (lyric, epic, dramatic, experimental)
+- Drama (comedy, tragedy, sainete, absurdist)
+- Prose (novel, novella, short story, essay, chronicle)
+- Hybrid/Experimental (prose poetry, metafiction, testimonio)
+
+---
+
+## 🎓 PEDAGOGICAL BENEFITS
+
+### Traditional Literature Teaching (What We Avoid):
+❌ Memorize author names and dates
+❌ "Study" plot summaries passively
+❌ Generic "What is the theme?" questions
+❌ No clear real-world application
+❌ Recall-based quizzes
+
+### EduForger Literature Approach (What We Do):
+✅ **Analyze** text closely for specific professional purposes
+✅ **Compare** multiple texts or interpretations
+✅ **Evaluate** literary quality, thematic coherence, stylistic effectiveness
+✅ **Apply** literary knowledge to real decisions (publishing, performance, therapy, etc.)
+✅ **Create** derivative works demonstrating deep understanding
+✅ **Argue** for interpretations using textual evidence
+✅ **Experience** literature as professionals use it
+
+---
+
+## 🔥 THE ULTIMATE TEST
+
+**Ask yourself**: Would a professional editor/translator/director/curator **ACTUALLY** need to analyze this text in this way to make this decision?
+
+✅ YES: Authentic task
+❌ NO: Fake "textbook question" disguised as scenario
 
 ---
 
@@ -325,7 +530,7 @@ You cannot ask students to:
 **If you haven't provided substantial text (150+ words), you haven't created a literature task - you've created a quiz about literature.**
 
 **There's a difference:**
-- **Quiz**: "Who is Don Juan?" (tests memory)
-- **Literary Analysis**: "Based on these three dialogue excerpts, how does Tirso characterize Don Juan as transgressive?" (tests interpretation)
+- **Quiz**: "Who is Don Quixote?" (tests memory)
+- **Literary Analysis**: "Based on these three dialogue excerpts, how does Cervantes characterize Don Quixote as both mad and wise?" (tests interpretation)
 
 **We create ANALYSIS tasks, not quizzes.**
