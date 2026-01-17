@@ -1,0 +1,17 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "mimetismo_aposematismo",
+    "name": "Mimetismo y Aposematismo",
+    "short_description": "Imitar o advertir con colores llamativos.",
+    "example_tasks": [
+      "Describe el mimetismo batesiano (imitar especies peligrosas)",
+      "Explica colores de advertencia en animales venenosos",
+      "Investiga ejemplos mexicanos de mimetismo (serpientes coral)"
+    ]
+  },
+  "task_id_hint": "mimetismo_aposematismo_generated"
+}

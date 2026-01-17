@@ -1,0 +1,20 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "graficacion_funciones_lineales",
+    "name": "Graficación de funciones lineales",
+    "short_description": "Graficar funciones lineales usando diferentes métodos.",
+    "example_tasks": [
+      "Graficar: y = 2x + 3",
+      "Representar gráficamente: y = -x + 5",
+      "Graficar la recta que pasa por (0, 4) con pendiente -1/2",
+      "Representar: 2x + 3y = 6",
+      "Graficar y = 4 (recta horizontal)",
+      "Representar x = -2 (recta vertical)"
+    ]
+  },
+  "task_id_hint": "graficacion_funciones_lineales_generated"
+}

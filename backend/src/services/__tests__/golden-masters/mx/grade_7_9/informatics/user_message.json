@@ -1,0 +1,17 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "media_queries",
+    "name": "Media Queries",
+    "short_description": "Aplicar estilos diferentes según características del dispositivo.",
+    "example_tasks": [
+      "Crear media query básica: @media (max-width: 768px) { /* estilos para móviles */ }",
+      "Implementar diseño mobile-first: estilos base para móvil, media queries para pantallas más grandes",
+      "Definir breakpoints comunes: móvil (<768px), tablet (768px-1024px), desktop (>1024px)"
+    ]
+  },
+  "task_id_hint": "media_queries_generated"
+}

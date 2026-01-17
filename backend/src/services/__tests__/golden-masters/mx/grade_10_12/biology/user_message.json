@@ -1,0 +1,17 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "modelo_watson_crick",
+    "name": "Modelo de Doble Hélice de Watson y Crick",
+    "short_description": "Comprensión de la estructura tridimensional del ADN con dos cadenas antiparalelas complementarias.",
+    "example_tasks": [
+      "Describe las características del modelo de doble hélice: dos cadenas antiparalelas, bases hacia el interior, esqueleto azúcar-fosfato externo",
+      "Explica el descubrimiento histórico de Watson y Crick en 1953 usando datos de difracción de rayos X de Rosalind Franklin",
+      "Dibuja un segmento de ADN mostrando el apareamiento complementario de bases (A-T con 2 puentes H, G-C con 3 puentes H)"
+    ]
+  },
+  "task_id_hint": "modelo_watson_crick_generated"
+}

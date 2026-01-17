@@ -1,0 +1,19 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "guerra_vietnam",
+    "name": "Guerra de Vietnam (1955-1975)",
+    "short_description": "Derrota estadounidense, impacto en política y sociedad.",
+    "example_tasks": [
+      "Explica orígenes: división de Vietnam (1954) tras derrota francesa, Norte comunista vs. Sur apoyado por EUA",
+      "Describe la escalada estadounidense: asesores militares, Incidente del Golfo de Tonkín (1964), bombardeos masivos",
+      "Analiza la guerra: tácticas de guerrilla del Vietcong, ofensiva del Tet (1968), protestas en EUA",
+      "Narra el retiro estadounidense (1973) y caída de Saigón (1975): victoria comunista, reunificación bajo el Norte",
+      "Evalúa consecuencias: trauma estadounidense, Síndrome de Vietnam, límites del poder militar"
+    ]
+  },
+  "task_id_hint": "guerra_vietnam_generated"
+}

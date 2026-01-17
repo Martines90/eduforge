@@ -1,0 +1,17 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "igualdad_genero",
+    "name": "Igualdad de género",
+    "short_description": "Empoderamiento de mujeres, equidad de oportunidades, Índice de Desigualdad de Género.",
+    "example_tasks": [
+      "Investiga el Índice de Desigualdad de Género del PNUD y países con mayor equidad",
+      "Analiza brechas de género en educación, participación laboral, representación política",
+      "Explica por qué la igualdad de género es fundamental para el desarrollo"
+    ]
+  },
+  "task_id_hint": "igualdad_genero_generated"
+}

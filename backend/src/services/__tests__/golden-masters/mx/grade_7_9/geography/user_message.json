@@ -1,0 +1,18 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "definicion_espacio_urbano",
+    "name": "Definición de espacio urbano",
+    "short_description": "Comprender características de zonas urbanas: alta densidad poblacional, actividades no agrícolas, servicios concentrados.",
+    "example_tasks": [
+      "Define espacio urbano según criterios mexicanos: localidades de 2,500 habitantes o más",
+      "Identifica características urbanas: alta concentración de población, edificación continua, servicios públicos",
+      "Analiza actividades económicas predominantes: industria, comercio, servicios",
+      "Describe infraestructura urbana: calles pavimentadas, transporte público, redes de agua y electricidad"
+    ]
+  },
+  "task_id_hint": "definicion_espacio_urbano_generated"
+}

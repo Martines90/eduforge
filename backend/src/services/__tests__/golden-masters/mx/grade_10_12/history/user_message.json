@@ -1,0 +1,17 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "crisis_1808",
+    "name": "La Crisis de 1808 como Detonante",
+    "short_description": "Estudiar cómo los eventos de 1808 precipitaron el movimiento.",
+    "example_tasks": [
+      "Explicar la invasión napoleónica de España y la abdicación de Fernando VII.",
+      "Analizar el golpe de Estado de los peninsulares en Nueva España contra el virrey Iturrigaray (septiembre 1808).",
+      "Describir cómo la crisis monárquica abrió el debate sobre la soberanía y el autogobierno."
+    ]
+  },
+  "task_id_hint": "crisis_1808_generated"
+}

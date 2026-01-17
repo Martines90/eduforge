@@ -1,0 +1,13 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "imagenes_digitales",
+    "name": "Trabajo con Imágenes Digitales",
+    "short_description": "Comprender conceptos básicos de imágenes digitales y realizar ediciones simples.",
+    "example_tasks": []
+  },
+  "task_id_hint": "imagenes_digitales_generated"
+}

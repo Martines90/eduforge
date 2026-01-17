@@ -1,0 +1,18 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "energia_termica",
+    "name": "Energía Térmica (Calor)",
+    "short_description": "Energía relacionada con la temperatura y el movimiento de partículas.",
+    "example_tasks": [
+      "Identifica fuentes de calor: sol, fuego, estufa, friccón, cuerpo humano.",
+      "Explica cómo el calor se transfiere: conducción (tocar), convección (fluidos), radiación (sol).",
+      "Diseña experimento: ¿qué materiales conducen mejor el calor? (metal vs. madera vs. plástico)",
+      "Investiga cómo el calor acelera reacciones químicas: cocción de alimentos, evaporación."
+    ]
+  },
+  "task_id_hint": "energia_termica_generated"
+}

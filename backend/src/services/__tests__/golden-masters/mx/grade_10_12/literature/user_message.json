@@ -1,0 +1,13 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "cronicas_america",
+    "name": "Crónicas de Indias",
+    "short_description": "Análisis de textos que narran el descubrimiento y conquista de América.",
+    "example_tasks": []
+  },
+  "task_id_hint": "cronicas_america_generated"
+}

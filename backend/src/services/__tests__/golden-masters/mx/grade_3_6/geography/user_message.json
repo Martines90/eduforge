@@ -1,0 +1,19 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "importancia_clima",
+    "name": "Importancia del Clima",
+    "short_description": "Comprender cómo el clima influye en actividades humanas y ecosistemas.",
+    "example_tasks": [
+      "Explica cómo el clima influye en qué cultivos se pueden sembrar en una región.",
+      "Describe cómo las personas adaptan sus viviendas al clima (materiales, diseño, techos).",
+      "Investiga cómo el clima afecta la vestimenta tradicional de diferentes regiones de México.",
+      "Analiza cómo el clima determina las actividades turísticas de una región (playa, montaña, nieve).",
+      "Explica por qué el clima es un factor importante para el desarrollo de las comunidades."
+    ]
+  },
+  "task_id_hint": "importancia_clima_generated"
+}

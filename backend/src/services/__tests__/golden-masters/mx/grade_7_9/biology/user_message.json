@@ -1,0 +1,22 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "cambio_climatico_biodiversidad",
+    "name": "Cambio climático y biodiversidad",
+    "short_description": "Comprender impactos del calentamiento global en especies y ecosistemas.",
+    "example_tasks": [
+      "Explica cómo el cambio climático altera distribución de especies",
+      "Describe migración hacia polos y mayores altitudes buscando temperaturas adecuadas",
+      "Investiga blanqueamiento de corales: estrés térmico mata simbiontes",
+      "Explica desajuste de tiempos: floración temprana, migración desincronizada",
+      "Describe amenazas a especies con rango estrecho: alta montaña, islas",
+      "Investiga impactos en México: estrés en arrecifes, cambios en distribución de bosques",
+      "Explica acidificación oceánica: afecta organismos con conchas calcáreas",
+      "Discute interacción de cambio climático con otras amenazas: efecto sinérgico"
+    ]
+  },
+  "task_id_hint": "cambio_climatico_biodiversidad_generated"
+}

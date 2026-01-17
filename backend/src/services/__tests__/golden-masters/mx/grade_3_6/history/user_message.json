@@ -1,0 +1,17 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "diversidad_geografica",
+    "name": "Diversidad Geográfica y Climática",
+    "short_description": "Reconocer la variedad de ambientes naturales dentro de Mesoamérica.",
+    "example_tasks": [
+      "Describe tres tipos de paisajes diferentes que existían en Mesoamérica (costa, altiplano, selva)",
+      "Explica cómo la diversidad geográfica influyó en las actividades económicas de las culturas mesoamericanas",
+      "Menciona qué recursos naturales había en cada región de Mesoamérica"
+    ]
+  },
+  "task_id_hint": "diversidad_geografica_generated"
+}

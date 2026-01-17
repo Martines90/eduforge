@@ -1,0 +1,18 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "electrizacion_frotamiento",
+    "name": "Electrización por Frotamiento",
+    "short_description": "Transferencia de electrones entre dos materiales al frotarlos.",
+    "example_tasks": [
+      "Explica cómo funciona la electrización por frotamiento: transferencia de electrones de un material a otro.",
+      "Da tres ejemplos de electrización por frotamiento: peine y cabello, globo y lana, ámbar frotado.",
+      "¿Por qué algunos materiales ceden electrones fácilmente mientras otros los aceptan?",
+      "Realiza un experimento: frota un globo con tu cabello y observa cómo puede atraer papelitos o pegarse a la pared."
+    ]
+  },
+  "task_id_hint": "electrizacion_frotamiento_generated"
+}

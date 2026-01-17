@@ -1,0 +1,18 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "media_aritmetica",
+    "name": "Media Aritmética",
+    "short_description": "Calcular la media para datos simples y agrupados.",
+    "example_tasks": [
+      "Calcula la media aritmética de los datos: 8, 6, 9, 7, 8, 10, 7, 9",
+      "Encuentra la media de las calificaciones usando la tabla de frecuencias dada",
+      "Calcula la media para datos agrupados en intervalos usando las marcas de clase",
+      "Si la media de 5 números es 15 y se agrega el número 21, ¿cuál es la nueva media?"
+    ]
+  },
+  "task_id_hint": "media_aritmetica_generated"
+}

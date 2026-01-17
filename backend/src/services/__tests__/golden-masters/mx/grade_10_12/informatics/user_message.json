@@ -1,0 +1,17 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "rendimiento_movil",
+    "name": "Rendimiento en Móvil",
+    "short_description": "Optimizar carga y rendimiento para conexiones lentas.",
+    "example_tasks": [
+      "Optimizar imágenes para web (compresión, formatos modernos webp)",
+      "Implementar lazy loading para cargar imágenes solo cuando sean visibles",
+      "Minimizar CSS/JS y usar CDN para mejor velocidad de carga"
+    ]
+  },
+  "task_id_hint": "rendimiento_movil_generated"
+}

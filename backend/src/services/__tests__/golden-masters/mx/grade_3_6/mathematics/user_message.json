@@ -1,0 +1,17 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "concepto_mediana",
+    "name": "Concepto de mediana",
+    "short_description": "Comprender la mediana como el valor que está en el centro.",
+    "example_tasks": [
+      "¿Qué significa que la mediana de las estaturas sea 1.45 m?",
+      "Explicar por qué se necesita ordenar los datos para encontrar la mediana",
+      "¿La mediana es siempre uno de los datos del conjunto?"
+    ]
+  },
+  "task_id_hint": "concepto_mediana_generated"
+}

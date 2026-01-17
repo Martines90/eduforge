@@ -1,0 +1,17 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "compuestos_ionicos",
+    "name": "Compuestos iónicos",
+    "short_description": "Identifica las propiedades de los compuestos iónicos y su estructura cristalina.",
+    "example_tasks": [
+      "Describe cinco propiedades características de los compuestos iónicos (punto de fusión, solubilidad, conductividad, etc.)",
+      "Explica por qué la sal de mesa (NaCl) conduce electricidad cuando está disuelta en agua pero no cuando está sólida",
+      "Investiga la estructura cristalina de la sal de mesa y explica cómo están organizados los iones Na⁺ y Cl⁻"
+    ]
+  },
+  "task_id_hint": "compuestos_ionicos_generated"
+}

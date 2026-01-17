@@ -1,0 +1,18 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "aplicaciones_laser",
+    "name": "Aplicaciones de Láseres",
+    "short_description": "Identificar usos tecnológicos y científicos de láseres.",
+    "example_tasks": [
+      "Medicina: cirugía láser (oftalmológica, dermatológica), tratamientos dentales.",
+      "Industria: corte y soldadura de metales, lectura de códigos de barras.",
+      "Comunicaciones: fibra óptica (transmisión de datos).",
+      "Investigación: espectroscopia, holografía, interferometría, enfriamiento atómico."
+    ]
+  },
+  "task_id_hint": "aplicaciones_laser_generated"
+}

@@ -1,0 +1,17 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "describir_ambientes",
+    "name": "Descripción de Ambientes",
+    "short_description": "Creación de espacios vívidos que contribuyen a la atmósfera narrativa.",
+    "example_tasks": [
+      "Describe un lugar de tu comunidad usando detalles sensoriales que creen atmósfera específica",
+      "Crea un ambiente que refleje el estado emocional de tu personaje",
+      "Practica mostrar (show) vs. decir (tell): describe un lugar amenazante sin usar la palabra 'amenazante'"
+    ]
+  },
+  "task_id_hint": "describir_ambientes_generated"
+}

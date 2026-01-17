@@ -1,0 +1,17 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "caracteristicas_equilibrio",
+    "name": "Características del Equilibrio",
+    "short_description": "Propiedades que definen un sistema en equilibrio químico.",
+    "example_tasks": [
+      "Enumera cinco características de un sistema en equilibrio químico",
+      "Explica por qué el equilibrio solo se alcanza en sistemas cerrados",
+      "Describe cómo se puede detectar experimentalmente que un sistema ha alcanzado equilibrio"
+    ]
+  },
+  "task_id_hint": "caracteristicas_equilibrio_generated"
+}

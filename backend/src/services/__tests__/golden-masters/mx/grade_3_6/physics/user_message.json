@@ -1,0 +1,17 @@
+{
+  "task_config": {
+    "language": "Spanish",
+    "metric_system": "metric"
+  },
+  "curriculum_topic": {
+    "key": "caracteristicas_luna",
+    "name": "Características de la Luna",
+    "short_description": "Identificar características básicas de la Luna.",
+    "example_tasks": [
+      "Observa la Luna con binoculares o telescopio simple. ¿Qué detalles puedes ver (cráteres, mares lunares)?",
+      "Investiga el tamaño de la Luna comparado con la Tierra. ¿Es más grande, más pequeña o igual?",
+      "Explica por qué la Luna brilla: no produce su propia luz, refleja la luz del Sol."
+    ]
+  },
+  "task_id_hint": "caracteristicas_luna_generated"
+}
